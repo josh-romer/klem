@@ -49,6 +49,81 @@ fn lemma(text: &str, kind: LemmaKind) -> Lemma {
 }
 
 #[test]
+fn omitted_copulas_keep_short_expanded_and_lexical_dictionary_readings() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from(
+            "tests/fixtures/krdict-colloquial-copulas.json",
+        )],
+        dir.db(),
+        "colloquial-copula-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, present) in [
+        ("겁니다", vec!["거", "이다"], vec!["습니다"], true),
+        ("겁니다", vec!["것", "이다"], vec!["습니다"], true),
+        ("건데", vec!["것", "이다"], vec!["은데"], true),
+        ("거죠", vec!["것", "이다"], vec!["죠"], true),
+        ("거면", vec!["거", "이다"], vec!["으면"], true),
+        ("이겁니다", vec!["이것", "이다"], vec!["습니다"], true),
+        ("그건데", vec!["그것", "이다"], vec!["은데"], true),
+        ("저거죠", vec!["저것", "이다"], vec!["죠"], true),
+        ("의삽니다", vec!["의사", "이다"], vec!["습니다"], true),
+        ("학교죠", vec!["학교", "이다"], vec!["죠"], true),
+        ("거예요", vec!["거", "이다"], vec!["에요"], true),
+        ("거예요", vec!["것", "이다"], vec!["에요"], true),
+        ("거지", vec!["거지"], vec![], true),
+        ("거지", vec!["것", "이다"], vec!["지"], true),
+        ("거니다", vec!["거", "이다"], vec!["습니다"], false),
+        ("먹긴데", vec!["먹다", "이다"], vec!["기", "은데"], true),
+        (
+            "거지않다",
+            vec!["것", "이다", "않다"],
+            vec!["지", "다"],
+            true,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let filtered = result.filtered(|l| annotation.has_match(l, false));
+        let compatible = result.filtered(|l| annotation.has_match(l, true));
+        for (actual, pos_only) in [(&filtered, false), (&compatible, true)] {
+            assert_eq!(
+                actual.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                // Identity has an unknown role: headword filtering keeps it,
+                // while POS-only filtering does not certify that role.
+                present && (!pos_only || !forms.is_empty()),
+                "{word}"
+            );
+        }
+        for (dict_only, expected) in [(false, &result), (true, &filtered)] {
+            let mut command = Command::new(env!("CARGO_BIN_EXE_klem"));
+            command.args(["word", word, "--dictionary"]).arg(dir.db());
+            if dict_only {
+                command.arg("--dict-only");
+            }
+            let output = command.output().unwrap();
+            assert!(output.status.success());
+            let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+            assert_eq!(
+                actual["analyses"],
+                serde_json::to_value(&expected.analyses).unwrap()
+            );
+        }
+    }
+}
+
+#[test]
 fn prefinal_licenses_keep_exact_dictionary_paths_and_cli_parity() {
     let dir = Scratch::new();
     let mut fixture: Value =

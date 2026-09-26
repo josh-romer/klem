@@ -1,0 +1,70 @@
+# sent_id = dev-s181
+# text = 맥도날드까지 늦어도 몇 시면 도착할까
+# translit = .maeg.do.nal.deu.gga.ji .neuj.eo.do .myeoch .si.myeon .do.chag.hal.gga
+1	맥도날드까지	맥도날드+까지	ADV	NNP+JX	_	2	advmod	_	Translit=.maeg.do.nal.deu.gga.ji|LTranslit=.maeg.do.nal.deu+.gga.ji
+2	늦어도	늦+어도	VERB	VA+EC	_	5	advcl	_	Translit=.neuj.eo.do|LTranslit=.neuj+.eo.do
+3	몇	몇	DET	MM	_	4	det	_	Translit=.myeoch|LTranslit=.myeoch
+4	시면	시+이+면	ADV	NNB+VCP+EC	_	5	advmod	_	Translit=.si.myeon|LTranslit=.si+.i+.myeon
+5	도착할까	도착+하+ㄹ까	VERB	NNG+XSV+EC	_	0	root	_	Translit=.do.chag.hal.gga|LTranslit=.do.chag+.ha+ㄹ.gga
+
+# sent_id = dev-s211
+# text = 집 앞이라 먹은 건데 기름값 나가더라도 나가서 먹어야겠네요.
+# translit = .jib .ap.i.ra .meog.eun .geon.de .gi.reum.gabs .na.ga.deo.ra.do .na.ga.seo .meog.eo.ya.gess.ne.yo.
+1	집	집	NOUN	NNG	_	3	nmod	_	Translit=.jib|LTranslit=.jib
+2	앞이라	앞+이+라	ADP	NNG+VCP+EC	_	1	case	_	Translit=.ap.i.ra|LTranslit=.ap+.i+.ra
+3	먹은	먹+은	VERB	VV+ETM	_	4	dep	_	Translit=.meog.eun|LTranslit=.meog+.eun
+4	건데	것+이+ㄴ데	VERB	NNB+VCP+EC	_	8	advcl	_	Translit=.geon.de|LTranslit=.geos+.i+ㄴ.de
+5	기름값	기름+값	NOUN	NNG+NNG	_	6	nsubj	_	Translit=.gi.reum.gabs|LTranslit=.gi.reum+.gabs
+6	나가더라도	나가+더라도	VERB	VV+EC	_	7	advcl	_	Translit=.na.ga.deo.ra.do|LTranslit=.na.ga+.deo.ra.do
+7	나가서	나가+아서	VERB	VV+EC	_	8	advcl	_	Translit=.na.ga.seo|LTranslit=.na.ga+.a.seo
+8	먹어야겠네요	먹+어야+겠+네요	VERB	VV+EC+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.meog.eo.ya.gess.ne.yo|LTranslit=.meog+.eo.ya+.gess+.ne.yo
+9	.	.	PUNCT	SF	_	8	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s681
+# text = 맛있는 거 먹을려면 이 정도 기다림은 감수할 수 있는 거죠!
+# translit = .mas.iss.neun .geo .meog.eul.ryeo.myeon .i .jeong.do .gi.da.rim.eun .gam.su.hal .su .iss.neun .geo.jyo!
+1	맛있는	맛있+는	ADJ	VA+ETM	_	2	amod	_	Translit=.mas.iss.neun|LTranslit=.mas.iss+.neun
+2	거	거	NOUN	NNB	_	3	obj	_	Translit=.geo|LTranslit=.geo
+3	먹을려면	먹+을려면	VERB	VV+EC	_	7	advcl	_	Translit=.meog.eul.ryeo.myeon|LTranslit=.meog+.eul.ryeo.myeon
+4	이	이	PRON	MM	_	6	nmod	_	Translit=.i|LTranslit=.i
+5	정도	정도	ADP	NNG	_	4	case	_	Translit=.jeong.do|LTranslit=.jeong.do
+6	기다림은	기다리+ㅁ+은	NOUN	VV+ETN+JX	_	7	obj	_	Translit=.gi.da.rim.eun|LTranslit=.gi.da.ri+ㅁ+.eun
+7	감수할	감수+하+ㄹ	VERB	NNG+XSV+ETM	_	8	dep	_	Translit=.gam.su.hal|LTranslit=.gam.su+.ha+ㄹ
+8	수	수	NOUN	NNB	_	9	nsubj	_	Translit=.su|LTranslit=.su
+9	있는	있+는	VERB	VV+ETM	_	10	dep	_	Translit=.iss.neun|LTranslit=.iss+.neun
+10	거죠	것+이+죠	VERB	NNB+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.geo.jyo|LTranslit=.geos+.i+.jyo
+11	!	!	PUNCT	SF	_	10	punct	_	Translit=!|LTranslit=!
+
+# sent_id = dev-s744
+# text = 점심 때 갈 거면 1층에서 보쌈정식 먹는 게 좋겠음.
+# translit = .jeom.sim .ddae .gal .geo.myeon 1.cheung.e.seo .bo.ssam.jeong.sig .meog.neun .ge .joh.gess.eum.
+1	점심	점심	NOUN	NNG	_	3	nmod	_	Translit=.jeom.sim|LTranslit=.jeom.sim
+2	때	때	ADP	NNG	_	1	case	_	Translit=.ddae|LTranslit=.ddae
+3	갈	가+ㄹ	VERB	VV+ETM	_	4	dep	_	Translit=.gal|LTranslit=.ga+ㄹ
+4	거면	거+이+면	VERB	NNB+VCP+EC	_	9	advcl	_	Translit=.geo.myeon|LTranslit=.geo+.i+.myeon
+5	1층에서	1+층+에서	ADV	SN+NNG+JKB	_	7	advmod	_	Translit=1.cheung.e.seo|LTranslit=1+.cheung+.e.seo
+6	보쌈정식	보쌈+정식	NOUN	NNG+NNG	_	7	obj	_	Translit=.bo.ssam.jeong.sig|LTranslit=.bo.ssam+.jeong.sig
+7	먹는	먹+는	VERB	VV+ETM	_	8	dep	_	Translit=.meog.neun|LTranslit=.meog+.neun
+8	게	것+이	NOUN	NNB+JKS	_	9	nsubj	_	Translit=.ge|LTranslit=.geos+.i
+9	좋겠음	좋+겠+음	NOUN	VA+EP+ETN	_	0	root	_	SpaceAfter=No|Translit=.joh.gess.eum|LTranslit=.joh+.gess+.eum
+10	.	.	PUNCT	SF	_	9	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s895
+# text = 만약 그런 대회에서 아리랑이 1등을 했다 해도 아리랑 세계화 사업에 이용할 수 없었을 겁니다.
+# translit = .man.yag .geu.reon .dae.hoe.e.seo .a.ri.rang.i 1.deung.eul .haess.da .hae.do .a.ri.rang .se.gye.hwa .sa.eob.e .i.yong.hal .su .eobs.eoss.eul .geob.ni.da.
+1	만약	만약	ADV	MAG	_	7	advmod	_	Translit=.man.yag|LTranslit=.man.yag
+2	그런	그런	ADJ	MM	_	3	amod	_	Translit=.geu.reon|LTranslit=.geu.reon
+3	대회에서	대회+에서	ADV	NNG+JKB	_	6	advmod	_	Translit=.dae.hoe.e.seo|LTranslit=.dae.hoe+.e.seo
+4	아리랑이	아리랑+이	NOUN	NNG+JKS	_	6	nsubj	_	Translit=.a.ri.rang.i|LTranslit=.a.ri.rang+.i
+5	1등을	1+등+을	NOUN	SN+NNB+JKO	_	6	obj	_	Translit=1.deung.eul|LTranslit=1+.deung+.eul
+6	했다	하+았+다	VERB	VV+EP+EC	_	7	ccomp	_	Translit=.haess.da|LTranslit=.ha+.ass+.da
+7	해도	하+아도	VERB	VV+EC	_	14	advcl	_	Translit=.hae.do|LTranslit=.ha+.a.do
+8	아리랑	아리랑	NOUN	NNG	_	11	obl	_	Translit=.a.ri.rang|LTranslit=.a.ri.rang
+9	세계화	세계+화	NOUN	NNG+XSN	_	8	flat	_	Translit=.se.gye.hwa|LTranslit=.se.gye+.hwa
+10	사업에	사업+에	ADV	NNG+JKB	_	8	flat	_	Translit=.sa.eob.e|LTranslit=.sa.eob+.e
+11	이용할	이용+하+ㄹ	VERB	NNG+XSV+ETM	_	12	dep	_	Translit=.i.yong.hal|LTranslit=.i.yong+.ha+ㄹ
+12	수	수	NOUN	NNB	_	13	nsubj	_	Translit=.su|LTranslit=.su
+13	없었을	없+었+을	VERB	VA+EP+ETM	_	14	dep	_	Translit=.eobs.eoss.eul|LTranslit=.eobs+.eoss+.eul
+14	겁니다	것+이+ㅂ니다	VERB	NNB+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.geob.ni.da|LTranslit=.geos+.i+ㅂ.ni.da
+15	.	.	PUNCT	SF	_	14	punct	_	Translit=.|LTranslit=.
+

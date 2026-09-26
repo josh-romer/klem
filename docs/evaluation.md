@@ -624,3 +624,36 @@ The production frontend build, complete browser/HTTP regression suite,
 check of the packaged app with the full local dictionary verifies seven selected
 readings and their source links, four forbidden paths, and desktop/mobile layout.
 The flake's other declared platforms were not executed on this host.
+
+## Omitted copulas and colloquial nominals (COV-020c)
+
+[The evaluation](omitted-copula-evaluation.json) compares commit `a2cd23f` with
+reviewed omitted-이 paths before 지/지요/죠, 면, ㄴ데, and ㅂ니다/ㅂ니까, plus
+finite 거/것 alternatives before copulas. It records every added candidate for
+41 audited surfaces. Four additional KAIST and five GSD development groups
+match; no grouped recoveries or component sets are lost. Remaining development
+misses are **148 KAIST and 173 GSD**. Nine complete source sentences protect the
+individual gains, preserving original short versus expanded noun annotations.
+
+Fourteen new ledger cases bring the total to **314 cases, 176 required and
+144 forbidden judgments**. The 221-form teaching catalog is unchanged in size;
+four short-allomorph sources bring its support to 262 primary entries, plus
+alternate propositive source 68883 (263 fixture entries). Every prior source
+entry is unchanged. The lexical fixture adds fifteen attributed primary entries
+for filtered alternatives and homonym preservation. Headword-only and POS-only
+filtering remain distinct: an unclassified identity is not a certified POS match.
+
+All prior analyses remain in the thirty stress snapshots. Three fingerprints
+each gain one omitted-copula path: nominal 먹어보 before 지 않다, 하 before
+지 않았음 + 을, and 공부해야하 before ㅂ니다. These noun spellings are lexical
+hypotheses, not a dictionary-membership claim. Every added analysis is recorded,
+and earlier hashes and revision notes are retained. All 66,570 frozen corpus
+cases, the 1,024-syllable memory test, offline Rust tests, and Clippy pass.
+Independent linguistic review and the broader coverage checklist remain open.
+
+The production frontend build and complete browser/HTTP suite pass, including
+short/full nominal selectors and CLI parity. `nix flake check` and
+`nix build .#web` pass on x86_64-linux. The packaged app's full-dictionary Chromium
+smoke verifies seven readings, all four added short-allomorph source links,
+three forbidden paths, lexical 거지 preservation, and desktop/mobile layout.
+Other declared Nix platforms were not executed on this host.

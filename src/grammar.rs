@@ -217,6 +217,9 @@ pub(crate) enum Boundary {
     Aeo,
     Copular,
     ZeroCopula,
+    // Omitted 이 before a reviewed ending; 0 = separate suffix, otherwise
+    // the ending's initial consonant is attached to the nominal syllable.
+    OmittedCopula(u32),
     HaDeletion,
     HaAspiration,
 }
@@ -286,6 +289,25 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
             }
         }
         Boundary::Aeo => return aeo(base),
+        Boundary::OmittedCopula(t) => {
+            let nominal = if t == 0 {
+                Some(base.to_owned())
+            } else {
+                last(base).and_then(|(_, v, actual)| {
+                    (actual == t).then(|| replace_last(base, v, 0).unwrap())
+                })
+            };
+            if let Some(nominal) = nominal {
+                if coda(&nominal) == Some(0) {
+                    push(&mut out, format!("{nominal}이"), "copula.omitted_ending");
+                } else if let Some(rule) = crate::pronunciation::assumption(&nominal, 2) {
+                    out.push(Recovery {
+                        stem: format!("{nominal}이"),
+                        rules: vec!["copula.omitted_ending".into(), rule.into()],
+                    });
+                }
+            }
+        }
         Boundary::Copular => {
             if base.ends_with('이') || base == "아니" {
                 push(&mut out, base.into(), "boundary.copular");
@@ -494,6 +516,24 @@ pub(crate) fn endings() -> &'static [Ending] {
                 form: suffix,
                 boundary: Literal,
                 connector: matches!(suffix, "고" | "지" | "게"),
+            });
+        }
+        // Reviewed omitted-copula families. Do not apply predicate irregular
+        // recovery to the nominal or restore 이 before arbitrary endings.
+        for (suffix, form, attached) in [
+            ("지", "지", 0),
+            ("지요", "지요", 0),
+            ("죠", "죠", 0),
+            ("면", "으면", 0),
+            ("데", "은데", 4),
+            ("니다", "습니다", 17),
+            ("니까", "습니까", 17),
+        ] {
+            out.push(Ending {
+                suffix,
+                form,
+                boundary: OmittedCopula(attached),
+                connector: suffix == "지",
             });
         }
         // Productive 아/어 family; the last stem vowel may absorb the ending.
@@ -928,6 +968,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "particle" => "Remove a particle with licensed order and boundary allomorph.",
         "copula" => "Separate a nominal and the affirmative copula 이다.",
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",
+        "copula.omitted_ending" => {
+            "Restore omitted copular 이 after a vowel-final nominal before a reviewed ending; the nominal is not a conjugated verb stem."
+        }
+        "nominal.colloquial_geot" => {
+            "Expand the colloquial 거/이거/그거/저거 nominal to 것/이것/그것/저것 before a copula; preserve the short lexical alternative."
+        }
         "auxiliary" => "Separate a licensed connective plus attached auxiliary.",
         "irregular.mal" => "Restore prohibitive 말다 in the short imperatives 마, 마라 and 마요.",
         "nominalization" => "Analyze a nominalized predicate before a particle or copula.",

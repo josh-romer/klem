@@ -3,6 +3,41 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn omitted_copulas_recover_annotated_short_and_full_nominal_groups() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-omitted-copulas.conllu").as_slice(),
+            vec![
+                ("id:M2TA_069-s16/4", "겁니다", "거"),
+                ("id:M2TA_089-s3/2", "과거지요", "과거"),
+                ("id:MH2_0159-s204/15", "겁니다", "것"),
+                ("id:MH2_0169-s304/6", "때면", "때"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-omitted-copulas.conllu").as_slice(),
+            vec![
+                ("id:dev-s181/4", "시면", "시"),
+                ("id:dev-s211/4", "건데", "것"),
+                ("id:dev-s681/10", "거죠", "것"),
+                ("id:dev-s744/4", "거면", "거"),
+                ("id:dev-s895/14", "겁니다", "것"),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "omitted-copulas").unwrap();
+        for (id, surface, nominal) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [nominal, "이다"]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn quoted_experience_keeps_gold_when_invalid_command_paths_are_removed() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-prefinal-licenses.conllu").as_slice(),

@@ -1129,3 +1129,38 @@ and [copula inflection](https://www.korean.go.kr/front/onlineQna/onlineQnaView.d
 The [evaluation](prefinal-license-evaluation.json) lists the full source inventory
 and every changed candidate for 63 audited surfaces. Composition judgments remain
 agent-authored pending independent Korean-language review.
+
+### Omitted copulas and colloquial nominal alternatives (COV-020c)
+
+The reviewed omitted-이 boundaries now support 지/지요/죠, 면, attached ㄴ데,
+and attached ㅂ니다/ㅂ니까 after a vowel-final nominal. 겁니다 has 거 + 이다 +
+습니다; 건데 has 거 + 이다 + 은데; 학교죠 has 학교 + 이다 + 죠. Canonical
+ending forms remain unchanged. Recovery requires the surface ending consonant
+where applicable, and does not conjugate the nominal through verb irregulars.
+The reconstructed 이 is a copula, not part of a fabricated lexical predicate.
+For pure non-Hangul bases such as ABC죠, the separate-suffix path explicitly
+requires a vowel-final pronunciation. No transliteration is chosen.
+
+Before a copula, exactly 거/이거/그거/저거 also gain the alternatives
+것/이것/그것/저것. These additions compose with existing explicit and polite
+copulas: 거예요 keeps both 거 and 것. They do not rewrite arbitrary 거-final
+words or recursively expand derivations. Whole-word homonyms such as 거지
+remain. Existing nominalizations, auxiliaries, and outer particles compose:
+먹긴데, 거지않다, 겁니다만, and 거면요 have ordered component paths.
+
+Sources: NIKL explicitly explains [겁니다 and 거입니다](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5935&mn_id=62&pageIndex=210)
+and [건데 and 것인데](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=306752).
+The [writing-teacher guide](https://www.korean.go.kr/common/download.do?c_file_name=cc9a75c9-14ac-4d4f-ab04-1f5e4fa08558_1.pdf&file_path=reportData&o_file_name=%EC%B4%88%EA%B8%89%20%ED%95%9C%EA%B5%AD%EC%96%B4%28%EC%93%B0%EA%B8%B0%29%20%EA%B5%90%EC%9B%90%EC%9A%A9%20%EC%A7%80%EC%B9%A8%EC%84%9C%20%EA%B0%9C%EB%B0%9C%20%EB%B3%B4%EA%B3%A0%EC%84%9C_2.pdf)
+also illustrates 의삽니다 and distinguishes conversational omission from usual
+formal writing. KRDict documents the copular attachment of
+[-죠](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85771),
+[-면](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80259),
+[-ㄴ데](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85132),
+[-ㅂ니다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79397),
+and [-ㅂ니까](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79401).
+
+The [evaluation](omitted-copula-evaluation.json) records nine additional annotated
+groups and every changed candidate for 41 audited surfaces. Other omitted-copula
+endings and prefinals, particle-marked nominal bases, broader colloquial noun
+paradigms, and contextual sense selection remain open. Composition judgments
+beyond explicit source examples await independent Korean-language review.

@@ -141,6 +141,8 @@ struct Predicate {
     // Track the initial copula's 이 + 어 -> 여 separately from contractions
     // inside later auxiliaries; merged rule provenance cannot distinguish them.
     copula_contracted: bool,
+    // Restored 이 belongs to a copula, never to a fabricated lexical verb.
+    copula_only: bool,
 }
 type PrefinalMemo = HashMap<(String, u8, u8), Vec<Predicate>>;
 
@@ -158,6 +160,7 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
         dap_suffix: false,
         ha_contracted: false,
         copula_contracted: false,
+        copula_only: false,
     }];
     let mut choices: Vec<(Recovery, u8, u8, &str, &str)> = vec![];
     if stage >= 4 {
@@ -227,6 +230,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
     for ending in grammar::matching_endings(word) {
         for r in grammar::recover(word, ending.suffix, ending.boundary) {
             for mut p in prefinals(&r.stem, 4, 0, &mut memo) {
+                p.copula_only = matches!(ending.boundary, Boundary::OmittedCopula(_));
                 p.copula_contracted |=
                     r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");
                 // Present conditional -ㄴ다면/-는다면 permits honorific 시,
@@ -413,7 +417,11 @@ fn predicate_analysis(p: &Predicate) -> Analysis {
 }
 
 fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
-    let mut out = vec![predicate_analysis(p)];
+    let mut out = if p.copula_only {
+        vec![]
+    } else {
+        vec![predicate_analysis(p)]
+    };
     if p.dap_suffix
         && let Some(base) = p.stem.strip_suffix('답').filter(|s| !s.is_empty())
     {
@@ -693,6 +701,18 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
 
 fn copula_bases(word: &str) -> Vec<Analysis> {
     let mut out = nominal_bases(word);
+    let expanded = match word {
+        "거" => Some("것"),
+        "이거" => Some("이것"),
+        "그거" => Some("그것"),
+        "저거" => Some("저것"),
+        _ => None,
+    };
+    if let Some(expanded) = expanded {
+        let mut a = nominal_bases(expanded).remove(0);
+        a.rules.push("nominal.colloquial_geot".into());
+        out.push(a);
+    }
     // Direct nominalizations need no intervening particle. Quoted questions
     // and connective clauses have separate attachment licenses.
     with_auxiliaries(word, PredicateEnd::CopulaBase, |p| {

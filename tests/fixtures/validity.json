@@ -2,6 +2,12 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "copula-omission-formal": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5935&mn_id=62&pageIndex=210",
+    "copula-omission-background": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=306752",
+    "copula-omission-confirmation": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85771",
+    "copula-omission-condition": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80259",
+    "colloquial-geot": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62331",
+
     "prefinal-fact-ra": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79275",
     "prefinal-fact-rago": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73964",
     "prefinal-fact-raseo": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80211",
@@ -132,6 +138,21 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id":"omitted-copula-formal-short","surface":"겁니다","judgments":[{"id":"path","lemmas":["거","이다"],"morphemes":["습니다"],"verdict":"required","source":"copula-omission-formal","reason":"NIKL explicitly describes 겁니다 as 거 plus 이다 with omitted 이."}]},
+    {"id":"omitted-copula-formal-full","surface":"겁니다","judgments":[{"id":"path","lemmas":["것","이다"],"morphemes":["습니다"],"verdict":"required","source":"copula-omission-formal","reason":"Retain the expanded 것 counterpart alongside the source-described colloquial 거 reading."}]},
+    {"id":"omitted-copula-background","surface":"건데","judgments":[{"id":"path","lemmas":["것","이다"],"morphemes":["은데"],"verdict":"required","source":"copula-omission-background","reason":"NIKL identifies 거 plus ㄴ데 and relates it to 것인데; expose the copula and canonical ending."}]},
+    {"id":"omitted-copula-confirmation","surface":"거죠","judgments":[{"id":"path","lemmas":["거","이다"],"morphemes":["죠"],"verdict":"required","source":"copula-omission-confirmation","reason":"Composition judgment: 죠 permits 이다 and the vowel-final nominal permits omitted 이."}]},
+    {"id":"omitted-copula-condition","surface":"거면","judgments":[{"id":"path","lemmas":["거","이다"],"morphemes":["으면"],"verdict":"required","source":"copula-omission-condition","reason":"Composition judgment: 면 permits 이다 and the vowel-final nominal permits omitted 이."}]},
+    {"id":"omitted-copula-demonstrative","surface":"이겁니다","judgments":[{"id":"path","lemmas":["이것","이다"],"morphemes":["습니다"],"verdict":"required","source":"demonstrative","reason":"Compose the existing 이거/이것 lexical alternatives with omitted 이 before the attached formal ending."}]},
+    {"id":"omitted-copula-expanded-polite","surface":"거예요","judgments":[{"id":"path","lemmas":["것","이다"],"morphemes":["에요"],"verdict":"required","source":"copula-omission-formal","reason":"Expand colloquial 거 while retaining the existing contracted polite copula."}]},
+    {"id":"omitted-copula-nominalized","surface":"먹긴데","judgments":[{"id":"path","lemmas":["먹다","이다"],"morphemes":["기","은데"],"verdict":"required","source":"copula-omission-background","reason":"Composition judgment: a 기 nominalization supplies the vowel-final base for omitted 이 and attached ㄴ데."}]},
+    {"id":"omitted-copula-lexical","surface":"거지","judgments":[{"id":"path","lemmas":["거지"],"morphemes":[],"verdict":"required","source":"copula-omission-confirmation","reason":"Preserve whole-word identity; an omitted-copula hypothesis must not replace a lexical homonym."}]},
+    {"id":"omitted-copula-bad-coda","surface":"학생죠","judgments":[{"id":"path","lemmas":["학생","이다"],"morphemes":["죠"],"verdict":"forbidden","source":"copula-omission-formal","reason":"This omitted-이 path requires a vowel-final nominal, not 학생."}]},
+    {"id":"omitted-copula-missing-attached","surface":"거니다","judgments":[{"id":"path","lemmas":["거","이다"],"morphemes":["습니다"],"verdict":"forbidden","source":"copula-omission-formal","reason":"Omitted 이 does not delete the attached ㅂ of the formal ending."}]},
+    {"id":"omitted-copula-wrong-inflection","surface":"도운데","judgments":[{"id":"path","lemmas":["돕","이다"],"morphemes":["은데"],"verdict":"forbidden","source":"copula-omission-background","reason":"Predicate irregular recovery cannot change a nominal 돕 into 도우 before the omitted copula."}]},
+    {"id":"omitted-copula-false-verb","surface":"학교죠","judgments":[{"id":"path","lemmas":["학교이다"],"morphemes":["죠"],"verdict":"forbidden","source":"copula-omission-confirmation","reason":"Restored 이 belongs to the copula and must not manufacture a lexical 학교이다 predicate."}]},
+    {"id":"omitted-copula-arbitrary-geo","surface":"자전거죠","judgments":[{"id":"path","lemmas":["자전것","이다"],"morphemes":["죠"],"verdict":"forbidden","source":"colloquial-geot","reason":"The finite colloquial expansion does not replace every nominal-final 거 with 것."}]},
+
     {"id":"prefinal-license-factual","surface":"먹었더라","judgments":[{"id":"path","lemmas":["먹다"],"morphemes":["었","더","라"],"verdict":"required","reason":"NIKL explicitly supports 더 + 라 alongside the bundled 더라 analysis.","source":"prefinal-deora"}]},
     {"id":"prefinal-license-bundle","surface":"먹었더라","judgments":[{"id":"path","lemmas":["먹다"],"morphemes":["었","더라"],"verdict":"required","reason":"Preserve the accepted bundled representation.","source":"prefinal-deora"}]},
     {"id":"prefinal-license-necessity","surface":"해야겠더라","judgments":[{"id":"path","lemmas":["하다"],"morphemes":["어야겠","더","라"],"verdict":"required","reason":"The factual ending follows retrospective 더, also after the documented necessity expression.","source":"prefinal-fact-ra"}]},

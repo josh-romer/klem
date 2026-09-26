@@ -115,6 +115,9 @@ try {
   const grammarLabelSources = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-grammar-labels.json"), "utf8"),
   );
+  const colloquialCopulas = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-colloquial-copulas.json"), "utf8"),
+  );
   const emphaticParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-emphatic-particles.json"), "utf8"),
   );
@@ -194,6 +197,7 @@ try {
       ...negativeAuxiliaries.LexicalResource.Lexicon.LexicalEntry,
       ...grammarLabelSources.LexicalResource.Lexicon.LexicalEntry,
       ...emphaticParticles.LexicalResource.Lexicon.LexicalEntry,
+      ...colloquialCopulas.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -811,6 +815,12 @@ try {
     ["먹어보란", ["먹", "어", "보", "으란"], "으란", "Quoted command (noun-modifying)", 89676, "-으란"],
     ["먹었더란", ["먹", "었", "더", "란"], "란", "Quoted fact (noun-modifying)", 86297, "-란"],
     ["작으리란", ["작", "으리", "란"], "으리", "Conjecture / intention", 86606, "-으리-"],
+    ["겁니다", ["거", "이", "습니다"], "습니다", "Formal polite statement", 79398, "-습니다"],
+    ["겁니다", ["것", "이", "습니다"], "습니다", "Formal polite statement", 79398, "-습니다"],
+    ["건데", ["것", "이", "은데"], "은데", "Background / contrast / response", 85633, "-은데"],
+    ["거죠", ["것", "이", "죠"], "죠", "Confirmation / question / suggestion", 85771, "-죠"],
+    ["그건데", ["그것", "이", "은데"], "은데", "Background / contrast / response", 85633, "-은데"],
+    ["의삽니다", ["의사", "이", "습니다"], "습니다", "Formal polite statement", 79398, "-습니다"],
     ["먹더라는", ["먹", "더라는"], "더라는", "Quoted experience (noun-modifying)", 86347, "-더라는"],
     ["먹어봤더라는", ["먹", "어", "보", "었", "더라는"], "더라는", "Quoted experience (noun-modifying)", 86347, "-더라는"],
     ["학생답더라는", ["학생", "답", "더라는"], "더라는", "Quoted experience (noun-modifying)", 86347, "-더라는"],

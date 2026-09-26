@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–l/018a–d/019a–c/020a–b/021a/022a batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–l/018a–d/019a–c/020a–c/021a/022a batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -490,8 +490,10 @@ review remains open under the completion review below.
   and corpus recoveries remain. See [scope](rules.md#auxiliary-adjective-inflections-and-legacy-links-cov-019c).
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
-  quoted copula fragments.**
-  Remaining: additional suffix order and adjective ending licenses. Quoted or
+  quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
+  finite 거/것 nominal alternatives.**
+  Remaining: additional suffix order and adjective ending licenses, other
+  omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
   nominalization does not authorize arbitrary ending + copula attachment.
 - [x] **COV-020a — Direct nominalization + copula.** 기/음 nominalizations
@@ -520,6 +522,21 @@ review remains open under the completion review below.
   parse preceding quoted material or license arbitrary ending + copula
   attachment inside a token. Other fragment endings and particle combinations
   remain COV-020 review. See [scope and source](rules.md#quoted-copula-fragments-cov-020b).
+- [x] **COV-020c — Omitted copulas and colloquial nominal alternatives.**
+  지/지요/죠, 면, attached ㄴ데, and attached ㅂ니다/ㅂ니까 now recover 이다
+  after vowel-final nominals, including 겁니다, 건데, 거죠, and 의삽니다.
+  Recovery preserves the ending consonants and does not apply verb irregulars
+  to nouns. Exactly 거/이거/그거/저거 also expose 것/이것/그것/저것 before
+  copulas, retaining short and whole-word alternatives. Existing nominalizations,
+  auxiliaries, and outer particles compose; unknown-script pronunciation
+  conditions remain explicit. Evidence: [boundary/composition tests](../tests/omitted_copulas.rs),
+  fourteen `omitted-copula-*` ledger cases, nine complete annotated sentences,
+  dictionary/CLI parity, and browser alternative/source-link checks.
+  [Evaluation](omitted-copula-evaluation.json) records nine new development
+  recoveries with no losses, and one reviewed additive noun/copula hypothesis
+  in each of three stress fingerprints. Every prior candidate and hash is
+  preserved. Other omission families and broader colloquial paradigms remain
+  open. See [scope and sources](rules.md#omitted-copulas-and-colloquial-nominal-alternatives-cov-020c).
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without

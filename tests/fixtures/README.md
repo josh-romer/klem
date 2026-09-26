@@ -308,9 +308,9 @@ Each sentence is a byte-identical excerpt. Four selected tokens protect 먹을�
 not new gains or annotations of every alternative analysis. Rejected class
 combinations are tracked separately by source-backed synthetic judgments.
 
-`krdict-grammar-labels.json` contains 259 primary entries from the September
+`krdict-grammar-labels.json` contains 263 primary entries from the September
 2026 KRDict export, National Institute of Korean Language, CC BY-SA 2.0 KR.
-258 support the teaching-label catalog; 68883 supplies the alternate propositive
+262 support the teaching-label catalog; 68883 supplies the alternate propositive
 boundary. Changes: retain English equivalents and the first example per sense,
 omit WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries,
 and reformat JSON. Source/license links above apply. The catalog records every
@@ -403,3 +403,21 @@ as its other entries. All 258 earlier entries remain unchanged. Dictionary tests
 reuse the attributed lexical fixtures described above. Individual paths, hashes,
 and the single reviewed optimization-snapshot change are recorded in
 `docs/prefinal-license-evaluation.json`.
+
+`kaist-omitted-copulas.conllu` and `gsd-omitted-copulas.conllu` contain four and
+five complete byte-identical development sentences from the pinned corpora,
+under their attribution and licenses above. All nine newly recovered groups are
+identified by stable IDs in `docs/omitted-copula-evaluation.json`. Original short
+거 versus full 것 annotations are preserved rather than normalized in the
+adapter.
+
+`krdict-colloquial-copulas.json` contains fifteen primary KRDict entries from the
+same September 2026 snapshot: 62331, 62835, 71128, 44878, 62251, 31953, 29739,
+31952, 86232, 73276, 20256, 20530, 58272, 62171, and 71581. Source/license links
+above apply (National Institute of Korean Language, CC BY-SA 2.0 KR). Changes:
+keep English equivalents and the first example per sense; remove WordForm,
+RelatedForm, global metadata, and idiom/proverb subentries; reformat JSON. This
+fixture supplies noun/pronoun alternatives, the copula, and the tested auxiliary
+and whole-word homonyms. The grammar-label fixture additionally includes the
+short ending allomorph sources 79397, 79401, 80259, and 85132; all 259 previous
+entries remain unchanged.

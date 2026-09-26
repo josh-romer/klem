@@ -843,3 +843,40 @@ expressive choices, six rejected paths, display of sense 9 and its exact source
 link, and desktop/mobile checks without JavaScript errors or overflow.
 Independent Korean-language review and other auxiliary attachment restrictions
 remain open.
+
+## Quoted alternatives (COV-017o)
+
+[The comparison](quoted-alternatives-evaluation.json) records three new KAIST
+development recoveries and one GSD recovery, leaving **135 KAIST and 166 GSD
+misses**. Three complete byte-identical source sentences protect the four lemma
+groups. No previous gold groups or recovered component sets are lost. Across
+74 audited surfaces, 265 analyses are added and none removed; unknown lexical
+hypotheses remain unjudged. All thirty stress fingerprints are unchanged, and
+historical corpus baselines and optimization snapshots are preserved.
+
+Ten source-listed expressions add eight canonical grammar forms, bringing the
+teaching catalog to **236 forms** with 284 source entries. The grammar fixture
+contains 285 entries and retains all prior entries unchanged. Twenty-two new
+ledger cases bring the total to **402 cases, 224 required and 184 forbidden
+judgments**. Tests distinguish present allomorphs, command vowel boundaries,
+copular/factual alternatives, prefinal licenses and known auxiliary/adjective
+classes, including honorific composition. Bundled expressions do not insert
+an implicit 하다 lemma or choose a contextual quotation sense.
+
+These ten expression entries fall outside the four POS classes of the persistent
+715-entry inventory. Their individual source dispositions are recorded in this
+comparison; the inventory still has ten scoped reviews and 705 entries without
+a manual disposition. Independent Korean-language review remains pending.
+
+The full dictionary lacks 해방시키다: its unfiltered recovery from
+해방시킨다거나 succeeds, while dictionary-only mode correctly returns no
+readings. The connective-clause/copula case 위해서라거나 remains a measured
+miss under COV-020. Neither gap is hidden by changing the dictionary or corpus.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, the
+1,024-syllable memory test, frontend production build and complete browser/HTTP
+suite pass. `nix flake check` and `nix build .#web` pass on x86_64-linux; other
+declared platforms were not executed. The packaged app with the full dictionary
+passes eight quoted-alternative choices and source links, five forbidden paths,
+the dictionary-miss empty state, and desktop/mobile checks without JavaScript
+errors or overflow.

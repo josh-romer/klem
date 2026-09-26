@@ -420,7 +420,10 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                     );
                 }
                 if (t != 17 || suffix == "시다")
-                    && !matches!(suffix, "다" | "다고" | "다는" | "다면" | "답니다")
+                    && !matches!(
+                        suffix,
+                        "다" | "다고" | "다는" | "다면" | "답니다" | "다거나" | "다든가"
+                    )
                 {
                     recover_eu_open(&stem, &mut out, true);
                 }
@@ -460,6 +463,8 @@ pub(crate) fn endings() -> &'static [Ending] {
         for suffix in [
             "다",
             "답니다",
+            "다거나",
+            "다든가",
             "다가",
             "고자",
             "건대",
@@ -522,6 +527,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "자",
             "자고",
             "자는",
+            "자거나",
             "자면",
             "자마자",
             "거든",
@@ -606,6 +612,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으란", "란", "으란"),
             ("으라면", "라면", "으라면"),
             ("으랍니다", "랍니다", "으랍니다"),
+            ("으라거나", "라거나", "으라거나"),
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
             ("으냐", "냐", "으냐"),
@@ -672,6 +679,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다는", "다는", "는다는", 4),
             ("는다면", "다면", "는다면", 4),
             ("는답니다", "답니다", "는답니다", 4),
+            ("는다거나", "다거나", "는다거나", 4),
+            ("는다든가", "다든가", "는다든가", 4),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -730,7 +739,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             }
         }
         // 이 is part of the copular stem, never an arbitrary removable ending.
-        for suffix in ["라", "라서", "라고", "라는", "라면", "랍니다"] {
+        for suffix in ["라", "라서", "라고", "라는", "라면", "랍니다", "라든가"] {
             for boundary in [Copular, ZeroCopula] {
                 out.push(Ending {
                     suffix,
@@ -746,6 +755,15 @@ pub(crate) fn endings() -> &'static [Ending] {
                 suffix,
                 form: suffix,
                 boundary: Literal,
+                connector: false,
+            });
+        }
+        // Copular -라거나 shares its spelling with quoted-command -(으)라거나.
+        for boundary in [Copular, ZeroCopula] {
+            out.push(Ending {
+                suffix: "라거나",
+                form: "라거나",
+                boundary,
                 connector: false,
             });
         }
@@ -1044,6 +1062,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.causal" => {
             "Recognize causal -기에/-길래 as an ending, distinct from nominalizing -기 plus particle 에; contextual reason and register are not selected."
+        }
+        "ending.quoted_alternative" => {
+            "Recognize a source-listed quoted alternative or enumeration as one grammatical component, without inserting an implicit 하다 lemma or choosing a contextual sense."
         }
         "pronoun" => "Restore a contracted pronoun with its particle.",
         "nominal.contraction" => "Restore contracted 거/것 plus a particle.",

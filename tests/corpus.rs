@@ -3,6 +3,34 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn quoted_alternatives_recover_saved_development_groups() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-quoted-alternatives.conllu").as_slice(),
+            vec![
+                ("id:MH2_0159-s14/5", "경시한다든가", "경시하다"),
+                ("id:MH2_0159-s161/8", "해방시킨다거나", "해방시키다"),
+                ("id:MH2_0159-s161/13", "된다거나", "되다"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-quoted-alternatives.conllu").as_slice(),
+            vec![("id:dev-s330/4", "세련되었다든가", "세련되다")],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "quoted-alternatives").unwrap();
+        for (id, surface, lemma) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn causal_endings_recover_saved_gsd_groups() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/gsd-causal.conllu").as_slice(),

@@ -238,3 +238,18 @@ for this boundary, not certification of all its senses. This brings the review
 ledger to ten scoped entries, with 705 still without a disposition. Corpus
 recovery remains **138 KAIST / 167 GSD misses**; the 75 removed hypotheses in
 32 audited surfaces are listed individually, with independent review pending.
+
+## Quoted-alternative expressions (COV-017o)
+
+[The expression comparison](quoted-alternatives-evaluation.json) records
+individual source dispositions for ten 문법‧표현 / 품사 없음 entries. They cover
+present, declarative, copular/factual, command and proposal alternatives through
+eight canonical bundles. These sources are outside the four POS classes in the
+715-entry queue, so that queue still has ten scoped reviews and 705 entries
+without a disposition; expression reviews are not counted as ordinary endings.
+
+Four newly recovered development groups leave **135 KAIST and 166 GSD misses**.
+The 해방시키다 headword is absent from the pinned dictionary even though the
+unfiltered rule recovers it. The connective-clause case 위해서라거나 remains
+open under COV-020. The report preserves both distinctions, records all additions
+across 74 audited surfaces, and leaves historical baselines unchanged.

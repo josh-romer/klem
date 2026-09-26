@@ -507,3 +507,20 @@ sense 1 and every other entry are unchanged. This is adapted from the same
 September 2026 National Institute of Korean Language KRDict export under
 CC BY-SA 2.0 KR, with the source/license links above. It validates dictionary
 source integration, not an independently annotated candidate precision score.
+
+`krdict-quoted-alternatives.json` contains nine primary lexical entries (15983,
+17203, 24037, 30750, 31670, 49222, 69579, 86232, 89858) from the September 2026
+National Institute of Korean Language KRDict export, under CC BY-SA 2.0 KR.
+Ten grammar-expression entries (82118, 82119, 82121, 82122, 83892, 86053, 86055,
+86056, 86057, 86332) are added to `krdict-grammar-labels.json`. Adaptation:
+retain English equivalents and the first example group per sense, omit
+WordForm/RelatedForm and global export metadata, exclude idiom subentries, and
+reformat JSON. Earlier entries are unchanged. Source/license links above apply.
+The source's 문법‧표현 / 품사 없음 classification is retained.
+
+`kaist-quoted-alternatives.conllu` preserves complete development sentences
+MH2_0159-s14 and MH2_0159-s161; `gsd-quoted-alternatives.conllu` preserves
+complete dev-s330. They are byte-identical excerpts from the pinned UD 2.15
+sources linked above under CC BY-SA 4.0. Four stable token IDs protect reported
+alternative recovery; no annotation is rewritten or promoted into a judgment of
+all candidates. GSD's automatic annotation remains secondary evidence.

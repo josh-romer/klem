@@ -1789,6 +1789,58 @@ fn causal_endings_keep_dictionary_filtered_cli_paths_and_nominal_alternatives() 
 }
 
 #[test]
+fn quoted_alternatives_preserve_dictionary_filtered_cli_groups() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from(
+            "tests/fixtures/krdict-quoted-alternatives.json",
+        )],
+        dir.db(),
+        "quoted-alternatives-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, ending) in [
+        ("된다거나", vec!["되다"], "는다거나"),
+        ("경시한다든가", vec!["경시하다"], "는다든가"),
+        ("세련되었다든가", vec!["세련되다"], "다든가"),
+        ("먹었다거나", vec!["먹다"], "다거나"),
+        ("학생이라거나", vec!["학생", "이다"], "라거나"),
+        ("교사라든가", vec!["교사", "이다"], "라든가"),
+        ("도우라거나", vec!["돕다"], "으라거나"),
+        ("먹자거나", vec!["먹다"], "자거나"),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| {
+                a.lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.lemmas.iter().all(|l| annotation.has_match(l, true))
+                    && a.morphemes.last().is_some_and(|m| m.form == ending)
+            }),
+            "{word}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}
+
+#[test]
 fn shortened_hada_matches_full_lemmas_in_cli_and_pos_filtering() {
     let dir = Scratch::new();
     import_krdict(

@@ -1352,3 +1352,50 @@ records every removal in the audited cases. Existing annotated corpus groups
 remain unchanged; those corpora do not independently certify these newly
 forbidden paths or all retained alternatives. Independent linguistic review
 remains pending.
+
+## Quoted alternatives (COV-017o)
+
+Ten KRDict grammar-expression entries are represented as eight canonical
+`Ending` bundles. They are marked 문법‧표현 / 품사 없음 by the source, not ordinary
+어미 entries. The viewer admits their exact reviewed IDs/headwords/POS through
+its existing explicit catalog mapping; unrelated unclassified entries remain
+excluded. The source dispositions and every candidate change are recorded in
+[the comparison](quoted-alternatives-evaluation.json).
+
+| Reading | Canonical forms | Source entries |
+| --- | --- | --- |
+| Present verb alternatives | 는다거나, 는다든가 | [ㄴ다거나](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86055), [는다거나](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86053), [ㄴ다든가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82118), [는다든가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82119) |
+| Adjective / past / modal statements | 다거나, 다든가 | [다거나](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86056), [다든가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82121) |
+| Copular / factual alternatives | 라거나, 라든가 | [라거나](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86057), [라든가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82122) |
+| Reported commands | 으라거나 | [으라거나](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86332), [라거나 sense 3](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86057) |
+| Reported proposals | 자거나 | [자거나](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83892) |
+
+Present verbs use attached ㄴ after open/ㄹ stems and 는 after other consonants.
+They permit honorific 시; recovered past/modal/retrospective markers instead
+need another form. Literal 다거나/다든가 retain adjective and past/modal
+paths, including honorific composition and the existing 어야겠 bundle, but not
+retrospective 더. Known bare auxiliary verbs take the present form; known
+adjective auxiliaries and explicit 답다 suffixes do not gain present verbal
+attachment. Arbitrary lexical heads remain unclassified.
+
+Copular 라거나/라든가 use explicit 이다/아니다 and existing vowel-final copula
+omission. 라든가 additionally has source-listed factual 시/더/으리 paths.
+Command 으라거나 has a vowel boundary (들으라거나, 도우라거나) and allows
+honorific 시, while proposal 자거나 is a bare-stem path. These command/proposal
+paths do not attach to a represented copula or known auxiliary adjective.
+Present ㄴ has no vowel-only ㅂ/ㅎ recovery: 도운다거나 does not restore 돕다.
+Neither bundle licenses a following auxiliary or nominal case particle.
+
+The expressions do not insert an implicit 하다 lemma or expand into a quoted
+clause. All lexical and previously generated alternatives remain. For example,
+학생이라거나 has the copular 라거나 path, distinct from the command canonical
+으라거나. Nominal particle 이라든가 and further quotation variants need their
+own attachment and representation review. The remaining corpus 위해서라거나
+case is a connective-clause + copula question under COV-020, not evidence that
+an arbitrary ending may become a copular nominal.
+
+The four recovered development tokens are 경시한다든가, 해방시킨다거나,
+된다거나 and 세련되었다든가. The pinned full dictionary lacks the generated
+headword 해방시키다, so that gold recovery is available unfiltered but excluded
+by dictionary-only filtering. The rule does not manufacture a dictionary entry
+or silently replace the corpus's causative lemma with 해방하다.

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–n/018a–d/019a–d/020a–d/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–o/018a–d/019a–d/020a–d/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -218,7 +218,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–n implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–o implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -409,6 +409,19 @@ review remains open under the completion review below.
   source links with nominalization alternatives. See [scope](rules.md#causal-endings-cov-017n)
   and [evaluation](causal-evaluation.json). Omitted-copula and shortened 하다
   allomorphs, further outer particles, and contextual interpretation remain open.
+- [x] **COV-017o — Quoted alternatives and enumerations.** Ten source-listed
+  expressions map to eight canonical bundles: 는다거나/다거나/라거나/으라거나/
+  자거나 and 는다든가/다든가/라든가. Attached ㄴ/non-ㄹ consonant, command
+  vowel boundaries, copulas, prefinals and known auxiliary/suffix classes have
+  distinct licenses. Factual 라든가 retains 시/더/으리 attachment. No implicit
+  하다 is inserted. Evidence: [boundary/composition tests](../tests/quoted_alternatives.rs),
+  twenty-two `quoted-alt-*` ledger cases, three complete annotated development
+  sentences, dictionary/CLI parity, and browser source links. The
+  [comparison](quoted-alternatives-evaluation.json) records each candidate change
+  and the source dispositions. These entries are 문법‧표현, outside COV-013's
+  715-entry POS inventory. Other quotation contractions, expanded quotation
+  analysis, particle alternatives and quoted-clause copulas remain open. See
+  [scope](rules.md#quoted-alternatives-cov-017o).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–d implement post-ending, outer choice, emphatic,
   concessive and definition particles, including nominal (이)라고 alternatives.**
@@ -683,7 +696,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 228 currently emitted canonical grammar forms.** The initial catalog
+  for all 236 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

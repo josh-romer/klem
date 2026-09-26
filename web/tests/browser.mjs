@@ -130,6 +130,9 @@ try {
   const causal = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-causal.json"), "utf8"),
   );
+  const quotedAlternatives = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-quoted-alternatives.json"), "utf8"),
+  );
   const colloquialCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-colloquial-copulas.json"), "utf8"),
   );
@@ -218,6 +221,7 @@ try {
       ...reporting.LexicalResource.Lexicon.LexicalEntry,
       ...copulaYo.LexicalResource.Lexicon.LexicalEntry,
       ...causal.LexicalResource.Lexicon.LexicalEntry,
+      ...quotedAlternatives.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -594,6 +598,14 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id] of [
+    ["된다거나", ["되", "는다거나"], "는다거나", "Reported alternatives / examples", 86053],
+    ["먹었다거나", ["먹", "었", "다거나"], "다거나", "Reported alternatives / examples", 86056],
+    ["학생이라거나", ["학생", "이", "라거나"], "라거나", "Reported alternatives / examples", 86057],
+    ["먹으라거나", ["먹", "으라거나"], "으라거나", "Reported alternatives / examples", 86332],
+    ["먹자거나", ["먹", "자거나"], "자거나", "Reported alternatives / examples", 83892],
+    ["경시한다든가", ["경시하", "는다든가"], "는다든가", "Reported alternatives / examples", 82119],
+    ["세련되었다든가", ["세련되", "었", "다든가"], "다든가", "Reported alternatives / examples", 82121],
+    ["학생이라든가", ["학생", "이", "라든가"], "라든가", "Reported alternatives / examples", 82122],
     ["추천하길래", ["추천하", "길래"], "길래", "Reason / basis", 73011],
     ["뽑길래", ["뽑", "길래"], "길래", "Reason / basis", 73011],
     ["먹기에", ["먹", "기에"], "기에", "Reason / basis", 84811],
@@ -1044,6 +1056,8 @@ try {
     ["학생이어해요", ["학생", "이다", "하다"]],
     ["먹기이어해요", ["먹다", "이다", "하다"]],
     ["먹어보지않아해요", ["먹다", "보다", "않다", "하다"]],
+    ["먹고싶으신다거나", ["먹다", "싶다"]],
+    ["학생이신다든가", ["학생", "이다"]],
     ["먹고싶자면", ["먹다", "싶다"]],
     ["학생이자면", ["학생", "이다"]],
   ]) {

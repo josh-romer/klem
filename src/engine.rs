@@ -290,16 +290,18 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 p.copula_contracted |=
                     r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");
-                // Present -ㄴ/는다면 and -ㄴ/는답니다 permit honorific 시,
-                // but no other prefinals; past/modal use plain 다면/답니다.
-                if matches!(ending.form, "는다면" | "는답니다")
+                // Present reported forms permit honorific 시 but no other
+                // prefinals; past/modal use their plain 다- counterparts.
+                if matches!(ending.form, "는다면" | "는답니다" | "는다거나" | "는다든가")
                     && p.morphs.iter().any(|m| m.form != "시")
                 {
                     continue;
                 }
                 // Informative/reported -답니다 permits honorific, past and
                 // modal markers; retrospective 더 instead takes -랍니다.
-                if ending.form == "답니다" && p.morphs.iter().any(|m| m.form == "더") {
+                if matches!(ending.form, "답니다" | "다거나" | "다든가")
+                    && p.morphs.iter().any(|m| m.form == "더")
+                {
                     continue;
                 }
                 // Source-listed causal endings: 기에 licenses honorific,
@@ -350,7 +352,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // Reviewed shortened adnominals: intention permits honorific
                 // 시; proposal quotation is currently scoped to bare stems.
                 if (ending.form == "으려는" && p.morphs.iter().any(|m| m.form != "시"))
-                    || (ending.form == "자는" && !p.morphs.is_empty())
+                    || (matches!(ending.form, "자는" | "자거나") && !p.morphs.is_empty())
                 {
                     continue;
                 }
@@ -365,6 +367,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "으라면"
                         | "으란"
                         | "으랍니다"
+                        | "으라거나"
                         | "으세요"
                         | "으십시오"
                         | "읍시다"
@@ -381,7 +384,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 let factual_ra = matches!(ending.boundary, Boundary::Literal)
                     && matches!(
                         ending.form,
-                        "라" | "라서" | "라고" | "라는" | "라면" | "랍니다"
+                        "라" | "라서" | "라고" | "라는" | "라면" | "랍니다" | "라든가"
                     );
                 if factual_ra
                     && !p.morphs.last().is_some_and(|m| {
@@ -406,6 +409,19 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "기에" | "길래") {
                     p.rules.push("ending.causal".into());
+                }
+                if matches!(
+                    ending.form,
+                    "다거나"
+                        | "는다거나"
+                        | "라거나"
+                        | "으라거나"
+                        | "자거나"
+                        | "다든가"
+                        | "는다든가"
+                        | "라든가"
+                ) {
+                    p.rules.push("ending.quoted_alternative".into());
                 }
                 if matches!(ending.form, "답니다" | "는답니다" | "랍니다" | "으랍니다")
                 {
@@ -435,7 +451,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
     }
     // Conjectural (으)리 precedes this source-listed factual family only.
     // Preserve existing bundled -(으)리라 / -(으)리라고 alternatives.
-    for ending in ["란", "라", "라서", "라고", "라면", "랍니다"] {
+    for ending in ["란", "라", "라서", "라고", "라면", "랍니다", "라든가"] {
         if let Some(base) = word.strip_suffix(ending) {
             for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
                 for r in grammar::recover(base, suffix, boundary) {
@@ -461,6 +477,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         ]);
                         if ending == "랍니다" {
                             p.rules.push("ending.reporting_polite".into());
+                        }
+                        if ending == "라든가" {
+                            p.rules.push("ending.quoted_alternative".into());
                         }
                         p.dap_suffix = dap_suffix_allowed(&p);
                         out.push(p);
@@ -659,9 +678,12 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
         {
             // Only bare-stem attachment is decided here. The ending notes
             // separately license prefinals, including adjective + 었 + 는데.
-            // -자면 requires a verb even after an honorific marker.
+            // These verbal families still require a verb after honorific 시.
             if matches!(class, Some(PredicateClass::Adjective))
-                && matches!(m.form.as_str(), "자면" | "으랍니다")
+                && matches!(
+                    m.form.as_str(),
+                    "자면" | "으랍니다" | "으라거나" | "자거나" | "는다거나" | "는다든가"
+                )
             {
                 return false;
             }
@@ -687,7 +709,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                     ),
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
-                    Some(PredicateClass::Verb | PredicateClass::Copula) | None => false,
+                    Some(PredicateClass::Verb) => matches!(m.form.as_str(), "다거나" | "다든가"),
+                    Some(PredicateClass::Copula) | None => false,
                 }
             {
                 return false;
@@ -716,7 +739,12 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
     if p.morphs
         .iter()
         .find(|m| m.kind == MorphemeKind::Ending)
-        .is_some_and(|m| matches!(m.form.as_str(), "자면" | "으랍니다"))
+        .is_some_and(|m| {
+            matches!(
+                m.form.as_str(),
+                "자면" | "으랍니다" | "으라거나" | "자거나" | "는다거나" | "는다든가"
+            )
+        })
     {
         return false;
     }
@@ -760,6 +788,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "다니"
             | "다면"
             | "답니다"
+            | "다거나"
+            | "다든가"
             | "고"
             | "고요"
             | "지"
@@ -857,6 +887,10 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                     | "으라면"
                     | "으란"
                     | "으랍니다"
+                    | "으라거나"
+                    | "자거나"
+                    | "는다거나"
+                    | "는다든가"
                     | "으십시오"
                     | "읍시다"
             )
@@ -866,10 +900,19 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     }
     // Bare 이다 takes quoted -냐는; -느냐는 may follow its licensed
     // prefinals, but does not attach directly to the copula.
-    if p.morphs
-        .first()
-        .is_some_and(|m| matches!(m.form.as_str(), "느냐는" | "으냐는" | "답니다" | "는답니다"))
-    {
+    if p.morphs.first().is_some_and(|m| {
+        matches!(
+            m.form.as_str(),
+            "느냐는"
+                | "으냐는"
+                | "답니다"
+                | "는답니다"
+                | "다거나"
+                | "는다거나"
+                | "다든가"
+                | "는다든가"
+        )
+    }) {
         return;
     }
     // Quotation punctuation can leave an explicitly spelled copula in its

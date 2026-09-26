@@ -1,0 +1,7308 @@
+{
+  "schema_version": 1,
+  "scope": "COV-017o: ten quoted-alternative expressions represented as eight canonical bundles, without implicit 하다 or contextual quotation parsing.",
+  "baseline_commit": "ef79b3628a311f069755ee500dcb5388ee891b5c",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Selected source fields retain all senses and at most two example groups each.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "02d6c1e616dcf2d7b7b3eea8c6a363a37450e4de182a7f1d611f8767d04270bf",
+    "src/engine.rs": "523cd96ccb8ac3ec9739da9a431ad9233725e0c85660612f7a9d7213af2f06c5",
+    "tests/quoted_alternatives.rs": "ca5e0506e870de7338ce5cba2bfda8639def2de09cbd66a9564b1b68a2630aa5",
+    "tests/corpus.rs": "99ef64839d0f55d338db9719b0ba2dc52ba28d8c7842c2eab9caaf9d9c3bcbbd",
+    "tests/dictionary.rs": "6612fd24827ac578a99a6f94add4acdcfcbd60bce368bc80a87fdc41c5667426",
+    "tests/validity.rs": "351b234aa2f7d023720229da9ea23ec38d49cd0024a1536bac0a62bfe97fe9c0",
+    "tests/fixtures/validity.json": "2141faf38431bdd60f811547b06b6ca7880d9f05900ce6437ad95f801b0e3048",
+    "tests/fixtures/optimization.json": "461482340a2bbff3e02278a47e4fcb6262e8f35fd9425375e881625ba60a1e25",
+    "tests/fixtures/krdict-quoted-alternatives.json": "fa71ceca9f959a38679e19120d728ad78188c0cd8dce9053b5caad969fed114d",
+    "tests/fixtures/krdict-grammar-labels.json": "0020018030a061ebaf7e8f0824b87f5bea624f64258ec79a22eaf0855fb6bfd1",
+    "web/src/grammar-labels.json": "baba224d01564ee769379c64ca182fbdcf10f9fc2d56c592761e5fb5f7f00e3c",
+    "web/tests/browser.mjs": "5ab53903ce5b4d0f8688b67b0c9daf28b7beb2822ac5da7bdf6f2ec562f79114"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:86055",
+        "headword": "-ㄴ다거나",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86055",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "받침이 없거나 ‘ㄹ’ 받침인 동사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "여러 가지 행위를 예로 들어 나열하면서 설명할 때 쓰는 표현.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "어른들과 술을 마신다거나 할 때는 예의를 갖추어야 한다.  "
+              ],
+              [
+                "복도에서 뛴다거나 소리를 지르면 안 된다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "둘 이상의 동작이나 상태, 대상 중 하나를 선택함을 나타내는 표현.",
+            "notes": [
+              "‘-ㄴ다고 하거나’가 줄어든 말이다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "대학원에 진학한다거나 취업을 하거나 할 거예요."
+              ],
+              [
+                "기숙사를 신청한다거나 원룸을 알아보거나 해야 해요. "
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "63febd06fdc3a5ccd9886281b96f565b01939d64210a821cf36c5b0f46715927",
+      "disposition": "Present open/ㄹ verb allomorph canonical 는다거나; attached ㄴ, no vowel-only irregular recovery. Honorific composition retains the required verbal class.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:86053",
+        "headword": "-는다거나",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86053",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "여러 가지 행위를 예로 들어 나열하면서 설명할 때 쓰는 표현.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "주말에는 책을 읽는다거나 드라마를 보면서 시간을 보낸다.  "
+              ],
+              [
+                "기숙사에서는 음악을 크게 듣는다거나 큰 소리를 내면 안 된다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "둘 이상의 동작이나 상태, 대상 중 하나를 선택함을 나타내는 표현.",
+            "notes": [
+              "‘-는다고 하거나’가 줄어든 말이다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "택시를 잡는다거나 버스를 기다리거나 해야지."
+              ],
+              [
+                "손님이 많을 때에는 주방 일을 돕는다거나 배달이라도 좀 하거라. "
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "80a9df6a1a3048b3f6f63b8f985c74e5f70c54e9305f122ffa06b600f689180e",
+      "disposition": "Present non-ㄹ consonant verb allomorph 는다거나; excludes recovered past/modal/retrospective slots.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:86056",
+        "headword": "-다거나",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86056",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "형용사 또는 ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "여러 가지 행위나 상태를 예로 들어 나열하면서 설명할 때 쓰는 표현.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "힘들다거나 하면 저에게 이야기하세요."
+              ],
+              [
+                "바쁘다거나 피곤하다고 해서 일을 자꾸 미루면 안 돼요. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "둘 이상의 동작이나 상태, 대상 중 하나를 선택함을 나타내는 표현.",
+            "notes": [
+              "‘-다고 하거나’가 줄어든 말이다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "좋으면 좋다거나 싫으면 싫다고 말을 해 주세요."
+              ],
+              [
+                "드시고 나서 싱겁다거나 짜다고 알려 주시면 도움이 됩니다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "3b3b89302790b5e9f63c813b8c74dbd5387f8f8f02ee464fe6c0fac3d481df7b",
+      "disposition": "Plain 다거나 for adjective and past/modal paths, with honorific composition; known bare auxiliary verbs require the present form. Retrospective 더 excluded.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:86057",
+        "headword": "-라거나",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86057",
+        "lexical_unit": "문법‧표현",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "여러 가지 행위나 상태를 예로 들어 나열하면서 설명할 때 쓰는 표현.",
+            "notes": [
+              "‘이다’, ‘아니다’ 뒤에 붙여 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "빵이라거나 과자 같은 거 있으면 좀 주세요."
+              ],
+              [
+                "교사라거나 공무원으로 일할 수 있으면 좋겠어요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "둘 이상의 동작이나 상태, 대상 중 하나를 선택함을 나타내는 표현.",
+            "notes": [
+              "‘이다’, ‘아니다’ 뒤에 붙여 쓴다. ‘-라고 하거나’가 줄어든 말이다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "누가 뭐라거나 신경 쓰지 마세요."
+              ],
+              [
+                "저는 딸이라거나 아들이라거나 다 좋아요. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "명령의 내용을 예를 들거나 나열하며 전할 때 쓰는 표현.",
+            "notes": [
+              "받침이 없거나 ‘ㄹ’ 받침인 동사 뒤에 붙여 쓴다. ‘-라고 하거나’가 줄어든 말이다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "제게 김치를 담그라거나 찌개를 끓이라거나 하면 곤란해요."
+              ],
+              [
+                "누구에게든 함부로 오라거나 가라거나 하면 기분이 나쁠 수밖에 없어요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "a9408ed378b315f004550c0798afef3f628cab51bc5c180822a3b04903856e6d",
+      "disposition": "Senses 1/2: explicit or vowel-final omitted copula, canonical 라거나. Sense 3: short command allomorph, canonical 으라거나, with vowel-boundary irregular recovery and honorific composition.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:86332",
+        "headword": "-으라거나",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86332",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "명령의 내용을 예를 들거나 나열하며 전할 때 쓰는 표현.",
+            "notes": [
+              "‘-으라고 하거나’가 줄어든 말이다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "지수에게 존경하는 인물을 적으라거나 말하라면 항상 부모님을 들었다."
+              ],
+              [
+                "아이들에게 빨리 먹으라거나 남기지 말고 먹으라고 강요해서는 안 된다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "8f7841808722173eba6c79ba2bb75d23398b9d9c6b3030b90bcdace614d411d8",
+      "disposition": "Consonantal command allomorph 으라거나; no recovered past/modal/retrospective slots or known adjective/copula command path.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:83892",
+        "headword": "-자거나",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83892",
+        "lexical_unit": "문법‧표현",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "제안이나 권유의 내용을 예를 들거나 나열하며 전할 때 쓰는 표현.",
+            "notes": [
+              "동사 뒤에 붙여 쓴다. '-자고 하거나'가 줄어든 말이다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "승규가 밥을 먹자거나 술을 마시자거나 해도 나는 시간이 없었다."
+              ],
+              [
+                "친구가 나한테 무슨 영화를 보자거나 간에 나는 영화에는 원래 관심이 없다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "7dd2021d76892f01af4c92d25b2765939e35fa1170eacad7d23d17ac9a5dc20e",
+      "disposition": "Proposal 자거나 as a bare-verb bundle; no implicit 하다 or known adjective/copula proposal path.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:82118",
+        "headword": "-ㄴ다든가",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82118",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "받침이 없거나 ‘ㄹ’ 받침인 동사 또는 ‘-으시-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "두 가지 사실 가운데 어느 하나를 선택함을 나타내는 표현.",
+            "notes": [
+              "‘-ㄴ다든가 -ㄴ다든가’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "간다든가 안 간다든가 확실히 말씀해 주세요."
+              ],
+              [
+                "머리를 기른다든가 자른다든가 결정을 하세요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "여러 사실 중에 어느 것을 선택하거나 어느 것에 해당해도 상관이 없음을 나타내는 표현.",
+            "notes": [
+              "주로 ‘-ㄴ다든가 (-ㄴ다든가) (하다)’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "전화한다든가 메일을 보낸다든가 하면 돼요."
+              ],
+              [
+                "이번 주에 온다든가 다음 주에 온다든가 상관없어요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "006fcdd8b317a423b907de21e85b177b3a6683bccf1af4e5522d1f7fa316bdc8",
+      "disposition": "Present open/ㄹ verb allomorph canonical 는다든가; attached ㄴ, honorific composition, no vowel-only irregular recovery.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:82119",
+        "headword": "-는다든가",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82119",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "두 가지 사실 가운데 어느 하나를 선택함을 나타내는 표현.",
+            "notes": [
+              "'-는다든가 -는다든가’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "고기를 먹는다든가 생선회를 먹는다든가 결정하세요."
+              ],
+              [
+                "넌 책을 읽는다든가 음악을 듣는다든가 한 번에 한 가지만 할 수 없니?"
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "여러 사실 중에 어느 것을 선택하거나 어느 것에 해당해도 상관이 없음을 나타내는 표현.",
+            "notes": [
+              "주로 ‘-는다든가 (-는다든가) (하다)’로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "난 한국 음식을 먹는다든가 중국 음식을 먹는다든가 다 좋아."
+              ],
+              [
+                "심심하면 음악을 듣는다든가 책을 읽는다든가 하세요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "3ec99910cb3d266bba5b99060604d68fc6726984b82924fae152645f0d6f9b03",
+      "disposition": "Present non-ㄹ consonant verb allomorph 는다든가; no recovered past/modal/retrospective slots.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:82121",
+        "headword": "-다든가",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82121",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "두 가지 사실 가운데 어느 하나를 선택함을 나타내는 표현.",
+            "notes": [
+              "‘-다든가 -다든가’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "좋다든가 싫다든가 말씀을 해 주세요."
+              ],
+              [
+                "음식이 맛있다든가 맛없다든가 냉정하게 평가해 주세요. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "여러 사실 중에 어느 것을 선택하거나 어느 것에 해당해도 상관이 없음을 나타내는 표현.",
+            "notes": [
+              "주로 ‘-다든가 (-다든가) (하다)’로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "몸이 피곤하다든가 아프다든가 하면 집에서 쉬세요."
+              ],
+              [
+                "슬리퍼는 조금 크다든가 조금 작다든가 해도 신을 수 있어요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "df825331506abd30fe4a7827e51bc8d694ab262ab64f8935401bd1c38ff765fa",
+      "disposition": "Plain 다든가 for adjective or source-listed honorific/past/modal paths; bare known verbs require the present form and retrospective 더 uses 라든가.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    },
+    {
+      "source": {
+        "id": "krdict:82122",
+        "headword": "-라든가",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82122",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "‘이다’, ‘아니다’ 또는 ‘-으시-’, ‘-더-’, ‘-으리-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "두 가지 사실 가운데 어느 하나를 선택함을 나타내는 표현.",
+            "notes": [
+              "‘-라든가 -라든가’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "자연계라든가 인문계라든가 네가 적성을 생각해서 계열을 선택해야지."
+              ],
+              [
+                "햄버거라든가 피자라든가 먹고 싶은 걸 한 가지 얘기해."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "여러 사실 중에 어느 것을 선택하거나 해당해도 상관이 없음을 나타내는 표현.",
+            "notes": [
+              "주로 ‘-라든가 (-라든가) (하다)’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "주스라든가 물이라든가 마실 것 좀 주세요."
+              ],
+              [
+                "그 애가 바보라든가 천재라든가 나하고 무슨 상관있어요?"
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "112de3ee2377fbb70fb29c5f38ee7cf97751fdae39d8359d5b37f70fad1cb6b6",
+      "disposition": "Copular 라든가 plus source-listed factual 시/더/으리 paths; preserves explicit copulas and vowel-final omission. Bare past/modal does not license factual 라든가.",
+      "remaining": "Contextual sense, further outer particles/auxiliary connections and expanded quotation representation remain unreviewed. Unknown lexical head classes are not inferred."
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "dd02a08998515081108cb05ca28e91fe8abd2b4c8b21b25b93d14021df3cf13d",
+      "after_sha256": "6c851b3d83d1ccc7c765203f8107ff2866be19eb6079b6791d284b0f13a5ef19",
+      "converted": 22220,
+      "before_matched": 22082,
+      "after_matched": 22085,
+      "remaining_misses": 135,
+      "new_matches": [
+        {
+          "id": "id:MH2_0159-s14/5",
+          "surface": "경시한다든가",
+          "expected": [
+            "경시하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s161/13",
+          "surface": "된다거나",
+          "expected": [
+            "되다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s161/8",
+          "surface": "해방시킨다거나",
+          "expected": [
+            "해방시키다"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": []
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "5be0d07722ee719a5543ada968975dc0bc1fc473755cba884ba85e7d54e34727",
+      "after_sha256": "339fb682153a74bc42a9b0c6c0c5d19db17427ce9146db33d8102ad9a7c86187",
+      "converted": 9989,
+      "before_matched": 9822,
+      "after_matched": 9823,
+      "remaining_misses": 166,
+      "new_matches": [
+        {
+          "id": "id:dev-s330/4",
+          "surface": "세련되었다든가",
+          "expected": [
+            "세련되다"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": []
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-quoted-alternatives.conllu",
+      "sha256": "91935920f9d2d7fca1cbb3ce380b23d8971017965a3886c6f80c10f316aef170",
+      "complete_byte_identical_sentences": 2
+    },
+    {
+      "path": "tests/fixtures/gsd-quoted-alternatives.conllu",
+      "sha256": "ffa5227727cc3f94909f704ab78b6979ee23cc81656b5cf26985ccb3c9924514",
+      "complete_byte_identical_sentences": 1
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "된다거나",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "되다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "된다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "될다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "해방시킨다거나",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "해방시키다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "해방시킨다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "해방시킬다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "경시한다든가",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "경시하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "경시한다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "경시할다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "세련되었다든가",
+      "before_count": 5,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "세련되다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "세련되어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "세련되었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "세련되으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "세련됫다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.siot",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹는다거나",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹느다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹는다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹늘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.consonant",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹는다든가",
+      "before_count": 5,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹느다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹는다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹늘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.consonant",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "산다거나",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "산다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "산다든가",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "산다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹으신다거나",
+      "before_count": 12,
+      "after_count": 19,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으신다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으실다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹을다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹으신다든가",
+      "before_count": 5,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으신다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으실다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹을다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹었다거나",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹겠다거나",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹겋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹게다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹겠다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹겠다든가",
+      "before_count": 5,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹겋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹게다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹겠다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어야겠다거나",
+      "before_count": 12,
+      "after_count": 19,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어야겋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어야게다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어야겠다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어야다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "좋다거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "좋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "좋으시다든가",
+      "before_count": 5,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "좋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋으시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋을다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고싶으시다거나",
+      "before_count": 12,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶을다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이시라든가",
+      "before_count": 5,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이시",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이시이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생다우시다든가",
+      "before_count": 5,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.bieup",
+            "prefinal.honorific",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다울다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다웋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.bieup",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이라거나",
+      "before_count": 12,
+      "after_count": 19,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.copular",
+            "copula",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.copular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "교사라거나",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교사다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교사이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교샇다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "아니라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아니",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.copular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아닣다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이라든가",
+      "before_count": 5,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.copular",
+            "copula",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.copular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "교사라든가",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교사이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "아니라든가",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아니",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.copular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이셨다든가",
+      "before_count": 5,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "copula",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이셨다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.vowel",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹으시라든가",
+      "before_count": 5,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으시",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으시이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹을다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹었더라든가",
+      "before_count": 5,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.past",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.past",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었더",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었더이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.past",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹으리라든가",
+      "before_count": 5,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.conjectural_ra"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "prefinal.conjectural_ra"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으리",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으리이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.factual_ra",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.conjectural_ra"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "가라거나",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "가",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "가다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "가이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "갛다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "살라거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "살다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹으라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "들으라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "듣다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.digeut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "들으",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "들으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "들으이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "들읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "도우라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "도우",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "도우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "도우이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "도웋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돕다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.bieup"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹으시라거나",
+      "before_count": 12,
+      "after_count": 20,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으시",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으시이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으싷다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹을다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹자거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "살자거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "살다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어본다거나",
+      "before_count": 12,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.attached",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.attached",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어본다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어볼다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.attached",
+            "deletion.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고싶다든가",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보자거나",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보라거나",
+      "before_count": 12,
+      "after_count": 19,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "contraction.identical",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어봏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "deletion.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생답다거나",
+      "before_count": 12,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생답다든가",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "가는다거나",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "가느다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "가는다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "가늘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "살는다든가",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "살느다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살는다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살늘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "도운다거나",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "도우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "도운다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "도울다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹었는다거나",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹었느다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었는다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었늘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.consonant",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹겠는다든가",
+      "before_count": 5,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹겠느다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹겠는다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹겠늘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹겠다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.consonant",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹더다거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹더다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹더다든가",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹더다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹었으라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹겠자거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹겠다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹었라든가",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹겠라든가",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹라거나",
+      "before_count": 12,
+      "after_count": 12,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "가으라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "가으",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "가으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "가으이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "가읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "갓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.siot"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고싶는다거나",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶느다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶는다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶늘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.consonant",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고싶자거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고싶으라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보다거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이자거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "자거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고싶으신다거나",
+      "before_count": 12,
+      "after_count": 19,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으신다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으실다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶을다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이신다든가",
+      "before_count": 5,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이신다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이실다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생다우신다거나",
+      "before_count": 12,
+      "after_count": 19,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생다우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우신다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우실다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다울다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다웋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.bieup",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이다거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생답는다든가",
+      "before_count": 5,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생답느다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답는다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답늘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.rieul",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는다든가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.consonant",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생다우라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생다우",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다웋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.bieup"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹는다거나보다",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹자거나를",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학생이라든가보다",
+      "before_count": 13,
+      "after_count": 13,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "위해서라거나",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "위해",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "위해서",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "위해서다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "위해서이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "위해섷다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으라거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.quoted_alternative",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각다거나",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다거나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.quoted_alternative"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "간편타든가",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹자든가",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": []
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "dictionary_gaps": [
+    {
+      "surface": "해방시킨다거나",
+      "expected": "해방시키다",
+      "dictionary_fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+      "filtered_candidates": 0,
+      "disposition": "Full pinned dictionary lacks this generated headword. Unfiltered gold recovery is retained; no vocabulary or causative segmentation is invented."
+    }
+  ],
+  "representation_review": [
+    {
+      "id": "id:MH2_0169-s510/4",
+      "surface": "위해서라거나",
+      "expected": [
+        "위하다",
+        "이다"
+      ],
+      "disposition": "Still a measured miss. A connective clause before a copula needs separate COV-020 source/representation review; no arbitrary ending + copula rule is added."
+    }
+  ],
+  "remaining": [
+    "Other quoted contractions, contextual sense selection and expanded quotation structure remain COV-017 work.",
+    "Nominal particle 이라든가 and other outer particle attachments remain COV-018 review; this batch preserves the copular expression as a distinct representation.",
+    "Shortened 하다 variants and other quoted command/proposal variants require separate source coverage.",
+    "All ten source entries are 문법‧표현 / 품사 없음, outside the four POS classes of the 715-entry inventory queue; their dispositions are recorded here rather than incorrectly counted as reviewed rows there."
+  ],
+  "labels": {
+    "canonical_forms": 236,
+    "catalog_source_entries": 284,
+    "grammar_fixture_entries": 285,
+    "new_source_ids": [
+      82118,
+      82119,
+      82121,
+      82122,
+      83892,
+      86053,
+      86055,
+      86056,
+      86057,
+      86332
+    ],
+    "all_prior_entries_unchanged": true
+  },
+  "review_status": "Source-backed agent judgments; independent Korean-language review pending. No precision estimate."
+}

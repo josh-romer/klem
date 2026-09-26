@@ -56,7 +56,12 @@ export function parts(
     if ("lemma" in component) {
       const lemma = a.lemmas[component.lemma];
       const entries = matches(token, lemma);
+      // KRDict tags both enumerative 이다 and the copula as 조사. This path
+      // already represents a copula, so prefer its explicit source homonym.
+      const copulaEntry = lemma.kind === "copula" && lemma.text === "이다"
+        ? entries.find((e) => e.id === "krdict:86232") : undefined;
       const entry =
+        copulaEntry ??
         entries.find((e) => e.pos_compatibility === "compatible") ??
         entries.find((e) => e.pos_compatibility === "unknown");
       const stem = ["predicate", "auxiliary", "copula"].includes(lemma.kind);
@@ -83,7 +88,26 @@ export function parts(
       a.rules.includes("particle.concessive") && previous &&
       "morpheme" in previous && a.morphemes[previous.morpheme].kind === "ending" &&
       ["다", "는다", "습니다", "냐", "느냐", "으냐", "자", "지", "더니"].includes(a.morphemes[previous.morpheme].form);
-    const label = concessiveMan
+    const previousMorpheme = previous && "morpheme" in previous
+      ? a.morphemes[previous.morpheme] : undefined;
+    const previousLemma = previous && "lemma" in previous
+      ? a.lemmas[previous.lemma] : undefined;
+    // Provenance is analysis-wide. Check this component's immediate base too,
+    // so nested nominalizations do not borrow another 다's source sense.
+    const enumerativeDa = m.kind === "particle" && m.form === "다" &&
+      a.rules.includes("particle.enumerative_da") &&
+      previousMorpheme?.kind !== "particle" && previousLemma?.kind !== "adverbial";
+    const emphaticDa = m.kind === "particle" && m.form === "다" &&
+      a.rules.includes("particle.emphatic_adverbial") &&
+      ((previousMorpheme?.kind === "particle" &&
+        ["에", "에서", "서", "에게", "한테", "께", "로", "으로"].includes(previousMorpheme.form)) ||
+       (previousLemma && ["여기", "거기", "저기", "어디", "이리", "그리", "저리"].includes(previousLemma.text)));
+    const label = enumerativeDa || emphaticDa
+      ? { ...grammarLabels[key],
+          label: enumerativeDa ? (emphaticDa ? "Enumeration / emphasis" : "Enumeration") : "Adverbial emphasis",
+          sources: grammarLabels[key].sources.filter((s) =>
+            (enumerativeDa && s.id === 85738) || (emphaticDa && s.id === 41693)) }
+      : concessiveMan
       ? { ...grammarLabels[key], label: "But / although",
           sources: grammarLabels[key].sources.filter((s) => s.id === 86555) }
       : grammarLabels[key]?.kind === m.kind ? grammarLabels[key] : undefined;

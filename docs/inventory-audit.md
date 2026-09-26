@@ -294,3 +294,19 @@ lost gold groups or component recoveries. The report preserves all 121 added
 analyses across 66 audited surfaces and removes none. All thirty stress
 fingerprints remain unchanged. Bundled and component paths are alternatives;
 matching corpus gold does not certify every candidate or resolve sense choice.
+
+
+## Enumerative 다/이다 particle review (COV-018g)
+
+[The comparison](enumerative-da-evaluation.json) records separate scoped reviews
+of enumerative 다 (85738) and 이다 (86118). Vowel/consonant nominal attachment,
+nominalizations, bounded suffixes and foreign pronunciation conditions are
+implemented; no prior case phrase or predicate ending is stripped for this use.
+Identical component paths can merge the enumerative and emphatic provenance;
+labels retain both sources rather than claiming a contextual choice.
+
+The ledger now has **30 scoped reviews and 685 entries without a disposition**.
+Development misses remain **133 KAIST and 165 GSD**, with no lost groups or
+component sets. Three changed stress snapshots gain reviewed nominal hypotheses;
+all prior candidates and hashes remain. Independent Korean-language review,
+lexical/sense suitability and further combinations remain open.

@@ -1189,7 +1189,8 @@ fn nominals(
             a.rules.push("particle".into());
             out.push(a);
         }
-        let emphatic_adverbial = matches!(particle.form, "다" | "다가");
+        let enumerative_da = particle.class == 4 && matches!(particle.form, "다" | "이다");
+        let emphatic_adverbial = !enumerative_da && matches!(particle.form, "다" | "다가");
         // Only the reviewed location/direction senses license a bare 다/다가
         // base. Other lexical adverbials require a separate semantic inventory.
         if emphatic_adverbial {
@@ -1262,7 +1263,8 @@ fn nominals(
         } else {
             particle.class
         };
-        if particle.form != "마는" {
+        // Enumerative 다/이다 follows a nominal, not a preceding case phrase.
+        if particle.form != "마는" && !enumerative_da {
             nominals(
                 base,
                 next,
@@ -1281,6 +1283,9 @@ fn nominals(
             match particle.form {
                 "요" => a.rules.push("particle.polite".into()),
                 "들" => a.rules.push("particle.distributive".into()),
+                "다" | "이다" if enumerative_da => {
+                    a.rules.push("particle.enumerative_da".into());
+                }
                 "다" | "다가" => a.rules.push("particle.emphatic_adverbial".into()),
                 "에다" | "에다가" | "에게다" | "에게다가" | "한테다" | "한테다가" | "로다가"
                 | "으로다가" => {

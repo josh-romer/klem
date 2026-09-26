@@ -120,7 +120,9 @@
   },
   {
     "word": "의사다",
-    "sha256": "359e41ccfa39f8df285ffb5029a64299fb6d7defd17265852880e67d86257339"
+    "sha256": "ff3a376d88995774a64d460d828386d8f8c9da140aa1e09154ee9a523a78a297",
+    "previous_sha256": "359e41ccfa39f8df285ffb5029a64299fb6d7defd17265852880e67d86257339",
+    "change": "COV-018g: One nominal 의사 + enumerative 다 path; copular alternatives remain. Every previous candidate and provenance retained. Individual review: docs/enumerative-da-evaluation.json."
   },
   {
     "word": "의사였음을",
@@ -136,9 +138,17 @@
   },
   {
     "word": "2년만이다",
-    "sha256": "a749c86fd4666d6e8fd5b5d013218ff2c3e4cb664b9581954436088c9d8da92c",
-    "previous_sha256": "030d516f99ad38cf4c6c2858e1f939eb9d57915444e232b4efd8f269aff28fa0",
-    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
+    "sha256": "caa8f77f6c49140b924192a46685c9e3012dde76ff4cd149c751ffdef910e672",
+    "previous_sha256": "a749c86fd4666d6e8fd5b5d013218ff2c3e4cb664b9581954436088c9d8da92c",
+    "change": "COV-018g: Two unverified nominal hypotheses: 2년만 + 이다 and 2년만이 + 다. These are rule-only candidates, not lexical or contextual judgments. Every previous candidate and provenance retained. Individual review: docs/enumerative-da-evaluation.json.",
+    "previous_revisions": [
+      {
+        "word": "2년만이다",
+        "sha256": "a749c86fd4666d6e8fd5b5d013218ff2c3e4cb664b9581954436088c9d8da92c",
+        "previous_sha256": "030d516f99ad38cf4c6c2858e1f939eb9d57915444e232b4efd8f269aff28fa0",
+        "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
+      }
+    ]
   },
   {
     "word": "학교에서만은",
@@ -158,14 +168,20 @@
   },
   {
     "word": "공부해야합니다",
-    "sha256": "00dc7027d7f287d5ed095c7e459e02b15a982fca7e6e3fec529e00d7e31ba391",
+    "sha256": "7efaf68e3b2ee90a136800934e0e08b79c35fef11df1b12ec9b240ea7d9fc0da",
     "previous_revisions": [
       {
         "sha256": "888b922990d73a8c6a00e8b81de4a0401dae22ab4243f64c91366965f406be52"
+      },
+      {
+        "word": "공부해야합니다",
+        "sha256": "00dc7027d7f287d5ed095c7e459e02b15a982fca7e6e3fec529e00d7e31ba391",
+        "previous_sha256": "888b922990d73a8c6a00e8b81de4a0401dae22ab4243f64c91366965f406be52",
+        "change": "COV-020c: one additive omitted-copula path with nominal 공부해야하. Every prior analysis retained; the nominal is a lexical hypothesis, not a dictionary-membership claim. Individual review: docs/omitted-copula-evaluation.json."
       }
     ],
-    "previous_sha256": "888b922990d73a8c6a00e8b81de4a0401dae22ab4243f64c91366965f406be52",
-    "change": "COV-020c: one additive omitted-copula path with nominal 공부해야하. Every prior analysis retained; the nominal is a lexical hypothesis, not a dictionary-membership claim. Individual review: docs/omitted-copula-evaluation.json."
+    "previous_sha256": "00dc7027d7f287d5ed095c7e459e02b15a982fca7e6e3fec529e00d7e31ba391",
+    "change": "COV-018g: One unverified nominal 공부해야합니 + 다 hypothesis; the established predicate analyses remain. Every previous candidate and provenance retained. Individual review: docs/enumerative-da-evaluation.json."
   },
   {
     "word": "들으셨겠어요",

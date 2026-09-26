@@ -3229,15 +3229,20 @@
   },
   "다": {
     "kind": "particle",
-    "label": "Adverbial emphasis",
+    "label": "Enumeration / emphasis",
     "sources": [
       {
         "id": 41693,
         "headword": "다",
         "pos": "조사"
+      },
+      {
+        "id": 85738,
+        "headword": "다",
+        "pos": "조사"
       }
     ],
-    "note": "Emphatic particle after a reviewed case phrase or deictic location/direction word. Distinct from predicate endings and the separate enumerative 다 particle."
+    "note": "Enumerative 다 follows a vowel-final nominal; emphatic 다 follows a reviewed adverbial base. Identical component paths retain both source readings; context selects their use."
   },
   "다가": {
     "kind": "particle",
@@ -3250,5 +3255,17 @@
       }
     ],
     "note": "Emphatic particle after a reviewed case phrase or deictic location/direction word. Distinct from predicate endings and the separate enumerative 다 particle."
+  },
+  "이다": {
+    "kind": "particle",
+    "label": "Enumeration",
+    "sources": [
+      {
+        "id": 86118,
+        "headword": "이다",
+        "pos": "조사"
+      }
+    ],
+    "note": "Enumerative particle after a consonant-final nominal. Distinct from the copula 이다; a surrounding list is not inferred from this token."
   }
 }

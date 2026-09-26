@@ -561,3 +561,19 @@ sources under CC BY-SA 4.0, with their original lemma/XPOS annotations. They
 protect 강에다, 노동자보고 and 거기에다 recovery, without judging every
 alternative or choosing contextual senses. GSD's automatic annotations remain
 secondary evidence; source/license links above apply.
+
+
+`krdict-enumerative-da.json` contains fifteen lexical entries (15983, 17608,
+20195, 26805, 29542, 29555, 30159, 31670, 36978, 37057, 58809, 64611, 71218,
+73276, 86232) from the September 2026 NIKL KRDict export under CC BY-SA 2.0 KR.
+Grammar entries 85738 and 86118 are added to `krdict-grammar-labels.json`.
+Adaptation: retain English equivalents and the first example group per sense,
+omit WordForm/RelatedForm and global metadata, exclude idiom subentries, and
+reformat JSON. Every previous grammar fixture entry is retained unchanged.
+Source and license links above apply. Enumerative and emphatic 다 have separate
+sources, and particle 이다 does not replace the copula homonym.
+
+`gsd-enumerative-da.conllu` is the complete byte-identical UD Korean GSD 2.15
+training sentence train-s1156 under CC BY-SA 4.0. Its 옷이다 token retains its
+copular lemma/XPOS annotation. It protects an existing alternative, not a new
+enumerative gold recovery or held-out score. Source/license links above apply.

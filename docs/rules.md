@@ -1503,8 +1503,48 @@ choose among a headword's senses; deictic and manner homonyms remain distinct
 source meanings even when they share a spelling or POS.
 
 Emphatic particle 다/다가 is separate from predicate -다/-다가/-어다가.
-Enumeration particle 다 (85738) remains unimplemented as its own source sense;
-the emphatic label links 41693. Tests that exclude an emphatic interpretation do
+Enumeration particle 다 (85738) is implemented separately in COV-018g below;
+the emphatic reading links 41693. Tests that exclude an emphatic interpretation do
 not declare every use of nominal + 다 invalid. Quoted-clause subject 가, including
 the saved 살겠다가 annotation, also remains COV-018/020 work. No final-ending
 + case rule is inferred solely to match that segmentation.
+
+
+## Enumerative 다/이다 particles (COV-018g)
+
+KRDict [다 85738](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85738)
+and [이다 86118](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86118)
+are enumerative particles, both homonym 3. They enumerate nominal items on an
+equal footing. 다 requires a vowel-final noun; 이다 requires a consonant-final
+noun, including ㄹ. The source examples include 구두다 / 옷이다 and 노래다 /
+춤이다. These have particle paths separate from the copula 이다 and ending -다.
+
+The rule accepts nominal bases, existing bounded nominal suffixes and 기/음
+nominalizations. It preserves lexical alternatives and existing outer 들/요
+slots without inferring that a sentence actually contains a list or an appropriate
+distributive/polite use. It does not recursively strip case/focus particles before
+this enumerative particle, or treat arbitrary final/connective endings as nouns.
+Unknown-script bases preserve the existing vowel/consonant pronunciation conditions.
+Nominal lexical identity is a hypothesis; dictionary presence does not select the
+contextual reading. Thus formal predicate surfaces can gain unknown nominal
+hypotheses in the raw API, as individually recorded in the comparison.
+
+`particle.enumerative_da` distinguishes this recovery from emphatic 다. Exact
+lemma/morpheme paths merge provenance, so 저기 + 다 can retain both rules in
+one analysis. The browser labels that merged path “Enumeration / emphasis” and
+lists both source entries; purely enumerative and emphatic paths use their own
+labels and preferred dictionary entries. Represented copulas prefer source 86232,
+since KRDict tags both copular and enumerative 이다 as 조사. The label checks the immediate component
+base as well as analysis-wide provenance. Copular alternatives remain independently
+selectable. The existing deterministic compactness ordering can initially select
+an enumerative path; this is not sentence-level disambiguation.
+
+[Tests](../tests/enumerative_da.rs), sixteen candidate judgments, dictionary/CLI
+parity and browser checks cover allomorphs, nominal composition, merged provenance,
+source homonyms, Unicode and preserved alternatives. The complete GSD training
+sentence train-s1156 preserves its original copular annotation for 옷이다; it is
+not relabeled as enumeration. The [comparison](enumerative-da-evaluation.json)
+records unchanged development recovery, additions and provenance changes, and
+three stress fingerprint changes with prior hashes preserved. It makes no new
+held-out recall or precision claim. Further particle combinations, contextual
+sense selection and independent Korean-language review remain open.

@@ -867,6 +867,9 @@ pub(crate) fn particles() -> &'static [Particle] {
             // Emphatic 다/다가 have separately checked adverbial/case bases.
             ("다", 3, 2),
             ("다가", 3, 2),
+            // Enumerative 다/이다 require a nominal, unlike emphatic 다.
+            ("다", 4, 2),
+            ("이다", 4, 1),
             ("의", 2, 0),
             ("으로", 2, 3),
             ("로", 2, 4),
@@ -965,6 +968,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.enumerative" => {
             "Retain an enumerative or choice particle, separate from a homonymous ending or copular expression; no contextual choice is inferred."
+        }
+        "particle.enumerative_da" => {
+            "Attach enumerative 다/이다 to a nominal in an equal-footing list; the surrounding enumeration is not inferred from this token."
         }
         "particle.emphatic_destination" => {
             "Separate a source-listed emphatic location, direction, means or recipient particle; bundled and component readings remain distinct."

@@ -2,6 +2,9 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "enumerative-da-다": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85738",
+    "enumerative-da-이다": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86118",
+
     "destination-에다": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73013",
     "destination-에다가": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73014",
     "destination-에게다": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80293",
@@ -187,6 +190,23 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id": "enumerative-da-shoes", "surface": "구두다", "judgments": [{"id": "path", "lemmas": ["구두"], "morphemes": ["다"], "morpheme_kinds": ["particle"], "verdict": "required", "source": "enumerative-da-다", "reason": "Vowel-final nominal accepts enumerative 다; the copular alternative remains."}]},
+    {"id": "enumerative-da-clothes", "surface": "옷이다", "judgments": [{"id": "path", "lemmas": ["옷"], "morphemes": ["이다"], "morpheme_kinds": ["particle"], "verdict": "required", "source": "enumerative-da-이다", "reason": "Consonant-final nominal accepts enumerative 이다, distinct from a copula and ending."}]},
+    {"id": "enumerative-da-song", "surface": "노래다", "judgments": [{"id": "path", "lemmas": ["노래"], "morphemes": ["다"], "morpheme_kinds": ["particle"], "verdict": "required", "source": "enumerative-da-다", "reason": "The dictionary enumeration example licenses the nominal and short allomorph."}]},
+    {"id": "enumerative-da-dance", "surface": "춤이다", "judgments": [{"id": "path", "lemmas": ["춤"], "morphemes": ["이다"], "morpheme_kinds": ["particle"], "verdict": "required", "source": "enumerative-da-이다", "reason": "The dictionary enumeration example licenses the nominal and full allomorph."}]},
+    {"id": "enumerative-da-rieul", "surface": "귤이다", "judgments": [{"id": "path", "lemmas": ["귤"], "morphemes": ["이다"], "morpheme_kinds": ["particle"], "verdict": "required", "source": "enumerative-da-이다", "reason": "A final ㄹ is a consonant for this allomorph, unlike instrumental 로."}]},
+    {"id": "enumerative-da-plural", "surface": "학생들이다", "judgments": [{"id": "path", "lemmas": ["학생"], "morphemes": ["들", "이다"], "morpheme_kinds": ["suffix", "particle"], "verdict": "required", "source": "enumerative-da-이다", "reason": "Nominal plural suffix stays inside the enumerated nominal."}]},
+    {"id": "enumerative-da-nominalization-open", "surface": "먹기다", "judgments": [{"id": "path", "lemmas": ["먹다"], "morphemes": ["기", "다"], "morpheme_kinds": ["ending", "particle"], "verdict": "required", "source": "enumerative-da-다", "reason": "A 기 nominalization supplies a vowel-final nominal base."}]},
+    {"id": "enumerative-da-nominalization-closed", "surface": "먹음이다", "judgments": [{"id": "path", "lemmas": ["먹다"], "morphemes": ["음", "이다"], "morpheme_kinds": ["ending", "particle"], "verdict": "required", "source": "enumerative-da-이다", "reason": "An 음 nominalization supplies a consonant-final nominal base."}]},
+    {"id": "enumerative-da-wrong-closed", "surface": "학생다", "judgments": [{"id": "path", "lemmas": ["학생"], "morphemes": ["다"], "morpheme_kinds": ["particle"], "verdict": "forbidden", "source": "enumerative-da-다", "reason": "Consonant-final nominal requires 이다."}]},
+    {"id": "enumerative-da-wrong-open", "surface": "학교이다", "judgments": [{"id": "path", "lemmas": ["학교"], "morphemes": ["이다"], "morpheme_kinds": ["particle"], "verdict": "forbidden", "source": "enumerative-da-이다", "reason": "Vowel-final nominal requires 다 for enumeration; explicit copula remains independently valid."}]},
+    {"id": "enumerative-da-wrong-rieul", "surface": "귤다", "judgments": [{"id": "path", "lemmas": ["귤"], "morphemes": ["다"], "morpheme_kinds": ["particle"], "verdict": "forbidden", "source": "enumerative-da-다", "reason": "ㄹ does not license the vowel-only allomorph."}]},
+    {"id": "enumerative-da-wrong-nominalization", "surface": "먹음다", "judgments": [{"id": "path", "lemmas": ["먹다"], "morphemes": ["음", "다"], "morpheme_kinds": ["ending", "particle"], "verdict": "forbidden", "source": "enumerative-da-다", "reason": "Consonant-final nominalization requires 이다."}]},
+    {"id": "enumerative-da-case", "surface": "학생만이다", "judgments": [{"id": "path", "lemmas": ["학생"], "morphemes": ["만", "이다"], "morpheme_kinds": ["particle", "particle"], "verdict": "forbidden", "source": "enumerative-da-이다", "reason": "Enumerative particle requires the nominal itself, not an existing focus-particle phrase; copular analysis is separate."}]},
+    {"id": "enumerative-da-connective", "surface": "먹고다", "judgments": [{"id": "path", "lemmas": ["먹다"], "morphemes": ["고", "다"], "morpheme_kinds": ["ending", "particle"], "verdict": "forbidden", "source": "enumerative-da-다", "reason": "Connective 고 alone does not supply a nominal."}]},
+    {"id": "enumerative-da-repetition", "surface": "학교다다", "judgments": [{"id": "path", "lemmas": ["학교"], "morphemes": ["다", "다"], "morpheme_kinds": ["particle", "particle"], "verdict": "forbidden", "source": "enumerative-da-다", "reason": "A preceding enumeration particle does not license a second enumeration suffix."}]},
+    {"id": "enumerative-da-final", "surface": "먹는다다", "judgments": [{"id": "path", "lemmas": ["먹다"], "morphemes": ["는다", "다"], "morpheme_kinds": ["ending", "particle"], "verdict": "forbidden", "source": "enumerative-da-다", "reason": "Final 는다 is not a nominalization."}]},
+
     {"id": "destination-location-short", "surface": "강에다", "judgments": [{"id": "path", "lemmas": ["강"], "morphemes": ["에다"], "morpheme_kinds": ["particle"], "verdict": "required", "source": "destination-에다", "reason": "The source licenses this nominal, recipient or deictic adverbial reading; contextual sense remains separate."}]},
     {"id": "destination-location-full", "surface": "학교에다가", "judgments": [{"id": "path", "lemmas": ["학교"], "morphemes": ["에다가"], "morpheme_kinds": ["particle"], "verdict": "required", "source": "destination-에다가", "reason": "The source licenses this nominal, recipient or deictic adverbial reading; contextual sense remains separate."}]},
     {"id": "destination-ege-short", "surface": "친구에게다", "judgments": [{"id": "path", "lemmas": ["친구"], "morphemes": ["에게다"], "morpheme_kinds": ["particle"], "verdict": "required", "source": "destination-에게다", "reason": "The source licenses this nominal, recipient or deictic adverbial reading; contextual sense remains separate."}]},

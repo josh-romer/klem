@@ -1,0 +1,2263 @@
+{
+  "schema_version": 1,
+  "scope": "COV-018g: enumerative nominal 다/이다, retaining emphatic and copular alternatives.",
+  "baseline_commit": "edd2b2ba0171cdc39324250d0f711af4dec993a2",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Selected fields retain every sense and at most two example groups per sense.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "0cf78a8829737be6d2670ec845950ba0130578078e2cb445d734d0cacdabd383",
+    "src/engine.rs": "14f6f46d62b9504b4121a64ef08f57b8490456e2163d6a886708768b3f82ddfc",
+    "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
+    "tests/corpus.rs": "7191d80632e9fddd781cc02316fbc20b1dacbba8ddb63da664f94b56b13e9e7a",
+    "tests/dictionary.rs": "9b336cb07e062a4284c9699b49756e441c72ed301eeb9c1476c760a5941be7a7",
+    "tests/validity.rs": "1fe190cc41449c7bcc17c4181ee597157407733da8eec4427d3bbcfcd10ee39f",
+    "tests/fixtures/validity.json": "5875c302d01495846cdf59068aef5d8d9b73af487f95d351504a92ab609ad9d4",
+    "tests/fixtures/optimization.json": "5bc6ef0df6c2cd67055c30d2b8b182c7e839fc8ccbd83e5e38b23d2184c9d12b",
+    "tests/fixtures/krdict-enumerative-da.json": "e3016929e1471cc086ee906724a34f2b26ba49044dc2f9d35be52cb31689f825",
+    "tests/fixtures/krdict-grammar-labels.json": "8e0cfc0d9a4e3c363a1c2c93de15f5abff707d2b33eeabc6e7aed69deb4b3c89",
+    "web/src/breakdown.ts": "5a8b8b2a4fe941b1438b8ea1924fc71556eaf50f32cd01a123b54bec9a0ebee3",
+    "web/src/grammar-labels.json": "3854d5cb7de547dd2816acb9add3e0b4a3d34f9e5493926277204f05afff3f94",
+    "web/tests/browser.mjs": "6a837ffb6a0564035e3908c4dff7ee53812a50641424fbc692377c3a9903b8d3"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:85738",
+        "headword": "다",
+        "homonym": "3",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85738",
+        "lexical_unit": "단어",
+        "notes": [
+          "받침 없는 명사 뒤에 붙여 쓴다. "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "여러 사물을 같은 자격으로 이어 주면서 나열함을 나타내는 조사.",
+            "notes": [
+              "주로 '-다 -다'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "승규는 노래다 춤이다 못 하는 게 없다."
+              ],
+              [
+                "유민이는 어제 백화점에서 구두다 옷이다 잔뜩 샀다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "8e3a58ea262c2a245e4f51f505e1e8f59afce6e52689316fb0dae2b9ba469e6f",
+      "disposition": "Enumerative 다 after a vowel-final nominal, including nominal suffixes and nominalizations. Foreign-base pronunciation conditions remain explicit. No recursive case-phrase or predicate-ending stripping. Existing outer 들/요 slots remain available; contextual list/distributive/polite suitability is not inferred.",
+      "remaining": "Lexical nominal identity, referential suitability, surrounding enumeration and contextual sense remain unverified. Broader particle stacking is not licensed. Independent Korean-language review pending."
+    },
+    {
+      "source": {
+        "id": "krdict:86118",
+        "headword": "이다",
+        "homonym": "3",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86118",
+        "lexical_unit": "단어",
+        "notes": [
+          "받침 있는 명사 뒤에 붙여 쓴다. "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "여러 사물을 같은 자격으로 이어 주면서 나열함을 나타내는 조사.",
+            "notes": [
+              "주로 ‘-이다 -이다’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "승규는 배드민턴이다 수영이다 못 하는 운동이 없었다. "
+              ],
+              [
+                "과일 가게 안에는 수박이다 귤이다 없는 과일이 없었다. "
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "c116522b198a0c961aba04360a2458c58030d379ea2cb205211e0ce95ecaa0df",
+      "disposition": "Enumerative 이다 after a consonant-final nominal, including nominal suffixes and nominalizations. Foreign-base pronunciation conditions remain explicit. No recursive case-phrase or predicate-ending stripping. Existing outer 들/요 slots remain available; contextual list/distributive/polite suitability is not inferred.",
+      "remaining": "Lexical nominal identity, referential suitability, surrounding enumeration and contextual sense remain unverified. Broader particle stacking is not licensed. Independent Korean-language review pending."
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "030c068c9a921c5bd2c9a4653f377992ed70a6569d022baf75f452e4f402d3f7",
+      "after_sha256": "c8b0378c96022c105fc6832673a5f45c149afeaa537c656f499bc88f2b38d111",
+      "converted": 22220,
+      "before_matched": 22087,
+      "after_matched": 22087,
+      "remaining_misses": 133,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.742844284428442,
+      "mean_candidates_after": 5.7932943294329435
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "31b8209bd6597a15cb780b87efa1829eff05a71b4c2d34526e0486470a538cfb",
+      "after_sha256": "d2a72837d695454f0d59c70492d92d5333b81b6017d995a749a193688d42c8d4",
+      "converted": 9989,
+      "before_matched": 9824,
+      "after_matched": 9824,
+      "remaining_misses": 165,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.279107017719491,
+      "mean_candidates_after": 5.313044348783662
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "구두다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "구두",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "노래다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "노래",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "옷이다",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "옷",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "옷이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "춤이다",
+      "before_count": 7,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "추다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "춤",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "춤이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "춯다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "배드민턴이다",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "배드민턴",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "배드민턴이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "수영이다",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "수영",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "수영이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "수박이다",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "수박",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "수박이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "귤이다",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "귤",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "귤이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이다",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생들이다",
+      "before_count": 8,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "선생님이다",
+      "before_count": 8,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "선생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da",
+            "suffix.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생님이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생닣다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기다",
+      "before_count": 6,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹음이다",
+      "before_count": 8,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹음",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹음이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어보기다",
+      "before_count": 8,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생다움이다",
+      "before_count": 9,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다움",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다움이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다웋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교다요",
+      "before_count": 6,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.enumerative_yo",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이다요",
+      "before_count": 6,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.enumerative_yo",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.enumerative_yo",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "저기다",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "저다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": [
+        {
+          "before": {
+            "lemmas": [
+              {
+                "text": "저기",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.emphatic_adverbial"
+            ],
+            "unchanged": false
+          },
+          "after": {
+            "lemmas": [
+              {
+                "text": "저기",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.emphatic_adverbial",
+              "particle.enumerative_da"
+            ],
+            "unchanged": false
+          }
+        }
+      ]
+    },
+    {
+      "surface": "ABC다",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC이다",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da",
+            "pronunciation.assumed_consonant"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생다",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교이다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "귤다",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹음다",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기이다",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서다",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "손으로다",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "손으로",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생만이다",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생만이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이다다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교다다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹는다다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹는다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "저기다가",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "이리다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이리",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "2년만이다",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "2년만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "2년만이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "공부해야합니다",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "공부해야합니",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교다들",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            },
+            {
+              "form": "들",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.distributive",
+            "particle.enumerative_da"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    }
+  ],
+  "snapshots": {
+    "unchanged": 27,
+    "changed": [
+      {
+        "surface": "의사다",
+        "before_count": 5,
+        "after_count": 6,
+        "removed": [],
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "의사",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.enumerative_da"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": [],
+        "before_sha256": "359e41ccfa39f8df285ffb5029a64299fb6d7defd17265852880e67d86257339",
+        "after_sha256": "ff3a376d88995774a64d460d828386d8f8c9da140aa1e09154ee9a523a78a297",
+        "judgment": "One nominal 의사 + enumerative 다 path; copular alternatives remain."
+      },
+      {
+        "surface": "2년만이다",
+        "before_count": 9,
+        "after_count": 11,
+        "removed": [],
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "2년만",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "이다",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.enumerative_da"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "2년만이",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.enumerative_da"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": [],
+        "before_sha256": "a749c86fd4666d6e8fd5b5d013218ff2c3e4cb664b9581954436088c9d8da92c",
+        "after_sha256": "caa8f77f6c49140b924192a46685c9e3012dde76ff4cd149c751ffdef910e672",
+        "judgment": "Two unverified nominal hypotheses: 2년만 + 이다 and 2년만이 + 다. These are rule-only candidates, not lexical or contextual judgments."
+      },
+      {
+        "surface": "공부해야합니다",
+        "before_count": 10,
+        "after_count": 11,
+        "removed": [],
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "공부해야합니",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.enumerative_da"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": [],
+        "before_sha256": "00dc7027d7f287d5ed095c7e459e02b15a982fca7e6e3fec529e00d7e31ba391",
+        "after_sha256": "7efaf68e3b2ee90a136800934e0e08b79c35fef11df1b12ec9b240ea7d9fc0da",
+        "judgment": "One unverified nominal 공부해야합니 + 다 hypothesis; the established predicate analyses remain."
+      }
+    ]
+  },
+  "fixtures": [
+    {
+      "path": "tests/fixtures/gsd-enumerative-da.conllu",
+      "sha256": "e96b577728ab9c3ff7d2afcbfc58d5f0893fb72d8dba762b1f8c5903854cdab4",
+      "complete_byte_identical_sentences": 1,
+      "split": "training",
+      "purpose": "Preserve the copular gold for 옷이다 in train-s1156/5; no new enumerative gold claim."
+    }
+  ],
+  "remaining": [
+    "Context does not choose between an enumerative particle, emphatic particle and copula. Identical component paths union provenance, including 저기 + 다.",
+    "Unclassified nominal hypotheses remain in the raw API; dictionary filtering may remove them but does not establish contextual enumeration.",
+    "Existing deterministic browser preference may initially show a new equally compact particle reading (e.g. 과학적이다); all copular choices remain selectable.",
+    "Independent Korean-language review, fresh passage evaluation, contextual ranking and broader inventory review remain open."
+  ],
+  "labels": {
+    "canonical_forms": 256,
+    "catalog_source_entries": 303,
+    "grammar_fixture_entries": 304,
+    "new_source_ids": [
+      85738,
+      86118
+    ],
+    "all_prior_entries_unchanged": true
+  },
+  "review_status": "Source-backed agent judgments; independent Korean-language review pending. No precision estimate."
+}

@@ -952,3 +952,42 @@ x86_64-linux; other declared platforms were not executed. The packaged app with
 the full dictionary passes fifteen reading choices, distinct particle/ending
 source links, six forbidden paths, preservation of the 돌보다 verb reading,
 and desktop/mobile checks without JavaScript errors or overflow.
+
+## Enumerative 다/이다 particles (COV-018g)
+
+[The comparison](enumerative-da-evaluation.json) records **72 added analyses and
+one merged-provenance change across 39 audited surfaces**, with no removed paths
+or provenance. Enumerative 다/이다 accepts vowel/consonant nominal boundaries,
+respectively, retaining emphatic and copular alternatives. Identical 저기 + 다
+paths retain both enumerative and emphatic provenance. The browser shows both
+functions, while represented copulas prefer KRDict's copula homonym over the
+separately tagged enumerative particle.
+
+Development recovery remains **133 KAIST and 165 GSD misses**, with no lost
+component sets. Mean candidates increase from 5.7428 to 5.7933 in KAIST and
+5.2791 to 5.3130 in GSD. These are ambiguity measurements, not linguistic
+precision scores. A complete byte-identical GSD training sentence preserves the
+existing copular gold for 옷이다; it is not relabeled as enumeration.
+
+The ledger contains **473 cases, 265 required and 214 forbidden judgments**,
+including sixteen new cases. The catalog has **256 canonical forms**, 303 source
+entries and 304 grammar-fixture entries. All previous source entries remain
+unchanged. Two new scoped reviews bring the inventory to **30 scoped entries
+and 685 without a disposition**. Lexical nominal identity, surrounding enumeration,
+contextual sense and broader attachment combinations remain open.
+
+Three stress fingerprints change: 의사다 gains 의사 + 다; 2년만이다 gains
+unverified 2년만 + 이다 and 2년만이 + 다 hypotheses; 공부해야합니다 gains
+unverified 공부해야합니 + 다. Every previous analysis, provenance and hash is
+preserved. The remaining 27 fingerprints and historical corpus baselines are
+unchanged. These additions illustrate why raw rule candidates and contextual
+correctness must remain separate.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, reviewed
+stress checks, the 1,024-syllable memory test, frontend production build and
+complete browser/HTTP suite pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared platforms were not executed. The final packaged app
+with the full dictionary passes ten reading choices, merged source references,
+copula/particle source switching, six forbidden paths, four homonym checks, and
+desktop/mobile inspection without JavaScript errors or overflow. Independent
+Korean-language review and fresh-passage evaluation remain pending.

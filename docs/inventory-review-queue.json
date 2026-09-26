@@ -12,22 +12,24 @@
     "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "87025ddab22da8cac874cf70d00823164a223873336987d5cf31e75f0fed702b",
+    "docs/coverage-checklist.md": "7f8b218b8cb3fef8002991f7249fffbc59ed86b1b77ea1119c5361acf6f411b4",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
+    "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
-    "docs/inventory-audit.md": "488cbdeb38219cb7ae632dcdd5d113da91045c7cde5605a04ae54ad045fcf297",
-    "docs/inventory-reviews.json": "d9d55f315208526212e73d545d69537c1c3efdcf08e2fcdf72573314438df100",
+    "docs/inventory-audit.md": "af38175db3bafb3091f396dfe279c971a1b71cd9138c4399d535a135c7e58285",
+    "docs/inventory-reviews.json": "2abe05b0e9b2e4fed9ac501d450748cbe4f9204a9ef6bcadfbd506d51ee38134",
     "docs/reporting-evaluation.json": "74f0fb2732024ef27d7250d374184bda3d766aeb32f2c6b787ee319157c6d96e",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
-    "tests/dictionary.rs": "ced421e8d44f4b7f049e20ca88c17097b6b76e9c0c37a0b0b7320ffbfb645b63",
+    "tests/dictionary.rs": "9b336cb07e062a4284c9699b49756e441c72ed301eeb9c1476c760a5941be7a7",
+    "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
-    "tests/fixtures/validity.json": "1ccddb47726358831863e556d183f03af8b89ab35c34d8576da179a8d5c5344b",
+    "tests/fixtures/validity.json": "5875c302d01495846cdf59068aef5d8d9b73af487f95d351504a92ab609ad9d4",
     "tests/reporting_endings.rs": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
-    "web/src/grammar-labels.json": "735226d7523cd4c38321966ed924c46f65e58a87c301b5f159bfd3709ada64fc"
+    "web/src/grammar-labels.json": "3854d5cb7de547dd2816acb9add3e0b4a3d34f9e5493926277204f05afff3f94"
   },
   "counts": {
     "entries": 715,
@@ -38,11 +40,11 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 687,
-      "scoped": 28
+      "unreviewed": 685,
+      "scoped": 30
     },
-    "with_catalog_links": 231,
-    "with_judgment_citations": 92
+    "with_catalog_links": 233,
+    "with_judgment_citations": 94
   },
   "entries": [
     {
@@ -32086,7 +32088,7 @@
         "checklist": [
           "COV-018f"
         ],
-        "scope": "Emphatic 다 after 에/에서/서/에게/한테/께/로/으로 or the seven reviewed deictic location/direction words. No arbitrary nominal, adverbial, final/connective ending or repeated emphasis stripping. Enumerative 다 85738 is a separate unimplemented source sense.",
+        "scope": "Emphatic 다 after 에/에서/서/에게/한테/께/로/으로 or the seven reviewed deictic location/direction words. No arbitrary nominal, adverbial, final/connective ending or repeated emphasis stripping. Enumerative 다 85738 is separately implemented and reviewed in COV-018g.",
         "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
         "evidence": [
           {
@@ -32150,11 +32152,124 @@
         ]
       },
       "source_sha256": "8e3a58ea262c2a245e4f51f505e1e8f59afce6e52689316fb0dae2b9ba469e6f",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "다",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "enumerative-da-connective",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "enumerative-da-final",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "enumerative-da-nominalization-open",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "enumerative-da-repetition",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "enumerative-da-shoes",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "enumerative-da-song",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "enumerative-da-wrong-closed",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "enumerative-da-wrong-nominalization",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "enumerative-da-wrong-rieul",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:85738",
+        "source_sha256": "8e3a58ea262c2a245e4f51f505e1e8f59afce6e52689316fb0dae2b9ba469e6f",
+        "status": "scoped",
+        "checklist": [
+          "COV-018g"
+        ],
+        "scope": "Enumerative 다 after a vowel-final nominal, including nominal suffixes and nominalizations. Foreign-base pronunciation conditions remain explicit. No recursive case-phrase or predicate-ending stripping. Existing outer 들/요 slots remain available; contextual list/distributive/polite suitability is not inferred.",
+        "remaining": "Lexical nominal identity, referential suitability, surrounding enumeration and contextual sense remain unverified. Broader particle stacking is not licensed. Independent Korean-language review pending.",
+        "evidence": [
+          {
+            "path": "tests/enumerative_da.rs",
+            "test": "enumerative_da_preserves_nominal_composition_and_homonymous_readings"
+          },
+          {
+            "path": "tests/enumerative_da.rs",
+            "test": "enumerative_da_rejects_wrong_boundaries_case_phrases_and_predicate_endings"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "enumerative_da_keeps_particle_and_copula_paths_in_dictionary_cli"
+          },
+          {
+            "path": "docs/enumerative-da-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "enumerative-da-shoes",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-song",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-nominalization-open",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-wrong-closed",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-wrong-rieul",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-wrong-nominalization",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-connective",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-repetition",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-final",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -39205,11 +39320,106 @@
         ]
       },
       "source_sha256": "c116522b198a0c961aba04360a2458c58030d379ea2cb205211e0ce95ecaa0df",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "이다",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "enumerative-da-case",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "enumerative-da-clothes",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "enumerative-da-dance",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "enumerative-da-nominalization-closed",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "enumerative-da-plural",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "enumerative-da-rieul",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "enumerative-da-wrong-open",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86118",
+        "source_sha256": "c116522b198a0c961aba04360a2458c58030d379ea2cb205211e0ce95ecaa0df",
+        "status": "scoped",
+        "checklist": [
+          "COV-018g"
+        ],
+        "scope": "Enumerative 이다 after a consonant-final nominal, including nominal suffixes and nominalizations. Foreign-base pronunciation conditions remain explicit. No recursive case-phrase or predicate-ending stripping. Existing outer 들/요 slots remain available; contextual list/distributive/polite suitability is not inferred.",
+        "remaining": "Lexical nominal identity, referential suitability, surrounding enumeration and contextual sense remain unverified. Broader particle stacking is not licensed. Independent Korean-language review pending.",
+        "evidence": [
+          {
+            "path": "tests/enumerative_da.rs",
+            "test": "enumerative_da_preserves_nominal_composition_and_homonymous_readings"
+          },
+          {
+            "path": "tests/enumerative_da.rs",
+            "test": "enumerative_da_rejects_wrong_boundaries_case_phrases_and_predicate_endings"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "enumerative_da_keeps_particle_and_copula_paths_in_dictionary_cli"
+          },
+          {
+            "path": "docs/enumerative-da-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "enumerative-da-clothes",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-dance",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-rieul",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-plural",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-nominalization-closed",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-wrong-open",
+            "judgment": "path"
+          },
+          {
+            "case": "enumerative-da-case",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

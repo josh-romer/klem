@@ -136,6 +136,9 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const enumerativeDa = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-enumerative-da.json"), "utf8"),
+  );
   const destinationParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-destination-particles.json"), "utf8"),
   );
@@ -230,6 +233,7 @@ try {
       ...quotedAlternatives.LexicalResource.Lexicon.LexicalEntry,
       ...enumerativeParticles.LexicalResource.Lexicon.LexicalEntry,
       ...destinationParticles.LexicalResource.Lexicon.LexicalEntry,
+      ...enumerativeDa.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -510,9 +514,11 @@ try {
       );
     }
     if (word === "과학적이다") {
+      // The compact enumerative particle now ties the copular analysis.
+      // Initial ordering is deterministic, not contextual disambiguation.
       assert.deepEqual(
         await breakdown.locator(".part-form").allTextContents(),
-        ["과학적", "이", "다"],
+        ["과학적", "이다"],
       );
     }
     const choice = await breakdown
@@ -606,6 +612,10 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["구두다", ["구두", "다"], "다", "Enumeration", 85738, "particle"],
+    ["옷이다", ["옷", "이다"], "이다", "Enumeration", 86118, "particle"],
+    ["먹기다", ["먹", "기", "다"], "다", "Enumeration", 85738, "particle"],
+    ["학생들이다", ["학생", "들", "이다"], "이다", "Enumeration", 86118, "particle"],
     ["강에다", ["강", "에다"], "에다", "Location / addition", 73013, "particle"],
     ["강에다", ["강", "에", "다"], "다", "Adverbial emphasis", 41693, "particle"],
     ["학교에다가", ["학교", "에다가"], "에다가", "Location / addition", 73014, "particle"],
@@ -618,7 +628,7 @@ try {
     ["손으로다가", ["손", "으로다가"], "으로다가", "Emphatic direction / means", 86577, "particle"],
     ["노동자보고", ["노동자", "보고"], "보고", "Recipient / addressee", 70051, "particle"],
     ["나더러", ["나", "더러"], "더러", "Recipient / addressee", 70037, "particle"],
-    ["저기다", ["저기", "다"], "다", "Adverbial emphasis", 41693, "particle"],
+    ["저기다", ["저기", "다"], "다", "Enumeration / emphasis", 41693, "particle"],
     ["어디다가", ["어디", "다가"], "다가", "Adverbial emphasis", 41695, "particle"],
     ["학생이라든가", ["학생", "이라든가"], "이라든가", "Enumerative examples", 85861, "particle"],
     ["학교라든가", ["학교", "라든가"], "라든가", "Enumerative examples", 85861, "particle"],
@@ -668,6 +678,24 @@ try {
     await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
     assert.ok(data.grammar[kind === "particle" ? form : `-${form}`].some(e => e.id === `krdict:${id}`));
+    if (word === "저기다" && kind === "particle") {
+      assert.ok(data.grammar["다"].some(e => e.id === "krdict:85738"));
+      const selected = data.records[0].analysis.analyses[Number(choice)];
+      assert.ok(selected.rules.includes("particle.enumerative_da"));
+      assert.ok(selected.rules.includes("particle.emphatic_adverbial"));
+      assert.match(await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).getAttribute("title"), /85738/);
+    }
+    if (word === "옷이다" && kind === "particle") {
+      const copula = data.records[0].analysis.analyses.findIndex(a =>
+        a.lemmas.length === 2 && a.lemmas[0].text === "옷" &&
+        a.lemmas[1].kind === "copula" && a.morphemes.length === 1 &&
+        a.morphemes[0].form === "다" && a.morphemes[0].kind === "ending");
+      assert.ok(copula >= 0);
+      await breakdown.getByRole("combobox").selectOption(String(copula));
+      assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), ["옷", "이", "다"]);
+      await breakdown.locator("button").filter({has: page.locator(".part-form", {hasText: /^이$/})}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=86232"));
+    }
     if (form === "기에") {
       const nominal = expected.slice(0, -1).concat(["기", "에"]);
       const alternate = await breakdown.getByRole("combobox").locator("option").evaluateAll(

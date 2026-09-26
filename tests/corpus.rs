@@ -3,6 +3,28 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn enumerative_da_preserves_annotated_copula_instead_of_replacing_it() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-enumerative-da.conllu").as_slice(),
+        Corpus::Gsd,
+        "enumerative-da",
+    )
+    .unwrap();
+    let case = &report.cases["id:train-s1156/5"];
+    assert_eq!(case.surface, "옷이다");
+    assert_eq!(case.expected, ["옷", "이다"]);
+    assert!(case.matched);
+    // This sentence asserts a copula, not enumeration. The dictionary licenses
+    // an additional token-level particle hypothesis; gold must stay unchanged.
+    let word = klem::Lemmatizer::new().analyze_word(&case.surface).unwrap();
+    assert!(word.analyses.iter().any(|a| a.lemmas.len() == 1
+        && a.lemmas[0].text == "옷"
+        && a.morphemes.len() == 1
+        && a.morphemes[0].form == "이다"
+        && a.morphemes[0].kind == klem::MorphemeKind::Particle));
+}
+
+#[test]
 fn destination_particles_recover_saved_development_groups() {
     for (corpus, input, cases) in [
         (

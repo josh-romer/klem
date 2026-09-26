@@ -2710,3 +2710,90 @@ fn cli_dict_only_requires_a_dictionary_and_supported_output() {
     assert!(!output.status.success());
     assert!(output.stdout.is_empty());
 }
+
+#[test]
+fn enumerative_da_keeps_particle_and_copula_paths_in_dictionary_cli() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-enumerative-da.json")],
+        dir.db(),
+        "enumerative-da-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        ("구두다", vec!["구두"], vec!["다"], MorphemeKind::Particle),
+        ("옷이다", vec!["옷"], vec!["이다"], MorphemeKind::Particle),
+        ("노래다", vec!["노래"], vec!["다"], MorphemeKind::Particle),
+        ("춤이다", vec!["춤"], vec!["이다"], MorphemeKind::Particle),
+        (
+            "학생들이다",
+            vec!["학생"],
+            vec!["들", "이다"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹기다",
+            vec!["먹다"],
+            vec!["기", "다"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹음이다",
+            vec!["먹다"],
+            vec!["음", "이다"],
+            MorphemeKind::Particle,
+        ),
+        ("저기다", vec!["저기"], vec!["다"], MorphemeKind::Particle),
+        (
+            "손으로다",
+            vec!["손"],
+            vec!["으로", "다"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "구두다",
+            vec!["구두", "이다"],
+            vec!["다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "옷이다",
+            vec!["옷", "이다"],
+            vec!["다"],
+            MorphemeKind::Ending,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

@@ -14,6 +14,208 @@ fn path(a: &Analysis, lemmas: &[&str], forms: &[&str]) -> bool {
 }
 
 #[test]
+fn choice_particles_compose_after_case_and_restrictive_chains() {
+    use unicode_normalization::UnicodeNormalization;
+    for (word, lemma, forms) in [
+        ("어디까지나", "어디", vec!["까지", "나"]),
+        ("이제부터라도", "이제", vec!["부터", "라도"]),
+        ("학교에서라도", "학교", vec!["에서", "라도"]),
+        ("학생만이라도", "학생", vec!["만", "이라도"]),
+        ("학교에서나", "학교", vec!["에서", "나"]),
+        ("학교에서든지", "학교", vec!["에서", "든지"]),
+        ("학생이든지", "학생", vec!["이든지"]),
+        ("학교에서야", "학교", vec!["에서", "야"]),
+        ("학생만이야", "학생", vec!["만", "이야"]),
+        ("학교에서라도요", "학교", vec!["에서", "라도", "요"]),
+        ("먹고라도", "먹다", vec!["고", "라도"]),
+        ("먹고나", "먹다", vec!["고", "나"]),
+        ("먹는다나", "먹다", vec!["는다", "나"]),
+        ("먹는다든지", "먹다", vec!["는다", "든지"]),
+        ("먹으라든지", "먹다", vec!["으라", "든지"]),
+        ("먹고야", "먹다", vec!["고", "야"]),
+        ("빨리라도", "빨리", vec!["라도"]),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        assert!(
+            result.analyses.iter().any(|a| path(a, &[lemma], &forms)),
+            "{word}"
+        );
+        assert!(
+            result.analyses.iter().all(|a| a.breakdown().is_some()),
+            "{word}"
+        );
+        assert_eq!(
+            result,
+            Lemmatizer::new()
+                .analyze_word(&word.nfd().collect::<String>())
+                .unwrap()
+        );
+    }
+    for (word, lemma, forms) in [
+        ("학교이라도", "학교", vec!["이라도"]),
+        ("학생라도", "학생", vec!["라도"]),
+        ("길라도", "길", vec!["라도"]),
+        ("학교에서이나", "학교", vec!["에서", "이나"]),
+        ("학생만나", "학생", vec!["만", "나"]),
+        ("학교나나", "학교", vec!["나", "나"]),
+        ("학교든지든지", "학교", vec!["든지", "든지"]),
+        ("학교야야", "학교", vec!["야", "야"]),
+        ("먹는라도", "먹다", vec!["는", "라도"]),
+    ] {
+        assert!(
+            !Lemmatizer::new()
+                .analyze_word(word)
+                .unwrap()
+                .analyses
+                .iter()
+                .any(|a| path(a, &[lemma], &forms)),
+            "{word}"
+        );
+    }
+    let result = Lemmatizer::new().analyze_word("빨리라도").unwrap();
+    assert!(
+        result
+            .analyses
+            .iter()
+            .any(|a| path(a, &["빨리"], &["라도"]) && a.lemmas[0].kind == LemmaKind::Adverbial)
+    );
+}
+
+#[test]
+fn nominal_quotative_particles_keep_copular_alternatives() {
+    let derived = Lemmatizer::new().analyze_word("달리라도").unwrap();
+    assert!(
+        derived
+            .analyses
+            .iter()
+            .any(|a| path(a, &["다르다"], &["이", "라도"]))
+    );
+    for (word, noun, particle) in [
+        ("사회주의라고", "사회주의", "라고"),
+        ("학생이라고", "학생", "이라고"),
+        ("길이라고", "길", "이라고"),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let a = result
+            .analyses
+            .iter()
+            .find(|a| path(a, &[noun], &[particle]))
+            .expect(word);
+        assert_eq!(a.morphemes[0].kind, MorphemeKind::Particle);
+        assert!(
+            result
+                .analyses
+                .iter()
+                .any(|a| path(a, &[noun, "이다"], &["라고"]))
+        );
+    }
+    for (word, noun, forms) in [
+        ("학생이라고는", "학생", vec!["이라고", "는"]),
+        ("학교라곤", "학교", vec!["라고", "는"]),
+        ("학생이라고도", "학생", vec!["이라고", "도"]),
+        ("학교라고요", "학교", vec!["라고", "요"]),
+    ] {
+        assert!(
+            Lemmatizer::new()
+                .analyze_word(word)
+                .unwrap()
+                .analyses
+                .iter()
+                .any(|a| path(a, &[noun], &forms)),
+            "{word}"
+        );
+    }
+    for (word, noun, form) in [
+        ("학생라고", "학생", "라고"),
+        ("학교이라고", "학교", "이라고"),
+    ] {
+        assert!(
+            !Lemmatizer::new()
+                .analyze_word(word)
+                .unwrap()
+                .analyses
+                .iter()
+                .any(|a| path(a, &[noun], &[form])),
+            "{word}"
+        );
+    }
+}
+
+#[test]
+fn post_ending_particles_preserve_groups_and_concessive_provenance() {
+    for (word, lemmas, forms, concessive) in [
+        ("있습니다만", vec!["있다"], vec!["습니다", "만"], true),
+        ("먹는다마는", vec!["먹다"], vec!["는다", "마는"], true),
+        ("먹겠냐만", vec!["먹다"], vec!["겠", "냐", "만"], true),
+        (
+            "학생입니다만",
+            vec!["학생", "이다"],
+            vec!["습니다", "만"],
+            true,
+        ),
+        (
+            "먹어봤습니다만",
+            vec!["먹다", "보다"],
+            vec!["어", "었", "습니다", "만"],
+            true,
+        ),
+        ("먹지만", vec!["먹다"], vec!["지", "만"], true),
+        ("먹고도", vec!["먹다"], vec!["고", "도"], false),
+        ("하면서도", vec!["하다"], vec!["으면서", "도"], false),
+        ("먹고는", vec!["먹다"], vec!["고", "는"], false),
+        ("먹어서는", vec!["먹다"], vec!["어서", "는"], false),
+        ("먹어서만은", vec!["먹다"], vec!["어서", "만", "은"], false),
+        ("먹어야만", vec!["먹다"], vec!["어야", "만"], false),
+        ("학생만", vec!["학생"], vec!["만"], false),
+        ("먹음만", vec!["먹다"], vec!["음", "만"], false),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let a = result
+            .analyses
+            .iter()
+            .find(|a| path(a, &lemmas, &forms))
+            .expect(word);
+        assert_eq!(
+            a.rules.iter().any(|r| r == "particle.concessive"),
+            concessive,
+            "{word}"
+        );
+        assert_eq!(a.morphemes.last().unwrap().kind, MorphemeKind::Particle);
+        assert!(result.analyses.iter().any(|a| a.unchanged));
+        assert!(
+            result.analyses.iter().all(|a| a.breakdown().is_some()),
+            "{word}"
+        );
+    }
+    for (word, lemmas, forms) in [
+        ("학생마는", vec!["학생"], vec!["마는"]),
+        ("먹음마는", vec!["먹다"], vec!["음", "마는"]),
+        ("먹는도", vec!["먹다"], vec!["는", "도"]),
+        ("먹습니다도", vec!["먹다"], vec!["습니다", "도"]),
+        ("먹고은", vec!["먹다"], vec!["고", "은"]),
+        ("먹냐는만", vec!["먹다"], vec!["냐는", "만"]),
+    ] {
+        assert!(
+            !Lemmatizer::new()
+                .analyze_word(word)
+                .unwrap()
+                .analyses
+                .iter()
+                .any(|a| path(a, &lemmas, &forms)),
+            "{word}"
+        );
+    }
+    // A bundled ending and a separated ending + particle remain alternatives.
+    let result = Lemmatizer::new().analyze_word("먹지만").unwrap();
+    assert!(
+        result
+            .analyses
+            .iter()
+            .any(|a| path(a, &["먹다"], &["지만"]))
+    );
+}
+
+#[test]
 fn contractions_preserve_case_chains_and_pronoun_alternatives() {
     for (word, noun, forms) in [
         ("학교에선", "학교", vec!["에서", "는"]),

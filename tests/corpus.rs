@@ -3,6 +3,261 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn annotated_intention_and_concession_endings_recover_missing_groups() {
+    for (name, input, selected) in [
+        (
+            "kaist",
+            include_bytes!("fixtures/kaist-intention-endings.conllu").as_slice(),
+            vec![
+                ("id:M2TA_069-s49/7", "되리라고", "되다"),
+                ("id:MH2_0069-s146/2", "들자면", "들다"),
+                ("id:MH2_0069-s42/2", "들자면", "들다"),
+                ("id:MH2_0069-s5/5", "할지라도", "하다"),
+                ("id:MH2_0159-s129/4", "말하자면", "말하다"),
+                ("id:MH2_0159-s194/14", "되리라고", "되다"),
+                ("id:MH2_0159-s203/7", "관련하자면", "관련하다"),
+                ("id:MH2_0159-s64/3", "할지라도", "하다"),
+                ("id:MH2_0169-s63/5", "얻으리라고", "얻다"),
+                ("id:MH2_0169-s739/4", "바뀌리라고", "바뀌다"),
+            ],
+        ),
+        (
+            "gsd",
+            include_bytes!("fixtures/gsd-intention-endings.conllu").as_slice(),
+            vec![("id:dev-s851/7", "할지라도", "하다")],
+        ),
+    ] {
+        let report = corpus::evaluate(input, Corpus::parse(name).unwrap(), name).unwrap();
+        for (id, surface, lemma) in selected {
+            let case = report.cases.get(id).unwrap();
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
+fn annotated_foreign_nominals_recover_spelling_without_inventing_pronunciation() {
+    let selected: Vec<serde_json::Value> =
+        serde_json::from_str(include_str!("fixtures/foreign-nominal-gold.json")).unwrap();
+    assert_eq!(selected.len(), 39);
+    for (name, input) in [
+        (
+            "kaist",
+            include_bytes!("fixtures/kaist-foreign-nominals.conllu").as_slice(),
+        ),
+        (
+            "gsd",
+            include_bytes!("fixtures/gsd-foreign-nominals.conllu").as_slice(),
+        ),
+    ] {
+        let report = corpus::evaluate(input, Corpus::parse(name).unwrap(), name).unwrap();
+        for selected in selected.iter().filter(|v| v["corpus"] == name) {
+            let id = selected["id"].as_str().unwrap();
+            let case = report.cases.get(id).unwrap();
+            assert_eq!(case.surface, selected["surface"].as_str().unwrap());
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                selected["expected"]
+            );
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
+fn annotated_propositive_preserves_the_lexical_recovery() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-propositive.conllu").as_slice(),
+        Corpus::Kaist,
+        "kaist",
+    )
+    .unwrap();
+    let case = report.cases.get("id:MH2_0159-s160/11").unwrap();
+    assert_eq!(case.surface, "봅시다");
+    assert_eq!(case.expected, ["보다"]);
+    assert!(case.matched);
+}
+
+#[test]
+fn annotated_auxiliary_adjectives_keep_their_licensed_inflections() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-auxiliary-classes.conllu").as_slice(),
+        Corpus::parse("gsd").unwrap(),
+        "gsd",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:dev-s112/1", "먹을만한", ["먹다", "만하다"]),
+        ("id:dev-s388/4", "참을만한데", ["참다", "만하다"]),
+        ("id:dev-s572/4", "보고싶다", ["보다", "싶다"]),
+        ("id:dev-s791/3", "보고싶습니다", ["보다", "싶다"]),
+    ] {
+        let case = report.cases.get(id).unwrap();
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
+fn annotated_short_prohibition_recovers_malda() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-negative-auxiliaries.conllu").as_slice(),
+        Corpus::parse("gsd").unwrap(),
+        "gsd",
+    )
+    .unwrap();
+    let case = report.cases.get("id:dev-s312/4").unwrap();
+    assert_eq!(case.surface, "마라");
+    assert_eq!(case.expected, ["말다"]);
+    assert!(case.matched);
+}
+
+#[test]
+fn annotated_additional_adverbs_recover_predicate_lemmas() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-adverb-expansion.conllu").as_slice(),
+        Corpus::parse("kaist").unwrap(),
+        "kaist",
+    )
+    .unwrap();
+    for (id, surface, lemma) in [
+        ("id:MH2_0159-s128/13", "다분히", "다분하다"),
+        ("id:MH2_0159-s341/12", "가벼이", "가볍다"),
+        ("id:MH2_0159-s358/4", "적잖이", "적잖다"),
+        ("id:MH2_0159-s53/3", "상당히", "상당하다"),
+    ] {
+        let case = report.cases.get(id).unwrap();
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [lemma]);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
+fn annotated_negative_contraction_recovers_both_lemmas() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-negative-contractions.conllu").as_slice(),
+        Corpus::parse("kaist").unwrap(),
+        "kaist",
+    )
+    .unwrap();
+    let case = report.cases.get("id:MH2_0159-s86/12").unwrap();
+    assert_eq!(case.surface, "적잖은");
+    assert_eq!(case.expected, ["적다", "않다"]);
+    assert!(case.matched);
+}
+
+#[test]
+fn annotated_direct_nominalization_recovers_omitted_copula() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-nominal-copulas.conllu").as_slice(),
+        Corpus::parse("kaist").unwrap(),
+        "kaist",
+    )
+    .unwrap();
+    let case = report.cases.get("id:MH2_0169-s271/6").unwrap();
+    assert_eq!(case.surface, "떠먹이기다");
+    assert_eq!(case.expected, ["떠먹이다", "이다"]);
+    assert!(case.matched);
+}
+
+#[test]
+fn annotated_auxiliary_inventory_cases_recover_whole_groups() {
+    for (name, input, cases) in [
+        (
+            "kaist",
+            include_str!("fixtures/kaist-auxiliary-inventory.conllu"),
+            vec![
+                ("id:M2TA_069-s25/2", "착하다보니", vec!["착하다", "보다"]),
+                ("id:MH2_0069-s198/7", "늘어났다", vec!["늘다", "나다"]),
+                (
+                    "id:MH2_0069-s422/19",
+                    "번져나갔다",
+                    vec!["번지다", "나가다"],
+                ),
+                ("id:MH2_0169-s332/8", "해달라고", vec!["하다", "달다"]),
+            ],
+        ),
+        (
+            "gsd",
+            include_str!("fixtures/gsd-auxiliary-inventory.conllu"),
+            vec![("id:dev-s112/1", "먹을만한", vec!["먹다", "만하다"])],
+        ),
+    ] {
+        let report =
+            corpus::evaluate(input.as_bytes(), Corpus::parse(name).unwrap(), name).unwrap();
+        for (id, surface, expected) in cases {
+            let case = report.cases.get(id).expect(id);
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
+fn annotated_particle_chains_preserve_nominal_and_nominalized_groups() {
+    for (name, input, cases) in [
+        (
+            "kaist",
+            include_str!("fixtures/kaist-particle-chains.conllu"),
+            vec![
+                ("id:M2TA_089-s52/8", "어디까지나", "어디"),
+                ("id:MH2_0069-s295/3", "이제부터라도", "이제"),
+                ("id:MH2_0169-s490/8", "사회주의라고", "사회주의"),
+            ],
+        ),
+        (
+            "gsd",
+            include_str!("fixtures/gsd-particle-chains.conllu"),
+            vec![("id:dev-s471/9", "넣기라도", "넣다")],
+        ),
+    ] {
+        let report =
+            corpus::evaluate(input.as_bytes(), Corpus::parse(name).unwrap(), name).unwrap();
+        for (id, surface, lemma) in cases {
+            let case = report.cases.get(id).expect(id);
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
+fn annotated_post_ending_particles_recover_grouped_cases() {
+    for (name, input, cases) in [
+        (
+            "kaist",
+            include_str!("fixtures/kaist-post-ending-particles.conllu"),
+            vec![
+                ("id:MH2_0159-s132/9", "있습니다만", vec!["있다"]),
+                ("id:MH2_0069-s174/9", "통해서만", vec!["통하다"]),
+                ("id:M2TA_089-s15/2", "빼고는", vec!["빼다"]),
+                ("id:MH2_0169-s548/10", "대주고는", vec!["대다", "주다"]),
+            ],
+        ),
+        (
+            "gsd",
+            include_str!("fixtures/gsd-post-ending-particles.conllu"),
+            vec![("id:dev-s320/3", "하면서도", vec!["하다"])],
+        ),
+    ] {
+        let report =
+            corpus::evaluate(input.as_bytes(), Corpus::parse(name).unwrap(), name).unwrap();
+        for (id, surface, expected) in cases {
+            let case = report.cases.get(id).expect(id);
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn annotated_quoted_questions_recover_negative_copula_and_past_groups() {
     let report = corpus::evaluate(
         std::io::Cursor::new(include_str!("fixtures/kaist-quoted-questions.conllu")),

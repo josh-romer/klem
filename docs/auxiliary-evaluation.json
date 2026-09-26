@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-019a structural auxiliary catalog and one internal particle; development comparison, not precision or lexical-class validation.",
+  "baseline_description": "COV-018b working tree before the auxiliary inventory batch.",
+  "baseline_source_sha256": {
+    "src/engine.rs": "23c10ef6e9c0edacec7528c8b63a8cea4d5fc400bbe34962a92045312935f957",
+    "src/grammar.rs": "1f5655cff13fed57f140473eb51d57de192d1c50f077eb3b0fee898e7dafefcf"
+  },
+  "source_sha256": {
+    "src/engine.rs": "553c5f4d2e34758af83273ebaa250ac886464bc2310066ff80aa96520124f87d",
+    "src/grammar.rs": "bc366bc15af305d3d6c9293ea978654582c5e4a55e9b84a822d0fe10c0fc111e"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "c3651772b9679909075a600503d05ca9bff4338f5dc27c28e122eecc29a59099",
+      "after_report_sha256": "23edf58c5f6b0c68e8c61572e708c75bbaa0206471ca84029956999b8581c2fc",
+      "converted": 22220,
+      "before_matched": 21976,
+      "after_matched": 21995,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": [
+        {
+          "id": "id:M2TA_069-s25/2",
+          "surface": "착하다보니",
+          "expected": [
+            "착하다",
+            "보다"
+          ]
+        },
+        {
+          "id": "id:M2TA_069-s30/17",
+          "surface": "밀려나가게",
+          "expected": [
+            "밀리다",
+            "나다",
+            "가다"
+          ]
+        },
+        {
+          "id": "id:M2TA_089-s28/7",
+          "surface": "일어났던",
+          "expected": [
+            "일다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:M2TA_089-s58/1",
+          "surface": "하다못해",
+          "expected": [
+            "하다",
+            "못하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s125/9",
+          "surface": "늘어나기",
+          "expected": [
+            "늘다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s141/20",
+          "surface": "팔려나갔다",
+          "expected": [
+            "팔리다",
+            "나가다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s198/7",
+          "surface": "늘어났다",
+          "expected": [
+            "늘다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s269/6",
+          "surface": "팔려나가는",
+          "expected": [
+            "팔리다",
+            "나가다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s3/20",
+          "surface": "벗어나지",
+          "expected": [
+            "벗다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s326/7",
+          "surface": "생겨날",
+          "expected": [
+            "생기다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s330/14",
+          "surface": "생겨났다",
+          "expected": [
+            "생기다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s422/19",
+          "surface": "번져나갔다",
+          "expected": [
+            "번지다",
+            "나가다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s425/9",
+          "surface": "번져나갔다",
+          "expected": [
+            "번지다",
+            "나가다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s485/7",
+          "surface": "생겨나기",
+          "expected": [
+            "생기다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s17/4",
+          "surface": "비켜나서",
+          "expected": [
+            "비키다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s332/8",
+          "surface": "해달라고",
+          "expected": [
+            "하다",
+            "달다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s553/11",
+          "surface": "늘어난",
+          "expected": [
+            "늘다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s568/12",
+          "surface": "늘어났다",
+          "expected": [
+            "늘다",
+            "나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s98/10",
+          "surface": "자라났고",
+          "expected": [
+            "자라다",
+            "나다"
+          ]
+        }
+      ],
+      "fixture": "tests/fixtures/kaist-auxiliary-inventory.conllu",
+      "fixture_sha256": "d74df9adf361e7437d67ca4c20c560e891af8d165b8da6e537263a471273e255"
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "12cc1247c71b9289bc5009e497ccfaa9cf75c4f115c471be4c22b8311ee915f7",
+      "after_report_sha256": "fb8bb88cfdd3f43cb9a55b65967892865615305196d84b22cc7ef20e06ed97f6",
+      "converted": 9989,
+      "before_matched": 9780,
+      "after_matched": 9782,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": [
+        {
+          "id": "id:dev-s112/1",
+          "surface": "먹을만한",
+          "expected": [
+            "먹다",
+            "만하다"
+          ]
+        },
+        {
+          "id": "id:dev-s388/4",
+          "surface": "참을만한데",
+          "expected": [
+            "참다",
+            "만하다"
+          ]
+        }
+      ],
+      "fixture": "tests/fixtures/gsd-auxiliary-inventory.conllu",
+      "fixture_sha256": "56a5f9d311f3e4668fd330f21f93d0a11863894d4b1761bf33ab4e69ccae3314"
+    }
+  ],
+  "review_notes": [
+    {
+      "id": "id:M2TA_089-s28/7",
+      "surface": "일어났던",
+      "note": "Gold 일다+나다 match remains a lexical/compound segmentation review case; not a required ledger judgment."
+    },
+    {
+      "id": "id:M2TA_069-s30/17",
+      "surface": "밀려나가게",
+      "note": "Gold 밀리다+나다+가다 match remains a lexical/compound segmentation review case; not a required ledger judgment."
+    }
+  ],
+  "snapshot_review": [
+    {
+      "word": "먹게하고있다",
+      "before_sha256": "1a86df45ffb0b1c20868a482437d51769716bd0b28feb4a63741ad68ad33b92c",
+      "after_sha256": "e84d085d60e270dd91568bd0e5f545733ea348e61516897927a6d4dd33882e75",
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹겋다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹게다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    }
+  ]
+}

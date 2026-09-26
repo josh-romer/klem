@@ -124,3 +124,103 @@ fn quoted_questions_reject_unlicensed_recoveries_and_preserve_other_readings() {
         assert!(result.analyses.iter().any(|a| path(a, &[lemma], &["냐는"])));
     }
 }
+
+#[test]
+fn adjective_question_allomorphs_and_retrospective_questions() {
+    for (word, lemmas, forms, recovery) in [
+        ("좋으냐는", vec!["좋다"], vec!["으냐는"], "boundary.eu"),
+        ("기냐는", vec!["길다"], vec!["으냐는"], "deletion.rieul"),
+        ("추우냐는", vec!["춥다"], vec!["으냐는"], "irregular.bieup"),
+        (
+            "파라냐는",
+            vec!["파랗다"],
+            vec!["으냐는"],
+            "irregular.hieut",
+        ),
+        (
+            "그러냐는",
+            vec!["그렇다"],
+            vec!["으냐는"],
+            "irregular.hieut",
+        ),
+        (
+            "학생다우냐는",
+            vec!["학생"],
+            vec!["답다", "으냐는"],
+            "irregular.bieup",
+        ),
+        (
+            "먹더냐는",
+            vec!["먹다"],
+            vec!["더", "냐는"],
+            "prefinal.retrospective",
+        ),
+        (
+            "살더냐는",
+            vec!["살다"],
+            vec!["더", "냐는"],
+            "prefinal.retrospective",
+        ),
+        (
+            "먹으셨겠더냐는",
+            vec!["먹다"],
+            vec!["시", "었", "겠", "더", "냐는"],
+            "prefinal.retrospective",
+        ),
+        (
+            "학생이더냐는",
+            vec!["학생", "이다"],
+            vec!["더", "냐는"],
+            "copula",
+        ),
+        (
+            "먹어봤더냐는",
+            vec!["먹다", "보다"],
+            vec!["어", "었", "더", "냐는"],
+            "auxiliary",
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let a = result
+            .analyses
+            .iter()
+            .find(|a| path(a, &lemmas, &forms))
+            .expect(word);
+        assert!(
+            a.rules.iter().any(|r| r == recovery),
+            "{word}: {:?}",
+            a.rules
+        );
+        assert!(a.rules.iter().any(|r| r == "ending.adnominal_expression"));
+        for candidate in &result.analyses {
+            assert_eq!(
+                candidate.breakdown().expect(word).len(),
+                candidate.lemmas.len() + candidate.morphemes.len()
+            );
+        }
+        assert_eq!(
+            result,
+            Lemmatizer::new()
+                .analyze_word(&word.nfd().collect::<String>())
+                .unwrap()
+        );
+    }
+    for (word, lemmas, forms) in [
+        ("길으냐는", vec!["길다"], vec!["으냐는"]),
+        ("학생답으냐는", vec!["학생"], vec!["답다", "으냐는"]),
+        ("학생이으냐는", vec!["학생", "이다"], vec!["으냐는"]),
+        ("파래냐는", vec!["파랗다"], vec!["으냐는"]),
+        ("추워냐는", vec!["춥다"], vec!["으냐는"]),
+        ("추우냐는", vec!["춥다"], vec!["냐는"]),
+    ] {
+        assert!(
+            !Lemmatizer::new()
+                .analyze_word(word)
+                .unwrap()
+                .analyses
+                .iter()
+                .any(|a| path(a, &lemmas, &forms)),
+            "{word}"
+        );
+    }
+}

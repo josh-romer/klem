@@ -2,6 +2,69 @@
 use crate::hangul::*;
 use std::{collections::HashMap, sync::OnceLock};
 
+// Source-listed adverb roots, not a general 이/히 spelling heuristic. The
+// related 하다 lemma is a lookup normalization; the suffix attaches to the root.
+// KRDict 88504 and NIKL's 1999 spelling discussion; see docs/adverb-inventory.json.
+pub(crate) const ADVERB_HADA_ROOTS: &[(&str, &str)] = &[
+    ("기웃", "이"),
+    ("버젓", "이"),
+    ("번듯", "이"),
+    ("반듯", "이"),
+    ("지긋", "이"),
+    ("산뜻", "이"),
+    ("깨끗", "이"),
+    ("깊숙", "이"),
+    ("가득", "히"),
+    ("가뿐", "히"),
+    ("가지런", "히"),
+    ("나란", "히"),
+    ("날렵", "히"),
+    ("냉랭", "히"),
+    ("냉정", "히"),
+    ("냉철", "히"),
+    ("냉혹", "히"),
+    ("너끈", "히"),
+    ("넉넉", "히"),
+    ("느슨", "히"),
+    ("능", "히"),
+    ("다급", "히"),
+    ("다분", "히"),
+    ("다정", "히"),
+    ("다행", "히"),
+    ("단단", "히"),
+    ("단순", "히"),
+    ("단정", "히"),
+    ("단호", "히"),
+    ("담담", "히"),
+    ("마땅", "히"),
+    ("막연", "히"),
+    ("만만", "히"),
+    ("말끔", "히"),
+    ("망연", "히"),
+    ("맹렬", "히"),
+    ("멀뚱", "히"),
+    ("멀쩡", "히"),
+    ("멍청", "히"),
+    ("멍", "히"),
+    ("무사", "히"),
+    ("부단", "히"),
+    ("부지런", "히"),
+    ("분명", "히"),
+    ("분분", "히"),
+    ("분주", "히"),
+    ("안녕", "히"),
+    ("영원", "히"),
+    ("조용", "히"),
+    ("엄격", "히"),
+    ("과감", "히"),
+    ("급급", "히"),
+    ("꼼꼼", "히"),
+    ("도저", "히"),
+    ("무단", "히"),
+    ("열심", "히"),
+    ("상당", "히"),
+];
+
 #[derive(Debug, Clone)]
 pub(crate) struct Recovery {
     pub stem: String,
@@ -166,6 +229,34 @@ pub(crate) struct Ending {
     pub connector: bool,
 }
 
+pub(crate) const AUXILIARY_CONNECTORS: &[&str] = &[
+    "어",
+    "고",
+    "지",
+    "게",
+    "어야",
+    "은",
+    "는",
+    "을",
+    "음",
+    "으려",
+    "으려고",
+    "기로",
+    "자고",
+    "다",
+    "다가",
+    "는가",
+    "은가",
+    "나",
+    "을까",
+    "으면",
+    "기",
+    "기도",
+    "기는",
+    "기만",
+    "고자",
+];
+
 pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Recovery> {
     let Some(base) = surface.strip_suffix(suffix) else {
         return Vec::new();
@@ -203,6 +294,11 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
         Boundary::ZeroCopula => {
             if coda(base) == Some(0) {
                 push(&mut out, format!("{base}이"), "copula.zero");
+            } else if let Some(rule) = crate::pronunciation::assumption(base, 2) {
+                out.push(Recovery {
+                    stem: format!("{base}이"),
+                    rules: vec!["copula.zero".into(), rule.into()],
+                });
             }
         }
         Boundary::Literal => {
@@ -282,7 +378,9 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                         "deletion.rieul",
                     );
                 }
-                if t != 17 && !matches!(suffix, "다" | "다고" | "다는" | "다면") {
+                if (t != 17 || suffix == "시다")
+                    && !matches!(suffix, "다" | "다고" | "다는" | "다면")
+                {
                     recover_eu_open(&stem, &mut out, true);
                 }
             }
@@ -379,6 +477,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "자",
             "자고",
             "자는",
+            "자면",
             "자마자",
             "거든",
             "거든요",
@@ -436,8 +535,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
             ("으냐", "냐", "으냐"),
+            ("으냐는", "냐는", "으냐는"),
             ("으나", "나", "으나"),
             ("으리라", "리라", "으리라"),
+            ("으리라고", "리라고", "으리라고"),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -468,8 +569,12 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을래", "래", "을래", 8),
             ("을래요", "래요", "을래요", 8),
             ("을지", "지", "을지", 8),
+            ("을지라도", "지라도", "을지라도", 8),
             ("을수록", "수록", "을수록", 8),
             ("음", "", "음", 16),
+            // Unlike -습니다/-습니까, -(으)ㅂ시다 has a vowel boundary:
+            // 들읍시다, 부읍시다, 도웁시다. The attached variant drops ㄹ.
+            ("읍시다", "시다", "읍시다", 17),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -487,7 +592,6 @@ pub(crate) fn endings() -> &'static [Ending] {
         for (full, short, form, t) in [
             ("습니다", "니다", "습니다", 17),
             ("습니까", "니까", "습니까", 17),
-            ("습시다", "시다", "습시다", 17),
             ("는다", "다", "는다", 4),
             ("는다고", "다고", "는다고", 4),
             ("는다는", "다는", "는다는", 4),
@@ -506,7 +610,7 @@ pub(crate) fn endings() -> &'static [Ending] {
                 connector: false,
             });
         }
-        for suffix in ["다고", "다는", "다니", "다면"] {
+        for suffix in ["다고", "다는", "다니", "다면", "잖아", "잖아요"] {
             out.push(Ending {
                 suffix,
                 form: suffix,
@@ -551,6 +655,9 @@ pub(crate) fn endings() -> &'static [Ending] {
                     connector: false,
                 });
             }
+        }
+        for ending in &mut out {
+            ending.connector = AUXILIARY_CONNECTORS.contains(&ending.form);
         }
         out
     })
@@ -600,7 +707,18 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("은", 4, 1),
             ("는", 4, 2),
             ("도", 4, 0),
+            // Choice/emphasis also follows case/restrictive particles.
+            // Keep the inner coordination slots below for existing readings.
+            ("이나", 4, 1),
+            ("나", 4, 2),
+            ("이라도", 4, 1),
+            ("라도", 4, 2),
+            ("이든지", 4, 1),
+            ("든지", 4, 2),
+            ("이야", 4, 1),
+            ("야", 4, 2),
             ("만", 3, 0),
+            ("마는", 3, 0),
             ("까지", 3, 0),
             ("부터", 3, 0),
             ("마다", 3, 0),
@@ -634,6 +752,8 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("보다", 1, 0),
             ("처럼", 1, 0),
             ("같이", 1, 0),
+            ("이라고", 1, 1),
+            ("라고", 1, 2),
             ("하고", 1, 0),
             ("이랑", 1, 1),
             ("랑", 1, 2),
@@ -671,6 +791,24 @@ pub(crate) fn particle_matches(base: &str, condition: u8) -> bool {
 
 pub(crate) fn explanation(id: &str) -> Option<&'static str> {
     Some(match id {
+        "pronunciation.assumed_consonant" => {
+            "Conditional nominal reading: the non-Hangul base must be pronounced with a final consonant; its pronunciation is not inferred."
+        }
+        "pronunciation.assumed_vowel" => {
+            "Conditional nominal reading: the non-Hangul base must be pronounced with a final vowel; its pronunciation is not inferred."
+        }
+        "pronunciation.assumed_non_rieul_consonant" => {
+            "Conditional nominal reading: the non-Hangul base must be pronounced with a final consonant other than ㄹ; its pronunciation is not inferred."
+        }
+        "pronunciation.assumed_vowel_or_rieul" => {
+            "Conditional nominal reading: the non-Hangul base must be pronounced with a final vowel or ㄹ; its pronunciation is not inferred."
+        }
+        "auxiliary.internal_particle" => {
+            "Retain a licensed particle between an ending and the following auxiliary predicate."
+        }
+        "particle.concessive" => {
+            "Attach concessive 만/마는 after a licensed final ending; retain the distinct nominal 만 reading where applicable."
+        }
         "ending.adnominal_expression" => {
             "Retain a reviewed shortened noun-modifying expression as one grammatical component."
         }
@@ -743,11 +881,63 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "copula" => "Separate a nominal and the affirmative copula 이다.",
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",
         "auxiliary" => "Separate a licensed connective plus attached auxiliary.",
-        "nominalization" => "Analyze a nominalized predicate before a particle.",
+        "irregular.mal" => "Restore prohibitive 말다 in the short imperatives 마, 마라 and 마요.",
+        "nominalization" => "Analyze a nominalized predicate before a particle or copula.",
+        "contraction.negative" => "Expand contracted 잖/찮 into 지/하지 plus auxiliary 않다.",
+        "suffix.adverbial.hi" => "Recover the adverb-forming suffix -히 for a source-listed root.",
+        "derivation.adverbial.bieup" => {
+            "Restore the ㅂ adjective stem of a source-listed -이 adverb."
+        }
+        "derivation.adverbial.hada" => {
+            "Link a source-listed adverb root to its related 하다 adjective."
+        }
+        "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
         "pronoun" => "Restore a contracted pronoun with its particle.",
         "nominal.contraction" => "Restore contracted 거/것 plus a particle.",
         "copula.polite" => "Restore the copula from 이에요/예요 or 이야/야.",
         "negative_copula.polite" => "Restore 아니다 from 아니에요.",
         _ => return None,
     })
+}
+
+#[cfg(test)]
+mod label_tests {
+    use super::*;
+    use crate::MorphemeKind;
+    use std::collections::BTreeMap;
+
+    #[test]
+    fn every_emitted_grammar_form_has_a_kind_specific_sourced_label() {
+        use MorphemeKind::*;
+        let mut forms = BTreeMap::new();
+        for ending in endings() {
+            forms.insert(format!("-{}", ending.form), Ending);
+        }
+        for particle in particles() {
+            forms.insert(particle.form.to_owned(), Particle);
+        }
+        // Forms emitted outside the tables: copula endings, prefinal recovery,
+        // and bounded derivation. Other synthetic contractions reuse table forms.
+        for form in ["에요", "야"] {
+            forms.insert(format!("-{form}"), Ending);
+        }
+        for form in ["시", "었", "겠", "더"] {
+            forms.insert(format!("-{form}-"), Prefinal);
+        }
+        for form in ["님", "들", "적", "답다", "이", "히"] {
+            forms.insert(format!("-{form}"), Suffix);
+        }
+        let labels: BTreeMap<String, serde_json::Value> =
+            serde_json::from_str(include_str!("../web/src/grammar-labels.json")).unwrap();
+        assert_eq!(
+            forms.keys().collect::<Vec<_>>(),
+            labels.keys().collect::<Vec<_>>()
+        );
+        for (key, kind) in forms {
+            let label = &labels[&key];
+            assert_eq!(label["kind"], serde_json::to_value(kind).unwrap(), "{key}");
+            assert!(!label["label"].as_str().unwrap().trim().is_empty(), "{key}");
+            assert!(!label["sources"].as_array().unwrap().is_empty(), "{key}");
+        }
+    }
 }

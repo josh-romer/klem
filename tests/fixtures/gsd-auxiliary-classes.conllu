@@ -1,0 +1,37 @@
+# sent_id = dev-s112
+# text = 먹을만한 게 없고 맛있지 않음.
+# translit = .meog.eul.man.han .ge .eobs.go .mas.iss.ji .anh.eum.
+1	먹을만한	먹+을+만+하+ㄴ	VERB	VV+ETM+NNB+XSA+ETM	_	2	acl:relcl	_	Translit=.meog.eul.man.han|LTranslit=.meog+.eul+.man+.ha+ㄴ
+2	게	것+이	NOUN	NNB+JKS	_	3	nsubj	_	Translit=.ge|LTranslit=.geos+.i
+3	없고	없+고	VERB	VA+EC	_	0	root	_	Translit=.eobs.go|LTranslit=.eobs+.go
+4	맛있지	맛있+지	VERB	VA+EC	_	3	conj	_	Translit=.mas.iss.ji|LTranslit=.mas.iss+.ji
+5	않음	않+음	NOUN	VX+ETN	_	4	flat	_	SpaceAfter=No|Translit=.anh.eum|LTranslit=.anh+.eum
+6	.	.	PUNCT	SF	_	5	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s388
+# text = 서비스 없는 건 참을만한데 기본적으로 맛이 없어요
+# translit = .seo.bi.seu .eobs.neun .geon .cham.eul.man.han.de .gi.bon.jeog.eu.ro .mas.i .eobs.eo.yo
+1	서비스	서비스	NOUN	NNG	_	2	nsubj	_	Translit=.seo.bi.seu|LTranslit=.seo.bi.seu
+2	없는	없+는	VERB	VA+ETM	_	3	dep	_	Translit=.eobs.neun|LTranslit=.eobs+.neun
+3	건	것+ㄴ	NOUN	NNB+JX	_	4	nsubj	_	Translit=.geon|LTranslit=.geos+ㄴ
+4	참을만한데	참+을+만+하+ㄴ데	VERB	VV+ETM+NNB+XSA+EC	_	7	advcl	_	Translit=.cham.eul.man.han.de|LTranslit=.cham+.eul+.man+.ha+ㄴ.de
+5	기본적으로	기본+적+으로	ADV	NNG+XSN+JKB	_	7	obl	_	Translit=.gi.bon.jeog.eu.ro|LTranslit=.gi.bon+.jeog+.eu.ro
+6	맛이	맛+이	NOUN	NNG+JKS	_	7	nsubj	_	Translit=.mas.i|LTranslit=.mas+.i
+7	없어요	없+어요	ADJ	VA+EC	_	0	root	_	Translit=.eobs.eo.yo|LTranslit=.eobs+.eo.yo
+
+# sent_id = dev-s572
+# text = 배우 장동건의 이미지를 보고싶다.
+# translit = .bae.u .jang.dong.geon.yi .i.mi.ji.reul .bo.go.sip.da.
+1	배우	배우	NOUN	NNG	_	4	obj	_	Translit=.bae.u|LTranslit=.bae.u
+2	장동건의	장동건+의	NOUN	NNP+JKG	_	1	nmod:poss	_	Translit=.jang.dong.geon.yi|LTranslit=.jang.dong.geon+.yi
+3	이미지를	이미지+를	NOUN	NNG+JKO	_	1	flat	_	Translit=.i.mi.ji.reul|LTranslit=.i.mi.ji+.reul
+4	보고싶다	보+고+싶+다	VERB	VV+EC+VX+EF	_	0	root	_	SpaceAfter=No|Translit=.bo.go.sip.da|LTranslit=.bo+.go+.sip+.da
+5	.	.	PUNCT	SF	_	4	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s791
+# text = 춤추는 동영상을 보고싶습니다
+# translit = .chum.chu.neun .dong.yeong.sang.eul .bo.go.sip.seub.ni.da
+1	춤추는	춤추+는	VERB	VV+ETM	_	2	acl:relcl	_	Translit=.chum.chu.neun|LTranslit=.chum.chu+.neun
+2	동영상을	동영상+을	NOUN	NNG+JKO	_	3	obj	_	Translit=.dong.yeong.sang.eul|LTranslit=.dong.yeong.sang+.eul
+3	보고싶습니다	보+고+싶+습니다	VERB	VV+EC+VX+EC	_	0	root	_	Translit=.bo.go.sip.seub.ni.da|LTranslit=.bo+.go+.sip+.seub.ni.da
+

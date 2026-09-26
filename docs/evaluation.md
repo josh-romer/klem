@@ -4,8 +4,8 @@ The [coverage completion checklist](coverage-checklist.md) connects known gaps
 to implementation priorities and the evidence needed to close each item.
 
 Normal tests exercise hand-specified rules, invalid boundaries, ambiguity,
-component grouping, Unicode/streaming/cache/CLI behavior, and 67 converted gold
-records from small annotated development excerpts. Those excerpts are adapter
+component grouping, Unicode/streaming/cache/CLI behavior, and gold records from
+attributed annotated development excerpts. Those excerpts are adapter
 regressions, not a representative accuracy benchmark.
 
 ```sh
@@ -47,7 +47,7 @@ GSD's `XSA`; these distinctions are tested.
 * **Ambiguity:** mean, p95, and maximum analyses. Extra candidates are not labeled
   false positives because annotations normally choose a contextual reading.
 
-## Current pinned-corpus results
+## Pinned baseline results
 
 Measured 2026-09-25. Rules were developed using curated cases and development
 data. Candidate-correctness audits added independent spelling, ending-boundary,
@@ -251,6 +251,32 @@ contextual validation. All 66,570 frozen cases and 30 output fingerprints pass;
 historical reports and baselines remain unchanged. Full -(으)냐는 adjective
 allomorphy and retrospective -더냐 quotation remain outside this batch.
 
+The COV-017e adjective/retrospective and COV-018a post-ending particle batches
+add sixteen ledger cases, reaching **111 cases with 64 required and 53 forbidden
+judgments**. The adjective examples are source-backed constructions; no new
+development gold matches are attributed to them. Five complete source sentences
+protect post-ending particles, including the 대다 + 주다 auxiliary group in
+대주고는. The [development comparison](post-ending-evaluation.json) records
+59 additional KAIST and 12 additional GSD gold groups against commit `051c0d7`,
+with no lost groups or recovered component sets. Remaining development misses
+are 280 and 212. The 부드러우다 and 해가지고는 annotations still need lexical
+or segmentation review and were not promoted into required-candidate judgments.
+All 66,570 frozen cases pass. Twenty-nine compatibility fingerprints remain
+unchanged; 학교에서만은 gains four reviewed unknown-predicate hypotheses from
+the new 어/어서 + 만 paths. Its old hash is retained and every previous analysis
+and provenance item remains. Historical corpus reports/baselines are unchanged.
+
+The COV-018b outer-choice/quotative batch adds twelve ledger cases, reaching
+**123 cases with 70 required and 59 forbidden judgments**. Four complete
+source sentences protect 어디까지나, 이제부터라도, 사회주의라고, and 넣기라도.
+The [development comparison](particle-chain-evaluation.json) records 36 new
+KAIST and 3 new GSD grouped matches against the COV-018a working tree, with
+no lost grouped matches or component recoveries. Remaining development misses
+are 244 and 209. 보게나 is only a lemma match, not validation of a contextual
+게 + 나 reading instead of imperative -게나. GSD 문여나 also remains a
+segmentation review case. All 66,570 frozen cases pass and all 30 current
+compatibility fingerprints are unchanged by COV-018b. Historical reports remain.
+
 The fixture is agent-authored against the cited sources; **independent Korean-language
 review is pending**. Reviewers can inspect the queue's complete analyses, add
 source-backed judgments to the fixture, and rerun the command. Adding labels is
@@ -259,3 +285,182 @@ a review decision, not an automatic acceptance of current engine output.
 Remaining misses include adverbial derivations, rarer endings, foreign-word
 pronunciations, and differences in lexical segmentation. Runtime code never loads
 corpus answer tables. See [data provenance and licenses](../data/README.md).
+
+The COV-019a structural auxiliary catalog and internal-particle batch adds twelve
+ledger cases, reaching **135 cases with 76 required and 65 forbidden judgments**.
+Five full source sentences protect connector-specific auxiliary groups. The
+[development comparison](auxiliary-evaluation.json) records 19 new KAIST and
+2 new GSD grouped matches against the COV-018b working tree, with no lost groups
+or component recoveries. Remaining development misses are **225 and 207**.
+The new 일어났던 and 밀려나가게 matches remain lexical-segmentation review
+cases, not required-candidate judgments. Source-backed synthetic examples cover
+internal particles; the corpus adapter does not measure grammatical components.
+All 66,570 frozen cases pass. Twenty-nine current output fingerprints remain
+unchanged; 먹게하고있다 gains two unknown-stem hypotheses through 어 + 하다.
+Every previous analysis remains and the old hash is retained. Historical
+baselines/reports are unchanged. Rust candidate, dictionary, stress, and browser
+checks pass; source-class and contextual restrictions remain open under COV-019.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. The browser suite
+also passes against the resulting Nix binaries. A full-dictionary browser smoke
+check covers six new auxiliary/internal-particle examples and the -을/들 source
+links; it checks display order, not contextual selection of lexical homonyms.
+
+COV-020a direct nominalization/copula composition adds eight ledger cases,
+reaching **143 cases with 80 required and 69 forbidden judgments**. Its full
+KAIST sentence fixture protects 떠먹이기다 → 떠먹이다 + 이다. The
+[development comparison](nominal-copula-evaluation.json) records that one new
+KAIST group and no new GSD groups, with no lost groups or component sets;
+remaining misses are **224 KAIST and 207 GSD**. The derived 학생다움이다 and
+polite/auxiliary examples are source-backed synthetic cases, not new corpus gold.
+All 66,570 frozen cases pass and all 30 current compatibility snapshots remain
+unchanged. Rust, dictionary/CLI, stress, Clippy and browser checks pass, including
+nominalizer source links. Historical baselines and evaluation reports remain.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. A browser smoke
+check of the packaged app with the full dictionary verifies five direct-copula
+examples, dictionary-only filtering, selectable component order, and the -음/-기
+source links. This does not validate contextual homonym or sense selection.
+
+COV-021a negative contractions and COV-017f confirmation expressions add eleven
+ledger cases, reaching **154 cases with 86 required and 74 forbidden judgments**.
+The [development comparison](negative-contraction-evaluation.json) records one
+new KAIST group, 적잖은 → 적다 + 않다, and no new GSD groups. No prior groups
+or component sets are lost; remaining misses are **223 KAIST and 207 GSD**.
+Confirmation expressions have source-backed synthetic evidence, with no new
+corpus gain attributed to them. All 66,570 frozen cases pass and all 30 current
+compatibility fingerprints remain unchanged. Rust, Clippy, stress, dictionary/CLI,
+frontend build and browser checks pass. Historical baselines/reports remain.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. A full-dictionary
+browser smoke check of the packaged app verifies seven selected readings,
+including both 먹잖아요 analyses, the confirmation-expression source link, and
+the preserved 괜찮다 lexical reading with dictionary-only filtering enabled.
+
+COV-022a predicate-adverb expansion adds eight ledger cases, reaching **162 cases
+with 90 required and 78 forbidden judgments**. Four complete KAIST sentences
+protect 다분히 → 다분하다, 가벼이 → 가볍다, 적잖이 → 적잖다, and 상당히 →
+상당하다. The [development comparison](adverb-expansion-evaluation.json) records
+these four new groups and no new GSD groups, without losing prior groups or
+component sets. Remaining development misses are **219 KAIST and 207 GSD**.
+The corpus convention supports related predicate lookup; it does not establish
+that 하 is a literal morpheme in the surface adverb. All 66,570 frozen cases
+pass and all 30 current compatibility fingerprints remain unchanged. Rust,
+Clippy, stress, dictionary/CLI, frontend build and browser checks pass. Historical
+baselines and reports remain unchanged.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. A full-dictionary
+browser smoke check of the packaged app verifies five adverb readings, preserved
+whole-word alternatives, normalized root display, and the -이/-히 source links.
+
+COV-019b negative auxiliary particles and short prohibitives add fourteen ledger
+cases, reaching **176 cases with 98 required and 84 forbidden judgments**. The
+complete GSD dev-s312 fixture protects 마라 → 말다. The
+[development comparison](negative-auxiliary-evaluation.json) records this one
+new GSD group and no new KAIST groups, with no lost groups or component sets.
+Remaining development misses are **219 KAIST and 206 GSD**. Internal-particle
+and mood cases have source-backed synthetic evidence. No claim of contextual
+mood/sense validation follows from the grouped-lemma score. All 66,570 frozen
+cases and all 30 current compatibility snapshots pass. Rust, Clippy, stress,
+dictionary/CLI, frontend build and browser checks pass, including -어라 and
+internal 는 source links. Historical reports and baselines remain unchanged.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. The packaged app's
+full-dictionary browser smoke check verifies five negative-auxiliary readings,
+normalized short forms, internal particle order, and -어라/는 source links.
+Dictionary glosses still use a compatible entry's first sense; this check does
+not validate contextual homonym selection.
+
+COV-019c auxiliary adjective inflections and legacy-link review add fourteen
+ledger cases, reaching **190 cases with 105 required and 91 forbidden judgments**.
+Four complete GSD sentences preserve annotated auxiliary-adjective groups. The
+[development comparison](auxiliary-class-evaluation.json) records no gained or
+lost gold groups and no lost component sets; remaining misses stay at **219
+KAIST and 206 GSD**. Candidate constraints are not measured as recall gains.
+The report records all 15 removed analyses across the seven targeted rejection
+cases, including unknown-head alternatives sharing the same invalid auxiliary
+ending. Other candidates in those cases remain unchanged. This is a reviewed
+sample, not a corpus-wide precision estimate. All 66,570 frozen cases and all
+30 current compatibility fingerprints pass. Rust, Clippy, stress, dictionary/CLI,
+and browser/API checks pass. Historical reports and baselines remain unchanged.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. A full-dictionary
+smoke check of the packaged app verifies six preserved readings, seven excluded
+lemma groups, unchanged original-word candidates, and the -은 source link.
+The preview is updated. Dictionary glosses remain hints rather than contextual
+homonym or sense selection.
+
+COV-015 inventories all **203 canonical grammar forms** (138 endings, 55 particles,
+four prefinals, six suffixes) and adds **140 teaching labels**. The shared catalog
+cites 232 unique KRDict entries through 258 source references. The attributed
+233-entry fixture also includes the alternate -ㅂ시다 boundary source. Tests check
+inventory equality and resolve every source, including kind-sensitive exceptions
+for expressions, component bundles, and spaced/contracted dictionary headwords.
+Ten browser examples verify labels, source panes, normalized component order,
+and unchanged CLI candidates. This is presentation coverage, not a precision or
+contextual translation benchmark.
+
+The audit also exposed the legacy 습시다 spelling. COV-017g replaces it with
+읍시다 and the correct vowel boundary, including ㄷ/ㅅ/ㅂ recovery. Eleven ledger
+cases bring the total to **201 cases with 111 required and 96 forbidden judgments**.
+The complete KAIST MH2_0159-s160 fixture preserves 봅시다 → 보다, which already
+matched before the canonical-form correction. The [recorded comparison](grammar-label-evaluation.json)
+finds no new/lost development groups or component sets; misses remain **219 KAIST
+and 206 GSD**. It also records individual candidate additions/removals for thirteen
+propositive inputs. All 66,570 frozen corpus cases and 30 current compatibility
+fingerprints pass; no historical baseline was regenerated. Rust, Clippy, stress,
+dictionary/CLI, frontend build, and browser/API checks pass. Further propositive
+lexical-class and prefinal restrictions remain open under COV-017/019.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. The updated packaged
+preview passes a full-dictionary smoke check of eight readings/source links,
+including 들읍시다/도웁시다 and the spaced -는 데다가 expression. Desktop and
+mobile screenshots were inspected; labels wrap without horizontal overflow.
+Lexical glosses still use the first compatible dictionary entry/sense (e.g. the
+먹다 homonym hint can be “be deaf”); these checks do not certify contextual gloss
+selection, which remains outside the current token-level scope.
+
+COV-014 adds conditional particle and copula readings for spelled names, numbers,
+and foreign words. The [comparison](foreign-nominal-evaluation.json) records
+**17 new KAIST and 22 new GSD development matches**, with no lost gold groups or
+component sets. Remaining misses are **202 KAIST and 184 GSD**. Complete source
+sentences and a 39-token selection index protect these recoveries offline.
+A recovered group is not verification of pronunciation: every non-Hangul
+allomorph assumption is explicit, and source spellings such as Bilbe are retained
+literally. Twelve ledger cases bring the total to **213 cases with 119 required
+and 100 forbidden judgments**.
+
+The report compares seventeen targeted surfaces, finding no removed component
+groups; existing contracted copula readings gain explicit pronunciation
+provenance. All 30 current output fingerprints and all 66,570 frozen corpus cases
+pass. Rust, Clippy, stress, dictionary/CLI, frontend build, and browser/API checks
+pass, including ten displayed boundary cases, condition-bearing JSON export,
+unknown-base filtering, exact punctuation boundaries, and streaming byte offsets.
+No historical baseline or prior evaluation report was regenerated. This does
+not add transliteration, named-entity recognition, pronunciation selection, or
+cross-punctuation token merging; those limits are stated in COV-014's scope.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. The updated
+packaged app passes a full-dictionary browser smoke check of eight readings,
+including separation of copula and later auxiliary contraction conditions.
+Condition-bearing JSON export, unmatched-word filtering, and mobile overflow
+checks pass; desktop and mobile screenshots were inspected.
+
+COV-017h adds intention/expectation and concessive endings: 으리라고, 을지라도,
+and 자면. The [development comparison](intention-ending-evaluation.json) records
+**10 new KAIST and one new GSD gold group**, with no lost groups or component
+sets. Remaining development misses are **192 KAIST and 183 GSD**. Eleven complete
+source sentences protect these recoveries offline. Fifteen new ledger cases
+bring the total to **228 cases with 127 required and 107 forbidden judgments**.
+
+The batch checks distinct allomorph and prefinal licenses, known adjective and
+copula exclusions for 자면, -답다 spelling, and separation of an earlier
+predicate's restrictions from a later auxiliary's ending. Unknown lexical
+classes remain unclassified; the honorific extension of 자면 is explicitly
+identified as composition requiring independent linguistic review. Six source
+entries supply three new grammar labels, taking the current catalog to 206 forms.
+The two 자면 homonyms remain distinguishable in the source pane; expression
+bundles do not insert an implicit reporting predicate or select a contextual sense.
+
+All 66,570 frozen corpus cases and all 30 current output fingerprints pass.
+Rust, Clippy, stress, dictionary/CLI, frontend build, and browser/API checks pass.
+The report also preserves the individual additions for 23 targeted surfaces,
+with no previous analyses removed. Historical baselines/reports are unchanged.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. The updated
+packaged preview passes a full-dictionary smoke check of eight readings/source
+links, including the -자면 expression homonym, -답다 derivation and a longer
+auxiliary group. Desktop and mobile screenshots were inspected; the mobile
+layout has no horizontal overflow. Dictionary glosses still use compatible
+entry/sense hints, not contextual disambiguation.

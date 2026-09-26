@@ -17,6 +17,8 @@ use tiny_http::{Header, Method, Request, Response, Server, StatusCode};
 const MAX_TEXT_BYTES: usize = 8_000;
 const MAX_WORD_CHARS: usize = 64;
 const MAX_BODY_BYTES: u64 = 32_768;
+#[path = "klem-web/grammar_labels.rs"]
+mod grammar_labels;
 const HELP: &str = "klem-web — local Korean sentence explorer\n\nUsage: klem-web [--port 8080] [--assets web/dist] [--dictionary path.db]\n\nOpen http://127.0.0.1:8080 in your browser. Binds only to loopback.\nWithout --dictionary, the app shows rule candidates without dictionary matches.\nBuild assets first with cd web && npm ci && npm run build, or use nix run .#web.\n";
 
 #[derive(Deserialize)]
@@ -28,25 +30,6 @@ struct AnalyzeRequest {
 #[serde(deny_unknown_fields)]
 struct EntryRequest {
     id: String,
-}
-
-fn grammar_entry_matches(kind: MorphemeKind, headword: &str, entry: &EntrySummary) -> bool {
-    let pos = match kind {
-        MorphemeKind::Particle => "조사",
-        MorphemeKind::Suffix => "접사",
-        _ => "어미",
-    };
-    entry.pos == pos
-        || (kind == MorphemeKind::Ending
-            && entry.pos == "품사 없음"
-            && entry.headword == headword
-            && matches!(
-                (headword, entry.id.as_str()),
-                ("-으려는", "krdict:86717")
-                    | ("-자는", "krdict:83896")
-                    | ("-냐는", "krdict:86030")
-                    | ("-느냐는", "krdict:86031")
-            ))
 }
 
 fn validate_text(text: &str) -> std::result::Result<(), &'static str> {
@@ -130,12 +113,7 @@ fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
                         if !grammar.contains_key(&headword) {
                             grammar.insert(
                                 headword.clone(),
-                                lookups
-                                    .lookup(&headword)?
-                                    .iter()
-                                    .filter(|e| grammar_entry_matches(m.kind, &headword, e))
-                                    .cloned()
-                                    .collect(),
+                                grammar_labels::lookup(lookups, m.kind, &headword)?,
                             );
                         }
                     }
@@ -389,7 +367,10 @@ mod tests {
             ("-으려는", "krdict:86717"),
             ("-자는", "krdict:83896"),
             ("-냐는", "krdict:86030"),
+            ("-잖아", "krdict:86756"),
+            ("-잖아요", "krdict:86757"),
             ("-느냐는", "krdict:86031"),
+            ("-으냐는", "krdict:86032"),
         ] {
             let mut entry = EntrySummary {
                 id: id.into(),
@@ -397,7 +378,7 @@ mod tests {
                 homonym: "0".into(),
                 pos: "품사 없음".into(),
             };
-            assert!(grammar_entry_matches(
+            assert!(grammar_labels::entry_matches(
                 MorphemeKind::Ending,
                 headword,
                 &entry
@@ -407,29 +388,29 @@ mod tests {
                 MorphemeKind::Particle,
                 MorphemeKind::Prefinal,
             ] {
-                assert!(!grammar_entry_matches(kind, headword, &entry));
+                assert!(!grammar_labels::entry_matches(kind, headword, &entry));
             }
-            assert!(!grammar_entry_matches(
+            assert!(!grammar_labels::entry_matches(
                 MorphemeKind::Ending,
                 "-는다면",
                 &entry
             ));
             entry.id = "krdict:68841".into();
-            assert!(!grammar_entry_matches(
+            assert!(!grammar_labels::entry_matches(
                 MorphemeKind::Ending,
                 headword,
                 &entry
             ));
             entry.id = id.into();
             entry.headword = "다른표현".into();
-            assert!(!grammar_entry_matches(
+            assert!(!grammar_labels::entry_matches(
                 MorphemeKind::Ending,
                 headword,
                 &entry
             ));
             entry.headword = headword.into();
             entry.pos = "명사".into();
-            assert!(!grammar_entry_matches(
+            assert!(!grammar_labels::entry_matches(
                 MorphemeKind::Ending,
                 headword,
                 &entry

@@ -8,6 +8,8 @@ export interface Analysis {
   rules: string[];
   unchanged: boolean;
 }
+export const pronunciationRules = (analysis?: Analysis) =>
+  analysis?.rules.filter((id) => id.startsWith("pronunciation.assumed_")) ?? [];
 export interface EntrySummary {
   id: string;
   headword: string;

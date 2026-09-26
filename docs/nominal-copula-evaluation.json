@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-020a direct nominalizing 기/음 followed by copulas; grouped development recall, not precision.",
+  "baseline_description": "COV-019a working tree before direct nominalization/copula composition.",
+  "baseline_source_sha256": {
+    "src/engine.rs": "553c5f4d2e34758af83273ebaa250ac886464bc2310066ff80aa96520124f87d",
+    "src/grammar.rs": "bc366bc15af305d3d6c9293ea978654582c5e4a55e9b84a822d0fe10c0fc111e"
+  },
+  "source_sha256": {
+    "src/engine.rs": "d6bf817a8186e9cd41fd4aac882ee7ee13fc1c397693af4f68fc86dc8f892ebb",
+    "src/grammar.rs": "bc366bc15af305d3d6c9293ea978654582c5e4a55e9b84a822d0fe10c0fc111e"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "23edf58c5f6b0c68e8c61572e708c75bbaa0206471ca84029956999b8581c2fc",
+      "after_report_sha256": "b3c8d572233499ad44d04228c5545e0f0acd82a8a2247347722defeb20ad77e0",
+      "converted": 22220,
+      "before_matched": 21995,
+      "after_matched": 21996,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": [
+        {
+          "id": "id:MH2_0169-s271/6",
+          "surface": "떠먹이기다",
+          "expected": [
+            "떠먹이다",
+            "이다"
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "fb8bb88cfdd3f43cb9a55b65967892865615305196d84b22cc7ef20e06ed97f6",
+      "after_report_sha256": "edbeb7c53960a3af24934751442042cc614c2119c9a89822fc6a19195faba761",
+      "converted": 9989,
+      "before_matched": 9782,
+      "after_matched": 9782,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": []
+    }
+  ],
+  "fixture": {
+    "path": "tests/fixtures/kaist-nominal-copulas.conllu",
+    "sha256": "2e4f01d4fbdd18e194f2e810a7cdd04859c18b5952bad3dc1856b8b53dc8dbbb",
+    "source_bytes_verified": true
+  },
+  "snapshot_review": {
+    "unchanged_current_fingerprints": 30,
+    "changes": []
+  }
+}

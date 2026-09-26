@@ -181,7 +181,13 @@ dialect coverage, spelling correction, whitespace repair, contextual selection,
 arbitrary compound segmentation, EPUB extraction, and exhaustive derivational
 morphology are outside this release. Text splits at whitespace and Unicode
 punctuation/symbols, including decimals and punctuation-bearing names. Unknown
-pronunciation at foreign-letter/number particle boundaries can cause misses.
+pronunciation at foreign-letter/number boundaries is represented by explicit
+conditional candidates, not guessed from an English letter or last digit.
+For example, `ABC는` can expose `ABC + 는` with a vowel-final pronunciation
+condition, and `3은` can expose `3 + 은` with a consonant-final condition.
+These conditions are in rule provenance and the browser; they are not spelling
+recommendations. Names/numbers missing from the dictionary still fail
+`--dict-only`. See [the supported scope](docs/rules.md#foreign-nominals-and-pronunciation-conditions-cov-014).
 Exhaustive analysis is output-sensitive: unusually long or ambiguous individual
 tokens can consume substantial work and memory.
 

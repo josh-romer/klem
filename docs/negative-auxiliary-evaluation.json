@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-019b negative auxiliary particles and short prohibitive forms. Development comparison, not precision or contextual mood validation.",
+  "baseline_description": "COV-022a working tree before negative auxiliary follow-up.",
+  "baseline_source_sha256": {
+    "src/engine.rs": "fd025286ff21f721a7e5b3361c165fffe332597a94c60ed8f27ae720157093d2",
+    "src/grammar.rs": "c69772eeb1ebfd7354f3926661469e72f4049e5d3862b4d5670ff1e210cbf989",
+    "src/breakdown.rs": "1a59933ea1a7b341843735cbc8132676c99bdc9ceaabe4c3ea4002a7025da038"
+  },
+  "source_sha256": {
+    "src/engine.rs": "76ce76effec650df504dedaae2d28891e2d27919add13662eb0b2e047545909a",
+    "src/grammar.rs": "a81a9d32957b9c54a64f7a9d64b30f22a2284023002d2684c2ae7a9e51876b42",
+    "src/breakdown.rs": "1a59933ea1a7b341843735cbc8132676c99bdc9ceaabe4c3ea4002a7025da038"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "8e1f57b2aec4f953ab2ffb7b68554b72e97045c80389763301cf2c114a4d687e",
+      "after_report_sha256": "8bb721665346c5a1ea4a1b3d603badbec429251689ef099b188c2daee5c6ad4c",
+      "converted": 22220,
+      "before_matched": 22001,
+      "after_matched": 22001,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": []
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "586d5ce6c279f6ed8ace4f92631fa497b30d232d6d5d3be5f5dbe0202583f0de",
+      "after_report_sha256": "7e3cca11afadd6c074a5621ca01ba13bd520e34c735a5f3d75859accb4cd296b",
+      "converted": 9989,
+      "before_matched": 9782,
+      "after_matched": 9783,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": [
+        {
+          "id": "id:dev-s312/4",
+          "surface": "마라",
+          "expected": [
+            "말다"
+          ]
+        }
+      ]
+    }
+  ],
+  "fixture": {
+    "path": "tests/fixtures/gsd-negative-auxiliaries.conllu",
+    "sha256": "8f3e3fb822b2cf69287fa2e082468b8474595d8bcc2886b36893aafc9c421619",
+    "source_bytes_verified": true
+  },
+  "snapshot_review": {
+    "unchanged_current_fingerprints": 30,
+    "changes": []
+  }
+}

@@ -10,6 +10,7 @@ pub mod dictionary;
 mod engine;
 mod grammar;
 mod hangul;
+mod pronunciation;
 mod text;
 
 use serde::{Deserialize, Serialize};

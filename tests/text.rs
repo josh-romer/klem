@@ -20,7 +20,7 @@ impl Read for Chunks<'_> {
 #[test]
 fn streaming_matches_memory_at_every_small_chunk_size() {
     let e = Arc::new(Lemmatizer::new());
-    let text = "“먹었어요.”\r\n학교에서는 café 😀 갔어요! English 42\t끝";
+    let text = "“먹었어요.”\r\n학교에서는 café 😀 갔어요! English 42\t끝 ABC는 3은 cafe\u{301}는 3.14는 O'Neil은 A-B는";
     let expected: Vec<_> = e.analyze_text(text).collect();
     assert_eq!(
         expected
@@ -67,6 +67,58 @@ fn streaming_matches_memory_at_every_small_chunk_size() {
             .iter()
             .any(|r| r.kind == TokenKind::Punctuation && r.surface == "😀")
     );
+}
+
+#[test]
+fn mixed_script_words_keep_punctuation_boundaries_and_original_spans() {
+    let engine = Lemmatizer::new();
+    let text = "ABC는 3은 3.14는 O'Neil은 A-B는 2026년은";
+    let records: Vec<_> = engine.analyze_text(text).collect();
+    assert_eq!(
+        records
+            .iter()
+            .map(|r| r.surface.as_str())
+            .collect::<Vec<_>>(),
+        [
+            "ABC는",
+            " ",
+            "3은",
+            " ",
+            "3",
+            ".",
+            "14는",
+            " ",
+            "O",
+            "'",
+            "Neil은",
+            " ",
+            "A",
+            "-",
+            "B는",
+            " ",
+            "2026년은"
+        ]
+    );
+    for record in &records {
+        assert_eq!(&text[record.span.clone()], record.surface);
+    }
+    for (surface, lemma) in [
+        ("ABC는", "ABC"),
+        ("3은", "3"),
+        ("14는", "14"),
+        ("Neil은", "Neil"),
+        ("B는", "B"),
+    ] {
+        let a = records
+            .iter()
+            .find(|r| r.surface == surface)
+            .unwrap()
+            .analysis
+            .as_ref()
+            .unwrap();
+        assert!(a.lemma_strings().contains(&lemma));
+        assert!(a.analyses.iter().any(|a| a.unchanged));
+    }
 }
 
 #[test]

@@ -57,10 +57,16 @@ Glosses use the first English headword gloss from the first POS-compatible entry
 and sense/homonym alternatives remain in the dictionary pane. Initial diagram
 selection prefers analyses with compatible or unclassified dictionary matches,
 then the fewest morphemes for a compact initial view. This is a display convenience,
-not contextual ranking. Short grammar labels cover
-common uses, with generic role labels for uncovered endings. They are paraphrased
-from KRDict; each label's source entry ID is in `web/src/breakdown.ts` and its
-hover text. See the bundled [grammar label notice](../web/public/Grammar-labels-LICENSE.txt).
+not contextual ranking. All 206 currently emitted canonical grammar forms have
+short teaching labels in the shared [catalog](../web/src/grammar-labels.json).
+These paraphrase common KRDict uses; they are not contextual translations or
+an exhaustive list of senses. Hover text lists each source ID and headword.
+Bundled forms such as 기가 cite their component entries; joined 는데다가 links
+to the spaced dictionary expression -는 데다가, and 어야죠 links to -어야지요.
+The entry pane preserves the source's actual headword and POS. Generic role
+labels remain a fallback for unknown forms, with inventory tests guarding all
+current ending/particle tables and synthetic prefinal/suffix/copula forms.
+See the bundled [grammar label notice](../web/public/Grammar-labels-LICENSE.txt).
 
 The UI shows 20 readings at a time with an explicit “show more” control. All
 candidates remain available and are included in export. Editing the text clears
@@ -104,12 +110,15 @@ to disk. Dictionary entry links intentionally open the external source website.
   Additional sidecars: `breakdowns[record_index][analysis_index]` contains ordered
   `{lemma: index}` / `{morpheme: index}` references, or null when unavailable;
   `glosses` maps entry IDs to English hints or null; `grammar` maps dictionary
-  headwords (particles, `-endings`, `-prefinals-`, `-suffixes`) to matching entry summaries.
-  Lookup normally requires the matching grammar POS. Scoped bundled expressions
-  -으려는 (86717), -자는 (83896), -냐는 (86030), and -느냐는 (86031)
-  also admit their exact KRDict headword/ID
-  with `품사 없음`, only for `Ending` components. This does not enable a general
-  unclassified-entry fallback or admit other quoted-expression homonyms.
+  canonical grammar keys (particles, `-endings`, `-prefinals-`, `-suffixes`) to
+  entry summaries. Lookup normally requires the matching headword and grammar
+  POS. The shared label catalog additionally permits reviewed expression and
+  component sources with exact kind, ID, headword, and POS matching. For example,
+  `-네요` includes expression 85934, `-기가` includes -기 and 가, and
+  `-는데다가` includes the spaced headword -는 데다가 (72714).
+  Entry summaries retain their original headword/POS, which can differ from
+  the map key. This does not enable a general unclassified-entry fallback;
+  unreviewed quoted homonyms such as -는다면 68841 remain excluded.
   The library exposes the same ordering through `Analysis::breakdown()`.
   Derivational suffixes remain grammatical morphemes: canonical `답다` is a
   `suffix` before its prefinals/ending, displayed as 답 and looked up as -답다.
@@ -186,3 +195,63 @@ entries 86030 and 86031. 아니냐는 displays 아니 + 냐는; 했느냐는 dis
 하 + 였 + 느냐는 with the normalization notice. Honorifics, modals, and
 auxiliary components stay separate. The source's 품사 없음 classification is
 preserved through the same narrow expression lookup exception.
+
+COV-017e adds canonical 으냐는 (“Quoted question”, 86032): 추우냐는 displays
+춥 + 으냐는 with the normalization notice. Retrospective 더 remains a separate
+prefinal in 먹더냐는. COV-018a distinguishes concessive 만 (“But / although”,
+86555) after final endings from nominal/restrictive 만 (“Only / emphasis”,
+86554). Full 마는 links to 86552. This uses component position and rule
+provenance; headword matches alone cannot distinguish these homonyms.
+
+COV-018b displays choice particle chains such as 어디 + 까지 + 나 and
+이제 + 부터 + 라도. Particle (이)라고 has a “Quotation / emphasis” label,
+separate from the copular ending -라고. 학생이라고 can therefore show
+학생 + 이라고 or 학생 + 이 + 라고, preserving both readings in the selector.
+The labels combine common functions; the app does not infer which dictionary
+sense is intended by the sentence.
+
+COV-019a preserves ordered auxiliary components and internal particles:
+먹어들봐요 displays 먹 + 어 + 들 + 보 + 어요 and links 들 to its particle
+entry (86264). 먹고야말았다 displays 먹 + 고 + 야 + 말 + 었 + 다.
+먹곤했다 expands contracted 곤 to 고 + 는 with a normalization notice.
+Adnominal auxiliaries use the existing predicate/auxiliary dictionary cards;
+-을 has the label “Prospective noun modifier” and links to ending 69058.
+Bundled and decomposed readings remain selectable; neither the label nor
+headword filtering validates lexical attachment classes or chooses a sense.
+
+COV-020a adds direct nominalization/copula display paths without changing the
+representation: 학생다움이다 can display 학생 + 답 + 음 + 이 + 다 and
+먹기예요 can display 먹 + 기 + 이 + 에요. Both use the expanded/normalized
+notice. The reading selector preserves compact whole-word alternatives.
+Nominalizer links are kind-specific endings -음 (78528) and -기 (72222),
+separate from their noun-forming suffix homonyms. Auxiliary order is preserved
+in 먹어보기였다 → 먹 + 어 + 보 + 기 + 이 + 었 + 다.
+
+COV-021a exposes expanded negative contractions as selectable readings:
+적잖은 can display 적 + 지 + 않 + 은 and 만만찮았다 can display
+만만하 + 지 + 않 + 었 + 다. Lexical readings remain selectable and the browser's
+existing compact-reading preference is unchanged. Expanded displays retain the
+normalization notice and negative auxiliary dictionary cards.
+
+COV-017f labels the bundled -잖아/-잖아요 expressions “Confirming / correcting”
+(with a polite marker for 잖아요), linking to 86756/86757. 먹잖아요 can show
+먹 + 잖아요 or 먹 + 지 + 않 + 어요; these readings must not be silently merged
+or presented as a contextual decision. The narrow grammar-expression exception
+preserves the dictionary's 품사 없음 classification.
+
+COV-022a retains compact lexical adverbs as the initial reading. Selecting the
+derived alternative shows 가까이 as 가깝 + 이, and 적잖이 as 적잖 + 이.
+Source-listed 하다-root adverbs display their actual roots: 깨끗 + 이 and
+조용 + 히. The root card links the related adjective 깨끗하다/조용하다, while
+exported JSON retains that lookup lemma and `derivation.adverbial.hada`
+provenance. This is a root-to-lemma relationship, not an inserted 하 segment.
+The 히 suffix label opens adverb-forming entry 88504, preserving its distinction
+from causative/passive homonyms. Existing 이 labels continue to open 88927.
+
+Foreign-letter/number splits (COV-014) can carry a pronunciation condition in
+`analysis.rules`. The browser displays the corresponding `result.rules` text
+both beside the selected breakdown and on candidate cards. Switching back to an
+unconditional reading removes that note. Export preserves each candidate's rule
+IDs and explanations; it does not turn a condition into verified pronunciation.
+Try ABC는 or 3은 with dictionary-only filtering off. With filtering on, unknown
+bases remain visible as unmatched words, not fabricated dictionary matches.

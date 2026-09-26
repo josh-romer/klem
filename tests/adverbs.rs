@@ -146,3 +146,98 @@ fn derivation_does_not_invent_inflection_causatives_or_noun_case_paths() {
     a.morphemes[0].kind = MorphemeKind::Prefinal;
     assert!(a.breakdown().is_none());
 }
+
+#[test]
+fn additional_predicate_adverbs_preserve_suffixes_and_lookup_lemmas() {
+    for (word, base, suffix, rule) in [
+        ("가까이", "가깝다", "이", "derivation.adverbial.bieup"),
+        ("가벼이", "가볍다", "이", "derivation.adverbial.bieup"),
+        ("고이", "곱다", "이", "derivation.adverbial.bieup"),
+        ("새로이", "새롭다", "이", "derivation.adverbial.bieup"),
+        ("외로이", "외롭다", "이", "derivation.adverbial.bieup"),
+        ("즐거이", "즐겁다", "이", "derivation.adverbial.bieup"),
+        ("적잖이", "적잖다", "이", "suffix.adverbial.i"),
+        ("헛되이", "헛되다", "이", "suffix.adverbial.i"),
+        ("깨끗이", "깨끗하다", "이", "derivation.adverbial.hada"),
+        ("깊숙이", "깊숙하다", "이", "derivation.adverbial.hada"),
+        ("반듯이", "반듯하다", "이", "derivation.adverbial.hada"),
+        ("조용히", "조용하다", "히", "derivation.adverbial.hada"),
+        ("다분히", "다분하다", "히", "derivation.adverbial.hada"),
+        ("상당히", "상당하다", "히", "derivation.adverbial.hada"),
+        ("엄격히", "엄격하다", "히", "derivation.adverbial.hada"),
+        ("열심히", "열심하다", "히", "derivation.adverbial.hada"),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let a = result
+            .analyses
+            .iter()
+            .find(|a| derived(a, base, &[suffix]))
+            .expect(word);
+        assert!(a.rules.iter().any(|r| r == rule), "{word}");
+        assert_eq!(
+            a.breakdown().unwrap(),
+            [Component::Lemma(0), Component::Morpheme(0)]
+        );
+        assert!(result.analyses.iter().any(|a| a.unchanged));
+        assert_eq!(
+            result,
+            Lemmatizer::new()
+                .analyze_word(&word.nfd().collect::<String>())
+                .unwrap()
+        );
+        for a in &result.analyses {
+            assert!(a.breakdown().is_some(), "{word}: {a:?}");
+            assert!(a.rules.iter().all(|r| klem::rule_explanation(r).is_some()));
+        }
+    }
+    for (word, base, forms) in [
+        ("조용히도요", "조용하다", vec!["히", "도", "요"]),
+        ("가까이만은", "가깝다", vec!["이", "만", "은"]),
+        ("깨끗이들", "깨끗하다", vec!["이", "들"]),
+        ("적잖이도", "적잖다", vec!["이", "도"]),
+        ("조용히라도", "조용하다", vec!["히", "라도"]),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        assert!(
+            result.analyses.iter().any(|a| derived(a, base, &forms)),
+            "{word}"
+        );
+        assert!(result.analyses.iter().all(|a| a.breakdown().is_some()));
+    }
+}
+
+#[test]
+fn lexical_spelling_and_adverb_roles_are_not_general_suffix_stripping() {
+    for (word, base) in [
+        ("가깝이", "가깝다"),
+        ("가까히", "가깝다"),
+        ("가까우이", "가깝다"),
+        ("조용이", "조용하다"),
+        ("깨끗히", "깨끗하다"),
+        ("적잖히", "적잖다"),
+        ("먹히", "먹다"),
+        ("조용했히", "조용하다"),
+        ("조용히를", "조용하다"),
+        ("가까이가", "가깝다"),
+        ("조용히했다", "조용하다"),
+    ] {
+        assert!(
+            !Lemmatizer::new()
+                .analyze_word(word)
+                .unwrap()
+                .analyses
+                .iter()
+                .any(|a| a.lemmas[0].text == base
+                    && a.rules.iter().any(|r| r.starts_with("suffix.adverbial."))),
+            "{word}"
+        );
+    }
+    assert!(
+        Lemmatizer::new()
+            .analyze_word("가까이를")
+            .unwrap()
+            .analyses
+            .iter()
+            .any(|a| a.lemmas[0].text == "가까이" && a.lemmas[0].kind == LemmaKind::Nominal)
+    );
+}

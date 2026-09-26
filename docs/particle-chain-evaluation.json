@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-018b outer choice/emphasis and nominal quotative particles; development comparison, not precision.",
+  "baseline_description": "COV-017e/018a working tree before outer choice and quotative particles.",
+  "baseline_source_sha256": {
+    "src/engine.rs": "79ed2cc0573fbf34e6449794bf114dd793cb3520b6ac6be0a08e3b0ba836da0a",
+    "src/grammar.rs": "c22ae0bc64cc78f96c172a6bb76b5692f9d5d24c9fddd3b1dda8d91586b7b4f2"
+  },
+  "source_sha256": {
+    "src/engine.rs": "23c10ef6e9c0edacec7528c8b63a8cea4d5fc400bbe34962a92045312935f957",
+    "src/grammar.rs": "1f5655cff13fed57f140473eb51d57de192d1c50f077eb3b0fee898e7dafefcf"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "9693a38e7e4f3b68dd8c183204ff04eba0753eac1e99c833ebd555a44b33d758",
+      "after_report_sha256": "c3651772b9679909075a600503d05ca9bff4338f5dc27c28e122eecc29a59099",
+      "converted": 22220,
+      "before_matched": 21940,
+      "after_matched": 21976,
+      "new_matches": [
+        {
+          "id": "id:M2TA_069-s8/12",
+          "surface": "어디서나",
+          "expected": [
+            "어디"
+          ]
+        },
+        {
+          "id": "id:M2TA_089-s52/8",
+          "surface": "어디까지나",
+          "expected": [
+            "어디"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s295/3",
+          "surface": "이제부터라도",
+          "expected": [
+            "이제"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s305/7",
+          "surface": "이제부터라도",
+          "expected": [
+            "이제"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s375/3",
+          "surface": "정치적으로나",
+          "expected": [
+            "정치적"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s57/16",
+          "surface": "때라도",
+          "expected": [
+            "때"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s7/7",
+          "surface": "보게나",
+          "expected": [
+            "보다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s150/3",
+          "surface": "어디까지나",
+          "expected": [
+            "어디"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s197/14",
+          "surface": "어디까지나",
+          "expected": [
+            "어디"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s199/5",
+          "surface": "이데올로기라고",
+          "expected": [
+            "이데올로기"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s101/6",
+          "surface": "한계라고",
+          "expected": [
+            "한계"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s157/3",
+          "surface": "재야라고",
+          "expected": [
+            "재야"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s158/3",
+          "surface": "재야라고",
+          "expected": [
+            "재야"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s185/2",
+          "surface": "국가라고",
+          "expected": [
+            "국가"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s213/7",
+          "surface": "인사라고",
+          "expected": [
+            "인사"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s288/5",
+          "surface": "전에야",
+          "expected": [
+            "전"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s3/10",
+          "surface": "민중민주주의라고",
+          "expected": [
+            "민중민주주의"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s30/12",
+          "surface": "사회주의자라고",
+          "expected": [
+            "사회주의자"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s331/6",
+          "surface": "개량주의라고",
+          "expected": [
+            "개량주의"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s352/3",
+          "surface": "고통만큼이나",
+          "expected": [
+            "고통"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s368/5",
+          "surface": "한올이라도",
+          "expected": [
+            "한올"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s386/6",
+          "surface": "시간이라도",
+          "expected": [
+            "시간"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s392/5",
+          "surface": "권세라고",
+          "expected": [
+            "권세"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s41/3",
+          "surface": "사회주의자라고",
+          "expected": [
+            "사회주의자"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s490/8",
+          "surface": "사회주의라고",
+          "expected": [
+            "사회주의"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s491/8",
+          "surface": "사회주의라고",
+          "expected": [
+            "사회주의"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s504/6",
+          "surface": "일본만큼이라도",
+          "expected": [
+            "일본"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s541/2",
+          "surface": "중소기업이라도",
+          "expected": [
+            "중소기업"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s548/14",
+          "surface": "후에나",
+          "expected": [
+            "후"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s571/7",
+          "surface": "동반자라고",
+          "expected": [
+            "동반자"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s656/3",
+          "surface": "방법이라도",
+          "expected": [
+            "방법"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s668/15",
+          "surface": "바에야",
+          "expected": [
+            "바"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s705/1",
+          "surface": "머슴에게나",
+          "expected": [
+            "머슴"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s734/1",
+          "surface": "봉건시대라고",
+          "expected": [
+            "봉건시대"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s743/5",
+          "surface": "사회주의라고",
+          "expected": [
+            "사회주의"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s83/8",
+          "surface": "조금이라도",
+          "expected": [
+            "조금"
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "5511c4a3e131e8c0740a46e59fa276971f4c25dbd47fd678638a0883ad765723",
+      "after_report_sha256": "12cc1247c71b9289bc5009e497ccfaa9cf75c4f115c471be4c22b8311ee915f7",
+      "converted": 9989,
+      "before_matched": 9777,
+      "after_matched": 9780,
+      "new_matches": [
+        {
+          "id": "id:dev-s177/12",
+          "surface": "후에야",
+          "expected": [
+            "후"
+          ]
+        },
+        {
+          "id": "id:dev-s471/9",
+          "surface": "넣기라도",
+          "expected": [
+            "넣다"
+          ]
+        },
+        {
+          "id": "id:dev-s94/3",
+          "surface": "문여나",
+          "expected": [
+            "문",
+            "이다"
+          ]
+        }
+      ]
+    }
+  ],
+  "review_notes": [
+    {
+      "id": "id:MH2_0149-s7/7",
+      "surface": "보게나",
+      "note": "Gold lemma match only. Does not establish that connective 게 + particle 나 is the contextual analysis instead of imperative -게나."
+    },
+    {
+      "id": "id:dev-s94/3",
+      "surface": "문여나",
+      "note": "Gold 문+이다 recovery remains a lexical/segmentation review case; not added to the required ledger."
+    }
+  ]
+}

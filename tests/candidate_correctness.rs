@@ -235,10 +235,10 @@ fn obligation_connective_is_not_part_of_the_auxiliary_lemma() {
 fn auxiliary_groups_require_their_connectives() {
     let engine = Lemmatizer::new();
     for (valid, invalid, lemmas) in [
-        ("먹어보다", "먹고보다", ["먹다", "보다"]),
+        ("먹어보다", "먹게보다", ["먹다", "보다"]),
         ("먹고싶다", "먹어싶다", ["먹다", "싶다"]),
         ("먹지않다", "먹게않다", ["먹다", "않다"]),
-        ("먹게하다", "먹고하다", ["먹다", "하다"]),
+        ("먹게하다", "먹지하다", ["먹다", "하다"]),
         ("먹어야하다", "먹고야하다", ["먹다", "하다"]),
     ] {
         assert!(

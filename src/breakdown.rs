@@ -17,7 +17,7 @@ impl Analysis {
     /// copula), with its prefinals before it and nominalization particles after
     /// it. Nominals consume licensed suffixes, then particles. A final 답다
     /// suffix consumes its own prefinals and ending. This also handles nominalizations
-    /// nested inside copulas. A predicate base followed directly by suffix 이
+    /// nested inside copulas. A predicate base followed directly by suffix 이/히
     /// is an adverbial derivation and has no inflectional ending.
     /// No source offsets or contextual interpretation are
     /// implied. Returns `None` for externally constructed, unsupported shapes.
@@ -67,10 +67,9 @@ impl Analysis {
                     .filter(|stem| !stem.is_empty())?;
             }
             let adverbial = lemma.kind == LemmaKind::Predicate
-                && self
-                    .morphemes
-                    .get(cursor)
-                    .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == "이");
+                && self.morphemes.get(cursor).is_some_and(|m| {
+                    m.kind == MorphemeKind::Suffix && matches!(m.form.as_str(), "이" | "히")
+                });
             if adverbial {
                 parts.push(Component::Morpheme(cursor));
                 cursor += 1;

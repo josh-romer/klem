@@ -14,7 +14,7 @@ import {
   preferred,
   type Part,
 } from "./breakdown";
-import type { Result } from "./model";
+import { pronunciationRules, type Result } from "./model";
 
 export default function SentenceBreakdown(props: {
   result: Result;
@@ -146,6 +146,11 @@ export default function SentenceBreakdown(props: {
                     )}
                   </Show>
                 </div>
+                <For each={pronunciationRules(
+                  token.analysis?.analyses[selected(index()) ?? -1],
+                )}>
+                  {(id) => <p class="pronunciation-note">{props.result.rules[id]}</p>}
+                </For>
                 <label class="reading-selector">
                   <span>{options(token, props.only).length} readings</span>
                   <select

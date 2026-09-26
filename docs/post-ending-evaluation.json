@@ -1,0 +1,540 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-017e adjective/retrospective questions and COV-018a post-ending particles. New development gold groups below are particle gains; not a precision estimate.",
+  "baseline_commit": "051c0d7",
+  "source_sha256": {
+    "src/engine.rs": "79ed2cc0573fbf34e6449794bf114dd793cb3520b6ac6be0a08e3b0ba836da0a",
+    "src/grammar.rs": "c22ae0bc64cc78f96c172a6bb76b5692f9d5d24c9fddd3b1dda8d91586b7b4f2"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "89f0b2c5212b3a5385d7571a79c06eb314b518d62fa2588fe3c0e7795c3ff490",
+      "after_report_sha256": "9693a38e7e4f3b68dd8c183204ff04eba0753eac1e99c833ebd555a44b33d758",
+      "converted": 22220,
+      "before_matched": 21881,
+      "after_matched": 21940,
+      "new_matches": [
+        {
+          "id": "id:M2TA_089-s15/2",
+          "surface": "빼고는",
+          "expected": [
+            "빼다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s149/12",
+          "surface": "제외하고는",
+          "expected": [
+            "제외하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s174/9",
+          "surface": "통해서만",
+          "expected": [
+            "통하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s2/5",
+          "surface": "강조하면서도",
+          "expected": [
+            "강조하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s212/10",
+          "surface": "얻지는",
+          "expected": [
+            "얻다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s240/19",
+          "surface": "제공하여야만",
+          "expected": [
+            "제공하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s260/3",
+          "surface": "부드러우면서도",
+          "expected": [
+            "부드러우다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s267/11",
+          "surface": "그러면서도",
+          "expected": [
+            "그러다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s270/5",
+          "surface": "지녀야만",
+          "expected": [
+            "지니다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s272/12",
+          "surface": "비하여는",
+          "expected": [
+            "비하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s58/18",
+          "surface": "나오지는",
+          "expected": [
+            "나오다"
+          ]
+        },
+        {
+          "id": "id:MH2_0109-s13/6",
+          "surface": "문제시하지도",
+          "expected": [
+            "문제시하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s100/13",
+          "surface": "통해서만",
+          "expected": [
+            "통하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s101/14",
+          "surface": "껴안아야만이",
+          "expected": [
+            "껴안다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s137/7",
+          "surface": "겪지는",
+          "expected": [
+            "겪다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s46/5",
+          "surface": "항의하고는",
+          "expected": [
+            "항의하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s60/8",
+          "surface": "신속하고도",
+          "expected": [
+            "신속하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s101/6",
+          "surface": "때묻지도",
+          "expected": [
+            "때묻다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s101/7",
+          "surface": "녹슬지도",
+          "expected": [
+            "녹슬다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s132/9",
+          "surface": "있습니다만",
+          "expected": [
+            "있다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s180/25",
+          "surface": "근원적이고도",
+          "expected": [
+            "근원적",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s187/6",
+          "surface": "존재합니다만",
+          "expected": [
+            "존재하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s197/11",
+          "surface": "있습니다만",
+          "expected": [
+            "있다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s231/7",
+          "surface": "황홀하고도",
+          "expected": [
+            "황홀하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s276/7",
+          "surface": "마련되어야만이",
+          "expected": [
+            "마련되다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s327/4",
+          "surface": "소개하면서도",
+          "expected": [
+            "소개하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s347/22",
+          "surface": "제하고는",
+          "expected": [
+            "제하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s161/5",
+          "surface": "보지는",
+          "expected": [
+            "보다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s188/3",
+          "surface": "인정하면서도",
+          "expected": [
+            "인정하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s20/7",
+          "surface": "투쟁하지는",
+          "expected": [
+            "투쟁하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s220/5",
+          "surface": "파악하지도",
+          "expected": [
+            "파악하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s231/1",
+          "surface": "심하게는",
+          "expected": [
+            "심하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s274/10",
+          "surface": "붙이고도",
+          "expected": [
+            "붙이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s334/2",
+          "surface": "하지는",
+          "expected": [
+            "하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s341/4",
+          "surface": "것이라고는",
+          "expected": [
+            "것",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s379/2",
+          "surface": "단순하면서도",
+          "expected": [
+            "단순하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s460/9",
+          "surface": "것이라고도",
+          "expected": [
+            "것",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s475/10",
+          "surface": "망하지는",
+          "expected": [
+            "망하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s495/11",
+          "surface": "부정하지는",
+          "expected": [
+            "부정하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s502/13",
+          "surface": "생각하지도",
+          "expected": [
+            "생각하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s502/9",
+          "surface": "적대시하지도",
+          "expected": [
+            "적대시하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s548/10",
+          "surface": "대주고는",
+          "expected": [
+            "대다",
+            "주다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s560/4",
+          "surface": "받고도",
+          "expected": [
+            "받다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s57/9",
+          "surface": "싸우고도",
+          "expected": [
+            "싸우다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s604/1",
+          "surface": "이렇게만",
+          "expected": [
+            "이렇다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s612/7",
+          "surface": "붙었으면서도",
+          "expected": [
+            "붙다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s672/13",
+          "surface": "찾지도",
+          "expected": [
+            "찾다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s698/4",
+          "surface": "시키지도",
+          "expected": [
+            "시키다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s77/3",
+          "surface": "해가지고는",
+          "expected": [
+            "하다",
+            "가다",
+            "지다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s121/6",
+          "surface": "표현하면서도",
+          "expected": [
+            "표현하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s27/10",
+          "surface": "달콤하면서도",
+          "expected": [
+            "달콤하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s38/8",
+          "surface": "돌이키지는",
+          "expected": [
+            "돌이키다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s47/14",
+          "surface": "말고도",
+          "expected": [
+            "말다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s53/1",
+          "surface": "죄짓고는",
+          "expected": [
+            "죄짓다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s62/3",
+          "surface": "말고는",
+          "expected": [
+            "말다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s65/8",
+          "surface": "힘차면서도",
+          "expected": [
+            "힘차다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s66/11",
+          "surface": "오르고도",
+          "expected": [
+            "오르다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s69/10",
+          "surface": "전전하면서도",
+          "expected": [
+            "전전하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s84/6",
+          "surface": "묘사하지는",
+          "expected": [
+            "묘사하다"
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "1da88e219a920ec7f7a3acf661ec88f85fbfc96a61eebfc32b2a08a623cd8cbc",
+      "after_report_sha256": "5511c4a3e131e8c0740a46e59fa276971f4c25dbd47fd678638a0883ad765723",
+      "converted": 9989,
+      "before_matched": 9765,
+      "after_matched": 9777,
+      "new_matches": [
+        {
+          "id": "id:dev-s263/7",
+          "surface": "같지는",
+          "expected": [
+            "같다"
+          ]
+        },
+        {
+          "id": "id:dev-s320/3",
+          "surface": "하면서도",
+          "expected": [
+            "하다"
+          ]
+        },
+        {
+          "id": "id:dev-s37/11",
+          "surface": "하지도",
+          "expected": [
+            "하다"
+          ]
+        },
+        {
+          "id": "id:dev-s408/9",
+          "surface": "지냈다고는",
+          "expected": [
+            "지내다"
+          ]
+        },
+        {
+          "id": "id:dev-s463/1",
+          "surface": "그렇게도",
+          "expected": [
+            "그렇다"
+          ]
+        },
+        {
+          "id": "id:dev-s630/1",
+          "surface": "따스하면서도",
+          "expected": [
+            "따스하다"
+          ]
+        },
+        {
+          "id": "id:dev-s664/30",
+          "surface": "두려워하면서도",
+          "expected": [
+            "두려워하다"
+          ]
+        },
+        {
+          "id": "id:dev-s781/6",
+          "surface": "기울여야만",
+          "expected": [
+            "기울이다"
+          ]
+        },
+        {
+          "id": "id:dev-s814/4",
+          "surface": "가지고는",
+          "expected": [
+            "가지다"
+          ]
+        },
+        {
+          "id": "id:dev-s850/5",
+          "surface": "공표되지는",
+          "expected": [
+            "공표되다"
+          ]
+        },
+        {
+          "id": "id:dev-s919/32",
+          "surface": "여성스러우면서도",
+          "expected": [
+            "여성스럽다"
+          ]
+        },
+        {
+          "id": "id:dev-s949/8",
+          "surface": "고고하면서도",
+          "expected": [
+            "고고하다"
+          ]
+        }
+      ]
+    }
+  ],
+  "interpretation": "KAIST 부드러우면서도 → 부드러우다 and 해가지고는 → 하다+가다+지다 remain annotation/lexical-segmentation review cases. New matches do not automatically enter the required-candidate ledger."
+}

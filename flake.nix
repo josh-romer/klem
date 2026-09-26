@@ -35,6 +35,7 @@
                 ./README.md
                 ./LICENSE-MIT
                 ./LICENSE-APACHE
+                ./web/src/grammar-labels.json
               ];
             };
 

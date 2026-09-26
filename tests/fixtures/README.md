@@ -164,8 +164,8 @@ under their CC BY-SA 4.0 corpus license. Three selected positive tokens protect
 살겠다가 quoted-subject annotation; it is not labeled a -다가 success. The GSD
 annotation is secondary evidence and the fixtures do not certify all candidates.
 
-`krdict-quoted-questions.json` contains three primary entries (86030, 86031,
-26878) from the same September 2026 KRDict export (National Institute of Korean
+`krdict-quoted-questions.json` contains seven primary entries (86030, 86031,
+86032, 26878, 72146, 71306, 79033) from the same September 2026 KRDict export (National Institute of Korean
 Language, CC BY-SA 2.0 KR). Changes: retain the first sense and English
 equivalents, omit WordForm/RelatedForm and global metadata, exclude idiom
 subentries, and reformat JSON. Source/license links above apply. The fixture
@@ -176,3 +176,170 @@ MH2_0169-s383, byte-identical excerpts of the pinned KAIST development partition
 linked above. The KAIST attribution and CC BY-SA 4.0 license apply. Selected
 stable tokens protect 아니냐는 and 했느냐는; the fixture does not certify all
 analyses of these sentences.
+
+`krdict-post-ending-particles.json` contains four primary entries (86552,
+86554, 86555, 68797) from the same September 2026 KRDict export (National
+Institute of Korean Language, CC BY-SA 2.0 KR). Changes: retain the first sense
+and English equivalents, omit WordForm/RelatedForm and global metadata, exclude
+idiom subentries, and reformat JSON. It preserves the two 만 particle homonyms,
+마는, and adjective 있다. Source/license links above apply.
+
+`kaist-post-ending-particles.conllu` preserves four complete sentences
+M2TA_089-s15, MH2_0069-s174, MH2_0159-s132, and MH2_0169-s548;
+`gsd-post-ending-particles.conllu` preserves complete sentence dev-s320.
+These are byte-identical excerpts from the pinned development partitions linked
+above, under their CC BY-SA 4.0 license. Stable tokens check 빼고는, 통해서만,
+있습니다만, 대주고는, and 하면서도. These annotation matches do not certify
+all candidates in the excerpted sentences.
+
+COV-018a updates only the 학교에서만은 compatibility fingerprint, retaining
+its old hash. Four new 어/어서 + 만 + 은 paths have unknown predicate roots;
+all prior analyses and provenance remain. This is an API compatibility review,
+not a judgment that those roots are valid vocabulary.
+
+`krdict-particle-chains.json` contains nineteen primary entries from the same
+September 2026 KRDict export (National Institute of Korean Language,
+CC BY-SA 2.0 KR): 78504, 78508, 89214, 89218, 86139, 70334, 70340, 70339,
+70337, 70074, 70075, 86366, 86353, 60319, 58621, 61172, 15672, 69698, 70055.
+Changes: keep all particle senses and the first lexical sense, retain English
+equivalents only, omit WordForm/RelatedForm and global metadata, exclude idiom
+subentries, and reformat JSON. Source/license links above apply. The fixture
+retains particle homonyms and the final-ending licenses in later senses of 나.
+
+`kaist-particle-chains.conllu` preserves complete sentences M2TA_089-s52,
+MH2_0069-s295, and MH2_0169-s490; `gsd-particle-chains.conllu` preserves
+complete sentence dev-s471. They are byte-identical excerpts of the pinned
+development partitions linked above, under their CC BY-SA 4.0 license. Stable
+tokens check 어디까지나, 이제부터라도, 사회주의라고, and 넣기라도; other
+analyses in those sentences are not automatically judged correct.
+
+`krdict-auxiliary-inventory.json` contains all 54 primary entries tagged 보조 동사
+or 보조 형용사 in the September 2026 KRDict export, plus ending -을 (69058).
+The National Institute of Korean Language attribution and CC BY-SA 2.0 KR
+license above apply. Changes: retain the first sense, its first example and
+English equivalents; omit WordForm/RelatedForm and global metadata, exclude
+shared-ID idiom/proverb subentries, and reformat JSON. The complete entry IDs,
+headwords, URLs, and attachment notes from every sense are preserved separately
+in [the source inventory](../../docs/auxiliary-inventory.json), under the same
+license. The browser fixture merge keeps existing primary entries where this
+inventory overlaps richer fixtures; shared-ID idioms remain distinct entries.
+
+`kaist-auxiliary-inventory.conllu` preserves complete sentences M2TA_069-s25,
+MH2_0069-s198, MH2_0069-s422, and MH2_0169-s332;
+`gsd-auxiliary-inventory.conllu` preserves complete sentence dev-s112. These are
+byte-identical excerpts from the pinned development partitions linked above,
+under their CC BY-SA 4.0 license. Selected tokens protect 착하다보니, 늘어났다,
+번져나갔다, 해달라고, and 먹을만한. These annotations do not certify every
+compound split or other candidate generated from those sentences.
+
+COV-019a updates only the 먹게하고있다 compatibility fingerprint and retains
+its previous hash. Two additional 어 + 하다 + 고 + 있다 paths hypothesize
+unknown 먹게다/먹겋다 stems; every prior analysis and provenance item remains.
+This records output compatibility, not a judgment of lexical validity.
+
+`krdict-nominal-copulas.json` contains primary ending entries -기 (72222) and
+-음 (78528) from the same September 2026 KRDict export (National Institute of
+Korean Language, CC BY-SA 2.0 KR). Changes: retain the first sense and its first
+example, keep only English equivalents, omit WordForm/RelatedForm and global
+metadata, exclude idiom subentries, and reformat JSON. Source/license links
+above apply. Copula 86232 and suffix -답다 are already in the derivation fixture.
+
+`kaist-nominal-copulas.conllu` contains complete sentence MH2_0169-s271,
+a byte-identical excerpt of the pinned KAIST development partition under its
+CC BY-SA 4.0 license. Token 6, 떠먹이기다, protects the ordered 떠먹이다 + 이다
+group through nominalization and copula omission. The other sentence candidates
+are not automatically certified. All current compatibility fingerprints remain
+unchanged by COV-020a.
+
+`krdict-negative-contractions.json` contains nine primary entries (62051, 61178,
+15807, 58695, 84451, 50338, 60097, 86756, 86757) from the same September 2026
+KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR).
+Changes: retain the first sense, its first example, and English equivalents;
+omit WordForm/RelatedForm and global metadata, exclude idiom subentries, and
+reformat JSON. Source/license links above apply. It preserves lexicalized words
+alongside base predicates, and the distinct 품사 없음 confirmation expressions.
+Auxiliary 않다 and 싶다 are provided by the auxiliary-inventory fixture.
+
+`kaist-negative-contractions.conllu` contains complete sentence MH2_0159-s86,
+a byte-identical excerpt of the pinned KAIST development partition under its
+CC BY-SA 4.0 license. Token 12, 적잖은, protects the grouped 적다 + 않다 path.
+The remaining candidates in this sentence are not automatically certified.
+
+`krdict-adverb-expansion.json` contains fourteen primary entries (88504, 14970,
+26788, 75797, 58167, 40533, 40536, 16218, 29025, 61076, 60323, 62493, 62494,
+84452) from the September 2026 KRDict export (National Institute of Korean
+Language, CC BY-SA 2.0 KR). Changes: retain the first sense, its first example,
+and English equivalents; omit WordForm/RelatedForm and global metadata, exclude
+idiom subentries, and reformat JSON. Source/license links above apply. The fixture
+preserves the noun/adverb homonyms of 가까이, lexical adverbs, related predicates,
+and the adverb-forming 히 suffix. The browser merge retains existing richer
+primary entries when supplemental inventories overlap.
+
+`kaist-adverb-expansion.conllu` contains complete sentences MH2_0159-s128,
+MH2_0159-s341, MH2_0159-s358, and MH2_0159-s53, byte-identical excerpts from the
+pinned KAIST development partition under CC BY-SA 4.0. Four selected tokens
+protect 다분히, 가벼이, 적잖이, and 상당히. These grouped-lemma annotations do
+not certify every candidate or a literal 하 segment in the adverb's surface.
+
+`krdict-negative-auxiliaries.json` contains primary entries 80682 (-어라),
+50193 (lexical 마), and 69296 (lexical 말다) from the September 2026 KRDict
+export, National Institute of Korean Language, CC BY-SA 2.0 KR. Changes: retain
+English equivalents and the first example per sense; omit WordForm/RelatedForm
+and global metadata, exclude idiom subentries, and reformat JSON. Source/license
+links above apply. The auxiliary-inventory fixture supplies the negative
+auxiliaries; the separate lexical entries protect ambiguity and broad POS lookup.
+
+`gsd-negative-auxiliaries.conllu` is complete sentence dev-s312, a byte-identical
+excerpt of the pinned GSD development partition (CC BY-SA 4.0). Token 4, 마라,
+protects 말다 recovery. Internal-particle and mood cases are source-backed
+synthetic regressions, not additional corpus gold.
+
+`krdict-auxiliary-classes.json` retains the attributed primary 없다 entry
+(89917) from `krdict-adverbs.json`, ultimately the September 2026 KRDict export
+(National Institute of Korean Language, CC BY-SA 2.0 KR). The existing trimmed
+sense/example and English-equivalent selection is unchanged; source/license
+links above apply. The auxiliary-inventory fixture supplies all 54 auxiliary
+entries for the class tests.
+
+`gsd-auxiliary-classes.conllu` contains complete sentences dev-s112, dev-s388,
+dev-s572, and dev-s791 from the pinned GSD development partition (CC BY-SA 4.0).
+Each sentence is a byte-identical excerpt. Four selected tokens protect 먹을만한,
+참을만한데, 보고싶다, and 보고싶습니다. These are preserved gold recoveries,
+not new gains or annotations of every alternative analysis. Rejected class
+combinations are tracked separately by source-backed synthetic judgments.
+
+`krdict-grammar-labels.json` contains 239 primary entries from the September
+2026 KRDict export, National Institute of Korean Language, CC BY-SA 2.0 KR.
+238 support the teaching-label catalog; 68883 supplies the alternate propositive
+boundary. Changes: retain English equivalents and the first example per sense,
+omit WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries,
+and reformat JSON. Source/license links above apply. The catalog records every
+label's source IDs, headwords, and original POS; these are common-function hints,
+not contextual sense selections or morphological attachment licenses.
+
+`kaist-propositive.conllu` is the complete KAIST development sentence
+MH2_0159-s160, a byte-identical excerpt under CC BY-SA 4.0. Token 11, 봅시다,
+preserves 보다 recovery while the engine's canonical ending changes from the
+legacy 습시다 to 읍시다. It is not a newly recovered corpus token; boundary and
+irregularity judgments have separate synthetic regressions.
+
+`kaist-foreign-nominals.conllu` and `gsd-foreign-nominals.conllu` contain complete,
+byte-identical sentences from the pinned development partitions, CC BY-SA 4.0.
+`foreign-nominal-gold.json` indexes 17 KAIST and 22 GSD tokens newly recovered by
+conditional non-Hangul nominal boundaries, retaining the source spelling and
+expected lemma groups. These annotations verify lexical recovery, not the
+pronunciation assumption or normative spelling of each source token. In
+particular Bilbe is retained as annotated rather than corrected to another word.
+The selection and source hashes are in `docs/foreign-nominal-evaluation.json`.
+Existing attributed grammar fixtures supply particles and copulas for browser
+and dictionary tests; no artificial foreign-name dictionary entries are added.
+
+`kaist-intention-endings.conllu` and `gsd-intention-endings.conllu` contain ten
+KAIST and one GSD complete development sentences, byte-identical excerpts under
+CC BY-SA 4.0. The eleven new intention/expectation/concession recoveries are
+indexed in `docs/intention-ending-evaluation.json` and asserted by stable corpus
+IDs in `tests/corpus.rs`. These gold groups do not annotate every reading or
+certify contextual sense choice. The grammar-label fixture additionally includes
+primary KRDict entries 85920/85922 (-으리라고/-리라고), 77049/77051
+(-을지라도/-ㄹ지라도), and 80338/80339 (both -자면 homonyms), using the
+same attribution and trimming policy documented above.

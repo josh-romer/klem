@@ -47,8 +47,8 @@ existence. Corpus segmentation may also disagree with preserved vocabulary units
 Joined auxiliary input is analyzed morphologically, including some nonstandard
 spacing; this does not certify that writing the components together is correct.
 
-Known gaps include contracted 하 aspiration (피케), broad adverbial derivation
-(같이, 없이, 달리), rarer endings/particle combinations, and foreign spelling
+Known gaps include further 하다 shortening, additional adverbial derivation
+outside the COV-012 families, rarer endings/particle combinations, and foreign spelling
 whose pronunciation determines particle allomorphs. Evaluation reports retain
 measured misses and separately count unsupported annotations.
 
@@ -96,7 +96,8 @@ a compact initial display. This is not contextual ranking or a change to export.
 
 Scope limits: one slot for each outer particle; explicit supported ending
 families rather than arbitrary stripping after every ending; no particles
-inserted inside a joined auxiliary chain such as 먹어들봐요. Spaced 먹어들 봐요
+inserted inside a joined auxiliary chain in this P1 batch; COV-019a now supports
+먹어들봐요. Spaced 먹어들 봐요
 is analyzed token by token. Further chains/ending licenses belong to COV-013.
 Predicate dictionary membership and correct usage in a sentence remain hypotheses.
 
@@ -185,7 +186,8 @@ the browser shows 생각하 + 건대 and the JSON retains 생각하다 plus endi
 Restored 하 stays part of a predicate. It cannot be reused as a nominal before
 an omitted copula. No bare 케/치/타 rewrites to 하다 without a base, and foreign
 letters/numbers do not supply a guessed coda class. Complex codas, further ending
-families, and Article 39 잖/찮 remain separate audit work under COV-013.
+families remain separate audit work under COV-013. COV-021a below adds Article 39
+잖/찮 recovery.
 
 Dictionary-free recovery can add unknown lexical hypotheses such as 걷하다
 beside 걷다 for 걷지. This is consistent with the exhaustive candidate API;
@@ -227,8 +229,8 @@ or 도요; normal particle allomorph and slot rules still apply. They do not lic
 subject/object marking, prefinals, arbitrary suffix recursion, or a joined
 auxiliary connector. For instance 높이를 retains 높이 + 를, without inventing an
 adverbial 높다 + 이 + 를 path. Other nominal interpretations remain available.
-General -히, 하다-root derivation, ㅂ recovery (가까이), other stem classes,
-and nominal -이 remain COV-013 audit work. No general dictionary of corpus
+The source-listed -히, 하다-root and ㅂ-recovery extension is COV-022a below.
+Other lexical/root classes and nominal -이 remain COV-013 audit work. No dictionary of corpus
 answers is loaded by the engine.
 
 Evidence: [path/boundary tests](../tests/adverbs.rs), eight `adverb-*`
@@ -423,11 +425,498 @@ structural constraints. The generic predicate role does not independently
 validate lexical verbs versus adjectives, including the 있다/없다 classes
 specified by the 느냐는 entry. Dictionary headword matching is not that check.
 
-The separate [-으냐는 (86032)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86032)
-family and its adjective boundary recoveries remain unimplemented. Retrospective
--더냐 quotation also remains for review: this batch recovers only the listed
-시/었/겠 prefinals, without labeling 더냐는 linguistically forbidden.
+The separate adjective allomorph and retrospective quotation were subsequently
+added by COV-017e below.
 No additional outer particles or auxiliary connectors are licensed.
 Expression entries have 문법‧표현 / 품사 없음 metadata; the browser admits
 only the exact canonical headword/ID pairs for `Ending` components. Both receive
 the “Quoted question” label. Other unclassified entries remain excluded.
+
+## Adjective and retrospective questions (COV-017e)
+
+[-으냐는 (86032)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86032)
+adds canonical `Ending` 으냐는 for the adjective allomorph. Full 으 follows
+non-ㄹ closed stems (좋으냐는); its short 냐는 spelling permits ㄹ deletion
+(기냐는 → 길다), ㅂ → 우 (추우냐는 → 춥다), and ㅎ deletion
+(파라냐는 → 파랗다). These are compositional recoveries from the question
+boundary and quoted expression, supported by NIKL's
+[ㅂ explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=313964)
+and [ㅎ/allomorph distinction](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=309166).
+This differs from literal 냐는, which does not trigger those vowel recoveries.
+Unknown lexical stems remain hypotheses; the generic predicate role still
+does not prove adjective membership or irregular class membership.
+
+The 으냐는 path is for bare stems; existing prefinal paths use 냐는/느냐는.
+Known -답다 requires its irregular spelling (학생다우냐는), and copulas do
+not acquire an adjective 으냐는 path. Retrospective 더 now precedes literal
+냐는: 먹더냐는 → 먹다 + 더 + 냐는; 살더냐는 preserves ㄹ before 더.
+The decomposition follows the engine's existing 더 + 냐 representation and
+NIKL's [listed 더 boundary](https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=316861),
+composed with the shortened quotation. It does not assert that KRDict's whole
+ending -더냐 is a separate lexical lemma. Earlier prefinals, copulas, and
+auxiliaries retain their ordering. No retrospective 느냐는 path is added.
+
+## Post-ending particles (COV-018a)
+
+KRDict [는 (85851)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851)
+and [도 (86258)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86258)
+license connective attachment, including 어/게/지/고. Both now use the
+existing reviewed connective inventory in `before_particle`: e.g. 먹고는,
+하지도, 하면서도, and quoted adverbial 것이라고도. Topic 는 retains its
+vowel boundary; bare adnominal 는 and formal final 습니다 do not license 도.
+Nominalized endings continue to accept their existing ordinary particles.
+
+Restrictive [만 (86554)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86554)
+is supported after 어/어서/어야/게/고, including 통해서만 and 먹어야만.
+Concessive [만 (86555)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86555)
+and [마는 (86552)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86552)
+follow 다/는다/습니다/냐/느냐/으냐/자/지/더니. They receive
+`particle.concessive` provenance. Full 마는 is restricted to these endings,
+not bare nouns or nominalizing 음. Existing prefinals, copulas, auxiliary groups,
+and permitted outer particles compose before or after the new attachment.
+Bundled 먹지만 → 먹다 + 지만 remains alongside 지 + 만.
+
+The UI uses the selected analysis and adjacent ending to choose the concessive
+만 label/source. Nominal/restrictive 만 keeps its existing entry. This structural
+hint does not rank senses or resolve contextual ambiguity. Further particle
+chains and additional attachment families remain tracked separately;
+COV-019a below adds bounded particles inside auxiliary chains.
+
+## Outer choice and quotative particles (COV-018b)
+
+The inner coordination slots for (이)나/(이)든지/(이)야 remain; an additional
+outer choice slot follows case and restrictive particles. (이)라도 occupies
+the outer slot. The immediate surface boundary chooses the full or short form:
+학교에서라도, 학생만이라도, 어디까지나, 학교에서든지, and 학교에서야.
+ㄹ counts as a consonant here (길이라도), unlike instrumental 로. Repeating
+the same choice family through the two slots is not licensed. Polite 요 and
+the existing distributive slot may follow. Whole-word alternatives remain.
+
+Sources: KRDict [이나 (89214)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89214),
+[나 (89218)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89218),
+[이라도 (78504)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78504),
+[라도 (78508)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78508),
+[이든지 (86139)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86139),
+[든지 (70334)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70334),
+[이야 (70340)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70340),
+and [야 (70339)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70339).
+Nominal and adverbial bases are alternatives; existing adverb derivations also
+compose (달리라도 → 다르다 + 이 + 라도). Nominalized predicates retain
+ordinary particle attachment (넣기라도). Short 나/라도/야 permit the reviewed
+어/게/지/고 endings. 나/든지 additionally permit final 다/는다/라/으라/어라.
+This is not a general license for all endings or arbitrary particle repetition.
+
+Nominal quotation/emphasis receives separate literal `Particle` forms 이라고
+(closed boundary) and 라고 (open boundary), allowing outer 도/는/요 and the
+existing ㄴ contraction in 학교라곤. Source entries distinguish quotation
+([70075](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70075),
+[70074](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70074))
+from nominal emphasis/qualification
+([86353](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86353),
+[86366](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86366)).
+The existing 학생 + 이다 + 라고 copular path remains alongside 학생 + 이라고.
+The browser's “Quotation / emphasis” hint does not select a contextual sense.
+It looks up the particle key rather than the hyphenated ending key; all source
+homonyms remain in the dictionary data. Cross-token quoted sentences and the
+separate 살겠다가 quoted-subject annotation remain outside this nominal rule.
+
+## Auxiliary connectors and internal particles (COV-019a)
+
+The [auxiliary source inventory](auxiliary-inventory.json) records all 54 entries
+marked 보조 동사 or 보조 형용사 in the pinned KRDict export, including notes
+from every sense. This is a structural attachment catalog, not a lexical-class
+or contextual sense validator. Each entry includes its primary-source URL.
+The runtime keeps a finite connector/stem table; it does not read the inventory.
+
+| Canonical connector | Auxiliary families added or expanded |
+| --- | --- |
+| 어 | 나다/나가다, 계시다, 가지다/갖다, 달다, 마지않다/마지아니하다, 먹다, 버릇하다, 빠지다, 쌓다, 재끼다, 젖히다, 죽다, 치우다, 터지다, 하다 |
+| 고 | 계시다, 나다, 들다, 보다, 자빠지다, 하다 |
+| 지 | 아니하다, alongside 않다/못하다/말다 |
+| 게 | 생기다, alongside 되다/하다 |
+| 은/는 | 듯하다/듯싶다, 양하다, 척하다, 체하다 |
+| 을 | 듯하다/듯싶다, 만하다, 법하다, 뻔하다, 성싶다 |
+| 음 | 직하다 |
+| 으려/으려고 | 들다, 하다 |
+| 기로/자고 | 들다 |
+| 다/다가 | 보다, 못하다; 다 also connects 싶다 |
+| 는가/은가/나/을까 | 보다, 싶다 hypotheses |
+| 었 + 으면 | 하다, 싶다 |
+| 기도/기는/기만/고자 | 하다 |
+
+Existing 어/고/지/게/어야 connections remain. Boundaries use the existing
+spelling recovery and ordered prefinal machinery. 가지다/갖다 require following
+고; 달다 permits following 으라/으라고/으라는/으라면/오; 보다 after 다/다가
+requires 으니/으면. These constraints reject 먹어가졌다 and 먹어달았다 for
+those auxiliary readings. They do not claim every tail or lexical restriction
+in the source is enforced. In particular, negative 말다 mood selection,
+verb/adjective classes, source-specific subsets such as 빠지다, and the legacy
+어 + 없다 path still need review under COV-019.
+
+One internal particle slot can occur before an auxiliary. 도/만/들 use the
+existing ending licenses and auxiliary connector check; 기 + 도/만 connects
+하다. 고/기 + 는, 기 + 나/야 connect 하다, while 고 + 야 connects 말다.
+Contracted 곤 recovers 고 + 는. Thus 먹어들봐요 has 먹다 + 어 + 들 + 보다 +
+어요, 먹고야말았다 has 먹다 + 고 + 야 + 말다 + 었 + 다, and 먹곤했다
+has 먹다 + 고 + 는 + 하다 + 었 + 다. The rule adds
+`auxiliary.internal_particle` provenance and preserves each particle's kind.
+Bundled 기도/기는/기만 and unsplit lexical candidates remain alternatives.
+Repeated internal particles are not recursively stripped. The same bounded
+slot can occur at different links of a longer chain; no chain-length cap is added.
+
+Joined input is tolerated for analysis. The normal orthographic rules can
+require a space before the auxiliary, particularly with intervening particles;
+see [NIKL's Article 47 discussion](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=305086).
+This feature does not repair whitespace, combine separately tokenized predicates,
+or split particles inside bound-noun expressions such as 듯도 하다.
+
+Two older negative tests were overbroad: KRDict licenses 고 + 보다 (62171,
+sense 3) and 고 + 하다 (62888, sense 7). The tests now use unsupported 게 + 보다
+and 지 + 하다 instead, with positive regressions for the source-listed pairs.
+Exact lemma/morpheme order, NFD normalization, particle provenance, and boundary
+violations are checked in [auxiliary tests](../tests/auxiliary_inventory.rs).
+Dictionary/CLI and browser tests preserve the same groups and role-specific
+labels. The packed iterative auxiliary search remains; stress tests retain the
+1,024-syllable memory bound and unlimited candidate enumeration.
+
+## Direct nominalization and copulas (COV-020a)
+
+The nominalizing endings [기 (72222)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72222)
+and [음 (78528)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78528)
+make predicates function as nominals. They now compose directly with
+[copular 이다 (86232)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86232),
+using the existing -ㅁ/-음 spelling recovery. This adds a missing composition
+boundary; it does not reinterpret every ending as a nominalizer or implement the
+homonymous noun-forming suffixes -기/-음.
+
+Explicit copulas, existing vowel-final 이 omission, and polite 이에요/예요 and
+이야/야 forms share the nominalized-base expansion. 학생다움이다 exposes
+학생 + 답다 + 음 + 이다 + 다; 먹기다 and 먹기예요 retain 먹다 + 기 + 이다.
+Consonant-final 먹음 requires 이, so 먹음다 and 먹음예요 do not gain those
+paths. Known -답다 uses its existing ㅂ-irregular boundary; 학생답음이다 does
+not gain a 학생 + 답다 decomposition. No additional suffix ordering is enabled.
+Whole-word nominal and predicate hypotheses remain, even when not dictionary
+headwords. Nominalizing-ending provenance is `nominalization`; the copula retains
+its existing `copula`, `copula.zero`, or `copula.polite` provenance.
+
+Prefinals and auxiliaries retain their positions on each side of the boundary:
+먹었음이었다 → 먹다 + 었 + 음 + 이다 + 었 + 다 and
+먹어보기였다 → 먹다 + 어 + 보다 + 기 + 이다 + 었 + 다.
+Nominalizations of copulas can themselves precede copulas; each recursive
+composition consumes input. A regression retains a 64-level structural path
+without a nesting cutoff; it is a termination/representation test, not a claim
+that such a sentence is natural. Existing particles after a copula and the
+separate particle-before-explicit-copula paths remain. The new direct path does
+not admit arbitrary connective/adnominal endings, quoted clauses, or new omitted
+copula contexts.
+
+[Path and boundary tests](../tests/nominal_copulas.rs) cover normalization,
+whole-word alternatives, suffixes, nesting, and ordered breakdown. The annotated
+KAIST token MH2_0169-s271/6 (떠먹이기다) supplies independent grouped-lemma
+evidence; synthetic source-backed tests cover the derived forms. The corpus
+adapter does not judge the correctness of all grammatical components or alternatives.
+
+## Negative contractions and confirmation (COV-021a/017f)
+
+[NIKL's Article 39/40 explanation](https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=84&pageIndex=1&qna_seq=335814)
+distinguishes contracted 지 않 → 잖 and 하지 않 → 찮 from the separate
+Article 40 shortening of 하. The rule adds optional expanded analyses:
+적잖은 → 적다 + 지 + 않다 + 은 and 만만찮았다 → 만만하다 + 지 + 않다 +
+었 + 다. It does not correct the spellings 쟎/챦. The left predicate uses
+existing 지 attachment and prefinal recovery, so Article 40 deletion can also
+compose in 넉넉잖다 → 넉넉하다 + 지 + 않다 + 다. Incorrect 하 deletion after
+ㄴ does not create 만만하다 from 만만잖다. Conversely, 찮 restoration uses
+the existing aspiration boundary: open syllables and ㄴ/ㄹ/ㅁ/ㅇ permit it,
+while stop-final 거북찮다 does not restore 거북하다. This follows
+[NIKL’s explicit 거북잖다/생각잖다 explanation](https://www.korean.go.kr/nkview/nklife/1994_1/4_10.html).
+Complex coda classes remain part of the COV-021 audit.
+
+The expansion is represented as a predicate followed by an auxiliary, with
+`contraction.negative` provenance. Both sides retain their own prefinals and
+endings. Auxiliary search preserves contracted components in intermediate tails,
+so 먹고싶잖다 retains 먹다 + 싶다 + 않다, while 먹잖고있다 retains 먹다 +
+않다 + 있다. Existing known -답다 decomposition and direct nominalization/copula
+composition also apply, e.g. 학생답잖다 and 적잖음이다. Each expansion removes
+a contracted 잖/찮 boundary; there is no global text substitution or candidate cap.
+
+Original lexical analyses remain. [적잖다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=84451),
+[만만찮다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=50338),
+and [괜찮다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=60097)
+are dictionary entries in their own right. A mechanically restored stem may be
+unknown, and an expanded negative need not have the same meaning as a lexicalized
+word. Dictionary presence does not settle that semantic question. Tests preserve
+both compact and expanded dictionary-compatible readings rather than replacing
+lexical words with their historical constituents.
+
+The separate expressions [-잖아 (86756)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86756)
+and [-잖아요 (86757)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86757)
+confirm or correct something for the listener. They remain one `Ending`
+component with `ending.confirmation` provenance, without an inferred 않다.
+Thus 먹잖아요 has both a bundled confirmation reading and an expanded negative
+reading. The source-listed honorific/past/modal prefinals are supported;
+retrospective 더 is excluded for the bundled expression. Copulas and preceding
+auxiliaries compose, including 학생이잖아요 and 먹어봤잖아요. No contextual
+selection, additional outer-particle licenses, or new auxiliary connector is
+claimed for these expressions. Browser lookup admits only these two reviewed
+품사 없음 expression IDs, alongside the existing expression exceptions.
+
+[Regression tests](../tests/negative_contractions.rs) check full/short path parity,
+NFD normalization, lexical alternatives, component ordering, and negative
+boundaries. KAIST MH2_0159-s86/12 supplies independent 적다 + 않다 gold for
+적잖은. Corpus recall does not judge every expanded candidate; the remaining
+적잖이 miss concerns adverb derivation and stays under COV-022.
+
+## Additional predicate adverbs (COV-022a)
+
+The [adverb inventory](adverb-inventory.json) records the source-listed forms,
+related predicate IDs, and dictionary coverage. Sources are KRDict's
+[-히 (88504)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88504),
+[-이 (88927)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88927),
+[NIKL's spelling discussion](https://m.korean.go.kr/nkview/nknews/199911/16_11.htm),
+and the linked lexical entries. The runtime uses explicit root/suffix pairs,
+not a heuristic that any consonant or final syllable selects a spelling.
+
+Six listed ㅂ forms recover adjective stems: 가까이/가벼이/고이/새로이/외로이/
+즐거이 → 가깝다/가볍다/곱다/새롭다/외롭다/즐겁다 + suffix 이.
+`derivation.adverbial.bieup` distinguishes this derivation from ordinary vowel
+ending recovery. 헛되이 → 헛되다 and 적잖이 → 적잖다 preserve their stems.
+The latter retains the lexical adjective; it does not recursively split an
+implicit negative auxiliary inside the adverb.
+
+The 57 root/suffix pairs support related 하다 adjective lookup, e.g.
+깨끗이 → 깨끗하다 + 이 and 조용히 → 조용하다 + 히. This is lemma-oriented
+normalization: [NIKL identifies 조용 as the root to which 히 attaches](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=317650).
+There is no literal 하 segment in 조용히. `derivation.adverbial.hada` records
+the relationship; the browser displays 조용 + 히 while linking the related
+adjective. The JSON keeps the lookup lemma and the suffix. Other consumers
+should use provenance when presenting the root rather than blindly concatenating
+lemma stems and suffixes. No root lemma kind or implicit 하다 suffix is added.
+
+All new paths retain `suffix.adverbial.i` or `suffix.adverbial.hi`; suffix 히
+is distinct from the causative/passive homonyms. Derivation consumes no prefinal
+or inflectional ending and does not license an auxiliary. The existing reviewed
+particle chains compose; 조용히도요 is supported, but 조용히를 does not gain an
+adverbial 조용하다 path. 가까이 has a nominal homonym: 가까이를 retains that
+whole-word noun reading without treating the adverbial 가깝다 + 이 as a noun.
+Spelling regressions reject the targeted 가깝이/가까히, 조용이 and 깨끗히 paths.
+
+This finite list is not an exhaustive lexical inventory. KRDict lacks some rare
+related predicates listed in the NIKL discussion, including 열심하다; rule
+recovery does not create a dictionary entry. Adverb/noun roots (곰곰, 더욱,
+가만, reduplicated nouns), other adjective classes, shortened 익히/특히, and
+nominal -이 remain open under COV-022. Dictionary POS compatibility checks the
+existing broad predicate role, not adjective sense or semantic equivalence.
+
+## Negative auxiliary particles and short prohibitives (COV-019b)
+
+`irregular.mal` recovers exactly 마 → 말다 + 어, 마라 → 말다 + 어라,
+and 마요 → 말다 + 어요. NIKL accepts both these short imperatives and
+말아/말아라/말아요 ([2019 guidance](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6717),
+[Article 18 explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&pageIndex=1&qna_seq=320385)).
+The existing full forms remain. Standalone words receive a predicate hypothesis;
+joined negative constructions put 말다 in the auxiliary role. Lexical 마 remains
+an independent reading. The source guidance does not license arbitrary ㄹ loss,
+short past forms, or shortening before connective 어서/어야. In auxiliary chains,
+short 마 requires a preceding 지; it cannot replace completive 고 말다 or
+act as connective 어 before another auxiliary. The browser shows the normalized
+말 stem and ending, and -어라 links to KRDict 80682 (command/exclamation).
+[NIKL explicitly excludes 마라요](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6475);
+existing particle licenses already prevent 어라 + 요.
+
+The one internal-particle slot now permits 지 + 는 before each existing negative
+auxiliary: 않다, 못하다, 말다 and 아니하다. It also expands contracted 진
+into 지 + 는, preserving `particle.contraction.n` and
+`auxiliary.internal_particle`. Sources: KRDict [는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851)
+and [ㄴ](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85847),
+which explicitly allow attachment after 지, and
+[NIKL's 애쓰지는 마라 example](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=44&pageIndex=1&qna_seq=334700).
+These compose with existing earlier auxiliaries, e.g. 먹어보진마요, and preserve
+internal 도/만. The particle remains after its ending in ordered breakdowns;
+it does not authorize a new connector such as 지 + 보다 or repeated 는 slots.
+Joined-input recovery is tolerant analysis, not a recommendation to omit spaces.
+
+The KRDict auxiliary entry's command/proposal note is not a safe token-level
+ending whitelist. [NIKL's question discussion](https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&pageIndex=1&qna_seq=326614)
+recognizes 가지 말까요 and 하지 말아요 as questions, while noting a lexical
+sense distinction not fully captured by the dictionary entry.
+[Its indirect-wish guidance](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8079&mn_id=27&pageIndex=1)
+also permits 말았으면 in an appropriate context. Regression cases preserve
+먹지말까요, 먹지말았으면, quoted 말라고 and embedded 말아야한다. No blanket
+past-tense or nonimperative ban is applied. This is preservation of possible
+lemma groups, not contextual certification of the auxiliary sense or sentence
+mood. Lexical verb/adjective restrictions and remaining auxiliary links are
+still COV-019 work.
+
+## Auxiliary adjective inflections and legacy links (COV-019c)
+
+The [class audit](auxiliary-class-audit.json) groups all 54 KRDict auxiliary
+entries into 48 headwords: 34 verb-only, eight adjective-only, and six with both
+classes. The eight unambiguous auxiliary adjectives are 듯싶다, 듯하다, 만하다,
+법하다, 뻔하다, 성싶다, 싶다, and 직하다. This classification applies to their
+auxiliary use in a grouped analysis, not every possible lexical homonym.
+
+Bare adjective auxiliaries reject canonical 는다/는다고/는다는/는다면 and
+는/는데/는데요/는데도/는데다가/는지/는가/는가요/느냐/느냐는. The audit
+records the dictionary attachment notes for these families and their allomorphs.
+For example, 먹고싶는다 and 먹을만하는 lose their targeted auxiliary readings;
+먹고싶다 and 먹을만한 remain. Prefinals have separate licenses, so this pass
+does not restrict endings after recovered 시/었/겠/더. In particular,
+먹고싶었는데 and 먹고싶었느냐는 remain. No command-only whitelist is inferred:
+어라 also has an exclamatory adjective use.
+
+| Auxiliary use | Class evidence used |
+| --- | --- |
+| The eight adjective-only headwords | Adjective |
+| The 34 verb-only headwords | Verb; resets a preceding adjective class |
+| 보다 after 어/다가 | Verb |
+| 보다 after 는가/은가/나/을까 | Adjective |
+| 보다 after 고/다 | Ambiguous; preserve both classes |
+| 못하다 after 다/다가 | Adjective |
+| 않다/아니하다/못하다 after 지 | Inherit a known preceding class |
+| 하다 after 어/게/어야/으려/으려고/고자/으면 | Verb |
+| Other 하다 links and 양하다 | Ambiguous |
+
+The single forward scan of each grouped analysis consumes nominal suffixes,
+each predicate's prefinals and ending, then its particles. A plain nominal does
+not consume the next copula's ending. An explicit 답다 suffix supplies adjective
+evidence even though its lemma is nominal; ordinary lexical heads supply no
+class without a dictionary. The scan allocates no extra component vectors.
+
+[NIKL's negative-adjective example](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=312012)
+requires 살고 싶지 않은 rather than the corresponding 는 reading. This supports
+class inheritance through negative auxiliaries: 먹고싶지는않은 and 먹고싶잖은
+remain, while their targeted 는 paths are excluded. By contrast, 먹어보지않는
+and 먹고싶어하는 remain verbal. Class changes and inherited classes are checked
+through multiple auxiliary links without imposing a chain-length cutoff.
+
+The converse rule, excluding 은가 from every source-tagged verb, is not applied.
+Honorific 계신가 is attested in [KRDict's examples](https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=85753),
+and existential negatives need separate treatment; tests preserve 먹고계신가 and
+먹고있지않은가. Unknown or ambiguous classes are not silently treated as verbs
+or adjectives. This batch does not resolve arbitrary lexical heads, left lexical
+subsets such as the limited verbs before auxiliary 먹다, additional prefinal
+constraints, or contextual sense selection.
+
+The old 어 + 없다 table entry had no support in the modern auxiliary inventory.
+KRDict [없다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89917)
+is a lexical adjective; its noun/수 constructions do not license an 어 auxiliary.
+That link is removed, including particle and later-auxiliary extensions. Lexical
+없다 inflections and 없이 remain. Whole-word and other lexical hypotheses are
+preserved; removal targets the unsupported grouped auxiliary reading. Existing
+게 + 되다 is retained, but this inventory does not assign it an auxiliary class
+by elimination because KRDict labels 되다 as a lexical verb.
+
+## Propositive spelling and boundaries (COV-017g)
+
+The grammar-label inventory exposed the legacy `습시다` rule. The canonical
+ending is now `읍시다`: 먹읍시다 → 먹다 + 읍시다, 갑시다 → 가다 + 읍시다,
+and 삽시다 retains both 사다 and 살다 hypotheses. Unlike 습니다/습니까, this
+family uses vowel-boundary recovery: 들읍시다 → 듣다, 부읍시다 → 붓다, and
+도웁시다 → 돕다. The attached ㅂ boundary drops ㄹ. The regular and irregular
+lexical-class alternatives remain hypotheses, as elsewhere in the rule engine.
+The test rejects the specific 먹다 path in 먹습시다, not the original token or
+all conceivable unknown-word analyses. 먹어봅시다 and 먹지맙시다 retain their
+auxiliary groups; prefinal and lexical-class restrictions need further review.
+
+Sources: KRDict [-읍시다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68880)
+and [-ㅂ시다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68883);
+the example 도웁시다 in [-는다니까](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81937).
+The complete KAIST MH2_0159-s160 fixture preserves 봅시다 → 보다; that lexical
+recovery already worked before this correction, so it is not counted as a gain.
+See [tests](../tests/propositive_endings.rs) and [the audit](grammar-label-evaluation.json).
+
+## Foreign nominals and pronunciation conditions (COV-014)
+
+Particle attachment is determined by the preceding pronunciation, not the last
+Latin letter or digit. [NIKL's examples](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&pageIndex=1&qna_seq=330830)
+include A는/M은 and 1은/2는. The engine does not choose among letter names,
+transliterations, numeral systems, or contextual readings. Instead, a spelled
+base ending in a non-Hangul letter or number can support a **conditional**
+nominal analysis. Four stable rule IDs state the necessary final-sound condition:
+
+| Rule ID | Assumption |
+| --- | --- |
+| `pronunciation.assumed_vowel` | A final vowel, e.g. the split ABC + 는 |
+| `pronunciation.assumed_consonant` | A final consonant, e.g. 3 + 은 |
+| `pronunciation.assumed_non_rieul_consonant` | A consonant other than ㄹ, e.g. 3 + 으로 |
+| `pronunciation.assumed_vowel_or_rieul` | A vowel or ㄹ, e.g. 1 + 로 |
+
+The [로 source entry](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85761)
+records its ㄹ exception. A condition is not an asserted pronunciation or a
+recommendation to use every allomorph with every spelling. Conditional candidates
+are visible even when their base has no dictionary entry. The unchanged word
+also remains. All dictionary matching continues to use the spelled NFC lemma;
+there is no inferred Hangul transliteration, number-name lemma, or fabricated
+headword. `--dict-only` therefore still removes analyses with unmatched bases.
+
+Only the new non-Hangul boundary is relaxed. Outer particles use the preceding
+Hangul surface normally: ABC로만은 carries the condition for ABC + 로, while
+ABC에는 and ABC들로 need none. Particle order and duplicate restrictions remain.
+Hangul names and units, such as 김민수는 and 2026년은, keep ordinary coda checks.
+The implementation accepts Unicode letters/numbers and their attached combining
+marks, preserves NFC/NFD behavior, and does not turn punctuation or emoji into
+new phonological bases. Compatibility jamo retain their original spelling;
+no letter-name transliteration or jamo normalization is added.
+
+Omitted copulas use the vowel condition: ABC다, ABC라면, ABC예요, and ABC야.
+Existing contracted 이 + 어 → 여 readings, such as ABC였다 and ABC여요, now
+also report that condition. Explicit ABC이다/ABC이에요/ABC이었다 do not require
+an inferred final vowel. The initial copula contraction is tracked separately
+from contractions in later auxiliaries, so ABC이었나봐요 does not acquire an
+assumption from 봐. Sources: [NIKL's 이에요/예요 guidance](https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=326208)
+and its [standard-language teaching material](https://m.korean.go.kr/common/download.do%3Bfront%3D12C549533B186950B1B76A529FAB4D33?c_file_name=94f3dbab-ed26-469f-b3d8-743c88e37a32_0.pdf&file_path=etcData&o_file_name=%EB%B0%94%EB%A5%B8+%EA%B5%AD%EC%96%B4+%EC%83%9D%ED%99%9C-%EA%B5%90%EC%82%AC%EC%A7%81%EB%AC%B4%EC%97%B0%EC%88%98%EA%B5%90%EC%9E%AC.pdf).
+This is not a complete audit of copula ending/attachment restrictions (COV-020).
+
+Tokenization remains lossless and splits at punctuation/symbols. Thus text
+`3.14는` becomes `3`, `.`, `14는`, and `O'Neil은` becomes `O`, `'`, `Neil은`.
+No whole decimal/name recovery across those boundaries is claimed. Raw `word`
+input is not silently retokenized; new pronunciation hypotheses do not cross
+punctuation inside its base. Whole-word candidates remain available to consumers
+that supply their own tokenization or dictionary.
+
+Evidence: [foreign boundary tests](../tests/foreign_nominals.rs),
+[streaming/token boundary tests](../tests/text.rs), twelve `foreign-*` ledger
+cases, dictionary/CLI filtering tests, ten browser cases, and 39 newly recovered
+annotated development tokens. [The evaluation](foreign-nominal-evaluation.json)
+keeps lexical recovery distinct from pronunciation validation; corpus spellings
+such as Bilbe are retained literally, not silently corrected.
+
+## Intention, expectation, and concession (COV-017h)
+
+Three additional ending families retain one canonical `Ending` component:
+
+| Canonical form | Surface boundary | Meaning and source |
+| --- | --- | --- |
+| 으리라고 | -으리라고 after a non-ㄹ consonant; -리라고 after a vowel or ㄹ | Reported intention/expectation: KRDict [85920](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85920), [85922](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85922) |
+| 을지라도 | -을지라도 after a non-ㄹ consonant; attached -ㄹ지라도 otherwise | Concession: KRDict [77049](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77049), [77051](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77051) |
+| 자면 | Literal attachment to a verb stem | Intention: KRDict [80338](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80338); shortened proposal quotation: [80339](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80339) |
+
+The source attachment notes, senses, and examples are retained in the attributed
+`krdict-grammar-labels.json` offline fixture. The vowel-boundary families use
+existing ㄷ/ㅅ/ㅂ/ㅎ recovery; 자면 preserves stem consonants. Thus 들자면
+recovers 들다, whereas 들으리라고 can recover 듣다. 살지라도 retains both
+살다 and 사다. Original-word and unknown lexical alternatives remain.
+
+으리라고 permits the existing honorific, past, and modal sequence, including
+먹으셨겠으리라고; retrospective 더 is not licensed. 을지라도 permits honorific
+and past markers, not 겠/더. 자면 permits a verb's honorific path but excludes
+past/modal/retrospective markers. The honorific extension follows the engine's
+verb-preserving 시 composition; the dictionary's -자면 notes state verb
+attachment without separately enumerating prefinals. This distinction remains
+visible for independent linguistic review rather than treating a corpus match
+as a judgment of every tense or mood combination.
+
+Known auxiliary adjectives and the explicit -답다 suffix cannot take 자면,
+including after 시. Neither can a nominal copula. These restrictions apply to
+the predicate carrying that ending: 먹고싶어하자면 retains 싶다 + 어 + 하다,
+and 학생이고싶어하자면 retains its earlier copula. Unknown lexical heads remain
+unclassified, so a dictionary match alone does not certify verb compatibility.
+The conjectural 으리라고 and concessive 을지라도 support adjectives/copulas;
+-답다 still requires its ㅂ-irregular spelling at a vowel boundary.
+
+Existing auxiliary chains may precede these endings; none of the three is a new
+auxiliary connector. A following reporting predicate is not inserted implicitly.
+The -으리라고 intention and expectation senses and the two -자면 homonyms share
+a bundled representation; the browser exposes both sources and a context note.
+This adds neither contextual sense selection nor cross-token quotation parsing.
+Additional outer particles and shortened quotation families remain COV-017/018.

@@ -6,56 +6,16 @@ import {
   type Token,
 } from "./model";
 
-// Short teaching labels, paraphrased from KRDict. These describe common uses,
-// not a contextually selected sense. Source IDs permit independent review.
-export const grammarLabels: Record<string, [string, number]> = {
-  "-들": ["Plural", 74906],
-  "-님": ["Honorific", 88852],
-  "-적": ["Relating to / having a quality", 88966],
-  "-답다": ["Characteristic of", 92145],
-  "-이": ["Adverb-forming suffix", 88927],
-  들: ["Plural subjects", 86264],
-  요: ["Polite", 86116],
-  는: ["Topic / contrast", 85851],
-  은: ["Topic / contrast", 86111],
-  이: ["Subject marker", 86289],
-  가: ["Subject marker", 66341],
-  을: ["Object marker", 86355],
-  를: ["Object marker", 85764],
-  에: ["Place / time / destination", 86572],
-  에서: ["Action location / from", 68853],
-  의: ["Possession / relation", 86290],
-  도: ["Also / even", 86258],
-  만: ["Only / emphasis", 86554],
-  와: ["With / and", 78628],
-  과: ["With / and", 78624],
-  "-어요": ["Polite informal", 86571],
-  "-에요": ["Polite informal", 86106],
-  "-어": ["Connective / informal", 86094],
-  "-는": ["Noun modifier", 85853],
-  "-은": ["Noun modifier", 80344],
-  "-기": ["Nominalizer", 72222],
-  "-음": ["Nominalizer", 78528],
-  "-고": ["Connective / final", 78583],
-  "-지": ["Connective / final", 78636],
-  "-게": ["Connective / final", 77326],
-  "-건대": ["Introducing a thought / wish", 78410],
-  "-도록": ["Purpose / extent", 80286],
-  "-듯": ["As / like", 80280],
-  "-듯이": ["As / like", 80282],
-  "-는다면": ["If / supposing", 68738],
-  "-다가": ["While / then", 85740],
-  "-어다가": ["Then / using the result", 86099],
-  "-으려는": ["Intending / about to", 86717],
-  "-자는": ["Quoted suggestion", 83896],
-  "-냐는": ["Quoted question", 86030],
-  "-느냐는": ["Quoted question", 86031],
-  "-고자": ["Purpose / intention", 78612],
-  "-었-": ["Past / completed", 68719],
-  "-시-": ["Subject honorific", 80330],
-  "-겠-": ["Intention / conjecture", 90137],
-  "-다": ["Plain / dictionary ending", 85041],
-};
+import labelCatalog from "./grammar-labels.json";
+
+interface GrammarLabel {
+  kind: string;
+  label: string;
+  sources: { id: number; headword: string; pos: string }[];
+  note?: string;
+}
+// Teaching hints describe common functions, not a contextually selected sense.
+export const grammarLabels: Record<string, GrammarLabel> = labelCatalog;
 export interface Part {
   form: string;
   label: string;
@@ -100,8 +60,13 @@ export function parts(
         entries.find((e) => e.pos_compatibility === "compatible") ??
         entries.find((e) => e.pos_compatibility === "unknown");
       const stem = ["predicate", "auxiliary", "copula"].includes(lemma.kind);
+      const next = order[position + 1];
+      const adverbRoot = lemma.kind === "predicate" &&
+        a.rules.includes("derivation.adverbial.hada") && next &&
+        "morpheme" in next && a.morphemes[next.morpheme].kind === "suffix" &&
+        ["이", "히"].includes(a.morphemes[next.morpheme].form);
       return {
-        form: stem ? lemma.text.replace(/다$/, "") : lemma.text,
+        form: adverbRoot ? lemma.text.replace(/하다$/, "") : stem ? lemma.text.replace(/다$/, "") : lemma.text,
         label:
           (entry && result.glosses[entry.id]) ||
           (entry ? "No English gloss" : "No dictionary gloss"),
@@ -112,12 +77,21 @@ export function parts(
     }
     const m = a.morphemes[component.morpheme];
     const key = grammarHeadword(m);
-    const label = grammarLabels[key];
+    const previous = order[position - 1];
+    const concessiveMan =
+      m.kind === "particle" && m.form === "만" &&
+      a.rules.includes("particle.concessive") && previous &&
+      "morpheme" in previous && a.morphemes[previous.morpheme].kind === "ending" &&
+      ["다", "는다", "습니다", "냐", "느냐", "으냐", "자", "지", "더니"].includes(a.morphemes[previous.morpheme].form);
+    const label = concessiveMan
+      ? { ...grammarLabels[key], label: "But / although",
+          sources: grammarLabels[key].sources.filter((s) => s.id === 86555) }
+      : grammarLabels[key]?.kind === m.kind ? grammarLabels[key] : undefined;
     const entries = result.grammar[key] ?? [];
     const entry =
-      entries.find((e) => e.id === `krdict:${label?.[1]}`) ?? entries[0];
+      label?.sources.map((s) => entries.find((e) => e.id === `krdict:${s.id}`))
+        .find((e) => e !== undefined) ?? entries[0];
     // 하 + 어/었 is displayed as 하 + 여/였. Keep canonical lookup/index intact.
-    const previous = order[position - 1];
     const afterHa =
       previous &&
       "lemma" in previous &&
@@ -130,7 +104,7 @@ export function parts(
     return {
       form,
       label:
-        label?.[0] ??
+        label?.label ??
         {
           particle: "Particle",
           ending: "Ending",
@@ -140,7 +114,7 @@ export function parts(
         m.kind,
       grammar: true,
       entry: entry?.id,
-      hint: `${key} · Common function; other uses may apply.${label ? ` Label source: KRDict ${label[1]}.` : ""}`,
+      hint: `${key} · Common function; other uses may apply.${label ? ` Label sources: KRDict ${label.sources.map((s) => `${s.id} (${s.headword})`).join(", ")}.${label.note ? ` ${label.note}` : ""}` : ""}`,
     };
   });
 }

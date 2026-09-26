@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-014 conditional pronunciation boundaries for spelled foreign/number nominals, particle chains and copulas. Tokenization and dictionary-only semantics unchanged. Not a linguistic precision estimate.",
+  "baseline_description": "COV-015/017g working tree before foreign nominal recovery.",
+  "baseline_source_sha256": {
+    "src/grammar.rs": "49481626e9a68f65db8921238a8437cbbe0b3e7f3edd427f0fa39e75b1e21152",
+    "src/engine.rs": "3fa1b238bd48141ad17bd5178faae7679e7c3d5987aa734efc67327f644cdca3",
+    "src/breakdown.rs": "1a59933ea1a7b341843735cbc8132676c99bdc9ceaabe4c3ea4002a7025da038",
+    "src/bin/klem-web.rs": "229f2bf17a81a7c4cae003b126c4c42988f29747e11d94800539d70729d402fb",
+    "src/bin/klem-web/grammar_labels.rs": "5d08e6d10ebd397e389b5dae3f73d051c80488f83a5db827a58fc5505b792c6d",
+    "web/src/grammar-labels.json": "40603557b542518dfef30de19c350ade2089decddc4b61b1d1375e8b6bc98d61"
+  },
+  "source_sha256": {
+    "src/engine.rs": "06c0a22ea5882f9723521c69d7db2695b35aba2a36264988fdda1df150d4354e",
+    "src/grammar.rs": "7d3d0c48791f037e6afbbfca82b84b2f576e96f5baaa78094f129a842b160298",
+    "src/pronunciation.rs": "c3133e56881c4e9d02f741e36ef5966166d04e8f1d624238a00c085b36c7ce0b",
+    "src/lib.rs": "0da965275cdc3fa556050486c23aaae5fffdc57393f2e8701c785f32d3042066",
+    "src/text.rs": "5ef733732a66f033e791826595c9ec50e46b67435e5c002b4594adff1e34d073",
+    "web/src/model.ts": "6790fdf248c3a00bbed31358f56c59defc260a6dc7d4384b74a7ddd9ae512fb2",
+    "web/src/SentenceBreakdown.tsx": "67f4b806918cb8fe83f6532e1d5f2a571416ac0bfd8d63684d9c2d24d4ceb3cd",
+    "web/src/App.tsx": "f5d4bd5705fb85e7602461095274fd148ac711b20b3249aeeb37793f14895204"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "ec1893840b7398025cdb4b836be8a1d932cceac31c0bfd7959e455d6b487deb5",
+      "after_report_sha256": "ca7195f283dcf6e4dfa3ecbfe63b36f0110ce6417271d9d1152f8ae44502bd75",
+      "converted": 22220,
+      "before_matched": 22001,
+      "after_matched": 22018,
+      "remaining_misses": 202,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": [
+        {
+          "id": "id:MH2_0069-s234/4",
+          "surface": "Longman은",
+          "expected": [
+            "Longman"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s214/2",
+          "surface": "神을",
+          "expected": [
+            "神"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s221/6",
+          "surface": "聖者가",
+          "expected": [
+            "聖者"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s222/2",
+          "surface": "善政을",
+          "expected": [
+            "善政"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s223/13",
+          "surface": "質을",
+          "expected": [
+            "質"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s242/13",
+          "surface": "金으로",
+          "expected": [
+            "金"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s242/8",
+          "surface": "語로",
+          "expected": [
+            "語"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s245/1",
+          "surface": "語音과",
+          "expected": [
+            "語音"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s261/4",
+          "surface": "神을",
+          "expected": [
+            "神"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s276/11",
+          "surface": "性을",
+          "expected": [
+            "性"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s285/12",
+          "surface": "大가",
+          "expected": [
+            "大"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s294/7",
+          "surface": "詩가",
+          "expected": [
+            "詩"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s295/2",
+          "surface": "活字作을",
+          "expected": [
+            "活字作"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s331/8",
+          "surface": "李源朝가",
+          "expected": [
+            "李源朝"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s336/3",
+          "surface": "自를",
+          "expected": [
+            "自"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s356/6",
+          "surface": "君民을",
+          "expected": [
+            "君民"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s364/4",
+          "surface": "好惡를",
+          "expected": [
+            "好惡"
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "7e3cca11afadd6c074a5621ca01ba13bd520e34c735a5f3d75859accb4cd296b",
+      "after_report_sha256": "4db168ab15b7c971920e6aa080598c726aae2dde2aa9a2be7aa24d429d7f45dc",
+      "converted": 9989,
+      "before_matched": 9783,
+      "after_matched": 9805,
+      "remaining_misses": 184,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": [
+        {
+          "id": "id:dev-s11/3",
+          "surface": "4와",
+          "expected": [
+            "4"
+          ]
+        },
+        {
+          "id": "id:dev-s145/3",
+          "surface": "mile로",
+          "expected": [
+            "mile"
+          ]
+        },
+        {
+          "id": "id:dev-s150/8",
+          "surface": "8로",
+          "expected": [
+            "8"
+          ]
+        },
+        {
+          "id": "id:dev-s217/11",
+          "surface": "3D로",
+          "expected": [
+            "3D"
+          ]
+        },
+        {
+          "id": "id:dev-s290/1",
+          "surface": "STX는",
+          "expected": [
+            "STX"
+          ]
+        },
+        {
+          "id": "id:dev-s31/6",
+          "surface": "MVP로",
+          "expected": [
+            "MVP"
+          ]
+        },
+        {
+          "id": "id:dev-s451/2",
+          "surface": "Bilbe을",
+          "expected": [
+            "Bilbe"
+          ]
+        },
+        {
+          "id": "id:dev-s567/5",
+          "surface": "777로",
+          "expected": [
+            "777"
+          ]
+        },
+        {
+          "id": "id:dev-s602/6",
+          "surface": "ID는",
+          "expected": [
+            "ID"
+          ]
+        },
+        {
+          "id": "id:dev-s617/11",
+          "surface": "250m나",
+          "expected": [
+            "250m"
+          ]
+        },
+        {
+          "id": "id:dev-s656/23",
+          "surface": "SIV를",
+          "expected": [
+            "SIV"
+          ]
+        },
+        {
+          "id": "id:dev-s692/2",
+          "surface": "s3를",
+          "expected": [
+            "s3"
+          ]
+        },
+        {
+          "id": "id:dev-s710/4",
+          "surface": "카니발R은",
+          "expected": [
+            "카니발R"
+          ]
+        },
+        {
+          "id": "id:dev-s717/3",
+          "surface": "ATM은",
+          "expected": [
+            "ATM"
+          ]
+        },
+        {
+          "id": "id:dev-s740/11",
+          "surface": "TV를",
+          "expected": [
+            "TV"
+          ]
+        },
+        {
+          "id": "id:dev-s741/1",
+          "surface": "현대카드ZERO는",
+          "expected": [
+            "현대카드ZERO"
+          ]
+        },
+        {
+          "id": "id:dev-s782/2",
+          "surface": "CEO는",
+          "expected": [
+            "CEO"
+          ]
+        },
+        {
+          "id": "id:dev-s810/2",
+          "surface": "Young은",
+          "expected": [
+            "Young"
+          ]
+        },
+        {
+          "id": "id:dev-s817/5",
+          "surface": "LAHAT은",
+          "expected": [
+            "LAHAT"
+          ]
+        },
+        {
+          "id": "id:dev-s89/2",
+          "surface": "ρ로",
+          "expected": [
+            "ρ"
+          ]
+        },
+        {
+          "id": "id:dev-s915/16",
+          "surface": "14m로",
+          "expected": [
+            "14m"
+          ]
+        },
+        {
+          "id": "id:dev-s939/5",
+          "surface": "SKKU라고",
+          "expected": [
+            "SKKU",
+            "이다"
+          ]
+        }
+      ]
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-foreign-nominals.conllu",
+      "sha256": "5040a9aa1712051cda8064bf42732a742c2c0705fbe48a9b315a7326c93fca11",
+      "sentences": 16,
+      "source_bytes_verified": true
+    },
+    {
+      "path": "tests/fixtures/gsd-foreign-nominals.conllu",
+      "sha256": "9daf87e2926257afc28bb9ef6740f077992be70e81429e1734a1f0bf2e0f3d54",
+      "sentences": 22,
+      "source_bytes_verified": true
+    }
+  ],
+  "selected_gold": {
+    "path": "tests/fixtures/foreign-nominal-gold.json",
+    "sha256": "b19267f34ea6ea998ff3a73cd11b28f5693a81eb9feb7da16ffb5ce720ca614e",
+    "tokens": 39
+  },
+  "snapshot_review": {
+    "unchanged_current_fingerprints": 30,
+    "changes": []
+  },
+  "sources": [
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&pageIndex=1&qna_seq=330830",
+      "scope": "NIKL: English letters and numbers take particles according to pronunciation."
+    },
+    {
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85761",
+      "scope": "로 after a vowel or ㄹ."
+    },
+    {
+      "url": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=326208",
+      "scope": "이에요 contracts to 예요 after a vowel."
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "ABC는",
+      "before_count": 6,
+      "after_count": 7,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC은",
+      "before_count": 6,
+      "after_count": 7,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "pronunciation.assumed_consonant"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "3은",
+      "before_count": 6,
+      "after_count": 7,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "3",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "pronunciation.assumed_consonant"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "3는",
+      "before_count": 6,
+      "after_count": 7,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "3",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "3으로는",
+      "before_count": 10,
+      "after_count": 11,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "3",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으로",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "pronunciation.assumed_non_rieul_consonant"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "1로",
+      "before_count": 1,
+      "after_count": 2,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "1",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "pronunciation.assumed_vowel_or_rieul"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC예요",
+      "before_count": 5,
+      "after_count": 6,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.polite",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC다",
+      "before_count": 2,
+      "after_count": 3,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC라면",
+      "before_count": 11,
+      "after_count": 13,
+      "removed_component_groups": 0,
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라면",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라면",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC였다",
+      "before_count": 6,
+      "after_count": 6,
+      "removed_component_groups": 0,
+      "added": [],
+      "provenance_changes": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "before_rules": [
+            "boundary.regular",
+            "contraction.vowel",
+            "copula",
+            "ending",
+            "prefinal.past"
+          ],
+          "after_rules": [
+            "boundary.regular",
+            "contraction.vowel",
+            "copula",
+            "ending",
+            "prefinal.past",
+            "pronunciation.assumed_vowel"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "ABC이었나봐요",
+      "before_count": 19,
+      "after_count": 19,
+      "removed_component_groups": 0,
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC였나봐요",
+      "before_count": 13,
+      "after_count": 13,
+      "removed_component_groups": 0,
+      "added": [],
+      "provenance_changes": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "나",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "before_rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "copula",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "after_rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "copula",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past",
+            "pronunciation.assumed_vowel"
+          ]
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "나",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "before_rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "copula",
+            "ending",
+            "prefinal.past"
+          ],
+          "after_rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "copula",
+            "ending",
+            "prefinal.past",
+            "pronunciation.assumed_vowel"
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "ABC에는",
+      "before_count": 12,
+      "after_count": 12,
+      "removed_component_groups": 0,
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "2026년은",
+      "before_count": 8,
+      "after_count": 8,
+      "removed_component_groups": 0,
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "김민수는",
+      "before_count": 9,
+      "after_count": 9,
+      "removed_component_groups": 0,
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC은는",
+      "before_count": 7,
+      "after_count": 7,
+      "removed_component_groups": 0,
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC으로로",
+      "before_count": 2,
+      "after_count": 2,
+      "removed_component_groups": 0,
+      "added": [],
+      "provenance_changes": []
+    }
+  ],
+  "scope_decisions": [
+    "No guessed transliteration, numeral reading, letter-name language, or named-entity label.",
+    "Conditional candidates state necessary coda assumptions; they do not certify pronunciation or normative spelling.",
+    "Hangul boundaries, particle slots, identity readings and dictionary-only semantics remain.",
+    "Punctuation-bearing names, decimals and formatted numbers retain the existing lossless split-at-punctuation policy; no cross-token recovery.",
+    "Annotated spellings including Bilbe are literal gold-group targets, not spelling corrections.",
+    "Broader copula attachment/ending constraints remain COV-020; independent linguistic review remains open."
+  ]
+}

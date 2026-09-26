@@ -84,6 +84,190 @@ fn plural_nominal_survives_cli_dictionary_filtering() {
 }
 
 #[test]
+fn daga_and_eodaga_remain_distinct_through_dictionary_and_cli_filtering() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[
+            PathBuf::from("tests/fixtures/krdict-daga.json"),
+            PathBuf::from("tests/fixtures/krdict.json"),
+            PathBuf::from("tests/fixtures/krdict-particles.json"),
+        ],
+        dir.db(),
+        "daga-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemma, forms) in [
+        ("먹다가", "먹다", vec!["다가"]),
+        ("갔다가", "가다", vec!["었", "다가"]),
+        ("불렀다가", "부르다", vec!["었", "다가"]),
+        ("먹으셨다가", "먹다", vec!["시", "었", "다가"]),
+        ("가다가", "가다", vec!["다가"]),
+        ("가다가", "가다", vec!["어다가"]),
+        ("먹어다가", "먹다", vec!["어다가"]),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a.lemmas.len() == 1
+                && a.lemmas[0].text == lemma
+                && annotation.has_match(&a.lemmas[0], true)
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())),
+            "{word}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    for (word, id) in [("-다가", "krdict:85740"), ("-어다가", "krdict:86099")] {
+        assert!(
+            db.lookup(word)
+                .unwrap()
+                .iter()
+                .any(|e| e.id == id && e.pos == "어미")
+        );
+    }
+}
+
+#[test]
+fn shortened_adnominals_survive_dictionary_filtering_and_cli_export() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[
+            PathBuf::from("tests/fixtures/krdict-adnominal.json"),
+            PathBuf::from("tests/fixtures/krdict-particles.json"),
+            PathBuf::from("tests/fixtures/krdict-conditional.json"),
+            PathBuf::from("tests/fixtures/krdict-comparative.json"),
+        ],
+        dir.db(),
+        "adnominal-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms) in [
+        ("먹으려는", vec!["먹다"], vec!["으려는"]),
+        ("살려는", vec!["살다"], vec!["으려는"]),
+        ("먹으시려는", vec!["먹다"], vec!["시", "으려는"]),
+        ("먹자는", vec!["먹다"], vec!["자는"]),
+        ("먹어보자는", vec!["먹다", "보다"], vec!["어", "자는"]),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    for (word, id) in [
+        ("-으려는", "krdict:86717"),
+        ("-려는", "krdict:86688"),
+        ("-자는", "krdict:83896"),
+    ] {
+        assert!(
+            db.lookup(word)
+                .unwrap()
+                .iter()
+                .any(|e| e.id == id && e.pos == "품사 없음")
+        );
+    }
+}
+
+#[test]
+fn present_conditionals_survive_dictionary_filtering_and_cli_export() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[
+            PathBuf::from("tests/fixtures/krdict-conditional.json"),
+            PathBuf::from("tests/fixtures/krdict-particles.json"),
+        ],
+        dir.db(),
+        "conditional-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemma) in [
+        ("한다면", "하다"),
+        ("산다면", "살다"),
+        ("먹는다면", "먹다"),
+        ("먹으신다면", "먹다"),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a.lemmas.len() == 1
+                && a.lemmas[0].text == lemma
+                && annotation.has_match(&a.lemmas[0], true)
+                && a.morphemes
+                    .last()
+                    .is_some_and(|m| m.form == "는다면" && m.kind == klem::MorphemeKind::Ending)),
+            "{word}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    let entries = db.lookup("-는다면").unwrap();
+    assert!(
+        entries
+            .iter()
+            .any(|e| e.id == "krdict:68738" && e.pos == "어미")
+    );
+    assert!(
+        entries
+            .iter()
+            .any(|e| e.id == "krdict:68841" && e.pos == "품사 없음")
+    );
+}
+
+#[test]
 fn comparative_endings_survive_dictionary_filtering_and_cli_export() {
     let dir = Scratch::new();
     import_krdict(

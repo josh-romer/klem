@@ -119,3 +119,47 @@ MH2_0069-s183, byte-for-byte from the same pinned KAIST development partition
 linked above. The offline regression checks token 2 (보듯이 → 보다) in both
 sentences. The KAIST attribution and CC BY-SA 4.0 license above apply; the test
 does not certify all analyses of all tokens in the excerpts.
+
+`krdict-conditional.json` contains six primary entries (66956, 68738, 68841,
+68881, 69579, 73277) from the same September 2026 KRDict export (National
+Institute of Korean Language, CC BY-SA 2.0 KR). Changes: retain the first sense
+and English equivalents, omit WordForm/RelatedForm and global metadata, exclude
+idiom subentries, and reformat JSON. Source/license links above apply. It covers
+하다/살다 and the conditional endings alongside their quoted-expression homonyms.
+
+`kaist-conditional.conllu` contains complete sentences MH2_0069-s53 and
+MH2_0149-s14; `gsd-conditional.conllu` contains complete sentence dev-s153.
+All are byte-identical excerpts from the pinned development partitions linked
+above, under the same CC BY-SA 4.0 corpus license. Selected stable tokens test
+한다면, 않는다면, and 들리신다면; the GSD annotation is secondary evidence,
+not an independent manual judgment. Other candidates in those sentences are
+not automatically labeled correct.
+
+`krdict-adnominal.json` contains four primary entries (62171, 83896, 86688,
+86717) from the same September 2026 KRDict export (National Institute of Korean
+Language, CC BY-SA 2.0 KR). Changes: retain all senses for the three expressions,
+the first sense for auxiliary 보다, and English equivalents only; omit
+WordForm/RelatedForm and global metadata, exclude idiom subentries, and reformat
+JSON. Source/license links above apply. Original 문법‧표현 / 품사 없음 fields
+are retained to test the narrow grammar-expression lookup exception.
+
+`kaist-adnominal.conllu` contains complete sentences M2TA_089-s4, MH2_0069-s151,
+and MH2_0169-s111, byte-identical excerpts from the pinned KAIST development
+partition linked above under the same CC BY-SA 4.0 corpus license. Selected
+stable tokens protect 배우자는, 절약하려는, and the 바꿔보자는 auxiliary group;
+other candidate readings in these sentences are not automatically certified.
+
+`krdict-daga.json` contains three primary entries (57304, 85740, 86099) from
+the same September 2026 KRDict export (National Institute of Korean Language,
+CC BY-SA 2.0 KR). Changes: retain all senses for the endings, the first sense
+for 부르다, and English equivalents only; omit WordForm/RelatedForm and global
+metadata, exclude idiom subentries, and reformat JSON. Source/license links
+above apply. It preserves the distinct -다가/-어다가 entries and notes.
+
+`kaist-daga.conllu` contains complete sentences MH2_0169-s159, MH2_0169-s444,
+and MH2_0169-s718; `gsd-daga.conllu` contains complete sentence dev-s616. These
+are byte-identical excerpts from the pinned development partitions linked above,
+under their CC BY-SA 4.0 corpus license. Three selected positive tokens protect
+불렀다가, 침략했다가, and 갔다가. The additional KAIST sentence preserves the
+살겠다가 quoted-subject annotation; it is not labeled a -다가 success. The GSD
+annotation is secondary evidence and the fixtures do not certify all candidates.

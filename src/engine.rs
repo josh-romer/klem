@@ -172,9 +172,33 @@ fn predicates(word: &str) -> Vec<Predicate> {
     for ending in grammar::matching_endings(word) {
         for r in grammar::recover(word, ending.suffix, ending.boundary) {
             for mut p in prefinals(&r.stem, 4, 0, &mut memo) {
+                // Present conditional -ㄴ다면/-는다면 permits honorific 시,
+                // but no other recovered prefinals; past/modal use plain -다면.
+                if ending.form == "는다면" && p.morphs.iter().any(|m| m.form != "시") {
+                    continue;
+                }
+                // KRDict -다가 licenses honorific and past markers. Keep
+                // the existing vowel-boundary -어다가 path independent.
+                if ending.form == "다가"
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었"))
+                {
+                    continue;
+                }
+                // Reviewed shortened adnominals: intention permits honorific
+                // 시; proposal quotation is currently scoped to bare stems.
+                if (ending.form == "으려는" && p.morphs.iter().any(|m| m.form != "시"))
+                    || (ending.form == "자는" && !p.morphs.is_empty())
+                {
+                    continue;
+                }
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
+                if matches!(ending.form, "으려는" | "자는") {
+                    p.rules.push("ending.adnominal_expression".into());
+                }
                 p.connector = ending.connector;
                 p.dap_suffix = dap_suffix_allowed(&p);
                 p.ha_contracted = matches!(
@@ -264,6 +288,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         first,
         "겠" | "더"
             | "다"
+            | "다가"
             | "다고"
             | "다는"
             | "다니"

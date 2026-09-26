@@ -204,6 +204,42 @@ All 66,570 frozen corpus cases still pass, and all 30 output fingerprints are
 unchanged. The frozen baselines and their historical metric table above were
 not replaced. These development gains are not unseen accuracy or precision.
 
+The COV-017a present conditional batch adds eight ledger cases, reaching
+**71 cases with 44 required and 33 forbidden judgments**. Three complete
+development sentences protect 한다면 (KAIST MH2_0069-s53/7), 않는다면
+(KAIST MH2_0149-s14/11), and 들리신다면 (GSD dev-s153/3). Exact boundary,
+prefinal, and auxiliary paths are checked separately from the corpus adapter.
+The [development comparison](conditional-evaluation.json) records 13 additional
+KAIST and 6 additional GSD matches against commit `b9148b4`, with no lost groups
+or component sets. Remaining development misses are 365 and 236. These are gold
+group matches, not independent correctness judgments: for example, the gained
+안쓴다면 → 안쓸다 annotation still needs lexical/segmentation review and is not
+a required judgment in the ledger. All 66,570 frozen cases pass and all 30
+output fingerprints remain unchanged; historical baselines/reports are retained.
+
+The COV-017b shortened-adnominal batch adds eight ledger cases, reaching
+**79 cases with 48 required and 37 forbidden judgments**. Three complete KAIST
+development sentences protect 절약하려는 (MH2_0069-s151/10), 배우자는
+(M2TA_089-s4/3), and the auxiliary group 바꿔보자는 (MH2_0169-s111/4).
+The [development comparison](adnominal-evaluation.json) records 21 additional
+KAIST and 3 additional GSD matches against the pre-COV-017b working tree,
+with no lost groups or component sets. Remaining development misses are
+344 and 233. All 66,570 frozen cases pass and all 30 output fingerprints
+remain unchanged. Previous reports remain dated snapshots; these selected
+development gains do not estimate precision or unseen accuracy.
+
+The COV-017c -다가 batch adds eight ledger cases, reaching **87 cases with
+52 required and 41 forbidden judgments**. Three offline positive cases protect
+불렀다가 (KAIST MH2_0169-s159/3), 침략했다가 (KAIST MH2_0169-s718/5), and
+갔다가 (GSD dev-s616/3). The [development comparison](daga-evaluation.json)
+records 3 additional KAIST and 8 additional GSD matches against the pre-COV-017c
+working tree, with no lost groups or component sets. Remaining development
+misses are 341 and 225. The tempting 살겠다가 miss remains under COV-018:
+its preserved annotation is 살+겠+다+가, with a subject particle. The forbidden
+judgment targets only the erroneous 겠 + 다가 analysis, allowing a future
+quoted-clause rule to recover the lexical group. All 66,570 frozen cases and
+30 output fingerprints pass; historical reports/baselines remain unchanged.
+
 The fixture is agent-authored against the cited sources; **independent Korean-language
 review is pending**. Reviewers can inspect the queue's complete analyses, add
 source-backed judgments to the fixture, and rerun the command. Adding labels is

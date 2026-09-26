@@ -282,7 +282,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                         "deletion.rieul",
                     );
                 }
-                if t != 17 && !matches!(suffix, "다" | "다고" | "다는") {
+                if t != 17 && !matches!(suffix, "다" | "다고" | "다는" | "다면") {
                     recover_eu_open(&stem, &mut out, true);
                 }
             }
@@ -320,6 +320,7 @@ pub(crate) fn endings() -> &'static [Ending] {
         let mut out = Vec::new();
         for suffix in [
             "다",
+            "다가",
             "고자",
             "건대",
             "구나",
@@ -375,6 +376,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "기보다",
             "자",
             "자고",
+            "자는",
             "자마자",
             "거든",
             "거든요",
@@ -424,6 +426,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으려고", "려고", "으려고"),
             ("으려면", "려면", "으려면"),
             ("으려", "려", "으려"),
+            ("으려는", "려는", "으려는"),
             ("으라", "라", "으라"),
             ("으라고", "라고", "으라고"),
             ("으라는", "라는", "으라는"),
@@ -486,6 +489,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다", "다", "는다", 4),
             ("는다고", "다고", "는다고", 4),
             ("는다는", "다는", "는다는", 4),
+            ("는다면", "다면", "는다면", 4),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -665,6 +669,9 @@ pub(crate) fn particle_matches(base: &str, condition: u8) -> bool {
 
 pub(crate) fn explanation(id: &str) -> Option<&'static str> {
     Some(match id {
+        "ending.adnominal_expression" => {
+            "Retain a shortened noun-modifying expression, (으)려는 or 자는, as one grammatical component."
+        }
         "identity" => "Unchanged vocabulary hypothesis; no dictionary verification.",
         "suffix.adverbial.i" => {
             "Recover a scoped adjective base before adverb-forming -이; retain whole-word readings."

@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-017c literal -다가; development comparison, not precision.",
+  "baseline_description": "COV-017b working tree before adding literal -다가.",
+  "source_sha256": {
+    "src/engine.rs": "9ad983d75bd552519bbaee7064ab3a831bc46afb65e4b25b264b57ffd346a467",
+    "src/grammar.rs": "19cddf9bff3609a72bc260ec1bde56a1f94fe7eb086e9350ab823c2cab82ecf1"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "29fc8f250035d195ccef4bd6db41428b69495f9db09bd3177fab807bd2f44335",
+      "after_report_sha256": "cd04790872eb8494851d0d26f52064e2a1bb63179d82db27d1dbf3dc4e1e79fa",
+      "converted": 22220,
+      "before_matched": 21876,
+      "after_matched": 21879,
+      "new_matches": [
+        {
+          "id": "id:MH2_0169-s159/3",
+          "surface": "불렀다가",
+          "expected": [
+            "부르다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s718/5",
+          "surface": "침략했다가",
+          "expected": [
+            "침략하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s109/3",
+          "surface": "나갔다가",
+          "expected": [
+            "나가다"
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "6224686acbfad405fceb279c81b3daefcce0d1d72102d9a751f8d438ba2f5bc9",
+      "after_report_sha256": "7b80804717d1740738848d5fc35d6aea004b28c231d0069d199bb60b178aae45",
+      "converted": 9989,
+      "before_matched": 9756,
+      "after_matched": 9764,
+      "new_matches": [
+        {
+          "id": "id:dev-s251/6",
+          "surface": "어겼다가",
+          "expected": [
+            "어기다"
+          ]
+        },
+        {
+          "id": "id:dev-s437/3",
+          "surface": "지망했다가",
+          "expected": [
+            "지망하다"
+          ]
+        },
+        {
+          "id": "id:dev-s616/3",
+          "surface": "갔다가",
+          "expected": [
+            "가다"
+          ]
+        },
+        {
+          "id": "id:dev-s732/6",
+          "surface": "되었다가",
+          "expected": [
+            "되다"
+          ]
+        },
+        {
+          "id": "id:dev-s827/10",
+          "surface": "강등시켰다가",
+          "expected": [
+            "강등시키다"
+          ]
+        },
+        {
+          "id": "id:dev-s836/11",
+          "surface": "신청했다가",
+          "expected": [
+            "신청하다"
+          ]
+        },
+        {
+          "id": "id:dev-s85/7",
+          "surface": "선고했다가",
+          "expected": [
+            "선고하다"
+          ]
+        },
+        {
+          "id": "id:dev-s874/15",
+          "surface": "하락했다가",
+          "expected": [
+            "하락하다"
+          ]
+        }
+      ]
+    }
+  ],
+  "reviewed_exclusions": [
+    {
+      "id": "id:MH2_0169-s444/3",
+      "surface": "살겠다가",
+      "annotation": "살+겠+다+가 / pvg+ep+ef+jcs",
+      "disposition": "COV-018 quoted clause + subject particle, not modal + 다가."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-017a present conditional; development comparison, not precision.",
+  "baseline_commit": "b9148b4",
+  "source_sha256": {
+    "src/engine.rs": "0c042f72b3eb223eef967e301c6555e0d8f39ed76a9c082648fd56953fc96bca",
+    "src/grammar.rs": "6c1983d66805172ba12e63c7ee8143a6f65cce3cfc7956de8dfa8e678de5b877"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "0199ba73a54623133dfbc52dc60ae44f4d865a5c2143d5903b4477b8aa7cdb3c",
+      "after_report_sha256": "8cb31f14823820a30f684306152e5f18b4adec8f4e9210488beaf6ab10a24592",
+      "converted": 22220,
+      "before_matched": 21842,
+      "after_matched": 21855,
+      "new_matches": [
+        {
+          "id": "id:MH2_0069-s121/10",
+          "surface": "못한다면",
+          "expected": [
+            "못하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s53/7",
+          "surface": "한다면",
+          "expected": [
+            "하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s14/11",
+          "surface": "않는다면",
+          "expected": [
+            "않다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s94/12",
+          "surface": "않는다면",
+          "expected": [
+            "않다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s10/7",
+          "surface": "심화된다면",
+          "expected": [
+            "심화되다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s23/12",
+          "surface": "반영된다면",
+          "expected": [
+            "반영되다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s355/3",
+          "surface": "한다면",
+          "expected": [
+            "하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s51/8",
+          "surface": "존재한다면",
+          "expected": [
+            "존재하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s8/4",
+          "surface": "따른다면",
+          "expected": [
+            "따르다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s90/6",
+          "surface": "투입한다면",
+          "expected": [
+            "투입하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s492/9",
+          "surface": "안쓴다면",
+          "expected": [
+            "안쓸다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s504/5",
+          "surface": "삼는다면",
+          "expected": [
+            "삼다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s668/11",
+          "surface": "주어진다면",
+          "expected": [
+            "주다",
+            "지다"
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "972f54104542ccea1e903957abb9cfd80c1e050b96d1af4b1857d9248d9a19ef",
+      "after_report_sha256": "e4b4cb34a89df126162eec8f87a8f4463918bdb2ee4729d01520aad491ee933b",
+      "converted": 9989,
+      "before_matched": 9747,
+      "after_matched": 9753,
+      "new_matches": [
+        {
+          "id": "id:dev-s153/3",
+          "surface": "들리신다면",
+          "expected": [
+            "들리다"
+          ]
+        },
+        {
+          "id": "id:dev-s217/12",
+          "surface": "본다면",
+          "expected": [
+            "보다"
+          ]
+        },
+        {
+          "id": "id:dev-s301/7",
+          "surface": "가신다면",
+          "expected": [
+            "가다"
+          ]
+        },
+        {
+          "id": "id:dev-s772/3",
+          "surface": "완료된다면",
+          "expected": [
+            "완료되다"
+          ]
+        },
+        {
+          "id": "id:dev-s842/5",
+          "surface": "나아진다면",
+          "expected": [
+            "나아지다"
+          ]
+        },
+        {
+          "id": "id:dev-s936/27",
+          "surface": "존재한다면",
+          "expected": [
+            "존재하다"
+          ]
+        }
+      ]
+    }
+  ]
+}

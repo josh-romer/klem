@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/016 batches are implemented.
+P1 and the bounded COV-010/011/012/016/017a/017b/017c batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -210,16 +210,64 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** Review attached ㄴ다면/는다면,
-  (으)려는, -자는, -다가, quoted contractions and other unreviewed inventory
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a/b/c implemented.**
+  Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
   not a blanket license to add every dictionary spelling as a literal suffix.
+- [x] **COV-017a — Present conditional -ㄴ다면/-는다면.** Implemented with
+  canonical ending 는다면. 한다면/산다면 use attached ㄴ, while 먹는다면 uses
+  the non-ㄹ consonant boundary. Honorific 시 is permitted; this present path
+  rejects recovered past/modal/retrospective markers. Existing plain 다면 paths
+  such as 먹었다면 remain. Vowel-only ㅂ/ㅎ/ㄷ recovery is not applied at the
+  present ending. Existing auxiliaries can precede it, but it is not itself an
+  auxiliary connector. Evidence: [boundary/group tests](../tests/conditional_endings.rs),
+  eight `conditional-*` ledger cases, three offline annotated cases,
+  dictionary/CLI parity and browser normalization/homonym checks.
+  Sources: KRDict [-ㄴ다면](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66956)
+  and [-는다면](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68738).
+  The rule-only engine does not distinguish lexical verb/adjective classes;
+  the quoted-expression homonyms and additional outer particles are not added.
+  See [rule scope](rules.md#present-conditionals-cov-017a) and
+  [the recorded development comparison](conditional-evaluation.json).
+- [x] **COV-017b — Shortened adnominal expressions (으)려는 and 자는.**
+  **Implemented as bundled grammatical components.** 먹으려는 recovers 먹다,
+  살려는 preserves ㄹ, 들으려는/도우려는 recover their irregular stems, and
+  바꿔보자는 retains the 바꾸다 + 보다 auxiliary group. Canonical endings are
+  으려는 and 자는; no implicit 하다 lemma is inserted. Intention expressions
+  permit honorific 시; the proposal expression is bounded to bare stems in
+  this batch. Other prefinals, outer particles, lexical verb/adjective class
+  validation, and a fully expanded quotation analysis remain for review.
+  Sources: KRDict [-으려는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86717),
+  [-려는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86688),
+  [-자는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83896).
+  These are tagged 문법‧표현 / 품사 없음. Browser lookup admits the two canonical
+  expression IDs through an explicit exception; unrelated unclassified entries
+  remain excluded. Evidence: [path and boundary tests](../tests/adnominal_expressions.rs),
+  eight `adnominal-*` ledger cases, three complete KAIST sentence fixtures,
+  dictionary/CLI parity, and browser/source-lookup regressions.
+  See [rule scope](rules.md#shortened-adnominal-expressions-cov-017b) and
+  [the development comparison](adnominal-evaluation.json).
+- [x] **COV-017c — Literal -다가.** Implemented separately from existing
+  vowel-boundary -어다가. 먹다가, 갔다가, 불렀다가, and 먹으셨다가 recover
+  their stems and ordered prefinals. Copulas, existing auxiliaries, and known
+  -답다 derivation compose with it. Honorific/past markers are supported;
+  recovered 겠/더 paths are excluded. 가다가 retains both 다가/어다가 readings.
+  Sources: KRDict [-다가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85740)
+  and [-어다가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86099).
+  Evidence: [path/boundary tests](../tests/daga.rs), eight `daga-*` ledger cases,
+  three positive offline corpus cases plus the preserved quoted-subject
+  annotation for 살겠다가, dictionary/CLI parity and browser alternative/link
+  checks. See [scope](rules.md#literal-daga-cov-017c) and
+  [the development comparison](daga-evaluation.json). Further outer particles,
+  joined auxiliary uses of 다가, and short-form 다 sense selection remain open.
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   Review post-ending 만 (있습니다만), 는/도 after connective endings, chains
   such as 어디까지나/이제부터라도, quotation-particle 라고 versus copula analyses,
   and pronouns outside the existing finite paradigms. Preserve homonym-specific
   dictionary labels; the current nominal 만 label cannot describe every use.
+  Include quoted clauses marked as nominals: KAIST MH2_0169-s444/3 살겠다가
+  is annotated 살 + 겠 + 다 + 가 (subject particle), not a -다가 example.
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** Review
   나가다/나다, 계시다, adnominal auxiliaries such as 만하다/듯하다, and the other
   unreviewed auxiliary entries with connector-specific constraints. Include

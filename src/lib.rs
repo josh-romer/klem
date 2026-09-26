@@ -43,6 +43,8 @@ pub struct Lemma {
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum MorphemeKind {
+    /// A terminal ending or a scoped, bundled grammatical expression such as
+    /// (으)려는/자는; not necessarily a single dictionary-tagged ending.
     Ending,
     Prefinal,
     Particle,

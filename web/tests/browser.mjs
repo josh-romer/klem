@@ -109,6 +109,24 @@ try {
     ...adverbs.LexicalResource.Lexicon.LexicalEntry,
   );
   const input = resolve(scratch, "combined.json");
+  const daga = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-daga.json"), "utf8"),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...daga.LexicalResource.Lexicon.LexicalEntry,
+  );
+  const adnominal = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-adnominal.json"), "utf8"),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...adnominal.LexicalResource.Lexicon.LexicalEntry,
+  );
+  const conditional = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-conditional.json"), "utf8"),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...conditional.LexicalResource.Lexicon.LexicalEntry,
+  );
   const comparative = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-comparative.json"), "utf8"),
   );
@@ -526,6 +544,84 @@ try {
       await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"),
       new RegExp(`ParaWordNo=${id}`),
     );
+  }
+  for (const [word, expected] of [
+    ["한다면", ["하", "는다면"]],
+    ["먹는다면", ["먹", "는다면"]],
+    ["먹으신다면", ["먹", "시", "는다면"]],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+    if (word === "한다면") assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+    await breakdown.getByRole("button", { name: "는다면 If / supposing", exact: true }).click();
+    await page.waitForFunction(() =>
+      document.querySelector(".entry-heading h2")?.textContent?.startsWith("-는다면")
+      && document.querySelector(".entry-meta")?.textContent?.includes("어미"),
+    );
+    assert.match(
+      await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"),
+      /ParaWordNo=68738/,
+    );
+    const result = await (await post("analyze", { text: word })).json();
+    assert.ok(result.grammar["-는다면"].some((e) => e.id === "krdict:68738"));
+    assert.ok(result.grammar["-는다면"].every((e) => e.pos === "어미"));
+  }
+  for (const [word, expected, form, label, id] of [
+    ["먹으려는", ["먹", "으려는"], "으려는", "Intending / about to", 86717],
+    ["살려는", ["살", "으려는"], "으려는", "Intending / about to", 86717],
+    ["먹으시려는", ["먹", "시", "으려는"], "으려는", "Intending / about to", 86717],
+    ["먹자는", ["먹", "자는"], "자는", "Quoted suggestion", 83896],
+    ["먹어보자는", ["먹", "어", "보", "자는"], "자는", "Quoted suggestion", 83896],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+    if (word === "살려는") assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+    await breakdown.getByRole("button", { name: `${form} ${label}`, exact: true }).click();
+    await page.waitForFunction((headword) =>
+      document.querySelector(".entry-heading h2")?.textContent?.startsWith(headword)
+      && document.querySelector(".entry-meta")?.textContent?.includes("품사 없음"),
+      `-${form}`,
+    );
+    assert.match(
+      await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"),
+      new RegExp(`ParaWordNo=${id}`),
+    );
+    const result = await (await post("analyze", { text: word })).json();
+    assert.deepEqual(result.grammar[`-${form}`].map((e) => e.id), [`krdict:${id}`]);
+  }
+  for (const [word, expected] of [
+    ["먹다가", ["먹", "다가"]],
+    ["갔다가", ["가", "었", "다가"]],
+    ["먹으셨다가", ["먹", "시", "었", "다가"]],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+    await breakdown.getByRole("button", { name: "다가 While / then", exact: true }).click();
+    await page.waitForFunction(() =>
+      document.querySelector(".entry-heading h2")?.textContent?.startsWith("-다가")
+      && document.querySelector(".entry-meta")?.textContent?.includes("어미"),
+    );
+    assert.match(await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"), /ParaWordNo=85740/);
+  }
+  await submit(page, "가다가");
+  await waitHeading(page, "가다가");
+  for (const [form, label, id] of [
+    ["다가", "While / then", 85740],
+    ["어다가", "Then / using the result", 86099],
+  ]) {
+    const choice = await breakdown.getByRole("combobox").locator("option").evaluateAll(
+      (options, title) => options.find((o) => o.textContent.includes(title))?.value,
+      `가 + ${form}`,
+    );
+    assert.ok(choice, form);
+    await breakdown.getByRole("combobox").selectOption(choice);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), ["가", form]);
+    await breakdown.getByRole("button", { name: `${form} ${label}`, exact: true }).click();
+    await page.waitForFunction((headword) => document.querySelector(".entry-heading h2")?.textContent?.startsWith(headword), `-${form}`);
+    assert.match(await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"), new RegExp(`ParaWordNo=${id}`));
   }
   await page.getByLabel("Dictionary matches only").uncheck();
   await submit(page, sample);

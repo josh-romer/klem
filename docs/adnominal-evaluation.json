@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-017b shortened adnominal expressions; development comparison, not precision.",
+  "baseline_description": "COV-017a working tree, compared before adding (으)려는/자는.",
+  "source_sha256": {
+    "src/engine.rs": "5e4674be9b9ff683441471096305534e68a27f377af151b76fd762a9c4ca07bc",
+    "src/grammar.rs": "7e84842ee059d45fa4b5618900fb56112e92aad82a2b34ab8a85fc1bd211b7ad",
+    "src/bin/klem-web.rs": "653b6e463ad48c7b899a315c409a25ebc5937a84b63f4517e968693b5cc7f018"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "8cb31f14823820a30f684306152e5f18b4adec8f4e9210488beaf6ab10a24592",
+      "after_report_sha256": "29fc8f250035d195ccef4bd6db41428b69495f9db09bd3177fab807bd2f44335",
+      "converted": 22220,
+      "before_matched": 21855,
+      "after_matched": 21876,
+      "new_matches": [
+        {
+          "id": "id:M2TA_089-s4/3",
+          "surface": "배우자는",
+          "expected": [
+            "배우다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s151/10",
+          "surface": "절약하려는",
+          "expected": [
+            "절약하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s230/7",
+          "surface": "확보하려는",
+          "expected": [
+            "확보하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0109-s6/8",
+          "surface": "이루려는",
+          "expected": [
+            "이루다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s275/8",
+          "surface": "설정하려는",
+          "expected": [
+            "설정하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s320/3",
+          "surface": "되려는",
+          "expected": [
+            "되다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s35/5",
+          "surface": "증언하려는",
+          "expected": [
+            "증언하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s69/8",
+          "surface": "제기하려는",
+          "expected": [
+            "제기하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s111/4",
+          "surface": "바꿔보자는",
+          "expected": [
+            "바꾸다",
+            "보다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s121/2",
+          "surface": "바꿔보자는",
+          "expected": [
+            "바꾸다",
+            "보다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s215/9",
+          "surface": "엎자는",
+          "expected": [
+            "엎다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s470/8",
+          "surface": "살자는",
+          "expected": [
+            "살다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s474/3",
+          "surface": "만들려는",
+          "expected": [
+            "만들다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s476/7",
+          "surface": "해보려는",
+          "expected": [
+            "하다",
+            "보다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s599/14",
+          "surface": "만들자는",
+          "expected": [
+            "만들다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s602/13",
+          "surface": "운영하자는",
+          "expected": [
+            "운영하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s603/11",
+          "surface": "지내자는",
+          "expected": [
+            "지내다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s615/12",
+          "surface": "막아보자는",
+          "expected": [
+            "막다",
+            "보다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s686/6",
+          "surface": "갈아치우자는",
+          "expected": [
+            "갈아치우다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s710/10",
+          "surface": "뽑자는",
+          "expected": [
+            "뽑다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s60/6",
+          "surface": "벌자는",
+          "expected": [
+            "벌다"
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "e4b4cb34a89df126162eec8f87a8f4463918bdb2ee4729d01520aad491ee933b",
+      "after_report_sha256": "6224686acbfad405fceb279c81b3daefcce0d1d72102d9a751f8d438ba2f5bc9",
+      "converted": 9989,
+      "before_matched": 9753,
+      "after_matched": 9756,
+      "new_matches": [
+        {
+          "id": "id:dev-s154/8",
+          "surface": "비교하려는",
+          "expected": [
+            "비교하다"
+          ]
+        },
+        {
+          "id": "id:dev-s20/9",
+          "surface": "쏟자는",
+          "expected": [
+            "쏟다"
+          ]
+        },
+        {
+          "id": "id:dev-s362/40",
+          "surface": "만들자는",
+          "expected": [
+            "만들다"
+          ]
+        }
+      ]
+    }
+  ]
+}

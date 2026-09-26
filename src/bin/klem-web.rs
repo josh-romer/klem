@@ -30,6 +30,22 @@ struct EntryRequest {
     id: String,
 }
 
+fn grammar_entry_matches(kind: MorphemeKind, headword: &str, entry: &EntrySummary) -> bool {
+    let pos = match kind {
+        MorphemeKind::Particle => "조사",
+        MorphemeKind::Suffix => "접사",
+        _ => "어미",
+    };
+    entry.pos == pos
+        || (kind == MorphemeKind::Ending
+            && entry.pos == "품사 없음"
+            && entry.headword == headword
+            && matches!(
+                (headword, entry.id.as_str()),
+                ("-으려는", "krdict:86717") | ("-자는", "krdict:83896")
+            ))
+}
+
 fn validate_text(text: &str) -> std::result::Result<(), &'static str> {
     if text.trim().is_empty() {
         return Err("Paste a sentence to analyze.");
@@ -109,17 +125,12 @@ fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
                             MorphemeKind::Prefinal => format!("-{}-", m.form),
                         };
                         if !grammar.contains_key(&headword) {
-                            let pos = match m.kind {
-                                MorphemeKind::Particle => "조사",
-                                MorphemeKind::Suffix => "접사",
-                                _ => "어미",
-                            };
                             grammar.insert(
                                 headword.clone(),
                                 lookups
                                     .lookup(&headword)?
                                     .iter()
-                                    .filter(|e| e.pos == pos)
+                                    .filter(|e| grammar_entry_matches(m.kind, &headword, e))
                                     .cloned()
                                     .collect(),
                             );
@@ -368,6 +379,56 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
+    #[test]
+    fn expression_lookup_is_limited_to_reviewed_ids_headwords_and_kinds() {
+        use super::*;
+        for (headword, id) in [("-으려는", "krdict:86717"), ("-자는", "krdict:83896")] {
+            let mut entry = EntrySummary {
+                id: id.into(),
+                headword: headword.into(),
+                homonym: "0".into(),
+                pos: "품사 없음".into(),
+            };
+            assert!(grammar_entry_matches(
+                MorphemeKind::Ending,
+                headword,
+                &entry
+            ));
+            for kind in [
+                MorphemeKind::Suffix,
+                MorphemeKind::Particle,
+                MorphemeKind::Prefinal,
+            ] {
+                assert!(!grammar_entry_matches(kind, headword, &entry));
+            }
+            assert!(!grammar_entry_matches(
+                MorphemeKind::Ending,
+                "-는다면",
+                &entry
+            ));
+            entry.id = "krdict:68841".into();
+            assert!(!grammar_entry_matches(
+                MorphemeKind::Ending,
+                headword,
+                &entry
+            ));
+            entry.id = id.into();
+            entry.headword = "다른표현".into();
+            assert!(!grammar_entry_matches(
+                MorphemeKind::Ending,
+                headword,
+                &entry
+            ));
+            entry.headword = headword.into();
+            entry.pos = "명사".into();
+            assert!(!grammar_entry_matches(
+                MorphemeKind::Ending,
+                headword,
+                &entry
+            ));
+        }
+    }
+
     use super::*;
     #[test]
     fn api_preserves_all_records_and_original_byte_offsets() {

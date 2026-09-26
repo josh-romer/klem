@@ -11,6 +11,9 @@ lookup table. `src/grammar.rs` holds endings and spelling transformations;
 | --- | --- |
 | Regular predicates | 먹고, 먹지만, 먹는데, 먹기, 가는, 간다 |
 | Comparative endings | 보듯, 보듯이, 살듯, 보셨듯이 |
+| Present conditional | 한다면, 산다면, 먹는다면, 먹으신다면 |
+| Shortened adnominal expressions | 먹으려는, 살려는, 도우려는, 먹자는, 바꿔보자는 |
+| Change/continuation connective | 먹다가, 갔다가, 불렀다가, 먹으셨다가; distinct 먹어다가 |
 | Consonant attachment | 갑니다, 삽니다, 먹습니다, 간, 갈, 감, 삶 |
 | 아/어 contractions | 먹어, 잡아, 봐, 줘, 돼, 마셔 |
 | 하 / 푸 / ㅡ | 해, 하여, 퍼, 아파, 써, 커 |
@@ -314,3 +317,89 @@ kind does not independently distinguish verb/adjective dictionary senses.
 
 The [inventory audit](inventory-audit.md) explains the source comparison and
 remaining work; merely finding a suffix spelling is not proof of coverage.
+
+## Present conditionals (COV-017a)
+
+KRDict [-ㄴ다면 (66956)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66956)
+licenses vowel/ㄹ-final verb stems and honorific 시, while
+[-는다면 (68738)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68738)
+licenses other consonant-final verb stems. Both use canonical `Ending` 는다면:
+한다면 → 하다 + 는다면, 산다면 → 살다 + 는다면, 먹는다면 → 먹다 + 는다면.
+The vowel-stem alternative 사다 remains for 산다면. Existing attached-coda or
+consonant-boundary provenance explains the difference in spelling.
+
+The attached ㄴ boundary restores an open or ㄹ stem; it does not perform the
+vowel-only ㅂ/ㅎ recoveries used by adjective adnominal endings. Prefinal recovery
+for this present family permits 시 only. Past/modal/retrospective markers are
+not recovered into a 는다면 path; existing 먹었다면/먹겠다면 paths retain plain
+다면. Unknown lexical stems that happen to look inflected remain hypotheses.
+Honorific recovery retains its own vowel boundary, so 들으신다면 and 도우신다면
+still recover 듣다 and 돕다 before 시. An earlier predicate in an auxiliary chain
+can independently carry past (먹었어야한다면).
+
+The library uses its existing generic predicate role. It does not certify that
+a generated lexical stem is a verb rather than an adjective, nor does headword
+filtering decide that class. Known derived -답다 remains governed by its existing
+ending whitelist. Additional outer particles, this ending as an auxiliary
+connector, and the separately listed quoted-expression homonyms (68881/68841)
+are outside this batch. The browser displays the canonical 는다면 component,
+marks expanded spellings, and opens the ending entry 68738. The attributed
+fixture includes both quoted-expression homonyms to test kind-sensitive lookup.
+
+## Shortened adnominal expressions (COV-017b)
+
+KRDict [-으려는 (86717)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86717)
+and [-려는 (86688)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86688)
+record shortened (으)려고 하는 expressions of intention or impending action.
+Closed non-ㄹ stems use 으려는; vowel/ㄹ stems and honorific 시 use 려는. Existing
+으-boundary recovery handles 들으려는 → 듣다, 도우려는 → 돕다, and 지으려는 → 짓다.
+The output bundles the expression into canonical `Ending` 으려는.
+
+[-자는 (83896)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83896)
+records shortened 자고 하는, quoting a proposal while modifying a following
+noun. The scoped literal boundary preserves ㄹ/ㄷ/ㅂ, as in 놀자는, 듣자는,
+and 돕자는. Its canonical `Ending` is 자는. Bare stems are supported; honorific
+or other prefinal readings of this proposal expression remain unreviewed and
+are not recovered into this new path. Intention permits 시 only. Unknown lexical
+stems that resemble inflected forms remain hypotheses.
+
+Both add `ending.adnominal_expression` provenance. Each is one grammatical
+component, with no implicit 하다 lemma. Existing auxiliary groups can end in
+these expressions, e.g. 바꿔보자는 → 바꾸다 + 어 + 보다 + 자는. The expressions
+are not auxiliary connectors and do not enable outer-particle attachment.
+Whole-word alternatives and 자는 → 자다 + 는 remain. The generic predicate
+role does not independently validate the lexical verb/adjective class.
+
+The dictionary classifies these entries as 문법‧표현 / 품사 없음. `Ending`
+therefore includes scoped bundled terminal expressions as well as ordinary
+endings. The browser uses the canonical entry IDs 86717/83896 through a narrow
+headword/ID/POS/kind exception. Labels are “Intending / about to” and “Quoted
+suggestion”; selecting one opens the full expression definition. These three
+expression entries sit outside COV-013's initial POS-based table inventory.
+
+## Literal daga (COV-017c)
+
+KRDict [-다가 (85740)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85740)
+permits predicates/이다, honorific 시, and past markers. A literal consonant
+boundary preserves the stem in 먹다가, 살다가, 듣다가, and 돕다가. Existing
+prefinal recovery supplies 갔다가, 불렀다가, and 먹으셨다가, including the
+engine's bounded repeated-past sequence. Recovered modal 겠 or retrospective
+더 is excluded from this new path. Unknown stems that resemble inflected forms
+remain unverified lexical hypotheses.
+
+Canonical `Ending` 다가 uses ordinary `ending` and boundary provenance. It can
+terminate existing auxiliary chains and copulas, and is licensed after the
+known adjective suffix -답다 (학생답다가/학생다웠다가). It is not an auxiliary
+connector itself. Additional outer particles and shortened -다 sense handling
+remain outside this batch.
+
+The existing [-어다가 (86099)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86099)
+retains its separate vowel boundary and canonical form. 가다가 may expose both
+가 + 다가 and 가 + 어다가; 먹어다가 keeps 먹다 + 어다가. The UI labels 다가
+“While / then” and 어다가 “Then / using the result”, with separate source links.
+These hints do not select a contextual sense.
+
+The saved KAIST 살겠다가 case is a quoted clause followed by subject particle
+가. Its annotation is 살+겠+다+가 / pvg+ep+ef+jcs. It must not be counted as
+new -다가 coverage; the source excerpt and targeted forbidden judgment preserve
+this distinction while leaving future quoted-clause recovery possible.

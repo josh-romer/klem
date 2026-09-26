@@ -3,6 +3,90 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn annotated_daga_past_cases_recover_gold_without_relabeling_a_quoted_subject() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_str!("fixtures/kaist-daga.conllu"),
+            vec![
+                ("id:MH2_0169-s159/3", "불렀다가", "부르다"),
+                ("id:MH2_0169-s718/5", "침략했다가", "침략하다"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_str!("fixtures/gsd-daga.conllu"),
+            vec![("id:dev-s616/3", "갔다가", "가다")],
+        ),
+    ] {
+        let report = corpus::evaluate(std::io::Cursor::new(input), corpus, "daga.conllu").unwrap();
+        for (id, surface, lemma) in cases {
+            let case = report.cases.get(id).expect(id);
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+    }
+    // Preserve the annotation that distinguishes this quotation from -다가.
+    // A future 다 + 가 rule may recover its group, so do not require a miss.
+    let row = include_str!("fixtures/kaist-daga.conllu")
+        .lines()
+        .find(|line| line.starts_with("3\t살겠다가\t"))
+        .unwrap();
+    let cols: Vec<_> = row.split('\t').collect();
+    assert_eq!(cols[2], "살+겠+다+가");
+    assert_eq!(cols[4], "pvg+ep+ef+jcs");
+}
+
+#[test]
+fn annotated_shortened_adnominals_recover_lexical_and_auxiliary_groups() {
+    let report = corpus::evaluate(
+        std::io::Cursor::new(include_str!("fixtures/kaist-adnominal.conllu")),
+        Corpus::Kaist,
+        "kaist-adnominal.conllu",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:MH2_0069-s151/10", "절약하려는", vec!["절약하다"]),
+        ("id:M2TA_089-s4/3", "배우자는", vec!["배우다"]),
+        ("id:MH2_0169-s111/4", "바꿔보자는", vec!["바꾸다", "보다"]),
+    ] {
+        let case = report.cases.get(id).expect(id);
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
+fn annotated_present_conditionals_recover_stable_development_cases() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_str!("fixtures/kaist-conditional.conllu"),
+            vec![
+                ("id:MH2_0069-s53/7", "한다면", "하다"),
+                ("id:MH2_0149-s14/11", "않는다면", "않다"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_str!("fixtures/gsd-conditional.conllu"),
+            vec![("id:dev-s153/3", "들리신다면", "들리다")],
+        ),
+    ] {
+        let report =
+            corpus::evaluate(std::io::Cursor::new(input), corpus, "conditional.conllu").unwrap();
+        for (id, surface, lemma) in cases {
+            let case = report.cases.get(id).expect(id);
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn annotated_comparative_endings_recover_both_saved_bodeusi_misses() {
     let report = corpus::evaluate(
         std::io::Cursor::new(include_str!("fixtures/kaist-comparative.conllu")),

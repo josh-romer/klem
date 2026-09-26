@@ -105,6 +105,10 @@ to disk. Dictionary entry links intentionally open the external source website.
   `{lemma: index}` / `{morpheme: index}` references, or null when unavailable;
   `glosses` maps entry IDs to English hints or null; `grammar` maps dictionary
   headwords (particles, `-endings`, `-prefinals-`, `-suffixes`) to matching entry summaries.
+  Lookup normally requires the matching grammar POS. Scoped bundled expressions
+  -으려는 (86717) and -자는 (83896) also admit their exact KRDict headword/ID
+  with `품사 없음`, only for `Ending` components. This does not enable a general
+  unclassified-entry fallback or admit other quoted-expression homonyms.
   The library exposes the same ordering through `Analysis::breakdown()`.
   Derivational suffixes remain grammatical morphemes: canonical `답다` is a
   `suffix` before its prefinals/ending, displayed as 답 and looked up as -답다.
@@ -156,3 +160,22 @@ Comparative endings -듯/-듯이 (COV-016) display as one ending component after
 the predicate stem, for example 보 + 듯이. Their “As / like” labels open KRDict
 80280/80282 respectively, restricted to ending entries. They are not displayed
 as the independent bound noun 듯 plus an 이 suffix.
+
+Present conditional allomorphs -ㄴ다면/-는다면 (COV-017a) share canonical
+는다면, labeled “If / supposing”. Thus 한다면 displays 하 + 는다면 with the
+existing expanded/normalized notice, while 먹는다면 displays 먹 + 는다면.
+The grammar link opens ending entry 68738; the homonymous quoted expression
+68841 (품사 없음) is excluded by the ending-kind lookup.
+
+COV-017b displays shortened adnominal expressions as single components:
+먹 + 으려는 (“Intending / about to”) and 먹 + 자는 (“Quoted suggestion”).
+살려는 displays 살 + 으려는 with the canonical-expansion notice. Their full
+dictionary definitions explain the shortened expressions; the display does
+not insert an implicit 하다 component or select a contextual sense. Expression
+metadata retains the source's 품사 없음 label. The lookup exception is restricted
+to the reviewed canonical IDs and does not affect lexical dictionary filtering.
+
+COV-017c keeps -다가 and -어다가 as separate ending components, labeled
+“While / then” (85740) and “Then / using the result” (86099). Both readings of
+가다가 remain selectable. Past and honorific components remain separate, e.g.
+갔다가 → 가 + 었 + 다가, with the existing normalized-expansion notice.

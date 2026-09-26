@@ -1,0 +1,3756 @@
+{
+  "schema_version": 1,
+  "scope": "COV-019e: one contrastive 는 after 고 before 싶다, with existing 곤 contraction, prefinals, negative/expressive chains and represented copulas.",
+  "baseline_commit": "2958810c4366a06d66a975f6fa919a45a3081a08",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Source projections preserve every sense and up to two example groups per sense; one additional cited example is retained separately.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/engine.rs": "2342a1ec050ee3e6d56c5e5fd24ab222bff47f03da1ddb6600c3e0d1eba2e787",
+    "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
+    "tests/dictionary.rs": "eb98ff68a7cbc5c07f75f1a025a9aa0d16912bb7968ac8299922dc40be75346c",
+    "tests/validity.rs": "d95383aa5f77e2bc46510b4506eb1ba83f3a7c0cb19bd68d16f41dea596e71e9",
+    "tests/fixtures/validity.json": "a46638609826712ca9722afe0db3bdbc99853987b76f08203e67c8abf03dc6ad",
+    "web/tests/browser.mjs": "3993c377df85d547412549610b17d918b91a79c81769d40e1034b19c93452321"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:62657",
+        "headword": "싶다",
+        "homonym": "0",
+        "pos": "보조 형용사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62657",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "십따"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "싶은",
+            "pronunciations": [
+              "시픈"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "싶어",
+            "pronunciations": [
+              "시퍼"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "싶으니",
+            "pronunciations": [
+              "시프니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "싶습니다",
+            "pronunciations": [
+              "십씀니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞말이 나타내는 내용을 하고자 하는 의도나 욕구가 있음을 나타내는 말.",
+            "notes": [
+              "동사 뒤에서 '-고 싶다'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 문득 여행을 가고 싶다고 생각했다."
+              ],
+              [
+                "나는 시원한 게 마시고 싶어서 편의점에 맥주를 사러 갔다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "앞말이 나타내는 내용과 같은 느낌이 들거나 앞의 내용과 같이 생각됨을 나타내는 말.",
+            "notes": [
+              "동사나 형용사, '이다' 뒤에서 '-는가 싶다', '-다 싶다', '-나 싶다' 등으로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "아들이 벌써 대학교를 졸업하다니 이제 정말 다 컸다 싶다."
+              ],
+              [
+                "아이가 밥을 다 먹었나 싶었는데 어느새 밖에 나가고 없었다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "앞말이 나타내는 내용대로 될까 봐 걱정하는 마음이 있음을 나타내는 말.",
+            "notes": [
+              "동사 뒤에서 '-을까 싶다'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 혹시나 늦을까 싶어 택시를 타기로 했다."
+              ],
+              [
+                "지수는 더운 날씨 때문에 빵이 상할까 싶어서 냉장고에 넣어 놓았다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "4",
+            "definition": "앞말이 나타내는 내용이 이루어지기를 바라거나 앞의 행동을 할 생각이 있음을 나타내는 말.",
+            "notes": [
+              "동사나 형용사, '이다' 뒤에서 '-었으면 싶다'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "날씨가 좋아서 가까운 곳으로 소풍을 갔으면 싶다."
+              ],
+              [
+                "이 일은 오늘 안에 다 끝냈으면 싶은데 오늘 우리 야근하죠?"
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "5",
+            "definition": "앞말이 나타내는 행동을 할 생각이 막연하게 있음을 나타내는 말.",
+            "notes": [
+              "동사 뒤에서 '-을까 싶다'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "폐가 안 좋아진 것 같은데 이제 담배를 끊을까 싶다."
+              ],
+              [
+                "나는 산책이나 할까 싶어서 일단 집 밖으로 나왔다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "c3db58e63b35b40b4f003c888a2673e4ce11ae1e9ad269426159a4fd7707b2ca"
+    },
+    {
+      "source": {
+        "id": "krdict:85851",
+        "headword": "는",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 대상이 다른 것과 대조됨을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, ‘-아’, ‘-게’, ‘-지’, ‘-고’ 등의 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "어머니는 선생님이고, 아버지는 회사원이다. "
+              ],
+              [
+                "편지는 자주 쓴다. "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "2",
+            "definition": "문장 속에서 어떤 대상이 화제임을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "저는 학생입니다."
+              ],
+              [
+                "사과는 몸에 좋다고 해요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "강조의 뜻을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, 연결 어미 등의 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "노는 게 좋아도 숙제는 해야지."
+              ],
+              [
+                "바쁘더라도 부모님께 전화는 자주 하세요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "8dc9d6effae6930841dcff3f5badde2d9f2daa86d2849f6ee8f649ffd905278d"
+    },
+    {
+      "source": {
+        "id": "krdict:85847",
+        "headword": "ㄴ",
+        "homonym": "2",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85847",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 대상이 다른 것과 대조됨을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, '-아', '-게', '-지', '-고' 등의 뒤에 붙여 쓴다. 주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "바나난 괜찮은데 포돈 씨가 있어서 먹기 불편해."
+              ],
+              [
+                "주말엔 백화점에 사람이 너무 많아요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "문장 속에서 어떤 대상이 화제임을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사 뒤에 붙여 쓴다. 주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "승균 오늘 피곤해서 일찍 집에 간대."
+              ],
+              [
+                "난 한국인인 게 자랑스럽다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "강조의 뜻을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, 연결 어미 뒤에 붙여 쓴다. 주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "일을 그렇게 급하게 처리해선 안 돼. "
+              ],
+              [
+                "오늘은 바쁘니깐 간단히 빵 먹자."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "a4530292503c1019062887fbf2dd57cf761a3ce84ed0a254751b5abe4a78a297"
+    },
+    {
+      "source": {
+        "id": "krdict:78583",
+        "headword": "-고",
+        "homonym": "1",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78583",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "두 가지 이상의 대등한 사실을 나열할 때 쓰는 연결 어미.",
+            "notes": [
+              "‘이다’, 동사와 형용사 또는 ‘-으리-’, ‘-더-’를 제외한 다른 어미 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 아내에게 항상 고맙고 미안하다. "
+              ],
+              [
+                "지수는 키도 크고 예뻐서 인기가 많다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "앞말과 뒤의 말이 차례대로 일어남을 나타내는 연결 어미.",
+            "notes": [
+              "동사 또는 ‘-으시-’ 뒤에 붙여 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "밥 먹을 거니까 손을 씻고 오너라."
+              ],
+              [
+                "나는 사고가 났다는 소식을 듣고 무척 놀랐다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "3",
+            "definition": "앞말이 나타내는 행동이나 그 결과가 뒤에 오는 행동이 일어나는 동안에 그대로 지속됨을 나타내는 연결 어미.",
+            "notes": [
+              "동사 또는 ‘-으시-’ 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "날이 추우니까 장갑을 끼고 나가렴."
+              ],
+              [
+                "지수는 새로 산 구두를 신고 학교에 갔다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "4",
+            "definition": "서로 뜻이 반대되는 말을 나열할 때 쓰는 연결 어미.",
+            "notes": [
+              "‘이다’, 동사와 형용사 또는 ‘-으리-’, ‘-더-’를 제외한 다른 어미 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "음식점의 손님이 많고 적고는 음식의 맛이 좌우한다."
+              ],
+              [
+                "누가 잘했고 못했고를 구별하는 게 쉬운 일은 아니다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "5",
+            "definition": "형용사를 반복하여 그 뜻을 강조할 때 쓰는 연결 어미.",
+            "notes": [
+              "일부 형용사 뒤에 붙여 쓰고, 주로 ‘-고 -은’으로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "저 멀고 먼 별에 가 보고 싶다. "
+              ],
+              [
+                "높고 높은 가을 하늘이 정말 푸르다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "6",
+            "definition": "‘이다’, 동사와 형용사를 보조 용언인 ‘있다’, ‘싶다’, ‘말다’, ‘나다’ 등과 이어 줄 때 쓰는 연결 어미.",
+            "notes": [
+              "주로 ‘-고 있다’, ‘-고 싶다’, ‘-고 지고’, ‘-고 나다’, ‘-고 보다’, ‘-고 보니’, ‘-고 보면’, ‘-고 말다’, ‘-고 들다’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "이곳에서 영원히 살고 지고."
+              ],
+              [
+                "추우니까 따뜻한 커피가 마시고 싶다."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "a59a6fa1c32c0f12c462490537247cc44b657341e3856675e0cca599db9e5c44"
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "1262782665d770abab5bd7f6c96158f02301b57e755b7c213ea192346d4b653f",
+      "after_sha256": "1262782665d770abab5bd7f6c96158f02301b57e755b7c213ea192346d4b653f",
+      "converted": 22220,
+      "before_matched": 22093,
+      "after_matched": 22093,
+      "remaining_misses": 127,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.835823582358236,
+      "mean_candidates_after": 5.835823582358236
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "4a966dee60cd8f70f547731f25d4c84c698569b2ffbd400209c18cc58e18b127",
+      "after_sha256": "4a966dee60cd8f70f547731f25d4c84c698569b2ffbd400209c18cc58e18b127",
+      "converted": 9989,
+      "before_matched": 9827,
+      "after_matched": 9827,
+      "remaining_misses": 162,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.3688056862548805,
+      "mean_candidates_after": 5.3688056862548805
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "놀곤싶지만",
+      "before_count": 16,
+      "after_count": 20,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.concessive",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "irregular.mal",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹곤싶다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "살곤싶어요",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "살다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "돕곤싶었다",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돕다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹곤싶겠지만",
+      "before_count": 28,
+      "after_count": 32,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.concessive",
+            "particle.contraction.n",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "irregular.mal",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹곤싶으셨다",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.honorific",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어보곤싶었다",
+      "before_count": 7,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹곤싶어한다",
+      "before_count": 9,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.attached",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹곤싶지않다",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이곤싶다",
+      "before_count": 4,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사곤싶다",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기곤싶다",
+      "before_count": 4,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹기다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고은싶다",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶는다",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹곤싶는",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생곤싶다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "도우곤싶다",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "도우",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "도우다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶었는가",
+      "before_count": 9,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶어요",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶지만요",
+      "before_count": 15,
+      "after_count": 19,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.concessive",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지만",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지만요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "irregular.mal",
+            "particle",
+            "particle.contraction.n",
+            "particle.polite"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹곤했다",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹진않다",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고도싶다",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고만싶다",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놀고는싶지만",
+      "before_count": 16,
+      "after_count": 20,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.concessive"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "irregular.mal",
+            "particle",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "살고는싶어요",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "살다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "돕고는싶었다",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돕다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶겠지만",
+      "before_count": 28,
+      "after_count": 32,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.concessive",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "irregular.mal",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.rieul",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶으셨다",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "prefinal.honorific",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어보고는싶었다",
+      "before_count": 7,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶어한다",
+      "before_count": 9,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.attached",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶지않다",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이고는싶다",
+      "before_count": 4,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사고는싶다",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기고는싶다",
+      "before_count": 4,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹기다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고는싶어있는다",
+      "before_count": 9,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.consonant",
+            "boundary.regular",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    }
+  ],
+  "direct_example": {
+    "id": "krdict:75798",
+    "headword": "좀",
+    "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75798",
+    "sense": "4",
+    "example_group_index": 2,
+    "examples": [
+      "나도 지금 놀고는 싶지만 좀 피곤해야 말이지."
+    ],
+    "tolerant_joined_surface": "놀고는싶지만",
+    "note": "Spacing retained in the source; the joined regression exercises existing tolerant token analysis, not a spelling recommendation."
+  },
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "remaining": [
+    "Other auxiliary/internal-particle combinations are unreviewed rather than forbidden solely because this slot is bounded.",
+    "Immediate-left class and lexical-subset restrictions remain incomplete. In particular 먹고는싶어있는다 still generates 먹다 + 싶다 + 있다 with 고/는/어/는다; the source eligibility of 어 있다 after known adjectives needs a separate review.",
+    "The direct example is spaced; no cross-token parser or spacing correction was introduced.",
+    "Copula and nominalization composition tests establish structural behavior; contextual suitability is not inferred.",
+    "Independent Korean-language review, fresh passages and full inventory dispositions remain pending. No precision estimate."
+  ]
+}

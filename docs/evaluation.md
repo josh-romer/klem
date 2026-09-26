@@ -1064,3 +1064,33 @@ allomorph source links, six forbidden paths and foreign-pronunciation conditions
 Desktop and mobile screenshots were inspected; no JavaScript errors or horizontal
 overflow occurred. Independent Korean-language review and fresh-passage
 evaluation remain pending.
+
+## Contrastive desire links (COV-019e)
+
+[The comparison](desire-topic-evaluation.json) records **71 added analyses
+across 37 audited surfaces**, with no removed candidates or provenance changes.
+The direct dictionary example 놀고는 싶지만 supports one contrastive 는
+between 고 and 싶다. Existing 곤 contraction, prefinals, trial/negative/expressive
+chains and represented copulas compose with the new link. Joined forms remain
+tolerant input analyses, not recommendations to remove standard spacing.
+
+Both development reports are byte-identical to the preceding batch, retaining
+**127 KAIST and 162 GSD misses** and the same mean candidate counts. No new
+annotated recovery is claimed. All 30 stress fingerprints and the historical
+corpus baselines are unchanged. The ledger contains **542 cases, 306 required
+and 242 forbidden judgments**, including thirteen new cases. Three scoped
+source reviews bring the inventory to **49 scoped entries and 666 without a
+disposition**. The source catalog and attributed lexical fixtures are unchanged.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, stress
+and memory regressions, and the complete browser/HTTP suite pass. `nix flake
+check` and `nix build .#web` pass on x86_64-linux; other declared platforms were
+not executed. The packaged app passes nine full-dictionary reading choices,
+particle source links, contraction notices and five forbidden-path checks.
+Desktop/mobile screenshots were inspected without JavaScript errors or overflow.
+
+Additional auxiliary left-class restrictions remain open. The audit records
+먹고는싶어있는다 generating a known adjective auxiliary before 어 있다;
+that path needs a separate source review and is not certified by this batch.
+Independent Korean-language review, fresh-passage evaluation and the remaining
+inventory dispositions are still pending.

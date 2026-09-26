@@ -1593,8 +1593,8 @@ path does not survive dictionary-only filtering.
 Four stress snapshots gain unknown nominal/copula hypotheses, recorded separately
 with every prior candidate/hash retained. In particular, represented copula +
 progressive 고 있다/계시다 needs further left-class review under COV-019; this
-batch does not certify those generated paths. Internal 는 before 싶다 remains
-missing (학생이고는싶다 / 의사고는싶다), while existing 도 composition works.
+batch does not certify those generated paths. COV-019e below closes the internal
+는 gap before 싶다 (학생이고는싶다 / 의사고는싶다), alongside existing 도.
 Other omitted ending and prefinal families remain COV-020 work. NIKL's valid
 honorific omission example 선수셨다 is not entered as a forbidden regression
 merely because that recovery was not included in COV-020e. COV-020f below
@@ -1643,3 +1643,32 @@ Three complete annotated sentences protect 마셨다, 주셨습니다 and 주셨
 as lexical verb cases. These are preservation regressions, not new corpus gold
 recoveries or a precision estimate. Independent Korean-language review remains
 pending.
+
+
+## Contrastive desire links (COV-019e)
+
+A single contrastive 는 after 고 can precede auxiliary 싶다. The existing
+곤 contraction expands to 고 + 는, preserving the particle role and normal
+auxiliary grouping: 먹곤싶다 → 먹다 + 고 + 는 + 싶다 + 다. The same link
+composes with represented copulas (학생이고는싶다), vowel-final omitted
+copulas (의사곤싶다), existing trial auxiliaries, right-side prefinals,
+negatives and expressive 하다. Normal nominal boundaries and the known
+adjective class of 싶다 still constrain these paths.
+
+The pinned KRDict [좀](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75798)
+entry, sense 4, directly exemplifies 놀고는 싶지만. The
+[는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851) and
+[ㄴ](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85847)
+entries license full/contracted particles after 고;
+[싶다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62657)
+records the desire construction. The auxiliary-connecting sense of
+[-고](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78583)
+includes represented copulas. The attributed [evaluation](desire-topic-evaluation.json)
+preserves source notes and the direct example.
+
+These joined forms are tolerant token analyses; standard source spacing remains
+unchanged. There is no cross-token grouping or contextual sense decision.
+Nominalization composition is a structural test, not a judgment that every
+referent is natural in a desire construction. Other particle slots remain for
+review. Existing 어 있다 candidates after known adjective auxiliaries, such as
+먹고는싶어있는다, remain explicitly unjudged pending a source/left-class audit.

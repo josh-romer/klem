@@ -3093,3 +3093,93 @@ fn honorific_copula_omission_keeps_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn desire_topic_keeps_dictionary_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from(
+            "tests/fixtures/krdict-honorific-copulas.json",
+        )],
+        dir.db(),
+        "desire-topic-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        (
+            "먹고는싶다",
+            vec!["먹다", "싶다"],
+            vec!["고", "는", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹곤싶다",
+            vec!["먹다", "싶다"],
+            vec!["고", "는", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "살곤싶어요",
+            vec!["살다", "싶다"],
+            vec!["고", "는", "어요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "돕고는싶었다",
+            vec!["돕다", "싶다"],
+            vec!["고", "는", "었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어보고는싶었다",
+            vec!["먹다", "보다", "싶다"],
+            vec!["어", "고", "는", "었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이고는싶다",
+            vec!["학생", "이다", "싶다"],
+            vec!["고", "는", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사고는싶다",
+            vec!["의사", "이다", "싶다"],
+            vec!["고", "는", "다"],
+            MorphemeKind::Ending,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

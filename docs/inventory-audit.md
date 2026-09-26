@@ -346,3 +346,16 @@ none is relabeled as a copula. The report records 72 added analyses on 66 surfac
 and one changed stress fingerprint with prior candidates and hashes retained.
 Unknown nominal hypotheses and contextual honorific suitability remain unjudged.
 Other prefinal omissions and broader auxiliary restrictions remain open.
+
+
+## Contrastive desire link review (COV-019e)
+
+Three new scoped dispositions cover 싶다, 는 and contracted ㄴ at the
+고 + 는 + 싶다 boundary. The persistent queue now contains **49 scoped
+entries and 666 without a disposition**. The previously reviewed -고 source
+retains its earlier scope; its auxiliary-connector sense is also preserved in
+[the new comparison](desire-topic-evaluation.json). A direct spaced example
+from 좀 is retained separately, outside the queue's grammar-POS scope.
+These dispositions do not certify all senses, particle combinations or auxiliary
+left classes. The new tests expose a further 어 있다 left-class question,
+recorded explicitly in the report rather than asserted as a forbidden judgment.

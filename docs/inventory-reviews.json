@@ -1936,6 +1936,121 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:62657",
+      "source_sha256": "c3db58e63b35b40b4f003c888a2673e4ce11ae1e9ad269426159a4fd7707b2ca",
+      "status": "scoped",
+      "checklist": [
+        "COV-019e"
+      ],
+      "scope": "Desire 고 plus one contrastive 는 retains adjective auxiliary 싶다, its prefinals and existing later chains. Other senses and left-class restrictions are not certified.",
+      "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/desire_topic.rs",
+          "test": "desire_topic_keeps_contracted_full_and_composed_paths"
+        },
+        {
+          "path": "tests/desire_topic.rs",
+          "test": "desire_topic_preserves_connector_boundaries_and_adjective_inflection"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "desire_topic_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/desire-topic-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "desire-topic-past",
+          "judgment": "path"
+        },
+        {
+          "case": "desire-topic-chain",
+          "judgment": "path"
+        },
+        {
+          "case": "desire-topic-expressive",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85851",
+      "source_sha256": "8dc9d6effae6930841dcff3f5badde2d9f2daa86d2849f6ee8f649ffd905278d",
+      "status": "scoped",
+      "checklist": [
+        "COV-019e"
+      ],
+      "scope": "One contrastive 는 between connector 고 and 싶다, preserving particle order and vowel allomorph. Other attachments remain independently scoped.",
+      "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/desire_topic.rs",
+          "test": "desire_topic_keeps_contracted_full_and_composed_paths"
+        },
+        {
+          "path": "tests/desire_topic.rs",
+          "test": "desire_topic_preserves_connector_boundaries_and_adjective_inflection"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "desire_topic_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/desire-topic-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "desire-topic-plain",
+          "judgment": "path"
+        },
+        {
+          "case": "desire-topic-allomorph",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85847",
+      "source_sha256": "a4530292503c1019062887fbf2dd57cf761a3ce84ed0a254751b5abe4a78a297",
+      "status": "scoped",
+      "checklist": [
+        "COV-019e"
+      ],
+      "scope": "Existing contracted 곤 expands to 고 + 는 before 싶다 and preserves full-form parity; no new generic contraction recovery is added.",
+      "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/desire_topic.rs",
+          "test": "desire_topic_keeps_contracted_full_and_composed_paths"
+        },
+        {
+          "path": "tests/desire_topic.rs",
+          "test": "desire_topic_preserves_connector_boundaries_and_adjective_inflection"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "desire_topic_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/desire-topic-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "desire-topic-short",
+          "judgment": "path"
+        },
+        {
+          "case": "desire-topic-rieul",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

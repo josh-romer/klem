@@ -1402,6 +1402,8 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
             }
             "는" => {
                 (right.stem == "하" && matches!(connector, "고" | "기"))
+                    // Contrastive 고는 싶다 (also contracted 곤 싶다).
+                    || (right.stem == "싶" && connector == "고")
                     || (connector == "지" && aux_allowed(&right.stem, connector))
             }
             "나" => right.stem == "하" && connector == "기",

@@ -12,24 +12,26 @@
     "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "bb4fc2f785ec7ada767f113733deb6af5e9e199f60a573e0db8b808929dd604e",
+    "docs/coverage-checklist.md": "7f3983deb36d2928346b1a19f2e4a1820b05b623c27c5f55f4de481bd2e44585",
+    "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
-    "docs/inventory-audit.md": "b188dfbeac7a07fa89fc731553014fce76b32eb93e7d85e21b2180a49ed2b02b",
-    "docs/inventory-reviews.json": "0d155adf2a021d87e84f2df48239fb06d578739f485b68c94420fc0281d69f59",
+    "docs/inventory-audit.md": "a5119f851dac6b721dcab261c07a67783cfd7a07adcb7904dda10fd37de873ae",
+    "docs/inventory-reviews.json": "57b686ddd3ee54bd785ac3eead6171673fab3ed8b131a3d2f902ae47f3c306c8",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/reporting-evaluation.json": "74f0fb2732024ef27d7250d374184bda3d766aeb32f2c6b787ee319157c6d96e",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
+    "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
-    "tests/dictionary.rs": "71e14269b7a79a39de0ab68683099212819e5812d4ed0c3144efba2e39861549",
+    "tests/dictionary.rs": "eb98ff68a7cbc5c07f75f1a025a9aa0d16912bb7968ac8299922dc40be75346c",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
-    "tests/fixtures/validity.json": "c9fe622dd3e744f5386dc433b9516583681ad48182786758b9bc42781671999a",
+    "tests/fixtures/validity.json": "a46638609826712ca9722afe0db3bdbc99853987b76f08203e67c8abf03dc6ad",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
     "tests/reporting_endings.rs": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
@@ -44,8 +46,8 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 669,
-      "scoped": 46
+      "unreviewed": 666,
+      "scoped": 49
     },
     "with_catalog_links": 236,
     "with_judgment_citations": 108
@@ -4607,13 +4609,66 @@
           "case": "aux-class-adnominal",
           "judgment": "group",
           "verdict": "required"
+        },
+        {
+          "case": "desire-topic-chain",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "desire-topic-expressive",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "desire-topic-past",
+          "judgment": "path",
+          "verdict": "required"
         }
       ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:62657",
+        "source_sha256": "c3db58e63b35b40b4f003c888a2673e4ce11ae1e9ad269426159a4fd7707b2ca",
+        "status": "scoped",
+        "checklist": [
+          "COV-019e"
+        ],
+        "scope": "Desire 고 plus one contrastive 는 retains adjective auxiliary 싶다, its prefinals and existing later chains. Other senses and left-class restrictions are not certified.",
+        "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
+        "evidence": [
+          {
+            "path": "tests/desire_topic.rs",
+            "test": "desire_topic_keeps_contracted_full_and_composed_paths"
+          },
+          {
+            "path": "tests/desire_topic.rs",
+            "test": "desire_topic_preserves_connector_boundaries_and_adjective_inflection"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "desire_topic_keeps_dictionary_and_cli_parity"
+          },
+          {
+            "path": "docs/desire-topic-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "desire-topic-past",
+            "judgment": "path"
+          },
+          {
+            "case": "desire-topic-chain",
+            "judgment": "path"
+          },
+          {
+            "case": "desire-topic-expressive",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -9326,6 +9381,21 @@
       ],
       "cited_judgments": [
         {
+          "case": "desire-topic-copula",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "desire-topic-irregular",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "desire-topic-omitted",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "omitted-connectives-connective-go",
           "judgment": "path",
           "verdict": "required"
@@ -12119,6 +12189,11 @@
         {
           "case": "aux-class-bad-present",
           "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "desire-topic-verbal",
+          "judgment": "path",
           "verdict": "forbidden"
         },
         {
@@ -31073,6 +31148,16 @@
       "catalog": [],
       "cited_judgments": [
         {
+          "case": "desire-topic-rieul",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "desire-topic-short",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "negative-aux-contracted-topic",
           "judgment": "group",
           "verdict": "required"
@@ -31085,7 +31170,41 @@
       ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:85847",
+        "source_sha256": "a4530292503c1019062887fbf2dd57cf761a3ce84ed0a254751b5abe4a78a297",
+        "status": "scoped",
+        "checklist": [
+          "COV-019e"
+        ],
+        "scope": "Existing contracted 곤 expands to 고 + 는 before 싶다 and preserves full-form parity; no new generic contraction recovery is added.",
+        "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
+        "evidence": [
+          {
+            "path": "tests/desire_topic.rs",
+            "test": "desire_topic_keeps_contracted_full_and_composed_paths"
+          },
+          {
+            "path": "tests/desire_topic.rs",
+            "test": "desire_topic_preserves_connector_boundaries_and_adjective_inflection"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "desire_topic_keeps_dictionary_and_cli_parity"
+          },
+          {
+            "path": "docs/desire-topic-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "desire-topic-short",
+            "judgment": "path"
+          },
+          {
+            "case": "desire-topic-rieul",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -32633,6 +32752,16 @@
       ],
       "cited_judgments": [
         {
+          "case": "desire-topic-allomorph",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "desire-topic-plain",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "negative-aux-full-topic",
           "judgment": "group",
           "verdict": "required"
@@ -32650,7 +32779,41 @@
       ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:85851",
+        "source_sha256": "8dc9d6effae6930841dcff3f5badde2d9f2daa86d2849f6ee8f649ffd905278d",
+        "status": "scoped",
+        "checklist": [
+          "COV-019e"
+        ],
+        "scope": "One contrastive 는 between connector 고 and 싶다, preserving particle order and vowel allomorph. Other attachments remain independently scoped.",
+        "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
+        "evidence": [
+          {
+            "path": "tests/desire_topic.rs",
+            "test": "desire_topic_keeps_contracted_full_and_composed_paths"
+          },
+          {
+            "path": "tests/desire_topic.rs",
+            "test": "desire_topic_preserves_connector_boundaries_and_adjective_inflection"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "desire_topic_keeps_dictionary_and_cli_parity"
+          },
+          {
+            "path": "docs/desire-topic-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "desire-topic-plain",
+            "judgment": "path"
+          },
+          {
+            "case": "desire-topic-allomorph",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -40258,6 +40421,11 @@
       "source_sha256": "fa3f17b3220e62f14e0a937640709956c84b2dcae828f91e1c9b5c7e897259f4",
       "catalog": [],
       "cited_judgments": [
+        {
+          "case": "desire-topic-nominal-boundary",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
         {
           "case": "foreign-copula",
           "judgment": "group",

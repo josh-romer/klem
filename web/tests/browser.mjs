@@ -620,6 +620,10 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["먹고는싶다", ["먹", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
+    ["먹곤싶다", ["먹", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
+    ["학생이고는싶다", ["학생", "이", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
+    ["의사곤싶다", ["의사", "이", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
     ["선수셨다", ["선수", "이", "시", "었", "다"], "다", "Plain / dictionary ending", 85041],
     ["의사시니까", ["의사", "이", "시", "으니까"], "으니까", "Reason / premise", 80137],
     ["의사셨어요", ["의사", "이", "시", "었", "어요"], "어요", "Polite informal", 86571],
@@ -701,6 +705,16 @@ try {
     await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
     assert.ok(data.grammar[kind === "particle" ? form : `-${form}`].some(e => e.id === `krdict:${id}`));
+    if (["먹고는싶다", "먹곤싶다", "학생이고는싶다", "의사곤싶다"].includes(word)) {
+      const selected = data.records[0].analysis.analyses[Number(choice)];
+      assert.ok(selected.rules.includes("auxiliary.internal_particle"));
+      if (word.includes("곤")) {
+        assert.ok(selected.rules.includes("particle.contraction.n"));
+        assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+      }
+      await breakdown.getByRole("button", {name: "는 Topic / contrast", exact: true}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=85851"));
+    }
     if (word === "선수셨다") {
       const selected = data.records[0].analysis.analyses[Number(choice)];
       assert.ok(selected.rules.includes("copula.omitted_honorific"));

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–h/019a–d/020a–f/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–h/019a–e/020a–f/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records forty-six scoped
-  dispositions from COV-016/017m–n/017p/018e–h/019d/020d–f; 669 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records forty-nine scoped
+  dispositions from COV-016/017m–n/017p/018e–h/019d–e/020d–f; 666 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -559,8 +559,8 @@ review remains open under the completion review below.
   The negative 말다 mood audit in COV-019b rules out a blanket command-only
   filter; questions and indirect wishes can also be valid. Sentence-mood and
   sense selection require context beyond this token-level candidate generator.
-  COV-020e also records missing internal 는 before 싶다 (학생이고는싶다) and
-  unreviewed represented-copula + progressive 고 있다/계시다 candidates;
+  COV-019e adds internal 는 before 싶다 (학생이고는싶다).
+  Represented-copula + progressive 고 있다/계시다 candidates remain unreviewed;
   a matching connector alone does not establish left-class eligibility.
 - [x] **COV-019a — Auxiliary connectors and one internal particle.** The
   [source inventory](auxiliary-inventory.json) preserves attachment notes for all
@@ -617,6 +617,17 @@ review remains open under the completion review below.
   fingerprints. This is not a blanket left-class filter for all auxiliaries;
   lexical-subset and contextual sense restrictions remain open. See
   [scope and sources](rules.md#expressive-hada-left-class-cov-019d).
+- [x] **COV-019e — Contrastive 고는/곤 before 싶다.** One internal 는 now
+  connects 고 to 싶다, including 먹고는싶다, 먹곤싶다, 학생이고는싶다
+  and 의사곤싶다. Prefinals, negative/expressive chains, nominalization and
+  existing dictionary alternatives remain. Known adjective-ending and nominal
+  boundary restrictions still apply. KRDict's 좀 entry supplies the direct
+  spaced example 놀고는 싶지만; joined tests exercise tolerant input only.
+  Evidence: [path/composition tests](../tests/desire_topic.rs), thirteen
+  `desire-topic-*` ledger cases, dictionary/CLI parity, browser particle-source
+  checks and [the comparison](desire-topic-evaluation.json). Other internal
+  particles and auxiliary left-class licenses remain open, including 어 있다
+  after known adjective auxiliaries. See [scope](rules.md#contrastive-desire-links-cov-019e).
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and

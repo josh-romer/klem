@@ -2,6 +2,15 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "desire-topic-62657": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62657",
+    "desire-topic-75798": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75798",
+    "desire-topic-78583": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78583",
+    "desire-topic-85037": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85037",
+    "desire-topic-85847": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85847",
+    "desire-topic-85851": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851",
+    "desire-topic-86232": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86232",
+
+
     "honorific-copula-80329": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80329",
     "honorific-copula-80330": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80330",
     "honorific-copula-85037": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85037",
@@ -215,6 +224,20 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id": "desire-topic-source", "surface": "놀고는싶지만", "judgments": [{"id": "path", "lemmas": ["놀다", "싶다"], "morphemes": ["고", "는", "지만"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "required", "source": "desire-topic-75798", "reason": "Direct 좀 sense 4 example, analyzed in tolerant joined-input form; standard spacing is 놀고는 싶지만."}]},
+    {"id": "desire-topic-plain", "surface": "먹고는싶다", "judgments": [{"id": "path", "lemmas": ["먹다", "싶다"], "morphemes": ["고", "는", "다"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "required", "source": "desire-topic-85851", "reason": "Contrastive 는 attaches to 고 before desire auxiliary 싶다."}]},
+    {"id": "desire-topic-short", "surface": "먹곤싶다", "judgments": [{"id": "path", "lemmas": ["먹다", "싶다"], "morphemes": ["고", "는", "다"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "required", "source": "desire-topic-85847", "reason": "Contracted ㄴ after 고 retains the particle and desire auxiliary."}]},
+    {"id": "desire-topic-rieul", "surface": "살곤싶어요", "judgments": [{"id": "path", "lemmas": ["살다", "싶다"], "morphemes": ["고", "는", "어요"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "required", "source": "desire-topic-85847", "reason": "Literal 고 preserves the lexical ㄹ before contracted 는."}]},
+    {"id": "desire-topic-past", "surface": "돕고는싶었다", "judgments": [{"id": "path", "lemmas": ["돕다", "싶다"], "morphemes": ["고", "는", "었", "다"], "morpheme_kinds": ["ending", "particle", "prefinal", "ending"], "verdict": "required", "source": "desire-topic-62657", "reason": "Literal 고 preserves ㅂ; the desire auxiliary carries past inflection."}]},
+    {"id": "desire-topic-chain", "surface": "먹어보고는싶었다", "judgments": [{"id": "path", "lemmas": ["먹다", "보다", "싶다"], "morphemes": ["어", "고", "는", "었", "다"], "morpheme_kinds": ["ending", "ending", "particle", "prefinal", "ending"], "verdict": "required", "source": "desire-topic-62657", "reason": "The internal particle connects immediately preceding trial 보다 to 싶다."}]},
+    {"id": "desire-topic-expressive", "surface": "먹고는싶어한다", "judgments": [{"id": "path", "lemmas": ["먹다", "싶다", "하다"], "morphemes": ["고", "는", "어", "는다"], "morpheme_kinds": ["ending", "particle", "ending", "ending"], "verdict": "required", "source": "desire-topic-62657", "reason": "Adjective auxiliary 싶다 remains available before expressive 하다."}]},
+    {"id": "desire-topic-copula", "surface": "학생이고는싶다", "judgments": [{"id": "path", "lemmas": ["학생", "이다", "싶다"], "morphemes": ["고", "는", "다"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "required", "source": "desire-topic-78583", "reason": "Represented copula plus 고 retains the contrast particle before 싶다; connector entry includes copulas."}]},
+    {"id": "desire-topic-omitted", "surface": "의사고는싶다", "judgments": [{"id": "path", "lemmas": ["의사", "이다", "싶다"], "morphemes": ["고", "는", "다"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "required", "source": "desire-topic-78583", "reason": "Existing vowel-final copula omission composes with the contrastive desire link."}]},
+    {"id": "desire-topic-allomorph", "surface": "먹고은싶다", "judgments": [{"id": "path", "lemmas": ["먹다", "싶다"], "morphemes": ["고", "은", "다"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "forbidden", "source": "desire-topic-85851", "reason": "The full contrast particle after vowel-final 고 is 는, not 은."}]},
+    {"id": "desire-topic-verbal", "surface": "먹고는싶는다", "judgments": [{"id": "path", "lemmas": ["먹다", "싶다"], "morphemes": ["고", "는", "는다"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "forbidden", "source": "desire-topic-85037", "reason": "Known adjective auxiliary 싶다 cannot take bare verbal present 는다."}]},
+    {"id": "desire-topic-nominal-boundary", "surface": "학생곤싶다", "judgments": [{"id": "path", "lemmas": ["학생", "이다", "싶다"], "morphemes": ["고", "는", "다"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "forbidden", "source": "desire-topic-86232", "reason": "A consonant-final nominal cannot lose its copular 이 before 고."}]},
+    {"id": "desire-topic-irregular", "surface": "도우곤싶다", "judgments": [{"id": "path", "lemmas": ["돕다", "싶다"], "morphemes": ["고", "는", "다"], "morpheme_kinds": ["ending", "particle", "ending"], "verdict": "forbidden", "source": "desire-topic-78583", "reason": "Literal 고 does not apply vowel-triggered ㅂ recovery to 돕다."}]},
+
     {"id": "honorific-copula-source-example", "surface": "선수셨다", "judgments": [{"id": "path", "lemmas": ["선수", "이다"], "morphemes": ["시", "었", "다"], "morpheme_kinds": ["prefinal", "prefinal", "ending"], "verdict": "required", "source": "honorific-copula-omission", "reason": "NIKL explicitly permits 선수셨다 as shortened 선수이셨다."}]},
     {"id": "honorific-copula-honorific-cause", "surface": "의사시니까", "judgments": [{"id": "path", "lemmas": ["의사", "이다"], "morphemes": ["시", "으니까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "honorific-copula-80330", "reason": "Copular 이 may be omitted before honorific 시 after a vowel-final nominal; the following causal ending is retained."}]},
     {"id": "honorific-copula-honorific-past-polite", "surface": "의사셨어요", "judgments": [{"id": "path", "lemmas": ["의사", "이다"], "morphemes": ["시", "었", "어요"], "morpheme_kinds": ["prefinal", "prefinal", "ending"], "verdict": "required", "source": "honorific-copula-80330", "reason": "Honorific 시 precedes past 었 and the polite ending; the 시어 contraction remains separate from copula omission."}]},

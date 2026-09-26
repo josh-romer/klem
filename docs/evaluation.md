@@ -1417,3 +1417,49 @@ overflow; 놨었지요 visibly yields 놓 + 었 + 었 + 지요 under dictionary-
 This change does not normalize internal lexical contractions or establish
 contextual senses. Unknown compound hypotheses, broader auxiliary restrictions,
 independent Korean-language review and fresh-passage evaluation remain open.
+
+## Informative and reported 다네/다는데 families (COV-017v)
+
+The [comparison](report-ne-evaluation.json) accounts for **954 added candidates
+on 186 surfaces**, with no removed candidates or changed prior provenance.
+Each addition carries the new reported-family provenance and one of ten reviewed
+canonical components. The tests require 119 paths and reject 68 exact invalid
+paths, including wrong ㄴ/는 and (으)라 boundaries, prefinal order, known
+auxiliary/adjective/copula roles and unlicensed composition. Unjudged lexical
+hypotheses remain visible; these counts are not a precision estimate.
+
+The implementation preserves informative/reported homonyms, separate factual
+and command 라 forms, retrospective bundle/component alternatives, polite 요,
+and source-listed concessive 도 composition. It does not insert a reporting
+하다. The shorter 라는데 entry's attachment note is narrower than the related
+더라는데/라는데요/라는데도 entries; the report explains the source-supported
+family interpretation and the compositional inference for split 으리 + 라는데.
+Unknown lexical classes and broader honorific judgments remain unverified.
+
+Five development groups newly match: KAIST **대부분이라는데, 풍속이었다네,
+있다는데**, and GSD **판매한다네요, 단골집이라는데**. Remaining misses are
+**113 KAIST and 156 GSD**, with no lost gold groups or component sets. Mean
+candidate counts are 5.834653 and 5.369607 respectively. Five complete
+byte-identical annotated sentences preserve these gains. All thirty stress
+fingerprints and historical corpus baselines remain unchanged.
+
+The 187 new ledger cases bring totals to **1,304 cases, 744 required and 566
+forbidden judgments**. Twenty-nine grammar/expression/particle entries and two
+additional lexical-entry examples support the source review. The lexical fixture
+contains 45 entries with all homonyms/senses retained. Ten canonical labels and
+16 new sources bring the catalog to **270 forms, 341 source IDs and 342 grammar
+fixture entries**, preserving every earlier entry. The command 으라네 label
+excludes the factual-only 라네 homonym 75476. Four scoped dispositions bring
+the inventory to **142 scoped entries and 573 without a disposition**.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build, full browser/HTTP checks,
+and inventory verification pass. `nix flake check` and `nix build .#web` pass
+on x86_64-linux; other declared systems were not executed. The packaged
+full-dictionary app passes nineteen reading selections, homonym/allomorph source
+links and all 68 forbidden paths. Desktop/mobile screenshots were inspected
+without JavaScript errors or horizontal overflow; 판매한다네요 visibly yields
+판매하 + 는다네 + 요 under dictionary-only filtering.
+
+Other quoted families and particle combinations, independent Korean-language
+review, fresh-passage evaluation and the broader inventory audit remain open.

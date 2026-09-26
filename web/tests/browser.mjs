@@ -66,6 +66,7 @@ async function submit(page, text) {
     .click();
 }
 try {
+  const grammarLabels = JSON.parse(await readFile(resolve(root, "web/src/grammar-labels.json"), "utf8"));
   const fixture = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict.json"), "utf8"),
   );
@@ -135,6 +136,9 @@ try {
   );
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
+  );
+  const reportNe = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-report-ne.json"), "utf8"),
   );
   const nohContraction = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-noh-contraction.json"), "utf8"),
@@ -258,6 +262,7 @@ try {
       ...prefinalCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...questionCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...nohContraction.LexicalResource.Lexicon.LexicalEntry,
+      ...reportNe.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -636,6 +641,25 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["좋다는데도", ["좋", "다는데", "도"], "도", "Also / even", 86258, "particle"],
+    ["먹는다는데도", ["먹", "는다는데", "도"], "도", "Also / even", 86258, "particle"],
+    ["학생이라는데도", ["학생", "이", "라는데", "도"], "도", "Also / even", 86258, "particle"],
+    ["먹으라는데도", ["먹", "으라는데", "도"], "도", "Also / even", 86258, "particle"],
+    ["풍속이었다네", ["풍속", "이", "었", "다네"], "다네", "Information / report", 75191, "ending"],
+    ["먹는다네", ["먹", "는다네"], "는다네", "Information / report", 75175, "ending"],
+    ["산다네", ["살", "는다네"], "는다네", "Information / report", 75175, "ending"],
+    ["학생이라네", ["학생", "이", "라네"], "라네", "Copular / factual report", 75476, "ending"],
+    ["먹으라네", ["먹", "으라네"], "으라네", "Reported command / request", 69096, "ending"],
+    ["있다는데", ["있", "다는데"], "다는데", "Report / background", 82257, "ending"],
+    ["간다는데", ["가", "는다는데"], "는다는데", "Report / background", 82255, "ending"],
+    ["대부분이라는데", ["대부분", "이", "라는데"], "라는데", "Copular / factual background", 82259, "ending"],
+    ["먹으라는데", ["먹", "으라는데"], "으라는데", "Reported command / background", 86598, "ending"],
+    ["먹더라네", ["먹", "더라네"], "더라네", "Retrospective report", 89635, "ending"],
+    ["먹더라네", ["먹", "더", "라네"], "라네", "Copular / factual report", 75476, "ending"],
+    ["먹더라는데", ["먹", "더라는데"], "더라는데", "Retrospective report / background", 86356, "ending"],
+    ["먹더라는데", ["먹", "더", "라는데"], "라는데", "Copular / factual background", 82259, "ending"],
+    ["의사더라는데", ["의사", "이", "더라는데"], "더라는데", "Retrospective report / background", 86356, "ending"],
+    ["판매한다네요", ["판매하", "는다네", "요"], "요", "Polite", 86116, "particle"],
     ["놔", ["놓", "어"], "어", "Connective / informal", 86094, "ending"],
     ["놨었지요", ["놓", "었", "었", "지요"], "지요", "Confirmation / question / suggestion", 85770, "ending"],
     ["내놔요", ["내놓", "어요"], "어요", "Polite informal", 86571, "ending"],
@@ -776,6 +800,13 @@ try {
       assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("contraction.noh"));
       assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
     }
+    if (["다네", "는다네", "라네", "으라네", "다는데", "는다는데", "라는데", "으라는데", "더라네", "더라는데"].includes(form) || word === "판매한다네요") {
+      assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("ending.reporting_ne"));
+      for (const source of grammarLabels["-" + (word === "판매한다네요" ? "는다네" : form)].sources) {
+        assert.ok(data.grammar["-" + (word === "판매한다네요" ? "는다네" : form)].some(e => e.id === `krdict:${source.id}`));
+      }
+    }
+    if (form === "으라네") assert.ok(!data.grammar["-으라네"].some(e => e.id === "krdict:75476"));
     // Display may use 여 after 하 while lookup retains canonical 어.
     await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
@@ -1244,7 +1275,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

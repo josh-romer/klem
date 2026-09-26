@@ -1976,3 +1976,48 @@ has a verb-completion sense and an adjective/이다 state sense, so the contract
 must preserve both left contexts. This does not select a contextual sense or
 certify all auxiliary restrictions. See the [candidate comparison](noh-contraction-evaluation.json)
 and [tracked tests](../tests/noh_contraction.rs).
+
+## Informative and reported ne families (COV-017v)
+
+Canonical 다네/는다네 and 다는데/는다는데 distinguish plain adjective or
+prefinal attachment from present verb ㄴ/는 allomorphs. Copular/factual 라네
+and 라는데 remain distinct from reported commands 으라네 and 으라는데.
+Thus 풍속이었다네 → 풍속 + 이다 + 었 + 다네, 대부분이라는데 → 대부분 +
+이다 + 라는데, and 판매한다네요 → 판매하다 + 는다네 + 요. The source-listed
+expressions stay bundled; they do not add an implicit reporting 하다 lemma.
+
+Present endings retain only honorific 시 from the prefinal stack; past/modal
+forms use their plain 다- counterpart. Attached ㄴ does not trigger vowel-only
+irregular recovery. Commands permit honorific 시 but reject past/modal/retrospective
+markers and represented copular or known adjective roles. Known bare auxiliary
+verbs use present forms, while known bare auxiliary adjectives and -답다 suffixes
+use the plain family. Unknown lexical classes and additional honorific judgments
+remain unverified. These are candidate rules, not contextual sentence analysis.
+
+The dictionary distinguishes the informative ending from a homonymous shortened
+report: [다네 75191](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75191)
+and [다네 86177](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86177).
+The catalog preserves all source IDs and original POS values. Factual
+[라네 75476](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75476)
+is not linked as evidence for command 으라네; the shared expression
+[69108](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69108)
+contains both factual and command senses.
+
+Retrospective 더라네/더라는데 bundles coexist with 더 + 라네/라는데. The
+shorter [라는데 entry](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82259)
+lists copulas/아니다/honorific, but the explicitly documented
+[더라는데](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86356)
+and [라는데요](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82264)
+/[라는데도](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86340)
+family supports retrospective and conjectural paths. Applying these larger
+expression notes to the split 라는데 component is an implementation inference;
+it is not a claim that the shorter entry explicitly lists every prefinal.
+Doubled retrospective markers remain excluded. Existing vowel-final copula
+omission and licensed auxiliary chains compose with the bundles.
+
+Polite 요 remains a particle. Source-listed 다는데도/라는데도 expressions are
+represented by their components plus concessive 도, preserving all earlier
+restrictions. This does not add arbitrary outer particles or 도 after 다네.
+Further quoted families, topic/object-particle combinations, lexical and contextual
+restrictions remain open. [The report](report-ne-evaluation.json) records every
+reviewed source, candidate delta, corpus gain and retained stress fingerprint.

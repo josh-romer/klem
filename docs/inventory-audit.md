@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **138 scoped
-reviews**, with **577 entries unreviewed in this ledger**. This does not imply
+The [manual ledger](inventory-reviews.json) currently contains **142 scoped
+reviews**, with **573 entries unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
 and source-specific candidate judgments. Independent Korean-language review
@@ -445,3 +445,14 @@ judgments support this disposition; other contextual/lexical restrictions are
 still open. The queue now contains **138 scoped entries and 577 without a disposition**.
 Lexical 놓다, compound verbs and 놔두다/놓아두다 are attributed separately
 outside the grammar-POS queue. No new canonical grammar label is needed.
+
+
+COV-017v adds four scoped grammar-POS dispositions (75148, 75175, 75191, 75476)
+for the informative 다네 family, preserving reported-expression homonyms,
+prefinal/allomorph constraints, auxiliary roles and reviewed 요/도 composition.
+The related 다는데 and retrospective expressions are attributed separately;
+expression POS is outside this 715-entry queue. The [review](report-ne-evaluation.json)
+accounts for 954 added candidates on 186 surfaces and five recovered development
+groups, with no lost candidates or changed previous provenance. The inventory
+now contains **142 scoped entries and 573 without a disposition**. Unknown
+lexical classes, broader honorific judgments and contextual senses remain open.

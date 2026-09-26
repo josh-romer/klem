@@ -1467,3 +1467,38 @@ fn noh_contraction_recovers_double_past_and_preserves_full_compound() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn report_ne_endings_recover_five_new_annotated_groups() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-report-ne.conllu").as_slice(),
+            vec![
+                (
+                    "id:M2TA_089-s28/5",
+                    "대부분이라는데",
+                    vec!["대부분", "이다"],
+                ),
+                ("id:MH2_0149-s30/17", "풍속이었다네", vec!["풍속", "이다"]),
+                ("id:MH2_0209-s94/14", "있다는데", vec!["있다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-report-ne.conllu").as_slice(),
+            vec![
+                ("id:dev-s340/3", "판매한다네요", vec!["판매하다"]),
+                ("id:dev-s854/4", "단골집이라는데", vec!["단골집", "이다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "report-ne").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}

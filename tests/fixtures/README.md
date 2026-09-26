@@ -709,3 +709,27 @@ license attribution above. M2TA_069-s13/4 (놨었지요) newly recovers 놓다;
 MH2_0169-s453/6 (내놓아야) protects the full compound spelling. Original gold
 and historical baselines are unchanged; [the report](../../docs/noh-contraction-evaluation.json)
 records input and fixture hashes.
+
+`krdict-report-ne.json` contains 45 primary word entries from the September 2026
+KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR).
+IDs: 15983, 16488, 17186, 17203, 20256, 24079, 24396, 26847, 26878, 27500,
+28764, 31670, 50557, 58272, 61190, 62171, 62249, 62394, 62395, 62595, 62657,
+65172, 65173, 68796, 68797, 69579, 70060, 71285, 71311, 71581, 71583, 71875,
+72578, 73276, 74104, 77243, 77245, 79033, 82136, 84412, 84413, 86118, 86232,
+89534, 92457. All homonyms and senses are retained, with English equivalents and
+the first example group per sense. WordForm, RelatedForm, idiom subentries and
+global metadata are omitted. These integration fixtures are not sentence gold.
+
+COV-017v adds 16 sources to `krdict-grammar-labels.json` with the same attribution,
+license and adaptations: 69096, 69108, 75148, 75175, 75191, 75476, 82253, 82255,
+82257, 82259, 86175, 86176, 86177, 86356, 86598, 89635. All 326 previous entries
+remain; ten new canonical labels bring the catalog to 270 forms, 341 distinct
+source IDs and 342 fixture entries. Ending and expression homonyms retain their
+source POS and senses; the command label excludes the factual-only 라네 homonym.
+
+`kaist-report-ne.conllu` and `gsd-report-ne.conllu` contain three and two complete
+byte-identical sentences from the pinned UD development files, under their
+existing source/license attribution above. They preserve the original gold for
+대부분이라는데, 풍속이었다네, 있다는데, 판매한다네요 and 단골집이라는데.
+[The report](../../docs/report-ne-evaluation.json) records the exact input and
+fixture hashes; no historical corpus baseline is rewritten.

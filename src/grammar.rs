@@ -428,7 +428,14 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                 if (t != 17 || suffix == "시다")
                     && !matches!(
                         suffix,
-                        "다" | "다고" | "다는" | "다면" | "답니다" | "다거나" | "다든가"
+                        "다" | "다고"
+                            | "다는"
+                            | "다면"
+                            | "답니다"
+                            | "다거나"
+                            | "다든가"
+                            | "다네"
+                            | "다는데"
                     )
                 {
                     recover_eu_open(&stem, &mut out, true);
@@ -469,6 +476,10 @@ pub(crate) fn endings() -> &'static [Ending] {
         for suffix in [
             "다",
             "답니다",
+            "다네",
+            "다는데",
+            "더라네",
+            "더라는데",
             "다거나",
             "다든가",
             "다가",
@@ -593,6 +604,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("던데요", "던데요", 0),
             ("던가", "던가", 0),
             ("던지", "던지", 0),
+            ("더라네", "더라네", 0),
+            ("더라는데", "더라는데", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -650,6 +663,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으란", "란", "으란"),
             ("으라면", "라면", "으라면"),
             ("으랍니다", "랍니다", "으랍니다"),
+            ("으라네", "라네", "으라네"),
+            ("으라는데", "라는데", "으라는데"),
             ("으라거나", "라거나", "으라거나"),
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
@@ -717,6 +732,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다는", "다는", "는다는", 4),
             ("는다면", "다면", "는다면", 4),
             ("는답니다", "답니다", "는답니다", 4),
+            ("는다네", "다네", "는다네", 4),
+            ("는다는데", "다는데", "는다는데", 4),
             ("는다거나", "다거나", "는다거나", 4),
             ("는다든가", "다든가", "는다든가", 4),
         ] {
@@ -777,7 +794,17 @@ pub(crate) fn endings() -> &'static [Ending] {
             }
         }
         // 이 is part of the copular stem, never an arbitrary removable ending.
-        for suffix in ["라", "라서", "라고", "라는", "라면", "랍니다", "라든가"] {
+        for suffix in [
+            "라",
+            "라서",
+            "라고",
+            "라는",
+            "라면",
+            "랍니다",
+            "라든가",
+            "라네",
+            "라는데",
+        ] {
             for boundary in [Copular, ZeroCopula] {
                 out.push(Ending {
                     suffix,
@@ -1145,6 +1172,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
         "ending.reporting_polite" => {
             "Recognize a polite informative or reported-speech ending as one grammatical component; its sense and any implicit speaker are not inferred."
+        }
+        "ending.reporting_ne" => {
+            "Recognize a 다네/다는데-family information or reported-speech component, keeping copular/factual and command allomorphs separate; do not infer an implicit 하다 or contextual sense."
         }
         "ending.enumerative_yo" => {
             "Recognize enumerative -요 after 이다/아니다, retaining vowel-final copula omission and the separate polite-particle reading."

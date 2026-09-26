@@ -7680,6 +7680,342 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:75148",
+      "source_sha256": "5a899f58da5cb2bb9cfe8997b09d7ba76e4df47996b5f50a0e516265ba9d085c",
+      "status": "scoped",
+      "checklist": [
+        "COV-017v"
+      ],
+      "scope": "다네-family stem/prefinal allomorphs, copular/factual versus reported-command representation, existing auxiliary roles, polite 요 and reviewed concessive 도; all homonym IDs remain attributed.",
+      "remaining": "This scoped morphology review does not select informative versus quoted contextual senses, certify unknown lexical classes or resolve all honorific attachment questions. Other outer particles and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/report_ne_endings.rs",
+          "test": "report_ne_endings_preserve_prefinals_roles_and_bundled_alternatives"
+        },
+        {
+          "path": "tests/report_ne_endings.rs",
+          "test": "report_ne_endings_reject_wrong_allomorphs_prefinals_and_known_roles"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ne_endings_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ne-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ne-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-31",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-107",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-19",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-26",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-27",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-28",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:75175",
+      "source_sha256": "a57498610e8e920eb7603b1fe01d4b74a31af640f4027a8cfb0c10d003c7e259",
+      "status": "scoped",
+      "checklist": [
+        "COV-017v"
+      ],
+      "scope": "다네-family stem/prefinal allomorphs, copular/factual versus reported-command representation, existing auxiliary roles, polite 요 and reviewed concessive 도; all homonym IDs remain attributed.",
+      "remaining": "This scoped morphology review does not select informative versus quoted contextual senses, certify unknown lexical classes or resolve all honorific attachment questions. Other outer particles and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/report_ne_endings.rs",
+          "test": "report_ne_endings_preserve_prefinals_roles_and_bundled_alternatives"
+        },
+        {
+          "path": "tests/report_ne_endings.rs",
+          "test": "report_ne_endings_reject_wrong_allomorphs_prefinals_and_known_roles"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ne_endings_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ne-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ne-forbidden-63",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-37",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-9",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-21",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-24",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:75191",
+      "source_sha256": "03f7a72d037597ec01b8b725cbeebbaca4949f6de2e6ad912c03ca476cb79fcb",
+      "status": "scoped",
+      "checklist": [
+        "COV-017v"
+      ],
+      "scope": "다네-family stem/prefinal allomorphs, copular/factual versus reported-command representation, existing auxiliary roles, polite 요 and reviewed concessive 도; all homonym IDs remain attributed.",
+      "remaining": "This scoped morphology review does not select informative versus quoted contextual senses, certify unknown lexical classes or resolve all honorific attachment questions. Other outer particles and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/report_ne_endings.rs",
+          "test": "report_ne_endings_preserve_prefinals_roles_and_bundled_alternatives"
+        },
+        {
+          "path": "tests/report_ne_endings.rs",
+          "test": "report_ne_endings_reject_wrong_allomorphs_prefinals_and_known_roles"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ne_endings_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ne-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ne-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-6",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-8",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-33",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-34",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-35",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-36",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-18",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-23",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:75476",
+      "source_sha256": "20e11bb0b72c46f22f8d912e266a4766fac4f43cdd11fd3faa7eb5256fc4fe74",
+      "status": "scoped",
+      "checklist": [
+        "COV-017v"
+      ],
+      "scope": "다네-family stem/prefinal allomorphs, copular/factual versus reported-command representation, existing auxiliary roles, polite 요 and reviewed concessive 도; all homonym IDs remain attributed.",
+      "remaining": "This scoped morphology review does not select informative versus quoted contextual senses, certify unknown lexical classes or resolve all honorific attachment questions. Other outer particles and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/report_ne_endings.rs",
+          "test": "report_ne_endings_preserve_prefinals_roles_and_bundled_alternatives"
+        },
+        {
+          "path": "tests/report_ne_endings.rs",
+          "test": "report_ne_endings_reject_wrong_allomorphs_prefinals_and_known_roles"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ne_endings_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ne-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ne-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-23",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-38",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-40",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-required-41",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-10",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-11",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ne-forbidden-17",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

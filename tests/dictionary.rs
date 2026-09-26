@@ -5460,3 +5460,788 @@ fn noh_contraction_preserves_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn report_ne_endings_preserve_dictionary_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-report-ne.json")],
+        dir.db(),
+        "report-ne-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        (
+            "좋다는데도",
+            vec!["좋다"],
+            vec!["다는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "간다는데도",
+            vec!["가다"],
+            vec!["는다는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹는다는데도",
+            vec!["먹다"],
+            vec!["는다는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이라는데도",
+            vec!["학생", "이다"],
+            vec!["라는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "의사라는데도",
+            vec!["의사", "이다"],
+            vec!["라는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹으라는데도",
+            vec!["먹다"],
+            vec!["으라는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "가라는데도",
+            vec!["가다"],
+            vec!["으라는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹으리라는데도",
+            vec!["먹다"],
+            vec!["으리", "라는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹었더라는데도",
+            vec!["먹다"],
+            vec!["었", "더", "라는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹었더라는데도",
+            vec!["먹다"],
+            vec!["었", "더라는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹고싶다는데도",
+            vec!["먹다", "싶다"],
+            vec!["고", "다는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹어본다는데도",
+            vec!["먹다", "보다"],
+            vec!["어", "는다는데", "도"],
+            MorphemeKind::Particle,
+        ),
+        ("좋다네", vec!["좋다"], vec!["다네"], MorphemeKind::Ending),
+        ("있다네", vec!["있다"], vec!["다네"], MorphemeKind::Ending),
+        (
+            "먹었다네",
+            vec!["먹다"],
+            vec!["었", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹겠다네",
+            vec!["먹다"],
+            vec!["겠", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으셨겠다네",
+            vec!["먹다"],
+            vec!["시", "었", "겠", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풍속이었다네",
+            vec!["풍속", "이다"],
+            vec!["었", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이셨다네",
+            vec!["학생", "이다"],
+            vec!["시", "었", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "놓았었다네",
+            vec!["놓다"],
+            vec!["었", "었", "다네"],
+            MorphemeKind::Ending,
+        ),
+        ("간다네", vec!["가다"], vec!["는다네"], MorphemeKind::Ending),
+        ("산다네", vec!["살다"], vec!["는다네"], MorphemeKind::Ending),
+        (
+            "먹는다네",
+            vec!["먹다"],
+            vec!["는다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "도우신다네",
+            vec!["돕다"],
+            vec!["시", "는다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "판매한다네",
+            vec!["판매하다"],
+            vec!["는다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이라네",
+            vec!["학생", "이다"],
+            vec!["라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사라네",
+            vec!["의사", "이다"],
+            vec!["라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "아니라네",
+            vec!["아니다"],
+            vec!["라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "대부분이라네",
+            vec!["대부분", "이다"],
+            vec!["라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "단골집이라네",
+            vec!["단골집", "이다"],
+            vec!["라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으시라네",
+            vec!["먹다"],
+            vec!["시", "라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더라네",
+            vec!["먹다"],
+            vec!["더", "라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹었더라네",
+            vec!["먹다"],
+            vec!["었", "더", "라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으리라네",
+            vec!["먹다"],
+            vec!["으리", "라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이리라네",
+            vec!["학생", "이다"],
+            vec!["으리", "라네"],
+            MorphemeKind::Ending,
+        ),
+        ("가라네", vec!["가다"], vec!["으라네"], MorphemeKind::Ending),
+        ("살라네", vec!["살다"], vec!["으라네"], MorphemeKind::Ending),
+        (
+            "먹으라네",
+            vec!["먹다"],
+            vec!["으라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "들으라네",
+            vec!["듣다"],
+            vec!["으라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "도우라네",
+            vec!["돕다"],
+            vec!["으라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으시라네",
+            vec!["먹다"],
+            vec!["시", "으라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹고싶다네",
+            vec!["먹다", "싶다"],
+            vec!["고", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어본다네",
+            vec!["먹다", "보다"],
+            vec!["어", "는다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "도와주라네",
+            vec!["돕다", "주다"],
+            vec!["어", "으라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생답다네",
+            vec!["학생"],
+            vec!["답다", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹지않았다네",
+            vec!["먹다", "않다"],
+            vec!["지", "었", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이었다네",
+            vec!["학생", "이다"],
+            vec!["었", "다네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "좋다네요",
+            vec!["좋다"],
+            vec!["다네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹는다네요",
+            vec!["먹다"],
+            vec!["는다네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이라네요",
+            vec!["학생", "이다"],
+            vec!["라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹으라네요",
+            vec!["먹다"],
+            vec!["으라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹더라네요",
+            vec!["먹다"],
+            vec!["더", "라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹으리라네요",
+            vec!["먹다"],
+            vec!["으리", "라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹더라네",
+            vec!["먹다"],
+            vec!["더라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더라네요",
+            vec!["먹다"],
+            vec!["더라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "좋더라네",
+            vec!["좋다"],
+            vec!["더라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "좋더라네요",
+            vec!["좋다"],
+            vec!["더라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이더라네",
+            vec!["학생", "이다"],
+            vec!["더라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이더라네요",
+            vec!["학생", "이다"],
+            vec!["더라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "의사더라네",
+            vec!["의사", "이다"],
+            vec!["더라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사더라네요",
+            vec!["의사", "이다"],
+            vec!["더라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹었더라네",
+            vec!["먹다"],
+            vec!["었", "더라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹었더라네요",
+            vec!["먹다"],
+            vec!["었", "더라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹으셨겠더라네",
+            vec!["먹다"],
+            vec!["시", "었", "겠", "더라네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으셨겠더라네요",
+            vec!["먹다"],
+            vec!["시", "었", "겠", "더라네", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "좋다는데",
+            vec!["좋다"],
+            vec!["다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "있다는데",
+            vec!["있다"],
+            vec!["다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹었다는데",
+            vec!["먹다"],
+            vec!["었", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹겠다는데",
+            vec!["먹다"],
+            vec!["겠", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으셨겠다는데",
+            vec!["먹다"],
+            vec!["시", "었", "겠", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풍속이었다는데",
+            vec!["풍속", "이다"],
+            vec!["었", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이셨다는데",
+            vec!["학생", "이다"],
+            vec!["시", "었", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "놓았었다는데",
+            vec!["놓다"],
+            vec!["었", "었", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "간다는데",
+            vec!["가다"],
+            vec!["는다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "산다는데",
+            vec!["살다"],
+            vec!["는다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹는다는데",
+            vec!["먹다"],
+            vec!["는다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "도우신다는데",
+            vec!["돕다"],
+            vec!["시", "는다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "판매한다는데",
+            vec!["판매하다"],
+            vec!["는다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이라는데",
+            vec!["학생", "이다"],
+            vec!["라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사라는데",
+            vec!["의사", "이다"],
+            vec!["라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "아니라는데",
+            vec!["아니다"],
+            vec!["라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "대부분이라는데",
+            vec!["대부분", "이다"],
+            vec!["라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "단골집이라는데",
+            vec!["단골집", "이다"],
+            vec!["라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으시라는데",
+            vec!["먹다"],
+            vec!["시", "라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더라는데",
+            vec!["먹다"],
+            vec!["더", "라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹었더라는데",
+            vec!["먹다"],
+            vec!["었", "더", "라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으리라는데",
+            vec!["먹다"],
+            vec!["으리", "라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이리라는데",
+            vec!["학생", "이다"],
+            vec!["으리", "라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "가라는데",
+            vec!["가다"],
+            vec!["으라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "살라는데",
+            vec!["살다"],
+            vec!["으라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으라는데",
+            vec!["먹다"],
+            vec!["으라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "들으라는데",
+            vec!["듣다"],
+            vec!["으라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "도우라는데",
+            vec!["돕다"],
+            vec!["으라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으시라는데",
+            vec!["먹다"],
+            vec!["시", "으라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹고싶다는데",
+            vec!["먹다", "싶다"],
+            vec!["고", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어본다는데",
+            vec!["먹다", "보다"],
+            vec!["어", "는다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "도와주라는데",
+            vec!["돕다", "주다"],
+            vec!["어", "으라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생답다는데",
+            vec!["학생"],
+            vec!["답다", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹지않았다는데",
+            vec!["먹다", "않다"],
+            vec!["지", "었", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이었다는데",
+            vec!["학생", "이다"],
+            vec!["었", "다는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "좋다는데요",
+            vec!["좋다"],
+            vec!["다는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹는다는데요",
+            vec!["먹다"],
+            vec!["는다는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이라는데요",
+            vec!["학생", "이다"],
+            vec!["라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹으라는데요",
+            vec!["먹다"],
+            vec!["으라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹더라는데요",
+            vec!["먹다"],
+            vec!["더", "라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹으리라는데요",
+            vec!["먹다"],
+            vec!["으리", "라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹더라는데",
+            vec!["먹다"],
+            vec!["더라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더라는데요",
+            vec!["먹다"],
+            vec!["더라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "좋더라는데",
+            vec!["좋다"],
+            vec!["더라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "좋더라는데요",
+            vec!["좋다"],
+            vec!["더라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이더라는데",
+            vec!["학생", "이다"],
+            vec!["더라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이더라는데요",
+            vec!["학생", "이다"],
+            vec!["더라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "의사더라는데",
+            vec!["의사", "이다"],
+            vec!["더라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사더라는데요",
+            vec!["의사", "이다"],
+            vec!["더라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹었더라는데",
+            vec!["먹다"],
+            vec!["었", "더라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹었더라는데요",
+            vec!["먹다"],
+            vec!["었", "더라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹으셨겠더라는데",
+            vec!["먹다"],
+            vec!["시", "었", "겠", "더라는데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으셨겠더라는데요",
+            vec!["먹다"],
+            vec!["시", "었", "겠", "더라는데", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "판매한다네요",
+            vec!["판매하다"],
+            vec!["는다네", "요"],
+            MorphemeKind::Particle,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    let ledger: Value = serde_json::from_str(include_str!("fixtures/validity.json")).unwrap();
+    for case in ledger["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["id"].as_str().unwrap().starts_with("report-ne-"))
+    {
+        let word = case["surface"].as_str().unwrap();
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        for judgment in case["judgments"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|j| j["verdict"] == "forbidden")
+        {
+            let lemmas: Vec<_> = judgment["lemmas"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            let forms: Vec<_> = judgment["morphemes"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            assert!(
+                !kept.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                "{word}: {forms:?}"
+            );
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

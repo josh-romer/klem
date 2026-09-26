@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–u/018a–i/019a–f/020a–h/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–v/018a–i/019a–f/020a–h/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 138 scoped
-  dispositions from COV-016/017m–n/017p–u/018e–i/019d–f/020d–h; 577 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 142 scoped
+  dispositions from COV-016/017m–n/017p–v/018e–i/019d–f/020d–h; 573 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -218,7 +218,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–u implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–v implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -501,6 +501,26 @@ review remains open under the completion review below.
   reviews 119 surfaces and 192 additions, with no lost candidates or changed
   existing provenance. 놨었지요 newly matches development gold; all 30 stress
   fingerprints remain unchanged. Broader auxiliary restrictions remain COV-019.
+
+- [x] **COV-017v — Informative/reported 다네 and 다는데 families.**
+  Ten canonical forms preserve present ㄴ/는 allomorphs, plain adjective/prefinal
+  attachment, copular/factual 라 forms and separate (으)라 command readings.
+  더라네/더라는데 bundles coexist with split retrospective components;
+  source-listed polite 요 and concessive 도 paths retain the same restrictions.
+  No implicit reporting 하다 or contextual sense is selected. Known auxiliary
+  roles and -답다 derivation constrain attachment; unknown lexical classes and
+  broader honorific judgments remain unverified.
+  The shorter 라는데 entry has a narrower note than 더라는데/라는데요/라는데도;
+  the latter entries support the retrospective/conjectural family paths. The
+  [review](report-ne-evaluation.json) records this compositional interpretation.
+  Evidence: [path/boundary tests](../tests/report_ne_endings.rs), 187 `report-ne-*`
+  ledger cases, five complete annotated sentences, dictionary/CLI parity and
+  browser homonym/source/normalization checks. The comparison accounts for 954
+  additions on 186 surfaces with no lost candidates or changed prior provenance;
+  all 30 stress fingerprints remain unchanged. Five development groups newly
+  match, including 대부분이라는데, 풍속이었다네 and 판매한다네요.
+  Further quoted families, outer particles, sense choice and independent Korean
+  review remain open. See [scope and sources](rules.md#informative-and-reported-ne-families-cov-017v).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–i implement post-ending, outer choice, emphatic,
@@ -936,7 +956,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 256 currently emitted canonical grammar forms.** The initial catalog
+  for all 270 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

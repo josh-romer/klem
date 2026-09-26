@@ -402,21 +402,27 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             | "을수록"
                             | "던가"
                             | "던지"
+                            | "더라네"
+                            | "더라는데"
                     )
                 {
                     continue;
                 }
                 // Present reported forms permit honorific 시 but no other
                 // prefinals; past/modal use their plain 다- counterparts.
-                if matches!(ending.form, "는다면" | "는답니다" | "는다거나" | "는다든가")
-                    && p.morphs.iter().any(|m| m.form != "시")
+                if matches!(
+                    ending.form,
+                    "는다면" | "는답니다" | "는다거나" | "는다든가" | "는다네" | "는다는데"
+                ) && p.morphs.iter().any(|m| m.form != "시")
                 {
                     continue;
                 }
                 // Informative/reported -답니다 permits honorific, past and
                 // modal markers; retrospective 더 instead takes -랍니다.
-                if matches!(ending.form, "답니다" | "다거나" | "다든가")
-                    && p.morphs.iter().any(|m| m.form == "더")
+                if matches!(
+                    ending.form,
+                    "답니다" | "다거나" | "다든가" | "다네" | "다는데"
+                ) && p.morphs.iter().any(|m| m.form == "더")
                 {
                     continue;
                 }
@@ -487,6 +493,8 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "으라면"
                         | "으란"
                         | "으랍니다"
+                        | "으라네"
+                        | "으라는데"
                         | "으라거나"
                         | "으세요"
                         | "으십시오"
@@ -501,10 +509,21 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "어라" && p.morphs.iter().any(|m| m.form == "더") {
                     continue;
                 }
+                // The wider 라는데 family includes retrospective 더라는데
+                // (KRDict 86356); 라는데요 (82264) also lists conjectural 으리.
+                // Preserve their split components despite the shorter entry's
+                // narrower attachment note, as with bundled 더라네 below.
                 let factual_ra = matches!(ending.boundary, Boundary::Literal)
                     && matches!(
                         ending.form,
-                        "라" | "라서" | "라고" | "라는" | "라면" | "랍니다" | "라든가"
+                        "라" | "라서"
+                            | "라고"
+                            | "라는"
+                            | "라면"
+                            | "랍니다"
+                            | "라든가"
+                            | "라네"
+                            | "라는데"
                     );
                 if factual_ra
                     && !p.morphs.last().is_some_and(|m| {
@@ -558,6 +577,21 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     p.rules.push("ending.reporting_polite".into());
                 }
+                if matches!(
+                    ending.form,
+                    "다네"
+                        | "는다네"
+                        | "라네"
+                        | "으라네"
+                        | "다는데"
+                        | "는다는데"
+                        | "라는데"
+                        | "으라는데"
+                        | "더라네"
+                        | "더라는데"
+                ) {
+                    p.rules.push("ending.reporting_ne".into());
+                }
                 if factual_ra {
                     p.rules.push("ending.factual_ra".into());
                 }
@@ -582,7 +616,17 @@ fn predicates(word: &str) -> Vec<Predicate> {
     }
     // Conjectural (으)리 precedes this source-listed factual family only.
     // Preserve existing bundled -(으)리라 / -(으)리라고 alternatives.
-    for ending in ["란", "라", "라서", "라고", "라면", "랍니다", "라든가"] {
+    for ending in [
+        "란",
+        "라",
+        "라서",
+        "라고",
+        "라면",
+        "랍니다",
+        "라든가",
+        "라네",
+        "라는데",
+    ] {
         if let Some(base) = word.strip_suffix(ending) {
             for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
                 for r in grammar::recover(base, suffix, boundary) {
@@ -608,6 +652,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         ]);
                         if ending == "랍니다" {
                             p.rules.push("ending.reporting_polite".into());
+                        }
+                        if matches!(ending, "라네" | "라는데") {
+                            p.rules.push("ending.reporting_ne".into());
                         }
                         if ending == "라든가" {
                             p.rules.push("ending.quoted_alternative".into());
@@ -828,6 +875,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                     m.form.as_str(),
                     "자면"
                         | "으랍니다"
+                        | "으라네"
+                        | "으라는데"
                         | "으라거나"
                         | "자거나"
                         | "는다"
@@ -847,6 +896,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                             | "는다는"
                             | "는다면"
                             | "는답니다"
+                            | "는다네"
+                            | "는다는데"
                             | "는"
                             | "는데"
                             | "는데요"
@@ -860,7 +911,9 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                     ),
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
-                    Some(PredicateClass::Verb) => matches!(m.form.as_str(), "다거나" | "다든가"),
+                    Some(PredicateClass::Verb) => {
+                        matches!(m.form.as_str(), "다거나" | "다든가" | "다네" | "다는데")
+                    }
                     Some(PredicateClass::Copula) | None => false,
                 }
             {
@@ -895,6 +948,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 m.form.as_str(),
                 "자면"
                     | "으랍니다"
+                    | "으라네"
+                    | "으라는데"
                     | "으라거나"
                     | "자거나"
                     | "는다"
@@ -946,6 +1001,10 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "다니"
             | "다면"
             | "답니다"
+            | "다네"
+            | "다는데"
+            | "더라네"
+            | "더라는데"
             | "다거나"
             | "다든가"
             | "고"
@@ -1049,6 +1108,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                     | "으라면"
                     | "으란"
                     | "으랍니다"
+                    | "으라네"
+                    | "으라는데"
                     | "으라거나"
                     | "자거나"
                     | "는다"
@@ -1070,6 +1131,10 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 | "으냐는"
                 | "답니다"
                 | "는답니다"
+                | "다네"
+                | "는다네"
+                | "다는데"
+                | "는다는데"
                 | "다거나"
                 | "는다거나"
                 | "다든가"
@@ -1725,6 +1790,16 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                         | "을게"
                         | "을래"
                         | "다니"
+                        | "다네"
+                        | "는다네"
+                        | "라네"
+                        | "으라네"
+                        | "다는데"
+                        | "는다는데"
+                        | "라는데"
+                        | "으라는데"
+                        | "더라네"
+                        | "더라는데"
                 )
         }
         "들" => matches!(
@@ -1746,7 +1821,16 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 | "습니다"
                 | "으세요"
         ),
-        "은" | "는" | "도" => connective,
+        "은" | "는" => connective,
+        // Source-listed -다는데도/-라는데도 families retain their own
+        // present/command/factual licenses before concessive 도.
+        "도" => {
+            connective
+                || matches!(
+                    ending,
+                    "다는데" | "는다는데" | "라는데" | "으라는데" | "더라는데"
+                )
+        }
         "라도" => matches!(ending, "어" | "게" | "지" | "고"),
         // KRDict 나마 explicitly illustrates an adverbial 게 clause.
         "나마" => ending == "게",

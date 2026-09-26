@@ -49,6 +49,69 @@ fn lemma(text: &str, kind: LemmaKind) -> Lemma {
 }
 
 #[test]
+fn adverb_root_roles_preserve_matches_homonyms_and_dictionary_gaps() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-adverb-roots.json")],
+        dir.db(),
+        "adverb-roots",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, base, kind, suffix, headword_match, pos_match) in [
+        ("더욱이", "더욱", LemmaKind::Adverbial, "이", true, true),
+        ("곰곰이", "곰곰", LemmaKind::Adverbial, "이", true, true),
+        ("가만히", "가만", LemmaKind::Adverbial, "히", true, true),
+        ("낱낱이", "낱낱", LemmaKind::Nominal, "이", true, true),
+        ("집집이", "집집", LemmaKind::Nominal, "이", true, true),
+        ("점점이", "점점", LemmaKind::Nominal, "이", true, false),
+        ("틈틈이", "틈틈", LemmaKind::Nominal, "이", false, false),
+        ("익히", "익숙하다", LemmaKind::Predicate, "히", true, true),
+        ("특히", "특별하다", LemmaKind::Predicate, "히", true, true),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let filtered = result.filtered(|l| annotation.has_match(l, false));
+        let compatible = result.filtered(|l| annotation.has_match(l, true));
+        for (actual, expected) in [
+            (&result, true),
+            (&filtered, headword_match),
+            (&compatible, pos_match),
+        ] {
+            assert_eq!(
+                actual.analyses.iter().any(|a| a.lemmas.len() == 1
+                    && a.lemmas[0].text == base
+                    && a.lemmas[0].kind == kind
+                    && a.morphemes.len() == 1
+                    && a.morphemes[0].form == suffix
+                    && a.morphemes[0].kind == klem::MorphemeKind::Suffix),
+                expected,
+                "{word}"
+            );
+        }
+        assert!(
+            filtered.analyses.iter().any(|a| a.unchanged),
+            "{word}: keep whole lexical adverb"
+        );
+        for (dict_only, expected) in [(false, &result), (true, &filtered)] {
+            let mut command = Command::new(env!("CARGO_BIN_EXE_klem"));
+            command.args(["word", word, "--dictionary"]).arg(dir.db());
+            if dict_only {
+                command.arg("--dict-only");
+            }
+            let output = command.output().unwrap();
+            assert!(output.status.success());
+            let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+            assert_eq!(
+                actual["analyses"],
+                serde_json::to_value(&expected.analyses).unwrap()
+            );
+        }
+    }
+}
+
+#[test]
 fn omitted_copulas_keep_short_expanded_and_lexical_dictionary_readings() {
     let dir = Scratch::new();
     import_krdict(

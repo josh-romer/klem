@@ -3,6 +3,41 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn lexicalized_adverb_gold_is_preserved_alongside_optional_derivations() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-adverb-roots.conllu").as_slice(),
+            vec![
+                ("id:MH2_0069-s237/1", "더욱이"),
+                ("id:MH2_0159-s132/15", "일일이"),
+                ("id:MH2_0159-s369/16", "익히"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-adverb-roots.conllu").as_slice(),
+            vec![("id:dev-s174/9", "특히")],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "adverb-roots").unwrap();
+        for (id, surface) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [surface]);
+            assert!(case.matched, "{id}");
+            let result = klem::Lemmatizer::new().analyze_word(surface).unwrap();
+            assert!(result.analyses.iter().any(|a| a.unchanged));
+            assert!(result.analyses.iter().any(|a| {
+                a.morphemes
+                    .iter()
+                    .any(|m| m.kind == klem::MorphemeKind::Suffix)
+            }));
+        }
+    }
+}
+
+#[test]
 fn omitted_copulas_recover_annotated_short_and_full_nominal_groups() {
     for (corpus, input, cases) in [
         (

@@ -9,8 +9,8 @@ fn fixture() -> validity::Suite {
 fn source_backed_judgments_pass_and_unreviewed_outputs_stay_visible() {
     let report = validity::evaluate(&fixture()).unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!(report.required_total, 176);
-    assert_eq!(report.forbidden_total, 144);
+    assert_eq!(report.required_total, 184);
+    assert_eq!(report.forbidden_total, 148);
     assert!(!report.review_queue.is_empty());
     assert_eq!(
         report.emitted_nonidentity,
@@ -55,5 +55,53 @@ fn conflicting_scopes_duplicate_ids_and_missing_sources_fail() {
     assert!(validity::evaluate(&suite).is_err());
     let mut suite = fixture();
     suite.sources.clear();
+    assert!(validity::evaluate(&suite).is_err());
+}
+
+#[test]
+fn homonymous_forms_are_judged_by_optional_roles_without_hiding_alternatives() {
+    let mut suite = fixture();
+    suite.cases.retain(|c| c.id == "adverb-root-nominal");
+    let report = validity::evaluate(&suite).unwrap();
+    assert!(report.passed());
+    assert_eq!(report.required_present, 1);
+    assert!(
+        report
+            .review_queue
+            .iter()
+            .any(|r| r.analysis.lemmas[0].text == "낱낱"
+                && r.analysis.morphemes.len() == 1
+                && r.analysis.morphemes[0].kind == klem::MorphemeKind::Particle)
+    );
+    let mut alternative = serde_json::from_value::<validity::Judgment>(serde_json::json!({
+        "id":"particle", "lemmas":["낱낱"], "lemma_kinds":["nominal"],
+        "morphemes":["이"], "morpheme_kinds":["particle"], "verdict":"forbidden",
+        "source":"adverb-root-i", "reason":"Synthetic mutation: ensure the distinct particle candidate is detected."
+    })).unwrap();
+    suite.cases[0].judgments.push(alternative);
+    let report = validity::evaluate(&suite).unwrap();
+    assert_eq!(report.required_present, 1);
+    assert_eq!(report.forbidden_present, 1);
+    assert_eq!(report.violations.len(), 1);
+    // Removing a role constraint broadens the forbidden scope and conflicts.
+    suite.cases[0].judgments[1].morpheme_kinds = None;
+    assert!(
+        validity::evaluate(&suite)
+            .unwrap_err()
+            .contains("conflicting")
+    );
+    alternative = suite.cases[0].judgments.pop().unwrap();
+    alternative.morpheme_kinds = Some(vec![
+        klem::MorphemeKind::Particle,
+        klem::MorphemeKind::Particle,
+    ]);
+    suite.cases[0].judgments.push(alternative);
+    assert!(
+        validity::evaluate(&suite)
+            .unwrap_err()
+            .contains("invalid judgment")
+    );
+    suite.cases[0].judgments.pop();
+    suite.cases[0].judgments[0].lemma_kinds = Some(vec![]);
     assert!(validity::evaluate(&suite).is_err());
 }

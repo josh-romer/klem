@@ -1164,3 +1164,38 @@ groups and every changed candidate for 41 audited surfaces. Other omitted-copula
 endings and prefinals, particle-marked nominal bases, broader colloquial noun
 paradigms, and contextual sense selection remain open. Composition judgments
 beyond explicit source examples await independent Korean-language review.
+
+### Adverb and repeated nominal bases; shortened adverbs (COV-022b)
+
+The [finite source inventory](adverb-root-inventory.json) adds eight adverb bases
+(곰곰, 더욱, 일찍, 오뚝, 히죽, 생긋, 가만, 단연) and twenty-one repeated
+nominal bases before their listed adverb-forming 이/히. Thus 더욱이 has 더욱 +
+이 with an Adverbial lemma; 낱낱이 has 낱낱 + 이 with a Nominal lemma and Suffix
+component. The same spelling also retains any subject-particle reading. Repeated
+bases remain one component, without recursively splitting them or claiming that
+every repeated string is a lexical noun. The inventory explicitly records absent
+base entries and homonyms whose dictionary POS is incompatible with that path.
+
+NIKL describes 익히 and 특히 as shortened 익숙히 and 특별히. These gain
+normalized lookup paths through 익숙하다 and 특별하다; their displayed roots are
+익숙 and 특별, followed by 히. The full forms are also supported. This does not
+invent 익하다/특하다, delete arbitrary syllables, or equate every contextual sense.
+The whole lexical adverb remains the initial dictionary-compatible browser reading.
+
+Adverb-compatible outer particles compose across the new base classes, including
+더욱이도, 곰곰이만은, 가만히들, 낱낱이도, and 익히도. A nominal *base* does
+not license subject/object/location case on the resulting derived adverb. Existing
+whole-word noun and particle hypotheses remain separate. Dictionary filtering
+uses actual entries: 틈틈 lacks a standalone entry, while 점점 has an adverb entry
+but no nominal entry in the pinned snapshot. Neither gap is repaired by inventing
+an entry or changing POS compatibility.
+
+Sources: NIKL's [spelling families](https://www.korean.go.kr/nkview/nknews/199911/16_11.htm)
+and [익히/특히 explanation](https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8296&mn_id=62&pageIndex=5),
+and KRDict [-이](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88927)
+and [-히](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88504).
+[Evaluation](adverb-root-evaluation.json) records all additions for 55 surfaces.
+Opaque roots such as 천천히/분연히, other lexical classes, nominal -이,
+subdivision of nonlexical repeated bases, and derivation across suffix/auxiliary
+boundaries remain open. The corpus fixtures preserve whole-word lexical adverb
+annotations; optional decompositions are source-backed judgments, not new corpus gold.

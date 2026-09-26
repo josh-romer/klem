@@ -2,6 +2,10 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "adverb-shortening": "https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8296&mn_id=62&pageIndex=5",
+    "adverb-root-i": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88927",
+    "adverb-root-hi": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88504",
+
     "copula-omission-formal": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5935&mn_id=62&pageIndex=210",
     "copula-omission-background": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=306752",
     "copula-omission-confirmation": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85771",
@@ -138,6 +142,19 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id":"adverb-root-adverb","surface":"더욱이","judgments":[{"id":"path","lemmas":["더욱"],"morphemes":["이"],"verdict":"required","reason":"The source lists an adverb base with adverb-forming 이, not a predicate.","source":"adverb-root-i","lemma_kinds":["adverbial"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-adverb-hi","surface":"가만히","judgments":[{"id":"path","lemmas":["가만"],"morphemes":["히"],"verdict":"required","reason":"The source lists 가만히; preserve the adverb base 가만.","source":"adverb-root-hi","lemma_kinds":["adverbial"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-nominal","surface":"낱낱이","judgments":[{"id":"path","lemmas":["낱낱"],"morphemes":["이"],"verdict":"required","reason":"The listed repeated nominal base precedes adverbial 이; subject-particle alternatives remain.","source":"adverb-root-i","lemma_kinds":["nominal"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-nominal-missing-dictionary","surface":"틈틈이","judgments":[{"id":"path","lemmas":["틈틈"],"morphemes":["이"],"verdict":"required","reason":"The documented repeated nominal base is retained even though KRDict lacks a standalone entry; dictionary-only filtering may remove it.","source":"adverb-root-i","lemma_kinds":["nominal"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-nominal-particle","surface":"집집이도","judgments":[{"id":"path","lemmas":["집집"],"morphemes":["이","도"],"verdict":"required","reason":"Composition judgment: the derived adverb permits reviewed additive 도.","source":"adverb-root-i","lemma_kinds":["nominal"],"morpheme_kinds":["suffix","particle"]}]},
+    {"id":"adverb-root-short-ik","surface":"익히","judgments":[{"id":"path","lemmas":["익숙하다"],"morphemes":["히"],"verdict":"required","reason":"The source relates 익히 to 익숙히; use the related predicate lookup lemma and retain lexical 익히.","source":"adverb-shortening","lemma_kinds":["predicate"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-short-teuk","surface":"특히","judgments":[{"id":"path","lemmas":["특별하다"],"morphemes":["히"],"verdict":"required","reason":"The source relates 특히 to 특별히, not nonexistent 특하다.","source":"adverb-shortening","lemma_kinds":["predicate"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-full-teuk","surface":"특별히","judgments":[{"id":"path","lemmas":["특별하다"],"morphemes":["히"],"verdict":"required","reason":"Preserve the documented full form alongside its shortened counterpart.","source":"adverb-shortening","lemma_kinds":["predicate"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-false-root","surface":"특히","judgments":[{"id":"path","lemmas":["특하다"],"morphemes":["히"],"verdict":"forbidden","reason":"NIKL explicitly rejects 특 as a 하다-attaching root for this explanation.","source":"adverb-shortening","lemma_kinds":["predicate"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-wrong-ending","surface":"곰곰히","judgments":[{"id":"path","lemmas":["곰곰"],"morphemes":["히"],"verdict":"forbidden","reason":"This listed adverb takes 이, not 히.","source":"adverb-root-i","lemma_kinds":["adverbial"],"morpheme_kinds":["suffix"]}]},
+    {"id":"adverb-root-case","surface":"낱낱이를","judgments":[{"id":"path","lemmas":["낱낱"],"morphemes":["이","를"],"verdict":"forbidden","reason":"The derived form is an adverb and is not licensed for object marking by this path.","source":"adverb-root-i","lemma_kinds":["nominal"],"morpheme_kinds":["suffix","particle"]}]},
+    {"id":"adverb-root-arbitrary-repetition","surface":"학교학교이","judgments":[{"id":"path","lemmas":["학교학교"],"morphemes":["이"],"verdict":"forbidden","reason":"The source limits the suffix to selected monosyllabic-noun repetitions; no arbitrary repeated-word rule is licensed.","source":"adverb-root-i","lemma_kinds":["nominal"],"morpheme_kinds":["suffix"]}]},
+
     {"id":"omitted-copula-formal-short","surface":"겁니다","judgments":[{"id":"path","lemmas":["거","이다"],"morphemes":["습니다"],"verdict":"required","source":"copula-omission-formal","reason":"NIKL explicitly describes 겁니다 as 거 plus 이다 with omitted 이."}]},
     {"id":"omitted-copula-formal-full","surface":"겁니다","judgments":[{"id":"path","lemmas":["것","이다"],"morphemes":["습니다"],"verdict":"required","source":"copula-omission-formal","reason":"Retain the expanded 것 counterpart alongside the source-described colloquial 거 reading."}]},
     {"id":"omitted-copula-background","surface":"건데","judgments":[{"id":"path","lemmas":["것","이다"],"morphemes":["은데"],"verdict":"required","source":"copula-omission-background","reason":"NIKL identifies 거 plus ㄴ데 and relates it to 것인데; expose the copula and canonical ending."}]},

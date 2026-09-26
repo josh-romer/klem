@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–l/018a–d/019a–c/020a–c/021a/022a batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–l/018a–d/019a–c/020a–c/021a/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -554,9 +554,10 @@ review remains open under the completion review below.
   and [development comparison](negative-contraction-evaluation.json).
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds
-  source-listed predicate adverbs, including 가까이.** Remaining: other lexical
-  classes, adverb/noun roots, reduplicated nouns, shortened 익히/특히, and
-  nominal -이. Keep lexical readings and causative/noun homonyms; historical
+  source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb
+  and repeated nominal bases plus shortened 익히/특히.** Remaining: other lexical
+  classes, opaque roots (including 천천히/분연히), subdivision of nonlexical
+  repeated bases, suffix/auxiliary interactions, and nominal -이. Keep lexical readings and causative/noun homonyms; historical
   달리/빨리 do not license a general 르 inflection rule.
 - [x] **COV-022a — Source-listed predicate adverbs.** Six explicit ㅂ-stem
   recoveries include 가까이 → 가깝다 and 가벼이 → 가볍다. 헛되이 and 적잖이
@@ -570,6 +571,22 @@ review remains open under the completion review below.
   dictionary/CLI parity, browser root/suffix/source-link tests, and
   [development comparison](adverb-expansion-evaluation.json). All current
   snapshots remain unchanged. See [scope](rules.md#additional-predicate-adverbs-cov-022a).
+
+- [x] **COV-022b — Adverb/repeated nominal roots and shortened adverbs.**
+  A [33-form inventory](adverb-root-inventory.json) adds eight adverb bases,
+  twenty-one repeated nominal bases, shortened 익히/특히, and their full forms.
+  The new paths retain base roles and adverbial suffixes, preserve whole lexical
+  readings and homonymous particle paths, and compose with the existing
+  adverb-compatible particles. Repeated bases remain single components; fourteen
+  base/role dictionary gaps are explicit. The source-backed shortening uses
+  익숙하다/특별하다 for lookup rather than inventing 익하다/특하다.
+  Evidence: [role/boundary tests](../tests/adverb_roots.rs), twelve
+  `adverb-root-*` ledger cases, four complete corpus sentences preserving lexical
+  gold, dictionary/CLI parity, and browser suffix/source-link checks. Optional
+  role constraints now distinguish homonymous paths in the ledger and retain
+  unjudged alternatives. [Evaluation](adverb-root-evaluation.json) records all
+  additions for 55 surfaces, unchanged development recall, and all thirty
+  unchanged stress fingerprints. See [scope](rules.md#adverb-and-repeated-nominal-bases-shortened-adverbs-cov-022b).
 
 ### P3: dictionary and representation boundaries
 

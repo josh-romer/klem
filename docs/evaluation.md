@@ -133,9 +133,12 @@ cargo run --release --locked --example evaluate_validity -- \
 ```
 
 The structured ledger supplies stable case/judgment IDs, ordered lemma groups,
-optional exact morpheme sequences, required/forbidden verdicts, rationales, and
-primary-source links. Missing morphemes mean that the judgment covers all paths
-for that lemma group. Overlapping contradictory judgments, duplicate IDs, and
+optional exact morpheme sequences, optional `lemma_kinds` and `morpheme_kinds`,
+required/forbidden verdicts, rationales, and primary-source links. Missing fields
+leave that dimension unconstrained. Role lists must match their corresponding
+text-list lengths when both are present. This lets identical 이 strings retain
+distinct suffix and particle judgments. Older role-unspecified judgments preserve
+their broad scopes. Overlapping contradictory judgments, duplicate IDs, and
 missing evidence are rejected. Normal tests run the ledger offline.
 
 The initial 16 cases have 11 required and 10 forbidden judgments. All pass; 11
@@ -657,3 +660,36 @@ short/full nominal selectors and CLI parity. `nix flake check` and
 smoke verifies seven readings, all four added short-allomorph source links,
 three forbidden paths, lexical 거지 preservation, and desktop/mobile layout.
 Other declared Nix platforms were not executed on this host.
+
+## Adverb/repeated nominal bases and shortened adverbs (COV-022b)
+
+[The source inventory](adverb-root-inventory.json) records 33 forms and their
+actual dictionary entries. Eight adverb bases and twenty-one repeated nominal
+bases gain adverbial suffix paths. 익히/특히 gain the documented 익숙히/특별히
+recoveries with related predicate lookup lemmas; the full forms also work. The
+[evaluation](adverb-root-evaluation.json) records every added analysis for 55
+surfaces, with no removals. Fourteen base/role combinations lack compatible
+entries in the pinned dictionary, including twelve absent bases and two
+adverb-only homonyms. These remain explicit filtering limits.
+
+Twelve new cases bring the ledger to **326 cases, 184 required and 148 forbidden
+judgments**. Optional lemma/morpheme role constraints now distinguish suffix 이
+from particle 이. Tests verify that unjudged homonyms stay in the review queue,
+broader contradictory scopes are rejected, and malformed role lengths fail.
+Existing role-unspecified scopes retain their previous meaning. Role-specific
+source judgments remain agent-authored pending independent linguistic review.
+
+The four offline corpus sentences keep whole-word adverb gold; they do not
+supply independent derivational gold. Development recall remains **148 KAIST and
+173 GSD misses**, without lost grouped recoveries or component sets. All thirty
+current compatibility fingerprints, all 66,570 frozen cases, and the
+1,024-syllable memory test pass. The Rust suite and Clippy pass. The 221-form
+teaching catalog and its 263-entry grammar-source fixture remain unchanged;
+a separate 52-entry attributed lexical fixture supplies the new dictionary tests.
+
+Formatting, the frontend production build, the complete browser/HTTP suite,
+`nix flake check`, and `nix build .#web` pass on x86_64-linux. The packaged app
+with the full dictionary passes seven role-specific derivations and their suffix
+source links, lexical default selection, and the missing-base 틈틈이 filtering
+check. Desktop and mobile checks find no overflow or JavaScript errors. Other
+declared Nix platforms were not executed on this host.

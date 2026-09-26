@@ -54,7 +54,7 @@ impl Analysis {
                 }
                 if !matches!(
                     suffixes.as_slice(),
-                    [] | ["님"] | ["적"] | ["들"] | ["님", "들"]
+                    [] | ["님"] | ["적"] | ["들"] | ["님", "들"] | ["이"] | ["히"]
                 ) || (derived_predicate && suffixes.contains(&"적"))
                 {
                     return None;
@@ -66,7 +66,7 @@ impl Analysis {
                     .strip_suffix('다')
                     .filter(|stem| !stem.is_empty())?;
             }
-            let adverbial = lemma.kind == LemmaKind::Predicate
+            let adverbial = matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Adverbial)
                 && self.morphemes.get(cursor).is_some_and(|m| {
                     m.kind == MorphemeKind::Suffix && matches!(m.form.as_str(), "이" | "히")
                 });

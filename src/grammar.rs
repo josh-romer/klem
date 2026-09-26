@@ -6,6 +6,8 @@ use std::{collections::HashMap, sync::OnceLock};
 // related 하다 lemma is a lookup normalization; the suffix attaches to the root.
 // KRDict 88504 and NIKL's 1999 spelling discussion; see docs/adverb-inventory.json.
 pub(crate) const ADVERB_HADA_ROOTS: &[(&str, &str)] = &[
+    ("익숙", "히"),
+    ("특별", "히"),
     ("기웃", "이"),
     ("버젓", "이"),
     ("번듯", "이"),
@@ -63,6 +65,23 @@ pub(crate) const ADVERB_HADA_ROOTS: &[(&str, &str)] = &[
     ("무단", "히"),
     ("열심", "히"),
     ("상당", "히"),
+];
+
+// Source-listed adverbs formed from adverbs and repeated nominal bases.
+// Repeated bases remain one component; this is not arbitrary compound splitting.
+pub(crate) const ADVERB_ADVERB_ROOTS: &[(&str, &str)] = &[
+    ("곰곰", "이"),
+    ("더욱", "이"),
+    ("일찍", "이"),
+    ("오뚝", "이"),
+    ("히죽", "이"),
+    ("생긋", "이"),
+    ("가만", "히"),
+    ("단연", "히"),
+];
+pub(crate) const ADVERB_NOMINAL_ROOTS: &[&str] = &[
+    "겹겹", "곳곳", "낱낱", "몫몫", "샅샅", "앞앞", "집집", "누누", "다달", "번번", "올올", "일일",
+    "점점", "줄줄", "짬짬", "첩첩", "층층", "켜켜", "칸칸", "틈틈", "푼푼",
 ];
 
 #[derive(Debug, Clone)]
@@ -984,6 +1003,15 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "derivation.adverbial.hada" => {
             "Link a source-listed adverb root to its related 하다 adjective."
+        }
+        "derivation.adverbial.adverb" => {
+            "Separate a source-listed adverb base and its adverb-forming suffix; do not manufacture a predicate lemma."
+        }
+        "derivation.adverbial.nominal" => {
+            "Separate a source-listed repeated nominal base and adverb-forming -이. The repeated base remains one component and may lack a dictionary entry."
+        }
+        "derivation.adverbial.shortened" => {
+            "Recover 익숙히/특별히 behind shortened 익히/특히, using 익숙하다/특별하다 as lookup lemmas; retain the whole-word reading."
         }
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
         "pronoun" => "Restore a contracted pronoun with its particle.",

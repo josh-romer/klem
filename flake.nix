@@ -29,6 +29,7 @@
                 ./Cargo.lock
                 ./src
                 ./tests
+                ./docs/adverb-root-inventory.json
                 ./examples
                 ./tools/corpus.rs
                 ./tools/validity.rs

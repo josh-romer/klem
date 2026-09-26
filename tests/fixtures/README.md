@@ -421,3 +421,19 @@ fixture supplies noun/pronoun alternatives, the copula, and the tested auxiliary
 and whole-word homonyms. The grammar-label fixture additionally includes the
 short ending allomorph sources 79397, 79401, 80259, and 85132; all 259 previous
 entries remain unchanged.
+
+`krdict-adverb-roots.json` contains 52 primary KRDict entries from the September
+2026 export. `docs/adverb-root-inventory.json` records every source ID, base,
+whole-word entry and grammatical role. National Institute of Korean Language,
+CC BY-SA 2.0 KR; source/license links above apply. Changes: keep English
+translations and the first example per sense, remove WordForm/RelatedForm and
+global metadata, exclude idiom/proverb subentries, and reformat JSON. Missing
+base entries are recorded rather than synthesized.
+
+`kaist-adverb-roots.conllu` and `gsd-adverb-roots.conllu` contain three and one
+complete byte-identical development sentences under the corpus attribution and
+licenses above. The tested lexical adverbs are 더욱이, 일일이, 익히, and 특히;
+the source gold keeps each whole word. Tests preserve these existing recoveries
+alongside optional decompositions and do not relabel the corpus as derivational
+gold. File hashes and unchanged development recall appear in
+`docs/adverb-root-evaluation.json`.

@@ -115,6 +115,9 @@ try {
   const grammarLabelSources = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-grammar-labels.json"), "utf8"),
   );
+  const adverbRoots = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-adverb-roots.json"), "utf8"),
+  );
   const colloquialCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-colloquial-copulas.json"), "utf8"),
   );
@@ -198,6 +201,7 @@ try {
       ...grammarLabelSources.LexicalResource.Lexicon.LexicalEntry,
       ...emphaticParticles.LexicalResource.Lexicon.LexicalEntry,
       ...colloquialCopulas.LexicalResource.Lexicon.LexicalEntry,
+      ...adverbRoots.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -935,6 +939,13 @@ try {
     assert.ok(candidates.some(a => a.unchanged), `${word}: preserve the original word`);
   }
   for (const [word, expected, form, id] of [
+    ["더욱이", ["더욱", "이"], "이", 88927],
+    ["곰곰이", ["곰곰", "이"], "이", 88927],
+    ["낱낱이", ["낱낱", "이"], "이", 88927],
+    ["집집이", ["집집", "이"], "이", 88927],
+    ["가만히", ["가만", "히"], "히", 88504],
+    ["특히", ["특별", "히"], "히", 88504],
+    ["익히", ["익숙", "히"], "히", 88504],
     ["가까이", ["가깝", "이"], "이", 88927],
     ["적잖이", ["적잖", "이"], "이", 88927],
     ["깨끗이", ["깨끗", "이"], "이", 88927],
@@ -945,10 +956,14 @@ try {
     await waitHeading(page, word);
     // A dictionary adverb remains the compact initial reading.
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), [word]);
-    const choice = await breakdown.getByRole("combobox").locator("option").evaluateAll(
-      (options, text) => options.find(o => o.textContent.replace(/^\d+\. /, "") === text)?.value,
-      expected.join(" + "),
+    const api = await (await post("analyze", {text: word})).json();
+    // Nominal + subject 이 and nominal + adverbial suffix 이 can have
+    // identical component text. Select the suffix role by its API index.
+    const choices = await breakdown.getByRole("combobox").locator("option").evaluateAll(
+      options => options.map(o => ({value:o.value, text:o.textContent.replace(/^\d+\. /, "")})),
     );
+    const choice = choices.find(o => o.text === expected.join(" + ") &&
+      api.records[0].analysis.analyses[Number(o.value)].morphemes.some(m => m.kind === "suffix" && m.form === form))?.value;
     assert.ok(choice, word);
     await breakdown.getByRole("combobox").selectOption(choice);
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);

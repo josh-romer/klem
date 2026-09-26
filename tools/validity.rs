@@ -1,5 +1,5 @@
 //! Development-only candidate judgments. Unjudged outputs remain unknown.
-use klem::{Analysis, Lemmatizer};
+use klem::{Analysis, LemmaKind, Lemmatizer, MorphemeKind};
 use serde::{Deserialize, Serialize};
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -25,8 +25,11 @@ pub struct Case {
 pub struct Judgment {
     pub id: String,
     pub lemmas: Vec<String>,
+    /// Optional role constraints; omitted fields preserve existing broad scopes.
+    pub lemma_kinds: Option<Vec<LemmaKind>>,
     /// None selects all morpheme paths for this ordered lemma group.
     pub morphemes: Option<Vec<String>>,
+    pub morpheme_kinds: Option<Vec<MorphemeKind>>,
     pub verdict: Verdict,
     pub reason: String,
     pub source: String,
@@ -71,9 +74,17 @@ impl Judgment {
     fn matches(&self, a: &Analysis) -> bool {
         a.lemmas.iter().map(|l| &l.text).eq(self.lemmas.iter())
             && self
+                .lemma_kinds
+                .as_ref()
+                .is_none_or(|kinds| a.lemmas.iter().map(|l| &l.kind).eq(kinds.iter()))
+            && self
                 .morphemes
                 .as_ref()
                 .is_none_or(|forms| a.morphemes.iter().map(|m| &m.form).eq(forms.iter()))
+            && self
+                .morpheme_kinds
+                .as_ref()
+                .is_none_or(|kinds| a.morphemes.iter().map(|m| &m.kind).eq(kinds.iter()))
     }
 }
 
@@ -110,6 +121,13 @@ pub fn evaluate(suite: &Suite) -> Result<Report, String> {
                 || !judgment_ids.insert(&j.id)
                 || j.lemmas.is_empty()
                 || j.lemmas.iter().any(String::is_empty)
+                || j.lemma_kinds
+                    .as_ref()
+                    .is_some_and(|k| k.len() != j.lemmas.len())
+                || j.morphemes
+                    .as_ref()
+                    .zip(j.morpheme_kinds.as_ref())
+                    .is_some_and(|(forms, kinds)| forms.len() != kinds.len())
                 || j.reason.trim().is_empty()
                 || !suite
                     .sources
@@ -119,11 +137,24 @@ pub fn evaluate(suite: &Suite) -> Result<Report, String> {
                 return Err(format!("invalid judgment {}/{}", case.id, j.id));
             }
             for other in &case.judgments[..i] {
+                fn compatible<T: PartialEq>(a: &Option<T>, b: &Option<T>) -> bool {
+                    a.is_none() || b.is_none() || a == b
+                }
+                let count = |j: &Judgment| {
+                    j.morphemes
+                        .as_ref()
+                        .map(Vec::len)
+                        .or_else(|| j.morpheme_kinds.as_ref().map(Vec::len))
+                };
                 let overlap = j.lemmas == other.lemmas
-                    && (j.morphemes.is_none()
-                        || other.morphemes.is_none()
-                        || j.morphemes == other.morphemes);
-                if overlap && (j.verdict != other.verdict || j.morphemes == other.morphemes) {
+                    && compatible(&j.lemma_kinds, &other.lemma_kinds)
+                    && compatible(&j.morphemes, &other.morphemes)
+                    && compatible(&j.morpheme_kinds, &other.morpheme_kinds)
+                    && compatible(&count(j), &count(other));
+                let identical = j.lemma_kinds == other.lemma_kinds
+                    && j.morphemes == other.morphemes
+                    && j.morpheme_kinds == other.morpheme_kinds;
+                if overlap && (j.verdict != other.verdict || identical) {
                     return Err(format!(
                         "conflicting or duplicate scopes: {}/{} and {}",
                         case.id, j.id, other.id

@@ -74,7 +74,53 @@ fn nominal_bases(word: &str) -> Vec<Analysis> {
 // Attachment is lexical: do not strip 이/히 from every noun/verb or infer a
 // general 르 rule from the historical 달리/빨리 forms.
 fn adverb_derivation(word: &str) -> Option<Analysis> {
+    for (root, suffix, kind, rule) in grammar::ADVERB_ADVERB_ROOTS
+        .iter()
+        .map(|&(root, suffix)| {
+            (
+                root,
+                suffix,
+                LemmaKind::Adverbial,
+                "derivation.adverbial.adverb",
+            )
+        })
+        .chain(grammar::ADVERB_NOMINAL_ROOTS.iter().map(|&root| {
+            (
+                root,
+                "이",
+                LemmaKind::Nominal,
+                "derivation.adverbial.nominal",
+            )
+        }))
+    {
+        if word.strip_suffix(suffix) == Some(root) {
+            return Some(Analysis {
+                lemmas: vec![lemma(root, kind)],
+                morphemes: vec![morph(suffix, MorphemeKind::Suffix)],
+                rules: vec![
+                    rule.into(),
+                    if suffix == "이" {
+                        "suffix.adverbial.i"
+                    } else {
+                        "suffix.adverbial.hi"
+                    }
+                    .into(),
+                ],
+                unchanged: false,
+            });
+        }
+    }
     let (stem, suffix, recovery) = match word {
+        "익히" => (
+            "익숙하".into(),
+            "히",
+            Some("derivation.adverbial.shortened"),
+        ),
+        "특히" => (
+            "특별하".into(),
+            "히",
+            Some("derivation.adverbial.shortened"),
+        ),
         "달리" => ("다르".into(), "이", Some("derivation.adverbial.lexical")),
         "빨리" => ("빠르".into(), "이", Some("derivation.adverbial.lexical")),
         _ => {
@@ -118,6 +164,9 @@ fn adverb_derivation(word: &str) -> Option<Analysis> {
     }];
     if let Some(rule) = recovery {
         rules.push(rule.into());
+        if rule == "derivation.adverbial.shortened" {
+            rules.push("derivation.adverbial.hada".into());
+        }
     }
     Some(Analysis {
         lemmas: vec![lemma(format!("{stem}다"), LemmaKind::Predicate)],

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–t/018a–i/019a–f/020a–h/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–u/018a–i/019a–f/020a–h/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 137 scoped
-  dispositions from COV-016/017m–n/017p–t/018e–i/019d–f/020d–h; 578 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 138 scoped
+  dispositions from COV-016/017m–n/017p–u/018e–i/019d–f/020d–h; 577 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -218,7 +218,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–t implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–u implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -488,6 +488,20 @@ review remains open under the completion review below.
   fingerprints and development gold/component recovery are preserved.
   Other followers, omitted-copula adnominals and lexical/contextual restrictions
   remain open. See [scope](rules.md#retrospective-adnominal-and-question-alternatives-cov-017t).
+- [x] **COV-017u — 놓아 → 놔 contraction.** Article 35 supplement 1
+  restores 놓다 in 놔/놔라/놨다, including compound-final 놓다, double past,
+  existing particles and auxiliary chains. Both verb and adjective/copular left
+  contexts of auxiliary 놓다 remain. This lexical exception does not generalize
+  ㅎ deletion (좋아 does not become 좌), treat phonetic 노아 as the written form,
+  or restore 놓 before a non-아/어 boundary. Lexical 놔두다 and split 놓다 + 두다
+  remain distinct; internal headword normalization is not added.
+  Evidence: [boundary/full-form tests](../tests/noh_contraction.rs), 64 `noh-*`
+  ledger cases, two complete KAIST sentences, dictionary/CLI parity and browser
+  normalization/source checks. The [comparison](noh-contraction-evaluation.json)
+  reviews 119 surfaces and 192 additions, with no lost candidates or changed
+  existing provenance. 놨었지요 newly matches development gold; all 30 stress
+  fingerprints remain unchanged. Broader auxiliary restrictions remain COV-019.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–i implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

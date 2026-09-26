@@ -7643,6 +7643,43 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:72578",
+      "source_sha256": "7c1658175309712206dca685203013c7373590c505323d76706cf0a364ab762a",
+      "status": "scoped",
+      "checklist": [
+        "COV-017u"
+      ],
+      "scope": "놓아 → 놔 contraction preserves 어 놓다 after verbs (sense 1), adjectives and 이다 (sense 2); existing tense, auxiliary chains and lexical alternatives remain.",
+      "remaining": "This is a spelling and role-preservation review, not certification of every contextual, lexical-subset or prefinal restriction. Full sentence sense selection remains outside the token-level generator.",
+      "evidence": [
+        {
+          "path": "tests/noh_contraction.rs",
+          "test": "noh_contraction_preserves_full_forms_tense_compounds_and_auxiliaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "noh_contraction_preserves_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/noh-contraction-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "noh-auxiliary-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "noh-auxiliary-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "noh-auxiliary-copula",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

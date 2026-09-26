@@ -13,14 +13,15 @@
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "ddce9e8bb838a25b73d395fb4be4ecc36dbd2352514ddd8ddabba99d480e7d30",
+    "docs/coverage-checklist.md": "0c24978315ccfa28726de6b8a2999394ef93daaa6d97694abe8ecbea88601782",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
-    "docs/inventory-audit.md": "44c2fb55564ae2a7d62a27eba7b4098a3c95ef7adf747bfdfb490b47575213dd",
-    "docs/inventory-reviews.json": "b3f9b7a645dafb9aa24293804cdcf3b5a77d269f8640fb33e8575335d8666712",
+    "docs/inventory-audit.md": "91270168655fb61326f790c776bc47247988589ba003c0e3ef3d808026f3d9e6",
+    "docs/inventory-reviews.json": "b5b36b3fffeb22253a049a617bf9ccbb8263e935d86bdc5fd07a4ee4ffe84109",
+    "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/prefinal-copula-evaluation.json": "51f8ee8c84b0909e7fae5d03bf40bd04783e85956b43a2f44d3c1a2b382af40e",
     "docs/question-copula-evaluation.json": "cdb143dfc27c253b3c87f875b6c010fae684c05f8e08dbb6dce5325577bd9d54",
@@ -34,14 +35,15 @@
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
-    "tests/corpus.rs": "ff9a60e04afe588b7e4e7fe46d4d84317d93b8bc5fb7fd8cf82b93c10a99a567",
+    "tests/corpus.rs": "abcf0ac70aafc057be713932b97641a5a98d828b4345c34a28d7a0ca66eb7736",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
-    "tests/dictionary.rs": "2c611f0b40115d4396855cae93a5a003452b19033d1bc1342086bf83dc32b721",
+    "tests/dictionary.rs": "b24b672c919b05a46b3f36744cb26a7d4be7471b8aebaaa6c1a09e14c073de0a",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
-    "tests/fixtures/validity.json": "1dd9ca500a28d68b413d414d146b8ffda51aef83760aeebea65d712ab0834c71",
+    "tests/fixtures/validity.json": "d7f236ee545886adab11045e911a64d8e77e4d377c08b2173c75860f6e4232ed",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
+    "tests/noh_contraction.rs": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
     "tests/prefinal_copulas.rs": "2898476eead2aec9180ac1775bc0742ad86fcfa65ea690c865a687e63113d003",
     "tests/question_copulas.rs": "ab4d8122ea796f7605e30d52d975f68e300f347364fce3f9b8fe1aba89c254cd",
@@ -61,11 +63,11 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 578,
-      "scoped": 137
+      "unreviewed": 577,
+      "scoped": 138
     },
     "with_catalog_links": 254,
-    "with_judgment_citations": 187
+    "with_judgment_citations": 188
   },
   "entries": [
     {
@@ -835,12 +837,62 @@
       },
       "source_sha256": "7c1658175309712206dca685203013c7373590c505323d76706cf0a364ab762a",
       "catalog": [],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "noh-auxiliary-adjective",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "noh-auxiliary-copula",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "noh-auxiliary-verb",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:72578",
+        "source_sha256": "7c1658175309712206dca685203013c7373590c505323d76706cf0a364ab762a",
+        "status": "scoped",
+        "checklist": [
+          "COV-017u"
+        ],
+        "scope": "놓아 → 놔 contraction preserves 어 놓다 after verbs (sense 1), adjectives and 이다 (sense 2); existing tense, auxiliary chains and lexical alternatives remain.",
+        "remaining": "This is a spelling and role-preservation review, not certification of every contextual, lexical-subset or prefinal restriction. Full sentence sense selection remains outside the token-level generator.",
+        "evidence": [
+          {
+            "path": "tests/noh_contraction.rs",
+            "test": "noh_contraction_preserves_full_forms_tense_compounds_and_auxiliaries"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "noh_contraction_preserves_dictionary_and_cli_parity"
+          },
+          {
+            "path": "docs/noh-contraction-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "noh-auxiliary-verb",
+            "judgment": "path"
+          },
+          {
+            "case": "noh-auxiliary-adjective",
+            "judgment": "path"
+          },
+          {
+            "case": "noh-auxiliary-copula",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

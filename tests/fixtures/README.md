@@ -692,3 +692,20 @@ same KRDict attribution and CC BY-SA 2.0 KR license as the other fixtures.
 `docs/question-copula-evaluation.json` records sources, fixture hashes, targeted
 additions and the individually inspected stress change. The stress history is
 retained; historical corpus baselines are unchanged.
+
+`krdict-noh-contraction.json` contains 26 primary word entries from the September
+2026 KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR).
+IDs: 15983, 26847, 28325, 28326, 31670, 48279, 58272, 59468, 61013, 61190,
+62051, 62171, 62249, 62601, 65570, 67470, 70060, 71234, 72578, 77243,
+79033, 83636, 86118, 86232, 89534, 92457. All homonyms and senses are retained,
+with English equivalents and the first example group per sense; WordForm,
+RelatedForm, idiom subentries and global metadata are omitted. Source/license
+links are above. Used for offline CLI/dictionary/browser contraction tests;
+these entries are not annotated sentence gold.
+
+`kaist-noh-contraction.conllu` preserves two complete byte-identical sentences
+from the pinned UD Korean KAIST development file, with its existing source and
+license attribution above. M2TA_069-s13/4 (놨었지요) newly recovers 놓다;
+MH2_0169-s453/6 (내놓아야) protects the full compound spelling. Original gold
+and historical baselines are unchanged; [the report](../../docs/noh-contraction-evaluation.json)
+records input and fixture hashes.

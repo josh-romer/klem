@@ -158,6 +158,11 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
         if let Some(prefix) = surface.strip_suffix('해') {
             push(&mut out, format!("{prefix}하"), "irregular.ha");
         }
+        // Article 35, supplement 1: 놓아 -> 놔, including compounds.
+        // This is lexical, not a general ㅎ-deletion rule (좋아 != 좌).
+        if let Some(prefix) = surface.strip_suffix('놔') {
+            push(&mut out, format!("{prefix}놓"), "contraction.noh");
+        }
         if surface == "퍼" {
             push(&mut out, "푸".into(), "irregular.pu");
         }
@@ -1072,6 +1077,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "boundary.attached" => "Recover an ending consonant fused into the final syllable.",
         "contraction.identical" => "Recover an absorbed 아/어 vowel.",
         "contraction.vowel" => "Undo vowel contraction (와, 워, 돼, or 여).",
+        "contraction.noh" => {
+            "Restore 놓아 from 놔 at an 아/어 boundary, including 놓다 compounds and auxiliaries."
+        }
         "deletion.eu" => "Restore stem-final ㅡ before 아/어.",
         "deletion.rieul" => "Restore ㄹ lost before a consonant ending.",
         "irregular.digeut" => "Hypothesize ㄷ irregular class: ㄷ becomes ㄹ before a vowel.",

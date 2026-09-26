@@ -136,6 +136,9 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const nohContraction = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-noh-contraction.json"), "utf8"),
+  );
   const questionCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-question-copulas.json"), "utf8"),
   );
@@ -254,6 +257,7 @@ try {
       ...seoConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...prefinalCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...questionCopulas.LexicalResource.Lexicon.LexicalEntry,
+      ...nohContraction.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -632,6 +636,14 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["놔", ["놓", "어"], "어", "Connective / informal", 86094, "ending"],
+    ["놨었지요", ["놓", "었", "었", "지요"], "지요", "Confirmation / question / suggestion", 85770, "ending"],
+    ["내놔요", ["내놓", "어요"], "어요", "Polite informal", 86571, "ending"],
+    ["먹어놨다", ["먹", "어", "놓", "었", "다"], "다", "Plain / dictionary ending", 85041, "ending"],
+    ["놔두었다", ["놓", "어", "두", "었", "다"], "다", "Plain / dictionary ending", 85041, "ending"],
+    ["놔두었다", ["놔두", "었", "다"], "다", "Plain / dictionary ending", 85041, "ending"],
+    ["좋아놔서", ["좋", "어", "놓", "어서"], "어서", "Sequence / reason / means", 80215, "ending"],
+    ["학생이어놔서", ["학생", "이", "어", "놓", "어서"], "어서", "Sequence / reason / means", 80215, "ending"],
     ["뭔지", ["뭐", "이", "은지"], "은지", "Uncertainty / wondering", 87432, "ending"],
     ["뭔가", ["뭐", "이", "은가"], "은가", "Question / wondering", 86125, "ending"],
     ["뭔가요", ["뭐", "이", "은가요"], "은가요", "Question / wondering (polite)", 86125, "ending"],
@@ -760,6 +772,10 @@ try {
     assert.ok(choice, word);
     await breakdown.getByRole("combobox").selectOption(choice);
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+    if (["놔", "놨었지요", "내놔요", "먹어놨다", "좋아놔서", "학생이어놔서"].includes(word) || (word === "놔두었다" && expected[0] === "놓")) {
+      assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("contraction.noh"));
+      assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+    }
     // Display may use 여 after 하 while lookup retains canonical 어.
     await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
@@ -1228,7 +1244,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

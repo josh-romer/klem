@@ -5144,3 +5144,319 @@ fn question_copulas_preserve_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn noh_contraction_preserves_dictionary_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-noh-contraction.json")],
+        dir.db(),
+        "noh-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        ("놔", vec!["놓다"], vec!["어"], MorphemeKind::Ending),
+        ("놔요", vec!["놓다"], vec!["어요"], MorphemeKind::Ending),
+        ("놔서", vec!["놓다"], vec!["어서"], MorphemeKind::Ending),
+        ("놔라", vec!["놓다"], vec!["어라"], MorphemeKind::Ending),
+        ("놔도", vec!["놓다"], vec!["어도"], MorphemeKind::Ending),
+        ("놔야", vec!["놓다"], vec!["어야"], MorphemeKind::Ending),
+        (
+            "놔야겠다",
+            vec!["놓다"],
+            vec!["어야겠", "다"],
+            MorphemeKind::Ending,
+        ),
+        ("놨다", vec!["놓다"], vec!["었", "다"], MorphemeKind::Ending),
+        (
+            "놨었지요",
+            vec!["놓다"],
+            vec!["었", "었", "지요"],
+            MorphemeKind::Ending,
+        ),
+        ("내놔", vec!["내놓다"], vec!["어"], MorphemeKind::Ending),
+        ("내놔요", vec!["내놓다"], vec!["어요"], MorphemeKind::Ending),
+        ("내놔서", vec!["내놓다"], vec!["어서"], MorphemeKind::Ending),
+        ("내놔라", vec!["내놓다"], vec!["어라"], MorphemeKind::Ending),
+        ("내놔도", vec!["내놓다"], vec!["어도"], MorphemeKind::Ending),
+        ("내놔야", vec!["내놓다"], vec!["어야"], MorphemeKind::Ending),
+        (
+            "내놔야겠다",
+            vec!["내놓다"],
+            vec!["어야겠", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내놨다",
+            vec!["내놓다"],
+            vec!["었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내놨었지요",
+            vec!["내놓다"],
+            vec!["었", "었", "지요"],
+            MorphemeKind::Ending,
+        ),
+        ("내려놔", vec!["내려놓다"], vec!["어"], MorphemeKind::Ending),
+        (
+            "내려놔요",
+            vec!["내려놓다"],
+            vec!["어요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내려놔서",
+            vec!["내려놓다"],
+            vec!["어서"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내려놔라",
+            vec!["내려놓다"],
+            vec!["어라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내려놔도",
+            vec!["내려놓다"],
+            vec!["어도"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내려놔야",
+            vec!["내려놓다"],
+            vec!["어야"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내려놔야겠다",
+            vec!["내려놓다"],
+            vec!["어야겠", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내려놨다",
+            vec!["내려놓다"],
+            vec!["었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "내려놨었지요",
+            vec!["내려놓다"],
+            vec!["었", "었", "지요"],
+            MorphemeKind::Ending,
+        ),
+        ("풀어놔", vec!["풀어놓다"], vec!["어"], MorphemeKind::Ending),
+        (
+            "풀어놔요",
+            vec!["풀어놓다"],
+            vec!["어요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풀어놔서",
+            vec!["풀어놓다"],
+            vec!["어서"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풀어놔라",
+            vec!["풀어놓다"],
+            vec!["어라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풀어놔도",
+            vec!["풀어놓다"],
+            vec!["어도"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풀어놔야",
+            vec!["풀어놓다"],
+            vec!["어야"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풀어놔야겠다",
+            vec!["풀어놓다"],
+            vec!["어야겠", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풀어놨다",
+            vec!["풀어놓다"],
+            vec!["었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "풀어놨었지요",
+            vec!["풀어놓다"],
+            vec!["었", "었", "지요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어놨다",
+            vec!["먹다", "놓다"],
+            vec!["어", "었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "적어놔두었다",
+            vec!["적다", "놓다", "두다"],
+            vec!["어", "어", "었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "놔두었다",
+            vec!["놓다", "두다"],
+            vec!["어", "었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "좋아놔서",
+            vec!["좋다", "놓다"],
+            vec!["어", "어서"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이어놔서",
+            vec!["학생", "이다", "놓다"],
+            vec!["어", "어서"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "놨겠지요",
+            vec!["놓다"],
+            vec!["었", "겠", "지요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "놨어도",
+            vec!["놓다"],
+            vec!["었", "어도"],
+            MorphemeKind::Ending,
+        ),
+        ("놔서는", vec!["놓다"], vec!["어서는"], MorphemeKind::Ending),
+        ("놔서도", vec!["놓다"], vec!["어서도"], MorphemeKind::Ending),
+        (
+            "놔보았다",
+            vec!["놓다", "보다"],
+            vec!["어", "었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "놔버렸다",
+            vec!["놓다", "버리다"],
+            vec!["어", "었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "놔야만",
+            vec!["놓다"],
+            vec!["어야", "만"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "놔두었다",
+            vec!["놔두다"],
+            vec!["었", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "놓아두었다",
+            vec!["놓아두다"],
+            vec!["었", "다"],
+            MorphemeKind::Ending,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    let ledger: Value = serde_json::from_str(include_str!("fixtures/validity.json")).unwrap();
+    for case in ledger["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["id"].as_str().unwrap().starts_with("noh-"))
+    {
+        let word = case["surface"].as_str().unwrap();
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        for judgment in case["judgments"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|j| j["verdict"] == "forbidden")
+        {
+            let lemmas: Vec<_> = judgment["lemmas"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            let forms: Vec<_> = judgment["morphemes"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            assert!(
+                !kept.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                "{word}: {forms:?}"
+            );
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

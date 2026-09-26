@@ -1,0 +1,8286 @@
+{
+  "schema_version": 1,
+  "scope": "COV-017u: Article 35 supplement 1, lexical 놓아 → 놔 at an 아/어 boundary, including past markers, compounds and licensed auxiliaries. Preserve unrelated candidates and lexical 놔두다.",
+  "baseline_commit": "ff7300bf1744e70925083a3ed49f0df7000f4323",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Every sense and attachment note; up to two example groups per sense.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "6536a77420bb6403e385cb0067e9675cd13ebbcb032e88b35af3bb7db7debe6a",
+    "src/engine.rs": "4a66ec7c824f2a90dc376405e62728eec1485fa3d200ef885e6931efe22fd1e5",
+    "tests/noh_contraction.rs": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
+    "tests/corpus.rs": "abcf0ac70aafc057be713932b97641a5a98d828b4345c34a28d7a0ca66eb7736",
+    "tests/dictionary.rs": "b24b672c919b05a46b3f36744cb26a7d4be7471b8aebaaa6c1a09e14c073de0a",
+    "tests/validity.rs": "3e744b85b5bab9e2f76d6a0e2236f9a33927beea95e45fd4afc2b8fb88caefc6",
+    "tests/fixtures/validity.json": "d7f236ee545886adab11045e911a64d8e77e4d377c08b2173c75860f6e4232ed",
+    "tests/fixtures/optimization.json": "c2725f12a0eebc9e84faf135e5a7509d88c477a92f80eeefe4dd3c4cc01f8c89",
+    "tests/fixtures/krdict-noh-contraction.json": "879f7fec03939e17fc718b20b85964775b657287859789d2e22d722461a43a7e",
+    "web/tests/browser.mjs": "63532777a69e225b9d71d0801948622064e0b061c1a1ed4211086ef9f5dbafe5"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:72578",
+        "headword": "놓다",
+        "homonym": "2",
+        "pos": "보조 동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72578",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "노타"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓는",
+            "pronunciations": [
+              "논는"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓아",
+            "pronunciations": [
+              "노아"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓으니",
+            "pronunciations": [
+              "노으니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓습니다",
+            "pronunciations": [
+              "노씀니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞말이 뜻하는 행동을 끝내고 그 결과를 유지함을 나타내는 말.",
+            "notes": [
+              "동사 뒤에서 ‘-어 놓다’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 바람이 들어오지 않게 창문을 꼭 닫아 놓았다. "
+              ],
+              [
+                "승규는 깜빡 잊고 불을 켜 놓은 채 집을 나갔다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "앞말이 뜻하는 상태가 계속됨을 강조하는 말.",
+            "notes": [
+              "형용사나 ‘이다’ 뒤에서 ‘-어 놓다’로 쓰며, 주로 뒷말의 내용에 대한 이유나 원인을 말할 때 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 몸이 아파 놓으니까 꼼짝도 하기 싫었다. "
+              ],
+              [
+                "날씨가 너무 더워 놓으니까 조금만 걸어도 땀이 난다. "
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "7c1658175309712206dca685203013c7373590c505323d76706cf0a364ab762a"
+    },
+    {
+      "source": {
+        "id": "krdict:89534",
+        "headword": "놓다",
+        "homonym": "1",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89534",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "노타"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓는",
+            "pronunciations": [
+              "논는"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓아",
+            "pronunciations": [
+              "노아"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓으니",
+            "pronunciations": [
+              "노으니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓습니다",
+            "pronunciations": [
+              "노씀니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "손으로 잡거나 누르고 있던 물건을 손을 펴거나 힘을 빼서 손에서 빠져나가게 하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놓다"
+            ],
+            "examples": [
+              [
+                "고삐를 놓다."
+              ],
+              [
+                "막대기를 놓다."
+              ]
+            ],
+            "total_example_groups": 21
+          },
+          {
+            "id": "2",
+            "definition": "계속해 오던 일을 그만두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놓다"
+            ],
+            "examples": [
+              [
+                "붓을 놓다."
+              ],
+              [
+                "생업을 놓다."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "3",
+            "definition": "걱정이나 긴장 등을 잊거나 풀어 없애다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놓다"
+            ],
+            "examples": [
+              [
+                "걱정을 놓다."
+              ],
+              [
+                "넋을 놓다."
+              ]
+            ],
+            "total_example_groups": 15
+          },
+          {
+            "id": "4",
+            "definition": "노름이나 내기에서 돈을 걸다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놓다"
+            ],
+            "examples": [
+              [
+                "돈을 놓다."
+              ],
+              [
+                "큰돈을 놓다."
+              ]
+            ],
+            "total_example_groups": 6
+          },
+          {
+            "id": "5",
+            "definition": "논의의 대상으로 삼다.",
+            "notes": [
+              "주로 '~을 놓고'로 쓴다."
+            ],
+            "patterns": [
+              "1이 2를 놓다"
+            ],
+            "examples": [
+              [
+                "거취를 놓고 고민하다."
+              ],
+              [
+                "결과를 놓고 이야기하다."
+              ]
+            ],
+            "total_example_groups": 16
+          },
+          {
+            "id": "6",
+            "definition": "수판이나 막대기 등을 이용하여 수를 세다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놓다"
+            ],
+            "examples": [
+              [
+                "셈을 놓다."
+              ],
+              [
+                "수판을 놓다."
+              ]
+            ],
+            "total_example_groups": 7
+          },
+          {
+            "id": "7",
+            "definition": "빨리 가도록 힘을 더하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놓다"
+            ],
+            "examples": [
+              [
+                "다리품을 놓다."
+              ],
+              [
+                "도망질을 놓다."
+              ]
+            ],
+            "total_example_groups": 13
+          },
+          {
+            "id": "8",
+            "definition": "병에서 벗어나 몸이 회복되다.",
+            "notes": [
+              "주로 '병을 놓다', '병줄을 놓다'로 쓴다."
+            ],
+            "patterns": [
+              "1이 2를 놓다"
+            ],
+            "examples": [
+              [
+                "병을 놓다."
+              ],
+              [
+                "아버지는 오랜 병을 놓으시고 기운을 차리셨다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "9",
+            "definition": "잡거나 쥐고 있던 물체를 어떤 곳에 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "가방을 놓다."
+              ],
+              [
+                "서류를 놓다."
+              ]
+            ],
+            "total_example_groups": 22
+          },
+          {
+            "id": "10",
+            "definition": "어떤 곳에 기계나 장치, 구조물 등을 설치하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "교량을 놓다."
+              ],
+              [
+                "구들을 놓다."
+              ]
+            ],
+            "total_example_groups": 15
+          },
+          {
+            "id": "11",
+            "definition": "동물이나 물고기를 잡기 위해 일정한 곳에 무엇을 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "그물을 놓다."
+              ],
+              [
+                "덫을 놓다."
+              ]
+            ],
+            "total_example_groups": 13
+          },
+          {
+            "id": "12",
+            "definition": "무늬나 그림, 글자 등을 새기다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "꽃무늬를 놓다."
+              ],
+              [
+                "무늬를 놓다."
+              ]
+            ],
+            "total_example_groups": 13
+          },
+          {
+            "id": "13",
+            "definition": "불을 지르거나 피우다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "뜸을 놓다."
+              ],
+              [
+                "맞불을 놓다."
+              ]
+            ],
+            "total_example_groups": 10
+          },
+          {
+            "id": "14",
+            "definition": "옷, 이불, 방석 등을 만들 때 속에 솜이나 털과 같은 내용물을 넣다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "이불솜을 놓다."
+              ],
+              [
+                "베개에 겨를 놓다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "15",
+            "definition": "중심이 되는 음식에 다른 것을 섞어서 한 음식으로 만들다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "고명을 놓다."
+              ],
+              [
+                "대추를 놓다."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "16",
+            "definition": "심어서 가꾸거나 키우다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "고추를 놓다."
+              ],
+              [
+                "소를 놓다."
+              ]
+            ],
+            "total_example_groups": 11
+          },
+          {
+            "id": "17",
+            "definition": "어떤 수에 수를 더하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "넷을 놓다."
+              ],
+              [
+                "둘을 놓다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "18",
+            "definition": "어떤 목적을 위하여 사람이나 동물 등을 내보내다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓다"
+            ],
+            "examples": [
+              [
+                "개를 놓다."
+              ],
+              [
+                "사냥개를 놓다."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "19",
+            "definition": "치료를 위해 주사나 침을 찌르다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에/에게 3을 놓다"
+            ],
+            "examples": [
+              [
+                "링거를 놓다."
+              ],
+              [
+                "마취제를 놓다."
+              ]
+            ],
+            "total_example_groups": 12
+          },
+          {
+            "id": "20",
+            "definition": "상대에게 어떤 행동을 하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에/에게 3을 놓다"
+            ],
+            "examples": [
+              [
+                "면박을 놓다."
+              ],
+              [
+                "방해를 놓다."
+              ]
+            ],
+            "total_example_groups": 13
+          },
+          {
+            "id": "21",
+            "definition": "돈이나 이자를 받고 집이나 돈, 쌀 등을 빌려주다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에/에게 3을 놓다"
+            ],
+            "examples": [
+              [
+                "방을 놓다."
+              ],
+              [
+                "빚을 놓다."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "22",
+            "definition": "값을 계산하여 매기다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에/에게 3을 놓다"
+            ],
+            "examples": [
+              [
+                "가격을 놓다."
+              ],
+              [
+                "값을 놓다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "23",
+            "definition": "장기나 바둑에서 돌이나 말을 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에/에게 3을 놓다"
+            ],
+            "examples": [
+              [
+                "돌을 놓다."
+              ],
+              [
+                "두 점을 놓다."
+              ]
+            ],
+            "total_example_groups": 10
+          },
+          {
+            "id": "24",
+            "definition": "총이나 대포를 쏘다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에/에게 3을 놓다"
+            ],
+            "examples": [
+              [
+                "다이너마이트를 놓다."
+              ],
+              [
+                "대포를 놓다."
+              ]
+            ],
+            "total_example_groups": 6
+          },
+          {
+            "id": "25",
+            "definition": "어떤 내용을 편지 등으로 알리다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에/에게 3을 놓다"
+            ],
+            "examples": [
+              [
+                "전보를 놓다."
+              ],
+              [
+                "편지를 놓다."
+              ]
+            ],
+            "total_example_groups": 6
+          },
+          {
+            "id": "26",
+            "definition": "말을 높이지 않고 반말로 말하다.",
+            "notes": [
+              "주로 '말을 놓다'로 쓴다.",
+              "'2와'가 없으면 1에 복수를 나타내는 말이 온다."
+            ],
+            "patterns": [
+              "1이 (2와) 3을 놓다"
+            ],
+            "examples": [
+              [
+                "말을 놓다."
+              ],
+              [
+                "말씀을 놓다."
+              ]
+            ],
+            "total_example_groups": 6
+          },
+          {
+            "id": "27",
+            "definition": "기계 장치를 조작하여 원하는 상태가 되게 하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3으로 놓다"
+            ],
+            "examples": [
+              [
+                "속력을 놓다."
+              ],
+              [
+                "시속 백 킬로미터로 놓다."
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "4ccd945dee276026faa899edb605b59bebd505399dc36a105f8857fd45f435b5"
+    },
+    {
+      "source": {
+        "id": "krdict:61013",
+        "headword": "내놓다",
+        "homonym": "0",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61013",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "내ː노타"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "내놓아",
+            "pronunciations": [
+              "내ː노아"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "내놓으니",
+            "pronunciations": [
+              "내ː노으니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "내놓는",
+            "pronunciations": [
+              "내ː논는"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "내놓습니다",
+            "pronunciations": [
+              "내ː노씀니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "물건을 밖으로 꺼내 놓다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/으로 내놓다"
+            ],
+            "examples": [
+              [
+                "셔츠를 내놓다."
+              ],
+              [
+                "이삿짐을 내놓다."
+              ]
+            ],
+            "total_example_groups": 10
+          },
+          {
+            "id": "2",
+            "definition": "보이도록 앞에 놓다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/에게 내놓다"
+            ],
+            "examples": [
+              [
+                "내놓아 자랑하다."
+              ],
+              [
+                "계약서를 내놓다."
+              ]
+            ],
+            "total_example_groups": 7
+          },
+          {
+            "id": "3",
+            "definition": "집을 팔거나 빌려주려고 부동산 중개업자 등에 말해 두어 사거나 빌릴 사람을 찾다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/에게 내놓다"
+            ],
+            "examples": [
+              [
+                "건물을 내놓다."
+              ],
+              [
+                "방을 내놓다."
+              ]
+            ],
+            "total_example_groups": 10
+          },
+          {
+            "id": "4",
+            "definition": "가두어 두었던 사람이나 동물 등을 바깥에서 마음대로 활동하게 하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/으로 내놓다"
+            ],
+            "examples": [
+              [
+                "내놓고 키우다."
+              ],
+              [
+                "가축을 내놓다."
+              ]
+            ],
+            "total_example_groups": 10
+          },
+          {
+            "id": "5",
+            "definition": "음식 등을 대접하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/에게 내놓다"
+            ],
+            "examples": [
+              [
+                "내놓아 접대하다."
+              ],
+              [
+                "요리를 내놓다."
+              ]
+            ],
+            "total_example_groups": 10
+          },
+          {
+            "id": "6",
+            "definition": "작품이나 상품 등을 발표하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/에게 내놓다"
+            ],
+            "examples": [
+              [
+                "소설을 내놓다."
+              ],
+              [
+                "신작을 내놓다."
+              ]
+            ],
+            "total_example_groups": 15
+          },
+          {
+            "id": "7",
+            "definition": "생각이나 의견을 제시하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/에게 내놓다"
+            ],
+            "examples": [
+              [
+                "계획을 내놓다."
+              ],
+              [
+                "방침을 내놓다."
+              ]
+            ],
+            "total_example_groups": 12
+          },
+          {
+            "id": "8",
+            "definition": "가지고 있던 것이나 차지하고 있던 것을 넘겨주다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/에게 내놓다"
+            ],
+            "examples": [
+              [
+                "내놓고 물러나다."
+              ],
+              [
+                "내놓고 쫓겨나다."
+              ]
+            ],
+            "total_example_groups": 11
+          },
+          {
+            "id": "9",
+            "definition": "몸의 일부를 밖으로 드러나 보이게 하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 내놓다"
+            ],
+            "examples": [
+              [
+                "눈을 내놓다."
+              ],
+              [
+                "덧니를 내놓다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "10",
+            "definition": "어떤 목적을 위하여 희생하다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 내놓다"
+            ],
+            "examples": [
+              [
+                "목을 내놓다."
+              ],
+              [
+                "목숨을 내놓다."
+              ]
+            ],
+            "total_example_groups": 6
+          },
+          {
+            "id": "11",
+            "definition": "어떤 대상이나 범위에서 빼거나 포기해 버리다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 내놓다"
+            ],
+            "examples": [
+              [
+                "내놓은 자식."
+              ],
+              [
+                "내놓은 학생."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "12",
+            "definition": "일부러 감추지 않고 공개적으로 드러내다.",
+            "notes": [
+              "주로 ‘내놓고’로 쓴다."
+            ],
+            "patterns": [
+              "1이 내놓다"
+            ],
+            "examples": [
+              [
+                "내놓고 말하다."
+              ],
+              [
+                "내놓고 아첨하다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "13",
+            "definition": "안에서 만들어진 물질을 밖으로 내보내다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 내놓다"
+            ],
+            "examples": [
+              [
+                "분비물을 내놓다."
+              ],
+              [
+                "산소를 내놓다."
+              ]
+            ],
+            "total_example_groups": 7
+          }
+        ]
+      },
+      "source_sha256": "fb4bc82cdbbff1ee7ac41cb6dba701ec57137de11fea47c53a081226bc91336e"
+    },
+    {
+      "source": {
+        "id": "krdict:59468",
+        "headword": "내려놓다",
+        "homonym": "0",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=59468",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "내려노타"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "내려놓아",
+            "pronunciations": [
+              "내려노아"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "내려놓으니",
+            "pronunciations": [
+              "내려노으니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "내려놓는",
+            "pronunciations": [
+              "내려논는"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "내려놓습니다",
+            "pronunciations": [
+              "내려노씀니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "들고 있던 것을 아래에 놓다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에 내려놓다"
+            ],
+            "examples": [
+              [
+                "가방을 내려놓다."
+              ],
+              [
+                "수화기를 내려놓다."
+              ]
+            ],
+            "total_example_groups": 10
+          },
+          {
+            "id": "2",
+            "definition": "위에 있던 것을 아래쪽으로 옮기다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/으로 내려놓다"
+            ],
+            "examples": [
+              [
+                "냄비를 불에서 내려놓다."
+              ],
+              [
+                "선반에서 내려놓다."
+              ]
+            ],
+            "total_example_groups": 6
+          },
+          {
+            "id": "3",
+            "definition": "탈것을 이용해서 사람을 어떤 곳에 옮겨다 주다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에 내려놓다"
+            ],
+            "examples": [
+              [
+                "길가에 내려놓다."
+              ],
+              [
+                "승객들을 정류장에 내려놓다."
+              ]
+            ],
+            "total_example_groups": 7
+          }
+        ]
+      },
+      "source_sha256": "0081259512f7c0192f46080faae8871f93462dc85956bcbec544db7da5ca8f41"
+    },
+    {
+      "source": {
+        "id": "krdict:83636",
+        "headword": "풀어놓다",
+        "homonym": "0",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83636",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "푸러노타"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "풀어놓아",
+            "pronunciations": [
+              "푸러노아"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "풀어놓으니",
+            "pronunciations": [
+              "푸러노으니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "풀어놓는",
+            "pronunciations": [
+              "푸러논는"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "풀어놓습니다",
+            "pronunciations": [
+              "푸러노씀니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 목적을 이루려고 사람을 널리 모으다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 풀어놓다"
+            ],
+            "examples": [
+              [
+                "경찰을 풀어놓다."
+              ],
+              [
+                "군대를 풀어놓다."
+              ]
+            ],
+            "total_example_groups": 11
+          }
+        ]
+      },
+      "source_sha256": "e4116051bbcb859c55867304af445da01763ea5c26f98bb75c4f81206f092090"
+    },
+    {
+      "source": {
+        "id": "krdict:28325",
+        "headword": "놓아두다",
+        "homonym": "0",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=28325",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "노아두다"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓아두는",
+            "pronunciations": [
+              "노아두는"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓아두어",
+            "pronunciations": [
+              "노아두어"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓아두니",
+            "pronunciations": [
+              "노아두니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놓아둡니다",
+            "pronunciations": [
+              "노아둠니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "들고 있던 것을 어떤 곳에 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2에 3을 놓아두다"
+            ],
+            "examples": [
+              [
+                "물건을 놓아두다."
+              ],
+              [
+                "책을 놓아두다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "2",
+            "definition": "건드리지 않고 그대로 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놓아두다"
+            ],
+            "examples": [
+              [
+                "구석에 놓아두다."
+              ],
+              [
+                "그냥 놓아두다."
+              ]
+            ],
+            "total_example_groups": 7
+          },
+          {
+            "id": "3",
+            "definition": "남이 마음대로 하도록 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놓아두다"
+            ],
+            "examples": [
+              [
+                "간섭하지 않고 놓아두다."
+              ],
+              [
+                "그냥 놓아두다."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "afdbda1d961cd8ab67f55de5c59614681e55494fd4fba4f427df8118c32df87b"
+    },
+    {
+      "source": {
+        "id": "krdict:28326",
+        "headword": "놔두다",
+        "homonym": "0",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=28326",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "놔ː두다"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놔두는",
+            "pronunciations": [
+              "놔ː두는"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놔두어",
+            "pronunciations": [
+              "놔ː두어"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놔두니",
+            "pronunciations": [
+              "놔ː두니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "놔둡니다",
+            "pronunciations": [
+              "놔ː둠니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "들고 있던 것을 어떤 곳에 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에 놔두다"
+            ],
+            "examples": [
+              [
+                "바닥에 놔두다."
+              ],
+              [
+                "선반 위에 놔두다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "2",
+            "definition": "건드리지 않고 그대로 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놔두다"
+            ],
+            "examples": [
+              [
+                "돈을 놔두다."
+              ],
+              [
+                "짐을 놔두다."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "3",
+            "definition": "남이 마음대로 하도록 두다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 놔두다"
+            ],
+            "examples": [
+              [
+                "놔두고 보다."
+              ],
+              [
+                "간섭하지 않고 놔두다."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "7a8e8d79b679792ed42799426949341b15f477234c1b74d525537a6e1eef73d5"
+    },
+    {
+      "source": {
+        "id": "krdict:48279",
+        "headword": "두다",
+        "homonym": "2",
+        "pos": "보조 동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=48279",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "두다"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "두는",
+            "pronunciations": [
+              "두는"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "두어",
+            "pronunciations": [
+              "두어"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "두니",
+            "pronunciations": [
+              "두니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "둡니다",
+            "pronunciations": [
+              "둠니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞말이 나타내는 행동을 하고 그 결과를 그대로 계속 유지되게 함을 나타내는 말.",
+            "notes": [
+              "동사 뒤에서 ‘-어 두다’로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 문을 활짝 열어 두고 방 안에 있는 공기를 환기했다."
+              ],
+              [
+                "내가 알아서 처리할 테니 그 일은 걱정하지 말고 나한테 맡겨 둬."
+              ]
+            ],
+            "total_example_groups": 6
+          }
+        ]
+      },
+      "source_sha256": "c191c42d1fe1eb4147a31fec27d27861f60bb33c0c4bcabfcce87187e764c999"
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "c95abdf5ea9e8894d8693401cc5105e21fda7f30c6559e04afadf28d0562b607",
+      "after_sha256": "28e0883b9988c2e3d3bb187d65d5b0e57a29070126e4a1024ab7014cd477cd81",
+      "converted": 22220,
+      "before_matched": 22103,
+      "after_matched": 22104,
+      "remaining_misses": 116,
+      "new_matches": [
+        {
+          "id": "id:M2TA_069-s13/4",
+          "surface": "놨었지요",
+          "expected": [
+            "놓다"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.833843384338434,
+      "mean_candidates_after": 5.833933393339334
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "aa68c704424773a09776ec03d817ad7c7f98219e84f0f05dccbdc4ea93378a41",
+      "after_sha256": "aa68c704424773a09776ec03d817ad7c7f98219e84f0f05dccbdc4ea93378a41",
+      "converted": 9989,
+      "before_matched": 9831,
+      "after_matched": 9831,
+      "remaining_misses": 158,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.368405245770347,
+      "mean_candidates_after": 5.368405245770347
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "놔",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔요",
+      "before_count": 6,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔서",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔라",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔도",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔야",
+      "before_count": 6,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔야겠다",
+      "before_count": 12,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놨다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놨었지요",
+      "before_count": 16,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놔",
+      "before_count": 2,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놔요",
+      "before_count": 6,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놔서",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놔라",
+      "before_count": 7,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놔도",
+      "before_count": 4,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놔야",
+      "before_count": 6,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놔야겠다",
+      "before_count": 12,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "irregular.hieut",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놨다",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놨었지요",
+      "before_count": 16,
+      "after_count": 22,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "낳다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "irregular.hieut",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놔",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놔요",
+      "before_count": 6,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놔서",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놔라",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놔도",
+      "before_count": 4,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놔야",
+      "before_count": 6,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놔야겠다",
+      "before_count": 12,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "contraction.vowel",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놨다",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놨었지요",
+      "before_count": 16,
+      "after_count": 20,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내려놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "내리다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놔",
+      "before_count": 2,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놔요",
+      "before_count": 6,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놔서",
+      "before_count": 5,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놔라",
+      "before_count": 7,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놔도",
+      "before_count": 4,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놔야",
+      "before_count": 6,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놔야겠다",
+      "before_count": 12,
+      "after_count": 22,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "irregular.digeut",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어야겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "prefinal.obligation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "deletion.eu",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놨다",
+      "before_count": 5,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놨었지요",
+      "before_count": 16,
+      "after_count": 26,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "푿다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "irregular.digeut",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "풀으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어놨다",
+      "before_count": 5,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "적어놔두었다",
+      "before_count": 9,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "적다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "두다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "적어놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "두다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "적어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "두다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "적으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "두다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "deletion.eu",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔두었다",
+      "before_count": 9,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "두다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좋아놔서",
+      "before_count": 5,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "좋다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋아놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋아다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이어놔서",
+      "before_count": 5,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "copula",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이어놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "deletion.eu",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생잇다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.noh",
+            "ending",
+            "irregular.siot"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놨겠지요",
+      "before_count": 16,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.modal",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.modal",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놨어도",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔서는",
+      "before_count": 14,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔서도",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔보았다",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔버렸다",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "버리다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔야만",
+      "before_count": 12,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어야",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좌",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좌요",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좠다",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "노아",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "노았다",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔다",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔고",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔는",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.noh",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔으니",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔었다",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놰",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓어",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔시다",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아요",
+      "before_count": 12,
+      "after_count": 12,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아서",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아라",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아도",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아야",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아야겠다",
+      "before_count": 17,
+      "after_count": 17,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓았다",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓았었지요",
+      "before_count": 18,
+      "after_count": 18,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓아",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓아요",
+      "before_count": 16,
+      "after_count": 16,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓아서",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓아라",
+      "before_count": 13,
+      "after_count": 13,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓아도",
+      "before_count": 13,
+      "after_count": 13,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓아야",
+      "before_count": 15,
+      "after_count": 15,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓아야겠다",
+      "before_count": 21,
+      "after_count": 21,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓았다",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내놓았었지요",
+      "before_count": 22,
+      "after_count": 22,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓아",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓아요",
+      "before_count": 14,
+      "after_count": 14,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓아서",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓아라",
+      "before_count": 12,
+      "after_count": 12,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓아도",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓아야",
+      "before_count": 13,
+      "after_count": 13,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓아야겠다",
+      "before_count": 19,
+      "after_count": 19,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓았다",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내려놓았었지요",
+      "before_count": 20,
+      "after_count": 20,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓아",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓아요",
+      "before_count": 20,
+      "after_count": 20,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓아서",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓아라",
+      "before_count": 15,
+      "after_count": 15,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓아도",
+      "before_count": 17,
+      "after_count": 17,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓아야",
+      "before_count": 19,
+      "after_count": 19,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓아야겠다",
+      "before_count": 25,
+      "after_count": 25,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓았다",
+      "before_count": 12,
+      "after_count": 12,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "풀어놓았었지요",
+      "before_count": 26,
+      "after_count": 26,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어놓았다",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "적어놓아두었다",
+      "before_count": 14,
+      "after_count": 14,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아두었다",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좋아놓아서",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이어놓아서",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓았겠지요",
+      "before_count": 20,
+      "after_count": 20,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓았어도",
+      "before_count": 12,
+      "after_count": 12,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아서는",
+      "before_count": 17,
+      "after_count": 17,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아서도",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아보았다",
+      "before_count": 12,
+      "after_count": 12,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아버렸다",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아야만",
+      "before_count": 16,
+      "after_count": 16,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔두다",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "두다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좋아",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "노다",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓다",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓으시다",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓으셨다",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔놨다",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "노다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "contraction.vowel",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "놓다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놔놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고놨다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고놓다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.noh",
+            "ending",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놔지다",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓다",
+              "kind": "predicate"
+            },
+            {
+              "text": "지다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.noh",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓아지다",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    }
+  ],
+  "spelling_guidance": {
+    "url": "https://www.korean.go.kr/common/download.do?c_file_name=0528a905-2eb3-4c5a-978c-f424dd6a6c47_0.pdf&file_path=reportData",
+    "document": "한글 맞춤법 표준어 규정 해설",
+    "printed_page": 90,
+    "pdf_page_index": 91,
+    "interpretation": "Article 35 supplement 1 explicitly permits 놓아/놓아라/놓았다 → 놔/놔라/놨다 and contrasts this exceptional contraction with 좋아, which does not become 좌. The implementation restores only final 놔 at an 아/어 boundary. 노아 in the explanation is a phonological intermediate, not a new spelling recovery rule.",
+    "inspection": "Extracted PDF text inspected. No screenshot image was returned by the screenshot request."
+  },
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-noh-contraction.conllu",
+      "sha256": "5cc0ab6c0c36097ee1d01564311d7bcb3b31b03603d012d4b5e00253b9bef33e",
+      "complete_byte_identical_sentences": 2
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "remaining": [
+    "Productive prefix recovery can yield unknown compound hypotheses; dictionary filtering checks headword and role compatibility but does not establish contextual sense.",
+    "The spelling rule applies only at a recovered 아/어 boundary. It does not normalize internal 놔 in lexical 놔두다 to the separate headword 놓아두다.",
+    "Broader auxiliary lexical-subset, prefinal and contextual attachment restrictions, independent Korean review and fresh passages remain open."
+  ],
+  "lexical_fixture": {
+    "path": "tests/fixtures/krdict-noh-contraction.json",
+    "entries": 26,
+    "adaptations": "All homonyms and senses; English equivalents and first example group in each sense; omit WordForm, RelatedForm and export metadata; no idiom subentry collisions."
+  }
+}

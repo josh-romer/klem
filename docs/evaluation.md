@@ -1379,3 +1379,41 @@ This batch restores the missing copula without extending general synonym or
 long-form pronoun normalization. Other pronoun contractions, nominal bases,
 attachment/class restrictions, independent Korean review and fresh-passage
 evaluation remain open.
+
+## 놓아 → 놔 contraction (COV-017u)
+
+The [comparison](noh-contraction-evaluation.json) reviews **119 surfaces** and
+accounts for **192 added candidates**, with no removals or changed provenance on
+existing candidates. Each addition carries `contraction.noh` and a recovered
+놓다-final predicate. Forty-eight short/full-form pairs exercise four lexical
+heads, terminal endings, past and double-past markers, particles and auxiliary
+composition. Thirteen forbidden paths protect the lexical and 아/어 boundary;
+좋아 → 좌 and pronunciation-spelled 노아 are not generalized. Lexical 놔두다
+and split 놓다 + 두다 alternatives remain separate.
+
+KAIST development **놨었지요 → 놓다** is newly recovered. Development misses
+are now **116 KAIST and 158 GSD**, without lost gold groups or component sets.
+KAIST mean candidates changes from 5.833843 to 5.833933; GSD remains 5.368405.
+These measure ambiguity, not linguistic precision. Two complete unchanged
+annotated KAIST sentences capture the new recovery and preserve full 내놓아야.
+All thirty stress fingerprints and historical corpus baselines remain unchanged.
+
+The 64 added ledger cases bring totals to **1,117 cases, 625 required and 498
+forbidden judgments**. Article 35 supplement 1 supports the spelling exception;
+eight KRDict entries document the lexical and auxiliary contexts. The offline
+lexical fixture contains 26 entries with all homonyms/senses retained. The new
+scoped review for auxiliary 놓다 preserves its verb sense and its adjective/이다
+sense, bringing the inventory to **138 scoped entries and 577 unreviewed**.
+No grammar catalog additions are needed.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build, browser/HTTP checks and
+inventory verification pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared systems were not executed. The packaged full-dictionary
+app passes eight reading selections, source links and all 13 forbidden paths.
+Desktop/mobile screenshots were inspected without JavaScript errors or horizontal
+overflow; 놨었지요 visibly yields 놓 + 었 + 었 + 지요 under dictionary-only filtering.
+
+This change does not normalize internal lexical contractions or establish
+contextual senses. Unknown compound hypotheses, broader auxiliary restrictions,
+independent Korean-language review and fresh-passage evaluation remain open.

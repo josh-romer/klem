@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **137 scoped
-reviews**, with **578 entries unreviewed in this ledger**. This does not imply
+The [manual ledger](inventory-reviews.json) currently contains **138 scoped
+reviews**, with **577 entries unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
 and source-specific candidate judgments. Independent Korean-language review
@@ -436,3 +436,12 @@ remains at **137 scoped entries and 578 without a disposition**. This batch
 recovers the GSD 뭔지/뭔가 gold groups and adds a dictionary check for the single
 new unverified nominal stress hypothesis. Broader pronoun normalization and
 particle-marked copula bases still need review.
+
+
+COV-017u adds a scoped review of auxiliary 놓다 (72578): the Article 35
+놓아 → 놔 spelling preserves its verb, adjective and copular left contexts.
+The [comparison](noh-contraction-evaluation.json) and three explicit role
+judgments support this disposition; other contextual/lexical restrictions are
+still open. The queue now contains **138 scoped entries and 577 without a disposition**.
+Lexical 놓다, compound verbs and 놔두다/놓아두다 are attributed separately
+outside the grammar-POS queue. No new canonical grammar label is needed.

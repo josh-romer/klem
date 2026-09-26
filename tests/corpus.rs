@@ -1448,3 +1448,22 @@ fn pinned_full_corpus_regressions() {
         }
     }
 }
+
+#[test]
+fn noh_contraction_recovers_double_past_and_preserves_full_compound() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-noh-contraction.conllu").as_slice(),
+        Corpus::Kaist,
+        "noh-contraction",
+    )
+    .unwrap();
+    for (id, surface, lemma) in [
+        ("id:M2TA_069-s13/4", "놨었지요", "놓다"),
+        ("id:MH2_0169-s453/6", "내놓아야", "내놓다"),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, vec![lemma]);
+        assert!(case.matched, "{id}");
+    }
+}

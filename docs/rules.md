@@ -1953,3 +1953,26 @@ Long-form pronoun normalization is separate work: the raw dictionary export
 links 뭐 to 본말 무어, while 무어/무엇 are linked as synonyms. Those relations
 do not authorize unrestricted synonym expansion. Further nominal bases, ending
 licenses, independent Korean review and fresh-passage evaluation remain open.
+
+## 놓아 contraction (COV-017u)
+
+At an 아/어 boundary, final 놔 also recovers 놓: 놔 → 놓다 + 어,
+놨었지요 → 놓다 + 었 + 었 + 지요. This composes with existing endings,
+particles, compound heads (내놔요 → 내놓다 + 어요), and auxiliaries
+(먹어놨다 → 먹다 + 어 + 놓다 + 었 + 다). Canonical 어/었 represent the
+아/았 surface allomorphs. The rule records `contraction.noh` provenance and a
+normalized browser breakdown; existing 와 → 오 candidates are retained.
+
+[Article 35 supplement 1](https://www.korean.go.kr/common/download.do?c_file_name=0528a905-2eb3-4c5a-978c-f424dd6a6c47_0.pdf&file_path=reportData)
+(printed p. 90, PDF page index 91) documents the lexical exception and contrasts
+좋아, which does not contract to 좌. The implementation does not generalize
+ㅎ deletion, recover 놓 from pronunciation-spelled 노아, or expand 놔 before
+consonant endings such as 고. Prefixes remain lexical hypotheses until dictionary
+lookup. It does not rewrite internal 놔 in the lexical headword 놔두다 to
+놓아두다; both dictionary heads and licensed 놓다 + 두다 decomposition remain.
+
+[Auxiliary 놓다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72578)
+has a verb-completion sense and an adjective/이다 state sense, so the contraction
+must preserve both left contexts. This does not select a contextual sense or
+certify all auxiliary restrictions. See the [candidate comparison](noh-contraction-evaluation.json)
+and [tracked tests](../tests/noh_contraction.rs).

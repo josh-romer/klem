@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–e/019a–d/020a–d/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–f/019a–d/020a–d/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records sixteen scoped
-  dispositions from COV-016/017m–n/017p/018e/019d/020d; 699 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records twenty-eight scoped
+  dispositions from COV-016/017m–n/017p/018e–f/019d/020d; 687 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -433,8 +433,9 @@ review remains open under the completion review below.
   and contextual choice remain open. Source: KRDict
   [-든가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82342).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–e implement post-ending, outer choice, emphatic,
-  concessive, definition and enumerative particles, including nominal (이)라고 alternatives.**
+  **Partial: COV-018a–f implement post-ending, outer choice, emphatic,
+  concessive, definition, enumerative, destination and recipient particles,
+  including nominal (이)라고 alternatives.**
   Remaining: pronouns outside the existing finite paradigms. Preserve homonym-specific
   dictionary labels and review additional ending/particle licenses.
   Include quoted clauses marked as nominals: KAIST MH2_0169-s444/3 살겠다가
@@ -506,6 +507,20 @@ review remains open under the completion review below.
   reading from bypassing the same restriction. [Scope and sources](rules.md#enumerative-particles-and-choice-ending-cov-018e017p)
   and [evaluation](enumerative-particle-evaluation.json) retain unjudged candidates.
   Further particle stacks and quoted-clause attachment remain open.
+- [x] **COV-018f — Emphatic destination/recipient particles.** 에다/에다가,
+  에게다/에게다가, 한테다/한테다가, (으)로다가 and 보고/더러 preserve
+  nominal paths and existing predicate readings. Separate emphatic 다/다가
+  attaches after eight reviewed case forms or seven deictic location/direction
+  words, retaining bundled and component alternatives. Nominalizations, suffixes,
+  outer particles, NFD and conditional foreign pronunciation compose. Arbitrary
+  nouns, adverbs, predicate endings and subject/object case phrases do not license
+  emphatic 다/다가. Recipient suitability and contextual senses remain explicit
+  limitations. Evidence: [path/boundary tests](../tests/destination_particles.rs),
+  twenty-four `destination-*` ledger cases, three complete development sentences,
+  dictionary/CLI parity and browser homonym/source-link checks. [Evaluation](destination-particle-evaluation.json)
+  records two KAIST and one GSD recovery, with all thirty stress fingerprints
+  unchanged. [Scope and sources](rules.md#destination-recipient-and-emphatic-adverbial-particles-cov-018f)
+  keep enumerative 다, other adverbial bases and further particle stacks open.
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -722,7 +737,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 243 currently emitted canonical grammar forms.** The initial catalog
+  for all 255 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

@@ -3,6 +3,33 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn destination_particles_recover_saved_development_groups() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-destination-particles.conllu").as_slice(),
+            vec![
+                ("id:MH2_0149-s138/2", "강에다", "강"),
+                ("id:MH2_0169-s706/11", "노동자보고", "노동자"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-destination-particles.conllu").as_slice(),
+            vec![("id:dev-s127/1", "거기에다", "거기")],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "destination-particles").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [expected]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn enumerative_particles_recover_saved_training_groups_without_extra_copulas() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-enumerative-particles.conllu").as_slice(),

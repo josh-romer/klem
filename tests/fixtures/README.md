@@ -542,3 +542,22 @@ under the pinned corpus's CC BY-SA 4.0 license. The examples 것이라든가,
 않든가 and 취미라든가 had missing gold groups before COV-018e/017p. Their
 original lemma/XPOS fields remain unchanged. These three selected cases are
 regressions, not a held-out recall estimate or evidence for every alternative.
+
+`krdict-destination-particles.json` contains twenty lexical entries (15983, 17608,
+17863, 25004, 29742, 30203, 31670, 60319, 60931, 61310, 62171, 62258, 62589,
+62907, 69792, 71218, 73276, 86232, 89849, 91328) from the September 2026 National
+Institute of Korean Language KRDict export, under CC BY-SA 2.0 KR. Grammar
+entries 41693, 41695, 70037, 70051, 73013, 73014, 80293, 83879, 83880, 86550,
+86573 and 86577 are added to the grammar-label fixture. Adaptation: retain English
+equivalents and first example group per sense, omit WordForm/RelatedForm and
+global metadata, exclude idiom subentries, and reformat JSON. All prior grammar
+entries remain unchanged. Source/license links above apply. The seven deictic
+entries supply location/direction senses; their homonyms are not interchangeable.
+
+`kaist-destination-particles.conllu` preserves complete development sentences
+MH2_0149-s138 and MH2_0169-s706; `gsd-destination-particles.conllu` preserves
+complete dev-s127. These are byte-identical excerpts from the pinned UD 2.15
+sources under CC BY-SA 4.0, with their original lemma/XPOS annotations. They
+protect 강에다, 노동자보고 and 거기에다 recovery, without judging every
+alternative or choosing contextual senses. GSD's automatic annotations remain
+secondary evidence; source/license links above apply.

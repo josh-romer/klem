@@ -1460,3 +1460,51 @@ is now enforced for known auxiliary adjectives, copulas and 답다 with or
 without 시. Tests exclude 학생이신다, 먹고싶으신다, 학생다우신다 and their
 composed 든가 forms while preserving 먹으신다든가 and 먹어보신다든가.
 Other present-ending families and unknown lexical head classes remain open.
+
+## Destination, recipient and emphatic adverbial particles (COV-018f)
+
+Twelve source-listed particle forms have distinct paths and dictionary labels:
+
+| Forms | Source entries | Attachment |
+| --- | --- | --- |
+| 에다 / 에다가 | [73013](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73013), [73014](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73014) | Nominals; location or addition |
+| 에게다 / 에게다가 | [80293](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80293), [86573](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86573) | Recipient nominals |
+| 한테다 / 한테다가 | [83879](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83879), [83880](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83880) | Recipient nominals |
+| 로다가 / 으로다가 | [86550](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86550), [86577](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86577) | Vowel/ㄹ versus other consonants; direction, means and other source-listed senses |
+| 보고 / 더러 | [70051](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70051), [70037](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70037) | Recipient/addressee nominals |
+| 다 / 다가 | [41693](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=41693), [41695](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=41695) | Reviewed location/direction/means/recipient adverbials and case phrases |
+
+강에다 retains both 강 + 에다 and 강 + 에 + 다. 학교에다가, 친구에게다가,
+친구한테다 and 손으로다가 similarly preserve bundle/component alternatives.
+Nominal suffixes and nominalizations compose, including 학생 + 들 + 한테다가,
+선생 + 님 + 에게다, and 먹다 + 음 + 으로다가. Existing outer particle slots
+support 강에다는, 학교로다가도 and 학교에다가요. `(으)로다가` uses the
+same explicit pronunciation conditions as `(으)로` for an unknown foreign base;
+Hangul boundaries, including ㄹ, remain directly checked.
+
+For separate emphatic 다/다가, this batch licenses preceding 에/에서/서/에게/
+한테/께/로/으로. It also licenses the location readings of 여기/거기/저기/어디
+and the direction readings of 이리/그리/저리. The seven corresponding dictionary
+entries and their sense definitions are preserved in the evaluation report.
+Nominal pronouns and directional adverbs retain different lemma roles. This
+finite lexical scope is not an unrestricted adverb rule: 빨리다가 and arbitrary
+nominal/ending + 다가 are not inferred. A bare nominalization needs an
+intervening case marker, as in 먹기 + 에 + 다가. Subject/object marking and
+recursive emphatic stacking do not satisfy this reviewed attachment path.
+Other adverbial bases and particle combinations remain for review.
+
+Recipient particles retain `particle.recipient` provenance. The source notes
+require an appropriate referent: 보고 lists people/animals, 더러 and 한테다가
+list people, and related forms include animate or personified uses. The engine
+does not infer that semantic eligibility from spelling or dictionary presence.
+It preserves a conditional recipient hypothesis without removing a lexical or
+predicate alternative such as 돌보다 + 고 in 돌보고. Display glosses do not
+choose among a headword's senses; deictic and manner homonyms remain distinct
+source meanings even when they share a spelling or POS.
+
+Emphatic particle 다/다가 is separate from predicate -다/-다가/-어다가.
+Enumeration particle 다 (85738) remains unimplemented as its own source sense;
+the emphatic label links 41693. Tests that exclude an emphatic interpretation do
+not declare every use of nominal + 다 invalid. Quoted-clause subject 가, including
+the saved 살겠다가 annotation, also remains COV-018/020 work. No final-ending
++ case rule is inferred solely to match that segmentation.

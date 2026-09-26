@@ -1,0 +1,4766 @@
+{
+  "schema_version": 1,
+  "scope": "COV-018f: emphatic destination/recipient particles, recipient 보고/더러, and bounded emphatic 다/다가 component paths.",
+  "baseline_commit": "84877e9fda26326ef53e1144ed9dc3260554564b",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Selected fields retain every sense and at most two example groups per sense.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "848eb197386109b7bd875c895a55d63c40bcafc31801e8f6fc904f6f352d1a42",
+    "src/engine.rs": "735492e381de996e11cddd3c10a32c90172c95d1205d4dd65242466497251bb4",
+    "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
+    "tests/corpus.rs": "1a600334c17b3de9473dbb1efe36b2338e1ba68c01e832753f7ca7d8e6cd4bbf",
+    "tests/dictionary.rs": "ced421e8d44f4b7f049e20ca88c17097b6b76e9c0c37a0b0b7320ffbfb645b63",
+    "tests/validity.rs": "d3fd4815adb051a4943eb5de513fa979261f5a533fb0cf3e25cb1dfe4d047282",
+    "tests/fixtures/validity.json": "1ccddb47726358831863e556d183f03af8b89ab35c34d8576da179a8d5c5344b",
+    "tests/fixtures/optimization.json": "461482340a2bbff3e02278a47e4fcb6262e8f35fd9425375e881625ba60a1e25",
+    "tests/fixtures/krdict-destination-particles.json": "1f91c059e430d984814ba83ce775024afaa2cc30758e6cc7990e390f36bbe34b",
+    "tests/fixtures/krdict-grammar-labels.json": "9c4d1a4668d414ba58d6cccbe1cb9dec27caaa32bfe386e1e260ee2938c2e44c",
+    "web/src/grammar-labels.json": "735226d7523cd4c38321966ed924c46f65e58a87c301b5f159bfd3709ada64fc",
+    "web/tests/browser.mjs": "d2dc9061b96297b987a22ff1d158ab1edde1b3034f3fcb4b8d56815bd0ac4023"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:73013",
+        "headword": "에다",
+        "homonym": "2",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73013",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "일정한 위치를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지금 옮기고 있는 책상은 어디에다 두면 될까요?"
+              ],
+              [
+                "안 쓰는 물건은 상자에 담아서 창고에다 두는 게 좋겠어."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "더해지는 대상을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "아버지는 물에다 밥을 말아 드신다."
+              ],
+              [
+                "밥 두 그릇에다 반찬까지 남기지 않고 다 먹었더니 정말 배가 부르다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "58abf908331713b24e4818add64f2b628df5b4a1516b297a8a6016da993e4bb9",
+      "disposition": "Nominal 에다 bundle, preserving a distinct 에 + 다 path. Nominalization, nominal suffixes and existing outer particle slots compose; location/addition senses are not selected.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:73014",
+        "headword": "에다가",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73014",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "일정한 위치를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "선생님은 전달 내용을 칠판에다가 써 내려갔다."
+              ],
+              [
+                "지수는 허공에다가 보고 싶은 사람의 이름을 썼다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "더해지는 대상을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 양손 가득 가방에다가 책까지 들어서 우산을 쓸 수가 없다."
+              ],
+              [
+                "이사하는 날 이웃에다가 친척들까지 도와줘서 이사가 손쉽게 끝났다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "f440c42ec59e760e00fdf43916dc687fca527382047762d7ab3b3d6d18017825",
+      "disposition": "Nominal 에다가 bundle, preserving a distinct 에 + 다가 path; nominalizations/suffixes and existing outer particles compose without treating arbitrary connectives as nouns.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:80293",
+        "headword": "에게다",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80293",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 행동이 영향을 미치는 대상임을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이 일을 누구에게다 말해야 할지 모르겠다."
+              ],
+              [
+                "거실에 계신 손님에게다 이 차 좀 가져다 드려라."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "67c094f4d0eb92392e95c788f28087425515484a1d32f77f8ceacb33e3daf69f",
+      "disposition": "Nominal recipient 에게다 bundle, separate from 에게 + 다; explicit recipient provenance marks contextual eligibility rather than inferring a referent from spelling.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:86573",
+        "headword": "에게다가",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86573",
+        "lexical_unit": "단어",
+        "notes": [
+          "사람이나 동물 등을 나타내는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 행동이 영향을 미치는 대상임을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 너에게다가 이 편지를 보낸다."
+              ],
+              [
+                "승규는 후배에게다가 자신의 실수를 뒤집어씌웠다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "ca936e7f11c7bc0d4199d9a446d3b98120f5bc572a4d9e2ab309f82d6c2b5f7a",
+      "disposition": "Nominal recipient 에게다가 bundle, separate from 에게 + 다가; recipient provenance leaves animate/personified eligibility and sense selection contextual.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:83879",
+        "headword": "한테다",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83879",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 행동이 영향을 미치는 대상임을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 친구한테다 내 비밀을 다 털어놓고 말았다. "
+              ],
+              [
+                "저기 앉아 있는 고양이한테다 먹이를 좀 나누어 주렴. "
+              ]
+            ],
+            "total_example_groups": 3
+          }
+        ]
+      },
+      "source_sha256": "98f7898d86b74a811b76e981374eae949a076736926cd6172cb05bd885375591",
+      "disposition": "Nominal recipient 한테다 bundle, separate from 한테 + 다; source animal and person examples are not reduced to a human-only whitelist.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:83880",
+        "headword": "한테다가",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83880",
+        "lexical_unit": "단어",
+        "notes": [
+          "사람을 나타내는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 행동이 영향을 미치는 대상임을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "너는 어린 아이한테다가 왜 그렇게 비싼 선물을 주니? "
+              ],
+              [
+                "왜 이런 복잡한 일을 나한테다가 맡기는 건지 모르겠다. "
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "73248483be0c911a1375e36e914534dc0b04c5aa6e2703f8a788169d72410525",
+      "disposition": "Nominal recipient 한테다가 bundle, separate from 한테 + 다가; person-reference requirement remains explicit in the scoped source review and recipient provenance.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:86550",
+        "headword": "로다가",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86550",
+        "lexical_unit": "단어",
+        "notes": [
+          "받침이 없거나 'ㄹ' 받침인 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "움직임의 방향을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이번 소풍은 어디로다가 갈까?"
+              ],
+              [
+                "민준이는 오늘 서울로다가 떠났다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "움직임의 경로를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리 이 다리로다가 강을 건너자."
+              ],
+              [
+                "아이들은 오솔길로다가 걸어가는 것이 재미있는 모양이었다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "변화의 결과를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "펑펑 내리던 눈이 어느새 비로다가 변했다."
+              ],
+              [
+                "그는 자신의 이야기를 수필로다가 써서 많은 독자들의 공감을 얻었다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "4",
+            "definition": "어떤 물건의 재료나 원료를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "동생은 매년 털실로다가 목도리를 짠다."
+              ],
+              [
+                "오늘은 찹쌀로다가 밥을 지었더니 밥이 차지다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "5",
+            "definition": "어떤 일의 수단이나 도구를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 항상 만년필로다가 서명을 한다."
+              ],
+              [
+                "웬만하면 문제를 대화로다가 해결하세."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "6",
+            "definition": "어떤 일의 방법이나 방식을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "여기서는 사과를 낱개로다가 판매한다."
+              ],
+              [
+                "아이는 장난감을 사달라며 막무가내로다가 떼를 썼다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "7",
+            "definition": "어떤 일의 원인이나 이유를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 환절기에 감기로다가 호되게 고생을 했다."
+              ],
+              [
+                "우리는 별것도 아닌 일로다가 곧잘 싸우곤 한다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "8",
+            "definition": "지위나 신분 또는 자격을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리는 승규를 축제의 사회자로다가 추천했다."
+              ],
+              [
+                "청년은 듬직하게 생긴 것이 사위로다가 삼으면 딱 좋겠구먼."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "9",
+            "definition": "시간을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "박 선생은 오늘로다가 학교를 떠난다."
+              ],
+              [
+                "지수는 결혼한 후로다가 부쩍 알뜰해졌다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "10",
+            "definition": "시간을 셈할 때 셈에 넣는 한계를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "내일로다가 일주일 간의 휴가가 끝난다."
+              ],
+              [
+                "이 일에 매달린 지 오늘로다가 딱 한 달째다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "12",
+            "definition": "약속이나 결정을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "저희는 꼭 같은 대학에 다니기로다가 약속했어요."
+              ],
+              [
+                "나는 건강을 위해서 담배를 끊기로다가 결심했어."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "13",
+            "definition": "어떤 사물에 대하여 생각하는 바를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [
+              "주로 '보다', '생각하다', '여기다' 등과 함께 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 나를 라이벌로다가 생각한다."
+              ],
+              [
+                "지수는 민준이의 선물을 가장 소중한 선물로다가 여긴다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "09c244e6383d025d6e4e3ae770227506e464b1193e09af9a6fb0d14056bbca68",
+      "disposition": "Vowel/ㄹ nominal 로다가 bundle with separate 로 + 다가 path, nominalization and outer-particle composition. Direction/path/result/material/means and other senses are not selected.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:86577",
+        "headword": "으로다가",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86577",
+        "lexical_unit": "단어",
+        "notes": [
+          "'ㄹ'을 제외한 받침 있는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "움직임의 방향을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리는 아침 운동을 할 겸 동네 뒷산으로다가 향했다."
+              ],
+              [
+                "그는 내가 다가가자 뒤쪽으로다가 한 발자국 물러섰다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "움직임의 경로를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 일본으로다가 경유를 해서 독일에 도착했다."
+              ],
+              [
+                "도둑은 내가 소리를 지르자 뒷문으로다가 도망을 쳤다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "변화의 결과를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "사소한 말다툼이 큰 싸움으로다가 번졌다."
+              ],
+              [
+                "냉동실에 넣어 둔 물이 얼음으로다가 변했다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "4",
+            "definition": "어떤 물건의 재료나 원료를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "할머니께서 직접 캐 온 쑥으로다가 떡을 쪄 주셨다."
+              ],
+              [
+                "우리는 우유, 얼음, 팥, 아이스크림으로다가 빙수를 만들었다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "5",
+            "definition": "어떤 일의 수단이나 도구를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그들은 트럭으로다가 이삿짐을 날랐다."
+              ],
+              [
+                "목수가 톱으로다가 열심히 나무를 잘랐다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "6",
+            "definition": "어떤 일의 방법이나 방식을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 언제나 정장 차림으로다가 강단에 선다."
+              ],
+              [
+                "승규는 창의적으로다가 생각하는 능력이 뛰어나다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "7",
+            "definition": "어떤 일의 원인이나 이유를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 이 사건으로다가 일약 스타덤에 올랐다."
+              ],
+              [
+                "올해는 잦은 태풍으로다가 과일의 수확량이 감소했다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "8",
+            "definition": "지위나 신분 또는 자격을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "장 씨는 그 사내를 형님으로다가 모셨다."
+              ],
+              [
+                "승규가 투표를 통해 회장으로다가 뽑혔다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "9",
+            "definition": "시간을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리는 동창회를 이번 달 초순으로다가 정했다."
+              ],
+              [
+                "지수는 아침저녁으로다가 부모님께 전화를 드린다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "10",
+            "definition": "시간을 셈할 때 셈에 넣는 한계를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이 축제는 이번으로다가 딱 백 회가 된다."
+              ],
+              [
+                "이번 봄으로다가 사 년간의 나의 대학 생활은 끝이 난다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "11",
+            "definition": "어떤 사물에 대하여 생각하는 바를 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [
+              "주로 '보다', '생각하다', '여기다' 등과 함께 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "노인은 손녀의 재롱을 삶의 즐거움으로다가 생각했다."
+              ],
+              [
+                "나는 자기 전에 책 읽는 시간을 하루의 낙으로다가 여긴다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "d47d561d545e3ca315758fab2287a32555459b4a994f132d4ea7bbcb4a15b15c",
+      "disposition": "Non-ㄹ consonant nominal 으로다가 bundle with separate 으로 + 다가 path. Distinguishes ㄹ boundary and conditional non-Hangul pronunciation; eleven senses remain context-dependent.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:70051",
+        "headword": "보고",
+        "homonym": "1",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70051",
+        "lexical_unit": "단어",
+        "notes": [
+          "사람이나 동물을 나타내는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 행동이 미치는 대상임을 나타내는 조사.",
+            "notes": [
+              "주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "이렇게 위험한 일을 누구보고 하라고 합니까? "
+              ],
+              [
+                "지수보고 내일까지 자료 좀 가지고 오라고 전해 줘."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "785ecfb5e4bf149c370a74c0a4414f55e0bc66a6e849069f6d316cda4147e087",
+      "disposition": "Nominal recipient 보고 as a particle, preserving lexical/predicate readings such as 돌보다 + 고. Person/animal-reference suitability is not inferred from headword presence.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:70037",
+        "headword": "더러",
+        "homonym": "2",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70037",
+        "lexical_unit": "단어",
+        "notes": [
+          "사람을 나타내는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 행동이 미치는 대상을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지수가 나더러 뚱뚱하다고 해서 나는 화가 났다. "
+              ],
+              [
+                "어머니는 형더러 방을 청소하라고 시키셨다. "
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "f2f4535422f3e46680e95dfbe53cc5d81dd58627b2bd017f8cc6e7f44ff6250b",
+      "disposition": "Nominal recipient 더러 as a particle; person-reference suitability and contextual interpretation remain separate from morphological candidates.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:41693",
+        "headword": "다",
+        "homonym": "4",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=41693",
+        "lexical_unit": "단어",
+        "notes": [
+          "장소나 방향, 수단, 대상을 나타내는 받침 없는 부사어나 조사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞에 오는 말의 의미를 더 뚜렷하게 할 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "만두를 직접 손으로다 빚었다."
+              ],
+              [
+                "승규는 스케치북에 연필로다 쓱쓱 내 얼굴을 그렸다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "8d8b62abd165ae460a7bdc5fd814b87903953fe0aafcab33a35f9e5f615a2af1",
+      "disposition": "Emphatic 다 after 에/에서/서/에게/한테/께/로/으로 or the seven reviewed deictic location/direction words. No arbitrary nominal, adverbial, final/connective ending or repeated emphasis stripping. Enumerative 다 85738 is a separate unimplemented source sense.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    },
+    {
+      "source": {
+        "id": "krdict:41695",
+        "headword": "다가",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=41695",
+        "lexical_unit": "단어",
+        "notes": [
+          "장소나 방향, 수단, 대상을 나타내는 받침 없는 부사어나 조사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞에 오는 말의 의미를 더 뚜렷하게 할 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 빵을 둘로다가 나눠 친구와 사이좋게 나눠 먹었다."
+              ],
+              [
+                "화장만으로다가 이렇게 인상이 달라질 수 있다니 놀라웠다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "b84355b09c16618cdc0527f37ff23a1b47ae7a765421d6bd9cdcf1ccac5c5a60",
+      "disposition": "Emphatic 다가 with the same reviewed case/deictic bases as 다, independent of connective -다가/-어다가. Bare nominalization is insufficient; an intervening case particle licenses composition.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification."
+    }
+  ],
+  "deictic_sources": [
+    {
+      "source": {
+        "id": "krdict:17863",
+        "headword": "여기",
+        "homonym": "0",
+        "pos": "대명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=17863",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "여기"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "말하는 사람에게 가까운 곳을 가리키는 말.",
+            "notes": [
+              "주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "여기가 제가 일하는 곳입니다."
+              ],
+              [
+                "그쪽에 혼자 서 있지 말고 여기로 와서 앉아."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "바로 앞에서 이야기한 대상을 가리키는 말.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "여기에서부터 일이 잘못되기 시작하였다."
+              ],
+              [
+                "문제의 핵심은 누구도 책임지려 하지 않는다는 것, 여기에 있다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "caa30264015fdf0beef5309320830ff422f66c892aa3f8310225d1ed9f3c4ed6",
+      "disposition": "Only the location/direction use supports this emphatic particle path; homonymous manner/interjection/noun senses are not selected by the candidate generator."
+    },
+    {
+      "source": {
+        "id": "krdict:62258",
+        "headword": "거기",
+        "homonym": "0",
+        "pos": "대명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62258",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "거기"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "듣는 사람에게 가까운 곳을 가리키는 말.",
+            "notes": [
+              "주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "거기에서 조금만 기다려 주세요."
+              ],
+              [
+                "거기에 그렇게 서 있지 말고 여기에 와서 앉으세요."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "2",
+            "definition": "앞에서 이미 이야기한 곳을 가리키는 말.",
+            "notes": [
+              "주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "그때 식당 종업원이 자리를 안내해 주면서 거기에 앉게 했어요."
+              ],
+              [
+                "친구는 우리 회사 근처에서 모임이 있으니 거기서 만나자고 했다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "3",
+            "definition": "앞에서 이미 이야기한 대상을 가리키는 말.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "정말 문제는 거기서 끝나는 게 아니라는 겁니다."
+              ],
+              [
+                "회사 사람들하고 같이 술을 마시는 것, 거기까지는 좋았다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "4",
+            "definition": "(낮잡아 이르는 말로) 너 또는 당신.",
+            "notes": [
+              "주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "저는 거기가 하자는 대로 할게요."
+              ],
+              [
+                "남의 일에 참견하지 마시고 거기 일이나 잘하세요."
+              ]
+            ],
+            "total_example_groups": 3
+          }
+        ]
+      },
+      "source_sha256": "0727134aca6ff2dbdd86fc4ff6f75f4a9681557e85fd64d123e073dca8525317",
+      "disposition": "Only the location/direction use supports this emphatic particle path; homonymous manner/interjection/noun senses are not selected by the candidate generator."
+    },
+    {
+      "source": {
+        "id": "krdict:71218",
+        "headword": "저기",
+        "homonym": "1",
+        "pos": "대명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71218",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "저기"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "말하는 사람이나 듣는 사람으로부터 멀리 떨어져 있는 곳을 가리키는 말.",
+            "notes": [
+              "주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "저기 보이는 분수 옆 벤치에서 나는 청혼을 받았다. "
+              ],
+              [
+                "우리는 남편 직장이 가까운 저기 동네에서 신혼집을 차렸다."
+              ]
+            ],
+            "total_example_groups": 3
+          }
+        ]
+      },
+      "source_sha256": "6f0340a4b0dc4bb57744cba43932ed4825189d685611d5bc726073cbb3b87ca4",
+      "disposition": "Only the location/direction use supports this emphatic particle path; homonymous manner/interjection/noun senses are not selected by the candidate generator."
+    },
+    {
+      "source": {
+        "id": "krdict:60319",
+        "headword": "어디",
+        "homonym": "1",
+        "pos": "대명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=60319",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "어디"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "모르는 곳을 가리키는 말.",
+            "notes": [
+              "의문문에 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "어디에 가세요?",
+                "학교에 가요."
+              ],
+              [
+                "내일 어디에서 만날까요?",
+                "지하철역에서 만납시다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "2",
+            "definition": "듣는 사람에게 밝혀 말하지 않는 어느 곳을 가리키는 말.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 어디 가 볼 데가 있다."
+              ],
+              [
+                "남편은 어디 가야 하는 곳이 있다면서 서둘러 집을 나섰다. "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "3",
+            "definition": "정해져 있지 않거나 정확하게 말할 수 없는 어느 곳을 가리키는 말.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "요즘은 어디를 가도 집값이 비싸다."
+              ],
+              [
+                "집에만 있으니 답답해서 어디로든 떠나고 싶다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "4",
+            "definition": "무엇이라고 말하기 어려운 점을 가리키는 말.",
+            "notes": [
+              "주로 '어딘가', '어딘지'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "두 사람은 어딘가 어울리지 않았다."
+              ],
+              [
+                "동생이 정장을 입고 있으니 어딘지 어색해 보였다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "5",
+            "definition": "수량, 범위, 장소 등이 아주 대단함을 가리키는 말.",
+            "notes": [
+              "반어적 의문문에 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "여기가 어디라고 그런 소리를 함부로 하는 거야?"
+              ],
+              [
+                "1점 차이로 시험에서 붙고 떨어지는데 3점이면 어디야?"
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "6",
+            "definition": "다른 가능성이 조금도 없음을 가리키는 말.",
+            "notes": [
+              "'어디까지나'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "대학교 진학은 어디까지나 본인이 결정해야 할 문제이다."
+              ],
+              [
+                "내년에 취직도 하고 결혼도 하는 것은 어디까지나 나의 희망 사항이다."
+              ]
+            ],
+            "total_example_groups": 3
+          }
+        ]
+      },
+      "source_sha256": "9107f672a15189378b27206071c9dac187511a73a459d96b129951c4d0254451",
+      "disposition": "Only the location/direction use supports this emphatic particle path; homonymous manner/interjection/noun senses are not selected by the candidate generator."
+    },
+    {
+      "source": {
+        "id": "krdict:91328",
+        "headword": "이리",
+        "homonym": "2",
+        "pos": "부사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=91328",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "이리"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "이곳으로. 또는 이쪽으로.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이리 가져오다."
+              ],
+              [
+                "이리 도망가다."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "b9f07465e2e8bd9ed9c2a7c776acec17332f3c52521d5b4e5a0fccd732d22fa8",
+      "disposition": "Only the location/direction use supports this emphatic particle path; homonymous manner/interjection/noun senses are not selected by the candidate generator."
+    },
+    {
+      "source": {
+        "id": "krdict:89849",
+        "headword": "그리",
+        "homonym": "1",
+        "pos": "부사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89849",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "그리"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "그곳으로. 또는 그쪽으로.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그리 가다."
+              ],
+              [
+                "그리 보내다."
+              ]
+            ],
+            "total_example_groups": 7
+          }
+        ]
+      },
+      "source_sha256": "13357b0237f3e3aea0d39b3c025b7c45371ec404b4f249ad8182effe7728667a",
+      "disposition": "Only the location/direction use supports this emphatic particle path; homonymous manner/interjection/noun senses are not selected by the candidate generator."
+    },
+    {
+      "source": {
+        "id": "krdict:25004",
+        "headword": "저리",
+        "homonym": "1",
+        "pos": "부사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=25004",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "저리"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "저곳으로. 또는 저쪽으로.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "저리 가다."
+              ],
+              [
+                "저리 나가다."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "5e33d9f7be9767de767fbcb63f5ed09aeda718b0da1ebe2084ec309d4ac2d31d",
+      "disposition": "Only the location/direction use supports this emphatic particle path; homonymous manner/interjection/noun senses are not selected by the candidate generator."
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "6c851b3d83d1ccc7c765203f8107ff2866be19eb6079b6791d284b0f13a5ef19",
+      "after_sha256": "030c068c9a921c5bd2c9a4653f377992ed70a6569d022baf75f452e4f402d3f7",
+      "converted": 22220,
+      "before_matched": 22085,
+      "after_matched": 22087,
+      "remaining_misses": 133,
+      "new_matches": [
+        {
+          "id": "id:MH2_0149-s138/2",
+          "surface": "강에다",
+          "expected": [
+            "강"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s706/11",
+          "surface": "노동자보고",
+          "expected": [
+            "노동자"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": []
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "9e4ceafa1d8c615db04afdf979ccfa68757ed808986b9e7ad79fbac482b6f113",
+      "after_sha256": "31b8209bd6597a15cb780b87efa1829eff05a71b4c2d34526e0486470a538cfb",
+      "converted": 9989,
+      "before_matched": 9823,
+      "after_matched": 9824,
+      "remaining_misses": 165,
+      "new_matches": [
+        {
+          "id": "id:dev-s127/1",
+          "surface": "거기에다",
+          "expected": [
+            "거기"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": []
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-destination-particles.conllu",
+      "sha256": "6aeb7951b3c2e2904c99f4c9fc492af36259de28a759988659d33a5c0d6b7020",
+      "complete_byte_identical_sentences": 2
+    },
+    {
+      "path": "tests/fixtures/gsd-destination-particles.conllu",
+      "sha256": "9f568e0c57bb9d0eb003b0c3cc3f9824192c4bad99e83e309e10c710c2b98d90",
+      "complete_byte_identical_sentences": 1
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "강에다",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "거기에다",
+      "before_count": 4,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "거기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "거기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "거다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "거다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학교에다가",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "친구에게다",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에게",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에게다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "친구에게다가",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에게",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에게다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "친구한테다",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "한테",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "한테다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "친구한테다가",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "한테",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "한테다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "서울로다가",
+      "before_count": 7,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "서우",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "서우",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "서우",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "서우",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "서울",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "서울",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "손으로다가",
+      "before_count": 7,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "손",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "손",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "손으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "손으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "손으로다",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "손",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으로",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "손으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학교로다가도",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로다가",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강에다는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학교에다가요",
+      "before_count": 14,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다가",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.enumerative_yo",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다가",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.enumerative_yo",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "노동자보고",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "노동자",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "보고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "나더러",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "나",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더러",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "친구보고는",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "보고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "친구더러도",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더러",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생들한테다가",
+      "before_count": 8,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "한테",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "한테다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "한테",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "한테다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "선생님에게다",
+      "before_count": 4,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "선생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "에게",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial",
+            "suffix.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "에게다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient",
+            "suffix.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에게",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에게다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에게",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에게다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생닣다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에게",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생닣다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에게다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "선생님께다가",
+      "before_count": 8,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "선생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "께",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial",
+            "suffix.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "께",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "께",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "선생닣다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "께",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹기에다",
+      "before_count": 4,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹음으로다가",
+      "before_count": 7,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "으로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "으로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "으로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "으로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹음",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹음",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹음으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹음으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "으로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "으로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보기에다가",
+      "before_count": 8,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생다움에다가",
+      "before_count": 8,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다움",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다움",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다웋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다웋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "nominalization",
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "에다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "nominalization",
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학교에서다가",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에서",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "여기",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "거기",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "저기",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "어디",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "이리",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "그리",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "저리",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "{base}{form}",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "ABC로다가",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial",
+            "pronunciation.assumed_vowel_or_rieul"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "pronunciation.assumed_vowel_or_rieul"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "ABC으로다가",
+      "before_count": 7,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial",
+            "pronunciation.assumed_non_rieul_consonant"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination",
+            "pronunciation.assumed_non_rieul_consonant"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생로다가",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학교으로다가",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "길으로다가",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "길으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "길으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이다가",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학생을다가",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학생만다가",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학교에다다가",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학교에다다",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹고에다",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_destination"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹기다가",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹는다가",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹다가",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "돌보고",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "보고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.recipient"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "저기다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "저기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "여기다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "여기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "여기다가",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "여기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "거기다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "거기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "거기다가",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "거기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "저기다가",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "저기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "어디다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "어디",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "어디다가",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "어디",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "이리다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이리",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "이리다가",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이리",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "그리다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "그리",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "그리다가",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "그리",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "저리다",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "저리",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "저리다가",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "저리",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "다가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.emphatic_adverbial"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학교다",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학교다가",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "빨리다가",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "살겠다가",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": []
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "remaining": [
+    "Recipient referent type and contextual senses are not certified by a headword match; provenance records that limitation.",
+    "The seven deictic bases use reviewed location/direction senses. Further lexical adverbials and case particles before emphatic 다/다가 need their own source review.",
+    "Enumerative particle 다 85738 and quoted-clause subject 가 (including 살겠다가) remain distinct open work.",
+    "Independent Korean-language review, contextual ranking and broader inventory review remain pending."
+  ],
+  "labels": {
+    "canonical_forms": 255,
+    "catalog_source_entries": 301,
+    "grammar_fixture_entries": 302,
+    "new_source_ids": [
+      41693,
+      41695,
+      70037,
+      70051,
+      73013,
+      73014,
+      80293,
+      83879,
+      83880,
+      86550,
+      86573,
+      86577
+    ],
+    "all_prior_entries_unchanged": true
+  },
+  "review_status": "Source-backed agent judgments; independent Korean-language review pending. No precision estimate."
+}

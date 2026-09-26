@@ -916,3 +916,39 @@ x86_64-linux; other declared platforms were not executed. The packaged app with
 the full dictionary passes eleven reading choices, distinct particle/ending and
 related-form source links, nine forbidden paths, and desktop/mobile checks
 without JavaScript errors or overflow.
+
+## Destination and recipient particles (COV-018f)
+
+[The comparison](destination-particle-evaluation.json) records **two new KAIST
+and one new GSD development recovery**: 강에다, 노동자보고 and 거기에다.
+Three complete byte-identical source sentences protect those gold groups.
+Remaining development misses are **133 KAIST and 165 GSD**, with no lost groups
+or component recoveries. Across 66 audited surfaces, 121 analyses are added and
+none removed. Bundled and component paths remain alternatives, and unjudged
+lexical hypotheses are retained explicitly in the report.
+
+Twenty-four new judgment cases bring the ledger to **457 cases, 257 required
+and 206 forbidden judgments**. Tests cover case/allomorph boundaries, recipient
+particles, nominalization/suffix composition, outer particles, NFD, foreign-base
+pronunciation conditions, and preserved predicate readings. Separate emphatic
+다/다가 is limited to eight reviewed case forms and seven deictic bases; it
+does not license arbitrary nominal, adverbial or predicate-ending stripping.
+The recipient's contextual suitability and the deictic headword's intended sense
+are not inferred from a dictionary match.
+
+The catalog now has **255 canonical grammar forms**, supported by 301 source
+entries. The grammar fixture contains 302 entries and retains every earlier
+entry unchanged. Twelve scoped particle reviews bring the persistent inventory
+to **28 scoped entries and 687 without a disposition**. All source senses and
+attachment notes remain visible; these reviews do not certify every sense or
+combination. Independent Korean-language review and further particle/adverbial
+coverage remain open.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, all thirty
+unchanged stress fingerprints, the 1,024-syllable memory test, frontend production
+build and complete browser/HTTP suite pass. Historical baselines and optimization
+snapshots remain unchanged. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared platforms were not executed. The packaged app with
+the full dictionary passes fifteen reading choices, distinct particle/ending
+source links, six forbidden paths, preservation of the 돌보다 verb reading,
+and desktop/mobile checks without JavaScript errors or overflow.

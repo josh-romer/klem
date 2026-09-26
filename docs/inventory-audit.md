@@ -277,3 +277,20 @@ The final comparison lists 500 added analyses and three removed known-class
 violations individually. The latter are 학생이신다, 먹고싶으신다 and
 학생다우신다; their composed 든가 paths are excluded too. Existing unclassified
 lexical hypotheses remain, and broader present-ending restrictions need review.
+
+## Destination and recipient particle review (COV-018f)
+
+[The comparison](destination-particle-evaluation.json) records scoped attachment
+reviews for twelve particles: 41693, 41695, 70037, 70051, 73013, 73014, 80293,
+83879, 83880, 86550, 86573 and 86577. It retains every sense of those sources and
+separately records the seven deictic location/direction entries used before
+emphatic 다/다가. The inventory ledger now has **28 scoped reviews and 687
+entries without a disposition**. Semantic recipient eligibility, contextual
+senses, further adverbial bases and particle stacks remain open.
+
+Two KAIST and one GSD development groups now recover: 강에다, 노동자보고 and
+거기에다. Current development misses are **133 KAIST and 165 GSD**, without
+lost gold groups or component recoveries. The report preserves all 121 added
+analyses across 66 audited surfaces and removes none. All thirty stress
+fingerprints remain unchanged. Bundled and component paths are alternatives;
+matching corpus gold does not certify every candidate or resolve sense choice.

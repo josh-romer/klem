@@ -1789,6 +1789,125 @@ fn causal_endings_keep_dictionary_filtered_cli_paths_and_nominal_alternatives() 
 }
 
 #[test]
+fn destination_particles_keep_filtered_bundled_and_component_paths() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from(
+            "tests/fixtures/krdict-destination-particles.json",
+        )],
+        dir.db(),
+        "destination-particles-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        ("강에다", vec!["강"], vec!["에다"], MorphemeKind::Particle),
+        (
+            "강에다",
+            vec!["강"],
+            vec!["에", "다"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "거기에다",
+            vec!["거기"],
+            vec!["에다"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학교에다가",
+            vec!["학교"],
+            vec!["에다가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "친구에게다",
+            vec!["친구"],
+            vec!["에게다"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "친구에게다가",
+            vec!["친구"],
+            vec!["에게다가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "친구한테다",
+            vec!["친구"],
+            vec!["한테다"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "친구한테다가",
+            vec!["친구"],
+            vec!["한테다가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "서울로다가",
+            vec!["서울"],
+            vec!["로다가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "손으로다가",
+            vec!["손"],
+            vec!["으로다가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "노동자보고",
+            vec!["노동자"],
+            vec!["보고"],
+            MorphemeKind::Particle,
+        ),
+        ("나더러", vec!["나"], vec!["더러"], MorphemeKind::Particle),
+        ("저기다", vec!["저기"], vec!["다"], MorphemeKind::Particle),
+        (
+            "어디다가",
+            vec!["어디"],
+            vec!["다가"],
+            MorphemeKind::Particle,
+        ),
+        ("돌보고", vec!["돌보다"], vec!["고"], MorphemeKind::Ending),
+        ("먹다가", vec!["먹다"], vec!["다가"], MorphemeKind::Ending),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}
+
+#[test]
 fn enumerative_particles_and_choice_endings_keep_filtered_cli_alternatives() {
     use klem::MorphemeKind;
     let dir = Scratch::new();

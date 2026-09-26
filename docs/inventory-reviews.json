@@ -714,6 +714,450 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:73013",
+      "source_sha256": "58abf908331713b24e4818add64f2b628df5b4a1516b297a8a6016da993e4bb9",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Nominal 에다 bundle, preserving a distinct 에 + 다 path. Nominalization, nominal suffixes and existing outer particle slots compose; location/addition senses are not selected.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-location-short",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-connective-location",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73014",
+      "source_sha256": "f440c42ec59e760e00fdf43916dc687fca527382047762d7ab3b3d6d18017825",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Nominal 에다가 bundle, preserving a distinct 에 + 다가 path; nominalizations/suffixes and existing outer particles compose without treating arbitrary connectives as nouns.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-location-full",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80293",
+      "source_sha256": "67c094f4d0eb92392e95c788f28087425515484a1d32f77f8ceacb33e3daf69f",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Nominal recipient 에게다 bundle, separate from 에게 + 다; explicit recipient provenance marks contextual eligibility rather than inferring a referent from spelling.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-ege-short",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86573",
+      "source_sha256": "ca936e7f11c7bc0d4199d9a446d3b98120f5bc572a4d9e2ab309f82d6c2b5f7a",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Nominal recipient 에게다가 bundle, separate from 에게 + 다가; recipient provenance leaves animate/personified eligibility and sense selection contextual.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-ege-full",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:83879",
+      "source_sha256": "98f7898d86b74a811b76e981374eae949a076736926cd6172cb05bd885375591",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Nominal recipient 한테다 bundle, separate from 한테 + 다; source animal and person examples are not reduced to a human-only whitelist.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-hante-short",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:83880",
+      "source_sha256": "73248483be0c911a1375e36e914534dc0b04c5aa6e2703f8a788169d72410525",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Nominal recipient 한테다가 bundle, separate from 한테 + 다가; person-reference requirement remains explicit in the scoped source review and recipient provenance.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-hante-full",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-plural-recipient",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86550",
+      "source_sha256": "09c244e6383d025d6e4e3ae770227506e464b1193e09af9a6fb0d14056bbca68",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Vowel/ㄹ nominal 로다가 bundle with separate 로 + 다가 path, nominalization and outer-particle composition. Direction/path/result/material/means and other senses are not selected.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-direction-open",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-short-wrong-consonant",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-short-wrong-son",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86577",
+      "source_sha256": "d47d561d545e3ca315758fab2287a32555459b4a994f132d4ea7bbcb4a15b15c",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Non-ㄹ consonant nominal 으로다가 bundle with separate 으로 + 다가 path. Distinguishes ㄹ boundary and conditional non-Hangul pronunciation; eleven senses remain context-dependent.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-direction-closed",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-nominalization-direction",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-full-wrong-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-full-wrong-rieul",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70051",
+      "source_sha256": "785ecfb5e4bf149c370a74c0a4414f55e0bc66a6e849069f6d316cda4147e087",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Nominal recipient 보고 as a particle, preserving lexical/predicate readings such as 돌보다 + 고. Person/animal-reference suitability is not inferred from headword presence.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-recipient-bogo",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70037",
+      "source_sha256": "f2f4535422f3e46680e95dfbe53cc5d81dd58627b2bd017f8cc6e7f44ff6250b",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Nominal recipient 더러 as a particle; person-reference suitability and contextual interpretation remain separate from morphological candidates.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-recipient-deoreo",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:41693",
+      "source_sha256": "8d8b62abd165ae460a7bdc5fd814b87903953fe0aafcab33a35f9e5f615a2af1",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Emphatic 다 after 에/에서/서/에게/한테/께/로/으로 or the seven reviewed deictic location/direction words. No arbitrary nominal, adverbial, final/connective ending or repeated emphasis stripping. Enumerative 다 85738 is a separate unimplemented source sense.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-deictic-short",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-location-components",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:41695",
+      "source_sha256": "b84355b09c16618cdc0527f37ff23a1b47ae7a765421d6bd9cdcf1ccac5c5a60",
+      "status": "scoped",
+      "checklist": [
+        "COV-018f"
+      ],
+      "scope": "Emphatic 다가 with the same reviewed case/deictic bases as 다, independent of connective -다가/-어다가. Bare nominalization is insufficient; an intervening case particle licenses composition.",
+      "remaining": "Other particle stacks, unreviewed adverbial bases, semantic referent constraints and contextual senses remain open. This is a scoped attachment review, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "destination_particles_preserve_bundles_components_and_nominal_composition"
+        },
+        {
+          "path": "tests/destination_particles.rs",
+          "test": "emphatic_particles_do_not_consume_unlicensed_bases_or_replace_predicates"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "destination_particles_keep_filtered_bundled_and_component_paths"
+        },
+        {
+          "path": "docs/destination-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "destination-deictic-full",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-location-full-components",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-bare-nominalization",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-subject-case",
+          "judgment": "path"
+        },
+        {
+          "case": "destination-final-ending",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

@@ -136,6 +136,9 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const destinationParticles = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-destination-particles.json"), "utf8"),
+  );
   const colloquialCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-colloquial-copulas.json"), "utf8"),
   );
@@ -226,6 +229,7 @@ try {
       ...causal.LexicalResource.Lexicon.LexicalEntry,
       ...quotedAlternatives.LexicalResource.Lexicon.LexicalEntry,
       ...enumerativeParticles.LexicalResource.Lexicon.LexicalEntry,
+      ...destinationParticles.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -602,6 +606,20 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["강에다", ["강", "에다"], "에다", "Location / addition", 73013, "particle"],
+    ["강에다", ["강", "에", "다"], "다", "Adverbial emphasis", 41693, "particle"],
+    ["학교에다가", ["학교", "에다가"], "에다가", "Location / addition", 73014, "particle"],
+    ["학교에다가", ["학교", "에", "다가"], "다가", "Adverbial emphasis", 41695, "particle"],
+    ["친구에게다", ["친구", "에게다"], "에게다", "Emphatic recipient", 80293, "particle"],
+    ["친구에게다가", ["친구", "에게다가"], "에게다가", "Emphatic recipient", 86573, "particle"],
+    ["친구한테다", ["친구", "한테다"], "한테다", "Emphatic recipient", 83879, "particle"],
+    ["친구한테다가", ["친구", "한테다가"], "한테다가", "Emphatic recipient", 83880, "particle"],
+    ["서울로다가", ["서울", "로다가"], "로다가", "Emphatic direction / means", 86550, "particle"],
+    ["손으로다가", ["손", "으로다가"], "으로다가", "Emphatic direction / means", 86577, "particle"],
+    ["노동자보고", ["노동자", "보고"], "보고", "Recipient / addressee", 70051, "particle"],
+    ["나더러", ["나", "더러"], "더러", "Recipient / addressee", 70037, "particle"],
+    ["저기다", ["저기", "다"], "다", "Adverbial emphasis", 41693, "particle"],
+    ["어디다가", ["어디", "다가"], "다가", "Adverbial emphasis", 41695, "particle"],
     ["학생이라든가", ["학생", "이라든가"], "이라든가", "Enumerative examples", 85861, "particle"],
     ["학교라든가", ["학교", "라든가"], "라든가", "Enumerative examples", 85861, "particle"],
     ["밥이라든지", ["밥", "이라든지"], "이라든지", "Enumerative examples", 86046, "particle"],

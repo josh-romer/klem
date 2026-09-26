@@ -979,6 +979,16 @@ fn particle_allowed(
     after_case: bool,
     suffixes: &[Morpheme],
 ) -> bool {
+    if suffixes
+        .first()
+        .is_some_and(|m| matches!(m.form.as_str(), "다" | "다가"))
+        && !matches!(
+            form,
+            "에" | "에서" | "서" | "에게" | "한테" | "께" | "로" | "으로"
+        )
+    {
+        return false;
+    }
     // The new focus particles permit nominal/adverbial bases, not a subject
     // or object case phrase. In particular 조금이나마 is not 조금 + 이 + 나마.
     if suffixes.first().is_some_and(|m| {
@@ -1179,8 +1189,27 @@ fn nominals(
             a.rules.push("particle".into());
             out.push(a);
         }
-        // 마는 is a post-ending particle, unlike the nominal homonym 만.
-        if particle.form != "마는" {
+        let emphatic_adverbial = matches!(particle.form, "다" | "다가");
+        // Only the reviewed location/direction senses license a bare 다/다가
+        // base. Other lexical adverbials require a separate semantic inventory.
+        if emphatic_adverbial {
+            let kind = match base {
+                "여기" | "거기" | "저기" | "어디" => Some(LemmaKind::Nominal),
+                "이리" | "그리" | "저리" => Some(LemmaKind::Adverbial),
+                _ => None,
+            };
+            if let Some(kind) = kind {
+                out.push(Analysis {
+                    lemmas: vec![lemma(base, kind)],
+                    morphemes: morphs.clone(),
+                    rules: vec!["particle".into()],
+                    unchanged: false,
+                });
+            }
+        }
+        // 마는 is post-ending; emphatic 다/다가 need the bases above or an
+        // explicit case phrase. None license arbitrary nominal suffix peeling.
+        if particle.form != "마는" && !emphatic_adverbial {
             for mut a in nominal_bases(base) {
                 a.morphemes.extend(morphs.clone());
                 a.rules.push("particle".into());
@@ -1210,22 +1239,24 @@ fn nominals(
         } else {
             PredicateEnd::Nominalized
         };
-        with_auxiliaries(base, ending, |p| {
-            let nominalized = PredicateEnd::Nominalized.accepts(&p);
-            let concessive = matches!(particle.form, "만" | "마는")
-                && p.morphs.last().is_some_and(|m| concessive_ending(&m.form));
-            for mut a in expand_predicate(&p) {
-                a.morphemes.extend(morphs.clone());
-                a.rules.push("particle".into());
-                if nominalized {
-                    a.rules.push("nominalization".into());
+        if !emphatic_adverbial {
+            with_auxiliaries(base, ending, |p| {
+                let nominalized = PredicateEnd::Nominalized.accepts(&p);
+                let concessive = matches!(particle.form, "만" | "마는")
+                    && p.morphs.last().is_some_and(|m| concessive_ending(&m.form));
+                for mut a in expand_predicate(&p) {
+                    a.morphemes.extend(morphs.clone());
+                    a.rules.push("particle".into());
+                    if nominalized {
+                        a.rules.push("nominalization".into());
+                    }
+                    if concessive {
+                        a.rules.push("particle.concessive".into());
+                    }
+                    out.push(a);
                 }
-                if concessive {
-                    a.rules.push("particle.concessive".into());
-                }
-                out.push(a);
-            }
-        });
+            });
+        }
         let next = if after_case && particle.form == "만" {
             1
         } else {
@@ -1250,11 +1281,22 @@ fn nominals(
             match particle.form {
                 "요" => a.rules.push("particle.polite".into()),
                 "들" => a.rules.push("particle.distributive".into()),
+                "다" | "다가" => a.rules.push("particle.emphatic_adverbial".into()),
+                "에다" | "에다가" | "에게다" | "에게다가" | "한테다" | "한테다가" | "로다가"
+                | "으로다가" => {
+                    a.rules.push("particle.emphatic_destination".into());
+                }
                 "이든가" | "든가" | "이라든가" | "라든가" | "이라든지" | "라든지" =>
                 {
                     a.rules.push("particle.enumerative".into());
                 }
                 _ => (),
+            }
+            if matches!(
+                particle.form,
+                "보고" | "더러" | "에게다" | "에게다가" | "한테다" | "한테다가"
+            ) {
+                a.rules.push("particle.recipient".into());
             }
         }
     }

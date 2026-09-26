@@ -864,6 +864,9 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("조차", 3, 0),
             ("마저", 3, 0),
             ("밖에", 3, 0),
+            // Emphatic 다/다가 have separately checked adverbial/case bases.
+            ("다", 3, 2),
+            ("다가", 3, 2),
             ("의", 2, 0),
             ("으로", 2, 3),
             ("로", 2, 4),
@@ -871,6 +874,8 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("로서", 2, 4),
             ("으로써", 2, 3),
             ("로써", 2, 4),
+            ("으로다가", 2, 3),
+            ("로다가", 2, 4),
             ("이", 1, 1),
             ("가", 1, 2),
             ("을", 1, 1),
@@ -878,13 +883,21 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("과", 1, 1),
             ("와", 1, 2),
             ("에", 1, 0),
+            ("에다", 1, 0),
+            ("에다가", 1, 0),
             ("에서", 1, 0),
             // Locative 서 (short 에서) follows consonants too: 시장서.
             // The separate count-emphasis homonym has narrower lexical scope.
             ("서", 1, 0),
             ("에게", 1, 0),
+            ("에게다", 1, 0),
+            ("에게다가", 1, 0),
             ("에게서", 1, 0),
             ("한테", 1, 0),
+            ("한테다", 1, 0),
+            ("한테다가", 1, 0),
+            ("보고", 1, 0),
+            ("더러", 1, 0),
             ("한테서", 1, 0),
             ("께", 1, 0),
             ("께서", 1, 0),
@@ -952,6 +965,15 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.enumerative" => {
             "Retain an enumerative or choice particle, separate from a homonymous ending or copular expression; no contextual choice is inferred."
+        }
+        "particle.emphatic_destination" => {
+            "Separate a source-listed emphatic location, direction, means or recipient particle; bundled and component readings remain distinct."
+        }
+        "particle.emphatic_adverbial" => {
+            "Attach emphatic 다/다가 to a reviewed case phrase or deictic location/direction reading, not to an arbitrary noun or predicate ending."
+        }
+        "particle.recipient" => {
+            "This recipient reading requires a contextually appropriate referent (typically a person or animate/personified entity); lexical and contextual eligibility are not inferred."
         }
         "ending.choice" => {
             "Recognize the literal choice ending -든가 with its reviewed prefinal licenses, separately from particle 든가."

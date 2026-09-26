@@ -100,9 +100,27 @@
           };
         });
 
-      checks = forAllSystems (system: {
-        inherit (self.packages.${system}) klem web-assets;
-      });
+      checks = forAllSystems (system:
+        let pkgs = nixpkgs.legacyPackages.${system};
+        in {
+          inherit (self.packages.${system}) klem web-assets;
+          inventory-review = pkgs.runCommand "klem-inventory-review" {
+            nativeBuildInputs = [ pkgs.python3 ];
+            src = pkgs.lib.fileset.toSource {
+              root = ./.;
+              fileset = pkgs.lib.fileset.unions [
+                ./tools/review_inventory.py ./tools/test_review_inventory.py
+                ./docs ./tests ./web/src/grammar-labels.json
+              ];
+            };
+          } ''
+            cd "$src"
+            export PYTHONDONTWRITEBYTECODE=1
+            python -m unittest discover -s tools -p 'test_review_inventory.py'
+            python tools/review_inventory.py --verify
+            touch "$out"
+          '';
+        });
 
       devShells = forAllSystems (system:
         let

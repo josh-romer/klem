@@ -170,7 +170,15 @@ review remains open under the completion review below.
   Remaining -이/-히 families, nominal/adverbial homonyms, and attachment classes
   are COV-013 inventory work. This does not certify all adverbial derivation.
 - [ ] **COV-013 — Ending, particle-chain, and auxiliary inventory audit.**
-  **Partial: initial inventory and development-miss clustering complete.**
+  **Partial: initial inventory, development-miss clustering, and persistent
+  entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
+  preserves homonyms, source attachment notes, and links to existing evidence.
+  The [manual review ledger](inventory-reviews.json) starts with seven scoped
+  dispositions from COV-016/017m/020d; 708 entries have no disposition in this
+  ledger yet, including entries with implemented behavior elsewhere. Neither
+  catalog links nor test citations automatically certify coverage. Source and
+  evidence drift checks run offline and in `nix flake check`. See the
+  [review workflow](inventory-audit.md#persistent-entry-review-queue).
   See [the reproducible audit](inventory-audit.md) and its
   [compact report](inventory-audit.json): 715 dictionary grammar entries are
   inventoried for triage, without treating literal table mentions as coverage.
@@ -720,6 +728,8 @@ browser checks require Chromium. See [evaluation](evaluation.md) and
 [web setup](web.md#tests) for prerequisites and details.
 
 ```sh
+python3 -m unittest discover -s tools -p 'test_review_inventory.py'
+python3 tools/review_inventory.py --verify
 cargo test --locked --offline --features web
 cargo clippy --locked --offline --all-targets --features web -- -D warnings
 cargo fmt --all -- --check

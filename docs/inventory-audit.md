@@ -6,6 +6,65 @@ records input/source hashes, inventory counts, stable IDs for the 19 new matches
 and examples from the largest remaining annotation signatures. This is an
 initial inventory pass, not completion of the linguistic audit.
 
+## Persistent entry review queue
+
+The [current queue](inventory-review-queue.json) contains all 715 source entries,
+with separate IDs/POS for homonyms, every sense's definition and attachment
+notes, patterns, and up to two source example groups per sense. The full source
+example count is retained. Source text is from the National Institute of Korean
+Language's Korean Basic Dictionary, September 2026 export, under
+[CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+The generated queue is an attributed selection of that data under the same
+license; the Python tooling retains the repository's code license.
+
+The [manual ledger](inventory-reviews.json) starts with seven scoped reviews:
+-듯/-듯이 (COV-016), four informative ending entries (COV-017m), and connective
+-요 (COV-020d). Their source notes were inspected individually; each review
+records its supported scope, remaining limits, checklist item, named Rust tests,
+evaluation evidence, and source-specific candidate judgments. Independent
+Korean-language review is pending. The other **708 entries are unreviewed in
+this ledger**, which does not imply they are unimplemented.
+
+The queue links **212 entries to the teaching catalog**, **73 to source-citing
+candidate judgments**, and all **54 auxiliaries to the earlier attachment
+inventory**. These are evidence navigation aids, not coverage certifications.
+In particular, a source citation can support one narrow forbidden path without
+establishing the rest of an entry's attachment behavior.
+
+```sh
+python3 -m unittest discover -s tools -p 'test_review_inventory.py'
+python3 tools/review_inventory.py --verify
+python3 tools/review_inventory.py --dictionary data/dictionaries/krdict/krdict.db \
+  > /tmp/klem-inventory-review-queue.json
+diff -u docs/inventory-review-queue.json /tmp/klem-inventory-review-queue.json
+```
+
+The first two commands need no downloaded dictionary and also run in
+`nix flake check`. Offline verification checks stored source hashes, current
+evidence hashes and references, review status/counts, and every generated link.
+The final two commands additionally reproduce the entire inventory from the
+read-only local dictionary, checking its entry IDs/headwords/POS and retaining
+its source manifest. Offline verification alone cannot establish that the
+stored source selection matches the upstream dictionary.
+
+To review another entry, inspect its source notes and existing paths, add tests
+or fixes where needed, then add an explicit disposition to the manual ledger.
+Use `scoped` for implemented behavior with linked judgments, `gap` for a reviewed
+missing capability, or `deferred` with a reason in the scope/remaining fields.
+Every disposition needs nonempty scope, limitations, checklist references and
+evidence; none means complete coverage. Pin `source_sha256` to the queue row's
+source hash after reviewing that text. Judgment references must cite that exact
+dictionary ID; homonymous source entries cannot substitute for one another.
+After reviewing changed sources or evidence, regenerate into a temporary file,
+inspect the diff, and replace the queue. Do not regenerate just to silence an
+unexpected source change. Named test references check existence; the relevant
+test suite must still be run to establish passing behavior.
+
+This queue is separate from the original `inventory-audit.json` and historical
+corpus reports. Neither those reports nor the application runtime are changed
+by generating it. Expressions and derivational sources outside the four audited
+POS classes still need separate inventories; COV-013 remains open.
+
 ## Reproduce
 
 From the repository root, with the dictionary and corpora already downloaded

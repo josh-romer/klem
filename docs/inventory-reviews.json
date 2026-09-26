@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "review_status": "Agent-authored scoped dispositions; independent Korean-language review pending. Not full-entry coverage certification.",
+  "entries": [
+    {
+      "id": "krdict:76427",
+      "source_sha256": "fec8bf93043380448082570536fab5a55eb644a656c93ddfbbc4fe7096d53536",
+      "status": "scoped",
+      "checklist": [
+        "COV-017m"
+      ],
+      "scope": "Copular/factual 랩니다, explicit and licensed omitted copulas, honorific and retrospective paths, with command homonyms preserved.",
+      "remaining": "Further 으리 prefinal combinations and contextual informative versus command senses need review; source notes do not certify all generated paths.",
+      "evidence": [
+        {
+          "path": "tests/reporting_endings.rs",
+          "test": "reporting_endings_preserve_stems_prefinals_and_homonymous_groups"
+        },
+        {
+          "path": "tests/reporting_endings.rs",
+          "test": "reporting_endings_reject_wrong_boundaries_and_prefinal_slots"
+        },
+        {
+          "path": "docs/reporting-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "reporting-copula",
+          "judgment": "required"
+        },
+        {
+          "case": "reporting-omitted-copula",
+          "judgment": "required"
+        },
+        {
+          "case": "reporting-factual-honorific",
+          "judgment": "required"
+        },
+        {
+          "case": "reporting-retrospective",
+          "judgment": "required"
+        },
+        {
+          "case": "reporting-consonant-copula",
+          "judgment": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80280",
+      "source_sha256": "79e4dc70da85f94de9a438624b136741f114b53e8ec824265730b1e14a0c7e45",
+      "status": "scoped",
+      "checklist": [
+        "COV-016"
+      ],
+      "scope": "Literal 듯 after predicates/copulas and implemented honorific/past/modal chains; preserves ㄹ and auxiliary ordering.",
+      "remaining": "Bound noun 듯, further outer particles, shortened 하다 and contextual interpretation are outside this reviewed scope.",
+      "evidence": [
+        {
+          "path": "tests/comparative_endings.rs",
+          "test": "comparative_endings_keep_stems_prefinals_and_auxiliary_order"
+        },
+        {
+          "path": "tests/comparative_endings.rs",
+          "test": "comparative_endings_do_not_invent_vowel_recovery_or_auxiliary_connections"
+        },
+        {
+          "path": "docs/inventory-audit.md"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "comparative-rieul",
+          "judgment": "ending-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80282",
+      "source_sha256": "f12aa4ab1f736bb837454c61835a7c0d6c4625ac985861ea45fb1e0dd8444b02",
+      "status": "scoped",
+      "checklist": [
+        "COV-016"
+      ],
+      "scope": "Literal 듯이 with predicate/copula and implemented prefinal/auxiliary composition; excludes vowel-recovery and auxiliary-connector misuse.",
+      "remaining": "Further particle attachment, shortened 하다, bound-noun alternatives and contextual interpretation remain outside this scope.",
+      "evidence": [
+        {
+          "path": "tests/comparative_endings.rs",
+          "test": "comparative_endings_keep_stems_prefinals_and_auxiliary_order"
+        },
+        {
+          "path": "tests/comparative_endings.rs",
+          "test": "comparative_endings_do_not_invent_vowel_recovery_or_auxiliary_connections"
+        },
+        {
+          "path": "docs/inventory-audit.md"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "comparative-open",
+          "judgment": "ending-path"
+        },
+        {
+          "case": "comparative-honorific-past",
+          "judgment": "ending-path"
+        },
+        {
+          "case": "comparative-no-eu",
+          "judgment": "ending-path"
+        },
+        {
+          "case": "comparative-no-digeut",
+          "judgment": "ending-path"
+        },
+        {
+          "case": "comparative-no-bieup",
+          "judgment": "ending-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81377",
+      "source_sha256": "d9aa8aa618228ad61f6d498f38c002fd56e076df27c648eef9484b8565dc0d7b",
+      "status": "scoped",
+      "checklist": [
+        "COV-017m"
+      ],
+      "scope": "Present attached ㄴ after open/ㄹ stems and honorific 시; canonical 는답니다, without vowel-only irregular recovery.",
+      "remaining": "Lexical verb/adjective identity and contextual informative versus quoted senses remain unjudged.",
+      "evidence": [
+        {
+          "path": "tests/reporting_endings.rs",
+          "test": "reporting_endings_preserve_stems_prefinals_and_homonymous_groups"
+        },
+        {
+          "path": "tests/reporting_endings.rs",
+          "test": "reporting_endings_reject_wrong_boundaries_and_prefinal_slots"
+        },
+        {
+          "path": "docs/reporting-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "reporting-rieul",
+          "judgment": "required"
+        },
+        {
+          "case": "reporting-no-vowel-irregular",
+          "judgment": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81389",
+      "source_sha256": "b90de95b4591ffff537a8236bef36d1781b21ebd2a420232b6fb27271d39633c",
+      "status": "scoped",
+      "checklist": [
+        "COV-017m"
+      ],
+      "scope": "Present 는답니다 after non-ㄹ consonants; past/modal/retrospective recoveries excluded from this present path.",
+      "remaining": "Unknown lexical verb/adjective classes and contextual senses remain unjudged.",
+      "evidence": [
+        {
+          "path": "tests/reporting_endings.rs",
+          "test": "reporting_endings_preserve_stems_prefinals_and_homonymous_groups"
+        },
+        {
+          "path": "tests/reporting_endings.rs",
+          "test": "reporting_endings_reject_wrong_boundaries_and_prefinal_slots"
+        },
+        {
+          "path": "docs/reporting-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "reporting-present",
+          "judgment": "required"
+        },
+        {
+          "case": "reporting-wrong-vowel",
+          "judgment": "forbidden"
+        },
+        {
+          "case": "reporting-present-past",
+          "judgment": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81393",
+      "source_sha256": "7fa619cbc83351f8b20cfdf4f9e66c92337ff3e60ee8168d7196e52a14b7160e",
+      "status": "scoped",
+      "checklist": [
+        "COV-017m"
+      ],
+      "scope": "Literal 답니다 with honorific/past/modal recovery and existing auxiliary composition; retrospective 더 excluded.",
+      "remaining": "General lexical adjective versus verb attachment is not validated; reported-expression homonyms remain distinct source entries.",
+      "evidence": [
+        {
+          "path": "tests/reporting_endings.rs",
+          "test": "reporting_endings_preserve_stems_prefinals_and_homonymous_groups"
+        },
+        {
+          "path": "tests/reporting_endings.rs",
+          "test": "reporting_endings_reject_wrong_boundaries_and_prefinal_slots"
+        },
+        {
+          "path": "docs/reporting-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "reporting-past",
+          "judgment": "required"
+        },
+        {
+          "case": "reporting-declarative-retrospective",
+          "judgment": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86117",
+      "source_sha256": "af05c902c81334cef67a6c0dc0ad5d5ac9b9e602594eca104c408b450da26d4f",
+      "status": "scoped",
+      "checklist": [
+        "COV-020d"
+      ],
+      "scope": "Connective 요 after bare 이다/아니다, licensed omitted copula and explicit 이요 fragment; excludes general predicates and recovered prefinals.",
+      "remaining": "Context does not select enumeration versus polite particle or terminal 오. Unknown nominal hypotheses remain conditional on lexical membership.",
+      "evidence": [
+        {
+          "path": "tests/copula_yo.rs",
+          "test": "enumerative_copulas_preserve_roles_composition_and_polite_homonyms"
+        },
+        {
+          "path": "tests/copula_yo.rs",
+          "test": "enumeration_does_not_license_arbitrary_predicates_prefinals_or_outer_particles"
+        },
+        {
+          "path": "docs/copula-yo-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "copula-yo-explicit",
+          "judgment": "required"
+        },
+        {
+          "case": "copula-yo-omitted",
+          "judgment": "required"
+        },
+        {
+          "case": "copula-yo-negative",
+          "judgment": "required"
+        },
+        {
+          "case": "copula-yo-fragment",
+          "judgment": "required"
+        },
+        {
+          "case": "copula-yo-predicate",
+          "judgment": "forbidden"
+        },
+        {
+          "case": "copula-yo-honorific",
+          "judgment": "forbidden"
+        },
+        {
+          "case": "copula-yo-consonant",
+          "judgment": "forbidden"
+        }
+      ]
+    }
+  ]
+}

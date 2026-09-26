@@ -3,6 +3,40 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn retrospective_connectives_preserve_four_unchanged_annotated_cases() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-retrospective-connectives.conllu").as_slice(),
+            vec![
+                ("id:M2TA_069-s11/3", "장손이기", vec!["장손", "이다"]),
+                (
+                    "id:MH2_0149-s147/14",
+                    "제한적이었음을",
+                    vec!["제한적", "이다"],
+                ),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-retrospective-connectives.conllu").as_slice(),
+            vec![
+                ("id:dev-s670/5", "먹게", vec!["먹다"]),
+                ("id:dev-s822/3", "먹기", vec!["먹다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "retrospective-connectives").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn retrospective_licenses_preserve_four_unchanged_annotated_cases() {
     for (corpus, input, cases) in [
         (

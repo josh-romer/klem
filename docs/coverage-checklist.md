@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–q/018a–i/019a–f/020a–f/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–s/018a–i/019a–f/020a–g/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records eighty-six scoped
-  dispositions from COV-016/017m–n/017p–r/018e–i/019d–f/020d–g; 629 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 115 scoped
+  dispositions from COV-016/017m–n/017p–s/018e–i/019d–f/020d–g; 600 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -218,7 +218,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–r implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–s implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -452,10 +452,26 @@ review remains open under the completion review below.
   cases, four complete unchanged annotated sentences, dictionary/CLI/browser
   checks and [comparison](retrospective-license-evaluation.json). The report
   accounts for every removed candidate across 184 surfaces and preserves all
-  30 stress fingerprints. Other followers, including 나 and nominalizing 기,
-  still need review; 먹더나요 retains the unjudged 더 + 나 + 요 alternative.
+  30 stress fingerprints. COV-017s below extends this review to 나 and nominalizing 기,
+  including the separately represented 더 + 나 + 요 alternative.
   This closes the 더 + 다 gap recorded by COV-020g. See
   [scope](rules.md#retrospective-following-ending-licenses-cov-017r).
+- [x] **COV-017s — Retrospective nominalization and connective boundaries.**
+  Recovered 더 is rejected before 33 further reviewed endings, including
+  나/으나, 기 and its bundles, 음, 게/도록/듯, 으면/으며/으면서/으므로,
+  어서 and related AEO connectives, 고자/건대/소/오. Nominal particles,
+  later copulas and auxiliaries cannot bypass the boundary. Licensed prefinal
+  stacks, lexical stems and bundled/component alternatives remain. Evidence:
+  [132-path matrix and composition tests](../tests/retrospective_connectives.rs),
+  107 source-cited ledger cases, four complete unchanged annotated sentences,
+  dictionary/CLI/browser checks and [comparison](retrospective-connective-evaluation.json).
+  Every removal across 211 surfaces contains the reviewed boundary; all 30
+  stress fingerprints and development gold/component recovery remain unchanged.
+  Three short 며/면서/므로 sources are added to their existing canonical labels.
+  Spaced 기로 하다 remains a nominalized clause followed by a lexical main verb;
+  it does not establish a joined auxiliary connector. Other retrospective
+  followers and attachment restrictions remain open. See
+  [scope](rules.md#retrospective-nominalization-and-connectives-cov-017s).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–i implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,

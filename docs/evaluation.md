@@ -1242,3 +1242,45 @@ Other followers remain open: 먹더나요 retains the separately represented,
 unjudged 더 + 나 + 요 path, and nominalizing 기 needs its own review. Independent
 Korean-language review, fresh passages and remaining inventory dispositions are
 still completion requirements.
+
+## Retrospective nominalization and connectives (COV-017s)
+
+The [comparison](retrospective-connective-evaluation.json) audits **211 surfaces**:
+**416 candidates removed, none added**, with no changed provenance on retained
+paths. Every removed candidate contains recovered 더 immediately before one of
+33 newly reviewed incompatible endings. All 132 targets in the verb/adjective/
+explicit-copula/omitted-copula matrix were present in the preceding binary.
+Nominal particles, later copulas, auxiliaries and earlier prefinals cannot bypass
+the condition. Valid nominalizations and bundled/component alternatives remain.
+
+Development gold recovery stays at **117 KAIST and 160 GSD misses**, without lost
+groups or component sets. KAIST mean candidates decreases from 5.824167 to
+5.823987; GSD stays at 5.361898. These are ambiguity measures, not precision
+estimates. Four complete unchanged annotated sentences preserve 장손이기,
+제한적이었음을, 먹게 and 먹기. All thirty stress fingerprints and historical
+corpus baselines remain unchanged.
+
+The 107 added cases bring the ledger to **814 cases, 413 required and 407 forbidden
+judgments**. Thirty-seven source entries support this review; 29 grammar entries
+gain scoped dispositions and six existing reviews add evidence. Two expression
+entries remain separately attributed outside the grammar-POS queue. The inventory
+now has **115 scoped entries and 600 without a disposition**. Short 며/면서/므로
+sources join their existing canonical labels: 258 forms, 313 source entries and
+314 grammar fixture entries, with all prior fixture entries preserved.
+
+Formatting, the complete Rust suite, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build and complete browser/HTTP
+suite pass. `nix flake check` and `nix build .#web` pass on x86_64-linux; other
+declared systems were not executed. The packaged full-dictionary app passes
+eight reading selections, short-allomorph source checks and all 69 new forbidden
+paths. Desktop/mobile screenshots were inspected with no horizontal overflow
+or JavaScript errors. The existing first-homonym gloss choice can still show
+“be deaf” for 먹다; contextual sense ranking remains outside these morphology
+checks and reader-visible gloss quality remains part of the completion review.
+
+This closes the separately represented 더 + 나 + 요 and nominalizing 기 gaps
+recorded by COV-017r. Adnominal and other following endings still need review.
+The source-backed distinction between lexical 기로 하다 and auxiliary connectors
+is preserved by a spaced-text regression; no joined auxiliary rule is inferred
+from that main-verb construction. Independent Korean-language review, fresh
+passages and remaining inventory dispositions are still pending.

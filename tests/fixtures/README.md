@@ -656,3 +656,14 @@ licensing and attribution above apply. The source catalog, grammar fixture and
 regressions. `docs/retrospective-license-evaluation.json` records source notes,
 case IDs, fixture hashes and every targeted candidate removal; no historical
 corpus baseline or stress fingerprint is regenerated.
+
+
+`kaist-retrospective-connectives.conllu` and `gsd-retrospective-connectives.conllu`
+each preserve two complete UD 2.15 development sentences byte for byte, covering
+장손이기, 제한적이었음을, 먹게 and 먹기. Existing corpus attribution and licensing
+above apply. `krdict-grammar-labels.json` adds short 며/면서/므로 entries
+80253/80266/80268 with English translations and the first example group of each
+sense, preserving every prior entry. The existing `krdict-prefinal-copulas.json`
+lexical fixture is reused. `docs/retrospective-connective-evaluation.json` retains
+source notes, hashes and every targeted candidate removal; no historical corpus
+baseline or stress fingerprint is regenerated.

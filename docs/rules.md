@@ -1820,10 +1820,10 @@ original lexical candidates. This is a standard-language review; historical and
 dialectal forms remain outside the declared scope.
 
 Dictionary/CLI and browser regressions check exact lemma-and-morpheme paths.
-먹더나요 loses the reviewed 더 + 나요 path while retaining an unjudged
-더 + 나 + 요 alternative, because 나 has a separate source and attachment
-audit. Other followers, including nominalizing 기, remain open. No grammatical
-certification follows merely from preserving an existing candidate.
+At this stage 먹더나요 lost 더 + 나요 while retaining the separately represented
+더 + 나 + 요 alternative. COV-017s below now rejects that path and nominalizing
+기 boundaries after their own source audit. Other followers remain open. No
+grammatical certification follows merely from preserving an existing candidate.
 
 Four complete unchanged annotated development sentences preserve 않더라도,
 맞더니, 가져가시더니 and 시켜주더군요. Development gold recovery is unchanged,
@@ -1831,3 +1831,40 @@ while mean candidate counts decrease. The comparison records every removed
 analysis for 184 targeted surfaces, verifies its forbidden adjacent boundary,
 and preserves all thirty stress fingerprints and every retained provenance.
 Independent Korean review and fresh-passage evaluation remain pending.
+
+
+## Retrospective nominalization and connectives (COV-017s)
+
+The [37-entry source review](retrospective-connective-evaluation.json) extends
+COV-017r to 나/으나, 기/기로/기가/기는/기도/기만/기를/기보다, 음,
+게/게요, 도록, 듯/듯이, 으면/으며/으면서/으므로, 어서/어서야/어도/
+어야/어야지/어야죠/어다가/어서는/어서도, 고자/건대/소/오.
+[기로](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83916)
+explicitly excludes 더. Other entries list their own prefinal slots; the joint
+following-ending and retrospective notes support these bounded exclusions.
+These are source-based attachment judgments, not an independent precision study.
+
+The constraint applies to recovered 더, leaving lexical stems such as 먹더다
+unclassified. Nominalization, outer particles, subsequent copulas and auxiliary
+chains cannot carry an invalid boundary into a larger reading. Valid 시/었/겠
+nominalizations, ㄹ-final 삶, explicit nominalized copulas, auxiliary clauses
+and split/bundled particle alternatives remain. All 132 forbidden matrix paths
+were present before this change. The comparison checks every removed candidate
+on 211 surfaces and preserves every retained rule provenance. It does not
+certify unreviewed adnominal or other retrospective followers.
+
+The browser now attributes short 며/면서/므로 to KRDict 80253/80266/80268
+alongside their existing 으며/으면서/으므로 canonical labels. All previous source
+entries remain. Exact-path negative checks prevent rejecting unrelated lexical
+or alternative analyses merely because they share a lemma.
+
+[하다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73277)
+sense 16 and the [기로 하다 expression](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78337)
+license a lexical main verb meaning to decide. The text regression preserves
+먹기로 했다 as two analyzed words; it does not add 기로 to auxiliary 하다.
+Whitespace repair and sentence-level interpretation remain outside this scope.
+
+Four complete unchanged development sentences preserve 장손이기, 제한적이었음을,
+먹게 and 먹기. No gold group or recovered component set is lost in either
+corpus; all thirty stress fingerprints remain unchanged. Independent Korean
+review, fresh passages and the broader inventory audit remain pending.

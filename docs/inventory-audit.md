@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **86 scoped
-reviews**, with **629 entries unreviewed in this ledger**. This does not imply
+The [manual ledger](inventory-reviews.json) currently contains **115 scoped
+reviews**, with **600 entries unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
 and source-specific candidate judgments. Independent Korean-language review
@@ -400,3 +400,15 @@ The queue now contains **86 scoped entries and 629 without a disposition**.
 The exact-path regressions distinguish rejected bundles from unreviewed
 alternatives, including 더 + 나 + 요. Broader following-ending and lexical/sense
 licenses, independent Korean review and fresh passages remain open.
+
+
+## Retrospective nominalization and connectives (COV-017s)
+
+[The review](retrospective-connective-evaluation.json) records 37 grammar and
+expression sources. 29 entries gain scoped dispositions and 6 existing
+entries retain their previous scope and evidence while adding this boundary
+review. The queue now has **115 scoped entries and 600 without a disposition**.
+Short 며/면서/므로 receive explicit source links in their existing canonical
+labels. The earlier unjudged 더 + 나 + 요 and nominalizing 기 paths are now
+rejected with separate exact-path judgments. Other followers and lexical/sense
+constraints remain open; this does not certify full coverage of any entry.

@@ -628,6 +628,14 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["먹나요", ["먹", "나", "요"], "요", "Polite", 86116, "particle"],
+    ["먹기", ["먹", "기"], "기", "Nominalizer", 72222, "ending"],
+    ["먹음", ["먹", "음"], "음", "Nominalizer", 78528, "ending"],
+    ["먹기다", ["먹", "기", "이", "다"], "다", "Plain / dictionary ending", 85041, "ending"],
+    ["가며", ["가", "으며"], "으며", "And / while", 80257, "ending"],
+    ["가면서", ["가", "으면서"], "으면서", "While / simultaneous contrast", 80267, "ending"],
+    ["가므로", ["가", "으므로"], "으므로", "Because", 80270, "ending"],
+    ["먹어서야", ["먹", "어서야"], "어서야", "Only after / emphatic reason", 86569, "ending"],
     ["먹더라", ["먹", "더", "라"], "라", "Statement / reason / contrast", 79275, "ending"],
     ["먹더라", ["먹", "더라"], "더라", "Recalled experience", 81524, "ending"],
     ["먹더니", ["먹", "더", "으니"], "으니", "Reason / premise / question", 80142, "ending"],
@@ -778,6 +786,8 @@ try {
       await breakdown.locator("button").filter({has: page.locator(".part-form", {hasText: /^이$/})}).click();
       await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=86232"));
     }
+    const shortConnective = {"으며": 80253, "으면서": 80266, "으므로": 80268}[form];
+    if (shortConnective) assert.ok(data.grammar[`-${form}`].some(e => e.id === `krdict:${shortConnective}`));
     if (form === "기에") {
       const nominal = expected.slice(0, -1).concat(["기", "에"]);
       const alternate = await breakdown.getByRole("combobox").locator("option").evaluateAll(
@@ -1194,7 +1204,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => c.id.startsWith("retrospective-license-"))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

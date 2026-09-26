@@ -308,9 +308,9 @@ Each sentence is a byte-identical excerpt. Four selected tokens protect 먹을�
 not new gains or annotations of every alternative analysis. Rejected class
 combinations are tracked separately by source-backed synthetic judgments.
 
-`krdict-grammar-labels.json` contains 258 primary entries from the September
+`krdict-grammar-labels.json` contains 259 primary entries from the September
 2026 KRDict export, National Institute of Korean Language, CC BY-SA 2.0 KR.
-257 support the teaching-label catalog; 68883 supplies the alternate propositive
+258 support the teaching-label catalog; 68883 supplies the alternate propositive
 boundary. Changes: retain English equivalents and the first example per sense,
 omit WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries,
 and reformat JSON. Source/license links above apply. The catalog records every
@@ -392,3 +392,14 @@ file hashes and original expected lemma groups appear in
 세척해야겠지요 is preserved as an annotation difference. KRDict source entries
 86238, 86239 and 86240 are included in the grammar-label fixture for the bundled
 -아/어/여야겠- expression; previous entries remain unchanged.
+
+`kaist-prefinal-licenses.conllu` is the complete byte-identical KAIST test sentence
+MH2_0110-s324 under the KAIST attribution and CC BY-SA 4.0 license above. Token 14,
+못하더라는, protects the original gold 못하다 after removal of the incorrect
+더 + 으라는 command analysis. The valid replacement uses the sourced 더라는
+bundle; this is a preserved recovery, not a new corpus gain. The grammar-label
+fixture adds KRDict entry 86347 with the same trimming policy, source, and license
+as its other entries. All 258 earlier entries remain unchanged. Dictionary tests
+reuse the attributed lexical fixtures described above. Individual paths, hashes,
+and the single reviewed optimization-snapshot change are recorded in
+`docs/prefinal-license-evaluation.json`.

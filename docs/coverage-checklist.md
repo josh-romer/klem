@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–k/018a–d/019a–c/020a–b/021a/022a batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–l/018a–d/019a–c/020a–b/021a/022a batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -210,7 +210,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–k implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–l implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -361,6 +361,22 @@ review remains open under the completion review below.
   The [evaluation](obligation-evaluation.json) records three new grouped matches
   and two GSD implicit-하다 representation differences; no prior recoveries or
   current output fingerprints are lost. See [scope and sources](rules.md#intention-and-necessity-bundle-cov-017k).
+- [x] **COV-017l — Factual 라-family and command prefinal licenses.**
+  먹었더라 retains bundled 더라 and factual 더 + 라; conjectural 으리 also
+  composes with the reviewed 라/라서/라고/라면 family. Incompatible recovered
+  past/modal/retrospective paths are removed from the reviewed command, quoted
+  command, and formal request/proposal endings, preserving honorific paths and
+  lexical alternatives. The separate 더라는 bundle preserves 못하더라는's corpus
+  gold without an invalid 더 + 으라는 analysis. Copular factual readings and
+  declarative/question 세요 remain; exclamatory 어라 and homonymous 자 require
+  further audit beyond the restrictions documented here.
+  Evidence: [path/boundary tests](../tests/prefinal_licenses.rs), seventeen
+  `prefinal-license-*` ledger cases, one complete KAIST test sentence,
+  dictionary/CLI parity, and browser/source-link checks. The
+  [evaluation](prefinal-license-evaluation.json) records every candidate change
+  for 63 surfaces and the reviewed 먹었었겠더라 fingerprint: twenty invalid
+  command paths become ten factual paths, preserving bundled 더라. No frozen
+  corpus baseline is changed. See [scope and sources](rules.md#factual-라-family-and-command-prefinal-licenses-cov-017l).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–d implement post-ending, outer choice, emphatic,
   concessive and definition particles, including nominal (이)라고 alternatives.**
@@ -561,7 +577,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 220 currently emitted canonical grammar forms.** The initial catalog
+  for all 221 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

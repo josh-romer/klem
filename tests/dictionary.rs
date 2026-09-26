@@ -49,6 +49,86 @@ fn lemma(text: &str, kind: LemmaKind) -> Lemma {
 }
 
 #[test]
+fn prefinal_licenses_keep_exact_dictionary_paths_and_cli_parity() {
+    let dir = Scratch::new();
+    let mut fixture: Value =
+        serde_json::from_str(include_str!("fixtures/krdict-emphatic-particles.json")).unwrap();
+    let copulas: Value =
+        serde_json::from_str(include_str!("fixtures/krdict-derivation.json")).unwrap();
+    let copula = copulas["LexicalResource"]["Lexicon"]["LexicalEntry"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|e| e["Lemma"]["feat"]["val"] == "이다")
+        .unwrap();
+    fixture["LexicalResource"]["Lexicon"]["LexicalEntry"]
+        .as_array_mut()
+        .unwrap()
+        .push(copula.clone());
+    let input = dir.0.join("prefinal-licenses.json");
+    fs::write(&input, serde_json::to_vec(&fixture).unwrap()).unwrap();
+    import_krdict(&[input], dir.db(), "prefinal-license-regression").unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, present) in [
+        ("먹었더라", vec!["먹다"], vec!["었", "더라"], true),
+        ("먹었더라", vec!["먹다"], vec!["었", "더", "라"], true),
+        ("먹었더라", vec!["먹다"], vec!["었", "더", "어라"], false),
+        ("먹었더라", vec!["먹다"], vec!["었", "더", "으라"], false),
+        ("먹으리라", vec!["먹다"], vec!["으리", "라"], true),
+        ("먹으리라", vec!["먹다"], vec!["으리라"], true),
+        ("먹더라는", vec!["먹다"], vec!["더라는"], true),
+        ("먹더라는", vec!["먹다"], vec!["더", "으라는"], false),
+        ("학생이라고", vec!["학생", "이다"], vec!["라고"], true),
+        ("학생이라고", vec!["학생", "이다"], vec!["으라고"], false),
+        ("먹으세요", vec!["먹다"], vec!["으세요"], true),
+        ("학생이세요", vec!["학생", "이다"], vec!["으세요"], true),
+        ("먹었으세요", vec!["먹다"], vec!["었", "으세요"], false),
+        (
+            "먹어봤더라는",
+            vec!["먹다", "보다"],
+            vec!["어", "었", "더라는"],
+            true,
+        ),
+        ("학생답더라는", vec!["학생"], vec!["답다", "더라는"], true),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let filtered = result.filtered(|l| annotation.has_match(l, false));
+        let compatible = result.filtered(|l| annotation.has_match(l, true));
+        for actual in [&filtered, &compatible] {
+            assert_eq!(
+                actual.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                present,
+                "{word}"
+            );
+        }
+        for (dict_only, expected) in [(false, &result), (true, &filtered)] {
+            let mut command = Command::new(env!("CARGO_BIN_EXE_klem"));
+            command.args(["word", word, "--dictionary"]).arg(dir.db());
+            if dict_only {
+                command.arg("--dict-only");
+            }
+            let output = command.output().unwrap();
+            assert!(output.status.success());
+            let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+            assert_eq!(
+                actual["analyses"],
+                serde_json::to_value(&expected.analyses).unwrap()
+            );
+        }
+    }
+}
+
+#[test]
 fn obligation_bundles_keep_dictionary_groups_and_cli_parity() {
     let dir = Scratch::new();
     let mut fixture: Value =

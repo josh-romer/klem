@@ -588,3 +588,39 @@ visible: besides the sourced retrospective ending, inherited rules generate
 더 + 어라/으라 alternatives. These are recorded among this report's individual
 candidate additions, not certified by the corpus recall gains. Their prefinal
 and mood licenses belong to the open COV-017 ending audit.
+
+## Factual endings and command prefinal licenses (COV-017l)
+
+[Individual candidate comparison](prefinal-license-evaluation.json) records 63
+reviewed surfaces against commit `1f3435d`. Factual 더 + 라 and 으리 + 라-family
+paths now coexist with bundled endings. Recovered past/modal/retrospective
+markers no longer license the reviewed command/request/proposal endings. The
+separate sourced 더라는 bundle preserves 못하더라는 without the incorrect
+더 + 으라는 command reading. Its complete KAIST test sentence is an offline
+regression fixture; no corpus annotation or frozen baseline is rewritten.
+
+The development comparison finds no lost groups or component sets and no new
+grouped matches: remaining misses are **152 KAIST and 178 GSD**. Seventeen new
+stable ledger cases bring the total to **300 cases, 167 required judgments and
+139 forbidden judgments**. These are source-backed agent judgments; the unjudged
+candidate queue and independent Korean-language review remain open.
+
+One of thirty compatibility fingerprints changes: 먹었었겠더라 loses twenty
+incompatible 더 + 어라/으라 paths and gains ten factual 더 + 라 paths with the
+same lexical hypotheses and earlier markers. The prior hash is retained, and
+every changed analysis is included in the report. Bundled 더라 and every other
+analysis for that word remain. The other twenty-nine fingerprints and the
+1,024-syllable memory stress test pass. All **66,570 frozen corpus cases** pass,
+as do the offline Rust tests and Clippy.
+
+The teaching catalog now covers **221 canonical forms** using 258 primary KRDict
+entries, with alternate propositive source 68883 bringing the source fixture to
+259 entries. All earlier source entries are unchanged. Scope limits include
+further 어라 exclamation licenses, 자 homonyms, lexical verb/adjective classes,
+and contextual sense selection; see the [rule scope](rules.md#factual-라-family-and-command-prefinal-licenses-cov-017l).
+
+The production frontend build, complete browser/HTTP regression suite,
+`nix flake check`, and `nix build .#web` pass on x86_64-linux. A Chromium smoke
+check of the packaged app with the full local dictionary verifies seven selected
+readings and their source links, four forbidden paths, and desktop/mobile layout.
+The flake's other declared platforms were not executed on this host.

@@ -448,6 +448,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "더니",
             "더라",
             "더라고",
+            "더라는",
             "더군요",
             "더군",
             "던",
@@ -657,6 +658,15 @@ pub(crate) fn endings() -> &'static [Ending] {
                     connector: false,
                 });
             }
+            // These homonyms also follow reviewed prefinals. A literal
+            // boundary alone is insufficient; predicates() checks the last
+            // recovered prefinal rather than treating any vowel stem as copular.
+            out.push(Ending {
+                suffix,
+                form: suffix,
+                boundary: Literal,
+                connector: false,
+            });
         }
         // Short quoted -란 also follows retrospective 더. Its recovered
         // copular/prefinal licenses are checked in predicates().
@@ -908,6 +918,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.retrospective" => "Recover retrospective 더 after other prefinal markers.",
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
+        }
+        "prefinal.conjectural_ra" => {
+            "Recover conjectural (으)리 before a reviewed factual 라-family ending; retain existing bundled forms separately."
+        }
+        "ending.factual_ra" => {
+            "A factual 라-family ending follows its licensed prefinal, distinct from the homonymous command ending."
         }
         "particle" => "Remove a particle with licensed order and boundary allomorph.",
         "copula" => "Separate a nominal and the affirmative copula 이다.",

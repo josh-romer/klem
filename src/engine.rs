@@ -258,7 +258,8 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // The adjective 으냐는 allomorph is a bare-stem path;
                 // prefinals use 냐는/느냐는. Retrospective 더 precedes 냐는.
                 if (ending.form == "으냐는" && !p.morphs.is_empty())
-                    || (ending.form == "느냐는" && p.morphs.iter().any(|m| m.form == "더"))
+                    || (matches!(ending.form, "느냐는" | "더라는")
+                        && p.morphs.iter().any(|m| m.form == "더"))
                     || (matches!(ending.form, "잖아" | "잖아요")
                         && p.morphs.iter().any(|m| m.form == "더"))
                 {
@@ -271,7 +272,36 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
-                if ending.form == "으란" && p.morphs.iter().any(|m| m.form != "시") {
+                // Commands/quoted commands and formal request/proposal
+                // endings do not inherit past, modal or retrospective slots.
+                // Keep honorific and unknown lexical-stem alternatives.
+                if matches!(
+                    ending.form,
+                    "으라"
+                        | "으라고"
+                        | "으라는"
+                        | "으라면"
+                        | "으란"
+                        | "으세요"
+                        | "으십시오"
+                        | "읍시다"
+                ) && p.morphs.iter().any(|m| m.form != "시")
+                {
+                    continue;
+                }
+                // -어라 has both command and exclamation senses. Only the
+                // reviewed retrospective boundary is excluded here; do not
+                // infer all of its mood restrictions from the command sense.
+                if ending.form == "어라" && p.morphs.iter().any(|m| m.form == "더") {
+                    continue;
+                }
+                let factual_ra = matches!(ending.boundary, Boundary::Literal)
+                    && matches!(ending.form, "라" | "라서" | "라고" | "라는" | "라면");
+                if factual_ra
+                    && !p.morphs.last().is_some_and(|m| {
+                        m.form == "시" || (m.form == "더" && ending.form != "라는")
+                    })
+                {
                     continue;
                 }
                 if ending.form == "란" {
@@ -285,12 +315,15 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
+                if factual_ra {
+                    p.rules.push("ending.factual_ra".into());
+                }
                 if matches!(ending.form, "잖아" | "잖아요") {
                     p.rules.push("ending.confirmation".into());
                 }
                 if matches!(
                     ending.form,
-                    "으려는" | "자는" | "냐는" | "느냐는" | "으냐는" | "란" | "으란"
+                    "으려는" | "자는" | "냐는" | "느냐는" | "으냐는" | "더라는" | "란" | "으란"
                 ) {
                     p.rules.push("ending.adnominal_expression".into());
                 }
@@ -304,24 +337,35 @@ fn predicates(word: &str) -> Vec<Predicate> {
             }
         }
     }
-    // Conjectural (으)리 is scoped to quoted -란 here. Do not make it a
-    // freely attachable prefinal for every existing ending or expand the
-    // separate bundled -(으)리라 / -(으)리라고 representations.
-    if let Some(base) = word.strip_suffix("란") {
-        for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
-            for r in grammar::recover(base, suffix, boundary) {
-                // Honorific/past/modal may precede conjectural (으)리, not 더.
-                for mut p in prefinals(&r.stem, 3, 0, &mut memo) {
-                    p.morphs.push(morph("으리", MorphemeKind::Prefinal));
-                    p.morphs.push(morph("란", MorphemeKind::Ending));
-                    p.rules.extend(r.rules.clone());
-                    p.rules.extend([
-                        "prefinal.conjectural_quotation".into(),
-                        "ending.adnominal_expression".into(),
-                        "ending".into(),
-                    ]);
-                    p.dap_suffix = dap_suffix_allowed(&p);
-                    out.push(p);
+    // Conjectural (으)리 precedes this source-listed factual family only.
+    // Preserve existing bundled -(으)리라 / -(으)리라고 alternatives.
+    for ending in ["란", "라", "라서", "라고", "라면"] {
+        if let Some(base) = word.strip_suffix(ending) {
+            for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
+                for r in grammar::recover(base, suffix, boundary) {
+                    // Honorific/past/modal may precede conjectural (으)리, not 더.
+                    for mut p in prefinals(&r.stem, 3, 0, &mut memo) {
+                        p.morphs.push(morph("으리", MorphemeKind::Prefinal));
+                        p.morphs.push(morph(ending, MorphemeKind::Ending));
+                        p.rules.extend(r.rules.clone());
+                        p.rules.extend([
+                            if ending == "란" {
+                                "prefinal.conjectural_quotation"
+                            } else {
+                                "prefinal.conjectural_ra"
+                            }
+                            .into(),
+                            if ending == "란" {
+                                "ending.adnominal_expression"
+                            } else {
+                                "ending.factual_ra"
+                            }
+                            .into(),
+                            "ending".into(),
+                        ]);
+                        p.dap_suffix = dap_suffix_allowed(&p);
+                        out.push(p);
+                    }
                 }
             }
         }
@@ -626,6 +670,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "던데요"
             | "더라"
             | "더라고"
+            | "더라는"
             | "더니"
             | "더군"
             | "더군요"
@@ -660,12 +705,17 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
 }
 
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
-    // Intention/proposal -자면 and quoted commands -으란 are not nominal
-    // copula endings. The separate fact-quotation 란 path preserves 학생이란.
+    // Commands and proposals are not nominal copula endings. The factual
+    // 라-family homonyms preserve copular readings such as 학생이라고.
     if p.morphs
         .iter()
         .find(|m| m.kind == MorphemeKind::Ending)
-        .is_some_and(|m| matches!(m.form.as_str(), "자면" | "으란"))
+        .is_some_and(|m| {
+            matches!(
+                m.form.as_str(),
+                "자면" | "으라" | "으라고" | "으라는" | "으라면" | "으란" | "으십시오" | "읍시다"
+            )
+        })
     {
         return;
     }

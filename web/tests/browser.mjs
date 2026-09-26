@@ -811,6 +811,12 @@ try {
     ["먹어보란", ["먹", "어", "보", "으란"], "으란", "Quoted command (noun-modifying)", 89676, "-으란"],
     ["먹었더란", ["먹", "었", "더", "란"], "란", "Quoted fact (noun-modifying)", 86297, "-란"],
     ["작으리란", ["작", "으리", "란"], "으리", "Conjecture / intention", 86606, "-으리-"],
+    ["먹더라는", ["먹", "더라는"], "더라는", "Quoted experience (noun-modifying)", 86347, "-더라는"],
+    ["먹어봤더라는", ["먹", "어", "보", "었", "더라는"], "더라는", "Quoted experience (noun-modifying)", 86347, "-더라는"],
+    ["학생답더라는", ["학생", "답", "더라는"], "더라는", "Quoted experience (noun-modifying)", 86347, "-더라는"],
+    ["먹었더라", ["먹", "었", "더", "라"], "더", "Recalled experience", 85794, "-더-"],
+    ["먹었더라", ["먹", "었", "더라"], "더라", "Recalled experience", 81524, "-더라"],
+    ["먹으리라", ["먹", "으리", "라"], "으리", "Conjecture / intention", 86606, "-으리-"],
     ["먹어야겠네요", ["먹", "어야겠", "네요"], "어야겠", "Intention / necessity", 86239, "-어야겠-"],
     ["피해야겠다", ["피하", "여야겠", "다"], "여야겠", "Intention / necessity", 86239, "-어야겠-"],
     ["먹어봐야겠다", ["먹", "어", "보", "어야겠", "다"], "어야겠", "Intention / necessity", 86239, "-어야겠-"],
@@ -840,6 +846,18 @@ try {
     // Grammar lookup enriches the response without replacing rule candidates.
     const cli = JSON.parse(execFileSync(cliBin, ["word", word], {encoding: "utf8"}));
     assert.deepEqual(result.records[0].analysis.analyses, cli.analyses);
+  }
+  for (const [word, lemmas, forbidden] of [
+    ["먹었더라", ["먹다"], ["었", "더", "어라"]],
+    ["먹었더라", ["먹다"], ["었", "더", "으라"]],
+    ["먹더라는", ["먹다"], ["더", "으라는"]],
+    ["학생이라고", ["학생", "이다"], ["으라고"]],
+    ["먹었으세요", ["먹다"], ["었", "으세요"]],
+  ]) {
+    const data = await (await post("analyze", {text: word})).json();
+    assert.ok(!data.records[0].analysis.analyses.some(a =>
+      JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(lemmas) &&
+      JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(forbidden)), word);
   }
   for (const word of ["이라는", "라는"]) {
     await submit(page, word);

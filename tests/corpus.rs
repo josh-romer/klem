@@ -3,6 +3,35 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn quoted_experience_keeps_gold_when_invalid_command_paths_are_removed() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-prefinal-licenses.conllu").as_slice(),
+        Corpus::Kaist,
+        "prefinal-licenses",
+    )
+    .unwrap();
+    let case = &report.cases["id:MH2_0110-s324/14"];
+    assert_eq!(case.surface, "못하더라는");
+    assert_eq!(case.expected, ["못하다"]);
+    assert!(case.matched);
+    let result = klem::Lemmatizer::new().analyze_word(&case.surface).unwrap();
+    assert!(
+        result
+            .analyses
+            .iter()
+            .any(|a| a.lemmas.iter().map(|l| l.text.as_str()).eq(["못하다"])
+                && a.morphemes.iter().map(|m| m.form.as_str()).eq(["더라는"]))
+    );
+    assert!(!result.analyses.iter().any(|a| {
+        a.lemmas.iter().map(|l| l.text.as_str()).eq(["못하다"])
+            && a.morphemes
+                .iter()
+                .map(|m| m.form.as_str())
+                .eq(["더", "으라는"])
+    }));
+}
+
+#[test]
 fn annotated_obligation_bundles_keep_implicit_auxiliary_differences_visible() {
     for (corpus, input, cases) in [
         (

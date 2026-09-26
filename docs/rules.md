@@ -1094,3 +1094,38 @@ GSD annotations that supply implicit 하다 in 와야겠다 and 세척해야겠�
 The latter remain measured misses with their original annotations. Literal
 와야하겠다 still produces 오다 + 하다; the expression-only spelling retains
 its bundled form. See [individual comparisons](obligation-evaluation.json).
+
+### Factual 라-family and command prefinal licenses (COV-017l)
+
+Factual 라/라서/라고/라면 now have component paths after recovered 시 and 더,
+and a scoped conjectural 으리 path. 라는 permits 시; its separate quoted-experience
+relative 더라는 is a bundled contraction of 더라고 하는. Thus 먹었더라 retains
+both 먹다 + 었 + 더라 and 먹다 + 었 + 더 + 라, while 못하더라는 has 못하다 +
+더라는. No unspelled 하다 lemma is inserted. Existing 으리라/으리라고 bundles,
+으리 + 란, copulas, nominalizations, -답다, and auxiliary groups remain available.
+
+The reviewed command/quoted-command forms 으라/으라고/으라는/으라면/으란 and
+formal 으세요/으십시오/읍시다 permit recovered 시, but exclude recovered past,
+modal, and retrospective markers. Copula-role paths exclude the reviewed command
+and proposal endings. This leaves lexical predicate hypotheses intact: the engine
+does not know whether an arbitrary headword is a verb or adjective. 으세요 also
+has declarative/question senses, so 학생이세요 remains. 어라 has adjective
+exclamation senses: only its incompatible 더 boundary is excluded in this batch.
+자 has non-propositive homonyms, so 먹어보았자 is preserved. Further licenses for
+these homonyms remain an explicit audit, not an inferred blanket mood filter.
+
+Sources: KRDict [-라](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79275),
+[-라서](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80211),
+[-라고](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73964),
+[-라면](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68832),
+[-라는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82217),
+[-더라는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86347),
+[-으라](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80715),
+[-으세요](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86609),
+[-어라](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80682),
+and NIKL on [더 + 라](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&qna_seq=322161),
+[alternative segmentation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=309235),
+and [copula inflection](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=305261).
+The [evaluation](prefinal-license-evaluation.json) lists the full source inventory
+and every changed candidate for 63 audited surfaces. Composition judgments remain
+agent-authored pending independent Korean-language review.

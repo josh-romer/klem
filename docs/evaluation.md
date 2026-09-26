@@ -464,3 +464,36 @@ links, including the -자면 expression homonym, -답다 derivation and a longer
 auxiliary group. Desktop and mobile screenshots were inspected; the mobile
 layout has no horizontal overflow. Dictionary glosses still use compatible
 entry/sense hints, not contextual disambiguation.
+
+COV-018c adds emphatic/concessive particles and ㄴ커녕 contraction, and corrects
+the coda restriction on locative 서. COV-017i separately adds the homonymous
+predicate ending -(으)나마. The [comparison](emphatic-particle-evaluation.json)
+records **12 new KAIST and two new GSD grouped matches**, with no lost groups or
+component sets; remaining misses are **180 KAIST and 181 GSD**. One gain,
+GSD dev-s934/6 확약서 → 확약, remains a segmentation-review case: the sentence
+concerns submission of a written pledge. Thirteen other new recoveries have
+explicit offline corpus tests. No corpus gains are attributed to the separate
+-(으)나마 ending; its evidence is source-backed synthetic cases.
+
+Nineteen ledger cases bring the total to **247 cases with 137 required and 116
+forbidden judgments**. The browser has twelve new reading/source-link checks,
+including both 조금이나마 analyses and normalized 먹긴커녕. The catalog now
+covers 214 canonical forms, with ten additional source entries. All previously
+included source entries are unchanged. Locative ABC서 retains its analysis but
+loses the old unnecessary vowel-pronunciation condition; this reviewed provenance
+change is recorded separately from added candidates across 23 targeted surfaces.
+No old component groups are removed in those cases.
+Subject/object case phrases are excluded as bases for the new focus particles;
+the ledger specifically rejects 조금 + 이 + 나마 while preserving its particle
+and copular-ending alternatives. Bare 커녕 does not inherit the adverbial
+particle-chain license of 은/는커녕.
+
+All 66,570 frozen corpus cases and all 30 current output fingerprints pass.
+Rust, Clippy, stress, dictionary/CLI, frontend build and browser/API checks pass.
+Historical baselines and reports are unchanged. Contextual homonym selection,
+further particle combinations and independent Korean-language review remain open.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. The refreshed
+packaged preview passes a full-dictionary smoke check of eight readings/source
+links, including both 조금이나마 interpretations, locative 서울서 and contracted
+먹긴커녕 with its provenance and ㄴ커녕 source entry. Desktop and mobile
+screenshots were inspected; no horizontal overflow was found.

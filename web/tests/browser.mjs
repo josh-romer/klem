@@ -115,6 +115,9 @@ try {
   const grammarLabelSources = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-grammar-labels.json"), "utf8"),
   );
+  const emphaticParticles = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-emphatic-particles.json"), "utf8"),
+  );
   const adverbExpansion = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-adverb-expansion.json"), "utf8"),
   );
@@ -190,6 +193,7 @@ try {
       ...adverbExpansion.LexicalResource.Lexicon.LexicalEntry,
       ...negativeAuxiliaries.LexicalResource.Lexicon.LexicalEntry,
       ...grammarLabelSources.LexicalResource.Lexicon.LexicalEntry,
+      ...emphaticParticles.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -787,6 +791,18 @@ try {
     ["먹어볼지라도", ["먹", "어", "보", "을지라도"], "을지라도", "Even if / although", 77049, "-을지라도"],
     ["먹자면", ["먹", "자면"], "자면", "If intending / if proposing", 80338, "-자면"],
     ["먹어보자면", ["먹", "어", "보", "자면"], "자면", "If intending / if proposing", 80338, "-자면"],
+    ["학교야말로", ["학교", "야말로"], "야말로", "Indeed / precisely", 86102, "야말로"],
+    ["학생이야말로", ["학생", "이야말로"], "이야말로", "Indeed / precisely", 86103, "이야말로"],
+    ["잠시나마", ["잠시", "나마"], "나마", "At least / even if limited", 70309, "나마"],
+    ["조금이나마", ["조금", "이나마"], "이나마", "At least / even if limited", 70312, "이나마"],
+    ["학교에서나마", ["학교", "에서", "나마"], "나마", "At least / even if limited", 70309, "나마"],
+    ["사과는커녕", ["사과", "는커녕"], "는커녕", "Far from / let alone", 70316, "는커녕"],
+    ["먹긴커녕", ["먹", "기", "는커녕"], "는커녕", "Far from / let alone", 70316, "는커녕"],
+    ["학생은커녕", ["학생", "은커녕"], "은커녕", "Far from / let alone", 70317, "은커녕"],
+    ["밥커녕", ["밥", "커녕"], "커녕", "Far from / let alone", 86168, "커녕"],
+    ["서울서", ["서울", "서"], "서", "Action location / from / subject emphasis", 86712, "서"],
+    ["작으나마", ["작", "으나마"], "으나마", "Although limited", 80164, "-으나마"],
+    ["조금이나마", ["조금", "이", "으나마"], "으나마", "Although limited", 80164, "-으나마"],
   ]) {
     await submit(page, word);
     await waitHeading(page, word);
@@ -808,6 +824,11 @@ try {
     const cli = JSON.parse(execFileSync(cliBin, ["word", word], {encoding: "utf8"}));
     assert.deepEqual(result.records[0].analysis.analyses, cli.analyses);
   }
+  const limitedReadings = await (await post("analyze", {text: "조금이나마"})).json();
+  assert.ok(!limitedReadings.records[0].analysis.analyses.some(a =>
+    a.lemmas.length === 1 && a.lemmas[0].text === "조금" &&
+    JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(["이", "나마"])),
+    "나마 does not attach to a subject-marked phrase");
   for (const [word, expected] of [
     ["먹고싶은", ["먹", "고", "싶", "은"]],
     ["먹을만한", ["먹", "을", "만하", "은"]],

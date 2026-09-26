@@ -3,6 +3,50 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn annotated_emphatic_particles_recover_nominals_and_nominalizations() {
+    for (name, input, selected) in [
+        (
+            "kaist",
+            include_bytes!("fixtures/kaist-emphatic-particles.conllu").as_slice(),
+            vec![
+                ("id:MH2_0159-s104/2", "명제야말로", "명제"),
+                ("id:MH2_0159-s117/1", "문학연구야말로", "문학연구"),
+                ("id:MH2_0159-s177/17", "교육이야말로", "교육"),
+                ("id:MH2_0159-s90/12", "일시적으로나마", "일시적"),
+                ("id:MH2_0169-s126/3", "포지티브야말로", "포지티브"),
+                ("id:MH2_0169-s458/2", "칭찬하기는커녕", "칭찬하다"),
+                ("id:MH2_0169-s554/4", "시설투자는커녕", "시설투자"),
+                ("id:MH2_0169-s579/5", "보호하기는커녕", "보호하다"),
+                ("id:MH2_0169-s584/6", "발전시키기는커녕", "발전시키다"),
+                ("id:MH2_0169-s595/3", "안에서나마", "안"),
+                ("id:MH2_0209-s29/2", "작품이야말로", "작품"),
+                ("id:MH2_0209-s40/9", "긴장이야말로", "긴장"),
+            ],
+        ),
+        (
+            "gsd",
+            include_bytes!("fixtures/gsd-emphatic-particles.conllu").as_slice(),
+            vec![("id:dev-s768/1", "서울서", "서울")],
+        ),
+    ] {
+        let report = corpus::evaluate(input, Corpus::parse(name).unwrap(), name).unwrap();
+        for (id, surface, lemma) in selected {
+            let case = report.cases.get(id).unwrap();
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+        if name == "gsd" {
+            // Preserve the annotation for review, without making it a required
+            // linguistic judgment: this sentence concerns a written pledge.
+            let case = report.cases.get("id:dev-s934/6").unwrap();
+            assert_eq!(case.surface, "확약서");
+            assert_eq!(case.expected, ["확약"]);
+        }
+    }
+}
+
+#[test]
 fn annotated_intention_and_concession_endings_recover_missing_groups() {
     for (name, input, selected) in [
         (

@@ -228,7 +228,8 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 // Reviewed intention/concession families have different
                 // prefinal licenses; do not inherit every terminal marker.
-                if (ending.form == "으리라고" && p.morphs.iter().any(|m| m.form == "더"))
+                if (matches!(ending.form, "으리라고" | "으나마")
+                    && p.morphs.iter().any(|m| m.form == "더"))
                     || (ending.form == "을지라도"
                         && p.morphs
                             .iter()
@@ -525,6 +526,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으면서"
                 | "으므로"
                 | "으나"
+                | "으나마"
                 | "으냐"
                 | "으냐는"
                 | "으리라"
@@ -669,6 +671,14 @@ fn particle_allowed(
     after_case: bool,
     suffixes: &[Morpheme],
 ) -> bool {
+    // The new focus particles permit nominal/adverbial bases, not a subject
+    // or object case phrase. In particular 조금이나마 is not 조금 + 이 + 나마.
+    if suffixes.first().is_some_and(|m| m.form == "커녕")
+        || (matches!(form, "이" | "가" | "을" | "를")
+            && suffixes.iter().any(|m| adverbial_focus_particle(&m.form)))
+    {
+        return false;
+    }
     // A choice particle may occupy an inner or outer slot, but the two
     // slots do not license repeating the same particle family.
     if let Some(family) = choice_particle(form)
@@ -693,6 +703,15 @@ fn choice_particle(form: &str) -> Option<u8> {
         "이야" | "야" => Some(3),
         _ => None,
     }
+}
+
+// These particles also attach to adverbial phrases. Bare 커녕 has only
+// nominal attachment in its source; do not inherit the longer forms' scope.
+fn adverbial_focus_particle(form: &str) -> bool {
+    matches!(
+        form,
+        "이야말로" | "야말로" | "이나마" | "나마" | "은커녕" | "는커녕"
+    )
 }
 
 // Closed pronoun paradigms supplement productive ㄴ/ㄹ attachment. The old
@@ -790,6 +809,17 @@ fn nominals(
             })
         })
         .collect();
+    if let Some(base) = word.strip_suffix("커녕")
+        && let Some((_, v, 4)) = last(base)
+    {
+        recoveries.push(ParticleRecovery {
+            base: replace_last(base, v, 0).unwrap(),
+            form: "는커녕",
+            class: 4,
+            contraction: Some("particle.contraction.nkeonyeong"),
+            pronunciation: None,
+        });
+    }
     if let Some((_, v, t @ (4 | 8))) = last(word) {
         let base = replace_last(word, v, 0).unwrap();
         if t == 4 {
@@ -827,6 +857,7 @@ fn nominals(
         if morphs.iter().all(|m| {
             matches!(m.form.as_str(), "도" | "만" | "는" | "은" | "요" | "들")
                 || choice_particle(&m.form).is_some()
+                || adverbial_focus_particle(&m.form)
         }) && let Some(mut a) = adverb_derivation(base)
         {
             a.morphemes.extend(morphs.clone());
@@ -842,7 +873,10 @@ fn nominals(
             }
         }
         let flexible = particle.contraction.is_some() || matches!(particle.form, "요" | "들");
-        if flexible || choice_particle(particle.form).is_some() {
+        if flexible
+            || choice_particle(particle.form).is_some()
+            || adverbial_focus_particle(particle.form)
+        {
             out.push(Analysis {
                 lemmas: vec![lemma(base, LemmaKind::Adverbial)],
                 morphemes: morphs.clone(),
@@ -855,7 +889,7 @@ fn nominals(
         let ending = if flexible
             || matches!(
                 particle.form,
-                "는" | "도" | "만" | "마는" | "나" | "라도" | "든지" | "야"
+                "는" | "도" | "만" | "마는" | "나" | "라도" | "든지" | "야" | "나마"
             ) {
             PredicateEnd::BeforeParticle(particle.form)
         } else {
@@ -1171,6 +1205,8 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         ),
         "는" | "도" => connective,
         "라도" => matches!(ending, "어" | "게" | "지" | "고"),
+        // KRDict 나마 explicitly illustrates an adverbial 게 clause.
+        "나마" => ending == "게",
         "나" => matches!(
             ending,
             "어" | "게" | "지" | "고" | "다" | "는다" | "라" | "으라" | "어라"

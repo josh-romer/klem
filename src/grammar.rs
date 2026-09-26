@@ -537,6 +537,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으냐", "냐", "으냐"),
             ("으냐는", "냐는", "으냐는"),
             ("으나", "나", "으나"),
+            ("으나마", "나마", "으나마"),
             ("으리라", "리라", "으리라"),
             ("으리라고", "리라고", "으리라고"),
         ] {
@@ -717,6 +718,13 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("든지", 4, 2),
             ("이야", 4, 1),
             ("야", 4, 2),
+            ("이야말로", 4, 1),
+            ("야말로", 4, 2),
+            ("이나마", 4, 1),
+            ("나마", 4, 2),
+            ("은커녕", 4, 1),
+            ("는커녕", 4, 2),
+            ("커녕", 4, 0),
             ("만", 3, 0),
             ("마는", 3, 0),
             ("까지", 3, 0),
@@ -742,7 +750,9 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("와", 1, 2),
             ("에", 1, 0),
             ("에서", 1, 0),
-            ("서", 1, 2),
+            // Locative 서 (short 에서) follows consonants too: 시장서.
+            // The separate count-emphasis homonym has narrower lexical scope.
+            ("서", 1, 0),
             ("에게", 1, 0),
             ("에게서", 1, 0),
             ("한테", 1, 0),
@@ -827,6 +837,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.contraction.n" => {
             "Expand attached ㄴ to topic/emphatic 는 after an open syllable."
+        }
+        "particle.contraction.nkeonyeong" => {
+            "Expand attached ㄴ커녕 to the particle 는커녕 after an open syllable."
         }
         "particle.contraction.l" => {
             "Expand attached ㄹ to object/emphatic 를 after an open syllable."

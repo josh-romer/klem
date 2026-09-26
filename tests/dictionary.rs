@@ -49,6 +49,75 @@ fn lemma(text: &str, kind: LemmaKind) -> Lemma {
 }
 
 #[test]
+fn emphatic_particles_and_concessive_endings_keep_dictionary_roles_and_cli_parity() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from(
+            "tests/fixtures/krdict-emphatic-particles.json",
+        )],
+        dir.db(),
+        "emphatic-particle-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemma, forms, present) in [
+        ("학교야말로", "학교", vec!["야말로"], true),
+        ("학생이야말로", "학생", vec!["이야말로"], true),
+        ("잠시나마", "잠시", vec!["나마"], true),
+        ("학교에서나마", "학교", vec!["에서", "나마"], true),
+        ("사과는커녕", "사과", vec!["는커녕"], true),
+        ("먹긴커녕", "먹다", vec!["기", "는커녕"], true),
+        ("밥커녕", "밥", vec!["커녕"], true),
+        ("서울서", "서울", vec!["서"], true),
+        ("작으나마", "작다", vec!["으나마"], true),
+        ("학교이야말로", "학교", vec!["이야말로"], false),
+        ("학생나마", "학생", vec!["나마"], false),
+        ("먹나마", "먹다", vec!["으나마"], false),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let filtered = result.filtered(|lemma| annotation.has_match(lemma, false));
+        let compatible = result.filtered(|lemma| annotation.has_match(lemma, true));
+        for actual in [&filtered, &compatible] {
+            assert_eq!(
+                actual.analyses.iter().any(|a| a.lemmas.len() == 1
+                    && a.lemmas[0].text == lemma
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                present,
+                "{word}"
+            );
+        }
+        if word == "잠시나마" {
+            assert!(compatible.analyses.iter().any(|a| a.lemmas.len() == 1
+                && a.lemmas[0].text == lemma
+                && a.lemmas[0].kind == LemmaKind::Adverbial));
+        }
+        for (dict_only, expected) in [(false, &result), (true, &filtered)] {
+            let mut command = Command::new(env!("CARGO_BIN_EXE_klem"));
+            command.args(["word", word, "--dictionary"]).arg(dir.db());
+            if dict_only {
+                command.arg("--dict-only");
+            }
+            let output = command.output().unwrap();
+            assert!(
+                output.status.success(),
+                "{}",
+                String::from_utf8_lossy(&output.stderr)
+            );
+            let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+            assert_eq!(
+                actual["analyses"],
+                serde_json::to_value(&expected.analyses).unwrap()
+            );
+        }
+    }
+}
+
+#[test]
 fn intention_endings_preserve_dictionary_filtering_and_cli_groups() {
     let dir = Scratch::new();
     import_krdict(

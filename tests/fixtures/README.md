@@ -308,9 +308,9 @@ Each sentence is a byte-identical excerpt. Four selected tokens protect 먹을�
 not new gains or annotations of every alternative analysis. Rejected class
 combinations are tracked separately by source-backed synthetic judgments.
 
-`krdict-grammar-labels.json` contains 239 primary entries from the September
+`krdict-grammar-labels.json` contains 249 primary entries from the September
 2026 KRDict export, National Institute of Korean Language, CC BY-SA 2.0 KR.
-238 support the teaching-label catalog; 68883 supplies the alternate propositive
+248 support the teaching-label catalog; 68883 supplies the alternate propositive
 boundary. Changes: retain English equivalents and the first example per sense,
 omit WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries,
 and reformat JSON. Source/license links above apply. The catalog records every
@@ -343,3 +343,21 @@ certify contextual sense choice. The grammar-label fixture additionally includes
 primary KRDict entries 85920/85922 (-으리라고/-리라고), 77049/77051
 (-을지라도/-ㄹ지라도), and 80338/80339 (both -자면 homonyms), using the
 same attribution and trimming policy documented above.
+
+`krdict-emphatic-particles.json` contains 21 primary lexical entries for twelve
+headwords used in COV-018c/017i dictionary/browser regressions, from the September
+2026 KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR).
+Changes: retain English equivalents and the first example per sense; omit
+WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries, and
+reformat JSON. Source/license links above apply. The grammar-label fixture adds
+ten entries: 70309, 70312, 70315, 70316, 70317, 80164, 80167, 86102, 86103, and
+86168; every previously included entry is unchanged. It already contains both
+서 particle homonyms, including locative 86712.
+
+`kaist-emphatic-particles.conllu` and `gsd-emphatic-particles.conllu` contain twelve
+KAIST and two GSD complete development sentences as byte-identical CC BY-SA 4.0
+excerpts. Tests explicitly protect thirteen new grouped recoveries. GSD dev-s934
+is retained for segmentation review: 확약서 is tagged 확약/NNG + 서/JKB in a
+sentence about submitting a written pledge. Its numerical recovery is not made
+into a required linguistic judgment. The source IDs, hashes, and fourteen total
+numerical gains are recorded in `docs/emphatic-particle-evaluation.json`.

@@ -58,7 +58,6 @@ fn foreign_particle_allomorphs_state_the_required_pronunciation() {
             ("야", "vowel"),
             ("아", "consonant"),
             ("여", "vowel"),
-            ("서", "vowel"),
             ("으로", "non_rieul_consonant"),
             ("로", "vowel_or_rieul"),
             ("으로서", "non_rieul_consonant"),
@@ -111,6 +110,8 @@ fn uncertainty_stays_at_the_foreign_boundary_and_preserves_chain_licenses() {
         ),
         ("ABC는요", "ABC", vec!["는", "요"], Some("vowel")),
         ("ABC에는", "ABC", vec!["에", "는"], None),
+        // Locative 서 has no coda restriction (KRDict 86712).
+        ("ABC서", "ABC", vec!["서"], None),
         ("ABC들로", "ABC", vec!["들", "로"], None),
         ("ABC님은", "ABC", vec!["님", "은"], None),
         ("김민수는", "김민수", vec!["는"], None),

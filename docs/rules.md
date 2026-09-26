@@ -920,3 +920,59 @@ The -으리라고 intention and expectation senses and the two -자면 homonyms 
 a bundled representation; the browser exposes both sources and a context note.
 This adds neither contextual sense selection nor cross-token quotation parsing.
 Additional outer particles and shortened quotation families remain COV-017/018.
+
+## Emphatic and concessive particles (COV-018c/017i)
+
+| Component | Source and attachment |
+| --- | --- |
+| 야말로 / 이야말로 | KRDict [86102](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86102) / [86103](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86103): emphasis after an open/consonant nominal or adverbial phrase |
+| 나마 / 이나마 | [70309](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70309) / [70312](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70312): accepting limited conditions, with the same open/consonant distinction |
+| 는커녕 / 은커녕 | [70316](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70316) / [70317](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70317): emphatic negation after an open/consonant nominal or adverbial phrase |
+| ㄴ커녕 → 는커녕 | [70315](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70315): contraction after an open boundary; one normalized particle component |
+| 커녕 | [86168](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86168): the independent bare particle follows a noun |
+| 서 | [86712](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86712): locative/source, shortened 에서, after nouns including consonant-final 시장/부산 |
+| -으나마 / -나마 | [80164](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80164) / [80167](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80167): separate predicate ending, canonical 으나마 |
+
+The new particles use the existing outer slot after nominalization, adverbial case, and
+restrictive particles, before polite 요 or distributive 들. The immediately
+preceding surface chooses the allomorph: 안에서나마, 학교로나마, 학생만이나마.
+ㄹ is a consonant for these particle pairs, unlike instrumental 로. New stacked
+outer-focus combinations are not licensed by placing several forms in this slot.
+More permissive particle ordering remains an explicit COV-018 review task.
+Subject/object-marked phrases are not adverbial bases for these new particles:
+조금 + 이 + 나마 is rejected, while 조금 + 이나마 and 조금 + 이다 + 으나마
+remain. Bare 커녕 does not recurse through case particles; the separate
+은/는커녕 forms cover the source-listed longer nominal particles.
+
+Nominal/suffix paths compose, including 학생들은커녕 and 학생답기는커녕;
+auxiliary nominalizations include 먹어보기는커녕. Source-listed adverb derivations
+retain their deeper readings in 조용히나마 and 빨리는커녕. Bare 커녕 does not
+inherit the longer particles' adverbial license. 나마 after adverbial 게 is
+explicitly supported by the source's 막연하게나마 example; other post-ending
+families are not inferred from the broad word “adverbial.”
+
+Contracted 먹긴커녕 and 화핸커녕 normalize to 먹다 + 기 + 는커녕 and 화해 +
+는커녕. The new `particle.contraction.nkeonyeong` provenance explains the
+contraction. The display uses canonical components without invented character
+spans; the label catalog links both full and contracted source entries. Topic 는
+and 커녕 are not separately asserted for the bundled particle. Original-word and
+unknown-base hypotheses remain available.
+
+The old 서 rule incorrectly applied the count-emphasis homonym's open-boundary
+condition to the locative homonym. Correcting the latter admits 서울서 and
+시장서 and removes the unnecessary vowel assumption from ABC서. It does not
+assert that the count-emphasis reading (source 86557, e.g. 둘이서) applies to
+arbitrary consonant-final nouns. Dictionary glosses/labels summarize available
+entries without selecting the contextual homonym. A surface ending in 서 may
+instead be lexical: GSD's 확약서 in a sentence about submitting a written pledge
+is a segmentation-review case. Its annotated 확약 + 서 now matches numerically,
+but that is not evidence that the particle reading is intended there.
+
+The homonymous predicate ending -으나마/-나마 has separate `Ending` components
+and source lookups. Existing (으) boundary recovery handles ㄷ/ㅅ/ㅂ/ㅎ and ㄹ
+deletion; honorific 시, past 었 and modal 겠 are licensed, not retrospective 더.
+The known -답다 derivation requires its ㅂ-irregular boundary. 조금이나마 retains
+both 조금 + 이나마 and 조금 + 이다 + 으나마, the latter explicitly illustrated
+by source 80167. No new auxiliary connector or contextual sense decision is
+introduced. Omitted copulas beyond the existing engine paths and further outer
+particles remain COV-018/020 work.

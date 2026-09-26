@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–h/018a–b/019a–c/020a/021a/022a batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–i/018a–c/019a–c/020a/021a/022a batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -210,7 +210,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–h implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–i implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -326,9 +326,18 @@ review remains open under the completion review below.
   dictionary/CLI parity, and six browser/source-link regressions. See
   [scope and sources](rules.md#intention-expectation-and-concession-cov-017h)
   and [development comparison](intention-ending-evaluation.json).
+- [x] **COV-017i — Concessive -(으)나마 ending.** Canonical 으나마 is
+  separate from the nominal/adverbial (이)나마 particle. 작으나마, 약소하나마,
+  and 먹지못하나마 retain their predicate/auxiliary groups; 조금이나마 retains
+  both particle and copular-ending readings. Existing vowel-boundary irregulars,
+  ㄹ deletion, honorific/past/modal markers, and known -답다 spelling apply;
+  retrospective 더 and new auxiliary links are not licensed. These are
+  source-backed synthetic cases, not additional corpus gains. Evidence and
+  sources are shared with COV-018c below. Broader omitted-copula and outer-particle
+  licenses remain COV-018/020.
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–b implement post-ending and outer choice particles,
-  including 어디까지나/이제부터라도 and nominal (이)라고 alternatives.**
+  **Partial: COV-018a–c implement post-ending, outer choice, emphatic and
+  concessive particles, including nominal (이)라고 alternatives.**
   Remaining: pronouns outside the existing finite paradigms. Preserve homonym-specific
   dictionary labels and review additional ending/particle licenses.
   Include quoted clauses marked as nominals: KAIST MH2_0169-s444/3 살겠다가
@@ -358,6 +367,21 @@ review remains open under the completion review below.
   [scope and sources](rules.md#outer-choice-and-quotative-particles-cov-018b).
   Quoted clauses followed by subject particles and cross-token quotation
   structure are not implemented by these nominal paths.
+- [x] **COV-018c — Emphatic/concessive particles and locative 서.**
+  (이)야말로, (이)나마, 은/는커녕 and bare 커녕 compose with the existing
+  nominal/suffix/particle order. Contracted ㄴ커녕 normalizes to 는커녕, as
+  in 먹긴커녕 → 먹다 + 기 + 는커녕. Nominalizations, auxiliary groups, and
+  adverbial phrases retain distinct roles; bare 커녕 has nominal attachment
+  only. 나마 additionally accepts the source-listed adverbial 게 ending.
+  Locative 서 now follows consonants too, including 서울서/시장서, and carries
+  no foreign-base pronunciation assumption. This does not broaden the separate
+  count-emphasis 서 homonym's lexical scope. No new auxiliary connector is added.
+  Evidence: [boundary/role tests](../tests/emphatic_particles.rs), nineteen
+  `emphatic-*` judgments, dictionary/CLI parity, twelve browser/source-link
+  cases, and [evaluation](emphatic-particle-evaluation.json). Thirteen newly
+  recovered corpus tokens have explicit tests. A fourteenth numerical gain,
+  확약서 → 확약, stays a segmentation-review case, not a required linguistic
+  judgment. See [scope and sources](rules.md#emphatic-and-concessive-particles-cov-018c017i).
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -486,7 +510,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 206 currently emitted canonical grammar forms.** The initial catalog
+  for all 214 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

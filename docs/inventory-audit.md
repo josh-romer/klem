@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **156 scoped
-reviews**, **one observed gap with unresolved acceptability**, and **558 entries
+The [manual ledger](inventory-reviews.json) currently contains **170 scoped
+reviews**, **one observed gap with unresolved acceptability**, and **544 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
@@ -509,3 +509,20 @@ four grammar POS categories; its 715 entries remain **156 scoped, one observed
 gap and 558 unreviewed**. Do not count the new suffix label as an additional
 review of those entries. Remaining suffix order, nominalized/particle bases,
 semantic classes and independent Korean review are explicit followups.
+
+
+## Quoted/confirmatory myeo family review (COV-017x)
+
+The [review](report-myeo-evaluation.json) retains all 34 source entries behind
+18 new canonical labels, distinguishing ending and expression homonyms. Fourteen
+ending entries receive scoped dispositions with same-source ledger citations.
+The 715-entry queue is now **170 scoped, one observed gap and 544 unreviewed**;
+the expression POS entries do not inflate that queue's reviewed count.
+
+The review preserves source-attested auxiliary stative plain-다 forms and
+separates present, factual/copular, command, proposal and question licenses.
+Generic retrospective question compounds remain unjudged. Source examples also
+expose older auxiliary report restrictions in COV-019g. Other quoted endings,
+lexical/existential classes, further particles and independent Korean review
+remain open. Labels, source matches and passing tests are not full-entry
+linguistic certification.

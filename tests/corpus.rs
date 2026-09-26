@@ -1590,3 +1590,43 @@ fn approximation_suffix_recovers_annotated_count_noun() {
     assert_eq!(case.expected, vec!["번"]);
     assert!(case.matched);
 }
+
+#[test]
+fn kaist_report_myeo_recovers_annotated_quotations() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-report-myeo.conllu").as_slice(),
+        Corpus::Kaist,
+        "report-myeo",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:MH2_0169-s260/11", "지원한다며", vec!["지원하다"]),
+        ("id:MH2_0169-s40/8", "필요하다면서", vec!["필요하다"]),
+        ("id:MH2_0169-s516/5", "모자란다면서도", vec!["모자라다"]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
+fn gsd_report_myeo_recovers_annotated_quotations() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-report-myeo.conllu").as_slice(),
+        Corpus::Gsd,
+        "report-myeo",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:dev-s737/6", "줄이라며", vec!["줄이다"]),
+        ("id:dev-s750/26", "현실이라며", vec!["현실", "이다"]),
+        ("id:dev-s926/19", "극복하겠다며", vec!["극복하다"]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}

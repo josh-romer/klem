@@ -1,0 +1,80 @@
+# sent_id = dev-s737
+# text = 정부가 10일 내년도 이산화탄소 배출량을 줄이라며 세부목표치를 제시하고 나섰기 때문이다.
+# translit = .jeong.bu.ga 10.il .nae.nyeon.do .i.san.hwa.tan.so .bae.chul.ryang.eul .jul.i.ra.myeo .se.bu.mog.pyo.chi.reul .je.si.ha.go .na.seoss.gi .ddae.mun.i.da.
+1	정부가	정부+가	NOUN	NNG+JKS	_	8	nsubj	_	Translit=.jeong.bu.ga|LTranslit=.jeong.bu+.ga
+2	10일	10+일	NOUN	SN+NNB	_	8	nmod	_	Translit=10.il|LTranslit=10+.il
+3	내년도	내년도	NOUN	NNG	_	6	obj	_	Translit=.nae.nyeon.do|LTranslit=.nae.nyeon.do
+4	이산화탄소	이산화탄소	NOUN	NNG	_	3	flat	_	Translit=.i.san.hwa.tan.so|LTranslit=.i.san.hwa.tan.so
+5	배출량을	배출량+을	NOUN	NNG+JKO	_	3	flat	_	Translit=.bae.chul.ryang.eul|LTranslit=.bae.chul.ryang+.eul
+6	줄이라며	줄이+라며	VERB	VV+EC	_	8	advcl	_	Translit=.jul.i.ra.myeo|LTranslit=.jul.i+.ra.myeo
+7	세부목표치를	세부+목표+치+를	NOUN	NNG+NNG+XSN+JKO	_	8	obj	_	Translit=.se.bu.mog.pyo.chi.reul|LTranslit=.se.bu+.mog.pyo+.chi+.reul
+8	제시하고	제시+하+고	VERB	NNG+XSV+EC	_	9	advcl	_	Translit=.je.si.ha.go|LTranslit=.je.si+.ha+.go
+9	나섰기	나서+었+기	NOUN	VV+EP+ETN	_	0	root	_	Translit=.na.seoss.gi|LTranslit=.na.seo+.eoss+.gi
+10	때문이다	때문+이+다	VERB	NNB+VCP+EF	_	9	case	_	SpaceAfter=No|Translit=.ddae.mun.i.da|LTranslit=.ddae.mun+.i+.da
+11	.	.	PUNCT	SF	_	10	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s750
+# text = 협의회는 성명서를 통해 청소년의 인터넷게임 중독 피해가 날로 확산되어 가는 현실에서, 양 부처와 게임산업계의 계속되는 입장차로 인해 법안이 아직까지 통과되지 못한다는 것은 너무도 안타까운 현실이라며 강한 유감을 나타냈다.
+# translit = .hyeob.yi.hoe.neun .seong.myeong.seo.reul .tong.hae .cheong.so.nyeon.yi .in.teo.nes.ge.im .jung.dog .pi.hae.ga .nal.ro .hwag.san.doe.eo .ga.neun .hyeon.sil.e.seo, .yang .bu.cheo.wa .ge.im.san.eob.gye.yi .gye.sog.doe.neun .ib.jang.cha.ro .in.hae .beob.an.i .a.jig.gga.ji .tong.gwa.doe.ji .mos.han.da.neun .geos.eun .neo.mu.do .an.ta.gga.un .hyeon.sil.i.ra.myeo .gang.han .yu.gam.eul .na.ta.naess.da.
+1	협의회는	협의회+는	NOUN	NNG+JX	_	29	nsubj	_	Translit=.hyeob.yi.hoe.neun|LTranslit=.hyeob.yi.hoe+.neun
+2	성명서를	성명서+를	NOUN	NNG+JKO	_	3	obj	_	Translit=.seong.myeong.seo.reul|LTranslit=.seong.myeong.seo+.reul
+3	통해	통하+아	VERB	VV+EC	_	29	advcl	_	Translit=.tong.hae|LTranslit=.tong.ha+.a
+4	청소년의	청소년+의	NOUN	NNG+JKG	_	5	nmod:poss	_	Translit=.cheong.so.nyeon.yi|LTranslit=.cheong.so.nyeon+.yi
+5	인터넷게임	인터넷+게임	NOUN	NNG+NNG	_	9	nsubj	_	Translit=.in.teo.nes.ge.im|LTranslit=.in.teo.nes+.ge.im
+6	중독	중독	NOUN	NNG	_	5	flat	_	Translit=.jung.dog|LTranslit=.jung.dog
+7	피해가	피해+가	NOUN	NNG+JKS	_	5	flat	_	Translit=.pi.hae.ga|LTranslit=.pi.hae+.ga
+8	날로	날로	ADV	MAG	_	9	advmod	_	Translit=.nal.ro|LTranslit=.nal.ro
+9	확산되어	확산+되+어	VERB	NNG+XSV+EC	_	11	dep	_	Translit=.hwag.san.doe.eo|LTranslit=.hwag.san+.doe+.eo
+10	가는	가+는	VERB	VX+ETM	_	9	flat	_	Translit=.ga.neun|LTranslit=.ga+.neun
+11	현실에서	현실+에서	ADV	NNG+JKB	_	21	advmod	_	SpaceAfter=No|Translit=.hyeon.sil.e.seo|LTranslit=.hyeon.sil+.e.seo
+12	,	,	PUNCT	SP	_	11	punct	_	Translit=,|LTranslit=,
+13	양	양	DET	MM	_	14	det	_	Translit=.yang|LTranslit=.yang
+14	부처와	부처+와	NOUN	NNG+JC	_	17	nmod:poss	_	Translit=.bu.cheo.wa|LTranslit=.bu.cheo+.wa
+15	게임산업계의	게임+산업+계+의	NOUN	NNG+NNG+XSN+JKG	_	14	conj	_	Translit=.ge.im.san.eob.gye.yi|LTranslit=.ge.im+.san.eob+.gye+.yi
+16	계속되는	계속+되+는	VERB	NNG+XSV+ETM	_	17	acl:relcl	_	Translit=.gye.sog.doe.neun|LTranslit=.gye.sog+.doe+.neun
+17	입장차로	입장+차+로	ADV	NNG+NNG+JKB	_	18	obl	_	Translit=.ib.jang.cha.ro|LTranslit=.ib.jang+.cha+.ro
+18	인해	인하+아	VERB	VV+EC	_	21	advcl	_	Translit=.in.hae|LTranslit=.in.ha+.a
+19	법안이	법안+이	NOUN	NNG+JKS	_	21	nsubj:pass	_	Translit=.beob.an.i|LTranslit=.beob.an+.i
+20	아직까지	아직+까지	ADV	MAG+JX	_	21	advmod	_	Translit=.a.jig.gga.ji|LTranslit=.a.jig+.gga.ji
+21	통과되지	통과+되+지	VERB	NNG+XSV+EC	_	23	dep	_	Translit=.tong.gwa.doe.ji|LTranslit=.tong.gwa+.doe+.ji
+22	못한다는	못하+ㄴ다는	VERB	VX+ETM	_	21	flat	_	Translit=.mos.han.da.neun|LTranslit=.mos.ha+ㄴ.da.neun
+23	것은	것+은	NOUN	NNB+JX	_	26	nsubj	_	Translit=.geos.eun|LTranslit=.geos+.eun
+24	너무도	너무+도	ADV	MAG+JX	_	25	advmod	_	Translit=.neo.mu.do|LTranslit=.neo.mu+.do
+25	안타까운	안타깝+ㄴ	ADJ	VA+ETM	_	26	amod	_	Translit=.an.ta.gga.un|LTranslit=.an.ta.ggab+ㄴ
+26	현실이라며	현실+이+라며	VERB	NNG+VCP+EC	_	29	advcl	_	Translit=.hyeon.sil.i.ra.myeo|LTranslit=.hyeon.sil+.i+.ra.myeo
+27	강한	강하+ㄴ	ADJ	VA+ETM	_	28	amod	_	Translit=.gang.han|LTranslit=.gang.ha+ㄴ
+28	유감을	유감+을	NOUN	NNG+JKO	_	29	obj	_	Translit=.yu.gam.eul|LTranslit=.yu.gam+.eul
+29	나타냈다	나타내+었+다	VERB	VV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.na.ta.naess.da|LTranslit=.na.ta.nae+.eoss+.da
+30	.	.	PUNCT	SF	_	29	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s926
+# text = 이런 가운데 지역 사회단체인 아산시 자율방범대연합대, 아산시 의용소방대연합대, (사)해병전우회 아산지회 등이 어려움을 함께 극복하겠다며 초소근무지원을 지원하고 있어 좋은 대조를 보이고 있다.
+# translit = .i.reon .ga.un.de .ji.yeog .sa.hoe.dan.che.in .a.san.si .ja.yul.bang.beom.dae.yeon.hab.dae, .a.san.si .yi.yong.so.bang.dae.yeon.hab.dae, (.sa).hae.byeong.jeon.u.hoe .a.san.ji.hoe .deung.i .eo.ryeo.um.eul .ham.gge .geug.bog.ha.gess.da.myeo .cho.so.geun.mu.ji.weon.eul .ji.weon.ha.go .iss.eo .joh.eun .dae.jo.reul .bo.i.go .iss.da.
+1	이런	이런	ADJ	MM	_	2	amod	_	Translit=.i.reon|LTranslit=.i.reon
+2	가운데	가운데	NOUN	NNG	_	25	obl	_	Translit=.ga.un.de|LTranslit=.ga.un.de
+3	지역	지역	NOUN	NNG	_	12	acl:relcl	_	Translit=.ji.yeog|LTranslit=.ji.yeog
+4	사회단체인	사회단체+이+ㄴ	VERB	NNG+VCP+ETM	_	3	flat	_	Translit=.sa.hoe.dan.che.in|LTranslit=.sa.hoe.dan.che+.i+ㄴ
+5	아산시	아산시	NOUN	NNP	_	19	nsubj	_	Translit=.a.san.si|LTranslit=.a.san.si
+6	자율방범대연합대	자율+방범대+연합대	NOUN	NNG+NNG+NNG	_	5	flat	_	SpaceAfter=No|Translit=.ja.yul.bang.beom.dae.yeon.hab.dae|LTranslit=.ja.yul+.bang.beom.dae+.yeon.hab.dae
+7	,	,	PUNCT	SP	_	8	punct	_	Translit=,|LTranslit=,
+8	아산시	아산시	NOUN	NNP	_	5	conj	_	Translit=.a.san.si|LTranslit=.a.san.si
+9	의용소방대연합대	의용+소방대+연합대	NOUN	NNG+NNG+NNG	_	8	flat	_	SpaceAfter=No|Translit=.yi.yong.so.bang.dae.yeon.hab.dae|LTranslit=.yi.yong+.so.bang.dae+.yeon.hab.dae
+10	,	,	PUNCT	SP	_	12	punct	_	Translit=,|LTranslit=,
+11	(	(	PUNCT	SS	_	12	punct	_	SpaceAfter=No|Translit=(|LTranslit=(
+12	사	사	NOUN	NNG	_	9	appos	_	SpaceAfter=No|Translit=.sa|LTranslit=.sa
+13	)	)	PUNCT	SS	_	12	punct	_	SpaceAfter=No|Translit=)|LTranslit=)
+14	해병전우회	해병+전우회	NOUN	NNG+NNG	_	9	conj	_	Translit=.hae.byeong.jeon.u.hoe|LTranslit=.hae.byeong+.jeon.u.hoe
+15	아산지회	아산지회	NOUN	NNG	_	12	flat	_	Translit=.a.san.ji.hoe|LTranslit=.a.san.ji.hoe
+16	등이	등+이	NOUN	NNB+JKS	_	12	dep	_	Translit=.deung.i|LTranslit=.deung+.i
+17	어려움을	어려움+을	NOUN	NNG+JKO	_	19	obj	_	Translit=.eo.ryeo.um.eul|LTranslit=.eo.ryeo.um+.eul
+18	함께	함께	ADV	MAG	_	19	advmod	_	Translit=.ham.gge|LTranslit=.ham.gge
+19	극복하겠다며	극복+하+겠+다며	VERB	NNG+XSV+EP+EC	_	21	ccomp	_	Translit=.geug.bog.ha.gess.da.myeo|LTranslit=.geug.bog+.ha+.gess+.da.myeo
+20	초소근무지원을	초소+근무+지원+을	NOUN	NNG+NNG+NNG+JKO	_	21	obj	_	Translit=.cho.so.geun.mu.ji.weon.eul|LTranslit=.cho.so+.geun.mu+.ji.weon+.eul
+21	지원하고	지원+하+고	VERB	NNG+XSV+EC	_	25	advcl	_	Translit=.ji.weon.ha.go|LTranslit=.ji.weon+.ha+.go
+22	있어	있+어	VERB	VX+EC	_	21	flat	_	Translit=.iss.eo|LTranslit=.iss+.eo
+23	좋은	좋+은	ADJ	VA+ETM	_	24	amod	_	Translit=.joh.eun|LTranslit=.joh+.eun
+24	대조를	대조+를	NOUN	NNG+JKO	_	25	obj	_	Translit=.dae.jo.reul|LTranslit=.dae.jo+.reul
+25	보이고	보이+고	VERB	VV+EC	_	0	root	_	Translit=.bo.i.go|LTranslit=.bo.i+.go
+26	있다	있+다	VERB	VX+EF	_	25	flat	_	SpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da
+27	.	.	PUNCT	SF	_	26	punct	_	Translit=.|LTranslit=.
+

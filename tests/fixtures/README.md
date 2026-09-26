@@ -826,3 +826,22 @@ development sentence `MH2_0159-s86`, under the KAIST attribution/license above.
 The regression requires `id:MH2_0159-s86/17` 번쯤 → 번. The original jxc tag is
 unchanged; the engine follows KRDict's suffix role. Neither annotation verifies
 every candidate of the sentence. Source/fixture hashes are in the review.
+
+
+`krdict-report-myeo.json` contains 44 primary word entries from the September
+2026 KRDict export. Every selected lexical homonym/sense is retained, with
+English equivalents and the first example group per sense; WordForm,
+RelatedForm and export metadata are omitted. Attribution: National Institute of
+Korean Language, Korean Basic Dictionary, [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+Thirty-four source entries extend `krdict-grammar-labels.json` under the same
+attribution/adaptations. Eighteen canonical labels bring the catalog to 296
+forms, 384 source IDs and 385 grammar fixture entries, preserving every prior
+entry. The [review](../../docs/report-myeo-evaluation.json) records source hashes
+and selected stative/outer-particle examples under the same attribution/license.
+
+`kaist-report-myeo.conllu` preserves complete byte-identical UD 2.15 development
+sentences MH2_0169-s260, MH2_0169-s40 and MH2_0169-s516; `gsd-report-myeo.conllu`
+preserves dev-s737, dev-s750 and dev-s926. They retain the KAIST/GSD source
+attribution/licenses above. Six stable annotated groups cover 지원한다며,
+필요하다면서, 모자란다면서도, 줄이라며, 현실이라며 and 극복하겠다며. No
+sentence text, annotation or historical corpus baseline is rewritten.

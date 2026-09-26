@@ -1651,3 +1651,41 @@ all nine forbidden paths. Desktop/mobile screenshots show 번 + 쯤 without
 JavaScript errors or horizontal overflow. Its lexical gloss currently displays
 `beon` from the dictionary's first sense; contextual selection of the counting
 sense remains separate from morphological recovery.
+
+
+## Quoted and confirmatory -며/-면서 families (COV-017x)
+
+[The comparison](report-myeo-evaluation.json) records **1,125 added candidates
+on 239 surfaces**, with no removals or changed prior provenance. Eighteen
+canonical components retain statement, factual/copular, command, proposal,
+question and retrospective roles. Known auxiliary/derived-adjective classes
+and prefinal/allomorph licenses are checked separately. Source-attested 있다/
+계시다 stative report possibilities survive, including inherited negatives.
+Unknown lexical classes and retrospective question compounds remain unjudged.
+
+KAIST gains **지원한다며, 필요하다면서, 모자란다면서도**; GSD gains **줄이라며,
+현실이라며, 극복하겠다며**. Development misses are now **106 KAIST and 151
+GSD**, with no lost groups or component sets. Mean candidate counts are
+5.836229 and 5.372310. Six complete byte-identical sentences preserve these
+annotations. All thirty stress fingerprints and historical baselines remain
+unchanged; no corpus recall result is presented as overall candidate precision.
+
+The 235 new ledger cases bring totals to **1,805 cases, 1,063 required and 748
+forbidden judgments**. The lexical fixture retains 44 entries and all selected
+homonyms/senses. Eighteen labels and 34 source entries bring the catalog to
+**296 forms, 384 source IDs and 385 grammar fixture entries**. Fourteen scoped
+inventory dispositions bring the queue to **170 scoped, one observed gap and
+544 unreviewed**. COV-019g records older stative auxiliary report restrictions;
+additional attachment review, independent Korean review and fresh passages
+remain open.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, the frontend production build, browser/HTTP checks
+and inventory verification pass. `nix flake check` and `nix build .#web` pass
+on x86_64-linux; the other declared systems were not executed. The final Nix
+suite includes both new annotated-corpus tests. The packaged full-dictionary
+app passes 29 reading selections covering all eighteen labels, all six corpus
+gains, auxiliary statives and split/bundled retrospective alternatives, plus
+all 78 forbidden paths. Every mapped source remains accessible. Inspected
+desktop/mobile screenshots show 필요하 + 다면서 with its source homonyms,
+without JavaScript errors or horizontal overflow.

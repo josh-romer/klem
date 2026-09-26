@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–w/018a–k/018m/019a–f/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–x/018a–k/018m/019a–f/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 156 scoped
-  dispositions from COV-016/017m–n/017p–w/018e–k/018m/019d–f/020d–h; 558 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 170 scoped
+  dispositions from COV-016/017m–n/017p–x/018e–k/018m/019d–f/020d–h; 544 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One additional
   entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–w implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–x implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -541,6 +541,26 @@ review remains open under the completion review below.
   positive and boundary scope, not those unresolved judgments. See
   [scope and sources](rules.md#literal-doe-and-licensed-eudoe-cov-017w).
 
+- [x] **COV-017x — Quoted/confirmatory -며/-면서 families.** Eighteen
+  canonical components cover statements, commands, proposals, questions and
+  retrospective reports, including ㄴ/는다며 and 다면서. Copular/factual 라
+  stays distinct from command 으라; bundled 더라 alternatives coexist with
+  더 + 라 components. Present forms retain attached-ㄴ boundaries and honorific
+  licenses. Commands/proposals, question allomorphs, known adjective/auxiliary
+  classes and copulas have separate checks. Auxiliary 있다/계시다 and inherited
+  negatives preserve source-attested stative plain-다 readings in these new
+  families. Polite 요 and longer -면서 + 도 compose; broader particles remain
+  unjudged. No implicit reporting 하다 or contextual sense is selected.
+  There are 157 required and 78 forbidden judgments, six complete unchanged
+  annotated sentences, dictionary/CLI parity and browser source regressions.
+  Six development gains leave 106 KAIST and 151 GSD misses, with no losses.
+  Generic 더 + 냐며/냐면서 hypotheses remain unjudged: missing examples or
+  an omitted prefinal in a short dictionary note is not a categorical ban.
+  Evidence: [tests](../tests/report_myeo_endings.rs), stable `report-myeo-*`
+  ledger cases, `report_myeo_endings_preserve_dictionary_and_cli_parity`,
+  [rules](rules.md#quoted-and-confirmatory-myeo-families-cov-017x) and
+  [source/candidate review](report-myeo-evaluation.json).
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -813,6 +833,16 @@ review remains open under the completion review below.
   removals across 83 surfaces and the two changed stress fingerprints, with no
   lost corpus gold. Transitivity, verb subsets, other prefinal/particle conditions
   and independent review remain open. See [scope](rules.md#continuative-left-classes-cov-019f).
+- [ ] **COV-019g — Stative auxiliary inflection across older report families.**
+  The full auxiliary paths in 먹고있다네 and 먹고계시다는데 remain absent.
+  The existing filter treats verbal auxiliary POS as a plain-다 exclusion;
+  KRDict 84376 and 83094 attest 지내고 있다네 and 받고 있다는데요.
+  COV-017x handles this distinction for its new -며/-면서 forms. Audit the
+  older 다네/다는데 and quoted-alternative families, inherited negatives and
+  existential present paradigms before applying the correction across them.
+  The [review](report-myeo-evaluation.json) preserves these source examples and
+  the observed gap; the missing paths are not silently counted as covered.
+
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
@@ -1045,7 +1075,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 278 currently emitted canonical grammar forms.** The initial catalog
+  for all 296 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

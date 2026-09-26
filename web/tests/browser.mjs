@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const reportMyeo = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-report-myeo.json"), "utf8"));
   const approximation = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-approximation.json"), "utf8"));
   const extent = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-extent.json"), "utf8"));
   const rangeCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-range-case.json"), "utf8"));
@@ -273,6 +274,7 @@ try {
       ...rangeCase.LexicalResource.Lexicon.LexicalEntry,
       ...extent.LexicalResource.Lexicon.LexicalEntry,
       ...approximation.LexicalResource.Lexicon.LexicalEntry,
+      ...reportMyeo.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -670,6 +672,30 @@ try {
   for (const [word, expected, form, label, id, kind = "ending"] of [
     ["학생치고는", ["학생", "치고", "는"], "는", "Topic / contrast", 85851, "particle"],
     ["사람치고서는", ["사람", "치고서", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["먹고있다며", ["먹", "고", "있", "다며"], "다며", "Report / confirmation", 81466, "ending"],
+    ["먹고있지않다면서", ["먹", "고", "있", "지", "않", "다면서"], "다면서", "Report / confirmation", 78806, "ending"],
+    ["좋다며", ["좋", "다며"], "다며", "Report / confirmation", 81466, "ending"],
+    ["지원한다며", ["지원하", "는다며"], "는다며", "Report / confirmation", 81465, "ending"],
+    ["학생이라며", ["학생", "이", "라며"], "라며", "Copular / factual report", 81469, "ending"],
+    ["먹으라며", ["먹", "으라며"], "으라며", "Reported command / confirmation", 81479, "ending"],
+    ["먹더라며", ["먹", "더라며"], "더라며", "Retrospective report", 81531, "ending"],
+    ["먹자며", ["먹", "자며"], "자며", "Reported proposal / confirmation", 81474, "ending"],
+    ["먹냐며", ["먹", "냐며"], "냐며", "Reported question", 86914, "ending"],
+    ["먹느냐며", ["먹", "느냐며"], "느냐며", "Reported question", 86861, "ending"],
+    ["좋으냐며", ["좋", "으냐며"], "으냐며", "Reported question", 86921, "ending"],
+    ["좋다면서", ["좋", "다면서"], "다면서", "Report / confirmation", 78806, "ending"],
+    ["지원한다면서", ["지원하", "는다면서"], "는다면서", "Report / confirmation", 78804, "ending"],
+    ["학생이라면서", ["학생", "이", "라면서"], "라면서", "Copular / factual report", 78807, "ending"],
+    ["먹으라면서", ["먹", "으라면서"], "으라면서", "Reported command / confirmation", 78808, "ending"],
+    ["먹더라면서", ["먹", "더라면서"], "더라면서", "Retrospective report", 81529, "ending"],
+    ["먹자면서", ["먹", "자면서"], "자면서", "Reported proposal / confirmation", 78809, "ending"],
+    ["먹냐면서", ["먹", "냐면서"], "냐면서", "Reported question", 86922, "ending"],
+    ["먹느냐면서", ["먹", "느냐면서"], "느냐면서", "Reported question", 88031, "ending"],
+    ["좋으냐면서", ["좋", "으냐면서"], "으냐면서", "Reported question", 86119, "ending"],
+    ["모자란다면서도", ["모자라", "는다면서", "도"], "도", "Also / even", 86258, "particle"],
+    ["필요하다면서", ["필요하", "다면서"], "다면서", "Report / confirmation", 78806, "ending"],
+    ["극복하겠다며", ["극복하", "겠", "다며"], "다며", "Report / confirmation", 81466, "ending"],
+    ["먹는다면서요", ["먹", "는다면서", "요"], "요", "Polite", 86116, "particle"],
     ["필생토록", ["필생", "토록"], "토록", "Throughout / to the extent", 86121, "particle"],
     ["그토록", ["그", "토록"], "토록", "Throughout / to the extent", 86121, "particle"],
     ["학생마냥", ["학생", "마냥"], "마냥", "Like / as if", 80341, "particle"],
@@ -886,6 +912,10 @@ try {
     }
     if (form === "만치") assert.ok(!data.grammar["만치"].some(e => e.id === "krdict:53006"));
     if (form === "마냥") assert.ok(!data.grammar["마냥"].some(e => e.id === "krdict:51528"));
+    if (data.records[0].analysis.analyses[Number(choice)].morphemes.some(m =>
+        Object.hasOwn(grammarLabels, "-" + m.form) && /(?:며|면서)$/.test(m.form) && !["으며", "으면서"].includes(m.form))) {
+      assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("ending.reporting_myeo"));
+    }
     // Display may use 여 after 하 while lookup retains canonical 어.
     await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
@@ -1354,7 +1384,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

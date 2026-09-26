@@ -436,6 +436,8 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다든가"
                             | "다네"
                             | "다는데"
+                            | "다며"
+                            | "다면서"
                     )
                 {
                     recover_eu_open(&stem, &mut out, true);
@@ -490,6 +492,16 @@ pub(crate) fn endings() -> &'static [Ending] {
             "다는데",
             "더라네",
             "더라는데",
+            "다며",
+            "다면서",
+            "더라며",
+            "더라면서",
+            "자며",
+            "자면서",
+            "냐며",
+            "냐면서",
+            "느냐며",
+            "느냐면서",
             "다거나",
             "다든가",
             "다가",
@@ -616,6 +628,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("던지", "던지", 0),
             ("더라네", "더라네", 0),
             ("더라는데", "더라는데", 0),
+            ("더라며", "더라며", 0),
+            ("더라면서", "더라면서", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -675,11 +689,15 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으랍니다", "랍니다", "으랍니다"),
             ("으라네", "라네", "으라네"),
             ("으라는데", "라는데", "으라는데"),
+            ("으라며", "라며", "으라며"),
+            ("으라면서", "라면서", "으라면서"),
             ("으라거나", "라거나", "으라거나"),
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
             ("으냐", "냐", "으냐"),
             ("으냐는", "냐는", "으냐는"),
+            ("으냐며", "냐며", "으냐며"),
+            ("으냐면서", "냐면서", "으냐면서"),
             ("으나", "나", "으나"),
             ("으나마", "나마", "으나마"),
             ("으리라", "리라", "으리라"),
@@ -744,6 +762,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는답니다", "답니다", "는답니다", 4),
             ("는다네", "다네", "는다네", 4),
             ("는다는데", "다는데", "는다는데", 4),
+            ("는다며", "다며", "는다며", 4),
+            ("는다면서", "다면서", "는다면서", 4),
             ("는다거나", "다거나", "는다거나", 4),
             ("는다든가", "다든가", "는다든가", 4),
         ] {
@@ -814,6 +834,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라든가",
             "라네",
             "라는데",
+            "라며",
+            "라면서",
         ] {
             for boundary in [Copular, ZeroCopula] {
                 out.push(Ending {
@@ -1203,6 +1225,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
         "ending.reporting_polite" => {
             "Recognize a polite informative or reported-speech ending as one grammatical component; its sense and any implicit speaker are not inferred."
+        }
+        "ending.reporting_myeo" => {
+            "Recognize a reported statement, command, proposal or question in a -며/-면서 contraction; preserve confirmation homonyms without inserting an implicit reporting verb."
         }
         "ending.reporting_ne" => {
             "Recognize a 다네/다는데-family information or reported-speech component, keeping copular/factual and command allomorphs separate; do not infer an implicit 하다 or contextual sense."

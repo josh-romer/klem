@@ -2165,3 +2165,43 @@ suffixes -경/-여. Thirty required and nine forbidden judgments, dictionary/CLI
 parity, ordered browser selection, source lookup and lexical alternatives have
 [regressions](../tests/approximation.rs). No contextual sense choice or overall
 candidate precision claim follows from these tests.
+
+
+## Quoted and confirmatory myeo families (COV-017x)
+
+The eighteen canonical -며/-면서 components include plain 다, present 는다
+(with attached ㄴ), factual/copular 라, command 으라, retrospective 더라,
+proposal 자, and question 냐/느냐/으냐. Each combines with both tails. Sources
+and all homonyms are pinned in [the review](report-myeo-evaluation.json).
+KRDict distinguishes confirmation-ending and quoted-expression uses; the
+[NIKL explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=331391)
+also describes the omitted reporting construction. `ending.reporting_myeo`
+marks the bundled component without inserting a silent 하다 lemma.
+
+Present forms use the consonant/attached-ㄴ boundary and permit only recovered
+시. Plain 다 forms accept adjective or licensed prefinal readings. Factual 라
+follows copulas, 시, 더 or 으리; commands use the (으) boundary with optional
+시. Proposals use bare verbal stems. Question 으냐 is a bare adjective path;
+느냐 permits verb/existential stems and listed prefinals. Generic 냐 + 더 is
+retained as an unjudged hypothesis: the primary thesis record discusses these
+compounds but its abstract reports no examples beyond 더냐고 in the examined
+corpus. That is not evidence of a universal grammatical prohibition.
+
+Known auxiliary and 답다 adjective roles enforce the relevant ending classes.
+Auxiliary 있다/계시다 still have stative plain-다 report readings despite verbal
+POS; negatives inherit that possibility. KRDict examples 듣고 있다며 and
+바로잡혀 있지 않다며 support the distinction. This correction is scoped to the
+new families; older report-family restrictions are tracked in COV-019g.
+Unknown lexical predicate classes remain hypotheses, even with dictionary hits.
+
+Polite 요 follows the new components. The longer -면서 connector also supports
+도, as in source-attested 대장부라면서도 and annotated 모자란다면서도. Other
+particles, short -며 + 도, further omitted copulas before quoted questions and
+existential present paradigms remain explicit followups. Bundled 더라 and split
+더 + 라 alternatives are both retained, including licensed earlier prefinals
+and vowel-final copula omission. Whole lexical readings remain unchanged.
+
+[Regression tests](../tests/report_myeo_endings.rs) and 235 stable ledger cases
+cover positive/negative attachment, ordered breakdowns, Unicode normalization,
+dictionary/CLI parity and browser source selection. Six complete annotated
+sentences support the corpus gains without certifying every generated candidate.

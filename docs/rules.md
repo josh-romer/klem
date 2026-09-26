@@ -2021,3 +2021,28 @@ restrictions. This does not add arbitrary outer particles or 도 after 다네.
 Further quoted families, topic/object-particle combinations, lexical and contextual
 restrictions remain open. [The report](report-ne-evaluation.json) records every
 reviewed source, candidate delta, corpus gain and retained stress fingerprint.
+
+## Literal doe and licensed eudoe (COV-017w)
+
+Canonical 으되 represents contrast, qualification or introduction of a quotation.
+It includes literal 되 in 먹되/살되/듣되/돕되, preserving consonants without
+vowel-triggered irregular recovery or ㄹ deletion. The full spelling follows
+bare 있다/없다 and compounds ending in these stems, or a recovered past/modal
+marker: 있으되, 맛있으되, 치렀으되, 먹겠으되. Honorific 시 selects 되 unless
+followed by a licensed past/modal marker. Recovered retrospective 더 is excluded.
+
+The primary entries are [되 80289](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80289)
+and [으되 80291](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80291).
+This pair is not implemented through the ordinary (으) boundary mechanism:
+먹으되 does not recover 먹다, nor does 도우되 recover 돕다. Existing copulas,
+auxiliaries and -답다 derivations retain their components. Polite 요 uses its
+[connective attachment note](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86116);
+the contrast ending is not itself an auxiliary connector or nominalizer.
+
+The broad 되 note and the more specific 으되 note establish the extended
+existential readings but leave short spellings such as 있되/없되 insufficiently
+resolved in this review. They remain generated, **unjudged** alternatives,
+recorded under `doe-short-existential` in the [report](doe-evaluation.json).
+They are neither required nor forbidden by the linguistic ledger. Omitted
+copulas and further particle combinations have a separate named followup.
+Unknown lexical hypotheses and contextual meanings also remain unverified.

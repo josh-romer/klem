@@ -1463,3 +1463,41 @@ without JavaScript errors or horizontal overflow; 판매한다네요 visibly yie
 
 Other quoted families and particle combinations, independent Korean-language
 review, fresh-passage evaluation and the broader inventory audit remain open.
+
+## Literal 되 and licensed 으되 (COV-017w)
+
+The [comparison](doe-evaluation.json) accounts for **132 added candidates on
+67 surfaces**, with no removals or changes to existing provenance. Canonical
+으되 represents literal 되 after ordinary stems/honorific 시 and full 으되
+after bare 있다/없다 compounds or past/modal markers. It does not invoke a
+general 으-boundary recovery. The 32 required and 22 forbidden paths preserve
+stem consonants, prefinal order, auxiliaries, copulas, -답다 and polite 요.
+Short existential 있되/없되 and compounds remain explicitly **unjudged** under
+the report's `doe-short-existential` followup; omitted copulas and further
+particles have a separate followup. Test success does not settle those questions.
+
+Two development groups newly match: KAIST **치렀으되 → 치르다** and GSD
+**그리되 → 그리다**. The complete source sentences respectively describe a
+past ceremony and drawing a planar graph. Remaining misses are **112 KAIST and
+155 GSD**, with no lost groups or recovered component sets. Mean candidates are
+5.834788 and 5.369707; these are ambiguity measures, not precision estimates.
+Both unchanged annotated sentences are retained as offline fixtures. All thirty
+stress fingerprints and historical corpus baselines remain unchanged.
+
+The 54 added cases bring totals to **1,358 cases, 776 required and 588 forbidden
+judgments**. The lexical fixture preserves 38 entries and their homonyms/senses.
+One canonical label links 되/으되 (80289/80291), bringing the catalog to
+**271 forms, 343 source IDs and 344 grammar fixture entries**. Every previous
+label and fixture entry remains. Two scoped grammar reviews bring the inventory
+to **144 scoped entries and 571 without a disposition**.
+
+Formatting, full Rust tests, the new annotated-corpus test, Clippy, all **66,570
+frozen corpus cases**, stress/memory regressions, frontend production build,
+full browser/HTTP checks and inventory verification pass. `nix flake check` and
+`nix build .#web` pass on x86_64-linux; other declared systems were not executed.
+The packaged full-dictionary app passes seven reading selections, both allomorph
+source links and all 22 forbidden paths. Desktop/mobile screenshots were
+inspected without JavaScript errors or horizontal overflow.
+
+The named unresolved allomorph/composition questions, broader grammar inventory,
+independent Korean-language review and fresh-passage evaluation remain open.

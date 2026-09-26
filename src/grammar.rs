@@ -473,6 +473,16 @@ pub(crate) fn endings() -> &'static [Ending] {
     RULES.get_or_init(|| {
         use Boundary::*;
         let mut out = Vec::new();
+        // 되/으되 are not a productive (으) vowel-boundary pair: ordinary
+        // consonants keep 되; lexical/prefinal licenses are checked later.
+        for suffix in ["되", "으되"] {
+            out.push(Ending {
+                suffix,
+                form: "으되",
+                boundary: Literal,
+                connector: false,
+            });
+        }
         for suffix in [
             "다",
             "답니다",
@@ -1175,6 +1185,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.reporting_ne" => {
             "Recognize a 다네/다는데-family information or reported-speech component, keeping copular/factual and command allomorphs separate; do not infer an implicit 하다 or contextual sense."
+        }
+        "ending.contrast_doe" => {
+            "Recognize 되/으되 contrast, qualification or quotation, selecting the written allomorph by the lexical/prefinal boundary rather than general vowel-triggered recovery."
         }
         "ending.enumerative_yo" => {
             "Recognize enumerative -요 after 이다/아니다, retaining vowel-final copula omission and the separate polite-particle reading."

@@ -733,3 +733,24 @@ existing source/license attribution above. They preserve the original gold for
 대부분이라는데, 풍속이었다네, 있다는데, 판매한다네요 and 단골집이라는데.
 [The report](../../docs/report-ne-evaluation.json) records the exact input and
 fixture hashes; no historical corpus baseline is rewritten.
+
+`krdict-doe.json` contains 38 primary word entries from the September 2026 KRDict
+export (National Institute of Korean Language, CC BY-SA 2.0 KR). IDs: 15983,
+17186, 17203, 20256, 24079, 24826, 26847, 26878, 28130, 31670, 36304, 50557,
+57277, 57315, 58272, 61190, 62171, 62249, 62595, 62642, 62657, 68796, 68797,
+69579, 70060, 70811, 71306, 71581, 71583, 71691, 71875, 74104, 77243, 79033,
+86118, 86232, 89917, 92457. All homonyms/senses are retained, with English
+equivalents and the first example group per sense. WordForm, RelatedForm,
+idiom subentries and global metadata are omitted. These are integration fixtures,
+not sentence gold. Source/license links are above.
+
+COV-017w adds 80289 and 80291 to `krdict-grammar-labels.json` under the same
+attribution, license and adaptations, preserving all 342 previous entries.
+Canonical 으되 links both spellings; the catalog now has 271 forms, 343 distinct
+source IDs and 344 grammar fixture entries.
+
+`kaist-doe.conllu` and `gsd-doe.conllu` preserve complete byte-identical sentences
+MH2_0149-s40 and dev-s267 from the pinned development files, under their existing
+source/license attribution above. The original gold records 치렀으되 → 치르다
+and 그리되 → 그리다. [The report](../../docs/doe-evaluation.json) includes hashes;
+historical baselines and original annotations remain unchanged.

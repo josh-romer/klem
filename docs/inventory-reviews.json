@@ -8016,6 +8016,280 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:80289",
+      "source_sha256": "97b8b03cc5c8e0e07946815a2a29d66d318399bf524b3ecd3d634b41cba971f9",
+      "status": "scoped",
+      "checklist": [
+        "COV-017w"
+      ],
+      "scope": "Literal 되 versus existential/past/modal 으되; preserve stem spelling, reviewed prefinals, existing copulas/auxiliaries/답다 and polite 요.",
+      "remaining": "Short existential spellings (있되/없되 and compounds) remain explicitly unjudged in doe-evaluation.json. Further outer particles, omitted copulas and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/doe_endings.rs",
+          "test": "doe_endings_preserve_stems_prefinals_and_composition"
+        },
+        {
+          "path": "tests/doe_endings.rs",
+          "test": "doe_endings_reject_generic_eu_recovery_and_wrong_prefinal_allomorphs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "doe_endings_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/doe-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "doe-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-6",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-8",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-23",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-26",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-27",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-28",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-9",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-11",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-12",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-13",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-18",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-20",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-21",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-22",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80291",
+      "source_sha256": "8f7baa51537dbdef4991c280aecdace31dfa6fdc7056ec983b06feb63a2a38c8",
+      "status": "scoped",
+      "checklist": [
+        "COV-017w"
+      ],
+      "scope": "Literal 되 versus existential/past/modal 으되; preserve stem spelling, reviewed prefinals, existing copulas/auxiliaries/답다 and polite 요.",
+      "remaining": "Short existential spellings (있되/없되 and compounds) remain explicitly unjudged in doe-evaluation.json. Further outer particles, omitted copulas and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/doe_endings.rs",
+          "test": "doe_endings_preserve_stems_prefinals_and_composition"
+        },
+        {
+          "path": "tests/doe_endings.rs",
+          "test": "doe_endings_reject_generic_eu_recovery_and_wrong_prefinal_allomorphs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "doe_endings_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/doe-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "doe-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-24",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-29",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-31",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-required-32",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-10",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-14",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-15",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-16",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-17",
+          "judgment": "path"
+        },
+        {
+          "case": "doe-forbidden-19",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

@@ -311,6 +311,19 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 p.copula_contracted |=
                     r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");
+                if ending.form == "으되" {
+                    let extended = p
+                        .morphs
+                        .last()
+                        .is_some_and(|m| matches!(m.form.as_str(), "었" | "겠" | "어야겠"))
+                        || (p.morphs.is_empty()
+                            && (p.stem.ends_with("있") || p.stem.ends_with("없")));
+                    if (ending.suffix == "으되" && !extended)
+                        || (ending.suffix == "되" && p.morphs.iter().any(|m| m.form != "시"))
+                    {
+                        continue;
+                    }
+                }
                 // Retrospective 더 has its own following-ending licenses.
                 // These source-reviewed families do not take it, including
                 // bundles that already contain a retrospective component.
@@ -551,6 +564,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
+                if ending.form == "으되" {
+                    p.rules.push("ending.contrast_doe".into());
+                }
                 if ending.form == "요" {
                     p.rules.push("ending.enumerative_yo".into());
                 }
@@ -1003,6 +1019,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "답니다"
             | "다네"
             | "다는데"
+            | "으되"
             | "더라네"
             | "더라는데"
             | "다거나"
@@ -1790,6 +1807,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                         | "을게"
                         | "을래"
                         | "다니"
+                        | "으되"
                         | "다네"
                         | "는다네"
                         | "라네"

@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const doe = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-doe.json"), "utf8"));
   const reportNe = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-report-ne.json"), "utf8"),
   );
@@ -263,6 +264,7 @@ try {
       ...questionCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...nohContraction.LexicalResource.Lexicon.LexicalEntry,
       ...reportNe.LexicalResource.Lexicon.LexicalEntry,
+      ...doe.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -641,6 +643,13 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["치렀으되", ["치르", "었", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
+    ["그리되", ["그리", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
+    ["살되", ["살", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
+    ["있으되", ["있", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
+    ["학생이었으되", ["학생", "이", "었", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
+    ["먹고있으되", ["먹", "고", "있", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
+    ["학생답되", ["학생", "답", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
     ["좋다는데도", ["좋", "다는데", "도"], "도", "Also / even", 86258, "particle"],
     ["먹는다는데도", ["먹", "는다는데", "도"], "도", "Also / even", 86258, "particle"],
     ["학생이라는데도", ["학생", "이", "라는데", "도"], "도", "Also / even", 86258, "particle"],
@@ -807,6 +816,10 @@ try {
       }
     }
     if (form === "으라네") assert.ok(!data.grammar["-으라네"].some(e => e.id === "krdict:75476"));
+    if (form === "으되") {
+      assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("ending.contrast_doe"));
+      assert.ok(data.grammar["-으되"].some(e => e.id === "krdict:80289"));
+    }
     // Display may use 여 after 하 while lookup retains canonical 어.
     await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
@@ -1275,7 +1288,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

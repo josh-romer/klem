@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **142 scoped
-reviews**, with **573 entries unreviewed in this ledger**. This does not imply
+The [manual ledger](inventory-reviews.json) currently contains **144 scoped
+reviews**, with **571 entries unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
 and source-specific candidate judgments. Independent Korean-language review
@@ -456,3 +456,12 @@ accounts for 954 added candidates on 186 surfaces and five recovered development
 groups, with no lost candidates or changed previous provenance. The inventory
 now contains **142 scoped entries and 573 without a disposition**. Unknown
 lexical classes, broader honorific judgments and contextual senses remain open.
+
+
+COV-017w adds scoped dispositions for 되/으되 (80289, 80291), separating literal
+stem attachment from existential/past/modal full-form selection. The queue now
+contains **144 scoped entries and 571 without a disposition**. The
+[review](doe-evaluation.json) records 132 candidate additions on 67 surfaces,
+two development gains and unchanged historical stress fingerprints. Short
+existential spellings remain explicitly unjudged under a named followup;
+scoped disposition is not full-entry certification.

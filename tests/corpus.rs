@@ -1502,3 +1502,27 @@ fn report_ne_endings_recover_five_new_annotated_groups() {
         }
     }
 }
+
+#[test]
+fn doe_endings_recover_past_and_plain_annotated_groups() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-doe.conllu").as_slice(),
+            vec![("id:MH2_0149-s40/4", "치렀으되", vec!["치르다"])],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-doe.conllu").as_slice(),
+            vec![("id:dev-s267/5", "그리되", vec!["그리다"])],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "doe").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}

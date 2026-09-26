@@ -302,6 +302,25 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
     out
 }
 
+// Canonical present-declarative forms share verb attachment and only permit
+// honorific 시 before the ending. Past/modal reports use the plain 다 family.
+fn present_declarative(form: &str) -> bool {
+    matches!(
+        form,
+        "는다"
+            | "는다고"
+            | "는다는"
+            | "는다면"
+            | "는답니다"
+            | "는다거나"
+            | "는다든가"
+            | "는다네"
+            | "는다는데"
+            | "는다며"
+            | "는다면서"
+    )
+}
+
 fn predicates(word: &str) -> Vec<Predicate> {
     let mut out = vec![];
     let mut memo = HashMap::new();
@@ -444,7 +463,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     continue;
                 }
                 // Quoted -며/-면서 families have separate prefinal licenses.
-                if (matches!(ending.form, "는다며" | "는다면서" | "으라며" | "으라면서")
+                if (matches!(ending.form, "으라며" | "으라면서")
                     && p.morphs.iter().any(|m| m.form != "시"))
                     || (matches!(ending.form, "자며" | "자면서" | "으냐며" | "으냐면서")
                         && !p.morphs.is_empty())
@@ -457,11 +476,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 // Present reported forms permit honorific 시 but no other
                 // prefinals; past/modal use their plain 다- counterparts.
-                if matches!(
-                    ending.form,
-                    "는다면" | "는답니다" | "는다거나" | "는다든가" | "는다네" | "는다는데"
-                ) && p.morphs.iter().any(|m| m.form != "시")
-                {
+                if present_declarative(ending.form) && p.morphs.iter().any(|m| m.form != "시") {
                     continue;
                 }
                 // Informative/reported -답니다 permits honorific, past and
@@ -942,33 +957,23 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                 .get(cursor)
                 .filter(|m| m.kind == MorphemeKind::Ending)
         {
-            if bare_stative_iss
+            if bare_stative_iss && present_declarative(&m.form) {
+                return false;
+            }
+            if present_declarative(&m.form)
                 && matches!(
-                    m.form.as_str(),
-                    "는다"
-                        | "는다고"
-                        | "는다는"
-                        | "는다면"
-                        | "는답니다"
-                        | "는다거나"
-                        | "는다든가"
-                        | "는다네"
-                        | "는다는데"
-                        | "는다며"
-                        | "는다면서"
+                    class,
+                    Some(PredicateClass::Adjective | PredicateClass::Copula)
                 )
             {
                 return false;
             }
-            // Only bare-stem attachment is decided here. The ending notes
-            // separately license prefinals, including adjective + 었 + 는데.
-            // These verbal families still require a verb after honorific 시.
+            // These other verbal families also exclude known adjectives,
+            // including after honorific 시.
             if matches!(class, Some(PredicateClass::Adjective))
                 && matches!(
                     m.form.as_str(),
-                    "는다며"
-                        | "는다면서"
-                        | "으라며"
+                    "으라며"
                         | "으라면서"
                         | "자며"
                         | "자면서"
@@ -978,27 +983,18 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                         | "으라는데"
                         | "으라거나"
                         | "자거나"
-                        | "는다"
-                        | "는다거나"
-                        | "는다든가"
                         | "고서"
                 )
             {
                 return false;
             }
+            // These restrictions apply only at the bare-stem boundary;
+            // e.g. adjective + 었 + 는데 remains a licensed composition.
             if bare
                 && match class {
                     Some(PredicateClass::Adjective) => matches!(
                         m.form.as_str(),
-                        "는다"
-                            | "는다고"
-                            | "는다는"
-                            | "는다면"
-                            | "는답니다"
-                            | "는다네"
-                            | "는다는데"
-                            | "는"
-                            | "는데"
+                        "는" | "는데"
                             | "는데요"
                             | "는데도"
                             | "는데다가"
@@ -1051,25 +1047,21 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         .iter()
         .find(|m| m.kind == MorphemeKind::Ending)
         .is_some_and(|m| {
-            matches!(
-                m.form.as_str(),
-                "는다며"
-                    | "는다면서"
-                    | "으라며"
-                    | "으라면서"
-                    | "자며"
-                    | "자면서"
-                    | "자면"
-                    | "으랍니다"
-                    | "으라네"
-                    | "으라는데"
-                    | "으라거나"
-                    | "자거나"
-                    | "는다"
-                    | "는다거나"
-                    | "는다든가"
-                    | "고서"
-            )
+            present_declarative(&m.form)
+                || matches!(
+                    m.form.as_str(),
+                    "으라며"
+                        | "으라면서"
+                        | "자며"
+                        | "자면서"
+                        | "자면"
+                        | "으랍니다"
+                        | "으라네"
+                        | "으라는데"
+                        | "으라거나"
+                        | "자거나"
+                        | "고서"
+                )
         })
     {
         return false;
@@ -1220,32 +1212,28 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         .iter()
         .find(|m| m.kind == MorphemeKind::Ending)
         .is_some_and(|m| {
-            matches!(
-                m.form.as_str(),
-                "는다며"
-                    | "는다면서"
-                    | "으라며"
-                    | "으라면서"
-                    | "자며"
-                    | "자면서"
-                    | "자면"
-                    | "고서"
-                    | "으라"
-                    | "으라고"
-                    | "으라는"
-                    | "으라면"
-                    | "으란"
-                    | "으랍니다"
-                    | "으라네"
-                    | "으라는데"
-                    | "으라거나"
-                    | "자거나"
-                    | "는다"
-                    | "는다거나"
-                    | "는다든가"
-                    | "으십시오"
-                    | "읍시다"
-            )
+            present_declarative(&m.form)
+                || matches!(
+                    m.form.as_str(),
+                    "으라며"
+                        | "으라면서"
+                        | "자며"
+                        | "자면서"
+                        | "자면"
+                        | "고서"
+                        | "으라"
+                        | "으라고"
+                        | "으라는"
+                        | "으라면"
+                        | "으란"
+                        | "으랍니다"
+                        | "으라네"
+                        | "으라는데"
+                        | "으라거나"
+                        | "자거나"
+                        | "으십시오"
+                        | "읍시다"
+                )
         })
     {
         return;

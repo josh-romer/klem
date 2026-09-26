@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const presentLicenses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-present-licenses.json"), "utf8"));
   const stativeReport = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-stative-report.json"), "utf8"));
   const reportMyeo = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-report-myeo.json"), "utf8"));
   const approximation = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-approximation.json"), "utf8"));
@@ -275,6 +276,7 @@ try {
       ...rangeCase.LexicalResource.Lexicon.LexicalEntry,
       ...extent.LexicalResource.Lexicon.LexicalEntry,
       ...approximation.LexicalResource.Lexicon.LexicalEntry,
+      ...presentLicenses.LexicalResource.Lexicon.LexicalEntry,
       ...stativeReport.LexicalResource.Lexicon.LexicalEntry,
       ...reportMyeo.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
@@ -674,6 +676,15 @@ try {
   for (const [word, expected, form, label, id, kind = "ending"] of [
     ["학생치고는", ["학생", "치고", "는"], "는", "Topic / contrast", 85851, "particle"],
     ["사람치고서는", ["사람", "치고서", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["간다", ["가", "는다"], "는다", "Present statement / self-question", 85037, "ending"],
+    ["간다고", ["가", "는다고"], "는다고", "Assertion / reason / quotation", 74684, "ending"],
+    ["간다는", ["가", "는다는"], "는다는", "Quoted noun modifier", 82214, "ending"],
+    ["간다면", ["가", "는다면"], "는다면", "If / supposing", 68738, "ending"],
+    ["먹으신다", ["먹", "시", "는다"], "는다", "Present statement / self-question", 85037, "ending"],
+    ["먹고계신다", ["먹", "고", "계시", "는다"], "는다", "Present statement / self-question", 85037, "ending"],
+    ["먹고싶으시다고", ["먹", "고", "싶", "시", "다고"], "다고", "Assertion / reason / quotation", 73900, "ending"],
+    ["학생다우시다는", ["학생", "답", "시", "다는"], "다는", "Quoted noun modifier", 82216, "ending"],
+    ["학생이시다네", ["학생", "이", "시", "다네"], "다네", "Information / report", 75191, "ending"],
     ["지내고있다네", ["지내", "고", "있", "다네"], "다네", "Information / report", 75191, "ending"],
     ["먹고계시다는데", ["먹", "고", "계시", "다는데"], "다는데", "Report / background", 82257, "ending"],
     ["감염되어있다거나", ["감염되", "어", "있", "다거나"], "다거나", "Reported alternatives / examples", 86056, "ending"],
@@ -1105,7 +1116,8 @@ try {
     );
     const result = await (await post("analyze", { text: word })).json();
     assert.ok(result.grammar["-는다면"].some((e) => e.id === "krdict:68738"));
-    assert.ok(result.grammar["-는다면"].every((e) => e.pos === "어미"));
+    assert.deepEqual(result.grammar["-는다면"].map(e => e.id).sort(),
+      grammarLabels["-는다면"].sources.map(s => `krdict:${s.id}`).sort());
   }
   for (const [word, expected, form, label, id] of [
     ["먹으려는", ["먹", "으려는"], "으려는", "Intending / about to", 86717],
@@ -1393,9 +1405,29 @@ try {
     }
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
+  for (const [word, form, sourceIds] of [
+    ["간다", "는다", [73909, 85033]],
+    ["간다고", "는다고", [74683, 86060, 86061]],
+    ["간다는", "는다는", [82213]],
+    ["간다면", "는다면", [66956, 68841, 68881]],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    const data = await (await post("analyze", {text: word})).json();
+    for (const id of sourceIds) {
+      const e = data.grammar[`-${form}`].find(e => e.id === `krdict:${id}`);
+      assert.ok(e, `${word}: ${id}`);
+      const choice = await page.locator(".entry-choices button").evaluateAll((buttons, e) =>
+        buttons.findIndex(b => b.querySelector("span")?.textContent === e.headword + (e.homonym === "0" ? "" : e.homonym)
+          && b.querySelector("small")?.textContent === e.pos), e);
+      assert.ok(choice >= 0, `${word}: ${id} selectable`);
+      await page.locator(".entry-choices button").nth(choice).click();
+      await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
+    }
+  }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

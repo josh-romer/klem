@@ -1630,3 +1630,32 @@ fn gsd_report_myeo_recovers_annotated_quotations() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn present_declaratives_preserve_annotated_verbs_without_copula_readings() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-present-licenses.conllu").as_slice(),
+        Corpus::Gsd,
+        "present-licenses",
+    )
+    .unwrap();
+    for (id, word, lemma, nominal) in [
+        ("id:dev-s153/3", "들리신다면", "들리다", "들리"),
+        ("id:dev-s301/7", "가신다면", "가다", "가"),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, word);
+        assert_eq!(case.expected, [lemma]);
+        assert!(case.matched);
+        let result = klem::Lemmatizer::new().analyze_word(word).unwrap();
+        assert!(!result.analyses.iter().any(|a| {
+            a.lemmas.len() == 2
+                && a.lemmas[0].text == nominal
+                && a.lemmas[1].kind == klem::LemmaKind::Copula
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(["시", "는다면"])
+        }));
+    }
+}

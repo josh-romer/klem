@@ -2233,3 +2233,30 @@ not a claim of individual attestation for every synthetic test. See the
 URLs, attachment notes, exact examples and unjudged followups. Independent Korean
 review remains pending. These judgments target represented roles, leaving raw
 unknown-head spelling hypotheses visible in the unfiltered candidate API.
+
+
+## Present-declarative prefinal and class licenses (COV-017y)
+
+Canonical 는다/는다고/는다는/는다면/는답니다/는다거나/는다든가/는다네/
+는다는데/는다며/는다면서 share verb attachment and permit only honorific 시
+before the ending. The predicate filter checks recovered markers, excluding
+었/겠/어야겠/더 even in longer sequences. Full 는 forms use non-ㄹ consonant
+stems; attached ㄴ uses vowel/ㄹ stems or 시 without vowel-only irregular recovery.
+Past/modal reports retain plain-다 endings.
+
+Known adjective auxiliaries, explicit 답다 derivations, copulas and their
+inherited negative classes do not become verbal through 시. These represented
+roles use their plain-다 alternatives. Later verbal auxiliaries reset the class,
+so 먹고싶어하신다고 remains. Lexical class is not inferred from spelling:
+먹었는다 still has an unjudged bare 먹었다 hypothesis, but no 먹다 + 었 + 는다
+analysis. Outer particles and split endings cannot bypass the restriction.
+
+All full/attached source homonyms are retained explicitly in the catalog,
+including nine newly mapped entries for ㄴ다/ㄴ다고/ㄴ다는/ㄴ다면 and the
+는다면 expression. The [source review](present-license-evaluation.json) retains
+all attachment notes, homonym roles and individual candidate removals. Its
+primary sources support the shared licenses; composition into known-class
+auxiliary chains is a morphological inference, not contextual interpretation.
+Auxiliary honorific 있으신다 and past-adnominal/question paradigms remain
+COV-019h work. Official consultation material prefers some forms but does not
+establish a blanket auxiliary-wide exclusion for these remaining cases.

@@ -316,10 +316,11 @@
       "source_sha256": "d9aa8aa618228ad61f6d498f38c002fd56e076df27c648eef9484b8565dc0d7b",
       "status": "scoped",
       "checklist": [
-        "COV-017m"
+        "COV-017m",
+        "COV-017y"
       ],
-      "scope": "Present attached ㄴ after open/ㄹ stems and honorific 시; canonical 는답니다, without vowel-only irregular recovery.",
-      "remaining": "Lexical verb/adjective identity and contextual informative versus quoted senses remain unjudged.",
+      "scope": "Present attached ㄴ after open/ㄹ stems and honorific 시; canonical 는답니다, without vowel-only irregular recovery. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical verb/adjective identity and contextual informative versus quoted senses remain unjudged. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/reporting_endings.rs",
@@ -331,6 +332,17 @@
         },
         {
           "path": "docs/reporting-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -341,6 +353,30 @@
         {
           "case": "reporting-no-vowel-irregular",
           "judgment": "forbidden"
+        },
+        {
+          "case": "present-license-required-058",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-062",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-064",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-067",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-069",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-071",
+          "judgment": "path"
         }
       ]
     },
@@ -349,10 +385,11 @@
       "source_sha256": "b90de95b4591ffff537a8236bef36d1781b21ebd2a420232b6fb27271d39633c",
       "status": "scoped",
       "checklist": [
-        "COV-017m"
+        "COV-017m",
+        "COV-017y"
       ],
-      "scope": "Present 는답니다 after non-ㄹ consonants; past/modal/retrospective recoveries excluded from this present path.",
-      "remaining": "Unknown lexical verb/adjective classes and contextual senses remain unjudged.",
+      "scope": "Present 는답니다 after non-ㄹ consonants; past/modal/retrospective recoveries excluded from this present path. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Unknown lexical verb/adjective classes and contextual senses remain unjudged. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/reporting_endings.rs",
@@ -364,6 +401,17 @@
         },
         {
           "path": "docs/reporting-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -378,6 +426,30 @@
         {
           "case": "reporting-present-past",
           "judgment": "forbidden"
+        },
+        {
+          "case": "present-license-required-057",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-061",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-061",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-064",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-066",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-074",
+          "judgment": "path"
         }
       ]
     },
@@ -775,10 +847,11 @@
       "status": "scoped",
       "checklist": [
         "COV-018e",
-        "COV-019"
+        "COV-019",
+        "COV-017y"
       ],
-      "scope": "Known adjective/copula classes cannot take present 는다 even after honorific 시; retain verb and unknown lexical head paths. Applied to auxiliary adjectives, represented copulas and known 답다, including following 든가.",
-      "remaining": "Only the known-class boundary is reviewed here. Unknown lexical heads, other present-ending families, wider prefinal attachment and contextual meaning remain open.",
+      "scope": "Known adjective/copula classes cannot take present 는다 even after honorific 시; retain verb and unknown lexical head paths. Applied to auxiliary adjectives, represented copulas and known 답다, including following 든가. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Only the known-class boundary is reviewed here. Unknown lexical heads, other present-ending families, wider prefinal attachment and contextual meaning remain open. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/enumerative_particles.rs",
@@ -790,6 +863,17 @@
         },
         {
           "path": "docs/enumerative-particle-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -803,6 +887,34 @@
         },
         {
           "case": "present-known-suffix-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-001",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-005",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-001",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-004",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-006",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-014",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-167",
           "judgment": "path"
         }
       ]
@@ -8278,10 +8390,11 @@
       "source_sha256": "5a899f58da5cb2bb9cfe8997b09d7ba76e4df47996b5f50a0e516265ba9d085c",
       "status": "scoped",
       "checklist": [
-        "COV-017v"
+        "COV-017v",
+        "COV-017y"
       ],
-      "scope": "다네-family stem/prefinal allomorphs, copular/factual versus reported-command representation, existing auxiliary roles, polite 요 and reviewed concessive 도; all homonym IDs remain attributed.",
-      "remaining": "This scoped morphology review does not select informative versus quoted contextual senses, certify unknown lexical classes or resolve all honorific attachment questions. Other outer particles and independent Korean review remain open.",
+      "scope": "다네-family stem/prefinal allomorphs, copular/factual versus reported-command representation, existing auxiliary roles, polite 요 and reviewed concessive 도; all homonym IDs remain attributed. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "This scoped morphology review does not select informative versus quoted contextual senses, certify unknown lexical classes or resolve all honorific attachment questions. Other outer particles and independent Korean review remain open. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/report_ne_endings.rs",
@@ -8297,6 +8410,17 @@
         },
         {
           "path": "docs/report-ne-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -8351,6 +8475,30 @@
         {
           "case": "report-ne-forbidden-28",
           "judgment": "path"
+        },
+        {
+          "case": "present-license-required-100",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-104",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-106",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-112",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-114",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-116",
+          "judgment": "path"
         }
       ]
     },
@@ -8359,10 +8507,11 @@
       "source_sha256": "a57498610e8e920eb7603b1fe01d4b74a31af640f4027a8cfb0c10d003c7e259",
       "status": "scoped",
       "checklist": [
-        "COV-017v"
+        "COV-017v",
+        "COV-017y"
       ],
-      "scope": "다네-family stem/prefinal allomorphs, copular/factual versus reported-command representation, existing auxiliary roles, polite 요 and reviewed concessive 도; all homonym IDs remain attributed.",
-      "remaining": "This scoped morphology review does not select informative versus quoted contextual senses, certify unknown lexical classes or resolve all honorific attachment questions. Other outer particles and independent Korean review remain open.",
+      "scope": "다네-family stem/prefinal allomorphs, copular/factual versus reported-command representation, existing auxiliary roles, polite 요 and reviewed concessive 도; all homonym IDs remain attributed. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "This scoped morphology review does not select informative versus quoted contextual senses, certify unknown lexical classes or resolve all honorific attachment questions. Other outer particles and independent Korean review remain open. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/report_ne_endings.rs",
@@ -8378,6 +8527,17 @@
         },
         {
           "path": "docs/report-ne-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -8419,6 +8579,30 @@
         },
         {
           "case": "report-ne-forbidden-24",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-099",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-103",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-106",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-109",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-111",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-119",
           "judgment": "path"
         }
       ]
@@ -9907,10 +10091,11 @@
       "source_sha256": "eedd4f8cc8d4e3fc163d79bab1447e05e450fdd941c5cb142689cb08c8964abb",
       "status": "scoped",
       "checklist": [
-        "COV-017x"
+        "COV-017x",
+        "COV-017y"
       ],
-      "scope": "Reported/confirmatory -며/-면서 families: preserve statement, factual/copular, command, proposal and retrospective roles with source-listed boundaries/prefinals and reviewed 요/도 composition.",
-      "remaining": "Lexical predicate classes, additional particles, existential auxiliary paradigms and independent Korean review remain open. Expression homonyms and retrospective question hypotheses are recorded without contextual sense certification.",
+      "scope": "Reported/confirmatory -며/-면서 families: preserve statement, factual/copular, command, proposal and retrospective roles with source-listed boundaries/prefinals and reviewed 요/도 composition. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical predicate classes, additional particles, existential auxiliary paradigms and independent Korean review remain open. Expression homonyms and retrospective question hypotheses are recorded without contextual sense certification. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/report_myeo_endings.rs",
@@ -9926,6 +10111,17 @@
         },
         {
           "path": "docs/report-myeo-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -9963,6 +10159,34 @@
         },
         {
           "case": "report-myeo-forbidden-72",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-141",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-145",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-151",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-154",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-156",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-164",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-168",
           "judgment": "path"
         }
       ]
@@ -10320,10 +10544,11 @@
       "source_sha256": "3161f8909b41a599f579c1cfea5315283710b022af1e03844be60848cfd0a0f6",
       "status": "scoped",
       "checklist": [
-        "COV-017x"
+        "COV-017x",
+        "COV-017y"
       ],
-      "scope": "Reported/confirmatory -며/-면서 families: preserve statement, factual/copular, command, proposal and retrospective roles with source-listed boundaries/prefinals and reviewed 요/도 composition.",
-      "remaining": "Lexical predicate classes, additional particles, existential auxiliary paradigms and independent Korean review remain open. Expression homonyms and retrospective question hypotheses are recorded without contextual sense certification.",
+      "scope": "Reported/confirmatory -며/-면서 families: preserve statement, factual/copular, command, proposal and retrospective roles with source-listed boundaries/prefinals and reviewed 요/도 composition. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical predicate classes, additional particles, existential auxiliary paradigms and independent Korean review remain open. Expression homonyms and retrospective question hypotheses are recorded without contextual sense certification. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/report_myeo_endings.rs",
@@ -10339,6 +10564,17 @@
         },
         {
           "path": "docs/report-myeo-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -10381,6 +10617,30 @@
         {
           "case": "report-myeo-forbidden-43",
           "judgment": "path"
+        },
+        {
+          "case": "present-license-required-142",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-146",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-148",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-157",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-159",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-161",
+          "judgment": "path"
         }
       ]
     },
@@ -10389,10 +10649,11 @@
       "source_sha256": "65bc9127a23ce576154ed179661c488868247d1954a5c08befd9bd1e1908027f",
       "status": "scoped",
       "checklist": [
-        "COV-017x"
+        "COV-017x",
+        "COV-017y"
       ],
-      "scope": "Reported/confirmatory -며/-면서 families: preserve statement, factual/copular, command, proposal and retrospective roles with source-listed boundaries/prefinals and reviewed 요/도 composition.",
-      "remaining": "Lexical predicate classes, additional particles, existential auxiliary paradigms and independent Korean review remain open. Expression homonyms and retrospective question hypotheses are recorded without contextual sense certification.",
+      "scope": "Reported/confirmatory -며/-면서 families: preserve statement, factual/copular, command, proposal and retrospective roles with source-listed boundaries/prefinals and reviewed 요/도 composition. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical predicate classes, additional particles, existential auxiliary paradigms and independent Korean review remain open. Expression homonyms and retrospective question hypotheses are recorded without contextual sense certification. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/report_myeo_endings.rs",
@@ -10408,6 +10669,17 @@
         },
         {
           "path": "docs/report-myeo-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -10446,6 +10718,30 @@
         {
           "case": "report-myeo-forbidden-4",
           "judgment": "path"
+        },
+        {
+          "case": "present-license-required-128",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-132",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-134",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-142",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-144",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-146",
+          "judgment": "path"
         }
       ]
     },
@@ -10454,10 +10750,11 @@
       "source_sha256": "5cab888879e72da0ee30be9ccdfe07dcd9ae10e1d0bcc00424b2a03e8297dfe2",
       "status": "scoped",
       "checklist": [
-        "COV-017x"
+        "COV-017x",
+        "COV-017y"
       ],
-      "scope": "Reported/confirmatory -며/-면서 families: preserve statement, factual/copular, command, proposal and retrospective roles with source-listed boundaries/prefinals and reviewed 요/도 composition.",
-      "remaining": "Lexical predicate classes, additional particles, existential auxiliary paradigms and independent Korean review remain open. Expression homonyms and retrospective question hypotheses are recorded without contextual sense certification.",
+      "scope": "Reported/confirmatory -며/-면서 families: preserve statement, factual/copular, command, proposal and retrospective roles with source-listed boundaries/prefinals and reviewed 요/도 composition. Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical predicate classes, additional particles, existential auxiliary paradigms and independent Korean review remain open. Expression homonyms and retrospective question hypotheses are recorded without contextual sense certification. Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/report_myeo_endings.rs",
@@ -10473,6 +10770,17 @@
         },
         {
           "path": "docs/report-myeo-evaluation.json"
+        },
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
         }
       ],
       "judgments": [
@@ -10510,6 +10818,30 @@
         },
         {
           "case": "report-myeo-forbidden-33",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-127",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-131",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-136",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-139",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-141",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-149",
           "judgment": "path"
         }
       ]
@@ -10976,6 +11308,455 @@
         },
         {
           "case": "report-myeo-forbidden-8",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:66956",
+      "source_sha256": "1bfbbc64cfdd2d8e6fb6d089d812f2d3da1b67df9f0ef67b055c6d7ec6c74159",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "present_declaratives_preserve_annotated_verbs_without_copula_readings"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-044",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-048",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-050",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-052",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-054",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-056",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-gsd-153",
+          "judgment": "verbal"
+        },
+        {
+          "case": "present-license-gsd-153",
+          "judgment": "copular"
+        },
+        {
+          "case": "present-license-gsd-301",
+          "judgment": "verbal"
+        },
+        {
+          "case": "present-license-gsd-301",
+          "judgment": "copular"
+        }
+      ]
+    },
+    {
+      "id": "krdict:68738",
+      "source_sha256": "97a8b2b464325dd921cb8cd5a80dbb5f2c7186bb0f438abe74811c3e48ffa855",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-043",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-047",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-046",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-049",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-051",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-059",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73909",
+      "source_sha256": "e30a9301f52a248e23cec6d0dafb5e1eb4efaf95ebd87d112380d7f5f39f91e9",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-002",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-006",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-008",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-003",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-008",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-010",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-012",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:74683",
+      "source_sha256": "ffb458ef7de16bfa9aa9a5c9dda28fd2ad64f02db66deaa9c596d550d4a8f5e3",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-016",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-021",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-018",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-024",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-027",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:74684",
+      "source_sha256": "900fe2a23371554f505ffaa9f0c44ad76b360f8e216e994e46e31512df2227d4",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-015",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-023",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-017",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-021",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-030",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85033",
+      "source_sha256": "2bc5971d69680deea72ca03eb863944811a64407a6bb67c4b5dab2ed6a687322",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-003",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-007",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-155",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-007",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-009",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-011",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85735",
+      "source_sha256": "75cd72a4e92f4399185be883fedea8873e0f75b48b69c0e7db6203cdf39abf5a",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-004",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-009",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-002",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-005",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-013",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-015",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86058",
+      "source_sha256": "e727401352e3db0e5cf8673c2fcd97e82e5019609d67453122178b3e548914ea",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-018",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-162",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-019",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-028",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-166",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86060",
+      "source_sha256": "6caed38c3c0bc9d30d4a148013eb35e858150543b6722dd4a299fd0f73c20c00",
+      "status": "scoped",
+      "checklist": [
+        "COV-017y"
+      ],
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/present_licenses.rs",
+          "test": "present_declaratives_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "present_declaratives_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/present-license-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-license-required-017",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-required-022",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-022",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-025",
+          "judgment": "path"
+        },
+        {
+          "case": "present-license-forbidden-169",
           "judgment": "path"
         }
       ]

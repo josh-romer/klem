@@ -544,3 +544,21 @@ replacing their earlier left-class judgments. Counts remain 170 scoped, one
 observed gap and 544 unreviewed across the 715-entry queue. All 166 new cases
 have stable exact-role judgments: 108 required and 58 forbidden. This is a
 reviewed inflection scope, not contextual sense selection or a precision estimate.
+
+
+## Shared present declaratives (COV-017y / partial COV-019h)
+
+[The review](present-license-evaluation.json) unifies prefinal and known-class
+licenses for eleven canonical families. It closes older 는다/는다고/는다는
+past/modal/retrospective gaps, including auxiliary chains, and known
+adjective/copula honorific loopholes. Unknown lexical hypotheses remain separate.
+The 343-surface comparison accounts for 306 removals and no additions or changed
+provenance. Existing corpus gold and all thirty stress fingerprints remain.
+
+Nine missing source homonyms are now linked; the catalog has 296 forms, 393
+source IDs and 394 grammar fixture entries. The persistent grammar-POS queue gains
+nine scoped reviews and updates nine prior dispositions, preserving their older
+evidence. Counts are now 179 scoped, one observed gap and 535 unreviewed across
+715 entries. There are 338 new cases (169 required and 171 forbidden). The broader
+existential honorific, adnominal and question review remains open: a naturalness
+preference or contextual temporal correction is insufficient for a blanket ban.

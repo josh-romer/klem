@@ -1725,3 +1725,46 @@ The packaged full-dictionary app passes eleven reading selections and all
 screenshots show 지내 + 고 + 있 + 다네 without JavaScript errors or horizontal
 overflow. The auxiliary's dictionary gloss is `itda`; contextual English gloss
 selection remains separate from morphological correctness.
+
+
+## Shared present-declarative licenses (COV-017y / partial COV-019h)
+
+[The review](present-license-evaluation.json) records **306 removed candidates
+across 343 surfaces**, with no additions or changed surviving provenance. It
+covers recovered non-honorific prefinals (167 removals), explicit/inherited
+copulas (120), auxiliary adjectives (13), and explicit 답다 derivations (six).
+Past/modal plain-다 counterparts, honorific verbal readings, later class-changing
+auxiliaries and unknown lexical alternatives remain. The broader existential
+honorific/question/adnominal questions remain COV-019h.
+
+There are no lost development gold groups or component sets: **106 KAIST and
+151 GSD misses** remain. Mean candidate counts are 5.836229 and 5.372109. All thirty
+stress fingerprints remain byte-identical to the prior revision; historical
+baselines are unchanged. No new annotated-corpus recovery is claimed.
+
+The **338 new cases** bring totals to **2,309 cases, 1,340 required and 977
+forbidden judgments**. A 39-entry lexical fixture preserves every selected
+homonym/sense. Nine source additions bring the grammar catalog to **296 forms,
+393 source IDs and 394 grammar fixture entries**. Nine new scoped dispositions
+and nine updated reviews leave **179 scoped, one observed gap and 535 unreviewed**
+in the persistent queue. Contextual sense selection, independent Korean review,
+fresh passages and the other open coverage families remain pending.
+
+A separate comparison of all 7,266 unique converted GSD development surfaces
+finds two changes: 들리신다면 and 가신다면 each lose an omitted-copula
+reading. Two complete byte-identical sentences and role-specific judgments
+preserve their annotated verb readings. The visit-context 들리다 spelling and
+source POS tags remain unchanged; this is no claim of contextual spelling
+correctness. All six 들리다 source entries, including the redirect to 들르다,
+remain in the dictionary fixture.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build, browser/HTTP checks and
+inventory verification pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared systems were not executed. The final Nix suite
+includes the two annotated-sentence regressions and all 338 new ledger cases.
+The packaged full-dictionary app passes eleven reading selections and all
+**169 required / 171 forbidden** new judgments. All nine added source entries
+are selectable in the browser. Inspected desktop/mobile screenshots show
+가 + 시 + 는다면 alongside the short -ㄴ다면 source, with retained alternatives,
+no JavaScript errors and no horizontal overflow.

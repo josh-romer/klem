@@ -853,3 +853,23 @@ reporting and dictionary/CLI/browser regressions. Changes: English equivalents
 only, the first example group per sense, no WordForm/RelatedForm or export
 metadata, and reformatted JSON. These are integration fixtures, not annotated
 sentence gold. Source and license links are above.
+
+`krdict-present-licenses.json` retains 39 primary entries and all selected
+homonyms/senses from the September 2026 KRDict export by the National Institute
+of Korean Language, under CC BY-SA 2.0 KR. It supports COV-017y / COV-019h
+present-declarative class and prefinal tests. Nine further source entries extend
+`krdict-grammar-labels.json` for ㄴ다/ㄴ다고/ㄴ다는/ㄴ다면 and the 는다면
+expression homonym. Changes: English equivalents only, first example group per
+sense, no WordForm/RelatedForm or export metadata, and reformatted JSON. Source
+and license links are above. The catalog now has 296 canonical forms, 393 source
+IDs and 394 grammar fixture entries. These fixtures verify source integration,
+not independently annotated sentence analyses.
+
+`gsd-present-licenses.conllu` retains two complete, byte-identical sentences
+(dev-s153 and dev-s301) from the pinned GSD development corpus under the corpus
+license described above. It preserves the annotated verbal groups while
+rejecting omitted-copula present-declarative paths. The visit-context 들리다
+spelling and the corpus POS tags are not corrected or certified as normative.
+All six 들리다 dictionary entries, including the source redirect to 들르다,
+remain in the corresponding lexical fixture; contextual spelling repair is
+outside this change.

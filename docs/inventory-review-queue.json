@@ -13,31 +13,34 @@
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "ad00051164debcaab43b3f31feab2576f5342cea08bded2f60ebdf26e670eedb",
+    "docs/coverage-checklist.md": "ef6954e0995017cbb3affc0e13ccf42ab623e5e44cad8c43c0c6877ef17a6695",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
-    "docs/inventory-audit.md": "bb1043ea120401006ae4c0dd9fda167c2fe1a98a464d96bb2bb6e1b8cf6845b2",
-    "docs/inventory-reviews.json": "60956ef44a808eafe1dac3dbb8af5c296f0397fa55fade149d852b1bd57b744b",
+    "docs/inventory-audit.md": "a840c8e8532c40e27361c00315863a80363a26d0668c94d45194a0bc4e602785",
+    "docs/inventory-reviews.json": "bf35c7b0a3e830b710e6bd71e73a9765fc4e8e02961a86c5e71892d897dcd85d",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/reporting-evaluation.json": "74f0fb2732024ef27d7250d374184bda3d766aeb32f2c6b787ee319157c6d96e",
+    "docs/seo-connective-evaluation.json": "eb0b98f963e2685d24f2572f3b43619a8f2b636c4c007f1924fbaf0b0f056e07",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
+    "tests/corpus.rs": "eb5ec5935e3184a884211e839345c37b05b78bb5a9d49ad074730e0f1e955321",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
-    "tests/dictionary.rs": "cc23270dca8f413dcee0b81426e8608c19b75cb73b94f6d559b0e8f5fc60f9e1",
+    "tests/dictionary.rs": "d4932a4b40bc5775a88e2b493286298c4fefc28316dd97cb3155a1574eaf2ebb",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
-    "tests/fixtures/validity.json": "22f347a0ce08b570f9257c17095a5eed53e0a149f535ae60c4b1378b67beb785",
+    "tests/fixtures/validity.json": "c52f53603ac81a7643ec26e892dc376a675f44f7b384f8033a4d40e37f75c5e4",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
     "tests/reporting_endings.rs": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
-    "web/src/grammar-labels.json": "f6585938d6627b74d5c2daadae8583afbf0d15fdb6d7dd9fabd051dea7966ef0"
+    "tests/seo_connectives.rs": "16fe785640f46da0d453bc2db93c70eb089dacf7d092f65b9dc8cb0d40851680",
+    "web/src/grammar-labels.json": "ad6b53af7bf54ba594ae69d1156802b7553f6ac1ac8144d31f087ff0c489d2ef"
   },
   "counts": {
     "entries": 715,
@@ -48,11 +51,11 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 664,
-      "scoped": 51
+      "unreviewed": 657,
+      "scoped": 58
     },
-    "with_catalog_links": 236,
-    "with_judgment_citations": 108
+    "with_catalog_links": 240,
+    "with_judgment_citations": 115
   },
   "entries": [
     {
@@ -9908,11 +9911,191 @@
         ]
       },
       "source_sha256": "0f6a70bd2a7092adaad86bfe72f268cafd1a6955cfe6640ee6c9cfc30a987e13",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-고서",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "seo-connectives-adjective-auxiliary",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-adjective-negative",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-adjective-suffix",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-bieup",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-copula-rejected",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-digeut",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-literal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-modal",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-negative-copula",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-negative-verb",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-past",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-polite",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-retrospective",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "seo-connectives-topic",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-trial",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:78584",
+        "source_sha256": "0f6a70bd2a7092adaad86bfe72f268cafd1a6955cfe6640ee6c9cfc30a987e13",
+        "status": "scoped",
+        "checklist": [
+          "COV-017q"
+        ],
+        "scope": "Literal 고서 with honorific-only recovered prefinals, verb/아니다 attachment, known adjective/copula exclusions and reviewed outer particles.",
+        "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+          },
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+          },
+          {
+            "path": "docs/seo-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "seo-connectives-literal",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-negative-copula",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-trial",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-negative-verb",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-topic",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-past",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-modal",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-retrospective",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-bieup",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-digeut",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-copula-rejected",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-adjective-auxiliary",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-adjective-negative",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-adjective-suffix",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -22490,11 +22673,56 @@
         ]
       },
       "source_sha256": "f594eb08b0e0ae02e8f8053487ae5a3703ee662c50347c3a12fb17d302393e3d",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-어서야",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "seo-connectives-a-bundle",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86567",
+        "source_sha256": "f594eb08b0e0ae02e8f8053487ae5a3703ee662c50347c3a12fb17d302393e3d",
+        "status": "scoped",
+        "checklist": [
+          "COV-017q"
+        ],
+        "scope": "Preserve the 아서야 allomorph and A-vowel contraction under canonical 어서야.",
+        "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+          },
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+          },
+          {
+            "path": "docs/seo-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "seo-connectives-a-bundle",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -23461,11 +23689,74 @@
         ]
       },
       "source_sha256": "f7b620b26a7adf1ef33d20f027731d92aa986e16946fa0ff650ee77b8b4ed6f3",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-어서야",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "seo-connectives-copula",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-eo-bundle",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-vowel-irregular",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86569",
+        "source_sha256": "f7b620b26a7adf1ef33d20f027731d92aa986e16946fa0ff650ee77b8b4ed6f3",
+        "status": "scoped",
+        "checklist": [
+          "COV-017q"
+        ],
+        "scope": "Canonical vowel-boundary 어서야, including copulas, irregular recovery and an independent 어서 + 야 path.",
+        "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+          },
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+          },
+          {
+            "path": "docs/seo-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "seo-connectives-eo-bundle",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-vowel-irregular",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-copula",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -24268,11 +24559,65 @@
         ]
       },
       "source_sha256": "37c8eb06ba9c2a34fa1c1da30915df1147667b67578ed1cf3699b99ed0757ba2",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-어서야",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "seo-connectives-ha-contraction",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-yeo-bundle",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86584",
+        "source_sha256": "37c8eb06ba9c2a34fa1c1da30915df1147667b67578ed1cf3699b99ed0757ba2",
+        "status": "scoped",
+        "checklist": [
+          "COV-017q"
+        ],
+        "scope": "Preserve 하여서야/해서야 forms and expose the 하-specific source through canonical 어서야.",
+        "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+          },
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+          },
+          {
+            "path": "docs/seo-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "seo-connectives-yeo-bundle",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-ha-contraction",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -36461,10 +36806,50 @@
           "kind": "particle"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "seo-connectives-comparison",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:70060",
+        "source_sha256": "69394596dd03824283b82209916b912af1ea716d7f1d0615abe095d8aa033486",
+        "status": "scoped",
+        "checklist": [
+          "COV-018i"
+        ],
+        "scope": "Comparative 보다 after an 어서 adverbial clause, including corpus-backed 통해서보다는.",
+        "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+          },
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+          },
+          {
+            "path": "docs/seo-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "seo-connectives-comparison",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -36506,10 +36891,77 @@
           "kind": "particle"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "seo-connectives-from-adverbial",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-from-chain",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-from-go",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-from-myeonseo",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:70055",
+        "source_sha256": "d70733b3fde4feab34310fd75cac8ae931e57d993f53e40dd88b70fe15fddca2",
+        "status": "scoped",
+        "checklist": [
+          "COV-018i"
+        ],
+        "scope": "부터 after 어서/고 source examples and corpus-backed 으면서, retaining existing outer particle order.",
+        "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+          },
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+          },
+          {
+            "path": "docs/seo-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "seo-connectives-from-adverbial",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-from-go",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-from-myeonseo",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-from-chain",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -36962,10 +37414,59 @@
           "kind": "particle"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "seo-connectives-emphasis",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "seo-connectives-split-emphasis",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:70339",
+        "source_sha256": "5624c31807b63f92dfbad1dc01a78f5ac65831a4e7431b6f5e5efb8b78709d2c",
+        "status": "scoped",
+        "checklist": [
+          "COV-018i"
+        ],
+        "scope": "Emphatic 야 after 어서 and 고서, independent of vocative 야 and bundled 어서야.",
+        "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+          },
+          {
+            "path": "tests/seo_connectives.rs",
+            "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+          },
+          {
+            "path": "docs/seo-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "seo-connectives-emphasis",
+            "judgment": "path"
+          },
+          {
+            "case": "seo-connectives-split-emphasis",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

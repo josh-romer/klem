@@ -3,6 +3,32 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn seo_connectives_recover_nine_unchanged_annotated_cases() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-seo-connectives.conllu").as_slice(),
+        Corpus::Kaist,
+        "seo-connectives",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:MH2_0069-s196/10", "나오면서부터", "나오다"),
+        ("id:MH2_0069-s247/7", "통해서보다는", "통하다"),
+        ("id:MH2_0069-s311/5", "기록하면서부터", "기록하다"),
+        ("id:MH2_0069-s494/3", "되어서야", "되다"),
+        ("id:MH2_0069-s75/14", "가지고서", "가지다"),
+        ("id:MH2_0149-s20/16", "돌리고서는", "돌리다"),
+        ("id:MH2_0159-s141/7", "주면서부터", "주다"),
+        ("id:MH2_0159-s227/3", "이르러서야", "이르다"),
+        ("id:MH2_0169-s321/14", "가서야", "가다"),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [expected]);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
 fn honorific_copula_omission_preserves_annotated_lexical_verbs() {
     for (corpus, input, cases) in [
         (

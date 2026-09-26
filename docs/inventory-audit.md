@@ -17,21 +17,18 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) contains ten scoped reviews:
--듯/-듯이 (COV-016), four informative ending entries (COV-017m), and connective
--요 (COV-020d), causal -기에/-길래 (COV-017n), and the expressive 어 하다
-sense of auxiliary 하다 (COV-019d). Their source notes were
-inspected individually; each review
-records its supported scope, remaining limits, checklist item, named Rust tests,
-evaluation evidence, and source-specific candidate judgments. Independent
-Korean-language review is pending. The other **705 entries are unreviewed in
-this ledger**, which does not imply they are unimplemented.
+The [manual ledger](inventory-reviews.json) currently contains **58 scoped
+reviews**, with **657 entries unreviewed in this ledger**. This does not imply
+that those entries are unimplemented. Each disposition records its supported
+scope, remaining limits, checklist item, named Rust tests, evaluation evidence
+and source-specific candidate judgments. Independent Korean-language review
+remains pending. The sections below preserve the history of earlier batches.
 
-The queue links **214 entries to the teaching catalog**, **75 to source-citing
-candidate judgments**, and all **54 auxiliaries to the earlier attachment
-inventory**. These are evidence navigation aids, not coverage certifications.
-In particular, a source citation can support one narrow forbidden path without
-establishing the rest of an entry's attachment behavior.
+The generated queue links source entries to the teaching catalog, source-citing
+candidate judgments and the earlier 54-entry auxiliary inventory. These links
+are evidence navigation aids, not coverage certifications. A source citation can
+support one narrow forbidden path without establishing the rest of an entry's
+attachment behavior. Current link counts are in the queue's summary.
 
 ```sh
 python3 -m unittest discover -s tools -p 'test_review_inventory.py'
@@ -371,3 +368,13 @@ verb-attachment notes supplement the broader 있다 note. This closes the known
 adjective/copula issue from COV-019e/020e, while retaining unknown lexical heads
 and known verb paths. Lexical-subset, transitivity and semantic conditions remain
 unreviewed; these dispositions are not full-entry or contextual certification.
+
+
+## Seo connective and particle review (COV-017q/018i)
+
+Seven new scoped dispositions cover 고서, the three 어서야 allomorph sources,
+emphatic 야, 부터 and 보다. The queue now has **58 scoped entries and 657
+without a disposition**. The [comparison](seo-connective-evaluation.json) records
+nine new KAIST development grouped matches, all previous gold/candidates retained,
+and unchanged stress fingerprints. Broader particle attachments, 어서야
+prefinal licenses and contextual class/sense decisions remain open.

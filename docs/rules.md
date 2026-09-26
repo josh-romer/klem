@@ -1707,3 +1707,41 @@ Dictionary headword membership does not establish contextual class or sense.
 Verb selection alone does not settle resultative transitivity, lexical subsets,
 semantic suitability, or all prefinal/particle restrictions. Those questions and
 independent Korean-language review remain open.
+
+
+## Seo connectives and particles (COV-017q/018i)
+
+Literal 고서 adds sequential, reason, conditional and contrast hypotheses.
+It preserves the stem (듣고서, 돕고서, 살고서) and permits honorific 시;
+recovered past/modal/retrospective prefinal stacks are excluded. The source's
+conditional 아니다 use remains as a lexical predicate. Known adjective
+auxiliaries, their inherited negative classes, explicit 답다 derivation and
+represented affirmative copulas cannot take this verb ending. Unknown lexical
+heads remain unclassified. 고서 is not itself an auxiliary connector.
+
+Vowel-boundary 어서야 preserves 아서야/어서야/여서야 allomorphs, existing
+irregular recovery, 하여/해 and 되어/돼 alternatives, and copular attachment.
+The dictionary bundle remains alongside separate 어서 + emphatic 야. This
+path reuses existing vowel/prefinal recovery; further tense/modal licenses need
+review and are not certified by the bundle's presence. The audit explicitly
+retains 먹었어서야 as an unjudged probe rather than calling every output valid.
+
+Post-ending particle slots now include 은/는, 도, 만, 요 and 야 after 고서,
+plus 야 after 어서. 부터 follows 어서/고/으면서; 보다 follows an 어서
+adverbial clause. Existing outer particles compose, e.g. 기록하면서부터는
+and 통해서보다는. These are bounded attachment rules; other connective
+families, broader clause representation and additional particle orders remain
+open. Existing whole-word and nominal hypotheses remain available.
+
+Primary sources are KRDict [-고서](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78584),
+[-어서야](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86569),
+[-아서야](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86567),
+[-여서야](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86584),
+[야](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70339),
+[부터](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70055)
+and [보다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70060).
+The 부터 entry directly illustrates 젊어서부터 and 생기고부터; the
+unchanged corpus supplies 으면서부터 and 어서보다는 evidence. The
+[evaluation](seo-connective-evaluation.json) preserves all sense/attachment notes,
+additional source examples and nine complete annotated sentences. Independent
+Korean-language review remains pending.

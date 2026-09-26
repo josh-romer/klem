@@ -2149,6 +2149,353 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:78584",
+      "source_sha256": "0f6a70bd2a7092adaad86bfe72f268cafd1a6955cfe6640ee6c9cfc30a987e13",
+      "status": "scoped",
+      "checklist": [
+        "COV-017q"
+      ],
+      "scope": "Literal 고서 with honorific-only recovered prefinals, verb/아니다 attachment, known adjective/copula exclusions and reviewed outer particles.",
+      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+        },
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/seo-connective-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "seo-connectives-literal",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-negative-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-trial",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-negative-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-polite",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-past",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-retrospective",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-bieup",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-digeut",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-copula-rejected",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-adjective-auxiliary",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-adjective-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-adjective-suffix",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86569",
+      "source_sha256": "f7b620b26a7adf1ef33d20f027731d92aa986e16946fa0ff650ee77b8b4ed6f3",
+      "status": "scoped",
+      "checklist": [
+        "COV-017q"
+      ],
+      "scope": "Canonical vowel-boundary 어서야, including copulas, irregular recovery and an independent 어서 + 야 path.",
+      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+        },
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/seo-connective-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "seo-connectives-eo-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-vowel-irregular",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-copula",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86567",
+      "source_sha256": "f594eb08b0e0ae02e8f8053487ae5a3703ee662c50347c3a12fb17d302393e3d",
+      "status": "scoped",
+      "checklist": [
+        "COV-017q"
+      ],
+      "scope": "Preserve the 아서야 allomorph and A-vowel contraction under canonical 어서야.",
+      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+        },
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/seo-connective-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "seo-connectives-a-bundle",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86584",
+      "source_sha256": "37c8eb06ba9c2a34fa1c1da30915df1147667b67578ed1cf3699b99ed0757ba2",
+      "status": "scoped",
+      "checklist": [
+        "COV-017q"
+      ],
+      "scope": "Preserve 하여서야/해서야 forms and expose the 하-specific source through canonical 어서야.",
+      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+        },
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/seo-connective-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "seo-connectives-yeo-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-ha-contraction",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70339",
+      "source_sha256": "5624c31807b63f92dfbad1dc01a78f5ac65831a4e7431b6f5e5efb8b78709d2c",
+      "status": "scoped",
+      "checklist": [
+        "COV-018i"
+      ],
+      "scope": "Emphatic 야 after 어서 and 고서, independent of vocative 야 and bundled 어서야.",
+      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+        },
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/seo-connective-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "seo-connectives-emphasis",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-split-emphasis",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70055",
+      "source_sha256": "d70733b3fde4feab34310fd75cac8ae931e57d993f53e40dd88b70fe15fddca2",
+      "status": "scoped",
+      "checklist": [
+        "COV-018i"
+      ],
+      "scope": "부터 after 어서/고 source examples and corpus-backed 으면서, retaining existing outer particle order.",
+      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+        },
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/seo-connective-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "seo-connectives-from-adverbial",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-from-go",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-from-myeonseo",
+          "judgment": "path"
+        },
+        {
+          "case": "seo-connectives-from-chain",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70060",
+      "source_sha256": "69394596dd03824283b82209916b912af1ea716d7f1d0615abe095d8aa033486",
+      "status": "scoped",
+      "checklist": [
+        "COV-018i"
+      ],
+      "scope": "Comparative 보다 after an 어서 adverbial clause, including corpus-backed 통해서보다는.",
+      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_keep_literal_vowel_and_particle_alternatives"
+        },
+        {
+          "path": "tests/seo_connectives.rs",
+          "test": "seo_connectives_reject_wrong_boundaries_prefinals_and_known_classes"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "seo_connectives_keep_bundles_particles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "seo_connectives_recover_nine_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/seo-connective-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "seo-connectives-comparison",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

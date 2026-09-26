@@ -1130,3 +1130,37 @@ reading choices, twelve forbidden-group checks and original-word preservation.
 Desktop/mobile screenshots were inspected; there were no JavaScript errors or
 horizontal overflow. Independent Korean-language review and fresh-passage
 validation remain pending.
+
+## Sequential/emphatic connectives and their particles (COV-017q/018i)
+
+[The comparison](seo-connective-evaluation.json) records **191 added analyses
+across 59 audited surfaces**, with no removed candidates or changed provenance.
+Literal 고서 and vowel-boundary 어서야 preserve separate 어서 + 야 readings;
+reviewed connective slots admit emphatic 야, temporal 부터 and comparative
+보다. Known class and prefinal restrictions on 고서 have positive and negative
+regressions. Broader 어서야 prefinal licenses remain unreviewed.
+
+Nine complete, byte-identical KAIST development sentences become exact grouped
+matches, leaving **118 KAIST and 162 GSD misses**. No prior gold groups or
+component sets are lost. Mean candidates change from 5.835734 to 5.837579 for
+KAIST and from 5.368806 to 5.369106 for GSD; these measure ambiguity, not
+precision. All 30 stress fingerprints and historical corpus baselines remain
+unchanged.
+
+Twenty-nine new ledger cases bring the total to **591 cases, 334 required and
+263 forbidden judgments**. Seven scoped reviews bring the inventory to
+**58 scoped entries and 657 without a disposition**. The catalog contains
+258 canonical forms and 310 distinct source entries; the attributed grammar
+fixture contains 311 entries, with every previous entry preserved. A separate
+46-entry lexical fixture verifies dictionary filtering and CLI/library parity.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, stress
+and memory regressions, frontend production build and the complete browser/HTTP
+suite pass. `nix flake check` and `nix build .#web` pass on x86_64-linux; other
+declared platforms were not executed. The packaged app with the full dictionary
+passes ten reading choices, bundled/component alternatives, allomorph source
+links and nine forbidden paths. Desktop/mobile screenshots were inspected
+without JavaScript errors or horizontal overflow. The browser expectations
+explicitly distinguish displayed 여서/여서야 after 하 from canonical 어서/어서야
+used for lookup. Independent Korean-language review, fresh-passage evaluation,
+other particle slots and remaining inventory dispositions are still pending.

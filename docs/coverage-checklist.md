@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–h/019a–f/020a–f/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–q/018a–i/019a–f/020a–f/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records fifty-one scoped
-  dispositions from COV-016/017m–n/017p/018e–h/019d–f/020d–f; 664 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records fifty-eight scoped
+  dispositions from COV-016/017m–n/017p–q/018e–i/019d–f/020d–f; 657 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -218,7 +218,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–p implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–q implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -432,8 +432,18 @@ review remains open under the completion review below.
   and [evaluation](enumerative-particle-evaluation.json). Further outer particles
   and contextual choice remain open. Source: KRDict
   [-든가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82342).
+- [x] **COV-017q — Sequential 고서 and emphatic 어서야.** Literal 고서
+  preserves consonant stems and honorific 시, rejects recovered past/modal/
+  retrospective stacks, and distinguishes verb/아니다 attachment from known
+  adjective or represented-copula paths. Vowel-boundary 어서야 preserves
+  아/어/여 allomorphs, irregulars, 하 contractions and a separate 어서 + 야
+  reading. Evidence: [boundary/composition tests](../tests/seo_connectives.rs),
+  source-cited `seo-connectives-*` judgments, dictionary/CLI parity and browser
+  alternatives/source links. [The comparison](seo-connective-evaluation.json)
+  records gains shared with COV-018i; broader 어서야 prefinal constraints and
+  lexical class/sense selection remain open. See [scope](rules.md#seo-connectives-and-particles-cov-017q018i).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–h implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–i implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives.**
   Remaining: pronouns outside the existing finite paradigms. Preserve homonym-specific
@@ -547,6 +557,17 @@ review remains open under the completion review below.
   judgments, dictionary/CLI parity and browser source checks. This corrects
   the existing allomorph omission; it does not expand the connective inventory
   or auxiliary-internal particle slots.
+- [x] **COV-018i — Reviewed particles after 서 connectives.** Connective
+  고서 admits the existing 은/는, 도, 만, 요 slots and emphatic 야; 어서
+  also admits 야. 부터 follows 어서/고/으면서, while comparative 보다
+  follows 어서, with existing outer particles. Examples include 돌리고서는,
+  되어서야, 나오면서부터 and 통해서보다는. Together with COV-017q,
+  nine complete unchanged KAIST development sentences become exact grouped
+  matches; no prior gold or candidates are lost. Evidence: [tests](../tests/seo_connectives.rs),
+  twenty-nine ledger cases across both items, attributed dictionary fixtures,
+  CLI/browser checks and [evaluation](seo-connective-evaluation.json).
+  Other ending/particle families, especially broader 부터/보다 attachment,
+  remain for review. No unrestricted clause nominalization is introduced.
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**

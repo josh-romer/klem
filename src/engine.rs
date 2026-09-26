@@ -349,6 +349,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // Literal 고서 permits honorific 시, not a recovered tense/
+                // modal stack. Its 아니다 conditional use remains lexical.
+                if ending.form == "고서" && p.morphs.iter().any(|m| m.form != "시") {
+                    continue;
+                }
                 // The adjective 으냐는 allomorph is a bare-stem path;
                 // prefinals use 냐는/느냐는. Retrospective 더 precedes 냐는.
                 if (ending.form == "으냐는" && !p.morphs.is_empty())
@@ -716,7 +721,14 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             if matches!(class, Some(PredicateClass::Adjective))
                 && matches!(
                     m.form.as_str(),
-                    "자면" | "으랍니다" | "으라거나" | "자거나" | "는다" | "는다거나" | "는다든가"
+                    "자면"
+                        | "으랍니다"
+                        | "으라거나"
+                        | "자거나"
+                        | "는다"
+                        | "는다거나"
+                        | "는다든가"
+                        | "고서"
                 )
             {
                 return false;
@@ -776,7 +788,14 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         .is_some_and(|m| {
             matches!(
                 m.form.as_str(),
-                "자면" | "으랍니다" | "으라거나" | "자거나" | "는다" | "는다거나" | "는다든가"
+                "자면"
+                    | "으랍니다"
+                    | "으라거나"
+                    | "자거나"
+                    | "는다"
+                    | "는다거나"
+                    | "는다든가"
+                    | "고서"
             )
         })
     {
@@ -916,6 +935,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
             matches!(
                 m.form.as_str(),
                 "자면"
+                    | "고서"
                     | "으라"
                     | "으라고"
                     | "으라는"
@@ -1267,6 +1287,8 @@ fn nominals(
                     | "든가"
                     | "야"
                     | "나마"
+                    | "부터"
+                    | "보다"
             ) {
             PredicateEnd::BeforeParticle(particle.form)
         } else {
@@ -1543,6 +1565,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
             | "어야"
             | "어다가"
             | "고"
+            | "고서"
             | "게"
             | "지"
             | "지만"
@@ -1625,9 +1648,12 @@ fn before_particle(ending: &str, particle: &str) -> bool {
             "어" | "게" | "지" | "고" | "다" | "는다" | "라" | "으라" | "어라"
         ),
         "든지" | "든가" => matches!(ending, "다" | "는다" | "라" | "으라" | "어라"),
-        "야" => matches!(ending, "어" | "게" | "지" | "고"),
+        "야" => matches!(ending, "어" | "어서" | "게" | "지" | "고" | "고서"),
+        "부터" => matches!(ending, "어서" | "고" | "으면서"),
+        "보다" => ending == "어서",
         "만" => {
-            concessive_ending(ending) || matches!(ending, "어" | "어서" | "어야" | "게" | "고")
+            concessive_ending(ending)
+                || matches!(ending, "어" | "어서" | "어야" | "게" | "고" | "고서")
         }
         "마는" => concessive_ending(ending),
         "를" => matches!(ending, "어" | "게" | "지" | "고"),

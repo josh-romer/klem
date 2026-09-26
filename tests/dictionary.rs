@@ -3295,3 +3295,159 @@ fn continuative_left_classes_keep_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn seo_connectives_keep_bundles_particles_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-seo-connectives.json")],
+        dir.db(),
+        "seo-connectives-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        ("먹고서", vec!["먹다"], vec!["고서"], MorphemeKind::Ending),
+        (
+            "먹으시고서",
+            vec!["먹다"],
+            vec!["시", "고서"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "아니고서",
+            vec!["아니다"],
+            vec!["고서"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어보고서",
+            vec!["먹다", "보다"],
+            vec!["어", "고서"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어보지않고서",
+            vec!["먹다", "보다", "않다"],
+            vec!["어", "지", "고서"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "돌리고서는",
+            vec!["돌리다"],
+            vec!["고서", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹고서야",
+            vec!["먹다"],
+            vec!["고서", "야"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹고서요",
+            vec!["먹다"],
+            vec!["고서", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "되어서야",
+            vec!["되다"],
+            vec!["어서야"],
+            MorphemeKind::Ending,
+        ),
+        ("가서야", vec!["가다"], vec!["어서야"], MorphemeKind::Ending),
+        (
+            "공부하여서야",
+            vec!["공부하다"],
+            vec!["어서야"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "공부해서야",
+            vec!["공부하다"],
+            vec!["어서야"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어서야",
+            vec!["먹다"],
+            vec!["어서", "야"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "추워서야",
+            vec!["춥다"],
+            vec!["어서야"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이어서야",
+            vec!["학생", "이다"],
+            vec!["어서야"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "젊어서부터",
+            vec!["젊다"],
+            vec!["어서", "부터"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹고부터",
+            vec!["먹다"],
+            vec!["고", "부터"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "나오면서부터",
+            vec!["나오다"],
+            vec!["으면서", "부터"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "기록하면서부터는",
+            vec!["기록하다"],
+            vec!["으면서", "부터", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "통해서보다는",
+            vec!["통하다"],
+            vec!["어서", "보다", "는"],
+            MorphemeKind::Particle,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

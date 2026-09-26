@@ -611,3 +611,21 @@ sentences dev-s236 and dev-s932. They are byte-identical excerpts with original
 annotations, under CC BY-SA 4.0. Their 마셨다, 주셨습니다 and 주셨어요 tokens
 protect existing lexical readings as new copula hypotheses are introduced. They
 are not relabeled or presented as new copula gold. Source/license links above apply.
+
+
+`krdict-seo-connectives.json` is an attributed CC BY-SA 2.0 KR slice of the
+September 2026 NIKL Korean Basic Dictionary export for COV-017q/018i. It retains
+46 matching noun, predicate, auxiliary and particle entries for the tested
+headwords, preserving homonyms and every sense, English equivalents and the
+first example group per sense. Global export metadata, WordForm and RelatedForm
+are omitted. The four new grammar sources 78584, 86567, 86569 and 86584 are added
+to `krdict-grammar-labels.json` with the same selection policy. Other grammar
+entries remain unchanged. Sources, source IDs and attachment notes are preserved
+in `docs/seo-connective-evaluation.json`; these are dictionary integration
+fixtures, not independent gold annotations.
+
+`kaist-seo-connectives.conllu` preserves nine complete, byte-identical UD 2.15
+KAIST development sentences whose annotated groups are newly recovered by
+COV-017q/018i. The original annotations and corpus license remain unchanged;
+case IDs and input hashes are recorded in the evaluation. No GSD recovery is
+claimed by this batch.

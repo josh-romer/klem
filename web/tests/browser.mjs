@@ -136,6 +136,9 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const seoConnectives = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-seo-connectives.json"), "utf8"),
+  );
   const honorificCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-honorific-copulas.json"), "utf8"),
   );
@@ -242,6 +245,7 @@ try {
       ...enumerativeDa.LexicalResource.Lexicon.LexicalEntry,
       ...omittedConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...honorificCopulas.LexicalResource.Lexicon.LexicalEntry,
+      ...seoConnectives.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -620,6 +624,13 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["가지고서", ["가지", "고서"], "고서", "After / reason / condition", 78584, "ending"],
+    ["돌리고서는", ["돌리", "고서", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["되어서야", ["되", "어서야"], "어서야", "Only after / emphatic reason", 86569, "ending"],
+    ["되어서야", ["되", "어서", "야"], "야", "Emphasis / address", 70339, "particle"],
+    ["공부해서야", ["공부하", "여서야"], "어서야", "Only after / emphatic reason", 86569, "ending"],
+    ["나오면서부터", ["나오", "으면서", "부터"], "부터", "From / starting at", 70055, "particle"],
+    ["통해서보다는", ["통하", "여서", "보다", "는"], "는", "Topic / contrast", 85851, "particle"],
     ["먹고는싶다", ["먹", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
     ["먹곤싶다", ["먹", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
     ["학생이고는싶다", ["학생", "이", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
@@ -702,7 +713,8 @@ try {
     assert.ok(choice, word);
     await breakdown.getByRole("combobox").selectOption(choice);
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
-    await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).click();
+    // Display may use 여 after 하 while lookup retains canonical 어.
+    await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
     assert.ok(data.grammar[kind === "particle" ? form : `-${form}`].some(e => e.id === `krdict:${id}`));
     if (["먹고는싶다", "먹곤싶다", "학생이고는싶다", "의사곤싶다"].includes(word)) {
@@ -714,6 +726,11 @@ try {
       }
       await breakdown.getByRole("button", {name: "는 Topic / contrast", exact: true}).click();
       await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=85851"));
+    }
+    if (word === "공부해서야") {
+      for (const id of [86567, 86569, 86584]) {
+        assert.ok(data.grammar["-어서야"].some(e => e.id === `krdict:${id}`));
+      }
     }
     if (word === "선수셨다") {
       const selected = data.records[0].analysis.analyses[Number(choice)];
@@ -1160,6 +1177,15 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, forbidden] of [
+    ["먹었고서", ["먹다"]],
+    ["먹겠고서", ["먹다"]],
+    ["먹더고서", ["먹다"]],
+    ["도우고서", ["돕다"]],
+    ["들고서", ["듣다"]],
+    ["학생이고서", ["학생", "이다"]],
+    ["먹고싶고서", ["먹다", "싶다"]],
+    ["먹고싶지않고서", ["먹다", "싶다", "않다"]],
+    ["학생답고서", ["학생"]],
     ["먹고싶어있다", ["먹다", "싶다", "있다"]],
     ["먹고싶고있다", ["먹다", "싶다", "있다"]],
     ["먹고싶어계신다", ["먹다", "싶다", "계시다"]],

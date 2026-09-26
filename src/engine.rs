@@ -302,6 +302,20 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "답니다" && p.morphs.iter().any(|m| m.form == "더") {
                     continue;
                 }
+                // Source-listed causal endings: 기에 licenses honorific,
+                // past and modal markers; 길래 licenses honorific and past.
+                // Keep 기 + 에 nominalization as a separate existing path.
+                if (ending.form == "기에"
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었" | "겠" | "어야겠")))
+                    || (ending.form == "길래"
+                        && p.morphs
+                            .iter()
+                            .any(|m| !matches!(m.form.as_str(), "시" | "었")))
+                {
+                    continue;
+                }
                 // Reviewed intention/concession families have different
                 // prefinal licenses; do not inherit every terminal marker.
                 if (matches!(ending.form, "으리라고" | "으나마")
@@ -389,6 +403,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.rules.push("ending".into());
                 if ending.form == "요" {
                     p.rules.push("ending.enumerative_yo".into());
+                }
+                if matches!(ending.form, "기에" | "길래") {
+                    p.rules.push("ending.causal".into());
                 }
                 if matches!(ending.form, "답니다" | "는답니다" | "랍니다" | "으랍니다")
                 {
@@ -748,6 +765,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "냐는"
             | "니"
             | "기"
+            | "기에"
+            | "길래"
             | "기로"
             | "기가"
             | "기는"

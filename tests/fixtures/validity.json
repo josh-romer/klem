@@ -2,6 +2,8 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "causal-gie": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=84811",
+    "causal-gillae": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73011",
     "copula-enumerative-yo": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86117",
     "copula-yo-spelling": "https://korean.go.kr/kornorms/m/m_regltn.do",
     "reporting-declarative": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81393",
@@ -153,6 +155,18 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id": "causal-gie", "surface": "먹기에", "judgments": [{"id": "ending", "lemmas": ["먹다"], "morphemes": ["기에"], "verdict": "required", "reason": "Causal 기에 is one ending, alongside the independent 기 + 에 nominalization hypothesis.", "source": "causal-gie"}]},
+    {"id": "causal-gillae", "surface": "추천하길래", "judgments": [{"id": "ending", "lemmas": ["추천하다"], "morphemes": ["길래"], "verdict": "required", "reason": "Literal causal attachment to the verb stem; also observed in GSD dev-s485/4.", "source": "causal-gillae"}]},
+    {"id": "causal-rieul", "surface": "살길래", "judgments": [{"id": "ending", "lemmas": ["살다"], "morphemes": ["길래"], "verdict": "required", "reason": "The ㄱ-initial ending retains ㄹ.", "source": "causal-gillae"}]},
+    {"id": "causal-honorific-past", "surface": "들으셨길래", "judgments": [{"id": "ending", "lemmas": ["듣다"], "morphemes": ["시", "었", "길래"], "verdict": "required", "reason": "Honorific and past are source-listed before 길래; ㄷ recovery belongs to the honorific boundary.", "source": "causal-gillae"}]},
+    {"id": "causal-modal", "surface": "먹겠기에", "judgments": [{"id": "ending", "lemmas": ["먹다"], "morphemes": ["겠", "기에"], "verdict": "required", "reason": "The source licenses modal 겠 before 기에.", "source": "causal-gie"}]},
+    {"id": "causal-copula", "surface": "학생이기에", "judgments": [{"id": "ending", "lemmas": ["학생", "이다"], "morphemes": ["기에"], "verdict": "required", "reason": "Causal 기에 attaches to explicit 이다; nominalized copula alternatives remain.", "source": "causal-gie"}]},
+    {"id": "causal-auxiliary", "surface": "먹고싶기에", "judgments": [{"id": "ending", "lemmas": ["먹다", "싶다"], "morphemes": ["고", "기에"], "verdict": "required", "reason": "Causal 기에 permits adjective attachment and preserves the preceding auxiliary group.", "source": "causal-gie"}]},
+    {"id": "causal-no-modal-gillae", "surface": "먹겠길래", "judgments": [{"id": "ending", "lemmas": ["먹다"], "morphemes": ["겠", "길래"], "verdict": "forbidden", "reason": "The reviewed 길래 entry licenses honorific and past, not recovered 겠; this scopes the standard source-listed path, not every colloquial usage.", "source": "causal-gillae"}]},
+    {"id": "causal-no-retrospective", "surface": "먹더기에", "judgments": [{"id": "ending", "lemmas": ["먹다"], "morphemes": ["더", "기에"], "verdict": "forbidden", "reason": "Retrospective 더 is outside the reviewed 기에 attachment inventory.", "source": "causal-gie"}]},
+    {"id": "causal-no-digeut", "surface": "들길래", "judgments": [{"id": "ending", "lemmas": ["듣다"], "morphemes": ["길래"], "verdict": "forbidden", "reason": "A consonantal ㄱ boundary does not license the vowel-only ㄷ alternation.", "source": "causal-gillae"}]},
+    {"id": "causal-no-bieup", "surface": "도우기에", "judgments": [{"id": "ending", "lemmas": ["돕다"], "morphemes": ["기에"], "verdict": "forbidden", "reason": "A consonantal ㄱ boundary does not license vowel-only ㅂ recovery.", "source": "causal-gie"}]},
+    {"id": "causal-no-rieul-loss", "surface": "사길래", "judgments": [{"id": "ending", "lemmas": ["살다"], "morphemes": ["길래"], "verdict": "forbidden", "reason": "길래 does not cause ㄹ deletion; the distinct 사다 reading remains available.", "source": "causal-gillae"}]},
     {"id":"adverb-root-adverb","surface":"더욱이","judgments":[{"id":"path","lemmas":["더욱"],"morphemes":["이"],"verdict":"required","reason":"The source lists an adverb base with adverb-forming 이, not a predicate.","source":"adverb-root-i","lemma_kinds":["adverbial"],"morpheme_kinds":["suffix"]}]},
     {"id":"adverb-root-adverb-hi","surface":"가만히","judgments":[{"id":"path","lemmas":["가만"],"morphemes":["히"],"verdict":"required","reason":"The source lists 가만히; preserve the adverb base 가만.","source":"adverb-root-hi","lemma_kinds":["adverbial"],"morpheme_kinds":["suffix"]}]},
     {"id":"adverb-root-nominal","surface":"낱낱이","judgments":[{"id":"path","lemmas":["낱낱"],"morphemes":["이"],"verdict":"required","reason":"The listed repeated nominal base precedes adverbial 이; subject-particle alternatives remain.","source":"adverb-root-i","lemma_kinds":["nominal"],"morpheme_kinds":["suffix"]}]},

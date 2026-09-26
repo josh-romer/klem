@@ -1285,3 +1285,36 @@ records each reviewed addition, including two compatibility snapshots. Gold
 lemma groups do not establish contextual correctness: two newly matched KAIST
 cases use sentence-final 요, distinct from the connective this rule supports.
 No spelling repair or contextual parsing is inferred.
+
+## Causal endings (COV-017n)
+
+KRDict [-기에](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=84811)
+and [-길래](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73011)
+are causal connectives. NIKL also explains the
+[standard status and spoken use of -길래](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5571).
+The pinned source notes license verbs, adjectives and 이다; both list honorific
+시 and past 었, while 기에 also lists modal 겠. The rule retains the existing
+어야겠 bundle before 기에 and the existing repeated-past recovery. Retrospective
+더 is not added to either attachment inventory; 길래 does not gain recovered
+modal paths from 기에. These boundaries describe the reviewed standard forms,
+not a judgment of every colloquial or quoted usage.
+
+Both endings attach literally: 살길래 retains ㄹ, 듣길래 retains ㄷ, and
+돕기에 retains ㅂ. Recovery before a preceding vowel-initial prefinal still
+works, as in 들으셨길래. Existing auxiliaries, explicit copulas, and known
+답다 derivation compose, including 먹고싶기에 and 학생답길래. Neither ending
+becomes an auxiliary connector or a nominalizer.
+
+The causal analysis 먹다 + 기에 is distinct from the existing nominalization
+먹다 + 기 + 에. Both remain in the API and browser, with their original grammar
+roles and source links. The causal path carries `ending.causal` provenance.
+The two complete GSD development sentences protect 추천하길래 and 뽑길래;
+[the comparison](causal-evaluation.json) records every change in the audited
+surfaces and the unchanged historical baselines. Corpus lemma recall alone
+cannot distinguish the two 기에 decompositions.
+
+Omitted copulas before these endings, additional outer particles, and shortened
+하다 allomorphs remain COV-020/018/021 review work. Existing nominalization
+shortening such as 생각하다 + 기 + 에 is preserved. The tool does not infer
+causal relations between clauses, choose a contextual sense, or certify the
+lexical membership of arbitrary recovered stems.

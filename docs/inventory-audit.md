@@ -17,15 +17,16 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) starts with seven scoped reviews:
+The [manual ledger](inventory-reviews.json) contains nine scoped reviews:
 -듯/-듯이 (COV-016), four informative ending entries (COV-017m), and connective
--요 (COV-020d). Their source notes were inspected individually; each review
+-요 (COV-020d), plus causal -기에/-길래 (COV-017n). Their source notes were
+inspected individually; each review
 records its supported scope, remaining limits, checklist item, named Rust tests,
 evaluation evidence, and source-specific candidate judgments. Independent
-Korean-language review is pending. The other **708 entries are unreviewed in
+Korean-language review is pending. The other **706 entries are unreviewed in
 this ledger**, which does not imply they are unimplemented.
 
-The queue links **212 entries to the teaching catalog**, **73 to source-citing
+The queue links **214 entries to the teaching catalog**, **75 to source-citing
 candidate judgments**, and all **54 auxiliaries to the earlier attachment
 inventory**. These are evidence navigation aids, not coverage certifications.
 In particular, a source citation can support one narrow forbidden path without
@@ -214,3 +215,13 @@ sentences validate connective uses; two sentence-final gold-group matches are
 explicitly incidental and do not validate a spelling substitution. The current
 measured misses are **138 KAIST and 169 GSD**. Other inventory entries and
 contextual sense judgments remain open.
+
+## Causal ending inventory review (COV-017n)
+
+[The causal comparison](causal-evaluation.json) records source-listed attachment
+for -기에 (84811) and -길래 (73011), including prefinal differences and the
+separate 기 + 에 nominalization analysis. Two complete GSD sentences recover
+추천하길래 and 뽑길래. Current measured development misses are **138 KAIST and
+167 GSD**, without lost gold groups or component recoveries. Nine entries now
+have scoped dispositions in the persistent review ledger; the broader inventory,
+omitted copulas, shortened 하다 forms and contextual judgments remain open.

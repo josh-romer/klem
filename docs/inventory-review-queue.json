@@ -9,16 +9,18 @@
   },
   "evidence_sha256": {
     "docs/auxiliary-inventory.json": "16b7ac8ed9a8cb7f0b6cd9ef1251f1b4097a2abb02b36f4c3ad88b7e0e3c0cb9",
+    "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "712b145733599387fab637272eaf4648a8e083f4cd2623d71c8a1f1c6ad5e16a",
-    "docs/inventory-audit.md": "7704752788bec237f112b15a41a000f36aa3021c6b95bf84424104a4515cbdaa",
-    "docs/inventory-reviews.json": "fbdcfff3262839b962beb9770a9f18d35e88d4c26683e3da277e62145544deaa",
+    "docs/coverage-checklist.md": "bf07949c840b06d2a8086d9e33d9cca0903bcd7d35b1b6b4ed14c812c0f54023",
+    "docs/inventory-audit.md": "ba9f03a07cedac95e04e08a91afe931f88cdd411530ae1a589685ffe0b270b71",
+    "docs/inventory-reviews.json": "afd70ac212ac9e56d72fd39b098e07b1c8b03b7104877a581a0134589aed27b4",
     "docs/reporting-evaluation.json": "74f0fb2732024ef27d7250d374184bda3d766aeb32f2c6b787ee319157c6d96e",
+    "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
-    "tests/fixtures/validity.json": "526149bdea40b3b1fa630098f18127fc4c60532bbc405f8a467082a1d5983730",
+    "tests/fixtures/validity.json": "b3f78d7d8b3e23f1b3eab6923c1ca4c8d16ba74df7fc9daf2e5322af829642a6",
     "tests/reporting_endings.rs": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
-    "web/src/grammar-labels.json": "a0ab2e0feae3db90b24962ba93baf3a37a6c7dd519fe746cfc3a1277f2d7d6a3"
+    "web/src/grammar-labels.json": "e14ceb53823814e43b46e47aaadcca278d02c28dbb59effca783c150d14b379f"
   },
   "counts": {
     "entries": 715,
@@ -29,11 +31,11 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 708,
-      "scoped": 7
+      "unreviewed": 706,
+      "scoped": 9
     },
-    "with_catalog_links": 212,
-    "with_judgment_citations": 73
+    "with_catalog_links": 214,
+    "with_judgment_citations": 75
   },
   "entries": [
     {
@@ -10135,11 +10137,93 @@
         ]
       },
       "source_sha256": "e6b852b804fc7935316462289dea48db95e6d50908d3f1346ed7afd7e2b810be",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-기에",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "causal-auxiliary",
+          "judgment": "ending",
+          "verdict": "required"
+        },
+        {
+          "case": "causal-copula",
+          "judgment": "ending",
+          "verdict": "required"
+        },
+        {
+          "case": "causal-gie",
+          "judgment": "ending",
+          "verdict": "required"
+        },
+        {
+          "case": "causal-modal",
+          "judgment": "ending",
+          "verdict": "required"
+        },
+        {
+          "case": "causal-no-bieup",
+          "judgment": "ending",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "causal-no-retrospective",
+          "judgment": "ending",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:84811",
+        "source_sha256": "e6b852b804fc7935316462289dea48db95e6d50908d3f1346ed7afd7e2b810be",
+        "status": "scoped",
+        "checklist": [
+          "COV-017n"
+        ],
+        "scope": "Literal causal 기에 on predicates and explicit copulas, with honorific/past/modal prefinals, existing 어야겠 bundle and auxiliary/답다 composition; retains separate 기 + 에 nominalization.",
+        "remaining": "Omitted copulas, shortened 하다 causal allomorphs, further outer particles and contextual causal interpretation need review. Unknown lexical hypotheses remain unverified; source-listed prefinal licenses do not certify every colloquial or quoted usage.",
+        "evidence": [
+          {
+            "path": "tests/causal_endings.rs",
+            "test": "causal_endings_preserve_prefinals_copulas_auxiliaries_and_nominalization"
+          },
+          {
+            "path": "tests/causal_endings.rs",
+            "test": "causal_endings_reject_unlicensed_prefinals_and_vowel_recoveries"
+          },
+          {
+            "path": "docs/causal-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "causal-gie",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-modal",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-copula",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-auxiliary",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-no-retrospective",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-no-bieup",
+            "judgment": "ending"
+          }
+        ]
       }
     },
     {
@@ -10226,11 +10310,93 @@
         ]
       },
       "source_sha256": "f260c9315d06ce6654588243eaad8efd2bdc4ceb966ce223160d2b1d26eb715d",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-길래",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "causal-gillae",
+          "judgment": "ending",
+          "verdict": "required"
+        },
+        {
+          "case": "causal-honorific-past",
+          "judgment": "ending",
+          "verdict": "required"
+        },
+        {
+          "case": "causal-no-digeut",
+          "judgment": "ending",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "causal-no-modal-gillae",
+          "judgment": "ending",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "causal-no-rieul-loss",
+          "judgment": "ending",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "causal-rieul",
+          "judgment": "ending",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:73011",
+        "source_sha256": "f260c9315d06ce6654588243eaad8efd2bdc4ceb966ce223160d2b1d26eb715d",
+        "status": "scoped",
+        "checklist": [
+          "COV-017n"
+        ],
+        "scope": "Literal 길래 on verbs, adjectives and explicit copulas, with honorific/past prefinals and existing auxiliary/답다 composition; no vowel-only recovery or ㄹ loss at ㄱ.",
+        "remaining": "Omitted copulas, shortened 하다 causal allomorphs, further outer particles and contextual causal interpretation need review. Unknown lexical hypotheses remain unverified; source-listed prefinal licenses do not certify every colloquial or quoted usage.",
+        "evidence": [
+          {
+            "path": "tests/causal_endings.rs",
+            "test": "causal_endings_preserve_prefinals_copulas_auxiliaries_and_nominalization"
+          },
+          {
+            "path": "tests/causal_endings.rs",
+            "test": "causal_endings_reject_unlicensed_prefinals_and_vowel_recoveries"
+          },
+          {
+            "path": "docs/causal-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "causal-gillae",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-rieul",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-honorific-past",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-no-modal-gillae",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-no-digeut",
+            "judgment": "ending"
+          },
+          {
+            "case": "causal-no-rieul-loss",
+            "judgment": "ending"
+          }
+        ]
       }
     },
     {

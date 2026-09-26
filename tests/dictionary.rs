@@ -1705,6 +1705,63 @@ fn reporting_endings_preserve_dictionary_filtered_cli_paths() {
 }
 
 #[test]
+fn causal_endings_keep_dictionary_filtered_cli_paths_and_nominal_alternatives() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-causal.json")],
+        dir.db(),
+        "causal-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, ending) in [
+        ("추천하길래", vec!["추천하다"], "길래"),
+        ("뽑길래", vec!["뽑다"], "길래"),
+        ("살길래", vec!["살다"], "길래"),
+        ("먹기에", vec!["먹다"], "기에"),
+        ("학생이기에", vec!["학생", "이다"], "기에"),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| {
+                a.lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.lemmas.iter().all(|l| annotation.has_match(l, true))
+                    && a.morphemes.last().is_some_and(|m| m.form == ending)
+            }),
+            "{word}"
+        );
+        if ending == "기에" {
+            assert!(
+                kept.analyses.iter().any(|a| a
+                    .morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(["기", "에"])),
+                "{word}"
+            );
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}
+
+#[test]
 fn shortened_hada_matches_full_lemmas_in_cli_and_pos_filtering() {
     let dir = Scratch::new();
     import_krdict(

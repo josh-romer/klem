@@ -3,6 +3,25 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn causal_endings_recover_saved_gsd_groups() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-causal.conllu").as_slice(),
+        Corpus::Gsd,
+        "causal",
+    )
+    .unwrap();
+    for (id, surface, lemma) in [
+        ("id:dev-s485/4", "추천하길래", "추천하다"),
+        ("id:dev-s836/10", "뽑길래", "뽑다"),
+    ] {
+        let c = &report.cases[id];
+        assert_eq!(c.surface, surface);
+        assert_eq!(c.expected, [lemma]);
+        assert!(c.matched, "{id}");
+    }
+}
+
+#[test]
 fn enumerative_copula_yo_recovers_annotated_groups() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-copula-yo.conllu").as_slice(),

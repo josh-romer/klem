@@ -482,3 +482,20 @@ cases are documented in `docs/copula-yo-evaluation.json`, not promoted to gold
 for the connective. COV-020d changes two stress fingerprints by adding an
 unknown nominal + omitted copula reading; old hashes and all prior candidates
 remain. The report records each addition rather than certifying those nominals.
+
+`krdict-causal.json` contains nine primary entries (15983, 24079, 26878, 26962,
+27804, 31670, 50557, 69579, 86232) from the same September 2026 KRDict export,
+National Institute of Korean Language, under CC BY-SA 2.0 KR. Changes: retain
+English equivalents and the first example group per sense; omit WordForm,
+RelatedForm and export metadata; exclude idiom subentries and reformat JSON.
+The two ending sources 73011 and 84811 are added to `krdict-grammar-labels.json`
+with the same adaptation. All earlier source entries are retained. Source and
+license links are above. These are dictionary integration fixtures, not
+independent sentence judgments.
+
+`gsd-causal.conllu` preserves complete, byte-identical UD Korean GSD 2.15
+**development** sentences dev-s485 and dev-s836 under the dataset's CC BY-SA 4.0
+license. They contain the saved 추천하길래 and 뽑길래 misses. The original
+lemma/XPOS fields and sentence context remain; GSD's automatic annotation is
+secondary evidence and does not label every valid alternative. See the existing
+GSD source/license links above and `docs/causal-evaluation.json` for hashes.

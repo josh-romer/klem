@@ -484,6 +484,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "도록",
             "듯",
             "듯이",
+            "기에",
+            "길래",
             "든지",
             "든",
             "더라도",
@@ -1039,6 +1041,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.enumerative_yo" => {
             "Recognize enumerative -요 after 이다/아니다, retaining vowel-final copula omission and the separate polite-particle reading."
+        }
+        "ending.causal" => {
+            "Recognize causal -기에/-길래 as an ending, distinct from nominalizing -기 plus particle 에; contextual reason and register are not selected."
         }
         "pronoun" => "Restore a contracted pronoun with its particle.",
         "nominal.contraction" => "Restore contracted 거/것 plus a particle.",

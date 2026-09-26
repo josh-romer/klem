@@ -3,6 +3,55 @@
   "review_status": "Agent-authored scoped dispositions; independent Korean-language review pending. Not full-entry coverage certification.",
   "entries": [
     {
+      "id": "krdict:73011",
+      "source_sha256": "f260c9315d06ce6654588243eaad8efd2bdc4ceb966ce223160d2b1d26eb715d",
+      "status": "scoped",
+      "checklist": [
+        "COV-017n"
+      ],
+      "scope": "Literal 길래 on verbs, adjectives and explicit copulas, with honorific/past prefinals and existing auxiliary/답다 composition; no vowel-only recovery or ㄹ loss at ㄱ.",
+      "remaining": "Omitted copulas, shortened 하다 causal allomorphs, further outer particles and contextual causal interpretation need review. Unknown lexical hypotheses remain unverified; source-listed prefinal licenses do not certify every colloquial or quoted usage.",
+      "evidence": [
+        {
+          "path": "tests/causal_endings.rs",
+          "test": "causal_endings_preserve_prefinals_copulas_auxiliaries_and_nominalization"
+        },
+        {
+          "path": "tests/causal_endings.rs",
+          "test": "causal_endings_reject_unlicensed_prefinals_and_vowel_recoveries"
+        },
+        {
+          "path": "docs/causal-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "causal-gillae",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-rieul",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-honorific-past",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-no-modal-gillae",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-no-digeut",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-no-rieul-loss",
+          "judgment": "ending"
+        }
+      ]
+    },
+    {
       "id": "krdict:76427",
       "source_sha256": "fec8bf93043380448082570536fab5a55eb644a656c93ddfbbc4fe7096d53536",
       "status": "scoped",
@@ -221,6 +270,55 @@
         {
           "case": "reporting-declarative-retrospective",
           "judgment": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "krdict:84811",
+      "source_sha256": "e6b852b804fc7935316462289dea48db95e6d50908d3f1346ed7afd7e2b810be",
+      "status": "scoped",
+      "checklist": [
+        "COV-017n"
+      ],
+      "scope": "Literal causal 기에 on predicates and explicit copulas, with honorific/past/modal prefinals, existing 어야겠 bundle and auxiliary/답다 composition; retains separate 기 + 에 nominalization.",
+      "remaining": "Omitted copulas, shortened 하다 causal allomorphs, further outer particles and contextual causal interpretation need review. Unknown lexical hypotheses remain unverified; source-listed prefinal licenses do not certify every colloquial or quoted usage.",
+      "evidence": [
+        {
+          "path": "tests/causal_endings.rs",
+          "test": "causal_endings_preserve_prefinals_copulas_auxiliaries_and_nominalization"
+        },
+        {
+          "path": "tests/causal_endings.rs",
+          "test": "causal_endings_reject_unlicensed_prefinals_and_vowel_recoveries"
+        },
+        {
+          "path": "docs/causal-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "causal-gie",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-modal",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-copula",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-auxiliary",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-no-retrospective",
+          "judgment": "ending"
+        },
+        {
+          "case": "causal-no-bieup",
+          "judgment": "ending"
         }
       ]
     },

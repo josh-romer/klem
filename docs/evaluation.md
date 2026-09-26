@@ -776,3 +776,37 @@ on x86_64-linux. The full-dictionary packaged app passes four connective choices
 separate ending/particle source links and polite alternatives, filtering of the
 two unknown snapshot nominals, and desktop/mobile checks without JavaScript
 errors or overflow. Other Nix platforms were not executed on this host.
+
+## Causal endings (COV-017n)
+
+[The comparison](causal-evaluation.json) records two new GSD development
+recoveries, 추천하길래 and 뽑길래, protected by complete byte-identical source
+sentences. Remaining development misses are **138 KAIST and 167 GSD**. No
+previous groups or recovered component sets are lost. The separate causal 기에
+and nominalization 기 + 에 readings illustrate why lemma-group recall cannot
+measure decomposition precision. All additions across 41 audited surfaces are
+recorded, including unknown lexical hypotheses; none of those hypotheses is
+certified merely by being generated.
+
+Twelve new source-backed ledger cases bring the total to **368 cases, 208 required
+and 166 forbidden judgments**. Tests cover prefinal differences, literal ㄱ
+boundaries, explicit copulas, auxiliary/답다 composition, NFD, dictionary/CLI
+parity and preserved nominalization alternatives. Two primary ending entries
+bring the teaching catalog to **228 canonical forms**, supported by 274 source
+entries; the grammar fixture contains 275 entries including the existing extra
+propositive allomorph. Every earlier source entry remains unchanged. Nine
+lexical entries supply the offline dictionary tests. The inventory queue now
+records nine scoped reviews and 706 entries without a disposition in that
+ledger. Independent linguistic review remains pending.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, all thirty
+unchanged stress fingerprints and the 1,024-syllable memory test pass. Historical
+corpus baselines and optimization snapshots are unchanged. The frontend build,
+complete browser/HTTP suite, `nix flake check` (including the inventory integrity
+check), and `nix build .#web` pass on x86_64-linux. Other declared Nix platforms
+were not executed. The packaged app with the full dictionary passes eight causal
+readings, two nominalization alternatives, both new source links, five forbidden
+paths, and desktop/mobile checks without JavaScript errors or overflow.
+
+Omitted copulas before these endings, shortened 하다 causal allomorphs, further
+outer particles and contextual interpretation remain tracked as open work.

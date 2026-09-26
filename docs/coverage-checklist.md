@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–m/018a–d/019a–c/020a–d/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–n/018a–d/019a–c/020a–d/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) starts with seven scoped
-  dispositions from COV-016/017m/020d; 708 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records nine scoped
+  dispositions from COV-016/017m–n/020d; 706 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -218,7 +218,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–m implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–n implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -398,6 +398,17 @@ review remains open under the completion review below.
   recoveries with no lost groups/component sets or changed stress fingerprints.
   Arbitrary lexical head verb/adjective classes remain unknown; other quoted
   contractions remain open. See [scope](rules.md#polite-informative-and-reported-endings-cov-017m).
+- [x] **COV-017n — Causal -기에/-길래.** Literal predicate, explicit copula,
+  known adjective suffix and auxiliary paths retain the ending as one component.
+  The existing 기 + 에 nominalization reading remains separately selectable.
+  Source-listed honorific/past attachment is supported for both; 기에 additionally
+  permits modal 겠, including the existing 어야겠 bundle. Retrospective 더 and
+  vowel-only irregular recovery at ㄱ are excluded. Evidence:
+  [boundary/composition tests](../tests/causal_endings.rs), twelve `causal-*`
+  ledger cases, two complete GSD sentences, dictionary/CLI parity, and browser
+  source links with nominalization alternatives. See [scope](rules.md#causal-endings-cov-017n)
+  and [evaluation](causal-evaluation.json). Omitted-copula and shortened 하다
+  allomorphs, further outer particles, and contextual interpretation remain open.
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–d implement post-ending, outer choice, emphatic,
   concessive and definition particles, including nominal (이)라고 alternatives.**
@@ -658,7 +669,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 226 currently emitted canonical grammar forms.** The initial catalog
+  for all 228 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

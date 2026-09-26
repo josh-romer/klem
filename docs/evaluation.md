@@ -1284,3 +1284,50 @@ The source-backed distinction between lexical 기로 하다 and auxiliary connec
 is preserved by a spaced-text regression; no joined auxiliary rule is inferred
 from that main-verb construction. Independent Korean-language review, fresh
 passages and remaining inventory dispositions are still pending.
+
+## Retrospective adnominal and question alternatives (COV-017t)
+
+The [comparison](retrospective-adnominal-evaluation.json) reviews **157 surfaces**:
+**215 candidates removed and 85 added**, with no changed provenance on retained
+analyses. Every removal contains recovered 더 before one of the 17 reviewed
+present/prospective endings. Every added candidate contains 던가 or 던지 and has
+a corresponding split analysis. The 68-path four-class matrix was present before
+this change; the new bundles also reject a doubled retrospective marker.
+
+The source review preserves 더 + 은/은데/은가/은지-family analyses rather than
+inferring a prohibition from ordinary adnominal attachment notes alone. It adds
+bundled 던가/던지, their copula and particle compositions, and 던가 before
+conjectural 보다/싶다 with the existing adjective restriction. Choice 든가/든지
+remain separate. 던지 is not introduced as an auxiliary connector, and neither
+new bundle is treated as a productive copula base.
+
+Development gold recovery remains **117 KAIST and 160 GSD misses**, without lost
+groups or component sets. KAIST mean candidates rises from 5.823987 to 5.826103
+as dictionary bundles become alternatives; GSD remains at 5.361898. These are
+ambiguity measures, not precision estimates. Four complete unchanged annotated
+sentences preserve 정도였던가, 아니었던가요, 먹던 and 별로였던. All thirty
+stress fingerprints and historical corpus baselines remain unchanged.
+
+The 144 added cases bring the ledger to **958 cases, 500 required and 464 forbidden
+judgments**. Thirty-two KRDict entries and five NIKL references support the review.
+Twenty-two grammar entries gain scoped dispositions and four existing reviews
+add evidence; six expression entries remain separately attributed outside the
+grammar-POS queue. The inventory now has **137 scoped entries and 578 without a
+disposition**. Two new canonical forms and eleven new sources bring the catalog
+to 260 forms and 324 source entries; all 314 previous grammar-fixture entries are
+preserved, with eleven additions. Existing lexical and auxiliary fixtures are
+merged by entry ID for dictionary/CLI parity.
+
+Formatting, the full Rust suite, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build and complete browser/HTTP
+suite pass. `nix flake check` and `nix build .#web` pass on x86_64-linux; other
+declared systems were not executed. The packaged full-dictionary app passes ten
+reading selections, split/bundle and short-allomorph source checks, and all 57 new
+forbidden paths. Desktop/mobile screenshots were inspected with no JavaScript
+errors or horizontal overflow.
+
+These are bounded attachment and representation checks. Bare omitted-copula
+의사던 remains unjudged; the question/connective sources do not certify that
+adnominal boundary. Other retrospective followers, lexical/class restrictions,
+independent Korean-language review, fresh passages and the broader inventory
+review remain open.

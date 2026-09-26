@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **115 scoped
-reviews**, with **600 entries unreviewed in this ledger**. This does not imply
+The [manual ledger](inventory-reviews.json) currently contains **137 scoped
+reviews**, with **578 entries unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
 and source-specific candidate judgments. Independent Korean-language review
@@ -412,3 +412,15 @@ Short 며/면서/므로 receive explicit source links in their existing canonica
 labels. The earlier unjudged 더 + 나 + 요 and nominalizing 기 paths are now
 rejected with separate exact-path judgments. Other followers and lexical/sense
 constraints remain open; this does not certify full coverage of any entry.
+
+
+## Retrospective adnominal and question alternatives (COV-017t)
+
+[The review](retrospective-adnominal-evaluation.json) records 32 KRDict entries
+and five NIKL references about segmentation. 22 grammar entries gain scoped
+dispositions and 4 existing entries add evidence without discarding their
+previous scope. The queue now contains **137 scoped entries and 578 without a disposition**.
+The review distinguishes the present/prospective exclusions from retained
+retrospective adnominal components, and adds the dictionary bundles 던가/던지.
+Nine short-allomorph sources and two bundle sources receive catalog links.
+Independent Korean review and other attachment/class conditions remain open.

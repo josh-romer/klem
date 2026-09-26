@@ -1,0 +1,27 @@
+# sent_id = dev-s120
+# text = 예전에 먹던 냉동삼겹살이 먹고 싶을 때 꼭 가봐야 할 곳.
+# translit = .ye.jeon.e .meog.deon .naeng.dong.sam.gyeob.sal.i .meog.go .sip.eul .ddae .ggog .ga.bwa.ya .hal .gos.
+1	예전에	예전+에	ADV	NNG+JKB	_	2	obl	_	Translit=.ye.jeon.e|LTranslit=.ye.jeon+.e
+2	먹던	먹+던	VERB	VV+ETM	_	3	acl:relcl	_	Translit=.meog.deon|LTranslit=.meog+.deon
+3	냉동삼겹살이	냉동+삼겹살+이	NOUN	NNG+NNG+JKS	_	4	obj	_	Translit=.naeng.dong.sam.gyeob.sal.i|LTranslit=.naeng.dong+.sam.gyeob.sal+.i
+4	먹고	먹+고	VERB	VV+EC	_	8	advcl	_	Translit=.meog.go|LTranslit=.meog+.go
+5	싶을	싶+을	VERB	VX+ETM	_	4	flat	_	Translit=.sip.eul|LTranslit=.sip+.eul
+6	때	때	NOUN	NNG	_	4	obl	_	OrigDeprel=mark|Translit=.ddae|LTranslit=.ddae
+7	꼭	꼭	ADV	MAG	_	8	advmod	_	Translit=.ggog|LTranslit=.ggog
+8	가봐야	가+아+보+아야	VERB	VV+EC+VX+EC	_	10	dep	_	Translit=.ga.bwa.ya|LTranslit=.ga+.a+.bo+.a.ya
+9	할	하+ㄹ	VERB	VX+ETM	_	8	flat	_	Translit=.hal|LTranslit=.ha+ㄹ
+10	곳	곳	NOUN	NNG	_	0	root	_	SpaceAfter=No|Translit=.gos|LTranslit=.gos
+11	.	.	PUNCT	SF	_	10	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s138
+# text = 원할머니 체인 중 서비스가 가장 별로였던 곳.
+# translit = .weon.hal.meo.ni .che.in .jung .seo.bi.seu.ga .ga.jang .byeol.ro.yeoss.deon .gos.
+1	원할머니	원+할머니	NOUN	NNG+NNG	_	6	nmod	_	Translit=.weon.hal.meo.ni|LTranslit=.weon+.hal.meo.ni
+2	체인	체인	NOUN	NNG	_	1	flat	_	Translit=.che.in|LTranslit=.che.in
+3	중	중	ADP	NNB	_	1	case	_	Translit=.jung|LTranslit=.jung
+4	서비스가	서비스+가	NOUN	NNG+JKS	_	6	nsubj	_	Translit=.seo.bi.seu.ga|LTranslit=.seo.bi.seu+.ga
+5	가장	가장	ADV	MAG	_	6	advmod	_	Translit=.ga.jang|LTranslit=.ga.jang
+6	별로였던	별로+이+었+던	VERB	MAG+VCP+EP+ETM	_	7	acl:relcl	_	Translit=.byeol.ro.yeoss.deon|LTranslit=.byeol.ro+.i+.eoss+.deon
+7	곳	곳	NOUN	NNG	_	0	root	_	SpaceAfter=No|Translit=.gos|LTranslit=.gos
+8	.	.	PUNCT	SF	_	7	punct	_	Translit=.|LTranslit=.
+

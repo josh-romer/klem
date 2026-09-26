@@ -667,3 +667,15 @@ sense, preserving every prior entry. The existing `krdict-prefinal-copulas.json`
 lexical fixture is reused. `docs/retrospective-connective-evaluation.json` retains
 source notes, hashes and every targeted candidate removal; no historical corpus
 baseline or stress fingerprint is regenerated.
+
+
+`kaist-retrospective-adnominals.conllu` and `gsd-retrospective-adnominals.conllu`
+each preserve two complete UD 2.15 development sentences byte for byte, covering
+정도였던가, 아니었던가요, 먹던 and 별로였던. Existing corpus attribution and
+licensing above apply. `krdict-grammar-labels.json` adds eleven short-allomorph
+and retrospective-bundle entries with English equivalents and the first example
+group of each sense; every earlier entry remains. The dictionary regression
+merges existing prefinal-copula and auxiliary-inventory fixtures by entry ID,
+so shared entries are imported once. The comparison in
+`docs/retrospective-adnominal-evaluation.json` records sources, fixture hashes,
+and every targeted added/removed path without regenerating historical baselines.

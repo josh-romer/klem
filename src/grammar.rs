@@ -269,6 +269,7 @@ pub(crate) const AUXILIARY_CONNECTORS: &[&str] = &[
     "다가",
     "는가",
     "은가",
+    "던가",
     "나",
     "을까",
     "으면",
@@ -505,6 +506,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "던",
             "던데",
             "던데요",
+            "던가",
+            "던지",
             "나",
             "나요",
             "네",
@@ -577,6 +580,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("더라도", "더라도", 0),
             ("던데", "던데", 0),
             ("던데요", "던데요", 0),
+            ("던가", "던가", 0),
+            ("던지", "던지", 0),
         ] {
             out.push(Ending {
                 suffix,

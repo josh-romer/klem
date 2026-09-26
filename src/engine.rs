@@ -383,6 +383,25 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             | "건대"
                             | "소"
                             | "오"
+                            | "는"
+                            | "는데"
+                            | "는데요"
+                            | "는데도"
+                            | "는데다가"
+                            | "는가"
+                            | "는가요"
+                            | "는지"
+                            | "을"
+                            | "을까"
+                            | "을까요"
+                            | "을게"
+                            | "을게요"
+                            | "을래"
+                            | "을래요"
+                            | "을지"
+                            | "을수록"
+                            | "던가"
+                            | "던지"
                     )
                 {
                     continue;
@@ -704,7 +723,7 @@ fn auxiliary_class(
         "못하" => previous,
         "보" => match connector {
             Some("어" | "다가") => Some(Verb),
-            Some("는가" | "은가" | "나" | "을까") => Some(Adjective),
+            Some("는가" | "은가" | "던가" | "나" | "을까") => Some(Adjective),
             _ => None,
         },
         "하" => match connector {
@@ -962,6 +981,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "던"
             | "던데"
             | "던데요"
+            | "던가"
+            | "던지"
             | "더라"
             | "더라고"
             | "더라는"
@@ -1494,7 +1515,7 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
         "으려" | "으려고" => matches!(stem, "들" | "하"),
         "기로" | "자고" => stem == "들",
         "다" | "다가" => matches!(stem, "보" | "못하") || (connector == "다" && stem == "싶"),
-        "는가" | "은가" | "나" | "을까" => matches!(stem, "보" | "싶"),
+        "는가" | "은가" | "던가" | "나" | "을까" => matches!(stem, "보" | "싶"),
         "으면" => matches!(stem, "하" | "싶"),
         "기도" | "기는" | "기만" | "고자" => stem == "하",
         _ => false,
@@ -1627,7 +1648,7 @@ impl PredicateEnd {
                 }
                 matches!(
                     m.form.as_str(),
-                    "기" | "음" | "는가" | "은가" | "는지" | "은지"
+                    "기" | "음" | "는가" | "은가" | "는지" | "은지" | "던가" | "던지"
                 ) || match self {
                     Self::BeforeParticle(form) => before_particle(&m.form, form),
                     _ => false,

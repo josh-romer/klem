@@ -3,6 +3,36 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn retrospective_adnominals_preserve_four_unchanged_annotated_cases() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-retrospective-adnominals.conllu").as_slice(),
+            vec![
+                ("id:MH2_0149-s133/2", "정도였던가", vec!["정도", "이다"]),
+                ("id:MH2_0159-s167/14", "아니었던가요", vec!["아니다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-retrospective-adnominals.conllu").as_slice(),
+            vec![
+                ("id:dev-s120/2", "먹던", vec!["먹다"]),
+                ("id:dev-s138/6", "별로였던", vec!["별로", "이다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "retrospective-adnominals").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn retrospective_connectives_preserve_four_unchanged_annotated_cases() {
     for (corpus, input, cases) in [
         (

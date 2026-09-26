@@ -628,6 +628,16 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["먹던", ["먹", "더", "은"], "은", "Noun modifier", 80344, "ending"],
+    ["먹던", ["먹", "던"], "던", "Recalled noun modifier / question", 86038, "ending"],
+    ["먹던가", ["먹", "더", "은가"], "은가", "Question / wondering", 86125, "ending"],
+    ["먹던가", ["먹", "던가"], "던가", "Recalled question / wondering", 89043, "ending"],
+    ["먹던지", ["먹", "더", "은지"], "은지", "Uncertainty / wondering", 87432, "ending"],
+    ["먹던지", ["먹", "던지"], "던지", "Recalled reason / wondering", 87431, "ending"],
+    ["의사던가", ["의사", "이", "던가"], "던가", "Recalled question / wondering", 89043, "ending"],
+    ["먹던가요", ["먹", "던가", "요"], "요", "Polite", 86116, "particle"],
+    ["먹던가싶다", ["먹", "던가", "싶", "다"], "다", "Plain / dictionary ending", 85041, "ending"],
+    ["갈수록", ["가", "을수록"], "을수록", "The more … the more", 74356, "ending"],
     ["먹나요", ["먹", "나", "요"], "요", "Polite", 86116, "particle"],
     ["먹기", ["먹", "기"], "기", "Nominalizer", 72222, "ending"],
     ["먹음", ["먹", "음"], "음", "Nominalizer", 78528, "ending"],
@@ -1204,7 +1214,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

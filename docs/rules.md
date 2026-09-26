@@ -1868,3 +1868,47 @@ Four complete unchanged development sentences preserve 장손이기, 제한적�
 먹게 and 먹기. No gold group or recovered component set is lost in either
 corpus; all thirty stress fingerprints remain unchanged. Independent Korean
 review, fresh passages and the broader inventory audit remain pending.
+
+
+## Retrospective adnominal and question alternatives (COV-017t)
+
+The [comparison](retrospective-adnominal-evaluation.json) reviews 32 KRDict sources
+and records the relevant NIKL discussion. [NIKL's answer on 던](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=314188)
+recognizes differing segmentation conventions, including 더 + ㄴ. Its
+[discussion of 데/대](https://www.korean.go.kr/nkview/news/10/107.htm)
+describes retrospective 더 before ㄴ데. A separate
+[던지/든지 explanation](https://www.korean.go.kr/nkview/nklife/1987_2/9_18.html)
+describes the split 더 + ㄴ지 analysis. The ordinary attachment notes for short
+adnominals alone therefore do not establish a retrospective prohibition.
+Existing 더 + 은/은데/은가/은지 paths remain, including particles and the
+existing 은데도/은데다가 bundles. The joined 데다가 expression keeps its
+existing representation boundary; this does not introduce whitespace repair.
+
+[던가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89043)
+and [던지](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87431)
+are now available as single-ending alternatives. Their paths support earlier
+honorific/past/modal markers, explicit and vowel-final omitted copulas, ordinary
+question-clause particles and existing auxiliary composition. 던가 precedes
+conjectural 보다/싶다, retaining their adjective class. 던지 does not become an
+auxiliary connector, and neither bundle becomes a productive copula base.
+The separate lexical 하다 construction still needs its own representation audit.
+
+Recovered 더 is rejected before 는/는데/는데요/는데도/는데다가/는가/는가요/
+는지 and 을/을까/을까요/을게/을게요/을래/을래요/을지/을수록. All 68
+matrix paths across four predicate/copula classes were previously emitted.
+A second recovered 더 cannot precede the new retrospective bundles. These
+checks concern a recovered prefinal, leaving unclassified lexical stems intact.
+The choice spellings 든가/든지 remain distinct; no spelling correction is added.
+
+The grammar catalog adds two forms and eleven dictionary sources. Short ㄴ,
+ㄹ, ㄴ가, ㄴ지, ㄹ지, ㄹ까, ㄹ게, ㄹ래 and ㄹ수록 are attributed under their
+existing canonical forms. The ㄴ source is adnominal entry 78634, not the
+homonymous imperative entry 73877. All earlier sources and fixture entries remain.
+
+Each added candidate in the 157-surface comparison has a corresponding split
+analysis. Every removal has a reviewed incompatible boundary, and every retained
+analysis keeps its provenance. Corpus gold recovery and all stress fingerprints
+are unchanged. Bare omitted-copula 의사던 remains unjudged here; question and
+connective evidence does not certify that adnominal boundary. Other followers,
+lexical/class restrictions, independent Korean review and fresh passages remain
+open.

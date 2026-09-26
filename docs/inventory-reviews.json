@@ -3,6 +3,83 @@
   "review_status": "Agent-authored scoped dispositions; independent Korean-language review pending. Not full-entry coverage certification.",
   "entries": [
     {
+      "id": "krdict:62888",
+      "source_sha256": "1cf2d85ba20accaf29c937d34d26d23f86591016955b73438f3889fb26647873",
+      "status": "scoped",
+      "checklist": [
+        "COV-019d"
+      ],
+      "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged.",
+      "remaining": "This disposition covers only the expressive left-class boundary, not all nine senses of this entry. Unknown lexical adjective/verb identity, lexical-subset and contextual compatibility, and other connector/prefinal restrictions remain open.",
+      "evidence": [
+        {
+          "path": "tests/auxiliary_left_class.rs",
+          "test": "expressive_hada_keeps_adjectives_negatives_and_unclassified_heads"
+        },
+        {
+          "path": "tests/auxiliary_left_class.rs",
+          "test": "expressive_hada_rejects_known_verbs_copulas_and_inherited_classes"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "auxiliary_class_constraints_keep_dictionary_and_cli_results_in_sync"
+        },
+        {
+          "path": "docs/auxiliary-left-hada-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "left-hada-adjective",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-negative-adjective",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-derivation",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-following-verb",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-trial-verb",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-progressive-verb",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-copula",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-nominalized-copula",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-causative-verb",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-negative-verb",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-contracted-negative",
+          "judgment": "group"
+        },
+        {
+          "case": "left-hada-internal-particle",
+          "judgment": "group"
+        }
+      ]
+    },
+    {
       "id": "krdict:73011",
       "source_sha256": "f260c9315d06ce6654588243eaad8efd2bdc4ceb966ce223160d2b1d26eb715d",
       "status": "scoped",

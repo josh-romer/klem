@@ -810,3 +810,36 @@ paths, and desktop/mobile checks without JavaScript errors or overflow.
 
 Omitted copulas before these endings, shortened 하다 causal allomorphs, further
 outer particles and contextual interpretation remain tracked as open work.
+
+## Expressive auxiliary 하다 left class (COV-019d)
+
+[The comparison](auxiliary-left-hada-evaluation.json) records 75 removed
+hypotheses across 32 audited surfaces. Each removal has a known verb or
+represented copula immediately before expressive 어 하다, including inherited
+negative classes and internal particles. All eight newly forbidden ledger paths
+were present before the change and are now absent; the four new required paths
+remain. Unknown lexical heads remain unclassified, so dictionary presence alone
+still does not certify the adjective sense required by this construction.
+
+The ledger now contains **380 cases, 212 required and 174 forbidden judgments**.
+The offline source fixture adds expressive sense 9 to auxiliary 하다 entry
+62888, retaining its causative sense 1 and every earlier entry field. The
+228-form teaching catalog and 275-entry grammar fixture are unchanged. The
+persistent inventory records ten scoped reviews and 705 entries without a
+manual disposition. The 하다 review specifically covers this boundary, not
+all nine senses of the source entry.
+
+Development grouped recovery and component sets are unchanged: **138 KAIST and
+167 GSD misses** remain. The source-backed forbidden paths are agent-authored
+judgments; the corpora do not independently validate them. All **66,570 frozen
+cases**, all thirty unchanged stress fingerprints and the 1,024-syllable memory
+test pass. Historical baselines and optimization snapshots are unchanged.
+
+The Rust suite, formatting, Clippy, dictionary/CLI regressions and complete
+browser/HTTP suite pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared platforms were not executed. Frontend production
+source is unchanged. The packaged app with the full dictionary passes four
+expressive choices, six rejected paths, display of sense 9 and its exact source
+link, and desktop/mobile checks without JavaScript errors or overflow.
+Independent Korean-language review and other auxiliary attachment restrictions
+remain open.

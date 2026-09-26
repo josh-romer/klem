@@ -9,16 +9,19 @@
   },
   "evidence_sha256": {
     "docs/auxiliary-inventory.json": "16b7ac8ed9a8cb7f0b6cd9ef1251f1b4097a2abb02b36f4c3ad88b7e0e3c0cb9",
+    "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "bf07949c840b06d2a8086d9e33d9cca0903bcd7d35b1b6b4ed14c812c0f54023",
-    "docs/inventory-audit.md": "ba9f03a07cedac95e04e08a91afe931f88cdd411530ae1a589685ffe0b270b71",
-    "docs/inventory-reviews.json": "afd70ac212ac9e56d72fd39b098e07b1c8b03b7104877a581a0134589aed27b4",
+    "docs/coverage-checklist.md": "0d91a6aac5888ae218d4fc7c5401733bb2c35e4610724aaed3364663186e3774",
+    "docs/inventory-audit.md": "d6ddc89e24e2ced4643724241721527aaa975472535d92bc4a9adf34201b8259",
+    "docs/inventory-reviews.json": "d4e178e48623d8b8c450a0e6c959ae6b2b5a9eefbf7fd44d5a3d09da1a1e7dac",
     "docs/reporting-evaluation.json": "74f0fb2732024ef27d7250d374184bda3d766aeb32f2c6b787ee319157c6d96e",
+    "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
-    "tests/fixtures/validity.json": "b3f78d7d8b3e23f1b3eab6923c1ca4c8d16ba74df7fc9daf2e5322af829642a6",
+    "tests/dictionary.rs": "642cea71a606de80b1031a7c0ad399502e3aa8741d5f228fd83ddcae8a5117f0",
+    "tests/fixtures/validity.json": "555dedec902b18ea71db09cb23979b36be2e37d1e3a104c5004cb226b9c9e3da",
     "tests/reporting_endings.rs": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
     "web/src/grammar-labels.json": "e14ceb53823814e43b46e47aaadcca278d02c28dbb59effca783c150d14b379f"
   },
@@ -31,8 +34,8 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 706,
-      "scoped": 9
+      "unreviewed": 705,
+      "scoped": 10
     },
     "with_catalog_links": 214,
     "with_judgment_citations": 75
@@ -3553,6 +3556,66 @@
           "verdict": "required"
         },
         {
+          "case": "left-hada-adjective",
+          "judgment": "group",
+          "verdict": "required"
+        },
+        {
+          "case": "left-hada-causative-verb",
+          "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "left-hada-contracted-negative",
+          "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "left-hada-copula",
+          "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "left-hada-derivation",
+          "judgment": "group",
+          "verdict": "required"
+        },
+        {
+          "case": "left-hada-following-verb",
+          "judgment": "group",
+          "verdict": "required"
+        },
+        {
+          "case": "left-hada-internal-particle",
+          "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "left-hada-negative-adjective",
+          "judgment": "group",
+          "verdict": "required"
+        },
+        {
+          "case": "left-hada-negative-verb",
+          "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "left-hada-nominalized-copula",
+          "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "left-hada-progressive-verb",
+          "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "left-hada-trial-verb",
+          "judgment": "group",
+          "verdict": "forbidden"
+        },
+        {
           "case": "obligation-components",
           "judgment": "correct-group",
           "verdict": "required"
@@ -3567,7 +3630,81 @@
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:62888",
+        "source_sha256": "1cf2d85ba20accaf29c937d34d26d23f86591016955b73438f3889fb26647873",
+        "status": "scoped",
+        "checklist": [
+          "COV-019d"
+        ],
+        "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged.",
+        "remaining": "This disposition covers only the expressive left-class boundary, not all nine senses of this entry. Unknown lexical adjective/verb identity, lexical-subset and contextual compatibility, and other connector/prefinal restrictions remain open.",
+        "evidence": [
+          {
+            "path": "tests/auxiliary_left_class.rs",
+            "test": "expressive_hada_keeps_adjectives_negatives_and_unclassified_heads"
+          },
+          {
+            "path": "tests/auxiliary_left_class.rs",
+            "test": "expressive_hada_rejects_known_verbs_copulas_and_inherited_classes"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "auxiliary_class_constraints_keep_dictionary_and_cli_results_in_sync"
+          },
+          {
+            "path": "docs/auxiliary-left-hada-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "left-hada-adjective",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-negative-adjective",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-derivation",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-following-verb",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-trial-verb",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-progressive-verb",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-copula",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-nominalized-copula",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-causative-verb",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-negative-verb",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-contracted-negative",
+            "judgment": "group"
+          },
+          {
+            "case": "left-hada-internal-particle",
+            "judgment": "group"
+          }
+        ]
       }
     },
     {

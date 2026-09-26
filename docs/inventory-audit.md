@@ -17,13 +17,14 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) contains nine scoped reviews:
+The [manual ledger](inventory-reviews.json) contains ten scoped reviews:
 -듯/-듯이 (COV-016), four informative ending entries (COV-017m), and connective
--요 (COV-020d), plus causal -기에/-길래 (COV-017n). Their source notes were
+-요 (COV-020d), causal -기에/-길래 (COV-017n), and the expressive 어 하다
+sense of auxiliary 하다 (COV-019d). Their source notes were
 inspected individually; each review
 records its supported scope, remaining limits, checklist item, named Rust tests,
 evaluation evidence, and source-specific candidate judgments. Independent
-Korean-language review is pending. The other **706 entries are unreviewed in
+Korean-language review is pending. The other **705 entries are unreviewed in
 this ledger**, which does not imply they are unimplemented.
 
 The queue links **214 entries to the teaching catalog**, **75 to source-citing
@@ -225,3 +226,15 @@ separate 기 + 에 nominalization analysis. Two complete GSD sentences recover
 167 GSD**, without lost gold groups or component recoveries. Nine entries now
 have scoped dispositions in the persistent review ledger; the broader inventory,
 omitted copulas, shortened 하다 forms and contextual judgments remain open.
+
+## Expressive auxiliary 하다 review (COV-019d)
+
+[The left-class comparison](auxiliary-left-hada-evaluation.json) records the
+adjective selection of auxiliary 하다 sense 9, source 62888. Known auxiliary
+verbs and represented copulas are excluded at 어 하다; inherited negative
+classes and internal particles are checked. Other 하다 senses and unclassified
+lexical heads remain. The nine-sense entry has a scoped disposition specifically
+for this boundary, not certification of all its senses. This brings the review
+ledger to ten scoped entries, with 705 still without a disposition. Corpus
+recovery remains **138 KAIST / 167 GSD misses**; the 75 removed hypotheses in
+32 audited surfaces are listed individually, with independent review pending.

@@ -951,6 +951,21 @@ fn auxiliary_class_constraints_keep_dictionary_and_cli_results_in_sync() {
     let db = SqliteDictionary::open(dir.db()).unwrap();
     let mut session = DictionarySession::new(&db, 1024 * 1024);
     for (word, lemmas, forms) in [
+        (
+            "먹고싶어해요",
+            vec!["먹다", "싶다", "하다"],
+            vec!["고", "어", "어요"],
+        ),
+        (
+            "학생다워해요",
+            vec!["학생", "하다"],
+            vec!["답다", "어", "어요"],
+        ),
+        (
+            "먹고싶지않아해요",
+            vec!["먹다", "싶다", "않다", "하다"],
+            vec!["고", "지", "어", "어요"],
+        ),
         ("먹고싶은", vec!["먹다", "싶다"], vec!["고", "은"]),
         (
             "먹고싶지는않은",
@@ -1000,7 +1015,19 @@ fn auxiliary_class_constraints_keep_dictionary_and_cli_results_in_sync() {
         );
     }
     assert!(db.lookup("없다").unwrap().iter().all(|e| e.pos == "형용사"));
+    let hada = db.entry("krdict:62888").unwrap().unwrap();
+    assert!(hada.senses.iter().any(|s| {
+        s.id == "9"
+            && s.notes
+                .iter()
+                .any(|n| n == "형용사 뒤에서 '-어하다'로 쓴다.")
+    }));
     for (word, forbidden) in [
+        ("먹어봐해요", vec!["먹다", "보다", "하다"]),
+        ("먹고있어해요", vec!["먹다", "있다", "하다"]),
+        ("학생이어해요", vec!["학생", "이다", "하다"]),
+        ("먹기이어해요", vec!["먹다", "이다", "하다"]),
+        ("먹어보지않아해요", vec!["먹다", "보다", "않다", "하다"]),
         ("먹어없다", vec!["먹다", "없다"]),
         ("먹고싶는다", vec!["먹다", "싶다"]),
         ("먹을만하는", vec!["먹다", "만하다"]),

@@ -499,3 +499,11 @@ license. They contain the saved 추천하길래 and 뽑길래 misses. The origin
 lemma/XPOS fields and sentence context remain; GSD's automatic annotation is
 secondary evidence and does not label every valid alternative. See the existing
 GSD source/license links above and `docs/causal-evaluation.json` for hashes.
+
+COV-019d extends entry 62888 in `krdict-auxiliary-inventory.json` with its
+expressive -어 하다 sense 9. It retains the source attachment note, Korean
+definition, English equivalent and first example group; the existing causative
+sense 1 and every other entry are unchanged. This is adapted from the same
+September 2026 National Institute of Korean Language KRDict export under
+CC BY-SA 2.0 KR, with the source/license links above. It validates dictionary
+source integration, not an independently annotated candidate precision score.

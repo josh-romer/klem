@@ -1318,3 +1318,37 @@ Omitted copulas before these endings, additional outer particles, and shortened
 shortening such as 생각하다 + 기 + 에 is preserved. The tool does not infer
 causal relations between clauses, choose a contextual sense, or certify the
 lexical membership of arbitrary recovered stems.
+
+## Expressive 하다 left class (COV-019d)
+
+KRDict [하다, auxiliary verb sense 9](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888)
+selects an adjective before expressive -어 하다. NIKL's
+[궁금해하다 explanation](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8010)
+confirms that construction. This differs from causative 게 하다, necessity 어야
+하다, nominalizing 기도 하다 and other 하다 senses. The offline auxiliary
+fixture now retains sense 9 as well as its existing causative sense 1.
+
+The ordered analysis already knows some predicate classes: auxiliary uses such
+as trial 어 보다 are verbs; 싶다 and several other auxiliaries are adjectives;
+explicit 답다 supplies an adjective; represented 이다 is a copula. Expressive
+어 하다 now excludes a known verb or copula immediately on its left. Negative
+않다/아니하다/못하다 inherit a known class, and internal particles or contracted
+잖 do not change it. The check handles nominalized predicate + copula as well.
+In 학생답게해해요, the immediately preceding 게 하다 is a verb even though the
+chain starts with an adjective suffix.
+
+먹고싶어한다 and 학생다워해요 retain their adjective paths. Following auxiliaries
+still compose: 먹고싶어해본다 keeps 먹다 + 싶다 + 하다 + 보다. Unknown lexical
+heads remain unclassified, so a hypothesis such as 먹다 + 어 + 하다 in 먹어하다
+is still emitted for later lexical/sense review. Dictionary headword filtering
+alone does not establish the required adjective sense. Other copula connectors,
+including the existing 학생이고싶다 alternative, remain.
+
+This source-specific restriction is not generalized to every auxiliary: the
+54-entry source inventory includes homonyms, multiple left classes and notes
+that say 'mainly', as well as lexical-subset and contextual conditions. Its
+remaining restrictions stay under COV-019. The [comparison](auxiliary-left-hada-evaluation.json)
+records every removal in the audited cases. Existing annotated corpus groups
+remain unchanged; those corpora do not independently certify these newly
+forbidden paths or all retained alternatives. Independent linguistic review
+remains pending.

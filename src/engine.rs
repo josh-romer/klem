@@ -552,6 +552,7 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
 enum PredicateClass {
     Verb,
     Adjective,
+    Copula,
 }
 
 // Classes belong to a particular auxiliary use, not every homonym of a lemma.
@@ -599,6 +600,19 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
     let mut previous = None;
     let mut connector = None;
     for lemma in &a.lemmas {
+        // Expressive -어 하다 selects an adjective. Check the immediately
+        // preceding known role, including inherited negative classes. A
+        // lexical head remains unknown without dictionary/sense analysis.
+        if lemma.kind == LemmaKind::Auxiliary
+            && lemma.text == "하다"
+            && connector == Some("어")
+            && matches!(
+                previous,
+                Some(PredicateClass::Verb | PredicateClass::Copula)
+            )
+        {
+            return false;
+        }
         let mut inflected = matches!(
             lemma.kind,
             LemmaKind::Predicate | LemmaKind::Auxiliary | LemmaKind::Copula
@@ -609,6 +623,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                 connector,
                 previous,
             )
+        } else if lemma.kind == LemmaKind::Copula {
+            Some(PredicateClass::Copula)
         } else {
             None
         };
@@ -671,7 +687,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                     ),
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
-                    Some(PredicateClass::Verb) | None => false,
+                    Some(PredicateClass::Verb | PredicateClass::Copula) | None => false,
                 }
             {
                 return false;

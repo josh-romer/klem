@@ -1,0 +1,3797 @@
+{
+  "schema_version": 1,
+  "scope": "COV-019d: expressive 어 하다 requires an adjective when the immediately preceding class is known; preserve unknown lexical hypotheses and other 하다 connectors.",
+  "baseline_commit": "078b1c882770cc6231f1f53220ee48e993d79cdc",
+  "sources": {
+    "auxiliary_hada": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888",
+    "nikl_explanation": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8010"
+  },
+  "source_evidence": "Pinned KRDict sense 9 and NIKL explanation select an adjective before expressive 어 하다. The auxiliary fixture now retains the actual attachment note and example for sense 9.",
+  "source_sha256": {
+    "src/engine.rs": "d8328a7935d290f788131ecf039caae8fd28c1e252843387bf514bdd5a22f2a2",
+    "src/grammar.rs": "e32466737b914fb96bde016f588199cdaf06e6e50eee78813d82520b9741b6ca",
+    "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
+    "tests/dictionary.rs": "642cea71a606de80b1031a7c0ad399502e3aa8741d5f228fd83ddcae8a5117f0",
+    "tests/validity.rs": "6264a995de933b661e9c1d408879d15a82990cd6cca0b10ecb384e180cdb80b0",
+    "tests/fixtures/validity.json": "555dedec902b18ea71db09cb23979b36be2e37d1e3a104c5004cb226b9c9e3da",
+    "tests/fixtures/optimization.json": "461482340a2bbff3e02278a47e4fcb6262e8f35fd9425375e881625ba60a1e25",
+    "tests/fixtures/krdict-auxiliary-inventory.json": "41748dcae063735e5cb87e55c903e1fa61c50dc58c6f511936b0ce03fb0845a2",
+    "web/tests/browser.mjs": "cfad47db8cd568966bca9765bf267c423c8e2e2d6f83f9e440b7976467b0afac"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "cf3825470a20b16f7b91e264c305e9f069386b04dbdaa131b53376eb14b44bee",
+      "after_sha256": "dd02a08998515081108cb05ca28e91fe8abd2b4c8b21b25b93d14021df3cf13d",
+      "converted": 22220,
+      "before_matched": 22082,
+      "after_matched": 22082,
+      "remaining_misses": 138,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": []
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "4aefe4101b1671723c81e27c0c218156013197b9a0d6bf4732a9f9c9ca6d11b0",
+      "after_sha256": "5be0d07722ee719a5543ada968975dc0bc1fc473755cba884ba85e7d54e34727",
+      "converted": 9989,
+      "before_matched": 9822,
+      "after_matched": 9822,
+      "remaining_misses": 167,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": []
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "먹고싶어한다",
+      "before_count": 10,
+      "after_count": 10,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶어해요",
+      "before_count": 18,
+      "after_count": 18,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶어도한다",
+      "before_count": 10,
+      "after_count": 10,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶지않아해요",
+      "before_count": 22,
+      "after_count": 22,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶지는않아해요",
+      "before_count": 22,
+      "after_count": 22,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶잖아해요",
+      "before_count": 22,
+      "after_count": 22,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶지못해해요",
+      "before_count": 22,
+      "after_count": 22,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶어해본다",
+      "before_count": 13,
+      "after_count": 13,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹나봐해요",
+      "before_count": 16,
+      "after_count": 14,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹나다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.vowel",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹나다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.vowel",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생다워해요",
+      "before_count": 16,
+      "after_count": 16,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "학생이고싶다",
+      "before_count": 6,
+      "after_count": 6,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹어하다",
+      "before_count": 8,
+      "after_count": 8,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "좋아한다",
+      "before_count": 9,
+      "after_count": 9,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹어봐해요",
+      "before_count": 18,
+      "after_count": 12,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.vowel",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.vowel",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.vowel",
+            "deletion.eu",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.vowel",
+            "deletion.eu",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어봐도한다",
+      "before_count": 10,
+      "after_count": 7,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            },
+            {
+              "form": "는다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.attached",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            },
+            {
+              "form": "는다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.attached",
+            "contraction.identical",
+            "contraction.vowel",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            },
+            {
+              "form": "는다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.attached",
+            "contraction.vowel",
+            "deletion.eu",
+            "ending",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고있어해요",
+      "before_count": 18,
+      "after_count": 16,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고계셔해요",
+      "before_count": 20,
+      "after_count": 18,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "계시다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "계시다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이어해요",
+      "before_count": 20,
+      "after_count": 18,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이었어해요",
+      "before_count": 26,
+      "after_count": 24,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "irregular.ha",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹기이어해요",
+      "before_count": 24,
+      "after_count": 18,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "irregular.ha",
+            "nominalization",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "irregular.ha",
+            "nominalization"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "deletion.ha",
+            "ending",
+            "irregular.ha",
+            "nominalization",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "deletion.ha",
+            "ending",
+            "irregular.ha",
+            "nominalization"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생답게해해요",
+      "before_count": 26,
+      "after_count": 16,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "게",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "게",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답겋다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "ending",
+            "irregular.ha",
+            "irregular.hieut",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답겋다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "ending",
+            "irregular.ha",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답게다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답게다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "게",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "게",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "게",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "deletion.ha",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "게",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "deletion.ha",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보지않아해요",
+      "before_count": 26,
+      "after_count": 18,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보지는않아해요",
+      "before_count": 26,
+      "after_count": 18,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "irregular.ha",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "irregular.ha",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보잖아해요",
+      "before_count": 26,
+      "after_count": 18,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.negative",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.negative",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.negative",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "contraction.negative",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.negative",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.negative",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.negative",
+            "deletion.eu",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.negative",
+            "deletion.eu",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보지아니해해요",
+      "before_count": 26,
+      "after_count": 18,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "아니하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "아니하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "아니하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "아니하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "아니하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "아니하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "아니하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "아니하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보지못해해요",
+      "before_count": 26,
+      "after_count": 18,
+      "added": [],
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "못하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "못하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "못하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "못하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "못하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "못하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "못하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "못하다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "irregular.ha"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이었으면한다",
+      "before_count": 11,
+      "after_count": 11,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹어봐야한다",
+      "before_count": 10,
+      "after_count": 10,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶어서",
+      "before_count": 8,
+      "after_count": 8,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "학생답게한다",
+      "before_count": 11,
+      "after_count": 11,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "학생이다",
+      "before_count": 5,
+      "after_count": 5,
+      "added": [],
+      "removed": []
+    },
+    {
+      "surface": "먹고싶어했어요",
+      "before_count": 24,
+      "after_count": 24,
+      "added": [],
+      "removed": []
+    }
+  ],
+  "new_judgment_checks": [
+    {
+      "case": "left-hada-adjective",
+      "judgment": "group",
+      "verdict": "required",
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "case": "left-hada-negative-adjective",
+      "judgment": "group",
+      "verdict": "required",
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "case": "left-hada-derivation",
+      "judgment": "group",
+      "verdict": "required",
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "case": "left-hada-following-verb",
+      "judgment": "group",
+      "verdict": "required",
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "case": "left-hada-trial-verb",
+      "judgment": "group",
+      "verdict": "forbidden",
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "case": "left-hada-progressive-verb",
+      "judgment": "group",
+      "verdict": "forbidden",
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "case": "left-hada-copula",
+      "judgment": "group",
+      "verdict": "forbidden",
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "case": "left-hada-nominalized-copula",
+      "judgment": "group",
+      "verdict": "forbidden",
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "case": "left-hada-causative-verb",
+      "judgment": "group",
+      "verdict": "forbidden",
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "case": "left-hada-negative-verb",
+      "judgment": "group",
+      "verdict": "forbidden",
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "case": "left-hada-contracted-negative",
+      "judgment": "group",
+      "verdict": "forbidden",
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "case": "left-hada-internal-particle",
+      "judgment": "group",
+      "verdict": "forbidden",
+      "before_present": true,
+      "after_present": false
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "source_fixture": {
+    "path": "tests/fixtures/krdict-auxiliary-inventory.json",
+    "sha256": "41748dcae063735e5cb87e55c903e1fa61c50dc58c6f511936b0ce03fb0845a2",
+    "changed_entry": "krdict:62888",
+    "added_sense": "9",
+    "every_existing_entry_field_and_sense_unchanged": true
+  },
+  "remaining": [
+    "Unknown lexical heads remain unclassified; dictionary headword or broad predicate-POS compatibility does not certify the required adjective sense.",
+    "Other auxiliary left-class restrictions remain open. Multiple senses, primarily/mainly attachment notes and lexical subsets prevent a blanket verb-only filter.",
+    "Known adjective attachment is a structural license, not contextual sense/semantic compatibility for every adjective auxiliary. Independent Korean-language review remains pending.",
+    "Development corpora do not independently certify the newly forbidden paths; their grouped gold recovery is unchanged."
+  ],
+  "review_status": "Source-backed agent judgments; independent linguistic review pending. No precision estimate."
+}

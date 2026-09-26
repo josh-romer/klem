@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–n/018a–d/019a–c/020a–d/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–n/018a–d/019a–d/020a–d/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records nine scoped
-  dispositions from COV-016/017m–n/020d; 706 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records ten scoped
+  dispositions from COV-016/017m–n/019d/020d; 705 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -471,7 +471,8 @@ review remains open under the completion review below.
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
   COV-019c checks known auxiliary adjective inflections and removes unsupported
-  어 + 없다. Remaining: left verb/adjective and lexical-subset restrictions,
+  어 + 없다. COV-019d checks the known left class before expressive 어 하다.
+  Remaining: other left verb/adjective and lexical-subset restrictions,
   further ending/prefinal constraints, and additional particle combinations.
   Distinguish independent compounds and
   contextual auxiliary senses; dictionary presence does not resolve these.
@@ -520,6 +521,19 @@ review remains open under the completion review below.
   and browser/API checks. The [evaluation](auxiliary-class-evaluation.json)
   records each removed candidate in the targeted cases; all current fingerprints
   and corpus recoveries remain. See [scope](rules.md#auxiliary-adjective-inflections-and-legacy-links-cov-019c).
+- [x] **COV-019d — Known left classes before expressive -어 하다.**
+  Known auxiliary verbs and represented copulas no longer feed expressive 어 하다.
+  Classes propagate through negatives, including contracted 잖 and internal
+  particles; the immediately preceding class is checked after causative 게 하다.
+  Adjective auxiliary and explicit 답다 paths remain, as do unclassified lexical
+  hypotheses and other copula/하다 connectors. Evidence:
+  [class/composition tests](../tests/auxiliary_left_class.rs), twelve `left-hada-*`
+  ledger cases, dictionary/CLI parity, the retained expressive source sense,
+  and browser regressions. [The comparison](auxiliary-left-hada-evaluation.json)
+  lists each removed candidate and verifies unchanged corpus recovery and stress
+  fingerprints. This is not a blanket left-class filter for all auxiliaries;
+  lexical-subset and contextual sense restrictions remain open. See
+  [scope and sources](rules.md#expressive-hada-left-class-cov-019d).
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and

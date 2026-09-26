@@ -1,0 +1,28 @@
+[package]
+name = "klem"
+version = "0.1.0"
+edition = "2024"
+description = "Explainable, exhaustive rule-based Korean lemma candidates"
+license = "MIT OR Apache-2.0"
+default-run = "klem"
+exclude = ["data/corpora/**", "data/books/**", "data/dictionaries/**"]
+
+[dependencies]
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+unicode-normalization = "0.1"
+unicode-general-category = "1"
+rusqlite = { version = "0.37", features = ["bundled"] }
+sha2 = "0.10"
+tiny_http = { version = "0.12", optional = true }
+
+[features]
+web = ["dep:tiny_http"]
+
+[[bin]]
+name = "klem-web"
+path = "src/bin/klem-web.rs"
+required-features = ["web"]
+
+[profile.release]
+lto = "thin"

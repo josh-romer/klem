@@ -1,0 +1,232 @@
+use klem::dictionary::{Annotation, DictionarySession, SqliteDictionary};
+use klem::{Lemmatizer, Session, TokenAnalysis, WordAnalysis};
+use serde::Serialize;
+mod dictionary_cli;
+use std::{
+    collections::BTreeSet,
+    env,
+    fs::File,
+    io::{self, BufWriter, Read, Write},
+    sync::Arc,
+};
+
+const HELP: &str = "klem — Korean lemma candidates\n\nUsage:\n  klem word <word> [--format jsonl|text]\n  klem text [file|-] [--format jsonl|text] [--cache-bytes N]\n  klem explain <rule-id>\n\nJSON Lines is the default. Text records include original UTF-8 byte offsets.\nText input defaults to stdin. Cache defaults to 8 MiB; use 0 to disable.\nAll candidates are grammatical hypotheses, not dictionary-verified words.\n";
+
+const DICTIONARY_HELP: &str = "\nOffline dictionaries:\n  klem dict import-krdict <json-directory|file> <new.db> --snapshot <label>\n  klem dict info <db>\n  klem dict lookup <db> <headword>\n  klem dict entry <db> <entry-id>\n  klem word <word> --dictionary <db> [--dict-only]\n  klem text [file|-] --dictionary <db> [--dict-only]\nDictionary annotations require JSONL and preserve every candidate by default.\n--dict-only requires --dictionary and keeps analyses with dictionary entries\nfor every lemma, regardless of POS compatibility. Unmatched words retain an\nempty analyses array; text records and offsets are preserved.\n";
+
+#[derive(Serialize)]
+struct Annotated<T> {
+    #[serde(flatten)]
+    record: T,
+    dictionary: Option<Annotation>,
+}
+
+fn run() -> klem::dictionary::Result<()> {
+    let mut args = env::args().skip(1);
+    let Some(command) = args.next() else {
+        print!("{HELP}{DICTIONARY_HELP}");
+        return Ok(());
+    };
+    if command == "--help" || command == "-h" {
+        print!("{HELP}{DICTIONARY_HELP}");
+        return Ok(());
+    }
+    if command == "--version" {
+        println!("klem {}", env!("CARGO_PKG_VERSION"));
+        return Ok(());
+    }
+    if command == "dict" {
+        return dictionary_cli::run(args.collect());
+    }
+    let mut input = None;
+    let mut format = "jsonl".to_owned();
+    let mut budget = 8 * 1024 * 1024;
+    let mut dictionary_path = None;
+    let mut dict_only = false;
+    while let Some(arg) = args.next() {
+        match arg.as_str() {
+            "--help" | "-h" => {
+                print!("{HELP}{DICTIONARY_HELP}");
+                return Ok(());
+            }
+            "--format" => format = args.next().ok_or("--format needs jsonl or text")?,
+            "--dict-only" => dict_only = true,
+            "--dictionary" => {
+                let path = args.next().ok_or("--dictionary needs a database path")?;
+                if dictionary_path.replace(path).is_some() {
+                    return Err("--dictionary may only be supplied once".into());
+                }
+            }
+            "--cache-bytes" => {
+                budget = args
+                    .next()
+                    .ok_or("--cache-bytes needs an integer")?
+                    .parse()?
+            }
+            "-" => {
+                if input.replace(arg).is_some() {
+                    return Err("too many inputs".into());
+                }
+            }
+            _ if arg.starts_with('-') => return Err(format!("unknown option: {arg}").into()),
+            _ => {
+                if input.replace(arg).is_some() {
+                    return Err("too many inputs".into());
+                }
+            }
+        }
+    }
+    if !matches!(format.as_str(), "jsonl" | "text") {
+        return Err("--format must be jsonl or text".into());
+    }
+    if dict_only && dictionary_path.is_none() {
+        return Err("--dict-only requires --dictionary <db>".into());
+    }
+    if dictionary_path.is_some()
+        && (format != "jsonl" || !matches!(command.as_str(), "word" | "text"))
+    {
+        return Err("--dictionary requires word/text with --format jsonl".into());
+    }
+    let dictionary = dictionary_path.map(SqliteDictionary::open).transpose()?;
+    let mut dictionary_session = dictionary
+        .as_ref()
+        .map(|d| DictionarySession::new(d, 4 * 1024 * 1024));
+    let engine = Arc::new(Lemmatizer::new());
+    let mut out = BufWriter::new(io::stdout().lock());
+    match command.as_str() {
+        "word" => {
+            let word = input.ok_or("word requires one word")?;
+            let mut result = engine.analyze_word(&word)?;
+            if format == "jsonl" {
+                if let Some(session) = &mut dictionary_session {
+                    let mut annotation = session.annotate(&result)?;
+                    if dict_only {
+                        filter_dictionary_matches(&mut result, &mut annotation);
+                    }
+                    serde_json::to_writer(
+                        &mut out,
+                        &Annotated {
+                            record: &result,
+                            dictionary: Some(annotation),
+                        },
+                    )?;
+                } else {
+                    serde_json::to_writer(&mut out, &result)?;
+                }
+                writeln!(out)?;
+            } else {
+                for a in &result.analyses {
+                    let lemmas = a
+                        .lemmas
+                        .iter()
+                        .map(|l| l.text.as_str())
+                        .collect::<Vec<_>>()
+                        .join(" + ");
+                    let morphs = a
+                        .morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .collect::<Vec<_>>()
+                        .join(" + ");
+                    writeln!(out, "{lemmas}\t{morphs}\t{}", a.rules.join(", "))?;
+                }
+            }
+        }
+        "text" => {
+            let reader: Box<dyn Read> = match input.as_deref() {
+                None | Some("-") => Box::new(io::stdin().lock()),
+                Some(path) => Box::new(File::open(path)?),
+            };
+            let mut session = Session::new(engine, budget);
+            klem::analyze_reader(reader, &mut session, |mut record| {
+                if let Some(dictionary) = &mut dictionary_session {
+                    let mut annotation = record
+                        .analysis
+                        .as_ref()
+                        .map(|a| dictionary.annotate(a))
+                        .transpose()
+                        .map_err(io::Error::other)?;
+                    if dict_only
+                        && let (Some(analysis), Some(annotation)) =
+                            (record.analysis.as_mut(), annotation.as_mut())
+                    {
+                        // Session cache entries stay unfiltered for future consumers.
+                        filter_dictionary_matches(Arc::make_mut(analysis), annotation);
+                    }
+                    serde_json::to_writer(
+                        &mut out,
+                        &Annotated {
+                            record: &record,
+                            dictionary: annotation,
+                        },
+                    )?;
+                    writeln!(out)
+                } else {
+                    write_record(&mut out, &record, &format)
+                }
+            })?;
+        }
+        "explain" => {
+            let id = input.ok_or("explain requires a rule ID")?;
+            writeln!(
+                out,
+                "{}",
+                klem::rule_explanation(&id).ok_or("unknown rule ID")?
+            )?;
+        }
+        _ => return Err(format!("unknown command: {command}\n{HELP}").into()),
+    }
+    out.flush()?;
+    Ok(())
+}
+
+fn filter_dictionary_matches(analysis: &mut WordAnalysis, annotation: &mut Annotation) {
+    let matched: BTreeSet<_> = annotation
+        .lemmas
+        .iter()
+        .filter(|m| !m.entries.is_empty())
+        .map(|m| &m.lemma)
+        .collect();
+    analysis
+        .analyses
+        .retain(|a| a.lemmas.iter().all(|l| matched.contains(l)));
+    let retained: BTreeSet<_> = analysis.analyses.iter().flat_map(|a| &a.lemmas).collect();
+    annotation.lemmas.retain(|m| retained.contains(&m.lemma));
+}
+
+fn write_record(out: &mut impl Write, record: &TokenAnalysis, format: &str) -> io::Result<()> {
+    if format == "jsonl" {
+        serde_json::to_writer(&mut *out, record)?;
+        writeln!(out)
+    } else {
+        let lemmas = record
+            .analysis
+            .as_ref()
+            .map(|a| a.lemma_strings().join(", "))
+            .unwrap_or_default();
+        writeln!(
+            out,
+            "{}..{}\t{}\t{}",
+            record.span.start,
+            record.span.end,
+            serde_json::to_string(&record.surface)?,
+            lemmas
+        )
+    }
+}
+
+fn main() {
+    if let Err(error) = run() {
+        if error
+            .downcast_ref::<io::Error>()
+            .is_some_and(|e| e.kind() == io::ErrorKind::BrokenPipe)
+            || error
+                .downcast_ref::<serde_json::Error>()
+                .is_some_and(|e| e.io_error_kind() == Some(io::ErrorKind::BrokenPipe))
+        {
+            return;
+        }
+        eprintln!("klem: {error}");
+        std::process::exit(1);
+    }
+}

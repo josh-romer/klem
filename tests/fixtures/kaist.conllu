@@ -1,0 +1,48 @@
+# sent_id = M2TA_069-s1
+# text = 내 고향은 서울입니다.
+# translit = .nae .go.hyang.eun .seo.ul.ib.ni.da.
+1	내	내	ADJ	mma	_	2	amod	_	Translit=.nae|LTranslit=.nae
+2	고향은	고향+은	NOUN	ncn+jxt	_	3	dislocated	_	Translit=.go.hyang.eun|LTranslit=.go.hyang+.eun
+3	서울입니다	서울+이+ㅂ니다	VERB	nq+jp+ef	_	0	root	_	SpaceAfter=No|Translit=.seo.ul.ib.ni.da|LTranslit=.seo.ul+.i+ㅂ.ni.da
+4	.	.	PUNCT	sf	_	3	punct	_	Translit=.|LTranslit=.
+
+# sent_id = M2TA_069-s2
+# text = 옛날의 서울의 모습이 몹시 그립습니다.
+# translit = .yes.nal.yi .seo.ul.yi .mo.seub.i .mob.si .geu.rib.seub.ni.da.
+1	옛날의	옛날+의	NOUN	ncn+jcm	_	2	nmod	_	Translit=.yes.nal.yi|LTranslit=.yes.nal+.yi
+2	서울의	서울+의	PROPN	nq+jcm	_	3	nmod	_	Translit=.seo.ul.yi|LTranslit=.seo.ul+.yi
+3	모습이	모습+이	NOUN	ncn+jcs	_	5	nsubj	_	Translit=.mo.seub.i|LTranslit=.mo.seub+.i
+4	몹시	몹시	ADV	mag	_	5	advmod	_	Translit=.mob.si|LTranslit=.mob.si
+5	그립습니다	그립+습니다	ADJ	paa+ef	_	0	root	_	SpaceAfter=No|Translit=.geu.rib.seub.ni.da|LTranslit=.geu.rib+.seub.ni.da
+6	.	.	PUNCT	sf	_	5	punct	_	Translit=.|LTranslit=.
+
+# sent_id = M2TA_069-s3
+# text = 이른 아침과 밤 늦게 종로 보신각의 종소리를 듣고 잠을 자고 잠에서 깨어나던 그 때 그 서울이 그립습니다.
+# translit = .i.reun .a.chim.gwa .bam .neuj.ge .jong.ro .bo.sin.gag.yi .jong.so.ri.reul .deud.go .jam.eul .ja.go .jam.e.seo .ggae.eo.na.deon .geu .ddae .geu .seo.ul.i .geu.rib.seub.ni.da.
+1	이른	이르+ㄴ	ADJ	paa+etm	_	2	amod	_	Translit=.i.reun|LTranslit=.i.reu+ㄴ
+2	아침과	아침+과	CCONJ	ncn+jcj	_	4	dep	_	Translit=.a.chim.gwa|LTranslit=.a.chim+.gwa
+3	밤	밤	NOUN	ncn	_	2	conj	_	Translit=.bam|LTranslit=.bam
+4	늦게	늦+게	SCONJ	paa+ecs	_	12	xcomp	_	Translit=.neuj.ge|LTranslit=.neuj+.ge
+5	종로	종로	PROPN	nq	_	7	nmod	_	Translit=.jong.ro|LTranslit=.jong.ro
+6	보신각의	보신각+의	PROPN	nq+jcm	_	5	flat	_	Translit=.bo.sin.gag.yi|LTranslit=.bo.sin.gag+.yi
+7	종소리를	종소리+를	NOUN	ncn+jco	_	8	obj	_	Translit=.jong.so.ri.reul|LTranslit=.jong.so.ri+.reul
+8	듣고	듣+고	CCONJ	pvg+ecc	_	14	acl	_	Translit=.deud.go|LTranslit=.deud+.go
+9	잠을	잠+을	NOUN	ncn+jco	_	10	obj	_	Translit=.jam.eul|LTranslit=.jam+.eul
+10	자고	자+고	CCONJ	pvg+ecc	_	8	conj	_	Translit=.ja.go|LTranslit=.ja+.go
+11	잠에서	잠+에서	ADV	ncn+jca	_	12	advcl	_	Translit=.jam.e.seo|LTranslit=.jam+.e.seo
+12	깨어나던	깨어나+던	VERB	pvg+etm	_	8	conj	_	Translit=.ggae.eo.na.deon|LTranslit=.ggae.eo.na+.deon
+13	그	그	DET	mmd	_	14	det	_	Translit=.geu|LTranslit=.geu
+14	때	때	NOUN	ncn	_	16	compound	_	Translit=.ddae|LTranslit=.ddae
+15	그	그	DET	mmd	_	16	det	_	Translit=.geu|LTranslit=.geu
+16	서울이	서울+이	PROPN	nq+jcs	_	17	nsubj	_	Translit=.seo.ul.i|LTranslit=.seo.ul+.i
+17	그립습니다	그립+습니다	ADJ	paa+ef	_	0	root	_	SpaceAfter=No|Translit=.geu.rib.seub.ni.da|LTranslit=.geu.rib+.seub.ni.da
+18	.	.	PUNCT	sf	_	17	punct	_	Translit=.|LTranslit=.
+
+# sent_id = M2TA_069-s4
+# text = 서울에는 다리도 많았습니다.
+# translit = .seo.ul.e.neun .da.ri.do .manh.ass.seub.ni.da.
+1	서울에는	서울+에+는	PROPN	nq+jca+jxt	_	3	dislocated	_	Translit=.seo.ul.e.neun|LTranslit=.seo.ul+.e+.neun
+2	다리도	다리+도	ADV	ncn+jxc	_	3	advcl	_	Translit=.da.ri.do|LTranslit=.da.ri+.do
+3	많았습니다	많+았+습니다	ADJ	paa+ep+ef	_	0	root	_	SpaceAfter=No|Translit=.manh.ass.seub.ni.da|LTranslit=.manh+.ass+.seub.ni.da
+4	.	.	PUNCT	sf	_	3	punct	_	Translit=.|LTranslit=.
+

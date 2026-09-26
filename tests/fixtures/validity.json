@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
+  "sources": {
+    "plural": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=74906",
+    "object": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86355",
+    "spelling": "https://korean.go.kr/kornorms/regltn/regltnView.do?regltn_code=0001&regltn_no=222",
+    "rieul": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=319173",
+    "bieup": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=316687",
+    "rira": "https://krdict.korean.go.kr/jpn/dicSearch/SearchView?ParaWordNo=79280&nation=jpn",
+    "ni": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=313616",
+    "copula": "https://www.korean.go.kr/nkview/nklife/1996_4/6_10.html",
+    "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
+  },
+  "cases": [
+    {"id":"nominal-plural-object","surface":"지식인들을","judgments":[
+      {"id":"plural-before-case","lemmas":["지식인"],"morphemes":["들","을"],"verdict":"required","reason":"Nominal plural -들 precedes the object particle; the dictionary headword remains 지식인.","source":"plural"}]},
+    {"id":"nominal-plural-bare","surface":"지식인들","judgments":[
+      {"id":"bare-plural","lemmas":["지식인"],"morphemes":["들"],"verdict":"required","reason":"The nominal plural suffix does not require a following particle.","source":"plural"}]},
+    {"id":"nominal-plural-copula","surface":"지식인들이다","judgments":[
+      {"id":"plural-before-copula","lemmas":["지식인","이다"],"morphemes":["들","다"],"verdict":"required","reason":"Plural belongs to the nominal component before the copula.","source":"plural"}]},
+    {"id":"nominal-plural-case-boundary","surface":"지식인들를","judgments":[
+      {"id":"wrong-object-allomorph","lemmas":["지식인"],"morphemes":["들","를"],"verdict":"forbidden","reason":"The consonant-final plural form takes 을, not 를.","source":"object"}]},
+    {"id":"nominal-plural-repetition","surface":"지식인들들을","judgments":[
+      {"id":"repeated-suffix","lemmas":["지식인"],"morphemes":["들","들","을"],"verdict":"forbidden","reason":"This nominal-suffix rule licenses one plural slot, not recursive repetition.","source":"plural"}]},
+    {"id":"digeut-ambiguity","surface":"들어","judgments":[
+      {"id":"regular","lemmas":["들다"],"morphemes":["어"],"verdict":"required","reason":"The regular stem remains possible.","source":"spelling"},
+      {"id":"irregular","lemmas":["듣다"],"morphemes":["어"],"verdict":"required","reason":"ㄷ changes to ㄹ before the vowel.","source":"spelling"}]},
+    {"id":"rieul-ambiguity","surface":"사는","judgments":[
+      {"id":"regular","lemmas":["사다"],"morphemes":["는"],"verdict":"required","reason":"A vowel stem takes 는 directly.","source":"rieul"},
+      {"id":"deleted","lemmas":["살다"],"morphemes":["는"],"verdict":"required","reason":"ㄹ drops before 는.","source":"rieul"}]},
+    {"id":"rieul-retention","surface":"살는","judgments":[
+      {"id":"invalid-retention","lemmas":["살다"],"verdict":"forbidden","reason":"The retained ㄹ cannot recover this lemma here.","source":"rieul"}]},
+    {"id":"bieup-wa","surface":"도와요","judgments":[
+      {"id":"exception","lemmas":["돕다"],"morphemes":["어요"],"verdict":"required","reason":"돕 uses 와 in this ending family.","source":"bieup"}]},
+    {"id":"bieup-wrong-vowel","surface":"도워요","judgments":[
+      {"id":"wrong-exception","lemmas":["돕다"],"verdict":"forbidden","reason":"워 cannot recover 돕 in this family.","source":"bieup"}]},
+    {"id":"bieup-eu","surface":"도우면","judgments":[
+      {"id":"eu-boundary","lemmas":["돕다"],"morphemes":["으면"],"verdict":"required","reason":"The (으) family still uses 우.","source":"bieup"}]},
+    {"id":"rira-full","surface":"먹으리라","judgments":[
+      {"id":"full-ending","lemmas":["먹다"],"morphemes":["으리라"],"verdict":"required","reason":"A non-ㄹ consonant stem selects 으리라.","source":"rira"}]},
+    {"id":"rira-invalid","surface":"먹리라","judgments":[
+      {"id":"missing-eu","lemmas":["먹다"],"verdict":"forbidden","reason":"The short ending cannot bypass the boundary.","source":"rira"}]},
+    {"id":"ni-question","surface":"그렇니","judgments":[
+      {"id":"question","lemmas":["그렇다"],"morphemes":["니"],"verdict":"required","reason":"Interrogative 니 keeps this consonant.","source":"ni"}]},
+    {"id":"ni-connective","surface":"그러니","judgments":[
+      {"id":"connective","lemmas":["그렇다"],"morphemes":["으니"],"verdict":"required","reason":"Connective (으)니 licenses ㅎ deletion.","source":"ni"},
+      {"id":"wrong-path","lemmas":["그렇다"],"morphemes":["니"],"verdict":"forbidden","reason":"This deletion is not the interrogative path.","source":"ni"}]},
+    {"id":"copula-group","surface":"학생이라고","judgments":[
+      {"id":"copula","lemmas":["학생","이다"],"morphemes":["라고"],"verdict":"required","reason":"Preserve 이 as the copula.","source":"copula"},
+      {"id":"overstrip","lemmas":["학생다"],"verdict":"forbidden","reason":"Do not remove copular 이 as an ending.","source":"copula"}]},
+    {"id":"copula-restriction","surface":"가라서","judgments":[
+      {"id":"not-ordinary-ending","lemmas":["가다"],"verdict":"forbidden","reason":"라서 requires a copular context.","source":"copula"}]},
+    {"id":"obligation-components","surface":"먹어야한다","judgments":[
+      {"id":"correct-group","lemmas":["먹다","하다"],"morphemes":["어야","는다"],"verdict":"required","reason":"For joined input, 어야 belongs to the connector.","source":"hada"},
+      {"id":"wrong-auxiliary","lemmas":["먹다","야하다"],"verdict":"forbidden","reason":"야 is not part of the auxiliary lemma.","source":"hada"}]},
+    {"id":"siot-boundary","surface":"지면","judgments":[
+      {"id":"missing-eu","lemmas":["짓다"],"verdict":"forbidden","reason":"The ㅅ deletion path requires 으 here.","source":"spelling"}]},
+    {"id":"hieut-boundary","surface":"빨가고","judgments":[
+      {"id":"unlicensed-deletion","lemmas":["빨갛다"],"verdict":"forbidden","reason":"고 does not license ㅎ deletion.","source":"spelling"}]},
+    {"id":"reu-harmony","surface":"몰러","judgments":[
+      {"id":"wrong-vowel","lemmas":["모르다"],"verdict":"forbidden","reason":"This 르 recovery has the wrong vowel.","source":"spelling"}]}
+  ]
+}

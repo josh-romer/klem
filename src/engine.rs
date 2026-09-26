@@ -263,6 +263,17 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                if ending.form == "으란" && p.morphs.iter().any(|m| m.form != "시") {
+                    continue;
+                }
+                if ending.form == "란" {
+                    let copular = (p.stem.ends_with('이') || p.stem == "아니")
+                        && p.morphs.iter().all(|m| m.form == "시");
+                    let retrospective = p.morphs.last().is_some_and(|m| m.form == "더");
+                    if !copular && !retrospective {
+                        continue;
+                    }
+                }
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
@@ -271,7 +282,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(
                     ending.form,
-                    "으려는" | "자는" | "냐는" | "느냐는" | "으냐는"
+                    "으려는" | "자는" | "냐는" | "느냐는" | "으냐는" | "란" | "으란"
                 ) {
                     p.rules.push("ending.adnominal_expression".into());
                 }
@@ -282,6 +293,28 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     Boundary::HaDeletion | Boundary::HaAspiration
                 );
                 out.push(p);
+            }
+        }
+    }
+    // Conjectural (으)리 is scoped to quoted -란 here. Do not make it a
+    // freely attachable prefinal for every existing ending or expand the
+    // separate bundled -(으)리라 / -(으)리라고 representations.
+    if let Some(base) = word.strip_suffix("란") {
+        for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
+            for r in grammar::recover(base, suffix, boundary) {
+                // Honorific/past/modal may precede conjectural (으)리, not 더.
+                for mut p in prefinals(&r.stem, 3, 0, &mut memo) {
+                    p.morphs.push(morph("으리", MorphemeKind::Prefinal));
+                    p.morphs.push(morph("란", MorphemeKind::Ending));
+                    p.rules.extend(r.rules.clone());
+                    p.rules.extend([
+                        "prefinal.conjectural_quotation".into(),
+                        "ending.adnominal_expression".into(),
+                        "ending".into(),
+                    ]);
+                    p.dap_suffix = dap_suffix_allowed(&p);
+                    out.push(p);
+                }
             }
         }
     }
@@ -530,6 +563,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐"
                 | "으냐는"
                 | "으리라"
+                | "으리"
                 | "으리라고"
                 | "을"
                 | "을까"
@@ -618,11 +652,12 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
 }
 
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
-    // Intention/proposal -자면 attaches to verbs, not nominal copulas.
+    // Intention/proposal -자면 and quoted commands -으란 are not nominal
+    // copula endings. The separate fact-quotation 란 path preserves 학생이란.
     if p.morphs
         .iter()
         .find(|m| m.kind == MorphemeKind::Ending)
-        .is_some_and(|m| m.form == "자면")
+        .is_some_and(|m| matches!(m.form.as_str(), "자면" | "으란"))
     {
         return;
     }
@@ -633,6 +668,20 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         .is_some_and(|m| matches!(m.form.as_str(), "느냐는" | "으냐는"))
     {
         return;
+    }
+    // Quotation punctuation can leave an explicitly spelled copula in its
+    // own token (e.g. '농민' 이란). Preserve its role without joining tokens
+    // or manufacturing an omitted nominal component.
+    if p.stem == "이"
+        && p.morphs
+            .iter()
+            .find(|m| m.kind == MorphemeKind::Ending)
+            .is_some_and(|m| m.form == "란")
+    {
+        let mut a = predicate_analysis(p);
+        a.lemmas[0].kind = LemmaKind::Copula;
+        a.rules.push("copula.fragment".into());
+        out.push(a);
     }
     if let Some(base) = p.stem.strip_suffix('이').filter(|s| !s.is_empty()) {
         let mut bases = copula_bases(base);
@@ -673,7 +722,9 @@ fn particle_allowed(
 ) -> bool {
     // The new focus particles permit nominal/adverbial bases, not a subject
     // or object case phrase. In particular 조금이나마 is not 조금 + 이 + 나마.
-    if suffixes.first().is_some_and(|m| m.form == "커녕")
+    if suffixes
+        .first()
+        .is_some_and(|m| matches!(m.form.as_str(), "커녕" | "란" | "이란"))
         || (matches!(form, "이" | "가" | "을" | "를")
             && suffixes.iter().any(|m| adverbial_focus_particle(&m.form)))
     {

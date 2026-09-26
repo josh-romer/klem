@@ -976,3 +976,55 @@ both 조금 + 이나마 and 조금 + 이다 + 으나마, the latter explicitly i
 by source 80167. No new auxiliary connector or contextual sense decision is
 introduced. Omitted copulas beyond the existing engine paths and further outer
 particles remain COV-018/020 work.
+
+## Definition particles and short quotations (COV-018d/017j)
+
+| Representation | Attachment and sources |
+| --- | --- |
+| 란 / 이란 (`Particle`) | Definition/topic after an open/consonant nominal: KRDict [85858](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85858), [85859](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85859) |
+| 란 (`Ending`) | Shortened quoted fact after copulas, honorific copulas, retrospective 더, or conjectural (으)리: [86297](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86297) |
+| 으란 (`Ending`) | Shortened quoted command, full -으란 after a non-ㄹ consonant and -란 otherwise: [89676](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89676), command sense of [86297](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86297) |
+| 으리 (`Prefinal`, scoped before 란) | Conjecture/intention with full 으리 or short 리: [86606](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86606), [52612](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=52612) |
+
+학교란 and 학생이란 retain both nominal definition particles and copular
+quotations, with different lemma groups and grammatical kinds. The particle path
+supports nominalizations and existing nominal suffixes, e.g. 먹기란 and
+학생들이란, but not a subject-marked 학생 + 이 + 란 or an adverbial case chain.
+ㄹ counts as a consonant for the particle pair; foreign bases state the necessary
+pronunciation condition. The copular path preserves explicit 이 after consonants,
+permits its existing vowel-final omission, and admits 아니다 and honorific 시.
+Bare past/modal markers before 란 are not licensed by this copular path.
+
+The factual expression additionally follows retrospective 더, including earlier
+honorific/past/modal markers already supported by the engine. Conjectural 으리
+is recognized only before 란 in this batch, with honorific/past/modal before it,
+not retrospective 더. This recovers the source's 작으리란 and the composed
+먹었으리란 without adding a freely attachable prefinal to every ending.
+Existing 으리라 and 으리라고 remain bundled endings. The new provenance
+`prefinal.conjectural_quotation` explains this bounded representation.
+Known -답다 derivatives retain the ㅂ boundary, including 학생다우리란.
+
+The quoted command 으란 permits bare or honorific stems, not recovered
+past/modal/retrospective markers. Vowel-boundary irregulars apply and ㄹ is
+preserved, as in 들으란, 도우란, and 살란. It does not replace the copular
+fact expression. Source 86297 calls the command attachment verbal but also
+explicitly gives 행복하란; the implementation therefore does not impose a
+blanket lexical-adjective rejection on state-directed wishes/commands. Broader
+mood/lexical constraints and the existing -답다 command exclusions remain
+COV-019/020 work. No new auxiliary connector or implicit reporting 하다 is added.
+
+Explicit standalone 이란 gains an 이다 lemma with `Copula` role and
+`copula.fragment` provenance. The source corpus has such a token after a quoted
+nominal phrase. This retains the original word and lexical hypotheses and does
+not join tokens or invent a missing nominal. Bare 라는, with an omitted 이,
+remains a separate representation question under COV-020.
+
+The full 라는 form already has copula + ending analyses. NIKL explains
+[철수라는 as omitted copular 이](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=327939)
+and [이라는/라는 as a shortened quotation](https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&qna_seq=329041).
+Three KAIST entries instead annotate 근대라는, 사회주의라는, and 민주주의라는
+as noun + particle, with no copula in the gold group. The engine keeps its sourced
+copular analysis; these remain measured misses and documented representation
+differences. The evaluation separately records quotation after ending-bearing
+clauses and omitted-copula fragments, rather than licensing arbitrary suffix
+removal to match the corpus.

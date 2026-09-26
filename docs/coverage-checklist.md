@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–i/018a–c/019a–c/020a/021a/022a batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–j/018a–d/019a–c/020a/021a/022a batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -210,7 +210,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–i implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–j implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -335,9 +335,23 @@ review remains open under the completion review below.
   source-backed synthetic cases, not additional corpus gains. Evidence and
   sources are shared with COV-018c below. Broader omitted-copula and outer-particle
   licenses remain COV-018/020.
+- [x] **COV-017j — Short quoted facts and commands -란/-(으)란.**
+  학생이란 preserves 학생 + 이다 + 란 alongside the separate particle reading.
+  Explicit and vowel-final omitted copulas, 아니다, honorific copulas and
+  retrospective forms such as 먹었더란 are supported. 먹으란/먹어보란 use
+  canonical 으란 with their own allomorph and prefinal licenses. Conjectural
+  (으)리 is a scoped prefinal before 란, including 작으리란 and 먹었으리란;
+  existing -(으)리라/-(으)리라고 remain bundled. Explicit standalone 이란 gains
+  a Copula-kind reading without joining tokens or inserting a nominal component.
+  The source's 행복하란 example prevents a blanket adjective-command ban;
+  further lexical/mood restrictions and -답다 command licenses remain open.
+  Evidence: [path and boundary tests](../tests/quoted_definitions.rs), shared
+  twenty-one `definition-*` ledger cases, dictionary/CLI role checks and eight
+  browser/source-link cases. [Scope and sources](rules.md#definition-particles-and-short-quotations-cov-018d017j),
+  [evaluation](quoted-definition-evaluation.json).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–c implement post-ending, outer choice, emphatic and
-  concessive particles, including nominal (이)라고 alternatives.**
+  **Partial: COV-018a–d implement post-ending, outer choice, emphatic,
+  concessive and definition particles, including nominal (이)라고 alternatives.**
   Remaining: pronouns outside the existing finite paradigms. Preserve homonym-specific
   dictionary labels and review additional ending/particle licenses.
   Include quoted clauses marked as nominals: KAIST MH2_0169-s444/3 살겠다가
@@ -382,6 +396,17 @@ review remains open under the completion review below.
   recovered corpus tokens have explicit tests. A fourteenth numerical gain,
   확약서 → 확약, stays a segmentation-review case, not a required linguistic
   judgment. See [scope and sources](rules.md#emphatic-and-concessive-particles-cov-018c017i).
+- [x] **COV-018d — Definition/topic particles 란/이란.** Nominal allomorphs
+  preserve 문화란 → 문화 and 학생이란 → 학생, with nominalization and suffix
+  composition. They do not accept adverbial/case-marked bases; 학생 + 이 + 란
+  is not substituted for the bundled particle or copula + ending. Unknown foreign
+  bases retain explicit pronunciation conditions. Together with COV-017j this
+  recovers 26 annotated groups, protected by complete source sentences and a
+  stable-ID index. The same [evaluation](quoted-definition-evaluation.json)
+  records eight remaining 라는 cases: three annotation/representation differences
+  preserve existing copula + ending analyses; quoted-clause and omitted-copula
+  fragments remain COV-018/020 review. No unsupported 라는 particle is added
+  solely to match corpus segmentation. Evidence is shared with COV-017j above.
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -510,7 +535,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 214 currently emitted canonical grammar forms.** The initial catalog
+  for all 219 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

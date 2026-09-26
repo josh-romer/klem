@@ -49,6 +49,82 @@ fn lemma(text: &str, kind: LemmaKind) -> Lemma {
 }
 
 #[test]
+fn definition_and_quotation_readings_keep_dictionary_groups_and_roles() {
+    let dir = Scratch::new();
+    let mut fixture: Value =
+        serde_json::from_str(include_str!("fixtures/krdict-emphatic-particles.json")).unwrap();
+    let copulas: Value =
+        serde_json::from_str(include_str!("fixtures/krdict-derivation.json")).unwrap();
+    let copula = copulas["LexicalResource"]["Lexicon"]["LexicalEntry"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|e| e["Lemma"]["feat"]["val"] == "이다")
+        .unwrap();
+    // The attributed fixtures overlap on 학생; add only the missing copula.
+    fixture["LexicalResource"]["Lexicon"]["LexicalEntry"]
+        .as_array_mut()
+        .unwrap()
+        .push(copula.clone());
+    let input = dir.0.join("definitions.json");
+    fs::write(&input, serde_json::to_vec(&fixture).unwrap()).unwrap();
+    import_krdict(&[input], dir.db(), "definition-quotation-regression").unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms) in [
+        ("학생이란", vec!["학생"], vec!["이란"]),
+        ("학생이란", vec!["학생", "이다"], vec!["란"]),
+        ("학교란", vec!["학교", "이다"], vec!["란"]),
+        ("이란", vec!["이다"], vec!["란"]),
+        ("먹으란", vec!["먹다"], vec!["으란"]),
+        ("작으리란", vec!["작다"], vec!["으리", "란"]),
+        ("먹어보란", vec!["먹다", "보다"], vec!["어", "으란"]),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let filtered = result.filtered(|lemma| annotation.has_match(lemma, false));
+        let compatible = result.filtered(|lemma| annotation.has_match(lemma, true));
+        for actual in [&filtered, &compatible] {
+            assert!(
+                actual.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                "{word}: {lemmas:?}"
+            );
+        }
+        if word == "이란" {
+            assert!(compatible.analyses.iter().any(|a| a.lemmas.len() == 1
+                && a.lemmas[0].text == "이다"
+                && a.lemmas[0].kind == LemmaKind::Copula));
+        }
+        for (dict_only, expected) in [(false, &result), (true, &filtered)] {
+            let mut command = Command::new(env!("CARGO_BIN_EXE_klem"));
+            command.args(["word", word, "--dictionary"]).arg(dir.db());
+            if dict_only {
+                command.arg("--dict-only");
+            }
+            let output = command.output().unwrap();
+            assert!(
+                output.status.success(),
+                "{}",
+                String::from_utf8_lossy(&output.stderr)
+            );
+            let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+            assert_eq!(
+                actual["analyses"],
+                serde_json::to_value(&expected.analyses).unwrap()
+            );
+        }
+    }
+}
+
+#[test]
 fn emphatic_particles_and_concessive_endings_keep_dictionary_roles_and_cli_parity() {
     let dir = Scratch::new();
     import_krdict(

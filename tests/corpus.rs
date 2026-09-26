@@ -3,6 +3,35 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn annotated_definitions_preserve_particle_and_copular_gold_groups() {
+    let selected: Vec<serde_json::Value> =
+        serde_json::from_str(include_str!("fixtures/quoted-definition-gold.json")).unwrap();
+    assert_eq!(selected.len(), 26);
+    for (name, input) in [
+        (
+            "kaist",
+            include_bytes!("fixtures/kaist-quoted-definitions.conllu").as_slice(),
+        ),
+        (
+            "gsd",
+            include_bytes!("fixtures/gsd-quoted-definitions.conllu").as_slice(),
+        ),
+    ] {
+        let report = corpus::evaluate(input, Corpus::parse(name).unwrap(), name).unwrap();
+        for selected in selected.iter().filter(|v| v["corpus"] == name) {
+            let id = selected["id"].as_str().unwrap();
+            let case = report.cases.get(id).unwrap();
+            assert_eq!(case.surface, selected["surface"].as_str().unwrap());
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                selected["expected"]
+            );
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn annotated_emphatic_particles_recover_nominals_and_nominalizations() {
     for (name, input, selected) in [
         (

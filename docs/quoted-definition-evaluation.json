@@ -1,0 +1,4452 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-018d definition particles and COV-017j short quoted -란/-(으)란, including scoped conjectural (으)리. No contextual sense selection or implicit reporting verb.",
+  "baseline_commit": "487a0fdd95bc99ccf794ddf9f48fa8093921a82a",
+  "baseline_source_sha256": {
+    "src/grammar.rs": "3fe4d6f8c8b323c40803a3020500d07742045f232d319452ba704f6d773ddc0f",
+    "src/engine.rs": "185993b8628f2337c54ad8b6706630282ee64782ba6174d865bef85a91cc4d8b",
+    "web/src/grammar-labels.json": "e45ac7cfd34768f5aaac0c474dcba9ea5a429cc08f3329f22cbe2795e904597a",
+    "tests/emphatic_particles.rs": "508385f7bf89f5824262697e6a7cadcb4e4bcfbd7c2f41d12d564775fd9551de",
+    "tests/foreign_nominals.rs": "7fa4a0dae03b708a19ddb07e335b05528ad35547b2acfbdf84579f3b324c4ddd",
+    "tests/fixtures/validity.json": "e97ad42beb2520c39cc2368780b271725c842b9d442098671046f1f167ec636a",
+    "tests/fixtures/krdict-grammar-labels.json": "23d5ac6376be9c0bf18c22915599b8301f1d777fb86ee49d62361150b6b389f3",
+    "tests/fixtures/krdict-emphatic-particles.json": "cb1a50911ad57d16320cbc265576e7677044a2f09c3cab5725afa864f0a8f54a"
+  },
+  "source_sha256": {
+    "src/grammar.rs": "63b4601a60794c0dd76b8f64c5452de8e7221f1831b95dd2f197411aacdb8748",
+    "src/engine.rs": "f3fb80541071bfdcb264d33ac808b1324b26958c074a34d2c3f8bb9c9ba58b3d",
+    "web/src/grammar-labels.json": "20092555e6510b29b906b69dda6cbba2667c5afe0a533f7edeea6bf8acd24b57",
+    "tests/quoted_definitions.rs": "2aeae4e66cba05723278d8b25c3598b5722ea43784e374048ee486e17b474b04",
+    "tests/fixtures/validity.json": "f5f91acbef9101b39d7ac4b0e1dbb850356c3752954463b1571405d476599f28",
+    "tests/fixtures/krdict-grammar-labels.json": "9a355dbef40402dabacad300851e0200015ae936af6f2cae12591c4363b5aaae"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_report_sha256": "da63acece465a474a4f26d3e6f603aea8af20657e82c37b8dfc5a58d1c5fe13b",
+      "after_report_sha256": "af1bc9c3705fbe17894a619c65ae9afa1e646207ac80343074591c0eea330680",
+      "converted": 22220,
+      "before_matched": 22040,
+      "after_matched": 22064,
+      "remaining_misses": 156,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": [
+        {
+          "id": "id:M2TA_069-s12/2",
+          "surface": "마장이란",
+          "expected": [
+            "마장",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:M2TA_089-s52/3",
+          "surface": "흑인이란",
+          "expected": [
+            "흑인"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s370/6",
+          "surface": "이란",
+          "expected": [
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s379/3",
+          "surface": "문화란",
+          "expected": [
+            "문화"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s68/2",
+          "surface": "행위란",
+          "expected": [
+            "행위"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s79/1",
+          "surface": "노동수단이란",
+          "expected": [
+            "노동수단"
+          ]
+        },
+        {
+          "id": "id:MH2_0109-s4/11",
+          "surface": "공동의식이란",
+          "expected": [
+            "공동의식",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s21/4",
+          "surface": "변전무상이란",
+          "expected": [
+            "변전무상"
+          ]
+        },
+        {
+          "id": "id:MH2_0149-s27/1",
+          "surface": "편력기사란",
+          "expected": [
+            "편력기사"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s111/2",
+          "surface": "인문주의란",
+          "expected": [
+            "인문주의",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s197/15",
+          "surface": "도덕성이란",
+          "expected": [
+            "도덕성",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s22/6",
+          "surface": "문학비평이란",
+          "expected": [
+            "문학비평"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s24/2",
+          "surface": "재독이란",
+          "expected": [
+            "재독",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s246/4",
+          "surface": "문학사란",
+          "expected": [
+            "문학사"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s283/4",
+          "surface": "서문이란",
+          "expected": [
+            "서문"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s339/4",
+          "surface": "고전이란",
+          "expected": [
+            "고전"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s342/7",
+          "surface": "의식이란",
+          "expected": [
+            "의식"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s40/2",
+          "surface": "비평정신이란",
+          "expected": [
+            "비평정신"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s59/1",
+          "surface": "과학이란",
+          "expected": [
+            "과학"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s345/1",
+          "surface": "안양이란",
+          "expected": [
+            "안양",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s449/2",
+          "surface": "대안이란",
+          "expected": [
+            "대안"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s729/4",
+          "surface": "민주주의란",
+          "expected": [
+            "민주주의"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s744/1",
+          "surface": "자본주의란",
+          "expected": [
+            "자본주의"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s124/4",
+          "surface": "마음이란",
+          "expected": [
+            "마음"
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_report_sha256": "53e54fe991eae7dc27777bc458c26a4de16f10462c245fc509bb5617383467d6",
+      "after_report_sha256": "6d6735c03959a4de0c4a460c1c16dc9f0668ab901d118e383c3f80aac205e400",
+      "converted": 9989,
+      "before_matched": 9808,
+      "after_matched": 9810,
+      "remaining_misses": 179,
+      "lost_groups": 0,
+      "lost_component_sets": 0,
+      "new_matches": [
+        {
+          "id": "id:dev-s234/7",
+          "surface": "결정론이란",
+          "expected": [
+            "결정론"
+          ]
+        },
+        {
+          "id": "id:dev-s923/1",
+          "surface": "입체음향이란",
+          "expected": [
+            "입체음향"
+          ]
+        }
+      ]
+    }
+  ],
+  "remaining_quotation_reviews": [
+    {
+      "corpus": "kaist",
+      "id": "id:MH2_0109-s16/7",
+      "surface": "근대라는",
+      "expected": [
+        "근대"
+      ],
+      "annotated_lemma": "근대+라는",
+      "annotated_tags": "ncn+jcm",
+      "annotation_misc": "Translit=.geun.dae.ra.neun|LTranslit=.geun.dae+.ra.neun",
+      "disposition": "Representation difference: corpus treats 라는 as a particle and omits copula. Existing copula + ending analysis follows cited NIKL/KRDict sources; do not add an unsupported particle solely to match gold.",
+      "preserved_analysis": {
+        "lemmas": [
+          {
+            "text": "근대",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "라는",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.zero",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "corpus": "kaist",
+      "id": "id:MH2_0169-s169/4",
+      "surface": "대안인가라는",
+      "expected": [
+        "대안",
+        "이다"
+      ],
+      "annotated_lemma": "대안+이+ㄴ가라는",
+      "annotated_tags": "ncn+jp+etm",
+      "annotation_misc": "Translit=.dae.an.in.ga.ra.neun|LTranslit=.dae.an+.i+ㄴ.ga.ra.neun",
+      "disposition": "Open COV-018/020: quotation after an ending-bearing clause; source/representation and normative-use review required before licensing arbitrary ending + 라는."
+    },
+    {
+      "corpus": "kaist",
+      "id": "id:MH2_0169-s380/8",
+      "surface": "달아줘라는",
+      "expected": [
+        "달다",
+        "주다"
+      ],
+      "annotated_lemma": "달+아+주+어라는",
+      "annotated_tags": "pvg+ecx+px+etm",
+      "annotation_misc": "Translit=.dal.a.jweo.ra.neun|LTranslit=.dal+.a+.ju+.eo.ra.neun",
+      "disposition": "Open COV-018/020: quotation after an ending-bearing clause; source/representation and normative-use review required before licensing arbitrary ending + 라는."
+    },
+    {
+      "corpus": "kaist",
+      "id": "id:MH2_0169-s492/7",
+      "surface": "사회주의라는",
+      "expected": [
+        "사회주의"
+      ],
+      "annotated_lemma": "사회주의+라는",
+      "annotated_tags": "ncn+jcm",
+      "annotation_misc": "Translit=.sa.hoe.ju.yi.ra.neun|LTranslit=.sa.hoe.ju.yi+.ra.neun",
+      "disposition": "Representation difference: corpus treats 라는 as a particle and omits copula. Existing copula + ending analysis follows cited NIKL/KRDict sources; do not add an unsupported particle solely to match gold.",
+      "preserved_analysis": {
+        "lemmas": [
+          {
+            "text": "사회주의",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "라는",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.zero",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "corpus": "kaist",
+      "id": "id:MH2_0169-s728/1",
+      "surface": "민주주의라는",
+      "expected": [
+        "민주주의"
+      ],
+      "annotated_lemma": "민주주의+라는",
+      "annotated_tags": "ncn+jcm",
+      "annotation_misc": "Translit=.min.ju.ju.yi.ra.neun|LTranslit=.min.ju.ju.yi+.ra.neun",
+      "disposition": "Representation difference: corpus treats 라는 as a particle and omits copula. Existing copula + ending analysis follows cited NIKL/KRDict sources; do not add an unsupported particle solely to match gold.",
+      "preserved_analysis": {
+        "lemmas": [
+          {
+            "text": "민주주의",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "라는",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.zero",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "corpus": "kaist",
+      "id": "id:MH2_0209-s122/4",
+      "surface": "라는",
+      "expected": [
+        "이다"
+      ],
+      "annotated_lemma": "이",
+      "annotated_tags": "jp+etm",
+      "annotation_misc": "OrigLemma=이+란|Translit=.ra.neun|LTranslit=.i",
+      "disposition": "Open COV-020: omitted-copula fragment after quoted material. Explicitly spelled standalone 이란 is supported, but this missing-이 representation remains separate review. No cross-token joining."
+    },
+    {
+      "corpus": "kaist",
+      "id": "id:MH2_0209-s39/4",
+      "surface": "라는",
+      "expected": [
+        "이다"
+      ],
+      "annotated_lemma": "이",
+      "annotated_tags": "jp+etm",
+      "annotation_misc": "OrigLemma=이+란|Translit=.ra.neun|LTranslit=.i",
+      "disposition": "Open COV-020: omitted-copula fragment after quoted material. Explicitly spelled standalone 이란 is supported, but this missing-이 representation remains separate review. No cross-token joining."
+    },
+    {
+      "corpus": "gsd",
+      "id": "id:dev-s777/10",
+      "surface": "빨라진다라는",
+      "expected": [
+        "빠르다",
+        "지다"
+      ],
+      "annotated_lemma": "빠르+아+지+ㄴ다라는",
+      "annotated_tags": "VA+EC+VX+ETM",
+      "annotation_misc": "Translit=.bbal.ra.jin.da.ra.neun|LTranslit=.bba.reu+.a+.ji+ㄴ.da.ra.neun",
+      "disposition": "Open COV-018/020: quotation after an ending-bearing clause; source/representation and normative-use review required before licensing arbitrary ending + 라는."
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-quoted-definitions.conllu",
+      "sha256": "e9d90611f02e4aa2a2c6c3bffa71eb0fd2c433090d9266a2812e3832ba1e7b75",
+      "sentences": 24,
+      "source_bytes_verified": true
+    },
+    {
+      "path": "tests/fixtures/gsd-quoted-definitions.conllu",
+      "sha256": "1b74335d07f77f4fa2177b15f6f761c302a65ecc9d0e190ccd8c63894c1a1cd6",
+      "sentences": 2,
+      "source_bytes_verified": true
+    }
+  ],
+  "selected_gold": {
+    "path": "tests/fixtures/quoted-definition-gold.json",
+    "sha256": "69b75773f6077310a6d4edf650f07a57ea244cc18ff7636ac3f0486dfc8473fd",
+    "tokens": 26
+  },
+  "snapshot_review": {
+    "unchanged_current_fingerprints": 30,
+    "changes": []
+  },
+  "candidate_review": [
+    {
+      "surface": "학교란",
+      "before_count": 7,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학굫다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이란",
+      "before_count": 7,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "이란",
+      "before_count": 7,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula.fragment",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "이이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹기란",
+      "before_count": 7,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹기다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹기이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹깋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression",
+            "nominalization"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생들이란",
+      "before_count": 7,
+      "after_count": 21,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "이란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "ending.adnominal_expression",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression",
+            "particle",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생드",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "ending.adnominal_expression",
+            "particle",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생드",
+              "kind": "adverbial"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "ending.adnominal_expression",
+            "particle",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들이이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "아니란",
+      "before_count": 7,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아니",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아니이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아닣다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생이시란",
+      "before_count": 7,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "copula",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이시",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이시",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이시이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이싷다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생일다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "deletion.rieul",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹었더란",
+      "before_count": 7,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.past",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.past",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었더",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었더",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었더다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었더이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었덯다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.past",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹으란",
+      "before_count": 7,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹어보란",
+      "before_count": 8,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "contraction.identical",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어봏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "deletion.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "행복하란",
+      "before_count": 8,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "행복하",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "행복하",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "행복하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "행복하이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "행복핳다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "작으리란",
+      "before_count": 7,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "작다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "작으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "작으리",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "작으리",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "작으리다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "작으리이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "작으맇다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "작읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹었으리란",
+      "before_count": 7,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "contraction.identical",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으리",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으리",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으리다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으리이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으맇다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "deletion.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생다우리란",
+      "before_count": 7,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.bieup",
+            "prefinal.conjectural_quotation",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우리",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우리",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우리다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우리이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우맇다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다웋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.bieup",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고싶으리란",
+      "before_count": 7,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으리",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으리",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으리다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으리이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶으맇다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고싶읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "싶다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹으셨겠으리란",
+      "before_count": 7,
+      "after_count": 23,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.honorific",
+            "prefinal.modal",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.honorific",
+            "prefinal.modal",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.conjectural_quotation",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨게다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "contraction.identical",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겠다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겠으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겠으리",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겠으리",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겠으리다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겠으리이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겠으맇다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨겠읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으셨다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으시다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.modal",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹을다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "deletion.rieul",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation",
+            "prefinal.honorific",
+            "prefinal.modal",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.conjectural_quotation",
+            "prefinal.honorific",
+            "prefinal.modal",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "학생란",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학교이란",
+      "before_count": 7,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교이이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교잏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹었으란",
+      "before_count": 7,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었으이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "살으리란",
+      "before_count": 7,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "삳다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.digeut",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살으리",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살으리",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살으리다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살으리이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살으맇다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "살읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으리",
+              "kind": "prefinal"
+            },
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "ending",
+            "ending.adnominal_expression",
+            "irregular.hieut",
+            "prefinal.conjectural_quotation"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "사회주의라는",
+      "before_count": 15,
+      "after_count": 15,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "ABC란",
+      "before_count": 7,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "란",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.zero",
+            "ending",
+            "ending.adnominal_expression",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ]
+    }
+  ],
+  "source_entries": [
+    85858,
+    85859,
+    86297,
+    89676,
+    86606,
+    52612
+  ],
+  "representation_sources": [
+    "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=327939",
+    "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&qna_seq=329041"
+  ],
+  "source_fixture_preservation": {
+    "unchanged_primary_entries": 249,
+    "added_primary_entries": 6
+  },
+  "scope_decisions": [
+    "Definition particles have nominal, not adverbial/case-phrase attachment. Copular facts and commands remain separate canonical endings.",
+    "Explicit standalone 이란 gains a Copula-kind candidate without manufacturing a nominal or joining tokens; lexical/identity alternatives remain.",
+    "Conjectural 으리 is emitted only before the reviewed ending 란; existing 으리라/으리라고 bundles remain unchanged.",
+    "Command licenses permit honorific, not past/modal/retrospective recovery. Source 행복하란 prevents a blanket adjective-command ban. Broader lexical and mood constraints remain open.",
+    "Existing -답다 command restrictions remain under COV-020; conjectural/retrospective paths retain their spelling constraints.",
+    "No new auxiliary connector, implicit reporting verb, arbitrary quoted-clause attachment or contextual sense selection.",
+    "Twenty-six corpus gains are from definition/copular forms; command/retrospective/conjectural cases have separate source-backed synthetic evidence.",
+    "Independent Korean-language review and the rest of the inventory remain open."
+  ]
+}

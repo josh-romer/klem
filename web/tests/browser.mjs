@@ -803,6 +803,14 @@ try {
     ["서울서", ["서울", "서"], "서", "Action location / from / subject emphasis", 86712, "서"],
     ["작으나마", ["작", "으나마"], "으나마", "Although limited", 80164, "-으나마"],
     ["조금이나마", ["조금", "이", "으나마"], "으나마", "Although limited", 80164, "-으나마"],
+    ["학교란", ["학교", "란"], "란", "As for / defining", 85858, "란"],
+    ["학생이란", ["학생", "이란"], "이란", "As for / defining", 85859, "이란"],
+    ["학교란", ["학교", "이", "란"], "란", "Quoted fact (noun-modifying)", 86297, "-란"],
+    ["학생이란", ["학생", "이", "란"], "란", "Quoted fact (noun-modifying)", 86297, "-란"],
+    ["먹으란", ["먹", "으란"], "으란", "Quoted command (noun-modifying)", 89676, "-으란"],
+    ["먹어보란", ["먹", "어", "보", "으란"], "으란", "Quoted command (noun-modifying)", 89676, "-으란"],
+    ["먹었더란", ["먹", "었", "더", "란"], "란", "Quoted fact (noun-modifying)", 86297, "-란"],
+    ["작으리란", ["작", "으리", "란"], "으리", "Conjecture / intention", 86606, "-으리-"],
   ]) {
     await submit(page, word);
     await waitHeading(page, word);

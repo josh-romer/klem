@@ -308,9 +308,9 @@ Each sentence is a byte-identical excerpt. Four selected tokens protect 먹을�
 not new gains or annotations of every alternative analysis. Rejected class
 combinations are tracked separately by source-backed synthetic judgments.
 
-`krdict-grammar-labels.json` contains 249 primary entries from the September
+`krdict-grammar-labels.json` contains 255 primary entries from the September
 2026 KRDict export, National Institute of Korean Language, CC BY-SA 2.0 KR.
-248 support the teaching-label catalog; 68883 supplies the alternate propositive
+254 support the teaching-label catalog; 68883 supplies the alternate propositive
 boundary. Changes: retain English equivalents and the first example per sense,
 omit WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries,
 and reformat JSON. Source/license links above apply. The catalog records every
@@ -361,3 +361,17 @@ is retained for segmentation review: 확약서 is tagged 확약/NNG + 서/JKB in
 sentence about submitting a written pledge. Its numerical recovery is not made
 into a required linguistic judgment. The source IDs, hashes, and fourteen total
 numerical gains are recorded in `docs/emphatic-particle-evaluation.json`.
+
+`kaist-quoted-definitions.conllu` and `gsd-quoted-definitions.conllu` contain 24
+KAIST and two GSD complete development sentences as byte-identical CC BY-SA 4.0
+excerpts. `quoted-definition-gold.json` indexes the 26 newly recovered groups.
+The KAIST token MH2_0069-s370/6 is explicit standalone 이란 after a quoted noun
+phrase; a separate role test requires its Copula-kind candidate without joining
+tokens. Remaining 라는 representation differences are recorded in
+`docs/quoted-definition-evaluation.json`, not promoted into required particles.
+
+The grammar-label fixture adds primary KRDict entries 85858, 85859, 86297,
+89676, 86606, and 52612 with the same source/license and trimming policy above;
+all earlier entries remain unchanged. Existing `krdict-emphatic-particles.json`
+lexical entries and the attributed 이다 entry in `krdict-derivation.json` supply
+dictionary regressions, combined without their duplicate 학생 entry.

@@ -497,3 +497,35 @@ packaged preview passes a full-dictionary smoke check of eight readings/source
 links, including both 조금이나마 interpretations, locative 서울서 and contracted
 먹긴커녕 with its provenance and ㄴ커녕 source entry. Desktop and mobile
 screenshots were inspected; no horizontal overflow was found.
+
+COV-018d definition particles and COV-017j short quotations add **24 new KAIST
+and two new GSD grouped matches**. The [comparison](quoted-definition-evaluation.json)
+records no lost groups/component sets; remaining development misses are **156
+KAIST and 179 GSD**. Twenty-six complete source sentences and a stable-ID index
+protect the recoveries. The isolated 이란 case has a separate Copula-role test;
+its earlier nominal context is not inferred. Command, retrospective and scoped
+conjectural forms have source-backed synthetic tests, not attributed corpus gains.
+
+Twenty-one ledger cases bring the total to **268 cases with 148 required and 126
+forbidden judgments**. Five new labels cover the two definition particles, two
+quotation endings, and scoped 으리 prefinal, bringing the catalog to 219 forms.
+Six new source entries are included without changing any earlier fixture entry.
+Eight browser cases check alternate readings, normalization and source links.
+The source's 행복하란 example is retained, rather than imposing a blanket
+adjective-command ban; further mood and derivational constraints remain open.
+
+The same report reviews eight remaining 라는 cases. Three corpus noun + particle
+annotations differ from the existing sourced copula + ending analysis; the other
+five require quoted-clause or omitted-copula-fragment review. None is converted
+into a required particle merely to improve recall. All 30 current output
+fingerprints and all 66,570 frozen corpus cases pass. Rust, Clippy, stress,
+dictionary/CLI, frontend build and browser/API checks pass. Individual additions
+for 22 targeted surfaces are recorded, with no prior analyses removed.
+Historical reports/baselines remain unchanged; independent linguistic review
+and the broader inventory audit remain open.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. The refreshed
+packaged app passes eight full-dictionary reading/source-link checks, including
+both particle and copular definition readings, quoted commands, retrospective
+quotation and the conjectural prefinal. The explicit standalone 이란 copula role
+also passes an API check. Desktop and mobile screenshots were inspected; there
+is no horizontal overflow or browser error.

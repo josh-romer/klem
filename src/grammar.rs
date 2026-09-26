@@ -531,6 +531,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라", "라", "으라"),
             ("으라고", "라고", "으라고"),
             ("으라는", "라는", "으라는"),
+            ("으란", "란", "으란"),
             ("으라면", "라면", "으라면"),
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
@@ -657,6 +658,16 @@ pub(crate) fn endings() -> &'static [Ending] {
                 });
             }
         }
+        // Short quoted -란 also follows retrospective 더. Its recovered
+        // copular/prefinal licenses are checked in predicates().
+        for boundary in [Literal, ZeroCopula] {
+            out.push(Ending {
+                suffix: "란",
+                form: "란",
+                boundary,
+                connector: false,
+            });
+        }
         for ending in &mut out {
             ending.connector = AUXILIARY_CONNECTORS.contains(&ending.form);
         }
@@ -725,6 +736,8 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("은커녕", 4, 1),
             ("는커녕", 4, 2),
             ("커녕", 4, 0),
+            ("이란", 4, 1),
+            ("란", 4, 2),
             ("만", 3, 0),
             ("마는", 3, 0),
             ("까지", 3, 0),
@@ -890,6 +903,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.honorific" => "Recover honorific (으)시 before tense/modal markers.",
         "prefinal.modal" => "Recover 겠 after honorific or past markers.",
         "prefinal.retrospective" => "Recover retrospective 더 after other prefinal markers.",
+        "prefinal.conjectural_quotation" => {
+            "Recover conjectural (으)리 before the reviewed shortened quotation -란."
+        }
         "particle" => "Remove a particle with licensed order and boundary allomorph.",
         "copula" => "Separate a nominal and the affirmative copula 이다.",
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",
@@ -908,6 +924,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "pronoun" => "Restore a contracted pronoun with its particle.",
         "nominal.contraction" => "Restore contracted 거/것 plus a particle.",
         "copula.polite" => "Restore the copula from 이에요/예요 or 이야/야.",
+        "copula.fragment" => {
+            "Recognize an explicitly spelled copula fragment without joining it to a preceding token."
+        }
         "negative_copula.polite" => "Restore 아니다 from 아니에요.",
         _ => return None,
     })
@@ -934,7 +953,7 @@ mod label_tests {
         for form in ["에요", "야"] {
             forms.insert(format!("-{form}"), Ending);
         }
-        for form in ["시", "었", "겠", "더"] {
+        for form in ["시", "었", "겠", "더", "으리"] {
             forms.insert(format!("-{form}-"), Prefinal);
         }
         for form in ["님", "들", "적", "답다", "이", "히"] {

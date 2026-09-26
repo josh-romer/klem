@@ -95,3 +95,19 @@ adjective/verb attachment distinctions, additional homonyms, and judgment of
 unannotated alternatives remain open. Source-backed narrow rules should be
 implemented with positive and negative paths; automatic inventory differences
 must not become required linguistic judgments.
+
+## Reviewed quotation representations (COV-018d/017j)
+
+The [quoted-definition comparison](quoted-definition-evaluation.json) gives
+stable-ID dispositions for eight remaining development cases ending in 라는.
+KAIST 근대라는, 사회주의라는 and 민주주의라는 use noun + jcm annotations;
+the engine already recovers noun + 이다 + 라는, consistent with the cited NIKL
+and KRDict descriptions. These are representation differences, not evidence for
+an otherwise unsourced standalone 라는 particle. They remain measured misses;
+no adapter or baseline is changed to conceal the difference.
+
+대안인가라는, 달아줘라는 and GSD 빨라진다라는 require further quotation and
+attachment review under COV-018/020. Two standalone 라는 tokens require review
+of an omitted-copula fragment. Explicitly spelled 이란 now has a Copula-kind
+candidate, but this does not infer or join its preceding nominal context. The
+full 715-entry inventory and other remaining corpus families are still open.

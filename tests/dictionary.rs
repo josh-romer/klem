@@ -3641,3 +3641,220 @@ fn prefinal_copula_omission_keeps_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn retrospective_licenses_preserve_dictionary_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-prefinal-copulas.json")],
+        dir.db(),
+        "retrospective-license-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        (
+            "먹더라",
+            vec!["먹다"],
+            vec!["더", "라"],
+            MorphemeKind::Ending,
+        ),
+        ("먹더라", vec!["먹다"], vec!["더라"], MorphemeKind::Ending),
+        (
+            "먹더라고",
+            vec!["먹다"],
+            vec!["더", "라고"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더라고",
+            vec!["먹다"],
+            vec!["더라고"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더니",
+            vec!["먹다"],
+            vec!["더", "니"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더니",
+            vec!["먹다"],
+            vec!["더", "으니"],
+            MorphemeKind::Ending,
+        ),
+        ("먹더니", vec!["먹다"], vec!["더니"], MorphemeKind::Ending),
+        (
+            "먹더니까",
+            vec!["먹다"],
+            vec!["더", "으니까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더냐",
+            vec!["먹다"],
+            vec!["더", "냐"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더냐고",
+            vec!["먹다"],
+            vec!["더", "냐고"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더냐는",
+            vec!["먹다"],
+            vec!["더", "냐는"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더구나",
+            vec!["먹다"],
+            vec!["더", "구나"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더군요",
+            vec!["먹다"],
+            vec!["더", "군요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹더군요",
+            vec!["먹다"],
+            vec!["더군요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹던데요",
+            vec!["먹다"],
+            vec!["던데요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹었더라",
+            vec!["먹다"],
+            vec!["었", "더", "라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹었었겠더라",
+            vec!["먹다"],
+            vec!["었", "었", "겠", "더", "라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹으셨겠더라",
+            vec!["먹다"],
+            vec!["시", "었", "겠", "더", "라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사더라",
+            vec!["의사", "이다"],
+            vec!["더", "라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이더군요",
+            vec!["학생", "이다"],
+            vec!["더군요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어보더니",
+            vec!["먹다", "보다"],
+            vec!["어", "더니"],
+            MorphemeKind::Ending,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    let ledger: Value = serde_json::from_str(include_str!("fixtures/validity.json")).unwrap();
+    for case in ledger["cases"].as_array().unwrap().iter().filter(|c| {
+        c["id"]
+            .as_str()
+            .unwrap()
+            .starts_with("retrospective-license-")
+    }) {
+        let word = case["surface"].as_str().unwrap();
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        for judgment in case["judgments"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|j| j["verdict"] == "forbidden")
+        {
+            let lemmas: Vec<_> = judgment["lemmas"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            let forms: Vec<_> = judgment["morphemes"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            assert!(
+                !kept.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                "{word}: {forms:?}"
+            );
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

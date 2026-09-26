@@ -1202,3 +1202,43 @@ Broader prefinal-ending restrictions remain open, including the recorded
 omission is not added. Full-form parity does not certify contextual grammar;
 independent Korean-language review, fresh passages and remaining inventory
 dispositions are still completion requirements.
+
+## Retrospective following-ending licenses (COV-017r)
+
+[The comparison](retrospective-license-evaluation.json) records **464 removed
+analyses across 184 audited surfaces**, with no added analyses or changed
+provenance on retained paths. Every removal contains a recovered 더 immediately
+before one of the 33 reviewed incompatible endings. The 132-path matrix covers
+verbs, adjectives and explicit/omitted copulas: 128 targets were present in the
+previous binary, while four double-더라는 paths were already excluded. Auxiliary
+chains, internal/outer particles and earlier prefinals cannot bypass the check.
+Licensed retrospective followers, literal bundles and lexical stems remain.
+
+Development gold recovery is unchanged at **117 KAIST and 160 GSD misses**, with
+no lost gold groups or component sets. Mean candidates decrease from 5.842574
+to 5.824167 for KAIST and from 5.377415 to 5.361898 for GSD. These are ambiguity
+measures, not precision estimates. Four complete unchanged annotated development
+sentences protect negative, connective, honorific and auxiliary readings. All
+thirty stress fingerprints and historical corpus baselines are unchanged.
+
+Eighty-one new cases bring the ledger to **707 cases, 375 required and 338
+forbidden judgments**. The source review includes 46 entries: twenty grammar
+entries gain scoped dispositions, twelve existing reviews add evidence while
+preserving their earlier scope, and fourteen expression entries remain outside
+the grammar-POS queue. The inventory now has **86 scoped entries and 629 without
+a disposition**. The label catalog and dictionary fixtures are unchanged.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, stress
+and memory regressions, and the complete browser/HTTP suite pass. `nix flake
+check` and `nix build .#web` pass on x86_64-linux; other declared platforms were
+not executed. The packaged full-dictionary app passes nine preserved reading
+choices, prefinal/bundle source links and all 64 new forbidden-path judgments.
+Desktop/mobile screenshots were inspected without JavaScript errors or horizontal
+overflow. Dictionary/CLI and browser checks compare exact paths, preserving
+unjudged alternatives instead of rejecting every reading with the same lemma.
+
+The recorded 더 + 다 gap is closed for the reviewed standard-language paths.
+Other followers remain open: 먹더나요 retains the separately represented,
+unjudged 더 + 나 + 요 path, and nominalizing 기 needs its own review. Independent
+Korean-language review, fresh passages and remaining inventory dispositions are
+still completion requirements.

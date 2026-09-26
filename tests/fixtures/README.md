@@ -645,3 +645,14 @@ and two complete UD 2.15 development sentences byte for byte. They protect
 마찬가지겠지만, 최고더군요 and 어디더라 with their original grouped copula
 annotations. Existing corpus licensing and attribution above apply; hashes and
 case IDs are recorded in the comparison. Historical baselines are unchanged.
+
+
+`kaist-retrospective-licenses.conllu` and `gsd-retrospective-licenses.conllu`
+each preserve two complete UD 2.15 development sentences byte for byte. They
+protect 않더라도, 맞더니, 가져가시더니 and 시켜주더군요 while retrospective
+following-ending constraints remove other candidates. Existing UD corpus
+licensing and attribution above apply. The source catalog, grammar fixture and
+`krdict-prefinal-copulas.json` are reused unchanged for dictionary/CLI/browser
+regressions. `docs/retrospective-license-evaluation.json` records source notes,
+case IDs, fixture hashes and every targeted candidate removal; no historical
+corpus baseline or stress fingerprint is regenerated.

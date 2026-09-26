@@ -311,6 +311,49 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 p.copula_contracted |=
                     r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");
+                // Retrospective 더 has its own following-ending licenses.
+                // These source-reviewed families do not take it, including
+                // bundles that already contain a retrospective component.
+                // Check the recovered marker, not a lexical stem ending in 더.
+                if p.morphs.iter().any(|m| m.form == "더")
+                    && matches!(
+                        ending.form,
+                        "다" | "다고"
+                            | "다는"
+                            | "다니"
+                            | "다면"
+                            | "어"
+                            | "어요"
+                            | "지"
+                            | "지요"
+                            | "죠"
+                            | "습니다"
+                            | "습니까"
+                            | "네"
+                            | "네요"
+                            | "나요"
+                            | "고"
+                            | "고요"
+                            | "지만"
+                            | "지만요"
+                            | "거든"
+                            | "거든요"
+                            | "거나"
+                            | "건"
+                            | "더라"
+                            | "더라고"
+                            | "더라는"
+                            | "더니"
+                            | "더라도"
+                            | "더군"
+                            | "더군요"
+                            | "던"
+                            | "던데"
+                            | "던데요"
+                    )
+                {
+                    continue;
+                }
                 // Present reported forms permit honorific 시 but no other
                 // prefinals; past/modal use their plain 다- counterparts.
                 if matches!(ending.form, "는다면" | "는답니다" | "는다거나" | "는다든가")
@@ -368,8 +411,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // The adjective 으냐는 allomorph is a bare-stem path;
                 // prefinals use 냐는/느냐는. Retrospective 더 precedes 냐는.
                 if (ending.form == "으냐는" && !p.morphs.is_empty())
-                    || (matches!(ending.form, "느냐는" | "더라는")
-                        && p.morphs.iter().any(|m| m.form == "더"))
+                    || (ending.form == "느냐는" && p.morphs.iter().any(|m| m.form == "더"))
                     || (matches!(ending.form, "잖아" | "잖아요")
                         && p.morphs.iter().any(|m| m.form == "더"))
                 {

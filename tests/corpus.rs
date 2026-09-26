@@ -3,6 +3,36 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn retrospective_licenses_preserve_four_unchanged_annotated_cases() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-retrospective-licenses.conllu").as_slice(),
+            vec![
+                ("id:M2TA_089-s34/5", "않더라도", vec!["않다"]),
+                ("id:MH2_0209-s16/6", "맞더니", vec!["맞다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-retrospective-licenses.conllu").as_slice(),
+            vec![
+                ("id:dev-s143/7", "가져가시더니", vec!["가져가다"]),
+                ("id:dev-s600/20", "시켜주더군요", vec!["시키다", "주다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "retrospective-licenses").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn prefinal_copula_omission_recovers_three_unchanged_annotated_cases() {
     for (corpus, input, cases) in [
         (

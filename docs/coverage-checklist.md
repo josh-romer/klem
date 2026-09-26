@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records sixty-six scoped
-  dispositions from COV-016/017m–n/017p–q/018e–i/019d–f/020d–g; 649 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records eighty-six scoped
+  dispositions from COV-016/017m–n/017p–r/018e–i/019d–f/020d–g; 629 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -218,7 +218,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–q implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–r implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -442,6 +442,20 @@ review remains open under the completion review below.
   alternatives/source links. [The comparison](seo-connective-evaluation.json)
   records gains shared with COV-018i; broader 어서야 prefinal constraints and
   lexical class/sense selection remain open. See [scope](rules.md#seo-connectives-and-particles-cov-017q018i).
+- [x] **COV-017r — Retrospective following-ending licenses.** Recovered 더
+  is rejected before 33 reviewed ordinary or retrospective-bundled endings,
+  including 다, 지, 어/어요, formal endings, 고 and doubled 더라/던데.
+  The same condition applies to lexical predicates, explicit/omitted copulas,
+  derived adjectives, auxiliary chains and outer particles. Licensed 라/니/냐/
+  구나 families and literal bundles remain. Evidence: [132-path matrix and
+  composition tests](../tests/retrospective_licenses.rs), 81 source-cited ledger
+  cases, four complete unchanged annotated sentences, dictionary/CLI/browser
+  checks and [comparison](retrospective-license-evaluation.json). The report
+  accounts for every removed candidate across 184 surfaces and preserves all
+  30 stress fingerprints. Other followers, including 나 and nominalizing 기,
+  still need review; 먹더나요 retains the unjudged 더 + 나 + 요 alternative.
+  This closes the 더 + 다 gap recorded by COV-020g. See
+  [scope](rules.md#retrospective-following-ending-licenses-cov-017r).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–i implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -766,8 +780,8 @@ review remains open under the completion review below.
   `prefinal-copula-*` ledger cases, attributed dictionary/CLI/browser checks and
   [comparison](prefinal-copula-evaluation.json). Bare 던/더라는 omission,
   wider prefinal-ending licenses and contextual senses remain open. The report
-  records the existing 더 + 다 attachment problem for follow-up; this batch
-  does not certify it. See [scope](rules.md#modal-and-retrospective-copula-omission-cov-020g).
+  records the then-existing 더 + 다 attachment problem; COV-017r now rejects
+  that path across lexical and represented-copula classes. See [scope](rules.md#modal-and-retrospective-copula-omission-cov-020g).
 
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation

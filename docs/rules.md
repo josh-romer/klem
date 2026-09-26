@@ -1778,8 +1778,9 @@ remain available. Dictionary presence does not select a contextual sense.
 and notes restrictions in adnominal/nominalizing uses. No new bare 던/더라는
 omission rule is introduced here. Broader prefinal-ending licenses remain open:
 the comparison explicitly probes 의사더다, whose underlying 더 + 다 path also
-exists for explicit copulas and lexical predicates. This unresolved path is not
-certified by full-form parity or by corpus recall.
+existed for explicit copulas and lexical predicates. COV-017r below now rejects
+that path. The historical comparison did not certify it through full-form parity
+or corpus recall.
 
 Three complete unchanged development sentences recover 마찬가지겠지만,
 최고더군요 and 어디더라. Thirty-five ledger cases and dictionary/CLI/browser
@@ -1787,3 +1788,46 @@ checks cover required readings and boundary/order violations. All thirty stress
 fingerprints remain unchanged, and every prior candidate and gold group in the
 comparison is preserved. Independent review and fresh-passage validation remain
 completion requirements.
+
+
+## Retrospective following-ending licenses (COV-017r)
+
+Recovered [더](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85794)
+has a restricted set of following endings. The [source review](retrospective-license-evaluation.json)
+retains all senses and attachment notes for 46 entries. In particular,
+[고](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78583) explicitly
+excludes 더 from its prefinal slot; the reviewed ordinary endings list other
+markers, while literal retrospective bundles already contain that component.
+The forbidden judgments infer the scoped restrictions from both sides of each
+boundary. They are not independent Korean-language precision judgments.
+
+The engine rejects recovered 더 before 다/다고/다는/다니/다면, 어/어요,
+지/지요/죠, 습니다/습니까, 네/네요, 나요, 고/고요, 지만/지만요,
+거든/거든요, 거나/건, and 더라/더라고/더라는/더니/더라도/더군/더군요/
+던/던데/던데요. Attached formal allomorphs share the same canonical check.
+The marker is checked before predicate expansion, so auxiliary connectors,
+답다 derivations, explicit and omitted copulas, earlier prefinals and outer
+particles cannot bypass the condition. No analysis is discarded merely because
+its lexical stem contains or ends in the syllable 더.
+
+The 132-path matrix covers verbs, adjectives and both copula spellings. Of these,
+128 targets were emitted by the preceding binary; the four double-더라는 paths
+were already rejected. A further composition matrix checks earlier honorific,
+past/modal/obligation markers, auxiliaries, internal particles and polite endings.
+Licensed 더 + 라/라고/라면/라서/란/랍니다/라든가, 니/으니/으니까,
+냐/냐고/냐는 and 구나/군요 readings remain, alongside literal bundles and
+original lexical candidates. This is a standard-language review; historical and
+dialectal forms remain outside the declared scope.
+
+Dictionary/CLI and browser regressions check exact lemma-and-morpheme paths.
+먹더나요 loses the reviewed 더 + 나요 path while retaining an unjudged
+더 + 나 + 요 alternative, because 나 has a separate source and attachment
+audit. Other followers, including nominalizing 기, remain open. No grammatical
+certification follows merely from preserving an existing candidate.
+
+Four complete unchanged annotated development sentences preserve 않더라도,
+맞더니, 가져가시더니 and 시켜주더군요. Development gold recovery is unchanged,
+while mean candidate counts decrease. The comparison records every removed
+analysis for 184 targeted surfaces, verifies its forbidden adjacent boundary,
+and preserves all thirty stress fingerprints and every retained provenance.
+Independent Korean review and fresh-passage evaluation remain pending.

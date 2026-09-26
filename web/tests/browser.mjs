@@ -628,6 +628,12 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["먹더라", ["먹", "더", "라"], "라", "Statement / reason / contrast", 79275, "ending"],
+    ["먹더라", ["먹", "더라"], "더라", "Recalled experience", 81524, "ending"],
+    ["먹더니", ["먹", "더", "으니"], "으니", "Reason / premise / question", 80142, "ending"],
+    ["먹더니까", ["먹", "더", "으니까"], "으니까", "Reason / premise", 80137, "ending"],
+    ["먹더군요", ["먹", "더군요"], "더군요", "Recalled realization (polite)", 86281, "ending"],
+    ["학생이더군요", ["학생", "이", "더군요"], "더군요", "Recalled realization (polite)", 86281, "ending"],
     ["의사겠지", ["의사", "이", "겠", "지"], "지", "Connective / final", 78636, "ending"],
     ["최고더군요", ["최고", "이", "더군요"], "더군요", "Recalled realization (polite)", 86281, "ending"],
     ["최고더군요", ["최고", "이", "더", "군", "요"], "요", "Polite", 86116, "particle"],
@@ -1185,6 +1191,17 @@ try {
       await selector.selectOption(choice);
     }
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+  }
+  const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
+  const retrospectiveResults = new Map();
+  for (const c of retrospectiveLedger.cases.filter(c => c.id.startsWith("retrospective-license-"))) {
+    for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
+      if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
+      const data = retrospectiveResults.get(c.surface);
+      assert.ok(!data.records[0].analysis.analyses.some(a =>
+        JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas) &&
+        JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)), `${c.id}: ${j.id}`);
+    }
   }
   for (const [word, forbidden] of [
     ["학생겠지", ["학생", "이다"]],

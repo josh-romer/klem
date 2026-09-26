@@ -2105,3 +2105,33 @@ COV-018l separately tracks the observed 편마다에도 gap. KRDict's noun-attac
 note and the abstract of [Yoo (2007)](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001059464)
 do not resolve following 에. The full paper was not obtained; this case remains
 open without a required/forbidden judgment or a claim about its regional status.
+
+
+## Comparison and extent particles (COV-018m)
+
+KRDict [토록](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86121)
+and [마냥](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80341)
+specify noun attachment. 필생토록 yields 필생 + 토록, and 아이들마냥 yields
+아이 + 들 + 마냥. Intervening case particles and bare predicate connectives
+do not become noun bases through these rules. Duration/degree and comparison
+interpretations remain contextual; semantic noun subclasses are not inferred.
+
+[만치](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80343)
+and [만큼](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80342)
+list noun/particle attachment and, for the restrictive sense, 어서. The direct
+있어서만치는 example and the [엉큼하다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=67460)
+example 있어서만큼은 support the new connective paths. Existing spelling,
+auxiliary/copula/답다 composition and outer topic/polite rules remain; the
+immediately preceding surface still determines 은/는.
+
+Whole lexical 그토록/이토록/저토록 and standalone adverb 마냥 remain available
+under dictionary-only filtering. The particle label excludes the adverb 마냥
+and bound-noun 만치 homonyms. Adnominal + bound-noun 만치/만큼 is a separate
+construction: an exact forbidden particle-role path does not ban a bound-noun
+analysis with its own lemma. Joining those spaced constructions remains separate.
+Existing 연구토록/분발토록 shortened 하다 + 도록 readings also remain.
+
+[The source/candidate review](extent-evaluation.json) names unresolved outer
+cases/particles, nominalized-base semantics and connectors beyond explicit 어서.
+The source's 등 is not interpreted as a complete exclusion list. See
+[regressions](../tests/extent_particles.rs) and stable `extent-*` ledger cases.

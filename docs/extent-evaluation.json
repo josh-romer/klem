@@ -1,0 +1,4597 @@
+{
+  "schema_version": 1,
+  "scope": "COV-018m: noun-attached 토록/마냥, noun/particle 만치, and source-listed 어서 + 만치/만큼. Preserve bound-noun/adverb homonyms and whole lexical alternatives.",
+  "baseline_commit": "63f53eed3ed84727fb81d9d5c1c893f26c36a90d",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Every sense and attachment note; up to two example groups per sense plus explicitly selected example evidence.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "32cc5ea4c4df7170c9e80bc5bcf4cc1241ead8d25807e070e184231f015ba14e",
+    "src/engine.rs": "41075f083533625699500f5333094dfd98f6db9854875053bc63bd36950f6881",
+    "tests/extent_particles.rs": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
+    "tests/corpus.rs": "6f6cf4bbc890953da8cb6951894f4fdbdbb1dd8d9f6044f48a10896359565b2f",
+    "tests/dictionary.rs": "09a86ec146e9e3c44e516663479a3214b346bba9f0fbe1e6e91fc8f85f02f384",
+    "tests/validity.rs": "826e35643e0f4fb98faf857105b13e7d1a040e7451fa5e3ae0a8253fce1cb1c7",
+    "tests/fixtures/validity.json": "27a002559784d167f2c8b803e6f3762d43f61bcd435f517fabf209569f7ce036",
+    "tests/fixtures/optimization.json": "c2725f12a0eebc9e84faf135e5a7509d88c477a92f80eeefe4dd3c4cc01f8c89",
+    "tests/fixtures/krdict-extent.json": "5eb4b10954e0a55761848a0f58bfc6eac71ea9abd263fef310581e8b6a464735",
+    "tests/fixtures/krdict-grammar-labels.json": "6a3d1f4b7c217d1da4059adf1456e0553c62db10b8a8df9da40674f8514ffe91",
+    "web/src/grammar-labels.json": "6303065007d151521b60a8b2298df41d34c02d05c9cf239838cccb03c0655cdc",
+    "web/tests/browser.mjs": "2acc69b244d1dc453521a5aa5ad0f7d3e3f992f7843c0d702a1d35d3865c89b7"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:86121",
+        "headword": "토록",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86121",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다. "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞에 오는 말의 정도나 시간이 다할 때까지의 뜻을 나타내는 조사.",
+            "notes": [
+              "주로 '종일토록', '평생토록', '이토록', '그토록', '저토록'으로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "이토록 날 힘들게 하는 이유가 뭘까?"
+              ],
+              [
+                "승규는 종일토록 도서관에서 공부를 했다. "
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "10bd9ead437fb0af4597e4ef98b7ded9dbd34f0983de63576f7716ea3d5108d9"
+    },
+    {
+      "source": {
+        "id": "krdict:80341",
+        "headword": "마냥",
+        "homonym": "2",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80341",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "모양이나 정도가 서로 비슷하거나 같음을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "하늘에 구멍이 난 것마냥 폭우가 쏟아진다."
+              ],
+              [
+                "승규는 소풍 간 아이마냥 들떠서 뛰어 다닌다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "f3341a15e262c7bb05539467543963c167e68f056eefe5c8d7b8b791058d9298"
+    },
+    {
+      "source": {
+        "id": "krdict:80343",
+        "headword": "만치",
+        "homonym": "2",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80343",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞말과 정도가 서로 비슷하거나 같음을 나타내는 조사.",
+            "notes": [
+              "명사나 조사 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "그만치."
+              ],
+              [
+                "나만치."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "2",
+            "definition": "앞말에 한정됨을 나타내는 조사.",
+            "notes": [
+              "명사나 조사 뒤, 어미 '-어서-' 등에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오늘만치는 집에 일찍 들어가겠다."
+              ],
+              [
+                "그는 피아노 연주에 있어서만치는 세계 최고이다."
+              ]
+            ],
+            "total_example_groups": 2
+          }
+        ]
+      },
+      "source_sha256": "a688c7f4f9dfbd3c1df8f4ae6349e4083178b78a3dc7896650efdec2549a69b2"
+    },
+    {
+      "source": {
+        "id": "krdict:80342",
+        "headword": "만큼",
+        "homonym": "2",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80342",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞에 말한 내용과 비슷한 정도나 한도임을 나타내는 조사.",
+            "notes": [
+              "명사나 조사 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오늘 본 영화는 기대만큼 실망도 컸다."
+              ],
+              [
+                "지수만큼 부모님에게 효도하는 효녀도 없다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "앞말에 한정됨을 나타내는 조사.",
+            "notes": [
+              "명사나 조사 뒤, 어미 '-어서-' 등에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "배 아픈 데만큼은 이 약이 잘 듣는다."
+              ],
+              [
+                "그는 자신이 맡은 일에서만큼은 최고의 전문가다."
+              ]
+            ],
+            "total_example_groups": 3
+          }
+        ]
+      },
+      "source_sha256": "4e0a14e657e6c76cc426eb30929ca44fd0dd11da56687285c431afbcece37b4e"
+    },
+    {
+      "source": {
+        "id": "krdict:53006",
+        "headword": "만치",
+        "homonym": "1",
+        "pos": "의존 명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=53006",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "만치"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞의 내용과 같은 양이나 정도임을 나타내는 말.",
+            "notes": [
+              "주로 '-은/-는/-을 만치'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "가는 만치."
+              ],
+              [
+                "놀 만치."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "2",
+            "definition": "앞의 내용이 뒤에 나오는 내용의 원인이나 근거가 됨을 나타내는 말.",
+            "notes": [
+              "주로 '-은/-는/-을 만치'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "대학생인 만치."
+              ],
+              [
+                "빨리 온 만치."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "131c1951acd75636b9db1b5ffbaf1763b4804b852b827129e6c04014bd9ef015"
+    },
+    {
+      "source": {
+        "id": "krdict:53008",
+        "headword": "만큼",
+        "homonym": "1",
+        "pos": "의존 명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=53008",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "만큼"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞의 내용과 같은 양이나 정도임을 나타내는 말.",
+            "notes": [
+              "주로 '-은/-는/-을 만큼'으로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "공부한 만큼."
+              ],
+              [
+                "먹을 만큼."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "2",
+            "definition": "앞의 내용이 뒤에 나오는 내용의 원인이나 근거가 됨을 나타내는 말.",
+            "notes": [
+              "주로 '-은/-는/-을 만큼'으로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "공부를 한 만큼."
+              ],
+              [
+                "그녀를 사랑한 만큼."
+              ]
+            ],
+            "total_example_groups": 9
+          }
+        ]
+      },
+      "source_sha256": "2c8747812a8264e935677cee36f1d1eb0bdd78d2c432fbf684c0d4987712a4ee"
+    },
+    {
+      "source": {
+        "id": "krdict:51528",
+        "headword": "마냥",
+        "homonym": "1",
+        "pos": "부사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=51528",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "마냥"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "언제까지나 계속하여.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "마냥 걷다"
+              ],
+              [
+                "마냥 기다리다"
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "2",
+            "definition": "부족함이 없이 실컷.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "마냥 떠들다"
+              ],
+              [
+                "마냥 먹다"
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "3",
+            "definition": "보통 이상으로 몹시.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "마냥 부럽다"
+              ],
+              [
+                "마냥 정겹다"
+              ]
+            ],
+            "total_example_groups": 9
+          }
+        ]
+      },
+      "source_sha256": "0dc3760d49e887332d1013215e98f81cd7f412e55938c0efb03a52b480395b86"
+    },
+    {
+      "source": {
+        "id": "krdict:86160",
+        "headword": "필생",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86160",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "필쌩"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "살아 있는 동안.",
+            "notes": [
+              "주로 '필생의'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "필생의 고통."
+              ],
+              [
+                "필생의 꿈."
+              ]
+            ],
+            "total_example_groups": 10
+          },
+          {
+            "id": "2",
+            "definition": "목숨이 끊어질 때까지 다함.",
+            "notes": [
+              "주로 '필생의'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "필생의 노력."
+              ],
+              [
+                "필생의 대작."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "77661f37f778207915984135adc90c971aebf39fe9679f09eda0f30fb833f80c"
+    },
+    {
+      "source": {
+        "id": "krdict:72922",
+        "headword": "이토록",
+        "homonym": "0",
+        "pos": "부사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72922",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "이토록"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "이런 정도로까지. 또는 이렇게까지.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이토록 다르다."
+              ],
+              [
+                "이토록 예쁘다."
+              ]
+            ],
+            "total_example_groups": 7
+          }
+        ]
+      },
+      "source_sha256": "90a12b6e7573f03376cc257bcff25e229f409dea2a4275c56b7f07c30b5b377a"
+    },
+    {
+      "source": {
+        "id": "krdict:37147",
+        "headword": "그토록",
+        "homonym": "0",
+        "pos": "부사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=37147",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "그토록"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "그런 정도로까지. 또는 그렇게까지.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그토록 바라다."
+              ],
+              [
+                "그토록 원하다. "
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "e063f73229483edb2683c56e00fa9847ac0b30abe57a9b8727fafc95f6f79b60"
+    },
+    {
+      "source": {
+        "id": "krdict:86116",
+        "headword": "요",
+        "homonym": "4",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86116",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "높임의 대상인 상대방에게 존대의 뜻을 나타내는 조사.",
+            "notes": [
+              "주로 두루 낮춤으로 쓰는 종결 어미나 일부 예사 낮춤으로 쓰는 종결 어미 뒤에 붙여 쓴다. 격식을 갖추어야 하는 상대에게는 잘 쓰지 않는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오늘 날씨가 참 좋군요."
+              ],
+              [
+                "내일 점심 같이 먹을까요?"
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "2",
+            "definition": "높임의 대상인 상대방에게 존대의 뜻을 나타내는 조사.",
+            "notes": [
+              "명사, 부사어, 연결 어미 뒤에 붙여 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "빨리요, 버스가 떠나겠어요."
+              ],
+              [
+                "승규가요, 저한테요, 화를 냈어요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "29064a11377b1737feea0727efbd79325d74e7cc184d2c020a05d677f9e94301"
+    },
+    {
+      "source": {
+        "id": "krdict:85851",
+        "headword": "는",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 대상이 다른 것과 대조됨을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, ‘-아’, ‘-게’, ‘-지’, ‘-고’ 등의 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "어머니는 선생님이고, 아버지는 회사원이다. "
+              ],
+              [
+                "편지는 자주 쓴다. "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "2",
+            "definition": "문장 속에서 어떤 대상이 화제임을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "저는 학생입니다."
+              ],
+              [
+                "사과는 몸에 좋다고 해요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "강조의 뜻을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, 연결 어미 등의 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "노는 게 좋아도 숙제는 해야지."
+              ],
+              [
+                "바쁘더라도 부모님께 전화는 자주 하세요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "8dc9d6effae6930841dcff3f5badde2d9f2daa86d2849f6ee8f649ffd905278d"
+    },
+    {
+      "source": {
+        "id": "krdict:67460",
+        "headword": "엉큼하다",
+        "homonym": "0",
+        "pos": "형용사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=67460",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "엉큼하다"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "엉큼한",
+            "pronunciations": [
+              "엉큼한"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "엉큼하여",
+            "pronunciations": [
+              "엉큼하여"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "엉큼하니",
+            "pronunciations": [
+              "엉큼하니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "엉큼합니다",
+            "pronunciations": [
+              "엉큼함니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "엉뚱한 욕심을 품고 분수에 넘치는 짓을 하려는 태도가 있다.",
+            "notes": [],
+            "patterns": [
+              "1이 엉큼하다"
+            ],
+            "examples": [
+              [
+                "엉큼한 마음."
+              ],
+              [
+                "엉큼한 생각."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "2",
+            "definition": "보기와 다르게 실속이 있다.",
+            "notes": [],
+            "patterns": [
+              "1이 엉큼하다"
+            ],
+            "examples": [
+              [
+                "엉큼한 면."
+              ],
+              [
+                "엉큼하게 일하다."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "b31d0774664a78fd7d40b1d4e8b8114f4151b1aebf36af1a88a834aef61e726a"
+    }
+  ],
+  "example_evidence": [
+    {
+      "id": "krdict:80343",
+      "headword": "만치",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80343",
+      "groups": [
+        {
+          "sense": "2",
+          "group_index": 1,
+          "text": [
+            "그는 피아노 연주에 있어서만치는 세계 최고이다."
+          ]
+        }
+      ],
+      "groups_sha256": "4627c79004d360a9da02ee064e5dc3edaa54fe1918b19826ed8cdae38c35e703"
+    },
+    {
+      "id": "krdict:67460",
+      "headword": "엉큼하다",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=67460",
+      "groups": [
+        {
+          "sense": "2",
+          "group_index": 6,
+          "text": [
+            "평소에는 말없이 조용한 김 대리는 일에 있어서만큼은 엉큼하게 해냈다."
+          ]
+        }
+      ],
+      "groups_sha256": "c54561ac7c122e9c08494e89ce39382a2f4f37f40833a0b794092272feb21607"
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "5cc59acabcd9b19d8f0176bbc1dbe7949e1094de9324d86fcf73f315e235dd3e",
+      "after_sha256": "af4951f3536566952a7150ecfc2162f7987541dc1bb48225928d63bbd7cf4bad",
+      "converted": 22220,
+      "before_matched": 22109,
+      "after_matched": 22110,
+      "remaining_misses": 110,
+      "new_matches": [
+        {
+          "id": "id:MH2_0159-s121/11",
+          "surface": "필생토록",
+          "expected": [
+            "필생"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.835418541854185,
+      "mean_candidates_after": 5.835553555355536
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "9655475b346a771494eb65bca5c44dbee5422489808c1427d3f64549adf1f5a5",
+      "after_sha256": "9655475b346a771494eb65bca5c44dbee5422489808c1427d3f64549adf1f5a5",
+      "converted": 9989,
+      "before_matched": 9835,
+      "after_matched": 9835,
+      "remaining_misses": 154,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.370007007708479,
+      "mean_candidates_after": 5.370007007708479
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "필생토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "필생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "평생토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "평생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "일생토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "일생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "종일토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "종일",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "영원토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "영원",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "이토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "그토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "그",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "저토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "저",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아이마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "새마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "새",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "애마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "애",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "것마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "것",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "그만치",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "그",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "나만치",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "나",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "너만치",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "너",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "작년만치",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "작년",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "어제만치",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "어제",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "오늘만치",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "오느",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오느",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오늘",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아이들마냥",
+      "before_count": 1,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수님마냥",
+      "before_count": 1,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "suffix.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수니다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수닣다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "평생토록은",
+      "before_count": 9,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "평생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "종일토록도",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "종일",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "필생토록요",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "필생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.polite"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생마냥은",
+      "before_count": 8,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아이마냥요",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.polite"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "오늘만치는",
+      "before_count": 13,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "오느",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오느",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오늘",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "오늘만치도",
+      "before_count": 6,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "오느",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오느",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오늘",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서만치",
+      "before_count": 2,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에서",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교엏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교로만치",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교로",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서만치는",
+      "before_count": 10,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "에서",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교엏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "있어서만치는",
+      "before_count": 10,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "있다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있어서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "있어서만큼은",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "있다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좋아서만큼은",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "좋다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋아다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "일해서만치는",
+      "before_count": 10,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "일하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.ha",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "일핳다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "일해",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "일해다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "일해서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이어서만큼은",
+      "before_count": 12,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생잇다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.siot",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어봐서만치는",
+      "before_count": 10,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.identical",
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어봐",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어봐서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "contraction.vowel",
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생다워서만큼은",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "답다",
+              "kind": "suffix"
+            },
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "particle",
+            "particle.comparison_seo",
+            "suffix.adjectival.dap"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생다우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생답다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생을토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "친구와토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구와",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생만토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어서토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹어서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹다토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생을마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "친구와마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구와",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생만마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어서마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹어서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹다마냥",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "평생토록는",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생마냥는",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "오늘만치은",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "있어서만치은",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "있어서만큼는",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹을만치",
+      "before_count": 6,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "을",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹는만치",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹는",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹을만큼",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹는만큼",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "토록",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "마냥",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "만치",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "만큼",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "연구토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "연구",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "분발토록",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서만큼은",
+      "before_count": 13,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교엏다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만큼",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "평생토록만",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "평생토록이",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아이마냥을",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "나만만치",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "나만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기토록",
+      "before_count": 2,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "토록",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹음마냥",
+      "before_count": 1,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹음",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "마냥",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어만치",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고만큼",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "있어서만치의",
+      "before_count": 2,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "있다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "의",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "의",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "의",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있어서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "의",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "있으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "의",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.comparison_extent",
+            "particle.comparison_seo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹을만치는",
+      "before_count": 14,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "을",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent",
+            "particle.contraction.l"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "만치",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.comparison_extent"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹을만큼은",
+      "before_count": 14,
+      "after_count": 14,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    }
+  ],
+  "source_access": "Live KRDict entry pages were attempted but inaccessible through the web tool. Review uses the pinned September 2026 export with source URLs and hashes.",
+  "attachment_decisions": [
+    "토록 and 마냥 specify nouns as their bases. Existing honorific/plural suffixes can precede them, but intervening particles and bare predicate connectives are not licensed by this path. 토록 retains duration/degree interpretations without selecting a semantic noun subclass.",
+    "만치 and 만큼 explicitly allow nouns or particles; their restrictive sense also lists 어서. The direct 있어서만치는 example and lexical 엉큼하다 example 있어서만큼은 support this added connector. The existing nominal 만큼 paths remain unchanged.",
+    "Bound-noun 만치 (53006) and 만큼 (53008) list adnominal 은/는/을 environments. Those are not the particle readings; exact forbidden particle-role judgments do not reject a separate bound-noun analysis. Joining such spaced constructions remains separate work.",
+    "마냥 (51528) is also a standalone adverb; 이토록/그토록/저토록 are lexical alternatives. Dictionary-only retains these whole words as well as supported decompositions. Grammar lookup links only the particle source and excludes the adverb/bound-noun homonyms.",
+    "토록 also occurs in existing shortened 하다 + 도록 paths such as 연구토록/분발토록. These predicate candidates remain alongside new nominal hypotheses; the new particle does not normalize or delete them.",
+    "Topic, additive and polite particles retain their existing immediate allomorph boundaries. Broader case/particle chains, other connectors implied by 등 and semantic suitability of nominalized bases remain explicitly unjudged."
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-extent.conllu",
+      "sha256": "75484680d96c28ce5f84f656dd6fc85440c35ac7cb7ed58610c0550f1eff6edc",
+      "complete_byte_identical_sentences": 2,
+      "judged_groups": [
+        {
+          "id": "id:MH2_0159-s121/11",
+          "surface": "필생토록",
+          "expected": [
+            "필생"
+          ],
+          "matched": true,
+          "recovered": 1,
+          "recovered_sets": [
+            [
+              0
+            ]
+          ]
+        },
+        {
+          "id": "id:M2TA_089-s30/5",
+          "surface": "그토록",
+          "expected": [
+            "그토록"
+          ],
+          "matched": true,
+          "recovered": 1,
+          "recovered_sets": [
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "unjudged_followups": [
+    {
+      "id": "extent-further-composition",
+      "surfaces": [
+        "평생토록만",
+        "평생토록이",
+        "아이마냥을",
+        "나만만치",
+        "먹기토록",
+        "먹음마냥",
+        "먹어만치",
+        "먹고만큼",
+        "있어서만치의"
+      ],
+      "status": "unjudged",
+      "reason": "Review generated and absent paths for further particle/case combinations, nominalized-base semantics and connectors beyond explicit 어서. The source 등 is not treated as a complete exclusion list."
+    },
+    {
+      "id": "extent-bound-noun-joining",
+      "surfaces": [
+        "먹을만치",
+        "먹는만치",
+        "먹을만큼",
+        "먹는만큼"
+      ],
+      "status": "separate-representation",
+      "reason": "The adnominal + bound-noun construction is distinct from the particle. Exact forbidden particle-role judgments do not forbid a future analysis with a separate bound-noun lemma; spacing/compound scope remains separate."
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "remaining": [
+    "COV-018 remains open for additional particles, chains and pronouns, including the separately tracked 마다 + 에 question.",
+    "Independent Korean review, fresh passages, semantic noun classes and contextual interpretation remain open. Dictionary matches do not certify every lexical hypothesis."
+  ],
+  "labels": {
+    "canonical_forms": 277,
+    "source_entries": 349,
+    "grammar_fixture_entries": 350,
+    "added_forms": [
+      "토록",
+      "마냥",
+      "만치"
+    ],
+    "added_source_ids": [
+      86121,
+      80341,
+      80343
+    ],
+    "previous_catalog_and_fixtures_preserved": true
+  },
+  "lexical_fixture": {
+    "path": "tests/fixtures/krdict-extent.json",
+    "entries": 73,
+    "adaptations": "All homonyms and senses; English equivalents and first example group per sense; omit WordForm, RelatedForm and export metadata."
+  }
+}

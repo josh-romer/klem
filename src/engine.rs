@@ -1226,7 +1226,16 @@ fn particle_allowed(
     if suffixes.first().is_some_and(|m| {
         matches!(
             m.form.as_str(),
-            "커녕" | "란" | "이란" | "이라든가" | "이라든지" | "치고" | "치고는" | "치고서"
+            "커녕"
+                | "란"
+                | "이란"
+                | "이라든가"
+                | "이라든지"
+                | "치고"
+                | "치고는"
+                | "치고서"
+                | "토록"
+                | "마냥"
         )
     }) || (matches!(form, "이" | "가" | "을" | "를")
         && suffixes.iter().any(|m| {
@@ -1488,6 +1497,8 @@ fn nominals(
                     | "나마"
                     | "부터"
                     | "보다"
+                    | "만치"
+                    | "만큼"
             ) {
             PredicateEnd::BeforeParticle(particle.form)
         } else {
@@ -1506,6 +1517,11 @@ fn nominals(
                     }
                     if concessive {
                         a.rules.push("particle.concessive".into());
+                    }
+                    if matches!(particle.form, "만치" | "만큼")
+                        && p.morphs.last().is_some_and(|m| m.form == "어서")
+                    {
+                        a.rules.push("particle.comparison_seo".into());
                     }
                     out.push(a);
                 }
@@ -1542,6 +1558,7 @@ fn nominals(
             match particle.form {
                 "요" => a.rules.push("particle.polite".into()),
                 "치고" | "치고는" | "치고서" => a.rules.push("particle.chigo".into()),
+                "만치" | "마냥" | "토록" => a.rules.push("particle.comparison_extent".into()),
                 "들" => a.rules.push("particle.distributive".into()),
                 "다" | "이다" if enumerative_da => {
                     a.rules.push("particle.enumerative_da".into());
@@ -1877,6 +1894,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "야" => matches!(ending, "어" | "어서" | "게" | "지" | "고" | "고서"),
         "부터" => matches!(ending, "어서" | "고" | "으면서"),
         "보다" => ending == "어서",
+        "만치" | "만큼" => ending == "어서",
         "만" => {
             concessive_ending(ending)
                 || matches!(ending, "어" | "어서" | "어야" | "게" | "고" | "고서")

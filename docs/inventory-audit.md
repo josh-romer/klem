@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **152 scoped
-reviews**, **one observed gap with unresolved acceptability**, and **562 entries
+The [manual ledger](inventory-reviews.json) currently contains **156 scoped
+reviews**, **one observed gap with unresolved acceptability**, and **558 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
@@ -488,3 +488,13 @@ and 562 unreviewed**. [The comparison](range-case-evaluation.json) records 84
 candidate additions on 65 surfaces and two provenance-only changes, with
 one KAIST gain and unchanged stress fingerprints. Other case combinations,
 contextual restrictions and independent review remain open.
+
+
+COV-018m adds scoped dispositions for 토록, 마냥, 만치 and 만큼
+(86121/80341/80343/80342). Their noun/particle/어서 licenses remain separate
+from the bound-noun and adverb homonyms; lexical alternatives and shortened
+하다 predicate paths are retained. [The comparison](extent-evaluation.json)
+records 123 additions on 81 surfaces, no removals/provenance changes, one KAIST
+gain and thirty unchanged stress fingerprints. The inventory now has **156
+scoped entries, one observed gap and 558 unreviewed**. Semantic subclasses,
+other connectors and further particle combinations remain open.

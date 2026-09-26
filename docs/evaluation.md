@@ -1581,3 +1581,38 @@ completed at 26/194/770 syllables, yielding 18/130/514 candidates. The report
 records single-run timings; these unjudged inputs check termination and growth,
 not linguistic accuracy or novel throughput. Fresh-passage evaluation and
 independent Korean review remain open.
+
+
+## Comparison and extent particles (COV-018m)
+
+[The comparison](extent-evaluation.json) records **123 added candidates on
+81 surfaces**, with no removals or changed prior provenance. Noun-only 토록
+and 마냥, noun/particle 만치, and explicit 어서 + 만치/만큼 retain their
+separate roles. Whole lexical/adverb alternatives and prior shortened 하다
+paths remain. Thirty-eight required and twenty-five forbidden judgments cover
+attachment, suffixes, allomorphs and homonym boundaries; these counts do not
+measure precision. Further connectors and semantic restrictions remain unjudged.
+
+KAIST **필생토록 → 필생** newly matches. Development misses are now
+**110 KAIST and 154 GSD**, with no lost gold groups or component sets. Mean
+candidate counts are 5.835554 and 5.370007. Two complete unchanged KAIST
+sentences preserve the duration gain and lexical 그토록 gold. All thirty
+stress fingerprints and historical corpus baselines remain unchanged.
+
+The 63 new ledger cases bring totals to **1,531 cases, 876 required and 661
+forbidden judgments**. The lexical fixture retains 73 entries and all their
+homonyms/senses. Three labels/source entries bring the catalog to **277 forms,
+349 source IDs and 350 grammar fixture entries**; all previous entries remain.
+Four scoped dispositions bring the inventory to **156 scoped entries, one
+observed gap and 558 unreviewed**. Bound-noun joining, other particle/connector
+combinations, independent Korean review and fresh passages remain open.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build, browser/HTTP checks and
+inventory verification pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared systems were not executed. The final Nix tests
+include the new corpus regression. The packaged full-dictionary app passes
+eight breakdown selections, a whole-word 그토록 selection, source/homonym
+separation and all 25 forbidden paths. Desktop/mobile screenshots were inspected
+without JavaScript errors or horizontal overflow; 필생토록 visibly yields
+필생 + 토록 under dictionary-only filtering.

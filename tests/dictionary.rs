@@ -7077,3 +7077,298 @@ fn range_case_particles_preserve_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn extent_particles_preserve_dictionary_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-extent.json")],
+        dir.db(),
+        "extent-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        (
+            "필생토록",
+            vec!["필생"],
+            vec!["토록"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "평생토록",
+            vec!["평생"],
+            vec!["토록"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "일생토록",
+            vec!["일생"],
+            vec!["토록"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "종일토록",
+            vec!["종일"],
+            vec!["토록"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "영원토록",
+            vec!["영원"],
+            vec!["토록"],
+            MorphemeKind::Particle,
+        ),
+        ("이토록", vec!["이"], vec!["토록"], MorphemeKind::Particle),
+        ("그토록", vec!["그"], vec!["토록"], MorphemeKind::Particle),
+        ("저토록", vec!["저"], vec!["토록"], MorphemeKind::Particle),
+        (
+            "아이마냥",
+            vec!["아이"],
+            vec!["마냥"],
+            MorphemeKind::Particle,
+        ),
+        ("새마냥", vec!["새"], vec!["마냥"], MorphemeKind::Particle),
+        ("애마냥", vec!["애"], vec!["마냥"], MorphemeKind::Particle),
+        ("것마냥", vec!["것"], vec!["마냥"], MorphemeKind::Particle),
+        (
+            "학생마냥",
+            vec!["학생"],
+            vec!["마냥"],
+            MorphemeKind::Particle,
+        ),
+        ("그만치", vec!["그"], vec!["만치"], MorphemeKind::Particle),
+        ("나만치", vec!["나"], vec!["만치"], MorphemeKind::Particle),
+        ("너만치", vec!["너"], vec!["만치"], MorphemeKind::Particle),
+        (
+            "작년만치",
+            vec!["작년"],
+            vec!["만치"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "어제만치",
+            vec!["어제"],
+            vec!["만치"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "오늘만치",
+            vec!["오늘"],
+            vec!["만치"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "아이들마냥",
+            vec!["아이"],
+            vec!["들", "마냥"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "교수님마냥",
+            vec!["교수"],
+            vec!["님", "마냥"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "평생토록은",
+            vec!["평생"],
+            vec!["토록", "은"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "종일토록도",
+            vec!["종일"],
+            vec!["토록", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "필생토록요",
+            vec!["필생"],
+            vec!["토록", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생마냥은",
+            vec!["학생"],
+            vec!["마냥", "은"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "아이마냥요",
+            vec!["아이"],
+            vec!["마냥", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "오늘만치는",
+            vec!["오늘"],
+            vec!["만치", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "오늘만치도",
+            vec!["오늘"],
+            vec!["만치", "도"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학교에서만치",
+            vec!["학교"],
+            vec!["에서", "만치"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학교로만치",
+            vec!["학교"],
+            vec!["로", "만치"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학교에서만치는",
+            vec!["학교"],
+            vec!["에서", "만치", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "있어서만치는",
+            vec!["있다"],
+            vec!["어서", "만치", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "있어서만큼은",
+            vec!["있다"],
+            vec!["어서", "만큼", "은"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "좋아서만큼은",
+            vec!["좋다"],
+            vec!["어서", "만큼", "은"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "일해서만치는",
+            vec!["일하다"],
+            vec!["어서", "만치", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이어서만큼은",
+            vec!["학생", "이다"],
+            vec!["어서", "만큼", "은"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹어봐서만치는",
+            vec!["먹다", "보다"],
+            vec!["어", "어서", "만치", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생다워서만큼은",
+            vec!["학생"],
+            vec!["답다", "어서", "만큼", "은"],
+            MorphemeKind::Particle,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    for word in ["그토록", "이토록", "저토록", "마냥", "만치", "만큼"] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses
+                .iter()
+                .any(|a| a.unchanged && a.lemmas[0].text == word),
+            "{word}"
+        );
+    }
+    let ledger: Value = serde_json::from_str(include_str!("fixtures/validity.json")).unwrap();
+    for case in ledger["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["id"].as_str().unwrap().starts_with("extent-"))
+    {
+        let word = case["surface"].as_str().unwrap();
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        for judgment in case["judgments"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|j| j["verdict"] == "forbidden")
+        {
+            let lemmas: Vec<_> = judgment["lemmas"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            let forms: Vec<_> = judgment["morphemes"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            assert!(
+                !kept.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                "{word}: {forms:?}"
+            );
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

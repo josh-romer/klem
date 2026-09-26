@@ -9001,6 +9001,374 @@
         }
       ],
       "judgments": []
+    },
+    {
+      "id": "krdict:86121",
+      "source_sha256": "10bd9ead437fb0af4597e4ef98b7ded9dbd34f0983de63576f7716ea3d5108d9",
+      "status": "scoped",
+      "checklist": [
+        "COV-018m"
+      ],
+      "scope": "Noun-only 토록/마냥, noun/particle 만치 and source-listed 어서 + 만치/만큼; preserve lexical words and distinguish particle from adverb/bound-noun homonyms.",
+      "remaining": "Other connectors, case/particle combinations, semantic noun subclasses and independent Korean review remain open. Adnominal bound-noun joining is a separate representation, not licensed by these particle paths.",
+      "evidence": [
+        {
+          "path": "tests/extent_particles.rs",
+          "test": "extent_particles_preserve_nominal_and_seo_composition"
+        },
+        {
+          "path": "tests/extent_particles.rs",
+          "test": "extent_particles_reject_wrong_roles_and_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "extent_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/extent-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "extent-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-6",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-8",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-23",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-24",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-17",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80341",
+      "source_sha256": "f3341a15e262c7bb05539467543963c167e68f056eefe5c8d7b8b791058d9298",
+      "status": "scoped",
+      "checklist": [
+        "COV-018m"
+      ],
+      "scope": "Noun-only 토록/마냥, noun/particle 만치 and source-listed 어서 + 만치/만큼; preserve lexical words and distinguish particle from adverb/bound-noun homonyms.",
+      "remaining": "Other connectors, case/particle combinations, semantic noun subclasses and independent Korean review remain open. Adnominal bound-noun joining is a separate representation, not licensed by these particle paths.",
+      "evidence": [
+        {
+          "path": "tests/extent_particles.rs",
+          "test": "extent_particles_preserve_nominal_and_seo_composition"
+        },
+        {
+          "path": "tests/extent_particles.rs",
+          "test": "extent_particles_reject_wrong_roles_and_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "extent_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/extent-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "extent-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-26",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-9",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-10",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-11",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-12",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-13",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-14",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-15",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-16",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-18",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80343",
+      "source_sha256": "a688c7f4f9dfbd3c1df8f4ae6349e4083178b78a3dc7896650efdec2549a69b2",
+      "status": "scoped",
+      "checklist": [
+        "COV-018m"
+      ],
+      "scope": "Noun-only 토록/마냥, noun/particle 만치 and source-listed 어서 + 만치/만큼; preserve lexical words and distinguish particle from adverb/bound-noun homonyms.",
+      "remaining": "Other connectors, case/particle combinations, semantic noun subclasses and independent Korean review remain open. Adnominal bound-noun joining is a separate representation, not licensed by these particle paths.",
+      "evidence": [
+        {
+          "path": "tests/extent_particles.rs",
+          "test": "extent_particles_preserve_nominal_and_seo_composition"
+        },
+        {
+          "path": "tests/extent_particles.rs",
+          "test": "extent_particles_reject_wrong_roles_and_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "extent_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/extent-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "extent-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-27",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-28",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-29",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-31",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-32",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-35",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-37",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-19",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-20",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-22",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-23",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80342",
+      "source_sha256": "4e0a14e657e6c76cc426eb30929ca44fd0dd11da56687285c431afbcece37b4e",
+      "status": "scoped",
+      "checklist": [
+        "COV-018m"
+      ],
+      "scope": "Noun-only 토록/마냥, noun/particle 만치 and source-listed 어서 + 만치/만큼; preserve lexical words and distinguish particle from adverb/bound-noun homonyms.",
+      "remaining": "Other connectors, case/particle combinations, semantic noun subclasses and independent Korean review remain open. Adnominal bound-noun joining is a separate representation, not licensed by these particle paths.",
+      "evidence": [
+        {
+          "path": "tests/extent_particles.rs",
+          "test": "extent_particles_preserve_nominal_and_seo_composition"
+        },
+        {
+          "path": "tests/extent_particles.rs",
+          "test": "extent_particles_reject_wrong_roles_and_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "extent_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/extent-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "extent-required-33",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-34",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-36",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-required-38",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-21",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-24",
+          "judgment": "path"
+        },
+        {
+          "case": "extent-forbidden-25",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

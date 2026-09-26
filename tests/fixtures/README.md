@@ -789,3 +789,22 @@ attribution/license above. The regression requires the reviewed
 `id:MH2_0149-s122/6` 역사까지를 → 역사 group. The second sentence records
 `id:MH2_0159-s285/15` 편마다에도 as an unresolved observation; its morphology
 is neither required nor forbidden. The report records source/fixture hashes.
+
+
+`krdict-extent.json` contains 73 primary word entries from the September 2026
+KRDict export, retaining every homonym and sense for its selected headwords.
+English equivalents and the first example group per sense remain; WordForm,
+RelatedForm and export metadata are omitted. Attribution: National Institute of
+Korean Language, Korean Basic Dictionary, [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+Three particle entries (86121/80341/80343) extend `krdict-grammar-labels.json`
+under the same attribution/adaptations; every earlier entry is retained. The
+catalog now has 277 canonical forms, 349 source IDs and 350 grammar fixture
+entries. Homonymous bound-noun/adverb entries remain lexical alternatives and
+are excluded from particle lookup. The report retains two explicitly selected
+있어서만치/만큼 example groups under the same attribution/license.
+
+`kaist-extent.conllu` preserves complete byte-identical UD 2.15 KAIST development
+sentences `MH2_0159-s121` and `M2TA_089-s30`, under the KAIST attribution/license
+above. The tests require 필생토록 → 필생 and preserve lexical 그토록 gold;
+they do not certify every candidate of every token in those sentences.
+[The comparison](../../docs/extent-evaluation.json) records source/fixture hashes.

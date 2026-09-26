@@ -1557,3 +1557,22 @@ fn range_case_particles_recover_annotated_history() {
     // Its disputed attachment is deliberately not a required/forbidden judgment.
     assert_eq!(report.cases["id:MH2_0159-s285/15"].surface, "편마다에도");
 }
+
+#[test]
+fn extent_particles_recover_duration_and_preserve_lexical_adverb_gold() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-extent.conllu").as_slice(),
+        Corpus::Kaist,
+        "extent",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:MH2_0159-s121/11", "필생토록", vec!["필생"]),
+        ("id:M2TA_089-s30/5", "그토록", vec!["그토록"]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}

@@ -934,6 +934,9 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("부터", 3, 0),
             ("마다", 3, 0),
             ("만큼", 3, 0),
+            ("만치", 3, 0),
+            ("마냥", 3, 0),
+            ("토록", 3, 0),
             ("대로", 3, 0),
             ("조차", 3, 0),
             ("마저", 3, 0),
@@ -1048,6 +1051,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.range_case" => {
             "Retain source-attested case marking after 까지 or 부터; the immediately preceding surface still determines the case allomorph."
+        }
+        "particle.comparison_extent" => {
+            "Recover comparison/extent particles 만치, 마냥 or 토록; contextual comparison and duration are not inferred."
+        }
+        "particle.comparison_seo" => {
+            "Attach source-listed 만치/만큼 after the 어서 connective; this rule represents the particle sense."
         }
         "particle.enumerative" => {
             "Retain an enumerative or choice particle, separate from a homonymous ending or copular expression; no contextual choice is inferred."

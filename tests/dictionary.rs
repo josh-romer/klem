@@ -4583,3 +4583,564 @@ fn retrospective_adnominals_preserve_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn question_copulas_preserve_dictionary_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-question-copulas.json")],
+        dir.db(),
+        "question-copula-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        (
+            "뭔지",
+            vec!["뭐", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "뭔가",
+            vec!["뭐", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "뭔가요",
+            vec!["뭐", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "뭘까",
+            vec!["뭐", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "뭘까요",
+            vec!["뭐", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "뭘지",
+            vec!["뭐", "이다"],
+            vec!["을지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누군지",
+            vec!["누구", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누군가",
+            vec!["누구", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누군가요",
+            vec!["누구", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누굴까",
+            vec!["누구", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누굴까요",
+            vec!["누구", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누굴지",
+            vec!["누구", "이다"],
+            vec!["을지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "어딘지",
+            vec!["어디", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "어딘가",
+            vec!["어디", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "어딘가요",
+            vec!["어디", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "어딜까",
+            vec!["어디", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "어딜까요",
+            vec!["어디", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "어딜지",
+            vec!["어디", "이다"],
+            vec!["을지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "언젠지",
+            vec!["언제", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "언젠가",
+            vec!["언제", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "언젠가요",
+            vec!["언제", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "언젤까",
+            vec!["언제", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "언젤까요",
+            vec!["언제", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "언젤지",
+            vec!["언제", "이다"],
+            vec!["을지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "얼만지",
+            vec!["얼마", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "얼만가",
+            vec!["얼마", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "얼만가요",
+            vec!["얼마", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "얼말까",
+            vec!["얼마", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "얼말까요",
+            vec!["얼마", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "얼말지",
+            vec!["얼마", "이다"],
+            vec!["을지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "무언지",
+            vec!["무어", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "무언가",
+            vec!["무어", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "무언가요",
+            vec!["무어", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "무얼까",
+            vec!["무어", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "무얼까요",
+            vec!["무어", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "무얼지",
+            vec!["무어", "이다"],
+            vec!["을지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의산지",
+            vec!["의사", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의산가",
+            vec!["의사", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의산가요",
+            vec!["의사", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의살까",
+            vec!["의사", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의살까요",
+            vec!["의사", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의살지",
+            vec!["의사", "이다"],
+            vec!["을지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학굔지",
+            vec!["학교", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학굔가",
+            vec!["학교", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학굔가요",
+            vec!["학교", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학굘까",
+            vec!["학교", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학굘까요",
+            vec!["학교", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학굘지",
+            vec!["학교", "이다"],
+            vec!["을지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "뭔지요",
+            vec!["뭐", "이다"],
+            vec!["은지", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "뭔가요",
+            vec!["뭐", "이다"],
+            vec!["은가", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "뭘까요",
+            vec!["뭐", "이다"],
+            vec!["을까", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "뭔지를",
+            vec!["뭐", "이다"],
+            vec!["은지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "누군가의",
+            vec!["누구", "이다"],
+            vec!["은가", "의"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "언젠가는",
+            vec!["언제", "이다"],
+            vec!["은가", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "뭔가보다",
+            vec!["뭐", "이다", "보다"],
+            vec!["은가", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누군가싶다",
+            vec!["누구", "이다", "싶다"],
+            vec!["은가", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "뭘까싶다",
+            vec!["뭐", "이다", "싶다"],
+            vec!["을까", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹긴지",
+            vec!["먹다", "이다"],
+            vec!["기", "은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어보긴가",
+            vec!["먹다", "보다", "이다"],
+            vec!["어", "기", "은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹길까",
+            vec!["먹다", "이다"],
+            vec!["기", "을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "건지",
+            vec!["거", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "건지",
+            vec!["것", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "건가",
+            vec!["것", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "걸까",
+            vec!["것", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "이건지",
+            vec!["이것", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "그건가요",
+            vec!["그것", "이다"],
+            vec!["은가요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "저걸까요",
+            vec!["저것", "이다"],
+            vec!["을까요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생인지",
+            vec!["학생", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "길인가",
+            vec!["길", "이다"],
+            vec!["은가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생일까",
+            vec!["학생", "이다"],
+            vec!["을까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누구였는지",
+            vec!["누구", "이다"],
+            vec!["었", "는지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누구겠는가",
+            vec!["누구", "이다"],
+            vec!["겠", "는가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "무엇인지",
+            vec!["무엇", "이다"],
+            vec!["은지"],
+            MorphemeKind::Ending,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    // The permissive rule engine can hypothesize an unknown vowel-final nominal.
+    // A dictionary filter must remove it without losing the established predicate group.
+    let stress = Lemmatizer::new().analyze_word("먹고싶은가를").unwrap();
+    assert!(
+        stress
+            .analyses
+            .iter()
+            .any(|a| a.lemmas[0].text == "먹고싶으")
+    );
+    let annotated = session.annotate(&stress).unwrap();
+    let kept = stress.filtered(|l| annotated.has_match(l, false));
+    assert!(!kept.analyses.iter().any(|a| a.lemmas[0].text == "먹고싶으"));
+    assert!(kept.analyses.iter().any(|a| {
+        a.lemmas
+            .iter()
+            .map(|l| l.text.as_str())
+            .eq(["먹다", "싶다"])
+            && a.morphemes
+                .iter()
+                .map(|m| m.form.as_str())
+                .eq(["고", "은가", "를"])
+    }));
+    let ledger: Value = serde_json::from_str(include_str!("fixtures/validity.json")).unwrap();
+    for case in ledger["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["id"].as_str().unwrap().starts_with("question-copula-"))
+    {
+        let word = case["surface"].as_str().unwrap();
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        for judgment in case["judgments"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|j| j["verdict"] == "forbidden")
+        {
+            let lemmas: Vec<_> = judgment["lemmas"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            let forms: Vec<_> = judgment["morphemes"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            assert!(
+                !kept.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                "{word}: {forms:?}"
+            );
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

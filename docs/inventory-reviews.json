@@ -6216,9 +6216,10 @@
       "source_sha256": "85aac66b0cd57f70df5db4ed49b9988bf5a42ea226924b591ebf5ccc23965561",
       "status": "scoped",
       "checklist": [
-        "COV-017t"
+        "COV-017t",
+        "COV-020h"
       ],
-      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit.",
+      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit. COV-020h reviews the cited omitted/explicit copula question paths, attached allomorph boundaries and retained prefinal alternatives. Other nominal bases and lexical/contextual licenses remain open.",
       "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
       "evidence": [
         {
@@ -6243,6 +6244,33 @@
         },
         {
           "path": "docs/retrospective-adnominal-evaluation.json"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_preserve_full_copula_parity_and_ordered_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_compose_with_particles_nominalizations_and_auxiliaries"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_require_nominal_boundaries_and_copula_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "copula_questions_preserve_existing_particle_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "question_copulas_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "question_copulas_recover_two_new_cases_and_preserve_explicit_copulas"
+        },
+        {
+          "path": "docs/question-copula-evaluation.json"
         }
       ],
       "judgments": [
@@ -6252,6 +6280,142 @@
         },
         {
           "case": "retrospective-adnominal-short-4",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-8",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-26",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-27",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-32",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-33",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-38",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-39",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-44",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-45",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-50",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-53",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-54",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-55",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-56",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-59",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-63",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-66",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-69",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-9",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-11",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-13",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-16",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-18",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-21",
           "judgment": "path"
         }
       ]
@@ -6674,9 +6838,10 @@
       "source_sha256": "cbe7bc3fe45ab79be70e45c2ffb682a9de72649525dfa18646db8efda2b1c317",
       "status": "scoped",
       "checklist": [
-        "COV-017t"
+        "COV-017t",
+        "COV-020h"
       ],
-      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit.",
+      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit. COV-020h reviews the cited omitted/explicit copula question paths, attached allomorph boundaries and retained prefinal alternatives. Other nominal bases and lexical/contextual licenses remain open.",
       "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
       "evidence": [
         {
@@ -6701,6 +6866,33 @@
         },
         {
           "path": "docs/retrospective-adnominal-evaluation.json"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_preserve_full_copula_parity_and_ordered_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_compose_with_particles_nominalizations_and_auxiliaries"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_require_nominal_boundaries_and_copula_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "copula_questions_preserve_existing_particle_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "question_copulas_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "question_copulas_recover_two_new_cases_and_preserve_explicit_copulas"
+        },
+        {
+          "path": "docs/question-copula-evaluation.json"
         }
       ],
       "judgments": [
@@ -6711,6 +6903,82 @@
         {
           "case": "retrospective-adnominal-short-7",
           "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-28",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-34",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-40",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-46",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-51",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-57",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-60",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-64",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-70",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-12",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-14",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-17",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-19",
+          "judgment": "path"
         }
       ]
     },
@@ -6719,9 +6987,10 @@
       "source_sha256": "981780c9cdf9d101e79722772f5cc555ec1b2eb87f85ff16c4d71ab8b37b970c",
       "status": "scoped",
       "checklist": [
-        "COV-017t"
+        "COV-017t",
+        "COV-020h"
       ],
-      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit.",
+      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit. COV-020h reviews the cited omitted/explicit copula question paths, attached allomorph boundaries and retained prefinal alternatives. Other nominal bases and lexical/contextual licenses remain open.",
       "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
       "evidence": [
         {
@@ -6746,6 +7015,33 @@
         },
         {
           "path": "docs/retrospective-adnominal-evaluation.json"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_preserve_full_copula_parity_and_ordered_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_compose_with_particles_nominalizations_and_auxiliaries"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_require_nominal_boundaries_and_copula_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "copula_questions_preserve_existing_particle_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "question_copulas_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "question_copulas_recover_two_new_cases_and_preserve_explicit_copulas"
+        },
+        {
+          "path": "docs/question-copula-evaluation.json"
         }
       ],
       "judgments": [
@@ -6756,6 +7052,38 @@
         {
           "case": "retrospective-adnominal-short-6",
           "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-6",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-24",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-36",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-42",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-48",
+          "judgment": "path"
         }
       ]
     },
@@ -6764,9 +7092,10 @@
       "source_sha256": "bb8c07a2e6eff39ad7e38098cf5673927cc93b192892eececea2069b148b8d64",
       "status": "scoped",
       "checklist": [
-        "COV-017t"
+        "COV-017t",
+        "COV-020h"
       ],
-      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit.",
+      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit. COV-020h reviews the cited omitted/explicit copula question paths, attached allomorph boundaries and retained prefinal alternatives. Other nominal bases and lexical/contextual licenses remain open.",
       "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
       "evidence": [
         {
@@ -6791,11 +7120,126 @@
         },
         {
           "path": "docs/retrospective-adnominal-evaluation.json"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_preserve_full_copula_parity_and_ordered_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_compose_with_particles_nominalizations_and_auxiliaries"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_require_nominal_boundaries_and_copula_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "copula_questions_preserve_existing_particle_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "question_copulas_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "question_copulas_recover_two_new_cases_and_preserve_explicit_copulas"
+        },
+        {
+          "path": "docs/question-copula-evaluation.json"
         }
       ],
       "judgments": [
         {
           "case": "retrospective-adnominal-short-5",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-31",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-37",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-43",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-49",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-52",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-58",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-61",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-62",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-65",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-68",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-73",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-10",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-15",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-forbidden-20",
           "judgment": "path"
         }
       ]
@@ -6805,9 +7249,10 @@
       "source_sha256": "934ad2701417a3cacba021f9b04658bcaba546cfd634a22a74a56d637ddef651",
       "status": "scoped",
       "checklist": [
-        "COV-017t"
+        "COV-017t",
+        "COV-020h"
       ],
-      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit.",
+      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit. COV-020h reviews the cited omitted/explicit copula question paths, attached allomorph boundaries and retained prefinal alternatives. Other nominal bases and lexical/contextual licenses remain open.",
       "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
       "evidence": [
         {
@@ -6832,6 +7277,33 @@
         },
         {
           "path": "docs/retrospective-adnominal-evaluation.json"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_preserve_full_copula_parity_and_ordered_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_compose_with_particles_nominalizations_and_auxiliaries"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_require_nominal_boundaries_and_copula_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "copula_questions_preserve_existing_particle_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "question_copulas_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "question_copulas_recover_two_new_cases_and_preserve_explicit_copulas"
+        },
+        {
+          "path": "docs/question-copula-evaluation.json"
         }
       ],
       "judgments": [
@@ -6845,6 +7317,10 @@
         },
         {
           "case": "retrospective-adnominal-preserved-75",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-71",
           "judgment": "path"
         }
       ]
@@ -7088,9 +7564,10 @@
       "source_sha256": "0feaf73990b45c7ebe2eed1fc81f64076302e5ef4a0af7eb89df70f9b1ffd2d9",
       "status": "scoped",
       "checklist": [
-        "COV-017t"
+        "COV-017t",
+        "COV-020h"
       ],
-      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit.",
+      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit. COV-020h reviews the cited omitted/explicit copula question paths, attached allomorph boundaries and retained prefinal alternatives. Other nominal bases and lexical/contextual licenses remain open.",
       "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
       "evidence": [
         {
@@ -7115,6 +7592,33 @@
         },
         {
           "path": "docs/retrospective-adnominal-evaluation.json"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_preserve_full_copula_parity_and_ordered_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_compose_with_particles_nominalizations_and_auxiliaries"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "omitted_questions_require_nominal_boundaries_and_copula_roles"
+        },
+        {
+          "path": "tests/question_copulas.rs",
+          "test": "copula_questions_preserve_existing_particle_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "question_copulas_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "question_copulas_recover_two_new_cases_and_preserve_explicit_copulas"
+        },
+        {
+          "path": "docs/question-copula-evaluation.json"
         }
       ],
       "judgments": [
@@ -7132,6 +7636,10 @@
         },
         {
           "case": "retrospective-adnominal-preserved-62",
+          "judgment": "path"
+        },
+        {
+          "case": "question-copula-required-72",
           "judgment": "path"
         }
       ]

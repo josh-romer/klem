@@ -136,6 +136,9 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const questionCopulas = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-question-copulas.json"), "utf8"),
+  );
   const prefinalCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-prefinal-copulas.json"), "utf8"),
   );
@@ -250,6 +253,7 @@ try {
       ...honorificCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...seoConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...prefinalCopulas.LexicalResource.Lexicon.LexicalEntry,
+      ...questionCopulas.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -628,6 +632,15 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["뭔지", ["뭐", "이", "은지"], "은지", "Uncertainty / wondering", 87432, "ending"],
+    ["뭔가", ["뭐", "이", "은가"], "은가", "Question / wondering", 86125, "ending"],
+    ["뭔가요", ["뭐", "이", "은가요"], "은가요", "Question / wondering (polite)", 86125, "ending"],
+    ["뭘까", ["뭐", "이", "을까"], "을까", "Question / proposal / conjecture", 86120, "ending"],
+    ["뭘까요", ["뭐", "이", "을까요"], "을까요", "Question / proposal / conjecture (polite)", 82348, "ending"],
+    ["누굴지", ["누구", "이", "을지"], "을지", "Uncertainty / wondering", 86133, "ending"],
+    ["건지", ["것", "이", "은지"], "은지", "Uncertainty / wondering", 87432, "ending"],
+    ["먹긴지", ["먹", "기", "이", "은지"], "은지", "Uncertainty / wondering", 87432, "ending"],
+    ["뭔가보다", ["뭐", "이", "은가", "보", "다"], "다", "Plain / dictionary ending", 85041, "ending"],
     ["먹던", ["먹", "더", "은"], "은", "Noun modifier", 80344, "ending"],
     ["먹던", ["먹", "던"], "던", "Recalled noun modifier / question", 86038, "ending"],
     ["먹던가", ["먹", "더", "은가"], "은가", "Question / wondering", 86125, "ending"],
@@ -796,6 +809,7 @@ try {
       await breakdown.locator("button").filter({has: page.locator(".part-form", {hasText: /^이$/})}).click();
       await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=86232"));
     }
+    if (form === "을까요") assert.ok(data.grammar["-을까요"].some(e => e.id === "krdict:82350"));
     const shortConnective = {"으며": 80253, "으면서": 80266, "으므로": 80268}[form];
     if (shortConnective) assert.ok(data.grammar[`-${form}`].some(e => e.id === `krdict:${shortConnective}`));
     if (form === "기에") {
@@ -1214,7 +1228,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

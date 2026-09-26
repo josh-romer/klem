@@ -1912,3 +1912,44 @@ are unchanged. Bare omitted-copula 의사던 remains unjudged here; question and
 connective evidence does not certify that adnominal boundary. Other followers,
 lexical/class restrictions, independent Korean review and fresh passages remain
 open.
+
+
+## Omitted copula in attached questions (COV-020h)
+
+[NIKL's 뭘까 explanation](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5759&mn_id=217&pageIndex=225)
+identifies omission of copular 이 from 뭐일까. It distinguishes this construction
+from the object-marked pronoun 뭘. The [source review](question-copula-evaluation.json)
+combines that boundary with KRDict's copula licenses for ㄴ지/ㄴ가, ㄹ까/ㄹ까요
+and ㄹ지. The question forms use canonical 은지/은가/은가요/을까/을까요/을지.
+A NIKL vocabulary-development report also lists short/full question pairs;
+its extracted text was inspected, while PDF screenshot retrieval failed.
+
+The existing omitted-copula boundary now restores 이 before attached ㄴ or ㄹ
+in these six forms. For example 뭔지 → 뭐 + 이다 + 은지, 누군가 → 누구 +
+이다 + 은가, and 뭘까 → 뭐 + 이다 + 을까. Explicit 뭐인지/누구인가/뭐일까
+retain their existing analyses. The 48-pair matrix covers eight vowel-final
+bases and verifies ordered roles, full-form parity and NFD normalization.
+Consonant-final nominals still require explicit 이, and nominal recovery does
+not apply ㄹ loss, ㅂ irregularity or ㅎ irregularity. The recovered stem is
+marked copula-only, so it does not invent a lexical 뭐이다 verb.
+
+Existing particle and auxiliary rules compose after the recovered question:
+뭔지를, 뭔가요 and 뭔가보다 remain distinct paths. Nominalized predicates such
+as 먹긴지 and 먹길까 retain their inner lexical head and outer copula. Existing
+거/것 normalization supplies both bases for 건지/건가/걸까. Conjectural 보다
+and 싶다 retain their adjective class; arbitrary question + copula attachment
+is not licensed. The independent lexical 왠지 and object-marked 뭘 remain.
+
+The engine still admits unverified nominal hypotheses. For 먹고싶은가를, it
+now also proposes nominal 먹고싶으 + 이다 + 은가 + 를. The established 먹다 +
+싶다 analysis is preserved; the dictionary regression removes the unmatched
+nominal. The one changed stress fingerprint retains its complete earlier
+history. All additions in the targeted report carry the omitted-copula rule
+and a represented copula; no previous candidate or provenance is lost.
+
+The browser's 을까요 label gains the short ㄹ까요 source 82350. The 39-entry
+lexical fixture preserves all homonyms and all senses of its selected heads.
+Long-form pronoun normalization is separate work: the raw dictionary export
+links 뭐 to 본말 무어, while 무어/무엇 are linked as synonyms. Those relations
+do not authorize unrestricted synonym expansion. Further nominal bases, ending
+licenses, independent Korean review and fresh-passage evaluation remain open.

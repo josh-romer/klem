@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–t/018a–i/019a–f/020a–g/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–t/018a–i/019a–f/020a–h/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,7 +174,7 @@ review remains open under the completion review below.
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
   The [manual review ledger](inventory-reviews.json) records 137 scoped
-  dispositions from COV-016/017m–n/017p–t/018e–i/019d–f/020d–g; 578 entries have no disposition in this
+  dispositions from COV-016/017m–n/017p–t/018e–i/019d–f/020d–h; 578 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -713,7 +713,8 @@ review remains open under the completion review below.
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
   finite 거/것 nominal alternatives; COV-020d adds enumerative -요 and
   COV-020e adds reviewed consonant-initial ending families; COV-020f adds
-  honorific omission and short 세요; COV-020g adds modal/retrospective omission.**
+  honorific omission and short 세요; COV-020g adds modal/retrospective omission;
+  COV-020h adds attached question endings.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -815,6 +816,24 @@ review remains open under the completion review below.
   records the then-existing 더 + 다 attachment problem; COV-017r now rejects
   that path across lexical and represented-copula classes. See [scope](rules.md#modal-and-retrospective-copula-omission-cov-020g).
 
+- [x] **COV-020h — Omitted copula in attached questions.** 뭔지/뭔가
+  recover 뭐 + 이다 + 은지/은가; 뭘까 recovers 뭐 + 이다 + 을까.
+  Six forms cover 은지/은가/은가요/을까/을까요/을지 after vowel-final
+  nominals, including 누구/어디/언제/얼마/무어 and ordinary nominal bases.
+  Existing 거/것 alternatives, full spellings, nominalizations, particles and
+  licensed auxiliary composition remain. Attached ㄴ/ㄹ is required; nominal
+  consonants are not repaired through verb irregulars, and the recovered 이
+  cannot fabricate a lexical verb. Evidence: [48-pair full-form matrix and
+  composition tests](../tests/question_copulas.rs), 95 cited ledger cases,
+  dictionary/CLI/browser checks and [comparison](question-copula-evaluation.json).
+  Four complete annotated sentences capture two GSD gains (뭔지/뭔가) and
+  preserve two explicit KAIST copulas. The comparison accounts for all 132
+  additions across 105 surfaces with no removals or changed provenance.
+  One stress fingerprint adds an unverified nominal hypothesis; its prior
+  history is retained and dictionary filtering is checked. The other 29 are
+  unchanged. This does not expand 뭐/무어 into all longer lexical counterparts;
+  that remains part of COV-018's pronoun audit. See
+  [scope](rules.md#omitted-copula-in-attached-questions-cov-020h).
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without

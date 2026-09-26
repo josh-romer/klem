@@ -1331,3 +1331,51 @@ These are bounded attachment and representation checks. Bare omitted-copula
 adnominal boundary. Other retrospective followers, lexical/class restrictions,
 independent Korean-language review, fresh passages and the broader inventory
 review remain open.
+
+## Omitted copula in attached questions (COV-020h)
+
+The [comparison](question-copula-evaluation.json) reviews **105 surfaces** and
+accounts for **132 added candidates**, with no removals or changed provenance
+on existing analyses. Every addition carries the omitted-copula rule and a
+represented copula before one of six reviewed question forms. The 48-pair matrix
+checks full-form parity across eight nominal bases; composition tests cover
+particles, nominalized predicates, auxiliaries, invalid boundaries and lexical
+alternatives.
+
+Two GSD development gold groups are newly recovered: **뭔지 and 뭔가 → 뭐 + 이다**.
+Development misses are now **117 KAIST and 158 GSD**, with no lost groups or
+component sets. Mean candidates increase from 5.826103 to 5.833843 for KAIST and
+from 5.361898 to 5.368405 for GSD. These measure ambiguity, not linguistic
+precision. Four complete byte-identical annotated sentences capture the two gains
+and preserve the explicit 무엇일까/일부인지 forms.
+
+Twenty-nine stress fingerprints are unchanged. 먹고싶은가를 gains one unverified
+nominal 먹고싶으 + 이다 + 은가 + 를 hypothesis. Its former hash and earlier
+history are retained, and the report records the exact addition. Every previous
+analysis and its provenance remains. A dictionary regression excludes the
+unmatched nominal while retaining the established 먹다 + 싶다 predicate group.
+Historical corpus baselines are unchanged.
+
+The 95 added cases bring the ledger to **1,053 cases, 574 required and 485 forbidden
+judgments**. Seven KRDict entries and NIKL's explicit 뭘까 analysis support the
+review. Six existing grammar dispositions add evidence; the queue remains at
+**137 scoped entries and 578 without a disposition**. The grammar catalog keeps
+260 forms and adds short ㄹ까요 source 82350, correctly classified as an
+expression: 325 sources and 326 grammar-fixture entries. All previous entries
+remain. The new lexical fixture contains 39 entries with their homonyms and
+senses preserved.
+
+Formatting, the full Rust suite, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build and complete browser/HTTP
+suite pass. `nix flake check` and `nix build .#web` pass on x86_64-linux; other
+declared systems were not executed. The packaged full-dictionary app passes nine
+reading selections, question/allomorph source checks and all 21 new forbidden
+paths. Desktop/mobile screenshots were inspected without JavaScript errors or
+horizontal overflow. 뭔지 visibly retains 뭐 + 이 + 은지 under dictionary-only
+filtering. The existing missing short English gloss for copular 이 remains a
+reader-facing limitation outside this morphology change.
+
+This batch restores the missing copula without extending general synonym or
+long-form pronoun normalization. Other pronoun contractions, nominal bases,
+attachment/class restrictions, independent Korean review and fresh-passage
+evaluation remain open.

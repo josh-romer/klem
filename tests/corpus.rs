@@ -3,6 +3,36 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn question_copulas_recover_two_new_cases_and_preserve_explicit_copulas() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-question-copulas.conllu").as_slice(),
+            vec![
+                ("id:MH2_0159-s366/17", "무엇일까", vec!["무엇", "이다"]),
+                ("id:MH2_0169-s31/7", "일부인지", vec!["일부", "이다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-question-copulas.conllu").as_slice(),
+            vec![
+                ("id:dev-s219/2", "뭔지", vec!["뭐", "이다"]),
+                ("id:dev-s842/1", "뭔가", vec!["뭐", "이다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "question-copulas").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn retrospective_adnominals_preserve_four_unchanged_annotated_cases() {
     for (corpus, input, cases) in [
         (

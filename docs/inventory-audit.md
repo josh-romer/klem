@@ -424,3 +424,15 @@ The review distinguishes the present/prospective exclusions from retained
 retrospective adnominal components, and adds the dictionary bundles 던가/던지.
 Nine short-allomorph sources and two bundle sources receive catalog links.
 Independent Korean review and other attachment/class conditions remain open.
+
+
+## Omitted-copula question forms (COV-020h)
+
+[The source review](question-copula-evaluation.json) covers seven dictionary
+entries plus NIKL's copula-omission explanation. Six existing grammar dispositions
+add the question-boundary evidence while retaining their earlier reviews; the
+short ㄹ까요 expression is attributed outside the grammar-POS queue. The queue
+remains at **137 scoped entries and 578 without a disposition**. This batch
+recovers the GSD 뭔지/뭔가 gold groups and adds a dictionary check for the single
+new unverified nominal stress hypothesis. Broader pronoun normalization and
+particle-marked copula bases still need review.

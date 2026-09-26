@@ -679,3 +679,16 @@ merges existing prefinal-copula and auxiliary-inventory fixtures by entry ID,
 so shared entries are imported once. The comparison in
 `docs/retrospective-adnominal-evaluation.json` records sources, fixture hashes,
 and every targeted added/removed path without regenerating historical baselines.
+
+
+`kaist-question-copulas.conllu` and `gsd-question-copulas.conllu` each preserve
+two complete UD 2.15 development sentences byte for byte. GSD gains 뭔지/뭔가;
+KAIST preserves 무엇일까/일부인지. Existing corpus licensing and attribution
+above apply. `krdict-question-copulas.json` contains 39 lexical entries, retaining
+all homonyms and senses for its selected heads, English equivalents and the
+first example group per sense. `krdict-grammar-labels.json` adds short ㄹ까요
+(entry 82350), preserving every earlier entry. These dictionary subsets use the
+same KRDict attribution and CC BY-SA 2.0 KR license as the other fixtures.
+`docs/question-copula-evaluation.json` records sources, fixture hashes, targeted
+additions and the individually inspected stress change. The stress history is
+retained; historical corpus baselines are unchanged.

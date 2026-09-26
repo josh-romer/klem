@@ -2,6 +2,7 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "copula-quotation-fragment": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=327939",
     "definition-ran": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85858",
     "definition-iran": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85859",
     "quote-ran": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86297",
@@ -113,6 +114,10 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id":"quoted-copula-omitted","surface":"라는","judgments":[{"id":"group","lemmas":["이다"],"morphemes":["라는"],"verdict":"required","reason":"Standalone 라는 can follow closing quotation punctuation with omitted copular 이. This candidate carries the quoted-material condition; it does not invent a nominal or join tokens.","source":"copula-quotation-fragment"}]},
+    {"id":"quoted-copula-explicit","surface":"이라는","judgments":[{"id":"group","lemmas":["이다"],"morphemes":["라는"],"verdict":"required","reason":"The explicit copula plus the same quotation expression remains a separate token-level candidate with Copula role.","source":"copula-quotation-fragment"}]},
+    {"id":"quoted-copula-coda","surface":"학생라는","judgments":[{"id":"group","lemmas":["학생","이다"],"morphemes":["라는"],"verdict":"forbidden","reason":"A fragment license does not permit omission after a consonant-final nominal inside an unbroken token.","source":"copula-quotation-fragment"}]},
+
     {"id":"definition-fragment","surface":"이란","judgments":[{"id":"group","lemmas":["이다"],"morphemes":["란"],"verdict":"required","reason":"An explicitly spelled 이다 inflection may form its own token after quotation punctuation. Preserve its copular role without joining tokens or inserting a nominal.","source":"quote-ran"}]},
     {"id":"definition-open","surface":"학교란","judgments":[{"id":"group","lemmas":["학교"],"morphemes":["란"],"verdict":"required","reason":"An open nominal takes the definition/topic particle 란.","source":"definition-ran"}]},
     {"id":"definition-coda","surface":"학생이란","judgments":[{"id":"group","lemmas":["학생"],"morphemes":["이란"],"verdict":"required","reason":"A consonant-final nominal takes 이란.","source":"definition-iran"}]},

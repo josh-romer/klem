@@ -927,6 +927,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "copula.fragment" => {
             "Recognize an explicitly spelled copula fragment without joining it to a preceding token."
         }
+        "copula.omitted_fragment" => {
+            "This reading assumes preceding quoted material: 라는 has an omitted copular 이. The quoted material is outside this token."
+        }
         "negative_copula.polite" => "Restore 아니다 from 아니에요.",
         _ => return None,
     })

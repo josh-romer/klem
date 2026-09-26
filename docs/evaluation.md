@@ -529,3 +529,28 @@ both particle and copular definition readings, quoted commands, retrospective
 quotation and the conjectural prefinal. The explicit standalone 이란 copula role
 also passes an API check. Desktop and mobile screenshots were inspected; there
 is no horizontal overflow or browser error.
+
+COV-020b adds conditional omitted-copula 라는 and explicit 이라는 fragments.
+The [comparison](copula-fragment-evaluation.json) records **two new KAIST grouped
+matches**, leaving **154 KAIST and 179 GSD development misses**. No previously
+recovered group or component set is lost. Two complete, byte-identical source
+sentences cover the gains; tokenization, punctuation and streaming offsets have
+separate regression checks. The ledger now contains **271 cases with 150
+required and 127 forbidden judgments**.
+
+All 30 current output fingerprints and all 66,570 frozen corpus cases pass.
+Rust, Clippy, dictionary/CLI, stress, frontend build and browser/API checks pass.
+The browser verifies both Copula-role choices, the omitted-context condition,
+normalized display, existing grammar source and filtered export. Fourteen
+individual surfaces are compared: only 이라는 and 라는 gain candidates, and
+no prior analyses are removed. No new grammar labels or source entries are
+needed. Historical baselines and reports remain unchanged. Additional quoted
+clause attachment and independent Korean-language review remain open.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. A full-dictionary
+packaged-browser check uses a complete sentence containing both explicit and
+omitted fragments. Both Copula-role alternatives, the context condition,
+grammar source links, filtered export and original punctuation pass. Desktop
+and mobile screenshots were inspected with no overflow or browser errors.
+Dictionary hints remain context-free: for example, 사랑 can display the
+reception-room homonym in this sample, so successful decomposition does not
+establish the intended dictionary sense.

@@ -676,7 +676,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         && p.morphs
             .iter()
             .find(|m| m.kind == MorphemeKind::Ending)
-            .is_some_and(|m| m.form == "란")
+            .is_some_and(|m| matches!(m.form.as_str(), "란" | "라는"))
     {
         let mut a = predicate_analysis(p);
         a.lemmas[0].kind = LemmaKind::Copula;
@@ -1424,6 +1424,17 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
         unchanged: true,
     }];
     if has_hangul(&normalized) {
+        // Closing quotation punctuation can leave 라는 in its own token.
+        // This conditional fragment has no recoverable nominal in this word;
+        // do not invent one or use the empty base in general suffix recovery.
+        if normalized == "라는" {
+            out.push(Analysis {
+                lemmas: vec![lemma("이다", LemmaKind::Copula)],
+                morphemes: vec![morph("라는", MorphemeKind::Ending)],
+                rules: vec!["copula.omitted_fragment".into(), "ending".into()],
+                unchanged: false,
+            });
+        }
         out.extend(adverb_derivation(&normalized));
         out.extend(nominal_derivations(&normalized));
         for (suffix, vowel_only) in [

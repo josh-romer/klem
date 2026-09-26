@@ -3,6 +3,22 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn annotated_omitted_copula_fragments_recover_without_token_joining() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-copula-fragments.conllu").as_slice(),
+        Corpus::Kaist,
+        "copula-fragments",
+    )
+    .unwrap();
+    for id in ["id:MH2_0209-s39/4", "id:MH2_0209-s122/4"] {
+        let case = report.cases.get(id).unwrap();
+        assert_eq!(case.surface, "라는");
+        assert_eq!(case.expected, ["이다"]);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
 fn annotated_definitions_preserve_particle_and_copular_gold_groups() {
     let selected: Vec<serde_json::Value> =
         serde_json::from_str(include_str!("fixtures/quoted-definition-gold.json")).unwrap();

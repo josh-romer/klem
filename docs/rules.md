@@ -1028,3 +1028,30 @@ copular analysis; these remain measured misses and documented representation
 differences. The evaluation separately records quotation after ending-bearing
 clauses and omitted-copula fragments, rather than licensing arbitrary suffix
 removal to match the corpus.
+
+### Quoted copula fragments (COV-020b)
+
+Standalone `이라는` has an explicit `이다 + 라는` Copula-role candidate, alongside
+its previous predicate/lexical hypotheses. Standalone `라는` now has the same
+canonical components with `copula.omitted_fragment` provenance. This candidate
+requires preceding quoted material; word analysis cannot establish that context.
+The browser shows the condition for the selected reading and includes it in
+filtered JSON export. Its normalized `이 + 라는` display does not claim that 이
+has a source span. No nominal component or reporting verb is invented.
+
+Source: [NIKL, quotation punctuation and 라는](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=327939)
+explains that 라는 after a closing quote omits 이 from 이라는. The bundled
+ending retains its existing [KRDict label/source](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82217).
+Explicit `이란` remains covered by COV-018d/017j.
+
+The omitted-fragment rule is scoped to the complete token 라는. It does not
+relax consonant-final omission inside 학생라는, remove other terminal endings,
+license following particles, or recover unbroken quoted clauses such as
+대안인가라는. Those forms require their own attachment/representation review.
+Tokenization remains unchanged: punctuation stays separate, offsets reference
+the original input, and streaming/cache results equal independent word results.
+
+Two complete KAIST development sentences protect MH2_0209-s39/4 and
+MH2_0209-s122/4. Both annotate the lemma 이; their `OrigLemma=이+란` differs
+from this program's canonical 라는 component. The measured gain concerns the
+lemma group, not a claim that the morpheme segmentation matches the corpus.

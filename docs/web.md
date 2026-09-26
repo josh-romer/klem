@@ -255,3 +255,10 @@ unconditional reading removes that note. Export preserves each candidate's rule
 IDs and explanations; it does not turn a condition into verified pronunciation.
 Try ABC는 or 3은 with dictionary-only filtering off. With filtering on, unknown
 bases remain visible as unmatched words, not fabricated dictionary matches.
+
+Quoted copula fragments also expose reading conditions: selecting standalone
+라는 → 이다 + 라는 displays that preceding quoted material is assumed. The
+same `copula.omitted_fragment` rule and explanation survive dictionary-filtered
+JSON export. The normalized display expands omitted 이 without assigning it a
+surface span; punctuation and original token offsets stay unchanged. Explicit
+이라는 → 이다 + 라는 requires no omission notice.

@@ -375,3 +375,11 @@ The grammar-label fixture adds primary KRDict entries 85858, 85859, 86297,
 all earlier entries remain unchanged. Existing `krdict-emphatic-particles.json`
 lexical entries and the attributed 이다 entry in `krdict-derivation.json` supply
 dictionary regressions, combined without their duplicate 학생 entry.
+
+`kaist-copula-fragments.conllu` contains two complete, byte-identical KAIST
+Universal Dependencies development sentences, MH2_0209-s39 and MH2_0209-s122,
+under the same KAIST attribution/license above. COV-020b tests token 4 in each:
+standalone 라는 has the annotated lemma 이 (normalized to 이다 by the existing
+adapter). The corpus's `OrigLemma=이+란` is preserved; the program's canonical
+ending remains 라는. See `docs/copula-fragment-evaluation.json` for comparison
+hashes, source, stable IDs and the explicit preceding-quotation condition.

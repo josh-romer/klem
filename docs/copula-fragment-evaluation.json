@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "scope": "COV-020b: explicit 이라는 and conditional omitted-copula 라는 fragments. No token joining, nominal invention or generic empty-base recovery.",
+  "baseline_commit": "f231d9921aa60606d132e6dfd024b4448abaa39b",
+  "source": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=327939",
+  "source_sha256": {
+    "src/engine.rs": "13cde1eab722f2ec952f9d9694e196e939035477d5de4bea4a7ca0462aa1670e",
+    "src/grammar.rs": "7b43e6441529abf12537e3bf4ae66075e5215b01c40d3c0b93fb5a48a96d49ed",
+    "web/src/model.ts": "a8714066d9add9bcbe1a2a530550d7b615c2144c67d72f08330a07eaa43b3e51",
+    "tests/copula_fragments.rs": "94dd2eb7215f01a8a76d52a9d6327882f3c5758ed38d3ba24aac479165ea8e80",
+    "tests/fixtures/validity.json": "2fcdd01032173fede5e08249bb66dbc25504870d3d4641bc76d3e2e3cc235f88"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "af1bc9c3705fbe17894a619c65ae9afa1e646207ac80343074591c0eea330680",
+      "after_sha256": "8e0682382fc35950f1d6c68df09a682111e9c96570a6ef075d3086d1b1852459",
+      "converted": 22220,
+      "before_matched": 22064,
+      "after_matched": 22066,
+      "remaining_misses": 154,
+      "new_matches": [
+        {
+          "id": "id:MH2_0209-s122/4",
+          "surface": "라는",
+          "expected": [
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s39/4",
+          "surface": "라는",
+          "expected": [
+            "이다"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": []
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "6d6735c03959a4de0c4a460c1c16dc9f0668ab901d118e383c3f80aac205e400",
+      "after_sha256": "b2e13f88813833cb8771bb8e5e1c9c4879be8d18e840848b81eb480bcca7fe49",
+      "converted": 9989,
+      "before_matched": 9810,
+      "after_matched": 9810,
+      "remaining_misses": 179,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": []
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "이라는",
+      "before_count": 15,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.copular",
+            "copula.fragment",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "라는",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "라는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.omitted_fragment",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "이란",
+      "before_count": 14,
+      "after_count": 14,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "이시라는",
+      "before_count": 17,
+      "after_count": 17,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "이었라는",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "라",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "라면",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "라서",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "라는요",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹는다는",
+      "before_count": 14,
+      "after_count": 14,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "먹라는",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학생라는",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "사회주의라는",
+      "before_count": 15,
+      "after_count": 15,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "학교라는",
+      "before_count": 14,
+      "after_count": 14,
+      "removed": [],
+      "added": []
+    }
+  ],
+  "fixture": {
+    "path": "tests/fixtures/kaist-copula-fragments.conllu",
+    "sha256": "7d41539494b22218c9211848f4095a78e17b37c2fc59ffb56ad7a0a48d485027",
+    "complete_byte_identical_sentences": 2
+  },
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "scope_notes": [
+    "The omitted fragment carries copula.omitted_fragment provenance requiring preceding quoted material. Word analysis cannot establish the condition; browser and export display it.",
+    "Explicit 이라는 retains lexical/predicate alternatives and gains a Copula-role analysis.",
+    "Only standalone 라는 receives omitted-fragment recovery. Quoted clauses inside unbroken words, other endings and post-fragment particles still require separate review.",
+    "The source supports copula omission; the corpus OrigLemma records 이+란 for both 라는 tokens. Lemma-group recovery does not assert matching morpheme segmentation.",
+    "Current source-backed judgments are agent-authored; independent Korean-language review remains pending."
+  ]
+}

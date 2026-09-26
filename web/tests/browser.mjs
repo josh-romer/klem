@@ -759,7 +759,7 @@ try {
     const a = data.records[0].analysis.analyses[Number(choice)];
     const rules = a.rules.filter(r => r.startsWith("pronunciation.assumed_"));
     assert.deepEqual(rules, condition ? [`pronunciation.assumed_${condition}`] : []);
-    assert.deepEqual(await breakdown.locator(".pronunciation-note").allTextContents(), rules.map(r => data.rules[r]));
+    assert.deepEqual(await breakdown.locator(".reading-condition").allTextContents(), rules.map(r => data.rules[r]));
   }
   await submit(page, "ABC는");
   await waitHeading(page, "ABC는");
@@ -771,7 +771,7 @@ try {
   await page.getByLabel("Dictionary matches only").check();
   assert.match(await breakdown.innerText(), /No matching reading/);
   assert.match(await breakdown.innerText(), /ABC는/);
-  assert.equal(await breakdown.locator(".pronunciation-note").count(), 0);
+  assert.equal(await breakdown.locator(".reading-condition").count(), 0);
 
   // Missing labels, expression POS, component links, and normalized spellings.
   for (const [word, expected, form, label, id, key] of [
@@ -832,6 +832,32 @@ try {
     const cli = JSON.parse(execFileSync(cliBin, ["word", word], {encoding: "utf8"}));
     assert.deepEqual(result.records[0].analysis.analyses, cli.analyses);
   }
+  for (const word of ["이라는", "라는"]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    const data = await (await post("analyze", {text: word})).json();
+    const index = data.records[0].analysis.analyses.findIndex(a =>
+      a.lemmas.length === 1 && a.lemmas[0].text === "이다" && a.lemmas[0].kind === "copula" &&
+      a.morphemes.length === 1 && a.morphemes[0].form === "라는");
+    assert.ok(index >= 0, word);
+    await breakdown.getByRole("combobox").selectOption(String(index));
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), ["이", "라는"]);
+    const notes = await breakdown.locator(".reading-condition").allTextContents();
+    assert.deepEqual(notes, word === "라는" ? [data.rules["copula.omitted_fragment"]] : []);
+    if (word === "라는") {
+      assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+      assert.match(notes[0], /preceding quoted material/);
+    }
+    await breakdown.getByRole("button", {name: "라는 Quoted noun modifier", exact: true}).click();
+    await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=82217"));
+    const cli = JSON.parse(execFileSync(cliBin, ["word", word], {encoding: "utf8"}));
+    assert.deepEqual(data.records[0].analysis.analyses, cli.analyses);
+  }
+  const fragmentDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const fragmentExport = JSON.parse(await readFile(await (await fragmentDownload).path(), "utf8"));
+  assert.ok(fragmentExport.records[0].analysis.analyses.some(a => a.rules.includes("copula.omitted_fragment")));
+  assert.match(fragmentExport.rules["copula.omitted_fragment"], /preceding quoted material/);
   const limitedReadings = await (await post("analyze", {text: "조금이나마"})).json();
   assert.ok(!limitedReadings.records[0].analysis.analyses.some(a =>
     a.lemmas.length === 1 && a.lemmas[0].text === "조금" &&

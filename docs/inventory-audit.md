@@ -107,7 +107,9 @@ an otherwise unsourced standalone 라는 particle. They remain measured misses;
 no adapter or baseline is changed to conceal the difference.
 
 대안인가라는, 달아줘라는 and GSD 빨라진다라는 require further quotation and
-attachment review under COV-018/020. Two standalone 라는 tokens require review
-of an omitted-copula fragment. Explicitly spelled 이란 now has a Copula-kind
-candidate, but this does not infer or join its preceding nominal context. The
-full 715-entry inventory and other remaining corpus families are still open.
+attachment review under COV-018/020. COV-020b resolves the two standalone 라는
+tokens with a conditional omitted-copula candidate and adds the explicit 이라는
+Copula-role alternative. The [fragment comparison](copula-fragment-evaluation.json)
+records both stable IDs and the unchanged corpus bytes. The quoted context is
+neither inferred nor joined to the fragment. Other fragment forms, the full
+715-entry inventory and remaining corpus families are still open.

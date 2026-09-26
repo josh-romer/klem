@@ -8,8 +8,10 @@ export interface Analysis {
   rules: string[];
   unchanged: boolean;
 }
-export const pronunciationRules = (analysis?: Analysis) =>
-  analysis?.rules.filter((id) => id.startsWith("pronunciation.assumed_")) ?? [];
+export const readingConditions = (analysis?: Analysis) =>
+  analysis?.rules.filter((id) =>
+    id.startsWith("pronunciation.assumed_") || id === "copula.omitted_fragment",
+  ) ?? [];
 export interface EntrySummary {
   id: string;
   headword: string;

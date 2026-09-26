@@ -76,6 +76,8 @@ fn definition_and_quotation_readings_keep_dictionary_groups_and_roles() {
         ("학생이란", vec!["학생", "이다"], vec!["란"]),
         ("학교란", vec!["학교", "이다"], vec!["란"]),
         ("이란", vec!["이다"], vec!["란"]),
+        ("이라는", vec!["이다"], vec!["라는"]),
+        ("라는", vec!["이다"], vec!["라는"]),
         ("먹으란", vec!["먹다"], vec!["으란"]),
         ("작으리란", vec!["작다"], vec!["으리", "란"]),
         ("먹어보란", vec!["먹다", "보다"], vec!["어", "으란"]),
@@ -98,7 +100,7 @@ fn definition_and_quotation_readings_keep_dictionary_groups_and_roles() {
                 "{word}: {lemmas:?}"
             );
         }
-        if word == "이란" {
+        if matches!(word, "이란" | "이라는" | "라는") {
             assert!(compatible.analyses.iter().any(|a| a.lemmas.len() == 1
                 && a.lemmas[0].text == "이다"
                 && a.lemmas[0].kind == LemmaKind::Copula));

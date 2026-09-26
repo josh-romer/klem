@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–j/018a–d/019a–c/020a/021a/022a batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–j/018a–d/019a–c/020a–b/021a/022a batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -461,7 +461,8 @@ review remains open under the completion review below.
   records each removed candidate in the targeted cases; all current fingerprints
   and corpus recoveries remain. See [scope](rules.md#auxiliary-adjective-inflections-and-legacy-links-cov-019c).
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
-  **Partial: direct nominalization + copula is implemented in COV-020a.**
+  **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
+  quoted copula fragments.**
   Remaining: additional suffix order and adjective ending licenses. Quoted or
   connective clauses before copulas need a separate source/representation audit;
   nominalization does not authorize arbitrary ending + copula attachment.
@@ -478,6 +479,19 @@ review remains open under the completion review below.
   snapshots and frozen corpus recoveries remain; the new 떠먹이기다 group is
   recorded in [the evaluation](nominal-copula-evaluation.json). See
   [scope and sources](rules.md#direct-nominalization-and-copulas-cov-020a).
+- [x] **COV-020b — Quoted copula fragments.** Standalone 이라는 gains a
+  Copula-role analysis; standalone 라는 additionally recovers omitted 이다
+  with explicit provenance requiring preceding quoted material. Tokenization,
+  original byte offsets, and lexical alternatives remain. The browser displays
+  the condition with the selected breakdown and exports it with the analysis.
+  Evidence: [fragment/streaming tests](../tests/copula_fragments.rs), two complete
+  [KAIST sentences](../tests/fixtures/kaist-copula-fragments.conllu), three
+  `quoted-copula-*` ledger cases, dictionary/CLI parity, and browser/export checks.
+  [Evaluation](copula-fragment-evaluation.json) records two additional grouped
+  recoveries, with no losses or changed current fingerprints. This does not
+  parse preceding quoted material or license arbitrary ending + copula
+  attachment inside a token. Other fragment endings and particle combinations
+  remain COV-020 review. See [scope and source](rules.md#quoted-copula-fragments-cov-020b).
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without

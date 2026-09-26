@@ -13,7 +13,7 @@ import {
   filteredResult,
   grammarHeadword,
   matches,
-  pronunciationRules,
+  readingConditions,
   type Entry,
   type Lemma,
   type Result,
@@ -496,8 +496,8 @@ export default function App() {
                             </div>
                           </div>
                         </Show>
-                        <For each={pronunciationRules(candidate)}>
-                          {(id) => <p class="pronunciation-note">{result()!.rules[id]}</p>}
+                        <For each={readingConditions(candidate)}>
+                          {(id) => <p class="reading-condition">{result()!.rules[id]}</p>}
                         </For>
                         <details class="trace">
                           <summary>How this reading was found</summary>

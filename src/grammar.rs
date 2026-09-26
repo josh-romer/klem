@@ -938,6 +938,9 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("조차", 3, 0),
             ("마저", 3, 0),
             ("밖에", 3, 0),
+            ("치고", 3, 0),
+            ("치고는", 3, 0),
+            ("치고서", 3, 0),
             // Emphatic 다/다가 have separately checked adverbial/case bases.
             ("다", 3, 2),
             ("다가", 3, 2),
@@ -1039,6 +1042,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.concessive" => {
             "Attach concessive 만/마는 after a licensed final ending; retain the distinct nominal 만 reading where applicable."
+        }
+        "particle.chigo" => {
+            "Attach 치고/치고는/치고서 to a nominal; retain bundled and component alternatives without selecting the contextual generalization or exception sense."
         }
         "particle.enumerative" => {
             "Retain an enumerative or choice particle, separate from a homonymous ending or copular expression; no contextual choice is inferred."

@@ -8290,6 +8290,345 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:73015",
+      "source_sha256": "f207f705c9af66ffef67095f9f11c8006426be09cb5795f31cae39bcd05546d1",
+      "status": "scoped",
+      "checklist": [
+        "COV-018j"
+      ],
+      "scope": "Noun-attached 치고 family, plural bases, bundle/component alternatives, topic and polite particles; no bare predicate or intervening case attachment.",
+      "remaining": "Further outer particles, nominalized-base semantics, repeated topics and contraction remain explicitly unjudged in chigo-evaluation.json. 교수님 has a recorded dictionary headword gap. Independent Korean review remains open.",
+      "evidence": [
+        {
+          "path": "tests/chigo_particles.rs",
+          "test": "chigo_particles_preserve_nominals_plurals_and_bundles"
+        },
+        {
+          "path": "tests/chigo_particles.rs",
+          "test": "chigo_particles_reject_case_and_predicate_bases"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "chigo_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/chigo-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "chigo-required-29",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-6",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-24",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-26",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-25",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-27",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-29",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-30",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-31",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:83882",
+      "source_sha256": "e393d09b72bdef8fc977016c6fc609f7b0ad02a32684ac874709d59ac5768239",
+      "status": "scoped",
+      "checklist": [
+        "COV-018j"
+      ],
+      "scope": "Noun-attached 치고 family, plural bases, bundle/component alternatives, topic and polite particles; no bare predicate or intervening case attachment.",
+      "remaining": "Further outer particles, nominalized-base semantics, repeated topics and contraction remain explicitly unjudged in chigo-evaluation.json. 교수님 has a recorded dictionary headword gap. Independent Korean review remains open.",
+      "evidence": [
+        {
+          "path": "tests/chigo_particles.rs",
+          "test": "chigo_particles_preserve_nominals_plurals_and_bundles"
+        },
+        {
+          "path": "tests/chigo_particles.rs",
+          "test": "chigo_particles_reject_case_and_predicate_bases"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "chigo_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/chigo-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "chigo-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-8",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-27",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-9",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-10",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-11",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-12",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-13",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-14",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-15",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-16",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-28",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73016",
+      "source_sha256": "c21f0cbab9086da379c157c5b91bc6cea6fa676cc851dddccd02a7818e1f7ef0",
+      "status": "scoped",
+      "checklist": [
+        "COV-018j"
+      ],
+      "scope": "Noun-attached 치고 family, plural bases, bundle/component alternatives, topic and polite particles; no bare predicate or intervening case attachment.",
+      "remaining": "Further outer particles, nominalized-base semantics, repeated topics and contraction remain explicitly unjudged in chigo-evaluation.json. 교수님 has a recorded dictionary headword gap. Independent Korean review remains open.",
+      "evidence": [
+        {
+          "path": "tests/chigo_particles.rs",
+          "test": "chigo_particles_preserve_nominals_plurals_and_bundles"
+        },
+        {
+          "path": "tests/chigo_particles.rs",
+          "test": "chigo_particles_reject_case_and_predicate_bases"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "chigo_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/chigo-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "chigo-required-31",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-32",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-23",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-required-28",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-17",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-18",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-19",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-20",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-21",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-22",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-23",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-24",
+          "judgment": "path"
+        },
+        {
+          "case": "chigo-forbidden-26",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

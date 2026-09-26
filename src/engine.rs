@@ -1226,7 +1226,7 @@ fn particle_allowed(
     if suffixes.first().is_some_and(|m| {
         matches!(
             m.form.as_str(),
-            "커녕" | "란" | "이란" | "이라든가" | "이라든지"
+            "커녕" | "란" | "이란" | "이라든가" | "이라든지" | "치고" | "치고는" | "치고서"
         )
     }) || (matches!(form, "이" | "가" | "을" | "를")
         && suffixes.iter().any(|m| {
@@ -1525,6 +1525,7 @@ fn nominals(
             }
             match particle.form {
                 "요" => a.rules.push("particle.polite".into()),
+                "치고" | "치고는" | "치고서" => a.rules.push("particle.chigo".into()),
                 "들" => a.rules.push("particle.distributive".into()),
                 "다" | "이다" if enumerative_da => {
                     a.rules.push("particle.enumerative_da".into());

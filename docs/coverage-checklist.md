@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–w/018a–i/019a–f/020a–h/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–w/018a–j/019a–f/020a–h/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 144 scoped
-  dispositions from COV-016/017m–n/017p–w/018e–i/019d–f/020d–h; 571 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 147 scoped
+  dispositions from COV-016/017m–n/017p–w/018e–j/019d–f/020d–h; 568 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -541,9 +541,9 @@ review remains open under the completion review below.
   [scope and sources](rules.md#literal-doe-and-licensed-eudoe-cov-017w).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–i implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–j implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
-  including nominal (이)라고 alternatives.**
+  including nominal (이)라고 alternatives and the noun-attached 치고 family.**
   Remaining: pronouns outside the existing finite paradigms. Preserve homonym-specific
   dictionary labels and review additional ending/particle licenses.
   Include quoted clauses marked as nominals: KAIST MH2_0169-s444/3 살겠다가
@@ -666,6 +666,20 @@ review remains open under the completion review below.
   CLI/browser checks and [evaluation](seo-connective-evaluation.json).
   Other ending/particle families, especially broader 부터/보다 attachment,
   remain for review. No unrestricted clause nominalization is introduced.
+- [x] **COV-018j — Noun-attached 치고 family.** 치고, 치고는 and 치고서
+  retain separate source-backed bundles, plural bases and reviewed topic/polite
+  composition. 학생치고는 preserves both 치고는 and 치고 + 는; 사람치고서는
+  preserves 치고서 + 는. Existing 치다/고치다/놓치다 predicate readings remain.
+  Bare predicate endings and intervening case particles do not license noun
+  attachment. The GSD 아파트치고 group now recovers 아파트. Evidence:
+  [boundary/ambiguity tests](../tests/chigo_particles.rs), 63 stable ledger
+  cases, one complete unchanged annotated sentence, dictionary/CLI parity,
+  source-linked browser alternatives and [comparison](chigo-evaluation.json).
+  The required raw 교수님 plural paths have an explicit dictionary headword gap;
+  the existing 교수 + 님 + 들 alternatives survive dictionary-only filtering.
+  Further outer particles, repeated topics, nominalized-base semantics and
+  contracted 치곤 remain unjudged in the report; COV-018 remains open.
+
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -974,7 +988,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 271 currently emitted canonical grammar forms.** The initial catalog
+  for all 274 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

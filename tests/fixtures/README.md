@@ -754,3 +754,20 @@ MH2_0149-s40 and dev-s267 from the pinned development files, under their existin
 source/license attribution above. The original gold records 치렀으되 → 치르다
 and 그리되 → 그리다. [The report](../../docs/doe-evaluation.json) includes hashes;
 historical baselines and original annotations remain unchanged.
+
+
+`krdict-chigo.json` contains 29 primary word entries from the September 2026
+KRDict export, with every lexical homonym and sense for its selected headwords.
+It retains English equivalents and the first example group per sense, omitting
+WordForm/RelatedForm and export metadata. Attribution: National Institute of
+Korean Language, Korean Basic Dictionary, [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+The absent 교수님 headword is tested as a dictionary gap, not fabricated.
+Three grammar entries (73015/83882/73016) extend `krdict-grammar-labels.json`
+under the same attribution and adaptations; all previous entries remain.
+The catalog now has 274 forms, 346 source IDs and 347 grammar fixture entries.
+
+`gsd-chigo.conllu` preserves the complete byte-identical UD 2.15 GSD development
+sentence `dev-s33`, under the GSD attribution/license above. Its regression
+requires only the reviewed `id:dev-s33/5` 아파트치고 → 아파트 group; it does
+not certify all candidates in that sentence. [The report](../../docs/chigo-evaluation.json)
+records the corpus/fixture hashes and exact candidate comparisons.

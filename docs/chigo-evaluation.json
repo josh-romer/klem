@@ -1,0 +1,3620 @@
+{
+  "schema_version": 1,
+  "scope": "COV-018j: noun-attached 치고, 치고는 and 치고서; preserve lexical predicates, plural bases and bundled/component alternatives. Contextual sense is not inferred.",
+  "baseline_commit": "320c0df151c56d97806ee182815b89f6210a0183",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Every sense and attachment note; up to two example groups per sense.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "f90ae5fff82c1466e4afd517a19763c797158fdff7f4fedfeefc74a95f0a0812",
+    "src/engine.rs": "1981e87490e69a26266786de61fff7e64636b8f7cf21379c9d87b15fde649350",
+    "tests/chigo_particles.rs": "116a92c14a3ad8cc5880be4f7d9052d9b6d85bdc5156114cc3c715b867832238",
+    "tests/corpus.rs": "be3e50622a8b84d694fce5e32e50f98ab59cc888a24927a3d8ea5b956b6f4893",
+    "tests/dictionary.rs": "405034a83af70eec0f499a317de5968f43aec4179a84592206afa50664ae35c8",
+    "tests/validity.rs": "2e4075ffb7ba4ac33c964c894c185c53ba56ef98192329fe5a7eef5aa237d459",
+    "tests/fixtures/validity.json": "0a0a94d18955643fe4c4bfd3f1ec53fbd8ace85f6af6bd2bebe253080a8abc83",
+    "tests/fixtures/optimization.json": "c2725f12a0eebc9e84faf135e5a7509d88c477a92f80eeefe4dd3c4cc01f8c89",
+    "tests/fixtures/krdict-chigo.json": "504b018e387d3c7b93efac3a610568d4328a264eb36e5b83c4c49a05cf6dc8ae",
+    "tests/fixtures/krdict-grammar-labels.json": "2755f5bf860852f2ad7b1e217611e307ca8cf92790533c977bd0760e0be4b70b",
+    "web/src/grammar-labels.json": "121eb85cc49663df98cdfa4238d201bd613fb27f40be093b4a924aa0588e3b21",
+    "web/tests/browser.mjs": "6495ee4815f71dd7dcb93a11509813e8ff957435db239693326eedbfc405abaf"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:73015",
+        "headword": "치고",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73015",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다. "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞말이 예외가 없이 뒤의 내용과 같음을 나타내는 조사.",
+            "notes": [
+              "흔히 부정을 뜻하는 말이 뒤에 오거나 반어의 뜻을 가진 의문문으로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "아이들치고 싸우지 않는 아이들을 본 적 있어요?"
+              ],
+              [
+                "우리 학교 학생치고 수학 천재인 민준이를 모르는 사람은 없다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "뒤의 내용이 앞말에 대해 예외적임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "여기는 도서관치고 소장 도서가 적어서 보려던 책이 거의 없어."
+              ],
+              [
+                "올해는 눈도 안 오고 바람도 많이 안 불어서 겨울 날씨치고 따뜻한 편이다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "f207f705c9af66ffef67095f9f11c8006426be09cb5795f31cae39bcd05546d1"
+    },
+    {
+      "source": {
+        "id": "krdict:83882",
+        "headword": "치고는",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83882",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞의 명사에 대해 보통 가지고 있는 생각과는 달리 그 상태가 제법이거나 상당한 경우를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "민준이는 중학생치고는 키가 꽤 컸다."
+              ],
+              [
+                "승규는 요새 젊은이치고는 꽤 점잖고 신중한 성격이었다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "e393d09b72bdef8fc977016c6fc609f7b0ad02a32684ac874709d59ac5768239"
+    },
+    {
+      "source": {
+        "id": "krdict:73016",
+        "headword": "치고서",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73016",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞말이 예외가 없이 뒤의 내용과 같음을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [
+              "주로 뒤에 부정적인 내용이나 반어의 뜻을 가진 의문문이 온다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "고춧가루가 들어간 음식치고서 맵지 않은 것이 없어."
+              ],
+              [
+                "꾸준히 운동하는 사람치고서 병약한 사람 못 봤다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "2",
+            "definition": "뒤의 내용이 앞말에 대해 예외적임을 강조하여 나타낼 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그 배우는 큰 상을 받은 사람치고서는 겸손한 태도로 인터뷰를 했어."
+              ],
+              [
+                "민준이는 많이 배운 사람치고서는 겸손해서 사람들이 칭찬을 많이 해."
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "c21f0cbab9086da379c157c5b91bc6cea6fa676cc851dddccd02a7818e1f7ef0"
+    },
+    {
+      "source": {
+        "id": "krdict:85851",
+        "headword": "는",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 대상이 다른 것과 대조됨을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, ‘-아’, ‘-게’, ‘-지’, ‘-고’ 등의 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "어머니는 선생님이고, 아버지는 회사원이다. "
+              ],
+              [
+                "편지는 자주 쓴다. "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "2",
+            "definition": "문장 속에서 어떤 대상이 화제임을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "저는 학생입니다."
+              ],
+              [
+                "사과는 몸에 좋다고 해요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "강조의 뜻을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, 연결 어미 등의 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "노는 게 좋아도 숙제는 해야지."
+              ],
+              [
+                "바쁘더라도 부모님께 전화는 자주 하세요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "8dc9d6effae6930841dcff3f5badde2d9f2daa86d2849f6ee8f649ffd905278d"
+    },
+    {
+      "source": {
+        "id": "krdict:86116",
+        "headword": "요",
+        "homonym": "4",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86116",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "높임의 대상인 상대방에게 존대의 뜻을 나타내는 조사.",
+            "notes": [
+              "주로 두루 낮춤으로 쓰는 종결 어미나 일부 예사 낮춤으로 쓰는 종결 어미 뒤에 붙여 쓴다. 격식을 갖추어야 하는 상대에게는 잘 쓰지 않는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오늘 날씨가 참 좋군요."
+              ],
+              [
+                "내일 점심 같이 먹을까요?"
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "2",
+            "definition": "높임의 대상인 상대방에게 존대의 뜻을 나타내는 조사.",
+            "notes": [
+              "명사, 부사어, 연결 어미 뒤에 붙여 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "빨리요, 버스가 떠나겠어요."
+              ],
+              [
+                "승규가요, 저한테요, 화를 냈어요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "29064a11377b1737feea0727efbd79325d74e7cc184d2c020a05d677f9e94301"
+    },
+    {
+      "source": {
+        "id": "krdict:88852",
+        "headword": "-님",
+        "homonym": "0",
+        "pos": "접사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88852",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "‘높임’의 뜻을 더하는 접미사.",
+            "notes": [
+              "직위나 신분을 나타내는 일부 명사 뒤에 붙는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "나라님"
+              ],
+              [
+                "도련님"
+              ]
+            ],
+            "total_example_groups": 16
+          },
+          {
+            "id": "2",
+            "definition": "'그 대상을 사람처럼 표현하여 높임'의 뜻을 더하는 접미사.",
+            "notes": [
+              "사람이 아닌 일부 명사 뒤에 붙는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "달님"
+              ],
+              [
+                "별님"
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "‘높임’과 ‘존경’의 뜻을 더하는 접미사.",
+            "notes": [
+              "신처럼 생각되는 인물이나 옛 성인의 이름 뒤에 붙는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "공자님"
+              ],
+              [
+                "맹자님"
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "bb125b3bd831abafbb116adfd9d4c8c52fdbdce8d78d6aaf6f6cb75ec6aee85c"
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "8f1a60905d9993d0dbc8e60dc458a50f2ce9e0d7e9c407587b6f235557d9f8ad",
+      "after_sha256": "fb3dedea0143d600f947c2aed42df027fea46bf7df4a30f830eeac4c9accd09d",
+      "converted": 22220,
+      "before_matched": 22108,
+      "after_matched": 22108,
+      "remaining_misses": 112,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.8347884788478845,
+      "mean_candidates_after": 5.835373537353735
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "baa5094dd8dba686bd17aaf8bdb4b831e1d4b865faefe5c6319f0ee8a0e1cb71",
+      "after_sha256": "9655475b346a771494eb65bca5c44dbee5422489808c1427d3f64549adf1f5a5",
+      "converted": 9989,
+      "before_matched": 9834,
+      "after_matched": 9835,
+      "remaining_misses": 154,
+      "new_matches": [
+        {
+          "id": "id:dev-s33/5",
+          "surface": "아파트치고",
+          "expected": [
+            "아파트"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.3697066773450794,
+      "mean_candidates_after": 5.370007007708479
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "아파트치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "외국인치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "외국인",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사람치고",
+      "before_count": 3,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사라다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사람",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사랗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "음식치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "음식",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아이들치고",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수님들치고",
+      "before_count": 3,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.honorific",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아파트치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "외국인치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "외국인",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "외국인",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사람치고는",
+      "before_count": 11,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사라다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사라다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사람",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사람",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사랗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사랗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "음식치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "음식",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "음식",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아이들치고는",
+      "before_count": 11,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수님들치고는",
+      "before_count": 11,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.honorific",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.honorific",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아파트치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "외국인치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "외국인",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사람치고서",
+      "before_count": 4,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사라다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사람",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사랗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "음식치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "음식",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아이들치고서",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수님들치고서",
+      "before_count": 4,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.honorific",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사람치고서는",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사라다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사람",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사랗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수님들치고서는",
+      "before_count": 12,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.honorific",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아파트치고요",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.enumerative_yo",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고는요",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "particle.polite"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "음식치고서요",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "음식",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "음식",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.enumerative_yo",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생을치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "친구와치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구와",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생만치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좋다치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "좋다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생을치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "친구와치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구와",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "친구와",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생만치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좋다치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "좋다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "좋다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생을치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "친구와치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "친구와",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생만치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생만",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "좋다치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "좋다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고은",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고서은",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생치고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고는치고서",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생치고는",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고다",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "치고",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "치고는",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "치고서",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "고치고",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "놓치고는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "놓",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "놓",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아파트치고도",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생치고는는",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "음식치고서도",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "음식",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기치고",
+      "before_count": 3,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "치고",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹음치고서",
+      "before_count": 4,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹음",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹읗다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "음",
+              "kind": "ending"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.hieut",
+            "nominalization",
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교치고의",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "의",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아파트치곤",
+      "before_count": 8,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "particle.contraction.n"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생들치고서",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아파트치고는요",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아파트",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "치고는",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.chigo",
+            "particle.polite"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    }
+  ],
+  "source_access": "Live KRDict pages were attempted but the web tool could not access them. Review uses the pinned local September 2026 export, with source hashes and URLs retained.",
+  "attachment_decisions": [
+    "All three entries explicitly attach to nouns. No consonant/vowel allomorph selection or stem recovery is introduced. Existing plural suffixes precede these particles, as in the direct 아이들치고 and 교수님들치고서 examples.",
+    "치고는 and 치고서 retain independent dictionary bundles. 치고 + 는 is a compositional interpretation alongside the 치고는 bundle; 치고서 + 는 is directly attested by 사람치고서는 examples. 치고서 is not interpreted as locative 치고 + 서.",
+    "Intervening particles and bare predicate endings do not become nominal bases through this rule. Original lexical 치다/고치다/놓치다 readings remain. Existing nominalization and outer-particle mechanics still generate hypotheses; only the cited noun/plural/topic/polite paths receive required judgments here.",
+    "Generalization/exception and expectation meanings depend on the following context. The word analyzer does not impose sentence polarity from the dictionary note saying negative/rhetorical continuations are common.",
+    "Polite 요 uses its documented attachment to particles. Other outer combinations and the semantics of nominalized bases remain explicitly unjudged."
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/gsd-chigo.conllu",
+      "sha256": "6e412837e26c539d291d1182fd46298c8df82156bae220d253e498e7140393f1",
+      "complete_byte_identical_sentences": 1
+    }
+  ],
+  "unjudged_followups": [
+    {
+      "id": "chigo-further-composition",
+      "surfaces": [
+        "아파트치고도",
+        "학생치고는는",
+        "음식치고서도",
+        "먹기치고",
+        "먹음치고서",
+        "학교치고의",
+        "아파트치곤"
+      ],
+      "status": "unjudged",
+      "reason": "Review both generated hypotheses and absent paths on these surfaces: contextual acceptability, repeated topics, contraction and further outer particles need source review. The per-surface comparison records the actual outputs; these followups are not required or forbidden judgments."
+    },
+    {
+      "id": "chigo-dictionary-gap",
+      "surfaces": [
+        "교수님들치고",
+        "교수님들치고는",
+        "교수님들치고서",
+        "교수님들치고서는"
+      ],
+      "status": "dictionary-gap",
+      "reason": "Source-backed noun/plural paths are required in raw analysis. 교수님 has no exact headword in the pinned dictionary and is correctly excluded by dictionary-only. The existing 교수 + 님 + 들 alternative survives dictionary-only filtering and now has explicit required/CLI/browser regressions."
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "remaining": [
+    "Further particles and pronouns remain COV-018; the named composition followup is not closed by these scoped tests.",
+    "Independent Korean review, fresh passages and contextual interpretation remain open. Dictionary matches do not certify every lexical hypothesis."
+  ],
+  "labels": {
+    "canonical_forms": 274,
+    "source_entries": 346,
+    "grammar_fixture_entries": 347,
+    "added_forms": [
+      "치고",
+      "치고는",
+      "치고서"
+    ],
+    "added_source_ids": [
+      73015,
+      83882,
+      73016
+    ],
+    "previous_catalog_and_fixtures_preserved": true
+  },
+  "lexical_fixture": {
+    "path": "tests/fixtures/krdict-chigo.json",
+    "entries": 29,
+    "adaptations": "All homonyms and senses; English equivalents and first example group per sense; omit WordForm, RelatedForm and export metadata."
+  }
+}

@@ -1526,3 +1526,17 @@ fn doe_endings_recover_past_and_plain_annotated_groups() {
         }
     }
 }
+
+#[test]
+fn chigo_particle_recovers_annotated_apartment() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-chigo.conllu").as_slice(),
+        Corpus::Gsd,
+        "chigo",
+    )
+    .unwrap();
+    let case = &report.cases["id:dev-s33/5"];
+    assert_eq!(case.surface, "아파트치고");
+    assert_eq!(case.expected, ["아파트"]);
+    assert!(case.matched);
+}

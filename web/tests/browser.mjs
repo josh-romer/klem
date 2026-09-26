@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const chigo = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-chigo.json"), "utf8"));
   const doe = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-doe.json"), "utf8"));
   const reportNe = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-report-ne.json"), "utf8"),
@@ -265,6 +266,7 @@ try {
       ...nohContraction.LexicalResource.Lexicon.LexicalEntry,
       ...reportNe.LexicalResource.Lexicon.LexicalEntry,
       ...doe.LexicalResource.Lexicon.LexicalEntry,
+      ...chigo.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -643,6 +645,14 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["학생치고는", ["학생", "치고", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["사람치고서는", ["사람", "치고서", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["아파트치고", ["아파트", "치고"], "치고", "Generalization / exception", 73015, "particle"],
+    ["학생치고는", ["학생", "치고는"], "치고는", "Against expectations", 83882, "particle"],
+    ["음식치고서", ["음식", "치고서"], "치고서", "Emphatic generalization / exception", 73016, "particle"],
+    ["아이들치고", ["아이", "들", "치고"], "치고", "Generalization / exception", 73015, "particle"],
+    ["교수님들치고서", ["교수", "님", "들", "치고서"], "치고서", "Emphatic generalization / exception", 73016, "particle"],
+    ["아이들치고서", ["아이", "들", "치고서"], "치고서", "Emphatic generalization / exception", 73016, "particle"],
     ["치렀으되", ["치르", "었", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
     ["그리되", ["그리", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
     ["살되", ["살", "으되"], "으되", "Contrast / qualification / quotation", 80291, "ending"],
@@ -819,6 +829,9 @@ try {
     if (form === "으되") {
       assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("ending.contrast_doe"));
       assert.ok(data.grammar["-으되"].some(e => e.id === "krdict:80289"));
+    }
+    if (["치고", "치고는", "치고서"].includes(form)) {
+      assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("particle.chigo"));
     }
     // Display may use 여 after 하 while lookup retains canonical 어.
     await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
@@ -1288,7 +1301,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

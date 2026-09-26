@@ -1501,3 +1501,41 @@ inspected without JavaScript errors or horizontal overflow.
 
 The named unresolved allomorph/composition questions, broader grammar inventory,
 independent Korean-language review and fresh-passage evaluation remain open.
+
+
+## Noun-attached 치고 family (COV-018j)
+
+[The comparison](chigo-evaluation.json) accounts for **113 added candidates on
+70 surfaces**, with no removed candidates or changed existing provenance.
+The three dictionary particles retain separate labels and noun attachment.
+The 32 required and 31 forbidden paths cover plurals, bundles, topic/polite
+composition, intervening cases, bare predicate endings and lexical ambiguity.
+Other generated combinations remain explicitly unjudged; these counts are not
+a precision estimate. The pinned sources were read locally because live KRDict
+pages were inaccessible through the web tool.
+
+GSD **아파트치고 → 아파트** newly matches its annotated group. Remaining
+development misses are **112 KAIST and 154 GSD**, with no lost gold groups or
+component sets. Mean candidates are 5.835374 and 5.370007 respectively. One
+complete unchanged GSD sentence preserves the gain. All thirty stress
+fingerprints and historical corpus baselines remain unchanged.
+
+The 63 new cases bring the ledger to **1,421 cases, 808 required and 619
+forbidden judgments**. The lexical fixture retains 29 entries with their
+homonyms and senses. Three labels/source entries bring the catalog to
+**274 forms, 346 source IDs and 347 grammar fixture entries**, preserving all
+previous labels and entries. Three scoped inventory dispositions bring the
+queue to **147 reviewed entries and 568 without a disposition**.
+The source-backed 교수님 plural paths have a recorded dictionary headword gap;
+dictionary-only filtering correctly removes those whole-base paths while
+retaining 교수 + 님 + 들 alternatives. Further outer particles,
+nominalization semantics, independent Korean review and fresh passages remain open.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build, browser/HTTP checks and
+inventory verification pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared systems were not executed. The final Nix test run
+includes the new honorific/plural and annotated-corpus regressions. The packaged
+full-dictionary app passes eight reading selections, source links and all 31
+forbidden paths. Desktop/mobile screenshots were inspected without JavaScript
+errors or horizontal overflow; 아이들치고서 visibly yields 아이 + 들 + 치고서.

@@ -2046,3 +2046,33 @@ recorded under `doe-short-existential` in the [report](doe-evaluation.json).
 They are neither required nor forbidden by the linguistic ledger. Omitted
 copulas and further particle combinations have a separate named followup.
 Unknown lexical hypotheses and contextual meanings also remain unverified.
+
+
+## Noun-attached 치고 family (COV-018j)
+
+KRDict [치고](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73015),
+[치고는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83882) and
+[치고서](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73016)
+explicitly attach to nouns. The literal spellings do not trigger stem recovery
+or a consonant/vowel allomorph. Examples include 아파트치고 → 아파트 + 치고,
+학생치고는 → 학생 + 치고는 and 아이들치고 → 아이 + 들 + 치고.
+The source entries retain generalization, exception and expectation senses;
+following sentence polarity and contextual meaning are not inferred.
+
+The dictionary bundles remain available. 치고 + 는 is also retained as a
+compositional interpretation of 치고는; the 치고서 source explicitly illustrates
+사람치고서는. Polite 요 follows its particle-attachment note. Case-marked
+phrases and bare predicate endings are not noun bases for these new particles.
+In particular 학생이치고 does not acquire 학생 + 이 + 치고, and 먹고치고
+does not acquire 먹다 + 고 + 치고. Existing lexical 치고 → 치다 + 고 and
+고치고 → 고치다 + 고 analyses remain. Whole-word and unknown nominal
+hypotheses remain subject to the usual dictionary filter.
+
+[The comparison](chigo-evaluation.json) explicitly leaves further outer
+particles, repeated topics, contracted 치곤 and nominalized-base semantics
+unjudged. Their generic structural candidates are not correctness judgments.
+The source's 교수님들치고서 supports the raw 교수님 + 들 + 치고서 path, but
+교수님 has no exact headword in the pinned dictionary. Dictionary-only therefore
+excludes that path. The existing 교수 + 님 + 들 + 치고서 alternative survives filtering and has
+explicit dictionary/CLI/browser regressions.
+See [regressions](../tests/chigo_particles.rs) and stable `chigo-*` ledger cases.

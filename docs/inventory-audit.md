@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **144 scoped
-reviews**, with **571 entries unreviewed in this ledger**. This does not imply
+The [manual ledger](inventory-reviews.json) currently contains **147 scoped
+reviews**, with **568 entries unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
 and source-specific candidate judgments. Independent Korean-language review
@@ -465,3 +465,13 @@ contains **144 scoped entries and 571 without a disposition**. The
 two development gains and unchanged historical stress fingerprints. Short
 existential spellings remain explicitly unjudged under a named followup;
 scoped disposition is not full-entry certification.
+
+
+COV-018j adds scoped dispositions for 치고, 치고는 and 치고서
+(73015/83882/73016). The queue now contains **147 scoped entries and 568
+without a disposition**. Noun/plural attachment, bundled/component alternatives,
+reviewed topic/polite composition and exact forbidden boundary paths have
+source-linked judgments. [The comparison](chigo-evaluation.json) records 113
+added candidates on 70 surfaces, one GSD development gain and thirty unchanged
+stress fingerprints. Other outer particles and nominalization semantics remain
+unjudged; 교수님 has a separately tracked dictionary gap.

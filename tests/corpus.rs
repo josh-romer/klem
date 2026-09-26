@@ -3,6 +3,43 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn annotated_obligation_bundles_keep_implicit_auxiliary_differences_visible() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-obligation.conllu").as_slice(),
+            vec![
+                ("id:M2TA_069-s33/16", "말해야겠다", "말하다"),
+                ("id:M2TA_069-s44/11", "이야기해야겠다", "이야기하다"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-obligation.conllu").as_slice(),
+            vec![("id:dev-s211/8", "먹어야겠네요", "먹다")],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "obligation").unwrap();
+        for (id, surface, lemma) in cases {
+            let case = report.cases.get(id).unwrap();
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+        if matches!(corpus, Corpus::Gsd) {
+            for (id, lemmas) in [
+                ("id:dev-s361/10", vec!["오다", "하다"]),
+                ("id:dev-s475/7", vec!["세척하다", "하다"]),
+            ] {
+                assert_eq!(report.cases[id].expected, lemmas);
+                // Preserve the annotated implicit 하다 instead of rewriting
+                // the corpus adapter to match this program's bundle.
+            }
+        }
+    }
+}
+
+#[test]
 fn annotated_omitted_copula_fragments_recover_without_token_joining() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-copula-fragments.conllu").as_slice(),

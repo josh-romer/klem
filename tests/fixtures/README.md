@@ -308,9 +308,9 @@ Each sentence is a byte-identical excerpt. Four selected tokens protect 먹을�
 not new gains or annotations of every alternative analysis. Rejected class
 combinations are tracked separately by source-backed synthetic judgments.
 
-`krdict-grammar-labels.json` contains 255 primary entries from the September
+`krdict-grammar-labels.json` contains 258 primary entries from the September
 2026 KRDict export, National Institute of Korean Language, CC BY-SA 2.0 KR.
-254 support the teaching-label catalog; 68883 supplies the alternate propositive
+257 support the teaching-label catalog; 68883 supplies the alternate propositive
 boundary. Changes: retain English equivalents and the first example per sense,
 omit WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries,
 and reformat JSON. Source/license links above apply. The catalog records every
@@ -383,3 +383,12 @@ standalone 라는 has the annotated lemma 이 (normalized to 이다 by the exist
 adapter). The corpus's `OrigLemma=이+란` is preserved; the program's canonical
 ending remains 라는. See `docs/copula-fragment-evaluation.json` for comparison
 hashes, source, stable IDs and the explicit preceding-quotation condition.
+
+`kaist-obligation.conllu` and `gsd-obligation.conllu` contain two and three
+complete development sentences, respectively, under the corpus attribution and
+licenses listed above. They are byte-identical excerpts. The exact tested IDs,
+file hashes and original expected lemma groups appear in
+`docs/obligation-evaluation.json`. GSD's implicit 하다 in 와야겠다 and
+세척해야겠지요 is preserved as an annotation difference. KRDict source entries
+86238, 86239 and 86240 are included in the grammar-label fixture for the bundled
+-아/어/여야겠- expression; previous entries remain unchanged.

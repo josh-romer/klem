@@ -113,3 +113,21 @@ Copula-role alternative. The [fragment comparison](copula-fragment-evaluation.js
 records both stable IDs and the unchanged corpus bytes. The quoted context is
 neither inferred nor joined to the fragment. Other fragment forms, the full
 715-entry inventory and remaining corpus families are still open.
+
+## Necessity/intention representation (COV-017k)
+
+The [obligation comparison](obligation-evaluation.json) records canonical 어야겠
+as the KRDict-listed expression before a final ending. KAIST 말해야겠다 and
+이야기해야겠다 and GSD 먹어야겠네요 now match. GSD dev-s361/10 와야겠다
+and dev-s475/7 세척해야겠지요 include an implicit 하다 in their lemma groups;
+their annotations and measured misses remain unchanged. The report includes
+the actual bundled alternatives instead of treating the two cases as evidence
+for a missing explicit auxiliary. General modal/ending and left-predicate
+auxiliary constraints remain COV-017/019 work, including the other inherited
+connectors after the new bundle.
+
+A concrete next COV-017 candidate review is 해야겠더라: the source supports the
+retrospective ending, but inherited terminal recovery also emits 더 + 어라/으라.
+Review the retrospective/imperative boundary alongside older forms such as
+먹었더라. Broader modal-before-auxiliary combinations also remain unjudged;
+only the new 고 있다/계시다 boundary was constrained in COV-017k.

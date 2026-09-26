@@ -49,6 +49,69 @@ fn lemma(text: &str, kind: LemmaKind) -> Lemma {
 }
 
 #[test]
+fn obligation_bundles_keep_dictionary_groups_and_cli_parity() {
+    let dir = Scratch::new();
+    let mut fixture: Value =
+        serde_json::from_str(include_str!("fixtures/krdict-emphatic-particles.json")).unwrap();
+    let copulas: Value =
+        serde_json::from_str(include_str!("fixtures/krdict-derivation.json")).unwrap();
+    let copula = copulas["LexicalResource"]["Lexicon"]["LexicalEntry"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|e| e["Lemma"]["feat"]["val"] == "이다")
+        .unwrap();
+    fixture["LexicalResource"]["Lexicon"]["LexicalEntry"]
+        .as_array_mut()
+        .unwrap()
+        .push(copula.clone());
+    let input = dir.0.join("obligation.json");
+    fs::write(&input, serde_json::to_vec(&fixture).unwrap()).unwrap();
+    import_krdict(&[input], dir.db(), "obligation-regression").unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, present) in [
+        ("먹어야겠네요", vec!["먹다"], true),
+        ("먹으셔야겠다", vec!["먹다"], true),
+        ("먹어봐야겠다", vec!["먹다", "보다"], true),
+        ("학생이어야겠다", vec!["학생", "이다"], true),
+        ("학생다워야겠다", vec!["학생"], true),
+        ("먹아야겠다", vec!["먹다"], false),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let filtered = result.filtered(|l| annotation.has_match(l, false));
+        let compatible = result.filtered(|l| annotation.has_match(l, true));
+        for actual in [&filtered, &compatible] {
+            assert_eq!(
+                actual.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.rules.iter().any(|r| r == "prefinal.obligation")),
+                present,
+                "{word}"
+            );
+        }
+        for (dict_only, expected) in [(false, &result), (true, &filtered)] {
+            let mut command = Command::new(env!("CARGO_BIN_EXE_klem"));
+            command.args(["word", word, "--dictionary"]).arg(dir.db());
+            if dict_only {
+                command.arg("--dict-only");
+            }
+            let output = command.output().unwrap();
+            assert!(output.status.success());
+            let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+            assert_eq!(
+                actual["analyses"],
+                serde_json::to_value(&expected.analyses).unwrap()
+            );
+        }
+    }
+}
+
+#[test]
 fn definition_and_quotation_readings_keep_dictionary_groups_and_roles() {
     let dir = Scratch::new();
     let mut fixture: Value =

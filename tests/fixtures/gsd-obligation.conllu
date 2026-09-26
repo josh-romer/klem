@@ -1,0 +1,40 @@
+# sent_id = dev-s211
+# text = 집 앞이라 먹은 건데 기름값 나가더라도 나가서 먹어야겠네요.
+# translit = .jib .ap.i.ra .meog.eun .geon.de .gi.reum.gabs .na.ga.deo.ra.do .na.ga.seo .meog.eo.ya.gess.ne.yo.
+1	집	집	NOUN	NNG	_	3	nmod	_	Translit=.jib|LTranslit=.jib
+2	앞이라	앞+이+라	ADP	NNG+VCP+EC	_	1	case	_	Translit=.ap.i.ra|LTranslit=.ap+.i+.ra
+3	먹은	먹+은	VERB	VV+ETM	_	4	dep	_	Translit=.meog.eun|LTranslit=.meog+.eun
+4	건데	것+이+ㄴ데	VERB	NNB+VCP+EC	_	8	advcl	_	Translit=.geon.de|LTranslit=.geos+.i+ㄴ.de
+5	기름값	기름+값	NOUN	NNG+NNG	_	6	nsubj	_	Translit=.gi.reum.gabs|LTranslit=.gi.reum+.gabs
+6	나가더라도	나가+더라도	VERB	VV+EC	_	7	advcl	_	Translit=.na.ga.deo.ra.do|LTranslit=.na.ga+.deo.ra.do
+7	나가서	나가+아서	VERB	VV+EC	_	8	advcl	_	Translit=.na.ga.seo|LTranslit=.na.ga+.a.seo
+8	먹어야겠네요	먹+어야+겠+네요	VERB	VV+EC+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.meog.eo.ya.gess.ne.yo|LTranslit=.meog+.eo.ya+.gess+.ne.yo
+9	.	.	PUNCT	SF	_	8	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s361
+# text = 오랜만에 정말 맜있는 집을 찾아서 기분도 좋고 다음에 또 와야겠다.
+# translit = .o.raen.man.e .jeong.mal .mass.iss.neun .jib.eul .chaj.a.seo .gi.bun.do .joh.go .da.eum.e .ddo .wa.ya.gess.da.
+1	오랜만에	오랜만+에	ADV	NNG+JKB	_	5	obl	_	Translit=.o.raen.man.e|LTranslit=.o.raen.man+.e
+2	정말	정말	ADV	MAG	_	3	advmod	_	Translit=.jeong.mal|LTranslit=.jeong.mal
+3	맜있는	맜있+는	VERB	VA+ETM	_	4	acl:relcl	_	Translit=.mass.iss.neun|LTranslit=.mass.iss+.neun
+4	집을	집+을	NOUN	NNG+JKO	_	5	obj	_	Translit=.jib.eul|LTranslit=.jib+.eul
+5	찾아서	찾+아서	VERB	VV+EC	_	10	advcl	_	Translit=.chaj.a.seo|LTranslit=.chaj+.a.seo
+6	기분도	기분+도	NOUN	NNG+JX	_	7	nsubj	_	Translit=.gi.bun.do|LTranslit=.gi.bun+.do
+7	좋고	좋+고	VERB	VA+EC	_	0	root	_	Translit=.joh.go|LTranslit=.joh+.go
+8	다음에	다음+에	ADV	NNG+JKB	_	10	obl	_	Translit=.da.eum.e|LTranslit=.da.eum+.e
+9	또	또	ADV	MAG	_	10	advmod	_	Translit=.ddo|LTranslit=.ddo
+10	와야겠다	오+아야+하+겠+다	VERB	VV+EC+VX+EP+EF	_	7	conj	_	SpaceAfter=No|Translit=.wa.ya.gess.da|LTranslit=.o+.a.ya+.ha+.gess+.da
+11	.	.	PUNCT	SF	_	10	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s475
+# text = 사이폰을 맨 처음 사용하려면 아무래도 깨끗이 세척해야겠지요.
+# translit = .sa.i.pon.eul .maen .cheo.eum .sa.yong.ha.ryeo.myeon .a.mu.rae.do .ggae.ggeus.i .se.cheog.hae.ya.gess.ji.yo.
+1	사이폰을	사이폰+을	NOUN	NNP+JKO	_	4	obj	_	Translit=.sa.i.pon.eul|LTranslit=.sa.i.pon+.eul
+2	맨	맨	ADV	MM	_	3	advmod	_	Translit=.maen|LTranslit=.maen
+3	처음	처음	ADV	NNG	_	4	advmod	_	Translit=.cheo.eum|LTranslit=.cheo.eum
+4	사용하려면	사용+하+려면	VERB	NNG+XSV+EC	_	7	advcl	_	Translit=.sa.yong.ha.ryeo.myeon|LTranslit=.sa.yong+.ha+.ryeo.myeon
+5	아무래도	아무래도	ADV	MAG	_	7	advmod	_	Translit=.a.mu.rae.do|LTranslit=.a.mu.rae.do
+6	깨끗이	깨끗이	ADV	MAG	_	7	advmod	_	Translit=.ggae.ggeus.i|LTranslit=.ggae.ggeus.i
+7	세척해야겠지요	세척+하+아야+하+겠+지요	VERB	NNG+XSV+EC+VX+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.se.cheog.hae.ya.gess.ji.yo|LTranslit=.se.cheog+.ha+.a.ya+.ha+.gess+.ji.yo
+8	.	.	PUNCT	SF	_	7	punct	_	Translit=.|LTranslit=.
+

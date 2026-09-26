@@ -902,6 +902,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.past" => "Recover 았/었; at most two past markers are licensed.",
         "prefinal.honorific" => "Recover honorific (으)시 before tense/modal markers.",
         "prefinal.modal" => "Recover 겠 after honorific or past markers.",
+        "prefinal.obligation" => {
+            "Recover the intention or necessity expression -아/어/여야겠- as one prefinal-position bundle, without inserting an implicit 하다."
+        }
         "prefinal.retrospective" => "Recover retrospective 더 after other prefinal markers.",
         "prefinal.conjectural_quotation" => {
             "Recover conjectural (으)리 before the reviewed shortened quotation -란."
@@ -956,7 +959,7 @@ mod label_tests {
         for form in ["에요", "야"] {
             forms.insert(format!("-{form}"), Ending);
         }
-        for form in ["시", "었", "겠", "더", "으리"] {
+        for form in ["시", "었", "겠", "더", "으리", "어야겠"] {
             forms.insert(format!("-{form}-"), Prefinal);
         }
         for form in ["님", "들", "적", "답다", "이", "히"] {

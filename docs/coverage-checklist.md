@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–j/018a–d/019a–c/020a–b/021a/022a batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–k/018a–d/019a–c/020a–b/021a/022a batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -210,7 +210,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–j implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–k implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -349,6 +349,18 @@ review remains open under the completion review below.
   twenty-one `definition-*` ledger cases, dictionary/CLI role checks and eight
   browser/source-link cases. [Scope and sources](rules.md#definition-particles-and-short-quotations-cov-018d017j),
   [evaluation](quoted-definition-evaluation.json).
+- [x] **COV-017k — Intention/necessity -아/어/여야겠-.** The canonical
+  `어야겠` component occupies a prefinal position before a final ending.
+  Existing vowel recovery covers 해야겠다, 와야겠다, 들어야겠다 and 도와야겠다;
+  copulas, honorific/past markers, -답다, and existing auxiliary groups compose.
+  No implicit 하다 lemma is inserted. The new progressive-order check preserves
+  먹고 있어야겠다 while rejecting 먹어야겠고 있다. Broader ending/prefinal and
+  auxiliary restrictions remain COV-017/019 work. Evidence: [path/boundary tests](../tests/obligation.rs),
+  twelve `obligation-*` ledger cases, five complete annotated sentences,
+  dictionary/CLI parity, and nine browser reading/source-link checks.
+  The [evaluation](obligation-evaluation.json) records three new grouped matches
+  and two GSD implicit-하다 representation differences; no prior recoveries or
+  current output fingerprints are lost. See [scope and sources](rules.md#intention-and-necessity-bundle-cov-017k).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–d implement post-ending, outer choice, emphatic,
   concessive and definition particles, including nominal (이)라고 alternatives.**
@@ -549,7 +561,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 219 currently emitted canonical grammar forms.** The initial catalog
+  for all 220 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

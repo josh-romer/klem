@@ -554,3 +554,37 @@ and mobile screenshots were inspected with no overflow or browser errors.
 Dictionary hints remain context-free: for example, 사랑 can display the
 reception-room homonym in this sample, so successful decomposition does not
 establish the intended dictionary sense.
+
+COV-017k adds the prefinal-position necessity/intention bundle 어야겠. The
+[comparison](obligation-evaluation.json) records **two new KAIST and one new GSD
+grouped match**, leaving **152 KAIST and 178 GSD development misses**. No earlier
+group or component set is lost. Five complete, byte-identical source sentences
+preserve the three recoveries and two GSD cases whose gold includes implicit
+하다. The latter remain measured differences rather than changing the adapter
+or inserting an unspelled auxiliary to force a match.
+
+Twelve new ledger cases bring the total to **283 cases with 158 required and
+131 forbidden judgments**. One label covers the canonical prefinal-position
+bundle, bringing the catalog to **220 forms**; three source entries are added
+without altering any previous fixture entry. Twenty-seven surfaces have
+individual candidate comparisons, with no previous analyses removed. The
+progressive boundary check rejects the new necessity + 고 있다/계시다 route
+while preserving progressive + necessity.
+
+Rust, Clippy, stress, dictionary/CLI, frontend build and browser/API checks pass.
+All 30 current output fingerprints and all 66,570 frozen corpus cases pass.
+Nine browser cases cover contractions, auxiliary grouping, copulas, suffixes,
+honorific/past markers, 하 + 여 display normalization and source links. Historical baselines and reports are
+unchanged. Inherited ending/prefinal and auxiliary constraints and independent
+Korean-language review remain open.
+`nix flake check` and `nix build .#web` pass on x86_64 Linux. The refreshed
+packaged app passes eight full-dictionary reading/source-link checks and resolves
+all three expression entries. The viewer's existing 하 + 여 normalization is
+verified separately from canonical API 어야겠. Desktop and mobile screenshots
+were inspected; there are no browser errors or horizontal overflow.
+
+The inspected 해야겠더라 output also makes a remaining candidate-audit issue
+visible: besides the sourced retrospective ending, inherited rules generate
+더 + 어라/으라 alternatives. These are recorded among this report's individual
+candidate additions, not certified by the corpus recall gains. Their prefinal
+and mood licenses belong to the open COV-017 ending audit.

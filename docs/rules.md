@@ -1055,3 +1055,42 @@ Two complete KAIST development sentences protect MH2_0209-s39/4 and
 MH2_0209-s122/4. Both annotate the lemma 이; their `OrigLemma=이+란` differs
 from this program's canonical 라는 component. The measured gain concerns the
 lemma group, not a claim that the morpheme segmentation matches the corpus.
+
+### Intention and necessity bundle (COV-017k)
+
+The dictionary expressions [-아야겠-](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86238),
+[-어야겠-](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86239),
+and [-여야겠-](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86240)
+share canonical `어야겠`. They appear before a final ending, so the API uses
+`MorphemeKind::Prefinal` for this bundled expression; this does not assert that
+KRDict classifies it as a single prefinal ending. No implicit 하다 is inserted.
+The viewer labels it “Intention / necessity” and links all three source entries.
+The hint explains its bundled and normalized representation.
+
+Recovery uses the existing 아/어 boundary, including vowel harmony, 하다 and
+irregular alternatives: 해야겠다, 하여야겠다, 살아야겠다, 와야겠다,
+들어야겠다, 도와야겠다, 몰라야겠다, 써야겠다 and 그래야겠다. Adjectives
+and copulas are licensed by the source, including 넓어야겠군요 and
+학생이어야겠다. Known -답다 still requires its ㅂ-irregular form in
+학생다워야겠다. Honorific/past markers can precede the bundle; no recovered
+겠/더 precedes it through this route. Retrospective 더 can follow, consistent
+with the source's 해야겠더라 example. Composition beyond the source examples,
+including past and honorific combinations, remains agent-authored judgment
+pending independent linguistic review.
+
+Existing auxiliaries can precede the bundle, such as 먹어봐야겠다 and
+먹고 있어야겠다 (represented as joined input in the word API). The new
+necessity path is rejected before progressive 고 있다/계시다: necessity applies
+to the whole progressive predicate, not to an action subsequently made
+progressive. The attachment judgment uses the documented progressive functions
+of [있다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62595)
+and [계시다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61346).
+Only the immediately preceding predicate is checked. Other inherited ending
+and auxiliary licenses remain part of the COV-017/019 audit, including modal
+combinations; this batch does not certify every generated combination.
+
+The five complete corpus sentences include three newly matched groups and two
+GSD annotations that supply implicit 하다 in 와야겠다 and 세척해야겠지요.
+The latter remain measured misses with their original annotations. Literal
+와야하겠다 still produces 오다 + 하다; the expression-only spelling retains
+its bundled form. See [individual comparisons](obligation-evaluation.json).

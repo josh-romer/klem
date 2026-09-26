@@ -47,6 +47,8 @@ pub enum MorphemeKind {
     /// A terminal ending or a scoped, bundled grammatical expression such as
     /// (으)려는/자는; not necessarily a single dictionary-tagged ending.
     Ending,
+    /// A prefinal ending or a reviewed expression occupying that position,
+    /// such as the bundled -아/어/여야겠- before a terminal ending.
     Prefinal,
     Particle,
     /// A derivational suffix, distinct from a particle or lemma. Predicate-forming

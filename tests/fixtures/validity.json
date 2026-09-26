@@ -2,6 +2,10 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "obligation-eo": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86239",
+    "obligation-a": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86238",
+    "obligation-ha": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86240",
+    "aux-progressive": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62595",
     "copula-quotation-fragment": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=327939",
     "definition-ran": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85858",
     "definition-iran": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85859",
@@ -114,6 +118,19 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id":"obligation-plain","surface":"먹어야겠다","judgments":[{"id":"group","lemmas":["먹다"],"morphemes":["어야겠","다"],"verdict":"required","reason":"The documented expression precedes the terminal ending; it does not insert 하다.","source":"obligation-eo"}]},
+    {"id":"obligation-hada","surface":"해야겠다","judgments":[{"id":"group","lemmas":["하다"],"morphemes":["어야겠","다"],"verdict":"required","reason":"The source explicitly documents contracted 해야겠-.","source":"obligation-ha"}]},
+    {"id":"obligation-bright","surface":"살아야겠다","judgments":[{"id":"group","lemmas":["살다"],"morphemes":["어야겠","다"],"verdict":"required","reason":"The source illustrates a bright-vowel predicate with 아야겠-.","source":"obligation-a"}]},
+    {"id":"obligation-adjective","surface":"넓어야겠군요","judgments":[{"id":"group","lemmas":["넓다"],"morphemes":["어야겠","군요"],"verdict":"required","reason":"The dictionary example includes the adjective and the final 군요.","source":"obligation-eo"}]},
+    {"id":"obligation-copula","surface":"학생이어야겠다","judgments":[{"id":"group","lemmas":["학생","이다"],"morphemes":["어야겠","다"],"verdict":"required","reason":"The dictionary explicitly includes 이다 among bases for 어야겠-.","source":"obligation-eo"}]},
+    {"id":"obligation-auxiliary","surface":"먹어봐야겠다","judgments":[{"id":"group","lemmas":["먹다","보다"],"morphemes":["어","어야겠","다"],"verdict":"required","reason":"The expression can inflect the last member of an existing auxiliary chain; the source illustrates 봐야겠어.","source":"obligation-a"}]},
+    {"id":"obligation-honorific","surface":"먹으셔야겠다","judgments":[{"id":"group","lemmas":["먹다"],"morphemes":["시","어야겠","다"],"verdict":"required","reason":"Composition judgment: earlier honorific 시 supplies 셔 at the expression vowel boundary; independent review remains pending.","source":"obligation-eo"}]},
+    {"id":"obligation-retrospective","surface":"해야겠더라","judgments":[{"id":"group","lemmas":["하다"],"morphemes":["어야겠","더라"],"verdict":"required","reason":"The source explicitly illustrates 해야겠더라.","source":"obligation-ha"}]},
+    {"id":"obligation-bad-vowel","surface":"먹아야겠다","judgments":[{"id":"group","lemmas":["먹다"],"morphemes":["어야겠","다"],"verdict":"forbidden","reason":"The 먹 stem requires 어 rather than 아.","source":"obligation-eo"}]},
+    {"id":"obligation-missing-vowel","surface":"먹야겠다","judgments":[{"id":"group","lemmas":["먹다"],"morphemes":["어야겠","다"],"verdict":"forbidden","reason":"The consonant-final stem cannot omit the expression vowel.","source":"obligation-eo"}]},
+    {"id":"obligation-bad-order","surface":"먹어야겠었다","judgments":[{"id":"group","lemmas":["먹다"],"morphemes":["어야겠","었","다"],"verdict":"forbidden","reason":"Composition judgment: the earlier past slot cannot follow modal 겠 inside this expression.","source":"obligation-eo"}]},
+    {"id":"obligation-progressive-order","surface":"먹어야겠고있다","judgments":[{"id":"group","lemmas":["먹다","있다"],"morphemes":["어야겠","고","다"],"verdict":"forbidden","reason":"Attachment judgment: necessity must follow the progressive predicate (먹고 있어야겠다); it does not turn necessity itself into a progressive action.","source":"aux-progressive"}]},
+
     {"id":"quoted-copula-omitted","surface":"라는","judgments":[{"id":"group","lemmas":["이다"],"morphemes":["라는"],"verdict":"required","reason":"Standalone 라는 can follow closing quotation punctuation with omitted copular 이. This candidate carries the quoted-material condition; it does not invent a nominal or join tokens.","source":"copula-quotation-fragment"}]},
     {"id":"quoted-copula-explicit","surface":"이라는","judgments":[{"id":"group","lemmas":["이다"],"morphemes":["라는"],"verdict":"required","reason":"The explicit copula plus the same quotation expression remains a separate token-level candidate with Copula role.","source":"copula-quotation-fragment"}]},
     {"id":"quoted-copula-coda","surface":"학생라는","judgments":[{"id":"group","lemmas":["학생","이다"],"morphemes":["라는"],"verdict":"forbidden","reason":"A fragment license does not permit omission after a consonant-final nominal inside an unbroken token.","source":"copula-quotation-fragment"}]},

@@ -169,6 +169,14 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
         for r in grammar::recover(stem, "겠", Boundary::Literal) {
             choices.push((r, 2, pasts, "겠", "prefinal.modal"));
         }
+        // KRDict treats -아/어/여야겠- as one expression. Keep it as a
+        // prefinal-position bundle, without inventing an omitted 하다 lemma.
+        // Its 아/어 boundary uses the same inflection and earlier tense/
+        // honorific recovery as other vowel-initial forms. Modal/retrospective
+        // markers cannot precede it through this path; 더 may follow it.
+        for r in grammar::recover(stem, "야겠", Boundary::Aeo) {
+            choices.push((r, 2, pasts, "어야겠", "prefinal.obligation"));
+        }
     }
     if stage >= 2
         && pasts < 2
@@ -1081,6 +1089,19 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
         false
     };
     if !bare_link {
+        return false;
+    }
+    // Necessity/intention belongs outside progressive 고 있다/계시다:
+    // 먹고 있어야겠다, not 먹어야겠고 있다. Inspect only the predicate
+    // immediately before this connector, not earlier members of the chain.
+    if connector == "고"
+        && matches!(right.stem.as_str(), "있" | "계시")
+        && left.morphs[..index]
+            .iter()
+            .rev()
+            .take_while(|m| m.kind != MorphemeKind::Ending)
+            .any(|m| m.form == "어야겠")
+    {
         return false;
     }
     // Short 마 is prohibitive; it cannot replace completive 고 말다 or act

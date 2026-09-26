@@ -146,3 +146,12 @@ Fresh development reports now have **145 KAIST and 169 GSD misses**. These
 counts supersede the initial triage counts for current work; the original
 inventory report and frozen corpus baselines stay unchanged. Every-entry
 review of the 715-item inventory and remaining corpus families is still open.
+
+## Enumerative copula inventory review (COV-020d)
+
+[The connective -요 comparison](copula-yo-evaluation.json) reviews ending 86117
+separately from polite particle 86116 and terminal -오. Five complete KAIST
+sentences validate connective uses; two sentence-final gold-group matches are
+explicitly incidental and do not validate a spelling substitution. The current
+measured misses are **138 KAIST and 169 GSD**. Other inventory entries and
+contextual sense judgments remain open.

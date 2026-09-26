@@ -280,6 +280,14 @@ fn predicates(word: &str) -> Vec<Predicate> {
         for r in grammar::recover(word, ending.suffix, ending.boundary) {
             for mut p in prefinals(&r.stem, 4, 0, &mut memo) {
                 p.copula_only = matches!(ending.boundary, Boundary::OmittedCopula(_));
+                if ending.form == "요" {
+                    // This connective attaches to bare 이다/아니다 only.
+                    // A lexical stem ending in 이 is not sufficient evidence.
+                    if !p.morphs.is_empty() {
+                        continue;
+                    }
+                    p.copula_only = p.stem != "아니";
+                }
                 p.copula_contracted |=
                     r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");
                 // Present -ㄴ/는다면 and -ㄴ/는답니다 permit honorific 시,
@@ -379,6 +387,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
+                if ending.form == "요" {
+                    p.rules.push("ending.enumerative_yo".into());
+                }
                 if matches!(ending.form, "답니다" | "는답니다" | "랍니다" | "으랍니다")
                 {
                     p.rules.push("ending.reporting_polite".into());
@@ -833,7 +844,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         && p.morphs
             .iter()
             .find(|m| m.kind == MorphemeKind::Ending)
-            .is_some_and(|m| matches!(m.form.as_str(), "란" | "라는"))
+            .is_some_and(|m| matches!(m.form.as_str(), "란" | "라는" | "요"))
     {
         let mut a = predicate_analysis(p);
         a.lemmas[0].kind = LemmaKind::Copula;

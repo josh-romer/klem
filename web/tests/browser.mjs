@@ -124,6 +124,9 @@ try {
   const reporting = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-reporting.json"), "utf8"),
   );
+  const copulaYo = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-copula-yo.json"), "utf8"),
+  );
   const colloquialCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-colloquial-copulas.json"), "utf8"),
   );
@@ -210,6 +213,7 @@ try {
       ...adverbRoots.LexicalResource.Lexicon.LexicalEntry,
       ...hadaKi.LexicalResource.Lexicon.LexicalEntry,
       ...reporting.LexicalResource.Lexicon.LexicalEntry,
+      ...copulaYo.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -612,6 +616,33 @@ try {
     if (form === "는답니다") {
       assert.ok(data.grammar["-는답니다"].some(e => e.id === "krdict:81377"));
       assert.ok(data.grammar["-는답니다"].some(e => e.id === "krdict:86633"));
+    }
+  }
+  for (const [word, expected] of [
+    ["연장이요", ["연장", "이", "요"]],
+    ["자화상이요", ["자화상", "이", "요"]],
+    ["아비요", ["아비", "이", "요"]],
+    ["아니요", ["아니", "요"]],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    const data = await (await post("analyze", {text: word})).json();
+    const choices = await breakdown.getByRole("combobox").locator("option").evaluateAll(
+      options => options.map(o => ({value:o.value, text:o.textContent.replace(/^\d+\. /, "")})),
+    );
+    const choice = choices.find(o => o.text === expected.join(" + ") &&
+      data.records[0].analysis.analyses[Number(o.value)].morphemes.some(m => m.form === "요" && m.kind === "ending"))?.value;
+    assert.ok(choice, word);
+    await breakdown.getByRole("combobox").selectOption(choice);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+    await breakdown.getByRole("button", {name:"요 And / in contrast (copula)", exact:true}).click();
+    await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=86117"));
+    assert.ok(data.grammar["-요"].some(e => e.id === "krdict:86117" && e.pos === "어미"));
+    assert.ok(!data.grammar["요"].some(e => e.id === "krdict:86117"));
+    if (word === "아비요") {
+      const polite = choices.find(o => o.text === "아비 + 요" && data.records[0].analysis.analyses[Number(o.value)].morphemes[0].kind === "particle");
+      assert.ok(polite);await breakdown.getByRole("combobox").selectOption(polite.value);
+      assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), ["아비", "요"]);
     }
   }
   for (const [word, expected] of [

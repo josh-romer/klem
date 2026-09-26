@@ -112,6 +112,55 @@ fn adverb_root_roles_preserve_matches_homonyms_and_dictionary_gaps() {
 }
 
 #[test]
+fn enumerative_yo_and_polite_particle_survive_dictionary_filtering() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[
+            PathBuf::from("tests/fixtures/krdict-copula-yo.json"),
+            PathBuf::from("tests/fixtures/krdict-colloquial-copulas.json"),
+        ],
+        dir.db(),
+        "copula-yo",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, base) in [
+        ("연장이요", "연장"),
+        ("자화상이요", "자화상"),
+        ("아비요", "아비"),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(kept.analyses.iter().any(|a| {
+            a.lemmas.iter().map(|l| l.text.as_str()).eq([base, "이다"])
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))
+                && a.morphemes.len() == 1
+                && a.morphemes[0].form == "요"
+                && a.morphemes[0].kind == klem::MorphemeKind::Ending
+        }));
+        if word == "아비요" {
+            assert!(kept.analyses.iter().any(|a| a.lemmas.len() == 1
+                && a.lemmas[0].text == base
+                && a.morphemes[0].kind == klem::MorphemeKind::Particle));
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}
+
+#[test]
 fn omitted_copulas_keep_short_expanded_and_lexical_dictionary_readings() {
     let dir = Scratch::new();
     import_krdict(

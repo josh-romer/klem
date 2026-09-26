@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–m/018a–d/019a–c/020a–c/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–m/018a–d/019a–c/020a–d/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -504,7 +504,7 @@ review remains open under the completion review below.
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
-  finite 거/것 nominal alternatives.**
+  finite 거/것 nominal alternatives; COV-020d adds enumerative -요.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -550,6 +550,18 @@ review remains open under the completion review below.
   in each of three stress fingerprints. Every prior candidate and hash is
   preserved. Other omission families and broader colloquial paradigms remain
   open. See [scope and sources](rules.md#omitted-copulas-and-colloquial-nominal-alternatives-cov-020c).
+- [x] **COV-020d — Enumerative copular -요.** 연장이요, 자화상이요,
+  아비요 and 아니요 gain connective-ending paths distinct from polite particle
+  요. Bare 이다/아니다, vowel-final omission, nominal suffixes/particles,
+  nominalizations and explicit 이요 fragments compose. General predicates and
+  recovered prefinals do not gain this ending. Evidence: [role/boundary tests](../tests/copula_yo.rs),
+  eight `copula-yo-*` judgments, five complete annotated sentences,
+  dictionary/CLI parity and browser role-specific source links. The
+  [evaluation](copula-yo-evaluation.json) separates five connective recoveries
+  from two incidental sentence-final gold-group matches. Two stress snapshots
+  gain reviewed unknown-nominal hypotheses; every prior candidate and hash is
+  retained. Other copula families and contextual reading selection remain open.
+  See [scope and sources](rules.md#enumerative-copular-yo-cov-020d).
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without
@@ -638,7 +650,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 225 currently emitted canonical grammar forms.** The initial catalog
+  for all 226 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

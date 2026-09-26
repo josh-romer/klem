@@ -1258,3 +1258,30 @@ review. The endings themselves do not license following auxiliaries, nominal
 case particles or an extra polite 요. Existing lexical alternatives, including
 답니다 → 달다 + 습니다, remain. The [evaluation](reporting-evaluation.json)
 records the tested scope and remaining limits.
+
+## Enumerative copular -요 (COV-020d)
+
+KRDict [-요, 86117](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86117)
+is a connective for listing or contrasting facts, attached to bare 이다/아니다.
+[NIKL's spelling explanation, Article 15](https://korean.go.kr/kornorms/m/m_regltn.do)
+distinguishes this from terminal -오 and explicitly illustrates vowel-final
+omission of 이. Thus 연장이요 exposes 연장 + 이다 + 요, 아비요 additionally
+exposes 아비 + 이다 + 요, and 아니요 exposes 아니다 + 요. The ordinary
+[polite particle 요](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86116)
+remains a separate reading with a different dictionary source and grammar kind.
+
+The rule does not attach to arbitrary predicates or recover honorific, past,
+modal or retrospective markers before connective 요. Known copula roles are
+required: a lexical predicate merely ending in 이다 is insufficient. Existing
+nominal suffixes, particles and nominalizations can precede the copula. An
+explicit 이요 fragment retains Copula role without joining a preceding token;
+standalone omitted 요 is not introduced. Non-Hangul vowel assumptions use the
+existing explicit pronunciation provenance. The ending does not itself license
+auxiliaries or further case/polite particles.
+
+The unfiltered API may add unknown nominal hypotheses before omitted copulas;
+dictionary filtering still requires actual entries. [The evaluation](copula-yo-evaluation.json)
+records each reviewed addition, including two compatibility snapshots. Gold
+lemma groups do not establish contextual correctness: two newly matched KAIST
+cases use sentence-final 요, distinct from the connective this rule supports.
+No spelling repair or contextual parsing is inferred.

@@ -746,3 +746,33 @@ on x86_64-linux. The full-dictionary packaged app passes eight choices (includin
 both 먹으시랍니다 readings), their four grammar-source families, four rejected
 paths, and desktop/mobile checks without JavaScript errors or overflow. Other
 Nix platforms were not executed on this host.
+
+## Enumerative copular -요 (COV-020d)
+
+[The comparison](copula-yo-evaluation.json) records **seven additional KAIST
+lemma-group matches** and no GSD gains or lost groups/component recoveries.
+Five source-supported connective uses (선배요, 아니요, 연장이요, 자화상이요,
+아비요) have complete byte-identical sentence fixtures. Two sentence-final cases,
+본분이요 and 사회요, match the lexical group incidentally; standard spelling
+distinguishes terminal 오 from connective 요. They remain explicitly separated
+from the five validated uses. Measured misses are **138 KAIST and 169 GSD**.
+
+The ledger has **356 cases, 201 required and 161 forbidden judgments**. Role
+constraints distinguish ending 요 from particle 요 and preserve the explicit
+copula fragment. The 226-form catalog adds -요 with primary source 86117; the
+273-entry grammar fixture retains every previous entry. Four attributed lexical
+entries support CLI/library dictionary parity and browser reading selection.
+
+Two of thirty stress snapshots add exactly one unknown-nominal copula hypothesis
+each: 먹어봤어 + 이다 + 요 and 들으셨겠어 + 이다 + 요. These are structural
+hypotheses, not assertions of lexical membership or the intended analysis. Each
+addition was inspected individually; all previous candidates and provenance
+remain, and all historical hashes/change notes are retained. The other 28
+snapshots are unchanged. Frozen corpus baselines are not regenerated.
+
+Formatting, the Rust suite, Clippy, all 66,570 frozen cases, frontend production
+build, complete browser/HTTP suite, `nix flake check` and `nix build .#web` pass
+on x86_64-linux. The full-dictionary packaged app passes four connective choices,
+separate ending/particle source links and polite alternatives, filtering of the
+two unknown snapshot nominals, and desktop/mobile checks without JavaScript
+errors or overflow. Other Nix platforms were not executed on this host.

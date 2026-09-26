@@ -556,6 +556,15 @@ pub(crate) fn endings() -> &'static [Ending] {
                 connector: suffix == "지",
             });
         }
+        // Enumerative -요 is a copula/아니다 ending, distinct from polite 요.
+        for boundary in [Copular, OmittedCopula(0)] {
+            out.push(Ending {
+                suffix: "요",
+                form: "요",
+                boundary,
+                connector: false,
+            });
+        }
         // Productive 아/어 family; the last stem vowel may absorb the ending.
         for (suffix, form) in [
             ("", "어"),
@@ -1027,6 +1036,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
         "ending.reporting_polite" => {
             "Recognize a polite informative or reported-speech ending as one grammatical component; its sense and any implicit speaker are not inferred."
+        }
+        "ending.enumerative_yo" => {
+            "Recognize enumerative -요 after 이다/아니다, retaining vowel-final copula omission and the separate polite-particle reading."
         }
         "pronoun" => "Restore a contracted pronoun with its particle.",
         "nominal.contraction" => "Restore contracted 거/것 plus a particle.",

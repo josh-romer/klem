@@ -308,9 +308,9 @@ Each sentence is a byte-identical excerpt. Four selected tokens protect 먹을�
 not new gains or annotations of every alternative analysis. Rejected class
 combinations are tracked separately by source-backed synthetic judgments.
 
-`krdict-grammar-labels.json` contains 272 primary entries from the September
+`krdict-grammar-labels.json` contains 273 primary entries from the September
 2026 KRDict export, National Institute of Korean Language, CC BY-SA 2.0 KR.
-271 support the teaching-label catalog; 68883 supplies the alternate propositive
+272 support the teaching-label catalog; 68883 supplies the alternate propositive
 boundary. Changes: retain English equivalents and the first example per sense,
 omit WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries,
 and reformat JSON. Source/license links above apply. The catalog records every
@@ -466,3 +466,19 @@ dev-s650. Both are byte-identical excerpts from the pinned corpora above,
 under their CC BY-SA 4.0 licenses. They verify the grouped lemma recoveries for
 넘었답니다, 묻었답니다, 물어본답니다 and 좋았답니다; they do not judge every
 unannotated candidate or choose between informative and reported-speech senses.
+
+`krdict-copula-yo.json` contains four primary entries from the same September
+2026 KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR),
+IDs 14023, 66841, 67746 and 73689. Changes: retain English equivalents and first
+example per sense; omit WordForm/RelatedForm, global metadata and idiom
+subentries; reformat JSON. Source/license links above apply. Entry 86117 (-요)
+is added to the grammar-label fixture with the same adaptations.
+
+`kaist-copula-yo.conllu` preserves five complete byte-identical UD 2.15
+KAIST development sentences: MH2_0069-s406, MH2_0109-s3, MH2_0159-s181,
+MH2_0159-s263 and MH2_0159-s354, under the pinned corpus's CC BY-SA 4.0 license.
+They protect the connective -요 reading. Two separate sentence-final annotation
+cases are documented in `docs/copula-yo-evaluation.json`, not promoted to gold
+for the connective. COV-020d changes two stress fingerprints by adding an
+unknown nominal + omitted copula reading; old hashes and all prior candidates
+remain. The report records each addition rather than certifying those nominals.

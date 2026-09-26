@@ -3,6 +3,28 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn enumerative_copula_yo_recovers_annotated_groups() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-copula-yo.conllu").as_slice(),
+        Corpus::Kaist,
+        "copula-yo",
+    )
+    .unwrap();
+    for (id, surface, lemmas) in [
+        ("id:MH2_0069-s406/4", "선배요", vec!["선배", "이다"]),
+        ("id:MH2_0109-s3/8", "아니요", vec!["아니다"]),
+        ("id:MH2_0159-s181/23", "연장이요", vec!["연장", "이다"]),
+        ("id:MH2_0159-s263/7", "자화상이요", vec!["자화상", "이다"]),
+        ("id:MH2_0159-s354/2", "아비요", vec!["아비", "이다"]),
+    ] {
+        let c = &report.cases[id];
+        assert_eq!(c.surface, surface);
+        assert_eq!(c.expected, lemmas);
+        assert!(c.matched, "{id}");
+    }
+}
+
+#[test]
 fn polite_reporting_endings_recover_annotated_predicates() {
     for (corpus, input, cases) in [
         (

@@ -2,6 +2,8 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "copula-enumerative-yo": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86117",
+    "copula-yo-spelling": "https://korean.go.kr/kornorms/m/m_regltn.do",
     "reporting-declarative": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81393",
     "reporting-present": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81389",
     "reporting-attached": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81377",
@@ -546,6 +548,14 @@
     {"id": "reporting-present-past", "surface": "먹었는답니다", "judgments": [{"id": "forbidden", "lemmas": ["먹다"], "morphemes": ["었", "는답니다"], "verdict": "forbidden", "reason": "Past uses 답니다, not the present-verb 는답니다 allomorph.", "source": "reporting-present"}]},
     {"id": "reporting-declarative-retrospective", "surface": "먹더답니다", "judgments": [{"id": "forbidden", "lemmas": ["먹다"], "morphemes": ["더", "답니다"], "verdict": "forbidden", "reason": "Retrospective 더 is not licensed before 답니다.", "source": "reporting-declarative"}]},
     {"id": "reporting-command-past", "surface": "먹었으랍니다", "judgments": [{"id": "forbidden", "lemmas": ["먹다"], "morphemes": ["었", "으랍니다"], "verdict": "forbidden", "reason": "The quoted command does not inherit past tense.", "source": "reporting-command"}]},
-    {"id": "reporting-consonant-copula", "surface": "학생랍니다", "judgments": [{"id": "forbidden", "lemmas": ["학생", "이다"], "morphemes": ["랍니다"], "verdict": "forbidden", "reason": "Consonant-final 학생 does not license omitted 이.", "source": "reporting-copular"}]}
+    {"id": "reporting-consonant-copula", "surface": "학생랍니다", "judgments": [{"id": "forbidden", "lemmas": ["학생", "이다"], "morphemes": ["랍니다"], "verdict": "forbidden", "reason": "Consonant-final 학생 does not license omitted 이.", "source": "reporting-copular"}]},
+    {"id": "copula-yo-explicit", "surface": "연장이요", "judgments": [{"id": "required", "lemmas": ["연장", "이다"], "morphemes": ["요"], "morpheme_kinds": ["ending"], "verdict": "required", "reason": "Enumerative 요 follows an explicitly spelled copula.", "source": "copula-enumerative-yo"}]},
+    {"id": "copula-yo-omitted", "surface": "아비요", "judgments": [{"id": "required", "lemmas": ["아비", "이다"], "morphemes": ["요"], "morpheme_kinds": ["ending"], "verdict": "required", "reason": "A vowel-final nominal allows omission of 이 before connective 요.", "source": "copula-enumerative-yo"}]},
+    {"id": "copula-yo-negative", "surface": "아니요", "judgments": [{"id": "required", "lemmas": ["아니다"], "morphemes": ["요"], "morpheme_kinds": ["ending"], "verdict": "required", "reason": "The connective attaches to 아니다 as well as 이다; the lexical answer reading remains.", "source": "copula-enumerative-yo"}]},
+    {"id": "copula-yo-polite-homonym", "surface": "아비요", "judgments": [{"id": "required", "lemmas": ["아비"], "morphemes": ["요"], "morpheme_kinds": ["particle"], "verdict": "required", "reason": "The nominal plus polite particle reading remains distinct from the connective.", "source": "particle-yo"}]},
+    {"id": "copula-yo-fragment", "surface": "이요", "judgments": [{"id": "required", "lemmas": ["이다"], "morphemes": ["요"], "morpheme_kinds": ["ending"], "verdict": "required", "reason": "An explicit copula fragment keeps its own role without joining preceding quoted text.", "source": "copula-enumerative-yo", "lemma_kinds": ["copula"]}]},
+    {"id": "copula-yo-predicate", "surface": "먹요", "judgments": [{"id": "forbidden", "lemmas": ["먹다"], "morphemes": ["요"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "reason": "Connective 요 is not a general ending for arbitrary predicates.", "source": "copula-enumerative-yo"}]},
+    {"id": "copula-yo-honorific", "surface": "학생이시요", "judgments": [{"id": "forbidden", "lemmas": ["학생", "이다"], "morphemes": ["시", "요"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "forbidden", "reason": "Connective 요 attaches to the bare copula, not a recovered honorific slot.", "source": "copula-enumerative-yo"}]},
+    {"id": "copula-yo-consonant", "surface": "학생요", "judgments": [{"id": "forbidden", "lemmas": ["학생", "이다"], "morphemes": ["요"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "reason": "Consonant-final 학생 requires explicitly spelled 이 in this copular reading; polite particle 요 remains.", "source": "copula-enumerative-yo"}]}
   ]
 }

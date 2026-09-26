@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const approximation = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-approximation.json"), "utf8"));
   const extent = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-extent.json"), "utf8"));
   const rangeCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-range-case.json"), "utf8"));
   const chigo = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-chigo.json"), "utf8"));
@@ -271,6 +272,7 @@ try {
       ...chigo.LexicalResource.Lexicon.LexicalEntry,
       ...rangeCase.LexicalResource.Lexicon.LexicalEntry,
       ...extent.LexicalResource.Lexicon.LexicalEntry,
+      ...approximation.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -526,6 +528,11 @@ try {
     }
   }
   for (const [word, expanded, displayed, suffix, label] of [
+    ["번쯤", "번 + 쯤", ["번", "쯤"], "쯤", "About / approximately"],
+    ["내일쯤에", "내일 + 쯤 + 에", ["내일", "쯤", "에"], "쯤", "About / approximately"],
+    ["그쯤", "그 + 쯤", ["그", "쯤"], "쯤", "About / approximately"],
+    ["교수님들쯤은", "교수 + 님 + 들 + 쯤 + 은", ["교수", "님", "들", "쯤", "은"], "쯤", "About / approximately"],
+    ["중간쯤이었다", "중간 + 쯤 + 이 + 었 + 다", ["중간", "쯤", "이", "었", "다"], "쯤", "About / approximately"],
     ["선생님께", "선생 + 님 + 께", ["선생", "님", "께"], "님", "Honorific"],
     [
       "과학적이다",
@@ -589,6 +596,18 @@ try {
     const response = await post("analyze", { text: word });
     const result = await response.json();
     assert.ok(result.grammar[`-${suffix}`].some((e) => e.pos === "접사"));
+    if (suffix === "쯤") {
+      assert.deepEqual(result.grammar["-쯤"].map(e => e.id), ["krdict:88691"]);
+      assert.ok(result.records[0].analysis.analyses[Number(choice)].rules.includes("suffix.approximation"));
+      if (word === "그쯤") {
+        const whole = await breakdown.getByRole("combobox").locator("option").evaluateAll(options =>
+          options.find(o => o.textContent.replace(/^\d+\. /, "") === "그쯤")?.value);
+        assert.ok(whole);
+        await breakdown.getByRole("combobox").selectOption(whole);
+        assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), ["그쯤"]);
+      }
+    }
+
     assert.ok(
       result.records[0].analysis.analyses.some(
         (a) =>
@@ -1335,7 +1354,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

@@ -1616,3 +1616,38 @@ eight breakdown selections, a whole-word 그토록 selection, source/homonym
 separation and all 25 forbidden paths. Desktop/mobile screenshots were inspected
 without JavaScript errors or horizontal overflow; 필생토록 visibly yields
 필생 + 토록 under dictionary-only filtering.
+
+
+## Nominal approximation suffix (COV-020i)
+
+[The comparison](approximation-evaluation.json) records **53 added candidates
+on 55 surfaces**, with no removals or changed prior provenance. Nominal -쯤
+preserves lexical readings and composes with the existing bounded nominal
+suffixes, particles and copulas. The nine forbidden paths check outer allomorphs
+against the immediate ㅁ boundary; broader suffix order and semantic restrictions
+remain unjudged. Numeric/foreign bases keep their spelling without guessing
+pronunciation where 쯤 already determines the outer boundary.
+
+KAIST **번쯤 → 번** newly matches, leaving **109 KAIST and 154 GSD development
+misses**, with no lost groups or component sets. Mean candidate counts are
+5.835734 and 5.370007. One complete byte-identical KAIST sentence retains the
+original jxc annotation; the engine's suffix role comes from KRDict. All thirty
+stress fingerprints and historical corpus baselines are unchanged.
+
+The 39 new ledger cases bring totals to **1,570 cases, 906 required and 670
+forbidden judgments**. A 44-entry lexical fixture retains every selected
+homonym/sense. One source/label brings the catalog to **278 forms, 350 source
+IDs and 351 grammar fixture entries**, preserving all prior mappings. The
+715-entry grammar-POS queue is unchanged in scope: suffixes are outside it.
+Independent Korean review, fresh passages and further attachment work remain.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, the frontend production build, browser/HTTP checks
+and inventory verification pass. `nix flake check` and `nix build .#web` pass
+on x86_64-linux; the other declared systems were not executed. The final Nix
+suite includes the new annotated corpus regression. The packaged full-dictionary
+app passes six split readings, a whole 그쯤 selection, suffix source lookup and
+all nine forbidden paths. Desktop/mobile screenshots show 번 + 쯤 without
+JavaScript errors or horizontal overflow. Its lexical gloss currently displays
+`beon` from the dictionary's first sense; contextual selection of the counting
+sense remains separate from morphological recovery.

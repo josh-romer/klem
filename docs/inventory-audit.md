@@ -498,3 +498,14 @@ records 123 additions on 81 surfaces, no removals/provenance changes, one KAIST
 gain and thirty unchanged stress fingerprints. The inventory now has **156
 scoped entries, one observed gap and 558 unreviewed**. Semantic subclasses,
 other connectors and further particle combinations remain open.
+
+
+## Approximation suffix scope (COV-020i)
+
+The [source/candidate review](approximation-evaluation.json) adds noun-attached
+-쯤 and its reviewed nominal composition. The grammar catalog has 278 forms,
+350 source IDs and 351 fixture entries. Suffix POS is outside this queue's
+four grammar POS categories; its 715 entries remain **156 scoped, one observed
+gap and 558 unreviewed**. Do not count the new suffix label as an additional
+review of those entries. Remaining suffix order, nominalized/particle bases,
+semantic classes and independent Korean review are explicit followups.

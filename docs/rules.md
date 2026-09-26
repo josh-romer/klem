@@ -2135,3 +2135,33 @@ Existing 연구토록/분발토록 shortened 하다 + 도록 readings also remai
 cases/particles, nominalized-base semantics and connectors beyond explicit 어서.
 The source's 등 is not interpreted as a complete exclusion list. See
 [regressions](../tests/extent_particles.rs) and stable `extent-*` ledger cases.
+
+
+## Nominal approximation suffix (COV-020i)
+
+KRDict [-쯤](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88691)
+classifies approximate amount/degree as a suffix after some nouns or noun
+phrases. The [official FAQ](https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8216&mn_id=62&pageIndex=5)
+also describes 사흘쯤/나흘쯤 for approximate duration. The engine emits a suffix
+with `suffix.approximation` provenance, preserving whole-word alternatives.
+
+번쯤 → 번 + 쯤, 내일쯤에 → 내일 + 쯤 + 에, and 중간쯤이었다 → 중간 + 쯤
++ 이다 + 었 + 다 compose through existing nominal particle/copula paths. One
+outer 쯤 may follow the bounded 님/들/님 + 들/적 nominal hypotheses. Semantic
+suitability is not inferred from a spelling match; 적 combinations remain
+unjudged. Known ㅁ in 쯤 determines following allomorphs, including after unknown,
+numeric or foreign spelled bases. The finite wrapper does not recursively strip
+쯤, preceding particles or predicate nominalizations; existing 답다 paths do not
+acquire a 쯤 decomposition. These scope limits are not blanket linguistic bans.
+
+Whole 그쯤/이쯤/저쯤 noun/adverb homonyms remain dictionary-selectable. The grammar
+pane links only suffix 88691 and displays “About / approximately.” KAIST calls
+쯤 jxc in the complete 번쯤 sentence; the adapter recovers the same lemma 번
+without changing that annotation or equating its POS conventions with KRDict.
+
+The [review](approximation-evaluation.json) records source examples, all added
+candidates on 55 surfaces, unresolved composition and separate quantity/time
+suffixes -경/-여. Thirty required and nine forbidden judgments, dictionary/CLI
+parity, ordered browser selection, source lookup and lexical alternatives have
+[regressions](../tests/approximation.rs). No contextual sense choice or overall
+candidate precision claim follows from these tests.

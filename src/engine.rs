@@ -24,7 +24,7 @@ fn morph(form: impl Into<String>, kind: MorphemeKind) -> Morpheme {
 
 // Bounded suffix paths at the nominal boundary, before particles or a copula.
 // Whole-word hypotheses remain: a matching tail need not be a real suffix.
-fn nominal_derivations(word: &str) -> Vec<Analysis> {
+fn simple_nominal_derivations(word: &str) -> Vec<Analysis> {
     let mut out = vec![];
     // One honorific, relational, or plural suffix; also honorific + plural.
     // Each shorter base is a lexical hypothesis, never recursively re-split.
@@ -54,6 +54,28 @@ fn nominal_derivations(word: &str) -> Vec<Analysis> {
                     unchanged: false,
                 });
             }
+        }
+    }
+    out
+}
+
+fn nominal_derivations(word: &str) -> Vec<Analysis> {
+    let mut out = simple_nominal_derivations(word);
+    // Approximation follows a nominal (including the existing bounded suffix
+    // paths). Do not recursively peel 쯤 or treat a preceding particle/ending
+    // as a noun phrase: those attachment classes need separate evidence.
+    if let Some(base) = word.strip_suffix('쯤').filter(|s| !s.is_empty()) {
+        let mut bases = simple_nominal_derivations(base);
+        bases.push(Analysis {
+            lemmas: vec![lemma(base, LemmaKind::Nominal)],
+            morphemes: vec![],
+            rules: vec![],
+            unchanged: false,
+        });
+        for mut a in bases {
+            a.morphemes.push(morph("쯤", MorphemeKind::Suffix));
+            a.rules.push("suffix.approximation".into());
+            out.push(a);
         }
     }
     out
@@ -734,8 +756,11 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
         && let Some(base) = p.stem.strip_suffix('답').filter(|s| !s.is_empty())
     {
         for mut a in nominal_bases(base) {
-            // -적 combinations need their own attachment audit.
-            if a.morphemes.iter().any(|m| m.form == "적") {
+            // -적/-쯤 combinations need their own attachment audit.
+            if a.morphemes
+                .iter()
+                .any(|m| matches!(m.form.as_str(), "적" | "쯤"))
+            {
                 continue;
             }
             a.morphemes.push(morph("답다", MorphemeKind::Suffix));

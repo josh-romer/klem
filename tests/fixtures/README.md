@@ -808,3 +808,21 @@ sentences `MH2_0159-s121` and `M2TA_089-s30`, under the KAIST attribution/licens
 above. The tests require 필생토록 → 필생 and preserve lexical 그토록 gold;
 they do not certify every candidate of every token in those sentences.
 [The comparison](../../docs/extent-evaluation.json) records source/fixture hashes.
+
+
+`krdict-approximation.json` contains 44 primary word entries from the September
+2026 KRDict export, retaining all lexical homonyms/senses for selected heads.
+English equivalents and the first example group per sense remain; WordForm,
+RelatedForm and export metadata are omitted. Attribution: National Institute of
+Korean Language, Korean Basic Dictionary, [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+Suffix entry 88691 extends `krdict-grammar-labels.json` under the same
+attribution/adaptations, preserving every earlier entry. The catalog now has
+278 canonical forms, 350 source IDs and 351 grammar fixture entries.
+[The review](../../docs/approximation-evaluation.json) retains selected example
+groups from entries 88691/36231/68020/25578 under the same attribution/license.
+
+`kaist-approximation.conllu` preserves the complete byte-identical UD 2.15 KAIST
+development sentence `MH2_0159-s86`, under the KAIST attribution/license above.
+The regression requires `id:MH2_0159-s86/17` 번쯤 → 번. The original jxc tag is
+unchanged; the engine follows KRDict's suffix role. Neither annotation verifies
+every candidate of the sentence. Source/fixture hashes are in the review.

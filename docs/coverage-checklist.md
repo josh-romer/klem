@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–w/018a–k/018m/019a–f/020a–h/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–w/018a–k/018m/019a–f/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -819,7 +819,7 @@ review remains open under the completion review below.
   finite 거/것 nominal alternatives; COV-020d adds enumerative -요 and
   COV-020e adds reviewed consonant-initial ending families; COV-020f adds
   honorific omission and short 세요; COV-020g adds modal/retrospective omission;
-  COV-020h adds attached question endings.**
+  COV-020h adds attached question endings; COV-020i adds nominal approximation -쯤.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -939,6 +939,24 @@ review remains open under the completion review below.
   unchanged. This does not expand 뭐/무어 into all longer lexical counterparts;
   that remains part of COV-018's pronoun audit. See
   [scope](rules.md#omitted-copula-in-attached-questions-cov-020h).
+- [x] **COV-020i — Nominal approximation -쯤.** 번쯤 exposes 번 + 쯤;
+  particles and copulas compose in 내일쯤에, 번쯤은요 and 중간쯤이었다.
+  Existing 님/들/님 + 들 suffix paths can precede 쯤, including 교수님들쯤은.
+  Whole 그쯤/이쯤/저쯤 lexical readings survive dictionary filtering. The known
+  ㅁ boundary selects outer allomorphs even after numeric/foreign spelled bases.
+  The browser labels the suffix “About / approximately” and links entry 88691.
+  Thirty required and nine forbidden judgments cover the stated scope. The
+  complete KAIST sentence preserves 번쯤 → 번 gold, while retaining the source
+  jxc tag rather than relabeling it as proof of the dictionary's suffix role.
+  No recursive 쯤 splitting, predicate nominalization/inner-particle peeling,
+  semantic noun-class validation or 쯤 + 답다 derivation is claimed. Existing
+  적 hypotheses before 쯤 remain unjudged; other approximation suffixes -경/-여
+  need their own semantic/homonym review. These followups remain COV-020 work.
+  Evidence: [rules](rules.md#nominal-approximation-suffix-cov-020i),
+  [tests](../tests/approximation.rs), stable `approximation-*` ledger cases,
+  `approximation_suffix_preserves_dictionary_and_cli_parity`, browser source
+  selections, and [source/candidate review](approximation-evaluation.json).
+
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without
@@ -1027,7 +1045,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 277 currently emitted canonical grammar forms.** The initial catalog
+  for all 278 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

@@ -1576,3 +1576,17 @@ fn extent_particles_recover_duration_and_preserve_lexical_adverb_gold() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn approximation_suffix_recovers_annotated_count_noun() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-approximation.conllu").as_slice(),
+        Corpus::Kaist,
+        "approximation",
+    )
+    .unwrap();
+    let case = &report.cases["id:MH2_0159-s86/17"];
+    assert_eq!(case.surface, "번쯤");
+    assert_eq!(case.expected, vec!["번"]);
+    assert!(case.matched);
+}

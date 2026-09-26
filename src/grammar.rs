@@ -1119,6 +1119,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "suffix.relational" => {
             "Separate relational -적 from a nominal base; preserve the whole-word alternative."
         }
+        "suffix.approximation" => {
+            "Separate approximate amount/degree suffix -쯤 after a nominal base; preserve whole-word alternatives and existing nominal suffixes."
+        }
         "suffix.adjectival.dap" => {
             "Separate adjective-forming -답다 from a nominal base, with ㅂ-irregular vowel attachment."
         }
@@ -1254,7 +1257,7 @@ mod label_tests {
         for form in ["시", "었", "겠", "더", "으리", "어야겠"] {
             forms.insert(format!("-{form}-"), Prefinal);
         }
-        for form in ["님", "들", "적", "답다", "이", "히"] {
+        for form in ["님", "들", "적", "답다", "이", "히", "쯤"] {
             forms.insert(format!("-{form}"), Suffix);
         }
         let labels: BTreeMap<String, serde_json::Value> =

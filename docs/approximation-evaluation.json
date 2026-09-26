@@ -1,0 +1,2354 @@
+{
+  "schema_version": 1,
+  "scope": "COV-020i: nominal approximation suffix -쯤 before particles/copulas, including existing bounded nominal suffixes. Whole lexical words remain; nominalized predicates and inner particles are not recursively split.",
+  "baseline_commit": "cbc067b166f10250eb40fe6c0bf9d34c11da9d1e",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Every sense and attachment note, with up to two example groups per sense and selected additional examples.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "040ca5a8bf12aa7f0c17d3ff0ac6c42c89f2e804e3a75aedbd638a5ffd1c7706",
+    "src/engine.rs": "64791376dc11f28e265072eb412803529ae0af6f2b0507c8118e7c80a19375ae",
+    "src/breakdown.rs": "6659883282b10e5167e30f3e0f86ed4b0f0adefaf73a74769756588d57bf2cf3",
+    "tests/approximation.rs": "d41eb00f869eae0343c11fc80516d605bc1eebb30bb397cae835b5f1f8849aff",
+    "tests/corpus.rs": "e37f934ed0e3536e1f915ad4e0b3f56ae8308182208f6c498051f58671a8116e",
+    "tests/dictionary.rs": "5102ebaac1d2605a9c2a63261a3f8675b207f6d88d05a578898d0b780a139eaf",
+    "tests/validity.rs": "0c94aab7ead4ed03319d872784f8fdb7dc50768027d49a38a4b01a8580cc0e36",
+    "tests/fixtures/validity.json": "cc4688dd701f8497e46b4a2c8fd3f8dc5038bd45429afc5a94ef621da7fad43b",
+    "tests/fixtures/optimization.json": "c2725f12a0eebc9e84faf135e5a7509d88c477a92f80eeefe4dd3c4cc01f8c89",
+    "tests/fixtures/krdict-approximation.json": "f209907f4a5edb3b08c482e2cfc7cc527e5a3c5abcdfdc24ea5fe6b737837526",
+    "tests/fixtures/krdict-grammar-labels.json": "5eacb1bacd567ff34130582572402e2a6eca4b341063c8ea0bdeff89da9eb400",
+    "web/src/grammar-labels.json": "537d5bb081ae7543cecb7d32d96fdd14938c61e0a3f1f916e83b5a944c081994",
+    "web/tests/browser.mjs": "9dda2925a4810a35a5515b53d71b63f41b4bbd9b3ff1a13eb127f3185a9f1a52"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:88691",
+        "headword": "-쯤",
+        "homonym": "0",
+        "pos": "접사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88691",
+        "lexical_unit": "단어",
+        "notes": [
+          "일부 명사 또는 명사구 뒤에 붙는다. "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "‘정도’의 뜻을 더하는 접미사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그쯤"
+              ],
+              [
+                "내일쯤"
+              ]
+            ],
+            "total_example_groups": 6
+          }
+        ]
+      },
+      "source_sha256": "7efb0dcc6a98a9e69ac2d36bbd57b667dd64173f98cef96f0e8642e232ac1fc1"
+    },
+    {
+      "source": {
+        "id": "krdict:36231",
+        "headword": "그까짓",
+        "homonym": "0",
+        "pos": "관형사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=36231",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "그까짇"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "겨우 그만한 정도의.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 그까짓 공부해 봤자 다 소용이 없다며 학교를 그만두었다."
+              ],
+              [
+                "너는 대학생이 되어서 초등학생도 푸는 그까짓 문제도 못 풀어?"
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "ec485334ba54e7b4ff510857b3b6d860da6e79cc569b5961dd5a7a8baded36e1"
+    },
+    {
+      "source": {
+        "id": "krdict:68020",
+        "headword": "올려붙이다",
+        "homonym": "0",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68020",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "올려부치다"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "올려붙이어",
+            "pronunciations": [
+              "올려부치어",
+              "올려부치여"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "올려붙이니",
+            "pronunciations": [
+              "올려부치니"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "아래쪽에 있던 것을 위쪽으로 올려서 붙이거나 가까이 가져가다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 3에/으로 올려붙이다"
+            ],
+            "examples": [
+              [
+                "손을 올려붙이다."
+              ],
+              [
+                "액자를 올려붙이다."
+              ]
+            ],
+            "total_example_groups": 6
+          },
+          {
+            "id": "2",
+            "definition": "(낮잡아 이르는 말로) 손을 들어 경례를 하다.",
+            "notes": [
+              "주로 '경례를 올려붙이다'로 쓴다."
+            ],
+            "patterns": [
+              "1이 2에/에게 3을 올려붙이다"
+            ],
+            "examples": [
+              [
+                "경례를 올려붙이다."
+              ],
+              [
+                "건물 입구에 있는 경비는 사장이 타고 있는 차에 경례를 올려붙였다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "뺨 등을 손으로 세게 때리다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 올려붙이다"
+            ],
+            "examples": [
+              [
+                "귀싸대기를 올려붙이다."
+              ],
+              [
+                "따귀를 올려붙이다."
+              ]
+            ],
+            "total_example_groups": 7
+          }
+        ]
+      },
+      "source_sha256": "1c3594161715358099236516e6c9909165c99648b5f56fa9e311c10bdae646d0"
+    },
+    {
+      "source": {
+        "id": "krdict:25578",
+        "headword": "걸음",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=25578",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "거름"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "다리를 움직여 두 발을 번갈아 옮겨 놓는 동작.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "급한 걸음."
+              ],
+              [
+                "빠른 걸음."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "2",
+            "definition": "어떤 곳을 방문하는 것.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "걸음이 끊이지 않다."
+              ],
+              [
+                "걸음이 뜸하다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "3",
+            "definition": "(비유적으로) 행동이나 활동 또는 결정.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "새로운 걸음."
+              ],
+              [
+                "걸음을 결심하다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "4",
+            "definition": "두 발을 번갈아 옮겨 놓는 횟수를 세는 단위.",
+            "notes": [
+              "수량을 나타내는 말 뒤에 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "두세 걸음."
+              ],
+              [
+                "한 걸음 더."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "b9361886c17b9e8a98663d3f81239a5fba4d32a5976772b183e2be664a8d61ac"
+    },
+    {
+      "source": {
+        "id": "krdict:72506",
+        "headword": "-여",
+        "homonym": "4",
+        "pos": "접사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72506",
+        "lexical_unit": "단어",
+        "notes": [
+          "수량을 나타내는 말 뒤에 붙는다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "'그 수를 넘음'의 뜻을 더하는 접미사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이십여 년"
+              ],
+              [
+                "백여"
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "d4b0aa384f160b3cf627eb9e4bd096681b9288a8e1ff5ed1d076c01670b3cdc6"
+    },
+    {
+      "source": {
+        "id": "krdict:72353",
+        "headword": "-경",
+        "homonym": "2",
+        "pos": "접사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72353",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "'그 시간에 가까운 때' 또는 '그 날짜에 가까운 때'의 뜻을 더하는 접미사.",
+            "notes": [
+              "시간이나 날짜를 나타내는 대다수 명사 또는 명사구 뒤에 붙는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오전 9시경"
+              ],
+              [
+                "16세기경"
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "‘그 일에 걸리는 정도의 시간’의 뜻을 더하는 접미사.",
+            "notes": [
+              "일부 특정한 절차를 나타내는 한자 구성 뒤에 붙는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "탄지경"
+              ]
+            ],
+            "total_example_groups": 1
+          }
+        ]
+      },
+      "source_sha256": "0d12e68473c059a0132ab410c0cc1cf8d03be2d7bed4368e605c06a7a4608c4f"
+    },
+    {
+      "source": {
+        "id": "krdict:72354",
+        "headword": "-경",
+        "homonym": "3",
+        "pos": "접사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72354",
+        "lexical_unit": "단어",
+        "notes": [
+          "일부 명사 뒤에 붙는다. "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "‘무언가를 보기 위한 기구’의 뜻을 더하는 접미사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "내시경"
+              ],
+              [
+                "만화경"
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "2",
+            "definition": "‘안경’의 뜻을 더하는 접미사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "근시경"
+              ],
+              [
+                "노인경"
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "3",
+            "definition": "‘거울’의 뜻을 더하는 접미사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "구면경"
+              ],
+              [
+                "반사경"
+              ]
+            ],
+            "total_example_groups": 3
+          }
+        ]
+      },
+      "source_sha256": "bb5fd8cb6fb10814c8b15b781e21d7223aea44e97f8f87075794a0af1915d713"
+    }
+  ],
+  "example_evidence": [
+    {
+      "id": "krdict:88691",
+      "headword": "-쯤",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88691",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 0,
+          "text": [
+            "그쯤"
+          ]
+        },
+        {
+          "sense": "1",
+          "group_index": 1,
+          "text": [
+            "내일쯤"
+          ]
+        },
+        {
+          "sense": "1",
+          "group_index": 2,
+          "text": [
+            "이쯤"
+          ]
+        },
+        {
+          "sense": "1",
+          "group_index": 3,
+          "text": [
+            "중간쯤"
+          ]
+        },
+        {
+          "sense": "1",
+          "group_index": 4,
+          "text": [
+            "그런 사정쯤"
+          ]
+        },
+        {
+          "sense": "1",
+          "group_index": 5,
+          "text": [
+            "12월 25일쯤"
+          ]
+        }
+      ],
+      "groups_sha256": "1dd64e57d380a6aeb1c49e0be44c86f8ea34e1a7058854df4fd8d4d2134daf4c"
+    },
+    {
+      "id": "krdict:36231",
+      "headword": "그까짓",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=36231",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 4,
+          "text": [
+            "며칠 동안 감기로 고생을 했어.",
+            "그까짓 감기쯤이야 하루만 쉬면 낫지 뭐."
+          ]
+        }
+      ],
+      "groups_sha256": "eba318e30657e78d70e5d2637dc5221a8fc9b54ac30b3c991ab58f93dfd29371"
+    },
+    {
+      "id": "krdict:68020",
+      "headword": "올려붙이다",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68020",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 5,
+          "text": [
+            "여기쯤이 좋을까?",
+            "좀 더 위로 올려붙여 봐."
+          ]
+        }
+      ],
+      "groups_sha256": "49a851dc3a8d919f792255c79c8ab418fb05511fab8dd7de0db10261fc049b27"
+    },
+    {
+      "id": "krdict:25578",
+      "headword": "걸음",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=25578",
+      "groups": [
+        {
+          "sense": "4",
+          "group_index": 6,
+          "text": [
+            "이 별장은 스무 걸음쯤 떨어진 곳에 바다가 있어 경치가 무척 좋다."
+          ]
+        }
+      ],
+      "groups_sha256": "af1027706e691aa202c725ff6daf91ac80d86478388ddacbb7d46638fedf335c"
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "af4951f3536566952a7150ecfc2162f7987541dc1bb48225928d63bbd7cf4bad",
+      "after_sha256": "50b61446b1cac6b871eb99e385bb5bd3d74372d3a658f9d93507ac1d78e4611b",
+      "converted": 22220,
+      "before_matched": 22110,
+      "after_matched": 22111,
+      "remaining_misses": 109,
+      "new_matches": [
+        {
+          "id": "id:MH2_0159-s86/17",
+          "surface": "번쯤",
+          "expected": [
+            "번"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.835553555355536,
+      "mean_candidates_after": 5.835733573357336
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "9655475b346a771494eb65bca5c44dbee5422489808c1427d3f64549adf1f5a5",
+      "after_sha256": "9655475b346a771494eb65bca5c44dbee5422489808c1427d3f64549adf1f5a5",
+      "converted": 9989,
+      "before_matched": 9835,
+      "after_matched": 9835,
+      "remaining_misses": 154,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.370007007708479,
+      "mean_candidates_after": 5.370007007708479
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "번쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내일쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내일",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "중간쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "중간",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사정쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사정",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사흘쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사흘",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "나흘쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "나흘",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "얼마쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "얼마",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "이쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "그쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "그",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "저쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "저",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "여기쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "여기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "저녁쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "저녁",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "걸음쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "걸음",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "내일쯤에",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "내일",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤은",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤도",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤만",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "중간쯤에서",
+      "before_count": 9,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "중간",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "에서",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "중간쯤으로",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "중간",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "으로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "여기쯤이",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "여기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "이",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "그쯤을",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "그",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "을",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사흘쯤이나",
+      "before_count": 22,
+      "after_count": 26,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사흘",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "나",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사흘",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "이나",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사흘",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사흘",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "으나",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "copula",
+            "ending",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤은요",
+      "before_count": 8,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.polite",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사흘쯤이다",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사흘",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "이다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.enumerative_da",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사흘",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사흘쯤이에요",
+      "before_count": 13,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사흘",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "에요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.polite",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "중간쯤이었다",
+      "before_count": 11,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "중간",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "prefinal.past",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "아이들쯤은",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "아이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "아이들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수님쯤은",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation",
+            "suffix.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수님들쯤은",
+      "before_count": 10,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation",
+            "suffix.honorific",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "감기쯤이야",
+      "before_count": 14,
+      "after_count": 17,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "감기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "감기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "이야",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "감기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "야",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula.polite",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤는",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤가",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤를",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤로",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤랑",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤나",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤야",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤예요",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤로는",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "쯤",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "25일쯤에",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "25일",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "3쯤은",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "3",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC쯤으로",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "으로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기쯤은",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹음쯤은",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹음",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에서쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교에서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교에쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교에",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학교까지쯤",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학교까지",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            }
+          ],
+          "rules": [
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "과학적쯤은",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "과학",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "적",
+              "kind": "suffix"
+            },
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation",
+            "suffix.relational"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "과학적",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수쯤답다",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번쯤쯤은",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "번쯤",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수들님쯤은",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation",
+            "suffix.honorific"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수들님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "쯤",
+              "kind": "suffix"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "suffix.approximation"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "오전경",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "백여",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "십년여",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    }
+  ],
+  "source_access": "Live entry 88691 could not be opened through the web tool; the pinned export supplies the attachment note and examples. Official NIKL FAQ 8216 independently describes noun/noun-phrase attachment and 사흘쯤/나흘쯤.",
+  "additional_sources": [
+    {
+      "url": "https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8216&mn_id=62&pageIndex=5",
+      "scope": "Official FAQ: -쯤 after nouns/noun phrases; 사흘쯤 and 나흘쯤 mean approximate duration."
+    }
+  ],
+  "attachment_decisions": [
+    "KRDict classifies -쯤 as 접사 after some nouns or noun phrases. Emit MorphemeKind::Suffix and source 88691, even though the KAIST token labels 쯤 as jxc. Do not alter the corpus annotation or claim it proves every candidate.",
+    "Existing nominal hypotheses and bounded 님/들/님+들/적 derivations can precede one outer 쯤. No semantic noun-class validator is claimed. The required stack examples cover honorific/plural nouns; 적 combinations remain unjudged.",
+    "Following particles and copulas reuse the known ㅁ boundary of 쯤. Numeric/foreign bases retain their spellings, but outer allomorphs do not need a pronunciation assumption for those bases.",
+    "Whole 그쯤/이쯤/저쯤 noun/adverb homonyms remain available under dictionary filtering. An unchanged lexical word and a decomposed suffix reading are separate candidates.",
+    "The suffix wrapper does not recursively peel itself or preceding particles/nominalized predicates. Existing 답다 paths do not acquire 쯤 derivation. These are scope limits pending attachment evidence, not universal linguistic prohibitions.",
+    "Temporal -경 and numeric -여 have different semantic restrictions; -경 also has an instrument homonym. They are not silently implemented as unrestricted approximation suffixes."
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-approximation.conllu",
+      "sha256": "b87c1105fa4f520c462459ac28c098c0d41ece6d79a99f4aae96a8eb19e7c020",
+      "complete_byte_identical_sentences": 1,
+      "judged_groups": [
+        {
+          "id": "id:MH2_0159-s86/17",
+          "surface": "번쯤",
+          "expected": [
+            "번"
+          ],
+          "matched": true,
+          "recovered": 1,
+          "recovered_sets": [
+            [
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "unjudged_followups": [
+    {
+      "id": "approximation-further-composition",
+      "surfaces": [
+        "먹기쯤은",
+        "먹음쯤은",
+        "학교에서쯤",
+        "학교에쯤",
+        "학교까지쯤",
+        "과학적쯤은",
+        "교수쯤답다",
+        "번쯤쯤은",
+        "교수들님쯤은"
+      ],
+      "status": "unjudged",
+      "reason": "Review generated lexical hypotheses and absent decompositions separately for nominalized predicates, inner particles, suffix order/repetition, relational semantics and 답다 attachment."
+    },
+    {
+      "id": "approximation-other-suffixes",
+      "surfaces": [
+        "오전경",
+        "백여",
+        "십년여"
+      ],
+      "status": "unimplemented",
+      "reason": "Quantity/time semantic restrictions and homonymous suffixes require separate rules and evidence."
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "labels": {
+    "canonical_forms": 278,
+    "source_entries": 350,
+    "grammar_fixture_entries": 351,
+    "added_forms": [
+      "-쯤"
+    ],
+    "added_source_ids": [
+      88691
+    ],
+    "previous_catalog_and_fixtures_preserved": true
+  },
+  "lexical_fixture": {
+    "path": "tests/fixtures/krdict-approximation.json",
+    "entries": 44,
+    "adaptations": "All lexical homonyms and senses; English equivalents and first example group per sense; omit WordForm, RelatedForm and export metadata."
+  },
+  "remaining": [
+    "COV-020 stays open for other suffix/composition and copular attachment classes.",
+    "Suffix POS is outside the 715-entry grammar-POS review queue; do not inflate its reviewed count.",
+    "Independent Korean review, fresh passages, semantic noun classes and contextual interpretation remain open."
+  ]
+}

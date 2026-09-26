@@ -54,8 +54,18 @@ impl Analysis {
                 }
                 if !matches!(
                     suffixes.as_slice(),
-                    [] | ["님"] | ["적"] | ["들"] | ["님", "들"] | ["이"] | ["히"]
-                ) || (derived_predicate && suffixes.contains(&"적"))
+                    [] | ["님"]
+                        | ["적"]
+                        | ["들"]
+                        | ["님", "들"]
+                        | ["이"]
+                        | ["히"]
+                        | ["쯤"]
+                        | ["님", "쯤"]
+                        | ["적", "쯤"]
+                        | ["들", "쯤"]
+                        | ["님", "들", "쯤"]
+                ) || (derived_predicate && suffixes.iter().any(|s| matches!(*s, "적" | "쯤")))
                 {
                     return None;
                 }

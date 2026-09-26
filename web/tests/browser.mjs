@@ -133,6 +133,9 @@ try {
   const quotedAlternatives = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-quoted-alternatives.json"), "utf8"),
   );
+  const enumerativeParticles = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
+  );
   const colloquialCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-colloquial-copulas.json"), "utf8"),
   );
@@ -222,6 +225,7 @@ try {
       ...copulaYo.LexicalResource.Lexicon.LexicalEntry,
       ...causal.LexicalResource.Lexicon.LexicalEntry,
       ...quotedAlternatives.LexicalResource.Lexicon.LexicalEntry,
+      ...enumerativeParticles.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -597,7 +601,16 @@ try {
     await breakdown.getByRole("combobox").selectOption(choice);
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
-  for (const [word, expected, form, label, id] of [
+  for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["학생이라든가", ["학생", "이라든가"], "이라든가", "Enumerative examples", 85861, "particle"],
+    ["학교라든가", ["학교", "라든가"], "라든가", "Enumerative examples", 85861, "particle"],
+    ["밥이라든지", ["밥", "이라든지"], "이라든지", "Enumerative examples", 86046, "particle"],
+    ["학교에서라든지", ["학교", "에서", "라든지"], "라든지", "Enumerative examples", 86518, "particle"],
+    ["학생이든가", ["학생", "이든가"], "이든가", "Any choice", 70330, "particle"],
+    ["학교든가", ["학교", "든가"], "든가", "Any choice", 70330, "particle"],
+    ["먹든가", ["먹", "든가"], "든가", "Choice / alternative", 82342],
+    ["학생이든가", ["학생", "이", "든가"], "든가", "Choice / alternative", 82342],
+    ["먹는다든가", ["먹", "는다", "든가"], "든가", "Any choice", 70330, "particle"],
     ["된다거나", ["되", "는다거나"], "는다거나", "Reported alternatives / examples", 86053],
     ["먹었다거나", ["먹", "었", "다거나"], "다거나", "Reported alternatives / examples", 86056],
     ["학생이라거나", ["학생", "이", "라거나"], "라거나", "Reported alternatives / examples", 86057],
@@ -622,17 +635,21 @@ try {
   ]) {
     await submit(page, word);
     await waitHeading(page, word);
+    const data = await (await post("analyze", {text: word})).json();
+    const eligible = data.records[0].analysis.analyses.flatMap((a, index) =>
+      a.morphemes.at(-1)?.kind === kind && a.morphemes.at(-1)?.form === form
+        ? [String(index)] : []);
     const choice = await breakdown.getByRole("combobox").locator("option").evaluateAll(
-      (options, text) => options.find(o => o.textContent.replace(/^\d+\. /, "") === text)?.value,
-      expected.join(" + "),
+      (options, {text, eligible}) => options.find(o =>
+        o.textContent.replace(/^\d+\. /, "") === text && eligible.includes(o.value))?.value,
+      {text: expected.join(" + "), eligible},
     );
     assert.ok(choice, word);
     await breakdown.getByRole("combobox").selectOption(choice);
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
     await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
-    const data = await (await post("analyze", {text: word})).json();
-    assert.ok(data.grammar[`-${form}`].some(e => e.id === `krdict:${id}`));
+    assert.ok(data.grammar[kind === "particle" ? form : `-${form}`].some(e => e.id === `krdict:${id}`));
     if (form === "기에") {
       const nominal = expected.slice(0, -1).concat(["기", "에"]);
       const alternate = await breakdown.getByRole("combobox").locator("option").evaluateAll(

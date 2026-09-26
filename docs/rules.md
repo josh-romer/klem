@@ -1399,3 +1399,64 @@ The four recovered development tokens are 경시한다든가, 해방시킨다거
 headword 해방시키다, so that gold recovery is available unfiltered but excluded
 by dictionary-only filtering. The rule does not manufacture a dictionary entry
 or silently replace the corpus's causative lemma with 해방하다.
+
+## Enumerative particles and choice ending (COV-018e/017p)
+
+The following particle paths are separate from copular and ending analyses:
+
+| Surface forms | Attachment in this batch | Dictionary source |
+| --- | --- | --- |
+| 이라든가 | Consonant-final nominal | [85861](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85861) |
+| 라든가 | Vowel-final nominal/adverbial related form | 85861 and the NIKL related-form inventory below |
+| 이라든지 | Consonant-final nominal | [86046](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86046) |
+| 라든지 | Vowel-final nominal/adverbial | [86518](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86518) |
+| 든가 | Vowel-final nominal/adverbial or final 다/는다/라 allomorphs | [70330](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70330) |
+| 이든가 | Consonant-final nominal/adverbial related form | 70330 and NIKL section 3.1.12 below |
+
+The [2017 NIKL curriculum, printed p. 463 (PDF p. 481)](https://korean.go.kr/common/download.do?c_file_name=f8313ff7-b33b-43b6-a01e-a8af43eb6a1d.pdf&file_path=reportData&o_file_name=2017%EB%85%84+%EA%B5%AD%EC%A0%9C+%ED%86%B5%EC%9A%A9+%ED%95%9C%EA%B5%AD%EC%96%B4+%ED%91%9C%EC%A4%80+%EA%B5%90%EC%9C%A1%EA%B3%BC%EC%A0%95+%EC%A0%81%EC%9A%A9+%EC%97%B0%EA%B5%AC(4%EB%8B%A8%EA%B3%84).pdf)
+lists all four 라든가/라든지 particle variants together. The
+[NIKL grammar-expression development study, stage 3, section 3.1.12, printed p. 76 (PDF p. 90)](https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=%ED%95%9C%EA%B5%AD%EC%96%B4%EA%B5%90%EC%9C%A1+%EB%AC%B8%EB%B2%95%ED%91%9C%ED%98%84+%EB%82%B4%EC%9A%A9%EA%B0%9C%EB%B0%9C+%EC%97%B0%EA%B5%AC_3%EB%8B%A8%EA%B3%84.pdf)
+distinguishes 이든가 after consonants from 든가 after vowels. The pinned KRDict
+snapshot lacks standalone particle entries for 라든가 and 이든가. Their catalog
+mappings explicitly link the related particle entries, preserving the source
+headwords and explaining the relationship instead of inventing dictionary IDs.
+The vowel-form 라든가 adverbial scope follows the related 라든지 form; this
+source-based extension remains subject to independent linguistic review.
+
+Examples include 학생 + 이라든가, 학교 + 라든가, 밥 + 이라든지,
+학교 + 에서 + 라든지, and 학교 + 에서 + 든가. Nominalizations and bounded
+nominal suffixes compose: 먹다 + 음 + 이라든지 and 학생 + 들 + 이라든가.
+The full 이라든가/이라든지 paths do not consume preceding particles; the short
+forms allow adverbial case phrases but reject subject/object case splitting.
+Further stacked particles require review. The implemented outer enumeration
+slot permits polite 요; it does not enable arbitrary recursive enumeration.
+든가 shares 든지's existing inner/outer choice slots and repeated-family guard,
+with a separate exclusion of subject/object case phrases. 학생 + 이 + 든가
+is not substituted for 학생 + 이든가 or 학생 + 이다 + 든가. The older
+든지 family is unchanged and its other attachment paths remain for audit.
+Unknown foreign bases retain the same explicit pronunciation conditions as other
+particle allomorphs. Lexical and adverb-derived alternatives remain available.
+
+After a final ending, 든가 exposes a second representation of some quoted forms:
+먹는다든가 can be 먹다 + 는다든가 or 먹다 + 는다 + 든가.
+학생이라든가 additionally retains 학생 + 이다 + 라든가 and
+학생 + 이다 + 라 + 든가. These are possible representations, not contextual
+sense choices. A bare adnominal or unlicensed connective does not become a
+quoted nominal just because a particle can be removed from its spelling.
+
+The separate literal ending [-든가, 82342](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82342)
+accepts bare verbs/adjectives and source-listed 시/었 prefinals. 먹든가 and
+먹으셨든가 recover 먹다; literal ㄷ preserves ㄹ in 살든가 and does not trigger
+vowel-boundary irregular recovery. Recovered 겠/더/어야겠 are excluded.
+Explicit copulas, existing auxiliary groups and known 답다 derivation compose;
+학교이든가 thus retains a copula + ending reading even though 학교 + 이든가
+is the wrong particle allomorph. Omitted copulas, further ending-particle links,
+conversational spelling variants and sense selection remain separate review work.
+
+Composition also exposed a pre-existing known-class gap before present 는다:
+honorific 시 must not turn a represented copula or adjective into a verb. The
+[verb-only attachment note, 85037](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85037)
+is now enforced for known auxiliary adjectives, copulas and 답다 with or
+without 시. Tests exclude 학생이신다, 먹고싶으신다, 학생다우신다 and their
+composed 든가 forms while preserving 먹으신다든가 and 먹어보신다든가.
+Other present-ending families and unknown lexical head classes remain open.

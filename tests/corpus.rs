@@ -3,6 +3,26 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn enumerative_particles_recover_saved_training_groups_without_extra_copulas() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-enumerative-particles.conllu").as_slice(),
+        Corpus::Kaist,
+        "enumerative-particles",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:MH2_0014-s474/4", "것이라든가", "것"),
+        ("id:MH2_0024-s81/9", "않든가", "않다"),
+        ("id:MH2_0024-s173/11", "취미라든가", "취미"),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [expected]);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
 fn quoted_alternatives_recover_saved_development_groups() {
     for (corpus, input, cases) in [
         (

@@ -253,3 +253,27 @@ The 해방시키다 headword is absent from the pinned dictionary even though th
 unfiltered rule recovers it. The connective-clause case 위해서라거나 remains
 open under COV-020. The report preserves both distinctions, records all additions
 across 74 audited surfaces, and leaves historical baselines unchanged.
+
+## Enumerative particles and choice ending (COV-018e/017p)
+
+[The comparison](enumerative-particle-evaluation.json) records six individual
+source dispositions: particles 70330, 85861, 86046, 86518 and endings 82342/85037.
+The existing present-ending entry receives a scoped review of known
+adjective/copula class restrictions after honorific 시. Two
+related particle spellings absent from the pinned dictionary use explicit source
+mappings backed by NIKL's form tables. Full nominal particles, short
+nominal/adverbial forms, final-ending + 든가 and literal -든가 remain distinct.
+The review ledger now has sixteen scoped entries and 699 without a disposition;
+these scoped reviews do not certify every possible attachment or contextual use.
+
+Development misses remain **135 KAIST and 166 GSD** with no lost gold groups or
+component recoveries. Three separately selected KAIST training tokens gain their
+annotated groups: 것이라든가, 않든가 and 취미라든가. Complete byte-identical
+sentences preserve those regressions; they are not a held-out score. All candidate
+changes across 78 audited surfaces are retained in the report, with unjudged
+lexical hypotheses and remaining particle/clause restrictions explicit.
+
+The final comparison lists 500 added analyses and three removed known-class
+violations individually. The latter are 학생이신다, 먹고싶으신다 and
+학생다우신다; their composed 든가 paths are excluded too. Existing unclassified
+lexical hypotheses remain, and broader present-ending restrictions need review.

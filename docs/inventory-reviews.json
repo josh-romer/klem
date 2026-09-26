@@ -451,6 +451,269 @@
           "judgment": "forbidden"
         }
       ]
+    },
+    {
+      "id": "krdict:85861",
+      "source_sha256": "4ed86d51cf5f61820b33745829a790965af7857a2bad70ee5fa9a5eeb56eded7",
+      "status": "scoped",
+      "checklist": [
+        "COV-018e"
+      ],
+      "scope": "Consonant-final nominal 이라든가; nominalizations and bounded nominal suffixes compose. Related vowel form 라든가 is separately represented and maps to this source; NIKL curriculum printed p. 463 identifies the related form. No preceding particle is stripped in the full-form path.",
+      "remaining": "Further particle stacks, quoted-clause attachment, omission, contextual sense and independent linguistic review remain open.",
+      "evidence": [
+        {
+          "path": "tests/enumerative_particles.rs",
+          "test": "enumeration_preserves_nominals_composition_and_distinct_readings"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "enumerative_particles_and_choice_endings_keep_filtered_cli_alternatives"
+        },
+        {
+          "path": "docs/enumerative-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "enum-full",
+          "judgment": "path"
+        },
+        {
+          "case": "enum-plural",
+          "judgment": "path"
+        },
+        {
+          "case": "enum-full-vowel",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86046",
+      "source_sha256": "61d5ed0a1e34a45f1887f679f189ef103bffb8d21c1adc215438f96d6e80e06b",
+      "status": "scoped",
+      "checklist": [
+        "COV-018e"
+      ],
+      "scope": "Consonant-final nominal 이라든지, with nominalization/suffix composition. Distinct from a copula plus quoted expression; no preceding particle is stripped in this full-form path.",
+      "remaining": "Further particle stacks, quoted-clause attachment, omission, contextual sense and independent linguistic review remain open.",
+      "evidence": [
+        {
+          "path": "tests/enumerative_particles.rs",
+          "test": "enumeration_preserves_nominals_composition_and_distinct_readings"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "enumerative_particles_and_choice_endings_keep_filtered_cli_alternatives"
+        },
+        {
+          "path": "docs/enumerative-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "enum-full-ji",
+          "judgment": "path"
+        },
+        {
+          "case": "enum-nominalized",
+          "judgment": "path"
+        },
+        {
+          "case": "enum-full-ji-vowel",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86518",
+      "source_sha256": "5b28e8ebec25e9d5e6fd72b41646ac2f37104531c050bfc399c066c751bb20fa",
+      "status": "scoped",
+      "checklist": [
+        "COV-018e"
+      ],
+      "scope": "Vowel-final nominal/adverbial 라든지; adverb derivation and adverbial case phrases compose. Subject/object case phrases do not license this path. Related 라든가 adverbial attachment is a source-based extension pending independent review.",
+      "remaining": "Further particle stacks, quoted-clause attachment, omission, contextual sense and independent linguistic review remain open.",
+      "evidence": [
+        {
+          "path": "tests/enumerative_particles.rs",
+          "test": "enumeration_preserves_nominals_composition_and_distinct_readings"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "enumerative_particles_and_choice_endings_keep_filtered_cli_alternatives"
+        },
+        {
+          "path": "docs/enumerative-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "enum-open-ji",
+          "judgment": "path"
+        },
+        {
+          "case": "enum-adverb",
+          "judgment": "path"
+        },
+        {
+          "case": "enum-case",
+          "judgment": "path"
+        },
+        {
+          "case": "enum-short-consonant",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70330",
+      "source_sha256": "76cbb0d1e9797b21476f4c8dc75be21dfb75249edc4fff70d3d0d8239831bb3a",
+      "status": "scoped",
+      "checklist": [
+        "COV-018e"
+      ],
+      "scope": "Particle 든가 after a vowel-final nominal/adverbial or reviewed final 다/는다/라 allomorphs; existing 든지 choice slots and repeated-family guard apply, excluding subject/object case phrases for the new 든가 forms. NIKL stage-3 study section 3.1.12 supports consonant-final 이든가, absent as its own headword in the pinned dictionary.",
+      "remaining": "Further particle stacks, quoted-clause attachment, omission, contextual sense and independent linguistic review remain open.",
+      "evidence": [
+        {
+          "path": "tests/enumerative_particles.rs",
+          "test": "enumeration_preserves_nominals_composition_and_distinct_readings"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "enumerative_particles_and_choice_endings_keep_filtered_cli_alternatives"
+        },
+        {
+          "path": "docs/enumerative-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "choice-particle-open",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-particle-case",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-particle-present",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-particle-command",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-particle-short-consonant",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-particle-adnominal",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-particle-subject-split",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:82342",
+      "source_sha256": "c56ccf0f099c9c1a0685ae8d087399c3e0b5291200b6ae7076a2b276a5765c39",
+      "status": "scoped",
+      "checklist": [
+        "COV-017p"
+      ],
+      "scope": "Literal ending -든가: bare verb/adjective and 시/었 prefinals; ㄹ retained, no vowel-only irregular recovery, 겠/더/어야겠 rejected. Explicit copulas, existing auxiliaries and known 답다 compose. Distinct from particle 든가.",
+      "remaining": "Further particle stacks, quoted-clause attachment, omission, contextual sense and independent linguistic review remain open.",
+      "evidence": [
+        {
+          "path": "tests/enumerative_particles.rs",
+          "test": "choice_ending_has_its_own_literal_boundary_and_prefinal_license"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "enumerative_particles_and_choice_endings_keep_filtered_cli_alternatives"
+        },
+        {
+          "path": "docs/enumerative-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "choice-ending-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-ending-honorific-past",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-ending-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-ending-rieul",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-ending-bieup",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-ending-rieul-loss",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-ending-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "choice-ending-retrospective",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85037",
+      "source_sha256": "3b4a812d2c22a19813cdbd69d6ee83e3ed5fb701296a635027ab6316b30d6514",
+      "status": "scoped",
+      "checklist": [
+        "COV-018e",
+        "COV-019"
+      ],
+      "scope": "Known adjective/copula classes cannot take present 는다 even after honorific 시; retain verb and unknown lexical head paths. Applied to auxiliary adjectives, represented copulas and known 답다, including following 든가.",
+      "remaining": "Only the known-class boundary is reviewed here. Unknown lexical heads, other present-ending families, wider prefinal attachment and contextual meaning remain open.",
+      "evidence": [
+        {
+          "path": "tests/enumerative_particles.rs",
+          "test": "enumeration_rejects_wrong_allomorphs_unlicensed_clauses_and_repetition"
+        },
+        {
+          "path": "tests/enumerative_particles.rs",
+          "test": "enumeration_preserves_nominals_composition_and_distinct_readings"
+        },
+        {
+          "path": "docs/enumerative-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "present-known-copula-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "present-known-aux-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "present-known-suffix-honorific",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

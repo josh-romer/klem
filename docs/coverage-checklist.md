@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–o/018a–d/019a–d/020a–d/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–e/019a–d/020a–d/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records ten scoped
-  dispositions from COV-016/017m–n/019d/020d; 705 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records sixteen scoped
+  dispositions from COV-016/017m–n/017p/018e/019d/020d; 699 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -218,7 +218,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–o implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–p implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -422,9 +422,19 @@ review remains open under the completion review below.
   715-entry POS inventory. Other quotation contractions, expanded quotation
   analysis, particle alternatives and quoted-clause copulas remain open. See
   [scope](rules.md#quoted-alternatives-cov-017o).
+- [x] **COV-017p — Literal choice ending -든가.** Bare predicates and the
+  source-listed honorific/past markers are supported, including copulas,
+  auxiliaries and 답다. Literal ㄷ attachment preserves ㄹ and excludes
+  vowel-boundary irregular recovery. Recovered 겠/더/어야겠 are not licensed.
+  The ending remains distinct from particle 든가 and bundled quoted alternatives.
+  Evidence: [ending/boundary tests](../tests/enumerative_particles.rs), eight
+  `choice-ending-*` ledger cases, dictionary/CLI and browser homonym checks,
+  and [evaluation](enumerative-particle-evaluation.json). Further outer particles
+  and contextual choice remain open. Source: KRDict
+  [-든가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82342).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–d implement post-ending, outer choice, emphatic,
-  concessive and definition particles, including nominal (이)라고 alternatives.**
+  **Partial: COV-018a–e implement post-ending, outer choice, emphatic,
+  concessive, definition and enumerative particles, including nominal (이)라고 alternatives.**
   Remaining: pronouns outside the existing finite paradigms. Preserve homonym-specific
   dictionary labels and review additional ending/particle licenses.
   Include quoted clauses marked as nominals: KAIST MH2_0169-s444/3 살겠다가
@@ -480,6 +490,22 @@ review remains open under the completion review below.
   preserve existing copula + ending analyses; quoted-clause and omitted-copula
   fragments remain COV-018/020 review. No unsupported 라는 particle is added
   solely to match corpus segmentation. Evidence is shared with COV-017j above.
+- [x] **COV-018e — Enumerative (이)라든가/(이)라든지 and choice (이)든가.**
+  Six particle forms preserve nominal, reviewed adverbial/case-phrase and
+  nominalization paths, alongside existing copular/ending alternatives.
+  든가 separately follows final 다/는다/라 allomorphs; 먹는다든가 retains both
+  the bundle and 는다 + 든가. Nominal suffixes, polite 요, NFD and conditional
+  foreign-base pronunciation compose. Full 이라든가/이라든지 have nominal-only
+  attachment; the short forms do not strip subject/object case phrases.
+  The viewer uses explicitly mapped related entries when the pinned dictionary
+  lacks a separate 라든가 or 이든가 particle entry. Evidence:
+  [path/role/boundary tests](../tests/enumerative_particles.rs), twenty
+  `enum-*`/`choice-particle-*` ledger cases, dictionary/CLI parity and browser
+  source links. Three further ledger judgments exclude known adjective/copula
+  classes before present 는다 even after 시, preventing the composed particle
+  reading from bypassing the same restriction. [Scope and sources](rules.md#enumerative-particles-and-choice-ending-cov-018e017p)
+  and [evaluation](enumerative-particle-evaluation.json) retain unjudged candidates.
+  Further particle stacks and quoted-clause attachment remain open.
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -696,7 +722,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 236 currently emitted canonical grammar forms.** The initial catalog
+  for all 243 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

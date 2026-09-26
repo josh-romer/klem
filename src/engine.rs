@@ -401,6 +401,14 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         continue;
                     }
                 }
+                // KRDict 82342 lists bare predicates, honorific 시 and past 었.
+                if ending.form == "든가"
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었"))
+                {
+                    continue;
+                }
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
@@ -409,6 +417,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "기에" | "길래") {
                     p.rules.push("ending.causal".into());
+                }
+                if ending.form == "든가" {
+                    p.rules.push("ending.choice".into());
                 }
                 if matches!(
                     ending.form,
@@ -682,7 +693,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             if matches!(class, Some(PredicateClass::Adjective))
                 && matches!(
                     m.form.as_str(),
-                    "자면" | "으랍니다" | "으라거나" | "자거나" | "는다거나" | "는다든가"
+                    "자면" | "으랍니다" | "으라거나" | "자거나" | "는다" | "는다거나" | "는다든가"
                 )
             {
                 return false;
@@ -742,7 +753,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         .is_some_and(|m| {
             matches!(
                 m.form.as_str(),
-                "자면" | "으랍니다" | "으라거나" | "자거나" | "는다거나" | "는다든가"
+                "자면" | "으랍니다" | "으라거나" | "자거나" | "는다" | "는다거나" | "는다든가"
             )
         })
     {
@@ -838,6 +849,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "거니와"
             | "든"
             | "든지"
+            | "든가"
             | "도록"
             | "습니다"
             | "습니까"
@@ -889,6 +901,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                     | "으랍니다"
                     | "으라거나"
                     | "자거나"
+                    | "는다"
                     | "는다거나"
                     | "는다든가"
                     | "으십시오"
@@ -968,11 +981,15 @@ fn particle_allowed(
 ) -> bool {
     // The new focus particles permit nominal/adverbial bases, not a subject
     // or object case phrase. In particular 조금이나마 is not 조금 + 이 + 나마.
-    if suffixes
-        .first()
-        .is_some_and(|m| matches!(m.form.as_str(), "커녕" | "란" | "이란"))
-        || (matches!(form, "이" | "가" | "을" | "를")
-            && suffixes.iter().any(|m| adverbial_focus_particle(&m.form)))
+    if suffixes.first().is_some_and(|m| {
+        matches!(
+            m.form.as_str(),
+            "커녕" | "란" | "이란" | "이라든가" | "이라든지"
+        )
+    }) || (matches!(form, "이" | "가" | "을" | "를")
+        && suffixes.iter().any(|m| {
+            adverbial_focus_particle(&m.form) || matches!(m.form.as_str(), "든가" | "이든가")
+        }))
     {
         return false;
     }
@@ -996,8 +1013,9 @@ fn choice_particle(form: &str) -> Option<u8> {
     match form {
         "이나" | "나" => Some(0),
         "이라도" | "라도" => Some(1),
-        "이든지" | "든지" => Some(2),
+        "이든지" | "든지" | "이든가" | "든가" => Some(2),
         "이야" | "야" => Some(3),
+        "이라든가" | "라든가" | "이라든지" | "라든지" => Some(4),
         _ => None,
     }
 }
@@ -1007,7 +1025,7 @@ fn choice_particle(form: &str) -> Option<u8> {
 fn adverbial_focus_particle(form: &str) -> bool {
     matches!(
         form,
-        "이야말로" | "야말로" | "이나마" | "나마" | "은커녕" | "는커녕"
+        "이야말로" | "야말로" | "이나마" | "나마" | "은커녕" | "는커녕" | "라든가" | "라든지"
     )
 }
 
@@ -1153,7 +1171,7 @@ fn nominals(
         // must not mistake this adverbial path for a nominalization.
         if morphs.iter().all(|m| {
             matches!(m.form.as_str(), "도" | "만" | "는" | "은" | "요" | "들")
-                || choice_particle(&m.form).is_some()
+                || choice_particle(&m.form).is_some_and(|family| family != 4)
                 || adverbial_focus_particle(&m.form)
         }) && let Some(mut a) = adverb_derivation(base)
         {
@@ -1171,7 +1189,7 @@ fn nominals(
         }
         let flexible = particle.contraction.is_some() || matches!(particle.form, "요" | "들");
         if flexible
-            || choice_particle(particle.form).is_some()
+            || choice_particle(particle.form).is_some_and(|family| family != 4)
             || adverbial_focus_particle(particle.form)
         {
             out.push(Analysis {
@@ -1186,7 +1204,7 @@ fn nominals(
         let ending = if flexible
             || matches!(
                 particle.form,
-                "는" | "도" | "만" | "마는" | "나" | "라도" | "든지" | "야" | "나마"
+                "는" | "도" | "만" | "마는" | "나" | "라도" | "든지" | "든가" | "야" | "나마"
             ) {
             PredicateEnd::BeforeParticle(particle.form)
         } else {
@@ -1232,6 +1250,10 @@ fn nominals(
             match particle.form {
                 "요" => a.rules.push("particle.polite".into()),
                 "들" => a.rules.push("particle.distributive".into()),
+                "이든가" | "든가" | "이라든가" | "라든가" | "이라든지" | "라든지" =>
+                {
+                    a.rules.push("particle.enumerative".into());
+                }
                 _ => (),
             }
         }
@@ -1521,7 +1543,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
             ending,
             "어" | "게" | "지" | "고" | "다" | "는다" | "라" | "으라" | "어라"
         ),
-        "든지" => matches!(ending, "다" | "는다" | "라" | "으라" | "어라"),
+        "든지" | "든가" => matches!(ending, "다" | "는다" | "라" | "으라" | "어라"),
         "야" => matches!(ending, "어" | "게" | "지" | "고"),
         "만" => {
             concessive_ending(ending) || matches!(ending, "어" | "어서" | "어야" | "게" | "고")

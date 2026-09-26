@@ -880,3 +880,39 @@ declared platforms were not executed. The packaged app with the full dictionary
 passes eight quoted-alternative choices and source links, five forbidden paths,
 the dictionary-miss empty state, and desktop/mobile checks without JavaScript
 errors or overflow.
+
+## Enumerative particles and choice ending (COV-018e/017p)
+
+[The comparison](enumerative-particle-evaluation.json) records six new particle
+forms and the literal ending -든가, retaining copular and bundled quoted
+alternatives. Three selected KAIST **training** tokens now recover their gold
+groups: 것이라든가, 취미라든가 and 않든가. Complete byte-identical sentences
+protect those cases; they are not a held-out score. Development recovery remains
+**135 KAIST and 166 GSD misses**, with no lost gold groups or component sets.
+
+The ledger now contains **433 cases, 241 required and 198 forbidden judgments**,
+including 31 new cases. The candidate review records 500 additions and three
+removals across 78 surfaces. The removed paths are known adjective/copula
+classes before present 는다 after honorific 시. Composition with particle 든가
+exposed this existing boundary gap; both the standalone and composed paths are
+now checked. Unknown lexical head classes remain unjudged. Subject/object case
+splitting is also excluded for the new particles where the source requires a
+nominal/adverbial or listed final-ending base.
+
+The teaching catalog has **243 canonical forms**, with 289 dictionary source
+entries and 290 grammar-fixture entries. Every previous source entry is retained.
+The pinned dictionary lacks separate 라든가 and 이든가 particle headwords;
+explicit related-form mappings link existing entries, supported by NIKL form
+tables. Ending and particle homonyms retain separate labels and source panes.
+Six new scoped inventory reviews bring the ledger to **16 reviewed entries and
+699 without a disposition**. These are scoped judgments, not certification of
+all senses or attachments. Independent Korean-language review remains pending.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, all thirty
+unchanged stress fingerprints, the 1,024-syllable memory test, frontend production
+build and complete browser/HTTP suite pass. Historical baselines and optimization
+snapshots are unchanged. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared platforms were not executed. The packaged app with
+the full dictionary passes eleven reading choices, distinct particle/ending and
+related-form source links, nine forbidden paths, and desktop/mobile checks
+without JavaScript errors or overflow.

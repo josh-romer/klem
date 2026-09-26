@@ -524,3 +524,21 @@ complete dev-s330. They are byte-identical excerpts from the pinned UD 2.15
 sources linked above under CC BY-SA 4.0. Four stable token IDs protect reported
 alternative recovery; no annotation is rewritten or promoted into a judgment of
 all candidates. GSD's automatic annotation remains secondary evidence.
+
+`krdict-enumerative-particles.json` contains ten lexical entries (15983, 26344,
+31670, 57305, 62171, 62683, 65114, 68755, 73276, 86232) from the September 2026
+National Institute of Korean Language KRDict export, under CC BY-SA 2.0 KR.
+Grammar entries 70330, 82342, 85861, 86046 and 86518 are added to the grammar-label
+fixture. Adaptation: retain English equivalents and the first example group per
+sense, omit WordForm/RelatedForm and global metadata, exclude idiom subentries,
+and reformat JSON. All previous grammar entries are unchanged. Source/license
+links above apply. NIKL's related-form tables supplement two dictionary gaps;
+the catalog links existing source entries and does not fabricate missing entries.
+The sources and representation boundaries are documented in COV-018e/017p.
+
+`kaist-enumerative-particles.conllu` preserves complete, byte-identical UD Korean
+KAIST 2.15 **training** sentences MH2_0014-s474, MH2_0024-s81 and MH2_0024-s173,
+under the pinned corpus's CC BY-SA 4.0 license. The examples 것이라든가,
+않든가 and 취미라든가 had missing gold groups before COV-018e/017p. Their
+original lemma/XPOS fields remain unchanged. These three selected cases are
+regressions, not a held-out recall estimate or evidence for every alternative.

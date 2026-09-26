@@ -492,6 +492,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "기에",
             "길래",
             "든지",
+            "든가",
             "든",
             "더라도",
             "더니",
@@ -836,6 +837,12 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("라도", 4, 2),
             ("이든지", 4, 1),
             ("든지", 4, 2),
+            ("이든가", 4, 1),
+            ("든가", 4, 2),
+            ("이라든가", 4, 1),
+            ("라든가", 4, 2),
+            ("이라든지", 4, 1),
+            ("라든지", 4, 2),
             ("이야", 4, 1),
             ("야", 4, 2),
             ("이야말로", 4, 1),
@@ -893,6 +900,8 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("나", 1, 2),
             ("이든지", 1, 1),
             ("든지", 1, 2),
+            ("이든가", 1, 1),
+            ("든가", 1, 2),
             ("이야", 1, 1),
             ("야", 1, 2),
             ("아", 1, 1),
@@ -940,6 +949,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.concessive" => {
             "Attach concessive 만/마는 after a licensed final ending; retain the distinct nominal 만 reading where applicable."
+        }
+        "particle.enumerative" => {
+            "Retain an enumerative or choice particle, separate from a homonymous ending or copular expression; no contextual choice is inferred."
+        }
+        "ending.choice" => {
+            "Recognize the literal choice ending -든가 with its reviewed prefinal licenses, separately from particle 든가."
         }
         "ending.adnominal_expression" => {
             "Retain a reviewed shortened noun-modifying expression as one grammatical component."

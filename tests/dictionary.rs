@@ -1789,6 +1789,116 @@ fn causal_endings_keep_dictionary_filtered_cli_paths_and_nominal_alternatives() 
 }
 
 #[test]
+fn enumerative_particles_and_choice_endings_keep_filtered_cli_alternatives() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from(
+            "tests/fixtures/krdict-enumerative-particles.json",
+        )],
+        dir.db(),
+        "enumerative-particles-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, last_kind) in [
+        (
+            "학생이라든가",
+            vec!["학생"],
+            vec!["이라든가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이라든가",
+            vec!["학생", "이다"],
+            vec!["라든가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학교라든가",
+            vec!["학교"],
+            vec!["라든가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "밥이라든지",
+            vec!["밥"],
+            vec!["이라든지"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학교에서라든지",
+            vec!["학교"],
+            vec!["에서", "라든지"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이든가",
+            vec!["학생"],
+            vec!["이든가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이든가",
+            vec!["학생", "이다"],
+            vec!["든가"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학교든가",
+            vec!["학교"],
+            vec!["든가"],
+            MorphemeKind::Particle,
+        ),
+        ("먹든가", vec!["먹다"], vec!["든가"], MorphemeKind::Ending),
+        (
+            "먹는다든가",
+            vec!["먹다"],
+            vec!["는다", "든가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹는다든가",
+            vec!["먹다"],
+            vec!["는다든가"],
+            MorphemeKind::Ending,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| {
+                a.lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())
+                    && a.morphemes.last().unwrap().kind == last_kind
+                    && a.lemmas.iter().all(|l| annotation.has_match(l, true))
+            }),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}
+
+#[test]
 fn quoted_alternatives_preserve_dictionary_filtered_cli_groups() {
     let dir = Scratch::new();
     import_krdict(

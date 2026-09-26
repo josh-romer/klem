@@ -683,6 +683,14 @@ pub(crate) fn endings() -> &'static [Ending] {
         // Explicit ㄱ/ㄷ/ㅈ ending families for Article 40. Ordinary endings
         // remain alongside their shortened variants; no global text rewriting.
         for (form, aspirated) in [
+            ("기", "키"),
+            ("기로", "키로"),
+            ("기가", "키가"),
+            ("기는", "키는"),
+            ("기도", "키도"),
+            ("기만", "키만"),
+            ("기를", "키를"),
+            ("기보다", "키보다"),
             ("게", "케"),
             ("게요", "케요"),
             ("지", "치"),

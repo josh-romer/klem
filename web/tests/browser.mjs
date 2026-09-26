@@ -118,6 +118,9 @@ try {
   const adverbRoots = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-adverb-roots.json"), "utf8"),
   );
+  const hadaKi = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-hada-ki.json"), "utf8"),
+  );
   const colloquialCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-colloquial-copulas.json"), "utf8"),
   );
@@ -202,6 +205,7 @@ try {
       ...emphaticParticles.LexicalResource.Lexicon.LexicalEntry,
       ...colloquialCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...adverbRoots.LexicalResource.Lexicon.LexicalEntry,
+      ...hadaKi.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -527,6 +531,8 @@ try {
     );
   }
   for (const [word, expected] of [
+    ["강구키", ["강구하", "기"]],
+    ["생각기", ["생각하", "기"]],
     ["생각지", ["생각하", "지"]],
     ["생각건대", ["생각하", "건대"]],
     ["비유컨대", ["비유하", "건대"]],
@@ -540,6 +546,10 @@ try {
       expected,
     );
     assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+    if (word === "강구키") {
+      await breakdown.getByRole("button", { name: "기 Nominalizer", exact: true }).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=72222"));
+    }
     if (word === "비유컨대") {
       await breakdown
         .getByRole("button", {
@@ -555,6 +565,21 @@ try {
           document.querySelector(".entry-meta")?.textContent?.includes("어미"),
       );
     }
+  }
+  for (const [word, expected] of [
+    ["조성키로", ["조성하", "기", "로"]],
+    ["생각기에", ["생각하", "기", "에"]],
+    ["돌변키도했다", ["돌변하", "기", "도", "하", "였", "다"]],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    const choice = await breakdown.getByRole("combobox").locator("option").evaluateAll(
+      (options, text) => options.find(o => o.textContent.replace(/^\d+\. /, "") === text)?.value,
+      expected.join(" + "),
+    );
+    assert.ok(choice, word);
+    await breakdown.getByRole("combobox").selectOption(choice);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected] of [
     ["같이", ["같", "이"]],

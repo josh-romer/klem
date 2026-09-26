@@ -1614,7 +1614,10 @@ fn adverb_derivation_keeps_lexical_readings_and_filters_on_predicate_bases() {
 fn shortened_hada_matches_full_lemmas_in_cli_and_pos_filtering() {
     let dir = Scratch::new();
     import_krdict(
-        &[PathBuf::from("tests/fixtures/krdict-hada.json")],
+        &[
+            PathBuf::from("tests/fixtures/krdict-hada.json"),
+            PathBuf::from("tests/fixtures/krdict-hada-ki.json"),
+        ],
         dir.db(),
         "hada-regression",
     )
@@ -1622,6 +1625,10 @@ fn shortened_hada_matches_full_lemmas_in_cli_and_pos_filtering() {
     let db = SqliteDictionary::open(dir.db()).unwrap();
     let mut session = DictionarySession::new(&db, 1024 * 1024);
     for (word, lemma, ending) in [
+        ("강구키", "강구하다", "기"),
+        ("조성키로", "조성하다", "기로"),
+        ("돌변키도", "돌변하다", "기도"),
+        ("생각기", "생각하다", "기"),
         ("생각지", "생각하다", "지"),
         ("생각건대", "생각하다", "건대"),
         ("비유컨대", "비유하다", "건대"),

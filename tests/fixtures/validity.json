@@ -2,6 +2,9 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "hada-ki-deletion": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6606&mn_id=62&pageIndex=1",
+    "hada-ki-aspiration": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=320083",
+
     "adverb-shortening": "https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8296&mn_id=62&pageIndex=5",
     "adverb-root-i": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88927",
     "adverb-root-hi": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88504",
@@ -515,6 +518,14 @@
     {"id":"hieut-boundary","surface":"빨가고","judgments":[
       {"id":"unlicensed-deletion","lemmas":["빨갛다"],"verdict":"forbidden","reason":"고 does not license ㅎ deletion.","source":"spelling"}]},
     {"id":"reu-harmony","surface":"몰러","judgments":[
-      {"id":"wrong-vowel","lemmas":["모르다"],"verdict":"forbidden","reason":"This 르 recovery has the wrong vowel.","source":"spelling"}]}
+      {"id":"wrong-vowel","lemmas":["모르다"],"verdict":"forbidden","reason":"This 르 recovery has the wrong vowel.","source":"spelling"}]},
+    {"id": "hada-ki-aspiration", "surface": "강구키", "judgments": [{"id": "required", "lemmas": ["강구하다"], "morphemes": ["기"], "verdict": "required", "reason": "A vowel-final base retains aspirating ㅎ before nominalizer 기.", "source": "hada-ki-aspiration"}]},
+    {"id": "hada-ki-nominal-particle", "surface": "조성키로", "judgments": [{"id": "required", "lemmas": ["조성하다"], "morphemes": ["기", "로"], "verdict": "required", "reason": "The recovered nominalizer keeps the following directional particle.", "source": "hada-ki-aspiration"}]},
+    {"id": "hada-ki-deletion", "surface": "생각기에", "judgments": [{"id": "required", "lemmas": ["생각하다"], "morphemes": ["기", "에"], "verdict": "required", "reason": "NIKL explicitly gives 생각기에, with 하 deleted after stop-final 생각.", "source": "hada-ki-deletion"}]},
+    {"id": "hada-ki-auxiliary", "surface": "돌변키도했다", "judgments": [{"id": "required", "lemmas": ["돌변하다", "하다"], "morphemes": ["기도", "었", "다"], "verdict": "required", "reason": "NIKL explicitly permits 돌변키도 했다; the joined auxiliary path retains the nominalization connector.", "source": "hada-ki-aspiration"}]},
+    {"id": "hada-ki-wrong-stop", "surface": "생각키", "judgments": [{"id": "forbidden", "lemmas": ["생각하다"], "morphemes": ["기"], "verdict": "forbidden", "reason": "Stop-final 생각 deletes 하 rather than aspirating 기.", "source": "hada-ki-deletion"}]},
+    {"id": "hada-ki-wrong-vowel", "surface": "강구기", "judgments": [{"id": "forbidden", "lemmas": ["강구하다"], "morphemes": ["기"], "verdict": "forbidden", "reason": "Vowel-final 강구 requires the aspirated 키 in this contraction.", "source": "hada-ki-aspiration"}]},
+    {"id": "hada-ki-wrong-sonorant", "surface": "조성기로", "judgments": [{"id": "forbidden", "lemmas": ["조성하다"], "morphemes": ["기로"], "verdict": "forbidden", "reason": "Sonorant-final 조성 requires 키로 rather than deleting all of 하.", "source": "hada-ki-aspiration"}]},
+    {"id": "hada-ki-no-base", "surface": "키", "judgments": [{"id": "forbidden", "lemmas": ["하다"], "morphemes": ["기"], "verdict": "forbidden", "reason": "This contraction requires a preceding base; do not restore 하 from standalone 키.", "source": "hada-ki-aspiration"}]}
   ]
 }

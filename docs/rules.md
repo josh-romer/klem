@@ -1199,3 +1199,26 @@ Opaque roots such as 천천히/분연히, other lexical classes, nominal -이,
 subdivision of nonlexical repeated bases, and derivation across suffix/auxiliary
 boundaries remain open. The corpus fixtures preserve whole-word lexical adverb
 annotations; optional decompositions are source-backed judgments, not new corpus gold.
+
+## Shortened 하다 nominalizations (COV-021b)
+
+Article 40 recovery now includes 기 and the existing bundles 기로, 기가, 기는,
+기도, 기만, 기를, 기보다. Vowel/sonorant bases retain aspiration (강구키,
+조성키로); stop-final bases delete 하 (생각기). Existing nominal particle,
+copula and auxiliary attachment paths compose with the restored stem. Bundled
+and separated alternatives remain available; no new connector is licensed.
+
+NIKL explicitly documents [생각하기에 → 생각기에](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6606&mn_id=62&pageIndex=1)
+and [돌변하기도 → 돌변키도](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=320083).
+The other variants follow the same [Article 40 spelling boundary](https://www.korean.go.kr/kornorms/m/m_regltn.do)
+and existing nominalization composition. Tests compare all eight bundles with
+full forms across vowel, sonorant and stop codas, including NFD, ordered
+breakdowns, wrong-class rejections and joined auxiliaries.
+
+This does not license contraction without a preceding base, guess non-Hangul
+pronunciation, handle complex codas, or repair spellings such as 등록케. It can
+emit unknown lexical hypotheses: the extra measured GSD match for 이시가키와
+is an annotation anomaly, separately documented in the
+[evaluation](hada-ki-evaluation.json), not a validated predicate. The original
+word and nominal 이시가키 + 와 remain available. Independent linguistic review
+and broader Article 40 coverage remain open.

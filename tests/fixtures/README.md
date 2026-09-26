@@ -437,3 +437,16 @@ the source gold keeps each whole word. Tests preserve these existing recoveries
 alongside optional decompositions and do not relabel the corpus as derivational
 gold. File hashes and unchanged development recall appear in
 `docs/adverb-root-evaluation.json`.
+
+`krdict-hada-ki.json` contains four primary entries from the same September 2026
+KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR), IDs
+17503, 48285, 58171 and 75325. Changes: retain the first sense, its English
+equivalents and first example; omit WordForm/RelatedForm, global metadata and
+idiom subentries; reformat JSON. Source/license links are above. These entries
+support shortened 하다 nominalization dictionary and browser checks.
+
+`kaist-hada-ki.conllu` and `gsd-hada-ki.conllu` preserve the complete, byte-identical
+UD 2.15 development sentences MH2_0209-s34 and dev-s629 from the pinned sources
+above. They verify 강구키 and 조성키로. Attribution and CC BY-SA 4.0 licensing
+follow the other KAIST/GSD excerpts. GSD's separate 이시가키와 annotation anomaly
+is recorded in `docs/hada-ki-evaluation.json`, not promoted to linguistic gold.

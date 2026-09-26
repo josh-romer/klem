@@ -3,6 +3,32 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn shortened_hada_nominalizations_recover_annotated_predicates() {
+    for (corpus, input, id, surface, lemma) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-hada-ki.conllu").as_slice(),
+            "id:MH2_0209-s34/14",
+            "강구키",
+            "강구하다",
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-hada-ki.conllu").as_slice(),
+            "id:dev-s629/12",
+            "조성키로",
+            "조성하다",
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "hada-ki").unwrap();
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [lemma]);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
 fn lexicalized_adverb_gold_is_preserved_alongside_optional_derivations() {
     for (corpus, input, cases) in [
         (

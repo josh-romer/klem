@@ -2,6 +2,72 @@
 use klem::{Analysis, LemmaKind, Lemmatizer, MorphemeKind};
 use unicode_normalization::UnicodeNormalization;
 
+#[test]
+fn shortened_ki_preserves_bundled_and_separated_nominalizations() {
+    let engine = Lemmatizer::new();
+    for (root, short, rule) in [
+        ("강구", "키", "contraction.ha_aspiration"),
+        ("조성", "키", "contraction.ha_aspiration"),
+        ("돌변", "키", "contraction.ha_aspiration"),
+        ("분발", "키", "contraction.ha_aspiration"),
+        ("결심", "키", "contraction.ha_aspiration"),
+        ("생각", "기", "deletion.ha"),
+        ("깨끗", "기", "deletion.ha"),
+        ("섭섭", "기", "deletion.ha"),
+    ] {
+        for tail in ["", "로", "가", "는", "도", "만", "를", "보다"] {
+            let word = format!("{root}{short}{tail}");
+            let full = engine.analyze_word(&format!("{root}하기{tail}")).unwrap();
+            let result = engine.analyze_word(&word).unwrap();
+            let lemma = format!("{root}하다");
+            let expected: Vec<_> = full
+                .analyses
+                .iter()
+                .filter(|a| a.lemmas.len() == 1 && a.lemmas[0].text == lemma)
+                .collect();
+            assert!(!expected.is_empty(), "{word}");
+            for a in expected {
+                assert!(
+                    result.analyses.iter().any(|b| b.lemmas == a.lemmas
+                        && b.morphemes == a.morphemes
+                        && b.rules.iter().any(|r| r == rule)),
+                    "{word}: {a:?}"
+                );
+            }
+            assert!(
+                result.analyses.iter().all(|a| a.breakdown().is_some()),
+                "{word}"
+            );
+            assert_eq!(
+                result,
+                engine
+                    .analyze_word(&word.nfd().collect::<String>())
+                    .unwrap()
+            );
+        }
+    }
+    for (word, lemma) in [
+        ("생각키에", "생각하다"),
+        ("깨끗키는", "깨끗하다"),
+        ("섭섭키도", "섭섭하다"),
+        ("강구기를", "강구하다"),
+        ("조성기로", "조성하다"),
+        ("돌변기도", "돌변하다"),
+        ("ABC키로", "ABC하다"),
+        ("키로", "하다"),
+    ] {
+        let result = engine.analyze_word(word).unwrap();
+        assert!(
+            !result
+                .analyses
+                .iter()
+                .any(|a| a.lemmas.iter().any(|l| l.text == lemma)),
+            "{word}"
+        );
+        assert!(result.analyses.iter().any(|a| a.unchanged));
+    }
+}
+
 fn path(a: &Analysis, lemmas: &[&str], forms: &[&str]) -> bool {
     a.lemmas
         .iter()
@@ -16,6 +82,28 @@ fn path(a: &Analysis, lemmas: &[&str], forms: &[&str]) -> bool {
 #[test]
 fn article_40_examples_recover_the_same_lemma_and_ending_as_full_forms() {
     for (short, full, lemma, ending, rule) in [
+        (
+            "강구키",
+            "강구하기",
+            "강구하다",
+            "기",
+            "contraction.ha_aspiration",
+        ),
+        (
+            "조성키로",
+            "조성하기로",
+            "조성하다",
+            "기로",
+            "contraction.ha_aspiration",
+        ),
+        (
+            "돌변키도",
+            "돌변하기도",
+            "돌변하다",
+            "기도",
+            "contraction.ha_aspiration",
+        ),
+        ("생각기", "생각하기", "생각하다", "기", "deletion.ha"),
         ("생각지", "생각하지", "생각하다", "지", "deletion.ha"),
         ("생각건대", "생각하건대", "생각하다", "건대", "deletion.ha"),
         ("생각다", "생각하다", "생각하다", "다", "deletion.ha"),
@@ -119,6 +207,25 @@ fn article_40_examples_recover_the_same_lemma_and_ending_as_full_forms() {
 #[test]
 fn contractions_compose_with_auxiliaries_particles_and_explicit_ending_variants() {
     for (word, lemmas, forms) in [
+        ("강구키를", vec!["강구하다"], vec!["기", "를"]),
+        ("조성키로", vec!["조성하다"], vec!["기", "로"]),
+        ("생각기에", vec!["생각하다"], vec!["기", "에"]),
+        (
+            "돌변키도했다",
+            vec!["돌변하다", "하다"],
+            vec!["기도", "었", "다"],
+        ),
+        (
+            "강구키만했다",
+            vec!["강구하다", "하다"],
+            vec!["기", "만", "었", "다"],
+        ),
+        (
+            "생각기는했다",
+            vec!["생각하다", "하다"],
+            vec!["기는", "었", "다"],
+        ),
+        ("연구키이다", vec!["연구하다", "이다"], vec!["기", "다"]),
         (
             "생각지않았다",
             vec!["생각하다", "않다"],
@@ -168,6 +275,11 @@ fn aspiration_and_deletion_cannot_swap_coda_classes_or_rewrite_arbitrary_tails()
             .any(|a| path(a, &["생각하", "이다"], &["다"]))
     );
     for (word, lemma, ending) in [
+        ("생각키", "생각하다", "기"),
+        ("강구기", "강구하다", "기"),
+        ("조성기로", "조성하다", "기로"),
+        ("ABC키", "ABC하다", "기"),
+        ("키", "하다", "기"),
         ("생각컨대", "생각하다", "건대"),
         ("익숙치", "익숙하다", "지"),
         ("깨끗치", "깨끗하다", "지"),

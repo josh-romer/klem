@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–l/018a–d/019a–c/020a–c/021a/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–l/018a–d/019a–c/020a–c/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -538,7 +538,7 @@ review remains open under the completion review below.
   preserved. Other omission families and broader colloquial paradigms remain
   open. See [scope and sources](rules.md#omitted-copulas-and-colloquial-nominal-alternatives-cov-020c).
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
-  forms are covered by COV-021a.** Remaining: Article 40 complex coda pronunciation
+  forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without
   pronunciation evidence.
 - [x] **COV-021a — Article 39 negative contractions.** 잖 recovers 지 + 않다;
@@ -552,6 +552,20 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser reading selectors. All current fingerprints
   remain unchanged. See [scope and sources](rules.md#negative-contractions-and-confirmation-cov-021a017f)
   and [development comparison](negative-contraction-evaluation.json).
+- [x] **COV-021b — Shortened 하다 before 기 nominalizations.** 강구키 and
+  조성키로 recover 강구하다 and 조성하다. Stop-final 생각기에 recovers
+  생각하다 through deletion rather than aspiration. The eight existing 기
+  bundles retain full-form parity, ordinary nominal particles/copulas, and
+  licensed auxiliary connectors, including 돌변키도했다. Wrong coda classes,
+  unknown-script bases and standalone 키 do not gain this restoration.
+  Evidence: [boundary/composition tests](../tests/hada.rs), eight `hada-ki-*`
+  ledger cases, two complete annotated sentences, dictionary/CLI parity, and
+  browser normalization/alternative/source-link checks. The
+  [evaluation](hada-ki-evaluation.json) records two supported development
+  recoveries and a separate incidental match to GSD's erroneous predicate
+  annotation of the place name 이시가키와. No prior candidates, gold groups,
+  component recoveries or stress fingerprints are lost. See
+  [scope and sources](rules.md#shortened-hada-nominalizations-cov-021b).
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds
   source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb

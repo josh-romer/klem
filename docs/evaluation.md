@@ -693,3 +693,29 @@ with the full dictionary passes seven role-specific derivations and their suffix
 source links, lexical default selection, and the missing-base 틈틈이 filtering
 check. Desktop and mobile checks find no overflow or JavaScript errors. Other
 declared Nix platforms were not executed on this host.
+
+## Shortened 하다 nominalizations (COV-021b)
+
+[The comparison](hada-ki-evaluation.json) records additions for 84 surfaces,
+with no removed candidates, recovered groups or component sets, and thirty
+unchanged stress fingerprints. Two complete development sentences verify
+강구키 → 강구하다 and 조성키로 → 조성하다. GSD also gains an incidental match
+for 이시가키와 → 이시가하다; its sentence names Ishigaki and Miyako as islands.
+That annotation anomaly is recorded separately, not treated as evidence that
+the generated predicate exists. Original-word and nominal alternatives remain.
+The measured development misses are **147 KAIST and 171 GSD**; this is a gold
+match count, not a candidate precision estimate.
+
+Eight source-backed ledger cases bring the total to **334 cases, 188 required
+and 152 forbidden judgments**. The rules preserve full/short nominalization
+parity across eight bundles and three coda classes, ordinary particle/copula
+composition and licensed auxiliary paths. Four attributed offline dictionary
+entries support CLI filtering and browser checks; existing grammar labels and
+source mappings are reused. Historical corpus baselines remain unchanged.
+
+Formatting, the Rust suite, Clippy, all 66,570 frozen cases, the complete
+browser/HTTP suite, `nix flake check` and `nix build .#web` pass on x86_64-linux.
+The full-dictionary packaged app passes five normalized paths and their -기
+source links, four rejected restorations, preservation of the 이시가키 nominal
+alternative, and desktop/mobile checks without JavaScript errors or overflow.
+Frontend production source is unchanged. Other Nix platforms were not executed.

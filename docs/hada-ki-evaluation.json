@@ -1,0 +1,3740 @@
+{
+  "schema_version": 1,
+  "scope": "COV-021b: Article 40 shortening before 기 and its eight existing nominalization bundles, with ordinary particle/copula and licensed auxiliary composition.",
+  "baseline_commit": "dbacf7b3cf033d5c98d6f581a7c07f81b2499b4b",
+  "sources": {
+    "deletion": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6606&mn_id=62&pageIndex=1",
+    "aspiration": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=320083",
+    "article-40": "https://www.korean.go.kr/kornorms/m/m_regltn.do"
+  },
+  "source_sha256": {
+    "src/grammar.rs": "51c0c56b2656ee6b8f1c539e1d729efc8d30a833d5d2ecc6f557789383739aa2",
+    "tests/hada.rs": "c4216ec0b960749c2f5297e5890193a6c0af567dee7641e82c37624b6b353e03",
+    "tests/corpus.rs": "8afa3792bdd165d16f83314f02cbd0eb2d7625ddcb1d01a0a6d7c64cd2cad12f",
+    "tests/dictionary.rs": "8f3a03ce5bf77b72f50f7294f3094237aae949eb8a20a805f553db4dacae646f",
+    "tests/fixtures/validity.json": "0bc4e2ba0e7f198dac49728f08fd9232bd91a0c44d45c6c32dedc03c9291e464",
+    "tests/fixtures/krdict-hada-ki.json": "dc327b1ddf9aed9b9b0ab923225174abf96d2c5fe4e443825488bd31995ee2bc",
+    "web/tests/browser.mjs": "1da0d7bbe19f426df52f0e5428600d8db470aa218488930407eb3a7954ea8e3e"
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "67bfa86b47ed29f6179e734feb0ba11467c2e728318d44028ccfcc06c93698b3",
+      "after_sha256": "ed9ccfd8837ed35290bb22fe9e7261e9d9b05ba44493c27408d1ca584aafacdb",
+      "converted": 22220,
+      "before_matched": 22072,
+      "after_matched": 22073,
+      "remaining_misses": 147,
+      "new_matches": [
+        {
+          "id": "id:MH2_0209-s34/14",
+          "surface": "강구키",
+          "expected": [
+            "강구하다"
+          ],
+          "disposition": "Source-supported contracted nominalization recovery."
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": []
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "1acceda999778e264d5b3ade33b9a37498a1161ebb48408c9f96098ba54f234d",
+      "after_sha256": "f342220927deca7c973a80cf3ca7e3944f22abb811f18b3e111e3c23a031f09e",
+      "converted": 9989,
+      "before_matched": 9816,
+      "after_matched": 9818,
+      "remaining_misses": 171,
+      "new_matches": [
+        {
+          "id": "id:dev-s629/12",
+          "surface": "조성키로",
+          "expected": [
+            "조성하다"
+          ],
+          "disposition": "Source-supported contracted nominalization recovery."
+        },
+        {
+          "id": "id:dev-s858/12",
+          "surface": "이시가키와",
+          "expected": [
+            "이시가하다"
+          ],
+          "disposition": "Annotation anomaly: context names the island Ishigaki; the generated 이시가하다 is an unverified lexical hypothesis, not a correctness gain."
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": []
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-hada-ki.conllu",
+      "sha256": "dc893234419a35809c2e80a235438481463584e725925928f08940ef8642f5bd",
+      "complete_byte_identical_sentences": 1
+    },
+    {
+      "path": "tests/fixtures/gsd-hada-ki.conllu",
+      "sha256": "1936862c34fd00d0f5dd1351377eb492c1522e56e413c129caa46dafca7c9914",
+      "complete_byte_identical_sentences": 1
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "강구키",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강구키로",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기로",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강구키가",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강구키는",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강구키도",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강구키만",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강구키를",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기를",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강구키보다",
+      "before_count": 6,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "보다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기보다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "조성키",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "조성키로",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기로",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "조성키가",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "조성키는",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "조성키도",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "조성키만",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "조성키를",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기를",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "조성키보다",
+      "before_count": 6,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "보다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "조성하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기보다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키로",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기로",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키가",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키는",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키도",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키만",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키를",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기를",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키보다",
+      "before_count": 6,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "보다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기보다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "분발키",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "분발키로",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기로",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "분발키가",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "분발키는",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "분발키도",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "분발키만",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "분발키를",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기를",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "분발키보다",
+      "before_count": 6,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "보다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "분발하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기보다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "결심키",
+      "before_count": 1,
+      "after_count": 2,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "결심키로",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기로",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "결심키가",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "결심키는",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "결심키도",
+      "before_count": 2,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "결심키만",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "결심키를",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기를",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "결심키보다",
+      "before_count": 6,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "보다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "결심하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기보다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기로",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기로",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기가",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기도",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기만",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기를",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기를",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기보다",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "보다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기보다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "깨끗기",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "깨끗기로",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기로",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "깨끗기가",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "깨끗기는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "깨끗기도",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "깨끗기만",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "깨끗기를",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기를",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "깨끗기보다",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "보다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "깨끗하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기보다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "섭섭기",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "섭섭기로",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기로",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "섭섭기가",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기가",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "섭섭기는",
+      "before_count": 11,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "섭섭기도",
+      "before_count": 4,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "섭섭기만",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "섭섭기를",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기를",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "섭섭기보다",
+      "before_count": 8,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "보다",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "섭섭하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기보다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기에",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "돌변키도했다",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "contraction.ha_aspiration",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌변하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기도",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.ha_aspiration",
+            "ending",
+            "irregular.ha",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "강구키만했다",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "contraction.ha_aspiration",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "강구하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기만",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.ha_aspiration",
+            "ending",
+            "irregular.ha",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각기는했다",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "auxiliary.internal_particle",
+            "boundary.regular",
+            "deletion.ha",
+            "ending",
+            "irregular.ha",
+            "particle",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "생각하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "하다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기는",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.ha",
+            "ending",
+            "irregular.ha",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "연구키이다",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "연구하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.ha_aspiration",
+            "copula",
+            "ending",
+            "nominalization"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "생각키",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "생각키에",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "깨끗키는",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "섭섭키도",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "강구기",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "강구기를",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "조성기로",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "돌변기도",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "ABC키",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "ABC키로",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "키",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "키로",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "키로야",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "등록케",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": []
+    },
+    {
+      "surface": "이시가키와",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이시가하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "와",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.ha_aspiration",
+            "ending",
+            "nominalization",
+            "particle"
+          ],
+          "unchanged": false
+        }
+      ]
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "annotation_anomaly": {
+    "id": "id:dev-s858/12",
+    "surface": "이시가키와",
+    "source_annotation": "이+시가+하+기+와 / MM+NNG+XSV+ETN+JKB",
+    "context": "The sentence coordinates 이시가키 and 미야코 as islands.",
+    "interpretation": "The gold match is measured but not treated as evidence of a real 이시가하다 predicate. Unknown lexical hypotheses remain in the unfiltered API; dictionary filtering uses actual entries.",
+    "dictionary_entries": [],
+    "preserved_nominal_alternative": {
+      "lemmas": [
+        {
+          "text": "이시가키",
+          "kind": "nominal"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "와",
+          "kind": "particle"
+        }
+      ],
+      "rules": [
+        "particle"
+      ],
+      "unchanged": false
+    }
+  },
+  "remaining": [
+    "Article 40 complex codas and other ending families remain COV-021 work.",
+    "등록케 remains a miss: stop-final 등록 requires deletion rather than aspiration under this standard-spelling rule. No correction path is added.",
+    "Bare 키/키로야 do not recover standalone 하다 without a preceding base; the GSD 키로야 case remains for annotation review.",
+    "Rule-only analysis cannot establish lexical membership or contextual sense. This batch does not add arbitrary spelling repair or context ranking."
+  ],
+  "review_status": "Source-backed agent judgments; independent Korean-language review pending. No precision estimate.",
+  "verification": {
+    "platform": "x86_64-linux",
+    "passed": [
+      "cargo fmt --all -- --check",
+      "cargo test --locked --offline --features web",
+      "cargo clippy --locked --offline --all-targets --features web -- -D warnings",
+      "all 66,570 frozen corpus cases",
+      "all 30 existing stress fingerprints and 1,024-syllable memory test",
+      "complete browser and HTTP regression suite",
+      "nix flake check",
+      "nix build .#web"
+    ],
+    "frontend": "Production source unchanged; Nix reuses the verified production assets.",
+    "packaged_full_dictionary_smoke": {
+      "paths": [
+        "강구키",
+        "생각기",
+        "조성키로",
+        "생각기에",
+        "돌변키도했다"
+      ],
+      "checks": [
+        "nominalizer source link 72222",
+        "normalized morpheme order",
+        "four rejected restorations",
+        "preserved 이시가키 nominal alternative",
+        "desktop and mobile layout",
+        "no JavaScript page errors"
+      ]
+    },
+    "other_nix_platforms": "not executed on this host"
+  }
+}

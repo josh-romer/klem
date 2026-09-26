@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const stativeReport = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-stative-report.json"), "utf8"));
   const reportMyeo = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-report-myeo.json"), "utf8"));
   const approximation = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-approximation.json"), "utf8"));
   const extent = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-extent.json"), "utf8"));
@@ -274,6 +275,7 @@ try {
       ...rangeCase.LexicalResource.Lexicon.LexicalEntry,
       ...extent.LexicalResource.Lexicon.LexicalEntry,
       ...approximation.LexicalResource.Lexicon.LexicalEntry,
+      ...stativeReport.LexicalResource.Lexicon.LexicalEntry,
       ...reportMyeo.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
@@ -672,6 +674,15 @@ try {
   for (const [word, expected, form, label, id, kind = "ending"] of [
     ["학생치고는", ["학생", "치고", "는"], "는", "Topic / contrast", 85851, "particle"],
     ["사람치고서는", ["사람", "치고서", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["지내고있다네", ["지내", "고", "있", "다네"], "다네", "Information / report", 75191, "ending"],
+    ["먹고계시다는데", ["먹", "고", "계시", "다는데"], "다는데", "Report / background", 82257, "ending"],
+    ["감염되어있다거나", ["감염되", "어", "있", "다거나"], "다거나", "Reported alternatives / examples", 86056, "ending"],
+    ["변해가고있다든가", ["변하", "여", "가", "고", "있", "다든가"], "다든가", "Reported alternatives / examples", 82121, "ending"],
+    ["먹고있지않다네", ["먹", "고", "있", "지", "않", "다네"], "다네", "Information / report", 75191, "ending"],
+    ["먹고있지못하다는데", ["먹", "고", "있", "지", "못하", "다는데"], "다는데", "Report / background", 82257, "ending"],
+    ["먹고계신다네", ["먹", "고", "계시", "는다네"], "는다네", "Information / report", 75175, "ending"],
+    ["먹고있지않는다네", ["먹", "고", "있", "지", "않", "는다네"], "는다네", "Information / report", 75175, "ending"],
+    ["먹고있어본다네", ["먹", "고", "있", "어", "보", "는다네"], "는다네", "Information / report", 75175, "ending"],
     ["먹고있다며", ["먹", "고", "있", "다며"], "다며", "Report / confirmation", 81466, "ending"],
     ["먹고있지않다면서", ["먹", "고", "있", "지", "않", "다면서"], "다면서", "Report / confirmation", 78806, "ending"],
     ["좋다며", ["좋", "다며"], "다며", "Report / confirmation", 81466, "ending"],
@@ -1384,7 +1395,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

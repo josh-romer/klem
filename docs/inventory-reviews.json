@@ -2293,10 +2293,11 @@
       "source_sha256": "79de7045add131e7d5d746be1d249229923048aa461f64b921f53ec642a69a9c",
       "status": "scoped",
       "checklist": [
-        "COV-019f"
+        "COV-019f",
+        "COV-019g"
       ],
-      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry.",
-      "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open.",
+      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms.",
+      "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open. COV-019h tracks the remaining prefinal and existential question/adnominal paradigms.",
       "evidence": [
         {
           "path": "tests/continuative_class.rs",
@@ -2312,6 +2313,17 @@
         },
         {
           "path": "docs/continuative-class-evaluation.json"
+        },
+        {
+          "path": "tests/stative_reports.rs",
+          "test": "stative_reports_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "stative_reports_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/stative-report-evaluation.json"
         }
       ],
       "judgments": [
@@ -2334,6 +2346,422 @@
         {
           "case": "continuative-class-negative-verb",
           "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-001",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-002",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-005",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-006",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-007",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-009",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-010",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-011",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-012",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-014",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-015",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-016",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-017",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-018",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-019",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-020",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-023",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-024",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-025",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-027",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-028",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-029",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-030",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-032",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-033",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-034",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-035",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-036",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-037",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-038",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-041",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-042",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-043",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-045",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-046",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-047",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-048",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-050",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-051",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-052",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-053",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-054",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-055",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-056",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-059",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-060",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-061",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-063",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-064",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-065",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-066",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-068",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-069",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-070",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-071",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-072",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-074",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-077",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-080",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-083",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-086",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-093",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-096",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-102",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-103",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-104",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-105",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-106",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-107",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-108",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-001",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-002",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-003",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-004",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-005",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-006",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-007",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-008",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-009",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-010",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-011",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-012",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-013",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-014",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-015",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-016",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-017",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-018",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-019",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-020",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-021",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-022",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-023",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-024",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-025",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-026",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-027",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-028",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-029",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-030",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-031",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-032",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-041",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-forbidden-042",
+          "judgment": "path"
         }
       ]
     },
@@ -2342,10 +2770,11 @@
       "source_sha256": "6d9db44cf763df0df3eec81e45c1979973ea3a5b188cfb672ba7a931e0876a2a",
       "status": "scoped",
       "checklist": [
-        "COV-019f"
+        "COV-019f",
+        "COV-019g"
       ],
-      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry.",
-      "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open.",
+      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms.",
+      "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open. COV-019h tracks the remaining prefinal and existential question/adnominal paradigms.",
       "evidence": [
         {
           "path": "tests/continuative_class.rs",
@@ -2361,6 +2790,17 @@
         },
         {
           "path": "docs/continuative-class-evaluation.json"
+        },
+        {
+          "path": "tests/stative_reports.rs",
+          "test": "stative_reports_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "stative_reports_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/stative-report-evaluation.json"
         }
       ],
       "judgments": [
@@ -2382,6 +2822,98 @@
         },
         {
           "case": "continuative-class-contracted-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-003",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-004",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-008",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-013",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-021",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-022",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-026",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-031",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-039",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-040",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-044",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-049",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-057",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-058",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-062",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-067",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-073",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-076",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-079",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-082",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-085",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-092",
+          "judgment": "path"
+        },
+        {
+          "case": "stative-report-required-095",
           "judgment": "path"
         }
       ]

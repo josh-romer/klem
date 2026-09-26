@@ -923,6 +923,11 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             && a.morphemes
                 .get(cursor)
                 .is_some_and(|m| m.kind == MorphemeKind::Ending);
+        // Auxiliary 있다 describes an ongoing action/result/state, rather than
+        // lexical 있다's dynamic 'stay' reading. Its bare declarative uses 다,
+        // not 는다. Do not inherit this restriction through negative auxiliaries
+        // or apply it to honorific 계시다, which also permits 계신다.
+        let bare_stative_iss = bare && lemma.kind == LemmaKind::Auxiliary && lemma.text == "있다";
         while inflected
             && a.morphemes
                 .get(cursor)
@@ -937,6 +942,24 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                 .get(cursor)
                 .filter(|m| m.kind == MorphemeKind::Ending)
         {
+            if bare_stative_iss
+                && matches!(
+                    m.form.as_str(),
+                    "는다"
+                        | "는다고"
+                        | "는다는"
+                        | "는다면"
+                        | "는답니다"
+                        | "는다거나"
+                        | "는다든가"
+                        | "는다네"
+                        | "는다는데"
+                        | "는다며"
+                        | "는다면서"
+                )
+            {
+                return false;
+            }
             // Only bare-stem attachment is decided here. The ending notes
             // separately license prefinals, including adjective + 었 + 는데.
             // These verbal families still require a verb after honorific 시.
@@ -990,10 +1013,12 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
                     Some(PredicateClass::Verb) => {
-                        matches!(
-                            m.form.as_str(),
-                            "다거나" | "다든가" | "다네" | "다는데" | "으냐며" | "으냐면서"
-                        ) || (!report_stative && matches!(m.form.as_str(), "다며" | "다면서"))
+                        matches!(m.form.as_str(), "으냐며" | "으냐면서")
+                            || (!report_stative
+                                && matches!(
+                                    m.form.as_str(),
+                                    "다거나" | "다든가" | "다네" | "다는데" | "다며" | "다면서"
+                                ))
                     }
                     Some(PredicateClass::Copula) | None => false,
                 }

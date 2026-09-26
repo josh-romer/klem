@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–x/018a–k/018m/019a–f/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–x/018a–k/018m/019a–g/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -833,15 +833,27 @@ review remains open under the completion review below.
   removals across 83 surfaces and the two changed stress fingerprints, with no
   lost corpus gold. Transitivity, verb subsets, other prefinal/particle conditions
   and independent review remain open. See [scope](rules.md#continuative-left-classes-cov-019f).
-- [ ] **COV-019g — Stative auxiliary inflection across older report families.**
-  The full auxiliary paths in 먹고있다네 and 먹고계시다는데 remain absent.
-  The existing filter treats verbal auxiliary POS as a plain-다 exclusion;
-  KRDict 84376 and 83094 attest 지내고 있다네 and 받고 있다는데요.
-  COV-017x handles this distinction for its new -며/-면서 forms. Audit the
-  older 다네/다는데 and quoted-alternative families, inherited negatives and
-  existential present paradigms before applying the correction across them.
-  The [review](report-myeo-evaluation.json) preserves these source examples and
-  the observed gap; the missing paths are not silently counted as covered.
+- [x] **COV-019g — Stative auxiliary inflection across older report families.**
+  Auxiliary 있다/계시다 now retain plain-다 readings before 다네/다는데 and
+  다거나/다든가, including inherited negative readings. A later dynamic auxiliary
+  resets that possibility. Bare auxiliary 있다 no longer takes the reviewed
+  declarative 는다 families; lexical 있다, 계신다 and 있지 않는다 remain distinct.
+  Present adnominal 는, background 는데, question 느냐 and prefinal-bearing
+  reports retain their existing behavior. Evidence: [role and normalization
+  tests](../tests/stative_reports.rs), 166 stable `stative-report-*` ledger cases,
+  dictionary/CLI parity and browser selections, plus [source/candidate
+  review](stative-report-evaluation.json). The review distinguishes direct
+  attestations from morphological inferences, accounts for 96 additions and
+  50 removals, and preserves all corpus gold and stress fingerprints. This does
+  not settle all existential paradigms; COV-019h retains that work.
+- [ ] **COV-019h — Further existential auxiliary paradigms.** Review
+  honorific/past/modal prefinals before present declaratives, existential
+  question allomorphs and past adnominals. Probe observations such as
+  먹고있으신다네, 먹고있었는다고 and 앉아있은 are explicitly unjudged in
+  [the source review](stative-report-evaluation.json). The learner-error abstract
+  alone does not establish every restriction. Keep lexical 있다 and auxiliary
+  있다/계시다 senses distinct. COV-019 also retains the separate internal-particle
+  observation 먹고는있다네; its full auxiliary path remains absent.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

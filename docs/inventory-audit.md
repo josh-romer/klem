@@ -526,3 +526,21 @@ expose older auxiliary report restrictions in COV-019g. Other quoted endings,
 lexical/existential classes, further particles and independent Korean review
 remain open. Labels, source matches and passing tests are not full-entry
 linguistic certification.
+
+
+## Stative auxiliary reports (COV-019g)
+
+[The review](stative-report-evaluation.json) distinguishes source-attested
+plain-다 reports from the auxiliary's verbal POS and reviews the direct bare
+있다 declarative paradigm. It preserves 계신다 and inherited negative readings,
+checks resets through later dynamic auxiliaries, and removes only the reviewed
+bare auxiliary 있는다 paths. The 178-surface comparison records 96 additions and
+50 removals with unchanged development recall and all thirty stress fingerprints.
+COV-019h retains prefinal/existential question/adnominal work; the full
+먹고는있다네 internal-particle path remains an unjudged missing observation.
+
+The existing 62595 and 61346 scoped dispositions gain this evidence without
+replacing their earlier left-class judgments. Counts remain 170 scoped, one
+observed gap and 544 unreviewed across the 715-entry queue. All 166 new cases
+have stable exact-role judgments: 108 required and 58 forbidden. This is a
+reviewed inflection scope, not contextual sense selection or a precision estimate.

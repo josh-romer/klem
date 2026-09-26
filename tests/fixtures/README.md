@@ -845,3 +845,11 @@ preserves dev-s737, dev-s750 and dev-s926. They retain the KAIST/GSD source
 attribution/licenses above. Six stable annotated groups cover 지원한다며,
 필요하다면서, 모자란다면서도, 줄이라며, 현실이라며 and 극복하겠다며. No
 sentence text, annotation or historical corpus baseline is rewritten.
+
+`krdict-stative-report.json` retains 40 primary entries (all selected homonyms
+and senses) from the September 2026 KRDict export by the National Institute
+of Korean Language, under CC BY-SA 2.0 KR. It supports COV-019g auxiliary
+reporting and dictionary/CLI/browser regressions. Changes: English equivalents
+only, the first example group per sense, no WordForm/RelatedForm or export
+metadata, and reformatted JSON. These are integration fixtures, not annotated
+sentence gold. Source and license links are above.

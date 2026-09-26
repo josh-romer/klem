@@ -1689,3 +1689,39 @@ gains, auxiliary statives and split/bundled retrospective alternatives, plus
 all 78 forbidden paths. Every mapped source remains accessible. Inspected
 desktop/mobile screenshots show 필요하 + 다면서 with its source homonyms,
 without JavaScript errors or horizontal overflow.
+
+
+## Stative auxiliary reports and declaratives (COV-019g)
+
+[The review](stative-report-evaluation.json) accounts for **96 added and 50
+removed analyses across 178 surfaces**, with no provenance-only changes.
+Auxiliary 있다/계시다 now preserve older plain-다 reports, including inherited
+negatives; later dynamic auxiliaries reset the permission. Direct bare auxiliary
+있다 rejects the reviewed 는다 declaratives while lexical 있다, 계신다,
+있지 않는다 and nondeclarative endings retain their distinct behavior.
+The report explicitly distinguishes direct usage evidence from inferred paradigm
+extensions and retains the COV-019h prefinal/question/adnominal followups.
+
+Development recall and candidate means are unchanged: **106 KAIST and 151 GSD
+misses**, means 5.836229 and 5.372310, with no lost gold groups or component sets.
+No new annotated-corpus recovery is claimed. All thirty stress fingerprints
+remain byte-identical to the prior revision and historical baselines stay intact.
+
+The **166 new cases** bring totals to **1,971 cases, 1,171 required and 806
+forbidden judgments**. A 40-entry offline fixture preserves all selected lexical
+homonyms/senses for dictionary/CLI and browser verification. No grammar labels
+or source mappings change. The existing two auxiliary inventory dispositions
+gain evidence, leaving **170 scoped, one observed gap and 544 unreviewed**.
+Independent Korean review, fresh passages and the other open coverage families
+remain pending.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, the frontend production build, browser/HTTP checks
+and inventory verification pass. `nix flake check` and `nix build .#web` pass
+on x86_64-linux; the other declared systems were not executed. The final Nix
+suite includes all 166 new judgments and the exact-role dictionary parity test.
+The packaged full-dictionary app passes eleven reading selections and all
+58 forbidden paths. Source homonyms remain accessible. Inspected desktop/mobile
+screenshots show 지내 + 고 + 있 + 다네 without JavaScript errors or horizontal
+overflow. The auxiliary's dictionary gloss is `itda`; contextual English gloss
+selection remains separate from morphological correctness.

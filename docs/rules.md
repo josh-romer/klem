@@ -2205,3 +2205,31 @@ and vowel-final copula omission. Whole lexical readings remain unchanged.
 cover positive/negative attachment, ordered breakdowns, Unicode normalization,
 dictionary/CLI parity and browser source selection. Six complete annotated
 sentences support the corpus gains without certifying every generated candidate.
+
+
+## Stative auxiliary reporting (COV-019g)
+
+Auxiliary 있다 and 계시다 permit stative plain-다 reports despite their verbal
+POS. The known-class filter now preserves 다네/다는데/다거나/다든가 alongside
+the previously supported 다며/다면서 readings. Negative auxiliaries retain this
+possibility, while a later dynamic 보다/주다/하다 resets it. This does not relax
+the known verb requirement before continuative/resultative auxiliaries.
+
+Bare auxiliary 있다 uses 다 rather than declarative 는다. The restriction covers
+canonical 는다, 는다고, 는다는, 는다면, 는답니다, 는다거나, 는다든가, 는다네,
+는다는데, 는다며 and 는다면서, including split 는다 + 든가 and outer particles.
+It does not reclassify all 있다 as adjectival: lexical dynamic 있는다, honorific
+계신다, negative 있지 않는다, and nondeclarative 있는/있는데/있느냐 remain.
+Prefinal-bearing paradigms and further question/adnominal restrictions remain
+COV-019h; internal particles such as 고 + 는 before 있다 remain COV-019 work.
+
+Primary KRDict examples include 지내고 있다네 (84376), 받고 있다는데요 (83094),
+바로잡혀 있지 않다며 (56535), and 매진하고 계신다며 (80807). NIKL-published usage
+attests 어 있다거나 and 고 있다든가. The Kim/Yang 2023 learner-corpus abstract
+identifies -고 있는다 errors; applying that paradigm to the state/result 어
+connector and embedded/quoted declaratives is an explicit morphological inference,
+not a claim of individual attestation for every synthetic test. See the
+[attributed source and candidate review](stative-report-evaluation.json) for
+URLs, attachment notes, exact examples and unjudged followups. Independent Korean
+review remains pending. These judgments target represented roles, leaving raw
+unknown-head spelling hypotheses visible in the unfiltered candidate API.

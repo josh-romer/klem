@@ -1,0 +1,52 @@
+# sent_id = dev-s461
+# text = 젊은 부부 사장님의 친절과 배려가 최고네요.
+# translit = .jeorm.eun .bu.bu .sa.jang.nim.yi .chin.jeol.gwa .bae.ryeo.ga .choe.go.ne.yo.
+1	젊은	젊+은	ADJ	VA+ETM	_	2	amod	_	Translit=.jeorm.eun|LTranslit=.jeorm+.eun
+2	부부	부부	NOUN	NNG	_	5	nmod:poss	_	Translit=.bu.bu|LTranslit=.bu.bu
+3	사장님의	사장+님+의	NOUN	NNG+XSN+JKG	_	2	flat	_	Translit=.sa.jang.nim.yi|LTranslit=.sa.jang+.nim+.yi
+4	친절과	친절+과	NOUN	NNG+JC	_	6	nsubj	_	Translit=.chin.jeol.gwa|LTranslit=.chin.jeol+.gwa
+5	배려가	배려+가	NOUN	NNG+JKS	_	4	conj	_	Translit=.bae.ryeo.ga|LTranslit=.bae.ryeo+.ga
+6	최고네요	최고+이+네요	VERB	NNG+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.choe.go.ne.yo|LTranslit=.choe.go+.i+.ne.yo
+7	.	.	PUNCT	SF	_	6	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s570
+# text = 주도는 페루자이며, 테르니, 페루자의 두 현으로 구성되어 있다.
+# translit = .ju.do.neun .pe.ru.ja.i.myeo, .te.reu.ni, .pe.ru.ja.yi .du .hyeon.eu.ro .gu.seong.doe.eo .iss.da.
+1	주도는	주도+는	NOUN	NNG+JX	_	2	nsubj	_	Translit=.ju.do.neun|LTranslit=.ju.do+.neun
+2	페루자이며	페루+자+이+며	VERB	NNP+NNB+VCP+EC	_	0	root	_	SpaceAfter=No|Translit=.pe.ru.ja.i.myeo|LTranslit=.pe.ru+.ja+.i+.myeo
+3	,	,	PUNCT	SP	_	9	punct	_	Translit=,|LTranslit=,
+4	테르니	테르+이+니	NOUN	NNP+VCP+EC	_	8	nmod:poss	_	SpaceAfter=No|Translit=.te.reu.ni|LTranslit=.te.reu+.i+.ni
+5	,	,	PUNCT	SP	_	6	punct	_	Translit=,|LTranslit=,
+6	페루자의	페루+자+의	NOUN	NNP+NNB+JKG	_	4	conj	_	Translit=.pe.ru.ja.yi|LTranslit=.pe.ru+.ja+.yi
+7	두	두	NUM	MM	NumType=Card	8	nummod	_	Translit=.du|LTranslit=.du
+8	현으로	현+으로	ADV	NNG+JKB	_	9	obl	_	Translit=.hyeon.eu.ro|LTranslit=.hyeon+.eu.ro
+9	구성되어	구성+되+어	VERB	NNG+XSV+EC	_	2	conj	_	Translit=.gu.seong.doe.eo|LTranslit=.gu.seong+.doe+.eo
+10	있다	있+다	VERB	VX+EF	_	9	flat	_	SpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da
+11	.	.	PUNCT	SF	_	10	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s842
+# text = 뭔가 더하고 변형해서 성능이 나아진다면 제품이 완전하지 못하다는 이야기고, 제품이 완전하다면 더하고 변형하는 것은 제품의 완결성을 떨어뜨리는 행위가 되기 때문이다.
+# translit = .mweon.ga .deo.ha.go .byeon.hyeong.hae.seo .seong.neung.i .na.a.jin.da.myeon .je.pum.i .wan.jeon.ha.ji .mos.ha.da.neun .i.ya.gi.go, .je.pum.i .wan.jeon.ha.da.myeon .deo.ha.go .byeon.hyeong.ha.neun .geos.eun .je.pum.yi .wan.gyeol.seong.eul .ddeol.eo.ddeu.ri.neun .haeng.wi.ga .doe.gi .ddae.mun.i.da.
+1	뭔가	뭐+이+ㄴ가	NOUN	NP+VCP+EC	_	3	obj	_	Translit=.mweon.ga|LTranslit=.mweo+.i+ㄴ.ga
+2	더하고	더하+고	VERB	VV+EC	_	5	advcl	_	Translit=.deo.ha.go|LTranslit=.deo.ha+.go
+3	변형해서	변형+하+아서	VERB	NNG+XSV+EC	_	2	conj	_	Translit=.byeon.hyeong.hae.seo|LTranslit=.byeon.hyeong+.ha+.a.seo
+4	성능이	성능+이	NOUN	NNG+JKS	_	5	nsubj	_	Translit=.seong.neung.i|LTranslit=.seong.neung+.i
+5	나아진다면	나아지+ㄴ다면	VERB	VV+EC	_	7	advcl	_	Translit=.na.a.jin.da.myeon|LTranslit=.na.a.ji+ㄴ.da.myeon
+6	제품이	제품+이	NOUN	NNG+JKS	_	7	nsubj	_	Translit=.je.pum.i|LTranslit=.je.pum+.i
+7	완전하지	완전+하+지	VERB	NNG+XSA+EC	_	9	ccomp	_	Translit=.wan.jeon.ha.ji|LTranslit=.wan.jeon+.ha+.ji
+8	못하다는	못하+다는	VERB	VX+ETM	_	7	flat	_	Translit=.mos.ha.da.neun|LTranslit=.mos.ha+.da.neun
+9	이야기고	이야기+이+고	VERB	NNG+VCP+EC	_	0	root	_	SpaceAfter=No|Translit=.i.ya.gi.go|LTranslit=.i.ya.gi+.i+.go
+10	,	,	PUNCT	SP	_	20	punct	_	Translit=,|LTranslit=,
+11	제품이	제품+이	NOUN	NNG+JKS	_	12	nsubj	_	Translit=.je.pum.i|LTranslit=.je.pum+.i
+12	완전하다면	완전+하+다면	VERB	NNG+XSV+EC	_	20	advcl	_	Translit=.wan.jeon.ha.da.myeon|LTranslit=.wan.jeon+.ha+.da.myeon
+13	더하고	더하+고	VERB	VV+EC	_	15	dep	_	Translit=.deo.ha.go|LTranslit=.deo.ha+.go
+14	변형하는	변형+하+는	VERB	NNG+XSV+ETM	_	13	conj	_	Translit=.byeon.hyeong.ha.neun|LTranslit=.byeon.hyeong+.ha+.neun
+15	것은	것+은	NOUN	NNB+JX	_	20	nsubj	_	Translit=.geos.eun|LTranslit=.geos+.eun
+16	제품의	제품+의	NOUN	NNG+JKG	_	17	nmod:poss	_	Translit=.je.pum.yi|LTranslit=.je.pum+.yi
+17	완결성을	완결+성+을	NOUN	NNG+XSN+JKO	_	18	obj	_	Translit=.wan.gyeol.seong.eul|LTranslit=.wan.gyeol+.seong+.eul
+18	떨어뜨리는	떨어뜨리+는	VERB	VV+ETM	_	19	dep	_	Translit=.ddeol.eo.ddeu.ri.neun|LTranslit=.ddeol.eo.ddeu.ri+.neun
+19	행위가	행위+가	NOUN	NNG+JKS	_	20	nsubj	_	Translit=.haeng.wi.ga|LTranslit=.haeng.wi+.ga
+20	되기	되+기	NOUN	VV+ETN	_	9	conj	_	Translit=.doe.gi|LTranslit=.doe+.gi
+21	때문이다	때문+이+다	VERB	NNB+VCP+EF	_	9	case	_	SpaceAfter=No|Translit=.ddae.mun.i.da|LTranslit=.ddae.mun+.i+.da
+22	.	.	PUNCT	SF	_	21	punct	_	Translit=.|LTranslit=.
+

@@ -3,6 +3,51 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn omitted_connectives_recover_saved_groups_and_keep_annotation_caveats() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-omitted-connectives.conllu").as_slice(),
+            vec![
+                ("id:M2TA_089-s65/9", "어디서고", "어디"),
+                ("id:MH2_0159-s200/3", "엘리트주의니", "엘리트주의"),
+                ("id:MH2_0169-s179/10", "일쑤고", "일쑤"),
+                ("id:MH2_0169-s615/5", "치료니", "치료"),
+                ("id:MH2_0169-s650/2", "살인자니까", "살인자"),
+                ("id:MH2_0169-s698/2", "노동자니까", "노동자"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-omitted-connectives.conllu").as_slice(),
+            vec![
+                ("id:dev-s461/6", "최고네요", "최고"),
+                // This source sentence uses the place name Terni. Its existing
+                // annotation is an incidental match, not a correctness claim.
+                ("id:dev-s570/4", "테르니", "테르"),
+                ("id:dev-s842/9", "이야기고", "이야기"),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "omitted-connectives").unwrap();
+        for (id, surface, base) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [base, "이다"]);
+            assert!(case.matched, "{id}");
+        }
+    }
+    assert!(
+        klem::Lemmatizer::new()
+            .analyze_word("테르니")
+            .unwrap()
+            .analyses
+            .iter()
+            .any(|a| a.unchanged && a.lemmas[0].text == "테르니")
+    );
+}
+
+#[test]
 fn enumerative_da_preserves_annotated_copula_instead_of_replacing_it() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/gsd-enumerative-da.conllu").as_slice(),

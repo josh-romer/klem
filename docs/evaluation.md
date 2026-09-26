@@ -991,3 +991,44 @@ with the full dictionary passes ten reading choices, merged source references,
 copula/particle source switching, six forbidden paths, four homonym checks, and
 desktop/mobile inspection without JavaScript errors or overflow. Independent
 Korean-language review and fresh-passage evaluation remain pending.
+
+## Further omitted copulas and connective 은 (COV-020e/018h)
+
+[The comparison](omitted-connective-evaluation.json) records **six KAIST and three
+GSD development grouped gains**, leaving **127 and 162 misses**, respectively.
+There are no lost gold groups or component sets. The GSD gains include an
+incidental match to an apparent annotation error for the place name 테르니;
+that match is not counted as linguistic evidence for a copula. Nine complete
+byte-identical sentences preserve the annotations. 어디서고 composes through
+an existing particle-marked copula base; broader eligibility remains for review.
+
+The ledger now has **503 cases, 283 required and 226 forbidden judgments**, with
+thirty new cases covering omission, nominalization, ending homonyms and 은/는
+boundaries. No valid but unsupported honorific omission is labeled forbidden.
+The pinned dictionary lacks 엘리트주의: raw recovery for 엘리트주의니 succeeds,
+while dictionary-only mode remains empty. Dictionary/CLI regressions preserve
+that distinction rather than manufacturing a vocabulary entry.
+
+Across 114 audited surfaces, **115 analyses are added and none removed**.
+Four stress fingerprints gain individually recorded nominal/copula hypotheses;
+prior candidates, provenance and hashes are retained. Some auxiliary or
+particle-marked hypotheses remain explicitly unjudged, especially represented
+copula + progressive 고 있다/계시다. Internal 는 before 싶다 remains a separate
+visible gap. The remaining 26 fingerprints and historical corpus baselines are
+unchanged. Mean development candidates rise from 5.7933 to 5.8345 in KAIST and
+5.3130 to 5.3569 in GSD; these are ambiguity measures, not precision estimates.
+
+The catalog still has **256 canonical forms**, now supported by 304 source entries
+and 305 grammar-fixture entries. Earlier source entries are unchanged. Twelve
+new scoped dispositions bring the review queue to **42 scoped entries and 673
+without a disposition**. Two expression sources are recorded in the evaluation
+outside the queue's 715-entry POS scope. Independent Korean-language review,
+other omission families and broader attachment constraints remain pending.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, reviewed
+stress checks, the 1,024-syllable memory test, frontend production build and full
+browser/HTTP suite pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared platforms were not executed. The final packaged app
+with the full dictionary passes twelve normalized reading choices, related
+allomorph source lookup, six forbidden paths, missing-vocabulary empty state,
+and desktop/mobile inspection without JavaScript errors or overflow.

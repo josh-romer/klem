@@ -2797,3 +2797,173 @@ fn enumerative_da_keeps_particle_and_copula_paths_in_dictionary_cli() {
         );
     }
 }
+
+#[test]
+fn omitted_connectives_keep_filtered_copulas_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from(
+            "tests/fixtures/krdict-omitted-connectives.json",
+        )],
+        dir.db(),
+        "omitted-connectives-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        (
+            "노동자니까",
+            vec!["노동자", "이다"],
+            vec!["으니까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사니",
+            vec!["의사", "이다"],
+            vec!["으니"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "어디니",
+            vec!["어디", "이다"],
+            vec!["니"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사니",
+            vec!["의사", "이다"],
+            vec!["니"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "치료니",
+            vec!["치료", "이다"],
+            vec!["니"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "이야기고",
+            vec!["이야기", "이다"],
+            vec!["고"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사고",
+            vec!["의사", "이다"],
+            vec!["고"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사지만",
+            vec!["의사", "이다"],
+            vec!["지만"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사지만요",
+            vec!["의사", "이다"],
+            vec!["지만요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사거든",
+            vec!["의사", "이다"],
+            vec!["거든"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사거든요",
+            vec!["의사", "이다"],
+            vec!["거든요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사네",
+            vec!["의사", "이다"],
+            vec!["네"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "최고네요",
+            vec!["최고", "이다"],
+            vec!["네요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹기니까",
+            vec!["먹다", "이다"],
+            vec!["기", "으니까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사고",
+            vec!["의사", "이다"],
+            vec!["고"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "거니까",
+            vec!["것", "이다"],
+            vec!["으니까"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹지만은",
+            vec!["먹다"],
+            vec!["지만", "은"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "의사지만은",
+            vec!["의사", "이다"],
+            vec!["지만", "은"],
+            MorphemeKind::Particle,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    let result = Lemmatizer::new().analyze_word("엘리트주의니").unwrap();
+    assert!(result.analyses.iter().any(|a| {
+        a.lemmas
+            .iter()
+            .map(|l| l.text.as_str())
+            .eq(["엘리트주의", "이다"])
+    }));
+    let annotation = session.annotate(&result).unwrap();
+    assert!(
+        result
+            .filtered(|l| annotation.has_match(l, false))
+            .analyses
+            .is_empty()
+    );
+}

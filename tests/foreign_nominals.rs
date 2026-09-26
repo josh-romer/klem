@@ -149,15 +149,7 @@ fn uncertainty_stays_at_the_foreign_boundary_and_preserves_chain_licenses() {
             "{word}"
         );
     }
-    for word in [
-        "🙂는",
-        "!은",
-        "\u{301}은",
-        "A.B는",
-        "ABC고",
-        "3으면",
-        "ABC케",
-    ] {
+    for word in ["🙂는", "!은", "\u{301}은", "A.B는", "3으면", "ABC케"] {
         assert!(
             engine
                 .analyze_word(word)
@@ -175,6 +167,8 @@ fn foreign_copulas_distinguish_explicit_i_from_vowel_dependent_omission() {
     let engine = Lemmatizer::new();
     for (word, forms, conditional) in [
         ("ABC다", vec!["다"], true),
+        // COV-020e adds this omitted-copula ending with a vowel condition.
+        ("ABC고", vec!["고"], true),
         ("ABC라면", vec!["라면"], true),
         ("ABC예요", vec!["에요"], true),
         ("ABC야", vec!["야"], true),

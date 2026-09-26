@@ -136,6 +136,9 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const omittedConnectives = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-omitted-connectives.json"), "utf8"),
+  );
   const enumerativeDa = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-da.json"), "utf8"),
   );
@@ -234,6 +237,7 @@ try {
       ...enumerativeParticles.LexicalResource.Lexicon.LexicalEntry,
       ...destinationParticles.LexicalResource.Lexicon.LexicalEntry,
       ...enumerativeDa.LexicalResource.Lexicon.LexicalEntry,
+      ...omittedConnectives.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -612,6 +616,15 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["노동자니까", ["노동자", "이", "으니까"], "으니까", "Reason / premise", 80137, "ending"],
+    ["어디니", ["어디", "이", "니"], "니", "Question / reason / statement", 76426, "ending"],
+    ["의사고", ["의사", "이", "고"], "고", "Connective / final", 78583, "ending"],
+    ["의사지만", ["의사", "이", "지만"], "지만", "But / although", 78638, "ending"],
+    ["의사거든", ["의사", "이", "거든"], "거든", "If / explaining a reason", 66501, "ending"],
+    ["의사거든요", ["의사", "이", "거든요"], "거든요", "Explaining a reason (polite)", 66503, "ending"],
+    ["의사네", ["의사", "이", "네"], "네", "Statement / realization", 77333, "ending"],
+    ["최고네요", ["최고", "이", "네요"], "네요", "Realization / seeking agreement (polite)", 85934, "ending"],
+    ["의사지만은", ["의사", "이", "지만", "은"], "은", "Topic / contrast", 86111, "particle"],
     ["구두다", ["구두", "다"], "다", "Enumeration", 85738, "particle"],
     ["옷이다", ["옷", "이다"], "이다", "Enumeration", 86118, "particle"],
     ["먹기다", ["먹", "기", "다"], "다", "Enumeration", 85738, "particle"],

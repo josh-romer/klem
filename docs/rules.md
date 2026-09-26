@@ -1548,3 +1548,54 @@ records unchanged development recovery, additions and provenance changes, and
 three stress fingerprint changes with prior hashes preserved. It makes no new
 held-out recall or precision claim. Further particle combinations, contextual
 sense selection and independent Korean-language review remain open.
+
+
+## Further omitted copulas and connective 은 (COV-020e/018h)
+
+The reviewed vowel-final nominal omission paths now include 니/니까, 고, 지만,
+거든 and 네, plus the existing polite bundles 지만요, 거든요 and 네요.
+노동자니까 recovers 노동자 + 이다 + 으니까; 최고네요 recovers 최고 + 이다 +
+네요. Literal 니 and canonical 으니 paths remain separate components where the
+existing ending inventory distinguishes them. Explicit copulas remain available.
+
+[NIKL's copula guidance](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=309714)
+permits omission of copular 이 after vowel-final nominals. Its
+[vowel-boundary explanation](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=321172)
+distinguishes this from contraction before 에요/었 and notes the limits of
+adnominal/nominalizing omission. Each ending's copula attachment is retained from
+KRDict in the [source review](omitted-connective-evaluation.json): 80139, 80144,
+76426, 76420, 85823, 78583, 85022, 78638, 66501, 77333 and expression entries
+66503/85934. Catalog mappings add the short -니까/-니 sources to their canonical
+full forms. Source homonyms are not a prediction of sentence mood or meaning.
+
+Recovery inserts the represented copula without applying predicate irregulars
+to the nominal. It rejects consonant-final omission, including ㄹ, and preserves
+conditional vowel pronunciation for non-Hangul bases. Nominalizations, finite
+거/것 alternatives, and existing particle-marked copula bases compose. No new
+base class or auxiliary connector is introduced; 고 uses the existing connector
+inventory, retaining its unresolved left-class/sense restrictions.
+
+The same review exposed a missing allomorph in post-ending particle attachment.
+KRDict [은 86111](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86111)
+(sense 3) licenses consonant-final connectives. The existing connective inventory
+now accepts 은 as well as 는, with the original allomorph boundary checks.
+먹지만은 has 먹다 + 지만 + 은; 의사지만은 has 의사 + 이다 + 지만 + 은.
+Existing 지 + 만 + 은 alternatives remain. This adds no arbitrary final or
+adnominal attachment and does not widen internal auxiliary particle slots.
+
+The comparison records six KAIST and three GSD development grouped recoveries.
+The Terni place-name case is an incidental match to an apparent annotation error;
+its original gold and whole-word reading remain. 어디서고 composes through an
+existing particle-marked base; competing readings and broader base constraints
+remain unjudged. The pinned dictionary lacks 엘리트주의, so its recovered raw
+path does not survive dictionary-only filtering.
+
+Four stress snapshots gain unknown nominal/copula hypotheses, recorded separately
+with every prior candidate/hash retained. In particular, represented copula +
+progressive 고 있다/계시다 needs further left-class review under COV-019; this
+batch does not certify those generated paths. Internal 는 before 싶다 remains
+missing (학생이고는싶다 / 의사고는싶다), while existing 도 composition works.
+Other omitted ending and prefinal families remain COV-020 work. NIKL's valid
+honorific omission example 선수셨다 is not entered as a forbidden regression
+merely because that recovery has not yet been implemented. Independent Korean
+review remains pending.

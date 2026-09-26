@@ -12,24 +12,26 @@
     "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "7f8b218b8cb3fef8002991f7249fffbc59ed86b1b77ea1119c5361acf6f411b4",
+    "docs/coverage-checklist.md": "f1687e5bf61bd9900d1f4cadf5092704605104d4b7dd356adca37dcbb54b6bcd",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
-    "docs/inventory-audit.md": "af38175db3bafb3091f396dfe279c971a1b71cd9138c4399d535a135c7e58285",
-    "docs/inventory-reviews.json": "2abe05b0e9b2e4fed9ac501d450748cbe4f9204a9ef6bcadfbd506d51ee38134",
+    "docs/inventory-audit.md": "a85c6d6d5b564922fd7a8685309f674dfb645b224cc36a6bf9c3116f4e2d5061",
+    "docs/inventory-reviews.json": "d34bd3e4e9daca273359580c04579ad60eb3d005e0b5f08d002bb827ca4c177c",
+    "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/reporting-evaluation.json": "74f0fb2732024ef27d7250d374184bda3d766aeb32f2c6b787ee319157c6d96e",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
-    "tests/dictionary.rs": "9b336cb07e062a4284c9699b49756e441c72ed301eeb9c1476c760a5941be7a7",
+    "tests/dictionary.rs": "d8d2376519541811046b74691f46da45a9808bd3b2de0910bf6b88b7b87df04b",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
-    "tests/fixtures/validity.json": "5875c302d01495846cdf59068aef5d8d9b73af487f95d351504a92ab609ad9d4",
+    "tests/fixtures/validity.json": "90fb7de6e835839b38b21b6aa2b69a093837f3a80b172f4613f1dbd1ce6877cd",
+    "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
     "tests/reporting_endings.rs": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
-    "web/src/grammar-labels.json": "3854d5cb7de547dd2816acb9add3e0b4a3d34f9e5493926277204f05afff3f94"
+    "web/src/grammar-labels.json": "77905460c0dbc38e17d35779a474babacfa302d85b316d85746c613becd279a9"
   },
   "counts": {
     "entries": 715,
@@ -40,11 +42,11 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 685,
-      "scoped": 30
+      "unreviewed": 673,
+      "scoped": 42
     },
-    "with_catalog_links": 233,
-    "with_judgment_citations": 94
+    "with_catalog_links": 234,
+    "with_judgment_citations": 105
   },
   "entries": [
     {
@@ -8404,10 +8406,50 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-reason",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:66501",
+        "source_sha256": "b9164690f59998c3696976653829a04b07267a86080876324f65d3c429eadb82",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-reason",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -9280,10 +9322,50 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-connective-go",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:78583",
+        "source_sha256": "a59a6fa1c32c0f12c462490537247cc44b657341e3856675e0cca599db9e5c44",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-connective-go",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -9340,10 +9422,50 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-final-go",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:85022",
+        "source_sha256": "4af92e7008484ec768a249b79ffed88b0d85544bccd7a4a5e56532ad0700e0df",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-final-go",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -11004,10 +11126,50 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-realization",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:77333",
+        "source_sha256": "1b69f6a60d1e6cb01a7e78866084b66c4358df50d29104cbf495fcd7c23031b8",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-realization",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -13350,10 +13512,50 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-statement",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:76420",
+        "source_sha256": "37bf6a084bc034bb78215e70f34f260793cf8e54e260f37037f722edd8a0be23",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-statement",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -13393,10 +13595,50 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-question",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:76426",
+        "source_sha256": "22bdd756f0d9a51bd4cbbeed8ba0594ee6b95c9730352abf103bd0bdf4a026ba",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-question",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -13449,12 +13691,56 @@
         {
           "form": "-니",
           "kind": "ending"
+        },
+        {
+          "form": "-으니",
+          "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-premise",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:80144",
+        "source_sha256": "884d275492bf6a738441e0b6e6b91b85d4abd76917712ff88b2127a673f3c57b",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-premise",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -13494,10 +13780,50 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-enumeration",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:85823",
+        "source_sha256": "2d1e7d0153fd38f03e5687eb77e894b6ae37c3421ce4af9594634687f3611447",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-enumeration",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -13531,11 +13857,74 @@
         ]
       },
       "source_sha256": "9475fc3038abd5505e03853abd63fabfeeb05dadc5d9fb75c43c9e2f7cef3212",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-으니까",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-cause",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "omitted-connectives-colloquial",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "omitted-connectives-nominalization",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:80139",
+        "source_sha256": "9475fc3038abd5505e03853abd63fabfeeb05dadc5d9fb75c43c9e2f7cef3212",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-cause",
+            "judgment": "path"
+          },
+          {
+            "case": "omitted-connectives-nominalization",
+            "judgment": "path"
+          },
+          {
+            "case": "omitted-connectives-colloquial",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -30122,10 +30511,59 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-contrast",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "omitted-connectives-contrast-polite",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:78638",
+        "source_sha256": "91f92a75a4f10f052a6f09b3086cd002501b5fe4ec0ddbd561e1066fde8b251b",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-contrast",
+            "judgment": "path"
+          },
+          {
+            "case": "omitted-connectives-contrast-polite",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -38420,10 +38858,95 @@
           "kind": "particle"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "omitted-connectives-topic-adnominal",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "omitted-connectives-topic-closed",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "omitted-connectives-topic-copula",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "omitted-connectives-topic-formal",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "omitted-connectives-topic-wrong-closed",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "omitted-connectives-topic-wrong-open",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86111",
+        "source_sha256": "ebb654c09997decffab497c9b63dc680f350e94e1d0fb6e8843cd411363b3e77",
+        "status": "scoped",
+        "checklist": [
+          "COV-018h"
+        ],
+        "scope": "Consonant-final connective endings accept emphatic 은 through the existing connective inventory; the vowel-final 는 partner and explicit allomorph checks remain. Arbitrary adnominal/formal final endings are excluded.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-topic-closed",
+            "judgment": "path"
+          },
+          {
+            "case": "omitted-connectives-topic-copula",
+            "judgment": "path"
+          },
+          {
+            "case": "omitted-connectives-topic-wrong-open",
+            "judgment": "path"
+          },
+          {
+            "case": "omitted-connectives-topic-wrong-closed",
+            "judgment": "path"
+          },
+          {
+            "case": "omitted-connectives-topic-formal",
+            "judgment": "path"
+          },
+          {
+            "case": "omitted-connectives-topic-adnominal",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -39476,11 +39999,50 @@
           "case": "nominal-copula-zero",
           "judgment": "group",
           "verdict": "required"
+        },
+        {
+          "case": "omitted-connectives-copula",
+          "judgment": "path",
+          "verdict": "required"
         }
       ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86232",
+        "source_sha256": "fa3f17b3220e62f14e0a937640709956c84b2dcae828f91e1c9b5c7e897259f4",
+        "status": "scoped",
+        "checklist": [
+          "COV-020e"
+        ],
+        "scope": "Represented affirmative copula is recovered after vowel-final nominals before reviewed 니/니까, 고, 지만, 거든, 네 and existing polite bundles, preserving explicit forms and colloquial 거 alternatives.",
+        "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
+        "evidence": [
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_preserve_explicit_copula_parity_and_composition"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "omitted_connectives_do_not_conjugate_nominals_or_replace_lexical_predicates"
+          },
+          {
+            "path": "tests/omitted_connectives.rs",
+            "test": "closed_connectives_accept_eun_without_losing_neun_boundary_checks"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "omitted_connectives_keep_filtered_copulas_and_cli_parity"
+          },
+          {
+            "path": "docs/omitted-connective-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "omitted-connectives-copula",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

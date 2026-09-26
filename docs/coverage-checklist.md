@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–g/019a–d/020a–d/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–h/019a–d/020a–e/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records thirty scoped
-  dispositions from COV-016/017m–n/017p/018e–g/019d/020d; 685 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records forty-two scoped
+  dispositions from COV-016/017m–n/017p/018e–h/019d/020d–e; 673 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -433,7 +433,7 @@ review remains open under the completion review below.
   and contextual choice remain open. Source: KRDict
   [-든가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82342).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–g implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–h implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives.**
   Remaining: pronouns outside the existing finite paradigms. Preserve homonym-specific
@@ -536,6 +536,17 @@ review remains open under the completion review below.
   retaining prior candidates and hashes. Contextual enumeration, lexical
   suitability and broader particle combinations remain open. See
   [scope and sources](rules.md#enumerative-daida-particles-cov-018g).
+- [x] **COV-018h — 은 after consonant-final connectives.** The connective
+  attachment inventory now accepts both topic/emphatic allomorphs 은/는 with
+  their existing consonant/vowel boundary checks. 먹지만은 and 의사지만은
+  retain bundled 지만 + 은 alongside existing component alternatives.
+  Wrong allomorphs and arbitrary adnominal/formal endings remain excluded.
+  Source: KRDict [은 86111](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86111),
+  sense 3. Evidence: `closed_connectives_accept_eun_without_losing_neun_boundary_checks`
+  in [tests](../tests/omitted_connectives.rs), six `omitted-connectives-topic-*`
+  judgments, dictionary/CLI parity and browser source checks. This corrects
+  the existing allomorph omission; it does not expand the connective inventory
+  or auxiliary-internal particle slots.
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -548,6 +559,9 @@ review remains open under the completion review below.
   The negative 말다 mood audit in COV-019b rules out a blanket command-only
   filter; questions and indirect wishes can also be valid. Sentence-mood and
   sense selection require context beyond this token-level candidate generator.
+  COV-020e also records missing internal 는 before 싶다 (학생이고는싶다) and
+  unreviewed represented-copula + progressive 고 있다/계시다 candidates;
+  a matching connector alone does not establish left-class eligibility.
 - [x] **COV-019a — Auxiliary connectors and one internal particle.** The
   [source inventory](auxiliary-inventory.json) preserves attachment notes for all
   54 KRDict auxiliary entries. Added paths include 나다/나가다, 계시다,
@@ -606,7 +620,8 @@ review remains open under the completion review below.
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
-  finite 거/것 nominal alternatives; COV-020d adds enumerative -요.**
+  finite 거/것 nominal alternatives; COV-020d adds enumerative -요 and
+  COV-020e adds reviewed consonant-initial ending families.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -664,6 +679,21 @@ review remains open under the completion review below.
   gain reviewed unknown-nominal hypotheses; every prior candidate and hash is
   retained. Other copula families and contextual reading selection remain open.
   See [scope and sources](rules.md#enumerative-copular-yo-cov-020d).
+- [x] **COV-020e — Omitted copula before further consonant-initial endings.**
+  니/니까, 고, 지만, 거든 and 네, including existing 지만요/거든요/네요
+  bundles, restore 이다 after vowel-final nominals. Canonical 니/으니 alternatives,
+  explicit copulas, nominalizations, colloquial 거 forms and existing particle/
+  auxiliary connectors remain. Consonant-final nominals do not lose their coda
+  or receive predicate irregulars. Conditional foreign pronunciation is explicit.
+  Evidence: [boundary/composition tests](../tests/omitted_connectives.rs),
+  thirty `omitted-connectives-*` judgments shared with COV-018h, nine complete
+  annotated sentences, dictionary/CLI parity and browser normalized source checks.
+  [Evaluation](omitted-connective-evaluation.json) records six KAIST and three
+  GSD grouped gains; the latter include an incidental place-name annotation
+  match, not a linguistic improvement. Four stress changes retain every previous
+  candidate and hash, with unknown nominal/auxiliary hypotheses explicitly
+  unjudged. Honorific/prefinal omission (e.g. 선수셨다), further endings and
+  copula/auxiliary eligibility remain open. See [scope and sources](rules.md#further-omitted-copulas-and-connective-eun-cov-020e018h).
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without

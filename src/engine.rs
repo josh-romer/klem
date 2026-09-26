@@ -1234,7 +1234,16 @@ fn nominals(
         let ending = if flexible
             || matches!(
                 particle.form,
-                "는" | "도" | "만" | "마는" | "나" | "라도" | "든지" | "든가" | "야" | "나마"
+                "은" | "는"
+                    | "도"
+                    | "만"
+                    | "마는"
+                    | "나"
+                    | "라도"
+                    | "든지"
+                    | "든가"
+                    | "야"
+                    | "나마"
             ) {
             PredicateEnd::BeforeParticle(particle.form)
         } else {
@@ -1582,7 +1591,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 | "습니다"
                 | "으세요"
         ),
-        "는" | "도" => connective,
+        "은" | "는" | "도" => connective,
         "라도" => matches!(ending, "어" | "게" | "지" | "고"),
         // KRDict 나마 explicitly illustrates an adverbial 게 clause.
         "나마" => ending == "게",

@@ -310,3 +310,22 @@ Development misses remain **133 KAIST and 165 GSD**, with no lost groups or
 component sets. Three changed stress snapshots gain reviewed nominal hypotheses;
 all prior candidates and hashes remain. Independent Korean-language review,
 lexical/sense suitability and further combinations remain open.
+
+
+## Further omitted copulas and connective 은 (COV-020e/018h)
+
+[The comparison](omitted-connective-evaluation.json) retains fourteen dictionary
+source projections and NIKL omission guidance. Twelve POS-scoped entries receive
+manual dispositions; the two grammar-expression entries remain outside the
+715-entry POS queue. The inventory now has **42 scoped reviews and 673 entries
+without a disposition**. Each disposition covers the implemented copula or
+connective-particle attachment, not all senses or combinations.
+
+Development misses are **127 KAIST and 162 GSD**. Nine grouped gains include an
+incidental match to an apparent place-name annotation error; they do not imply
+nine linguistically improved analyses. All corpus annotations remain unchanged.
+Four stress snapshots gain explicitly unjudged nominal/copula hypotheses, with
+prior candidates and hashes retained. Omitted honorific prefinals, auxiliary
+left-class eligibility, internal 는 before 싶다, and broader copula bases remain
+visible gaps. The absence of 엘리트주의 in the pinned dictionary is recorded
+separately from successful raw morphology recovery.

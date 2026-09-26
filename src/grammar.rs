@@ -557,12 +557,22 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("데", "은데", 4),
             ("니다", "습니다", 17),
             ("니까", "습니까", 17),
+            ("니", "니", 0),
+            ("니", "으니", 0),
+            ("니까", "으니까", 0),
+            ("고", "고", 0),
+            ("지만", "지만", 0),
+            ("지만요", "지만요", 0),
+            ("거든", "거든", 0),
+            ("거든요", "거든요", 0),
+            ("네", "네", 0),
+            ("네요", "네요", 0),
         ] {
             out.push(Ending {
                 suffix,
                 form,
                 boundary: OmittedCopula(attached),
-                connector: suffix == "지",
+                connector: matches!(suffix, "지" | "고"),
             });
         }
         // Enumerative -요 is a copula/아니다 ending, distinct from polite 요.

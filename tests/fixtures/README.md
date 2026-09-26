@@ -577,3 +577,21 @@ sources, and particle 이다 does not replace the copula homonym.
 training sentence train-s1156 under CC BY-SA 4.0. Its 옷이다 token retains its
 copular lemma/XPOS annotation. It protects an existing alternative, not a new
 enumerative gold recovery or held-out score. Source/license links above apply.
+
+
+`krdict-omitted-connectives.json` contains nineteen lexical entries (15983, 20256,
+24079, 24562, 31670, 47976, 60319, 60321, 61468, 62171, 62331, 62657, 62835,
+62907, 71875, 73276, 82525, 83170, 86232) from the September 2026 NIKL KRDict
+export under CC BY-SA 2.0 KR. Entry 80139 is added to the grammar fixture; 80144
+was already present. Adaptation: retain English equivalents and the first example
+group per sense, omit WordForm/RelatedForm and global metadata, exclude idiom
+subentries, and reformat JSON. Prior grammar entries remain unchanged. Source and
+license links above apply. No entry is fabricated for the missing 엘리트주의.
+
+`kaist-omitted-connectives.conllu` retains complete UD Korean KAIST 2.15 development
+sentences M2TA_089-s65, MH2_0159-s200, MH2_0169-s179, MH2_0169-s615,
+MH2_0169-s650 and MH2_0169-s698. `gsd-omitted-connectives.conllu` retains complete
+GSD development sentences dev-s461, dev-s570 and dev-s842. All are byte-identical
+excerpts with original annotations, under CC BY-SA 4.0. dev-s570 uses the place
+name 테르니; matching its existing 테르 + 이 + 니 annotation is incidental,
+not a claimed linguistic improvement. Source/license links above apply.

@@ -1222,3 +1222,39 @@ is an annotation anomaly, separately documented in the
 [evaluation](hada-ki-evaluation.json), not a validated predicate. The original
 word and nominal 이시가키 + 와 remain available. Independent linguistic review
 and broader Article 40 coverage remain open.
+
+## Polite informative and reported endings (COV-017m)
+
+The source distinguishes informative endings from homonymous shortened reports.
+The engine represents both with one grammatical component; it does not insert
+an implicit 하다 or choose the contextual sense. Canonical 는답니다 covers
+attached ㄴ답니다 after open/ㄹ stems and literal 는답니다 after other codas.
+Only honorific 시 can precede this present-verb path. Plain 답니다 permits
+honorific, past and modal markers, while retrospective 더 takes 랩니다.
+
+Sources: KRDict [ㄴ답니다 ending](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81377),
+[는답니다 ending](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81389),
+[답니다 ending](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81393),
+and the corresponding [ㄴ답니다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86633),
+[는답니다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86635),
+[답니다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86636) report expressions.
+Their attachment notes were inspected in the pinned official September 2026
+export and retained in the attributed offline grammar fixture.
+
+[Informative 랩니다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76427)
+follows the copula/아니다 or the listed honorific, retrospective and conjectural
+markers. Existing vowel-final omitted-copula recovery also composes. The
+[report expression](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86638)
+additionally has a command sense, whose consonant counterpart is
+[으랍니다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81412).
+The latter uses canonical 으랍니다 with the existing (으) boundary and honorific
+only. Thus 먹으시랍니다 preserves both factual and command paths; 먹었더랍니다
+has the factual path without a retrospective command reading.
+
+Known adjective auxiliaries and -답다 derivation reject the new command path;
+bare copulas use 랩니다 rather than 답니다/는답니다. Unknown lexical head classes
+are not inferred, so unrestricted dictionary-free hypotheses still require
+review. The endings themselves do not license following auxiliaries, nominal
+case particles or an extra polite 요. Existing lexical alternatives, including
+답니다 → 달다 + 습니다, remain. The [evaluation](reporting-evaluation.json)
+records the tested scope and remaining limits.

@@ -126,8 +126,23 @@ for a missing explicit auxiliary. General modal/ending and left-predicate
 auxiliary constraints remain COV-017/019 work, including the other inherited
 connectors after the new bundle.
 
-A concrete next COV-017 candidate review is 해야겠더라: the source supports the
-retrospective ending, but inherited terminal recovery also emits 더 + 어라/으라.
-Review the retrospective/imperative boundary alongside older forms such as
-먹었더라. Broader modal-before-auxiliary combinations also remain unjudged;
-only the new 고 있다/계시다 boundary was constrained in COV-017k.
+COV-017l subsequently reviewed 해야겠더라 and 먹었더라, retaining the
+retrospective reading while excluding incompatible command recoveries. See
+[the prefinal-license comparison](prefinal-license-evaluation.json).
+Broader modal-before-auxiliary combinations remain unjudged; only the new
+고 있다/계시다 boundary was constrained in COV-017k.
+
+## Polite reporting inventory review (COV-017m)
+
+[The reporting comparison](reporting-evaluation.json) records attachment
+dispositions for four entries from this ending inventory (81377, 81389, 81393,
+76427), plus five related grammar-expression entries (86633, 86635, 86636,
+86638, 81412). Present allomorphs, factual/copular and command senses are
+represented without inserting implicit 하다. The source notes, ordered paths,
+prefinal exclusions and dictionary links have regression coverage; unknown
+lexical head classes and contextual senses remain unjudged.
+
+Fresh development reports now have **145 KAIST and 169 GSD misses**. These
+counts supersede the initial triage counts for current work; the original
+inventory report and frozen corpus baselines stay unchanged. Every-entry
+review of the 715-item inventory and remaining corpus families is still open.

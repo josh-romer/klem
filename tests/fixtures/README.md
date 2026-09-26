@@ -308,9 +308,9 @@ Each sentence is a byte-identical excerpt. Four selected tokens protect 먹을�
 not new gains or annotations of every alternative analysis. Rejected class
 combinations are tracked separately by source-backed synthetic judgments.
 
-`krdict-grammar-labels.json` contains 263 primary entries from the September
+`krdict-grammar-labels.json` contains 272 primary entries from the September
 2026 KRDict export, National Institute of Korean Language, CC BY-SA 2.0 KR.
-262 support the teaching-label catalog; 68883 supplies the alternate propositive
+271 support the teaching-label catalog; 68883 supplies the alternate propositive
 boundary. Changes: retain English equivalents and the first example per sense,
 omit WordForm/RelatedForm and global metadata, exclude idiom/proverb subentries,
 and reformat JSON. Source/license links above apply. The catalog records every
@@ -450,3 +450,19 @@ UD 2.15 development sentences MH2_0209-s34 and dev-s629 from the pinned sources
 above. They verify 강구키 and 조성키로. Attribution and CC BY-SA 4.0 licensing
 follow the other KAIST/GSD excerpts. GSD's separate 이시가키와 annotation anomaly
 is recorded in `docs/hada-ki-evaluation.json`, not promoted to linguistic gold.
+
+`krdict-reporting.json` contains eleven primary entries from the same September
+2026 KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR),
+IDs 15722, 17203, 24079, 31670, 46165, 58272, 64524, 69471, 69473, 69579 and
+79033. Changes: retain English equivalents and first example per sense; omit
+WordForm/RelatedForm, global metadata and idiom subentries; reformat JSON.
+Source/license links are above. Nine additional reporting-grammar entries
+(76427, 81377, 81389, 81393, 81412, 86633, 86635, 86636, 86638) are in the
+grammar-label fixture with the same adaptations and all attachment notes.
+
+`kaist-reporting.conllu` preserves complete UD 2.15 development sentences
+M2TA_069-s20 and M2TA_069-s27; `gsd-reporting.conllu` preserves dev-s287 and
+dev-s650. Both are byte-identical excerpts from the pinned corpora above,
+under their CC BY-SA 4.0 licenses. They verify the grouped lemma recoveries for
+넘었답니다, 묻었답니다, 물어본답니다 and 좋았답니다; they do not judge every
+unannotated candidate or choose between informative and reported-speech senses.

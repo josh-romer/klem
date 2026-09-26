@@ -420,7 +420,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                     );
                 }
                 if (t != 17 || suffix == "시다")
-                    && !matches!(suffix, "다" | "다고" | "다는" | "다면")
+                    && !matches!(suffix, "다" | "다고" | "다는" | "다면" | "답니다")
                 {
                     recover_eu_open(&stem, &mut out, true);
                 }
@@ -459,6 +459,7 @@ pub(crate) fn endings() -> &'static [Ending] {
         let mut out = Vec::new();
         for suffix in [
             "다",
+            "답니다",
             "다가",
             "고자",
             "건대",
@@ -593,6 +594,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라는", "라는", "으라는"),
             ("으란", "란", "으란"),
             ("으라면", "라면", "으라면"),
+            ("으랍니다", "랍니다", "으랍니다"),
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
             ("으냐", "냐", "으냐"),
@@ -658,6 +660,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다고", "다고", "는다고", 4),
             ("는다는", "다는", "는다는", 4),
             ("는다면", "다면", "는다면", 4),
+            ("는답니다", "답니다", "는답니다", 4),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -716,7 +719,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             }
         }
         // 이 is part of the copular stem, never an arbitrary removable ending.
-        for suffix in ["라", "라서", "라고", "라는", "라면"] {
+        for suffix in ["라", "라서", "라고", "라는", "라면", "랍니다"] {
             for boundary in [Copular, ZeroCopula] {
                 out.push(Ending {
                     suffix,
@@ -1022,6 +1025,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Recover 익숙히/특별히 behind shortened 익히/특히, using 익숙하다/특별하다 as lookup lemmas; retain the whole-word reading."
         }
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
+        "ending.reporting_polite" => {
+            "Recognize a polite informative or reported-speech ending as one grammatical component; its sense and any implicit speaker are not inferred."
+        }
         "pronoun" => "Restore a contracted pronoun with its particle.",
         "nominal.contraction" => "Restore contracted 거/것 plus a particle.",
         "copula.polite" => "Restore the copula from 이에요/예요 or 이야/야.",

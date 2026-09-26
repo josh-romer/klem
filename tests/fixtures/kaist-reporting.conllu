@@ -1,0 +1,35 @@
+# sent_id = M2TA_069-s20
+# text = 즉 부산 동래부를 거쳐서 언양으로, 울산으로 경주로 해서는 문경새재를 넘었답니다.
+# translit = .jeug .bu.san .dong.rae.bu.reul .geo.chyeo.seo .eon.yang.eu.ro, .ul.san.eu.ro .gyeong.ju.ro .hae.seo.neun .mun.gyeong.sae.jae.reul .neom.eoss.dab.ni.da.
+1	즉	즉	CCONJ	maj	_	11	cc	_	Translit=.jeug|LTranslit=.jeug
+2	부산	부산	PROPN	nq	_	4	obj	_	Translit=.bu.san|LTranslit=.bu.san
+3	동래부를	동래부+를	PROPN	nq+jco	_	2	flat	_	Translit=.dong.rae.bu.reul|LTranslit=.dong.rae.bu+.reul
+4	거쳐서	거치+어서	SCONJ	pvg+ecs	_	9	ccomp	_	Translit=.geo.chyeo.seo|LTranslit=.geo.chi+.eo.seo
+5	언양으로	언양+으로	ADV	nq+jca	_	8	dep	_	SpaceAfter=No|Translit=.eon.yang.eu.ro|LTranslit=.eon.yang+.eu.ro
+6	,	,	PUNCT	sp	_	5	punct	_	Translit=,|LTranslit=,
+7	울산으로	울산+으로	ADV	nq+jca	_	8	advcl	_	Translit=.ul.san.eu.ro|LTranslit=.ul.san+.eu.ro
+8	경주로	경주+로	ADV	nq+jca	_	9	advmod	_	Translit=.gyeong.ju.ro|LTranslit=.gyeong.ju+.ro
+9	해서는	하+어서+는	NOUN	pvg+ecs+jxt	_	11	ccomp	_	Translit=.hae.seo.neun|LTranslit=.ha+.eo.seo+.neun
+10	문경새재를	문경+새재+를	PROPN	nq+nq+jco	_	11	obj	_	Translit=.mun.gyeong.sae.jae.reul|LTranslit=.mun.gyeong+.sae.jae+.reul
+11	넘었답니다	넘+었+답니다	VERB	pvg+ep+ef	_	0	root	_	SpaceAfter=No|Translit=.neom.eoss.dab.ni.da|LTranslit=.neom+.eoss+.dab.ni.da
+12	.	.	PUNCT	sf	_	11	punct	_	Translit=.|LTranslit=.
+
+# sent_id = M2TA_069-s27
+# text = 그것이 경도에 있는 풍국신사인데, 그 입구에 큰 대갓집 행랑채처럼 돼있는 그곳에 코를 묻었답니다.
+# translit = .geu.geos.i .gyeong.do.e .iss.neun .pung.gug.sin.sa.in.de, .geu .ib.gu.e .keun .dae.gas.jib .haeng.rang.chae.cheo.reom .dwae.iss.neun .geu.gos.e .ko.reul .mud.eoss.dab.ni.da.
+1	그것이	그것+이	PRON	npd+jcs	_	3	nsubj	_	Translit=.geu.geos.i|LTranslit=.geu.geos+.i
+2	경도에	경도+에	ADV	nq+jca	_	3	obl	_	Translit=.gyeong.do.e|LTranslit=.gyeong.do+.e
+3	있는	있+는	ADJ	paa+etm	_	4	amod	_	Translit=.iss.neun|LTranslit=.iss+.neun
+4	풍국신사인데	풍국신사+이+ㄴ데	SCONJ	nq+jp+ecs	_	14	ccomp	_	SpaceAfter=No|Translit=.pung.gug.sin.sa.in.de|LTranslit=.pung.gug.sin.sa+.i+ㄴ.de
+5	,	,	PUNCT	sp	_	4	punct	_	Translit=,|LTranslit=,
+6	그	그	DET	mmd	_	7	det	_	Translit=.geu|LTranslit=.geu
+7	입구에	입구+에	ADV	ncn+jca	_	11	obl	_	Translit=.ib.gu.e|LTranslit=.ib.gu+.e
+8	큰	크+ㄴ	ADJ	paa+etm	_	10	amod	_	Translit=.keun|LTranslit=.keu+ㄴ
+9	대갓집	대갓집	NOUN	ncn	_	10	compound	_	Translit=.dae.gas.jib|LTranslit=.dae.gas.jib
+10	행랑채처럼	행랑채+처럼	ADV	ncn+jca	_	11	advcl	_	Translit=.haeng.rang.chae.cheo.reom|LTranslit=.haeng.rang.chae+.cheo.reom
+11	돼있는	되+어+있+는	VERB	pvg+ecx+px+etm	_	12	acl	_	Translit=.dwae.iss.neun|LTranslit=.doe+.eo+.iss+.neun
+12	그곳에	그곳+에	ADV	npd+jca	_	14	obl	_	Translit=.geu.gos.e|LTranslit=.geu.gos+.e
+13	코를	코+를	NOUN	ncn+jco	_	14	obj	_	Translit=.ko.reul|LTranslit=.ko+.reul
+14	묻었답니다	묻+었+답니다	VERB	pvg+ep+ef	_	0	root	_	SpaceAfter=No|Translit=.mud.eoss.dab.ni.da|LTranslit=.mud+.eoss+.dab.ni.da
+15	.	.	PUNCT	sf	_	14	punct	_	Translit=.|LTranslit=.
+

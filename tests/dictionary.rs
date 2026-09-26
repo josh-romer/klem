@@ -1611,6 +1611,51 @@ fn adverb_derivation_keeps_lexical_readings_and_filters_on_predicate_bases() {
 }
 
 #[test]
+fn reporting_endings_preserve_dictionary_filtered_cli_paths() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-reporting.json")],
+        dir.db(),
+        "reporting-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemma, ending) in [
+        ("넘었답니다", "넘다", "답니다"),
+        ("묻었답니다", "묻다", "답니다"),
+        ("좋았답니다", "좋다", "답니다"),
+        ("산답니다", "살다", "는답니다"),
+        ("먹는답니다", "먹다", "는답니다"),
+        ("물어본답니다", "물어보다", "는답니다"),
+        ("도우랍니다", "돕다", "으랍니다"),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a.lemmas.len() == 1
+                && a.lemmas[0].text == lemma
+                && annotation.has_match(&a.lemmas[0], true)
+                && a.morphemes.last().is_some_and(|m| m.form == ending)),
+            "{word}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}
+
+#[test]
 fn shortened_hada_matches_full_lemmas_in_cli_and_pos_filtering() {
     let dir = Scratch::new();
     import_krdict(

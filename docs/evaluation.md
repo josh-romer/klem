@@ -719,3 +719,30 @@ The full-dictionary packaged app passes five normalized paths and their -기
 source links, four rejected restorations, preservation of the 이시가키 nominal
 alternative, and desktop/mobile checks without JavaScript errors or overflow.
 Frontend production source is unchanged. Other Nix platforms were not executed.
+
+## Polite informative and reported endings (COV-017m)
+
+[The comparison](reporting-evaluation.json) records four additional development
+recoveries: KAIST 넘었답니다/묻었답니다 and GSD 물어본답니다/좋았답니다. Four
+complete, byte-identical annotated sentences supply offline regression evidence.
+Development misses are **145 KAIST and 169 GSD**, without lost grouped matches
+or recovered component sets. All thirty existing stress fingerprints remain
+unchanged; historical corpus baselines are not regenerated.
+
+Fourteen source-backed cases bring the ledger to **348 cases, 196 required and
+158 forbidden judgments**. Tests cover present/tense allomorphs, honorific and
+retrospective boundaries, copulas, known adjective auxiliaries and -답다,
+reported-command homonyms, grouped auxiliary and lexical alternatives, and NFD.
+The 225-form teaching catalog adds four canonical labels with nine attributed
+source entries. The grammar fixture now has 272 entries, 271 supporting the
+catalog plus the pre-existing propositive allomorph entry. An eleven-entry
+lexical fixture supports dictionary/CLI parity. These are source-backed agent
+judgments, pending independent linguistic review; gold recovery is not a
+precision score or contextual sense judgment.
+
+Formatting, the Rust suite, Clippy, all 66,570 frozen cases, frontend production
+build, complete browser/HTTP suite, `nix flake check` and `nix build .#web` pass
+on x86_64-linux. The full-dictionary packaged app passes eight choices (including
+both 먹으시랍니다 readings), their four grammar-source families, four rejected
+paths, and desktop/mobile checks without JavaScript errors or overflow. Other
+Nix platforms were not executed on this host.

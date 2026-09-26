@@ -121,6 +121,9 @@ try {
   const hadaKi = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-hada-ki.json"), "utf8"),
   );
+  const reporting = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-reporting.json"), "utf8"),
+  );
   const colloquialCopulas = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-colloquial-copulas.json"), "utf8"),
   );
@@ -206,6 +209,7 @@ try {
       ...colloquialCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...adverbRoots.LexicalResource.Lexicon.LexicalEntry,
       ...hadaKi.LexicalResource.Lexicon.LexicalEntry,
+      ...reporting.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -580,6 +584,35 @@ try {
     assert.ok(choice, word);
     await breakdown.getByRole("combobox").selectOption(choice);
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+  }
+  for (const [word, expected, form, label, id] of [
+    ["넘었답니다", ["넘", "었", "답니다"], "답니다", "Polite information / report", 81393],
+    ["산답니다", ["살", "는답니다"], "는답니다", "Polite information / report", 81389],
+    ["먹는답니다", ["먹", "는답니다"], "는답니다", "Polite information / report", 81389],
+    ["학생이랍니다", ["학생", "이", "랍니다"], "랍니다", "Polite information / report", 76427],
+    ["의사랍니다", ["의사", "이", "랍니다"], "랍니다", "Polite information / report", 76427],
+    ["먹었더랍니다", ["먹", "었", "더", "랍니다"], "랍니다", "Polite information / report", 76427],
+    ["먹으랍니다", ["먹", "으랍니다"], "으랍니다", "Reported command / request", 81412],
+    ["먹으시랍니다", ["먹", "시", "으랍니다"], "으랍니다", "Reported command / request", 81412],
+    ["먹으시랍니다", ["먹", "시", "랍니다"], "랍니다", "Polite information / report", 76427],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    const choice = await breakdown.getByRole("combobox").locator("option").evaluateAll(
+      (options, text) => options.find(o => o.textContent.replace(/^\d+\. /, "") === text)?.value,
+      expected.join(" + "),
+    );
+    assert.ok(choice, word);
+    await breakdown.getByRole("combobox").selectOption(choice);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+    await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).click();
+    await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
+    const data = await (await post("analyze", {text: word})).json();
+    assert.ok(data.grammar[`-${form}`].some(e => e.id === `krdict:${id}`));
+    if (form === "는답니다") {
+      assert.ok(data.grammar["-는답니다"].some(e => e.id === "krdict:81377"));
+      assert.ok(data.grammar["-는답니다"].some(e => e.id === "krdict:86633"));
+    }
   }
   for (const [word, expected] of [
     ["같이", ["같", "이"]],

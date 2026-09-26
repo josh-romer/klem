@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–l/018a–d/019a–c/020a–c/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–m/018a–d/019a–c/020a–c/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -210,7 +210,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–l implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–m implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -377,6 +377,19 @@ review remains open under the completion review below.
   for 63 surfaces and the reviewed 먹었었겠더라 fingerprint: twenty invalid
   command paths become ten factual paths, preserving bundled 더라. No frozen
   corpus baseline is changed. See [scope and sources](rules.md#factual-라-family-and-command-prefinal-licenses-cov-017l).
+- [x] **COV-017m — Polite informative and reported endings.** 답니다,
+  present-verb ㄴ/는답니다, copular/factual 랩니다 and reported-command
+  (으)랍니다 now retain distinct canonical paths. Literal/attached/vowel
+  boundaries, honorific/past/modal/retrospective licenses, known adjective
+  auxiliary/suffix restrictions and copula roles are checked. No implicit 하다
+  is inserted; informative/reported senses remain dictionary alternatives.
+  Evidence: [boundary and composition tests](../tests/reporting_endings.rs),
+  fourteen `reporting-*` ledger cases, four complete annotated sentences,
+  dictionary/CLI parity, and browser alternatives with nine primary-source
+  entries. The [evaluation](reporting-evaluation.json) records four development
+  recoveries with no lost groups/component sets or changed stress fingerprints.
+  Arbitrary lexical head verb/adjective classes remain unknown; other quoted
+  contractions remain open. See [scope](rules.md#polite-informative-and-reported-endings-cov-017m).
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–d implement post-ending, outer choice, emphatic,
   concessive and definition particles, including nominal (이)라고 alternatives.**
@@ -625,7 +638,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 221 currently emitted canonical grammar forms.** The initial catalog
+  for all 225 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

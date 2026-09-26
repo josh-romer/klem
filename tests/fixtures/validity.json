@@ -2,6 +2,12 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "reporting-declarative": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81393",
+    "reporting-present": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81389",
+    "reporting-attached": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81377",
+    "reporting-copular": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76427",
+    "reporting-command": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81412",
+
     "hada-ki-deletion": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6606&mn_id=62&pageIndex=1",
     "hada-ki-aspiration": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=320083",
 
@@ -526,6 +532,20 @@
     {"id": "hada-ki-wrong-stop", "surface": "생각키", "judgments": [{"id": "forbidden", "lemmas": ["생각하다"], "morphemes": ["기"], "verdict": "forbidden", "reason": "Stop-final 생각 deletes 하 rather than aspirating 기.", "source": "hada-ki-deletion"}]},
     {"id": "hada-ki-wrong-vowel", "surface": "강구기", "judgments": [{"id": "forbidden", "lemmas": ["강구하다"], "morphemes": ["기"], "verdict": "forbidden", "reason": "Vowel-final 강구 requires the aspirated 키 in this contraction.", "source": "hada-ki-aspiration"}]},
     {"id": "hada-ki-wrong-sonorant", "surface": "조성기로", "judgments": [{"id": "forbidden", "lemmas": ["조성하다"], "morphemes": ["기로"], "verdict": "forbidden", "reason": "Sonorant-final 조성 requires 키로 rather than deleting all of 하.", "source": "hada-ki-aspiration"}]},
-    {"id": "hada-ki-no-base", "surface": "키", "judgments": [{"id": "forbidden", "lemmas": ["하다"], "morphemes": ["기"], "verdict": "forbidden", "reason": "This contraction requires a preceding base; do not restore 하 from standalone 키.", "source": "hada-ki-aspiration"}]}
+    {"id": "hada-ki-no-base", "surface": "키", "judgments": [{"id": "forbidden", "lemmas": ["하다"], "morphemes": ["기"], "verdict": "forbidden", "reason": "This contraction requires a preceding base; do not restore 하 from standalone 키.", "source": "hada-ki-aspiration"}]},
+    {"id": "reporting-past", "surface": "넘었답니다", "judgments": [{"id": "required", "lemmas": ["넘다"], "morphemes": ["었", "답니다"], "verdict": "required", "reason": "Past 었 precedes the informative/reported ending.", "source": "reporting-declarative"}]},
+    {"id": "reporting-present", "surface": "먹는답니다", "judgments": [{"id": "required", "lemmas": ["먹다"], "morphemes": ["는답니다"], "verdict": "required", "reason": "The non-ㄹ consonant allomorph attaches literally.", "source": "reporting-present"}]},
+    {"id": "reporting-rieul", "surface": "산답니다", "judgments": [{"id": "required", "lemmas": ["살다"], "morphemes": ["는답니다"], "verdict": "required", "reason": "Attached ㄴ replaces ㄹ in this present-verb allomorph.", "source": "reporting-attached"}]},
+    {"id": "reporting-copula", "surface": "학생이랍니다", "judgments": [{"id": "required", "lemmas": ["학생", "이다"], "morphemes": ["랍니다"], "verdict": "required", "reason": "Explicit copula precedes informative 랩니다; no implicit 하다 is added.", "source": "reporting-copular"}]},
+    {"id": "reporting-omitted-copula", "surface": "의사랍니다", "judgments": [{"id": "required", "lemmas": ["의사", "이다"], "morphemes": ["랍니다"], "verdict": "required", "reason": "Vowel-final nominal permits the existing omitted-copula boundary.", "source": "reporting-copular"}]},
+    {"id": "reporting-command", "surface": "먹으랍니다", "judgments": [{"id": "required", "lemmas": ["먹다"], "morphemes": ["으랍니다"], "verdict": "required", "reason": "Reported command has the consonant 으랍니다 allomorph.", "source": "reporting-command"}]},
+    {"id": "reporting-factual-honorific", "surface": "먹으시랍니다", "judgments": [{"id": "required", "lemmas": ["먹다"], "morphemes": ["시", "랍니다"], "verdict": "required", "reason": "The informative homonym explicitly licenses honorific 시.", "source": "reporting-copular"}]},
+    {"id": "reporting-retrospective", "surface": "먹었더랍니다", "judgments": [{"id": "required", "lemmas": ["먹다"], "morphemes": ["었", "더", "랍니다"], "verdict": "required", "reason": "Retrospective 더 precedes informative 랩니다.", "source": "reporting-copular"}]},
+    {"id": "reporting-wrong-vowel", "surface": "가는답니다", "judgments": [{"id": "forbidden", "lemmas": ["가다"], "morphemes": ["는답니다"], "verdict": "forbidden", "reason": "Open 가 requires attached ㄴ rather than separate 는.", "source": "reporting-present"}]},
+    {"id": "reporting-no-vowel-irregular", "surface": "도운답니다", "judgments": [{"id": "forbidden", "lemmas": ["돕다"], "morphemes": ["는답니다"], "verdict": "forbidden", "reason": "Present attached ㄴ is not a vowel-boundary ㅂ recovery.", "source": "reporting-attached"}]},
+    {"id": "reporting-present-past", "surface": "먹었는답니다", "judgments": [{"id": "forbidden", "lemmas": ["먹다"], "morphemes": ["었", "는답니다"], "verdict": "forbidden", "reason": "Past uses 답니다, not the present-verb 는답니다 allomorph.", "source": "reporting-present"}]},
+    {"id": "reporting-declarative-retrospective", "surface": "먹더답니다", "judgments": [{"id": "forbidden", "lemmas": ["먹다"], "morphemes": ["더", "답니다"], "verdict": "forbidden", "reason": "Retrospective 더 is not licensed before 답니다.", "source": "reporting-declarative"}]},
+    {"id": "reporting-command-past", "surface": "먹었으랍니다", "judgments": [{"id": "forbidden", "lemmas": ["먹다"], "morphemes": ["었", "으랍니다"], "verdict": "forbidden", "reason": "The quoted command does not inherit past tense.", "source": "reporting-command"}]},
+    {"id": "reporting-consonant-copula", "surface": "학생랍니다", "judgments": [{"id": "forbidden", "lemmas": ["학생", "이다"], "morphemes": ["랍니다"], "verdict": "forbidden", "reason": "Consonant-final 학생 does not license omitted 이.", "source": "reporting-copular"}]}
   ]
 }

@@ -3,6 +3,36 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn polite_reporting_endings_recover_annotated_predicates() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-reporting.conllu").as_slice(),
+            vec![
+                ("id:M2TA_069-s20/11", "넘었답니다", "넘다"),
+                ("id:M2TA_069-s27/14", "묻었답니다", "묻다"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-reporting.conllu").as_slice(),
+            vec![
+                ("id:dev-s287/5", "물어본답니다", "물어보다"),
+                ("id:dev-s650/8", "좋았답니다", "좋다"),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "reporting").unwrap();
+        for (id, surface, lemma) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn shortened_hada_nominalizations_recover_annotated_predicates() {
     for (corpus, input, id, surface, lemma) in [
         (

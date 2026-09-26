@@ -136,6 +136,9 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const honorificCopulas = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-honorific-copulas.json"), "utf8"),
+  );
   const omittedConnectives = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-omitted-connectives.json"), "utf8"),
   );
@@ -238,6 +241,7 @@ try {
       ...destinationParticles.LexicalResource.Lexicon.LexicalEntry,
       ...enumerativeDa.LexicalResource.Lexicon.LexicalEntry,
       ...omittedConnectives.LexicalResource.Lexicon.LexicalEntry,
+      ...honorificCopulas.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -616,6 +620,12 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["선수셨다", ["선수", "이", "시", "었", "다"], "다", "Plain / dictionary ending", 85041],
+    ["의사시니까", ["의사", "이", "시", "으니까"], "으니까", "Reason / premise", 80137],
+    ["의사셨어요", ["의사", "이", "시", "었", "어요"], "어요", "Polite informal", 86571],
+    ["의사세요", ["의사", "이", "으세요"], "으세요", "Polite statement / question / request", 86609],
+    ["의사십니까", ["의사", "이", "시", "습니까"], "습니까", "Formal polite question", 79402],
+    ["배우셨었다", ["배우", "이", "시", "었", "었", "다"], "다", "Plain / dictionary ending", 85041],
     ["노동자니까", ["노동자", "이", "으니까"], "으니까", "Reason / premise", 80137, "ending"],
     ["어디니", ["어디", "이", "니"], "니", "Question / reason / statement", 76426, "ending"],
     ["의사고", ["의사", "이", "고"], "고", "Connective / final", 78583, "ending"],
@@ -691,6 +701,18 @@ try {
     await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
     assert.ok(data.grammar[kind === "particle" ? form : `-${form}`].some(e => e.id === `krdict:${id}`));
+    if (word === "선수셨다") {
+      const selected = data.records[0].analysis.analyses[Number(choice)];
+      assert.ok(selected.rules.includes("copula.omitted_honorific"));
+      assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+      assert.ok(!data.records[0].analysis.analyses.some(a => a.lemmas.some(l => l.text === "선수이다")));
+      await breakdown.getByRole("button", {name: "시 Subject honorific", exact: true}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes("ParaWordNo=80330"));
+      assert.ok(data.grammar["-시-"].some(e => e.id === "krdict:80329"));
+    }
+    if (word === "의사세요") {
+      assert.ok(data.grammar["-으세요"].some(e => e.id === "krdict:86558"));
+    }
     if (word === "저기다" && kind === "particle") {
       assert.ok(data.grammar["다"].some(e => e.id === "krdict:85738"));
       const selected = data.records[0].analysis.analyses[Number(choice)];

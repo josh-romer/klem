@@ -3,6 +3,33 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn honorific_copula_omission_preserves_annotated_lexical_verbs() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-honorific-copulas.conllu").as_slice(),
+            vec![("id:MH2_0209-s66/14", "마셨다", "마시다")],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-honorific-copulas.conllu").as_slice(),
+            vec![
+                ("id:dev-s236/10", "주셨습니다", "주다"),
+                ("id:dev-s932/14", "주셨어요", "주다"),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "honorific-copulas").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [expected]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn omitted_connectives_recover_saved_groups_and_keep_annotation_caveats() {
     for (corpus, input, cases) in [
         (

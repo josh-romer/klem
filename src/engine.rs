@@ -244,9 +244,19 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
                 choices.push((r, 0, pasts, "시", "prefinal.honorific"));
             }
         }
+        // Honorific 시 can follow an omitted copula after a vowel-final
+        // nominal. Recover at this boundary, before the normal tense stack;
+        // predicate irregulars must not alter the nominal itself.
+        for r in grammar::recover(stem, "시", Boundary::OmittedCopula(0)) {
+            choices.push((r, 0, pasts, "시", "prefinal.honorific"));
+        }
     }
     for (r, next, count, form, rule) in choices {
         for mut p in prefinals(&r.stem, next, count, memo) {
+            if form == "시" && r.rules.iter().any(|r| r == "copula.omitted_ending") {
+                p.copula_only = true;
+                p.rules.push("copula.omitted_honorific".into());
+            }
             p.copula_contracted |=
                 r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");
             p.morphs.push(morph(form, MorphemeKind::Prefinal));
@@ -279,7 +289,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
     for ending in grammar::matching_endings(word) {
         for r in grammar::recover(word, ending.suffix, ending.boundary) {
             for mut p in prefinals(&r.stem, 4, 0, &mut memo) {
-                p.copula_only = matches!(ending.boundary, Boundary::OmittedCopula(_));
+                p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
                 if ending.form == "요" {
                     // This connective attaches to bare 이다/아니다 only.
                     // A lexical stem ending in 이 is not sufficient evidence.

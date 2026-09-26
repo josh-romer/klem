@@ -329,3 +329,20 @@ prior candidates and hashes retained. Omitted honorific prefinals, auxiliary
 left-class eligibility, internal 는 before 싶다, and broader copula bases remain
 visible gaps. The absence of 엘리트주의 in the pinned dictionary is recorded
 separately from successful raw morphology recovery.
+
+
+## Honorific copula omission (COV-020f)
+
+[The comparison](honorific-copula-evaluation.json) records NIKL's explicit
+선수셨다 example and scoped reviews of 시/으시 (80330/80329) and 세요/으세요
+(86558/86609). Restoration before honorific 시 preserves the existing tense stack
+and known copula ending restrictions. The restored stem remains copula-only;
+short 세요 stays bundled. The inventory now has **46 scoped reviews and 669
+entries without a disposition**.
+
+Development misses remain **127 KAIST and 162 GSD**, without lost gold groups or
+component sets. Three selected corpus sentences preserve lexical verb readings;
+none is relabeled as a copula. The report records 72 added analyses on 66 surfaces
+and one changed stress fingerprint with prior candidates and hashes retained.
+Unknown nominal hypotheses and contextual honorific suitability remain unjudged.
+Other prefinal omissions and broader auxiliary restrictions remain open.

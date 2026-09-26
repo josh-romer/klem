@@ -1032,3 +1032,35 @@ x86_64-linux; other declared platforms were not executed. The final packaged app
 with the full dictionary passes twelve normalized reading choices, related
 allomorph source lookup, six forbidden paths, missing-vocabulary empty state,
 and desktop/mobile inspection without JavaScript errors or overflow.
+
+## Honorific copula omission (COV-020f)
+
+[The comparison](honorific-copula-evaluation.json) records recovery of the omitted
+copula before honorific 시, including 선수셨다 and 의사셨어요, and the bundled
+short ending in 의사세요. Across 66 audited surfaces, **72 analyses are added
+and none removed**, with no changes to existing provenance. Development recovery
+is unchanged at **127 KAIST and 162 GSD misses**. Three complete annotated
+sentences preserve lexical 마시다/주다 alternatives; these are preservation
+checks, not new gold recoveries or held-out precision evidence.
+
+The candidate ledger has **529 cases, 297 required and 238 forbidden judgments**,
+including 26 new cases. The catalog retains **256 canonical forms**, with 306
+source entries and 307 grammar-fixture entries. Four scoped source reviews bring
+the inventory to **46 scoped entries and 669 without a disposition**. Honorific
+referent suitability, other omitted prefinals and broader copula/auxiliary
+attachment restrictions remain unresolved.
+
+One stress fingerprint changes: 들으셨겠어요 gains two unverified nominal
+들으 + 이다 + 시 + 었 + 겠 paths, with bundled 어요 or separated 어 + 요.
+Every prior candidate, provenance and hash is retained. The other 29 fingerprints
+and historical corpus baselines are unchanged.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, stress
+checks, the 1,024-syllable memory test, frontend production build and complete
+browser/HTTP suite pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared platforms were not executed. The packaged app with
+the full dictionary passes ten normalized reading choices, honorific/polite
+allomorph source links, six forbidden paths and foreign-pronunciation conditions.
+Desktop and mobile screenshots were inspected; no JavaScript errors or horizontal
+overflow occurred. Independent Korean-language review and fresh-passage
+evaluation remain pending.

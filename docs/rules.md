@@ -1597,5 +1597,49 @@ batch does not certify those generated paths. Internal 는 before 싶다 remains
 missing (학생이고는싶다 / 의사고는싶다), while existing 도 composition works.
 Other omitted ending and prefinal families remain COV-020 work. NIKL's valid
 honorific omission example 선수셨다 is not entered as a forbidden regression
-merely because that recovery has not yet been implemented. Independent Korean
-review remains pending.
+merely because that recovery was not included in COV-020e. COV-020f below
+implements that honorific omission. Independent Korean review remains pending.
+
+
+## Honorific copula omission (COV-020f)
+
+[NIKL explicitly permits 선수셨다](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=309714)
+as a shortened 선수이셨다 after a vowel-final nominal. The engine now recovers
+that omitted copula at the honorific 시 boundary, before the existing prefinal
+stack. Thus 선수셨다 has 선수 + 이다 + 시 + 었 + 다, and 의사시니까 has
+의사 + 이다 + 시 + 으니까. The uncontracted 시었 spelling, double past,
+modal/retrospective order, and the existing ending licenses remain available.
+
+Restored 이 is tagged for copula-only expansion. That flag survives final ending
+recovery, nominalization and later auxiliary composition, preventing a fabricated
+의사이다 predicate in 의사셨다 or 의사셨기다. The boundary checks the original
+nominal and does not apply verb irregulars: 학생셨다 cannot recover 학생 + 이다,
+and 사셨다 does not license 살 + 이다 through ㄹ deletion. Existing 살다/돕다
+verb paths remain. Non-Hangul bases retain the explicit vowel-pronunciation
+condition, independently of later 시어 contractions. Explicit ABC이셨다 needs
+no such assumption.
+
+KRDict [-시- 80330](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80330)
+licenses copula attachment; [-으시- 80329](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80329)
+retains the full lexical-predicate allomorph. The catalog now records both.
+The separate bundled [-세요 86558](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86558)
+also licenses a copula; 의사세요 gains 의사 + 이다 + 으세요, with the short
+source mapped alongside [-으세요 86609](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86609).
+This does not introduce generic 시어-to-세 recovery. The existing 시 + 어요
+path remains available for 셔요. Bare-bundle restrictions and known copula ending
+restrictions still reject the reviewed past/세요 and honorific/verbal-present
+combinations. Honorific referent suitability and sentence mood remain contextual.
+
+Nominalizations, an outer copula, negative auxiliaries and other already licensed
+connectors compose. This is structural coverage, not evidence that every nominal
+referent can appropriately be honored. Broader auxiliary left-class constraints
+remain COV-019 work. Other copula prefinal omissions remain COV-020 work.
+
+[The comparison](honorific-copula-evaluation.json) records 72 additions over
+66 audited surfaces, no removed candidates/provenance, and unchanged development
+recovery. One stress fingerprint gains two unknown nominal 들으 + copula
+hypotheses while retaining existing verb readings; prior hashes are preserved.
+Three complete annotated sentences protect 마셨다, 주셨습니다 and 주셨어요
+as lexical verb cases. These are preservation regressions, not new corpus gold
+recoveries or a precision estimate. Independent Korean-language review remains
+pending.

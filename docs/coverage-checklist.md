@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–h/019a–d/020a–e/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–h/019a–d/020a–f/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records forty-two scoped
-  dispositions from COV-016/017m–n/017p/018e–h/019d/020d–e; 673 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records forty-six scoped
+  dispositions from COV-016/017m–n/017p/018e–h/019d/020d–f; 669 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -621,7 +621,8 @@ review remains open under the completion review below.
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
   finite 거/것 nominal alternatives; COV-020d adds enumerative -요 and
-  COV-020e adds reviewed consonant-initial ending families.**
+  COV-020e adds reviewed consonant-initial ending families; COV-020f adds
+  honorific omission and short 세요.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -692,8 +693,24 @@ review remains open under the completion review below.
   GSD grouped gains; the latter include an incidental place-name annotation
   match, not a linguistic improvement. Four stress changes retain every previous
   candidate and hash, with unknown nominal/auxiliary hypotheses explicitly
-  unjudged. Honorific/prefinal omission (e.g. 선수셨다), further endings and
-  copula/auxiliary eligibility remain open. See [scope and sources](rules.md#further-omitted-copulas-and-connective-eun-cov-020e018h).
+  unjudged. COV-020f separately adds honorific omission; other prefinals,
+  further endings and copula/auxiliary eligibility remain open. See [scope and sources](rules.md#further-omitted-copulas-and-connective-eun-cov-020e018h).
+- [x] **COV-020f — Honorific copula omission and short 세요.** 선수셨다
+  restores 선수 + 이다 + 시 + 었 + 다; 의사시니까 and 의사세요 retain
+  represented copulas. Restoration occurs before the existing prefinal stack,
+  preserving contracted/uncontracted past, double past, modal/retrospective order,
+  ending restrictions, nominalizations and licensed particle/auxiliary links.
+  Consonant-final nouns cannot borrow predicate irregulars; restored 이 cannot
+  become an invented lexical predicate, including through an outer copula.
+  Evidence: [boundary/parity tests](../tests/honorific_copulas.rs), twenty-six
+  `honorific-copula-*` judgments, three unchanged annotated verb sentences,
+  dictionary/CLI parity and browser normalized/source checks. The
+  [comparison](honorific-copula-evaluation.json) records all additions and
+  unchanged development recall. One stress fingerprint gains two unjudged nominal
+  hypotheses; every prior candidate and hash remains. The short 세요 component
+  stays bundled; generic 시어-to-세 recovery, other prefinal omissions, contextual
+  honorific suitability and broader auxiliary restrictions remain open. See
+  [scope and sources](rules.md#honorific-copula-omission-cov-020f).
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without

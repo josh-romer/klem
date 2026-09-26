@@ -567,6 +567,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("거든요", "거든요", 0),
             ("네", "네", 0),
             ("네요", "네요", 0),
+            ("세요", "으세요", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -1082,6 +1083,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",
         "copula.omitted_ending" => {
             "Restore omitted copular 이 after a vowel-final nominal before a reviewed ending; the nominal is not a conjugated verb stem."
+        }
+        "copula.omitted_honorific" => {
+            "Restore omitted copular 이 before honorific 시 after a vowel-final nominal; preserve the normal prefinal order and ending restrictions."
         }
         "nominal.colloquial_geot" => {
             "Expand the colloquial 거/이거/그거/저거 nominal to 것/이것/그것/저것 before a copula; preserve the short lexical alternative."

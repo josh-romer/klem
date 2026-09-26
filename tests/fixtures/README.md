@@ -595,3 +595,19 @@ GSD development sentences dev-s461, dev-s570 and dev-s842. All are byte-identica
 excerpts with original annotations, under CC BY-SA 4.0. dev-s570 uses the place
 name 테르니; matching its existing 테르 + 이 + 니 annotation is incidental,
 not a claimed linguistic improvement. Source/license links above apply.
+
+
+`krdict-honorific-copulas.json` contains fourteen lexical entries (15983, 17203,
+20256, 24079, 31670, 58204, 59251, 62050, 62171, 62657, 62948, 69579, 71875,
+86232) from the September 2026 NIKL KRDict export under CC BY-SA 2.0 KR.
+Grammar entries 80329 and 86558 are added to the grammar-label fixture, retaining
+all earlier entries unchanged. Adaptation: retain English equivalents and the
+first example group per sense, omit WordForm/RelatedForm and global metadata,
+exclude idiom subentries, and reformat JSON. Source and license links above apply.
+
+`kaist-honorific-copulas.conllu` retains complete UD Korean KAIST 2.15 development
+sentence MH2_0209-s66. `gsd-honorific-copulas.conllu` retains complete GSD development
+sentences dev-s236 and dev-s932. They are byte-identical excerpts with original
+annotations, under CC BY-SA 4.0. Their 마셨다, 주셨습니다 and 주셨어요 tokens
+protect existing lexical readings as new copula hypotheses are introduced. They
+are not relabeled or presented as new copula gold. Source/license links above apply.

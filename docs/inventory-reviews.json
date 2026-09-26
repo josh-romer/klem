@@ -1756,6 +1756,186 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:80330",
+      "source_sha256": "3e70a2f12f768edca3329e823b730c3f0a1b810f0804fa53faeb67906b3d1805",
+      "status": "scoped",
+      "checklist": [
+        "COV-020f"
+      ],
+      "scope": "Honorific 시 after a vowel-final nominal with restored copula. Existing full-form parity, tense/modal/retrospective order, questions, nominalization, licensed particles and auxiliaries remain. Known copula ending restrictions still apply.",
+      "remaining": "Honorific referent suitability, lexical identity, contextual mood, broader auxiliary restrictions and further prefinal omission remain open. This is scoped evidence, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/honorific_copulas.rs",
+          "test": "omitted_honorific_copulas_preserve_full_form_parity_and_prefinal_order"
+        },
+        {
+          "path": "tests/honorific_copulas.rs",
+          "test": "honorific_omission_rejects_wrong_nominal_boundaries_and_known_ending_violations"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "honorific_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/honorific-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "honorific-copula-honorific-cause",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-honorific-past-polite",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-double-past",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-modal-retrospective",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-negative-auxiliary",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-nested-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-outer-polite",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-formal-question",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-past-question",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-repeated-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-wrong-order",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80329",
+      "source_sha256": "f834244901d0d9a70ffe42421641cbf2ed4b0c180cfb572d68c4f6214d765dd5",
+      "status": "scoped",
+      "checklist": [
+        "COV-020f"
+      ],
+      "scope": "Preserve the existing full 으시 allomorph on consonant-final lexical predicates while the new copula-omission path checks the nominal vowel boundary without predicate irregulars. Canonical 시 labels retain both source allomorphs.",
+      "remaining": "Honorific referent suitability, lexical identity, contextual mood, broader auxiliary restrictions and further prefinal omission remain open. This is scoped evidence, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/honorific_copulas.rs",
+          "test": "omitted_honorific_copulas_preserve_full_form_parity_and_prefinal_order"
+        },
+        {
+          "path": "tests/honorific_copulas.rs",
+          "test": "honorific_omission_rejects_wrong_nominal_boundaries_and_known_ending_violations"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "honorific_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/honorific-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "honorific-copula-full-honorific",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86558",
+      "source_sha256": "578eec9563905fd0e5b856abf934560e7b722c400c74e7533261e05aa20f67a8",
+      "status": "scoped",
+      "checklist": [
+        "COV-020f"
+      ],
+      "scope": "Short bundled 세요 after an explicit or vowel-final omitted copula. The ending remains a bundle distinct from 시 + 어요; no generic 시어-to-세 recovery is introduced.",
+      "remaining": "Honorific referent suitability, lexical identity, contextual mood, broader auxiliary restrictions and further prefinal omission remain open. This is scoped evidence, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/honorific_copulas.rs",
+          "test": "omitted_honorific_copulas_preserve_full_form_parity_and_prefinal_order"
+        },
+        {
+          "path": "tests/honorific_copulas.rs",
+          "test": "honorific_omission_rejects_wrong_nominal_boundaries_and_known_ending_violations"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "honorific_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/honorific-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "honorific-copula-polite-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-explicit-polite",
+          "judgment": "path"
+        },
+        {
+          "case": "honorific-copula-past-polite-bundle",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86609",
+      "source_sha256": "ddb5c455321551ddd86bf6e2ecfcdcbac0b457232a624ff64bb35562d3016351",
+      "status": "scoped",
+      "checklist": [
+        "COV-020f"
+      ],
+      "scope": "Preserve full 으세요 on consonant-final lexical predicates and the existing bare-ending restrictions. Canonical 으세요 links the copula-licensed short source separately.",
+      "remaining": "Honorific referent suitability, lexical identity, contextual mood, broader auxiliary restrictions and further prefinal omission remain open. This is scoped evidence, not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/honorific_copulas.rs",
+          "test": "omitted_honorific_copulas_preserve_full_form_parity_and_prefinal_order"
+        },
+        {
+          "path": "tests/honorific_copulas.rs",
+          "test": "honorific_omission_rejects_wrong_nominal_boundaries_and_known_ending_violations"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "honorific_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/honorific-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "honorific-copula-full-polite",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

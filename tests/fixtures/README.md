@@ -163,3 +163,16 @@ under their CC BY-SA 4.0 corpus license. Three selected positive tokens protect
 불렀다가, 침략했다가, and 갔다가. The additional KAIST sentence preserves the
 살겠다가 quoted-subject annotation; it is not labeled a -다가 success. The GSD
 annotation is secondary evidence and the fixtures do not certify all candidates.
+
+`krdict-quoted-questions.json` contains three primary entries (86030, 86031,
+26878) from the same September 2026 KRDict export (National Institute of Korean
+Language, CC BY-SA 2.0 KR). Changes: retain the first sense and English
+equivalents, omit WordForm/RelatedForm and global metadata, exclude idiom
+subentries, and reformat JSON. Source/license links above apply. The fixture
+preserves the quoted-question expressions and lexical 아니다.
+
+`kaist-quoted-questions.conllu` contains complete sentences MH2_0069-s250 and
+MH2_0169-s383, byte-identical excerpts of the pinned KAIST development partition
+linked above. The KAIST attribution and CC BY-SA 4.0 license apply. Selected
+stable tokens protect 아니냐는 and 했느냐는; the fixture does not certify all
+analyses of these sentences.

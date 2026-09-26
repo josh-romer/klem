@@ -365,6 +365,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "는지",
             "냐",
             "냐고",
+            "냐는",
+            "느냐는",
             "니",
             "기",
             "기로",
@@ -670,7 +672,7 @@ pub(crate) fn particle_matches(base: &str, condition: u8) -> bool {
 pub(crate) fn explanation(id: &str) -> Option<&'static str> {
     Some(match id {
         "ending.adnominal_expression" => {
-            "Retain a shortened noun-modifying expression, (으)려는 or 자는, as one grammatical component."
+            "Retain a reviewed shortened noun-modifying expression as one grammatical component."
         }
         "identity" => "Unchanged vocabulary hypothesis; no dictionary verification.",
         "suffix.adverbial.i" => {

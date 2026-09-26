@@ -109,6 +109,12 @@ try {
     ...adverbs.LexicalResource.Lexicon.LexicalEntry,
   );
   const input = resolve(scratch, "combined.json");
+  const quotedQuestions = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-quoted-questions.json"), "utf8"),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...quotedQuestions.LexicalResource.Lexicon.LexicalEntry,
+  );
   const daga = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-daga.json"), "utf8"),
   );
@@ -573,6 +579,10 @@ try {
     ["먹으시려는", ["먹", "시", "으려는"], "으려는", "Intending / about to", 86717],
     ["먹자는", ["먹", "자는"], "자는", "Quoted suggestion", 83896],
     ["먹어보자는", ["먹", "어", "보", "자는"], "자는", "Quoted suggestion", 83896],
+    ["아니냐는", ["아니", "냐는"], "냐는", "Quoted question", 86030],
+    ["했느냐는", ["하", "였", "느냐는"], "느냐는", "Quoted question", 86031],
+    ["먹으시겠냐는", ["먹", "시", "겠", "냐는"], "냐는", "Quoted question", 86030],
+    ["먹어봤느냐는", ["먹", "어", "보", "었", "느냐는"], "느냐는", "Quoted question", 86031],
   ]) {
     await submit(page, word);
     await waitHeading(page, word);

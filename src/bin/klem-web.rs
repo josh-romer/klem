@@ -42,7 +42,10 @@ fn grammar_entry_matches(kind: MorphemeKind, headword: &str, entry: &EntrySummar
             && entry.headword == headword
             && matches!(
                 (headword, entry.id.as_str()),
-                ("-으려는", "krdict:86717") | ("-자는", "krdict:83896")
+                ("-으려는", "krdict:86717")
+                    | ("-자는", "krdict:83896")
+                    | ("-냐는", "krdict:86030")
+                    | ("-느냐는", "krdict:86031")
             ))
 }
 
@@ -382,7 +385,12 @@ mod tests {
     #[test]
     fn expression_lookup_is_limited_to_reviewed_ids_headwords_and_kinds() {
         use super::*;
-        for (headword, id) in [("-으려는", "krdict:86717"), ("-자는", "krdict:83896")] {
+        for (headword, id) in [
+            ("-으려는", "krdict:86717"),
+            ("-자는", "krdict:83896"),
+            ("-냐는", "krdict:86030"),
+            ("-느냐는", "krdict:86031"),
+        ] {
             let mut entry = EntrySummary {
                 id: id.into(),
                 headword: headword.into(),

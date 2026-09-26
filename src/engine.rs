@@ -186,6 +186,15 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // Bound this batch to the prefinals listed by the quoted
+                // expression entries. Retrospective -더냐 remains unreviewed.
+                if matches!(ending.form, "냐는" | "느냐는")
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었" | "겠"))
+                {
+                    continue;
+                }
                 // Reviewed shortened adnominals: intention permits honorific
                 // 시; proposal quotation is currently scoped to bare stems.
                 if (ending.form == "으려는" && p.morphs.iter().any(|m| m.form != "시"))
@@ -196,7 +205,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
-                if matches!(ending.form, "으려는" | "자는") {
+                if matches!(ending.form, "으려는" | "자는" | "냐는" | "느냐는") {
                     p.rules.push("ending.adnominal_expression".into());
                 }
                 p.connector = ending.connector;
@@ -311,6 +320,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "나요"
             | "냐"
             | "냐고"
+            | "냐는"
             | "니"
             | "기"
             | "기로"
@@ -346,6 +356,11 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
 }
 
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
+    // Bare 이다 takes quoted -냐는; -느냐는 may follow its licensed
+    // prefinals, but does not attach directly to the copula.
+    if p.morphs.first().is_some_and(|m| m.form == "느냐는") {
+        return;
+    }
     if let Some(base) = p.stem.strip_suffix('이').filter(|s| !s.is_empty()) {
         let mut nominal_alternatives = nominal_bases(base);
         // Polite/distributive outer particles do not intervene before a copula.

@@ -106,7 +106,8 @@ to disk. Dictionary entry links intentionally open the external source website.
   `glosses` maps entry IDs to English hints or null; `grammar` maps dictionary
   headwords (particles, `-endings`, `-prefinals-`, `-suffixes`) to matching entry summaries.
   Lookup normally requires the matching grammar POS. Scoped bundled expressions
-  -으려는 (86717) and -자는 (83896) also admit their exact KRDict headword/ID
+  -으려는 (86717), -자는 (83896), -냐는 (86030), and -느냐는 (86031)
+  also admit their exact KRDict headword/ID
   with `품사 없음`, only for `Ending` components. This does not enable a general
   unclassified-entry fallback or admit other quoted-expression homonyms.
   The library exposes the same ordering through `Analysis::breakdown()`.
@@ -179,3 +180,9 @@ COV-017c keeps -다가 and -어다가 as separate ending components, labeled
 “While / then” (85740) and “Then / using the result” (86099). Both readings of
 가다가 remain selectable. Past and honorific components remain separate, e.g.
 갔다가 → 가 + 었 + 다가, with the existing normalized-expansion notice.
+
+COV-017d labels -냐는 and -느냐는 “Quoted question”, linking to expression
+entries 86030 and 86031. 아니냐는 displays 아니 + 냐는; 했느냐는 displays
+하 + 였 + 느냐는 with the normalization notice. Honorifics, modals, and
+auxiliary components stay separate. The source's 품사 없음 classification is
+preserved through the same narrow expression lookup exception.

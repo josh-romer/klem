@@ -240,6 +240,17 @@ judgment targets only the erroneous 겠 + 다가 analysis, allowing a future
 quoted-clause rule to recover the lexical group. All 66,570 frozen cases and
 30 output fingerprints pass; historical reports/baselines remain unchanged.
 
+The COV-017d quoted-question batch adds eight ledger cases, reaching **95 cases
+with 56 required and 45 forbidden judgments**. Two complete KAIST development
+sentences protect 아니냐는 (MH2_0069-s250/18) and 했느냐는 (MH2_0169-s383/9).
+The [development comparison](quoted-question-evaluation.json) records two new
+KAIST matches and one GSD match against commit `c2bf2e2`, with no lost groups
+or component sets. Remaining development misses are 339 and 224. The GSD
+뭐하냐는 → 뭐하다 match is an annotation match, not independent lexical or
+contextual validation. All 66,570 frozen cases and 30 output fingerprints pass;
+historical reports and baselines remain unchanged. Full -(으)냐는 adjective
+allomorphy and retrospective -더냐 quotation remain outside this batch.
+
 The fixture is agent-authored against the cited sources; **independent Korean-language
 review is pending**. Reviewers can inspect the queue's complete analyses, add
 source-backed judgments to the fixture, and rerun the command. Adding labels is

@@ -403,3 +403,31 @@ The saved KAIST 살겠다가 case is a quoted clause followed by subject particl
 가. Its annotation is 살+겠+다+가 / pvg+ep+ef+jcs. It must not be counted as
 new -다가 coverage; the source excerpt and targeted forbidden judgment preserve
 this distinction while leaving future quoted-clause recovery possible.
+
+## Quoted questions (COV-017d)
+
+KRDict [-냐는 (86030)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86030)
+and [-느냐는 (86031)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86031)
+describe shortened 냐고 하는 / 느냐고 하는 expressions modifying a following
+noun. Each remains a single canonical `Ending`, with
+`ending.adnominal_expression` provenance and no inferred 하다 lemma.
+Literal attachment keeps ㄷ/ㅂ stems intact (듣냐는/돕느냐는), and the existing
+ㄴ boundary drops ㄹ (사느냐는 → 살다). 사다 remains an alternative.
+
+Both entries list 시/었/겠 attachments. Existing prefinal recovery preserves
+their ordering in 먹으셨겠냐는; auxiliary paths include 먹어봤느냐는 →
+먹다 + 어 + 보다 + 었 + 느냐는. Bare copulas take 냐는, while prefinals
+permit 학생이었느냐는. Known adjective suffix -답다 permits bare 냐는 but
+not bare 느냐는; prefinal 겠 permits 학생답겠느냐는. These are bounded
+structural constraints. The generic predicate role does not independently
+validate lexical verbs versus adjectives, including the 있다/없다 classes
+specified by the 느냐는 entry. Dictionary headword matching is not that check.
+
+The separate [-으냐는 (86032)](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86032)
+family and its adjective boundary recoveries remain unimplemented. Retrospective
+-더냐 quotation also remains for review: this batch recovers only the listed
+시/었/겠 prefinals, without labeling 더냐는 linguistically forbidden.
+No additional outer particles or auxiliary connectors are licensed.
+Expression entries have 문법‧표현 / 품사 없음 metadata; the browser admits
+only the exact canonical headword/ID pairs for `Ending` components. Both receive
+the “Quoted question” label. Other unclassified entries remain excluded.

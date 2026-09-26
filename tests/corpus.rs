@@ -3,6 +3,25 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn annotated_quoted_questions_recover_negative_copula_and_past_groups() {
+    let report = corpus::evaluate(
+        std::io::Cursor::new(include_str!("fixtures/kaist-quoted-questions.conllu")),
+        Corpus::Kaist,
+        "kaist-quoted-questions.conllu",
+    )
+    .unwrap();
+    for (id, surface, lemma) in [
+        ("id:MH2_0069-s250/18", "아니냐는", "아니다"),
+        ("id:MH2_0169-s383/9", "했느냐는", "하다"),
+    ] {
+        let case = report.cases.get(id).expect(id);
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [lemma]);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
 fn annotated_daga_past_cases_recover_gold_without_relabeling_a_quoted_subject() {
     for (corpus, input, cases) in [
         (

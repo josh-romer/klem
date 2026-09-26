@@ -2,6 +2,8 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "quoted-question-nya": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86030",
+    "quoted-question-neunya": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86031",
     "ending-daga": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85740",
     "ending-eodaga": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86099",
     "adnominal-intention": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86717",
@@ -36,6 +38,14 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id":"quoted-question-negative-copula","surface":"아니냐는","judgments":[{"id":"expression-path","lemmas":["아니다"],"morphemes":["냐는"],"verdict":"required","reason":"The expression entry includes this quoted negative-copula question.","source":"quoted-question-nya"}]},
+    {"id":"quoted-question-past","surface":"했느냐는","judgments":[{"id":"expression-path","lemmas":["하다"],"morphemes":["었","느냐는"],"verdict":"required","reason":"Past markers may precede the bundled quoted-question expression.","source":"quoted-question-neunya"}]},
+    {"id":"quoted-question-prefinal-order","surface":"먹으셨겠냐는","judgments":[{"id":"expression-path","lemmas":["먹다"],"morphemes":["시","었","겠","냐는"],"verdict":"required","reason":"Honorific, past and modal recovery retain their existing order before 냐는.","source":"quoted-question-nya"}]},
+    {"id":"quoted-question-rieul","surface":"사느냐는","judgments":[{"id":"expression-path","lemmas":["살다"],"morphemes":["느냐는"],"verdict":"required","reason":"Stem-final ㄹ drops before the ㄴ-initial expression.","source":"quoted-question-neunya"}]},
+    {"id":"quoted-question-retained-rieul","surface":"살느냐는","judgments":[{"id":"expression-path","lemmas":["살다"],"morphemes":["느냐는"],"verdict":"forbidden","reason":"The ㄹ cannot remain at this ㄴ boundary.","source":"quoted-question-neunya"}]},
+    {"id":"quoted-question-bieup","surface":"도우느냐는","judgments":[{"id":"expression-path","lemmas":["돕다"],"morphemes":["느냐는"],"verdict":"forbidden","reason":"The consonant-initial expression does not license ㅂ to 우 recovery.","source":"quoted-question-neunya"}]},
+    {"id":"quoted-question-reu","surface":"몰라냐는","judgments":[{"id":"expression-path","lemmas":["모르다"],"morphemes":["냐는"],"verdict":"forbidden","reason":"The consonant-initial expression does not license the 르 to ㄹ라 vowel-boundary alternation.","source":"quoted-question-nya"}]},
+    {"id":"quoted-question-copula-boundary","surface":"학생이느냐는","judgments":[{"id":"expression-path","lemmas":["학생","이다"],"morphemes":["느냐는"],"verdict":"forbidden","reason":"Bare copulas use 냐는; 느냐는 is not directly attached to 이다 in this path.","source":"quoted-question-neunya"}]},
     {"id":"daga-closed","surface":"먹다가","judgments":[{"id":"ending-path","lemmas":["먹다"],"morphemes":["다가"],"verdict":"required","reason":"The connective attaches directly to the predicate stem.","source":"ending-daga"}]},
     {"id":"daga-past","surface":"갔다가","judgments":[{"id":"ending-path","lemmas":["가다"],"morphemes":["었","다가"],"verdict":"required","reason":"The entry explicitly licenses a preceding past marker and gives 갔다가 as an example.","source":"ending-daga"}]},
     {"id":"daga-honorific-past","surface":"먹으셨다가","judgments":[{"id":"ending-path","lemmas":["먹다"],"morphemes":["시","었","다가"],"verdict":"required","reason":"Honorific and past precede the literal connective.","source":"ending-daga"}]},

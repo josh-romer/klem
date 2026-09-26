@@ -210,7 +210,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a/b/c implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a/b/c/d implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -261,6 +261,20 @@ review remains open under the completion review below.
   checks. See [scope](rules.md#literal-daga-cov-017c) and
   [the development comparison](daga-evaluation.json). Further outer particles,
   joined auxiliary uses of 다가, and short-form 다 sense selection remain open.
+- [x] **COV-017d — Bundled quoted questions -냐는/-느냐는.** Literal
+  attachment supports 아니냐는, 했느냐는, ㄹ deletion in 사느냐는, and
+  honorific/past/modal prefinals in order. Existing auxiliary chains compose;
+  bare copulas use 냐는, while copula + past + 느냐는 remains available.
+  Both expressions retain one `Ending` component without an inferred 하다.
+  Sources: KRDict [-냐는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86030)
+  and [-느냐는](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86031).
+  Evidence: [path/boundary tests](../tests/quoted_questions.rs), eight
+  `quoted-question-*` ledger cases, two complete KAIST sentence fixtures,
+  dictionary/CLI parity, and browser component/source-link checks. See
+  [scope](rules.md#quoted-questions-cov-017d) and
+  [the development comparison](quoted-question-evaluation.json).
+  Full -(으)냐는 adjective allomorphy, retrospective -더냐 quotation, lexical
+  verb/adjective validation, and additional outer particles remain open.
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   Review post-ending 만 (있습니다만), 는/도 after connective endings, chains
   such as 어디까지나/이제부터라도, quotation-particle 라고 versus copula analyses,

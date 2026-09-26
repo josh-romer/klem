@@ -84,6 +84,71 @@ fn plural_nominal_survives_cli_dictionary_filtering() {
 }
 
 #[test]
+fn quoted_questions_preserve_dictionary_groups_and_cli_parity() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[
+            PathBuf::from("tests/fixtures/krdict-quoted-questions.json"),
+            PathBuf::from("tests/fixtures/krdict-conditional.json"),
+            PathBuf::from("tests/fixtures/krdict-particles.json"),
+            PathBuf::from("tests/fixtures/krdict-adnominal.json"),
+        ],
+        dir.db(),
+        "quoted-question-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms) in [
+        ("아니냐는", vec!["아니다"], vec!["냐는"]),
+        ("했느냐는", vec!["하다"], vec!["었", "느냐는"]),
+        ("먹으시겠냐는", vec!["먹다"], vec!["시", "겠", "냐는"]),
+        (
+            "먹어봤느냐는",
+            vec!["먹다", "보다"],
+            vec!["어", "었", "느냐는"],
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    for (word, id) in [("-냐는", "krdict:86030"), ("-느냐는", "krdict:86031")] {
+        assert!(
+            db.lookup(word)
+                .unwrap()
+                .iter()
+                .any(|e| e.id == id && e.pos == "품사 없음")
+        );
+    }
+}
+
+#[test]
 fn daga_and_eodaga_remain_distinct_through_dictionary_and_cli_filtering() {
     let dir = Scratch::new();
     import_krdict(

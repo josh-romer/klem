@@ -48,6 +48,8 @@ export const grammarLabels: Record<string, [string, number]> = {
   "-어다가": ["Then / using the result", 86099],
   "-으려는": ["Intending / about to", 86717],
   "-자는": ["Quoted suggestion", 83896],
+  "-냐는": ["Quoted question", 86030],
+  "-느냐는": ["Quoted question", 86031],
   "-고자": ["Purpose / intention", 78612],
   "-었-": ["Past / completed", 68719],
   "-시-": ["Subject honorific", 80330],

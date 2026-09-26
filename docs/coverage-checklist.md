@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–w/018a–j/019a–f/020a–h/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–w/018a–k/019a–f/020a–h/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,9 +173,10 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 147 scoped
-  dispositions from COV-016/017m–n/017p–w/018e–j/019d–f/020d–h; 568 entries have no disposition in this
-  ledger yet, including entries with implemented behavior elsewhere. Neither
+  The [manual review ledger](inventory-reviews.json) records 152 scoped
+  dispositions from COV-016/017m–n/017p–w/018e–k/019d–f/020d–h; 562 entries have no disposition in this
+  ledger yet, including entries with implemented behavior elsewhere. One additional
+  entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
   [review workflow](inventory-audit.md#persistent-entry-review-queue).
@@ -541,9 +542,10 @@ review remains open under the completion review below.
   [scope and sources](rules.md#literal-doe-and-licensed-eudoe-cov-017w).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–j implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
-  including nominal (이)라고 alternatives and the noun-attached 치고 family.**
+  including nominal (이)라고 alternatives, the noun-attached 치고 family and
+  source-attested case marking after range particles.**
   Remaining: pronouns outside the existing finite paradigms. Preserve homonym-specific
   dictionary labels and review additional ending/particle licenses.
   Include quoted clauses marked as nominals: KAIST MH2_0169-s444/3 살겠다가
@@ -679,6 +681,28 @@ review remains open under the completion review below.
   the existing 교수 + 님 + 들 alternatives survive dictionary-only filtering.
   Further outer particles, repeated topics, nominalized-base semantics and
   contracted 치곤 remain unjudged in the report; COV-018 remains open.
+
+- [x] **COV-018k — Case marking after range particles.** Source examples
+  support 까지 + 가/를/에/로 and 부터 + 가 across the ordinary particle
+  ordering stages. 역사까지를, 여기까지가, 페이지까지로, 정착되기까지에는
+  and 제목부터가 now recover their bases. Existing nominalizations,
+  honorific/plural suffixes, topic/polite particles and attached ㄹ compose;
+  case allomorphs still follow the immediately preceding sound. Evidence:
+  [boundary tests](../tests/range_case_particles.rs), 47 stable ledger cases,
+  dictionary/CLI parity, source-linked browser alternatives and
+  [candidate/source comparison](range-case-evaluation.json). One unchanged
+  annotated sentence preserves the KAIST 역사까지를 gain; another records the
+  separate unjudged COV-018l observation. All prior analyses remain; two existing
+  contracted paths gain provenance only. Other case chains remain open.
+- [ ] **COV-018l — Resolve 마다 + 에 distribution.** The complete KAIST
+  `MH2_0159-s285/15` observation 편마다에도 is retained in
+  [the fixture](../tests/fixtures/kaist-range-case.conllu). Its expected
+  편 + 마다 + 에 + 도 path is not generated. KRDict 마다 specifies noun
+  attachment but does not settle following case marking. The primary paper's
+  abstract links distribution to semantic restrictions; the full distribution
+  evidence and Korean review are still needed. This observed gap is neither
+  a required nor forbidden candidate judgment. See the named followup and
+  bibliography in [the review](range-case-evaluation.json).
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

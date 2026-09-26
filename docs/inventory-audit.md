@@ -17,8 +17,9 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **147 scoped
-reviews**, with **568 entries unreviewed in this ledger**. This does not imply
+The [manual ledger](inventory-reviews.json) currently contains **152 scoped
+reviews**, **one observed gap with unresolved acceptability**, and **562 entries
+unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
 and source-specific candidate judgments. Independent Korean-language review
@@ -475,3 +476,15 @@ source-linked judgments. [The comparison](chigo-evaluation.json) records 113
 added candidates on 70 surfaces, one GSD development gain and thirty unchanged
 stress fingerprints. Other outer particles and nominalization semantics remain
 unjudged; 교수님 has a separately tracked dictionary gap.
+
+
+COV-018k adds five scoped dispositions for 까지, 가, 를, 에 and 로 and
+extends the earlier 부터 review without removing its connector evidence.
+Direct dictionary examples support five range/case pairs. COV-018l separately
+records 마다 as an observed implementation gap with unresolved linguistic
+acceptability; its complete corpus sentence is evidence rather than a required
+or forbidden judgment. The queue now contains **152 scoped entries, one gap
+and 562 unreviewed**. [The comparison](range-case-evaluation.json) records 84
+candidate additions on 65 surfaces and two provenance-only changes, with
+one KAIST gain and unchanged stress fingerprints. Other case combinations,
+contextual restrictions and independent review remain open.

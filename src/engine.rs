@@ -1249,6 +1249,16 @@ fn particle_allowed(
         || (after_case && form == "만")
         || (outer == Some("만") && matches!(form, "까지" | "부터"))
         || (outer == Some("의") && matches!(class, 2 | 3) && form != "의")
+        || outer.is_some_and(|outer| range_case_link(form, outer))
+}
+
+// Source-attested case marking after a range particle. These pairs cross
+// the usual case-before-focus stages; they do not reorder every particle.
+fn range_case_link(inner: &str, outer: &str) -> bool {
+    matches!(
+        (inner, outer),
+        ("까지", "가" | "를" | "에" | "로") | ("부터", "가")
+    )
 }
 
 fn choice_particle(form: &str) -> Option<u8> {
@@ -1517,6 +1527,12 @@ fn nominals(
             );
         }
         for a in &mut out[start..] {
+            if suffixes
+                .first()
+                .is_some_and(|m| range_case_link(particle.form, &m.form))
+            {
+                a.rules.push("particle.range_case".into());
+            }
             if let Some(rule) = particle.pronunciation {
                 a.rules.push(rule.into());
             }

@@ -2740,10 +2740,11 @@
       "source_sha256": "d70733b3fde4feab34310fd75cac8ae931e57d993f53e40dd88b70fe15fddca2",
       "status": "scoped",
       "checklist": [
-        "COV-018i"
+        "COV-018i",
+        "COV-018k"
       ],
-      "scope": "부터 after 어서/고 source examples and corpus-backed 으면서, retaining existing outer particle order.",
-      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
+      "scope": "부터 after 어서/고 source examples and corpus-backed 으면서, retaining existing outer particle order. Also source-attested following 가, with existing composition preserved.",
+      "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification. Further range/case combinations remain unjudged in range-case-evaluation.json.",
       "evidence": [
         {
           "path": "tests/seo_connectives.rs",
@@ -2763,6 +2764,21 @@
         },
         {
           "path": "docs/seo-connective-evaluation.json"
+        },
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_preserve_composition_and_allomorphs"
+        },
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_reject_wrong_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "range_case_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/range-case-evaluation.json"
         }
       ],
       "judgments": [
@@ -2780,6 +2796,50 @@
         },
         {
           "case": "seo-connectives-from-chain",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-24",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-28",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-11",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-13",
           "judgment": "path"
         }
       ]
@@ -8629,6 +8689,318 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:69698",
+      "source_sha256": "c94c4f49f9ef563ce0146cc7b262a64cd776ae4e318f99a46630ccad557cfe14",
+      "status": "scoped",
+      "checklist": [
+        "COV-018k"
+      ],
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
+      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
+      "evidence": [
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_preserve_composition_and_allomorphs"
+        },
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_reject_wrong_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "range_case_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/range-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "range-case-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-3",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:66341",
+      "source_sha256": "d7afd7c8919b7f2d692fbeeace44e96faa1c632d2ee938cedcaa062ddedf0d9c",
+      "status": "scoped",
+      "checklist": [
+        "COV-018k"
+      ],
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
+      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
+      "evidence": [
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_preserve_composition_and_allomorphs"
+        },
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_reject_wrong_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "range_case_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/range-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "range-case-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-6",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-23",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-15",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-17",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85764",
+      "source_sha256": "7ba7680ed1c5e5d14cd9b6bb337b1a5553c69ad94555805a23c935d296b27fe5",
+      "status": "scoped",
+      "checklist": [
+        "COV-018k"
+      ],
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
+      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
+      "evidence": [
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_preserve_composition_and_allomorphs"
+        },
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_reject_wrong_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "range_case_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/range-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "range-case-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-26",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-27",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-12",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-16",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86572",
+      "source_sha256": "2e9d2dc8d037415ef15634fb13214b52648ef86acab8c6fc87d090817df67765",
+      "status": "scoped",
+      "checklist": [
+        "COV-018k"
+      ],
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
+      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
+      "evidence": [
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_preserve_composition_and_allomorphs"
+        },
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_reject_wrong_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "range_case_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/range-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "range-case-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-10",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85761",
+      "source_sha256": "59e52dd1e740805c7b14992f52b32d6d7cfc37f4eda00a848fa83190137c0e51",
+      "status": "scoped",
+      "checklist": [
+        "COV-018k"
+      ],
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
+      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
+      "evidence": [
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_preserve_composition_and_allomorphs"
+        },
+        {
+          "path": "tests/range_case_particles.rs",
+          "test": "range_case_particles_reject_wrong_boundaries"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "range_case_particles_preserve_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/range-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "range-case-required-8",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-required-29",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-9",
+          "judgment": "path"
+        },
+        {
+          "case": "range-case-forbidden-14",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70331",
+      "source_sha256": "7c98e4ad1825c099b2f7b1dfba072f374b7b05e0288fe9ee0ea6bfe0238d14c0",
+      "status": "gap",
+      "checklist": [
+        "COV-018l"
+      ],
+      "scope": "Observed KAIST 편마다에도 → 편 + 마다 + 에 + 도 is currently unrecovered. The complete source sentence and grammar-source review are retained for investigation.",
+      "remaining": "Linguistic acceptability, distribution and register remain unresolved; this observation is neither required nor forbidden. Read full distribution evidence and obtain Korean review before generalizing 마다 + 에.",
+      "evidence": [
+        {
+          "path": "docs/range-case-evaluation.json"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "range_case_particles_recover_annotated_history"
+        },
+        {
+          "path": "tests/fixtures/kaist-range-case.conllu"
+        }
+      ],
+      "judgments": []
     }
   ]
 }

@@ -6786,3 +6786,294 @@ fn chigo_particles_preserve_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn range_case_particles_preserve_dictionary_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-range-case.json")],
+        dir.db(),
+        "range-case-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        (
+            "역사까지를",
+            vec!["역사"],
+            vec!["까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "부산까지를",
+            vec!["부산"],
+            vec!["까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "중기까지를",
+            vec!["중기"],
+            vec!["까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "어디까지가",
+            vec!["어디"],
+            vec!["까지", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "여기까지가",
+            vec!["여기"],
+            vec!["까지", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "사춘기까지가",
+            vec!["사춘기"],
+            vec!["까지", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "오월까지가",
+            vec!["오월"],
+            vec!["까지", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "페이지까지로",
+            vec!["페이지"],
+            vec!["까지", "로"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "번까지로",
+            vec!["번"],
+            vec!["까지", "로"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "6세까지에",
+            vec!["6세"],
+            vec!["까지", "에"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "정착되기까지에는",
+            vec!["정착되다"],
+            vec!["기", "까지", "에", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "되기까지를",
+            vec!["되다"],
+            vec!["기", "까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "이르기까지를",
+            vec!["이르다"],
+            vec!["기", "까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "출발선부터가",
+            vec!["출발선"],
+            vec!["부터", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "제목부터가",
+            vec!["제목"],
+            vec!["부터", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "근본부터가",
+            vec!["근본"],
+            vec!["부터", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "공기부터가",
+            vec!["공기"],
+            vec!["부터", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "체격부터가",
+            vec!["체격"],
+            vec!["부터", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹기부터가",
+            vec!["먹다"],
+            vec!["기", "부터", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹었기까지를",
+            vec!["먹다"],
+            vec!["었", "기", "까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "먹어보기까지를",
+            vec!["먹다", "보다"],
+            vec!["어", "기", "까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생이기까지를",
+            vec!["학생", "이다"],
+            vec!["기", "까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "교수님들까지가",
+            vec!["교수"],
+            vec!["님", "들", "까지", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "학생들부터가",
+            vec!["학생"],
+            vec!["들", "부터", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "ABC까지가",
+            vec!["ABC"],
+            vec!["까지", "가"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "역사까질",
+            vec!["역사"],
+            vec!["까지", "를"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "역사까지를요",
+            vec!["역사"],
+            vec!["까지", "를", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "출발선부터가요",
+            vec!["출발선"],
+            vec!["부터", "가", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "페이지까지로는",
+            vec!["페이지"],
+            vec!["까지", "로", "는"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "6세까지에도",
+            vec!["6세"],
+            vec!["까지", "에", "도"],
+            MorphemeKind::Particle,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        // Numeric/foreign lexical hypotheses are still available without the
+        // dictionary filter; these exact headwords are absent from this fixture.
+        if lemmas == vec!["6세"] || lemmas == vec!["ABC"] {
+            assert!(
+                kept.analyses
+                    .iter()
+                    .all(|a| a.lemmas.iter().all(|l| l.text != lemmas[0]))
+            );
+        } else {
+            assert!(
+                kept.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())
+                    && a.morphemes.last().unwrap().kind == kind
+                    && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+                "{word}: {forms:?}"
+            );
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    let ledger: Value = serde_json::from_str(include_str!("fixtures/validity.json")).unwrap();
+    for case in ledger["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["id"].as_str().unwrap().starts_with("range-case-"))
+    {
+        let word = case["surface"].as_str().unwrap();
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        for judgment in case["judgments"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .filter(|j| j["verdict"] == "forbidden")
+        {
+            let lemmas: Vec<_> = judgment["lemmas"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            let forms: Vec<_> = judgment["morphemes"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect();
+            assert!(
+                !kept.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(lemmas.iter().copied())
+                    && a.morphemes
+                        .iter()
+                        .map(|m| m.form.as_str())
+                        .eq(forms.iter().copied())),
+                "{word}: {forms:?}"
+            );
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

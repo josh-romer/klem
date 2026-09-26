@@ -1539,3 +1539,45 @@ includes the new honorific/plural and annotated-corpus regressions. The packaged
 full-dictionary app passes eight reading selections, source links and all 31
 forbidden paths. Desktop/mobile screenshots were inspected without JavaScript
 errors or horizontal overflow; 아이들치고서 visibly yields 아이 + 들 + 치고서.
+
+
+## Case marking after range particles (COV-018k; COV-018l followup)
+
+[The comparison](range-case-evaluation.json) accounts for **84 added candidates
+on 65 surfaces**, no removed candidates, and two provenance-only changes to
+existing contracted 를 paths. The five reviewed pairs are 까지 + 가/를/에/로
+and 부터 + 가. Sixteen dictionary entries supply direct example evidence,
+separate from the grammar-entry attachment notes. Thirty required and seventeen
+forbidden paths cover composition, immediate allomorphs and invalid boundaries;
+other lexical/compositional hypotheses remain unjudged.
+
+KAIST **역사까지를 → 역사** newly matches. Remaining development misses are
+**111 KAIST and 154 GSD**, with no lost gold groups or component sets.
+Mean candidates are 5.835419 and 5.370007 respectively. All thirty stress
+fingerprints and historical corpus baselines remain unchanged. Two complete
+unchanged KAIST sentences preserve the gain and the separate unjudged
+편마다에도 observation. The latter is not silently counted as implemented or
+converted into a forbidden judgment; its distribution remains COV-018l.
+
+The 47 new cases bring the ledger to **1,468 cases, 838 required and 636
+forbidden judgments**. The lexical fixture retains 37 entries and all their
+homonyms/senses. The 274-form grammar catalog is unchanged. Five new scoped
+reviews, an extended 부터 review and one explicit 마다 gap bring the inventory
+to **152 scoped entries, one gap and 562 unreviewed**. The gap's linguistic
+acceptability still needs review; dictionary absence and raw hypotheses for
+6세/ABC also remain separate from correctness.
+
+Formatting, full Rust tests, Clippy, all **66,570 frozen corpus cases**,
+stress/memory regressions, frontend production build, browser/HTTP checks and
+inventory verification pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared systems were not executed. The final Nix run also
+includes the new annotated-corpus test. The packaged full-dictionary app passes
+eight reading selections, source links and all 17 forbidden paths. Desktop/mobile
+screenshots were inspected without JavaScript errors or horizontal overflow;
+역사까지를 visibly yields 역사 + 까지 + 를 under dictionary-only filtering.
+
+An additional local debug probe on synthetic 학교 + repeated 까지가 inputs
+completed at 26/194/770 syllables, yielding 18/130/514 candidates. The report
+records single-run timings; these unjudged inputs check termination and growth,
+not linguistic accuracy or novel throughput. Fresh-passage evaluation and
+independent Korean review remain open.

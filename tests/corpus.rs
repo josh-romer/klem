@@ -1540,3 +1540,20 @@ fn chigo_particle_recovers_annotated_apartment() {
     assert_eq!(case.expected, ["아파트"]);
     assert!(case.matched);
 }
+
+#[test]
+fn range_case_particles_recover_annotated_history() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-range-case.conllu").as_slice(),
+        Corpus::Kaist,
+        "range-case",
+    )
+    .unwrap();
+    let case = &report.cases["id:MH2_0149-s122/6"];
+    assert_eq!(case.surface, "역사까지를");
+    assert_eq!(case.expected, ["역사"]);
+    assert!(case.matched);
+    // The second complete sentence preserves the observed 마다 + 에 gap.
+    // Its disputed attachment is deliberately not a required/forbidden judgment.
+    assert_eq!(report.cases["id:MH2_0159-s285/15"].surface, "편마다에도");
+}

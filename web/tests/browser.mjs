@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const rangeCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-range-case.json"), "utf8"));
   const chigo = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-chigo.json"), "utf8"));
   const doe = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-doe.json"), "utf8"));
   const reportNe = JSON.parse(
@@ -267,6 +268,7 @@ try {
       ...reportNe.LexicalResource.Lexicon.LexicalEntry,
       ...doe.LexicalResource.Lexicon.LexicalEntry,
       ...chigo.LexicalResource.Lexicon.LexicalEntry,
+      ...rangeCase.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -647,6 +649,13 @@ try {
   for (const [word, expected, form, label, id, kind = "ending"] of [
     ["학생치고는", ["학생", "치고", "는"], "는", "Topic / contrast", 85851, "particle"],
     ["사람치고서는", ["사람", "치고서", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["역사까지를", ["역사", "까지", "를"], "를", "Object marker", 85764, "particle"],
+    ["여기까지가", ["여기", "까지", "가"], "가", "Subject marker", 66341, "particle"],
+    ["페이지까지로", ["페이지", "까지", "로"], "로", "Direction / means / role", 85761, "particle"],
+    ["정착되기까지에는", ["정착되", "기", "까지", "에", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["제목부터가", ["제목", "부터", "가"], "가", "Subject marker", 66341, "particle"],
+    ["교수님들까지가", ["교수", "님", "들", "까지", "가"], "가", "Subject marker", 66341, "particle"],
+    ["역사까질", ["역사", "까지", "를"], "를", "Object marker", 85764, "particle"],
     ["아파트치고", ["아파트", "치고"], "치고", "Generalization / exception", 73015, "particle"],
     ["학생치고는", ["학생", "치고는"], "치고는", "Against expectations", 83882, "particle"],
     ["음식치고서", ["음식", "치고서"], "치고서", "Emphatic generalization / exception", 73016, "particle"],
@@ -832,6 +841,9 @@ try {
     }
     if (["치고", "치고는", "치고서"].includes(form)) {
       assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("particle.chigo"));
+    }
+    if (["역사까지를", "여기까지가", "페이지까지로", "정착되기까지에는", "제목부터가", "교수님들까지가", "역사까질"].includes(word)) {
+      assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("particle.range_case"));
     }
     // Display may use 여 after 하 while lookup retains canonical 어.
     await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
@@ -1301,7 +1313,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

@@ -2076,3 +2076,32 @@ The source's 교수님들치고서 supports the raw 교수님 + 들 + 치고서 
 excludes that path. The existing 교수 + 님 + 들 + 치고서 alternative survives filtering and has
 explicit dictionary/CLI/browser regressions.
 See [regressions](../tests/chigo_particles.rs) and stable `chigo-*` ledger cases.
+
+
+## Case marking after range particles (COV-018k)
+
+Direct KRDict examples support the following ordering exceptions:
+
+| Inner particle | Following case | Example source |
+| --- | --- | --- |
+| 까지 | 를 | [대장정](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=47059): 부산까지를 |
+| 까지 | 가 | [다하다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61526): 여기까지가 |
+| 까지 | 에 | [명멸하다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=55286): 정착되기까지에는 |
+| 까지 | 로 | [오십](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89596): 페이지까지로 |
+| 부터 | 가 | [충격적](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=27836): 제목부터가 |
+
+The parser admits these pairs across its ordinary particle stages, preserving
+nominalized verbs, suffixes and existing outer particles. 역사까지를 yields
+역사 + 까지 + 를; 정착되기까지에는 yields 정착되다 + 기 + 까지 + 에 + 는.
+The immediately preceding surface determines the case allomorph, so 까지/부터
+require the vowel forms even after a consonant-final lexical head. Existing
+attached ㄹ retains canonical 를 and gains the same range-case provenance.
+No general case-after-particle rule or contextual sense selection is inferred.
+
+[The comparison](range-case-evaluation.json) records further combinations as
+unjudged, including case stacking and connector + 부터 + 가. The older
+고/어서/으면서 + 부터 paths remain supported in their own scope.
+COV-018l separately tracks the observed 편마다에도 gap. KRDict's noun-attachment
+note and the abstract of [Yoo (2007)](https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001059464)
+do not resolve following 에. The full paper was not obtained; this case remains
+open without a required/forbidden judgment or a claim about its regional status.

@@ -771,3 +771,21 @@ sentence `dev-s33`, under the GSD attribution/license above. Its regression
 requires only the reviewed `id:dev-s33/5` 아파트치고 → 아파트 group; it does
 not certify all candidates in that sentence. [The report](../../docs/chigo-evaluation.json)
 records the corpus/fixture hashes and exact candidate comparisons.
+
+
+`krdict-range-case.json` contains 37 primary word entries from the September
+2026 KRDict export, with every lexical homonym and sense for selected heads.
+It retains English equivalents and the first example group per sense, omitting
+WordForm/RelatedForm and export metadata. Attribution: National Institute of
+Korean Language, Korean Basic Dictionary, [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+No entries are invented for the raw 6세/ABC hypotheses. The grammar catalog and
+its fixture are unchanged. [The comparison](../../docs/range-case-evaluation.json)
+additionally retains explicitly selected dictionary example groups as evidence
+for the five particle pairs, under the same attribution/license.
+
+`kaist-range-case.conllu` preserves complete byte-identical UD 2.15 KAIST
+development sentences `MH2_0149-s122` and `MH2_0159-s285`, under the KAIST
+attribution/license above. The regression requires the reviewed
+`id:MH2_0149-s122/6` 역사까지를 → 역사 group. The second sentence records
+`id:MH2_0159-s285/15` 편마다에도 as an unresolved observation; its morphology
+is neither required nor forbidden. The report records source/fixture hashes.

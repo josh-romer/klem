@@ -1,0 +1,5798 @@
+{
+  "schema_version": 1,
+  "scope": "COV-018k: source-attested 까지 + 가/를/에/로 and 부터 + 가 across ordinary particle stages; retain immediate allomorphs and existing composition. COV-018l separately records the unresolved 마다 + 에 corpus gap.",
+  "baseline_commit": "2a68aa447ce872a52a54356878ea1fbdf58d75c4",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Every sense and attachment note; up to two example groups per sense plus explicitly selected evidence groups.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "be3f249edfe7d4434f7ef27e22d9ffeec4d93774f25ebd415cdc52257f79bed8",
+    "src/engine.rs": "fa7776d3e1cd0e5d60f574a882f7c5bb9e80eb1cda51e0c27d338e46095519f0",
+    "tests/range_case_particles.rs": "25e9b75fe1d217b3847ff347443a41b85d55b17243725a56d5f0ca9f5ab3b6fd",
+    "tests/corpus.rs": "636c1a6b9a6d4c717c298e3491b0a4f75ae661692dfd8047b23f7c54f0e5019c",
+    "tests/dictionary.rs": "82f79d35365390d8e16d9aadf409b2ac2aff770da06bcdb7bca98e54678c4c2a",
+    "tests/validity.rs": "bfd246e0116421fb8804371309d8e5db9ac3674fbeb9f0dc4305e889b5672960",
+    "tests/fixtures/validity.json": "73c54200ee58454611bc9cf501f760aa82594cfdc3d2653dc632db9e71c5c5fa",
+    "tests/fixtures/optimization.json": "c2725f12a0eebc9e84faf135e5a7509d88c477a92f80eeefe4dd3c4cc01f8c89",
+    "tests/fixtures/krdict-range-case.json": "7cb01e45d8f2e1728db7bd26f8b76dd0229b5f5959d1e22fa53760cf825006e8",
+    "web/tests/browser.mjs": "b1e7fba927c2e6c44f95c9bc92a638b63b183ad0529047babe79966ff20ece11"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:69698",
+        "headword": "까지",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69698",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사나 부사어 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 범위의 끝임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "내일까지 글쓰기 숙제를 제출하세요. "
+              ],
+              [
+                "나는 오늘 일본어로 일부터 십까지 세는 법을 배웠다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "현재의 상태나 정도에서 그 위에 더함을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "최근 노트북 컴퓨터는 가볍고 얇아진 데다 성능까지 좋아졌다. "
+              ],
+              [
+                "지수는 예쁘고 착하기까지 해서 남자들에게 인기가 많았다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "정상적인 정도를 지나침을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그를 그렇게까지 사랑했다."
+              ],
+              [
+                "유민이는 이렇게 자세하게까지 말하고 싶지는 않았다. "
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "c94c4f49f9ef563ce0146cc7b262a64cd776ae4e318f99a46630ccad557cfe14"
+    },
+    {
+      "source": {
+        "id": "krdict:70055",
+        "headword": "부터",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70055",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사나 부사어 또는 일부 어미 뒤에 붙여 쓴다.  "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 일의 시작이나 처음을 나타내는 조사.",
+            "notes": [
+              "주로 ‘~부터 ~까지’로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "이 지루한 책을 처음부터 끝까지 다 읽으려니 힘들다. "
+              ],
+              [
+                "서울부터 부산까지 기차로는 여섯 시간이 걸린다. "
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "d70733b3fde4feab34310fd75cac8ae931e57d993f53e40dd88b70fe15fddca2"
+    },
+    {
+      "source": {
+        "id": "krdict:66341",
+        "headword": "가",
+        "homonym": "3",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66341",
+        "lexical_unit": "단어",
+        "notes": [
+          "받침 없는 말 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 상태나 상황에 놓인 대상이나 동작의 주체를 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사 뒤에 붙여 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "민준이가 용돈을 다 써서 학교에서 집까지 걸어갔다."
+              ],
+              [
+                "선글라스를 낀 남자가 아까부터 아이를 쳐다본다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "바뀌게 되는 대상이나 부정하는 대상임을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사 뒤에 붙여 쓴다. 주로 '되다', '아니다'와 함께 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "동생은 졸업 후에 변호사가 되었다."
+              ],
+              [
+                "이것은 내가 어제 들었던 이야기가 아니다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "앞말을 강조하는 뜻을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "날씨가 더워서 도대체가 입맛이 없다."
+              ],
+              [
+                "지수는 입사한 지 한 달이 지났는데도 업무가 손에 익지가 않는다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "d7afd7c8919b7f2d692fbeeace44e96faa1c632d2ee938cedcaa062ddedf0d9c"
+    },
+    {
+      "source": {
+        "id": "krdict:85764",
+        "headword": "를",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85764",
+        "lexical_unit": "단어",
+        "notes": [
+          "받침 없는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "동작이 직접적으로 영향을 미치는 대상을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 알겠다며 고개를 끄덕였다. "
+              ],
+              [
+                "승규는 영화를 보는 것이 취미이다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "동작이 간접적인 영향을 미치는 대상이나 목적임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그 책은 나를 줘. "
+              ],
+              [
+                "지수는 아버지를 도와 집안 청소를 했다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "어떤 재료나 수단이 되는 사물임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 집에 있는 재료를 사용해서 간단한 요리를 했다. "
+              ],
+              [
+                "글쎄 엄마가 내가 아끼던 셔츠를 걸레로 만들었지 뭐야? "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "4",
+            "definition": "동작의 도착지나 동작이 이루어지는 장소를 나타내는 조사.",
+            "notes": [
+              "주로 '가다', '걷다', '뛰다'와 함께 쓴다.  "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 해안가를 걸으며 바닷바람을 만끽했다. "
+              ],
+              [
+                "눈이 와서 신난 아이들이 눈 위를 뛰어다녔다.  "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "5",
+            "definition": "이동하고자 하는 곳을 나타내는 조사.",
+            "notes": [
+              "주로 '가다', '오다', '떠나다' 등과 함께 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "어머니는 이모를 따라 교회를 나가기 시작하셨다. "
+              ],
+              [
+                "지수는 학교를 다니면서 아르바이트도 하려니 힘들었다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "6",
+            "definition": "그 행동의 목적이 되는 일을 나타내는 조사.",
+            "notes": [
+              "주로 '- 를 가다', '- 를 오다'로 쓴다.  "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "단풍이 예쁘게 들었으니 주말에 단풍놀이를 가자. "
+              ],
+              [
+                "나는 동아리 친구들과 경복궁 답사를 갔다 왔다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "7",
+            "definition": "행동의 출발점을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "유민이는 회사를 나왔다. "
+              ],
+              [
+                "승규는 화가 나 뒤도 돌아보지 않고 자리를 떠났다. "
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "8",
+            "definition": "어떤 행동이 비롯되는 곳, 또는 그 일을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "적자였던 회사 사정이 올해를 기점으로 크게 나아졌다.   "
+              ],
+              [
+                "나는 세계적인 요리사를 목표로 요리 공부에 매진하고 있다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "9",
+            "definition": "동작 대상의 수량이나 동작의 순서를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 사탕 하나를 동생에게 줬다. "
+              ],
+              [
+                "이 선수는 오늘 경기에서 홈런을 세 개를 쳤다. "
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "10",
+            "definition": "강조를 나타내는 조사.",
+            "notes": [
+              "주로 조사 ‘에', '으로’, 연결 어미 ‘-아', '-게', '-지', '-고’, 받침 없는 일부 부사 뒤에 붙여 쓴다.  "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 무섭다는 아이를 끌고 치과에를 갔다. "
+              ],
+              [
+                "승규는 잃어버린 열쇠를 아직도 찾지를 못했다. "
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "7ba7680ed1c5e5d14cd9b6bb337b1a5553c69ad94555805a23c935d296b27fe5"
+    },
+    {
+      "source": {
+        "id": "krdict:86572",
+        "headword": "에",
+        "homonym": "3",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86572",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞말이 어떤 장소나 자리임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "여기 의자에 앉으렴."
+              ],
+              [
+                "가게에 손님들이 많다."
+              ]
+            ],
+            "total_example_groups": 6
+          },
+          {
+            "id": "2",
+            "definition": "앞말이 시간이나 때임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "벚꽃은 봄에 핀다."
+              ],
+              [
+                "지수는 작년에 결혼을 했다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "3",
+            "definition": "앞말이 목적지이거나 어떤 행위의 진행 방향임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리는 공원에 가기로 했다."
+              ],
+              [
+                "승규는 일본에 어학연수를 간다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "4",
+            "definition": "앞말이 어떤 일의 원인임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 추위에 몸을 오들오들 떨었다."
+              ],
+              [
+                "천둥소리에 길을 가던 아이가 깜짝 놀랐다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "5",
+            "definition": "앞말이 어떤 행위나 감정 등의 대상임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "승규는 지수의 미모에 반해 버렸다."
+              ],
+              [
+                "우리는 일회용품 사용에 반대합니다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "6",
+            "definition": "앞말이 어떤 행위나 작용이 미치는 대상임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 꽃에 물을 주었다."
+              ],
+              [
+                "아이가 벽에 낙서를 했다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "7",
+            "definition": "앞말이 무엇의 목적이나 목표임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이 차는 불면증에 효과가 있다."
+              ],
+              [
+                "나는 이번 대회에서 금메달에 목표를 두었다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "8",
+            "definition": "앞말이 어떤 일의 도구나 수단, 방법 등임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "유민이는 세탁기에 빨래를 돌렸다."
+              ],
+              [
+                "지수는 햇볕에 젖은 수건을 말렸다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "9",
+            "definition": "앞말이 무엇의 조건, 환경, 상태 등임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "계속되는 무더위에 건강은 괜찮으신지요?"
+              ],
+              [
+                "그 일은 생각하기에 따라 좋을 수도 나쁠 수도 있겠다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "10",
+            "definition": "앞말이 기준이 되는 대상이나 단위임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이 글은 보고서 형식에 맞지 않는다."
+              ],
+              [
+                "시험지는 한 사람에 한 장씩 받으세요."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "11",
+            "definition": "앞말이 비교의 대상임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리 제품은 수입품에 결코 밀리지 않는다."
+              ],
+              [
+                "승규의 나무를 다듬는 기술은 전문가에 뒤지지 않았다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "12",
+            "definition": "앞말이 어떤 지위나 자격 등임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "김 씨가 차기 회장에 선출되었다."
+              ],
+              [
+                "민준이가 우리 반 반장에 뽑혔다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "13",
+            "definition": "앞말이 한정된 범위임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이 차는 경차에 속한다."
+              ],
+              [
+                "사과는 다른 것들과 함께 이곳의 특산품에 속한다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "14",
+            "definition": "앞말이 말하고자 하는 특정한 대상임을 나타내는 조사.",
+            "notes": [
+              "주로 '에 관하여(관한)', '에 대하여(대한)', '에 의하여(의한)', '에 있어서'로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "지금 발견되는 문제점에 관하여 상세히 보고해 주세요."
+              ],
+              [
+                "이 안건에 대한 의견을 자유롭게 말씀해 주시기 바랍니다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "15",
+            "definition": "앞말에 무엇이 더해짐을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "열에 다섯을 더하면 얼마지?"
+              ],
+              [
+                "저는 커피에 설탕을 넣어 주세요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "16",
+            "definition": "둘 이상의 사물을 같은 자격으로 이어 줄 때 쓰는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "아이는 과자에 빵에 군것질 거리를 잔뜩 집었다."
+              ],
+              [
+                "승규는 백화점에 가서 바지에 치마에 티셔츠에 옷을 잔뜩 사 왔다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "2e9d2dc8d037415ef15634fb13214b52648ef86acab8c6fc87d090817df67765"
+    },
+    {
+      "source": {
+        "id": "krdict:85761",
+        "headword": "로",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85761",
+        "lexical_unit": "단어",
+        "notes": [
+          "받침이 없거나 ‘ㄹ’ 받침으로 끝나는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "움직임의 방향을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리는 신혼여행을 제주도로 갔다 왔다. "
+              ],
+              [
+                "지수는 창가로 다가가 밖을 내다보았다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "움직임의 경로를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 문틈 사이로 방안을 엿보았다. "
+              ],
+              [
+                "화재가 났을 때는 비상구로 탈출하십시오. "
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "3",
+            "definition": "변화의 결과를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그 소설가는 자신의 일을 소설로 썼다."
+              ],
+              [
+                "큰 지진이 일어난 뒤 도시는 폐허로 변했다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "4",
+            "definition": "어떤 물건의 재료나 원료를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "종이는 나무로 만들어진다. "
+              ],
+              [
+                "이 주스는 다른 것은 섞지 않고 딸기로만 만든 것이다. "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "5",
+            "definition": "어떤 일의 수단이나 도구를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "복잡한 계산은 계산기로 하면 정확하다. "
+              ],
+              [
+                "승규는 회사가 가까워 자전거로 출퇴근을 한다.   "
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "6",
+            "definition": "어떤 일의 방법이나 방식을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 부드러운 모래사장을 맨발로 걸었다. "
+              ],
+              [
+                "선배들은 승규가 먹기 싫다는데도 강제로 술을 먹였다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "7",
+            "definition": "어떤 일의 원인이나 이유를 나타내는 조사.",
+            "notes": [
+              "주로 ‘~로 말미암아’, ‘~로 인하여’, ‘~로 하여’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "김 과장은 과로로 말미암아 쓰러져 입원했다. "
+              ],
+              [
+                "기상 악화로 비행기가 연착되고 있다. "
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "8",
+            "definition": "신분이나 자격을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "부처는 원래 어느 왕국의 왕자로 태어났다. "
+              ],
+              [
+                "이 선수는 이번 마라톤 대회에 한국 대표로 참석했다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "9",
+            "definition": "시간을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "오늘 할 일을 내일로 미루지 마라. "
+              ],
+              [
+                "어머니가 입원한 후로 줄곧 나는 병실을 지켰다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "10",
+            "definition": "시간을 셈할 때 셈에 넣는 한계를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리 학교는 올해로 세워진 지 백 년이 된다. "
+              ],
+              [
+                "우리 회사의 휴가는 어제로 끝났다. "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "11",
+            "definition": "특정한 동사와 같이 쓰여 시키는 대상이나 함께 하는 대상을 나타내는 조사.",
+            "notes": [
+              "주로 ‘~로 하여금’, ‘~로 더불어’로 쓴다.  "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "극심한 부담감은 그로 하여금 잠조차 제대로 자지 못하게 하였다. "
+              ],
+              [
+                "그 시인의 시는 사람들로 하여금 삶에 대해 많은 생각을 하도록 해 준다. "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "12",
+            "definition": "약속이나 결정을 나타내는 조사.",
+            "notes": [
+              "‘-기로 하다’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 지수와 결혼하기로 약속했다. "
+              ],
+              [
+                "어머니의 말씀을 듣고 나는 이제부터 열심히 공부하기로 했다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "13",
+            "definition": "어떤 사물에 대하여 생각하는 바를 나타내는 조사.",
+            "notes": [
+              "주로 ‘보다’, ‘생각하다’, ‘여기다’ 등과 함께 쓴다.  "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "예로부터 까마귀는 불길한 새로 여겨졌다. "
+              ],
+              [
+                "이 부분은 영어를 번역할 때 생긴 실수로 보인다. "
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "59e52dd1e740805c7b14992f52b32d6d7cfc37f4eda00a848fa83190137c0e51"
+    },
+    {
+      "source": {
+        "id": "krdict:70331",
+        "headword": "마다",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70331",
+        "lexical_unit": "단어",
+        "notes": [
+          "명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "하나하나 빠짐없이 모두의 뜻을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "날마다"
+              ],
+              [
+                "밤마다"
+              ]
+            ],
+            "total_example_groups": 12
+          },
+          {
+            "id": "2",
+            "definition": "앞말이 가리키는 시기에 한 번씩의 뜻을 나타내는 조사.",
+            "notes": [
+              "주로 시간을 나타내는 말 뒤에 붙는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "5분마다"
+              ],
+              [
+                "1시간마다"
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "7c98e4ad1825c099b2f7b1dfba072f374b7b05e0288fe9ee0ea6bfe0238d14c0"
+    },
+    {
+      "source": {
+        "id": "krdict:86289",
+        "headword": "이",
+        "homonym": "7",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86289",
+        "lexical_unit": "단어",
+        "notes": [
+          "받침 있는 말 뒤에 붙여 쓴다."
+        ],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 상태나 상황의 대상이나 동작의 주체를 나타내는 조사.",
+            "notes": [
+              "받침 있는 명사 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오늘 밤은 달이 참 밝다."
+              ],
+              [
+                "나는 신이 있다고 믿는다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "바뀌게 되는 대상이나 부정하는 대상임을 나타내는 조사.",
+            "notes": [
+              "받침 있는 명사 뒤에 붙여 쓴다. 주로 '되다', '아니다'와 함께 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "저에 대한 소문은 사실이 아닙니다."
+              ],
+              [
+                "민준이는 내 아들이 아니고 조카다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "앞말을 강조하는 뜻을 나타내는 조사.",
+            "notes": [
+              "받침 있는 명사나 부사어 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "승규는 온다고 한 지가 한 시간이 지났는데 왜 안 와?"
+              ],
+              [
+                "여보, 점심에는 국수를 해 먹을까요?",
+                "나는 국수 말고 볶음밥이 먹고 싶은데."
+              ]
+            ],
+            "total_example_groups": 2
+          }
+        ]
+      },
+      "source_sha256": "92f10bf5fcad45cca67676395b37a1abb267cb5216f57c5f2f74439f4e928399"
+    },
+    {
+      "source": {
+        "id": "krdict:86355",
+        "headword": "을",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86355",
+        "lexical_unit": "단어",
+        "notes": [
+          "받침 있는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "동작이 직접적으로 영향을 미치는 대상을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "아침에는 빵을 먹는다."
+              ],
+              [
+                "시장에 가서 과일을 샀다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "동작이 간접적인 영향을 미치는 대상이나 목적임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "고기는 동생을 먹여라."
+              ],
+              [
+                "이 사진 친구들을 보였어요?"
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "어떤 재료나 수단이 되는 사물임을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "운동화 끈을 묶어서 긴 줄을 만들자."
+              ],
+              [
+                "나팔을 불어서 출발 신호로 알리자."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "4",
+            "definition": "동작의 도착지나 동작이 이루어지는 장소를 나타내는 조사.",
+            "notes": [
+              "주로 '가다', '걷다', '뛰다'와 함께 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 고등학교를 졸업하고 고향을 떠났다."
+              ],
+              [
+                "나는 지리산을 거쳐 설악산으로 갔다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "5",
+            "definition": "이동하고자 하는 곳을 나타내는 조사.",
+            "notes": [
+              "주로 '가다', '오다', '떠나다' 등과 함께 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "우리는 아침 일찍 산을 올라갔다."
+              ],
+              [
+                "나는 식중독에 걸려 병원을 다닌다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "6",
+            "definition": "그 행동의 목적이 되는 일을 나타내는 조사.",
+            "notes": [
+              "주로 '- 을 가다', '- 을 오다'로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "우리는 뒷산으로 소풍을 간다."
+              ],
+              [
+                "가족과 함께 경주로 여행을 왔어요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "7",
+            "definition": "행동의 출발점을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 고향을 떠나 서울로 갔다."
+              ],
+              [
+                "지금 막 부산을 출발한 기차는 오후 2시에 대전에 도착한다.  "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "8",
+            "definition": "어떤 행동이 비롯되는 곳, 또는 그 일을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이곳을 출발지로 정하자."
+              ],
+              [
+                "지난 달 사건을 시작으로 비슷한 범죄가 늘고 있어요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "9",
+            "definition": "동작 대상의 수량이나 동작의 순서를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그는 세 정거장을 걸어서 갔다."
+              ],
+              [
+                "주스 두 병을 샀다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "10",
+            "definition": "강조를 나타내는 조사.",
+            "notes": [
+              "받침 있는 일부 부사 뒤에 붙여 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오늘은 마시고 싶은 대로 맘껏을 마셔라."
+              ],
+              [
+                "매번을 늦게 일어나더니 결국 오늘도 지각하는구나."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "11",
+            "definition": "서술어의 명사형 목적어임을 나타내는 조사.",
+            "notes": [
+              "'잠', '춤', '꿈' 등 일부 서술어의 명사형 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "주말에는 열 시간 정도 잠을 잔다."
+              ],
+              [
+                "우리 아들은 라디오에서 노래만 나오면 춤을 춘다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "2e68798d46e8bfab3696fb20d1f7838bd9a3bc2a49f025f7d3e9eb5fdb6e0bb6"
+    },
+    {
+      "source": {
+        "id": "krdict:85784",
+        "headword": "으로",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85784",
+        "lexical_unit": "단어",
+        "notes": [
+          "‘ㄹ’을 제외한 받침 있는 명사 뒤에 붙여 쓴다."
+        ],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "움직임의 방향을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "승규는 일본으로 유학을 가기로 했다. "
+              ],
+              [
+                "우리는 배를 타기 위해 부산으로 출발했다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "움직임의 경로를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리 일행은 중국으로 해서 백두산에 올랐다. "
+              ],
+              [
+                "도둑은 뒷문으로 몰래 들어와서 물건을 훔쳐 간 것 같다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "3",
+            "definition": "변화의 결과를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "김 대리는 다음 달 과장으로 승진한다. "
+              ],
+              [
+                "바람의 방향이 동풍에서 남풍으로 바뀌었다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "4",
+            "definition": "어떤 물건의 재료나 원료를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 먹다 남은 음식으로 비빔밥을 해 먹었다."
+              ],
+              [
+                "난 이제 네 말이라면 콩으로 메주를 쑨대도 안 믿어."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "5",
+            "definition": "어떤 일의 수단이나 도구를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "지수는 아이스크림을 숟가락으로 떠먹었다. "
+              ],
+              [
+                "나는 손에 묻은 물기를 손수건으로 닦았다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "6",
+            "definition": "어떤 일의 방법이나 방식을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 모든 일을 긍정적으로 생각하려고 노력한다. "
+              ],
+              [
+                "범인은 서류의 내용을 거짓으로 꾸민 것이 밝혀져 구속됐다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "7",
+            "definition": "어떤 일의 원인이나 이유를 나타내는 조사.",
+            "notes": [
+              "주로 ‘~으로 말미암아’, ‘~으로 인하여’, ‘~으로 하여’로 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "일본은 이번 지진으로 큰 피해를 입었다. "
+              ],
+              [
+                "농민들이 심각한 가뭄으로 고통을 받고 있다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "8",
+            "definition": "신분이나 자격을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "승규가 우리 반 반장으로 뽑혔다. "
+              ],
+              [
+                "우리는 아기 고양이를 새 가족으로 맞이했다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "9",
+            "definition": "시간을 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "9월이 되니 아침저녁으로 시원한 바람이 분다. "
+              ],
+              [
+                "이 건물의 준공은 4월 중순으로 예정되어 있다. "
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "10",
+            "definition": "시간을 셈할 때 셈에 넣는 한계를 나타내는 조사.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "우리 학교의 체육 대회는 이번으로 일곱 번째이다.  "
+              ],
+              [
+                "우리 성당에서 하는 거리 미사가 올봄으로 100회를 맞이하게 되었습니다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "11",
+            "definition": "특정한 동사와 같이 쓰여 시키는 대상이나 함께 하는 대상을 나타내는 조사.",
+            "notes": [
+              "주로 ‘~으로 하여금’, ‘~으로 더불어’로 쓴다.  "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "이 노래는 듣는 사람으로 하여금 절로 춤이 나오게 한다. "
+              ],
+              [
+                "신께서는 모든 사람으로 더불어 평화롭게 지내라 하셨습니다.  "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "12",
+            "definition": "어떤 사물에 대하여 생각하는 바를 나타내는 조사.",
+            "notes": [
+              "주로 ‘보다’, ‘생각하다’, ‘여기다’ 등과 함께 쓴다.  "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 가족의 건강을 가장 큰 행복으로 여긴다. "
+              ],
+              [
+                "모두들 김 씨를 범인으로 생각했지만 그는 결백했다. "
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "a8d89a2ab343d4217a175c0a464101e4b1ccee552df9f8ce47aec9f181ea7c6c"
+    },
+    {
+      "source": {
+        "id": "krdict:86116",
+        "headword": "요",
+        "homonym": "4",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86116",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "높임의 대상인 상대방에게 존대의 뜻을 나타내는 조사.",
+            "notes": [
+              "주로 두루 낮춤으로 쓰는 종결 어미나 일부 예사 낮춤으로 쓰는 종결 어미 뒤에 붙여 쓴다. 격식을 갖추어야 하는 상대에게는 잘 쓰지 않는다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오늘 날씨가 참 좋군요."
+              ],
+              [
+                "내일 점심 같이 먹을까요?"
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "2",
+            "definition": "높임의 대상인 상대방에게 존대의 뜻을 나타내는 조사.",
+            "notes": [
+              "명사, 부사어, 연결 어미 뒤에 붙여 쓴다. "
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "빨리요, 버스가 떠나겠어요."
+              ],
+              [
+                "승규가요, 저한테요, 화를 냈어요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "29064a11377b1737feea0727efbd79325d74e7cc184d2c020a05d677f9e94301"
+    },
+    {
+      "source": {
+        "id": "krdict:85851",
+        "headword": "는",
+        "homonym": "0",
+        "pos": "조사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": []
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 대상이 다른 것과 대조됨을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, ‘-아’, ‘-게’, ‘-지’, ‘-고’ 등의 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "어머니는 선생님이고, 아버지는 회사원이다. "
+              ],
+              [
+                "편지는 자주 쓴다. "
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "2",
+            "definition": "문장 속에서 어떤 대상이 화제임을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "저는 학생입니다."
+              ],
+              [
+                "사과는 몸에 좋다고 해요."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "강조의 뜻을 나타내는 조사.",
+            "notes": [
+              "받침 없는 명사나 부사어, 연결 어미 등의 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "노는 게 좋아도 숙제는 해야지."
+              ],
+              [
+                "바쁘더라도 부모님께 전화는 자주 하세요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "8dc9d6effae6930841dcff3f5badde2d9f2daa86d2849f6ee8f649ffd905278d"
+    },
+    {
+      "source": {
+        "id": "krdict:47059",
+        "headword": "대장정",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=47059",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "대ː장정"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "아주 먼 길을 가는 과정.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "대장정을 끝내다."
+              ],
+              [
+                "대장정을 시작하다."
+              ]
+            ],
+            "total_example_groups": 9
+          }
+        ]
+      },
+      "source_sha256": "7509bdf8a01a6fcbaec2734e16b257fc34aea4794dff08d345267d417461b166"
+    },
+    {
+      "source": {
+        "id": "krdict:77286",
+        "headword": "중기",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77286",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "중기"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 기간의 중간이 되는 시기.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "고구려 중기."
+              ],
+              [
+                "삼국 중기."
+              ]
+            ],
+            "total_example_groups": 7
+          },
+          {
+            "id": "2",
+            "definition": "길거나 짧지 않고 중간 정도 되는 기간.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "중기 계획."
+              ],
+              [
+                "중기 대안."
+              ]
+            ],
+            "total_example_groups": 9
+          }
+        ]
+      },
+      "source_sha256": "02204e95bfc00c14e88b05bea2e40b95471963b94fc44bbc3cd56f3803fc3243"
+    },
+    {
+      "source": {
+        "id": "krdict:61526",
+        "headword": "다하다",
+        "homonym": "0",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61526",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "다ː하다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "다 써 버려서 남아 있지 않거나 이어지지 않고 끝나다.",
+            "notes": [],
+            "patterns": [
+              "1이 다하다"
+            ],
+            "examples": [
+              [
+                "기력이 다하다."
+              ],
+              [
+                "물이 다하다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "2",
+            "definition": "어떤 현상이나 때가 끝나다.",
+            "notes": [],
+            "patterns": [
+              "1이 다하다"
+            ],
+            "examples": [
+              [
+                "겨울이 다하다."
+              ],
+              [
+                "방학이 다하다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "3",
+            "definition": "생명이 끝나거나 일생을 마치다.",
+            "notes": [],
+            "patterns": [
+              "1이 다하다",
+              "1이 2를 다하다"
+            ],
+            "examples": [
+              [
+                "목숨이 다하다."
+              ],
+              [
+                "삶이 다하다."
+              ]
+            ],
+            "total_example_groups": 8
+          },
+          {
+            "id": "4",
+            "definition": "어떤 일을 위하여 힘이나 마음 등을 모두 가져다 바치다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 다하다"
+            ],
+            "examples": [
+              [
+                "마음을 다하다."
+              ],
+              [
+                "마지막 힘을 다하다."
+              ]
+            ],
+            "total_example_groups": 15
+          },
+          {
+            "id": "5",
+            "definition": "어떤 일을 완전히 이루다.",
+            "notes": [],
+            "patterns": [
+              "1이 2를 다하다"
+            ],
+            "examples": [
+              [
+                "구실을 다하다."
+              ],
+              [
+                "기능을 다하다."
+              ]
+            ],
+            "total_example_groups": 22
+          }
+        ]
+      },
+      "source_sha256": "9f9f1f549f7a0b2506988c09d8124a740096c4775f4a2072a4c496ce2d1ec53d"
+    },
+    {
+      "source": {
+        "id": "krdict:15101",
+        "headword": "언어",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=15101",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "어너"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "생각이나 느낌 등을 나타내거나 전달하는 음성이나 문자 등의 수단. 또는 그 체계.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "문자 언어."
+              ],
+              [
+                "음성 언어."
+              ]
+            ],
+            "total_example_groups": 14
+          }
+        ]
+      },
+      "source_sha256": "041e9dcf8151f82bc14885fc4d44c70fedd8419723a428728f84f75d1d6e6301"
+    },
+    {
+      "source": {
+        "id": "krdict:65929",
+        "headword": "싱그럽다",
+        "homonym": "0",
+        "pos": "형용사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=65929",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "싱그럽따"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "싱그러운",
+            "pronunciations": [
+              "싱그러운"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "싱그러워",
+            "pronunciations": [
+              "싱그러워"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "싱그러우니",
+            "pronunciations": [
+              "싱그러우니"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "싱그럽습니다",
+            "pronunciations": [
+              "싱그럽씀니다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "싱싱하고 맑으며 향기롭다.",
+            "notes": [],
+            "patterns": [
+              "1이 싱그럽다"
+            ],
+            "examples": [
+              [
+                "싱그러운 계절."
+              ],
+              [
+                "싱그러운 과일."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "931e09def04ad3ab5b4b3a62b1727642fb2a6cebfeb46faed9b16bc172205841"
+    },
+    {
+      "source": {
+        "id": "krdict:60951",
+        "headword": "불참석",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=60951",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "불참석"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "불참석이",
+            "pronunciations": [
+              "불참서기"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "불참석도",
+            "pronunciations": [
+              "불참석또"
+            ]
+          },
+          {
+            "kind": "활용",
+            "written": "불참석만",
+            "pronunciations": [
+              "불참성만"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 자리에 참가하지 않거나 참석하지 않음.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "모임 불참석."
+              ],
+              [
+                "회원의 불참석."
+              ]
+            ],
+            "total_example_groups": 7
+          }
+        ]
+      },
+      "source_sha256": "386a02037993ee7cc3822e1fa086b673f63806f8b155b6bd42ec9f4ec2e4bc47"
+    },
+    {
+      "source": {
+        "id": "krdict:89596",
+        "headword": "오십",
+        "homonym": "2",
+        "pos": "관형사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89596",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "오ː십"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "쉰의.",
+            "notes": [
+              "일부 단위를 나타내는 말 앞에 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오십 개."
+              ],
+              [
+                "오십 그램."
+              ]
+            ],
+            "total_example_groups": 16
+          },
+          {
+            "id": "2",
+            "definition": "오십 번째의.",
+            "notes": [
+              "일부 단위를 나타내는 말 앞에 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "오십 등."
+              ],
+              [
+                "오십 번."
+              ]
+            ],
+            "total_example_groups": 12
+          }
+        ]
+      },
+      "source_sha256": "fc86c6c593282b8d02c3889f91216249a396c799ed6b3bdda63444752f2d2a38"
+    },
+    {
+      "source": {
+        "id": "krdict:70573",
+        "headword": "유아 교육",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70573",
+        "lexical_unit": "구",
+        "notes": [
+          "붙여쓰기를 허용한다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "초등학교에 들어가기 전의 아이들에게 하는 교육.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "유아 교육 기관."
+              ],
+              [
+                "유아 교육 연수."
+              ]
+            ],
+            "total_example_groups": 9
+          }
+        ]
+      },
+      "source_sha256": "e84ee2bc7f38041f786f96eda9009f3dde893aab61d60cbd1a277a10a4afb113"
+    },
+    {
+      "source": {
+        "id": "krdict:55286",
+        "headword": "명멸하다",
+        "homonym": "0",
+        "pos": "동사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=55286",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "명멸하다"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "불빛 등이 켜졌다 꺼지거나 밝아졌다 어두워졌다 하다.",
+            "notes": [],
+            "patterns": [
+              "1이 명멸하다"
+            ],
+            "examples": [
+              [
+                "네온사인이 명멸하다."
+              ],
+              [
+                "백열등이 명멸하다."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "2",
+            "definition": "나타났다 사라졌다 하다.",
+            "notes": [],
+            "patterns": [
+              "1이 명멸하다"
+            ],
+            "examples": [
+              [
+                "기업이 명멸하다."
+              ],
+              [
+                "왕조가 명멸하다."
+              ]
+            ],
+            "total_example_groups": 9
+          }
+        ]
+      },
+      "source_sha256": "bf2b7ce33bb7b8ebd454f5bf0f8c86a884132b259bb77ea86d2e28679c7caf93"
+    },
+    {
+      "source": {
+        "id": "krdict:18222",
+        "headword": "낙화",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=18222",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "나콰"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "꽃이 떨어짐. 또는 떨어진 꽃.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "벚꽃의 낙화."
+              ],
+              [
+                "낙화가 되다."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "d7d5b649b88587a6114db4a779cf7f2a1d156e6b20f1e5396cf12d1720c2c405"
+    },
+    {
+      "source": {
+        "id": "krdict:32185",
+        "headword": "소설",
+        "homonym": "2",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=32185",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "소ː설"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "작가가 지어내어 쓴, 이야기 형식으로 된 문학 작품.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "고전 소설."
+              ],
+              [
+                "과학 소설."
+              ]
+            ],
+            "total_example_groups": 42
+          },
+          {
+            "id": "2",
+            "definition": "소설이 실린 책.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "소설 한 권."
+              ],
+              [
+                "소설 한 질."
+              ]
+            ],
+            "total_example_groups": 9
+          }
+        ]
+      },
+      "source_sha256": "e40669331dfe19e3ab7a9bc3a6ab5fbd052a046324eb9d6161ebf211f0a78268"
+    },
+    {
+      "source": {
+        "id": "krdict:79136",
+        "headword": "출발선",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79136",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "출발썬"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "달리기 경기를 할 때 출발점으로 그어 놓은 선.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "흰 출발선."
+              ],
+              [
+                "출발선이 멀다."
+              ]
+            ],
+            "total_example_groups": 7
+          },
+          {
+            "id": "2",
+            "definition": "어떤 일을 시작하는 곳.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "입시의 출발선."
+              ],
+              [
+                "출발선을 긋다."
+              ]
+            ],
+            "total_example_groups": 8
+          }
+        ]
+      },
+      "source_sha256": "310107ad0e9e71d25019f391876fa6ac8f790768ee757ffc87e439fff01d5f31"
+    },
+    {
+      "source": {
+        "id": "krdict:27836",
+        "headword": "충격적",
+        "homonym": "1",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=27836",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "충격쩍"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "정신적으로 충격을 받을 만한 것.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "충격적인 결과."
+              ],
+              [
+                "충격적인 경험."
+              ]
+            ],
+            "total_example_groups": 10
+          }
+        ]
+      },
+      "source_sha256": "2893b9d9b6444f5e801e7a82c512a88446e26f78fbe022a24b41ae3df03d2f7c"
+    },
+    {
+      "source": {
+        "id": "krdict:37177",
+        "headword": "근본",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=37177",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "근본"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "어떤 것의 본질이나 바탕.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나라의 근본."
+              ],
+              [
+                "물리학의 근본."
+              ]
+            ],
+            "total_example_groups": 14
+          },
+          {
+            "id": "2",
+            "definition": "한 사람이 자라 온 환경이나 혈통.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "근본이 나쁘다."
+              ],
+              [
+                "근본이 미천하다."
+              ]
+            ],
+            "total_example_groups": 7
+          }
+        ]
+      },
+      "source_sha256": "58ab5743421dcd7f7d248f7f7a723f8f9ed18173b91944e638c9ce8576bfd093"
+    },
+    {
+      "source": {
+        "id": "krdict:30206",
+        "headword": "땅",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=30206",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "땅"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "지구에서 물로 된 부분이 아닌 흙이나 돌로 된 부분.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "하늘과 땅."
+              ],
+              [
+                "낮은 땅."
+              ]
+            ],
+            "total_example_groups": 32
+          },
+          {
+            "id": "2",
+            "definition": "한 나라의 영토.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "고국 땅."
+              ],
+              [
+                "외국 땅."
+              ]
+            ],
+            "total_example_groups": 21
+          },
+          {
+            "id": "3",
+            "definition": "지역이나 지방.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "고향 땅."
+              ],
+              [
+                "서울 땅."
+              ]
+            ],
+            "total_example_groups": 13
+          },
+          {
+            "id": "4",
+            "definition": "건물을 짓거나 농사를 지으며 생활할 수 있는 자리.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "개인 땅."
+              ],
+              [
+                "금싸라기 땅."
+              ]
+            ],
+            "total_example_groups": 26
+          },
+          {
+            "id": "5",
+            "definition": "흙. 또는 흙의 성질.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "기름진 땅."
+              ],
+              [
+                "메마른 땅."
+              ]
+            ],
+            "total_example_groups": 9
+          },
+          {
+            "id": "6",
+            "definition": "권리를 누리거나 일을 하며 지낼 수 있는 환경이나 기반.",
+            "notes": [
+              "주로 '~ 설 땅'으로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "아무 준비도 없이 농산물을 수입하면 우리 농산물이 당장 설 땅을 잃게 된다."
+              ],
+              [
+                "회의 결과에서 불이익을 받게 된 사람들은 강하게 저항함으로써 스스로 설 땅을 찾았다."
+              ]
+            ],
+            "total_example_groups": 3
+          },
+          {
+            "id": "7",
+            "definition": "사회나 세상.",
+            "notes": [
+              "주로 '이 땅'으로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "그 과학자는 과학을 이 땅에 뿌리내리기 위한 노력을 아끼지 않았다."
+              ],
+              [
+                "이번 재판은 이 땅에 법과 정의가 살아 있다는 것을 보여 줬다는 점에서 큰 의미를 갖는다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "450c982c0ac98a409b21989f0493f4d3cbea809c797e0ed958a7ccf0668d6fb7"
+    },
+    {
+      "source": {
+        "id": "krdict:69615",
+        "headword": "씨름꾼",
+        "homonym": "0",
+        "pos": "명사",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69615",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [
+          {
+            "kind": "발음",
+            "written": "",
+            "pronunciations": [
+              "씨름꾼"
+            ]
+          }
+        ],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "씨름을 잘하는 사람.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "최고의 씨름꾼."
+              ],
+              [
+                "타고난 씨름꾼."
+              ]
+            ],
+            "total_example_groups": 7
+          }
+        ]
+      },
+      "source_sha256": "d672103dd84d4de1bd4da8d7c9380dda7f5a19182bfe24ceda909923c0372b99"
+    }
+  ],
+  "example_evidence": [
+    {
+      "id": "krdict:47059",
+      "headword": "대장정",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=47059",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 7,
+          "text": [
+            "자전거 동호회 회원들이 서울에서 부산까지를 자전거로 이동하는 십이 박 십삼 일간의 대장정에 올랐다."
+          ]
+        }
+      ],
+      "groups_sha256": "6dd60f8d519e83b5cd77c4d057abcad008932114fe81e2d7c25537d8bd5b567a"
+    },
+    {
+      "id": "krdict:77286",
+      "headword": "중기",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77286",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 6,
+          "text": [
+            "지난 역사 수업에서는 조선 건국부터 중기까지를 역사의 전체 흐름 속에서 분석하였다."
+          ]
+        }
+      ],
+      "groups_sha256": "f9981708592ea5e5293b0fcd92ae0c85cb70f3cca70ec06aa891665c394886d2"
+    },
+    {
+      "id": "krdict:61526",
+      "headword": "다하다",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61526",
+      "groups": [
+        {
+          "sense": "3",
+          "group_index": 7,
+          "text": [
+            "여기까지가 내 운명인가 보네. 이제 내 명을 다한 것 같아.",
+            "그런 말씀 마세요. 더 사셔야지요."
+          ]
+        }
+      ],
+      "groups_sha256": "af15ea1da4b4588b5fa3ae445eedc6cf943595860febb4528c3de72956b54987"
+    },
+    {
+      "id": "krdict:15101",
+      "headword": "언어",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=15101",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 11,
+          "text": [
+            "학자들에 따르면 두 살부터 사춘기까지가 인간 언어 발달의 결정적 시기라고 한다."
+          ]
+        }
+      ],
+      "groups_sha256": "78d81cc1473504efb6198883251e2c6a38a5624ea4870f71461bcc91fcd60a1b"
+    },
+    {
+      "id": "krdict:65929",
+      "headword": "싱그럽다",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=65929",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 6,
+          "text": [
+            "차 밭은 늘 녹색을 띠지만 특히 사월부터 오월까지가 가장 싱그럽다."
+          ]
+        }
+      ],
+      "groups_sha256": "a3f9a8b76c8312123f171a46e2afe3fd227db460df16c118d4ff53196809460f"
+    },
+    {
+      "id": "krdict:60951",
+      "headword": "불참석",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=60951",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 5,
+          "text": [
+            "동아리 회장은 학생들의 참여율을 높이기 위해 정기 회의 및 모임 불참석을 최대 네 번까지로 제한하였다."
+          ]
+        }
+      ],
+      "groups_sha256": "92ecb498c49632f05131a8869e6820924d0e6ef4f6bd25ea9fb0e0cb635d81e1"
+    },
+    {
+      "id": "krdict:89596",
+      "headword": "오십",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89596",
+      "groups": [
+        {
+          "sense": "2",
+          "group_index": 9,
+          "text": [
+            "시험 범위는 처음부터 오십 페이지까지로 정해졌다."
+          ]
+        }
+      ],
+      "groups_sha256": "5c92c2ec70d04763795c885a54faca88028725eeaa8687df99792a6c5dcfef7c"
+    },
+    {
+      "id": "krdict:70573",
+      "headword": "유아 교육",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70573",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 7,
+          "text": [
+            "유아 교육은 출생부터 초등학교에 입학하기 전인 6세까지에 해당하는 교육이다."
+          ]
+        }
+      ],
+      "groups_sha256": "83597b633376bce94b9f9fcdcc21fe7e321803fe9797667f047970fe901f6d4c"
+    },
+    {
+      "id": "krdict:55286",
+      "headword": "명멸하다",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=55286",
+      "groups": [
+        {
+          "sense": "2",
+          "group_index": 8,
+          "text": [
+            "이 학문이 정착되기까지에는 수많은 학자들이 있어 왔습니다.",
+            "네, 명멸한 많은 학자들의 노력이 있었지요."
+          ]
+        }
+      ],
+      "groups_sha256": "0393612613f69df11164d4a85de23aa5c320cfc9c5fde2b13d21faf0e0ec37f8"
+    },
+    {
+      "id": "krdict:18222",
+      "headword": "낙화",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=18222",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 6,
+          "text": [
+            "자연 다큐멘터리에서 꽃이 처음 피었다가 낙화에 이르기까지를 생생히 보여 주었다."
+          ]
+        }
+      ],
+      "groups_sha256": "23ced79fa1ac5d36dafb07c7a5694b53804c2b346dbec4c27e4b635b2431716c"
+    },
+    {
+      "id": "krdict:32185",
+      "headword": "소설",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=32185",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 41,
+          "text": [
+            "김 작가님, 이번 작품 소개 좀 해주시죠.",
+            "네,  주인공의 어린 시절부터 어른이 되기까지를 그린 성장 소설이에요."
+          ]
+        }
+      ],
+      "groups_sha256": "1011e0de43b52a52ea77938b1fbee0e212ddb4b4b3acd8ecf3ad0c5e31369773"
+    },
+    {
+      "id": "krdict:79136",
+      "headword": "출발선",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79136",
+      "groups": [
+        {
+          "sense": "2",
+          "group_index": 7,
+          "text": [
+            "유복한 환경에서 자란 유민이는 출발선부터가 남달라 승승장구하였다."
+          ]
+        }
+      ],
+      "groups_sha256": "c01065377cf681393576f4dfaa751bea992588377038ed137a098196fa2bca56"
+    },
+    {
+      "id": "krdict:27836",
+      "headword": "충격적",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=27836",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 7,
+          "text": [
+            "오늘 신문 1면의 기사는 제목부터가 충격적이었다."
+          ]
+        }
+      ],
+      "groups_sha256": "8e2862065895f15cecb52870fd56bea2a0c6bbb783930ee8a7e57449afee2b1e"
+    },
+    {
+      "id": "krdict:37177",
+      "headword": "근본",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=37177",
+      "groups": [
+        {
+          "sense": "2",
+          "group_index": 4,
+          "text": [
+            "승규는 근본부터가 남들과 비교할 수 없을 정도로 좋았다."
+          ]
+        }
+      ],
+      "groups_sha256": "a34df2ed31938c503038891bd3ad781383c1f38d868878e8b304ac2dea39b3bf"
+    },
+    {
+      "id": "krdict:30206",
+      "headword": "땅",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=30206",
+      "groups": [
+        {
+          "sense": "3",
+          "group_index": 12,
+          "text": [
+            "태어나서 처음으로 서울 땅을 밟아 본 기분이 어때?",
+            "아, 서울은 공기부터가 다르구나."
+          ]
+        }
+      ],
+      "groups_sha256": "44b2ff6817171be516c9a96a192128a262b22d1b4b966378ff452436eb50816b"
+    },
+    {
+      "id": "krdict:69615",
+      "headword": "씨름꾼",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69615",
+      "groups": [
+        {
+          "sense": "1",
+          "group_index": 4,
+          "text": [
+            "천하장사인 그는 체격부터가 타고난 씨름꾼이었다."
+          ]
+        }
+      ],
+      "groups_sha256": "6fba8b32cd8416b8962da07cd41f9767b559a8ead950bc870f771862c4544086"
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "fb3dedea0143d600f947c2aed42df027fea46bf7df4a30f830eeac4c9accd09d",
+      "after_sha256": "5cc59acabcd9b19d8f0176bbc1dbe7949e1094de9324d86fcf73f315e235dd3e",
+      "converted": 22220,
+      "before_matched": 22108,
+      "after_matched": 22109,
+      "remaining_misses": 111,
+      "new_matches": [
+        {
+          "id": "id:MH2_0149-s122/6",
+          "surface": "역사까지를",
+          "expected": [
+            "역사"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.835373537353735,
+      "mean_candidates_after": 5.835418541854185
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "9655475b346a771494eb65bca5c44dbee5422489808c1427d3f64549adf1f5a5",
+      "after_sha256": "9655475b346a771494eb65bca5c44dbee5422489808c1427d3f64549adf1f5a5",
+      "converted": 9989,
+      "before_matched": 9835,
+      "after_matched": 9835,
+      "remaining_misses": 154,
+      "new_matches": [],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.370007007708479,
+      "mean_candidates_after": 5.370007007708479
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "역사까지를",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "역사",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "부산까지를",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "부산",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "중기까지를",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "중기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "중다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "어디까지가",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "어디",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "여기까지가",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "여기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "여다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사춘기까지가",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사춘기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사춘다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "오월까지가",
+      "before_count": 3,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "오우다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.vowel",
+            "ending",
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오워",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오워",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "오월",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "옵다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "ending",
+            "irregular.bieup",
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "페이지까지로",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "페이지",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "번까지로",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "번",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "6세까지에",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "6세",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "정착되기까지에는",
+      "before_count": 12,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "정착되기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "정착되다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "되기까지를",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "되기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "되다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "이르기까지를",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "이르기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "이르다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "출발선부터가",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "출발선",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "제목부터가",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "제목",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "근본부터가",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "근본",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "공기부터가",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "공기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "공다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "체격부터가",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "체격",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기부터가",
+      "before_count": 5,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹었기까지를",
+      "before_count": 7,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹었하다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case",
+            "prefinal.past"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어보기까지를",
+      "before_count": 7,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "deletion.eu",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이기까지를",
+      "before_count": 7,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이기",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "nominalization",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "교수님들까지가",
+      "before_count": 3,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "교수",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "님",
+              "kind": "suffix"
+            },
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case",
+            "suffix.honorific",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님드",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님드",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "교수님들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생들부터가",
+      "before_count": 5,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "들",
+              "kind": "suffix"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case",
+            "suffix.plural"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생드",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생드",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생들",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC까지가",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "역사까질",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": [
+        {
+          "before": {
+            "lemmas": [
+              {
+                "text": "역사",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              },
+              {
+                "form": "를",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.l"
+            ],
+            "unchanged": false
+          },
+          "after": {
+            "lemmas": [
+              {
+                "text": "역사",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              },
+              {
+                "form": "를",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.l",
+              "particle.range_case"
+            ],
+            "unchanged": false
+          }
+        }
+      ]
+    },
+    {
+      "surface": "역사까지를요",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "역사",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.polite",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "출발선부터가요",
+      "before_count": 12,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "출발선",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.polite",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "출발선",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            },
+            {
+              "form": "요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "ending.enumerative_yo",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "페이지까지로는",
+      "before_count": 10,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "페이지",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "6세까지에도",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "6세",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "역사까지을",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생까지이",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "페이지까지으로",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "제목부터이",
+      "before_count": 1,
+      "after_count": 1,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "역사까진를",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "역사까질가",
+      "before_count": 2,
+      "after_count": 2,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고까지를",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어까지가",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹다까지로",
+      "before_count": 2,
+      "after_count": 3,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹는까지에",
+      "before_count": 4,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹는",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "에",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹다부터가",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생까지를는",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "제목부터가은",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "페이지까지로은",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생까지는가",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생까지를를",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생까지가가",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "편마다에도",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "편마다에",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "집마다에",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "저마다에게",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹고부터가",
+      "before_count": 5,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹고",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "젊어서부터가",
+      "before_count": 5,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "젊다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "ending",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "젊어",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "서",
+              "kind": "particle"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "젊어다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "ending",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "젊어서",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "젊으다",
+              "kind": "predicate"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어서",
+              "kind": "ending"
+            },
+            {
+              "form": "부터",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "deletion.eu",
+            "ending",
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생까지를은",
+      "before_count": 11,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "은",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "페이지까지로도",
+      "before_count": 3,
+      "after_count": 4,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "페이지",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "로",
+              "kind": "particle"
+            },
+            {
+              "form": "도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "역사까지에게",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생부터를",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "여기까지의",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이까지가",
+      "before_count": 3,
+      "after_count": 5,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생을까지를",
+      "before_count": 7,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "을",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생으",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생으",
+              "kind": "adverbial"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "를",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.contraction.l",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생을",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "를",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생까지가까지가",
+      "before_count": 3,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생까지",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "가",
+              "kind": "particle"
+            },
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생까지가",
+              "kind": "nominal"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "까지",
+              "kind": "particle"
+            },
+            {
+              "form": "가",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "particle",
+            "particle.range_case"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "까지가",
+      "before_count": 3,
+      "after_count": 3,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "부터가",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "까지를",
+      "before_count": 7,
+      "after_count": 7,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "역사까질요",
+      "before_count": 8,
+      "after_count": 8,
+      "removed": [],
+      "added": [],
+      "provenance_changes": [
+        {
+          "before": {
+            "lemmas": [
+              {
+                "text": "역사",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              },
+              {
+                "form": "를",
+                "kind": "particle"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.l",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          "after": {
+            "lemmas": [
+              {
+                "text": "역사",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              },
+              {
+                "form": "를",
+                "kind": "particle"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.l",
+              "particle.polite",
+              "particle.range_case"
+            ],
+            "unchanged": false
+          }
+        }
+      ]
+    }
+  ],
+  "attachment_decisions": [
+    "The particle notes alone are not a general permission to append case to every particle. Direct lexical-entry examples support 까지 + 를 (대장정/중기/낙화/소설), 가 (다하다/언어/싱그럽다), 에 (유아 교육/명멸하다), 로 (불참석/오십), and 부터 + 가 (출발선/충격적/근본/땅/씨름꾼).",
+    "The reverse parser crosses its usual stages only for these five pairs. Existing nominalization, honorific/plural bases, explicit copulas and outer particles still compose; these structural candidates do not choose semantic scope or a contextual case sense.",
+    "Case allomorphs inspect the immediately preceding surface, not the lexical head: 까지/부터 end in vowels. Existing attached ㄹ contraction now carries the same range-case provenance as its full 를 spelling; original rules are retained.",
+    "No blanket noun phrase conversion or arbitrary particle reordering is introduced. Existing 고/어서/으면서 + 부터 paths remain, but their outer 가 combinations and other range-case families need further review.",
+    "The KAIST 편마다에도 observation is not enough to establish a general 마다 + 에 rule. KRDict 마다 lists noun attachment without a following-case license. The cited primary paper abstract attributes distribution to semantic restrictions; it does not settle this exact combination. This is an observed implementation gap with an unresolved linguistic judgment, not a forbidden path."
+  ],
+  "external_review": [
+    {
+      "title": "유현경 (2007), 조사 마다의 의미와 분포, 國語學 49, 137–157",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001059464",
+      "doi": "10.15811/jkl.2007..49.005",
+      "access": "Author abstract and bibliographic record read; full paper not obtained.",
+      "finding": "The author connects noun-only attachment and distribution with distributive/event semantics. The abstract does not establish the acceptability or scope of 마다 + 에.",
+      "license": "Not copied into fixtures; paraphrased bibliographic review only."
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-range-case.conllu",
+      "sha256": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
+      "complete_byte_identical_sentences": 2,
+      "judged_group": "id:MH2_0149-s122/6",
+      "unjudged_observation": {
+        "id": "id:MH2_0159-s285/15",
+        "surface": "편마다에도",
+        "expected": [
+          "편"
+        ],
+        "matched": false,
+        "recovered": 0,
+        "recovered_sets": []
+      }
+    }
+  ],
+  "unjudged_followups": [
+    {
+      "id": "range-case-mada-e",
+      "checklist": "COV-018l",
+      "surfaces": [
+        "편마다에도",
+        "편마다에",
+        "집마다에"
+      ],
+      "status": "observed-gap-unjudged",
+      "reason": "Retain the exact corpus observation and source review. A broader distribution/usage investigation is needed before requiring or forbidding the parsed 마다 + 에 path. The second fixture sentence is evidence, not an executable correctness judgment."
+    },
+    {
+      "id": "range-case-further-composition",
+      "surfaces": [
+        "먹고부터가",
+        "젊어서부터가",
+        "학생까지를은",
+        "역사까지에게",
+        "학생부터를",
+        "학생이까지가",
+        "학생을까지를",
+        "학생까지가까지가"
+      ],
+      "status": "unjudged",
+      "reason": "The comparison records generated and absent paths. Existing generic composition is not a semantic judgment about connector bases, case stacking, repeated ranges or other following cases."
+    },
+    {
+      "id": "range-case-dictionary-boundaries",
+      "surfaces": [
+        "6세까지에",
+        "6세까지에도",
+        "ABC까지가"
+      ],
+      "status": "dictionary-gap",
+      "reason": "Raw numeric/foreign nominal hypotheses remain; dictionary-only requires an exact headword. The final Hangul particle supplies the known allomorph boundary, not a guessed pronunciation of ABC."
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "remaining": [
+    "COV-018l needs source and register/context review before a 마다 + 에 implementation decision. Broader case/particle composition remains COV-018.",
+    "Independent Korean review, fresh passages and contextual interpretation remain open. Dictionary matches do not certify every lexical hypothesis."
+  ],
+  "labels": {
+    "canonical_forms": 274,
+    "source_entries": 346,
+    "unchanged": true
+  },
+  "lexical_fixture": {
+    "path": "tests/fixtures/krdict-range-case.json",
+    "entries": 37,
+    "adaptations": "All homonyms and senses; English equivalents and first example group per sense; omit WordForm, RelatedForm and export metadata."
+  },
+  "synthetic_stress_probe": {
+    "input_pattern": "학교 + 까지가 repeated n times",
+    "build": "local debug CLI, x86_64-linux",
+    "interpretation": "Unjudged synthetic inputs test termination and candidate growth, not Korean correctness or novel throughput. Timings are single local wall-clock observations, not performance guarantees.",
+    "observations": [
+      {
+        "repeats": 8,
+        "syllables": 26,
+        "candidates": 18,
+        "elapsed_seconds": 0.005
+      },
+      {
+        "repeats": 64,
+        "syllables": 194,
+        "candidates": 130,
+        "elapsed_seconds": 0.182
+      },
+      {
+        "repeats": 256,
+        "syllables": 770,
+        "candidates": 514,
+        "elapsed_seconds": 3.261
+      }
+    ]
+  }
+}

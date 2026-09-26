@@ -1046,6 +1046,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "particle.chigo" => {
             "Attach 치고/치고는/치고서 to a nominal; retain bundled and component alternatives without selecting the contextual generalization or exception sense."
         }
+        "particle.range_case" => {
+            "Retain source-attested case marking after 까지 or 부터; the immediately preceding surface still determines the case allomorph."
+        }
         "particle.enumerative" => {
             "Retain an enumerative or choice particle, separate from a homonymous ending or copular expression; no contextual choice is inferred."
         }

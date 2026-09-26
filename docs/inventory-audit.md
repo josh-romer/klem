@@ -17,8 +17,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **58 scoped
-reviews**, with **657 entries unreviewed in this ledger**. This does not imply
+The [manual ledger](inventory-reviews.json) currently contains **66 scoped
+reviews**, with **649 entries unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
 and source-specific candidate judgments. Independent Korean-language review
@@ -378,3 +378,13 @@ without a disposition**. The [comparison](seo-connective-evaluation.json) record
 nine new KAIST development grouped matches, all previous gold/candidates retained,
 and unchanged stress fingerprints. Broader particle attachments, 어서야
 prefinal licenses and contextual class/sense decisions remain open.
+
+
+## Modal/retrospective copula omission (COV-020g)
+
+Eight grammar entries now have scoped dispositions for omitted copula attachment,
+with three additional expression sources attributed separately. The queue now
+contains **66 scoped entries and 649 without a disposition**. The source catalog
+is unchanged. [The comparison](prefinal-copula-evaluation.json) records three
+new development matches, all thirty unchanged stress fingerprints, and explicit
+remaining attachment gaps. This is not full-entry linguistic certification.

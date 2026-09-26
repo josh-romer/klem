@@ -569,6 +569,14 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("네", "네", 0),
             ("네요", "네요", 0),
             ("세요", "으세요", 0),
+            ("더라", "더라", 0),
+            ("더라고", "더라고", 0),
+            ("더군", "더군", 0),
+            ("더군요", "더군요", 0),
+            ("더니", "더니", 0),
+            ("더라도", "더라도", 0),
+            ("던데", "던데", 0),
+            ("던데요", "던데요", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -1088,6 +1096,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "copula.omitted_honorific" => {
             "Restore omitted copular 이 before honorific 시 after a vowel-final nominal; preserve the normal prefinal order and ending restrictions."
+        }
+        "copula.omitted_prefinal" => {
+            "Restore omitted copular 이 before modal 겠 or retrospective 더 after a vowel-final nominal, retaining prefinal order and ending restrictions."
         }
         "nominal.colloquial_geot" => {
             "Expand the colloquial 거/이거/그거/저거 nominal to 것/이것/그것/저것 before a copula; preserve the short lexical alternative."

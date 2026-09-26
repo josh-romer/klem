@@ -629,3 +629,19 @@ KAIST development sentences whose annotated groups are newly recovered by
 COV-017q/018i. The original annotations and corpus license remain unchanged;
 case IDs and input hashes are recorded in the evaluation. No GSD recovery is
 claimed by this batch.
+
+
+`krdict-prefinal-copulas.json` is an attributed selection of 29 lexical entries
+from the National Institute of Korean Language's Korean Basic Dictionary,
+September 2026 export, under CC BY-SA 2.0 KR. It retains all senses, English
+equivalents and the first example group per sense; WordForm, RelatedForm and
+export metadata are omitted. Lexical homonyms remain distinct. Idiom entries
+with reused numeric IDs are excluded, so 누구 is the pronoun, not an idiom.
+The existing grammar fixture/catalog supplies modal/retrospective source entries.
+See `docs/prefinal-copula-evaluation.json` for their complete attachment review.
+
+`kaist-prefinal-copulas.conllu` and `gsd-prefinal-copulas.conllu` preserve one
+and two complete UD 2.15 development sentences byte for byte. They protect
+마찬가지겠지만, 최고더군요 and 어디더라 with their original grouped copula
+annotations. Existing corpus licensing and attribution above apply; hashes and
+case IDs are recorded in the comparison. Historical baselines are unchanged.

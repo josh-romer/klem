@@ -1,0 +1,27 @@
+# sent_id = dev-s13
+# text = 몇 년 전 고시 공부하던 시절에 선후배들과 자주 갔던 곳인데 여전히 사장님의 친절은 최고더군요
+# translit = .myeoch .nyeon .jeon .go.si .gong.bu.ha.deon .si.jeol.e .seon.hu.bae.deul.gwa .ja.ju .gass.deon .gos.in.de .yeo.jeon.hi .sa.jang.nim.yi .chin.jeol.eun .choe.go.deo.gun.yo
+1	몇	몇	DET	MM	_	2	det	_	Translit=.myeoch|LTranslit=.myeoch
+2	년	년	NOUN	NNB	_	4	nmod	_	Translit=.nyeon|LTranslit=.nyeon
+3	전	전	ADP	NNG	_	2	case	_	Translit=.jeon|LTranslit=.jeon
+4	고시	고시	NOUN	NNG	_	6	acl:relcl	_	Translit=.go.si|LTranslit=.go.si
+5	공부하던	공부+하+던	VERB	NNG+XSV+ETM	_	4	flat	_	Translit=.gong.bu.ha.deon|LTranslit=.gong.bu+.ha+.deon
+6	시절에	시절+에	ADV	NNG+JKB	_	9	obl	_	Translit=.si.jeol.e|LTranslit=.si.jeol+.e
+7	선후배들과	선후배+들+과	ADV	NNG+XSN+JKB	_	9	advmod	_	Translit=.seon.hu.bae.deul.gwa|LTranslit=.seon.hu.bae+.deul+.gwa
+8	자주	자주	ADV	MAG	_	9	advmod	_	Translit=.ja.ju|LTranslit=.ja.ju
+9	갔던	가+았+던	VERB	VV+EP+ETM	_	10	acl:relcl	_	Translit=.gass.deon|LTranslit=.ga+.ass+.deon
+10	곳인데	곳+이+ㄴ데	VERB	NNG+VCP+EC	_	14	advcl	_	Translit=.gos.in.de|LTranslit=.gos+.i+ㄴ.de
+11	여전히	여전히	ADV	MAG	_	14	advmod	_	Translit=.yeo.jeon.hi|LTranslit=.yeo.jeon.hi
+12	사장님의	사장+님+의	NOUN	NNG+XSN+JKG	_	13	nmod:poss	_	Translit=.sa.jang.nim.yi|LTranslit=.sa.jang+.nim+.yi
+13	친절은	친절+은	NOUN	NNG+JX	_	14	nsubj	_	Translit=.chin.jeol.eun|LTranslit=.chin.jeol+.eun
+14	최고더군요	최고+이+더군요	VERB	NNG+VCP+EC	_	0	root	_	Translit=.choe.go.deo.gun.yo|LTranslit=.choe.go+.i+.deo.gun.yo
+
+# sent_id = dev-s635
+# text = 우리 아빠 직장이 어디더라?
+# translit = .u.ri .a.bba .jig.jang.i .eo.di.deo.ra?
+1	우리	우리	PRON	NNG	_	2	det:poss	_	Translit=.u.ri|LTranslit=.u.ri
+2	아빠	아빠	NOUN	NNG	_	4	nsubj	_	Translit=.a.bba|LTranslit=.a.bba
+3	직장이	직장+이	NOUN	NNG+JKS	_	2	flat	_	Translit=.jig.jang.i|LTranslit=.jig.jang+.i
+4	어디더라	어디+이+더라	VERB	NP+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.eo.di.deo.ra|LTranslit=.eo.di+.i+.deo.ra
+5	?	?	PUNCT	SF	_	4	punct	_	Translit=?|LTranslit=?
+

@@ -3,6 +3,37 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn prefinal_copula_omission_recovers_three_unchanged_annotated_cases() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-prefinal-copulas.conllu").as_slice(),
+            vec![(
+                "id:MH2_0169-s454/2",
+                "마찬가지겠지만",
+                vec!["마찬가지", "이다"],
+            )],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-prefinal-copulas.conllu").as_slice(),
+            vec![
+                ("id:dev-s13/14", "최고더군요", vec!["최고", "이다"]),
+                ("id:dev-s635/4", "어디더라", vec!["어디", "이다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "prefinal-copulas").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn seo_connectives_recover_nine_unchanged_annotated_cases() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-seo-connectives.conllu").as_slice(),

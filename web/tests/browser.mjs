@@ -136,6 +136,9 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const prefinalCopulas = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-prefinal-copulas.json"), "utf8"),
+  );
   const seoConnectives = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-seo-connectives.json"), "utf8"),
   );
@@ -246,6 +249,7 @@ try {
       ...omittedConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...honorificCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...seoConnectives.LexicalResource.Lexicon.LexicalEntry,
+      ...prefinalCopulas.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
       if (primaryIds.has(entry.val)) return false;
       primaryIds.add(entry.val);
@@ -624,6 +628,12 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, expected, form, label, id, kind = "ending"] of [
+    ["의사겠지", ["의사", "이", "겠", "지"], "지", "Connective / final", 78636, "ending"],
+    ["최고더군요", ["최고", "이", "더군요"], "더군요", "Recalled realization (polite)", 86281, "ending"],
+    ["최고더군요", ["최고", "이", "더", "군", "요"], "요", "Polite", 86116, "particle"],
+    ["의사겠더라", ["의사", "이", "겠", "더라"], "더라", "Recalled experience", 81524, "ending"],
+    ["의사던데요", ["의사", "이", "던데요"], "던데요", "Recalled background (polite)", 85637, "ending"],
+    ["먹기겠다", ["먹", "기", "이", "겠", "다"], "다", "Plain / dictionary ending", 85041, "ending"],
     ["가지고서", ["가지", "고서"], "고서", "After / reason / condition", 78584, "ending"],
     ["돌리고서는", ["돌리", "고서", "는"], "는", "Topic / contrast", 85851, "particle"],
     ["되어서야", ["되", "어서야"], "어서야", "Only after / emphatic reason", 86569, "ending"],
@@ -1177,6 +1187,17 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
   }
   for (const [word, forbidden] of [
+    ["학생겠지", ["학생", "이다"]],
+    ["길겠지", ["길", "이다"]],
+    ["학생더군요", ["학생", "이다"]],
+    ["길더라", ["길", "이다"]],
+    ["도우겠지", ["돕", "이다"]],
+    ["사겠지", ["살", "이다"]],
+    ["의사더겠지", ["의사", "이다"]],
+    ["의사겠었다", ["의사", "이다"]],
+    ["의사겠시다", ["의사", "이다"]],
+    ["의사겠지", ["의사이다"]],
+    ["최고더군요", ["최고이다"]],
     ["먹었고서", ["먹다"]],
     ["먹겠고서", ["먹다"]],
     ["먹더고서", ["먹다"]],

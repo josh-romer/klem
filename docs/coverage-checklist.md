@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records fifty-eight scoped
-  dispositions from COV-016/017m–n/017p–q/018e–i/019d–f/020d–f; 657 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records sixty-six scoped
+  dispositions from COV-016/017m–n/017p–q/018e–i/019d–f/020d–g; 649 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -667,7 +667,7 @@ review remains open under the completion review below.
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
   finite 거/것 nominal alternatives; COV-020d adds enumerative -요 and
   COV-020e adds reviewed consonant-initial ending families; COV-020f adds
-  honorific omission and short 세요.**
+  honorific omission and short 세요; COV-020g adds modal/retrospective omission.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -756,6 +756,19 @@ review remains open under the completion review below.
   stays bundled; generic 시어-to-세 recovery, other prefinal omissions, contextual
   honorific suitability and broader auxiliary restrictions remain open. See
   [scope and sources](rules.md#honorific-copula-omission-cov-020f).
+- [x] **COV-020g — Modal and retrospective copula omission.** Recover 이
+  before 겠/더 after vowel-final nominals, preserving represented copula roles,
+  normal prefinal order and explicit forms. Reviewed literal bundles 더라,
+  더라고, 더군/더군요, 더니, 더라도 and 던데/던데요 retain alternatives to
+  decomposed prefinals. 마찬가지겠지만, 최고더군요 and 어디더라 gain exact
+  annotated groups in three complete unchanged development sentences. Evidence:
+  [boundary/composition tests](../tests/prefinal_copulas.rs), thirty-five
+  `prefinal-copula-*` ledger cases, attributed dictionary/CLI/browser checks and
+  [comparison](prefinal-copula-evaluation.json). Bare 던/더라는 omission,
+  wider prefinal-ending licenses and contextual senses remain open. The report
+  records the existing 더 + 다 attachment problem for follow-up; this batch
+  does not certify it. See [scope](rules.md#modal-and-retrospective-copula-omission-cov-020g).
+
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without

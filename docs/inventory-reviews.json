@@ -2496,6 +2496,390 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:80204",
+      "source_sha256": "b95e6d1bae98bf795a9bdc9e7a6006578839c05f4daa6f6510a75c2f94203d4d",
+      "status": "scoped",
+      "checklist": [
+        "COV-020g"
+      ],
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_preserve_roles_composition_and_alternatives"
+        },
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_reject_wrong_boundaries_order_and_fabricated_verbs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "prefinal_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prefinal_copula_omission_recovers_three_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/prefinal-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "prefinal-copula-concession",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81522",
+      "source_sha256": "43ab37608a90607f5451417f8ec2130566f02eff674679e0473f62f4f12068cd",
+      "status": "scoped",
+      "checklist": [
+        "COV-020g"
+      ],
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_preserve_roles_composition_and_alternatives"
+        },
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_reject_wrong_boundaries_order_and_fabricated_verbs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "prefinal_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prefinal_copula_omission_recovers_three_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/prefinal-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "prefinal-copula-sentence-final",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81524",
+      "source_sha256": "a72771df053792538b809d57a87886db3f49f8cc9aa91689b8ad3b2413fd887b",
+      "status": "scoped",
+      "checklist": [
+        "COV-020g"
+      ],
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_preserve_roles_composition_and_alternatives"
+        },
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_reject_wrong_boundaries_order_and_fabricated_verbs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "prefinal_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prefinal_copula_omission_recovers_three_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/prefinal-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "prefinal-copula-modal-retrospective-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-retrospective-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-colloquial-short",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-colloquial-expanded",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-nominalization-retrospective",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-rieul-retrospective",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81572",
+      "source_sha256": "e5bbb3731931d72412464def0ab10476033260d9eea645b302a6cacc7fd7c3ff",
+      "status": "scoped",
+      "checklist": [
+        "COV-020g"
+      ],
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_preserve_roles_composition_and_alternatives"
+        },
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_reject_wrong_boundaries_order_and_fabricated_verbs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "prefinal_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prefinal_copula_omission_recovers_three_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/prefinal-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "prefinal-copula-realization",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85634",
+      "source_sha256": "e15a6e533daa2e9e7a113ddab82b7d50b0aaf0d51cc999b8a48bd5b249a67333",
+      "status": "scoped",
+      "checklist": [
+        "COV-020g"
+      ],
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_preserve_roles_composition_and_alternatives"
+        },
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_reject_wrong_boundaries_order_and_fabricated_verbs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "prefinal_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prefinal_copula_omission_recovers_three_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/prefinal-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "prefinal-copula-background",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85794",
+      "source_sha256": "30b5ac4e32bb0bb5bb82100f984517f89ffb6259411715812b9137c5db5fa70b",
+      "status": "scoped",
+      "checklist": [
+        "COV-020g"
+      ],
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_preserve_roles_composition_and_alternatives"
+        },
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_reject_wrong_boundaries_order_and_fabricated_verbs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "prefinal_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prefinal_copula_omission_recovers_three_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/prefinal-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "prefinal-copula-modal-retrospective",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-retrospective",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-polite-components",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85795",
+      "source_sha256": "f6e25debf939b3af983686c3f2e55414d00bf3dcaaf2b6c9de36d7b992730a91",
+      "status": "scoped",
+      "checklist": [
+        "COV-020g"
+      ],
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_preserve_roles_composition_and_alternatives"
+        },
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_reject_wrong_boundaries_order_and_fabricated_verbs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "prefinal_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prefinal_copula_omission_recovers_three_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/prefinal-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "prefinal-copula-connection",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:90137",
+      "source_sha256": "a623c857b21452506e797ddfd80dfabefd5a39660ef5c06c6caf9f3b05e1cd2a",
+      "status": "scoped",
+      "checklist": [
+        "COV-020g"
+      ],
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_preserve_roles_composition_and_alternatives"
+        },
+        {
+          "path": "tests/prefinal_copulas.rs",
+          "test": "omitted_prefinal_copulas_reject_wrong_boundaries_order_and_fabricated_verbs"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "prefinal_copula_omission_keeps_dictionary_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prefinal_copula_omission_recovers_three_unchanged_annotated_cases"
+        },
+        {
+          "path": "docs/prefinal-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "prefinal-copula-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-modal-polite",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-question",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-formal",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-nominalization",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-trial-nominalization",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-explicit-consonant",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-consonant-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-rieul-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-no-bieup",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-no-rieul-drop",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-wrong-order",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-past-after-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-honorific-after-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "prefinal-copula-fabricated-modal",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

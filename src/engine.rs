@@ -213,13 +213,17 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
     }];
     let mut choices: Vec<(Recovery, u8, u8, &str, &str)> = vec![];
     if stage >= 4 {
-        for r in grammar::recover(stem, "더", Boundary::Literal) {
-            choices.push((r, 3, pasts, "더", "prefinal.retrospective"));
+        for boundary in [Boundary::Literal, Boundary::OmittedCopula(0)] {
+            for r in grammar::recover(stem, "더", boundary) {
+                choices.push((r, 3, pasts, "더", "prefinal.retrospective"));
+            }
         }
     }
     if stage >= 3 {
-        for r in grammar::recover(stem, "겠", Boundary::Literal) {
-            choices.push((r, 2, pasts, "겠", "prefinal.modal"));
+        for boundary in [Boundary::Literal, Boundary::OmittedCopula(0)] {
+            for r in grammar::recover(stem, "겠", boundary) {
+                choices.push((r, 2, pasts, "겠", "prefinal.modal"));
+            }
         }
         // KRDict treats -아/어/여야겠- as one expression. Keep it as a
         // prefinal-position bundle, without inventing an omitted 하다 lemma.
@@ -253,9 +257,16 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
     }
     for (r, next, count, form, rule) in choices {
         for mut p in prefinals(&r.stem, next, count, memo) {
-            if form == "시" && r.rules.iter().any(|r| r == "copula.omitted_ending") {
+            if r.rules.iter().any(|r| r == "copula.omitted_ending") {
                 p.copula_only = true;
-                p.rules.push("copula.omitted_honorific".into());
+                p.rules.push(
+                    if form == "시" {
+                        "copula.omitted_honorific"
+                    } else {
+                        "copula.omitted_prefinal"
+                    }
+                    .into(),
+                );
             }
             p.copula_contracted |=
                 r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");

@@ -1164,3 +1164,41 @@ without JavaScript errors or horizontal overflow. The browser expectations
 explicitly distinguish displayed 여서/여서야 after 하 from canonical 어서/어서야
 used for lookup. Independent Korean-language review, fresh-passage evaluation,
 other particle slots and remaining inventory dispositions are still pending.
+
+## Modal and retrospective copula omission (COV-020g)
+
+[The comparison](prefinal-copula-evaluation.json) records **94 added analyses
+across 46 audited surfaces**, with no removed candidates or changed provenance.
+Omitted 이 before 겠/더 preserves represented copula roles and the existing
+prefinal order. Reviewed retrospective bundles retain separate decomposed
+readings. Consonant-final omission, predicate irregular changes to nominal bases,
+reversed prefinal order and fabricated lexical copula verbs have regressions.
+
+Three complete byte-identical development sentences recover 마찬가지겠지만
+(KAIST), 최고더군요 and 어디더라 (GSD), leaving **117 KAIST and 160 GSD
+misses**. No earlier gold group or component set is lost. Mean candidates change
+from 5.837579 to 5.842574 for KAIST and from 5.369106 to 5.377415 for GSD.
+These are ambiguity measures, not precision estimates. All thirty stress
+fingerprints and historical corpus baselines remain unchanged.
+
+Thirty-five new cases bring the ledger to **626 cases, 358 required and 274
+forbidden judgments**. Eight scoped grammar reviews bring the inventory to
+**66 scoped entries and 649 without a disposition**. Three expression sources
+are attributed separately; the existing label catalog and grammar fixture remain
+unchanged. A 29-entry lexical fixture preserves homonyms, including the 누구
+pronoun rather than the unrelated idiom that reuses its numeric export ID.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, stress
+and memory regressions, and the complete browser/HTTP suite pass. `nix flake
+check` and `nix build .#web` pass on x86_64-linux; other declared platforms were
+not executed. The inventory drift check caught a documentation hash change;
+regenerating the evidence queue resolved it. The packaged full-dictionary app
+passes nine ordered reading choices, prefinal/bundle source links and eleven
+forbidden paths. Desktop/mobile screenshots were inspected without JavaScript
+errors or horizontal overflow.
+
+Broader prefinal-ending restrictions remain open, including the recorded
+더 + 다 problem in lexical and explicit/omitted copula paths. Bare 던/더라는
+omission is not added. Full-form parity does not certify contextual grammar;
+independent Korean-language review, fresh passages and remaining inventory
+dispositions are still completion requirements.

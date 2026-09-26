@@ -1,0 +1,4108 @@
+{
+  "schema_version": 1,
+  "scope": "COV-020g: omitted copular 이 before 겠/더 and reviewed retrospective bundles; nominal boundary and represented-copula role retained.",
+  "baseline_commit": "32ba4db87db04700645e0aecfd95f9e45f76b3f8",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export. Every sense and attachment note; up to two example groups per sense.",
+  "source_license": "CC BY-SA 2.0 KR",
+  "source_license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_sha256": {
+    "src/grammar.rs": "9945b0ced56fe50256b8e35057345ac91a43695ef3dce48b5296e7931f534d9c",
+    "src/engine.rs": "31b62fd2d342f4f7b1827c766cb717248296a7f29fd6a9c794827db9cde62ea0",
+    "tests/prefinal_copulas.rs": "2898476eead2aec9180ac1775bc0742ad86fcfa65ea690c865a687e63113d003",
+    "tests/corpus.rs": "6edaf6e5497fdc38c48085b756e438ff48437aa4d79dedadaed91a772bc64d7e",
+    "tests/dictionary.rs": "76d87b35ba9b6284a1bf59d0b9a2bd75af2f075240396a87a4a3dbff248d5796",
+    "tests/validity.rs": "a8f995ae1938c202b621551044384f05948bc4c529bbbba86debd81ca6c293f5",
+    "tests/fixtures/validity.json": "8c02092f6a08c3eceaf5c9d97e9178cea5c150f11805738dd82b344056c6ee98",
+    "tests/fixtures/krdict-prefinal-copulas.json": "c2baab2b19f0c115fd2a3d3ccc371449a05d206fff3c44a726239792bfd1cd80",
+    "web/tests/browser.mjs": "9377a4db42b3171fbc4383a2daa8ed1731c880aee3b9584a5d372a828bc305e2"
+  },
+  "attachment_review": [
+    {
+      "source": {
+        "id": "krdict:80204",
+        "headword": "-더라도",
+        "homonym": "0",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80204",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "앞에 오는 말을 가정하거나 인정하지만 뒤에 오는 말에는 관계가 없거나 영향을 끼치지 않음을 나타내는 연결 어미.",
+            "notes": [
+              "‘이다’, 동사와 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "다소 어렵더라도 도움이 되는 책이니 읽어 보렴."
+              ],
+              [
+                "민준이는 위험이 따르더라도 옳은 일을 해야 한다고 생각했다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "b95e6d1bae98bf795a9bdc9e7a6006578839c05f4daa6f6510a75c2f94203d4d",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:81522",
+        "headword": "-더니",
+        "homonym": "2",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81522",
+        "lexical_unit": "단어",
+        "notes": [
+          "‘이다’, 동사와 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다. "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "과거에 직접 경험하여 알게 된 일을 회상하면서 현재는 그와 대조되는 상황이 있음을 암시하는 종결 어미.",
+            "notes": [
+              "주로 구어에서 혼잣말로 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "젊어서는 그렇게 고생만 하더니."
+              ],
+              [
+                "어릴 때는 겁이 많아서 항상 울더니."
+              ]
+            ],
+            "total_example_groups": 6
+          }
+        ]
+      },
+      "source_sha256": "43ab37608a90607f5451417f8ec2130566f02eff674679e0473f62f4f12068cd",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:81524",
+        "headword": "-더라",
+        "homonym": "0",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81524",
+        "lexical_unit": "단어",
+        "notes": [
+          "‘이다’, 동사와 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다. "
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "(아주낮춤으로) 말하는 이가 직접 경험하여 새롭게 알게 된 사실을 지금 전달함을 나타내는 종결 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그 식당 손님이 많이 줄었더라."
+              ],
+              [
+                "할아버지께서 손자를 많이 보고 싶어 하시더라."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "2",
+            "definition": "(아주낮춤으로) 말하는 이가 과거에 경험한 일을 떠올리며 스스로 묻거나, 함께했던 과거 경험에 대해 상대방에게 물어보는 뜻을 나타내는 종결 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그걸 어디다 뒀더라?"
+              ],
+              [
+                "내가 어제 뭘 먹었더라?"
+              ]
+            ],
+            "total_example_groups": 3
+          }
+        ]
+      },
+      "source_sha256": "a72771df053792538b809d57a87886db3f49f8cc9aa91689b8ad3b2413fd887b",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:81572",
+        "headword": "-더군",
+        "homonym": "0",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81572",
+        "lexical_unit": "단어",
+        "notes": [
+          "‘이다’, 동사와 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "(두루낮춤으로) 과거에 직접 경험하여 새롭게 알게 된 사실을 전하며 그 사실에 주목하거나 감탄함을 나타내는 종결 어미.",
+            "notes": [
+              "주로 구어나 혼잣말에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "내일 열리는 농구 결승전이 꽤 재미있겠더군."
+              ],
+              [
+                "오랜만에 지수를 만났는데 못 본 사이에 많이 자랐더군."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "(아주낮춤으로) 직접 경험하여 새롭게 알게 된 사실을 알릴 때 쓰는 종결 어미.",
+            "notes": [
+              "주로 구어에서 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "유민이는 얼굴도 예쁘고 마음씨도 예쁘더군."
+              ],
+              [
+                "민준이가 이번에 어려운 시험에 합격했더군."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "e5bbb3731931d72412464def0ab10476033260d9eea645b302a6cacc7fd7c3ff",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:82328",
+        "headword": "-더라고",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82328",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "'이다', 동사와 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "(두루낮춤으로) 과거에 경험하여 새로 알게 된 사실에 대해 지금 상대방에게 옮겨 전할 때 쓰는 표현.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "아까 지수는 시장에 가더라고."
+              ],
+              [
+                "어제 보니 산에는 눈이 쌓였더라고."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "5aa073a36cc8b94195e1a7278f2829ba6e499c81c66a648b7cf86e8569e05cbd",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:85634",
+        "headword": "-던데",
+        "homonym": "0",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85634",
+        "lexical_unit": "단어",
+        "notes": [
+          "‘이다’, 동사와 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "뒤의 말을 하기 위하여 그 대상과 관련이 있는 과거의 상황을 미리 말함을 나타내는 연결 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "어제 보니까 자전거를 잘 타던데 언제 배운 거니?"
+              ],
+              [
+                "지수가 기침을 계속하던데 감기에 걸린 것은 아닌지 걱정이다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "2",
+            "definition": "(두루낮춤으로) 듣는 사람의 반응을 기대하며 과거의 어떤 일에 대해 감탄함을 나타내는 종결 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "요즘 자네가 아주 잘되고 있다는 소리가 들리던데."
+              ],
+              [
+                "자네 어제 가죽 재킷을 입은 모습이 근사하던데."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "e15a6e533daa2e9e7a113ddab82b7d50b0aaf0d51cc999b8a48bd5b249a67333",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:85637",
+        "headword": "-던데요",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85637",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "‘이다’, 동사와 형용사 또는 ‘-으시-, -었-, -겠-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "2",
+            "definition": "(두루높임으로) 듣는 사람의 반응을 기대하며 과거의 어떤 일에 대해 감탄함을 나타내는 표현.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "벌써 꽃이 피었던데요."
+              ],
+              [
+                "그곳에는 맛있는 음식들이 많던데요."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "1",
+            "definition": "(두루높임으로) 과거에 직접 경험한 사실을 전달하여 듣는 사람의 반응을 기대함을 나타내는 표현.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "아까 경찰들이 옆집의 김 씨를 찾던데요. 무슨 일인지는 알려 주지 않았어요."
+              ],
+              [
+                "우유는 약이랑 같이 먹으면 안 좋다고 하던데요.",
+                "아닙니다. 그건 별 근거가 없는 말입니다."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "16e2432c21e9a355c030dddb39293b61ffb64aff8f44b562b438888404951e0f",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:85794",
+        "headword": "-더-",
+        "homonym": "0",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85794",
+        "lexical_unit": "단어",
+        "notes": [],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "과거 어느 때에 직접 경험하여 알게 된 사실을 현재의 말하는 장면에 그대로 옮겨 와서 전달한다는 뜻을 나타내는 어미.",
+            "notes": [
+              "‘이다’, 동사와 형용사 또는 ‘-으시-', '-었-', '-겠-’ 뒤에, ‘-라', '-냐', '-니', '-구나', '-구려’ 등의 어미 앞에 붙여 쓴다."
+            ],
+            "patterns": [],
+            "examples": [
+              [
+                "그날은 다들 신이 났더라."
+              ],
+              [
+                "너는 정말 많은 책을 읽었더구나."
+              ]
+            ],
+            "total_example_groups": 5
+          }
+        ]
+      },
+      "source_sha256": "30b5ac4e32bb0bb5bb82100f984517f89ffb6259411715812b9137c5db5fa70b",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:85795",
+        "headword": "-더니",
+        "homonym": "1",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85795",
+        "lexical_unit": "단어",
+        "notes": [
+          "‘이다’, 동사와 형용사 또는 '-으시-', '-었-', '-겠-' 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "과거의 사실이나 상황에 뒤이어 어떤 사실이나 상황이 일어남을 나타내는 연결 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "하늘이 흐려지더니 비가 온다."
+              ],
+              [
+                "밥을 많이 먹었더니 배가 부르다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "2",
+            "definition": "과거에 경험하여 알게 된 사실과 다른 새로운 사실이 있음을 나타내는 연결 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "아침에는 눈이 오더니 지금은 하늘이 맑네."
+              ],
+              [
+                "민준이가 아까까지만 해도 자고 있더니 지금은 공부를 하네?"
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "과거의 어떤 사실에 대하여 그와 관련된 또 다른 사실이 있음을 나타내는 연결 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "그 사람이 그렇게 능력을 인정받더니 결국 금방 승진했잖아."
+              ],
+              [
+                "그 아이는 친구들을 못살게 괴롭히더니 때리기까지 했다지 뭐야."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "f6e25debf939b3af983686c3f2e55414d00bf3dcaaf2b6c9de36d7b992730a91",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:86281",
+        "headword": "-더군요",
+        "homonym": "0",
+        "pos": "품사 없음",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86281",
+        "lexical_unit": "문법‧표현",
+        "notes": [
+          "‘이다’, 동사와 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "(두루높임으로) 과거에 직접 경험하여 새롭게 알게 된 사실에 주목하거나 감탄함을 나타내는 표현.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "전에 뵈니 따님이 참 미인이시더군요."
+              ],
+              [
+                "오랜만에 고향에 갔더니 많이 변했더군요."
+              ]
+            ],
+            "total_example_groups": 4
+          }
+        ]
+      },
+      "source_sha256": "aa4abb382875c134b512152d0ec1d35e22eef860f3939b89dfca8e4a0769d734",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    },
+    {
+      "source": {
+        "id": "krdict:90137",
+        "headword": "-겠-",
+        "homonym": "0",
+        "pos": "어미",
+        "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=90137",
+        "lexical_unit": "단어",
+        "notes": [
+          "‘이다’, 동사와 형용사 또는 ‘-으시-’, ‘-었-’ 뒤에, 다른 어미 앞에 붙여 쓴다."
+        ],
+        "forms": [],
+        "senses": [
+          {
+            "id": "1",
+            "definition": "미래의 일이나 추측을 나타내는 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "수업이 벌써 끝났겠다."
+              ],
+              [
+                "군대 간 아들이 많이 씩씩해졌겠다."
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "2",
+            "definition": "말하는 사람의 의지를 나타내는 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "나는 꿈을 좇는 사람이 되겠다."
+              ],
+              [
+                "이 정도의 어려움은 내 스스로 이겨 내겠다."
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "3",
+            "definition": "가능성이나 능력을 나타내는 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "이런 건 초등학생도 잘하겠다."
+              ],
+              [
+                "아이가 어떻게 혼자서 집을 볼 수 있겠니?"
+              ]
+            ],
+            "total_example_groups": 4
+          },
+          {
+            "id": "4",
+            "definition": "완곡하게 말하는 태도를 나타내는 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "네가 좀 도와주면 좋겠다."
+              ],
+              [
+                "잠깐 실례 좀 해도 되겠습니까?"
+              ]
+            ],
+            "total_example_groups": 5
+          },
+          {
+            "id": "5",
+            "definition": "헤아리거나 따져 보면 그렇게 된다는 뜻을 나타내는 어미.",
+            "notes": [],
+            "patterns": [],
+            "examples": [
+              [
+                "참 이상한 사람 다 보겠다."
+              ],
+              [
+                "살다 보니 별일을 다 겪겠다."
+              ]
+            ],
+            "total_example_groups": 3
+          }
+        ]
+      },
+      "source_sha256": "a623c857b21452506e797ddfd80dfabefd5a39660ef5c06c6caf9f3b05e1cd2a",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved.",
+      "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified."
+    }
+  ],
+  "reports": [
+    {
+      "corpus": "kaist",
+      "split": "development",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "ea6a5a019b5dccbb1438247ac423568f43f1658967bbd88f4fb20e62bc54ba8e",
+      "after_sha256": "f3dac7e823c773538b1fe0912c85cc458e14074d5ca5f9db245d1a9b93c68d2f",
+      "converted": 22220,
+      "before_matched": 22102,
+      "after_matched": 22103,
+      "remaining_misses": 117,
+      "new_matches": [
+        {
+          "id": "id:MH2_0169-s454/2",
+          "surface": "마찬가지겠지만",
+          "expected": [
+            "마찬가지",
+            "이다"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.837578757875788,
+      "mean_candidates_after": 5.842574257425743
+    },
+    {
+      "corpus": "gsd",
+      "split": "development",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "feb249be472afc9f9c9567ba95f4ea3eda4e0774a665281f1f4c6640008d7843",
+      "after_sha256": "a16ad1717d6864b0768fcc25f5b4424ae90bc473120837e35b1758152776302d",
+      "converted": 9989,
+      "before_matched": 9827,
+      "after_matched": 9829,
+      "remaining_misses": 160,
+      "new_matches": [
+        {
+          "id": "id:dev-s13/14",
+          "surface": "최고더군요",
+          "expected": [
+            "최고",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:dev-s635/4",
+          "surface": "어디더라",
+          "expected": [
+            "어디",
+            "이다"
+          ]
+        }
+      ],
+      "lost_groups": [],
+      "lost_component_sets": [],
+      "mean_candidates_before": 5.3691060166182805,
+      "mean_candidates_after": 5.377415156672339
+    }
+  ],
+  "candidate_review": [
+    {
+      "surface": "의사겠지",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사겠어요",
+      "before_count": 16,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "누구겠니",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "누구",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "니",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "최고겠습니다",
+      "before_count": 12,
+      "after_count": 13,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "최고",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "습니다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.consonant",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기겠다",
+      "before_count": 7,
+      "after_count": 10,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "nominalization",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "deletion.ha",
+            "ending",
+            "nominalization",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹어보기겠지",
+      "before_count": 6,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "nominalization",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.identical",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "nominalization",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹어보다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "nominalization",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹으다",
+              "kind": "predicate"
+            },
+            {
+              "text": "보다",
+              "kind": "auxiliary"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "deletion.eu",
+            "ending",
+            "nominalization",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사겠더라",
+      "before_count": 16,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "prefinal.modal",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사시겠더라",
+      "before_count": 24,
+      "after_count": 26,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사시",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "prefinal.modal",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사시",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생이겠지",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "학생",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "학생이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사더라",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사더라고",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더라고",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "최고더군",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "최고",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "최고",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "최고더군요",
+      "before_count": 11,
+      "after_count": 15,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "최고",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "최고",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "최고",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "최고",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사더니",
+      "before_count": 11,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "니",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "으니",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.eu",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더니",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사더라도",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "라도",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더라도",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사던데",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "은데",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "던데",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사던데요",
+      "before_count": 15,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "은데",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "던데",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "던데요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "거더라",
+      "before_count": 10,
+      "after_count": 14,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "거",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "거",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "것",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "nominal.colloquial_geot",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "것",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "nominal.colloquial_geot"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "먹기더라",
+      "before_count": 10,
+      "after_count": 16,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹기",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "nominalization",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "nominalization"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "deletion.ha",
+            "ending",
+            "ending.factual_ra",
+            "nominalization",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "먹하다",
+              "kind": "predicate"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "기",
+              "kind": "ending"
+            },
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "deletion.ha",
+            "ending",
+            "nominalization"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생겠지",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "길겠지",
+      "before_count": 6,
+      "after_count": 6,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "학생더군요",
+      "before_count": 11,
+      "after_count": 11,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "길더라",
+      "before_count": 10,
+      "after_count": 10,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "도우겠지",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "도우",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사겠지",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사더겠지",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사더",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사겠었다",
+      "before_count": 9,
+      "after_count": 9,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사겠시다",
+      "before_count": 5,
+      "after_count": 5,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC겠지",
+      "before_count": 5,
+      "after_count": 6,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC이겠지",
+      "before_count": 7,
+      "after_count": 9,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.modal",
+            "pronunciation.assumed_consonant"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC더군요",
+      "before_count": 7,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.retrospective",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.polite",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "pronunciation.assumed_vowel"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "ABC이더군요",
+      "before_count": 15,
+      "after_count": 23,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.retrospective",
+            "pronunciation.assumed_consonant"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "prefinal.retrospective",
+            "pronunciation.assumed_consonant"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "더군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.polite",
+            "pronunciation.assumed_consonant"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "이",
+              "kind": "particle"
+            },
+            {
+              "form": "더군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "pronunciation.assumed_consonant"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "ABC이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "가겠지",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "가",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "사더라",
+      "before_count": 9,
+      "after_count": 11,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "배우겠어요",
+      "before_count": 16,
+      "after_count": 18,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "배우",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "배우",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "마찬가지겠지만",
+      "before_count": 36,
+      "after_count": 40,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "마찬가지",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "만",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.concessive",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "마찬가지",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지만",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "마찬가지",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "irregular.mal",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "마찬가지",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "말다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "deletion.rieul",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "어디더라",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "어디",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "ending.factual_ra",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "어디",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더라",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사더라는",
+      "before_count": 15,
+      "after_count": 15,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사던",
+      "before_count": 10,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "contraction.identical",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사겠던",
+      "before_count": 20,
+      "after_count": 23,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "는",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "contraction.identical",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.contraction.n",
+            "prefinal.modal",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.attached",
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "던",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사겠고서",
+      "before_count": 4,
+      "after_count": 4,
+      "removed": [],
+      "added": [],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사더다",
+      "before_count": 6,
+      "after_count": 7,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사시겠다",
+      "before_count": 11,
+      "after_count": 12,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사시",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사이겠지",
+      "before_count": 7,
+      "after_count": 8,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "지",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "최고이더군요",
+      "before_count": 15,
+      "after_count": 19,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "최고이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "최고이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "최고이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending",
+            "particle",
+            "particle.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "최고이",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "더군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    },
+    {
+      "surface": "의사겠더군요",
+      "before_count": 23,
+      "after_count": 27,
+      "removed": [],
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.modal",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더",
+              "kind": "prefinal"
+            },
+            {
+              "form": "군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal",
+            "prefinal.retrospective"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더군",
+              "kind": "ending"
+            },
+            {
+              "form": "요",
+              "kind": "particle"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "particle",
+            "particle.polite",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "의사",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "겠",
+              "kind": "prefinal"
+            },
+            {
+              "form": "더군요",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "boundary.regular",
+            "copula",
+            "copula.omitted_ending",
+            "copula.omitted_prefinal",
+            "ending",
+            "prefinal.modal"
+          ],
+          "unchanged": false
+        }
+      ],
+      "provenance_changes": []
+    }
+  ],
+  "omission_guidance": [
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=309714",
+      "summary": "NIKL permits optional omission of copular 이 after a vowel-final nominal and explicitly illustrates honorific omission. Applying that boundary rule to the separately documented 겠/더 attachment is an implementation inference."
+    },
+    {
+      "url": "https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=321172",
+      "summary": "NIKL distinguishes omission from contraction before 에요/었 and notes that adnominal/nominalizing omission is generally unavailable. This batch adds no bare 던/더라는 omission rule."
+    }
+  ],
+  "fixtures": [
+    {
+      "path": "tests/fixtures/kaist-prefinal-copulas.conllu",
+      "sha256": "ecbce2d886d3de0792cd77d83aca8255ee0b32afe4530dc0925a25a72d9a0343",
+      "complete_byte_identical_sentences": 1
+    },
+    {
+      "path": "tests/fixtures/gsd-prefinal-copulas.conllu",
+      "sha256": "2febdc81afc467f8c02ce67130f137376d2f19b0fc092c57c50563d33e52abf8",
+      "complete_byte_identical_sentences": 2
+    }
+  ],
+  "snapshots": {
+    "unchanged": 30,
+    "changed": []
+  },
+  "remaining": [
+    "Bare adnominal 던 and 더라는 omission remain outside this batch; no blanket omitted-copula rule for arbitrary endings. Existing nominalization/modal/honorific compositions retain their prior boundaries.",
+    "Unclassified lexical heads remain hypotheses. Dictionary presence does not choose the nominal or lexical predicate sense.",
+    "Existing prefinal/endings still require a wider attachment review. For example this report probes 의사더다 without certifying the underlying 더 + 다 license; the same issue exists for explicit copulas and lexical predicates.",
+    "Independent Korean-language review, fresh passages, performance/ambiguity evaluation and remaining inventory dispositions are pending."
+  ],
+  "labels": {
+    "catalog_unchanged": true,
+    "grammar_fixture_unchanged": true
+  }
+}

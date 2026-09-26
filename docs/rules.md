@@ -1745,3 +1745,45 @@ unchanged corpus supplies 으면서부터 and 어서보다는 evidence. The
 [evaluation](seo-connective-evaluation.json) preserves all sense/attachment notes,
 additional source examples and nine complete annotated sentences. Independent
 Korean-language review remains pending.
+
+
+## Modal and retrospective copula omission (COV-020g)
+
+NIKL's [copula guidance](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=309714)
+permits optional omission after a vowel-final nominal. Applying that boundary to
+KRDict's separately documented copula attachment before
+[겠](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=90137) and
+[더](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85794)
+recovers 의사겠지 → 의사 + 이다 + 겠 + 지 and 의사더라 → 의사 + 이다 +
+더 + 라. This composition is an implementation inference from those sources,
+with independent Korean-language review still pending.
+
+The [source review](prefinal-copula-evaluation.json) also retains every sense and
+attachment note for the existing literal bundles 더라, 더라고, 더군/더군요,
+더니 (both homonyms), 더라도 and 던데/던데요. They admit copulas; their omitted
+forms retain both bundled and decomposed readings. 최고더군요 can display
+최고 + 이 + 더군요 or 최고 + 이 + 더 + 군 + 요. The dictionary catalog already
+includes these sources, including the three expression entries outside the
+715-entry grammar-POS inventory. No new catalog labels are needed.
+
+Recovery checks the nominal before the boundary and never applies predicate
+irregulars to it. 학생겠지/길더라 cannot omit 이; 도우겠지 cannot invent a
+돕 nominal. Foreign bases retain a conditional vowel-pronunciation assumption.
+The restored 이 is a represented copula, not a fabricated 의사이다 lexical
+verb. Normal prefinal stages exclude 더 + 겠, 겠 + 었 and 겠 + 시. Existing
+nominalizations, colloquial 거/것 alternatives, honorific forms and lexical verbs
+remain available. Dictionary presence does not select a contextual sense.
+
+[NIKL distinguishes omission from vowel contraction](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=321172)
+and notes restrictions in adnominal/nominalizing uses. No new bare 던/더라는
+omission rule is introduced here. Broader prefinal-ending licenses remain open:
+the comparison explicitly probes 의사더다, whose underlying 더 + 다 path also
+exists for explicit copulas and lexical predicates. This unresolved path is not
+certified by full-form parity or by corpus recall.
+
+Three complete unchanged development sentences recover 마찬가지겠지만,
+최고더군요 and 어디더라. Thirty-five ledger cases and dictionary/CLI/browser
+checks cover required readings and boundary/order violations. All thirty stress
+fingerprints remain unchanged, and every prior candidate and gold group in the
+comparison is preserved. Independent review and fresh-passage validation remain
+completion requirements.

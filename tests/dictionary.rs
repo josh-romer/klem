@@ -3451,3 +3451,193 @@ fn seo_connectives_keep_bundles_particles_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn prefinal_copula_omission_keeps_dictionary_and_cli_parity() {
+    use klem::MorphemeKind;
+    let dir = Scratch::new();
+    import_krdict(
+        &[PathBuf::from("tests/fixtures/krdict-prefinal-copulas.json")],
+        dir.db(),
+        "prefinal-copula-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms, kind) in [
+        (
+            "의사겠지",
+            vec!["의사", "이다"],
+            vec!["겠", "지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사겠어요",
+            vec!["의사", "이다"],
+            vec!["겠", "어요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "누구겠니",
+            vec!["누구", "이다"],
+            vec!["겠", "니"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "최고겠습니다",
+            vec!["최고", "이다"],
+            vec!["겠", "습니다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹기겠다",
+            vec!["먹다", "이다"],
+            vec!["기", "겠", "다"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹어보기겠지",
+            vec!["먹다", "보다", "이다"],
+            vec!["어", "기", "겠", "지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사겠더라",
+            vec!["의사", "이다"],
+            vec!["겠", "더", "라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사겠더라",
+            vec!["의사", "이다"],
+            vec!["겠", "더라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사시겠더라",
+            vec!["의사", "이다"],
+            vec!["시", "겠", "더", "라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "학생이겠지",
+            vec!["학생", "이다"],
+            vec!["겠", "지"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사더라",
+            vec!["의사", "이다"],
+            vec!["더", "라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사더라",
+            vec!["의사", "이다"],
+            vec!["더라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사더라고",
+            vec!["의사", "이다"],
+            vec!["더라고"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "최고더군",
+            vec!["최고", "이다"],
+            vec!["더군"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "최고더군요",
+            vec!["최고", "이다"],
+            vec!["더군요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "최고더군요",
+            vec!["최고", "이다"],
+            vec!["더", "군", "요"],
+            MorphemeKind::Particle,
+        ),
+        (
+            "의사더니",
+            vec!["의사", "이다"],
+            vec!["더니"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사더니",
+            vec!["의사", "이다"],
+            vec!["더니"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사더라도",
+            vec!["의사", "이다"],
+            vec!["더라도"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사던데",
+            vec!["의사", "이다"],
+            vec!["던데"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "의사던데요",
+            vec!["의사", "이다"],
+            vec!["던데요"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "거더라",
+            vec!["거", "이다"],
+            vec!["더라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "거더라",
+            vec!["것", "이다"],
+            vec!["더라"],
+            MorphemeKind::Ending,
+        ),
+        (
+            "먹기더라",
+            vec!["먹다", "이다"],
+            vec!["기", "더라"],
+            MorphemeKind::Ending,
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.morphemes.last().unwrap().kind == kind
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}: {forms:?}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+}

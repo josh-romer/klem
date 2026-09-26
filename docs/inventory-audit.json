@@ -1,0 +1,867 @@
+{
+  "schema_version": 1,
+  "measured": "2026-09-26",
+  "scope": "COV-013 triage after COV-016; development partitions only. No completeness or precision claim.",
+  "dictionary_fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+  "source_sha256": {
+    "src/grammar.rs": "b90632b1864bb622431bfc7a987a1368616b7c28640e3a37044d55655e79e6ca",
+    "src/engine.rs": "fbf395e45c8b2e362024a3fc84113e903f0de03ca092db9a25b08919fd159081",
+    "tools/audit-inventory.py": "f823d04d869a7348b3046e3fb497df1f46d5f1438d7b538d9ea3d9f2356f5bdf"
+  },
+  "inventory": {
+    "보조 동사": {
+      "entries": 40,
+      "literal_mentions": 16,
+      "interpretation": "Source string overlap only, not rule coverage."
+    },
+    "보조 형용사": {
+      "entries": 14,
+      "literal_mentions": 5,
+      "interpretation": "Source string overlap only, not rule coverage."
+    },
+    "어미": {
+      "entries": 504,
+      "literal_mentions": 142,
+      "interpretation": "Source string overlap only, not rule coverage."
+    },
+    "조사": {
+      "entries": 157,
+      "literal_mentions": 53,
+      "interpretation": "Source string overlap only, not rule coverage."
+    }
+  },
+  "reports": [
+    {
+      "corpus": "kaist",
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "report_sha256": "0199ba73a54623133dfbc52dc60ae44f4d865a5c2143d5903b4477b8aa7cdb3c",
+      "converted": 22220,
+      "matched": 21842,
+      "misses": 378,
+      "misses_before_cov016": 393,
+      "new_matches": [
+        {
+          "id": "id:MH2_0069-s183/2",
+          "surface": "보듯이",
+          "expected": [
+            "보다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s272/4",
+          "surface": "나타나듯이",
+          "expected": [
+            "나타나다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s293/1",
+          "surface": "이렇듯",
+          "expected": [
+            "이렇다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s435/6",
+          "surface": "했듯이",
+          "expected": [
+            "하다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s486/6",
+          "surface": "보여주듯이",
+          "expected": [
+            "보이다",
+            "주다"
+          ]
+        },
+        {
+          "id": "id:MH2_0069-s60/2",
+          "surface": "보듯이",
+          "expected": [
+            "보다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s121/10",
+          "surface": "그랬듯이",
+          "expected": [
+            "그렇다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s128/12",
+          "surface": "확인되듯이",
+          "expected": [
+            "확인되다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s173/7",
+          "surface": "이성이었듯이",
+          "expected": [
+            "이성",
+            "이다"
+          ]
+        },
+        {
+          "id": "id:MH2_0159-s39/8",
+          "surface": "쓰듯이",
+          "expected": [
+            "쓰다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s480/5",
+          "surface": "있듯이",
+          "expected": [
+            "있다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s493/11",
+          "surface": "있듯이",
+          "expected": [
+            "있다"
+          ]
+        },
+        {
+          "id": "id:MH2_0169-s736/5",
+          "surface": "되듯이",
+          "expected": [
+            "되다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s20/9",
+          "surface": "부리듯",
+          "expected": [
+            "부리다"
+          ]
+        },
+        {
+          "id": "id:MH2_0209-s65/9",
+          "surface": "쇠락하듯이",
+          "expected": [
+            "쇠락하다"
+          ]
+        }
+      ],
+      "largest_remaining_signatures": [
+        {
+          "signature": "라고/jcr",
+          "count": 16,
+          "examples": [
+            {
+              "id": "id:MH2_0159-s199/5",
+              "surface": "이데올로기라고",
+              "expected": [
+                "이데올로기"
+              ]
+            },
+            {
+              "id": "id:MH2_0169-s101/6",
+              "surface": "한계라고",
+              "expected": [
+                "한계"
+              ]
+            },
+            {
+              "id": "id:MH2_0169-s157/3",
+              "surface": "재야라고",
+              "expected": [
+                "재야"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "lexical-or-derivational",
+          "count": 12,
+          "examples": [
+            {
+              "id": "id:MH2_0069-s130/14",
+              "surface": "확대재생산에",
+              "expected": [
+                "확대"
+              ]
+            },
+            {
+              "id": "id:MH2_0069-s153/15",
+              "surface": "확대재생산을",
+              "expected": [
+                "확대"
+              ]
+            },
+            {
+              "id": "id:MH2_0069-s188/1",
+              "surface": "한마디로",
+              "expected": [
+                "한"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "지/ecx+는/jxt",
+          "count": 10,
+          "examples": [
+            {
+              "id": "id:MH2_0069-s212/10",
+              "surface": "얻지는",
+              "expected": [
+                "얻다"
+              ]
+            },
+            {
+              "id": "id:MH2_0069-s58/18",
+              "surface": "나오지는",
+              "expected": [
+                "나오다"
+              ]
+            },
+            {
+              "id": "id:MH2_0149-s137/7",
+              "surface": "겪지는",
+              "expected": [
+                "겪다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "면서/ecc+도/jxc",
+          "count": 9,
+          "examples": [
+            {
+              "id": "id:MH2_0069-s2/5",
+              "surface": "강조하면서도",
+              "expected": [
+                "강조하다"
+              ]
+            },
+            {
+              "id": "id:MH2_0069-s260/3",
+              "surface": "부드러우면서도",
+              "expected": [
+                "부드러우다"
+              ]
+            },
+            {
+              "id": "id:MH2_0159-s327/4",
+              "surface": "소개하면서도",
+              "expected": [
+                "소개하다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "이/jp+란/etm",
+          "count": 9,
+          "examples": [
+            {
+              "id": "id:M2TA_069-s12/2",
+              "surface": "마장이란",
+              "expected": [
+                "마장",
+                "이다"
+              ]
+            },
+            {
+              "id": "id:MH2_0069-s370/6",
+              "surface": "이란",
+              "expected": [
+                "이다"
+              ]
+            },
+            {
+              "id": "id:MH2_0109-s4/11",
+              "surface": "공동의식이란",
+              "expected": [
+                "공동의식",
+                "이다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "ㄴ다면/ecs",
+          "count": 8,
+          "examples": [
+            {
+              "id": "id:MH2_0069-s53/7",
+              "surface": "한다면",
+              "expected": [
+                "하다"
+              ]
+            },
+            {
+              "id": "id:MH2_0159-s10/7",
+              "surface": "심화된다면",
+              "expected": [
+                "심화되다"
+              ]
+            },
+            {
+              "id": "id:MH2_0159-s23/12",
+              "surface": "반영된다면",
+              "expected": [
+                "반영되다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "려는/etm",
+          "count": 8,
+          "examples": [
+            {
+              "id": "id:MH2_0069-s151/10",
+              "surface": "절약하려는",
+              "expected": [
+                "절약하다"
+              ]
+            },
+            {
+              "id": "id:MH2_0069-s230/7",
+              "surface": "확보하려는",
+              "expected": [
+                "확보하다"
+              ]
+            },
+            {
+              "id": "id:MH2_0109-s6/8",
+              "surface": "이루려는",
+              "expected": [
+                "이루다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "을/jco",
+          "count": 8,
+          "examples": [
+            {
+              "id": "id:MH2_0069-s432/4",
+              "surface": "플룩슈리프트을",
+              "expected": [
+                "플룩슈리프트"
+              ]
+            },
+            {
+              "id": "id:MH2_0159-s214/2",
+              "surface": "神을",
+              "expected": [
+                "神"
+              ]
+            },
+            {
+              "id": "id:MH2_0159-s222/2",
+              "surface": "善政을",
+              "expected": [
+                "善政"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "자는/etm",
+          "count": 8,
+          "examples": [
+            {
+              "id": "id:M2TA_089-s4/3",
+              "surface": "배우자는",
+              "expected": [
+                "배우다"
+              ]
+            },
+            {
+              "id": "id:MH2_0169-s215/9",
+              "surface": "엎자는",
+              "expected": [
+                "엎다"
+              ]
+            },
+            {
+              "id": "id:MH2_0169-s470/8",
+              "surface": "살자는",
+              "expected": [
+                "살다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "고/ecc+도/jxc",
+          "count": 7,
+          "examples": [
+            {
+              "id": "id:MH2_0149-s60/8",
+              "surface": "신속하고도",
+              "expected": [
+                "신속하다"
+              ]
+            },
+            {
+              "id": "id:MH2_0159-s231/7",
+              "surface": "황홀하고도",
+              "expected": [
+                "황홀하다"
+              ]
+            },
+            {
+              "id": "id:MH2_0169-s274/10",
+              "surface": "붙이고도",
+              "expected": [
+                "붙이다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "지/ecx+도/jxc",
+          "count": 7,
+          "examples": [
+            {
+              "id": "id:MH2_0109-s13/6",
+              "surface": "문제시하지도",
+              "expected": [
+                "문제시하다"
+              ]
+            },
+            {
+              "id": "id:MH2_0159-s101/7",
+              "surface": "녹슬지도",
+              "expected": [
+                "녹슬다"
+              ]
+            },
+            {
+              "id": "id:MH2_0169-s220/5",
+              "surface": "파악하지도",
+              "expected": [
+                "파악하다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "auxiliary|ㅆ/ep+다/ef",
+          "count": 6,
+          "examples": [
+            {
+              "id": "id:MH2_0069-s141/20",
+              "surface": "팔려나갔다",
+              "expected": [
+                "팔리다",
+                "나가다"
+              ]
+            },
+            {
+              "id": "id:MH2_0069-s198/7",
+              "surface": "늘어났다",
+              "expected": [
+                "늘다",
+                "나다"
+              ]
+            },
+            {
+              "id": "id:MH2_0069-s330/14",
+              "surface": "생겨났다",
+              "expected": [
+                "생기다",
+                "나다"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "corpus": "gsd",
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "report_sha256": "972f54104542ccea1e903957abb9cfd80c1e050b96d1af4b1857d9248d9a19ef",
+      "converted": 9989,
+      "matched": 9747,
+      "misses": 242,
+      "misses_before_cov016": 246,
+      "new_matches": [
+        {
+          "id": "id:dev-s374/7",
+          "surface": "주듯이",
+          "expected": [
+            "주다"
+          ]
+        },
+        {
+          "id": "id:dev-s419/22",
+          "surface": "미끄러지듯이",
+          "expected": [
+            "미끄러지다"
+          ]
+        },
+        {
+          "id": "id:dev-s760/1",
+          "surface": "이렇듯",
+          "expected": [
+            "이렇다"
+          ]
+        },
+        {
+          "id": "id:dev-s936/13",
+          "surface": "밝혔듯",
+          "expected": [
+            "밝히다"
+          ]
+        }
+      ],
+      "largest_remaining_signatures": [
+        {
+          "signature": "lexical-or-derivational",
+          "count": 14,
+          "examples": [
+            {
+              "id": "id:dev-s256/4",
+              "surface": "파워블로거",
+              "expected": [
+                "파워블",
+                "거"
+              ]
+            },
+            {
+              "id": "id:dev-s429/6",
+              "surface": "올리고세",
+              "expected": [
+                "올리다",
+                "세"
+              ]
+            },
+            {
+              "id": "id:dev-s489/3",
+              "surface": "한국홍가슴개미",
+              "expected": [
+                "하다",
+                "국홍가슴개미"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "고/EC",
+          "count": 11,
+          "examples": [
+            {
+              "id": "id:dev-s168/17",
+              "surface": "위협받고",
+              "expected": [
+                "위협",
+                "받다"
+              ]
+            },
+            {
+              "id": "id:dev-s18/24",
+              "surface": "각광받고",
+              "expected": [
+                "각광",
+                "받다"
+              ]
+            },
+            {
+              "id": "id:dev-s309/3",
+              "surface": "지하철타고",
+              "expected": [
+                "지하철",
+                "타다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "로/JKB",
+          "count": 9,
+          "examples": [
+            {
+              "id": "id:dev-s145/3",
+              "surface": "mile로",
+              "expected": [
+                "mile"
+              ]
+            },
+            {
+              "id": "id:dev-s150/8",
+              "surface": "8로",
+              "expected": [
+                "8"
+              ]
+            },
+            {
+              "id": "id:dev-s217/11",
+              "surface": "3D로",
+              "expected": [
+                "3D"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "ㄴ/ETM",
+          "count": 7,
+          "examples": [
+            {
+              "id": "id:dev-s112/1",
+              "surface": "먹을만한",
+              "expected": [
+                "먹다",
+                "만하다"
+              ]
+            },
+            {
+              "id": "id:dev-s123/6",
+              "surface": "피자건",
+              "expected": [
+                "피자것",
+                "이다"
+              ]
+            },
+            {
+              "id": "id:dev-s509/8",
+              "surface": "못한",
+              "expected": [
+                "못",
+                "하다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "는/ETM",
+          "count": 5,
+          "examples": [
+            {
+              "id": "id:dev-s198/1",
+              "surface": "지진희는",
+              "expected": [
+                "지진",
+                "희다"
+              ]
+            },
+            {
+              "id": "id:dev-s243/7",
+              "surface": "이뤄지는",
+              "expected": [
+                "이루어지다"
+              ]
+            },
+            {
+              "id": "id:dev-s465/4",
+              "surface": "사기치는",
+              "expected": [
+                "사기",
+                "치다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "는/JX",
+          "count": 5,
+          "examples": [
+            {
+              "id": "id:dev-s290/1",
+              "surface": "STX는",
+              "expected": [
+                "STX"
+              ]
+            },
+            {
+              "id": "id:dev-s516/1",
+              "surface": "걸복건귀는",
+              "expected": [
+                "것",
+                "이다",
+                "복건귀"
+              ]
+            },
+            {
+              "id": "id:dev-s602/6",
+              "surface": "ID는",
+              "expected": [
+                "ID"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "면서/EC+도/JX",
+          "count": 5,
+          "examples": [
+            {
+              "id": "id:dev-s320/3",
+              "surface": "하면서도",
+              "expected": [
+                "하다"
+              ]
+            },
+            {
+              "id": "id:dev-s630/1",
+              "surface": "따스하면서도",
+              "expected": [
+                "따스하다"
+              ]
+            },
+            {
+              "id": "id:dev-s664/30",
+              "surface": "두려워하면서도",
+              "expected": [
+                "두려워하다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "았/EP+다가/EC",
+          "count": 5,
+          "examples": [
+            {
+              "id": "id:dev-s437/3",
+              "surface": "지망했다가",
+              "expected": [
+                "지망하다"
+              ]
+            },
+            {
+              "id": "id:dev-s616/3",
+              "surface": "갔다가",
+              "expected": [
+                "가다"
+              ]
+            },
+            {
+              "id": "id:dev-s836/11",
+              "surface": "신청했다가",
+              "expected": [
+                "신청하다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "은/JX",
+          "count": 5,
+          "examples": [
+            {
+              "id": "id:dev-s670/2",
+              "surface": "강된장밥은",
+              "expected": [
+                "강되다",
+                "장밥"
+              ]
+            },
+            {
+              "id": "id:dev-s710/4",
+              "surface": "카니발R은",
+              "expected": [
+                "카니발R"
+              ]
+            },
+            {
+              "id": "id:dev-s717/3",
+              "surface": "ATM은",
+              "expected": [
+                "ATM"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "ㄴ다면/EC",
+          "count": 4,
+          "examples": [
+            {
+              "id": "id:dev-s217/12",
+              "surface": "본다면",
+              "expected": [
+                "보다"
+              ]
+            },
+            {
+              "id": "id:dev-s772/3",
+              "surface": "완료된다면",
+              "expected": [
+                "완료되다"
+              ]
+            },
+            {
+              "id": "id:dev-s842/5",
+              "surface": "나아진다면",
+              "expected": [
+                "나아지다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "구/EC",
+          "count": 4,
+          "examples": [
+            {
+              "id": "id:dev-s152/2",
+              "surface": "사상구",
+              "expected": [
+                "사상",
+                "이다"
+              ]
+            },
+            {
+              "id": "id:dev-s257/3",
+              "surface": "보통이구",
+              "expected": [
+                "보통",
+                "이다"
+              ]
+            },
+            {
+              "id": "id:dev-s498/6",
+              "surface": "먹구",
+              "expected": [
+                "먹다"
+              ]
+            }
+          ]
+        },
+        {
+          "signature": "를/JKO",
+          "count": 4,
+          "examples": [
+            {
+              "id": "id:dev-s235/6",
+              "surface": "2.36m를",
+              "expected": [
+                "2.36m"
+              ]
+            },
+            {
+              "id": "id:dev-s656/23",
+              "surface": "SIV를",
+              "expected": [
+                "SIV"
+              ]
+            },
+            {
+              "id": "id:dev-s692/2",
+              "surface": "s3를",
+              "expected": [
+                "s3"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

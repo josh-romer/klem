@@ -2,6 +2,42 @@
 mod corpus;
 use corpus::{Conversion, Corpus};
 
+#[test]
+fn annotated_comparative_endings_recover_both_saved_bodeusi_misses() {
+    let report = corpus::evaluate(
+        std::io::Cursor::new(include_str!("fixtures/kaist-comparative.conllu")),
+        Corpus::Kaist,
+        "kaist-comparative.conllu",
+    )
+    .unwrap();
+    for id in ["id:MH2_0069-s183/2", "id:MH2_0069-s60/2"] {
+        let case = report.cases.get(id).expect(id);
+        assert_eq!(case.surface, "보듯이");
+        assert_eq!(case.expected, ["보다"]);
+        assert!(case.matched, "{id}");
+    }
+}
+
+#[test]
+fn annotated_adverb_derivations_recover_previously_missed_gold_cases() {
+    let report = corpus::evaluate(
+        std::io::Cursor::new(include_str!("fixtures/kaist-adverbs.conllu")),
+        Corpus::Kaist,
+        "kaist-adverbs.conllu",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:M2TA_069-s19/2", "같이", "같다"),
+        ("id:M2TA_089-s68/8", "없이", "없다"),
+        ("id:MH2_0069-s41/7", "달리", "다르다"),
+    ] {
+        let case = report.cases.get(id).expect(id);
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [expected]);
+        assert!(case.matched, "{id}");
+    }
+}
+
 fn row(surface: &str, lemmas: &str, tags: &str, misc: &str) -> String {
     format!("1\t{surface}\t{lemmas}\tVERB\t{tags}\t_\t0\troot\t_\t{misc}")
 }

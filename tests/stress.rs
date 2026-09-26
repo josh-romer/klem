@@ -2,10 +2,11 @@ use klem::{LemmaKind, Lemmatizer, MorphemeKind};
 use sha2::{Digest, Sha256};
 
 #[test]
-fn output_matches_before_chart_optimization() {
-    // Full JSON fingerprints from the previous engine, including all alternate
-    // groups, morphemes, ordering and provenance. These are compatibility
-    // snapshots, not an independent linguistic accuracy benchmark.
+fn output_matches_reviewed_snapshots() {
+    // Full JSON fingerprints, including alternate groups, morphemes, ordering
+    // and provenance. Initially captured before chart optimization; reviewed
+    // particle/하다 changes retain prior hashes in the fixture for review.
+    // These are compatibility snapshots, not linguistic accuracy judgments.
     #[derive(serde::Deserialize)]
     struct Snapshot {
         word: String,

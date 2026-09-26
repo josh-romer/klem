@@ -78,7 +78,43 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...extra.LexicalResource.Lexicon.LexicalEntry,
   );
+  const particles = JSON.parse(
+    await readFile(
+      resolve(root, "tests/fixtures/krdict-particles.json"),
+      "utf8",
+    ),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...particles.LexicalResource.Lexicon.LexicalEntry,
+  );
+  const derivation = JSON.parse(
+    await readFile(
+      resolve(root, "tests/fixtures/krdict-derivation.json"),
+      "utf8",
+    ),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...derivation.LexicalResource.Lexicon.LexicalEntry,
+  );
+  const hada = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-hada.json"), "utf8"),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...hada.LexicalResource.Lexicon.LexicalEntry,
+  );
+  const adverbs = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-adverbs.json"), "utf8"),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...adverbs.LexicalResource.Lexicon.LexicalEntry,
+  );
   const input = resolve(scratch, "combined.json");
+  const comparative = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-comparative.json"), "utf8"),
+  );
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(
+    ...comparative.LexicalResource.Lexicon.LexicalEntry,
+  );
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -199,7 +235,7 @@ try {
   await breakdown
     .getByRole("button", { name: "Show all combinations", exact: true })
     .click();
-  assert.equal(await breakdown.locator(".combination-list li").count(), 2);
+  assert.equal(await breakdown.locator(".combination-list li").count(), 4);
   await selector.selectOption({ label: "2. 절 + 는" });
   assert.deepEqual(
     await breakdown
@@ -280,6 +316,217 @@ try {
         ?.textContent?.startsWith("-들") &&
       document.querySelector(".entry-meta")?.textContent?.includes("접사"),
   );
+  for (const [word, expected] of [
+    ["학교에선", ["학교", "에서", "는"]],
+    ["선생님께선", ["선생님", "께서", "는"]],
+    ["저도요", ["저", "도", "요"]],
+    ["친구는요", ["친구", "는", "요"]],
+    ["이건요", ["이거", "는", "요"]],
+    ["빨리들", ["빨리", "들"]],
+    ["먹어들", ["먹", "어", "들"]],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    assert.deepEqual(
+      await breakdown.locator(".part-form").allTextContents(),
+      expected,
+      word,
+    );
+    assert.equal(await breakdown.locator(".breakdown-unavailable").count(), 0);
+    if (word === "빨리들") {
+      assert.match(await breakdown.innerText(), /Plural subjects/);
+      await breakdown
+        .getByRole("button", { name: "들 Plural subjects", exact: true })
+        .click();
+      await page.waitForFunction(
+        () =>
+          document
+            .querySelector(".entry-heading h2")
+            ?.textContent?.startsWith("들") &&
+          document.querySelector(".entry-meta")?.textContent?.includes("조사"),
+      );
+    }
+    if (word === "이건요") {
+      const full = await breakdown
+        .getByRole("combobox")
+        .locator("option")
+        .evaluateAll(
+          (options) =>
+            options.find((o) => o.textContent.includes("이것 + 은 + 요"))
+              ?.value,
+        );
+      assert.ok(full);
+      await breakdown.getByRole("combobox").selectOption(full);
+      assert.deepEqual(
+        await breakdown.locator(".part-form").allTextContents(),
+        ["이것", "은", "요"],
+      );
+    }
+  }
+  for (const [word, expanded, displayed, suffix, label] of [
+    ["선생님께", "선생 + 님 + 께", ["선생", "님", "께"], "님", "Honorific"],
+    [
+      "과학적이다",
+      "과학 + 적 + 이 + 다",
+      ["과학", "적", "이", "다"],
+      "적",
+      "Relating to / having a quality",
+    ],
+    [
+      "학생다워요",
+      "학생 + 답 + 어요",
+      ["학생", "답", "어요"],
+      "답다",
+      "Characteristic of",
+    ],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    if (word === "선생님께") {
+      assert.deepEqual(
+        await breakdown.locator(".part-form").allTextContents(),
+        ["선생님", "께"],
+      );
+    }
+    if (word === "과학적이다") {
+      assert.deepEqual(
+        await breakdown.locator(".part-form").allTextContents(),
+        ["과학적", "이", "다"],
+      );
+    }
+    const choice = await breakdown
+      .getByRole("combobox")
+      .locator("option")
+      .evaluateAll(
+        (options, expanded) =>
+          options.find((o) => o.textContent.includes(expanded))?.value,
+        expanded,
+      );
+    assert.ok(choice, `${word}: missing ${expanded}`);
+    await breakdown.getByRole("combobox").selectOption(choice);
+    assert.deepEqual(
+      await breakdown.locator(".part-form").allTextContents(),
+      displayed,
+    );
+    await breakdown
+      .getByRole("button", {
+        name: `${suffix === "답다" ? "답" : suffix} ${label}`,
+        exact: true,
+      })
+      .click();
+    await page.waitForFunction(
+      (suffix) =>
+        document
+          .querySelector(".entry-heading h2")
+          ?.textContent?.startsWith(`-${suffix}`) &&
+        document.querySelector(".entry-meta")?.textContent?.includes("접사"),
+      suffix,
+    );
+    const response = await post("analyze", { text: word });
+    const result = await response.json();
+    assert.ok(result.grammar[`-${suffix}`].some((e) => e.pos === "접사"));
+    assert.ok(
+      result.records[0].analysis.analyses.some(
+        (a) =>
+          a.lemmas[0].kind === "nominal" &&
+          a.morphemes.some((m) => m.kind === "suffix" && m.form === suffix),
+      ),
+    );
+  }
+  for (const [word, expected] of [
+    ["생각지", ["생각하", "지"]],
+    ["생각건대", ["생각하", "건대"]],
+    ["비유컨대", ["비유하", "건대"]],
+    ["피케", ["피하", "게"]],
+    ["깨끗지", ["깨끗하", "지"]],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    assert.deepEqual(
+      await breakdown.locator(".part-form").allTextContents(),
+      expected,
+    );
+    assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+    if (word === "비유컨대") {
+      await breakdown
+        .getByRole("button", {
+          name: "건대 Introducing a thought / wish",
+          exact: true,
+        })
+        .click();
+      await page.waitForFunction(
+        () =>
+          document
+            .querySelector(".entry-heading h2")
+            ?.textContent?.startsWith("-건대") &&
+          document.querySelector(".entry-meta")?.textContent?.includes("어미"),
+      );
+    }
+  }
+  for (const [word, expected] of [
+    ["같이", ["같", "이"]],
+    ["없이", ["없", "이"]],
+    ["달리", ["다르", "이"]],
+    ["빨리", ["빠르", "이"]],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), [
+      word,
+    ]);
+    const choice = await breakdown
+      .getByRole("combobox")
+      .locator("option")
+      .evaluateAll(
+        (options, title) =>
+          options.find((o) => o.textContent.includes(title))?.value,
+        expected.join(" + "),
+      );
+    assert.ok(choice, word);
+    await breakdown.getByRole("combobox").selectOption(choice);
+    assert.deepEqual(
+      await breakdown.locator(".part-form").allTextContents(),
+      expected,
+    );
+    if (word === "달리")
+      assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
+    await breakdown
+      .getByRole("button", { name: "이 Adverb-forming suffix", exact: true })
+      .click();
+    await page.waitForFunction(
+      () =>
+        document
+          .querySelector(".entry-heading h2")
+          ?.textContent?.startsWith("-이") &&
+        document.querySelector(".entry-meta")?.textContent?.includes("접사"),
+    );
+    const link = page.getByRole("link", {
+      name: "Open original dictionary entry",
+    });
+    assert.match(await link.getAttribute("href"), /ParaWordNo=88927/);
+    const result = await (await post("analyze", { text: word })).json();
+    assert.ok(result.grammar["-이"].some((e) => e.id === "krdict:88927"));
+    assert.ok(result.grammar["-이"].some((e) => e.id === "krdict:88924"));
+    assert.ok(result.grammar["-이"].every((e) => e.pos === "접사"));
+  }
+  for (const [word, ending, id] of [
+    ["보듯", "듯", 80280],
+    ["보듯이", "듯이", 80282],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), ["보", ending]);
+    await breakdown.getByRole("button", { name: `${ending} As / like`, exact: true }).click();
+    await page.waitForFunction(
+      (headword) => document.querySelector(".entry-heading h2")?.textContent?.startsWith(headword)
+        && document.querySelector(".entry-meta")?.textContent?.includes("어미"),
+      `-${ending}`,
+    );
+    assert.match(
+      await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"),
+      new RegExp(`ParaWordNo=${id}`),
+    );
+  }
   await page.getByLabel("Dictionary matches only").uncheck();
   await submit(page, sample);
   await waitHeading(page, "가까워");

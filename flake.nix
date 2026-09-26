@@ -115,6 +115,7 @@
               clippy
               rust-analyzer
               nodejs
+              python3 # Offline grammar/corpus inventory audit.
             ];
 
             RUST_SRC_PATH = "${pkgs.rustPlatform.rustLibSrc}";

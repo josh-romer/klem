@@ -147,10 +147,62 @@ emits the report even when judgments fail and exits nonzero.
 The [initial review report](validity-review.json) retains those unjudged analyses
 and source links; rerun the command after changing the grammar or fixture.
 
-The current ledger adds five nominal-plural cases, for 21 cases with 14 required
+The nominal-plural extension added five cases, reaching 21 cases with 14 required
 and 12 forbidden judgments. The stable `nominal-plural-*` IDs track the reported
 지식인들을 failure, bare plurals, copulas, particle allomorphs, and repeated
 suffix rejection. The linked initial report predates these cases.
+
+The P1 particle/pronoun extension adds eleven cases, reaching 32 cases with
+22 required and 16 forbidden judgments. Role and morpheme-kind assertions are
+also tested in `tests/particles.rs` and the dictionary/browser suites. The full
+66,570-case corpus regression comparison passes without removing prior grouped
+or component recoveries. Corpus baselines and their dated recall measurements
+are unchanged; this comparison is not a new precision evaluation.
+
+The COV-010 suffix extension adds eight cases, reaching **40 cases with 27
+required and 19 forbidden judgments**. These cover honorific/plural order,
+relational suffixes before copulas, and the known ㅂ-irregular -답다 suffix.
+`tests/derivation.rs` also checks morpheme kinds, component order, boundary
+violations, and whole-word preservation. Dictionary tests use actual 정답다
+conjugations from the attributed offline excerpt. These source forms provide
+lexical evidence, not independently annotated sentences or contextual judgments.
+The full 66,570-case corpus regression comparison also passes after this batch;
+all 30 reviewed output fingerprints remain unchanged from the P1 state. No corpus
+baseline or existing fingerprint was regenerated for the suffix extension.
+
+The COV-011 하다 shortening batch adds nine cases, reaching **49 cases with 32
+required and 23 forbidden judgments**. Tests compare source-described short and
+full forms and reject wrong coda classes or a spurious omitted-copula reading.
+Nine compatibility fingerprints were individually reviewed and updated for
+additive `deletion.ha` hypotheses, retaining prior hashes; all prior analyses and
+provenance remain. These new lexical hypotheses are not automatically judged
+correct. Corpus baselines remain unchanged.
+All 66,570 frozen corpus cases pass the regression comparison after this batch;
+this verifies retained recoveries, not the precision of the added hypotheses.
+
+The COV-012 adverb batch adds eight cases, reaching **57 cases with 37 required
+and 26 forbidden judgments**. New offline corpus tests check three previously
+missed annotated KAIST development tokens: M2TA_069-s19/2 (같이 → 같다),
+M2TA_089-s68/8 (없이 → 없다), and MH2_0069-s41/7 (달리 → 다르다).
+Their complete sentences are preserved in `tests/fixtures/kaist-adverbs.conllu`;
+the project-authored tests additionally check suffix kinds and component order.
+The whole-word adverbs remain alternatives. These selected development gains
+are not an independent test-set estimate or a linguistic precision score.
+The 66,570-case regression comparison passes with no lost prior recoveries;
+all 30 compatibility fingerprints remain unchanged from COV-011. Corpus
+baselines and their dated metrics were not regenerated.
+
+The COV-013 inventory pass and COV-016 comparative endings add six ledger cases,
+reaching **63 cases with 40 required and 29 forbidden judgments**. Two complete
+KAIST sentences protect both saved 보듯이 → 보다 misses, including exact stable
+IDs. Fresh development reports compared against the pre-COV-016 engine show
+15 additional KAIST and 4 additional GSD grouped matches, with no lost groups
+or component sets. Remaining development misses number 378 and 242. The
+[inventory audit](inventory-audit.md) records the new matches and clusters
+remaining annotations; clusters are not independent linguistic judgments.
+All 66,570 frozen corpus cases still pass, and all 30 output fingerprints are
+unchanged. The frozen baselines and their historical metric table above were
+not replaced. These development gains are not unseen accuracy or precision.
 
 The fixture is agent-authored against the cited sources; **independent Korean-language
 review is pending**. Reviewers can inspect the queue's complete analyses, add

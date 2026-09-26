@@ -26,11 +26,57 @@ first sense and English equivalents, omit WordForm/RelatedForm and export
 metadata, and reformat JSON. Source and license links are above. These test
 entries verify source integration; they are not gold sentence annotations.
 
+`krdict-particles.json` contains 20 additional primary word entries from the same
+September 2026 KRDict export, by the National Institute of Korean Language,
+under CC BY-SA 2.0 KR. IDs: 17199, 29739, 29742, 31952, 31953, 44878, 57305,
+58272, 62251, 62818, 68853, 71128, 73012, 73276, 84991, 86094, 86111, 86116,
+86258, 86264. Changes: retain the first sense and its English equivalent,
+omit WordForm/RelatedForm and export metadata, exclude idiom subentries, and
+reformat JSON. Source/license links are above. Used for offline particle,
+pronoun, POS-compatibility, and browser integration regressions.
+
+`krdict-derivation.json` contains 10 additional primary word entries from that
+same September 2026 KRDict export (National Institute of Korean Language,
+CC BY-SA 2.0 KR). IDs: 21353, 21645, 21652, 31670, 65114, 75947, 86232, 88852,
+88966, 92145. Changes: retain all senses/attachment notes for the three suffixes,
+the first sense for other entries, and English equivalents only. Retain WordForm
+for 정답다 to test source conjugations; omit other WordForm, RelatedForm, and
+global metadata, exclude idiom subentries, and reformat JSON. Source/license
+links are above. These are offline integration fixtures, not sentence gold.
+
+`krdict-hada.json` contains 10 primary word entries from the same September 2026
+KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR).
+IDs: 15400, 24991, 49056, 60323, 60999, 66376, 78410, 78612, 80286, 85911.
+Changes: retain the first sense and English equivalents, omit WordForm,
+RelatedForm and global metadata, exclude idiom subentries, and reformat JSON.
+Source/license links are above. Used for offline dictionary/CLI/browser checks
+of shortened 하다; the spelling judgments themselves are in the separate ledger.
+
+`krdict-adverbs.json` contains 17 primary entries from the same September 2026
+KRDict export (National Institute of Korean Language, CC BY-SA 2.0 KR).
+IDs: 16281, 16288, 26799, 26824, 28387, 45290, 48746, 52143, 62076, 64523,
+68755, 70801, 80952, 88924, 88927, 89917, 89918. Changes: retain the first sense
+and English equivalents, omit WordForm/RelatedForm and global metadata, exclude
+idiom subentries, and reformat JSON. Source/license links are above. Used for
+offline adverb/base preservation and homonymous suffix/ending lookup tests.
+
 `optimization.json` contains complete-output SHA-256 fingerprints for 30 manually
-chosen words, captured from the engine before replacing the auxiliary chart.
+chosen words, initially captured before replacing the auxiliary chart.
 These project-licensed compatibility snapshots protect grouping, morphemes, rule
 provenance and ordering; they are not independently annotated linguistic gold.
 Intentional grammar changes require reviewing any resulting fingerprint changes.
+The P1 particle expansion changed 12 of these snapshots: two words gained polite
+요 paths, and ten gained contracted ㄴ/ㄹ hypotheses (including a copular case).
+Comparison against the initial committed Nix binary preserved every previous
+analysis and supporting rule. Affected entries retain `previous_sha256` and a
+change note. Additional dictionary-free lexical hypotheses are not certified
+valid words by these fingerprints; candidate judgments remain separate.
+The COV-011 하다 extension changed nine further snapshots. Each was compared
+against the preceding COV-010 Nix binary: all prior analyses and supporting rules
+remain, and the additions all carry `deletion.ha`. These include unknown whole
+하다 stems after stop-final strings and auxiliary groups headed by 먹하다.
+The snapshots document API additions, not certification of these lexical roots.
+Each retains its previous hash and change note; no corpus baseline was replaced.
 
 `validity.json` is a separate, agent-authored candidate-judgment ledger under the
 project's MIT OR Apache-2.0 license, not an excerpt from the corpora below. It
@@ -44,6 +90,12 @@ adapter/regression fixtures, not a representative accuracy benchmark.
 * `kaist.conllu`: [UD Korean KAIST](https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/888f855c7bcf1e39291246744f4e98f6bda6742e), sentences M2TA_069-s1 through M2TA_069-s4.
 * `gsd.conllu`: [UD Korean GSD](https://github.com/UniversalDependencies/UD_Korean-GSD/tree/60ffc4f2f0cbf0bf816f0d44a7339512f5ce9c25), sentences dev-s1 through dev-s4.
 
+`kaist-adverbs.conllu` is a further unmodified excerpt of the same pinned KAIST
+development partition, containing complete sentences M2TA_069-s19, M2TA_089-s68,
+and MH2_0069-s41. The COV-012 regression checks their 같이/없이/달리 token IDs;
+it does not assert all readings of every token in those sentences are correct.
+The corpus license and attribution below also apply to this excerpt.
+
 Both datasets specify **CC BY-SA 4.0**, separately from klem's code license.
 See [LICENSE.txt](LICENSE.txt) and the upstream READMEs. GSD's README distinguishes
 the annotation license from rights in the underlying source texts.
@@ -54,3 +106,16 @@ contributors, including Key-Sun Choi; and the GSD contributors, including Ryan
 McDonald, Joakim Nivre, and Daniel Zeman. GSD also requests citation of
 McDonald et al., *Universal Dependency Annotation for Multilingual Parsing*,
 ACL 2013. Full upstream notices are downloaded alongside each corpus.
+
+`krdict-comparative.json` contains three primary entries (61190, 80280, 80282)
+from the same September 2026 KRDict export (National Institute of Korean
+Language, CC BY-SA 2.0 KR). Changes: retain the first sense and English
+equivalents, omit WordForm/RelatedForm and global metadata, exclude idiom
+subentries, and reformat JSON. Source/license links above apply. This fixture
+covers lexical 보다 and the distinct -듯/-듯이 ending entries.
+
+`kaist-comparative.conllu` preserves two complete sentences, MH2_0069-s60 and
+MH2_0069-s183, byte-for-byte from the same pinned KAIST development partition
+linked above. The offline regression checks token 2 (보듯이 → 보다) in both
+sentences. The KAIST attribution and CC BY-SA 4.0 license above apply; the test
+does not certify all analyses of all tokens in the excerpts.

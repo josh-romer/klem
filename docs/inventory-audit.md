@@ -1,0 +1,97 @@
+# Grammar inventory triage (COV-013)
+
+Measured 2026-09-26 against the local September 2026 KRDict snapshot and pinned
+UD 2.15 **development** partitions. [The compact report](inventory-audit.json)
+records input/source hashes, inventory counts, stable IDs for the 19 new matches,
+and examples from the largest remaining annotation signatures. This is an
+initial inventory pass, not completion of the linguistic audit.
+
+## Reproduce
+
+From the repository root, with the dictionary and corpora already downloaded
+(the Nix development shell supplies Python 3):
+
+```sh
+cargo build --locked --offline --example evaluate
+./target/debug/examples/evaluate kaist data/corpora/kaist/ko_kaist-ud-dev.conllu \
+  data/baselines/kaist-dev.jsonl > /tmp/klem-audit-kaist.jsonl
+./target/debug/examples/evaluate gsd data/corpora/gsd/ko_gsd-ud-dev.conllu \
+  data/baselines/gsd-dev.jsonl > /tmp/klem-audit-gsd.jsonl
+python3 tools/audit-inventory.py --dictionary data/dictionaries/krdict/krdict.db \
+  --report /tmp/klem-audit-kaist.jsonl --report /tmp/klem-audit-gsd.jsonl \
+  > /tmp/klem-inventory.json
+```
+
+The tool uses Python's standard library and opens the database read-only. It
+verifies each report's corpus hash, case population, IDs, and match count. Its
+full output contains every inventoried entry and every remaining miss, rather
+than only the examples retained in the compact report. No dataset is fetched,
+no baseline is overwritten, and the runtime does not load this report.
+
+## Dictionary versus source tables
+
+| KRDict POS | Entries (homonyms separate) | Literal mentions in the relevant source section |
+| --- | ---: | ---: |
+| Ending (어미) | 504 | 142 |
+| Particle (조사) | 157 | 53 |
+| Auxiliary verb (보조 동사) | 40 | 16 |
+| Auxiliary adjective (보조 형용사) | 14 | 5 |
+
+The last column is a **triage hint**, not implemented coverage. The script
+compares hyphen-trimmed headwords against string literals in `endings()` and
+`particles()`, and auxiliary stems against `aux_allowed()`. For example, -ㄴ
+is implemented through an attached-coda boundary despite having no literal ㄴ
+table entry. Prefinals and contracted particles live elsewhere. Conversely,
+the table mentions 만 but does not yet license the sentence-final 만 reading.
+An auxiliary stem can occur in the table with only some connectors licensed.
+Dictionary homonyms must be reviewed separately; spelling overlap proves
+neither attachment support nor the correct sense.
+
+The full inventory is a review queue. Prefix/suffix entries (505 in this
+snapshot), dialectal forms, and multiword grammar expressions are outside this
+first table comparison; derivational gaps remain COV-020/022. Headwords and
+source IDs are from the National Institute of Korean Language's KRDict,
+[CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+
+## Corpus triage and selected fixes
+
+Before COV-016 there were 393 KAIST and 246 GSD development misses; afterward
+there are **378 and 242**, respectively. These comparisons used fresh reports
+from the COV-012 engine and then the COV-016 engine. All 19 gains are listed in
+the compact report. Previously matched groups/component sets remain covered;
+the four-partition check also passes all 66,570 frozen cases. Frozen baselines
+and their older aggregate measurements are unchanged.
+
+The script groups misses by the *annotated* trailing ending/particle sequence,
+using OrigLemma when supplied, and marks auxiliary-tagged rows. It does not
+infer a cause from the surface suffix. A signature can mix missing rules,
+spelling/annotation issues, and lexical segmentation differences. Examples:
+
+| Observation | Disposition |
+| --- | --- |
+| 보듯이, 나타나듯이, 했듯이 | Confirmed missing literal -듯/-듯이; COV-016 implemented. |
+| 합니다만/있습니다만 style | Separate post-ending 만 from nominal restrictive 만; COV-018. KRDict [86555](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86555) documents the former. |
+| 지+는, 지+도, 고+도, 면서+도 | Additional post-ending particle licenses; COV-018. Counts are token occurrences, not numbers of valid rules. |
+| 한다면, 절약하려는, 배우자는 | Missing/review-needed ending families, not arbitrary suffix removal; COV-017. |
+| 어디까지나 | Still misses 어디; until a chain rule is reviewed, retain its whole-word dictionary option; COV-018. |
+| 번져나갔다, 늘어났다 | Review auxiliary 나가다/나다 and their connectors; COV-019. Do not split all compound verbs. |
+| 사회주의라고 → 사회주의 | Annotation treats 라고 as a particle, while an existing copular alternative has an extra 이다 component. Representation/quotation-particle review, COV-018. |
+| 부드러우면서도 → 부드러우다 | Includes a questionable lexical lemma as well as a particle gap. Do not require that lemma without review. |
+| GSD 파워블로거 → 파워블 + 거, 지진희는 → 지진 + 희다 | Segmentation/annotation review; not automatically promoted to grammar requirements. |
+| 神을, mile로, numeric/alphanumeric tokens | Tokenization/pronunciation/coverage boundaries under COV-014. |
+
+Two complete KAIST development sentences now provide offline regression coverage
+for both saved 보듯이 IDs. Tests separately assert exact morpheme kinds, order,
+and forbidden boundary recoveries. The other new matches are recorded as gains,
+not independent judgments of every candidate. The test partitions were used
+only for regression comparison in this batch, not for selecting new rules.
+
+## Remaining review
+
+COV-017 through COV-022 split the former broad backlog into separately scoped
+work. COV-013 stays partial until each dictionary entry and remaining corpus
+family receives a reviewed disposition. Independent Korean-language review,
+adjective/verb attachment distinctions, additional homonyms, and judgment of
+unannotated alternatives remain open. Source-backed narrow rules should be
+implemented with positive and negative paths; automatic inventory differences
+must not become required linguistic judgments.

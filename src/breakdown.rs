@@ -15,8 +15,11 @@ impl Analysis {
     ///
     /// The engine emits one ending per predicate (including each auxiliary and
     /// copula), with its prefinals before it and nominalization particles after
-    /// it. Nominals consume an optional suffix followed by particles. This also handles nominalizations
-    /// nested inside copulas. No source offsets or contextual interpretation are
+    /// it. Nominals consume licensed suffixes, then particles. A final 답다
+    /// suffix consumes its own prefinals and ending. This also handles nominalizations
+    /// nested inside copulas. A predicate base followed directly by suffix 이
+    /// is an adverbial derivation and has no inflectional ending.
+    /// No source offsets or contextual interpretation are
     /// implied. Returns `None` for externally constructed, unsupported shapes.
     pub fn breakdown(&self) -> Option<Vec<Component>> {
         if self.lemmas.is_empty() {
@@ -26,14 +29,52 @@ impl Analysis {
         let mut cursor = 0;
         for (index, lemma) in self.lemmas.iter().enumerate() {
             parts.push(Component::Lemma(index));
-            if matches!(
+            let predicate = matches!(
                 lemma.kind,
                 LemmaKind::Predicate | LemmaKind::Auxiliary | LemmaKind::Copula
-            ) {
+            );
+            let mut derived_predicate = false;
+            if lemma.kind == LemmaKind::Nominal {
+                let start = cursor;
+                while self
+                    .morphemes
+                    .get(cursor)
+                    .is_some_and(|m| m.kind == MorphemeKind::Suffix)
+                {
+                    parts.push(Component::Morpheme(cursor));
+                    cursor += 1;
+                }
+                let mut suffixes = self.morphemes[start..cursor]
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .collect::<Vec<_>>();
+                if suffixes.last() == Some(&"답다") {
+                    derived_predicate = true;
+                    suffixes.pop();
+                }
+                if !matches!(
+                    suffixes.as_slice(),
+                    [] | ["님"] | ["적"] | ["들"] | ["님", "들"]
+                ) || (derived_predicate && suffixes.contains(&"적"))
+                {
+                    return None;
+                }
+            }
+            if predicate {
                 lemma
                     .text
                     .strip_suffix('다')
                     .filter(|stem| !stem.is_empty())?;
+            }
+            let adverbial = lemma.kind == LemmaKind::Predicate
+                && self
+                    .morphemes
+                    .get(cursor)
+                    .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == "이");
+            if adverbial {
+                parts.push(Component::Morpheme(cursor));
+                cursor += 1;
+            } else if predicate || derived_predicate {
                 while self
                     .morphemes
                     .get(cursor)
@@ -45,15 +86,6 @@ impl Analysis {
                 if self.morphemes.get(cursor)?.kind != MorphemeKind::Ending {
                     return None;
                 }
-                parts.push(Component::Morpheme(cursor));
-                cursor += 1;
-            }
-            if lemma.kind == LemmaKind::Nominal
-                && self
-                    .morphemes
-                    .get(cursor)
-                    .is_some_and(|m| m.kind == MorphemeKind::Suffix)
-            {
                 parts.push(Component::Morpheme(cursor));
                 cursor += 1;
             }
@@ -117,7 +149,12 @@ mod tests {
             .unwrap()
             .analyses
             .into_iter()
-            .find(|a| a.lemmas.len() == 2)
+            .find(|a| {
+                a.lemmas.len() == 2
+                    && a.morphemes
+                        .last()
+                        .is_some_and(|m| m.kind == MorphemeKind::Ending)
+            })
             .unwrap();
         a.morphemes.pop();
         assert!(a.breakdown().is_none());

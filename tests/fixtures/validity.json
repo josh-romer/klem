@@ -2,6 +2,22 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "comparative-deusi": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80282",
+    "comparative-deut": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80280",
+    "adverb-i": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88927",
+    "adverb-spelling": "https://www.korean.go.kr/nkview/nknews/199911/16_11.htm",
+    "adverb-historical": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=304692",
+    "hada-shortening": "https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=325451",
+    "hada-stop": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=9288&mn_id=62&pageIndex=2",
+    "suffix-nim": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88852",
+    "suffix-jeok": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88966",
+    "suffix-dap": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=92145",
+    "suffix-dap-inflection": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75947",
+    "particle-n": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85847",
+    "particle-l": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85760",
+    "particle-yo": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86116",
+    "particle-deul": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86264",
+    "demonstrative": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71128",
     "plural": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=74906",
     "object": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86355",
     "spelling": "https://korean.go.kr/kornorms/regltn/regltnView.do?regltn_code=0001&regltn_no=222",
@@ -13,6 +29,60 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id":"comparative-open","surface":"보듯이","judgments":[{"id":"ending-path","lemmas":["보다"],"morphemes":["듯이"],"verdict":"required","reason":"The connective attaches directly to the stem, without nominal 듯 or suffix 이.","source":"comparative-deusi"}]},
+    {"id":"comparative-rieul","surface":"살듯","judgments":[{"id":"ending-path","lemmas":["살다"],"morphemes":["듯"],"verdict":"required","reason":"The literal consonant boundary retains stem-final ㄹ.","source":"comparative-deut"}]},
+    {"id":"comparative-honorific-past","surface":"보셨듯이","judgments":[{"id":"ending-path","lemmas":["보다"],"morphemes":["시","었","듯이"],"verdict":"required","reason":"The entry licenses honorific and past markers before the ending.","source":"comparative-deusi"}]},
+    {"id":"comparative-no-eu","surface":"먹으듯이","judgments":[{"id":"ending-path","lemmas":["먹다"],"morphemes":["듯이"],"verdict":"forbidden","reason":"This ending does not insert 으 after a closed stem.","source":"comparative-deusi"}]},
+    {"id":"comparative-no-digeut","surface":"들듯이","judgments":[{"id":"ending-path","lemmas":["듣다"],"morphemes":["듯이"],"verdict":"forbidden","reason":"ㄷ does not change to ㄹ before this consonant ending; 들다 remains possible.","source":"comparative-deusi"}]},
+    {"id":"comparative-no-bieup","surface":"도우듯이","judgments":[{"id":"ending-path","lemmas":["돕다"],"morphemes":["듯이"],"verdict":"forbidden","reason":"ㅂ does not change to 우 before this consonant ending.","source":"comparative-deusi"}]},
+    {"id":"adverb-gati","surface":"같이","judgments":[{"id":"adverb-path","lemmas":["같다"],"morphemes":["이"],"verdict":"required","reason":"The adverbial suffix preserves the 같 stem; suffix-kind checks are in tests/adverbs.rs.","source":"adverb-spelling"}]},
+    {"id":"adverb-eopsi","surface":"없이","judgments":[{"id":"adverb-path","lemmas":["없다"],"morphemes":["이"],"verdict":"required","reason":"Recover the 없 adjective base before the adverbial suffix.","source":"adverb-i"}]},
+    {"id":"adverb-compound-eopsi","surface":"끝없이","judgments":[{"id":"adverb-path","lemmas":["끝없다"],"morphemes":["이"],"verdict":"required","reason":"Retain the compound adjective base rather than splitting an arbitrary nominal prefix.","source":"adverb-i"}]},
+    {"id":"adverb-dalli","surface":"달리","judgments":[{"id":"adverb-path","lemmas":["다르다"],"morphemes":["이"],"verdict":"required","reason":"Retain a historical lexical derivation as an optional reading, not productive 르 inflection.","source":"adverb-historical"}]},
+    {"id":"adverb-ppalli","surface":"빨리","judgments":[{"id":"adverb-path","lemmas":["빠르다"],"morphemes":["이"],"verdict":"required","reason":"The historical lexical derivation coexists with the whole adverb.","source":"adverb-historical"}]},
+    {"id":"adverb-gati-spelling","surface":"같히","judgments":[{"id":"adverb-path","lemmas":["같다"],"morphemes":["이"],"verdict":"forbidden","reason":"This spelling does not yield 같 plus the 이 suffix.","source":"adverb-spelling"}]},
+    {"id":"adverb-eopsi-spelling","surface":"없히","judgments":[{"id":"adverb-path","lemmas":["없다"],"morphemes":["이"],"verdict":"forbidden","reason":"The specified 이 suffix does not surface as 히 in this path.","source":"adverb-i"}]},
+    {"id":"adverb-dalli-not-inflection","surface":"달리","judgments":[{"id":"adverb-path","lemmas":["다르다"],"morphemes":["어"],"verdict":"forbidden","reason":"The historical adverb is not the 아/어 inflection of 다르다.","source":"adverb-historical"}]},
+    {"id":"hada-stop-deletion","surface":"생각지","judgments":[{"id":"shortening-path","lemmas":["생각하다"],"morphemes":["지"],"verdict":"required","reason":"Stop-final 생각 permits deletion of 하 before 지.","source":"hada-shortening"}]},
+    {"id":"hada-stop-geondae","surface":"생각건대","judgments":[{"id":"shortening-path","lemmas":["생각하다"],"morphemes":["건대"],"verdict":"required","reason":"Recover the deleted 하 and retain the complete ending 건대.","source":"hada-shortening"}]},
+    {"id":"hada-vowel-aspiration","surface":"비유컨대","judgments":[{"id":"shortening-path","lemmas":["비유하다"],"morphemes":["건대"],"verdict":"required","reason":"After a vowel, 하 contracts with ㄱ to surface ㅋ.","source":"hada-shortening"}]},
+    {"id":"hada-ge-aspiration","surface":"피케","judgments":[{"id":"shortening-path","lemmas":["피하다"],"morphemes":["게"],"verdict":"required","reason":"The same vowel-base aspiration licenses 하 + 게 as 케.","source":"hada-shortening"}]},
+    {"id":"hada-neutralized-coda","surface":"깨끗지","judgments":[{"id":"shortening-path","lemmas":["깨끗하다"],"morphemes":["지"],"verdict":"required","reason":"Final ㅅ has a ㄷ-sounding coda in the relevant environment and permits 하 deletion.","source":"hada-shortening"}]},
+    {"id":"hada-wrong-stop-aspiration","surface":"생각컨대","judgments":[{"id":"shortening-path","lemmas":["생각하다"],"morphemes":["건대"],"verdict":"forbidden","reason":"Stop-final 생각 requires deletion rather than aspiration.","source":"hada-shortening"}]},
+    {"id":"hada-wrong-iksuk","surface":"익숙치","judgments":[{"id":"shortening-path","lemmas":["익숙하다"],"morphemes":["지"],"verdict":"forbidden","reason":"The published correction specifies 익숙지, not 익숙치.","source":"hada-stop"}]},
+    {"id":"hada-wrong-vowel-deletion","surface":"비유건대","judgments":[{"id":"shortening-path","lemmas":["비유하다"],"morphemes":["건대"],"verdict":"forbidden","reason":"The vowel base requires aspiration when 하 is shortened.","source":"hada-shortening"}]},
+    {"id":"hada-restored-predicate-role","surface":"생각다","judgments":[{"id":"shortening-path","lemmas":["생각하","이다"],"morphemes":["다"],"verdict":"forbidden","reason":"Restored 하 belongs to the predicate stem; the shortening does not license an extra omitted copula.","source":"hada-shortening"}]},
+    {"id":"suffix-honorific-case","surface":"선생님께","judgments":[{"id":"suffix-path","lemmas":["선생"],"morphemes":["님","께"],"verdict":"required","reason":"Honorific suffix precedes the case particle; whole-word 선생님 remains a separate reading.","source":"suffix-nim"}]},
+    {"id":"suffix-honorific-plural","surface":"선생님들을","judgments":[{"id":"suffix-path","lemmas":["선생"],"morphemes":["님","들","을"],"verdict":"required","reason":"Honorific -님 precedes plural -들 and object marking.","source":"suffix-nim"}]},
+    {"id":"suffix-relational-copula","surface":"과학적이다","judgments":[{"id":"suffix-path","lemmas":["과학","이다"],"morphemes":["적","다"],"verdict":"required","reason":"Relational -적 belongs to the nominal before the copula.","source":"suffix-jeok"}]},
+    {"id":"suffix-adjectival-base","surface":"학생답다","judgments":[{"id":"suffix-path","lemmas":["학생"],"morphemes":["답다","다"],"verdict":"required","reason":"The suffix forms an adjective on a nominal base; it is followed by an ending.","source":"suffix-dap"}]},
+    {"id":"suffix-adjectival-vowel","surface":"학생다워요","judgments":[{"id":"suffix-path","lemmas":["학생"],"morphemes":["답다","어요"],"verdict":"required","reason":"The known -답다 suffix follows the ㅂ-irregular pattern documented in 정답다 conjugations.","source":"suffix-dap-inflection"}]},
+    {"id":"suffix-adjectival-regularized","surface":"학생답아요","judgments":[{"id":"suffix-path","lemmas":["학생"],"morphemes":["답다","어요"],"verdict":"forbidden","reason":"The suffix uses 다워 rather than regularized 답아 before this vowel ending.","source":"suffix-dap-inflection"}]},
+    {"id":"suffix-adjectival-adnominal","surface":"학생답은","judgments":[{"id":"suffix-path","lemmas":["학생"],"morphemes":["답다","은"],"verdict":"forbidden","reason":"The suffix uses 다운 rather than 답은, as in documented 정다운.","source":"suffix-dap-inflection"}]},
+    {"id":"suffix-honorific-case-boundary","surface":"선생님를","judgments":[{"id":"suffix-path","lemmas":["선생"],"morphemes":["님","를"],"verdict":"forbidden","reason":"Consonant-final 님 requires 을 in this object-particle path.","source":"object"}]},
+    {"id":"particle-contracted-topic","surface":"학교에선","judgments":[
+      {"id":"location-topic","lemmas":["학교"],"morphemes":["에서","는"],"verdict":"required","reason":"Attached ㄴ follows the open final syllable of 에서; preserve the inner location particle.","source":"particle-n"}]},
+    {"id":"pronoun-demonstrative-topic","surface":"이건","judgments":[
+      {"id":"expanded-topic","lemmas":["이것"],"morphemes":["은"],"verdict":"required","reason":"The expanded demonstrative reading retains its topic particle.","source":"demonstrative"},
+      {"id":"wrong-case","lemmas":["이것"],"morphemes":["을"],"verdict":"forbidden","reason":"This contraction is topical, not accusative.","source":"demonstrative"}]},
+    {"id":"pronoun-demonstrative-subject","surface":"이게","judgments":[
+      {"id":"expanded-subject","lemmas":["이것"],"morphemes":["이"],"verdict":"required","reason":"The expanded demonstrative retains the subject particle.","source":"demonstrative"}]},
+    {"id":"pronoun-contracted-object","surface":"뭘","judgments":[
+      {"id":"short-pronoun-object","lemmas":["뭐"],"morphemes":["를"],"verdict":"required","reason":"Attached ㄹ follows the open-syllable pronoun; its dictionary examples include 뭘.","source":"particle-l"}]},
+    {"id":"particle-polite-nominal","surface":"저도요","judgments":[
+      {"id":"additive-polite","lemmas":["저"],"morphemes":["도","요"],"verdict":"required","reason":"Polite 요 may follow an already marked nominal.","source":"particle-yo"}]},
+    {"id":"particle-polite-connective","surface":"먹으면요","judgments":[
+      {"id":"conditional-polite","lemmas":["먹다"],"morphemes":["으면","요"],"verdict":"required","reason":"Polite 요 attaches after a connective ending.","source":"particle-yo"}]},
+    {"id":"particle-distributive-connective","surface":"먹어들","judgments":[
+      {"id":"connective-deul","lemmas":["먹다"],"morphemes":["어","들"],"verdict":"required","reason":"The 들 particle can follow 아/어; this is not nominal plural derivation.","source":"particle-deul"}]},
+    {"id":"particle-distributive-adverb","surface":"빨리들","judgments":[
+      {"id":"adverb-deul","lemmas":["빨리"],"morphemes":["들"],"verdict":"required","reason":"The 들 particle can follow an adverbial; role/kind assertions are covered by tests/particles.rs.","source":"particle-deul"}]},
+    {"id":"particle-polite-adnominal-boundary","surface":"먹은요","judgments":[
+      {"id":"bare-adnominal","lemmas":["먹다"],"morphemes":["은","요"],"verdict":"forbidden","reason":"A bare noun-modifying 은 ending does not license this polite particle path.","source":"particle-yo"}]},
+    {"id":"particle-distributive-adnominal-boundary","surface":"먹을들","judgments":[
+      {"id":"bare-adnominal","lemmas":["먹다"],"morphemes":["을","들"],"verdict":"forbidden","reason":"A bare noun-modifying 을 ending does not license this distributive particle path.","source":"particle-deul"}]},
+    {"id":"particle-polite-repetition","surface":"친구는요요","judgments":[
+      {"id":"repeated-polite-slot","lemmas":["친구"],"morphemes":["는","요","요"],"verdict":"forbidden","reason":"The implemented standard attachment grammar has one outer polite slot, not arbitrary repetition.","source":"particle-yo"}]},
     {"id":"nominal-plural-object","surface":"지식인들을","judgments":[
       {"id":"plural-before-case","lemmas":["지식인"],"morphemes":["들","을"],"verdict":"required","reason":"Nominal plural -들 precedes the object particle; the dictionary headword remains 지식인.","source":"plural"}]},
     {"id":"nominal-plural-bare","surface":"지식인들","judgments":[

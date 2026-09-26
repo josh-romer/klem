@@ -203,6 +203,7 @@ pub fn pos_compatibility(lemma: &Lemma, entry: &EntrySummary) -> Compatibility {
         LemmaKind::Nominal => matches!(pos, "명사" | "대명사" | "수사" | "의존 명사"),
         LemmaKind::Predicate => matches!(pos, "동사" | "형용사"),
         LemmaKind::Auxiliary => matches!(pos, "보조 동사" | "보조 형용사"),
+        LemmaKind::Adverbial => pos == "부사",
         LemmaKind::Copula => matches!(
             (entry.headword.as_str(), pos),
             ("이다", "조사") | ("아니다", "형용사")

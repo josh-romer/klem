@@ -30,6 +30,8 @@ pub enum LemmaKind {
     Predicate,
     Copula,
     Auxiliary,
+    /// A lexical adverb before an attachable particle; not a nominal hypothesis.
+    Adverbial,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
@@ -44,7 +46,9 @@ pub enum MorphemeKind {
     Ending,
     Prefinal,
     Particle,
-    /// A nominal suffix such as plural -들, distinct from a particle or lemma.
+    /// A derivational suffix, distinct from a particle or lemma. Predicate-forming
+    /// suffixes use their dictionary form (e.g. 답다) and precede inflection.
+    /// Adverb-forming 이 follows a predicate lemma directly, without an ending.
     Suffix,
 }
 

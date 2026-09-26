@@ -22,17 +22,41 @@ fn morph(form: impl Into<String>, kind: MorphemeKind) -> Morpheme {
     }
 }
 
-// Strip at most one plural suffix at the nominal boundary, before any
-// particles or copula. Keep the unstripped lexical hypothesis as well: a word
-// ending in 들 need not contain a productive plural suffix (e.g. 아들).
-fn plural_nominal(word: &str) -> Option<Analysis> {
-    let base = word.strip_suffix('들').filter(|s| !s.is_empty())?;
-    Some(Analysis {
-        lemmas: vec![lemma(base, LemmaKind::Nominal)],
-        morphemes: vec![morph("들", MorphemeKind::Suffix)],
-        rules: vec!["suffix.plural".into()],
-        unchanged: false,
-    })
+// Bounded suffix paths at the nominal boundary, before particles or a copula.
+// Whole-word hypotheses remain: a matching tail need not be a real suffix.
+fn nominal_derivations(word: &str) -> Vec<Analysis> {
+    let mut out = vec![];
+    // One honorific, relational, or plural suffix; also honorific + plural.
+    // Each shorter base is a lexical hypothesis, never recursively re-split.
+    for (form, rule) in [
+        ("님", "suffix.honorific"),
+        ("적", "suffix.relational"),
+        ("들", "suffix.plural"),
+    ] {
+        if let Some(base) = word.strip_suffix(form).filter(|s| !s.is_empty()) {
+            out.push(Analysis {
+                lemmas: vec![lemma(base, LemmaKind::Nominal)],
+                morphemes: vec![morph(form, MorphemeKind::Suffix)],
+                rules: vec![rule.into()],
+                unchanged: false,
+            });
+            // Only honorific + plural is licensed in this batch.
+            if form == "들"
+                && let Some(root) = base.strip_suffix('님').filter(|s| !s.is_empty())
+            {
+                out.push(Analysis {
+                    lemmas: vec![lemma(root, LemmaKind::Nominal)],
+                    morphemes: vec![
+                        morph("님", MorphemeKind::Suffix),
+                        morph("들", MorphemeKind::Suffix),
+                    ],
+                    rules: vec!["suffix.honorific".into(), "suffix.plural".into()],
+                    unchanged: false,
+                });
+            }
+        }
+    }
+    out
 }
 
 fn nominal_bases(word: &str) -> Vec<Analysis> {
@@ -42,8 +66,38 @@ fn nominal_bases(word: &str) -> Vec<Analysis> {
         rules: vec![],
         unchanged: false,
     }];
-    out.extend(plural_nominal(word));
+    out.extend(nominal_derivations(word));
     out
+}
+
+// Scoped -이 derivation, separate from inflection and auxiliary connectors.
+// Attachment is lexical: do not strip 이 from every noun/verb or infer a
+// general 르 rule from the historical 달리/빨리 forms.
+fn adverb_derivation(word: &str) -> Option<Analysis> {
+    let (stem, historical) = match word {
+        "달리" => ("다르", true),
+        "빨리" => ("빠르", true),
+        _ => {
+            let stem = word.strip_suffix('이')?;
+            if !(stem.ends_with("같")
+                || stem.ends_with("없")
+                || matches!(stem, "굳" | "길" | "깊" | "높" | "많"))
+            {
+                return None;
+            }
+            (stem, false)
+        }
+    };
+    let mut rules = vec!["suffix.adverbial.i".into()];
+    if historical {
+        rules.push("derivation.adverbial.lexical".into());
+    }
+    Some(Analysis {
+        lemmas: vec![lemma(format!("{stem}다"), LemmaKind::Predicate)],
+        morphemes: vec![morph("이", MorphemeKind::Suffix)],
+        rules,
+        unchanged: false,
+    })
 }
 
 #[derive(Clone)]
@@ -53,6 +107,10 @@ struct Predicate {
     morphs: Vec<Morpheme>,
     rules: Vec<String>,
     connector: bool,
+    // Decided before auxiliary provenance is merged, so an irregular auxiliary
+    // cannot license an incorrectly conjugated -답다 on the left.
+    dap_suffix: bool,
+    ha_contracted: bool,
 }
 type PrefinalMemo = HashMap<(String, u8, u8), Vec<Predicate>>;
 
@@ -67,6 +125,8 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
         morphs: vec![],
         rules: vec![],
         connector: false,
+        dap_suffix: false,
+        ha_contracted: false,
     }];
     let mut choices: Vec<(Recovery, u8, u8, &str, &str)> = vec![];
     if stage >= 4 {
@@ -116,6 +176,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
                 p.connector = ending.connector;
+                p.dap_suffix = dap_suffix_allowed(&p);
+                p.ha_contracted = matches!(
+                    ending.boundary,
+                    Boundary::HaDeletion | Boundary::HaAspiration
+                );
                 out.push(p);
             }
         }
@@ -134,7 +199,26 @@ fn predicate_analysis(p: &Predicate) -> Analysis {
 
 fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
     let mut out = vec![predicate_analysis(p)];
-    add_copulas(p, &mut out);
+    if p.dap_suffix
+        && let Some(base) = p.stem.strip_suffix('답').filter(|s| !s.is_empty())
+    {
+        for mut a in nominal_bases(base) {
+            // -적 combinations need their own attachment audit.
+            if a.morphemes.iter().any(|m| m.form == "적") {
+                continue;
+            }
+            a.morphemes.push(morph("답다", MorphemeKind::Suffix));
+            a.morphemes.extend(p.morphs.clone());
+            a.rules.extend(p.rules.clone());
+            a.rules.push("suffix.adjectival.dap".into());
+            out.push(a);
+        }
+    }
+    // The restored 하 belongs to a predicate. It cannot then become a nominal
+    // base before an omitted copula: 생각다 is not 생각하 + 이다 + 다.
+    if !p.ha_contracted {
+        add_copulas(p, &mut out);
+    }
     for a in &mut out {
         a.lemmas.extend(
             p.auxiliaries
@@ -145,9 +229,101 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
     out
 }
 
+// Bounded adjective attachment inventory. The known suffix is ㅂ-irregular;
+// arbitrary lexical predicates still retain the engine's regular hypotheses.
+fn dap_suffix_allowed(p: &Predicate) -> bool {
+    if !p.stem.ends_with('답') {
+        return false;
+    }
+    let first = p.morphs[0].form.as_str();
+    let vowel = first.starts_with('어')
+        || first.starts_with('은')
+        || matches!(
+            first,
+            "었" | "시"
+                | "으면"
+                | "으니까"
+                | "으니"
+                | "으며"
+                | "으면서"
+                | "으므로"
+                | "으나"
+                | "으냐"
+                | "으리라"
+                | "을"
+                | "을까"
+                | "을까요"
+                | "을지"
+                | "을수록"
+                | "음"
+        );
+    if vowel {
+        return p.rules.iter().any(|r| r == "irregular.bieup");
+    }
+    matches!(
+        first,
+        "겠" | "더"
+            | "다"
+            | "다고"
+            | "다는"
+            | "다니"
+            | "다면"
+            | "고"
+            | "고요"
+            | "지"
+            | "지요"
+            | "죠"
+            | "게"
+            | "게요"
+            | "지만"
+            | "지만요"
+            | "군"
+            | "군요"
+            | "구나"
+            | "네"
+            | "네요"
+            | "나"
+            | "나요"
+            | "냐"
+            | "냐고"
+            | "니"
+            | "기"
+            | "기로"
+            | "기가"
+            | "기는"
+            | "기도"
+            | "기만"
+            | "기를"
+            | "기보다"
+            | "던"
+            | "던데"
+            | "던데요"
+            | "더라"
+            | "더라고"
+            | "더니"
+            | "더군"
+            | "더군요"
+            | "더라도"
+            | "거든"
+            | "거든요"
+            | "거나"
+            | "건"
+            | "거니"
+            | "거니와"
+            | "든"
+            | "든지"
+            | "도록"
+            | "습니다"
+            | "습니까"
+            | "소"
+            | "오"
+    )
+}
+
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     if let Some(base) = p.stem.strip_suffix('이').filter(|s| !s.is_empty()) {
         let mut nominal_alternatives = nominal_bases(base);
+        // Polite/distributive outer particles do not intervene before a copula.
         nominals(base, 5, false, &[], &mut nominal_alternatives);
         for mut a in nominal_alternatives {
             a.lemmas.push(lemma("이다", LemmaKind::Copula));
@@ -173,8 +349,79 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     }
 }
 
+fn particle_allowed(
+    class: u8,
+    form: &str,
+    stage: u8,
+    after_case: bool,
+    suffixes: &[Morpheme],
+) -> bool {
+    let outer = suffixes.first().map(|m| m.form.as_str());
+    class < stage
+        || (after_case && form == "만")
+        || (outer == Some("만") && matches!(form, "까지" | "부터"))
+        || (outer == Some("의") && matches!(class, 2 | 3) && form != "의")
+}
+
+// Closed pronoun paradigms supplement productive ㄴ/ㄹ attachment. The old
+// bare 거/것 representations remain available for compatibility; expanded
+// demonstratives use the case allomorph appropriate to their recovered noun.
+fn pronoun_particles(word: &str) -> Vec<(&str, &'static str, u8, &'static str)> {
+    let mut out = vec![];
+    for (surface, base, form, class) in [
+        ("내가", "나", "가", 1),
+        ("네가", "너", "가", 1),
+        ("제가", "저", "가", 1),
+        ("누가", "누구", "가", 1),
+        ("내", "나", "의", 2),
+        ("네", "너", "의", 2),
+        ("제", "저", "의", 2),
+    ] {
+        if word == surface {
+            out.push((base, form, class, "pronoun"));
+        }
+    }
+    for (surface, form, class) in [("게", "이", 1), ("건", "는", 4), ("걸", "를", 1)] {
+        if word == surface {
+            for base in ["거", "것"] {
+                out.push((base, form, class, "nominal.contraction"));
+            }
+        }
+    }
+    for (prefix, short, full) in [
+        ("이", "이거", "이것"),
+        ("그", "그거", "그것"),
+        ("저", "저거", "저것"),
+    ] {
+        if let Some(tail) = word.strip_prefix(prefix) {
+            let pair = match tail {
+                "게" => Some(("가", "이", 1)),
+                "건" => Some(("는", "은", 4)),
+                "걸" => Some(("를", "을", 1)),
+                _ => None,
+            };
+            if let Some((s, f, class)) = pair {
+                out.push((short, s, class, "pronoun.contraction"));
+                out.push((full, f, class, "pronoun.contraction"));
+            }
+        }
+    }
+    if word == "뭘" {
+        out.push(("뭐", "를", 1, "pronoun.contraction"));
+        out.push(("무엇", "을", 1, "pronoun.contraction"));
+    }
+    out
+}
+
+struct ParticleRecovery {
+    base: String,
+    form: &'static str,
+    class: u8,
+    contraction: Option<&'static str>,
+}
+
 /// Suffix peeling is acyclic: each particle consumes input, decreases a grammar
-/// stage, or uses the one 만-before-case transition. No depth/candidate cutoff.
+/// stage, or removes a coda before descending to a lower stage. No cutoff.
 fn nominals(
     word: &str,
     stage: u8,
@@ -182,33 +429,100 @@ fn nominals(
     suffixes: &[Morpheme],
     out: &mut Vec<Analysis>,
 ) {
-    for particle in grammar::particles() {
-        let outer = suffixes.first().map(|m| m.form.as_str());
-        let allowed = particle.class < stage
-            || (after_case && particle.form == "만")
-            || (outer == Some("만") && matches!(particle.form, "까지" | "부터"))
-            || (outer == Some("의") && matches!(particle.class, 2 | 3) && particle.form != "의");
-        if !allowed {
+    for (base, form, class, rule) in pronoun_particles(word) {
+        if particle_allowed(class, form, stage, after_case, suffixes) {
+            let mut morphs = vec![morph(form, MorphemeKind::Particle)];
+            morphs.extend_from_slice(suffixes);
+            out.push(Analysis {
+                lemmas: vec![lemma(base, LemmaKind::Nominal)],
+                morphemes: morphs,
+                rules: vec![rule.into()],
+                unchanged: false,
+            });
+        }
+    }
+    let mut recoveries: Vec<_> = grammar::particles()
+        .iter()
+        .filter_map(|p| {
+            let base = word.strip_suffix(p.form)?;
+            grammar::particle_matches(base, p.condition).then(|| ParticleRecovery {
+                base: base.into(),
+                form: p.form,
+                class: p.class,
+                contraction: None,
+            })
+        })
+        .collect();
+    if let Some((_, v, t @ (4 | 8))) = last(word) {
+        let base = replace_last(word, v, 0).unwrap();
+        if t == 4 {
+            recoveries.push(ParticleRecovery {
+                base,
+                form: "는",
+                class: 4,
+                contraction: Some("particle.contraction.n"),
+            });
+        } else {
+            // Object ㄹ and emphatic ㄹ after an adverbial particle use
+            // different chain slots, but share the canonical display form 를.
+            for class in [1, 4] {
+                recoveries.push(ParticleRecovery {
+                    base: base.clone(),
+                    form: "를",
+                    class,
+                    contraction: Some("particle.contraction.l"),
+                });
+            }
+        }
+    }
+    for particle in recoveries {
+        if !particle_allowed(particle.class, particle.form, stage, after_case, suffixes) {
             continue;
         }
-        let Some(base) = word.strip_suffix(particle.form) else {
-            continue;
-        };
-        if !grammar::particle_matches(base, particle.condition) {
-            continue;
-        }
+        let base = particle.base.as_str();
         let mut morphs = vec![morph(particle.form, MorphemeKind::Particle)];
         morphs.extend_from_slice(suffixes);
+        let start = out.len();
+        // Only reviewed adverb-compatible particles. Subject/object marking
+        // must not mistake this adverbial path for a nominalization.
+        if morphs
+            .iter()
+            .all(|m| matches!(m.form.as_str(), "도" | "만" | "는" | "은" | "요" | "들"))
+            && let Some(mut a) = adverb_derivation(base)
+        {
+            a.morphemes.extend(morphs.clone());
+            a.rules.push("particle".into());
+            out.push(a);
+        }
         for mut a in nominal_bases(base) {
             a.morphemes.extend(morphs.clone());
             a.rules.push("particle".into());
             out.push(a);
         }
-        // 기 / (으)ㅁ nominalizations can be followed by particles.
-        with_auxiliaries(base, PredicateEnd::Nominalized, |p| {
+        let flexible = particle.contraction.is_some() || matches!(particle.form, "요" | "들");
+        if flexible {
+            out.push(Analysis {
+                lemmas: vec![lemma(base, LemmaKind::Adverbial)],
+                morphemes: morphs.clone(),
+                rules: vec!["particle".into()],
+                unchanged: false,
+            });
+        }
+        // Nominalizations accept ordinary particles; connective/final endings
+        // have separate, explicit licenses for the newly supported particles.
+        let ending = if flexible {
+            PredicateEnd::BeforeParticle(particle.form)
+        } else {
+            PredicateEnd::Nominalized
+        };
+        with_auxiliaries(base, ending, |p| {
+            let nominalized = PredicateEnd::Nominalized.accepts(&p);
             for mut a in expand_predicate(&p) {
                 a.morphemes.extend(morphs.clone());
-                a.rules.extend(["particle".into(), "nominalization".into()]);
+                a.rules.push("particle".into());
+                if nominalized {
+                    a.rules.push("nominalization".into());
+                }
                 out.push(a);
             }
         });
@@ -224,6 +538,16 @@ fn nominals(
             &morphs,
             out,
         );
+        for a in &mut out[start..] {
+            if let Some(rule) = particle.contraction {
+                a.rules.push(rule.into());
+            }
+            match particle.form {
+                "요" => a.rules.push("particle.polite".into()),
+                "들" => a.rules.push("particle.distributive".into()),
+                _ => (),
+            }
+        }
     }
 }
 
@@ -256,6 +580,7 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
 enum PredicateEnd {
     Any,
     Nominalized,
+    BeforeParticle(&'static str),
 }
 impl PredicateEnd {
     fn accepts(self, p: &Predicate) -> bool {
@@ -264,8 +589,98 @@ impl PredicateEnd {
                 matches!(
                     m.form.as_str(),
                     "기" | "음" | "는가" | "은가" | "는지" | "은지"
-                )
+                ) || match self {
+                    Self::BeforeParticle(form) => before_particle(&m.form, form),
+                    _ => false,
+                }
             })
+    }
+}
+
+fn before_particle(ending: &str, particle: &str) -> bool {
+    let connective = matches!(
+        ending,
+        "어" | "어서"
+            | "어도"
+            | "어야"
+            | "어다가"
+            | "고"
+            | "게"
+            | "지"
+            | "지만"
+            | "는데"
+            | "은데"
+            | "던데"
+            | "거든"
+            | "으면"
+            | "으니"
+            | "으니까"
+            | "으며"
+            | "으면서"
+            | "으므로"
+            | "으려고"
+            | "으려면"
+            | "으려"
+            | "고자"
+            | "느라고"
+            | "도록"
+            | "더라도"
+            | "더니"
+            | "거나"
+            | "든지"
+            | "자마자"
+            | "라고"
+            | "으라고"
+            | "다고"
+            | "는다고"
+            | "냐고"
+            | "자고"
+            | "라서"
+            | "라면"
+            | "다면"
+    );
+    match particle {
+        "요" => {
+            connective
+                || matches!(
+                    ending,
+                    "군" | "구나"
+                        | "네"
+                        | "나"
+                        | "니"
+                        | "냐"
+                        | "으냐"
+                        | "더라"
+                        | "더라고"
+                        | "더군"
+                        | "을까"
+                        | "을게"
+                        | "을래"
+                        | "다니"
+                )
+        }
+        "들" => matches!(
+            ending,
+            "어" | "게"
+                | "지"
+                | "고"
+                | "라고"
+                | "으라고"
+                | "다고"
+                | "는다고"
+                | "냐고"
+                | "자고"
+                | "다"
+                | "는다"
+                | "어라"
+                | "자"
+                | "어요"
+                | "습니다"
+                | "으세요"
+        ),
+        "는" => connective,
+        "를" => matches!(ending, "어" | "게" | "지" | "고"),
+        _ => false,
     }
 }
 
@@ -402,7 +817,8 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
         unchanged: true,
     }];
     if has_hangul(&normalized) {
-        out.extend(plural_nominal(&normalized));
+        out.extend(adverb_derivation(&normalized));
+        out.extend(nominal_derivations(&normalized));
         for (suffix, vowel_only) in [
             ("이에요", false),
             ("예요", true),
@@ -435,40 +851,10 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
                 unchanged: false,
             });
         }
-        for (form, particle) in [("게", "이"), ("건", "는"), ("걸", "를")] {
-            if normalized == form {
-                for base in ["거", "것"] {
-                    out.push(Analysis {
-                        lemmas: vec![lemma(base, LemmaKind::Nominal)],
-                        morphemes: vec![morph(particle, MorphemeKind::Particle)],
-                        rules: vec!["nominal.contraction".into()],
-                        unchanged: false,
-                    });
-                }
-            }
-        }
         with_auxiliaries(&normalized, PredicateEnd::Any, |p| {
             out.extend(expand_predicate(&p));
         });
-        nominals(&normalized, 5, false, &[], &mut out);
-        for (surface, base, particle) in [
-            ("내가", "나", "가"),
-            ("네가", "너", "가"),
-            ("제가", "저", "가"),
-            ("누가", "누구", "가"),
-            ("내", "나", "의"),
-            ("네", "너", "의"),
-            ("제", "저", "의"),
-        ] {
-            if normalized == surface {
-                out.push(Analysis {
-                    lemmas: vec![lemma(base, LemmaKind::Nominal)],
-                    morphemes: vec![morph(particle, MorphemeKind::Particle)],
-                    rules: vec!["pronoun".into()],
-                    unchanged: false,
-                });
-            }
-        }
+        nominals(&normalized, 7, false, &[], &mut out);
     }
     // Semantic duplicates share provenance; sorting is independent of hash order.
     let mut unique: BTreeMap<(Vec<Lemma>, Vec<Morpheme>, bool), Vec<String>> = BTreeMap::new();

@@ -10,6 +10,12 @@ import {
 // not a contextually selected sense. Source IDs permit independent review.
 export const grammarLabels: Record<string, [string, number]> = {
   "-들": ["Plural", 74906],
+  "-님": ["Honorific", 88852],
+  "-적": ["Relating to / having a quality", 88966],
+  "-답다": ["Characteristic of", 92145],
+  "-이": ["Adverb-forming suffix", 88927],
+  들: ["Plural subjects", 86264],
+  요: ["Polite", 86116],
   는: ["Topic / contrast", 85851],
   은: ["Topic / contrast", 86111],
   이: ["Subject marker", 86289],
@@ -33,6 +39,11 @@ export const grammarLabels: Record<string, [string, number]> = {
   "-고": ["Connective / final", 78583],
   "-지": ["Connective / final", 78636],
   "-게": ["Connective / final", 77326],
+  "-건대": ["Introducing a thought / wish", 78410],
+  "-도록": ["Purpose / extent", 80286],
+  "-듯": ["As / like", 80280],
+  "-듯이": ["As / like", 80282],
+  "-고자": ["Purpose / intention", 78612],
   "-었-": ["Past / completed", 68719],
   "-시-": ["Subject honorific", 80330],
   "-겠-": ["Intention / conjecture", 90137],
@@ -54,11 +65,15 @@ export function options(token: Token, only: boolean) {
 export function preferred(token: Token, only: boolean) {
   const choices = options(token, only);
   return (
-    choices.find(({ analysis }) =>
-      analysis.lemmas.every((l) =>
-        matches(token, l).some((e) => e.pos_compatibility !== "incompatible"),
-      ),
-    ) ?? choices[0]
+    choices
+      .filter(({ analysis }) =>
+        analysis.lemmas.every((l) =>
+          matches(token, l).some((e) => e.pos_compatibility !== "incompatible"),
+        ),
+      )
+      .sort(
+        (a, b) => a.analysis.morphemes.length - b.analysis.morphemes.length,
+      )[0] ?? choices[0]
   )?.index;
 }
 export function parts(
@@ -102,7 +117,9 @@ export function parts(
       a.lemmas[previous.lemma].text.endsWith("하다");
     const form = afterHa
       ? m.form.replace(/^어/, "여").replace(/^었/, "였")
-      : m.form;
+      : m.kind === "suffix" && m.form === "답다"
+        ? "답"
+        : m.form;
     return {
       form,
       label:

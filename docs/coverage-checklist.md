@@ -8,8 +8,9 @@ implementation and regression evidence. It does not establish that every Korean
 analysis is generated or that every generated candidate is linguistically valid.
 Contextual sense selection and sentence parsing remain separate work.
 
-The open examples below were probed with the current CLI and the local September
-2026 Korean Basic Dictionary snapshot. They are audit observations, not yet
+The examples below were initially probed with the CLI and the local September
+2026 Korean Basic Dictionary snapshot. Closed items describe subsequent fixes.
+Open examples are audit observations, not yet
 executable regression cases unless a test is linked. No overall completion
 percentage is assigned: the inventory itself still needs an audit.
 
@@ -22,8 +23,10 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 is the next implementation batch, P2 follows it, and P3 needs a scope or
-representation decision first. Priorities reflect the concrete failures found,
+P1 and the bounded COV-010/011/012/016 batches are implemented.
+COV-013 has an initial inventory pass; its remaining work is split into
+COV-017..022 below. P3 needs further scope or representation decisions.
+Priorities reflect the concrete failures found,
 not measured frequency estimates across novels.
 
 ## Existing coverage to preserve
@@ -67,77 +70,172 @@ The examples and source references are expanded in [Grammar coverage](rules.md).
 
 ## Open coverage checklist
 
-### P1: common missing analyses and a role correction
+### P1: implemented particle/pronoun batch
 
-- [ ] **COV-006 — Contracted particles.** **Missing.** 학교에선 and 선생님께선
-  produce no dictionary-filtered analyses. Recover the particle chains
+- [x] **COV-006 — Contracted particles.** **Implemented for the scoped attachment families.**
+  학교에선 and 선생님께선 now recover the particle chains
   학교 + 에서 + 는 and 선생님 + 께서 + 는, with an explicitly normalized display.
-  Cover contracted ㄴ/ㄹ attachment and interactions with existing particles;
-  define canonical forms without confusing them with verb endings.
+  Contracted ㄴ/ㄹ attachment and existing particle chains use canonical 는/를,
+  separate from verb endings. Tests also cover 병원엘, 보곤, and 걷질.
   Source starting points: KRDict [ㄴ](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85847)
   and [ㄹ](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85760).
-  Exit cases must include particle chains, boundary failures, and retention of
-  genuine lexical/verb alternatives.
-- [ ] **COV-007 — Pronoun contractions beyond the special cases.** **Partial.**
-  이건 does not recover the intended 이것/이거 + topic reading; 그걸 and 뭘
-  survive as whole dictionary entries without the intended pronoun/object split.
-  Add source-justified alternatives for these forms and audit the related
-  이/그/저 paradigm. Reuse COV-006 where appropriate, retain whole-word readings,
-  and avoid inventing character spans for contractions.
+  Evidence: `contractions_preserve_case_chains_and_pronoun_alternatives` and
+  `particle_slots_and_ending_boundaries_do_not_overstrip` in
+  [particle tests](../tests/particles.rs), `particle-contracted-topic` in the
+  ledger, and browser/CLI regressions.
+- [x] **COV-007 — Pronoun contractions beyond the special cases.** **Implemented
+  for 이/그/저 subject/topic/object paradigms and 뭘.** Both short and expanded
+  pronouns are retained with the appropriate particles; outer particles compose,
+  e.g. 이건요. Productive ㄴ/ㄹ recovery also covers 난/날, 넌/널, 우린/우릴.
+  Whole-word readings remain available; contractions do not invent character spans.
   Source starting points: KRDict [이거](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71128),
   [뭐](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=84991), and
-  the ㄴ/ㄹ entries above. Review exactly which expanded lexical alternatives
-  each form licenses before adding required judgments.
-- [ ] **COV-008 — Polite particle 요.** **Missing.** 저도요 and 친구는요 return
-  no dictionary-filtered analyses. Required initial paths: 저 + 도 + 요 and
-  친구 + 는 + 요. Audit attachment after nominals, other particles, adverbials,
-  and endings; preserve existing 어요-family analyses. Do not strip every final
-  요 indiscriminately. Source: [NIKL explanation and attachment examples](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=312410).
-- [ ] **COV-009 — Distinguish the 들 particle from nominal -들.** **Partial.**
-  빨리들 currently survives headword filtering through a nominal plural
-  hypothesis, although 빨리 is an adverb. The appropriate particle analysis
-  is missing; 먹어들 also has no dictionary-filtered reading in the audit.
-  Model the grammatical role and its attachment conditions separately, keep
-  지식인들을 working, and show the correct grammar entry/label in the browser.
+  the ㄴ/ㄹ entries above. Evidence: the full three-pronoun paradigm and NFD
+  tests in [particles.rs](../tests/particles.rs), `pronoun-*` ledger IDs, and
+  the browser's 이건요 alternative selector. Other contractions remain COV-013 work.
+- [x] **COV-008 — Polite particle 요.** **Implemented for nominal/adverbial bases,
+  particle chains, and explicitly licensed ending families.** 저 + 도 + 요,
+  친구 + 는 + 요, and 먹다 + 으면 + 요 now survive dictionary filtering.
+  Existing 어요-family analyses remain alongside separated 어 + 요 readings.
+  One outer 요 slot is supported; arbitrary stripping after adnominal or formal
+  endings is not enabled. Source: [NIKL explanation and attachment examples](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=312410).
+  Evidence: particle attachment/boundary tests, `particle-polite-*` ledger IDs,
+  and dictionary/browser regressions.
+- [x] **COV-009 — Distinguish the 들 particle from nominal -들.** **Implemented
+  for nominal/adverbial bases and the listed connective/final endings.** 빨리들
+  now has an adverbial + particle analysis; 먹어들 has 먹다 + 어 + 들.
+  지식인들을 remains a nominal + suffix + particle analysis. The browser shows
+  the correct grammar entry/label for the selected role.
   Source: KRDict [들 particle](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86264)
   versus [plural suffix -들](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=74906).
-  Dictionary-free hypotheses remain hypotheses; do not silently change the
-  existing headword-only filter into a strict POS filter.
+  `LemmaKind::Adverbial` has dictionary compatibility with 부사. Headword-only
+  filtering still retains incompatible hypotheses; POS-aware consumers can
+  distinguish them. Evidence: `adverbs_and_plural_nouns_have_distinct_role_hypotheses`
+  in [particles.rs](../tests/particles.rs), the dictionary role test, and the
+  browser regression that opens the 들 particle entry.
+
+Batch limits and sources: [P1 rule scope](rules.md#particle-and-pronoun-expansion-p1).
+Further ending licenses, other pronoun contractions, and particles inside joined
+auxiliary chains (e.g. 먹어들봐요) remain in COV-013. Independent linguistic
+review remains open under the completion review below.
 
 ### P2: additional morphology
 
-- [ ] **COV-010 — Productive suffix decomposition.** **Partial.** 학생답다
-  returns no dictionary-filtered results. 선생님께 already recovers 선생님 + 께,
-  and 과학적이다 recovers 과학적 + 이다, but neither exposes the internal suffix.
-  Start with separately scoped -답다, -님, and -적 support. Decide how a suffix
-  that forms a predicate is represented and conjugated before implementing it.
-  Preserve recognized whole-word lemmas; make deeper learner decomposition an
-  additional analysis, not mandatory destructive splitting. Audit attachment
-  restrictions and suffix combinations instead of allowing arbitrary recursion.
+- [x] **COV-010 — Productive suffix decomposition.** **Implemented for bounded
+  -님, -적, and -답다 hypotheses.** 선생님께 additionally exposes 선생 + 님 + 께;
+  과학적이다 exposes 과학 + 적 + 이다 + 다. 학생답다 and 학생다워요 now retain
+  dictionary-filtered paths through 학생. Whole-word alternatives remain and
+  the browser initially prefers a compact dictionary-compatible reading.
+  `MorphemeKind::Suffix` uses canonical 답다 before its inflection; the display
+  shows 답 and links the -답다 entry. The known suffix uses ㅂ-irregular vowel
+  attachment. Nominal paths allow one 님, 적, or 들, or 님 + 들; these can
+  precede particles/copulas. 답다 may follow an unsplit base or 님/들/님 + 들,
+  before licensed inflection and existing auxiliaries. No recursive derivation,
+  님 stem alternation, or semantic noun-class validation is claimed. Further
+  combinations and adjective ending licenses remain COV-013 audit work.
   Sources: KRDict [-답다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=92145),
   [-님](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88852),
   [-적](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88966).
-- [ ] **COV-011 — Further 하다 contractions.** **Missing.** 생각지 and 생각건대
-  do not recover 생각하다. The documented aspiration gap includes 피케;
-  비유컨대 also appears in the saved development misses. Add independently
-  sourced deletion/aspiration conditions, conjugation paths, and paired negative
-  cases. Extend the [spelling audit](rules.md#candidate-correctness-audit), rather
-  than treating every shortened consonant sequence as a 하다 contraction.
-- [ ] **COV-012 — Adverbial derivation.** **Partial.** 같이 and 없이 have useful
-  whole-word dictionary entries, but the corpus-expected paths to 같다/없다
-  are missing; 달리 → 다르다 is also a recorded development miss. Decide which
-  derivations should be additional analyses and which remain lexical entries.
-  Preserve whole-word meanings and source-check each attachment family.
-  Evidence to triage: [KAIST development report](../data/baselines/kaist-dev.jsonl)
-  and [adapter conventions](evaluation.md#adapters-and-metrics).
+  Evidence: [suffix path and boundary tests](../tests/derivation.rs),
+  `derivational_suffixes_survive_dictionary_filtering_and_keep_lexical_readings`
+  in [dictionary tests](../tests/dictionary.rs), eight `suffix-*` ledger cases,
+  and browser selection/entry regressions. Scope: [suffix rules](rules.md#bounded-suffix-decomposition-cov-010).
+- [x] **COV-011 — Further 하다 contractions.** **Implemented for the listed
+  Article 40 ending families and simple coda classes.** 생각지/생각건대 recover
+  생각하다; 피케 and 비유컨대 recover 피하다 and 비유하다. Separate deletion and
+  aspiration rules preserve canonical endings and their auxiliary connections.
+  The scoped inventory is 게/게요, 지/지요/지만/지만요, 다/다고/다는/다니/다면,
+  도록, 고자, 건대. Paired negative cases reject the swapped coda classes and
+  prevent a restored 하 from being reinterpreted as a nominal before a zero copula.
+  Evidence: [Article 40 examples and boundary tests](../tests/hada.rs),
+  `shortened_hada_matches_full_lemmas_in_cli_and_pos_filtering` in
+  [dictionary tests](../tests/dictionary.rs), nine `hada-*` judgment cases,
+  and browser normalization/grammar-entry checks. Source:
+  [NIKL's Article 40 explanation](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=325451).
+  Complex codas, other ending families, and 잖/찮 contractions remain COV-013
+  audit work. See [the implemented scope](rules.md#shortened-hada-cov-011).
+- [x] **COV-012 — Adverbial derivation.** **Implemented for bounded -이 families.**
+  Adjective bases ending in 같/없, the stems 굳/길/깊/높/많, and the historical
+  달리/빨리 mappings gain optional suffix analyses. 같이 → 같다 + 이,
+  없이 → 없다 + 이, and 달리 → 다르다 + 이 now recover the recorded corpus gold.
+  Whole-word readings remain preferred in the browser; the deeper path has a
+  suffix, not a fabricated ending. Particles 도/만/는/요/들 compose through the
+  existing chain order (including 만은). Noun/case and arbitrary -이/히 stripping
+  are not enabled. Evidence: [adverb tests](../tests/adverbs.rs),
+  [three complete annotated KAIST sentences](../tests/fixtures/kaist-adverbs.conllu),
+  `annotated_adverb_derivations_recover_previously_missed_gold_cases` in
+  [corpus tests](../tests/corpus.rs), eight `adverb-*` ledger cases, and
+  dictionary/browser tests for preservation and the correct -이 homonym.
+  Sources and exclusions: [adverb derivation scope](rules.md#adverbial-derivation-cov-012).
+  Remaining -이/-히 families, nominal/adverbial homonyms, and attachment classes
+  are COV-013 inventory work. This does not certify all adverbial derivation.
 - [ ] **COV-013 — Ending, particle-chain, and auxiliary inventory audit.**
-  **Audit needed.** Compare the implemented tables with dictionary grammar
+  **Partial: initial inventory and development-miss clustering complete.**
+  See [the reproducible audit](inventory-audit.md) and its
+  [compact report](inventory-audit.json): 715 dictionary grammar entries are
+  inventoried for triage, without treating literal table mentions as coverage.
+  COV-016 fixes the reviewed -듯/-듯이 family; 19 additional development cases
+  match, leaving 378 KAIST and 242 GSD development misses. COV-017..022 split
+  the remaining morphology work. Every-entry linguistic review is still open.
+  Compare the implemented tables with dictionary grammar
   entries and cluster saved corpus misses by rule family. Previously recorded
   examples include 보듯이, 있습니다만, 어디까지나, and 번져나갔다; re-probe them
   before promoting a miss to a required test. Distinguish true missing rules
   from annotation errors and differing lexical segmentation. Split this item
   into individually scoped entries as families are reviewed. Corpus gold does
   not enumerate every valid alternative.
+  Include the remaining P1 extensions: pronoun contractions outside the finite
+  이/그/저 and 뭘 paradigms, additional particle/ending combinations, and particles
+  inside joined auxiliary chains. Spaced input is already analyzed token by token.
+  Audit further suffix combinations/adjective ending licenses, and direct
+  nominalization + copula without an intervening particle (e.g. 학생다움이다).
+  The tested 학생다움만이다 path already composes through the particle rule.
+  For 하다 shortening, audit complex coda pronunciation, remaining ending/particle
+  combinations, and Article 39 잖/찮 forms separately; COV-011 covers Article 40.
+  Audit remaining adverbial -이/-히 bases, spelling recoveries (e.g. 가까이),
+  and nominal -이 separately. COV-012 does not infer unrestricted -이 removal or
+  a productive 르 → ㄹ리 rule from the historical 달리/빨리 pairs.
+
+### Work split from COV-013
+
+- [x] **COV-016 — Comparative -듯/-듯이 endings.** **Implemented for literal
+  predicate attachment.** 보듯이 → 보다 + 듯이; 살듯 preserves ㄹ. Existing
+  honorific/past/modal markers, copulas, and auxiliary chains compose before
+  these endings. They do not themselves license an auxiliary connector.
+  No bound-noun 듯 segmentation, additional particle attachment, or shortened
+  하다 variants are included. Sources: KRDict
+  [-듯](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80280) and
+  [-듯이](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80282).
+  Evidence: [path/boundary tests](../tests/comparative_endings.rs), six
+  `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
+  dictionary/CLI parity and browser grammar-entry checks. All 30 existing
+  fingerprints remain unchanged; no frozen corpus baseline was regenerated.
+- [ ] **COV-017 — Further ending families.** Review attached ㄴ다면/는다면,
+  (으)려는, -자는, -다가, quoted contractions and other unreviewed inventory
+  entries. Re-probe each path and check verb/adjective attachment, prefinals,
+  and whole-word alternatives. Corpus signatures identify candidates for review,
+  not a blanket license to add every dictionary spelling as a literal suffix.
+- [ ] **COV-018 — Further particle attachments and pronoun contractions.**
+  Review post-ending 만 (있습니다만), 는/도 after connective endings, chains
+  such as 어디까지나/이제부터라도, quotation-particle 라고 versus copula analyses,
+  and pronouns outside the existing finite paradigms. Preserve homonym-specific
+  dictionary labels; the current nominal 만 label cannot describe every use.
+- [ ] **COV-019 — Auxiliary inventory and internal particles.** Review
+  나가다/나다, 계시다, adnominal auxiliaries such as 만하다/듯하다, and the other
+  unreviewed auxiliary entries with connector-specific constraints. Include
+  particles inside joined chains (먹어들봐요). Distinguish independent compounds
+  and lexical readings; preserve the packed acyclic search and stress bounds.
+- [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
+  Review direct nominalization + copula (학생다움이다), additional suffix order,
+  and adjective ending licenses. 학생다움만이다 already composes; this does not
+  establish the direct path or arbitrary recursive derivation.
+- [ ] **COV-021 — Remaining 하다 shortening.** Review Article 39 잖/찮 forms,
+  Article 40 complex coda pronunciation, and remaining ending/particle families
+  separately. Do not extend stop/sonorant rules without pronunciation evidence.
+- [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
+  lexical classes, 가까이-type recovery, and nominal -이 independently. Keep
+  lexical adverb readings and causative/noun homonyms; historical 달리/빨리 do
+  not license a general 르 inflection rule.
 
 ### P3: dictionary and representation boundaries
 

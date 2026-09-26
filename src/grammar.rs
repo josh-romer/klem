@@ -154,6 +154,8 @@ pub(crate) enum Boundary {
     Aeo,
     Copular,
     ZeroCopula,
+    HaDeletion,
+    HaAspiration,
 }
 
 #[derive(Debug)]
@@ -170,6 +172,28 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
     };
     let mut out = Vec::new();
     match boundary {
+        Boundary::HaDeletion | Boundary::HaAspiration => {
+            // Article 40: stop-final bases lose all of 하; vowels/sonorants
+            // retain ㅎ, which aspirates the following onset. Complex codas
+            // need a separate pronunciation audit, so are not guessed here.
+            let allowed = match boundary {
+                Boundary::HaDeletion => matches!(
+                    coda(base),
+                    Some(1 | 2 | 7 | 17 | 19 | 20 | 22 | 23 | 24 | 25 | 26)
+                ),
+                _ => matches!(coda(base), Some(0 | 4 | 8 | 16 | 21)),
+            };
+            if allowed {
+                push(
+                    &mut out,
+                    format!("{base}하"),
+                    match boundary {
+                        Boundary::HaDeletion => "deletion.ha",
+                        _ => "contraction.ha_aspiration",
+                    },
+                );
+            }
+        }
         Boundary::Aeo => return aeo(base),
         Boundary::Copular => {
             if base.ends_with('이') || base == "아니" {
@@ -297,6 +321,7 @@ pub(crate) fn endings() -> &'static [Ending] {
         for suffix in [
             "다",
             "고자",
+            "건대",
             "구나",
             "군",
             "군요",
@@ -316,6 +341,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "게",
             "게요",
             "도록",
+            "듯",
+            "듯이",
             "든지",
             "든",
             "더라도",
@@ -481,6 +508,33 @@ pub(crate) fn endings() -> &'static [Ending] {
                 connector: false,
             });
         }
+        // Explicit ㄱ/ㄷ/ㅈ ending families for Article 40. Ordinary endings
+        // remain alongside their shortened variants; no global text rewriting.
+        for (form, aspirated) in [
+            ("게", "케"),
+            ("게요", "케요"),
+            ("지", "치"),
+            ("지요", "치요"),
+            ("지만", "치만"),
+            ("지만요", "치만요"),
+            ("다", "타"),
+            ("다고", "타고"),
+            ("다는", "타는"),
+            ("다니", "타니"),
+            ("다면", "타면"),
+            ("도록", "토록"),
+            ("고자", "코자"),
+            ("건대", "컨대"),
+        ] {
+            for (suffix, boundary) in [(form, HaDeletion), (aspirated, HaAspiration)] {
+                out.push(Ending {
+                    suffix,
+                    form,
+                    boundary,
+                    connector: matches!(form, "게" | "지"),
+                });
+            }
+        }
         // 이 is part of the copular stem, never an arbitrary removable ending.
         for suffix in ["라", "라서", "라고", "라는", "라면"] {
             for boundary in [Copular, ZeroCopula] {
@@ -585,6 +639,9 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("야", 1, 2),
             ("아", 1, 1),
             ("여", 1, 2),
+            // Outer slots: ordinary particles -> distributive 들 -> polite 요.
+            ("들", 5, 0),
+            ("요", 6, 0),
         ] {
             out.push(Particle {
                 form,
@@ -609,8 +666,44 @@ pub(crate) fn particle_matches(base: &str, condition: u8) -> bool {
 pub(crate) fn explanation(id: &str) -> Option<&'static str> {
     Some(match id {
         "identity" => "Unchanged vocabulary hypothesis; no dictionary verification.",
+        "suffix.adverbial.i" => {
+            "Recover a scoped adjective base before adverb-forming -이; retain whole-word readings."
+        }
+        "derivation.adverbial.lexical" => {
+            "Expand historical 달리/빨리 to 다르다/빠르다 plus -이; not a general 르 inflection rule."
+        }
+        "deletion.ha" => {
+            "Restore 하 deleted after a ㄱ/ㄷ/ㅂ-sounding simple coda before a licensed consonant ending."
+        }
+        "contraction.ha_aspiration" => {
+            "Restore 하 whose ㅎ aspirates the following ㄱ/ㄷ/ㅈ after a vowel or sonorant base."
+        }
+        "particle.contraction.n" => {
+            "Expand attached ㄴ to topic/emphatic 는 after an open syllable."
+        }
+        "particle.contraction.l" => {
+            "Expand attached ㄹ to object/emphatic 를 after an open syllable."
+        }
+        "pronoun.contraction" => {
+            "Recover a contracted pronoun and its case/topic particle; preserve lexical alternatives."
+        }
+        "particle.polite" => {
+            "Attach polite particle 요 after a nominal, adverbial, or licensed ending."
+        }
+        "particle.distributive" => {
+            "Attach 들 marking plural subjects, distinct from nominal plural suffix -들."
+        }
         "suffix.plural" => {
             "Separate nominal plural -들 before particles or a copula; retain the unsplit lexical alternative."
+        }
+        "suffix.honorific" => {
+            "Separate nominal honorific -님; preserve the whole-word alternative."
+        }
+        "suffix.relational" => {
+            "Separate relational -적 from a nominal base; preserve the whole-word alternative."
+        }
+        "suffix.adjectival.dap" => {
+            "Separate adjective-forming -답다 from a nominal base, with ㅂ-irregular vowel attachment."
         }
         "boundary.regular" => "Remove an ending with no stem spelling change.",
         "boundary.consonant" => "Consonant-final stem selects the consonant allomorph.",

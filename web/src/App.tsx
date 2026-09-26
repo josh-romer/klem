@@ -35,6 +35,7 @@ const label = (kind: string) =>
     auxiliary: "Auxiliary",
     copula: "Copula",
     unclassified: "Unclassified",
+    adverbial: "Adverb",
   })[kind] ?? kind;
 
 function Arrow() {

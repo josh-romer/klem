@@ -55,8 +55,9 @@ both Rust binaries, runs their offline tests, and type-checks/builds the fronten
 Glosses use the first English headword gloss from the first POS-compatible entry
 (or an entry with unknown compatibility). They do not select a contextual sense,
 and sense/homonym alternatives remain in the dictionary pane. Initial diagram
-selection prefers an analysis with compatible or unclassified dictionary matches;
-this is a display convenience, not contextual ranking. Short grammar labels cover
+selection prefers analyses with compatible or unclassified dictionary matches,
+then the fewest morphemes for a compact initial view. This is a display convenience,
+not contextual ranking. Short grammar labels cover
 common uses, with generic role labels for uncovered endings. They are paraphrased
 from KRDict; each label's source entry ID is in `web/src/breakdown.ts` and its
 hover text. See the bundled [grammar label notice](../web/public/Grammar-labels-LICENSE.txt).
@@ -105,6 +106,12 @@ to disk. Dictionary entry links intentionally open the external source website.
   `glosses` maps entry IDs to English hints or null; `grammar` maps dictionary
   headwords (particles, `-endings`, `-prefinals-`, `-suffixes`) to matching entry summaries.
   The library exposes the same ordering through `Analysis::breakdown()`.
+  Derivational suffixes remain grammatical morphemes: canonical `답다` is a
+  `suffix` before its prefinals/ending, displayed as 답 and looked up as -답다.
+  Whole-word and deeper suffix readings coexist in the per-word selector.
+  Adverb-forming `이` follows its predicate base directly without an ending;
+  달리 may be shown as 다르 + 이 with the normalized-expansion notice. The
+  suffix link selects KRDict 88927 among the homonymous -이 entries.
 - `POST /api/entry` with `{"id":"krdict:27500"}`: full dictionary entry.
 
 POST requests require JSON. Invalid input receives a structured `error` string.
@@ -144,3 +151,8 @@ are included in `web/public/DM-Sans-LICENSE.txt` and
 `web/public/Newsreader-LICENSE.txt` and copied into production assets. Korean
 text uses the device's available Korean fonts. Dictionary text retains its
 separate [source license and attribution](dictionary.md#data-licensing).
+
+Comparative endings -듯/-듯이 (COV-016) display as one ending component after
+the predicate stem, for example 보 + 듯이. Their “As / like” labels open KRDict
+80280/80282 respectively, restricted to ending entries. They are not displayed
+as the independent bound noun 듯 plus an 이 suffix.

@@ -359,3 +359,15 @@ from 좀 is retained separately, outside the queue's grammar-POS scope.
 These dispositions do not certify all senses, particle combinations or auxiliary
 left classes. The new tests expose a further 어 있다 left-class question,
 recorded explicitly in the report rather than asserted as a forbidden judgment.
+
+
+## Continuative left-class review (COV-019f)
+
+Two new scoped reviews cover auxiliary 있다 and 계시다 at their 어/고
+boundaries. The queue has **51 scoped entries and 664 without a disposition**.
+Six specific expression entries, outside the queue's grammar-POS scope, are
+preserved in [the comparison](continuative-class-evaluation.json). Their explicit
+verb-attachment notes supplement the broader 있다 note. This closes the known
+adjective/copula issue from COV-019e/020e, while retaining unknown lexical heads
+and known verb paths. Lexical-subset, transitivity and semantic conditions remain
+unreviewed; these dispositions are not full-entry or contextual certification.

@@ -11,27 +11,29 @@
     "docs/auxiliary-inventory.json": "16b7ac8ed9a8cb7f0b6cd9ef1251f1b4097a2abb02b36f4c3ad88b7e0e3c0cb9",
     "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
+    "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "7f3983deb36d2928346b1a19f2e4a1820b05b623c27c5f55f4de481bd2e44585",
+    "docs/coverage-checklist.md": "ad00051164debcaab43b3f31feab2576f5342cea08bded2f60ebdf26e670eedb",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
-    "docs/inventory-audit.md": "a5119f851dac6b721dcab261c07a67783cfd7a07adcb7904dda10fd37de873ae",
-    "docs/inventory-reviews.json": "57b686ddd3ee54bd785ac3eead6171673fab3ed8b131a3d2f902ae47f3c306c8",
+    "docs/inventory-audit.md": "bb1043ea120401006ae4c0dd9fda167c2fe1a98a464d96bb2bb6e1b8cf6845b2",
+    "docs/inventory-reviews.json": "60956ef44a808eafe1dac3dbb8af5c296f0397fa55fade149d852b1bd57b744b",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/reporting-evaluation.json": "74f0fb2732024ef27d7250d374184bda3d766aeb32f2c6b787ee319157c6d96e",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
+    "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
-    "tests/dictionary.rs": "eb98ff68a7cbc5c07f75f1a025a9aa0d16912bb7968ac8299922dc40be75346c",
+    "tests/dictionary.rs": "cc23270dca8f413dcee0b81426e8608c19b75cb73b94f6d559b0e8f5fc60f9e1",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
-    "tests/fixtures/validity.json": "a46638609826712ca9722afe0db3bdbc99853987b76f08203e67c8abf03dc6ad",
+    "tests/fixtures/validity.json": "22f347a0ce08b570f9257c17095a5eed53e0a149f535ae60c4b1378b67beb785",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
     "tests/reporting_endings.rs": "7540bf0a1098cac78765c02c64d348111eca10330d4a069762cd3fa25a08da8c",
@@ -46,8 +48,8 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 666,
-      "scoped": 49
+      "unreviewed": 664,
+      "scoped": 51
     },
     "with_catalog_links": 236,
     "with_judgment_citations": 108
@@ -391,13 +393,84 @@
           "case": "aux-inventory-gyesida",
           "judgment": "group",
           "verdict": "required"
+        },
+        {
+          "case": "continuative-class-adjective-honorific",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-class-contracted-negative",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-class-copula-honorific",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-class-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-class-negative-honorific",
+          "judgment": "path",
+          "verdict": "required"
         }
       ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:61346",
+        "source_sha256": "6d9db44cf763df0df3eec81e45c1979973ea3a5b188cfb672ba7a931e0876a2a",
+        "status": "scoped",
+        "checklist": [
+          "COV-019f"
+        ],
+        "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry.",
+        "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open.",
+        "evidence": [
+          {
+            "path": "tests/continuative_class.rs",
+            "test": "continuatives_reject_known_adjectives_copulas_and_inherited_classes"
+          },
+          {
+            "path": "tests/continuative_class.rs",
+            "test": "continuatives_keep_verbs_changed_classes_and_unknown_lexical_heads"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "continuative_left_classes_keep_dictionary_and_cli_parity"
+          },
+          {
+            "path": "docs/continuative-class-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuative-class-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-class-negative-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-class-adjective-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-class-copula-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-class-contracted-negative",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -2548,6 +2621,31 @@
       "catalog": [],
       "cited_judgments": [
         {
+          "case": "continuative-class-causative",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-class-expressive",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-class-negative-verb",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-class-progressive",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-class-trial",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "obligation-progressive-order",
           "judgment": "group",
           "verdict": "forbidden"
@@ -2557,7 +2655,53 @@
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:62595",
+        "source_sha256": "79de7045add131e7d5d746be1d249229923048aa461f64b921f53ec642a69a9c",
+        "status": "scoped",
+        "checklist": [
+          "COV-019f"
+        ],
+        "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry.",
+        "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open.",
+        "evidence": [
+          {
+            "path": "tests/continuative_class.rs",
+            "test": "continuatives_reject_known_adjectives_copulas_and_inherited_classes"
+          },
+          {
+            "path": "tests/continuative_class.rs",
+            "test": "continuatives_keep_verbs_changed_classes_and_unknown_lexical_heads"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "continuative_left_classes_keep_dictionary_and_cli_parity"
+          },
+          {
+            "path": "docs/continuative-class-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuative-class-progressive",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-class-trial",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-class-expressive",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-class-causative",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-class-negative-verb",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -4608,6 +4752,11 @@
         {
           "case": "aux-class-adnominal",
           "judgment": "group",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-class-copula-desire",
+          "judgment": "path",
           "verdict": "required"
         },
         {

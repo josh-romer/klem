@@ -640,6 +640,19 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
     let mut previous = None;
     let mut connector = None;
     for lemma in &a.lemmas {
+        // Continuative/resultative 있다 and honorific 계시다 select verbs.
+        // Check the immediately preceding represented role, including classes
+        // inherited through negatives; an unknown lexical head stays unknown.
+        if lemma.kind == LemmaKind::Auxiliary
+            && matches!(lemma.text.as_str(), "있다" | "계시다")
+            && matches!(connector, Some("어" | "고"))
+            && matches!(
+                previous,
+                Some(PredicateClass::Adjective | PredicateClass::Copula)
+            )
+        {
+            return false;
+        }
         // Expressive -어 하다 selects an adjective. Check the immediately
         // preceding known role, including inherited negative classes. A
         // lexical head remains unknown without dictionary/sense analysis.

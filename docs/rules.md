@@ -1592,8 +1592,8 @@ path does not survive dictionary-only filtering.
 
 Four stress snapshots gain unknown nominal/copula hypotheses, recorded separately
 with every prior candidate/hash retained. In particular, represented copula +
-progressive 고 있다/계시다 needs further left-class review under COV-019; this
-batch does not certify those generated paths. COV-019e below closes the internal
+progressive 고 있다/계시다 required further left-class review. COV-019f below
+now rejects that represented-copula path; this earlier batch did not certify it. COV-019e below closes the internal
 는 gap before 싶다 (학생이고는싶다 / 의사고는싶다), alongside existing 도.
 Other omitted ending and prefinal families remain COV-020 work. NIKL's valid
 honorific omission example 선수셨다 is not entered as a forbidden regression
@@ -1670,5 +1670,40 @@ These joined forms are tolerant token analyses; standard source spacing remains
 unchanged. There is no cross-token grouping or contextual sense decision.
 Nominalization composition is a structural test, not a judgment that every
 referent is natural in a desire construction. Other particle slots remain for
-review. Existing 어 있다 candidates after known adjective auxiliaries, such as
-먹고는싶어있는다, remain explicitly unjudged pending a source/left-class audit.
+review. COV-019f below resolves the known-adjective 어 있다 issue discovered
+here, including 먹고는싶어있는다.
+
+
+## Continuative left classes (COV-019f)
+
+Auxiliary 있다 and its honorific counterpart 계시다 require a verb before
+both 어 and 고 in the reviewed resultative/continuative constructions. The
+role-aware analysis pass rejects a known adjective auxiliary, an inherited
+negative adjective class, explicit -답다 derivation or a represented copula at
+that immediate boundary. Prefinals, internal particles and contracted negation
+cannot bypass the check. It preserves class changes: 먹고싶어하고있다 and
+학생답게하고있다 have a verb 하다 immediately before 있다.
+
+The pinned entries for [있다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62595)
+and [계시다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61346)
+retain every source sense. The 있다 note says primarily verbs, so the review
+also checks the more specific expression entries:
+[-고 있다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72238),
+[-고 계시다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72221),
+[-어 있다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72230),
+[-아 있다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72232),
+[-어 계시다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72231)
+and [-아 계시다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72233).
+Their attachment notes specify verbs. NIKL's published
+[adjective discussion, printed page 197](https://www.korean.go.kr/nkview/nklife/2003_2/2003_0212.pdf)
+also excludes aspectual 어 있다/고 있다 from adjective attachment. The
+[evaluation](continuative-class-evaluation.json) preserves these source projections
+and every reviewed candidate removal.
+
+Lexical heads remain unclassified: 좋아있다 and 예쁘고있다 preservation
+checks are not judgments that these are valid adjective constructions. Lexical
+이다 (carry on one's head) likewise remains distinct from a represented copula.
+Dictionary headword membership does not establish contextual class or sense.
+Verb selection alone does not settle resultative transitivity, lexical subsets,
+semantic suitability, or all prefinal/particle restrictions. Those questions and
+independent Korean-language review remain open.

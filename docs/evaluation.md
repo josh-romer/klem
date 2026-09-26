@@ -1094,3 +1094,39 @@ Additional auxiliary left-class restrictions remain open. The audit records
 that path needs a separate source review and is not certified by this batch.
 Independent Korean-language review, fresh-passage evaluation and the remaining
 inventory dispositions are still pending.
+
+## Continuative auxiliary left classes (COV-019f)
+
+[The comparison](continuative-class-evaluation.json) records **188 removed
+analyses across 83 targeted surfaces**, with no added analyses or changed
+provenance on retained candidates. All 44 adjective/copula matrix paths were
+present in the preceding binary and are now rejected. Both 어 and 고 before
+있다/계시다 check the immediately preceding known class, including inherited
+negatives, explicit 답다 derivation and represented copulas. Expressive and
+causative 하다 restore a verb class; those continuation paths remain.
+
+Development gold recovery is unchanged at **127 KAIST and 162 GSD misses**, with
+no lost groups or component sets. Mean KAIST candidates decrease from 5.835824
+to 5.835734; GSD remains 5.368806. These are ambiguity measures, not precision
+estimates. Two stress fingerprints change: 먹어보고있다 and 먹게하고있다
+lose their previously unjudged unknown-nominal + copula + 고 + 있다 alternatives.
+All ordinary lexical/trial/causative readings and prior hashes remain recorded.
+The other 28 fingerprints and historical corpus baselines are unchanged.
+
+Twenty new ledger cases bring the total to **562 cases, 314 required and 254
+forbidden judgments**. Two scoped reviews bring the inventory to **51 scoped
+entries and 664 without a disposition**. Six specific expression sources remain
+separately attributed outside the 715-entry grammar-POS queue. The source catalog
+and lexical fixtures are unchanged. Unknown lexical heads remain candidates;
+a dictionary match does not establish their contextual class or sense. Verb
+selection alone does not settle transitivity, lexical subsets, aspectual meaning,
+or every prefinal/particle condition.
+
+Formatting, the Rust suite, Clippy, all **66,570 frozen corpus cases**, stress
+and memory regressions, and the complete browser/HTTP suite pass. `nix flake
+check` and `nix build .#web` pass on x86_64-linux; other declared platforms were
+not executed. The packaged app with the full dictionary passes seven preserved
+reading choices, twelve forbidden-group checks and original-word preservation.
+Desktop/mobile screenshots were inspected; there were no JavaScript errors or
+horizontal overflow. Independent Korean-language review and fresh-passage
+validation remain pending.

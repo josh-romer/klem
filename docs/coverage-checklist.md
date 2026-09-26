@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–h/019a–e/020a–f/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–p/018a–h/019a–f/020a–f/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records forty-nine scoped
-  dispositions from COV-016/017m–n/017p/018e–h/019d–e/020d–f; 666 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records fifty-one scoped
+  dispositions from COV-016/017m–n/017p/018e–h/019d–f/020d–f; 664 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
@@ -560,8 +560,8 @@ review remains open under the completion review below.
   filter; questions and indirect wishes can also be valid. Sentence-mood and
   sense selection require context beyond this token-level candidate generator.
   COV-019e adds internal 는 before 싶다 (학생이고는싶다).
-  Represented-copula + progressive 고 있다/계시다 candidates remain unreviewed;
-  a matching connector alone does not establish left-class eligibility.
+  COV-019f rejects known adjective/copula roles before 어/고 있다/계시다.
+  Other lexical subsets and attachment constraints still need review.
 - [x] **COV-019a — Auxiliary connectors and one internal particle.** The
   [source inventory](auxiliary-inventory.json) preserves attachment notes for all
   54 KRDict auxiliary entries. Added paths include 나다/나가다, 계시다,
@@ -626,8 +626,21 @@ review remains open under the completion review below.
   Evidence: [path/composition tests](../tests/desire_topic.rs), thirteen
   `desire-topic-*` ledger cases, dictionary/CLI parity, browser particle-source
   checks and [the comparison](desire-topic-evaluation.json). Other internal
-  particles and auxiliary left-class licenses remain open, including 어 있다
-  after known adjective auxiliaries. See [scope](rules.md#contrastive-desire-links-cov-019e).
+  particles and auxiliary left-class licenses remain open. COV-019f resolves
+  the known-adjective 어 있다 case discovered here. See
+  [scope](rules.md#contrastive-desire-links-cov-019e).
+- [x] **COV-019f — Known left classes before continuative 있다/계시다.**
+  Both 어 and 고 links reject known adjective auxiliaries, inherited negative
+  adjective classes, explicit 답다 derivation and represented copulas. Existing
+  verb paths, class changes through expressive/causative 하다 and unclassified
+  lexical heads remain. Specific dictionary expression notes establish verb
+  attachment; the broader connector inventory is not a license for every pairing.
+  Evidence: [44-combination matrix and composition tests](../tests/continuative_class.rs),
+  twenty `continuative-class-*` ledger cases, dictionary/CLI parity and browser
+  regressions. [The comparison](continuative-class-evaluation.json) reviews all
+  removals across 83 surfaces and the two changed stress fingerprints, with no
+  lost corpus gold. Transitivity, verb subsets, other prefinal/particle conditions
+  and independent review remain open. See [scope](rules.md#continuative-left-classes-cov-019f).
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and

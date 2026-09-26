@@ -2051,6 +2051,104 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:62595",
+      "source_sha256": "79de7045add131e7d5d746be1d249229923048aa461f64b921f53ec642a69a9c",
+      "status": "scoped",
+      "checklist": [
+        "COV-019f"
+      ],
+      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry.",
+      "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open.",
+      "evidence": [
+        {
+          "path": "tests/continuative_class.rs",
+          "test": "continuatives_reject_known_adjectives_copulas_and_inherited_classes"
+        },
+        {
+          "path": "tests/continuative_class.rs",
+          "test": "continuatives_keep_verbs_changed_classes_and_unknown_lexical_heads"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "continuative_left_classes_keep_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/continuative-class-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuative-class-progressive",
+          "judgment": "path"
+        },
+        {
+          "case": "continuative-class-trial",
+          "judgment": "path"
+        },
+        {
+          "case": "continuative-class-expressive",
+          "judgment": "path"
+        },
+        {
+          "case": "continuative-class-causative",
+          "judgment": "path"
+        },
+        {
+          "case": "continuative-class-negative-verb",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:61346",
+      "source_sha256": "6d9db44cf763df0df3eec81e45c1979973ea3a5b188cfb672ba7a931e0876a2a",
+      "status": "scoped",
+      "checklist": [
+        "COV-019f"
+      ],
+      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry.",
+      "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open.",
+      "evidence": [
+        {
+          "path": "tests/continuative_class.rs",
+          "test": "continuatives_reject_known_adjectives_copulas_and_inherited_classes"
+        },
+        {
+          "path": "tests/continuative_class.rs",
+          "test": "continuatives_keep_verbs_changed_classes_and_unknown_lexical_heads"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "continuative_left_classes_keep_dictionary_and_cli_parity"
+        },
+        {
+          "path": "docs/continuative-class-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuative-class-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "continuative-class-negative-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "continuative-class-adjective-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "continuative-class-copula-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "continuative-class-contracted-negative",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

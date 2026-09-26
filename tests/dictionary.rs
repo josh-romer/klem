@@ -3183,3 +3183,115 @@ fn desire_topic_keeps_dictionary_and_cli_parity() {
         );
     }
 }
+
+#[test]
+fn continuative_left_classes_keep_dictionary_and_cli_parity() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[
+            PathBuf::from("tests/fixtures/krdict-auxiliary-inventory.json"),
+            PathBuf::from("tests/fixtures/krdict-particles.json"),
+            PathBuf::from("tests/fixtures/krdict-derivation.json"),
+            PathBuf::from("tests/fixtures/krdict-auxiliary-classes.json"),
+        ],
+        dir.db(),
+        "continuative-classes",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    for (word, lemmas, forms) in [
+        ("먹고있다", vec!["먹다", "있다"], vec!["고", "다"]),
+        ("먹고계신다", vec!["먹다", "계시다"], vec!["고", "는다"]),
+        (
+            "먹어보고있다",
+            vec!["먹다", "보다", "있다"],
+            vec!["어", "고", "다"],
+        ),
+        (
+            "먹고싶어하고있다",
+            vec!["먹다", "싶다", "하다", "있다"],
+            vec!["고", "어", "고", "다"],
+        ),
+        (
+            "학생답게하고있다",
+            vec!["학생", "하다", "있다"],
+            vec!["답다", "게", "고", "다"],
+        ),
+        (
+            "먹어보지않고있다",
+            vec!["먹다", "보다", "않다", "있다"],
+            vec!["어", "지", "고", "다"],
+        ),
+        (
+            "먹어보지는않고계신다",
+            vec!["먹다", "보다", "않다", "계시다"],
+            vec!["어", "지", "는", "고", "는다"],
+        ),
+        (
+            "학생이고는싶다",
+            vec!["학생", "이다", "싶다"],
+            vec!["고", "는", "다"],
+        ),
+    ] {
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        assert!(
+            kept.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(lemmas.iter().copied())
+                && a.morphemes
+                    .iter()
+                    .map(|m| m.form.as_str())
+                    .eq(forms.iter().copied())
+                && a.lemmas.iter().all(|l| annotation.has_match(l, true))),
+            "{word}"
+        );
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+    }
+    for (word, forbidden) in [
+        ("먹고싶어있다", vec!["먹다", "싶다", "있다"]),
+        ("먹고싶고있다", vec!["먹다", "싶다", "있다"]),
+        ("먹고싶어계신다", vec!["먹다", "싶다", "계시다"]),
+        ("학생이고있다", vec!["학생", "이다", "있다"]),
+        ("학생이어있다", vec!["학생", "이다", "있다"]),
+        ("학생이시고계신다", vec!["학생", "이다", "계시다"]),
+        ("의사고있다", vec!["의사", "이다", "있다"]),
+        ("먹고싶지않고있다", vec!["먹다", "싶다", "않다", "있다"]),
+        ("먹고싶잖아계신다", vec!["먹다", "싶다", "않다", "계시다"]),
+        ("먹고는싶어있는다", vec!["먹다", "싶다", "있다"]),
+        ("학생다워있다", vec!["학생", "있다"]),
+        ("먹는가봐있다", vec!["먹다", "보다", "있다"]),
+    ] {
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: klem::WordAnalysis = serde_json::from_slice(&output.stdout).unwrap();
+        assert!(
+            !actual.analyses.iter().any(|a| a
+                .lemmas
+                .iter()
+                .map(|l| l.text.as_str())
+                .eq(forbidden.iter().copied())),
+            "{word}"
+        );
+    }
+}

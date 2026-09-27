@@ -4609,10 +4609,11 @@
       "source_sha256": "f12aacd20e59836389a6dbb74d827e6cb2661259f3891ee61f140de2873baa31",
       "status": "scoped",
       "checklist": [
-        "COV-017r"
+        "COV-017r",
+        "COV-017z"
       ],
-      "scope": "Following-ending license of recovered 더, using this entry together with the retrospective source 85794. Existing homonymous senses and other attachment conditions are not collapsed.",
-      "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
+      "scope": "Following-ending license of recovered 더, using this entry together with the retrospective source 85794. Existing homonymous senses and other attachment conditions are not collapsed. Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope. Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
       "evidence": [
         {
           "path": "tests/retrospective_licenses.rs",
@@ -4636,11 +4637,94 @@
         },
         {
           "path": "docs/retrospective-license-evaluation.json"
+        },
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
         }
       ],
       "judgments": [
         {
           "case": "retrospective-license-ending-4-74141",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-65",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-66",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-68",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-69",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-71",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-76",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-88",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-90",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-39",
           "judgment": "path"
         }
       ]
@@ -4650,10 +4734,11 @@
       "source_sha256": "0dbce3b5d61b66c9abe57ada845bf5632aa9978bfe735bc6aaec22e5aa9d423d",
       "status": "scoped",
       "checklist": [
-        "COV-017r"
+        "COV-017r",
+        "COV-017z"
       ],
-      "scope": "Following-ending license of recovered 더, using this entry together with the retrospective source 85794. Existing homonymous senses and other attachment conditions are not collapsed.",
-      "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
+      "scope": "Following-ending license of recovered 더, using this entry together with the retrospective source 85794. Existing homonymous senses and other attachment conditions are not collapsed. Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope. Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
       "evidence": [
         {
           "path": "tests/retrospective_licenses.rs",
@@ -4677,11 +4762,26 @@
         },
         {
           "path": "docs/retrospective-license-evaluation.json"
+        },
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
         }
       ],
       "judgments": [
         {
           "case": "retrospective-license-ending-4-74142",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-6",
           "judgment": "path"
         }
       ]
@@ -11757,6 +11857,389 @@
         },
         {
           "case": "present-license-forbidden-169",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:75258",
+      "source_sha256": "543b7dd6b935160192054e6c25b6fe22bd141691dd44c11b0179f4cd119f26d4",
+      "status": "scoped",
+      "checklist": [
+        "COV-017z"
+      ],
+      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ni-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-67",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-70",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-73",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-32",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-34",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-42",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-43",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-45",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-54",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:75475",
+      "source_sha256": "693c0df95520b9d19479d557c61991b5b61992e2b5b188a03e0bd9393e5b025e",
+      "status": "scoped",
+      "checklist": [
+        "COV-017z"
+      ],
+      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ni-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-72",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-16",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-33",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-40",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-41",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-48",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-53",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:75986",
+      "source_sha256": "46c00ea51979cd4351c5822eebca55ededb6383bda8f0b15e4f1f1bacf1da2dd",
+      "status": "scoped",
+      "checklist": [
+        "COV-017z"
+      ],
+      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ni-required-38",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-39",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-41",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-42",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-43",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-79",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-84",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-98",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-99",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-9",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81584",
+      "source_sha256": "9fbe72438749c6a4989a4e844cd83484d50227ec25f3f2bbc10babc9d09465fe",
+      "status": "scoped",
+      "checklist": [
+        "COV-017z"
+      ],
+      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ni-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-27",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-28",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-29",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-31",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-94",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-required-95",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-14",
+          "judgment": "path"
+        },
+        {
+          "case": "report-ni-forbidden-15",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85106",
+      "source_sha256": "16486159035189b76449049e1cf24d50fcdad88731fa904ec695dbb149697840",
+      "status": "scoped",
+      "checklist": [
+        "COV-017z"
+      ],
+      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ni-required-13",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85111",
+      "source_sha256": "c970115a92d82d7410fea751b7f0f7a0fd136c8ea4c9d7e337e2d6f1405bc061",
+      "status": "scoped",
+      "checklist": [
+        "COV-017z"
+      ],
+      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ni-required-17",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85121",
+      "source_sha256": "19054eb223c059d1d8458affdf6ee9edcef116a0b2f8d0033a9b7a0555a51add",
+      "status": "scoped",
+      "checklist": [
+        "COV-017z"
+      ],
+      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/report_ni_endings.rs",
+          "test": "report_ni_preserves_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "report_ni_preserves_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/report-ni-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "report-ni-required-23",
           "judgment": "path"
         }
       ]

@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const reportNi = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-report-ni.json"), "utf8"));
   const presentLicenses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-present-licenses.json"), "utf8"));
   const stativeReport = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-stative-report.json"), "utf8"));
   const reportMyeo = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-report-myeo.json"), "utf8"));
@@ -277,6 +278,7 @@ try {
       ...extent.LexicalResource.Lexicon.LexicalEntry,
       ...approximation.LexicalResource.Lexicon.LexicalEntry,
       ...presentLicenses.LexicalResource.Lexicon.LexicalEntry,
+      ...reportNi.LexicalResource.Lexicon.LexicalEntry,
       ...stativeReport.LexicalResource.Lexicon.LexicalEntry,
       ...reportMyeo.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
@@ -718,6 +720,21 @@ try {
     ["필요하다면서", ["필요하", "다면서"], "다면서", "Report / confirmation", 78806, "ending"],
     ["극복하겠다며", ["극복하", "겠", "다며"], "다며", "Report / confirmation", 81466, "ending"],
     ["먹는다면서요", ["먹", "는다면서", "요"], "요", "Polite", 86116, "particle"],
+    ["하다니", ["하", "다니"], "다니", "Surprise / repeated question", 74141, "ending"],
+    ["하신다니", ["하", "시", "는다니"], "는다니", "Present report / surprise", 75475, "ending"],
+    ["먹는다니", ["먹", "는다니"], "는다니", "Present report / surprise", 75475, "ending"],
+    ["학생이라니", ["학생", "이", "라니"], "라니", "Copular / factual report", 81584, "ending"],
+    ["먹으라니", ["먹", "으라니"], "으라니", "Reported command / surprise", 80893, "ending"],
+    ["가라니", ["가", "으라니"], "으라니", "Reported command / surprise", 80893, "ending"],
+    ["먹더라니", ["먹", "더라니"], "더라니", "Retrospective report", 75986, "ending"],
+    ["먹더라니", ["먹", "더", "라니"], "라니", "Copular / factual report", 81584, "ending"],
+    ["먹자니", ["먹", "자니"], "자니", "Reported proposal", 85768, "ending"],
+    ["학생이냐니", ["학생", "이", "냐니"], "냐니", "Reported question", 87423, "ending"],
+    ["먹느냐니", ["먹", "느냐니"], "느냐니", "Reported question", 87424, "ending"],
+    ["좋으냐니", ["좋", "으냐니"], "으냐니", "Reported question", 87425, "ending"],
+    ["먹어보다니", ["먹", "어", "보", "다니"], "다니", "Surprise / repeated question", 74141, "ending"],
+    ["하신다니요", ["하", "시", "는다니", "요"], "요", "Polite", 86116, "particle"],
+    ["먹고있으라니요", ["먹", "고", "있", "으라니", "요"], "요", "Polite", 86116, "particle"],
     ["필생토록", ["필생", "토록"], "토록", "Throughout / to the extent", 86121, "particle"],
     ["그토록", ["그", "토록"], "토록", "Throughout / to the extent", 86121, "particle"],
     ["학생마냥", ["학생", "마냥"], "마냥", "Like / as if", 80341, "particle"],
@@ -942,6 +959,20 @@ try {
     await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
     assert.ok(data.grammar[kind === "particle" ? form : `-${form}`].some(e => e.id === `krdict:${id}`));
+    if (["다니", "는다니", "라니", "으라니", "더라니", "자니", "냐니", "느냐니", "으냐니"].includes(form)) {
+      assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("ending.reporting_ni"));
+      for (const source of grammarLabels["-" + form].sources) {
+        const entry = data.grammar["-" + form].find(e => e.id === `krdict:${source.id}`);
+        assert.ok(entry, `${word}: ${source.id}`);
+        const index = await page.locator(".entry-choices button").evaluateAll((buttons, e) => buttons.findIndex(b =>
+          b.querySelector("span")?.textContent === e.headword + (e.homonym === "0" ? "" : e.homonym) &&
+          b.querySelector("small")?.textContent === e.pos), entry);
+        assert.ok(index >= 0, `${word}: ${source.id}`);
+        await page.locator(".entry-choices button").nth(index).click();
+        await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), source.id);
+      }
+      if (form === "으라니") assert.ok(!data.grammar["-으라니"].some(e => ["krdict:81584", "krdict:85121"].includes(e.id)));
+    }
     if (["먹고는싶다", "먹곤싶다", "학생이고는싶다", "의사곤싶다"].includes(word)) {
       const selected = data.records[0].analysis.analyses[Number(choice)];
       assert.ok(selected.rules.includes("auxiliary.internal_particle"));
@@ -1427,7 +1458,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

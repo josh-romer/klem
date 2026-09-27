@@ -1659,3 +1659,30 @@ fn present_declaratives_preserve_annotated_verbs_without_copula_readings() {
         }));
     }
 }
+
+#[test]
+fn report_ni_recovers_complete_annotated_sentences() {
+    for (data, corpus, expected) in [
+        (
+            include_bytes!("fixtures/kaist-report-ni.conllu").as_slice(),
+            Corpus::Kaist,
+            vec![
+                ("id:MH2_0169-s206/6", "따라가자니", "따라가다"),
+                ("id:MH2_0169-s628/4", "상대하자니", "상대하다"),
+            ],
+        ),
+        (
+            include_bytes!("fixtures/gsd-report-ni.conllu").as_slice(),
+            Corpus::Gsd,
+            vec![("id:dev-s74/3", "하신다니", "하다")],
+        ),
+    ] {
+        let report = corpus::evaluate(data, corpus, "report-ni").unwrap();
+        for (id, surface, lemma) in expected {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, vec![lemma]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}

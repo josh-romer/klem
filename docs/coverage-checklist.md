@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–y/018a–k/018m/019a–g/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–z/018a–k/018m/019a–g/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 179 scoped
-  dispositions from COV-016/017m–n/017p–y/018e–k/018m/019d–g/020d–h; 535 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 186 scoped
+  dispositions from COV-016/017m–n/017p–z/018e–k/018m/019d–g/020d–h; 528 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One additional
   entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–y implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–z implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -575,6 +575,36 @@ review remains open under the completion review below.
   306 unsupported paths with no added candidates, lost corpus gold or changed
   stress fingerprints. This also resolves COV-019h's generic past/modal + present
   declarative gap; existential honorific/question/adnominal review stays open.
+
+- [x] **COV-017z — Surprise and quoted -니 families.** Nine canonical
+  components cover 다니/는다니/라니/으라니/더라니/자니/냐니/느냐니/으냐니.
+  Present attached-ㄴ and consonant-는 boundaries, factual versus command 라,
+  question allomorphs and prefinal/known-class licenses remain distinct. Bare
+  verbal 다니 surprise is preserved (하다니 and 한다니 are both possible).
+  Bundled 더라니 coexists with split 더 + 라니; source-listed polite surprise
+  readings compose with 요 without licensing every homonymous sense. No implicit
+  reporting verb is inserted. There are 109 required and 54 forbidden judgments,
+  three complete unchanged corpus sentences, dictionary/CLI parity and browser
+  source selections. Development misses fall to 104 KAIST and 150 GSD with no
+  lost gold groups or changed stress fingerprints. All eight new components
+  have labels; 24 added source IDs preserve full/short and expression homonyms.
+  Evidence: [role/NFD tests](../tests/report_ni_endings.rs), stable `report-ni-*`
+  ledger cases, `report_ni_preserves_dictionary_roles_and_cli_parity`,
+  [rules](rules.md#surprise-and-quoted-ni-families-cov-017z) and
+  [source/candidate review](report-ni-evaluation.json). Generic 더 + 냐니 and
+  further existential paradigms remain unjudged. Broader quoted contractions
+  such as 된단 and 노력했단 remain COV-017 work.
+
+- [ ] **COV-017aa — Lexical attachment classes in dictionary-backed readings.**
+  Audit dictionary-matching lexical alternatives such as 가는다니 → 가늘다 +
+  는다니, 아니라니 → 아니다 + 으라니, and 길으냐니 → 긷다 + 으냐니.
+  The engine currently constrains represented auxiliary/copula/derived-adjective
+  roles, while raw lexical predicates retain unknown-class hypotheses. Dictionary
+  presence alone does not certify the ending/sense combination. Determine a
+  source-backed class policy that preserves genuine lexical homonyms and the
+  unfiltered rule API; do not treat dictionary-only filtering as a precision
+  guarantee. Track exact role-specific required/forbidden readings and CLI/library
+  parity. The [COV-017z review](report-ni-evaluation.json) records the probes.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m implement post-ending, outer choice, emphatic,
@@ -1104,7 +1134,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 296 currently emitted canonical grammar forms.** The initial catalog
+  for all 304 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

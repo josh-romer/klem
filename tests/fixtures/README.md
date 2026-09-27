@@ -873,3 +873,20 @@ spelling and the corpus POS tags are not corrected or certified as normative.
 All six 들리다 dictionary entries, including the source redirect to 들르다,
 remain in the corresponding lexical fixture; contextual spelling repair is
 outside this change.
+
+
+`krdict-report-ni.json` retains 53 primary entries and every selected homonym/sense
+from the September 2026 KRDict export by the National Institute of Korean
+Language, under CC BY-SA 2.0 KR. It supports COV-017z surprise and quoted -니
+regressions. `krdict-grammar-labels.json` gains 24 grammar entries for the eight
+new canonical components; the catalog now has 304 forms, 417 source IDs and 418
+fixture entries. Changes: English equivalents only, first example group per
+sense, no WordForm/RelatedForm or global metadata, exclude idiom subentries, and
+reformat JSON. Source and license links are above. These are source-integration
+fixtures, not independently annotated sentence gold.
+
+`kaist-report-ni.conllu` retains complete, byte-identical development sentences
+MH2_0169-s206 and MH2_0169-s628; `gsd-report-ni.conllu` retains dev-s74 from the
+pinned corpora, under their respective corpus licenses described above. These
+protect 따라가자니, 상대하자니 and 하신다니 without rewriting source spelling,
+segmentation or POS labels. Their gold groups do not enumerate all alternatives.

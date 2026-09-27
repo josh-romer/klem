@@ -2260,3 +2260,39 @@ auxiliary chains is a morphological inference, not contextual interpretation.
 Auxiliary honorific 있으신다 and past-adnominal/question paradigms remain
 COV-019h work. Official consultation material prefers some forms but does not
 establish a blanket auxiliary-wide exclusion for these remaining cases.
+
+
+## Surprise and quoted -ni families (COV-017z)
+
+다니/는다니/라니/으라니/더라니/자니/냐니/느냐니/으냐니 preserve source
+homonyms for surprise, reports, grounds and repeated questions. Present 는다니
+uses a non-ㄹ consonant boundary; attached ㄴ다니 uses vowel/ㄹ stems or 시.
+It shares the present-declarative class/prefinal checks, without vowel-only
+irregular recovery. Bare 다니 differs from plain-다 report families: both 하다니
+and 한다니 are licensed for surprise. This is explicit in
+[NIKL's 2025 consultation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=313339).
+
+Factual 라니 follows 이다/아니다 or 시/더/으리. Command 으라니 uses its
+full/short vowel boundary and permits 시 only. Factual-only short 라니 ending
+entries are excluded from the command source mapping. Bundled 더라니 and split
+더 + 라니 coexist, including licensed earlier prefinals and vowel-final copula
+omission. Proposal 자니 is scoped to bare verbs. Generic 냐니, verbal/existential
+느냐니 and bare adjectival 으냐니 retain separate paths and attachment conditions.
+Known auxiliary and derived classes enforce those conditions; lexical predicate
+class is not guessed from spelling or dictionary presence.
+
+Nine explicit polite expression entries support surprise/question readings with
+요. This does not assign every homonymous sense the same speech level. Source
+86669 includes 먹다니요 and 오다니요 despite its narrower attachment note;
+87427 includes 없느냐니요 and 가냐니요. Bundled 더라니 + 요 is an explicitly
+recorded compositional inference from 더 + 라니 + 요; source 86306 lists 더.
+It is not represented as a separately attested dictionary headword. Other outer
+particles and generic retrospective 냐니 hypotheses need further review.
+
+The [source and candidate review](report-ni-evaluation.json) retains every
+attachment note and homonym, all changed candidates, three annotated development
+gains and unresolved class/composition probes. A component does not insert an
+implicit reporting 하다 or select a contextual sense. Required/forbidden tests
+constrain exact represented paths while the unclassified lexical alternatives
+remain visible. Dictionary-aware lexical class review is COV-017aa; auxiliary
+existential and particle-marked nominal/copula issues remain COV-019h/COV-020.

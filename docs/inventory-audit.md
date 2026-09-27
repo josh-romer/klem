@@ -562,3 +562,25 @@ evidence. Counts are now 179 scoped, one observed gap and 535 unreviewed across
 715 entries. There are 338 new cases (169 required and 171 forbidden). The broader
 existential honorific, adnominal and question review remains open: a naturalness
 preference or contextual temporal correction is insufficient for a blanket ban.
+
+
+### Surprise and quoted -니 families (COV-017z)
+
+Nine canonical families now distinguish surprise/statement, factual/copular,
+command, proposal, retrospective and question readings. Eight components and
+24 source IDs are new; existing 다니 retains its bare-verbal surprise readings.
+Full/short forms and expression homonyms are mapped explicitly. Seven new scoped
+dispositions and two updates leave **186 scoped, one observed gap and 528
+unreviewed** in the 715-entry queue. The expression entries remain attributed
+outside the grammar-POS queue; neither a catalog link nor a matching dictionary
+headword certifies an ending's lexical sense/class.
+
+The [review](report-ni-evaluation.json) retains 163 probe surfaces with 727 added
+candidates, no removals and 106 provenance-only changes to existing 다니 paths.
+Three development gold groups are newly recovered, with no lost groups or
+component sets; misses are 104 KAIST and 150 GSD. All 30 stress fingerprints are
+unchanged. Exact role judgments cover 109 required and 54 forbidden paths.
+The new COV-017aa item tracks lexical-class hypotheses that survive headword
+filtering. Generic retrospective questions, existential paradigms and
+particle-marked copula bases remain explicitly unjudged followups, not passed
+coverage claims. Independent Korean-language review is still pending.

@@ -318,6 +318,7 @@ fn present_declarative(form: &str) -> bool {
             | "는다는데"
             | "는다며"
             | "는다면서"
+            | "는다니"
     )
 }
 
@@ -474,6 +475,17 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // Surprise/quoted -니 homonyms differ from plain-다 reports:
+                // bare verbs also take 다니. Commands permit 시, proposals and
+                // adjectival 으냐니 are bare, and 느냐니/더라니 exclude 더.
+                // Generic 냐니 + 더 remains outside this reviewed restriction.
+                if (ending.form == "으라니" && p.morphs.iter().any(|m| m.form != "시"))
+                    || (matches!(ending.form, "자니" | "으냐니") && !p.morphs.is_empty())
+                    || (matches!(ending.form, "느냐니" | "더라니")
+                        && p.morphs.iter().any(|m| m.form == "더"))
+                {
+                    continue;
+                }
                 // Present reported forms permit honorific 시 but no other
                 // prefinals; past/modal use their plain 다- counterparts.
                 if present_declarative(ending.form) && p.morphs.iter().any(|m| m.form != "시") {
@@ -588,6 +600,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             | "라는데"
                             | "라며"
                             | "라면서"
+                            | "라니"
                     );
                 if factual_ra
                     && !p.morphs.last().is_some_and(|m| {
@@ -659,6 +672,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 ) {
                     p.rules.push("ending.reporting_ne".into());
                 }
+                if reporting_ni(ending.form) {
+                    p.rules.push("ending.reporting_ni".into());
+                }
                 if reporting_myeo(ending.form) {
                     p.rules.push("ending.reporting_myeo".into());
                 }
@@ -698,6 +714,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
         "라는데",
         "라며",
         "라면서",
+        "라니",
     ] {
         if let Some(base) = word.strip_suffix(ending) {
             for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
@@ -730,6 +747,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         }
                         if ending == "라든가" {
                             p.rules.push("ending.quoted_alternative".into());
+                        }
+                        if reporting_ni(ending) {
+                            p.rules.push("ending.reporting_ni".into());
                         }
                         if reporting_myeo(ending) {
                             p.rules.push("ending.reporting_myeo".into());
@@ -975,6 +995,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                     m.form.as_str(),
                     "으라며"
                         | "으라면서"
+                        | "으라니"
+                        | "자니"
                         | "자며"
                         | "자면서"
                         | "자면"
@@ -1005,11 +1027,12 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                             | "느냐는"
                             | "느냐며"
                             | "느냐면서"
+                            | "느냐니"
                     ),
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
                     Some(PredicateClass::Verb) => {
-                        matches!(m.form.as_str(), "으냐며" | "으냐면서")
+                        matches!(m.form.as_str(), "으냐며" | "으냐면서" | "으냐니")
                             || (!report_stative
                                 && matches!(
                                     m.form.as_str(),
@@ -1052,6 +1075,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                     m.form.as_str(),
                     "으라며"
                         | "으라면서"
+                        | "으라니"
+                        | "자니"
                         | "자며"
                         | "자면서"
                         | "자면"
@@ -1084,6 +1109,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐는"
                 | "으냐며"
                 | "으냐면서"
+                | "으냐니"
                 | "으리라"
                 | "으리"
                 | "으리라고"
@@ -1112,6 +1138,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "다면서"
             | "더라며"
             | "더라면서"
+            | "더라니"
+            | "냐니"
             | "냐며"
             | "냐면서"
             | "다네"
@@ -1217,6 +1245,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                     m.form.as_str(),
                     "으라며"
                         | "으라면서"
+                        | "으라니"
+                        | "자니"
                         | "자며"
                         | "자면서"
                         | "자면"
@@ -1247,6 +1277,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 | "다면서"
                 | "느냐며"
                 | "느냐면서"
+                | "느냐니"
+                | "으냐니"
                 | "으냐며"
                 | "으냐면서"
                 | "느냐는"
@@ -1885,6 +1917,13 @@ fn concessive_ending(ending: &str) -> bool {
     )
 }
 
+fn reporting_ni(form: &str) -> bool {
+    matches!(
+        form,
+        "다니" | "는다니" | "라니" | "으라니" | "더라니" | "자니" | "냐니" | "느냐니" | "으냐니"
+    )
+}
+
 fn reporting_myeo(form: &str) -> bool {
     matches!(
         form,
@@ -1955,6 +1994,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
     match particle {
         "요" => {
             reporting_myeo(ending)
+                || reporting_ni(ending)
                 || connective
                 || matches!(
                     ending,

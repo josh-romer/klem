@@ -1768,3 +1768,46 @@ The packaged full-dictionary app passes eleven reading selections and all
 are selectable in the browser. Inspected desktop/mobile screenshots show
 가 + 시 + 는다면 alongside the short -ㄴ다면 source, with retained alternatives,
 no JavaScript errors and no horizontal overflow.
+
+
+## Surprise and quoted -니 families (COV-017z)
+
+[The source/candidate review](report-ni-evaluation.json) adds eight components
+alongside existing 다니, preserving bare-verbal surprise and the distinct
+statement, factual/copular, command, proposal and question licenses. Split
+더 + 라니 and bundled 더라니 coexist. Polite surprise readings have separate
+source evidence; homonym-specific speech levels are not inferred globally.
+
+Three development gold groups newly match: KAIST **따라가자니, 상대하자니**
+and GSD **하신다니**. No groups or recovered component sets are lost; remaining
+misses are **104 KAIST / 150 GSD**. Mean candidates are 5.836499 and 5.372610.
+Three complete, unchanged annotated sentences preserve those recoveries.
+A separate probe of all 277 development surfaces containing 니 changes only
+those three surfaces and 있다니 (provenance only). All 30 stress snapshots are
+unchanged, and frozen historical corpus baselines are preserved.
+
+There are **163 new cases: 109 required / 54 forbidden**, bringing the ledger
+to **2,472 cases: 1,449 required / 1,031 forbidden**. The 53-entry lexical fixture
+supports dictionary-only CLI/library parity. The grammar catalog contains
+**304 canonical forms / 417 source IDs / 418 fixture entries**, with 24 added
+sources. Seven new scoped inventory reviews and two updates leave **186 scoped,
+one observed gap, 528 unreviewed**. Expression sources remain separately
+attributed outside the queue's grammar-POS scope.
+
+The 163-surface candidate comparison records 727 additions, no removals and
+106 changes that only add the explanatory rule to existing 다니 readings.
+Of the additions, 117 have dictionary headwords for every lemma; this is not a
+precision estimate. The report distinguishes tested paths from unresolved
+lexical-class, particle/copula and existential hypotheses. COV-017aa now tracks
+lexical attachment review explicitly. Independent Korean review, fresh passages,
+contextual sense selection and the other open families remain pending.
+
+Formatting, Rust tests, Clippy, all **66,570 frozen corpus cases**, stress/memory
+regressions, the frontend production build, browser/HTTP checks and offline
+inventory verification pass. `nix flake check` and `nix build .#web` pass on
+x86_64-linux; other declared systems were not executed. The Nix suite includes
+all 163 new cases and the three complete annotated sentences. The packaged
+full-dictionary app passes 18 reading selections and all **109 required / 54
+forbidden** judgments. Source panes resolve all mapped homonyms. Inspected
+desktop/mobile screenshots show 하 + 시 + 는다니 with the short -ㄴ다니 source
+selected, no JavaScript errors and no horizontal overflow.

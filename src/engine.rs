@@ -237,6 +237,7 @@ fn record_spelling(p: &mut Predicate, r: &Recovery, vowel_boundary: bool) {
         Some(27) => (HieutRegular, HieutIrregular, "irregular.hieut"),
         Some(7) => (DigeutRegular, DigeutIrregular, "irregular.digeut"),
         Some(19) => (SiotRegular, SiotIrregular, "irregular.siot"),
+        Some(17) => (BieupRegular, BieupIrregular, "irregular.bieup"),
         _ => return,
     };
     let class = if r.rules.iter().any(|r| r == rule) {
@@ -1231,7 +1232,22 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
                 continue;
             }
             a.morphemes.push(morph("답다", MorphemeKind::Suffix));
+            let boundary = a.morphemes.len();
             append_predicate_morphs(&mut a, p);
+            // -답다's fixed ㅂ class is enforced by dap_suffix. It is not a
+            // lexical spelling requirement on the preceding nominal lemma.
+            for path in &mut a.spelling_paths {
+                path.retain(|r| {
+                    r.morpheme_index != boundary
+                        || !matches!(
+                            r.class,
+                            SpellingClass::BieupRegular | SpellingClass::BieupIrregular
+                        )
+                });
+            }
+            if a.spelling_paths.iter().any(Vec::is_empty) {
+                a.spelling_paths.clear();
+            }
             a.rules.extend(p.rules.clone());
             a.rules.push("suffix.adjectival.dap".into());
             out.push(a);

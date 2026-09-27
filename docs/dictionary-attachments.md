@@ -308,3 +308,36 @@ this classifier does not implement those attachment restrictions. Retaining an
 unknown candidate does not certify its spelling. Other irregular classes remain
 in COV-021. See [the case evaluation](digeut-siot-evaluation.json) for source
 hashes, individual judgments, novel removals and the remaining unjudged queue.
+
+## Written ㅂ inflection compatibility (COV-021f)
+
+The per-entry spelling checks include ㅂ. Written `활용` 니 forms establish
+regular retention or irregular recovery; written 운/온 forms additionally
+support adnominal-only entries such as 꽃답다 and 참답다. Surrounding whitespace
+is ignored when comparing a form, while evidence preserves its original string.
+The [443-entry inventory](../tests/fixtures/bieup-sources.json) has 56 regular,
+377 irregular and 10 unknown dispositions. Pronunciation strings never classify
+an entry. 곱다 and 굽다 have genuine regular/irregular homonyms, assessed
+separately before deciding whether to retain a complete reading.
+
+`EntryMatch` adds optional `bieup: ConjugationEvidence`, and `SpellingClass` adds
+`BieupRegular` and `BieupIrregular`. Old JSON remains readable with missing fields
+unknown; Rust struct literals and exhaustive matches need the additions. SQLite
+is unchanged. The same cache budget includes the written-form evidence.
+Auxiliaries and nominalizations retain their owning requirements. The productive
+-답다 suffix already enforces its fixed irregular class in the raw derivation;
+its inflection is not a lexical constraint on the preceding nominal lemma.
+
+The finite raw spelling rules also recover 곱디고와, 듣자와 and 받자오니 from
+their primary entries. 곱디곱다 uses 와 before 아/어 but 우 before (으) endings;
+듣잡다 and 받잡다 use 오 in both positions. This does not license arbitrary
+compounds or historical inflection patterns. General 돕다/곱다 versus other ㅂ
+vowel choices remain in the existing raw rules.
+
+The all-form regression covers 1,674 written forms. One source mismatch remains:
+KRDict 67256 lists 얃잡는 under 얕잡다. The fixture keeps that spelling and
+explicitly tracks the missing headword recovery; spelling correction is outside
+this rule. Ten entries without useful written evidence also remain unknown,
+including shortened 뵙다 and nonstandard cross-reference heads. Unknown retention
+is not a claim of grammatical correctness. Full source forms, hashes, individual
+judgments and observed output changes are in [the evaluation](bieup-evaluation.json).

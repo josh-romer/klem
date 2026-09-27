@@ -1,0 +1,78 @@
+# sent_id = train-s196
+# text = 또한 지난해 11월에는 한국의 올 경제성장률을 4.4%로 예상했지만, 6개월 만에 1.4% 포인트나 올려 잡았다.
+# translit = .ddo.han .ji.nan.hae 11.weol.e.neun .han.gug.yi .ol .gyeong.je.seong.jang.ryul.eul 4.4%.ro .ye.sang.haess.ji.man, 6.gae.weol .man.e 1.4% .po.in.teu.na .ol.ryeo .jab.ass.da.
+1	또한	또한	ADV	MAJ	_	18	advmod	_	Translit=.ddo.han|LTranslit=.ddo.han
+2	지난해	지난해	NOUN	NNG	_	10	nmod	_	Translit=.ji.nan.hae|LTranslit=.ji.nan.hae
+3	11월에는	11+월+에+는	NOUN	SN+NNB+JKB+JX	_	2	flat	_	Translit=11.weol.e.neun|LTranslit=11+.weol+.e+.neun
+4	한국의	한국+의	NOUN	NNP+JKG	_	5	nmod:poss	_	Translit=.han.gug.yi|LTranslit=.han.gug+.yi
+5	올	올	NOUN	MM	_	10	obj	_	Translit=.ol|LTranslit=.ol
+6	경제성장률을	경제+성장률+을	NOUN	NNG+NNG+JKO	_	5	flat	_	Translit=.gyeong.je.seong.jang.ryul.eul|LTranslit=.gyeong.je+.seong.jang.ryul+.eul
+7	4.4	4.4	NUM	SN	_	10	obl	_	SpaceAfter=No|Translit=4.4|LTranslit=4.4
+8	%	%	PUNCT	SW	_	9	punct	_	SpaceAfter=No|Translit=%|LTranslit=%
+9	로	로	ADP	JKB	_	7	case	_	Translit=.ro|LTranslit=.ro
+10	예상했지만	예상+하+았+지만	VERB	NNG+XSV+EP+EC	_	18	advcl	_	SpaceAfter=No|Translit=.ye.sang.haess.ji.man|LTranslit=.ye.sang+.ha+.ass+.ji.man
+11	,	,	PUNCT	SP	_	10	punct	_	Translit=,|LTranslit=,
+12	6개월	6+개월	NOUN	SN+NNB	_	18	nmod	_	Translit=6.gae.weol|LTranslit=6+.gae.weol
+13	만에	만+에	ADP	NNB+JKB	_	12	case	_	Translit=.man.e|LTranslit=.man+.e
+14	1.4	1.4	NUM	SN	_	15	nummod	_	SpaceAfter=No|Translit=1.4|LTranslit=1.4
+15	%	%	SYM	SW	_	17	obj	_	Translit=%|LTranslit=%
+16	포인트나	포인트+나	NOUN	NNG+JX	_	14	flat	_	Translit=.po.in.teu.na|LTranslit=.po.in.teu+.na
+17	올려	올리+어	ADV	VV+EC	_	18	advmod	_	Translit=.ol.ryeo|LTranslit=.ol.ri+.eo
+18	잡았다	잡+았+다	VERB	VV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.jab.ass.da|LTranslit=.jab+.ass+.da
+19	.	.	PUNCT	SF	_	18	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s379
+# text = 그가 15살이 되던 해 무렵, 그는 학교 생활을 그만두고 가족들의 농장 일을 도왔다.
+# translit = .geu.ga 15.sal.i .doe.deon .hae .mu.ryeob, .geu.neun .hag.gyo .saeng.hwal.eul .geu.man.du.go .ga.jog.deul.yi .nong.jang .il.eul .do.wass.da.
+1	그가	그+가	PRON	NP+JKS	_	3	nsubj	_	Translit=.geu.ga|LTranslit=.geu+.ga
+2	15살이	15+살+이	NOUN	SN+NNB+JKS	_	3	nsubj	_	Translit=15.sal.i|LTranslit=15+.sal+.i
+3	되던	되+던	VERB	VV+ETM	_	4	acl:relcl	_	Translit=.doe.deon|LTranslit=.doe+.deon
+4	해	해	NOUN	NNG	_	14	obl	_	Translit=.hae|LTranslit=.hae
+5	무렵	무렵	ADV	NNB	_	4	flat	_	SpaceAfter=No|Translit=.mu.ryeob|LTranslit=.mu.ryeob
+6	,	,	PUNCT	SP	_	5	punct	_	Translit=,|LTranslit=,
+7	그는	그+는	PRON	NP+JX	_	10	nsubj	_	Translit=.geu.neun|LTranslit=.geu+.neun
+8	학교	학교	NOUN	NNG	_	10	obj	_	Translit=.hag.gyo|LTranslit=.hag.gyo
+9	생활을	생활+을	NOUN	NNG+JKO	_	8	flat	_	Translit=.saeng.hwal.eul|LTranslit=.saeng.hwal+.eul
+10	그만두고	그만두+고	VERB	VV+EC	_	0	root	_	Translit=.geu.man.du.go|LTranslit=.geu.man.du+.go
+11	가족들의	가족+들+의	NOUN	NNG+XSN+JKG	_	12	nmod:poss	_	Translit=.ga.jog.deul.yi|LTranslit=.ga.jog+.deul+.yi
+12	농장	농장	NOUN	NNG	_	14	obj	_	Translit=.nong.jang|LTranslit=.nong.jang
+13	일을	일+을	NOUN	NNG+JKO	_	12	flat	_	Translit=.il.eul|LTranslit=.il+.eul
+14	도왔다	돕+았+다	VERB	VV+EP+EF	_	10	conj	_	SpaceAfter=No|Translit=.do.wass.da|LTranslit=.dob+.ass+.da
+15	.	.	PUNCT	SF	_	14	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1545
+# text = 숯불 석쇠에 구워 먹는 양념 닭갈비 맛이 다른 닭갈비와는 차원이 달라요
+# translit = .such.bul .seog.soe.e .gu.weo .meog.neun .yang.nyeom .darg.gal.bi .mas.i .da.reun .darg.gal.bi.wa.neun .cha.weon.i .dal.ra.yo
+1	숯불	숯불	NOUN	NNG	_	3	obl	_	Translit=.such.bul|LTranslit=.such.bul
+2	석쇠에	석쇠+에	ADV	NNG+JKB	_	1	flat	_	Translit=.seog.soe.e|LTranslit=.seog.soe+.e
+3	구워	굽+어	VERB	VV+EC	_	5	acl:relcl	_	Translit=.gu.weo|LTranslit=.gub+.eo
+4	먹는	먹+는	VERB	VV+ETM	_	3	flat	_	Translit=.meog.neun|LTranslit=.meog+.neun
+5	양념	양념	NOUN	NNG	_	11	nsubj	_	Translit=.yang.nyeom|LTranslit=.yang.nyeom
+6	닭갈비	닭갈비	NOUN	NNG	_	5	flat	_	Translit=.darg.gal.bi|LTranslit=.darg.gal.bi
+7	맛이	맛+이	NOUN	NNG+JKS	_	5	flat	_	Translit=.mas.i|LTranslit=.mas+.i
+8	다른	다른	ADJ	MM	_	9	amod	_	Translit=.da.reun|LTranslit=.da.reun
+9	닭갈비와는	닭갈비+와+는	ADV	NNG+JKB+JX	_	11	advmod	_	Translit=.darg.gal.bi.wa.neun|LTranslit=.darg.gal.bi+.wa+.neun
+10	차원이	차원+이	NOUN	NNG+JKS	_	11	nsubj	_	Translit=.cha.weon.i|LTranslit=.cha.weon+.i
+11	달라요	다르+아요	ADJ	VA+EC	_	0	root	_	Translit=.dal.ra.yo|LTranslit=.da.reu+.a.yo
+
+# sent_id = train-s1625
+# text = 암튼 코스는 그리 어려운 것 같지는 않은 느낌이었고, 이국적인 경치를 즐기며 좋은 플레이를 하고 왔다.
+# translit = .am.teun .ko.seu.neun .geu.ri .eo.ryeo.un .geos .gat.ji.neun .anh.eun .neu.ggim.i.eoss.go, .i.gug.jeog.in .gyeong.chi.reul .jeul.gi.myeo .joh.eun .peul.re.i.reul .ha.go .wass.da.
+1	암튼	암튼	ADV	MAG	_	15	advmod	_	Translit=.am.teun|LTranslit=.am.teun
+2	코스는	코스+는	NOUN	NNG+JX	_	4	nsubj	_	Translit=.ko.seu.neun|LTranslit=.ko.seu+.neun
+3	그리	그리	ADV	MAG	_	4	advmod	_	Translit=.geu.ri|LTranslit=.geu.ri
+4	어려운	어렵+ㄴ	VERB	VA+ETM	_	5	dep	_	Translit=.eo.ryeo.un|LTranslit=.eo.ryeob+ㄴ
+5	것	것	NOUN	NNB	_	6	nsubj	_	Translit=.geos|LTranslit=.geos
+6	같지는	같+지+는	VERB	VA+EC+JX	_	8	acl:relcl	_	Translit=.gat.ji.neun|LTranslit=.gat+.ji+.neun
+7	않은	않+은	VERB	VX+ETM	_	6	flat	_	Translit=.anh.eun|LTranslit=.anh+.eun
+8	느낌이었고	느낌+이+었+고	VERB	NNG+VCP+EP+EC	_	0	root	_	SpaceAfter=No|Translit=.neu.ggim.i.eoss.go|LTranslit=.neu.ggim+.i+.eoss+.go
+9	,	,	PUNCT	SP	_	15	punct	_	Translit=,|LTranslit=,
+10	이국적인	이국+적+이+ㄴ	ADJ	NNG+XSN+VCP+ETM	_	11	amod	_	Translit=.i.gug.jeog.in|LTranslit=.i.gug+.jeog+.i+ㄴ
+11	경치를	경치+를	NOUN	NNG+JKO	_	12	obj	_	Translit=.gyeong.chi.reul|LTranslit=.gyeong.chi+.reul
+12	즐기며	즐기+며	VERB	VV+EC	_	15	advcl	_	Translit=.jeul.gi.myeo|LTranslit=.jeul.gi+.myeo
+13	좋은	좋+은	ADJ	VA+ETM	_	14	amod	_	Translit=.joh.eun|LTranslit=.joh+.eun
+14	플레이를	플레이+를	NOUN	NNG+JKO	_	15	obj	_	Translit=.peul.re.i.reul|LTranslit=.peul.re.i+.reul
+15	하고	하+고	VERB	VV+EC	_	8	conj	_	Translit=.ha.go|LTranslit=.ha+.go
+16	왔다	오+았+다	VERB	VX+EP+EF	_	15	flat	_	SpaceAfter=No|Translit=.wass.da|LTranslit=.o+.ass+.da
+17	.	.	PUNCT	SF	_	16	punct	_	Translit=.|LTranslit=.
+

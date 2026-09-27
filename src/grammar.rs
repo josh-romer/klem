@@ -214,9 +214,11 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
             if let Some(prefix) = r.stem.strip_suffix(vowel)
                 && let Some((_, v, 0)) = last(prefix)
             {
-                // Before 아/어, 돕/곱 require 오; other stems require 우.
-                // Before (으) endings both classes use 우 (recover_eu_open).
-                if (vowel == '오') == matches!(prefix, "도" | "고") {
+                // Dictionary-written exceptions: 곱디곱 keeps 고와; humble
+                // 듣잡/받잡 use 오 both here and before (으) endings.
+                // Other stems retain the existing 돕/곱 versus 우 distinction.
+                if (vowel == '오') == matches!(prefix, "도" | "고" | "곱디고" | "듣자" | "받자")
+                {
                     push(
                         &mut out,
                         replace_last(prefix, v, 17).unwrap(),
@@ -477,10 +479,13 @@ fn drops_rieul(suffix: &str) -> bool {
 }
 
 fn recover_eu_open(base: &str, out: &mut Vec<Recovery>, allow_h: bool) {
-    if let Some(prefix) = base.strip_suffix('우')
-        && let Some((_, v, 0)) = last(prefix)
-    {
-        push(out, replace_last(prefix, v, 17).unwrap(), "irregular.bieup");
+    for vowel in ['우', '오'] {
+        if let Some(prefix) = base.strip_suffix(vowel)
+            && let Some((_, v, 0)) = last(prefix)
+            && (vowel == '오') == matches!(prefix, "듣자" | "받자")
+        {
+            push(out, replace_last(prefix, v, 17).unwrap(), "irregular.bieup");
+        }
     }
     if allow_h && let Some((_, v, 0)) = last(base) {
         push(out, replace_last(base, v, 27).unwrap(), "irregular.hieut");

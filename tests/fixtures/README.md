@@ -1482,3 +1482,25 @@ source entry and both paradigms, real homonyms and mixed spelling-class owners.
 training sentences whose target lemma groups survive compatible filtering.
 Four optimization snapshots add only ㄷ/ㅅ metadata; their previous hashes and
 pre-existing ㅎ requirements are checked separately from the full new JSON hash.
+
+`krdict-bieup.json` retains 459 full primary KRDict entries, with English
+equivalents, for COV-021f. `bieup-sources.json` preserves the 443 native single-ㅂ
+predicate entries, their original written forms and all senses/notes/examples,
+plus reviewed regular/irregular/unknown profiles. Attribution: NIKL Korean Basic
+Dictionary, September 2026; source material is CC BY-SA 2.0 KR. Related entries
+and other-language equivalents are omitted. Surrounding form whitespace remains
+in the source even though classification trims it.
+
+The 1,087 `bieup-compat-*` dictionary-policy judgments preserve 586 paths and
+reject 501 known class conflicts; all remain available raw and with headword-only
+filtering. The 36 `bieup-written-*` raw judgments separately require 18 finite
+오 spellings and forbid 18 wrong 우/오 counterparts. `bieup.rs` checks each native
+entry independently, real homonyms, ownership through auxiliaries/copulas and
+fixed -답다, and all 1,674 written 활용 forms. The sole source mismatch
+얃잡는 under 얕잡다 (67256) is kept and tracked explicitly. No correction is
+inserted into the source fixture or the engine.
+
+`kaist-bieup.conllu` and `gsd-bieup.conllu` preserve eight complete training
+sentences and their original annotations. Their target groups survive compatible
+filtering. One optimization snapshot adds only ㅂ metadata and tests its prior
+hash after removing that metadata; existing ㅎ/ㄷ/ㅅ evidence is preserved.

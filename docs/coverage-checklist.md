@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax/018a–k/018m–z/019a–g/019i–r/020a–o/021a–e/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax/018a–k/018m–z/019a–g/019i–r/020a–o/021a–f/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -1847,8 +1847,9 @@ review remains open under the completion review below.
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
   COV-021c adds eight fixed complex-coda classes; COV-021d adds per-entry
-  written ㅎ compatibility; COV-021e adds ㄷ/ㅅ compatibility.** Remaining: lexical regular/irregular dictionary
-  compatibility for ㅂ/르 and other paradigms, shortened-stem attachment
+  written ㅎ compatibility; COV-021e adds ㄷ/ㅅ and COV-021f adds ㅂ
+  compatibility and three finite 오 spelling exceptions.** Remaining: lexical
+  regular/irregular dictionary compatibility for 르/러 and other paradigms, shortened-stem attachment
   restrictions (e.g. 딛다/잡숫다), ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
@@ -1938,6 +1939,32 @@ review remains open under the completion review below.
   attachment notes, ㅂ/르 and other lexical classes remain under COV-021.
   See [policy](dictionary-attachments.md#written-ㄷㅅ-inflection-compatibility-cov-021e)
   and [individual-case evidence](digeut-siot-evaluation.json).
+
+- [x] **COV-021f — Written ㅂ paradigms and finite 오 exceptions.**
+  **Implemented for the scoped written paradigms.** Per-entry written forms
+  classify 443 native single-ㅂ entries: 56 regular, 377 irregular and 10 unknown.
+  Whitespace is trimmed for classification while original evidence is retained;
+  written 운/온 also establishes the irregular class of adnominal-only entries.
+  곱다/굽다 homonyms remain independent. The fixed -답다 suffix does not impose
+  a lexical spelling constraint on its preceding nominal lemma.
+  Raw recovery adds the source forms 곱디고와, 듣자와 and 받자오니, including
+  prefinal/auxiliary composition, and rejects their swapped vowel counterparts.
+  [Tests](../tests/bieup.rs) cover 1,087 dictionary-policy and 36 raw judgments,
+  every source entry, and 1,674 source conjugations. One mismatch is explicit:
+  얃잡는 under 얕잡다 (67256) remains unrecovered without spelling correction.
+  Eight original training groups survive filtering; all frozen raw corpus reports
+  remain byte-identical. On 8,000 compared inputs, raw changes (39 additions,
+  24 removals on 43 surfaces) belong only to the three finite heads. Prior
+  candidate order/rule IDs and ㅎ/ㄷ/ㅅ requirements remain unchanged on shared
+  paths. Novel headword candidates remain; compatible filtering removes only
+  지워→집다 and 어원→업다, with written-class conflicts recorded individually.
+  Rust, browser and x86_64-linux Nix checks pass, including packaged full-dictionary
+  API/CLI/export parity. Three interleaved novel runs measured compatible-filter
+  medians of 1.376 → 1.386 s and peak RSS of 29,952 → 30,224 KiB.
+  Ten entries lacking usable forms and separate shortened-stem restrictions
+  remain under COV-021, alongside 르/러 and other unreviewed paradigms.
+  See [policy](dictionary-attachments.md#written-ㅂ-inflection-compatibility-cov-021f)
+  and [individual-case evidence](bieup-evaluation.json).
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

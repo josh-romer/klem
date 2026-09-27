@@ -3291,3 +3291,14 @@ entry's written forms. An ambiguous surface such as 물어 keeps both 묻다 and
 paths, candidate order and rule IDs are preserved. The
 [filter contract](dictionary-attachments.md#written-ㄷㅅ-inflection-compatibility-cov-021e)
 details homonyms, missing evidence and API changes.
+
+### Finite ㅂ spelling exceptions (COV-021f)
+
+The [primary dictionary forms](../tests/fixtures/bieup-sources.json) license
+곱디곱다 → 곱디고와/곱디고우니, 듣잡다 → 듣자와/듣자오니 and 받잡다 →
+받자와/받자오니. These three finite heads extend the existing 오/우 recovery
+choices before 아/어 and (으) endings. Past/honorific and auxiliary composition
+uses the same local recovery; it does not rewrite arbitrary -곱다/-잡다 heads.
+Thirty-six raw judgments preserve these paths and forbid their swapped vowel
+counterparts. All other lexical ㅂ regularity remains a dictionary hypothesis,
+checked by the [compatible filter](dictionary-attachments.md#written-ㅂ-inflection-compatibility-cov-021f).

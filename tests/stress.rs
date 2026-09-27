@@ -13,12 +13,39 @@ fn output_matches_reviewed_snapshots() {
         sha256: String,
         before_spelling_sha256: Option<String>,
         before_digeut_siot_sha256: Option<String>,
+        before_bieup_sha256: Option<String>,
     }
     let snapshots: Vec<Snapshot> =
         serde_json::from_str(include_str!("fixtures/optimization.json")).unwrap();
     let engine = Lemmatizer::new();
     for snapshot in snapshots {
         let result = engine.analyze_word(&snapshot.word).unwrap();
+        if let Some(expected) = snapshot.before_bieup_sha256 {
+            let mut previous = result.clone();
+            for a in &mut previous.analyses {
+                for path in &mut a.spelling_paths {
+                    path.retain(|r| {
+                        !matches!(
+                            r.class,
+                            klem::SpellingClass::BieupRegular | klem::SpellingClass::BieupIrregular
+                        )
+                    });
+                }
+                if a.spelling_paths.iter().any(Vec::is_empty) {
+                    a.spelling_paths.clear();
+                }
+                a.spelling_paths.sort();
+                a.spelling_paths.dedup();
+            }
+            let mut json = serde_json::to_vec(&previous).unwrap();
+            json.push(b'\n');
+            assert_eq!(
+                format!("{:x}", Sha256::digest(json)),
+                expected,
+                "{}: pre-ㅂ output changed",
+                snapshot.word
+            );
+        }
         if let Some(expected) = snapshot.before_digeut_siot_sha256 {
             let mut previous = result.clone();
             for a in &mut previous.analyses {

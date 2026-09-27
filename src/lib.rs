@@ -74,6 +74,8 @@ pub enum SpellingClass {
     DigeutIrregular,
     SiotRegular,
     SiotIrregular,
+    BieupRegular,
+    BieupIrregular,
 }
 
 /// Ownership follows the lemma preceding this morpheme in `Analysis::breakdown`.

@@ -34,6 +34,7 @@ impl Fixture {
             "krdict-neura.json",
             "krdict-hieut-compatibility.json",
             "krdict-digeut-siot.json",
+            "krdict-bieup.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -45,7 +46,9 @@ impl Fixture {
             {
                 if matches!(
                     file,
-                    "krdict-hieut-compatibility.json" | "krdict-digeut-siot.json"
+                    "krdict-hieut-compatibility.json"
+                        | "krdict-digeut-siot.json"
+                        | "krdict-bieup.json"
                 ) {
                     // Full native entries supply written forms absent from older
                     // POS-only fixtures; do not borrow evidence by headword.
@@ -121,7 +124,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     })
     .unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (738, 483));
+    assert_eq!((report.required_total, report.forbidden_total), (1324, 984));
     assert_eq!(
         report.required_total + report.forbidden_total,
         suite.cases.len()

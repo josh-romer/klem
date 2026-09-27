@@ -2283,3 +2283,61 @@ fn digeut_siot_filter_preserves_eight_unchanged_training_gold_groups() {
     drop(db);
     std::fs::remove_file(path).unwrap();
 }
+
+#[test]
+fn bieup_filter_preserves_eight_unchanged_training_gold_groups() {
+    use klem::dictionary::{DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict};
+    let path = std::env::temp_dir().join(format!("klem-bieup-corpus-{}.db", std::process::id()));
+    import_krdict(
+        &[std::path::PathBuf::from("tests/fixtures/krdict-bieup.json")],
+        &path,
+        "bieup",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(&path).unwrap();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    for (kind, input, targets) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-bieup.conllu").as_slice(),
+            vec![
+                ("id:M2TA_066-s58/9", "고운", vec!["곱다"]),
+                ("id:M2TA_081-s24/4", "참다운", vec!["참답다"]),
+                ("id:MH2_0042-s36/6", "입었다", vec!["입다"]),
+                ("id:MH2_0184-s89/11", "굽은", vec!["굽다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-bieup.conllu").as_slice(),
+            vec![
+                ("id:train-s196/18", "잡았다", vec!["잡다"]),
+                ("id:train-s379/14", "도왔다", vec!["돕다"]),
+                ("id:train-s1545/3", "구워", vec!["굽다"]),
+                ("id:train-s1625/4", "어려운", vec!["어렵다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "bieup").unwrap();
+        for (id, surface, expected) in targets {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched);
+            let mut word = klem::Lemmatizer::new().analyze_word(surface).unwrap();
+            let mut annotation = dictionary.annotate(&word).unwrap();
+            annotation.filter(&mut word, DictionaryFilter::Compatible);
+            assert!(
+                word.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(expected.iter().copied())),
+                "{id}"
+            );
+        }
+    }
+    drop(dictionary);
+    drop(db);
+    std::fs::remove_file(path).unwrap();
+}

@@ -389,6 +389,11 @@ try {
   const dsIds = new Set(dsEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !dsIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...dsEntries);
+  const bieupFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-bieup.json"), "utf8"));
+  const bieupEntries = bieupFixture.LexicalResource.Lexicon.LexicalEntry;
+  const bieupIds = new Set(bieupEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !bieupIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...bieupEntries);
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -610,6 +615,34 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-digeut-siot-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-digeut-siot-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
+  const bieupCases = connectiveLedger.cases.filter(c=>c.id.startsWith("bieup-compat-"));
+  assert.equal(bieupCases.length,1087);
+  for(const c of bieupCases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments) {
+      const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id+" raw");
+      const assessment=token.dictionary.readings[i];assert.equal(assessment.status==="incompatible",j.verdict==="forbidden",c.id);
+      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule==="lexical_spelling"))),c.id);
+    }
+  }
+  const bieupText="입으면 이우면 도와 고와 곱아 구워 굽어 곱디고와 듣자오니 받자와 학생다워놓으니";
+  const bieupTokens=(await(await post("analyze",{text:bieupText})).json()).records.filter(r=>r.analysis);
+  await submit(page,bieupText);await waitHeading(page,"입으면");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").uncheck();
+  const bieupSelect=async(i,ls,ms)=>{
+    const index=bieupTokens[i].analysis.analyses.findIndex(a=>JSON.stringify(a.lemmas.map(l=>l.text))===JSON.stringify(ls)&&JSON.stringify(a.morphemes.map(m=>m.form))===JSON.stringify(ms));
+    assert.ok(index>=0);await page.locator(".breakdown-word").nth(i).locator("select").selectOption(String(index));return String(index);
+  };
+  const invalidBieup=await bieupSelect(1,["입다"],["으면"]);
+  await page.getByLabel("Exclude known grammar conflicts").check();assert.equal(await page.locator(".breakdown-word").nth(1).locator(`option[value="${invalidBieup}"]`).count(),0);
+  for(const [i,ls,ms]of [[0,["입다"],["으면"]],[2,["돕다"],["어"]],[3,["곱다"],["어"]],[4,["곱다"],["어"]],[5,["굽다"],["어"]],[6,["굽다"],["어"]],[7,["곱디곱다"],["어"]],[8,["듣잡다"],["으니"]],[9,["받잡다"],["어"]],[10,["학생","놓다"],["답다","어","으니"]]])await bieupSelect(i,ls,ms);
+  const bieupDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const bieupExport=JSON.parse(await readFile(await(await bieupDownload).path(),"utf8"));
+  const bieupExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:bieupText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);assert.deepEqual(bieupExport.records,bieupExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-bieup-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-bieup-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
   const connectiveCases = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-connectives-"));
   assert.equal(connectiveCases.length, 122);

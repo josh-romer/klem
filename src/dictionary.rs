@@ -237,6 +237,7 @@ impl ConjugationEvidence {
             Some(27) => ("니", Boundary::EuZero, "irregular.hieut"),
             Some(7) => ("으니", Boundary::EuFull, "irregular.digeut"),
             Some(19) => ("으니", Boundary::EuFull, "irregular.siot"),
+            Some(17) => ("니", Boundary::EuZero, "irregular.bieup"),
             _ => return None,
         };
         let mut evidence = Self::default();
@@ -244,12 +245,16 @@ impl ConjugationEvidence {
             if form.kind != "활용" {
                 continue;
             }
-            let written: String = form.written.nfc().collect();
+            let written: String = form.written.trim().nfc().collect();
             if written.strip_suffix("으니") == Some(stem) {
                 evidence.regular.push(form.written.clone());
             } else if crate::grammar::recover(&written, suffix, boundary)
                 .iter()
                 .any(|r| r.stem == stem && r.rules.iter().any(|r| r == rule))
+                || (crate::hangul::coda(stem) == Some(17)
+                    && crate::grammar::recover(&written, "", Boundary::Attached(4))
+                        .iter()
+                        .any(|r| r.stem == stem && r.rules.iter().any(|r| r == rule)))
             {
                 evidence.irregular.push(form.written.clone());
             }
@@ -285,6 +290,8 @@ pub struct EntryMatch {
     pub digeut: Option<ConjugationEvidence>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub siot: Option<ConjugationEvidence>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub bieup: Option<ConjugationEvidence>,
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct LemmaMatches {
@@ -358,7 +365,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                     .headword
                     .strip_suffix('다')
                     .and_then(crate::hangul::coda),
-                Some(7 | 19 | 27)
+                Some(7 | 17 | 19 | 27)
             ) && matches!(
                 summary.pos.as_str(),
                 "동사" | "형용사" | "보조 동사" | "보조 형용사"
@@ -451,6 +458,16 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                                 .strip_suffix('다')
                                 .and_then(crate::hangul::coda)
                                 == Some(19)
+                        })
+                        .cloned(),
+                    bieup: evidence
+                        .as_ref()
+                        .filter(|_| {
+                            entry
+                                .headword
+                                .strip_suffix('다')
+                                .and_then(crate::hangul::coda)
+                                == Some(17)
                         })
                         .cloned(),
                 })

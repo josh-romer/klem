@@ -1,5 +1,23 @@
 # Performance
 
+## Written ㅂ compatibility and finite 오 forms (COV-021f)
+
+On 2026-09-27, three interleaved release CLI runs of the same MuJeong input
+compared `4e61b4a` with the ㅂ evidence and finite spelling fixes. Startup,
+dictionary access and JSONL serialization are included; output was discarded.
+The complete [samples and package paths](bieup-evaluation.json) are recorded.
+
+| Filter | Before median | After median | Before peak RSS | After peak RSS |
+| --- | ---: | ---: | ---: | ---: |
+| Headword-only | 1.428 s | 1.404 s | 30,184 KiB | 30,248 KiB |
+| Compatible | 1.376 s | 1.386 s | 29,952 KiB | 30,224 KiB |
+
+The novel's headword-only candidates remain unchanged. Compatible filtering
+removes two unsupported spelling hypotheses; the finite raw exceptions do not
+change this novel's candidates. These local samples establish neither a portable
+latency bound nor statistical equivalence; earlier measurements retain their
+original implementation scope.
+
 ## Written ㄷ/ㅅ compatibility (COV-021e)
 
 On 2026-09-27, three interleaved release CLI runs of the same MuJeong input

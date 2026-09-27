@@ -449,6 +449,8 @@ impl Annotation {
                                 DigeutIrregular => (&matched.digeut, false),
                                 SiotRegular => (&matched.siot, true),
                                 SiotIrregular => (&matched.siot, false),
+                                BieupRegular => (&matched.bieup, true),
+                                BieupIrregular => (&matched.bieup, false),
                             };
                             if let Some(evidence) = evidence {
                                 let supported = if regular {

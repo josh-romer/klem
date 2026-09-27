@@ -4,6 +4,11 @@
 //! distinct. A POS match is lexical evidence, not proof of a grammatical reading.
 mod import;
 pub use import::import_krdict;
+mod attachment;
+pub use attachment::{
+    AttachmentConflict, AttachmentRule, DictionaryFilter, EntryAssessment, LemmaAssessment,
+    ReadingAssessment,
+};
 
 use crate::{Lemma, LemmaKind, WordAnalysis};
 use rusqlite::{Connection, OpenFlags, OptionalExtension};
@@ -230,6 +235,10 @@ pub struct Annotation {
     pub fingerprint: String,
     /// Unique (text, kind) keys referenced by the unchanged grouped analyses.
     pub lemmas: Vec<LemmaMatches>,
+    /// Scoped lexical checks, in the same order as the grouped analyses.
+    /// Older serialized annotations may omit this field.
+    #[serde(default)]
+    pub readings: Vec<ReadingAssessment>,
 }
 impl Annotation {
     pub fn has_match(&self, lemma: &Lemma, require_pos: bool) -> bool {
@@ -320,10 +329,17 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                 entries,
             });
         }
-        Ok(Annotation {
+        let mut annotation = Annotation {
             source: self.dictionary.metadata().source.clone(),
             fingerprint: self.dictionary.fingerprint().to_owned(),
             lemmas,
-        })
+            readings: Vec::new(),
+        };
+        annotation.readings = analysis
+            .analyses
+            .iter()
+            .map(|a| annotation.assess(a))
+            .collect();
+        Ok(annotation)
     }
 }

@@ -1,0 +1,1580 @@
+{
+  "schema_version": 1,
+  "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
+  "sources": {
+    "krdict-85037": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85037",
+    "krdict-74684": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=74684",
+    "krdict-82214": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82214",
+    "krdict-68738": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68738",
+    "krdict-81389": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81389",
+    "krdict-86053": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86053",
+    "krdict-82119": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82119",
+    "krdict-75175": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75175",
+    "krdict-82255": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82255",
+    "krdict-81465": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81465",
+    "krdict-78804": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78804",
+    "krdict-75475": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75475",
+    "krdict-86207": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86207",
+    "krdict-76235": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76235",
+    "krdict-86032": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86032",
+    "krdict-86921": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86921",
+    "krdict-86119": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86119",
+    "krdict-87425": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87425",
+    "krdict-85664": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85664",
+    "krdict-81584": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=81584",
+    "krdict-86509": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86509",
+    "krdict-86183": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86183",
+    "krdict-86182": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86182",
+    "krdict-85106": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85106",
+    "krdict-66584": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66584",
+    "krdict-43881": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=43881",
+    "krdict-61181": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61181",
+    "krdict-64526": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=64526",
+    "krdict-86297": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86297",
+    "nikl-wishes": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=318597",
+    "krdict-62899": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899",
+    "krdict-62657": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62657",
+    "krdict-86232": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86232",
+    "krdict-71286": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71286",
+    "krdict-49988": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=49988",
+    "krdict-53017": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=53017",
+    "krdict-62497": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62497",
+    "krdict-68797": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68797"
+  },
+  "cases": [
+    {
+      "id": "attachment-present-verb-0",
+      "surface": "먹는다",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-85037",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-0",
+      "surface": "가는다",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-85037",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-1",
+      "surface": "먹는다고",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-74684",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-1",
+      "surface": "가는다고",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-74684",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-2",
+      "surface": "먹는다는",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-82214",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-2",
+      "surface": "가는다는",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-82214",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-3",
+      "surface": "먹는다면",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다면"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-68738",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-3",
+      "surface": "가는다면",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다면"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-68738",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-4",
+      "surface": "먹는답니다",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는답니다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-81389",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-4",
+      "surface": "가는답니다",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는답니다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-81389",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-5",
+      "surface": "먹는다거나",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다거나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-86053",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-5",
+      "surface": "가는다거나",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다거나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-86053",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-6",
+      "surface": "먹는다든가",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다든가"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-82119",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-6",
+      "surface": "가는다든가",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다든가"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-82119",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-7",
+      "surface": "먹는다네",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다네"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-75175",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-7",
+      "surface": "가는다네",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다네"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-75175",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-8",
+      "surface": "먹는다는데",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는데"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-82255",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-8",
+      "surface": "가는다는데",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는데"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-82255",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-9",
+      "surface": "먹는다며",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다며"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-81465",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-9",
+      "surface": "가는다며",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다며"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-81465",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-10",
+      "surface": "먹는다면서",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다면서"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-78804",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-10",
+      "surface": "가는다면서",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다면서"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-78804",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-11",
+      "surface": "먹는다니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-75475",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-11",
+      "surface": "가는다니",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-75475",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-verb-12",
+      "surface": "먹는단",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는단"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-86207",
+          "reason": "Verbal head supports this canonical present-declarative ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-present-adjective-12",
+      "surface": "가는단",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는단"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-86207",
+          "reason": "가늘다 is adjectival; a headword match does not license a verbal present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-adjective-0",
+      "surface": "좋으냐",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-76235",
+          "reason": "Bare adjectival question allomorph is licensed."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-verb-0",
+      "surface": "길으냐",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "긷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-76235",
+          "reason": "Recovered ㄷ-irregular verb is not a bare adjectival question stem."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-adjective-1",
+      "surface": "좋으냐는",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐는"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-86032",
+          "reason": "Bare adjectival question allomorph is licensed."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-verb-1",
+      "surface": "길으냐는",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "긷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐는"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-86032",
+          "reason": "Recovered ㄷ-irregular verb is not a bare adjectival question stem."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-adjective-2",
+      "surface": "좋으냐며",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐며"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-86921",
+          "reason": "Bare adjectival question allomorph is licensed."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-verb-2",
+      "surface": "길으냐며",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "긷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐며"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-86921",
+          "reason": "Recovered ㄷ-irregular verb is not a bare adjectival question stem."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-adjective-3",
+      "surface": "좋으냐면서",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐면서"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-86119",
+          "reason": "Bare adjectival question allomorph is licensed."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-verb-3",
+      "surface": "길으냐면서",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "긷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐면서"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-86119",
+          "reason": "Recovered ㄷ-irregular verb is not a bare adjectival question stem."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-adjective-4",
+      "surface": "좋으냐니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-87425",
+          "reason": "Bare adjectival question allomorph is licensed."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-verb-4",
+      "surface": "길으냐니",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "긷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-87425",
+          "reason": "Recovered ㄷ-irregular verb is not a bare adjectival question stem."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-adjective-5",
+      "surface": "좋으냔",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냔"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-85664",
+          "reason": "Bare adjectival question allomorph is licensed."
+        }
+      ]
+    },
+    {
+      "id": "attachment-question-verb-5",
+      "surface": "길으냔",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "긷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냔"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-85664",
+          "reason": "Recovered ㄷ-irregular verb is not a bare adjectival question stem."
+        }
+      ]
+    },
+    {
+      "id": "attachment-negative-factual",
+      "surface": "아니라니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-81584",
+          "reason": "Factual 라니 explicitly admits 아니다."
+        }
+      ]
+    },
+    {
+      "id": "attachment-negative-command",
+      "surface": "아니라니",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-86509",
+          "reason": "Command sense is distinct from factual 아니다 + 라니; canonical 으라니 represents the command allomorph."
+        }
+      ]
+    },
+    {
+      "id": "attachment-honorific-adjective",
+      "surface": "가느신다니",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는다니"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-86183",
+          "reason": "Honorific 시 does not change an adjective into a verb."
+        }
+      ]
+    },
+    {
+      "id": "attachment-polite-adjective",
+      "surface": "가는다니요",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다니",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-86182",
+          "reason": "Outer polite particle does not repair the lexical attachment."
+        }
+      ]
+    },
+    {
+      "id": "attachment-split-outer-adjective",
+      "surface": "가는다든가",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다",
+            "든가"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-68738",
+          "reason": "A following particle does not repair the present ending."
+        }
+      ]
+    },
+    {
+      "id": "attachment-adjective-plain-report",
+      "surface": "가늘다니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-85106",
+          "reason": "Plain 다니 retains adjectival surprise/report readings."
+        }
+      ]
+    },
+    {
+      "id": "attachment-homonym-grow",
+      "surface": "큰다니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "크다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-66584",
+          "reason": "The verb homonym remains valid despite an adjectival homonym."
+        }
+      ]
+    },
+    {
+      "id": "attachment-homonym-long",
+      "surface": "긴다니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "길다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-43881",
+          "reason": "길다 has a verbal homonym; never reject by the adjective alone."
+        }
+      ]
+    },
+    {
+      "id": "attachment-homonym-late-verb",
+      "surface": "늦는다니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "늦다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-61181",
+          "reason": "늦다 has a verbal homonym for the present declarative."
+        }
+      ]
+    },
+    {
+      "id": "attachment-homonym-late-adjective",
+      "surface": "늦으냐니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "늦다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-64526",
+          "reason": "늦다 also has an adjectival homonym for this question."
+        }
+      ]
+    },
+    {
+      "id": "attachment-wish-command",
+      "surface": "행복하란",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으란"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-86297",
+          "reason": "Source example uses 행복하란; do not impose a blanket adjective-command prohibition."
+        }
+      ]
+    },
+    {
+      "id": "attachment-wish-proposal",
+      "surface": "행복하자",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "nikl-wishes",
+          "reason": "Wish/proposal use is not categorically excluded by adjective POS; see NIKL consultation 318597."
+        }
+      ]
+    },
+    {
+      "id": "attachment-auxiliary-local-ending",
+      "surface": "가늘어한다니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "가늘다",
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는다니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-62899",
+          "reason": "The present ending belongs to verbal auxiliary 하다, not the earlier adjective."
+        }
+      ]
+    },
+    {
+      "id": "attachment-auxiliary-desire",
+      "surface": "먹고싶다니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "다니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-62657",
+          "reason": "Each ending stays with its own lemma; lexical 먹다 does not impose its class on 싶다."
+        }
+      ]
+    },
+    {
+      "id": "attachment-nominalization-copula",
+      "surface": "가늘기다",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "가늘다",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "copula"
+          ],
+          "morphemes": [
+            "기",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-86232",
+          "reason": "Nominalized adjective plus copula retains distinct lemma/ending ownership."
+        }
+      ]
+    },
+    {
+      "id": "attachment-separate-auxiliary-desire-past",
+      "surface": "싶었다",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-62657",
+          "reason": "A token-initial predicate can be a separately written auxiliary; without the preceding connector its role/class is unknown."
+        }
+      ]
+    },
+    {
+      "id": "attachment-separate-auxiliary-desire-adnominal",
+      "surface": "싶은",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-62657",
+          "reason": "A token-initial predicate can be a separately written auxiliary; without the preceding connector its role/class is unknown."
+        }
+      ]
+    },
+    {
+      "id": "attachment-separate-auxiliary-desire-connective",
+      "surface": "싶고",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-62657",
+          "reason": "A token-initial predicate can be a separately written auxiliary; without the preceding connector its role/class is unknown."
+        }
+      ]
+    },
+    {
+      "id": "attachment-separate-auxiliary-negative-connective",
+      "surface": "아니하고",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "아니하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-71286",
+          "reason": "A token-initial predicate can be a separately written auxiliary; without the preceding connector its role/class is unknown."
+        }
+      ]
+    },
+    {
+      "id": "attachment-separate-auxiliary-negative-past",
+      "surface": "아니하였다",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "아니하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-71286",
+          "reason": "A token-initial predicate can be a separately written auxiliary; without the preceding connector its role/class is unknown."
+        }
+      ]
+    },
+    {
+      "id": "attachment-separate-auxiliary-seeming-past",
+      "surface": "듯하였다",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "듯하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-49988",
+          "reason": "A token-initial predicate can be a separately written auxiliary; without the preceding connector its role/class is unknown."
+        }
+      ]
+    },
+    {
+      "id": "attachment-separate-auxiliary-worth-adnominal",
+      "surface": "만한",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "만하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-53017",
+          "reason": "A token-initial predicate can be a separately written auxiliary; without the preceding connector its role/class is unknown."
+        }
+      ]
+    },
+    {
+      "id": "attachment-unclassified",
+      "surface": "가늘다",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "가늘다"
+          ],
+          "lemma_kinds": [
+            "unclassified"
+          ],
+          "morphemes": [],
+          "morpheme_kinds": [],
+          "verdict": "required",
+          "source": "krdict-62497",
+          "reason": "An unchanged headword is unclassified, not a known conflict."
+        }
+      ]
+    },
+    {
+      "id": "attachment-role-conflict",
+      "surface": "가늘다니",
+      "judgments": [
+        {
+          "id": "exclude",
+          "lemmas": [
+            "가늘다",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "krdict-62497",
+          "reason": "An adjective-only headword does not support the proposed nominal base."
+        }
+      ]
+    },
+    {
+      "id": "attachment-existential-homonym",
+      "surface": "있으냐니",
+      "judgments": [
+        {
+          "id": "keep",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "krdict-68797",
+          "reason": "Adjectival existential entry supports this path; verbal existential paradigm remains explicitly unreviewed."
+        }
+      ]
+    }
+  ]
+}

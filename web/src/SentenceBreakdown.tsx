@@ -19,6 +19,7 @@ import { readingConditions, type Result } from "./model";
 export default function SentenceBreakdown(props: {
   result: Result;
   only: boolean;
+  compatible: boolean;
   selected: number;
   onWord: (index: number) => void;
   onEntry: (id: string) => void;
@@ -40,16 +41,16 @@ export default function SentenceBreakdown(props: {
       .filter(({ token }) => token.kind === "word"),
   );
   const groups = createMemo(() =>
-    words().map(({ token }) => options(token, props.only).map((o) => o.index)),
+    words().map(({ token }) => options(token, props.only, props.compatible).map((o) => o.index)),
   );
   const count = createMemo(() => combinationCount(groups()));
   const all = createMemo(() => (expanded() ? combinations(groups()) : []));
   const selected = (index: number) => {
     const token = props.result.records[index];
     const chosen = choices()[index];
-    return options(token, props.only).some((o) => o.index === chosen)
+    return options(token, props.only, props.compatible).some((o) => o.index === chosen)
       ? chosen
-      : preferred(token, props.only);
+      : preferred(token, props.only, props.compatible);
   };
   const reading = (index: number, choice = selected(index)) =>
     choice === undefined ? null : parts(props.result, index, choice);
@@ -133,7 +134,7 @@ export default function SentenceBreakdown(props: {
                     when={reading(index())}
                     fallback={
                       <span class="breakdown-unavailable">
-                        {options(token, props.only).length
+                        {options(token, props.only, props.compatible).length
                           ? "Ordered breakdown unavailable"
                           : "No matching reading"}
                       </span>
@@ -152,11 +153,11 @@ export default function SentenceBreakdown(props: {
                   {(id) => <p class="reading-condition">{props.result.rules[id]}</p>}
                 </For>
                 <label class="reading-selector">
-                  <span>{options(token, props.only).length} readings</span>
+                  <span>{options(token, props.only, props.compatible).length} readings</span>
                   <select
                     aria-label={`Reading for ${token.surface} (word ${words().findIndex((w) => w.index === index()) + 1})`}
                     value={selected(index()) ?? ""}
-                    disabled={!options(token, props.only).length}
+                    disabled={!options(token, props.only, props.compatible).length}
                     onChange={(e) => {
                       setChoices((c) => ({
                         ...c,
@@ -165,10 +166,10 @@ export default function SentenceBreakdown(props: {
                       props.onWord(index());
                     }}
                   >
-                    <Show when={!options(token, props.only).length}>
+                    <Show when={!options(token, props.only, props.compatible).length}>
                       <option value="">No match</option>
                     </Show>
-                    <For each={options(token, props.only)}>
+                    <For each={options(token, props.only, props.compatible)}>
                       {(o, n) => (
                         <option value={o.index}>
                           {n() + 1}. {title(index(), o.index)}

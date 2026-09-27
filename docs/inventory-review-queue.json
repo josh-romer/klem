@@ -14,16 +14,18 @@
     "docs/chigo-evaluation.json": "c7f2927950286ae43279d140c887d5e9d016f0372064cd0ca10a0e8b97b8130d",
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "bd740a4f1ca54c17e1bdd1ae16ee985d516c535f4003c540c4ad9af7f64d38f3",
+    "docs/coverage-checklist.md": "12177c0fafd3fa256a2f95d3b14912f6835a2aedaf9079112f07ffca4eb291f7",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
+    "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
+    "docs/dictionary-attachments.md": "fb5396ec798208ab7b78c656794c763f39af51a537166f2572bd6a579643e83a",
     "docs/doe-evaluation.json": "e59e50e002254721f521fd28d4ff90ca3b37abdc0915d5119b29b6e633743853",
     "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
     "docs/extent-evaluation.json": "c612ab51f814696b827b15aceee416bef3193efc774e0ada438f8520e95311b5",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/inventory-audit.md": "effc946ad89da2c40cf36795fb0cf8647120a6d81f6f1b45c718725aa68b3019",
-    "docs/inventory-reviews.json": "5e4e4feb30e6ca1a5fc9b7cfabd7559537e441fba2e48ce9181e1bd743f6fd37",
+    "docs/inventory-reviews.json": "53f5cb2f2ea3f8a372c7eb6670518c82d8ad3e0be5a6d4e398eb8c77d8e5abd3",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/prefinal-copula-evaluation.json": "51f8ee8c84b0909e7fae5d03bf40bd04783e85956b43a2f44d3c1a2b382af40e",
@@ -50,10 +52,12 @@
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
     "tests/dictionary.rs": "c604d5ae616f24d50dc5d3c8829103e41e57da810b34b19aa7265c67c2ea6f50",
+    "tests/dictionary_attachments.rs": "7a3a2130586b10fd07258eb27f793bbeb692dfe82c3e70ee4b30b9b56ba9c741",
     "tests/doe_endings.rs": "f9da534bcfbbf4ad3c543afa015f541ad4ebebeacf1fb206046e40c68741132f",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
     "tests/extent_particles.rs": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
+    "tests/fixtures/dictionary-attachments.json": "f985e9f8c9587c44377552f64961210c6ee0ed0e5e2193df7b5ec6a01000701f",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
     "tests/fixtures/validity.json": "ac1f192cbc4cd802984150ead8945e4a10914637aebdfb046cac1cfda9f1c0d0",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
@@ -19288,9 +19292,10 @@
         "source_sha256": "97a8b2b464325dd921cb8cd5a80dbb5f2c7186bb0f438abe74811c3e48ffa855",
         "status": "scoped",
         "checklist": [
-          "COV-017y"
+          "COV-017y",
+          "COV-017aa"
         ],
-        "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+        "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings. COV-017aa adds finite dictionary-backed attachment evidence without changing raw hypotheses or headword-only filtering.",
         "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
         "evidence": [
           {
@@ -19303,6 +19308,19 @@
           },
           {
             "path": "docs/present-license-evaluation.json"
+          },
+          {
+            "path": "tests/dictionary_attachments.rs",
+            "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+          },
+          {
+            "path": "tests/fixtures/dictionary-attachments.json"
+          },
+          {
+            "path": "docs/dictionary-attachments.md"
+          },
+          {
+            "path": "docs/dictionary-attachment-evaluation.json"
           }
         ],
         "judgments": [
@@ -30097,9 +30115,10 @@
         "source_sha256": "9fbe72438749c6a4989a4e844cd83484d50227ec25f3f2bbc10babc9d09465fe",
         "status": "scoped",
         "checklist": [
-          "COV-017z"
+          "COV-017z",
+          "COV-017aa"
         ],
-        "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+        "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense. COV-017aa adds finite dictionary-backed attachment evidence without changing raw hypotheses or headword-only filtering.",
         "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
         "evidence": [
           {
@@ -30112,6 +30131,19 @@
           },
           {
             "path": "docs/report-ni-evaluation.json"
+          },
+          {
+            "path": "tests/dictionary_attachments.rs",
+            "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+          },
+          {
+            "path": "tests/fixtures/dictionary-attachments.json"
+          },
+          {
+            "path": "docs/dictionary-attachments.md"
+          },
+          {
+            "path": "docs/dictionary-attachment-evaluation.json"
           }
         ],
         "judgments": [

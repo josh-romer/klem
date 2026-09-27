@@ -72,6 +72,9 @@ requires no runtime network connection; downloads and imports are explicit.
 The `dictionary::Dictionary` trait supports other sources, and
 `DictionarySession` caches lookups. See [dictionary integration](docs/dictionary.md)
 for the API, source licensing, limitations and measured novel coverage.
+`--dict-compatible` also excludes known lexical-role/ending conflicts, preserving
+unknown classes and valid homonyms. The browser exposes this under its dictionary
+filter. See the [scoped policy](docs/dictionary-attachments.md).
 
 ## Browser app
 

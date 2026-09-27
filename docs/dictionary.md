@@ -3,7 +3,9 @@
 The `dictionary` module annotates generated candidates with exact headword matches
 from a local database. Dictionary matches do not prove grammatical or contextual
 correctness. Missing entries remain visible by default; `--dict-only` explicitly
-filters the output to matching analyses. The rule engine is unchanged.
+filters the output to matching analyses. `--dict-compatible` additionally removes
+known lexical-role and reviewed attachment conflicts, retaining unknown classes.
+The rule engine is unchanged.
 
 ## Import the Korean Basic Dictionary
 
@@ -52,6 +54,7 @@ remain separate, and sense IDs are scoped to their entry.
 ./target/release/klem word 먹어봤어요 --dictionary data/dictionaries/krdict/krdict.db
 ./target/release/klem text novel.txt --dictionary data/dictionaries/krdict/krdict.db > novel.jsonl
 ./target/release/klem word 먹어봤어요 --dictionary data/dictionaries/krdict/krdict.db --dict-only
+./target/release/klem word 아니라니 --dictionary data/dictionaries/krdict/krdict.db --dict-compatible
 # The same commands work through the flake:
 nix run . -- dict lookup data/dictionaries/krdict/krdict.db 가다
 ```
@@ -63,12 +66,14 @@ A missing headword returns an empty list. A missing entry ID produces an error.
 `--dictionary` requires JSONL. It adds a `dictionary` field to the existing word
 or token record; by default, all existing fields, candidate order, component grouping and
 byte offsets are preserved. Whitespace/punctuation receive `dictionary: null`.
-The annotation has `source`, `fingerprint`, and `lemmas`, keyed by unique
+The annotation has `source`, `fingerprint`, `readings`, and `lemmas`, keyed by unique
 `{text, kind}` pairs. Each lemma has all matching entry summaries with
 `pos_compatibility: compatible | incompatible | unknown`. Consumers join these
 keys back to components of each existing analysis. No cross-product of senses
 or definitions is copied into bulk output. Runs without the option retain their
-previous output schema.
+previous output schema. `readings` aligns per-analysis lexical attachment evidence
+with the grouped analyses; it references lemma indices, entry IDs and conflict
+reasons without copying definitions. See the [finite policy](dictionary-attachments.md).
 
 Add `--dict-only` to `word` or `text` to retain only complete analyses where
 **every component has at least one dictionary entry**. It requires `--dictionary`
@@ -79,6 +84,12 @@ their order, and dictionary annotations include only their referenced lemmas.
 An unmatched word keeps its record with `analyses: []` and an empty annotation
 lemma list. Whitespace, punctuation, original surfaces and byte offsets remain
 intact, so text can still be reconstructed. Cached analyses stay unfiltered.
+
+`--dict-compatible` implies headword matching and additionally excludes analyses
+with a known lexical-role or reviewed ending-class conflict. It keeps unknown
+classes and valid homonyms. Passing both flags selects this stronger policy.
+It does not establish grammatical or contextual correctness; see
+[scope, sources and examples](dictionary-attachments.md).
 
 Lookup performs NFC normalization only. Spaces, prefix/suffix hyphens and
 homonyms are not collapsed. Conjugations are retained for inspection/testing,
@@ -119,8 +130,10 @@ POS compatibility is deliberately broad: nominal roles accept nouns, pronouns,
 numerals and dependent nouns; predicates accept verbs/adjectives; auxiliaries
 accept auxiliary verbs/adjectives. Copulas special-case 이다/조사 and 아니다/형용사.
 Unclassified candidates and unknown dictionary labels yield `unknown`.
-Compatibility does not validate an ending, sense, syntactic construction or
-usage in context. Strict POS filtering (`has_match(lemma, true)`) also rejects
+The broad POS check alone does not validate an ending, sense, syntactic
+construction or usage in context. `Annotation::assess` adds the separately
+reviewed finite attachment checks; `Annotation::filter` with
+`DictionaryFilter::Compatible` applies them and reindexes the output. Strict POS filtering (`has_match(lemma, true)`) also rejects
 unknowns, so it can remove correct readings, notably unchanged adverbs.
 
 ## Validation and measured coverage

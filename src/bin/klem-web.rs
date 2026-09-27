@@ -6,7 +6,7 @@ use klem::{Lemmatizer, MorphemeKind, TokenKind, Tokenizer};
 use serde::Deserialize;
 use serde_json::{Value, json};
 use std::{
-    collections::BTreeMap,
+    collections::{BTreeMap, BTreeSet},
     env, fs,
     io::Read,
     path::{Component, Path, PathBuf},
@@ -67,23 +67,25 @@ fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
         } else {
             None
         };
-        // One short hint per lemma/role. Full senses remain available on demand;
+        // Short hints for compatible homonyms. Full senses remain available on demand;
         // neither dictionary order nor POS compatibility chooses a contextual sense.
         if let (Some(annotation), Some(db)) = (&annotation, dictionary) {
+            let supported: BTreeSet<_> = annotation
+                .readings
+                .iter()
+                .flat_map(|r| &r.lemmas)
+                .flat_map(|l| &l.entries)
+                .filter(|e| e.status != Compatibility::Incompatible)
+                .map(|e| e.id.as_str())
+                .collect();
             for matches in &annotation.lemmas {
-                let preferred = matches
-                    .entries
-                    .iter()
-                    .find(|e| e.pos_compatibility == Compatibility::Compatible)
-                    .or_else(|| {
-                        matches
-                            .entries
-                            .iter()
-                            .find(|e| e.pos_compatibility == Compatibility::Unknown)
-                    });
-                if let Some(entry) = preferred
-                    && !glosses.contains_key(&entry.entry.id)
-                {
+                for entry in matches.entries.iter().filter(|e| {
+                    e.pos_compatibility != Compatibility::Incompatible
+                        || supported.contains(e.entry.id.as_str())
+                }) {
+                    if glosses.contains_key(&entry.entry.id) {
+                        continue;
+                    }
                     let gloss = db.entry(&entry.entry.id)?.and_then(|e| {
                         e.senses
                             .into_iter()

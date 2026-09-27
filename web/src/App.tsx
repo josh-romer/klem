@@ -14,6 +14,7 @@ import {
   grammarHeadword,
   matches,
   readingConditions,
+  readingMatches,
   type Entry,
   type Lemma,
   type Result,
@@ -74,6 +75,7 @@ export default function App() {
   const [busy, setBusy] = createSignal(false);
   const [error, setError] = createSignal("");
   const [only, setOnly] = createSignal(false);
+  const [compatible, setCompatible] = createSignal(false);
   const [selected, setSelected] = createSignal(0);
   const [visible, setVisible] = createSignal(20);
   const [entryId, setEntryId] = createSignal<string>();
@@ -85,7 +87,7 @@ export default function App() {
   let generation = 0;
   const token = createMemo(() => result()?.records[selected()]);
   const candidates = createMemo(() =>
-    token() ? analyses(token()!, only()) : [],
+    token() ? analyses(token()!, only(), compatible()) : [],
   );
   const entryChoices = createMemo(() => {
     const current = token();
@@ -102,7 +104,7 @@ export default function App() {
     () => result()?.records.filter((t) => t.kind === "word") ?? [],
   );
   const total = createMemo(() =>
-    words().reduce((sum, t) => sum + analyses(t, only()).length, 0),
+    words().reduce((sum, t) => sum + analyses(t, only(), compatible()).length, 0),
   );
   const bytes = createMemo(() => new TextEncoder().encode(text()).length);
   const limit = () => status()?.limits.text_bytes ?? 8000;
@@ -113,7 +115,7 @@ export default function App() {
     const current = data?.records[index];
     const first =
       current &&
-      analyses(current, only()).flatMap((a) =>
+      analyses(current, only(), compatible()).flatMap((a) =>
         a.lemmas.flatMap((l) => matches(current, l)),
       )[0];
     setEntryId(first?.id);
@@ -180,7 +182,7 @@ export default function App() {
     const data = result();
     if (!data) return;
     const url = URL.createObjectURL(
-      new Blob([JSON.stringify(filteredResult(data, only()), null, 2)], {
+      new Blob([JSON.stringify(filteredResult(data, only(), compatible()), null, 2)], {
         type: "application/json",
       }),
     );
@@ -190,7 +192,7 @@ export default function App() {
     link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
-  function lemmaButton(current: Token, lemma: Lemma) {
+  function lemmaButton(current: Token, lemma: Lemma, candidate: number, lemmaIndex: number) {
     const entries = matches(current, lemma);
     return (
       <div class="lemma-part">
@@ -206,7 +208,7 @@ export default function App() {
             class="lemma-word linked"
             lang="ko"
             title={`Look up ${lemma.text}`}
-            onClick={() => setEntryId(entries[0].id)}
+            onClick={() => setEntryId(readingMatches(current, candidate, lemmaIndex)[0].id)}
           >
             {lemma.text}
             <span class="tiny-arrow">↗</span>
@@ -380,7 +382,7 @@ export default function App() {
                       classList={{
                         "sentence-word": true,
                         selected: selected() === index(),
-                        unmatched: only() && !analyses(record, true).length,
+                        unmatched: only() && !analyses(record, true, compatible()).length,
                       }}
                       aria-pressed={selected() === index()}
                       onClick={() => choose(index())}
@@ -405,19 +407,31 @@ export default function App() {
                 disabled={!status()?.dictionary}
                 onChange={(e) => {
                   setOnly(e.currentTarget.checked);
+                  if (!e.currentTarget.checked) setCompatible(false);
                   choose(selected());
                 }}
               />
               <span class="switch" />
               <span>Dictionary matches only</span>
             </label>
+            <label classList={{ "filter-control": true, disabled: !only() || !status()?.dictionary }}>
+              <input type="checkbox" checked={compatible()}
+                disabled={!only() || !status()?.dictionary}
+                onChange={(e) => { setCompatible(e.currentTarget.checked); choose(selected()); }} />
+              <span class="switch" />
+              <span>Exclude known grammar conflicts</span>
+            </label>
             <button class="export" onClick={download}>
               Export JSON <span aria-hidden="true">↗</span>
             </button>
           </div>
+          <Show when={compatible()}>
+            <p class="panel-caption">Checks cover lexical roles and reviewed ending restrictions. Unknown classes remain; context and other grammar are not checked.</p>
+          </Show>
           <SentenceBreakdown
             result={result()!}
             only={only()}
+            compatible={compatible()}
             selected={selected()}
             onWord={choose}
             onEntry={setEntryId}
@@ -445,7 +459,9 @@ export default function App() {
                     <span>∅</span>
                     <h3>No matching readings</h3>
                     <p>
-                      {only()
+                      {compatible()
+                        ? "This word has no dictionary reading without a known conflict. Turn off the conflict filter to inspect its candidates."
+                        : only()
                         ? "This word has no complete dictionary match. Turn off the filter to explore all candidates."
                         : "Select a word in the sentence to see its analyses."}
                     </p>
@@ -473,7 +489,7 @@ export default function App() {
                                 <Show when={i() > 0}>
                                   <span class="plus">+</span>
                                 </Show>
-                                {lemmaButton(token()!, lemma)}
+                                {lemmaButton(token()!, lemma, token()!.analysis!.analyses.indexOf(candidate), i())}
                               </>
                             )}
                           </For>
@@ -495,6 +511,9 @@ export default function App() {
                               </For>
                             </div>
                           </div>
+                        </Show>
+                        <Show when={token()?.dictionary?.readings?.[token()!.analysis!.analyses.indexOf(candidate)]?.status === "incompatible"}>
+                          <p class="reading-condition">Known dictionary class conflict. This reading remains available unless the conflict filter is enabled.</p>
                         </Show>
                         <For each={readingConditions(candidate)}>
                           {(id) => <p class="reading-condition">{result()!.rules[id]}</p>}

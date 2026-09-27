@@ -1,9 +1,8 @@
-use klem::dictionary::{Annotation, DictionarySession, SqliteDictionary};
-use klem::{Lemmatizer, Session, TokenAnalysis, WordAnalysis};
+use klem::dictionary::{Annotation, DictionaryFilter, DictionarySession, SqliteDictionary};
+use klem::{Lemmatizer, Session, TokenAnalysis};
 use serde::Serialize;
 mod dictionary_cli;
 use std::{
-    collections::BTreeSet,
     env,
     fs::File,
     io::{self, BufWriter, Read, Write},
@@ -12,7 +11,7 @@ use std::{
 
 const HELP: &str = "klem — Korean lemma candidates\n\nUsage:\n  klem word <word> [--format jsonl|text]\n  klem text [file|-] [--format jsonl|text] [--cache-bytes N]\n  klem explain <rule-id>\n\nJSON Lines is the default. Text records include original UTF-8 byte offsets.\nText input defaults to stdin. Cache defaults to 8 MiB; use 0 to disable.\nAll candidates are grammatical hypotheses, not dictionary-verified words.\n";
 
-const DICTIONARY_HELP: &str = "\nOffline dictionaries:\n  klem dict import-krdict <json-directory|file> <new.db> --snapshot <label>\n  klem dict info <db>\n  klem dict lookup <db> <headword>\n  klem dict entry <db> <entry-id>\n  klem word <word> --dictionary <db> [--dict-only]\n  klem text [file|-] --dictionary <db> [--dict-only]\nDictionary annotations require JSONL and preserve every candidate by default.\n--dict-only requires --dictionary and keeps analyses with dictionary entries\nfor every lemma, regardless of POS compatibility. Unmatched words retain an\nempty analyses array; text records and offsets are preserved.\n";
+const DICTIONARY_HELP: &str = "\nOffline dictionaries:\n  klem dict import-krdict <json-directory|file> <new.db> --snapshot <label>\n  klem dict info <db>\n  klem dict lookup <db> <headword>\n  klem dict entry <db> <entry-id>\n  klem word <word> --dictionary <db> [--dict-only | --dict-compatible]\n  klem text [file|-] --dictionary <db> [--dict-only | --dict-compatible]\nDictionary annotations require JSONL and preserve every candidate by default.\n--dict-only requires --dictionary and keeps analyses with dictionary entries\nfor every lemma, regardless of POS compatibility. Unmatched words retain an\nempty analyses array; text records and offsets are preserved.\n--dict-compatible additionally excludes known lexical-role/attachment conflicts.\nUnknown classes remain; the finite checks do not prove grammatical correctness.\n";
 
 #[derive(Serialize)]
 struct Annotated<T> {
@@ -43,6 +42,7 @@ fn run() -> klem::dictionary::Result<()> {
     let mut budget = 8 * 1024 * 1024;
     let mut dictionary_path = None;
     let mut dict_only = false;
+    let mut dict_compatible = false;
     while let Some(arg) = args.next() {
         match arg.as_str() {
             "--help" | "-h" => {
@@ -51,6 +51,7 @@ fn run() -> klem::dictionary::Result<()> {
             }
             "--format" => format = args.next().ok_or("--format needs jsonl or text")?,
             "--dict-only" => dict_only = true,
+            "--dict-compatible" => dict_compatible = true,
             "--dictionary" => {
                 let path = args.next().ok_or("--dictionary needs a database path")?;
                 if dictionary_path.replace(path).is_some() {
@@ -79,14 +80,26 @@ fn run() -> klem::dictionary::Result<()> {
     if !matches!(format.as_str(), "jsonl" | "text") {
         return Err("--format must be jsonl or text".into());
     }
-    if dict_only && dictionary_path.is_none() {
-        return Err("--dict-only requires --dictionary <db>".into());
+    if (dict_only || dict_compatible) && dictionary_path.is_none() {
+        return Err(if dict_compatible {
+            "--dict-compatible requires --dictionary <db>"
+        } else {
+            "--dict-only requires --dictionary <db>"
+        }
+        .into());
     }
     if dictionary_path.is_some()
         && (format != "jsonl" || !matches!(command.as_str(), "word" | "text"))
     {
         return Err("--dictionary requires word/text with --format jsonl".into());
     }
+    let filter = if dict_compatible {
+        Some(DictionaryFilter::Compatible)
+    } else if dict_only {
+        Some(DictionaryFilter::Headword)
+    } else {
+        None
+    };
     let dictionary = dictionary_path.map(SqliteDictionary::open).transpose()?;
     let mut dictionary_session = dictionary
         .as_ref()
@@ -100,8 +113,8 @@ fn run() -> klem::dictionary::Result<()> {
             if format == "jsonl" {
                 if let Some(session) = &mut dictionary_session {
                     let mut annotation = session.annotate(&result)?;
-                    if dict_only {
-                        filter_dictionary_matches(&mut result, &mut annotation);
+                    if let Some(policy) = filter {
+                        annotation.filter(&mut result, policy);
                     }
                     serde_json::to_writer(
                         &mut out,
@@ -146,12 +159,12 @@ fn run() -> klem::dictionary::Result<()> {
                         .map(|a| dictionary.annotate(a))
                         .transpose()
                         .map_err(io::Error::other)?;
-                    if dict_only
+                    if let Some(policy) = filter
                         && let (Some(analysis), Some(annotation)) =
                             (record.analysis.as_mut(), annotation.as_mut())
                     {
                         // Session cache entries stay unfiltered for future consumers.
-                        filter_dictionary_matches(Arc::make_mut(analysis), annotation);
+                        annotation.filter(Arc::make_mut(analysis), policy);
                     }
                     serde_json::to_writer(
                         &mut out,
@@ -178,20 +191,6 @@ fn run() -> klem::dictionary::Result<()> {
     }
     out.flush()?;
     Ok(())
-}
-
-fn filter_dictionary_matches(analysis: &mut WordAnalysis, annotation: &mut Annotation) {
-    let matched: BTreeSet<_> = annotation
-        .lemmas
-        .iter()
-        .filter(|m| !m.entries.is_empty())
-        .map(|m| &m.lemma)
-        .collect();
-    analysis
-        .analyses
-        .retain(|a| a.lemmas.iter().all(|l| matched.contains(l)));
-    let retained: BTreeSet<_> = analysis.analyses.iter().flat_map(|a| &a.lemmas).collect();
-    annotation.lemmas.retain(|m| retained.contains(&m.lemma));
 }
 
 fn write_record(out: &mut impl Write, record: &TokenAnalysis, format: &str) -> io::Result<()> {

@@ -1,6 +1,7 @@
 import {
   analyses,
   matches,
+  readingMatches,
   grammarHeadword,
   type Result,
   type Token,
@@ -23,14 +24,14 @@ export interface Part {
   entry?: string;
   hint: string;
 }
-export function options(token: Token, only: boolean) {
-  const kept = new Set(analyses(token, only));
+export function options(token: Token, only: boolean, compatible = false) {
+  const kept = new Set(analyses(token, only, compatible));
   return (token.analysis?.analyses ?? [])
     .map((analysis, index) => ({ analysis, index }))
     .filter(({ analysis }) => kept.has(analysis));
 }
-export function preferred(token: Token, only: boolean) {
-  const choices = options(token, only);
+export function preferred(token: Token, only: boolean, compatible = false) {
+  const choices = options(token, only, compatible);
   return (
     choices
       .filter(({ analysis }) =>
@@ -55,7 +56,7 @@ export function parts(
   return order.map((component, position) => {
     if ("lemma" in component) {
       const lemma = a.lemmas[component.lemma];
-      const entries = matches(token, lemma);
+      const entries = readingMatches(token, candidate, component.lemma);
       // KRDict tags both enumerative 이다 and the copula as 조사. This path
       // already represents a copula, so prefer its explicit source homonym.
       const copulaEntry = lemma.kind === "copula" && lemma.text === "이다"
@@ -63,7 +64,10 @@ export function parts(
       const entry =
         copulaEntry ??
         entries.find((e) => e.pos_compatibility === "compatible") ??
-        entries.find((e) => e.pos_compatibility === "unknown");
+        entries.find((e) => e.pos_compatibility === "unknown") ??
+        entries.find((e) => token.dictionary?.readings?.[candidate]?.lemmas
+          .find((l) => l.lemma_index === component.lemma)?.entries
+          .some((a) => a.id === e.id && a.status === "unknown"));
       const stem = ["predicate", "auxiliary", "copula"].includes(lemma.kind);
       const next = order[position + 1];
       const adverbRoot = lemma.kind === "predicate" &&

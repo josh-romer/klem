@@ -21,9 +21,16 @@ export interface EntrySummary {
 export interface EntryMatch extends EntrySummary {
   pos_compatibility: string;
 }
+export interface ReadingAssessment {
+  status: "compatible" | "incompatible" | "unknown";
+  lemmas: { lemma_index: number; status: string; entries: {
+    id: string; status: string; conflicts: { rule: string; morpheme_index: number | null }[];
+  }[] }[];
+}
 export interface Annotation {
   source: string;
   fingerprint: string;
+  readings?: ReadingAssessment[];
   lemmas: { lemma: Lemma; entries: EntryMatch[] }[];
 }
 export interface Token {
@@ -82,35 +89,51 @@ export const matches = (token: Token, lemma: Lemma) =>
   token.dictionary?.lemmas.find(
     (m) => m.lemma.text === lemma.text && m.lemma.kind === lemma.kind,
   )?.entries ?? [];
-export const analyses = (token: Token, only: boolean) =>
-  (token.analysis?.analyses ?? []).filter(
-    (a) => !only || a.lemmas.every((l) => matches(token, l).length > 0),
+// Prefer entries supported by this exact lemma slot's ending, retaining all
+// homonyms for inspection if every entry conflicts or evidence is unavailable.
+export function readingMatches(token: Token, candidate: number, index: number) {
+  const lemma = token.analysis?.analyses[candidate]?.lemmas[index];
+  const entries = lemma ? matches(token, lemma) : [];
+  const assessed = token.dictionary?.readings?.[candidate]?.lemmas.find(
+    (l) => l.lemma_index === index,
   );
-export function filteredResult(result: Result, only: boolean): Result {
-  if (!only) return result;
+  if (!assessed) return entries;
+  const supported = entries.filter((e) => assessed.entries.some(
+    (a) => a.id === e.id && a.status !== "incompatible",
+  ));
+  return supported.length ? supported : entries;
+}
+export const analyses = (token: Token, only: boolean, compatible = false) =>
+  (token.analysis?.analyses ?? []).filter(
+    (a, index) => (!only && !compatible) || (
+      a.lemmas.every((l) => matches(token, l).length > 0) &&
+      (!compatible || token.dictionary?.readings?.[index]?.status !== "incompatible")
+    ),
+  );
+export function filteredResult(result: Result, only: boolean, compatible = false): Result {
+  if (!only && !compatible) return result;
+  const indices = result.records.map((token) => {
+    const kept = new Set(analyses(token, only, compatible));
+    return (token.analysis?.analyses ?? []).flatMap((a, i) => kept.has(a) ? [i] : []);
+  });
   return {
     ...result,
-    breakdowns: result.records.map((token, i) =>
-      token.analysis
-        ? (result.breakdowns[i] ?? []).filter((_, j) =>
-            analyses(token, true).includes(token.analysis!.analyses[j]),
-          )
-        : null,
-    ),
-    records: result.records.map((token) => {
-      const kept = analyses(token, true);
+    breakdowns: result.records.map((token, i) => token.analysis
+      ? indices[i].map((j) => result.breakdowns[i]?.[j] ?? null) : null),
+    records: result.records.map((token, i) => {
+      const kept = indices[i].map((j) => token.analysis!.analyses[j]);
       return {
         ...token,
         analysis: token.analysis ? { ...token.analysis, analyses: kept } : null,
         dictionary: token.dictionary
           ? {
               ...token.dictionary,
+              readings: token.dictionary.readings
+                ? indices[i].map((j) => token.dictionary!.readings![j]) : undefined,
               lemmas: token.dictionary.lemmas.filter((m) =>
-                kept.some((a) =>
-                  a.lemmas.some(
-                    (l) => l.text === m.lemma.text && l.kind === m.lemma.kind,
-                  ),
-                ),
+                kept.some((a) => a.lemmas.some(
+                  (l) => l.text === m.lemma.text && l.kind === m.lemma.kind,
+                )),
               ),
             }
           : null,

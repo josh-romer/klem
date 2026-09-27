@@ -304,7 +304,7 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
 
 // Canonical present-declarative forms share verb attachment and only permit
 // honorific 시 before the ending. Past/modal reports use the plain 다 family.
-fn present_declarative(form: &str) -> bool {
+pub(crate) fn present_declarative(form: &str) -> bool {
     matches!(
         form,
         "는다"

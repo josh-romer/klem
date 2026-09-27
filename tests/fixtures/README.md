@@ -909,3 +909,13 @@ and 428 grammar fixture entries; these are integration fixtures, not gold analys
 sentences MH2_0149-s11 and MH2_0169-s5 from the pinned KAIST corpus, under its
 license described above. They protect 된단 and 노력했단 without rewriting
 annotations, spelling or POS. Gold groups do not enumerate all valid alternatives.
+
+`krdict-attachments.json` adds eleven lexical entries (가늘다, 긷다, both 크다
+and 늦다 homonyms, 행복하다, both 아니하다 auxiliary classes, 듯하다 and 만하다) for COV-017aa. It preserves every selected sense,
+English equivalent and the first example group, reusing the 53-entry
+`krdict-report-ni.json` fixture. These are National Institute of Korean Language
+Korean Basic Dictionary September 2026 texts under CC BY-SA 2.0 KR, with the same
+attribution and license as the other KRDict fixtures.
+`dictionary-attachments.json` is a separate source-linked judgment ledger for
+the explicit dictionary conflict policy: its forbidden readings remain raw rule
+hypotheses. See `docs/dictionary-attachments.md` for scope and exceptions.

@@ -89,11 +89,20 @@ impl Judgment {
 }
 
 pub fn evaluate(suite: &Suite) -> Result<Report, String> {
+    let engine = Lemmatizer::new();
+    evaluate_with(suite, |word| {
+        engine.analyze_word(word).map_err(|e| e.to_string())
+    })
+}
+
+pub fn evaluate_with(
+    suite: &Suite,
+    mut analyze: impl FnMut(&str) -> Result<klem::WordAnalysis, String>,
+) -> Result<Report, String> {
     if suite.schema_version != 1 || suite.review_status.trim().is_empty() || suite.cases.is_empty()
     {
         return Err("expected a nonempty version-1 judgment suite with review status".into());
     }
-    let engine = Lemmatizer::new();
     let mut ids = BTreeSet::new();
     let mut report = Report {
         schema_version: 1,
@@ -162,9 +171,7 @@ pub fn evaluate(suite: &Suite) -> Result<Report, String> {
                 }
             }
         }
-        let result = engine
-            .analyze_word(&case.surface)
-            .map_err(|e| e.to_string())?;
+        let result = analyze(&case.surface)?;
         for j in &case.judgments {
             let present = result.analyses.iter().any(|a| j.matches(a));
             match j.verdict {

@@ -1857,3 +1857,54 @@ source selected, no JavaScript errors and no horizontal overflow. The final
 fixture-only rebuild produces a byte-identical web executable to that preview.
 An interrupted final Nix/browser run was confirmed stopped and rerun successfully;
 no interrupted run is counted as a passing check.
+
+## Dictionary-backed lexical attachment evidence (COV-017aa)
+
+The [finite policy](dictionary-attachments.md) adds per-reading entry evidence
+and `--dict-compatible` in the library, CLI and browser. It preserves raw rule
+hypotheses and the old headword-only policy, while checking broad lexical roles,
+shared present-declarative attachments, six bare adjectival question families,
+and the factual/command distinction for 아니다 + 라니/으라니. Valid homonyms,
+unknown POS and token-initial separately written auxiliaries remain. Wish uses
+of adjective commands/proposals are not categorically excluded.
+
+A separate [dictionary-policy ledger](../tests/fixtures/dictionary-attachments.json)
+contains **63 cases: 39 required / 24 forbidden**, with stable IDs and exact roles.
+All required and forbidden paths are actually generated and headword-matched
+before this optional filter; missing fixture entries cannot masquerade as fixes.
+Eleven new attributed lexical entries complement the existing 53-entry fixture.
+The raw ledger remains **2,614 cases: 1,541 required / 1,081 forbidden**; grammar
+catalog and inventory counts remain unchanged (189 scoped / one gap / 525
+unreviewed). Two existing source reviews link the new evidence.
+
+The [report](dictionary-attachment-evaluation.json) compares **2,389 distinct
+regression surfaces**. Unfiltered JSONL is byte-identical, and old headword-only
+candidates and annotation fields are unchanged. The new filter removes 135
+complete groups from 2,351 headword-matching analyses; every removal includes
+entry-specific conflict evidence. This is not a contextual precision score.
+
+On the pinned 81,758-word-token 무정 text, headword-only output retains 124,268
+analyses, while the new filter retains 118,388. Complete-match token coverage
+changes from 73,303 to 73,162. A source/representation audit of the losses found
+that separately written auxiliaries must remain unknown; seven explicit cases
+now preserve them. The remaining 141 tokens across 52 types expose adverbial-role
+gaps (notably 아직도), older forms and unreviewed constructions; COV-018n tracks
+the missing adverbial alternatives. Coverage counts do not measure correctness.
+
+Three local release CLI runs per mode, including JSONL serialization to
+`/dev/null`, had median times of **1.25 s before / 1.36 s after** for headword-only
+output and **1.35 s** for the new filter. Peak RSS remained about **27–28 MiB**.
+Per-reading evidence increases headword-only JSONL from 85.1 MB to 118.0 MB; the
+new filter writes 113.0 MB. These are observations on one machine, not throughput
+guarantees. Bulk processing still uses bounded caches and loads no definitions.
+
+Formatting, Rust tests, Clippy, all **66,570 frozen corpus cases**, stress/memory
+regressions, frontend production build, browser/HTTP checks and offline inventory
+verification pass. `nix flake check` and `nix build .#web` pass on x86_64-linux;
+other declared systems were not executed. The packaged full-dictionary preview
+passes all **39 required / 24 forbidden** policy judgments and CLI/API parity.
+Browser checks cover matching indices, filtered exports, the adjective 늦다 gloss,
+separately written 싶었다, dictionary-free mode and mobile layout. Inspected
+screenshots show factual 아니라니, adjectival 늦으냐니 and 싶 + 었 + 다, with no
+JavaScript errors or horizontal overflow. The policy remains finite; broader
+attachment work, independent Korean review and fresh-passage evaluation remain.

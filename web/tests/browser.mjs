@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const attachments = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-attachments.json"), "utf8"));
   const shortClauses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-short-clauses.json"), "utf8"));
   const reportNi = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-report-ni.json"), "utf8"));
   const presentLicenses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-present-licenses.json"), "utf8"));
@@ -251,6 +252,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...attachments.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryInventory.LexicalResource.Lexicon.LexicalEntry,
       ...adverbExpansion.LexicalResource.Lexicon.LexicalEntry,
       ...negativeAuxiliaries.LexicalResource.Lexicon.LexicalEntry,
@@ -384,6 +386,59 @@ try {
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto(url);
   await page.waitForSelector(".reading");
+  assert.equal(await page.getByLabel("Exclude known grammar conflicts").isDisabled(), true);
+  const attachmentText = "가늘다니 가는다니 길으냐니 아니라니 늦으냐니 큰다니 가늘어한다니 싶었다 xyz.\n";
+  await submit(page, attachmentText);
+  await waitHeading(page, "가늘다니");
+  await page.getByLabel("Dictionary matches only").check();
+  const attachmentRaw = await (await post("analyze", { text: attachmentText })).json();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  const expectedAttachment = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {
+    input: attachmentText, encoding: "utf8",
+  }).trim().split("\n").map(JSON.parse);
+  const attachmentKey = (a) => JSON.stringify([a.lemmas.map((l) => [l.text, l.kind]), a.morphemes.map((m) => [m.form, m.kind]), a.rules, a.unchanged]);
+  const words = expectedAttachment.filter((r) => r.kind === "word");
+  for (const [i, word] of words.entries()) {
+    const block = page.locator(".breakdown-word").nth(i);
+    const options = block.locator("select option");
+    if (!word.analysis.analyses.length) {
+      assert.equal(await block.locator("select").isDisabled(), true);
+    } else {
+      assert.equal(await options.count(), word.analysis.analyses.length);
+      const raw = attachmentRaw.records.find((r) => r.surface === word.surface);
+      const expected = raw.analysis.analyses.flatMap((a, j) =>
+        word.analysis.analyses.some((b) => attachmentKey(a) === attachmentKey(b)) ? [String(j)] : []);
+      assert.deepEqual(await options.evaluateAll((items) => items.map((o) => o.value)), expected);
+    }
+  }
+  // This question must use the adjective 늦다 entry, not its verb homonym.
+  const late = page.locator(".breakdown-word").nth(4);
+  assert.equal(await late.locator(".part-gloss").first().innerText(), attachmentRaw.glosses["krdict:64526"]);
+  assert.ok(attachmentRaw.glosses["krdict:62657"]);
+  assert.equal(await page.locator(".breakdown-word").nth(7).locator(".part-gloss").first().innerText(), attachmentRaw.glosses["krdict:62657"]);
+  await late.locator(".breakdown-part").first().click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=64526"]'));
+  assert.match(await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"), /ParaWordNo=64526/);
+  const attachmentDownload = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Export JSON" }).click();
+  const attachmentExport = JSON.parse(await readFile(await (await attachmentDownload).path(), "utf8"));
+  assert.deepEqual(attachmentExport.records, expectedAttachment);
+  for (const [i, record] of attachmentExport.records.entries()) {
+    if (!record.analysis) continue;
+    assert.equal(attachmentExport.breakdowns[i].length, record.analysis.analyses.length);
+    record.analysis.analyses.forEach((a, j) => {
+      const originalIndex = attachmentRaw.records[i].analysis.analyses.findIndex((b) => attachmentKey(a) === attachmentKey(b));
+      assert.deepEqual(attachmentExport.breakdowns[i][j], attachmentRaw.breakdowns[i][originalIndex]);
+    });
+  }
+  await page.screenshot({ path: resolve(tmpdir(), "klem-attachments-desktop.png"), fullPage: true });
+  await page.setViewportSize({ width: 390, height: 844 });
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({ path: resolve(tmpdir(), "klem-attachments-mobile.png"), fullPage: true });
+  await page.setViewportSize({ width: 1440, height: 1100 });
+  await page.getByLabel("Dictionary matches only").uncheck();
+  assert.equal(await page.getByLabel("Exclude known grammar conflicts").isChecked(), false);
+  assert.equal(await page.getByLabel("Exclude known grammar conflicts").isDisabled(), true);
   await submit(page, "저는 한국어를 공부해요.");
   await waitHeading(page, "저는");
   await page.getByLabel("Dictionary matches only").check();
@@ -1775,6 +1830,7 @@ try {
   assert.deepEqual(errors, [], "Browser must not report runtime errors");
   const without = await start(false);
   await page.goto(without);
+  assert.equal(await page.getByLabel("Exclude known grammar conflicts").isDisabled(), true);
   await page.waitForSelector(".reading");
   assert.equal(
     await page.getByLabel("Dictionary matches only").isDisabled(),

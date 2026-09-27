@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–z/017ab/018a–k/018m/019a–g/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ab/018a–k/018m/019a–g/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–z and COV-017ab implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ab implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -595,16 +595,25 @@ review remains open under the completion review below.
   further existential paradigms remain unjudged. Broader quoted contractions
   such as 된단 and 노력했단 are now covered by COV-017ab; other families remain open.
 
-- [ ] **COV-017aa — Lexical attachment classes in dictionary-backed readings.**
-  Audit dictionary-matching lexical alternatives such as 가는다니 → 가늘다 +
-  는다니, 아니라니 → 아니다 + 으라니, and 길으냐니 → 긷다 + 으냐니.
-  The engine currently constrains represented auxiliary/copula/derived-adjective
-  roles, while raw lexical predicates retain unknown-class hypotheses. Dictionary
-  presence alone does not certify the ending/sense combination. Determine a
-  source-backed class policy that preserves genuine lexical homonyms and the
-  unfiltered rule API; do not treat dictionary-only filtering as a precision
-  guarantee. Track exact role-specific required/forbidden readings and CLI/library
-  parity. The [COV-017z review](report-ni-evaluation.json) records the probes.
+- [x] **COV-017aa — Lexical attachment classes in dictionary-backed readings.**
+  Added a finite, source-backed per-reading policy and opt-in `--dict-compatible`
+  CLI/library/browser filtering. It excludes lexical-role conflicts, adjective
+  present declaratives (가는다니 → 가늘다 + 는다니), verbal bare adjectival
+  questions (길으냐니 → 긷다 + 으냐니), and the distinct command hypothesis
+  아니다 + 으라니 while preserving factual 아니라니. Valid homonyms and unknown
+  provider classes remain. Separately written auxiliaries such as 싶었다 are
+  unknown without their preceding word, not automatically conflicting. Wish
+  uses 행복하란/행복하자 remain; this is not a blanket adjective-command ban.
+  The [separate dictionary-policy ledger](../tests/fixtures/dictionary-attachments.json)
+  has 63 exact cases (39 required, 24 forbidden); all are present before filtering
+  and after headword-only filtering. The raw rule API and `--dict-only` candidate
+  groups remain unchanged across 2,389 regression surfaces. Per-entry evidence,
+  component ownership, Unicode/cache behavior, CLI/library parity and browser
+  choices/glosses/export are covered. See [policy and limits](dictionary-attachments.md)
+  and [review/measurements](dictionary-attachment-evaluation.json).
+  Further lexical/sense restrictions remain COV-017/019; the novel audit exposes
+  missing adverbial-role alternatives under COV-018n. Dictionary matching or
+  passing this finite policy still does not certify grammatical correctness.
 
 - [x] **COV-017ab — Short quoted modifiers and change/conditional endings.**
   Eight components cover 단/는단/잔/냔/느냔/으냔/다간/다가는. Preserve both
@@ -803,6 +812,16 @@ review remains open under the completion review below.
   case/particle chains and nominalized-base semantics. Adnominal + bound-noun
   joining is a separate representation; its valid homonym is not forbidden by
   an exact particle-role judgment. COV-018 remains open.
+
+- [ ] **COV-018n — Adverbial bases before ordinary focus particles.** The
+  COV-017aa novel audit finds 아직도/퍽도/너무도/자세히는/아직까지 with only
+  nominal-role decompositions despite adverb-only headwords. The optional role
+  filter correctly excludes those nominal hypotheses but exposes the missing
+  adverbial alternatives. Review source-backed 도/은/는/까지 and related licenses,
+  preserve existing whole words and genuine nominal homonyms, and test exact
+  Adverbial roles in the raw API plus dictionary/CLI/browser filtering. Do not
+  generalize to arbitrary adverb + noun case marking. The full loss sample is
+  retained in [the dictionary-policy report](dictionary-attachment-evaluation.json).
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

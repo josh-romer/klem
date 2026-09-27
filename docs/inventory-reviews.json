@@ -11486,9 +11486,10 @@
       "source_sha256": "97a8b2b464325dd921cb8cd5a80dbb5f2c7186bb0f438abe74811c3e48ffa855",
       "status": "scoped",
       "checklist": [
-        "COV-017y"
+        "COV-017y",
+        "COV-017aa"
       ],
-      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings.",
+      "scope": "Present declaratives permit bare verbs or honorific 시, excluding recovered past/modal/retrospective markers and known adjective/copula classes. Preserve full/attached boundaries, unknown lexical alternatives, inherited negative classes, later verbal auxiliaries and distinct plain-다 readings. COV-017aa adds finite dictionary-backed attachment evidence without changing raw hypotheses or headword-only filtering.",
       "remaining": "Lexical class/sense selection, broader existential honorific/adnominal/question paradigms (COV-019h), further outer attachments and independent Korean review remain open.",
       "evidence": [
         {
@@ -11501,6 +11502,19 @@
         },
         {
           "path": "docs/present-license-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/dictionary-attachments.md"
+        },
+        {
+          "path": "docs/dictionary-attachment-evaluation.json"
         }
       ],
       "judgments": [
@@ -12093,9 +12107,10 @@
       "source_sha256": "9fbe72438749c6a4989a4e844cd83484d50227ec25f3f2bbc10babc9d09465fe",
       "status": "scoped",
       "checklist": [
-        "COV-017z"
+        "COV-017z",
+        "COV-017aa"
       ],
-      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense.",
+      "scope": "Scoped surprise/report family with full/attached or factual/retrospective licenses. Preserve separate homonyms and bare-verbal 다니 surprise; exact source-linked judgments cover compatible paths and boundaries. Polite surprise does not automatically generalize to every sense. COV-017aa adds finite dictionary-backed attachment evidence without changing raw hypotheses or headword-only filtering.",
       "remaining": "Lexical/sense class selection, additional outer particles, contextual choice, generic retrospective questions and independent Korean-language review remain open. This is not full-entry coverage certification.",
       "evidence": [
         {
@@ -12108,6 +12123,19 @@
         },
         {
           "path": "docs/report-ni-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/dictionary-attachments.md"
+        },
+        {
+          "path": "docs/dictionary-attachment-evaluation.json"
         }
       ],
       "judgments": [

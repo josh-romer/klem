@@ -24776,6 +24776,112 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:86544",
+      "source_sha256": "a124a9dad024ca616ea34662427a5b2a9de416b449eca151b9b4106035f2fea4",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ax"
+      ],
+      "scope": "Assumption homonym of 으려니 alongside shortened intention: vowel/ㄹ/consonant allomorphs, adjectives/copulas, honorific/past/modal, source-attested omitted 이, and attached 하다/싶다. Every source example group is retained and tested.",
+      "remaining": "Contextual sense selection, arbitrary lexical thought-predicate grouping, broader omitted-copula and outer-particle paradigms, and independent Korean review remain. Full intention expansions retain the COV-017aw conflicts.",
+      "evidence": [
+        {
+          "path": "tests/ryeo_expressions.rs",
+          "test": "ryeo_expressions_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/ryeo_expressions.rs",
+          "test": "ryeo_expressions_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/ryeo_expressions.rs",
+          "test": "ryeo_expressions_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "ryeo_expressions_recover_unchanged_training_gold_and_preserve_source_mismatches"
+        },
+        {
+          "path": "docs/ryeo-expressions-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "ryeo-expressions-source-86544-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeo-expressions-source-86544-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeo-expressions-source-86544-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeo-expressions-source-86544-3",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeo-expressions-source-86544-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86601",
+      "source_sha256": "26e9383778fd64b51e8aa80f8e7c3efbb98adb0416c1f30ac4f00a5859789735",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ax"
+      ],
+      "scope": "Assumption homonym of 으려니 alongside shortened intention: vowel/ㄹ/consonant allomorphs, adjectives/copulas, honorific/past/modal, source-attested omitted 이, and attached 하다/싶다. Every source example group is retained and tested.",
+      "remaining": "Contextual sense selection, arbitrary lexical thought-predicate grouping, broader omitted-copula and outer-particle paradigms, and independent Korean review remain. Full intention expansions retain the COV-017aw conflicts.",
+      "evidence": [
+        {
+          "path": "tests/ryeo_expressions.rs",
+          "test": "ryeo_expressions_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/ryeo_expressions.rs",
+          "test": "ryeo_expressions_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/ryeo_expressions.rs",
+          "test": "ryeo_expressions_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "ryeo_expressions_recover_unchanged_training_gold_and_preserve_source_mismatches"
+        },
+        {
+          "path": "docs/ryeo-expressions-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "ryeo-expressions-source-86601-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeo-expressions-source-86601-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeo-expressions-source-86601-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeo-expressions-source-86601-3",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeo-expressions-source-86601-4",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

@@ -3225,3 +3225,39 @@ non-honorific prefinals on the immediately preceding owner and represented
 copulas are excluded. Earlier owners and right-hand tense remain available.
 Lexical adjectives stay hypotheses; broad dictionary conflicts and other
 auxiliary endpoints are not inferred.
+
+## Shortened intention expressions and assumption -(으)려니 (COV-017ax)
+
+The analyzer preserves `으려니`, `으려니까`, `으려더라`, `으려던`,
+`으려면서`, and `으려든지` as distinct ending components, with consonant
+으 and vowel/ㄹ allomorphs. No unspoken 하다 lemma is inserted. The twelve
+shortened-expression entries allow different attachments; they do not inherit
+the verb-only restriction of the earlier intention-connective family.
+
+Two additional dictionary entries, [86544](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86544)
+and [86601](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86601),
+license the assumption homonym of -(으)려니. Its adjective, copula and
+past/modal paths coexist with the intention reading. The source example
+우스갯소리려니 restores omitted 이, and attached 하다/싶다 compositions
+are supported. Context selects the reading; neither the CLI nor browser assigns
+an intention sense merely because the surface contains 려.
+
+Honorific 시 composes across the six forms. Past/modal licenses apply to
+려니/려더라/려던/려면서/려든지, including their explicit 었/겠 notes,
+while 려니까 retains the narrower reviewed prefinal boundary. Bare copula
+이다 is listed for every family except 려더라; its explicit past/modal
+boundary remains available. Derived 답다 uses the ㅂ-irregular spelling.
+Connective 는/도 and polite 요 compose within their slots; noun-modifying
+려던 does not accept arbitrary 요 or case particles. The independent
+먹다 + 으려 + 들다 + 은지 analysis of 먹으려든지 remains available.
+
+[Source and candidate tests](../tests/ryeo_expressions.rs) preserve fourteen
+full entries, twenty senses and all 82 example groups. Dictionary-absent
+유학가다 is an explicitly raw-only source example, not a fabricated dictionary
+match. 어두워지려니까 and 좋아지려던 use the separate lexical predicate
+and auxiliary 지다 paths. Eight unchanged training sentences provide seven
+new gold matches; the 재견/재건 spelling conflict and unrelated annotation
+mismatches remain visible. Full expansions retain the COV-017aw conflicts;
+this batch does not impose their narrower intention restriction on these
+shortened forms. Broader omitted-copula variants and contextual sense selection
+remain outside this reviewed attachment scope.

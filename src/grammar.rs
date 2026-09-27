@@ -275,6 +275,7 @@ pub(crate) const AUXILIARY_CONNECTORS: &[&str] = &[
     "으려다",
     "으려다가",
     "으려나",
+    "으려니",
     "어다",
     "어다가",
     "는가",
@@ -696,6 +697,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("냐지만", "냐지만", 0),
             ("냐니까", "냐니까", 0),
             ("냔다", "냔다", 0),
+            // KRDict 86544 explicitly illustrates 우스갯소리려니.
+            ("려니", "으려니", 0),
             // KRDict 85653 explicitly illustrates 누구냔.
             ("냔", "냔", 0),
         ] {
@@ -754,6 +757,12 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으려는가", "려는가", "으려는가"),
             ("으려는지", "려는지", "으려는지"),
             ("으려나", "려나", "으려나"),
+            ("으려니", "려니", "으려니"),
+            ("으려니까", "려니까", "으려니까"),
+            ("으려더라", "려더라", "으려더라"),
+            ("으려던", "려던", "으려던"),
+            ("으려면서", "려면서", "으려면서"),
+            ("으려든지", "려든지", "으려든지"),
             ("으려거든", "려거든", "으려거든"),
             ("으려기에", "려기에", "으려기에"),
             ("으려는데", "려는데", "으려는데"),
@@ -1412,6 +1421,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.activity_reason" => {
             "Recognize full -느라고 and short -느라 reason/purpose endings after verbs or honorific 시; clause-level subject and meaning constraints require context."
+        }
+        "ending.ryeo_expression" => {
+            "Recover a shortened intention expression or the homonymous -(으)려니 assumption ending; preserve its own attachment licenses without inserting implicit 하다 or choosing a contextual sense."
         }
         "ending.rhetorical_llago" => {
             "Recognize -(으)ㄹ라고 doubt and -(으)ㄹ라고요 doubt/strong affirmation; the surface can also occur as colloquial intention, which requires context."

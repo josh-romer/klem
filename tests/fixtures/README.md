@@ -1419,3 +1419,24 @@ unchanged training sentences, respectively, under the corpus attribution and
 licenses above. GSD's 떠+시+느라 annotation and unrelated 동그래진다/늘릴라고
 mismatches remain exactly as published; no source gold or frozen baseline was
 rewritten to accommodate the implementation.
+
+`krdict-ryeo-expressions.json` preserves 129 full primary entries from the
+pinned September 2026 NIKL Korean Basic Dictionary export, under **CC BY-SA
+2.0 KR**, with the attribution and links above. All senses, notes, forms and
+examples remain; equivalents are English-only, RelatedForm and same-ID idioms
+are omitted. `ryeo-expressions-sources.json` preserves fourteen normalized
+family entries, twenty senses and all 82 example groups, each linked to an
+exact excerpt judgment. The two 어미 assumption entries remain distinct from
+the twelve 품사 없음 shortened expressions. The raw-only 유학가다 example
+has no headword in this snapshot; an unknown-headword regression also remains
+raw-only. Source hashes and the candidate queue are recorded in
+[the evaluation](../../docs/ryeo-expressions-evaluation.json).
+
+`kaist-ryeo-expressions.conllu` and `gsd-ryeo-expressions.conllu` preserve seven
+and one complete, unchanged sentences from the pinned **training** partitions,
+under the corpus attribution and CC BY-SA 4.0 license above. Selection scans
+for the six endings at the end of each surface word; -려니와 is a different
+form and was not included. Six KAIST targets and one GSD target gain a match.
+The original 재견되려던 / 재건+되+려던 spelling mismatch, 상점이고 gold
+without a copula, and the Matsunaga-name annotation 마+쓰+나가 remain unchanged.
+No source annotation or held-out baseline is rewritten.

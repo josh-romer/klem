@@ -272,6 +272,7 @@ try {
   const requestAux = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-request-aux.json"), "utf8"));
   const shortReports = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-short-reports.json"), "utf8"));
   const neura = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-neura.json"), "utf8"));
+  const ryeoExpressions = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ryeo-expressions.json"), "utf8"));
   const llago = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-llago.json"), "utf8"));
   const dajiman = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-dajiman.json"), "utf8"));
   const daji = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-daji.json"), "utf8"));
@@ -309,6 +310,7 @@ try {
       ...shortReports.LexicalResource.Lexicon.LexicalEntry,
       ...neura.LexicalResource.Lexicon.LexicalEntry,
       ...llago.LexicalResource.Lexicon.LexicalEntry,
+      ...ryeoExpressions.LexicalResource.Lexicon.LexicalEntry,
       ...dajiman.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
@@ -870,6 +872,45 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-short-reports-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
+  const ryeoCases = recipientLedger.cases.filter(c => c.id.startsWith("ryeo-expressions-"));
+  assert.equal(ryeoCases.length, 293);
+  for (const c of ryeoCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a=>danikkaPath(a,j)), j.verdict === "required", c.id);
+  }
+  const ryeoText = "가려니 먹으려니까 먹으려더라 먹으려던 먹으려면서 먹으려든지 먹었으려니 학생이려던 학생다우려면서 우스갯소리려니 가려니했다";
+  await submit(page, ryeoText); await waitHeading(page, "가려니");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["가","으려니"]],[1,["먹","으려니까"]],[2,["먹","으려더라"]],[3,["먹","으려던"]],[4,["먹","으려면서"]],[5,["먹","으려든지"]],[6,["먹","었","으려니"]],[7,["학생","이","으려던"]],[8,["학생","답","으려면서"]],[9,["우스갯소리","이","으려니"]],[10,["가","으려니","하","였","다"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 0) {
+      await word.locator(".breakdown-part").nth(1).click();
+      await page.locator(".entry-choices button").filter({hasText:"-으려니"}).first().click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=86601"]'));
+    }
+    if (i === 3) {
+      await word.locator(".breakdown-part").nth(1).click();
+      await page.locator(".entry-choices button").filter({hasText:"-으려던"}).first().click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=86734"]'));
+    }
+  }
+  assert.match(await page.locator(".breakdown-word").first().textContent(), /Assuming \/ intending/);
+  const ryeoDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const ryeoExport = JSON.parse(await readFile(await (await ryeoDownload).path(), "utf8"));
+  const ryeoExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:ryeoText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(ryeoExport.records,ryeoExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-ryeo-expressions-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-ryeo-expressions-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
   const ryeogoCases = recipientLedger.cases.filter(c => c.id.startsWith("ryeogo-"));
   assert.equal(ryeogoCases.length, 60);
   for (const c of ryeogoCases) {

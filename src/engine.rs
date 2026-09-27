@@ -368,6 +368,13 @@ pub(crate) fn verbal_intention(form: &str) -> bool {
     intention_connective(form) || matches!(form, "으려는" | "으려는가" | "으려는지")
 }
 
+fn ryeo_expression(form: &str) -> bool {
+    matches!(
+        form,
+        "으려니" | "으려니까" | "으려더라" | "으려던" | "으려면서" | "으려든지"
+    )
+}
+
 pub(crate) fn activity_reason(form: &str) -> bool {
     matches!(form, "느라" | "느라고")
 }
@@ -731,6 +738,19 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // These shortened expressions have broader notes than the
+                // verb-only intention family. KRDict 86601 also licenses past/
+                // modal on the assumption homonym of 으려니. Only 으려니까
+                // lacks those licenses (86696/86726); all retain honorific 시.
+                if ryeo_expression(ending.form)
+                    && p.morphs.iter().any(|m| {
+                        m.form != "시"
+                            && (ending.form == "으려니까"
+                                || !matches!(m.form.as_str(), "었" | "겠" | "어야겠"))
+                    })
+                {
+                    continue;
+                }
                 // The question homonym of -(으)려나 allows adjectives and
                 // copulas as well as verbs, with 시/었/겠. It is distinct
                 // from the narrower shortened intention expression.
@@ -893,6 +913,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "더라지만"
                 ) {
                     p.rules.push("ending.reporting_contrast".into());
+                }
+                if ryeo_expression(ending.form) {
+                    p.rules.push("ending.ryeo_expression".into());
                 }
                 if activity_reason(ending.form) {
                     p.rules.push("ending.activity_reason".into());
@@ -1539,6 +1562,12 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐지만"
                 | "으냐니까"
                 | "으려나"
+                | "으려니"
+                | "으려니까"
+                | "으려더라"
+                | "으려던"
+                | "으려면서"
+                | "으려든지"
                 // KRDict 69067 also has a final rhetorical adjective sense.
                 // Keep derived 답다 beside lexical adjectives such as 넓다.
                 | "으려고"
@@ -1730,7 +1759,12 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         .iter()
         .find(|m| m.kind == MorphemeKind::Ending)
         .is_some_and(|m| {
-            present_declarative(&m.form)
+            (m.form == "으려더라"
+                && !p
+                    .morphs
+                    .iter()
+                    .any(|m| matches!(m.form.as_str(), "었" | "겠" | "어야겠")))
+                || present_declarative(&m.form)
                 || verbal_intention(&m.form)
                 || result_connective(&m.form)
                 || activity_reason(&m.form)
@@ -2486,6 +2520,7 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
         "으려다" | "으려다가" => stem == "보",
         "어다" | "어다가" => matches!(stem, "주" | "드리" | "놓" | "두" | "달"),
         "으려나" => stem == "보",
+        "으려니" => matches!(stem, "하" | "싶"),
         "는가" | "은가" | "던가" | "나" | "을까" => matches!(stem, "보" | "싶"),
         "으면" => matches!(stem, "하" | "싶"),
         "기도" | "기는" | "기만" | "고자" => stem == "하",
@@ -2789,6 +2824,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 | "으므로"
                 | "으려고"
                 | "으려면"
+                | "으려니"
+                | "으려니까"
+                | "으려면서"
+                | "으려든지"
                 | "으려"
                 | "고자"
                 | "느라고"
@@ -2832,6 +2871,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                         | "냐"
                         | "으냐"
                         | "더라"
+                        | "으려더라"
                         | "더라고"
                         | "더군"
                         | "을까"

@@ -2121,3 +2121,41 @@ fn llago_recovers_original_training_lemma_without_rewriting_connective_gold() {
             .contains("10\t늘릴라고\t늘리+ㄹ라고\tVERB\tVV+EC\t")
     );
 }
+
+#[test]
+fn ryeo_expressions_recover_unchanged_training_gold_and_preserve_source_mismatches() {
+    for (kind, input, expected, unmatched) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-ryeo-expressions.conllu").as_slice(),
+            vec![
+                ("id:MH2_0045-s483/10", "그러려니", vec!["그렇다"]),
+                ("id:MH2_0062-s334/5", "매각하려던", vec!["매각하다"]),
+                ("id:MH2_0094-s1154/7", "혈이려니", vec!["혈", "이다"]),
+                ("id:MH2_0146-s287/4", "선택하려던", vec!["선택하다"]),
+                ("id:MH2_0185-s1/17", "지키려던", vec!["지키다"]),
+                ("id:MH2_0195-s97/11", "치장하려던", vec!["치장하다"]),
+            ],
+            vec![
+                ("id:MH2_0045-s483/3", "상점이고", vec!["상점"]),
+                ("id:MH2_0173-s226/10", "재견되려던", vec!["재건되다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-ryeo-expressions.conllu").as_slice(),
+            vec![("id:train-s1179/6", "조종하려던", vec!["조종하다"])],
+            vec![("id:train-s1179/7", "마쓰나가", vec!["마", "쓰다", "나가다"])],
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "ryeo-expressions").unwrap();
+        for (rows, matched) in [(expected, true), (unmatched, false)] {
+            for (id, surface, lemmas) in rows {
+                let case = &report.cases[id];
+                assert_eq!(case.surface, surface);
+                assert_eq!(case.expected, lemmas);
+                assert_eq!(case.matched, matched, "{id}");
+            }
+        }
+    }
+}

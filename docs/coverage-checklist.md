@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/018a–k/018m–z/019a–g/019i–r/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax/018a–k/018m–z/019a–g/019i–r/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 323 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–av/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o; 391 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 325 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–av/017ax/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o; 389 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -992,16 +992,23 @@ review remains open under the completion review below.
   and Nix/package checks pass; all frozen corpus reports and the complete
   dictionary-filtered novel output are byte-identical. This item remains open.
 
-- [ ] **COV-017ax — Remaining shortened intention expressions.**
-  Add and review -(으)려니, -(으)려니까, -(으)려더라, -(으)려던,
-  -(으)려면서 and -(으)려든지 using the twelve full entries preserved in the
-  [source review](ryeogo-source-review.json). Seven recorded probes lack the
-  single-predicate canonical ending path: 먹으려니까, 가려니까, 먹으려던,
-  먹으려면서, 먹으려든지, 먹으려더라 and 가려니. 먹으려든지 currently
-  contains 먹다 through a separate auxiliary 들다 analysis; that is not evidence
-  for the shortened 하다 expression. Preserve alternatives while auditing each
-  source's adjective/copula, honorific, past/modal and allomorph notes alongside
-  its full expansion. Those conflicts also govern the remaining COV-017aw work.
+- [x] **COV-017ax — Remaining shortened intention expressions.**
+  **Implemented for the reviewed attachment scope.** All six canonical paths
+  now compose with their reviewed allomorph, prefinal, adjective, copula,
+  derived 답다 and auxiliary boundaries. Fourteen full entries include the
+  two previously unlisted assumption homonyms of -(으)려니, which license
+  adjective/past/modal readings independently of shortened intention.
+  All 82 source example groups are preserved, with 230 required and 63 forbidden
+  raw judgments in [the tests](../tests/ryeo_expressions.rs). Both dictionary
+  filters and CLI parity pass; 유학가다 and an unknown-head probe explicitly
+  remain raw-only. The separate 들다 analysis of 먹으려든지 is retained.
+  Eight unchanged training sentences recover seven gold matches; original
+  annotation/spelling conflicts remain visible. Full-expansion conflicts stay
+  under COV-017aw, and broader omitted-copula variants need separate review.
+  Rust/stress, browser and x86_64 Linux Nix/package checks pass. The full novel
+  comparison adds 59 hypotheses across 41 records, with no removals; this is
+  candidate preservation, not contextual validation. See the
+  [candidate and corpus evaluation](ryeo-expressions-evaluation.json).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -1954,7 +1961,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 415 currently emitted canonical grammar forms.** The initial catalog
+  for all 421 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

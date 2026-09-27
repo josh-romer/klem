@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const continuativeTopic = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-continuative-topic.json"), "utf8"));
   const adverbFocus = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adverb-focus.json"), "utf8"));
   const attachments = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-attachments.json"), "utf8"));
   const shortClauses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-short-clauses.json"), "utf8"));
@@ -253,6 +254,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...continuativeTopic.LexicalResource.Lexicon.LexicalEntry,
       ...adverbFocus.LexicalResource.Lexicon.LexicalEntry,
       ...attachments.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryInventory.LexicalResource.Lexicon.LexicalEntry,
@@ -940,6 +942,11 @@ try {
     ["공부해서야", ["공부하", "여서야"], "어서야", "Only after / emphatic reason", 86569, "ending"],
     ["나오면서부터", ["나오", "으면서", "부터"], "부터", "From / starting at", 70055, "particle"],
     ["통해서보다는", ["통하", "여서", "보다", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["먹고는있다네", ["먹", "고", "는", "있", "다네"], "다네", "Information / report", 75191, "ending"],
+    ["먹곤있다", ["먹", "고", "는", "있", "다"], "다", "Plain / dictionary ending", 85041],
+    ["앉아는있다", ["앉", "어", "는", "있", "다"], "다", "Plain / dictionary ending", 85041],
+    ["앉아는계셨다", ["앉", "어", "는", "계시", "었", "다"], "다", "Plain / dictionary ending", 85041],
+    ["먹고는계셨다", ["먹", "고", "는", "계시", "었", "다"], "다", "Plain / dictionary ending", 85041],
     ["먹고는싶다", ["먹", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
     ["먹곤싶다", ["먹", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
     ["학생이고는싶다", ["학생", "이", "고", "는", "싶", "다"], "다", "Plain / dictionary ending", 85041],
@@ -1091,7 +1098,7 @@ try {
       }
       if (form === "으라니") assert.ok(!data.grammar["-으라니"].some(e => ["krdict:81584", "krdict:85121"].includes(e.id)));
     }
-    if (["먹고는싶다", "먹곤싶다", "학생이고는싶다", "의사곤싶다"].includes(word)) {
+    if (["먹고는싶다", "먹곤싶다", "학생이고는싶다", "의사곤싶다", "먹고는있다네", "먹곤있다", "앉아는있다", "앉아는계셨다", "먹고는계셨다"].includes(word)) {
       const selected = data.records[0].analysis.analyses[Number(choice)];
       assert.ok(selected.rules.includes("auxiliary.internal_particle"));
       if (word.includes("곤")) {
@@ -1576,7 +1583,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

@@ -930,3 +930,13 @@ MH2_0069-s118 and MH2_0159-s76; `gsd-adverb-focus.conllu` preserves dev-s382,
 dev-s750 and dev-s814. All are byte-identical to the pinned corpus sentences
 and retain their original corpus licensing and annotations. Six ADV tokens
 explicitly segment an adverb plus a focus particle.
+
+`krdict-continuative-topic.json` contains 38 lexical entries for the COV-019i
+auxiliary-topic regressions, projected from the pinned September 2026 National
+Institute of Korean Language Korean Basic Dictionary export. It retains all
+selected homonyms, senses, attachment notes, English translations and the first
+example group per sense; forms, related entries and idiom subentries are omitted.
+License: [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+Six additional source example groups and their IDs/sense/group indices are
+preserved in `docs/continuative-topic-evaluation.json`; joined test surfaces are
+explicit transformations of spaced examples, not corpus gold or spelling advice.

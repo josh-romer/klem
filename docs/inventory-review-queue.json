@@ -14,8 +14,9 @@
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/chigo-evaluation.json": "c7f2927950286ae43279d140c887d5e9d016f0372064cd0ca10a0e8b97b8130d",
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
+    "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "bf3fc3ce5e915994964d654fad946a4353855fb55a31b69c1d1be8c712bc6298",
+    "docs/coverage-checklist.md": "1f79532cb9e8fc5dba0215f48fd55237e7c93d85611cb860cef37aeaad6c9dc0",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
@@ -26,7 +27,7 @@
     "docs/extent-evaluation.json": "c612ab51f814696b827b15aceee416bef3193efc774e0ada438f8520e95311b5",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/inventory-audit.md": "effc946ad89da2c40cf36795fb0cf8647120a6d81f6f1b45c718725aa68b3019",
-    "docs/inventory-reviews.json": "c185a860cd189a09f97f56ffbc8b085b16e6e97833483eeb571bcd6acc114d53",
+    "docs/inventory-reviews.json": "f4cd8df88b2892c884544999454bf3ec02f74d9890cfbdf785d34c7e4bafccfd",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/prefinal-copula-evaluation.json": "51f8ee8c84b0909e7fae5d03bf40bd04783e85956b43a2f44d3c1a2b382af40e",
@@ -49,6 +50,7 @@
     "tests/chigo_particles.rs": "116a92c14a3ad8cc5880be4f7d9052d9b6d85bdc5156114cc3c715b867832238",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
+    "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/corpus.rs": "ba8bf1ff60fd167e8ae12c1bd6831af741d44d1f181d11abf9d69e24f9165dca",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
@@ -61,7 +63,7 @@
     "tests/extent_particles.rs": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
     "tests/fixtures/dictionary-attachments.json": "f985e9f8c9587c44377552f64961210c6ee0ed0e5e2193df7b5ec6a01000701f",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
-    "tests/fixtures/validity.json": "d7af87b2adc7fccd7a68f8ea9753b050216ea6ccb26dcdb4bb2e57221cf37278",
+    "tests/fixtures/validity.json": "c927e2e8ed1551404fead878065fa853f82d70f33f4cee4b9da02ccb4c810973",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/noh_contraction.rs": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
@@ -463,6 +465,51 @@
           "verdict": "required"
         },
         {
+          "case": "continuative-topic-adjective-honorific",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-alive-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-honorific-result",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-honorific-short",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-omitted-copula",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-result-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-wrong-honorific-connector",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
           "case": "stative-report-required-003",
           "judgment": "path",
           "verdict": "required"
@@ -587,9 +634,10 @@
         "status": "scoped",
         "checklist": [
           "COV-019f",
-          "COV-019g"
+          "COV-019g",
+          "COV-019i"
         ],
-        "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms.",
+        "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks.",
         "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open. COV-019h tracks the remaining prefinal and existential question/adnominal paradigms.",
         "evidence": [
           {
@@ -617,6 +665,17 @@
           },
           {
             "path": "docs/stative-report-evaluation.json"
+          },
+          {
+            "path": "tests/continuative_topic.rs",
+            "test": "continuative_topic_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/continuative_topic.rs",
+            "test": "continuative_topic_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "docs/continuative-topic-evaluation.json"
           }
         ],
         "judgments": [
@@ -730,6 +789,42 @@
           },
           {
             "case": "stative-report-required-095",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-honorific-short",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-honorific-result",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-alive-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-honorific-past",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-result-honorific-past",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-wrong-honorific-connector",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-adjective-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-omitted-copula",
             "judgment": "path"
           }
         ]
@@ -2958,6 +3053,191 @@
           "verdict": "required"
         },
         {
+          "case": "continuative-topic-adjective-left",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-adjective-result",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-bare-present",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-bare-report",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-copula",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-copula-result",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-copula-short",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-dynamic-reset",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-expressive-left",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-formal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-inherited-bare-present",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-left-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-modal-present",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-necessity-left",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-negative",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-negative-adjective",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-negative-report",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-past-present",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-plain",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-polite",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-question",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-regular-bieup",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-regular-digeut",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-report",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-result-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-resultative",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-short",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-short-report",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-trial-chain",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-trial-short",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuative-topic-wrong-connector",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-wrong-particle",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-wrong-progressive-boundary",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-wrong-result-boundary",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuative-topic-wrong-result-particle",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
           "case": "obligation-progressive-order",
           "judgment": "group",
           "verdict": "forbidden"
@@ -3492,9 +3772,10 @@
         "status": "scoped",
         "checklist": [
           "COV-019f",
-          "COV-019g"
+          "COV-019g",
+          "COV-019i"
         ],
-        "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms.",
+        "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks.",
         "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open. COV-019h tracks the remaining prefinal and existential question/adnominal paradigms.",
         "evidence": [
           {
@@ -3522,6 +3803,17 @@
           },
           {
             "path": "docs/stative-report-evaluation.json"
+          },
+          {
+            "path": "tests/continuative_topic.rs",
+            "test": "continuative_topic_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/continuative_topic.rs",
+            "test": "continuative_topic_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "docs/continuative-topic-evaluation.json"
           }
         ],
         "judgments": [
@@ -3959,6 +4251,154 @@
           },
           {
             "case": "stative-report-forbidden-042",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-plain",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-report",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-short",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-short-report",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-resultative",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-past",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-modal",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-formal",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-question",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-left-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-regular-digeut",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-regular-bieup",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-trial-chain",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-trial-short",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-negative",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-negative-report",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-dynamic-reset",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-expressive-left",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-result-past",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-wrong-particle",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-wrong-result-particle",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-wrong-progressive-boundary",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-wrong-result-boundary",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-wrong-connector",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-bare-present",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-bare-report",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-past-present",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-modal-present",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-adjective-left",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-adjective-result",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-negative-adjective",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-copula",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-copula-short",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-copula-result",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-necessity-left",
+            "judgment": "path"
+          },
+          {
+            "case": "continuative-topic-inherited-bare-present",
             "judgment": "path"
           }
         ]
@@ -48029,9 +48469,10 @@
         "status": "scoped",
         "checklist": [
           "COV-019e",
-          "COV-018n"
+          "COV-018n",
+          "COV-019i"
         ],
-        "scope": "One contrastive 는 between connector 고 and 싶다, preserving particle order and vowel allomorph. Other attachments remain independently scoped. COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만.",
+        "scope": "One contrastive 는 between connector 고 and 싶다, preserving particle order and vowel allomorph. Other attachments remain independently scoped. COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks.",
         "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
         "evidence": [
           {
@@ -48063,6 +48504,17 @@
           },
           {
             "path": "docs/adverb-focus-evaluation.json"
+          },
+          {
+            "path": "tests/continuative_topic.rs",
+            "test": "continuative_topic_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/continuative_topic.rs",
+            "test": "continuative_topic_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "docs/continuative-topic-evaluation.json"
           }
         ],
         "judgments": [

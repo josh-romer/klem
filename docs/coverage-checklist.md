@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ab/018a–k/018m–n/019a–g/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ab/018a–k/018m–n/019a–g/019i/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,7 +174,7 @@ review remains open under the completion review below.
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
   The [manual review ledger](inventory-reviews.json) records 191 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ab/018e–k/018m–n/019d–g/020d–h; 523 entries have no disposition in this
+  dispositions from COV-016/017m–n/017p–z/017aa–ab/018e–k/018m–n/019d–g/019i/020d–h; 523 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One additional
   entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -947,8 +947,23 @@ review remains open under the completion review below.
   [the latest source review](present-license-evaluation.json). Official consultation
   material does not provide a categorical auxiliary-wide judgment for every
   honorific or past-adnominal reading. Keep lexical 있다 and auxiliary 있다/계시다
-  senses distinct. COV-019 also retains the internal-particle observation
-  먹고는있다네; its full auxiliary path remains absent.
+  senses distinct. COV-019i resolves the missing internal-particle path
+  먹고는있다네 without settling these existential paradigms.
+
+- [x] **COV-019i — Contrastive particles before continuative auxiliaries.**
+  Added 고 + 는 and 어 + 는 before 있다/계시다, including existing 곤
+  expansion: 먹고는있다네, 먹곤있다, 살아는있을까, 앉아는계신다.
+  Six direct dictionary examples support the spaced constructions; joined
+  input and honorific/contracted composition are explicitly distinguished from
+  source attestations. Existing immediate-left class, boundary, reporting and
+  prefinal checks remain, with unknown lexical heads and whole-word alternatives
+  preserved. Evidence: [52 ledger cases](../tests/fixtures/validity.json)
+  (33 required / 19 forbidden), [Unicode/component/dictionary/CLI tests](../tests/continuative_topic.rs),
+  browser component/source checks, and [candidate/source review](continuative-topic-evaluation.json).
+  Across 82 focused/stress surfaces, 106 hypotheses are added with no prior
+  analyses or provenance removed. All thirty stress fingerprints remain intact.
+  More internal particles, lexical subsets, contextual suitability and COV-019h
+  existential paradigms remain open; this is not cross-token parsing.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

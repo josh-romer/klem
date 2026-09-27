@@ -1958,3 +1958,47 @@ source entries and mobile layout. Inspected screenshots show 아직 + 도,
 자세히 + 는, 일찍 + 부터 and 아직 + 까지 + 도, with no JavaScript errors or
 horizontal overflow. Independent Korean review, fresh-passage validation and the
 other open checklist families remain pending.
+
+### COV-019i: contrastive 는 inside continuative auxiliary chains
+
+The generator now preserves 고/어 + 는 before 있다/계시다, including existing
+곤 expansion. Six direct KRDict examples establish the spaced constructions;
+contracted and honorific forms are explicitly identified as compositional
+inferences. Joined input exercises tolerant word analysis, not spacing repair.
+See the [source and candidate review](continuative-topic-evaluation.json).
+
+The batch adds 52 stable cases (33 required / 19 forbidden), bringing the raw
+ledger to 2,721 cases with 1,612 required and 1,117 forbidden judgments. The
+separate 63-case dictionary-policy ledger is unchanged. The 38-entry attributed
+fixture exercises both dictionary filters and exact CLI/library annotation
+parity; Unicode normalization, component ordering, class restrictions and unknown
+heads are covered in `tests/continuative_topic.rs`.
+
+All 106 additions across 82 focused/stress surfaces were inspected. There are no
+removed analyses or changed existing provenance, and all thirty stress hashes
+remain unchanged. Unknown lexical heads and existing 지만/지 + 말다 alternatives
+remain visible as unjudged hypotheses; no precision claim is made. Development
+outputs are unchanged, including per-case recovery, candidate means and the
+102 KAIST / 150 GSD misses. No corresponding joined token in those development
+sets provides a new recall result; the dictionary examples supply direct
+construction evidence. Frozen corpus baselines are unchanged.
+
+Validation: full Rust/web-feature tests, the full pinned corpus regression,
+focused candidate/dictionary/stress tests, Clippy, formatting, frontend build,
+and offline inventory verification. The source queue remains 191 scoped,
+523 unreviewed and one unresolved gap; the three existing auxiliary/particle
+reviews now link this additional scope.
+
+Browser/HTTP regressions, `nix flake check` on x86_64-linux and `nix build .#web`
+passed. The packaged preview with the full dictionary passed all 52 cases with
+raw/filtered CLI/API parity, five displayed breakdowns, the internal particle's
+source link, and desktop/mobile layout checks.
+
+The pinned 81,758-word 무정 novel retains exactly the same aggregate filtered
+output counts: 119,554 compatible-policy analyses and 73,248 tokens with at least
+one such reading (130,363 / 73,303 for headword-only). No novel coverage gain is
+claimed. Three sequential local Nix release runs per mode, including dictionary
+lookup and JSONL serialization to `/dev/null`, measured median compatible-policy
+time of 1.182s before and 1.209s after, with peak RSS around 28 MiB. These are
+local observations, not throughput guarantees; raw measurements and input/dictionary
+fingerprints are preserved in the source review.

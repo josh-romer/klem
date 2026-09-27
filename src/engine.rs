@@ -1846,6 +1846,10 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
                 (right.stem == "하" && matches!(connector, "고" | "기"))
                     // Contrastive 고는 싶다 (also contracted 곤 싶다).
                     || (right.stem == "싶" && connector == "고")
+                    // Contrastive 고는/어는 있다 and honorific 계시다.
+                    // Keep the connector's left-class and inflection checks.
+                    || (matches!(right.stem.as_str(), "있" | "계시")
+                        && matches!(connector, "고" | "어"))
                     || (connector == "지" && aux_allowed(&right.stem, connector))
             }
             "나" => right.stem == "하" && connector == "기",

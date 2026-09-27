@@ -2349,3 +2349,32 @@ is implied. The inherited particle + explicit-copula composition can also gain
 adverbial-base hypotheses; those still require the separate COV-020 attachment
 audit. Individual notes for other particles, including 조차/마저, remain distinct
 from the general auxiliary-particle class definition.
+
+### Contrastive particles before continuative auxiliaries (COV-019i)
+
+The single internal particle slot accepts **는** after canonical **고/어**
+before **있다/계시다**. For example, 먹고는있다네 yields
+먹다 + 고 + 는 + 있다 + 다네; 살아는있을까 yields
+살다 + 어 + 는 + 있다 + 을까. The existing 고는 → 곤 expansion also
+composes here. No general contraction of 어는 is inferred.
+
+KRDict 는 (85851) lists contrastive attachment after 고 and 아; 있다 (62595)
+and 계시다 (61346) supply the continuative/resultative auxiliary frames.
+The [source review](continuative-topic-evaluation.json) retains six direct
+examples, including 듣고는 있는 and 살아는 있을까. Honorific and 곤 forms
+are compositional inferences. These spaced examples justify tolerant joined
+input, not a change to Korean spacing or cross-token analysis.
+
+The particle does not bypass left-class checks: represented 싶다 adjectives,
+inherited adjective negatives and copulas cannot supply the verb required by
+these auxiliaries. Existing right-side restrictions and the distinction between
+auxiliary 있다 and lexical 있다 remain. Verbal negative 않는다 remains
+available after 있다, alongside the stative reporting paths. A later dynamic
+auxiliary still changes the inflection class.
+
+The raw generator retains unknown stems, alternate vowel restorations and
+existing bundled/component ending alternatives. For example, 지만 can still
+have a distinct 지 + 말다 hypothesis; this change does not certify its
+contextual meaning or the acceptability of every auxiliary ending. Further
+particle stacks, lexical/aspect restrictions and existential paradigms remain
+open under COV-019/019h.

@@ -8783,3 +8783,73 @@ fn report_ni_preserves_dictionary_roles_and_cli_parity() {
     }
     assert_eq!(checked, 163);
 }
+
+#[test]
+fn short_clauses_preserve_dictionary_roles_and_cli_parity() {
+    let dir = Scratch::new();
+    import_krdict(
+        &[
+            PathBuf::from("tests/fixtures/krdict-report-ni.json"),
+            PathBuf::from("tests/fixtures/krdict-short-clauses.json"),
+        ],
+        dir.db(),
+        "short-clause-regression",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(dir.db()).unwrap();
+    let mut session = DictionarySession::new(&db, 1024 * 1024);
+    let ledger: Value = serde_json::from_str(include_str!("fixtures/validity.json")).unwrap();
+    let mut checked = 0;
+    for case in ledger["cases"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .filter(|c| c["id"].as_str().unwrap().starts_with("short-clause-"))
+    {
+        let word = case["surface"].as_str().unwrap();
+        let result = Lemmatizer::new().analyze_word(word).unwrap();
+        let annotation = session.annotate(&result).unwrap();
+        let kept = result.filtered(|l| annotation.has_match(l, false));
+        for j in case["judgments"].as_array().unwrap() {
+            let found = kept.analyses.iter().find(|a| {
+                let v = serde_json::to_value(a).unwrap();
+                [
+                    ("lemmas", "text", "lemmas"),
+                    ("lemmas", "kind", "lemma_kinds"),
+                    ("morphemes", "form", "morphemes"),
+                    ("morphemes", "kind", "morpheme_kinds"),
+                ]
+                .iter()
+                .all(|(field, key, expected)| {
+                    v[field]
+                        .as_array()
+                        .unwrap()
+                        .iter()
+                        .map(|v| &v[key])
+                        .eq(j[expected].as_array().unwrap())
+                })
+            });
+            assert_eq!(found.is_some(), j["verdict"] == "required", "{word}: {j}");
+            if let Some(a) = found {
+                assert!(
+                    a.lemmas.iter().all(|l| annotation.has_match(l, true)),
+                    "{word}"
+                );
+            }
+        }
+        let output = Command::new(env!("CARGO_BIN_EXE_klem"))
+            .args(["word", word, "--dictionary"])
+            .arg(dir.db())
+            .arg("--dict-only")
+            .output()
+            .unwrap();
+        assert!(output.status.success());
+        let actual: Value = serde_json::from_slice(&output.stdout).unwrap();
+        assert_eq!(
+            actual["analyses"],
+            serde_json::to_value(&kept.analyses).unwrap()
+        );
+        checked += 1;
+    }
+    assert_eq!(checked, 142);
+}

@@ -584,3 +584,25 @@ The new COV-017aa item tracks lexical-class hypotheses that survive headword
 filtering. Generic retrospective questions, existential paradigms and
 particle-marked copula bases remain explicitly unjudged followups, not passed
 coverage claims. Independent Korean-language review is still pending.
+
+
+### Short quoted modifiers and change/conditionals (COV-017ab)
+
+Eight new components distinguish quoted 단/는단/잔/냔/느냔/으냔 and the
+change/conditional 단/다간/다가는 homonyms. Ten explicit source IDs preserve
+full/attached and expression readings, while excluding noun suffix -단 (73350).
+The generic question source explicitly supports 누구냔 with omitted 이다.
+Three new scoped ending reviews leave **189 scoped, one observed gap and 525
+unreviewed** among the 715 grammar-POS entries. Seven expression entries remain
+separately attributed outside that POS queue.
+
+The [review](short-clause-evaluation.json) records 151 surfaces and 599 added
+candidates, with no removed candidates or changed existing provenance. Two
+KAIST gold groups newly match; misses are 102 KAIST / 150 GSD, with no losses.
+All 30 stress fingerprints are unchanged. Exact role judgments cover 92 required
+and 50 forbidden paths. A separate probe records all 17 converted development
+surfaces ending in the new spellings: 16 gain hypotheses while retaining their
+original readings, including noun-context 세단 and 판단. This does not certify
+contextual correctness. Further particles, omitted copulas, shortening,
+existential questions and lexical classes remain explicit followups; independent
+Korean-language review is still pending.

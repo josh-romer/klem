@@ -12243,6 +12243,305 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:73730",
+      "source_sha256": "5436c508d3d03aa5b93a139d8a810b8b0358904ebbc5e87a5031c726bcfb86f6",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ab"
+      ],
+      "scope": "Change/conditional family retains bare predicates and copulas or 시/었/겠, excluding recovered 더. Canonical 단 also preserves its distinct quoted-modifier homonym. Exact role judgments exercise known classes and auxiliary composition without licensing a noun suffix.",
+      "remaining": "Further outer particles, omitted-copula forms, 하다 shortening, lexical/sense classes and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/short_clauses.rs",
+          "test": "short_clauses_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "short_clauses_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/short-clause-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-clause-required-31",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-32",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-33",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-34",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-35",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-36",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-37",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-38",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-39",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-40",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-41",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-42",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-43",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-44",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-45",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-9",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-10",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-11",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-12",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-48",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73746",
+      "source_sha256": "cb8d72aff905bc231c3d9e8747c687cc47be3677f2d513c274e6f806f22e1a74",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ab"
+      ],
+      "scope": "Change/conditional family retains bare predicates and copulas or 시/었/겠, excluding recovered 더. Canonical 단 also preserves its distinct quoted-modifier homonym. Exact role judgments exercise known classes and auxiliary composition without licensing a noun suffix.",
+      "remaining": "Further outer particles, omitted-copula forms, 하다 shortening, lexical/sense classes and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/short_clauses.rs",
+          "test": "short_clauses_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "short_clauses_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/short-clause-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-clause-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-23",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-24",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-26",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-27",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-28",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-29",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-47",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86205",
+      "source_sha256": "0b257270f4d96d571a2a41019666eb5eee3d740a32dae3e57b494ef8221c3152",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ab"
+      ],
+      "scope": "Change/conditional family retains bare predicates and copulas or 시/었/겠, excluding recovered 더. Canonical 단 also preserves its distinct quoted-modifier homonym. Exact role judgments exercise known classes and auxiliary composition without licensing a noun suffix.",
+      "remaining": "Further outer particles, omitted-copula forms, 하다 shortening, lexical/sense classes and independent Korean-language review remain open. This is not full-entry coverage certification.",
+      "evidence": [
+        {
+          "path": "tests/short_clauses.rs",
+          "test": "short_clauses_preserve_roles_normalization_and_explainable_breakdowns"
+        },
+        {
+          "path": "tests/dictionary.rs",
+          "test": "short_clauses_preserve_dictionary_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/short-clause-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-clause-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "short-clause-forbidden-46",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

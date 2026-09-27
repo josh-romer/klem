@@ -890,3 +890,22 @@ MH2_0169-s206 and MH2_0169-s628; `gsd-report-ni.conllu` retains dev-s74 from the
 pinned corpora, under their respective corpus licenses described above. These
 protect 따라가자니, 상대하자니 and 하신다니 without rewriting source spelling,
 segmentation or POS labels. Their gold groups do not enumerate all alternatives.
+
+
+`krdict-short-clauses.json` retains four additional lexical entries (내리다,
+노력하다, 누구, 많다) and the unrelated suffix -단 (73350) as a negative source
+control for COV-017ab; the tests reuse the 53-entry
+`krdict-report-ni.json` fixture for the other selected lexical homonyms.
+`krdict-grammar-labels.json` gains ten ending/expression entries for
+단/는단/잔/냔/느냔/으냔/다간/다가는, excluding noun suffix 73350.
+These excerpts are adapted from the September 2026 KRDict export by the National
+Institute of Korean Language under CC BY-SA 2.0 KR. Changes: every selected
+homonym/sense, English equivalents only, first example group per sense, omit
+WordForm/RelatedForm/global metadata and idiom subentries, and reformat JSON.
+Source/license links are above. The catalog now has 312 forms, 427 source IDs
+and 428 grammar fixture entries; these are integration fixtures, not gold analyses.
+
+`kaist-short-clauses.conllu` retains complete, byte-identical development
+sentences MH2_0149-s11 and MH2_0169-s5 from the pinned KAIST corpus, under its
+license described above. They protect 된단 and 노력했단 without rewriting
+annotations, spelling or POS. Gold groups do not enumerate all valid alternatives.

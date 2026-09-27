@@ -430,6 +430,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                         suffix,
                         "다" | "다고"
                             | "다니"
+                            | "단"
                             | "다는"
                             | "다면"
                             | "답니다"
@@ -488,6 +489,12 @@ pub(crate) fn endings() -> &'static [Ending] {
         }
         for suffix in [
             "다",
+            "단",
+            "다간",
+            "다가는",
+            "잔",
+            "냔",
+            "느냔",
             "답니다",
             "다네",
             "다는데",
@@ -636,6 +643,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("더라며", "더라며", 0),
             ("더라면서", "더라면서", 0),
             ("더라니", "더라니", 0),
+            // KRDict 85653 explicitly illustrates 누구냔.
+            ("냔", "냔", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -706,6 +715,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으냐며", "냐며", "으냐며"),
             ("으냐면서", "냐면서", "으냐면서"),
             ("으냐니", "냐니", "으냐니"),
+            ("으냔", "냔", "으냔"),
             ("으나", "나", "으나"),
             ("으나마", "나마", "으나마"),
             ("으리라", "리라", "으리라"),
@@ -773,6 +783,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다며", "다며", "는다며", 4),
             ("는다면서", "다면서", "는다면서", 4),
             ("는다니", "다니", "는다니", 4),
+            ("는단", "단", "는단", 4),
             ("는다거나", "다거나", "는다거나", 4),
             ("는다든가", "다든가", "는다든가", 4),
         ] {
@@ -1235,6 +1246,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
         "ending.reporting_polite" => {
             "Recognize a polite informative or reported-speech ending as one grammatical component; its sense and any implicit speaker are not inferred."
+        }
+        "ending.short_clause" => {
+            "Recognize a reviewed contracted quotation or change/conditional family as one component; preserve homonyms without adding an implicit reporting verb or choosing a contextual sense."
         }
         "ending.reporting_ni" => {
             "Recognize a surprise, reported statement, command, proposal or question in a -니 family; preserve homonyms without inserting an implicit reporting verb or selecting a contextual sense."

@@ -2296,3 +2296,36 @@ implicit reporting 하다 or select a contextual sense. Required/forbidden tests
 constrain exact represented paths while the unclassified lexical alternatives
 remain visible. Dictionary-aware lexical class review is COV-017aa; auxiliary
 existential and particle-marked nominal/copula issues remain COV-019h/COV-020.
+
+
+## Short quoted modifiers and change/conditionals (COV-017ab)
+
+Canonical 단 preserves its quoted-modifier expression (86206, 다고 하는) and
+change/conditional ending (86205, short 다가는). The latter admits bare verbs:
+먹단 and 먹어보단 therefore retain those readings alongside adjective/prefinal
+quotation possibilities. 다간 (73746) and 다가는 (73730) keep their separate
+source-listed components with the same bare-predicate and 시/었/겠 licenses;
+recovered 더 is excluded. The group-forming noun suffix -단 (73350) is not an
+ending and is excluded from the catalog lookup.
+
+Present 는단 combines full 는단 (86207) and attached ㄴ단 (86208), sharing the
+present-declarative boundary and class checks. ㄴ does not trigger vowel-only
+irregular recovery. 된단 yields 되다 + 는단; 노력했단 yields 노력하다 + 었 + 단.
+잔 (83897) contracts 자는 and is scoped to bare verbal proposals. Generic 냔
+(85653), verbal/existential 느냔 (85659), and bare adjectival 으냔 (85664) keep
+separate question paths. 느냔 permits 시/었/겠 and ㄹ deletion, but not 더;
+으냔 is a bare-adjective path. Generic 더 + 냔 remains unjudged.
+
+Source 85653 explicitly illustrates 누구냔. Vowel-final omitted-copula recovery
+therefore yields 누구 + 이다 + 냔, using a nominal boundary without predicate
+irregular restoration. This does not permit consonant-final 학생냔 as 학생 + 이다
+or certify omission before every other new ending. Known auxiliary/copula and
+답다 roles retain their class constraints; raw lexical predicates remain
+unclassified and dictionary presence alone does not certify attachment.
+
+The [source/candidate review](short-clause-evaluation.json) records exact paths,
+all source homonyms, two annotated recoveries and unresolved followups. Quoted
+components do not insert a silent reporting 하다 or become auxiliary connectors.
+Nouns such as 세단 and 판단 retain whole-word readings alongside newly possible
+formal hypotheses. Sentence-context selection, extra particles, other copula
+omissions and expanded 하다 shortening remain separate review scopes.

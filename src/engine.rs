@@ -319,6 +319,7 @@ fn present_declarative(form: &str) -> bool {
             | "는다며"
             | "는다면서"
             | "는다니"
+            | "는단"
     )
 }
 
@@ -483,6 +484,15 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     || (matches!(ending.form, "자니" | "으냐니") && !p.morphs.is_empty())
                     || (matches!(ending.form, "느냐니" | "더라니")
                         && p.morphs.iter().any(|m| m.form == "더"))
+                {
+                    continue;
+                }
+                // Short quotation and change/conditional homonyms keep their
+                // own licenses. Plain 단 also abbreviates 다가는, so it admits
+                // bare verbs, including represented auxiliaries.
+                if (matches!(ending.form, "단" | "다간" | "다가는" | "느냔")
+                    && p.morphs.iter().any(|m| m.form == "더"))
+                    || (matches!(ending.form, "잔" | "으냔") && !p.morphs.is_empty())
                 {
                     continue;
                 }
@@ -671,6 +681,12 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "더라는데"
                 ) {
                     p.rules.push("ending.reporting_ne".into());
+                }
+                if matches!(
+                    ending.form,
+                    "단" | "는단" | "다간" | "다가는" | "잔" | "냔" | "느냔" | "으냔"
+                ) {
+                    p.rules.push("ending.short_clause".into());
                 }
                 if reporting_ni(ending.form) {
                     p.rules.push("ending.reporting_ni".into());
@@ -997,6 +1013,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                         | "으라면서"
                         | "으라니"
                         | "자니"
+                        | "잔"
                         | "자며"
                         | "자면서"
                         | "자면"
@@ -1028,11 +1045,12 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                             | "느냐며"
                             | "느냐면서"
                             | "느냐니"
+                            | "느냔"
                     ),
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
                     Some(PredicateClass::Verb) => {
-                        matches!(m.form.as_str(), "으냐며" | "으냐면서" | "으냐니")
+                        matches!(m.form.as_str(), "으냐며" | "으냐면서" | "으냐니" | "으냔")
                             || (!report_stative
                                 && matches!(
                                     m.form.as_str(),
@@ -1077,6 +1095,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                         | "으라면서"
                         | "으라니"
                         | "자니"
+                        | "잔"
                         | "자며"
                         | "자면서"
                         | "자면"
@@ -1110,6 +1129,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐며"
                 | "으냐면서"
                 | "으냐니"
+                | "으냔"
                 | "으리라"
                 | "으리"
                 | "으리라고"
@@ -1129,6 +1149,10 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         "겠" | "더"
             | "다"
             | "다가"
+            | "단"
+            | "다간"
+            | "다가는"
+            | "냔"
             | "다고"
             | "다는"
             | "다니"
@@ -1247,6 +1271,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                         | "으라면서"
                         | "으라니"
                         | "자니"
+                        | "잔"
                         | "자며"
                         | "자면서"
                         | "자면"
@@ -1279,6 +1304,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 | "느냐면서"
                 | "느냐니"
                 | "으냐니"
+                | "으냔"
+                | "느냔"
                 | "으냐며"
                 | "으냐면서"
                 | "느냐는"

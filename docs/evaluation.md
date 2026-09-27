@@ -1811,3 +1811,49 @@ full-dictionary app passes 18 reading selections and all **109 required / 54
 forbidden** judgments. Source panes resolve all mapped homonyms. Inspected
 desktop/mobile screenshots show 하 + 시 + 는다니 with the short -ㄴ다니 source
 selected, no JavaScript errors and no horizontal overflow.
+
+
+## Short quoted modifiers and change/conditionals (COV-017ab)
+
+[The review](short-clause-evaluation.json) adds 단/는단/잔/냔/느냔/으냔/다간/
+다가는, preserving quoted and change/conditional homonyms. Bare verbs remain
+valid before conditional 단; present quotations use full 는 or attached ㄴ.
+The generic question source explicitly supports omitted copula in 누구냔.
+Noun suffix -단 is excluded from ending lookups.
+
+KAIST **된단 → 되다** and **노력했단 → 노력하다** newly match their annotated
+groups. No groups or recovered component sets are lost; remaining development
+misses are **102 KAIST / 150 GSD**. Mean candidates are 5.837174 and 5.374412.
+Two complete, unchanged source sentences preserve these recoveries. All 30
+stress snapshots and frozen historical corpus baselines are unchanged.
+
+There are **142 new cases: 92 required / 50 forbidden**, bringing the ledger
+to **2,614 cases: 1,541 required / 1,081 forbidden**. A five-entry fixture (four lexical entries plus the unrelated -단 suffix as a
+negative source control) complements the reused 53-entry -니 fixture. Dictionary-only CLI/library parity
+covers all new judgments. The catalog now contains **312 canonical forms / 427
+source IDs / 428 grammar fixture entries**, with ten new source IDs. Three new
+scoped reviews leave **189 scoped, one observed gap, 525 unreviewed** in the
+715-entry grammar-POS queue; expression sources remain separately attributed.
+
+The 151-surface comparison records 599 added candidates and no removals or
+changed existing provenance. Of those additions, 105 have dictionary headwords
+for every lemma; this is not a precision estimate. A separate probe of all 17
+converted development surfaces ending in the new spellings records 16 changes,
+including noun-context 세단/판단. Whole-word readings remain, and no contextual
+sense or suffix segmentation is inferred. The report keeps lexical-class,
+particle/copula, existential and shortening followups open. Independent Korean
+review and fresh-passage evaluation remain pending.
+
+Formatting, Rust tests, Clippy, all **66,570 frozen corpus cases**, stress/memory
+regressions, frontend production build, browser/HTTP checks and offline inventory
+verification pass. `nix flake check` and `nix build .#web` pass on x86_64-linux;
+other declared systems were not executed. The final Nix suite includes all 142
+new cases and both complete annotated sentences. The offline browser fixture
+contains suffix 73350 and asserts its presence before checking its exclusion
+from the -단 ending sources. The packaged full-dictionary app passes thirteen
+reading selections and all **92 required / 50 forbidden** judgments. Inspected
+desktop/mobile screenshots show 노력하 + 였 + 단 with the quoted expression
+source selected, no JavaScript errors and no horizontal overflow. The final
+fixture-only rebuild produces a byte-identical web executable to that preview.
+An interrupted final Nix/browser run was confirmed stopped and rerun successfully;
+no interrupted run is counted as a passing check.

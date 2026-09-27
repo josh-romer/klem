@@ -14,7 +14,7 @@
     "docs/chigo-evaluation.json": "c7f2927950286ae43279d140c887d5e9d016f0372064cd0ca10a0e8b97b8130d",
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "5e6757104b5de3a571d060c6ea089b9eab30216006ff4f3e178f79b97bf3ded5",
+    "docs/coverage-checklist.md": "bd740a4f1ca54c17e1bdd1ae16ee985d516c535f4003c540c4ad9af7f64d38f3",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/doe-evaluation.json": "e59e50e002254721f521fd28d4ff90ca3b37abdc0915d5119b29b6e633743853",
@@ -22,8 +22,8 @@
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
     "docs/extent-evaluation.json": "c612ab51f814696b827b15aceee416bef3193efc774e0ada438f8520e95311b5",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
-    "docs/inventory-audit.md": "481b66de94b246ecd519a1f7c3688dd390382403aea0fcef7ad0101aaaec7c54",
-    "docs/inventory-reviews.json": "a361d30fb105d551d9d3888c11e18a80cb809ebd5d2e814d2fadca68069d5288",
+    "docs/inventory-audit.md": "effc946ad89da2c40cf36795fb0cf8647120a6d81f6f1b45c718725aa68b3019",
+    "docs/inventory-reviews.json": "5e4e4feb30e6ca1a5fc9b7cfabd7559537e441fba2e48ce9181e1bd743f6fd37",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/prefinal-copula-evaluation.json": "51f8ee8c84b0909e7fae5d03bf40bd04783e85956b43a2f44d3c1a2b382af40e",
@@ -38,6 +38,7 @@
     "docs/retrospective-connective-evaluation.json": "d3d01db20e6f35fdfb9e921e39f5efcc3fb6ae6df00d3137abfe4efd445ac257",
     "docs/retrospective-license-evaluation.json": "f1e83ed48f3f50a70f8ebe65ae8781144b85ca2eb2b5a30a0aa3764139ca4e21",
     "docs/seo-connective-evaluation.json": "eb0b98f963e2685d24f2572f3b43619a8f2b636c4c007f1924fbaf0b0f056e07",
+    "docs/short-clause-evaluation.json": "04024133e4c6fd13853333bf6ec41ff3286a492080d1039185b6f3702de9fab6",
     "docs/stative-report-evaluation.json": "ac1f990a800deff1b630016ab86b088654a14e09d1532059d953a1be05a55419",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
@@ -45,16 +46,16 @@
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
     "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
-    "tests/corpus.rs": "03cd97066eaba7941d857e83d38dbb64d1e547d7cf908ad19c64c92163e4fa01",
+    "tests/corpus.rs": "ba8bf1ff60fd167e8ae12c1bd6831af741d44d1f181d11abf9d69e24f9165dca",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
-    "tests/dictionary.rs": "db0ea77d92d108c4d78c848d1b10f7f1b97805cea6eb9f346525cb5e76b9a9e3",
+    "tests/dictionary.rs": "c604d5ae616f24d50dc5d3c8829103e41e57da810b34b19aa7265c67c2ea6f50",
     "tests/doe_endings.rs": "f9da534bcfbbf4ad3c543afa015f541ad4ebebeacf1fb206046e40c68741132f",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
     "tests/extent_particles.rs": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
-    "tests/fixtures/validity.json": "072207f512eaff9cf764dfdeb9fda3a4e2fc0532e4b15a17e4178577069c1c49",
+    "tests/fixtures/validity.json": "ac1f192cbc4cd802984150ead8945e4a10914637aebdfb046cac1cfda9f1c0d0",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/noh_contraction.rs": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
@@ -70,8 +71,9 @@
     "tests/retrospective_connectives.rs": "b14cb45785467763ccaa679df949ab3d2b7c58a69e803e1ed39d31c5a86d21f6",
     "tests/retrospective_licenses.rs": "782f6bd547a54ad6d664566c70cfe1d5bea8fc5b423f2ed04596a761924938f7",
     "tests/seo_connectives.rs": "16fe785640f46da0d453bc2db93c70eb089dacf7d092f65b9dc8cb0d40851680",
+    "tests/short_clauses.rs": "d3e1dbb93de840f53c3474ebf4e41e346dc57a0d1225c5d5738226d52ede46a3",
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
-    "web/src/grammar-labels.json": "ae9fd3e8b9c5608f9b0d383d7e53485bf9aa7c9d24f3c150d2abb8eb16a616f8"
+    "web/src/grammar-labels.json": "89dfbe0ed6d4599f2235b3572f6c66b18e22433322a4245dced1abfa2dc0eec5"
   },
   "counts": {
     "entries": 715,
@@ -82,12 +84,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 528,
-      "scoped": 186,
+      "unreviewed": 525,
+      "scoped": 189,
       "gap": 1
     },
-    "with_catalog_links": 292,
-    "with_judgment_citations": 234
+    "with_catalog_links": 295,
+    "with_judgment_citations": 237
   },
   "entries": [
     {
@@ -21454,11 +21456,219 @@
         ]
       },
       "source_sha256": "5436c508d3d03aa5b93a139d8a810b8b0358904ebbc5e87a5031c726bcfb86f6",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-다가는",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "short-clause-forbidden-10",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-11",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-12",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-48",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-9",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-required-31",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-32",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-33",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-34",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-35",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-36",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-37",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-38",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-39",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-40",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-41",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-42",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-43",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-44",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-45",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:73730",
+        "source_sha256": "5436c508d3d03aa5b93a139d8a810b8b0358904ebbc5e87a5031c726bcfb86f6",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ab"
+        ],
+        "scope": "Change/conditional family retains bare predicates and copulas or 시/었/겠, excluding recovered 더. Canonical 단 also preserves its distinct quoted-modifier homonym. Exact role judgments exercise known classes and auxiliary composition without licensing a noun suffix.",
+        "remaining": "Further outer particles, omitted-copula forms, 하다 shortening, lexical/sense classes and independent Korean-language review remain open. This is not full-entry coverage certification.",
+        "evidence": [
+          {
+            "path": "tests/short_clauses.rs",
+            "test": "short_clauses_preserve_roles_normalization_and_explainable_breakdowns"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "short_clauses_preserve_dictionary_roles_and_cli_parity"
+          },
+          {
+            "path": "docs/short-clause-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "short-clause-required-31",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-32",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-33",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-34",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-35",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-36",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-37",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-38",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-39",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-40",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-41",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-42",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-43",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-44",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-45",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-9",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-10",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-11",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-12",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-48",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -21507,11 +21717,219 @@
         ]
       },
       "source_sha256": "cb8d72aff905bc231c3d9e8747c687cc47be3677f2d513c274e6f806f22e1a74",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-다간",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "short-clause-forbidden-47",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-5",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-6",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-7",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-8",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-required-16",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-17",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-18",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-19",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-20",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-21",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-22",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-23",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-24",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-25",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-26",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-27",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-28",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-29",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-30",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:73746",
+        "source_sha256": "cb8d72aff905bc231c3d9e8747c687cc47be3677f2d513c274e6f806f22e1a74",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ab"
+        ],
+        "scope": "Change/conditional family retains bare predicates and copulas or 시/었/겠, excluding recovered 더. Canonical 단 also preserves its distinct quoted-modifier homonym. Exact role judgments exercise known classes and auxiliary composition without licensing a noun suffix.",
+        "remaining": "Further outer particles, omitted-copula forms, 하다 shortening, lexical/sense classes and independent Korean-language review remain open. This is not full-entry coverage certification.",
+        "evidence": [
+          {
+            "path": "tests/short_clauses.rs",
+            "test": "short_clauses_preserve_roles_normalization_and_explainable_breakdowns"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "short_clauses_preserve_dictionary_roles_and_cli_parity"
+          },
+          {
+            "path": "docs/short-clause-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "short-clause-required-16",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-17",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-18",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-19",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-20",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-21",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-22",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-23",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-24",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-25",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-26",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-27",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-28",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-29",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-30",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-5",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-6",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-7",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-8",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-47",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -23448,11 +23866,183 @@
         ]
       },
       "source_sha256": "0b257270f4d96d571a2a41019666eb5eee3d740a32dae3e57b494ef8221c3152",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-단",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "short-clause-forbidden-1",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-2",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-3",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-4",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-forbidden-46",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "short-clause-required-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-10",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-11",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-12",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-13",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-14",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-15",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-5",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "short-clause-required-7",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86205",
+        "source_sha256": "0b257270f4d96d571a2a41019666eb5eee3d740a32dae3e57b494ef8221c3152",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ab"
+        ],
+        "scope": "Change/conditional family retains bare predicates and copulas or 시/었/겠, excluding recovered 더. Canonical 단 also preserves its distinct quoted-modifier homonym. Exact role judgments exercise known classes and auxiliary composition without licensing a noun suffix.",
+        "remaining": "Further outer particles, omitted-copula forms, 하다 shortening, lexical/sense classes and independent Korean-language review remain open. This is not full-entry coverage certification.",
+        "evidence": [
+          {
+            "path": "tests/short_clauses.rs",
+            "test": "short_clauses_preserve_roles_normalization_and_explainable_breakdowns"
+          },
+          {
+            "path": "tests/dictionary.rs",
+            "test": "short_clauses_preserve_dictionary_roles_and_cli_parity"
+          },
+          {
+            "path": "docs/short-clause-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "short-clause-required-1",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-2",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-3",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-5",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-7",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-10",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-11",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-12",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-13",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-14",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-required-15",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-1",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-2",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-3",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-4",
+            "judgment": "path"
+          },
+          {
+            "case": "short-clause-forbidden-46",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

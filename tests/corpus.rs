@@ -1686,3 +1686,22 @@ fn report_ni_recovers_complete_annotated_sentences() {
         }
     }
 }
+
+#[test]
+fn short_clauses_recover_annotated_quoted_adnominals() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-short-clauses.conllu").as_slice(),
+        Corpus::Kaist,
+        "short-clauses",
+    )
+    .unwrap();
+    for (id, surface, lemma) in [
+        ("id:MH2_0149-s11/5", "된단", "되다"),
+        ("id:MH2_0169-s5/14", "노력했단", "노력하다"),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, vec![lemma]);
+        assert!(case.matched, "{id}");
+    }
+}

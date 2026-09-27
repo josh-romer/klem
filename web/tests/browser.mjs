@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const shortClauses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-short-clauses.json"), "utf8"));
   const reportNi = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-report-ni.json"), "utf8"));
   const presentLicenses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-present-licenses.json"), "utf8"));
   const stativeReport = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-stative-report.json"), "utf8"));
@@ -279,6 +280,7 @@ try {
       ...approximation.LexicalResource.Lexicon.LexicalEntry,
       ...presentLicenses.LexicalResource.Lexicon.LexicalEntry,
       ...reportNi.LexicalResource.Lexicon.LexicalEntry,
+      ...shortClauses.LexicalResource.Lexicon.LexicalEntry,
       ...stativeReport.LexicalResource.Lexicon.LexicalEntry,
       ...reportMyeo.LexicalResource.Lexicon.LexicalEntry,
     ].filter((entry) => {
@@ -296,6 +298,10 @@ try {
     "--snapshot",
     "browser-tests",
   ]);
+  // Keep the homonymous noun suffix in the database so the later -단 ending
+  // source exclusion actually exercises POS filtering.
+  const danEntries = JSON.parse(execFileSync(cliBin, ["dict", "lookup", database, "-단"], {encoding: "utf8"})).entries;
+  assert.ok(danEntries.some(e => e.id === "krdict:73350" && e.pos === "접사"));
   const url = await start(true);
   const post = (path, body) =>
     fetch(`${url}/api/${path}`, {
@@ -720,6 +726,18 @@ try {
     ["필요하다면서", ["필요하", "다면서"], "다면서", "Report / confirmation", 78806, "ending"],
     ["극복하겠다며", ["극복하", "겠", "다며"], "다며", "Report / confirmation", 81466, "ending"],
     ["먹는다면서요", ["먹", "는다면서", "요"], "요", "Polite", 86116, "particle"],
+    ["된단", ["되", "는단"], "는단", "Quoted modifier", 86207, "ending"],
+    ["노력했단", ["노력하", "였", "단"], "단", "Quoted modifier / conditional", 86205, "ending"],
+    ["먹는단", ["먹", "는단"], "는단", "Quoted modifier", 86207, "ending"],
+    ["하신단", ["하", "시", "는단"], "는단", "Quoted modifier", 86207, "ending"],
+    ["먹잔", ["먹", "잔"], "잔", "Quoted proposal", 83897, "ending"],
+    ["학생이냔", ["학생", "이", "냔"], "냔", "Quoted question", 85653, "ending"],
+    ["누구냔", ["누구", "이", "냔"], "냔", "Quoted question", 85653, "ending"],
+    ["먹느냔", ["먹", "느냔"], "느냔", "Quoted question", 85659, "ending"],
+    ["좋으냔", ["좋", "으냔"], "으냔", "Quoted question", 85664, "ending"],
+    ["먹다간", ["먹", "다간"], "다간", "Change / conditional", 73746, "ending"],
+    ["먹다가는", ["먹", "다가는"], "다가는", "Change / conditional", 73730, "ending"],
+    ["먹어보단", ["먹", "어", "보", "단"], "단", "Quoted modifier / conditional", 86205, "ending"],
     ["하다니", ["하", "다니"], "다니", "Surprise / repeated question", 74141, "ending"],
     ["하신다니", ["하", "시", "는다니"], "는다니", "Present report / surprise", 75475, "ending"],
     ["먹는다니", ["먹", "는다니"], "는다니", "Present report / surprise", 75475, "ending"],
@@ -959,6 +977,20 @@ try {
     await breakdown.getByRole("button", {name: `${expected.at(-1)} ${label}`, exact: true}).click();
     await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
     assert.ok(data.grammar[kind === "particle" ? form : `-${form}`].some(e => e.id === `krdict:${id}`));
+    if (["단", "는단", "잔", "냔", "느냔", "으냔", "다간", "다가는"].includes(form)) {
+      assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("ending.short_clause"));
+      for (const source of grammarLabels["-" + form].sources) {
+        const entry = data.grammar["-" + form].find(e => e.id === `krdict:${source.id}`);
+        assert.ok(entry, `${word}: ${source.id}`);
+        const index = await page.locator(".entry-choices button").evaluateAll((buttons, e) => buttons.findIndex(b =>
+          b.querySelector("span")?.textContent === e.headword + (e.homonym === "0" ? "" : e.homonym) &&
+          b.querySelector("small")?.textContent === e.pos), entry);
+        assert.ok(index >= 0, `${word}: ${source.id}`);
+        await page.locator(".entry-choices button").nth(index).click();
+        await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), source.id);
+      }
+      if (form === "단") assert.ok(!data.grammar["-단"].some(e => e.id === "krdict:73350"));
+    }
     if (["다니", "는다니", "라니", "으라니", "더라니", "자니", "냐니", "느냐니", "으냐니"].includes(form)) {
       assert.ok(data.records[0].analysis.analyses[Number(choice)].rules.includes("ending.reporting_ni"));
       for (const source of grammarLabels["-" + form].sources) {
@@ -1458,7 +1490,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

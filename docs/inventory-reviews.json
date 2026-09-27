@@ -23624,6 +23624,498 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:81514",
+      "source_sha256": "3b3871f3132eca016ec83d0a5e5442f528b53abe1f0f8240e00e42ede8836ff4",
+      "status": "scoped",
+      "checklist": [
+        "COV-017at"
+      ],
+      "scope": "Reviewed short report with source-sense examples, coda/prefinal constraints, polite particle, lexical/copular/auxiliary/derived ownership and command/intention alternatives. Source note/example conflicts are preserved.",
+      "remaining": "Independent linguistic review and contextual sense selection remain open; wider outer particles, negative/existential paradigms and novel derived-boundary hypotheses are not certified.",
+      "evidence": [
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "clothing_question_source_conflict_is_scoped_to_attested_polite_head"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "short_reports_recover_unchanged_gsd_training_targets"
+        },
+        {
+          "path": "docs/short-reports-evaluation.json"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_questions_preserve_existential_entries_and_assess_homonyms"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-report-source-81514-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-0",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-3",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-4",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-31",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-20",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-21",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-22",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-23",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81509",
+      "source_sha256": "edbf7d147754f86781312ea503ff686e77c46067cf20cc9a1aee7fcce6a41c8c",
+      "status": "scoped",
+      "checklist": [
+        "COV-017at"
+      ],
+      "scope": "Reviewed short report with source-sense examples, coda/prefinal constraints, polite particle, lexical/copular/auxiliary/derived ownership and command/intention alternatives. Source note/example conflicts are preserved.",
+      "remaining": "Independent linguistic review and contextual sense selection remain open; wider outer particles, negative/existential paradigms and novel derived-boundary hypotheses are not certified.",
+      "evidence": [
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "clothing_question_source_conflict_is_scoped_to_attested_polite_head"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "short_reports_recover_unchanged_gsd_training_targets"
+        },
+        {
+          "path": "docs/short-reports-evaluation.json"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_questions_preserve_existential_entries_and_assess_homonyms"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-report-source-81509-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-2",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-32",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-19",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-24",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-25",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-31",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81516",
+      "source_sha256": "3753985e2b465cb1ca494d95d66a32943bfad55b8288f266603d9985a26219a5",
+      "status": "scoped",
+      "checklist": [
+        "COV-017at"
+      ],
+      "scope": "Reviewed short report with source-sense examples, coda/prefinal constraints, polite particle, lexical/copular/auxiliary/derived ownership and command/intention alternatives. Source note/example conflicts are preserved.",
+      "remaining": "Independent linguistic review and contextual sense selection remain open; wider outer particles, negative/existential paradigms and novel derived-boundary hypotheses are not certified.",
+      "evidence": [
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "clothing_question_source_conflict_is_scoped_to_attested_polite_head"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "short_reports_recover_unchanged_gsd_training_targets"
+        },
+        {
+          "path": "docs/short-reports-evaluation.json"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_questions_preserve_existential_entries_and_assess_homonyms"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-report-source-81516-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-5",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-6",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-7",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-8",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-9",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-18",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-29",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-30",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-composition-41",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-26",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-37",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-boundary-41",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:77309",
+      "source_sha256": "fece29d46bade2fa284b856d01ad1f1bbbf0c35a8a0731837246346b0f4c59f0",
+      "status": "scoped",
+      "checklist": [
+        "COV-017at"
+      ],
+      "scope": "Reviewed short report with source-sense examples, coda/prefinal constraints, polite particle, lexical/copular/auxiliary/derived ownership and command/intention alternatives. Source note/example conflicts are preserved.",
+      "remaining": "Independent linguistic review and contextual sense selection remain open; wider outer particles, negative/existential paradigms and novel derived-boundary hypotheses are not certified.",
+      "evidence": [
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "clothing_question_source_conflict_is_scoped_to_attested_polite_head"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "short_reports_recover_unchanged_gsd_training_targets"
+        },
+        {
+          "path": "docs/short-reports-evaluation.json"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_questions_preserve_existential_entries_and_assess_homonyms"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-report-source-77309-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-source-77309-2",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-extra-77309-기다려달래",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81127",
+      "source_sha256": "24b74cbc0c33e526dda3be8e944ab9af03380eb4ba457680cc22bf15aa54aa47",
+      "status": "scoped",
+      "checklist": [
+        "COV-017at"
+      ],
+      "scope": "Reviewed short report with source-sense examples, coda/prefinal constraints, polite particle, lexical/copular/auxiliary/derived ownership and command/intention alternatives. Source note/example conflicts are preserved.",
+      "remaining": "Independent linguistic review and contextual sense selection remain open; wider outer particles, negative/existential paradigms and novel derived-boundary hypotheses are not certified.",
+      "evidence": [
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "clothing_question_source_conflict_is_scoped_to_attested_polite_head"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "short_reports_recover_unchanged_gsd_training_targets"
+        },
+        {
+          "path": "docs/short-reports-evaluation.json"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_questions_preserve_existential_entries_and_assess_homonyms"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-report-source-81127-1",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81135",
+      "source_sha256": "c9f4b16837dd5cd12b11cfe0dedcf37a70653ad3a5af893828eb852f3a951494",
+      "status": "scoped",
+      "checklist": [
+        "COV-017at"
+      ],
+      "scope": "Reviewed short report with source-sense examples, coda/prefinal constraints, polite particle, lexical/copular/auxiliary/derived ownership and command/intention alternatives. Source note/example conflicts are preserved.",
+      "remaining": "Independent linguistic review and contextual sense selection remain open; wider outer particles, negative/existential paradigms and novel derived-boundary hypotheses are not certified.",
+      "evidence": [
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "clothing_question_source_conflict_is_scoped_to_attested_polite_head"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "short_reports_recover_unchanged_gsd_training_targets"
+        },
+        {
+          "path": "docs/short-reports-evaluation.json"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_questions_preserve_existential_entries_and_assess_homonyms"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-report-source-81135-1",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81163",
+      "source_sha256": "76bc712797a727140f2bb0ede817659098726999463b8d18aeaaf5fb793639b4",
+      "status": "scoped",
+      "checklist": [
+        "COV-017at"
+      ],
+      "scope": "Reviewed short report with source-sense examples, coda/prefinal constraints, polite particle, lexical/copular/auxiliary/derived ownership and command/intention alternatives. Source note/example conflicts are preserved.",
+      "remaining": "Independent linguistic review and contextual sense selection remain open; wider outer particles, negative/existential paradigms and novel derived-boundary hypotheses are not certified.",
+      "evidence": [
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "clothing_question_source_conflict_is_scoped_to_attested_polite_head"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "short_reports_recover_unchanged_gsd_training_targets"
+        },
+        {
+          "path": "docs/short-reports-evaluation.json"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_questions_preserve_existential_entries_and_assess_homonyms"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-report-source-81163-1",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81093",
+      "source_sha256": "af4e24749176b1e932afe5fe154eea0ce6f7585dfb01394688ac82f09bd0e12a",
+      "status": "scoped",
+      "checklist": [
+        "COV-017at"
+      ],
+      "scope": "Reviewed short report with source-sense examples, coda/prefinal constraints, polite particle, lexical/copular/auxiliary/derived ownership and command/intention alternatives. Source note/example conflicts are preserved.",
+      "remaining": "Independent linguistic review and contextual sense selection remain open; wider outer particles, negative/existential paradigms and novel derived-boundary hypotheses are not certified.",
+      "evidence": [
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_reports_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "clothing_question_source_conflict_is_scoped_to_attested_polite_head"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "short_reports_recover_unchanged_gsd_training_targets"
+        },
+        {
+          "path": "docs/short-reports-evaluation.json"
+        },
+        {
+          "path": "tests/short_reports.rs",
+          "test": "short_report_questions_preserve_existential_entries_and_assess_homonyms"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-report-source-81093-1",
+          "judgment": "path"
+        },
+        {
+          "case": "short-report-extra-81093-보래요",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

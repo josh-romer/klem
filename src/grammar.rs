@@ -449,6 +449,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다죠"
                             | "다지만"
                             | "다니까"
+                            | "대"
                             | "다네"
                             | "다는데"
                             | "다며"
@@ -510,6 +511,11 @@ pub(crate) fn endings() -> &'static [Ending] {
             "느냔",
             "답니다",
             "단다",
+            "대",
+            "재",
+            "냬",
+            "느냬",
+            "더래",
             "다지",
             "다죠",
             "다지만",
@@ -682,6 +688,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("더라면서", "더라면서", 0),
             ("더라니", "더라니", 0),
             ("더란다", "더란다", 0),
+            ("더래", "더래", 0),
+            ("냬", "냬", 0),
             ("더라지만", "더라지만", 0),
             ("더라니까", "더라니까", 0),
             ("냐지만", "냐지만", 0),
@@ -758,6 +766,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라는", "라는", "으라는"),
             ("으란", "란", "으란"),
             ("으란다", "란다", "으란다"),
+            ("으래", "래", "으래"),
             ("으라지", "라지", "으라지"),
             ("으라죠", "라죠", "으라죠"),
             ("으라지만", "라지만", "으라지만"),
@@ -777,6 +786,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으냐지만", "냐지만", "으냐지만"),
             ("으냐니까", "냐니까", "으냐니까"),
             ("으냔다", "냔다", "으냔다"),
+            ("으냬", "냬", "으냬"),
             ("으냐는", "냐는", "으냐는"),
             ("으냐며", "냐며", "으냐며"),
             ("으냐면서", "냐면서", "으냐면서"),
@@ -857,6 +867,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다니", "다니", "는다니", 4),
             ("는단", "단", "는단", 4),
             ("는단다", "단다", "는단다", 4),
+            ("는대", "대", "는대", 4),
             ("는다지", "다지", "는다지", 4),
             ("는다죠", "다죠", "는다죠", 4),
             ("는다지만", "다지만", "는다지만", 4),
@@ -933,6 +944,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라면",
             "랍니다",
             "란다",
+            "래",
             "라지",
             "라죠",
             "라지만",
@@ -1394,6 +1406,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.reporting_confirmation" => {
             "Recognize confirming and reported -다지/-라지 families and contracted polite -죠 forms; preserve factual and command alternatives without inferring an implicit speaker or reporting verb."
+        }
+        "ending.reporting_short" => {
+            "Recognize short reported statements, requests, proposals, questions and experiences; retain factual/command homonyms and surprise senses without inserting implicit 하다."
         }
         "ending.reporting_familiar" => {
             "Preserve familiar informative/reported statements, commands, questions, proposals and retrospective reports as distinct canonical endings; no implicit 하다 is inserted."

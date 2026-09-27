@@ -270,6 +270,7 @@ try {
   const jimaneun = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-jimaneun.json"), "utf8"));
   const danikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danikka.json"), "utf8"));
   const requestAux = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-request-aux.json"), "utf8"));
+  const shortReports = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-short-reports.json"), "utf8"));
   const dajiman = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-dajiman.json"), "utf8"));
   const daji = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-daji.json"), "utf8"));
   const danda = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danda.json"), "utf8"));
@@ -303,6 +304,7 @@ try {
       ...jimaneun.LexicalResource.Lexicon.LexicalEntry,
       ...danikka.LexicalResource.Lexicon.LexicalEntry,
       ...requestAux.LexicalResource.Lexicon.LexicalEntry,
+      ...shortReports.LexicalResource.Lexicon.LexicalEntry,
       ...dajiman.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
@@ -820,6 +822,48 @@ try {
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-danikka-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const shortReportsCases = recipientLedger.cases.filter(c => c.id.startsWith("short-report-"));
+  assert.equal(shortReportsCases.length, 168);
+  for (const c of shortReportsCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a=>danikkaPath(a,j)), j.verdict === "required", c.id);
+  }
+  const shortReportsPolicy = connectiveLedger.cases.filter(c => c.id.startsWith("short-report-policy-"));
+  assert.equal(shortReportsPolicy.length, 23);
+  for (const c of shortReportsPolicy) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const i = token.analysis.analyses.findIndex(a=>danikkaPath(a,j));
+      assert.ok(i >= 0, c.id);
+      assert.equal(token.dictionary.readings[i].status === "incompatible", j.verdict === "forbidden", c.id);
+    }
+  }
+  const shortReportsText = "좋대요 먹는대 학생이래요 먹으래요 먹재요 크냬요 먹느냬요 좋으냬요 먹더래요 도와달래 가져다달래요 입으냬요 만들래";
+  await submit(page, shortReportsText); await waitHeading(page, "좋대요");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["좋","대","요"]],[1,["먹","는대"]],[2,["학생","이","래","요"]],[3,["먹","으래","요"]],[4,["먹","재","요"]],[5,["크","냬","요"]],[6,["먹","느냬","요"]],[7,["좋","으냬","요"]],[8,["먹","더래","요"]],[8,["먹","더","래","요"]],[9,["돕","어","달","으래"]],[10,["가지","어다","달","으래","요"]],[11,["입","으냬","요"]],[12,["만들","으래"]],[12,["만들","을래"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 0) {
+      await word.locator(".breakdown-part").nth(1).click();
+      await page.locator(".entry-choices button").filter({hasText:"-대"}).first().click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=81516"]'));
+    }
+  }
+  const shortReportsDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const shortReportsExport = JSON.parse(await readFile(await (await shortReportsDownload).path(), "utf8"));
+  const shortReportsExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:shortReportsText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(shortReportsExport.records,shortReportsExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-short-reports-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-short-reports-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const requestAuxCases = recipientLedger.cases.filter(c => c.id.startsWith("request-aux-"));

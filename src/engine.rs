@@ -321,6 +321,7 @@ pub(crate) fn present_declarative(form: &str) -> bool {
             | "는다니"
             | "는단"
             | "는단다"
+            | "는대"
             | "는다지"
             | "는다죠"
             | "는다지만"
@@ -341,6 +342,7 @@ pub(crate) fn adjectival_question(form: &str) -> bool {
             | "으냐니"
             | "으냔"
             | "으냔다"
+            | "으냬"
             | "으냐지만"
             | "으냐니까"
     )
@@ -558,6 +560,17 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // Short reports inherit the source's 시/었/겠 slots, not
+                // retrospective 더. Proposals remain bare; adjectival 으냬
+                // uses the shared bare-adjective question restriction below.
+                if (matches!(ending.form, "대" | "냬" | "느냬" | "더래")
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었" | "겠" | "어야겠")))
+                    || (ending.form == "재" && !p.morphs.is_empty())
+                {
+                    continue;
+                }
                 if (ending.form == "잔다" && !p.morphs.is_empty())
                     || (matches!(
                         ending.form,
@@ -717,6 +730,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "으라는"
                         | "으라면"
                         | "으란"
+                        | "으래"
                         | "으랍니다"
                         | "으란다"
                         | "으라지"
@@ -755,6 +769,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             | "라면"
                             | "랍니다"
                             | "란다"
+                            | "래"
                             | "라지"
                             | "라죠"
                             | "라지만"
@@ -858,6 +873,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 ) {
                     p.rules.push("ending.reporting_contrast".into());
                 }
+                if short_report(ending.form) {
+                    p.rules.push("ending.reporting_short".into());
+                }
                 if reporting_nikka(ending.form) {
                     p.rules.push("ending.reporting_reason".into());
                 }
@@ -949,6 +967,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
         "라면",
         "랍니다",
         "란다",
+        "래",
         "라지",
         "라죠",
         "라지만",
@@ -991,6 +1010,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         }
                         if matches!(ending, "라지" | "라죠") {
                             p.rules.push("ending.reporting_confirmation".into());
+                        }
+                        if ending == "래" {
+                            p.rules.push("ending.reporting_short".into());
                         }
                         if ending == "란다" {
                             p.rules.push("ending.reporting_familiar".into());
@@ -1258,7 +1280,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             // Do not resolve negative auxiliary paradigms solely from the
             // inherited adjective class (COV-019h remains open).
             if bare
-                && matches!(m.form.as_str(), "느냐지만" | "느냐니까")
+                && matches!(m.form.as_str(), "느냐지만" | "느냐니까" | "느냬")
                 && matches!(class, Some(PredicateClass::Adjective))
                 && !lemma.text.ends_with("있다")
                 && !lemma.text.ends_with("없다")
@@ -1306,6 +1328,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                         | "으라니까"
                         | "자지만"
                         | "자니까"
+                        | "으래"
+                        | "재"
                         | "잔다"
                         | "으라네"
                         | "으라는데"
@@ -1357,6 +1381,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                                         | "다죠"
                                         | "다지만"
                                         | "다니까"
+                                        | "대"
                                 ))
                     }
                     Some(PredicateClass::Copula) | None => false,
@@ -1386,7 +1411,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
     if p.morphs.first().is_some_and(|m| {
         matches!(
             m.form.as_str(),
-            "느냐고" | "느냔다" | "느냐지만" | "느냐니까"
+            "느냐고" | "느냔다" | "느냐지만" | "느냐니까" | "느냬"
         )
     }) {
         return false;
@@ -1419,6 +1444,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                         | "으라니까"
                         | "자지만"
                         | "자니까"
+                        | "으래"
+                        | "재"
                         | "잔다"
                         | "으라네"
                         | "으라는데"
@@ -1457,6 +1484,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐니"
                 | "으냔"
                 | "으냔다"
+                | "으냬"
                 | "으냐지만"
                 | "으냐니까"
                 | "으려나"
@@ -1503,6 +1531,9 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "더라니까"
             | "냔다"
             | "더란다"
+            | "대"
+            | "냬"
+            | "더래"
             | "다며"
             | "다면서"
             | "더라며"
@@ -1671,6 +1702,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                         | "으라니까"
                         | "자지만"
                         | "자니까"
+                        | "으래"
+                        | "재"
                         | "잔다"
                         | "으라네"
                         | "으라는데"
@@ -1696,6 +1729,9 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 | "느냔다"
                 | "으냔다"
                 | "단다"
+                | "대"
+                | "느냬"
+                | "으냬"
                 | "다지"
                 | "다죠"
                 | "다지만"
@@ -2391,7 +2427,7 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
         "기로" | "자고" => stem == "들",
         "다" | "다가" => matches!(stem, "보" | "못하") || (connector == "다" && stem == "싶"),
         "으려다" | "으려다가" => stem == "보",
-        "어다" | "어다가" => matches!(stem, "주" | "드리" | "놓" | "두"),
+        "어다" | "어다가" => matches!(stem, "주" | "드리" | "놓" | "두" | "달"),
         "으려나" => stem == "보",
         "는가" | "은가" | "던가" | "나" | "을까" => matches!(stem, "보" | "싶"),
         "으면" => matches!(stem, "하" | "싶"),
@@ -2483,6 +2519,7 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
                 | "으라고"
                 | "으라는"
                 | "으란"
+                | "으래"
                 | "으란다"
                 | "으라지"
                 | "으라죠"
@@ -2612,6 +2649,13 @@ fn reporting_nikka(form: &str) -> bool {
     )
 }
 
+fn short_report(form: &str) -> bool {
+    matches!(
+        form,
+        "대" | "는대" | "래" | "으래" | "재" | "냬" | "느냬" | "으냬" | "더래"
+    )
+}
+
 fn reporting_ni(form: &str) -> bool {
     matches!(
         form,
@@ -2697,7 +2741,8 @@ fn before_particle(ending: &str, particle: &str) -> bool {
     match particle {
         "밖에" => reporting_go(ending),
         "요" => {
-            reporting_go(ending)
+            short_report(ending)
+                || reporting_go(ending)
                 || reporting_myeo(ending)
                 || reporting_ni(ending)
                 || matches!(

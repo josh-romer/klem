@@ -3116,6 +3116,39 @@ The examples are tolerant joined input, not spelling or sense recommendations.
 exact excerpts, all output additions, and two unchanged corpus annotation
 disagreements. It distinguishes source-attested requests from inferred ending
 combinations. Short reported forms such as 도와달래 still need the separate
-으래 family under COV-017at; they are not replaced by intention 을래 or a
+으래 family, now implemented under COV-017at; they are not replaced by intention 을래 or a
 lexical 달래다 hypothesis. Contextual role/sense selection and further lexical
 or particle restrictions remain open.
+
+
+## Short reported speech (COV-017at / COV-019r)
+
+Canonical 대, 는대 (surface ㄴ대/는대), factual 래, command 으래, proposal 재,
+question 냬/느냬/으냬 and retrospective 더래 retain their source homonyms.
+Their polite forms use the same ending plus particle 요. No implicit reporting
+하다 or contextual speaker is inserted. Existing intention 을래 remains distinct
+from command 으래; bundled 더래 and split 더 + 래 both remain.
+
+Present 는대 accepts honorific 시, with consonant attachment rather than vowel
+irregular recovery. 대/냬/느냬/더래 accept reviewed 시/었/겠 prefinals (including
+the existing obligation bundle 어야겠); 재 and adjectival 으냬 are bare. Command
+으래 accepts 시; factual 래 supports copular and reviewed 시/더/으리 paths.
+Known auxiliary and 답다 classes reject incompatible verbal/question forms.
+Dictionary assessment belongs to each lexical head and preserves homonyms.
+
+KRDict 89688's adjective note conflicts with its 입으냬요 example. Only the
+attested 입다 + 으냬 + 요 pattern becomes Unknown; bare and other lexical heads
+retain the ordinary check. Generic 냬 retains the attested 서두르냬 verb reading.
+KRDict 81093's factual note and command 보래요 example remain as written;
+independent command sources supply that morphology.
+
+KRDict 86537 sense 4 directly attests 가져다 달래요. The request auxiliary 달다
+therefore accepts result-transfer 어다; full 어다가 is the compositional counterpart.
+Its existing restricted right-ending whitelist still applies, now including 으래.
+Other already-reviewed request endings after this connector are compositional
+inferences. This does not license ordinary past/honorific/indicative 달다 auxiliaries.
+
+[The evaluation](short-reports-evaluation.json) records all candidate additions,
+source conflicts, unchanged annotated training sentences and frozen comparisons.
+Novel ambiguity and derived-boundary hypotheses remain unjudged; dictionary
+matches do not prove the intended sentence reading.

@@ -98,6 +98,7 @@ fn bare_copular_ending(form: &str) -> bool {
             | "라면"
             | "랍니다"
             | "란다"
+            | "래"
             | "라지"
             | "라죠"
             | "라지만"
@@ -316,7 +317,7 @@ impl Annotation {
                             // and standalone auxiliaries are not rejected.
                             Some(AttachmentRule::BareCopularEnding)
                         } else if bare
-                            && matches!(form, "단다" | "다지" | "다죠" | "다지만" | "다니까")
+                            && matches!(form, "단다" | "다지" | "다죠" | "다지만" | "다니까" | "대")
                             && verb
                         {
                             // Lexical existential/honorific senses cannot be
@@ -341,7 +342,7 @@ impl Annotation {
                                 Some(AttachmentRule::LiteraryAssertionClass)
                             }
                         } else if bare
-                            && matches!(form, "느냐지만" | "느냐니까")
+                            && matches!(form, "느냐지만" | "느냐니까" | "느냬")
                             && adjective
                             && !lemma.text.ends_with("있다")
                             && !lemma.text.ends_with("없다")
@@ -367,6 +368,14 @@ impl Annotation {
                                     && lemma.text == "듣다"
                                     && analysis.morphemes.get(i + 1).is_some_and(|m|
                                         m.kind == crate::MorphemeKind::Particle && m.form == "는"))
+                                // KRDict 89688 lists adjectives but directly
+                                // illustrates the clothing question 입으냬요.
+                                // Preserve uncertainty only for the attested
+                                // lexical head and polite form, not all verbs.
+                                || (form == "으냬"
+                                    && lemma.text == "입다"
+                                    && analysis.morphemes.get(i + 1).is_some_and(|m|
+                                        m.kind == crate::MorphemeKind::Particle && m.form == "요"))
                             {
                                 status = Compatibility::Unknown;
                                 None

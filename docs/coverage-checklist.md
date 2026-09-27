@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–as/018a–k/018m–z/019a–g/019i–q/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–at/018a–k/018m–z/019a–g/019i–r/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 311 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–as/018e–k/018m–z/019d–g/019i–q/020d–h/020j–k/020n–o; 403 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 319 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–at/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o; 395 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -220,7 +220,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–as implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–at implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -923,18 +923,20 @@ review remains open under the completion review below.
   outside its POS-filtered queue. Broader paradigms and independent review remain.
   See the [source and candidate evaluation](danikka-evaluation.json).
 
-- [ ] **COV-017at — Short reported statements, requests, proposals and questions.**
-  Review the -대/-래/-재/-냬 families, their polite forms, prefinal licenses,
-  copular/factual versus command readings, and auxiliary composition.
-  Confirmed gap: 도와달래 lacks 돕다 + 달다 + 어 + 으래; existing 을래
-  intention or lexical 달래다 readings do not replace the quoted request.
-  KRDict [으래 80914](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80914)
-  and [래 86535](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86535)
-  identify the contraction from -(으)라고 해; NIKL's
-  [consultation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=334707)
-  explicitly distinguishes 달래 from retrospective 달라데. COV-019q fixes
-  composition with existing report endings; it does not implement this family.
-  Preserve short-report homonyms and original corpus annotations during review.
+- [x] **COV-017at — Short reported statements, requests, proposals and questions.**
+  Implemented nine canonical endings and their polite 요 variants. Rust/stress,
+  browser, frozen-corpus and Nix/package checks pass. 28 full source entries
+  preserve 51 senses, sampled by 59 exact source excerpts. [168 raw judgments](../tests/short_reports.rs)
+  and 23 dictionary-policy cases cover allomorphs, prefinals, auxiliaries, copulas,
+  답다 and command/intention ambiguity. 도와달래 now includes 돕다 + 달다 + 어 + 으래.
+  입으냬요 remains Unknown because its source example conflicts with the adjective
+  note; bare/other-head checks remain. 가져다 달래요 also supports COV-019r.
+  Two unchanged GSD training examples gain complete lemma matches. Frozen grouped
+  totals are unchanged, while candidate means and one partial lemma recovery change.
+  The novel gains 137 hypotheses at 95 tokens, with none removed; contextual
+  interpretation remains unjudged. Eight ending sources enter the scoped queue,
+  with twenty expression sources tracked separately. Independent review remains.
+  See the [source and candidate evaluation](short-reports-evaluation.json).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -1533,8 +1535,17 @@ review remains open under the completion review below.
   [the review](request-aux-evaluation.json). Seven unchanged annotated training
   targets remain matched; 매단 and 나달은 retain their original conflicting
   auxiliary annotations as explicit mismatches. No corpus baseline is repaired.
-  New short-report endings such as 으래 remain COV-017at; wider lexical and
+  New short-report endings such as 으래 are covered by COV-017at; wider lexical and
   particle restrictions remain under COV-019.
+
+- [x] **COV-019r — Result-transfer before request auxiliary 달다.**
+  Implementation, regressions, browser and Nix/package validation pass, shared
+  with COV-017at. KRDict 86537 sense 4 explicitly illustrates 가져다 달래요.
+  어다 now links to 달다; full 어다가 and existing request right endings are
+  compositional inferences, covered separately from direct source excerpts.
+  Ordinary indicative/past/honorific right forms remain rejected. Broader lexical
+  selection is unreviewed. See [tests](../tests/short_reports.rs) and the
+  [evaluation](short-reports-evaluation.json).
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

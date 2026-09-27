@@ -1389,3 +1389,18 @@ tokens retain their matching request groups. 매단 and 나달은 retain origina
 auxiliary annotations despite the conflicting context; tests record the two
 mismatches instead of rewriting gold or broadening the request paradigm. These
 fixtures use the corpus attribution and CC BY-SA 4.0 license above.
+
+`krdict-short-reports.json` preserves 148 full primary word/grammar-expression
+entries from the pinned September 2026 NIKL Korean Basic Dictionary export,
+under **CC BY-SA 2.0 KR**, with the attribution and links above. All senses,
+notes, forms and examples remain; equivalents are English-only; RelatedForm
+and same-ID idioms are omitted. `short-reports-sources.json` preserves the 28
+family entries and 59 exact example excerpts sampling all 51 senses. Spaces
+are removed only when feeding a cited auxiliary phrase to word-level tests.
+Attachment-note/example conflicts remain unchanged. Eight ending sources and
+twenty expression sources are distinguished in the coverage report.
+
+`gsd-short-reports.conllu` preserves two complete unchanged pinned GSD training
+sentences (train-s1824 and train-s4304), under the corpus attribution/license
+above. Their 쓴대요 and 한대요 annotations support the new lemma matches.
+No held-out baseline, annotation or source spelling was rewritten.

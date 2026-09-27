@@ -2028,3 +2028,22 @@ fn request_auxiliaries_preserve_training_targets_and_annotation_disagreements() 
     }
     assert_eq!((matched, mismatched), (7, 2));
 }
+
+#[test]
+fn short_reports_recover_unchanged_gsd_training_targets() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-short-reports.conllu").as_slice(),
+        Corpus::Gsd,
+        "short-reports",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:train-s1824/10", "쓴대요", vec!["쓰다"]),
+        ("id:train-s4304/3", "한대요", vec!["하다"]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}

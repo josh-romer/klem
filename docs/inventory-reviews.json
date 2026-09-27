@@ -20460,6 +20460,292 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:85762",
+      "source_sha256": "4b90b8a6b8b4d54bc74b0f6bce3bb24c0554df095ae669646fcdaca00d0fbb0c",
+      "status": "scoped",
+      "checklist": [
+        "COV-017am"
+      ],
+      "scope": "Necessity final ending with vowel/ㄹ versus other-coda allomorphs, honorific and past boundaries, all ten source example surfaces across both entries, verb/adjective/copula and auxiliary/답다 composition. Polite 요 explicitly marked inference. Distinct from restrictive particle 밖에; final-ending/topic rejection has separate NIKL evidence.",
+      "remaining": "Independent Korean review, contextual necessity semantics, wider copula omission and following-particle proposals remain open. No annotated necessity targets found in training corpora. Unknown lexical hypotheses retained; dictionary omission 되돌려받다 remains explicit.",
+      "evidence": [
+        {
+          "path": "tests/necessity.rs",
+          "test": "necessity_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/necessity.rs",
+          "test": "necessity_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/necessity.rs",
+          "test": "necessity_missing_headword_is_unknown_and_filtered"
+        },
+        {
+          "path": "tests/necessity.rs",
+          "test": "necessity_and_restrictive_particle_have_distinct_sources"
+        },
+        {
+          "path": "docs/necessity-ending-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-necessity.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "necessity-source-고수일밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-source-안타까울밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-source-만들밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-source-기도할밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-source-나갈밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-가다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-살다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-돕다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-짓다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-붓다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-모르다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-예쁘다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-아니다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-prefinal-먹으실밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-prefinal-좋으실밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-copula-학생일밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-copula-학생들일밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-derived-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-auxiliary-먹어볼밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-auxiliary-좋아질밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-polite-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-wrong-boundary-가을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-wrong-boundary-살을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-wrong-boundary-먹밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-wrong-boundary-먹으밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-wrong-derivation-boundary",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85772",
+      "source_sha256": "8795bea21f981c45fa1346bb1b43e1239707a47233565c86e12529ba0c26ee86",
+      "status": "scoped",
+      "checklist": [
+        "COV-017am"
+      ],
+      "scope": "Necessity final ending with vowel/ㄹ versus other-coda allomorphs, honorific and past boundaries, all ten source example surfaces across both entries, verb/adjective/copula and auxiliary/답다 composition. Polite 요 explicitly marked inference. Distinct from restrictive particle 밖에; final-ending/topic rejection has separate NIKL evidence.",
+      "remaining": "Independent Korean review, contextual necessity semantics, wider copula omission and following-particle proposals remain open. No annotated necessity targets found in training corpora. Unknown lexical hypotheses retained; dictionary omission 되돌려받다 remains explicit.",
+      "evidence": [
+        {
+          "path": "tests/necessity.rs",
+          "test": "necessity_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/necessity.rs",
+          "test": "necessity_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/necessity.rs",
+          "test": "necessity_missing_headword_is_unknown_and_filtered"
+        },
+        {
+          "path": "tests/necessity.rs",
+          "test": "necessity_and_restrictive_particle_have_distinct_sources"
+        },
+        {
+          "path": "docs/necessity-ending-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-necessity.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "necessity-source-참을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-source-아팠을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-source-잊을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-source-받을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-source-먹을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-읽다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-걷다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-듣다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-좋다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-있다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-boundary-없다",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-prefinal-갔을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-prefinal-먹었을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-prefinal-예뻤을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-prefinal-좋았을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-prefinal-갔었을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-prefinal-먹으셨을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-copula-학생이었을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-copula-의사였을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-auxiliary-먹고싶을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-auxiliary-보고있을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-auxiliary-예쁘지않을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-polite-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-unsupported-prefinal-먹겠을밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-unsupported-prefinal-먹덜밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "necessity-unsupported-prefinal-학생이겠을밖에",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

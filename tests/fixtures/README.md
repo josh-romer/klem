@@ -1247,3 +1247,17 @@ for class-conflict and class-reset checks.
 attribution and license above. No spelling, tags or gold rows were rewritten.
 The NIKL 2006 grammar answer and 2007 spelling guide are linked rather than
 redistributed. See the [source review](../../docs/llachimyeon-evaluation.json).
+
+`krdict-necessity.json` selects 79 primary word entries from the pinned NIKL
+Korean Basic Dictionary export, under its attribution and reuse terms above.
+All senses, notes, examples and forms remain; equivalents are English only and
+RelatedForm is omitted. The ending sources are 85762/85772, also added to the
+grammar-source fixture; 70070 preserves the distinct restrictive particle.
+되돌려받다 has no primary headword in this export and is not fabricated.
+
+`kaist-necessity-search.conllu` preserves one complete KAIST training sentence
+under the corpus attribution and license above. Its 못하다고밖에 annotation
+is a quoted clause plus particle and remains an open miss, not a necessity-ending
+example. No annotated necessity-ending target was found in the training search.
+The NIKL spelling guide and online answer are linked rather than redistributed.
+See the [source and candidate review](../../docs/necessity-ending-evaluation.json).

@@ -266,6 +266,7 @@ try {
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
   const additiveParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-additive-particles.json"), "utf8"));
+  const necessity = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-necessity.json"), "utf8"));
   const llachimyeon = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-llachimyeon.json"), "utf8"));
   const comparisonCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-comparison-case.json"), "utf8"));
   const comparisonParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-comparison-particles.json"), "utf8"));
@@ -287,6 +288,7 @@ try {
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
       ...hadaComplex.LexicalResource.Lexicon.LexicalEntry,
+      ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
       ...comparisonCase.LexicalResource.Lexicon.LexicalEntry,
       ...comparisonParticles.LexicalResource.Lexicon.LexicalEntry,
@@ -718,6 +720,50 @@ try {
       if (j.verdict === "forbidden") assert.ok(token.dictionary.readings[i].lemmas[0].entries.some(e=>e.conflicts.some(c=>c.rule === "habitual_condition_verb" && c.morpheme_index === j.morphemes.length - 1)));
     }
   }
+  const necessityCases = recipientLedger.cases.filter(c => c.id.startsWith("necessity-"));
+  assert.equal(necessityCases.length, 66);
+  for (const c of necessityCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const necessityText = "먹을밖에 아팠을밖에 고수일밖에 학생다울밖에 먹고싶을밖에 너밖에";
+  await submit(page, necessityText); await waitHeading(page, "먹을밖에");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["먹","을밖에"]],[1,["아프","었","을밖에"]],[2,["고수","이","을밖에"]],[3,["학생","답","을밖에"]],[4,["먹","고","싶","을밖에"]],[5,["너","밖에"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    await word.locator(".breakdown-part").last().click();
+    if (i < 5) {
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=85762"]'));
+      await page.locator(".entry-choices button").filter({hasText:"-을밖에"}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=85772"]'));
+    } else {
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=70070"]'));
+    }
+
+  }
+  assert.equal(await page.locator(".breakdown-word").count(), 6);
+  const necessityDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const necessityExport = JSON.parse(await readFile(await (await necessityDownload).path(), "utf8"));
+  const necessityExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:necessityText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(necessityExport.records, necessityExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-necessity-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-necessity-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   const llachimyeonCases = recipientLedger.cases.filter(c => c.id.startsWith("llachimyeon-"));
   assert.equal(llachimyeonCases.length, 42);
   for (const c of llachimyeonCases) {

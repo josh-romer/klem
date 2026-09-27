@@ -2902,3 +2902,20 @@ through 지-negatives, and stops at a different auxiliary/suffix/copula. Unknown
 lexical heads remain raw hypotheses. The [review](llachimyeon-evaluation.json)
 distinguishes primary examples, composition probes, lexical conflicts and the
 unjudged candidate queue.
+
+## Necessity ending (COV-017am)
+
+`을밖에` normalizes `-ㄹ밖에/-을밖에` with `ending.necessity` provenance.
+Vowel/ㄹ stems use the attached ㄹ form; other consonants use 을. Verb,
+adjective and explicit copula heads are licensed, including honorific 시 and
+past 었. Existing irregulars, auxiliary groups and adjectival 답다 derivation
+compose. Polite 요 is an explicit composition inference. Recovered modal and
+retrospective markers do not inherit the reviewed prefinal license.
+
+The final ending stays distinct from restrictive particle 밖에 after nouns or
+nominalizing 기. It does not split into adnominal 을 + 밖에, and NIKL's
+을밖에는 continuation does not license final-ending + topic 는. Unknown
+lexical and whole-word hypotheses remain. Broader copula omission and the
+quoted-clause + 밖에 observation need further review. The
+[evaluation](necessity-ending-evaluation.json) records those limits, exact source
+examples, composed probes and dictionary omissions.

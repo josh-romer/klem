@@ -597,6 +597,15 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "을라치면" && p.morphs.iter().any(|m| m.form != "시") {
                     continue;
                 }
+                // KRDict 85762/85772 permit predicates/copulas, honorific
+                // 시 and past 었; this final ending is not particle 밖에.
+                if ending.form == "을밖에"
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었"))
+                {
+                    continue;
+                }
                 // The reviewed concessive paradigms differ: -(으)ㄴ들 lists
                 // bare stems and honorific 시; 망정/지언정 additionally list 었.
                 // A retrospective -던들 needs its own ending analysis.
@@ -805,6 +814,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "으니라" | "느니라") {
                     p.rules.push("ending.literary_assertion".into());
+                }
+                if ending.form == "을밖에" {
+                    p.rules.push("ending.necessity".into());
                 }
                 if ending.form == "을라치면" {
                     p.rules.push("ending.habitual_condition".into());
@@ -1296,6 +1308,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "을지"
                 | "을는지"
                 | "을지라도"
+                | "을밖에"
                 | "을망정"
                 | "을지언정"
                 | "을수록"
@@ -2444,7 +2457,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "요" => {
             reporting_myeo(ending)
                 || reporting_ni(ending)
-                || matches!(ending, "은들" | "을망정" | "을지언정" | "던들" | "을라치면")
+                || matches!(
+                    ending,
+                    "은들" | "을망정" | "을지언정" | "던들" | "을라치면" | "을밖에"
+                )
                 || connective
                 || matches!(
                     ending,

@@ -2948,3 +2948,32 @@ selection and API/CLI/export parity. Desktop/mobile screenshots were inspected.
 Three interleaved release samples per version/filter give after medians of
 1.283 seconds (headword) and 1.314 seconds (compatible), below 29 MiB peak RSS.
 The small sample does not establish statistical speed equivalence.
+
+## Necessity ending (COV-017am)
+
+The [review](necessity-ending-evaluation.json) adds **53 required / 13 forbidden**
+judgments, bringing the main ledger to **2,879 / 1,679**. All pass. Both dictionary
+filters and library/CLI parity pass for covered heads; the source-attested but
+missing 되돌려받다 remains a raw candidate with unknown evidence and is removed
+by either dictionary filter. No fabricated dictionary entry supplies it.
+
+Across 4,438 raw probes, 54 surfaces gain 260 analyses with no removals or
+provenance changes. All four frozen corpus partitions remain unchanged. The
+training search found no annotated necessity-ending target; the separate
+못하다고밖에 quoted-clause miss is tracked as COV-018z. In 무정, only one
+of 179,112 records changes: 줄밖에 gains token-local 주다/줄다 ending
+hypotheses. Its context supports dependent noun 줄 + particle 밖에. These
+additions are ambiguity, not a claimed contextual accuracy improvement.
+
+The 685 remaining unjudged candidates in this batch's raw review queue are
+preserved. Independent Korean review and contextual interpretation remain open.
+Full Rust/web tests, all 30 stress snapshots and the memory-limited case, the
+pinned corpus gate, Clippy, formatting, TypeScript/Vite, browser checks and Nix
+CLI/web builds pass on x86_64 Linux. The packaged full-dictionary app passes all
+66 cases with both filters, source selection and API/CLI/export parity; four
+desktop/mobile screenshots were inspected.
+
+Three interleaved release runs per version/filter give after medians of
+1.232 seconds (headword) and 1.236 seconds (compatible), with peak
+RSS of 28.1 MiB. The small sample is a bounded performance
+check, not evidence of statistical speed equivalence.

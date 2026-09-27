@@ -26,7 +26,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "76cf8d50bcaa6bc25d5b9e68e8dce7e6fd8317a2671d6ceb60b79d40df328e08",
+    "docs/coverage-checklist.md": "c20e9209cb36dbe7c920121f6ad16ff5ea0d73c8947fbcc7a1fca07562607add",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
@@ -38,10 +38,11 @@
     "docs/eya-evaluation.json": "2cbfe997765a9f065db634701e408fced2fc6fa40b806788f91b4fe5660db66c",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "8a13d0a24c38c99cc2cf8ece16cbe889865debebf9d44a72f5f4afd9f98c06be",
-    "docs/inventory-reviews.json": "17ddb46d28dbc9b1970c48b437c8d8ad42a239e48b25d9417d5f8e4fae892a32",
+    "docs/inventory-audit.md": "9aef0720cc3c9000a684408434a05bcb0b804b01dfbdf41cbb58e36f3bb1af26",
+    "docs/inventory-reviews.json": "fdad085f9ab6843066e49665cc52af15eb5684b41f2c2bb1653bf58570c3fad8",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/llachimyeon-evaluation.json": "086132bdac962ca93a716841860e9b80695d9dfde5874675c9661f944211abba",
+    "docs/necessity-ending-evaluation.json": "68069546cd18497fd18878e6cc30cef8d010f0a3efcc288a03f249278953daad",
     "docs/nira-evaluation.json": "f5104870a3be746d817dc91c710b38c082ba8ded9a85bc685181a0c62c4ddea7",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
@@ -101,11 +102,13 @@
     "tests/fixtures/krdict-comparison-case.json": "c02f2fdd45911e9feb0d8eefe6bffa99da84d9b6d184c8bf0c636b816ec9e424",
     "tests/fixtures/krdict-comparison-particles.json": "7d855feab4200f6c6752599b977255bba5e3ff5a95f4b214cb9c2c4147a7a3a6",
     "tests/fixtures/krdict-llachimyeon.json": "e52bab62a2b6ed1ad409736dfbaecb3a35944f61d42e9bab3b4555cf4fa0a279",
-    "tests/fixtures/validity.json": "3dec1240220c5a13d9ba6c7e91383501433bd4073b714309665b640c06f1c788",
+    "tests/fixtures/krdict-necessity.json": "5f37d701bb0de166de41e30da7ee763f852a18fd21caa4fbec0e3e91eec30041",
+    "tests/fixtures/validity.json": "3932901a00f45408775633fb0f14dffaa171c264b00d07dcedf855ca0d50c459",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
     "tests/kkaena.rs": "63efa7b0ad133bfabd79b1b85d4a393608361596303c92a07b0e9df8d3fdc0a5",
     "tests/llachimyeon.rs": "2c01312a510253d4e25988765754494f7bc05cf96a6af76e45d57c07547ea1dc",
+    "tests/necessity.rs": "6efda60359e567a1918bd9fee20a51f719f18a65a16ea5d0a074ebfa9422a66e",
     "tests/nira.rs": "cace34737dd52a13c3a646e8256d1f2c2c7d8e7fa3f0b9c6d4dd791cdb18a8fa",
     "tests/noh_contraction.rs": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
@@ -130,8 +133,8 @@
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "40411e5443b9b05c90a0dc0d1ff8d0fd6b0297f66f3a29d1501fa3ca8630a07e",
-    "web/tests/browser.mjs": "377cfd87c108ca07e4872426c75cd40b3231722d8d604eaad6a884659a943875"
+    "web/src/grammar-labels.json": "d9888023a974beecad42c8e09fa48ceebfad087617d2a4ef8cc712a80703ca27",
+    "web/tests/browser.mjs": "248384627e1bca2621bacf00ebe4abc189dc6ee4c6db9e89e08de15ff7c6a4bf"
   },
   "counts": {
     "entries": 715,
@@ -142,12 +145,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 433,
-      "scoped": 281,
+      "unreviewed": 431,
+      "scoped": 283,
       "gap": 1
     },
-    "with_catalog_links": 350,
-    "with_judgment_citations": 322
+    "with_catalog_links": 352,
+    "with_judgment_citations": 325
   },
   "entries": [
     {
@@ -13093,11 +13096,287 @@
         ]
       },
       "source_sha256": "4b90b8a6b8b4d54bc74b0f6bce3bb24c0554df095ae669646fcdaca00d0fbb0c",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-을밖에",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "necessity-auxiliary-먹어볼밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-auxiliary-좋아질밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-가다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-돕다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-모르다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-붓다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-살다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-아니다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-예쁘다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-짓다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-copula-학생들일밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-copula-학생일밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-derived-adjective",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-polite-copula",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-prefinal-먹으실밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-prefinal-좋으실밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-고수일밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-기도할밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-나갈밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-만들밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-안타까울밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-wrong-boundary-가을밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-wrong-boundary-먹밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-wrong-boundary-먹으밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-wrong-boundary-살을밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-wrong-derivation-boundary",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:85762",
+        "source_sha256": "4b90b8a6b8b4d54bc74b0f6bce3bb24c0554df095ae669646fcdaca00d0fbb0c",
+        "status": "scoped",
+        "checklist": [
+          "COV-017am"
+        ],
+        "scope": "Necessity final ending with vowel/ㄹ versus other-coda allomorphs, honorific and past boundaries, all ten source example surfaces across both entries, verb/adjective/copula and auxiliary/답다 composition. Polite 요 explicitly marked inference. Distinct from restrictive particle 밖에; final-ending/topic rejection has separate NIKL evidence.",
+        "remaining": "Independent Korean review, contextual necessity semantics, wider copula omission and following-particle proposals remain open. No annotated necessity targets found in training corpora. Unknown lexical hypotheses retained; dictionary omission 되돌려받다 remains explicit.",
+        "evidence": [
+          {
+            "path": "tests/necessity.rs",
+            "test": "necessity_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/necessity.rs",
+            "test": "necessity_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/necessity.rs",
+            "test": "necessity_missing_headword_is_unknown_and_filtered"
+          },
+          {
+            "path": "tests/necessity.rs",
+            "test": "necessity_and_restrictive_particle_have_distinct_sources"
+          },
+          {
+            "path": "docs/necessity-ending-evaluation.json"
+          },
+          {
+            "path": "tests/fixtures/krdict-necessity.json"
+          },
+          {
+            "path": "web/tests/browser.mjs"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "necessity-source-고수일밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-source-안타까울밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-source-만들밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-source-기도할밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-source-나갈밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-가다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-살다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-돕다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-짓다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-붓다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-모르다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-예쁘다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-아니다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-prefinal-먹으실밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-prefinal-좋으실밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-copula-학생일밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-copula-학생들일밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-derived-adjective",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-auxiliary-먹어볼밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-auxiliary-좋아질밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-polite-copula",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-wrong-boundary-가을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-wrong-boundary-살을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-wrong-boundary-먹밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-wrong-boundary-먹으밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-wrong-derivation-boundary",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -49973,11 +50252,287 @@
         ]
       },
       "source_sha256": "8795bea21f981c45fa1346bb1b43e1239707a47233565c86e12529ba0c26ee86",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-을밖에",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "necessity-auxiliary-먹고싶을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-auxiliary-보고있을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-auxiliary-예쁘지않을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-걷다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-듣다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-없다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-읽다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-있다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-boundary-좋다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-copula-의사였을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-copula-학생이었을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-polite-verb",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-prefinal-갔었을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-prefinal-갔을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-prefinal-먹었을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-prefinal-먹으셨을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-prefinal-예뻤을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-prefinal-좋았을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-먹을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-받을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-아팠을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-잊을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-source-참을밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-unsupported-prefinal-먹겠을밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-unsupported-prefinal-먹덜밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-unsupported-prefinal-학생이겠을밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:85772",
+        "source_sha256": "8795bea21f981c45fa1346bb1b43e1239707a47233565c86e12529ba0c26ee86",
+        "status": "scoped",
+        "checklist": [
+          "COV-017am"
+        ],
+        "scope": "Necessity final ending with vowel/ㄹ versus other-coda allomorphs, honorific and past boundaries, all ten source example surfaces across both entries, verb/adjective/copula and auxiliary/답다 composition. Polite 요 explicitly marked inference. Distinct from restrictive particle 밖에; final-ending/topic rejection has separate NIKL evidence.",
+        "remaining": "Independent Korean review, contextual necessity semantics, wider copula omission and following-particle proposals remain open. No annotated necessity targets found in training corpora. Unknown lexical hypotheses retained; dictionary omission 되돌려받다 remains explicit.",
+        "evidence": [
+          {
+            "path": "tests/necessity.rs",
+            "test": "necessity_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/necessity.rs",
+            "test": "necessity_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/necessity.rs",
+            "test": "necessity_missing_headword_is_unknown_and_filtered"
+          },
+          {
+            "path": "tests/necessity.rs",
+            "test": "necessity_and_restrictive_particle_have_distinct_sources"
+          },
+          {
+            "path": "docs/necessity-ending-evaluation.json"
+          },
+          {
+            "path": "tests/fixtures/krdict-necessity.json"
+          },
+          {
+            "path": "web/tests/browser.mjs"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "necessity-source-참을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-source-아팠을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-source-잊을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-source-받을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-source-먹을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-읽다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-걷다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-듣다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-좋다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-있다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-boundary-없다",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-prefinal-갔을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-prefinal-먹었을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-prefinal-예뻤을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-prefinal-좋았을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-prefinal-갔었을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-prefinal-먹으셨을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-copula-학생이었을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-copula-의사였을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-auxiliary-먹고싶을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-auxiliary-보고있을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-auxiliary-예쁘지않을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-polite-verb",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-unsupported-prefinal-먹겠을밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-unsupported-prefinal-먹덜밖에",
+            "judgment": "path"
+          },
+          {
+            "case": "necessity-unsupported-prefinal-학생이겠을밖에",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -62122,7 +62677,58 @@
           "kind": "particle"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "necessity-not-adnominal-particle-갈밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-not-adnominal-particle-먹을밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-not-adnominal-particle-예쁠밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-not-adnominal-particle-좋을밖에",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "necessity-particle-너밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-particle-민망하기밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-particle-조금밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-particle-죽기밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-particle-학교밖에",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "necessity-particle-학생들밖에",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
         "status": "unreviewed"

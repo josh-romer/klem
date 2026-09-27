@@ -97,6 +97,8 @@ fn bare_copular_ending(form: &str) -> bool {
             | "라면"
             | "랍니다"
             | "란다"
+            | "라지"
+            | "라죠"
             | "라든가"
             | "라네"
             | "라는데"
@@ -310,7 +312,7 @@ impl Annotation {
                             // source-listed adjective exception. Unknown POS
                             // and standalone auxiliaries are not rejected.
                             Some(AttachmentRule::BareCopularEnding)
-                        } else if bare && form == "단다" && verb {
+                        } else if bare && matches!(form, "단다" | "다지" | "다죠") && verb {
                             // Lexical existential/honorific senses cannot be
                             // decided from the broad verbal POS alone.
                             if matches!(lemma.text.as_str(), "있다" | "없다" | "계시다") {

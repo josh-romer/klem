@@ -2962,3 +2962,27 @@ entries, 144 candidate judgments, 23 dictionary-policy judgments, thirteen
 annotated training targets, frozen corpus comparisons and novel alternatives.
 The candidate queue remains unjudged; these checks do not measure linguistic
 precision or choose a contextual reading.
+
+
+## Confirmation and reported -다지/-라지 (COV-017ap)
+
+다지/는다지/라지/으라지 preserve confirmation, reported-speech and
+command/dismissive alternatives without inserting implicit 하다. Factual 라지
+is distinct from command 으라지. The full polite spelling adds particle 요;
+contracted 다죠/는다죠/라죠/으라죠 remain bundled sourced components.
+Known lexical verb entries conflict with bare 다지/다죠 under the dictionary
+compatibility filter, while adjective homonyms and unresolved auxiliary or
+existential classes remain. These checks belong to the component owning the
+ending; they do not cross prefinals, derivation, auxiliary or copula boundaries.
+
+Source-level attachment notes must be read with each sense: -라지 and -라죠
+also illustrate commands despite a general note describing factual attachment.
+The command and factual analyses retain separate boundary rules and labels.
+Adjective wishes remain possible lexical hypotheses. Existing raw identity
+readings of 그다지 and 노다지 remain available.
+
+Attached present endings permit ordinary vowel/ㄹ recovery, not ㅂ/ㅎ
+recovery borrowed from 으 allomorphs. This also corrects the older 는단다
+family; every observed removed candidate is recorded separately. The
+[source/candidate report](daji-evaluation.json) preserves the unchanged corpus
+annotation mismatch, novel alternatives and unresolved candidate queue.

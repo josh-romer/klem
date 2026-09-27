@@ -1299,3 +1299,17 @@ complete training sentences from the pinned corpora, under their attribution
 and licenses above. No gold rows, spelling or tags were rewritten; KAIST's
 OrigLemma for 않단다 remains intact. Frozen evaluation gains remain in the
 [evaluation report](../../docs/danda-evaluation.json), not training fixtures.
+
+`krdict-daji.json` contains 176 primary word/selected grammar-expression
+entries from the pinned September 2026 NIKL Korean Basic Dictionary export,
+under **CC BY-SA 2.0 KR** and the attribution/reuse links above. Full senses,
+attachment notes, examples and forms are retained; equivalents are English only,
+RelatedForm and same-number idioms are omitted. Nineteen confirmation-family
+sources also appear in `krdict-grammar-labels.json`. No required headword is
+missing. Synthetic negative heads are not invented in the dictionary fixture.
+
+`gsd-daji.conllu` preserves the complete training sentence `train-s4336` under
+the GSD attribution/license above. Its 좋+다+지+요 / VA+EC+VX+EC annotation
+is unchanged and converts to 좋다 + 지다; this is an explicit annotation/model
+mismatch, not a newly recovered gold target. See the
+[evaluation report](../../docs/daji-evaluation.json) for frozen corpus results.

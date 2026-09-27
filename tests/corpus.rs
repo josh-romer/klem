@@ -1881,3 +1881,18 @@ fn familiar_reports_recover_annotated_training_targets() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn confirming_polite_source_annotation_remains_visible_without_gold_repair() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-daji.conllu").as_slice(),
+        Corpus::Gsd,
+        "daji-discovery",
+    )
+    .unwrap();
+    let case = &report.cases["id:train-s4336/3"];
+    assert_eq!(case.surface, "좋다지요");
+    assert_eq!(case.expected, ["좋다", "지다"]);
+    // The source tags 지 as VX. The confirmed ending is represented as
+    // 다지 + 요, so this annotation is not counted as a newly recovered gold row.
+}

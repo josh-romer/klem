@@ -444,6 +444,9 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "답니다"
                             | "다거나"
                             | "다든가"
+                            | "단다"
+                            | "다지"
+                            | "다죠"
                             | "다네"
                             | "다는데"
                             | "다며"
@@ -505,6 +508,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "느냔",
             "답니다",
             "단다",
+            "다지",
+            "다죠",
             "잔다",
             "냔다",
             "느냔다",
@@ -735,6 +740,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라는", "라는", "으라는"),
             ("으란", "란", "으란"),
             ("으란다", "란다", "으란다"),
+            ("으라지", "라지", "으라지"),
+            ("으라죠", "라죠", "으라죠"),
             ("으라면", "라면", "으라면"),
             ("으랍니다", "랍니다", "으랍니다"),
             ("으라네", "라네", "으라네"),
@@ -828,6 +835,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다니", "다니", "는다니", 4),
             ("는단", "단", "는단", 4),
             ("는단다", "단다", "는단다", 4),
+            ("는다지", "다지", "는다지", 4),
+            ("는다죠", "다죠", "는다죠", 4),
             ("는다거나", "다거나", "는다거나", 4),
             ("는다든가", "다든가", "는다든가", 4),
         ] {
@@ -899,6 +908,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라면",
             "랍니다",
             "란다",
+            "라지",
+            "라죠",
             "라든가",
             "라네",
             "라는데",
@@ -1348,6 +1359,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Recover 익숙히/특별히 behind shortened 익히/특히, using 익숙하다/특별하다 as lookup lemmas; retain the whole-word reading."
         }
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
+        "ending.reporting_confirmation" => {
+            "Recognize confirming and reported -다지/-라지 families and contracted polite -죠 forms; preserve factual and command alternatives without inferring an implicit speaker or reporting verb."
+        }
         "ending.reporting_familiar" => {
             "Preserve familiar informative/reported statements, commands, questions, proposals and retrospective reports as distinct canonical endings; no implicit 하다 is inserted."
         }

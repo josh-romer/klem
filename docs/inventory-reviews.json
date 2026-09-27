@@ -21024,9 +21024,10 @@
       "source_sha256": "e75f6d1eaa049879444e705e4e734b1d7c1a5a15bbf1597e1d9c3bcf92964120",
       "status": "scoped",
       "checklist": [
-        "COV-017ao"
+        "COV-017ao",
+        "COV-017ap"
       ],
-      "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+      "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label. COV-017ap corrects unsupported ㅂ/ㅎ recovery before attached present 는단다; 27 observed removed candidates have exact forbidden judgments.",
       "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
       "evidence": [
         {
@@ -21039,6 +21040,9 @@
         },
         {
           "path": "docs/danda-evaluation.json"
+        },
+        {
+          "path": "docs/daji-evaluation.json"
         }
       ],
       "judgments": [
@@ -21084,6 +21088,114 @@
         },
         {
           "case": "danda-boundary-살는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-간단다-갛다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-내린단다-내맇다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-늦는단다-늦늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-도운단다-도웋다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-먹겠는단다-먹겠늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-먹고싶는단다-먹고싶늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-먹고있는단다-먹고있늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-먹는단다-먹늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-먹어본단다-먹어봏다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-먹었는단다-먹었늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-먹으신단다-먹으싷다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-먹지않는단다-먹지않늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-모른단다-모릏다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-산단다-샇다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-살는단다-살늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-않는단다-않늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-오신단다-오싷다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-잃는단다-잃늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-잡아먹는단다-잡아먹늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-좋는단다-좋늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-주신단다-주싷다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-지낸단다-지냏다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-찾는단다-찾늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-학생답는단다-학생답늫다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-present-recovery-한단다-핳다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-도운단다",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-파란단다",
           "judgment": "path"
         }
       ]
@@ -21226,6 +21338,338 @@
         },
         {
           "case": "danda-nominalization",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76573",
+      "source_sha256": "c55d345e82968436ecf45fc84c898fef36a68c025fb46d7bc6d7e9385fbe2341",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ap"
+      ],
+      "scope": "Confirmation/reported family: full source examples, factual versus command/dismissive senses, explicit full and contracted polite spellings, prefinal/irregular and auxiliary/derived/copular boundaries, dictionary entry ownership and sourced browser labels.",
+      "remaining": "Contextual sense, wider particle attachment, and unjudged lexical hypotheses remain; independent Korean review pending.",
+      "evidence": [
+        {
+          "path": "tests/daji.rs",
+          "test": "daji_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "docs/daji-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "daji-source-76573-받는다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76573-맞는다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76573-먹는다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76573-쌓는다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76573-않는다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-산다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹으신다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹어본다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹지않는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹었는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹었는다죠",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹겠는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹겠는다죠",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-살는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-살는다죠",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-학생답는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-학생답는다죠",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹고싶는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹고싶는다죠",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹고있는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹고있는다죠",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76575",
+      "source_sha256": "1888d7e63f1d8a6c1a4236749d9826a39dbaa9da82db9dc61243f3844aecd8ac",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ap"
+      ],
+      "scope": "Confirmation/reported family: full source examples, factual versus command/dismissive senses, explicit full and contracted polite spellings, prefinal/irregular and auxiliary/derived/copular boundaries, dictionary entry ownership and sourced browser labels.",
+      "remaining": "Contextual sense, wider particle attachment, and unjudged lexical hypotheses remain; independent Korean review pending.",
+      "evidence": [
+        {
+          "path": "tests/daji.rs",
+          "test": "daji_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "docs/daji-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "daji-source-76575-된다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76575-다닌다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76575-나타난다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76575-댄다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76575-끝난다지-는다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-도운다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-도운다죠",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76576",
+      "source_sha256": "1dff41aaa8021a4b7361a8d9574e3fa6c35eae60e60ac66642c9bccafe461a26",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ap"
+      ],
+      "scope": "Confirmation/reported family: full source examples, factual versus command/dismissive senses, explicit full and contracted polite spellings, prefinal/irregular and auxiliary/derived/copular boundaries, dictionary entry ownership and sourced browser labels.",
+      "remaining": "Contextual sense, wider particle attachment, and unjudged lexical hypotheses remain; independent Korean review pending.",
+      "evidence": [
+        {
+          "path": "tests/daji.rs",
+          "test": "daji_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "docs/daji-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "daji-source-76576-우승했다지-다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76576-만났다지-다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76576-없다지-다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76576-많다지-다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-좋다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹었다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹으시다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹으셨겠다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-도왔다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹어봤다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹고싶다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-먹고있다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-학생답다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-학생다웠다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-composition-학생이었다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-polite-and-lexical-노다지-",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-polite-and-lexical-그다지-",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹더다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹더다죠",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-학생이다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-학생이다죠",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹어보다지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-boundary-먹어보다죠",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76586",
+      "source_sha256": "5c82f8b75c1f9c444bc94b1a8dedbd4150f8ae2ab9f55d1defae567258ae6135",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ap"
+      ],
+      "scope": "Confirmation/reported family: full source examples, factual versus command/dismissive senses, explicit full and contracted polite spellings, prefinal/irregular and auxiliary/derived/copular boundaries, dictionary entry ownership and sourced browser labels.",
+      "remaining": "Contextual sense, wider particle attachment, and unjudged lexical hypotheses remain; independent Korean review pending.",
+      "evidence": [
+        {
+          "path": "tests/daji.rs",
+          "test": "daji_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "docs/daji-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "daji-source-76586-미인이라지-라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-과정이라지-라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-고향이라지-라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-유행이라지-라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-졸업이라지-라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-지껄이라지-으라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-하라지-으라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-그만두라지-으라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-보라지-으라지",
+          "judgment": "path"
+        },
+        {
+          "case": "daji-source-76586-가라지-으라지",
           "judgment": "path"
         }
       ]

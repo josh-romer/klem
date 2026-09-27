@@ -321,6 +321,8 @@ pub(crate) fn present_declarative(form: &str) -> bool {
             | "는다니"
             | "는단"
             | "는단다"
+            | "는다지"
+            | "는다죠"
     )
 }
 
@@ -530,11 +532,13 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
-                // KRDict familiar reports: commands allow 시, proposals
+                // KRDict reports/confirmations: commands allow 시, proposals
                 // are bare, and statement/question/experience bundles reject 더.
                 if (ending.form == "잔다" && !p.morphs.is_empty())
-                    || (matches!(ending.form, "단다" | "냔다" | "느냔다" | "더란다")
-                        && p.morphs.iter().any(|m| m.form == "더"))
+                    || (matches!(
+                        ending.form,
+                        "단다" | "다지" | "다죠" | "냔다" | "느냔다" | "더란다"
+                    ) && p.morphs.iter().any(|m| m.form == "더"))
                 {
                     continue;
                 }
@@ -691,6 +695,8 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "으란"
                         | "으랍니다"
                         | "으란다"
+                        | "으라지"
+                        | "으라죠"
                         | "으라네"
                         | "으라는데"
                         | "으라거나"
@@ -723,6 +729,8 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             | "라면"
                             | "랍니다"
                             | "란다"
+                            | "라지"
+                            | "라죠"
                             | "라든가"
                             | "라네"
                             | "라는데"
@@ -801,6 +809,12 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "더란다"
                 ) {
                     p.rules.push("ending.reporting_familiar".into());
+                }
+                if matches!(
+                    ending.form,
+                    "다지" | "는다지" | "라지" | "으라지" | "다죠" | "는다죠" | "라죠" | "으라죠"
+                ) {
+                    p.rules.push("ending.reporting_confirmation".into());
                 }
                 if matches!(ending.form, "답니다" | "는답니다" | "랍니다" | "으랍니다")
                 {
@@ -890,6 +904,8 @@ fn predicates(word: &str) -> Vec<Predicate> {
         "라면",
         "랍니다",
         "란다",
+        "라지",
+        "라죠",
         "라든가",
         "라네",
         "라는데",
@@ -920,6 +936,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             .into(),
                             "ending".into(),
                         ]);
+                        if matches!(ending, "라지" | "라죠") {
+                            p.rules.push("ending.reporting_confirmation".into());
+                        }
                         if ending == "란다" {
                             p.rules.push("ending.reporting_familiar".into());
                         }
@@ -1216,6 +1235,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                         | "자면"
                         | "으랍니다"
                         | "으란다"
+                        | "으라지"
+                        | "으라죠"
                         | "잔다"
                         | "으라네"
                         | "으라는데"
@@ -1263,6 +1284,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                                         | "다며"
                                         | "다면서"
                                         | "단다"
+                                        | "다지"
+                                        | "다죠"
                                 ))
                     }
                     Some(PredicateClass::Copula) | None => false,
@@ -1317,6 +1340,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                         | "자면"
                         | "으랍니다"
                         | "으란다"
+                        | "으라지"
+                        | "으라죠"
                         | "잔다"
                         | "으라네"
                         | "으라는데"
@@ -1389,6 +1414,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "다면"
             | "답니다"
             | "단다"
+            | "다지"
+            | "다죠"
             | "냔다"
             | "더란다"
             | "다며"
@@ -1552,6 +1579,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                         | "으란"
                         | "으랍니다"
                         | "으란다"
+                        | "으라지"
+                        | "으라죠"
                         | "잔다"
                         | "으라네"
                         | "으라는데"
@@ -1577,6 +1606,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 | "느냔다"
                 | "으냔다"
                 | "단다"
+                | "다지"
+                | "다죠"
                 | "느니라"
                 | "느냐며"
                 | "느냐면서"
@@ -2559,6 +2590,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                         | "을래"
                         | "다니"
                         | "으되"
+                        | "다지"
+                        | "는다지"
+                        | "라지"
+                        | "으라지"
                         | "다네"
                         | "는다네"
                         | "라네"

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ao/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ap/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 291 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ao/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 423 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 295 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 419 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -852,6 +852,22 @@ review remains open under the completion review below.
   Independent review, contextual interpretation and the unjudged candidates
   remain open. The synthetic 뿍다 hypothesis has no dictionary entry.
   See the [source and candidate review](danda-evaluation.json).
+
+- [x] **COV-017ap — Confirming/reported -다지/-라지 and polite forms.**
+  Implemented and validated with Rust, corpus, browser, full-dictionary
+  packaged checks and Nix CLI/web builds. Nineteen full KRDict entries distinguish confirmation, reported
+  speech and dismissive commands. 다지/는다지/라지/으라지 take one polite 요;
+  contracted 다죠/는다죠/라죠/으라죠 retain their own sourced components.
+  Factual 라지 and command 으라지 remain separate, including after honorific 시.
+  [243 raw judgments](../tests/daji.rs) and 42 dictionary-policy judgments cover
+  source examples, prefinals, irregulars, auxiliary/답다/copula ownership and
+  lexical alternatives. The same audit fixes COV-017ao's unsupported ㅂ/ㅎ
+  recovery before attached present 는단다; all 27 observed removed candidates
+  have individual forbidden judgments. Frozen corpus recall is unchanged.
+  The GSD training annotation for 좋다지요 remains verbatim (좋다 + 지다 after
+  conversion), with its mismatch reported rather than rewriting gold.
+  Independent Korean review, contextual interpretation and the unjudged queue
+  remain open. See the [source and candidate evaluation](daji-evaluation.json).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

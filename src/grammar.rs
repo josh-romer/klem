@@ -867,6 +867,9 @@ pub(crate) fn endings() -> &'static [Ending] {
         // 이 is part of the copular stem, never an arbitrary removable ending.
         for suffix in [
             "라",
+            "라도",
+            "라야",
+            "라야만",
             "라서",
             "라고",
             "라는",
@@ -973,6 +976,10 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("나", 4, 2),
             ("이라도", 4, 1),
             ("라도", 4, 2),
+            ("이라야", 4, 1),
+            ("라야", 4, 2),
+            ("이라야만", 4, 1),
+            ("라야만", 4, 2),
             ("이든지", 4, 1),
             ("든지", 4, 2),
             ("이든가", 4, 1),

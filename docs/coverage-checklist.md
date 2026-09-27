@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ai/018a–k/018m–q/019a–g/019i–m/020a–j/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–aj/018a–k/018m–r/019a–g/019i–m/020a–k/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 223 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ai/018e–k/018m–q/019d–g/019i–m/020d–h/020j; 491 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 230 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–aj/018e–k/018m–r/019d–g/019i–m/020d–h/020j–k; 484 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ai implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–aj implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -769,8 +769,22 @@ review remains open under the completion review below.
   are COV-020j. This modern dictionary-listed literary register does not imply
   general historical or dialectal grammar coverage.
 
+- [x] **COV-017aj — Copular conditional/concessive 라 endings.** Added
+  라도, 라야 and 라야만 with explicit/omitted copula and 아니다 boundaries.
+  All permit honorific 시; only 라도 additionally admits 더 and conjectural
+  으리. Bare lexical predicates, command 으라 and unsupported prefinals retain
+  distinct boundaries. Factual 라 + 도 remains beside bundled 라도, matching
+  the original 교양만이라도 annotation. 라야 + 만 remains beside 라야만.
+  Evidence: [73 judgments across 72 cases](../tests/fixtures/validity.json),
+  [role/boundary, dictionary/CLI and corpus tests](../tests/ra_conditions.rs),
+  four complete unchanged corpus sentences, browser role/source checks and
+  [the source/output review](ra-condition-evaluation.json). Particle homonyms
+  are COV-018r and vowel-final copula omission is COV-020k. Contextual discourse
+  and temporal readings, other following auxiliaries/particles and independent
+  Korean review remain open.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–q implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–r implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -1013,6 +1027,17 @@ review remains open under the completion review below.
   its gold is preserved. Noun POS does not establish time/place semantics;
   contextual scope, other particle orders and independent Korean review remain open.
 
+- [x] **COV-018r — Conditional (이)라야/(이)라야만 particles.** Added
+  noun/adverbial 라야/이라야 with vowel/consonant allomorphs, and nominal
+  라야만/이라야만. NIKL's explicit compound decompositions retain (이)라야 + 만
+  alongside each longer particle. Case-marked adverbials such as 뒤에라야
+  compose; subject/object case markers do not gain those nominal/adverbial
+  licenses. The copula ending homonyms remain separate candidates and sources.
+  Evidence: COV-017aj's [tests](../tests/ra_conditions.rs), attributed dictionary
+  fixtures, the complete 꽃다발이라야 corpus sentence, browser alternatives and
+  [review](ra-condition-evaluation.json). Nominalization, unknown lexical heads
+  and further case/copula alternatives remain hypotheses, not contextual judgments.
+
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -1208,7 +1233,7 @@ review remains open under the completion review below.
   COV-020e adds reviewed consonant-initial ending families; COV-020f adds
   honorific omission and short 세요; COV-020g adds modal/retrospective omission;
   COV-020h adds attached question endings; COV-020i adds nominal approximation -쯤;
-  COV-020j adds literary 니라 omission.**
+  COV-020j adds literary 니라 omission; COV-020k adds conditional/concessive 라 endings.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -1357,6 +1382,17 @@ review remains open under the completion review below.
   dictionary/browser parity and [review](nira-evaluation.json). Broader
   particle-marked bases remain COV-020; historical tense uses are not inferred.
 
+- [x] **COV-020k — Omitted copulas before conditional/concessive 라 endings.**
+  의사라도/의사라야/의사라야만 preserve 의사 + 이다 and their respective endings,
+  while consonant-final nominals still require explicit 이. Nominal suffixes and
+  existing particle-marked bases compose, including 교양 + 만 + 이다 + 라도.
+  The full KAIST annotation's 라 + 도 alternative and GSD's 자전거도로 + 이다
+  group remain beside particle readings. The GSD annotation does not prove
+  which reading is intended in its sentence. Evidence: COV-017aj's
+  [tests](../tests/ra_conditions.rs), full corpus fixtures and
+  [review](ra-condition-evaluation.json). Broader particle-marked nominal/copula
+  attachment and contextual interpretation remain COV-020 and completion review.
+
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without
@@ -1445,7 +1481,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 325 currently emitted canonical grammar forms.** The initial catalog
+  for all 340 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

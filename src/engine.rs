@@ -668,7 +668,10 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 let factual_ra = matches!(ending.boundary, Boundary::Literal)
                     && matches!(
                         ending.form,
-                        "라" | "라서"
+                        "라" | "라도"
+                            | "라야"
+                            | "라야만"
+                            | "라서"
                             | "라고"
                             | "라는"
                             | "라면"
@@ -682,7 +685,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     );
                 if factual_ra
                     && !p.morphs.last().is_some_and(|m| {
-                        m.form == "시" || (m.form == "더" && ending.form != "라는")
+                        m.form == "시"
+                            || (m.form == "더"
+                                && !matches!(ending.form, "라는" | "라야" | "라야만"))
                     })
                 {
                     continue;
@@ -804,6 +809,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
     for ending in [
         "란",
         "라",
+        "라도",
         "라서",
         "라고",
         "라면",
@@ -1522,7 +1528,8 @@ fn particle_allowed(
         )
     }) || (matches!(form, "이" | "가" | "을" | "를")
         && suffixes.iter().any(|m| {
-            adverbial_focus_particle(&m.form) || matches!(m.form.as_str(), "든가" | "이든가")
+            adverbial_focus_particle(&m.form)
+                || matches!(m.form.as_str(), "든가" | "이든가" | "이라야만" | "라야만")
         }))
     {
         return false;
@@ -1569,7 +1576,16 @@ fn choice_particle(form: &str) -> Option<u8> {
 fn adverbial_focus_particle(form: &str) -> bool {
     matches!(
         form,
-        "이야말로" | "야말로" | "이나마" | "나마" | "은커녕" | "는커녕" | "라든가" | "라든지"
+        "이야말로"
+            | "야말로"
+            | "이나마"
+            | "나마"
+            | "은커녕"
+            | "는커녕"
+            | "라든가"
+            | "라든지"
+            | "이라야"
+            | "라야"
     )
 }
 
@@ -1884,20 +1900,26 @@ fn nominals(
                 a.rules.push("particle.recipient".into());
             }
         }
-        // NIKL explicitly decomposes the compound 에야 as 에 + 야. Keep
-        // both representations, including outer particles (때에야만), without
-        // allowing arbitrary focus particles to cross the ordering stages.
-        if particle.form == "에야" {
+        // Preserve NIKL's explicit compound decompositions without allowing
+        // arbitrary focus particles to cross the ordering stages. The longer
+        // (이)라야만 entries retain their nominal attachment scope.
+        let components = match particle.form {
+            "에야" => Some(["에", "야"]),
+            "이라야만" => Some(["이라야", "만"]),
+            "라야만" => Some(["라야", "만"]),
+            _ => None,
+        };
+        if let Some([first, second]) = components {
             let end = out.len();
             for i in start..end {
                 let mut split = out[i].clone();
                 let slot = split.morphemes.len() - suffixes.len() - 1;
-                debug_assert_eq!(split.morphemes[slot].form, "에야");
+                debug_assert_eq!(split.morphemes[slot].form, particle.form);
                 split.morphemes.splice(
                     slot..=slot,
                     [
-                        morph("에", MorphemeKind::Particle),
-                        morph("야", MorphemeKind::Particle),
+                        morph(first, MorphemeKind::Particle),
+                        morph(second, MorphemeKind::Particle),
                     ],
                 );
                 out.push(split);
@@ -2252,6 +2274,9 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "도" => {
             (reporting_myeo(ending) && ending.ends_with("면서"))
                 || connective
+                // Factual/copular 라 + 도 also has the bundled 라도 reading.
+                // Quoted commands retain their separate canonical 으라 form.
+                || ending == "라"
                 || matches!(
                     ending,
                     "다는데" | "는다는데" | "라는데" | "으라는데" | "더라는데"
@@ -2271,7 +2296,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "만치" | "만큼" => ending == "어서",
         "만" => {
             concessive_ending(ending)
-                || matches!(ending, "어" | "어서" | "어야" | "게" | "고" | "고서")
+                || matches!(
+                    ending,
+                    "어" | "어서" | "어야" | "라야" | "게" | "고" | "고서"
+                )
         }
         "마는" => concessive_ending(ending),
         "를" => matches!(ending, "어" | "게" | "지" | "고"),

@@ -2423,3 +2423,52 @@ after confirming it had stopped, a retry passed. The packaged full-dictionary
 preview verifies all 34 judgments, CLI/API/export parity, four displayed words
 with compound/split choices, source selection and desktop/mobile layout.
 Independent Korean review and the remaining checklist families stay open.
+
+## Conditional/concessive 라 and particle homonyms (COV-017aj/018r/020k)
+
+The [source and candidate review](ra-condition-evaluation.json) adds copular
+라도/라야/라야만 endings with distinct prefinal licenses. Nominal (이)라야 and
+(이)라야만 particles preserve their separate roles; plain (이)라야 also accepts
+source-supported adverbial attachment. Explicit particle + 만 decompositions
+coexist with compounds. Factual 라 + 도 preserves the exact 교양 + 만 + 이 + 라
++ 도 corpus analysis without adding a particle license to command 으라.
+
+There are 73 judgments across 72 cases (47 required / 26 forbidden), bringing
+main validity totals to 2,245 required / 1,462 forbidden. Four complete unchanged
+KAIST/GSD sentences preserve the source annotations. KAIST now matches
+22,127/22,220 groups (93 misses); GSD matches 9,844/9,989 (145 misses). Mean
+candidate counts are 6.028173 / 5.511763. Only 교양만이라도 and 자전거도로라도
+change from misses to matches. GSD annotates the latter with a copula; preserving
+that reading alongside the particle reading does not establish which is intended
+in its sentence. These development cases are regression evidence, not held-out
+precision evaluation.
+
+Across 3,554 tracked surfaces, 605 candidates are added on 62 surfaces, with no
+removals or provenance changes. All thirty stress hashes and frozen corpus
+baselines stay unchanged. The novel gains 477 compatible-filtered readings
+across 134 word tokens / 73 types. These include useful predicate paths and
+unjudged nominal/copula alternatives such as 가 + 이다 + 더 + 라도 beside
+가다 + 더 + 라도, plus particle-marked bases such as 마음 + 으로 + 이다 + 라도.
+The report retains these alternatives without counting them all as precision gains.
+
+Seven source dispositions bring the inventory to 230 scoped / 484 unreviewed /
+one gap. The catalog has 340 canonical forms / 477 source IDs / 478 fixture
+entries. The full-dictionary viewer initially glosses 먹다 as “be deaf” (15983)
+ahead of “eat” (58272); both are verbs. This is a recorded contextual sense
+selection limitation, separate from the verified ending and particle roles.
+
+The novel's compatible-filtered total becomes 120,427 analyses / 73,327 tokens
+with readings; headword-only totals become 131,372 / 73,382 across 81,758 word
+tokens. Three sequential local release runs measured compatible median 1.236s
+versus 1.250s before, with peak RSS below 29 MiB. Timings include startup and
+JSONL serialization; local variation is not evidence of a speedup or a throughput
+guarantee.
+
+Rust/web-feature tests, Clippy, formatting, frozen corpus regression, frontend
+build, browser/HTTP tests, inventory verification, x86_64-linux Nix flake checks
+and the packaged web build pass. The packaged full-dictionary preview verifies
+all 73 judgments, CLI/API/export parity, five displayed words with nine selections,
+all seven grammar sources and desktop/mobile layout. Browser selection checks
+both forms and grammatical roles because subject particle 이 and copula 이 can
+print identically. Independent Korean review and the remaining checklist
+families stay open.

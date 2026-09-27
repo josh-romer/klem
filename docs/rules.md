@@ -2626,3 +2626,25 @@ remain identical. Unknown nominal heads are hypotheses; neither dictionary noun
 POS nor a matching surface establishes a time/place sense or contextual scope.
 The [source review](eya-evaluation.json) records the primary report URL and the
 original corpus granularity. No corpus gold or frozen baseline is rewritten.
+
+## Conditional/concessive 라 homonyms (COV-017aj/018r/020k)
+
+Ending 라도 follows 이다/아니다 and the source-listed prefinals 시, 더 or 으리;
+라야 and 라야만 have the narrower 이다/아니다/시 license. Existing copula
+boundaries preserve explicit 이 and vowel-final omission. No bare lexical stem
+or command 으라 is licensed by these factual forms. Canonical 라 + particle 도
+also composes, preserving KAIST's 교양 + 만 + 이다 + 라 + 도 path beside bundled
+라도. Endings 라야 and 라야만 retain a split 라야 + 만 alternative.
+
+Particle 라야/이라야 has nominal/adverbial attachment, including 뒤에라야;
+라야만/이라야만 lists nominal attachment. ㄹ is consonantal for these particle
+allomorphs. NIKL explicitly decomposes the longer particles into (이)라야 + 만;
+this finite decomposition does not reorder arbitrary focus particles. Grammar
+lookup uses the component role to distinguish -라야/-라야만 endings from particle
+homonyms, and preserves each source rather than selecting a contextual sense.
+
+The [review](ra-condition-evaluation.json) contains seven KRDict sources and the
+NIKL report references. Existing broader nominal/copula composition can still
+produce unjudged alternatives. Matching GSD's 자전거도로 + 이다 annotation is a
+representation result, not proof that a copula is intended over the particle
+reading. Independent Korean review and wider auxiliary/particle licenses remain open.

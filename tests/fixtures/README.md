@@ -1074,3 +1074,20 @@ the pinned source above. Corpus 때 + 에 + 야만 differs in granularity from t
 program's split 때 + 에 + 야 + 만; source gold remains unchanged. The motivating
 development miss is regression evidence, not a held-out measure. The NIKL compound
 decomposition source and all source hashes are recorded in `docs/eya-evaluation.json`.
+
+`krdict-ra-conditions.json` contains 27 lexical entries from the September 2026
+Korean Basic Dictionary export (National Institute of Korean Language,
+CC BY-SA 2.0 KR). It preserves IDs/definitions, English equivalents and at most
+one example group per sense, omitting word/related forms. The grammar fixture
+adds seven source entries for endings -라도/-라야/-라야만 and particles
+(이)라야/(이)라야만, preserving their POS distinction.
+
+`kaist-ra-conditions.conllu` preserves complete UD Korean KAIST 2.15 development
+MH2_0149-s95 and training M2TA_087-s37 / MH2_0017-s181 sentences.
+`gsd-ra-conditions.conllu` preserves complete UD Korean GSD 2.15 development
+dev-s820. Attribution and licenses follow the pinned KAIST and GSD sources above.
+These reused development observations are regression evidence. The GSD adapter
+joins adjacent nouns in 자전거+도로+이+라도; its recovered copula group does not
+establish contextual correctness over the existing particle analysis. No source
+gold is rewritten. NIKL's compound decomposition and all source hashes appear in
+`docs/ra-condition-evaluation.json`.

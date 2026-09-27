@@ -264,6 +264,7 @@ try {
   const shortRecipient = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
+  const raConditions = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ra-conditions.json"), "utf8"));
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const nira = JSON.parse(
@@ -271,6 +272,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...raConditions.LexicalResource.Lexicon.LexicalEntry,
       ...eya.LexicalResource.Lexicon.LexicalEntry,
       ...vocative.LexicalResource.Lexicon.LexicalEntry,
       ...nira.LexicalResource.Lexicon.LexicalEntry,
@@ -603,6 +605,50 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Copular and particle homonyms retain their own source entries and role boundaries.
+  const raConditionsCases = recipientLedger.cases.filter(c => c.id.startsWith("ra-conditions-"));
+  assert.equal(raConditionsCases.length, 72);
+  for (const c of raConditionsCases) {
+    const data = await (await post("analyze", {text:c.surface})).json(), token = data.records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if(index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const raConditionsText = "교양만이라도 휴가라야만 꽃다발이라야 먹더라도 것이라야만";
+  await submit(page, raConditionsText); await waitHeading(page, "교양만이라도");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  const raConditionsData = await (await post("analyze",{text:raConditionsText})).json();
+  const raConditionsWords = raConditionsData.records.filter(r=>r.kind==="word");
+  for(const [i, expected, sourceId] of [[0,["교양","만","이","라도"],80246],[1,["휴가","라야만"],86066],[1,["휴가","라야","만"],86520],[1,["휴가","이","라야만"],80237],[1,["휴가","이","라야","만"],80230],[2,["꽃다발","이","라야"],80230],[2,["꽃다발","이라야"],86620],[3,["먹","더","라도"],80246],[4,["것","이라야만"],86067]]) {
+    const word=page.locator(".breakdown-word").nth(i), select=word.locator("select");
+    // A subject particle 이 and copula 이 can print identically; select by
+    // both displayed forms and the grammar source's actual morpheme role.
+    const [key,label]=Object.entries(grammarLabels).find(([,v])=>v.sources.some(s=>s.id===sourceId));
+    const allowed=raConditionsWords[i].analysis.analyses.flatMap((a,j)=>a.morphemes.some(m=>m.form===key.replace(/^-/,'') && m.kind===label.kind)?[String(j)]:[]);
+    const value=await select.locator("option").evaluateAll((os,{forms,allowed})=>os.find(o=>allowed.includes(o.value) && o.textContent.replace(/^\d+\. /,"")===forms.join(" + "))?.value,{forms:expected,allowed});
+    assert.ok(value,expected.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(),expected);
+    const partIndex=expected.at(-1)==="만"?expected.length-2:expected.length-1;
+    await word.locator(".breakdown-part").nth(partIndex).click();
+    await page.waitForFunction(id=>document.querySelector(`a[href*="ParaWordNo=${id}"]`),sourceId);
+  }
+  const raConditionsDownload=page.waitForEvent("download");
+  await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const raConditionsExport=JSON.parse(await readFile(await (await raConditionsDownload).path(),"utf8"));
+  const raConditionsExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:raConditionsText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(raConditionsExport.records,raConditionsExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-ra-conditions-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-ra-conditions-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Emphatic 에야 preserves bundled and split alternatives with outer particles.
   const eyaCases = recipientLedger.cases.filter(c => c.id.startsWith("eya-"));

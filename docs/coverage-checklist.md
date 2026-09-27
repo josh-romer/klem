@@ -1512,6 +1512,13 @@ review remains open under the completion review below.
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
   and ending/particle families. Do not extend stop/sonorant rules without
   pronunciation evidence.
+  The [complex-coda discovery audit](hada-complex-coda-audit.json) examines all
+  7,571 pinned dictionary entries ending in 하다 and finds three with a complex
+  coda immediately before 하: 한몫하다, 값하다 and 꼴값하다. It preserves their
+  pronunciations, all senses and training/development search hits. Full forms
+  recover today; the proposed shortened 지/기 forms do not. These are pending
+  implementation targets, not new correctness judgments. Other cluster classes
+  still need pronunciation review; dictionary absence does not close their scope.
 - [x] **COV-021a — Article 39 negative contractions.** 잖 recovers 지 + 않다;
   찮 restores 하지 + 않다. The left predicate uses existing spelling and
   prefinal recovery; the negative auxiliary retains its own inflection.

@@ -24,6 +24,7 @@ pub enum AttachmentRule {
     NegativeCopulaCommand,
     IntentionVerb,
     ResultTransferVerb,
+    NeuraVerb,
     AuxiliaryClass,
     LiteraryAssertionClass,
     HabitualConditionVerb,
@@ -355,6 +356,8 @@ impl Annotation {
                             Some(AttachmentRule::PresentDeclarativeVerb)
                         } else if adjective && crate::engine::verbal_intention(form) {
                             Some(AttachmentRule::IntentionVerb)
+                        } else if adjective && crate::engine::activity_reason(form) {
+                            Some(AttachmentRule::NeuraVerb)
                         } else if adjective && crate::engine::result_connective(form) {
                             Some(AttachmentRule::ResultTransferVerb)
                         } else if bare && verb && crate::engine::adjectival_question(form) {

@@ -3152,3 +3152,25 @@ inferences. This does not license ordinary past/honorific/indicative 달다 auxi
 source conflicts, unchanged annotated training sentences and frozen comparisons.
 Novel ambiguity and derived-boundary hypotheses remain unjudged; dictionary
 matches do not prove the intended sentence reading.
+
+
+## Action reason and purpose (COV-017au)
+
+느라 and 느라고 are separate canonical short/full endings. Both take a verb
+or honorific 시; the reviewed grammar research explicitly excludes past 었
+and modal 겠, and the source notes do not license retrospective 더. Unknown
+lexical roots remain candidates, while known auxiliary adjective/copula classes
+and derived 답다 cannot own these endings. A preceding adjective may still
+belong to another component, as in 좋아하느라 and 좋아지느라.
+
+The dictionary conflict `neura_verb` applies to lexical adjective entries that
+own this ending, including after 시. Verb/adjective homonyms are assessed
+separately: 늦다 and 있다 retain their verb entries; unclassified/standalone
+auxiliary entries remain Unknown. This does not pick a contextual sense.
+
+NIKL consultation 309656 explicitly accepts 주느라요 and 주느라고요, represented
+with outer particle 요. The old long-form 는/도 paths remain; their availability
+does not by itself establish wider short-form particle licenses. Clause subject,
+purpose versus cause and subsequent mood are outside token-level morphology.
+[The primary-source and candidate review](neura-evaluation.json) records these
+limits, every removed raw hypothesis, unchanged corpus gold and novel comparison.

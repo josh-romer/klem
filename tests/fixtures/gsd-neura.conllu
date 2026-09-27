@@ -1,0 +1,29 @@
+# sent_id = train-s1349
+# text = "다 모이면 웃느라고 정신이 없다"는 것이다.
+# translit = ".da .mo.i.myeon .us.neu.ra.go .jeong.sin.i .eobs.da".neun .geos.i.da.
+1	"	"	PUNCT	SS	_	6	punct	_	SpaceAfter=No|Translit="|LTranslit="
+2	다	다	NOUN	NNG	_	3	obl	_	Translit=.da|LTranslit=.da
+3	모이면	모이+면	VERB	VV+EC	_	6	advcl	_	Translit=.mo.i.myeon|LTranslit=.mo.i+.myeon
+4	웃느라고	웃+느라고	VERB	VV+EC	_	6	advcl	_	Translit=.us.neu.ra.go|LTranslit=.us+.neu.ra.go
+5	정신이	정신+이	NOUN	NNG+JKS	_	6	nsubj	_	Translit=.jeong.sin.i|LTranslit=.jeong.sin+.i
+6	없다	없+다	ADJ	VA+EC	_	9	amod	_	SpaceAfter=No|Translit=.eobs.da|LTranslit=.eobs+.da
+7	"	"	PUNCT	SS	_	6	punct	_	SpaceAfter=No|Translit="|LTranslit="
+8	는	는	VERB	ETM	_	6	dep	_	Translit=.neun|LTranslit=.neun
+9	것이다	것+이+다	VERB	NNB+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.geos.i.da|LTranslit=.geos+.i+.da
+10	.	.	PUNCT	SF	_	9	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1803
+# text = 간호사들 자기들끼리 수다 떠시느라 바쁘시고 의사는 검사 항목 하나라도 늘릴라고 안달
+# translit = .gan.ho.sa.deul .ja.gi.deul.ggi.ri .su.da .ddeo.si.neu.ra .ba.bbeu.si.go .yi.sa.neun .geom.sa .hang.mog .ha.na.ra.do .neul.ril.ra.go .an.dal
+1	간호사들	간호사+들	NOUN	NNG+XSN	_	4	nsubj	_	Translit=.gan.ho.sa.deul|LTranslit=.gan.ho.sa+.deul
+2	자기들끼리	자기+들+끼리	ADV	NP+XSN+XSN	_	4	advmod	_	Translit=.ja.gi.deul.ggi.ri|LTranslit=.ja.gi+.deul+.ggi.ri
+3	수다	수다	NOUN	NNG	_	4	obj	_	Translit=.su.da|LTranslit=.su.da
+4	떠시느라	떠+시+느라	VERB	VV+EP+EC	_	5	advcl	_	Translit=.ddeo.si.neu.ra|LTranslit=.ddeo+.si+.neu.ra
+5	바쁘시고	바쁘+시+고	VERB	VA+EP+EC	_	0	root	_	Translit=.ba.bbeu.si.go|LTranslit=.ba.bbeu+.si+.go
+6	의사는	의사+는	NOUN	NNG+JX	_	11	nsubj	_	Translit=.yi.sa.neun|LTranslit=.yi.sa+.neun
+7	검사	검사	NOUN	NNG	_	10	obj	_	Translit=.geom.sa|LTranslit=.geom.sa
+8	항목	항목	NOUN	NNG	_	7	flat	_	Translit=.hang.mog|LTranslit=.hang.mog
+9	하나라도	하나+이+라도	ADV	NR+VCP+EC	_	10	advmod	_	Translit=.ha.na.ra.do|LTranslit=.ha.na+.i+.ra.do
+10	늘릴라고	늘리+ㄹ라고	VERB	VV+EC	_	11	advcl	_	Translit=.neul.ril.ra.go|LTranslit=.neul.ri+ㄹ.ra.go
+11	안달	안달	NOUN	NNG	_	5	conj	_	Translit=.an.dal|LTranslit=.an.dal
+

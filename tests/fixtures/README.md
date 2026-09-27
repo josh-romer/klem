@@ -1404,3 +1404,18 @@ twenty expression sources are distinguished in the coverage report.
 sentences (train-s1824 and train-s4304), under the corpus attribution/license
 above. Their 쓴대요 and 한대요 annotations support the new lemma matches.
 No held-out baseline, annotation or source spelling was rewritten.
+
+`krdict-neura.json` preserves 70 full primary entries from the pinned September
+2026 NIKL Korean Basic Dictionary export under **CC BY-SA 2.0 KR**, with the
+attribution and links above. All senses, notes, forms and examples remain;
+equivalents are English only; RelatedForm and same-ID idioms are omitted.
+`neura-sources.json` preserves both ending entries and all eight source-example
+groups, linked to exact candidate cases. The grammar-label fixture includes
+both ending sources. The evaluation cites additional NIKL grammar research
+and consultations separately from this dictionary export.
+
+`kaist-neura.conllu` and `gsd-neura.conllu` preserve eight and two complete
+unchanged training sentences, respectively, under the corpus attribution and
+licenses above. GSD's 떠+시+느라 annotation and unrelated 동그래진다/늘릴라고
+mismatches remain exactly as published; no source gold or frozen baseline was
+rewritten to accommodate the implementation.

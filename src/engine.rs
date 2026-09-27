@@ -368,6 +368,10 @@ pub(crate) fn verbal_intention(form: &str) -> bool {
     intention_connective(form) || matches!(form, "으려는" | "으려는가" | "으려는지")
 }
 
+pub(crate) fn activity_reason(form: &str) -> bool {
+    matches!(form, "느라" | "느라고")
+}
+
 pub(crate) fn result_connective(form: &str) -> bool {
     matches!(form, "어다" | "어다가")
 }
@@ -558,6 +562,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     && p.morphs.iter().any(|m| m.form == "더"))
                     || (ending.form == "자니까" && !p.morphs.is_empty())
                 {
+                    continue;
+                }
+                // KRDict 80327/80328 and NIKL 2014 grammar research:
+                // verbs and honorific 시, without tense/modal/retrospective markers.
+                if activity_reason(ending.form) && p.morphs.iter().any(|m| m.form != "시") {
                     continue;
                 }
                 // Short reports inherit the source's 시/었/겠 slots, not
@@ -872,6 +881,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "더라지만"
                 ) {
                     p.rules.push("ending.reporting_contrast".into());
+                }
+                if activity_reason(ending.form) {
+                    p.rules.push("ending.activity_reason".into());
                 }
                 if short_report(ending.form) {
                     p.rules.push("ending.reporting_short".into());
@@ -1291,7 +1303,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             if bare_stative_iss && present_declarative(&m.form) {
                 return false;
             }
-            if (verbal_intention(&m.form) || result_connective(&m.form))
+            if (verbal_intention(&m.form) || result_connective(&m.form) || activity_reason(&m.form))
                 && matches!(
                     class,
                     Some(PredicateClass::Adjective | PredicateClass::Copula)
@@ -1426,6 +1438,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             present_declarative(&m.form)
                 || verbal_intention(&m.form)
                 || result_connective(&m.form)
+                || activity_reason(&m.form)
                 || matches!(
                     m.form.as_str(),
                     "으라며"
@@ -1677,6 +1690,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
             present_declarative(&m.form)
                 || verbal_intention(&m.form)
                 || result_connective(&m.form)
+                || activity_reason(&m.form)
                 || matches!(
                     m.form.as_str(),
                     "으라며"
@@ -2741,7 +2755,9 @@ fn before_particle(ending: &str, particle: &str) -> bool {
     match particle {
         "밖에" => reporting_go(ending),
         "요" => {
-            short_report(ending)
+            // NIKL consultation 309656 explicitly accepts both polite forms.
+            activity_reason(ending)
+                || short_report(ending)
                 || reporting_go(ending)
                 || reporting_myeo(ending)
                 || reporting_ni(ending)

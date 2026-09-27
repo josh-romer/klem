@@ -2047,3 +2047,59 @@ fn short_reports_recover_unchanged_gsd_training_targets() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn neura_preserves_all_discovered_training_annotations() {
+    let kaist = corpus::evaluate(
+        include_bytes!("fixtures/kaist-neura.conllu").as_slice(),
+        Corpus::Kaist,
+        "neura",
+    )
+    .unwrap();
+    let gsd = corpus::evaluate(
+        include_bytes!("fixtures/gsd-neura.conllu").as_slice(),
+        Corpus::Gsd,
+        "neura",
+    )
+    .unwrap();
+    let case = &kaist.cases["id:M2TA_092-s13/8"];
+    assert_eq!(case.surface, "적느라");
+    assert_eq!(case.expected, vec!["적다"]);
+    assert!(case.matched, "id:M2TA_092-s13/8");
+    let case = &kaist.cases["id:MH2_0091-s74/12"];
+    assert_eq!(case.surface, "적응하느라");
+    assert_eq!(case.expected, vec!["적응하다"]);
+    assert!(case.matched, "id:MH2_0091-s74/12");
+    let case = &kaist.cases["id:MH2_0091-s243/5"];
+    assert_eq!(case.surface, "읽느라고");
+    assert_eq!(case.expected, vec!["읽다"]);
+    assert!(case.matched, "id:MH2_0091-s243/5");
+    let case = &kaist.cases["id:MH2_0091-s248/9"];
+    assert_eq!(case.surface, "달래느라");
+    assert_eq!(case.expected, vec!["달래다"]);
+    assert!(case.matched, "id:MH2_0091-s248/9");
+    let case = &kaist.cases["id:MH2_0127-s208/22"];
+    assert_eq!(case.surface, "쓰느라");
+    assert_eq!(case.expected, vec!["쓰다"]);
+    assert!(case.matched, "id:MH2_0127-s208/22");
+    let case = &kaist.cases["id:MH2_0148-s317/14"];
+    assert_eq!(case.surface, "보내느라고");
+    assert_eq!(case.expected, vec!["보내다"]);
+    assert!(case.matched, "id:MH2_0148-s317/14");
+    let case = &kaist.cases["id:MH2_0174-s417/13"];
+    assert_eq!(case.surface, "이야기하느라");
+    assert_eq!(case.expected, vec!["이야기하다"]);
+    assert!(case.matched, "id:MH2_0174-s417/13");
+    let case = &kaist.cases["id:MH2_0286-s243/2"];
+    assert_eq!(case.surface, "하느라고");
+    assert_eq!(case.expected, vec!["하다"]);
+    assert!(case.matched, "id:MH2_0286-s243/2");
+    let case = &gsd.cases["id:train-s1349/4"];
+    assert_eq!(case.surface, "웃느라고");
+    assert_eq!(case.expected, vec!["웃다"]);
+    assert!(case.matched, "id:train-s1349/4");
+    let case = &gsd.cases["id:train-s1803/4"];
+    assert_eq!(case.surface, "떠시느라");
+    assert_eq!(case.expected, vec!["떠다"]);
+    assert!(case.matched, "id:train-s1803/4");
+}

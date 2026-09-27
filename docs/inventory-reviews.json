@@ -24116,6 +24116,432 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:80328",
+      "source_sha256": "c4ce8adbe3997fa12105d2bfe753bb5aff4610dbd4f658a45825d1d495a5cc92",
+      "status": "scoped",
+      "checklist": [
+        "COV-017au"
+      ],
+      "scope": "Reviewed short/full reason-purpose ending, all source-example groups, verb/honorific attachment, prefinal and represented-class boundaries, polite particle, lexical entry ownership and homonyms.",
+      "remaining": "Independent linguistic review, context-sensitive subject/mood/meaning, broader outer particles and lexical-subset restrictions remain open. Corpus annotation disagreements are preserved.",
+      "evidence": [
+        {
+          "path": "tests/neura.rs",
+          "test": "neura_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/neura.rs",
+          "test": "neura_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/neura.rs",
+          "test": "neura_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/neura.rs",
+          "test": "neura_assesses_each_homonym_and_only_the_ending_owner"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "neura_preserves_all_discovered_training_annotations"
+        },
+        {
+          "path": "docs/neura-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neura-source-80328-0",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-source-80328-1",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-source-80328-2",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-source-80328-3",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-0",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-1",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-2",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-3",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-4",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-5",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-6",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-7",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-8",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-9",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-10",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-11",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-12",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-13",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-14",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-15",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-16",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-composition-17",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-4",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-5",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-6",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-7",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-8",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-9",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-10",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-11",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-12",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-13",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-14",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-15",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-16",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라-boundary-17",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-corpus-적느라",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-corpus-적응하느라",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-corpus-달래느라",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-corpus-쓰느라",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-corpus-이야기하느라",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-corpus-떠시느라",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80327",
+      "source_sha256": "8a0c3e0149f4ab55fa201c808446e313e8376409b8286bfb31c4500c0b0779ba",
+      "status": "scoped",
+      "checklist": [
+        "COV-017au"
+      ],
+      "scope": "Reviewed short/full reason-purpose ending, all source-example groups, verb/honorific attachment, prefinal and represented-class boundaries, polite particle, lexical entry ownership and homonyms.",
+      "remaining": "Independent linguistic review, context-sensitive subject/mood/meaning, broader outer particles and lexical-subset restrictions remain open. Corpus annotation disagreements are preserved.",
+      "evidence": [
+        {
+          "path": "tests/neura.rs",
+          "test": "neura_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/neura.rs",
+          "test": "neura_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/neura.rs",
+          "test": "neura_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/neura.rs",
+          "test": "neura_assesses_each_homonym_and_only_the_ending_owner"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "neura_preserves_all_discovered_training_annotations"
+        },
+        {
+          "path": "docs/neura-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neura-source-80327-0",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-source-80327-1",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-source-80327-2",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-source-80327-3",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-0",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-1",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-2",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-3",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-4",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-5",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-6",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-7",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-8",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-9",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-10",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-11",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-12",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-13",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-14",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-15",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-16",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-composition-17",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-4",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-5",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-6",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-7",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-8",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-9",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-10",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-11",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-12",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-13",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-14",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-15",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-16",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-느라고-boundary-17",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-existing-outer-는",
+          "judgment": "path"
+        },
+        {
+          "case": "neura-existing-outer-도",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

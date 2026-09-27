@@ -566,6 +566,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "느냐고",
             "느니라",
             "느라고",
+            "느라",
             "고",
             "고서",
             "고요",
@@ -1406,6 +1407,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.reporting_confirmation" => {
             "Recognize confirming and reported -다지/-라지 families and contracted polite -죠 forms; preserve factual and command alternatives without inferring an implicit speaker or reporting verb."
+        }
+        "ending.activity_reason" => {
+            "Recognize full -느라고 and short -느라 reason/purpose endings after verbs or honorific 시; clause-level subject and meaning constraints require context."
         }
         "ending.reporting_short" => {
             "Recognize short reported statements, requests, proposals, questions and experiences; retain factual/command homonyms and surprise senses without inserting implicit 하다."

@@ -271,6 +271,7 @@ try {
   const danikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danikka.json"), "utf8"));
   const requestAux = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-request-aux.json"), "utf8"));
   const shortReports = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-short-reports.json"), "utf8"));
+  const neura = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-neura.json"), "utf8"));
   const dajiman = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-dajiman.json"), "utf8"));
   const daji = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-daji.json"), "utf8"));
   const danda = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danda.json"), "utf8"));
@@ -305,6 +306,7 @@ try {
       ...danikka.LexicalResource.Lexicon.LexicalEntry,
       ...requestAux.LexicalResource.Lexicon.LexicalEntry,
       ...shortReports.LexicalResource.Lexicon.LexicalEntry,
+      ...neura.LexicalResource.Lexicon.LexicalEntry,
       ...dajiman.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
@@ -864,6 +866,48 @@ try {
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-short-reports-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const neuraCases = recipientLedger.cases.filter(c => c.id.startsWith("neura-"));
+  assert.equal(neuraCases.length, 96);
+  for (const c of neuraCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a=>danikkaPath(a,j)), j.verdict === "required", c.id);
+  }
+  const neuraPolicy = connectiveLedger.cases.filter(c => c.id.startsWith("neura-policy-"));
+  assert.equal(neuraPolicy.length, 22);
+  for (const c of neuraPolicy) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const i = token.analysis.analyses.findIndex(a=>danikkaPath(a,j));
+      assert.ok(i >= 0, c.id);
+      assert.equal(token.dictionary.readings[i].status === "incompatible", j.verdict === "forbidden", c.id);
+    }
+  }
+  const neuraText = "공부하느라 먹느라고 주느라요 주느라고요 사시느라 먹어보느라 좋아하느라 먹고있느라 늦느라 바쁘느라";
+  await submit(page, neuraText); await waitHeading(page, "공부하느라");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["공부하","느라"]],[1,["먹","느라고"]],[2,["주","느라","요"]],[3,["주","느라고","요"]],[4,["살","시","느라"]],[5,["먹","어","보","느라"]],[6,["좋","어","하","느라"]],[7,["먹","고","있","느라"]],[8,["늦","느라"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 0) {
+      await word.locator(".breakdown-part").nth(1).click();
+      await page.locator(".entry-choices button").filter({hasText:"-느라"}).first().click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=80328"]'));
+    }
+  }
+  const neuraDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const neuraExport = JSON.parse(await readFile(await (await neuraDownload).path(), "utf8"));
+  const neuraExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:neuraText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(neuraExport.records,neuraExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-neura-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-neura-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const requestAuxCases = recipientLedger.cases.filter(c => c.id.startsWith("request-aux-"));

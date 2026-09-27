@@ -209,3 +209,14 @@ cites a narrower standard-dictionary note and does not supply a noncopular examp
 after 시. This check neither rejects nor newly licenses those prefinal paths.
 See [the evaluation record](copular-class-evaluation.json) for source IDs,
 output comparisons, validation, and remaining review limits.
+
+
+## Action reason/purpose endings (COV-017au)
+
+`neura_verb` rejects a known lexical adjective entry with 느라 or 느라고, including
+after honorific 시. The check follows the ending's owning component: 좋아하느라
+keeps 좋다 + 어 + 하다 + 느라, since 하다 owns the final ending. Verb homonyms
+remain available and unknown classes are not silently rejected. KRDict 80327/80328
+and NIKL consultation 313032 support this finite attachment policy. Clause-level
+meaning, subject identity and negative inheritance from ambiguous lexical heads
+remain unreviewed. See [evaluation](neura-evaluation.json) and [tests](../tests/neura.rs).

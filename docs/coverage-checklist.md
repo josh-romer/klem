@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–at/018a–k/018m–z/019a–g/019i–r/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–au/018a–k/018m–z/019a–g/019i–r/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 319 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–at/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o; 395 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 321 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–au/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o; 393 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -220,7 +220,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–at implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–au implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -937,6 +937,29 @@ review remains open under the completion review below.
   interpretation remains unjudged. Eight ending sources enter the scoped queue,
   with twenty expression sources tracked separately. Independent review remains.
   See the [source and candidate evaluation](short-reports-evaluation.json).
+
+- [x] **COV-017au — Action reason/purpose -느라/-느라고.**
+  Implementation, Rust/stress/corpus, browser and Nix/package checks pass.
+  The missing short 느라 joins full
+  느라고 with source-listed honorific 시 and polite 요; tense/modal/retrospective,
+  known adjective/답다 and copular paths are rejected. Dictionary `neura_verb`
+  conflicts belong to each lexical entry owning the ending, preserving verb
+  homonyms and unknown entries. [96 raw judgments](../tests/neura.rs), 22 policy
+  cases, all eight source-example groups, and ten complete unchanged training
+  sentences cover this scope. Six training tokens gain grouped lemma matches,
+  including GSD's original noisy 떠다 annotation, retained separately from 떨다.
+  Frozen reports are byte-identical; six novel records gain provenance only.
+  Subject identity, clause mood and interpretation remain contextual; broader
+  outer particles and independent review remain open. Two source entries enter
+  the scoped queue. See the [evaluation](neura-evaluation.json).
+
+- [ ] **COV-017av — Doubt endings -ㄹ라고/-을라고 and intention homonyms.**
+  Confirmed in the unchanged GSD training sentence train-s1803: 늘릴라고 lacks
+  늘리다. KRDict 79417/79416 describe doubt/denial, while the sentence's context
+  suggests colloquial intention. Review the sources' distinct adjective/copula,
+  honorific and past licenses alongside the senses of -(으)려고 (68846/69067).
+  Keep factual/command 라고 separate. Preserve original gold; a lemma match
+  alone cannot certify the intended ending sense or colloquial spelling.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

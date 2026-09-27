@@ -267,6 +267,7 @@ try {
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
   const additiveParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-additive-particles.json"), "utf8"));
   const copularClass = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-copular-class.json"), "utf8"));
+  const jimaneun = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-jimaneun.json"), "utf8"));
   const dajiman = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-dajiman.json"), "utf8"));
   const daji = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-daji.json"), "utf8"));
   const danda = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danda.json"), "utf8"));
@@ -297,6 +298,7 @@ try {
       ...quotedBakke.LexicalResource.Lexicon.LexicalEntry,
       ...danda.LexicalResource.Lexicon.LexicalEntry,
       ...daji.LexicalResource.Lexicon.LexicalEntry,
+      ...jimaneun.LexicalResource.Lexicon.LexicalEntry,
       ...dajiman.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
@@ -730,6 +732,46 @@ try {
       if (j.verdict === "forbidden") assert.ok(token.dictionary.readings[i].lemmas[0].entries.some(e=>e.conflicts.some(c=>c.rule === "habitual_condition_verb" && c.morpheme_index === j.morphemes.length - 1)));
     }
   }
+  const jimaneunCases = recipientLedger.cases.filter(c => c.id.startsWith("jimaneun-"));
+  assert.equal(jimaneunCases.length, 77);
+  const jimaneunPath = (a, j) => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+    && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+    && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes)
+    && JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds);
+  for (const c of jimaneunCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => jimaneunPath(a,j));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const jimaneunText = "먹지마는 의사지마는 학생답지마는 먹고싶지마는 흔치마는요 깨끗지마는";
+  await submit(page, jimaneunText); await waitHeading(page, "먹지마는");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["먹","지","마는"]],[0,["먹","지마는"]],[1,["의사","이","지마는"]],[2,["학생","답","지마는"]],[3,["먹","고","싶","지마는"]],[4,["흔하","지마는","요"]],[5,["깨끗하","지마는"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 0 && forms.length === 2) {
+      await word.locator(".breakdown-part").last().click();
+      await page.locator(".entry-choices button").filter({hasText:"-지마는"}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=78637"]'));
+    }
+  }
+  const jimaneunDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const jimaneunExport = JSON.parse(await readFile(await (await jimaneunDownload).path(), "utf8"));
+  const jimaneunExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:jimaneunText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(jimaneunExport.records,jimaneunExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-jimaneun-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-jimaneun-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   const dajimanCases = recipientLedger.cases.filter(c => c.id.startsWith("dajiman-"));
   assert.equal(dajimanCases.length, 160);
   const dajimanPath = (a, j) => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)

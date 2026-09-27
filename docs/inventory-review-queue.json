@@ -26,7 +26,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "46cffdce97d7d51e8df8f09cb82ac6d7044b87a293b282ba640ce2c7b0edcde7",
+    "docs/coverage-checklist.md": "0e396abf0930b6a1fd38657dc16e990095e370fe2a13a22df43f19212fcafc62",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
@@ -41,8 +41,9 @@
     "docs/factual-prefinal-evaluation.json": "460e7619e554153cf572e6db83d0786906cfeb1744aa11ab59506657da85f227",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "276f5cc7710239ee0c86004c63de5b14a4e5670a8b327785b660a309fe6bd92d",
-    "docs/inventory-reviews.json": "7a43131dd7c23a5fa53c38919938286d6a0cd3a3c3bf312b3966d047f9806a63",
+    "docs/inventory-audit.md": "e5758f5f985dcbbc9893682b1f90ba9a8b8939b85e2519ba880653564a07b6c8",
+    "docs/inventory-reviews.json": "15a2d64ef63e53b1980d56ab016b3746a39efbcda1b3df60da6fc6d19b813ed1",
+    "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/llachimyeon-evaluation.json": "086132bdac962ca93a716841860e9b80695d9dfde5874675c9661f944211abba",
     "docs/necessity-ending-evaluation.json": "68069546cd18497fd18878e6cc30cef8d010f0a3efcc288a03f249278953daad",
@@ -88,7 +89,7 @@
     "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/core_case.rs": "556f5fa2df29d0285552bf3e83a5cfbc9610c84c33fb1ac6e1bc02d7c2e5fbcb",
-    "tests/corpus.rs": "82f7c7a70c3b1863509f138c668df57b98f19c0dab1306e90b90ac8c1b59eb75",
+    "tests/corpus.rs": "9c8375da7101592d95bb27a34ff64ad6ab9a064ebc6a71aa5e9301915e01d1a4",
     "tests/daji.rs": "172b18762b2adaa5e59a0e0f592d7f1fad4ef48515a175d3f420e2bd391f658d",
     "tests/danda.rs": "7ac20e77584b520909734f32132a24af40c5cd626db0ad0f73f866149f31943a",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
@@ -111,9 +112,10 @@
     "tests/fixtures/krdict-llachimyeon.json": "e52bab62a2b6ed1ad409736dfbaecb3a35944f61d42e9bab3b4555cf4fa0a279",
     "tests/fixtures/krdict-necessity.json": "5f37d701bb0de166de41e30da7ee763f852a18fd21caa4fbec0e3e91eec30041",
     "tests/fixtures/krdict-quoted-bakke.json": "e6e164a1bfeabeb9b70724a9ab78e86f0f4bd76e6bdca414fa9c7bb7c4dddd85",
-    "tests/fixtures/validity.json": "b6976ca271f880e0fbd69d24fc80339af5d19e913ab9b98dd805be59283c7d1a",
+    "tests/fixtures/validity.json": "f78031e8fd4184076a819c54979f3c056782dca47bf60c402dd804479080a061",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
+    "tests/jimaneun.rs": "f49f4ed45712b4365d0bd16f8e37fc882bc9079a2c711d0d806542a7e300d217",
     "tests/kkaena.rs": "63efa7b0ad133bfabd79b1b85d4a393608361596303c92a07b0e9df8d3fdc0a5",
     "tests/llachimyeon.rs": "2c01312a510253d4e25988765754494f7bc05cf96a6af76e45d57c07547ea1dc",
     "tests/necessity.rs": "6efda60359e567a1918bd9fee20a51f719f18a65a16ea5d0a074ebfa9422a66e",
@@ -143,8 +145,8 @@
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "23a2f66270ea20775a67b0651c4ca95ab179e91818b73aa3d5e89e52c616eae5",
-    "web/tests/browser.mjs": "3bb64861ac6f8d4e5d4a34898f6e7eb74b5ada63e3fa95f84e061969137f9031"
+    "web/src/grammar-labels.json": "32b0b7e923b69cf60782f6dd3703453a846866bf567954576e0b19371510b0c5",
+    "web/tests/browser.mjs": "e3c61c728fae10413981aa7431c9b3ba97b03ab0f92cc2655ff254cfb17dacaf"
   },
   "counts": {
     "entries": 715,
@@ -155,12 +157,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 419,
-      "scoped": 295,
+      "unreviewed": 418,
+      "scoped": 296,
       "gap": 1
     },
-    "with_catalog_links": 360,
-    "with_judgment_citations": 334
+    "with_catalog_links": 361,
+    "with_judgment_citations": 335
   },
   "entries": [
     {
@@ -54670,11 +54672,601 @@
         ]
       },
       "source_sha256": "0bb3c08391e340a7af36063a01f23beb1355d105620f4921d77fbb59926251c1",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-지마는",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "jimaneun-boundary-도우지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-들지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-먹더지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-먹어보더지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-먹었더지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-먹지마는요요",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-살으지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-지으지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-파라지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-학생답더지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-학생이더지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-boundary-학생지마는",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "jimaneun-composition-것이지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-길지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-높으시지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-도왔지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-돕지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-듣지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹겠지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹고계시지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹고는있지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹고싶지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹고싶지않지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹고있지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹기지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹어보지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹었지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹으셨겠지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹으시지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹음이지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-먹지않지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-모르지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-몰랐지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-살지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-서두르지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-아니지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-의사였지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-의사이지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-의사지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-좋지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-짓지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-파랗지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-학생다웠지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-학생답지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-학생들이지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-학생이었지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-composition-학생이지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-full-hada-깨끗",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-full-hada-꼴값",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-full-hada-넉넉",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-full-hada-생각",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-full-hada-흔",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-lexical-homonym",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-polite-먹고싶지마는요",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-polite-먹지마는요",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-polite-의사지마는요",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-polite-학생답지마는요",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-source-문제이지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-source-없지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-source-죄송하지마는",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-source-하지마는",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:78637",
+        "source_sha256": "0bb3c08391e340a7af36063a01f23beb1355d105620f4921d77fbb59926251c1",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ar"
+        ],
+        "scope": "Single long contrast ending with lexical/auxiliary/copular/답다 ownership, reviewed prefinal and irregular boundaries, vowel-final copula omission, Article 40 shortening and one inferred polite 요. Existing split 지 + 마는 and short 지만 paths remain.",
+        "remaining": "Independent Korean review, contextual semantics, further outer particles and unjudged dictionary-free candidates remain. Corpus evidence supports lemma preservation rather than new recall.",
+        "evidence": [
+          {
+            "path": "tests/jimaneun.rs",
+            "test": "jimaneun_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/jimaneun.rs",
+            "test": "jimaneun_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "long_contrast_preserves_six_unchanged_training_targets"
+          },
+          {
+            "path": "docs/jimaneun-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "jimaneun-source-하지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-source-죄송하지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-source-없지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-source-문제이지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-좋지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-살지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-듣지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-돕지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-짓지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-파랗지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-모르지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-길지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹었지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹겠지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹으시지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹으셨겠지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-도왔지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-몰랐지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-학생이지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-의사이지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-의사지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-학생이었지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-의사였지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-아니지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-학생들이지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹음이지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹기지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-학생답지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-학생다웠지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹어보지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹고싶지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹고있지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹고계시지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹지않지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹고싶지않지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-먹고는있지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-높으시지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-서두르지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-composition-것이지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-polite-먹지마는요",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-polite-의사지마는요",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-polite-학생답지마는요",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-polite-먹고싶지마는요",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-full-hada-흔",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-full-hada-깨끗",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-full-hada-넉넉",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-full-hada-생각",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-full-hada-꼴값",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-먹더지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-먹었더지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-학생이더지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-학생답더지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-먹어보더지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-들지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-도우지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-지으지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-파라지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-살으지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-학생지마는",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-boundary-먹지마는요요",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-lexical-homonym",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -54720,6 +55312,26 @@
       ],
       "cited_judgments": [
         {
+          "case": "jimaneun-short-source-들었지만",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-short-source-성의였지만",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-short-source-예쁘지만",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-short-source-좋지만",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "omitted-connectives-contrast",
           "judgment": "path",
           "verdict": "required"
@@ -54747,9 +55359,10 @@
         "status": "scoped",
         "checklist": [
           "COV-020e",
-          "COV-017r"
+          "COV-017r",
+          "COV-017ar"
         ],
-        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense. COV-017r additionally reviews the following-ending licenses of recovered retrospective 더, including literal bundle boundaries.",
+        "scope": "Copula attachment for this source ending or polite bundle, with vowel-final nominal omission. Nominalizations and existing particle/auxiliary connectors compose. This does not audit every lexical class, prefinal or sense. COV-017r additionally reviews the following-ending licenses of recovered retrospective 더, including literal bundle boundaries. COV-017ar preserves all four exact source-example tokens and contrasts the independently listed long 지마는 ending.",
         "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
         "evidence": [
           {
@@ -54793,6 +55406,21 @@
           },
           {
             "path": "docs/retrospective-license-evaluation.json"
+          },
+          {
+            "path": "tests/jimaneun.rs",
+            "test": "jimaneun_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/jimaneun.rs",
+            "test": "jimaneun_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "long_contrast_preserves_six_unchanged_training_targets"
+          },
+          {
+            "path": "docs/jimaneun-evaluation.json"
           }
         ],
         "judgments": [
@@ -54810,6 +55438,22 @@
           },
           {
             "case": "retrospective-license-ending-19-78638",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-short-source-좋지만",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-short-source-들었지만",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-short-source-성의였지만",
+            "judgment": "path"
+          },
+          {
+            "case": "jimaneun-short-source-예쁘지만",
             "judgment": "path"
           }
         ]
@@ -63399,6 +64043,16 @@
         }
       ],
       "cited_judgments": [
+        {
+          "case": "jimaneun-composition-먹지마는",
+          "judgment": "split-concessive",
+          "verdict": "required"
+        },
+        {
+          "case": "jimaneun-source-하지마는",
+          "judgment": "split-concessive",
+          "verdict": "required"
+        },
         {
           "case": "post-ending-maneun",
           "judgment": "particle-path",

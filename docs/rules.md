@@ -3016,3 +3016,26 @@ The [evaluation](dajiman-evaluation.json) preserves complete source entries,
 individual candidate judgments, corpus gains, novel equality and the unjudged
 queue. These checks do not measure linguistic precision or select a contextual
 reading.
+
+
+## Long contrast ending (COV-017ar)
+
+The dictionary-listed ending 지마는 (KRDict 78637) is represented as one ending,
+with the existing shorter 지만 (78638) and final 지 + concessive particle 마는
+alternatives preserved. It attaches to predicates and copulas, with existing
+past, modal and honorific composition; recovered retrospective 더 is rejected
+as for 지만. Vowel-final copula omission, auxiliaries and 답다-derived predicates
+retain their separate components. No underlying nominal is conjugated as a verb.
+
+Article 40's existing shortening boundaries apply to the new ending: 흔치마는
+restores 흔하다, while 깨끗지마는 restores 깨끗하다. Wrong aspiration/deletion
+and vowel-only irregular recovery are individually forbidden in the candidate
+ledger. One polite 요 is an authored connective extension. Broader following
+particles are not newly licensed by this batch.
+
+[The source/candidate report](jimaneun-evaluation.json) retains eight exact
+dictionary-example tokens, complete source entries, both dictionary filters,
+all output additions and six complete unchanged KAIST training sentences.
+Those corpus targets already had matching lemmas through other readings;
+높으시지마는 retains its original 높+으시+지+만 annotation. The bundled
+ending regression does not rewrite gold or claim a corpus recall gain.

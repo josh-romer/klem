@@ -1918,3 +1918,26 @@ fn contrasting_reports_recover_annotated_targets_and_keep_the_neighboring_copula
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn long_contrast_preserves_six_unchanged_training_targets() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-jimaneun.conllu").as_slice(),
+        Corpus::Kaist,
+        "jimaneun",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:M2TA_073-s34/5", "것이지마는", vec!["것", "이다"]),
+        ("id:MH2_0017-s185/10", "서두르지마는", vec!["서두르다"]),
+        ("id:MH2_0017-s186/3", "하지마는", vec!["하다"]),
+        ("id:MH2_0024-s347/7", "것이지마는", vec!["것", "이다"]),
+        ("id:MH2_0083-s42/6", "높으시지마는", vec!["높다"]),
+        ("id:MH2_0083-s77/9", "하지마는", vec!["하다"]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}

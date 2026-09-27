@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–aq/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ar/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 295 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 419 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 296 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 418 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -220,7 +220,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–aq implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ar implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -888,6 +888,22 @@ review remains open under the completion review below.
   its 295 scoped/419 unreviewed counts are unchanged. Broader outer particles,
   contextual interpretation and independent Korean review remain open.
   See the [source and candidate evaluation](dajiman-evaluation.json).
+
+- [x] **COV-017ar — Long contrast ending -지마는.**
+  Rust/stress/corpus, browser, Nix and full-dictionary package checks pass.
+  KRDict 78637 supports predicates and 이다,
+  past/modal composition, and the independently listed shorter -지만 (78638).
+  The long ending now composes with honorifics, auxiliaries, 답다 derivation,
+  vowel-final omitted copulas and inferred polite 요. Article 40 shortening
+  preserves 흔치마는 and 깨끗지마는 with existing pronunciation boundaries.
+  [79 judgments across 77 cases](../tests/jimaneun.rs) cover exact components,
+  spelling/prefinal boundaries and both dictionary filters with CLI parity.
+  Existing 지 + 마는 and lexical readings remain. Six unchanged complete KAIST
+  training sentences already had matching lemmas; the new ending structure
+  does not claim recall gains or change their gold. Frozen reports are unchanged.
+  The novel gains ending alternatives at 62 tokens, with none removed.
+  Wider outer particles and contextual interpretation remain open.
+  See the [source and candidate evaluation](jimaneun-evaluation.json).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

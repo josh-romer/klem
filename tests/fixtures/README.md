@@ -1327,3 +1327,16 @@ contrasting reported endings; 나라지만 retains the neighboring 나라 + 이�
 annotation. OrigLemma on 있다지만, spelling and all gold tags remain unchanged.
 The [evaluation](../../docs/dajiman-evaluation.json) records two frozen test gains
 separately; no baseline or held-out source row was moved into training fixtures.
+
+`krdict-jimaneun.json` contains 57 primary word entries from the pinned September
+2026 NIKL Korean Basic Dictionary export, under **CC BY-SA 2.0 KR** with the
+attribution and links above. Full senses, notes, examples and forms remain;
+equivalents are English only, RelatedForm and same-number idioms are omitted.
+The new 지마는 source also appears in `krdict-grammar-labels.json`.
+
+`kaist-jimaneun.conllu` preserves all six complete training sentences containing
+지마는 in the pinned KAIST corpus, under the corpus attribution/license above.
+Original spelling, lemmas, tags and OrigLemma remain, including the differing
+높으시지마는 → 높+으시+지+만 annotation. These targets already matched at the
+lemma level. [The evaluation](../../docs/jimaneun-evaluation.json) distinguishes
+that result from the new dictionary-based ending structure.

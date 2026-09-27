@@ -2610,3 +2610,19 @@ outer-particle/copula composition still follow existing machinery; this bounded
 review does not certify every resulting combination. Dictionary nominal POS
 cannot determine whether a referent is being addressed, the speaker's relative
 status, or the intended sense. General sentence parsing is outside this rule.
+
+## Emphatic time/place 에야 (COV-018q)
+
+KRDict 86578 lists 에야 after nouns to emphasize a time/place range. NIKL's
+국어 교과 용어의 수화 표준화 연구 (언어 영역), printed page 217 / PDF page 231,
+explicitly decomposes it as 에 + 야. Both representations are generated, including
+following 만: 때에야만 → 때 + 에야 + 만 or 때 + 에 + 야 + 만. The three-part
+particle sequence is obtained through the documented compound; general particle
+ordering is unchanged. Other 야 + 만 attachments require a separate source review.
+
+The split preserves the owner and position of the original compound, including
+nominal suffixes, nominalizations and copula groups. Existing split readings
+remain identical. Unknown nominal heads are hypotheses; neither dictionary noun
+POS nor a matching surface establishes a time/place sense or contextual scope.
+The [source review](eya-evaluation.json) records the primary report URL and the
+original corpus granularity. No corpus gold or frozen baseline is rewritten.

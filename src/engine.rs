@@ -1884,6 +1884,25 @@ fn nominals(
                 a.rules.push("particle.recipient".into());
             }
         }
+        // NIKL explicitly decomposes the compound 에야 as 에 + 야. Keep
+        // both representations, including outer particles (때에야만), without
+        // allowing arbitrary focus particles to cross the ordering stages.
+        if particle.form == "에야" {
+            let end = out.len();
+            for i in start..end {
+                let mut split = out[i].clone();
+                let slot = split.morphemes.len() - suffixes.len() - 1;
+                debug_assert_eq!(split.morphemes[slot].form, "에야");
+                split.morphemes.splice(
+                    slot..=slot,
+                    [
+                        morph("에", MorphemeKind::Particle),
+                        morph("야", MorphemeKind::Particle),
+                    ],
+                );
+                out.push(split);
+            }
+        }
     }
 }
 

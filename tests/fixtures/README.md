@@ -1060,3 +1060,17 @@ and 젊은이여. Corpus attribution and CC BY-SA 4.0 licensing follow the pinne
 KAIST source above. The development observation motivated this fix and is
 regression evidence, not held-out evaluation. The source and output review is
 `docs/vocative-evaluation.json`.
+
+`krdict-eya.json` contains 29 lexical entries from the September 2026 Korean
+Basic Dictionary export (National Institute of Korean Language, CC BY-SA 2.0 KR).
+Selection preserves source IDs and definitions, keeps English translations and
+at most one example group per sense, and omits related/word forms. The grammar
+fixture adds the compound particle 에야 (86578).
+
+`kaist-eya.conllu` preserves three complete UD Korean KAIST 2.15 sentences:
+development MH2_0069-s77 (때에야만), MH2_0169-s288 (전에야), and training
+MH2_0024-s42 (다음에야). KAIST attribution and CC BY-SA 4.0 licensing follow
+the pinned source above. Corpus 때 + 에 + 야만 differs in granularity from the
+program's split 때 + 에 + 야 + 만; source gold remains unchanged. The motivating
+development miss is regression evidence, not a held-out measure. The NIKL compound
+decomposition source and all source hashes are recorded in `docs/eya-evaluation.json`.

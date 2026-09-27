@@ -15999,6 +15999,119 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:86578",
+      "source_sha256": "f063943a64928245345a58c0dad62b072aae66538d9e573aa2f96be783b4f2cc",
+      "status": "scoped",
+      "checklist": [
+        "COV-018q"
+      ],
+      "scope": "Nominal 에야 time/place emphasis, preserved alongside NIKL-documented 에 + 야 decomposition; both support the corpus-attested following 만. Nominal suffixes, nominalizations and copula ownership remain ordered.",
+      "remaining": "Noun POS does not establish time/place senses or contextual scope. Other compounds, arbitrary 야 + 만 attachments and general particle reordering are not licensed by this disposition. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/eya.rs",
+          "test": "eya_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/eya.rs",
+          "test": "eya_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/eya.rs",
+          "test": "annotated_eya_preserves_groups_and_split_alternatives"
+        },
+        {
+          "path": "tests/eya.rs",
+          "test": "eya_decomposition_preserves_outer_order_and_copula_ownership"
+        },
+        {
+          "path": "docs/eya-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "eya-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-23",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-forbidden-27",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-forbidden-28",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-forbidden-29",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-forbidden-30",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-forbidden-31",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-forbidden-32",
+          "judgment": "path"
+        },
+        {
+          "case": "eya-forbidden-33",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

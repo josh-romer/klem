@@ -264,12 +264,14 @@ try {
   const shortRecipient = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
+  const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const nira = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-nira.json"), "utf8"),
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...eya.LexicalResource.Lexicon.LexicalEntry,
       ...vocative.LexicalResource.Lexicon.LexicalEntry,
       ...nira.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
@@ -601,6 +603,48 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Emphatic 에야 preserves bundled and split alternatives with outer particles.
+  const eyaCases = recipientLedger.cases.filter(c => c.id.startsWith("eya-"));
+  assert.equal(eyaCases.length, 34);
+  for (const c of eyaCases) {
+    const data = await (await post("analyze", {text:c.surface})).json(), token = data.records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if(index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const eyaText = "때에야만 전에야 학생임에야 죽음에야";
+  await submit(page, eyaText); await waitHeading(page, "때에야만");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const [i, expected, sourceId] of [[0,["때","에야","만"],86578],[1,["전","에야"],86578],[2,["학생","이","음","에야"],86578],[3,["죽","음","에야"],86578]]) {
+    const word=page.locator(".breakdown-word").nth(i), select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,forms)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===forms.join(" + "))?.value,expected);
+    assert.ok(value,expected.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(),expected);
+    const splitForms=expected.flatMap(f=>f==="에야"?["에","야"]:[f]);
+    const splitValue=await select.locator("option").evaluateAll((os,forms)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===forms.join(" + "))?.value,splitForms);
+    assert.ok(splitValue,splitForms.join(" + ")); await select.selectOption(splitValue);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(),splitForms);
+    await select.selectOption(value);
+    await word.locator(".breakdown-part").nth(expected.indexOf("에야")).click();
+    await page.waitForFunction(id=>document.querySelector(`a[href*="ParaWordNo=${id}"]`),sourceId);
+  }
+  const eyaDownload=page.waitForEvent("download");
+  await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const eyaExport=JSON.parse(await readFile(await (await eyaDownload).path(),"utf8"));
+  const eyaExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:eyaText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(eyaExport.records,eyaExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-eya-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-eya-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Vocative allomorphs preserve nominal roles and their distinct source entries.
   const vocativeCases = recipientLedger.cases.filter(c => c.id.startsWith("vocative-"));

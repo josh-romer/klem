@@ -2379,3 +2379,47 @@ and the packaged web build pass. The full-dictionary preview verifies all 34
 judgments, CLI/API/export parity, five displayed breakdowns, particle sources
 and desktop/mobile layout. Independent Korean review and the remaining checklist
 families stay open.
+
+## Emphatic time/place 에야 (COV-018q)
+
+The [source and candidate review](eya-evaluation.json) adds KRDict's nominal
+compound 에야 alongside NIKL's explicit 에 + 야 decomposition. Both compose with
+following 만, recovering 때에야만 as 때 + 에야 + 만 and 때 + 에 + 야 + 만.
+General particle ordering stays unchanged. Nominal suffixes, nominalizations and
+copulas preserve the split component's position and owner.
+
+There are 34 new judgments (26 required / eight forbidden), bringing main
+validity totals to 2,198 required / 1,436 forbidden. Three complete unchanged KAIST
+sentences retain their original annotations, including 때 + 에 + 야만. The
+program's finer split preserves the lexical group without rewriting that gold.
+The motivating development miss now matches, giving KAIST 22,126/22,220 grouped
+matches and 94 misses. GSD remains at 9,843/9,989 and 146 misses; all other case
+outcomes are unchanged. Mean candidate counts become 6.017192 / 5.508960.
+
+Across 3,496 tracked surfaces, 31 candidates are added on 18 surfaces, with no
+removals or provenance changes. All thirty stress hashes and frozen corpus
+baselines stay unchanged. Raw unknown nominal and nominalization hypotheses
+remain visible and unjudged. In the novel, sixteen compound readings are added
+across eight types, each alongside an existing split reading. These additions
+represent alternative granularity and do not increase lexical coverage.
+
+One source disposition brings the inventory to 223 scoped / 491 unreviewed /
+one gap. The catalog has 333 canonical forms / 470 source IDs / 471 grammar
+fixture entries. Noun POS does not establish time/place semantics: the viewer
+can select 때's “dirt” hint (14423) ahead of “time” (74123), because both entries
+remain role-compatible. This observed homonym-selection limit is recorded;
+source-backed morphology is not a contextual sense selector.
+
+The novel's compatible total is 119,950 analyses / 73,322 tokens with readings;
+headword-only totals are 130,846 / 73,377, across 81,758 word tokens.
+Three sequential local Nix release runs measured compatible median 1.230s versus
+1.233s before, with peak RSS below 29 MiB. Timings include JSONL serialization
+and are local observations, not throughput guarantees.
+
+Rust/web-feature tests, Clippy, formatting, frozen corpus regression, frontend
+build, browser/HTTP tests, inventory verification, x86_64-linux Nix flake checks
+and the packaged web build pass. The first flake check terminated with signal 15;
+after confirming it had stopped, a retry passed. The packaged full-dictionary
+preview verifies all 34 judgments, CLI/API/export parity, four displayed words
+with compound/split choices, source selection and desktop/mobile layout.
+Independent Korean review and the remaining checklist families stay open.

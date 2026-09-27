@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–aj/018a–k/018m–v/019a–g/019i–o/020a–k/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ak/018a–k/018m–v/019a–g/019i–o/020a–k/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 266 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–aj/018e–k/018m–v/019d–g/019i–o/020d–h/020j–k; 448 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 273 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–v/019d–g/019i–o/020d–h/020j–k; 441 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–aj implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ak implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -783,6 +783,20 @@ review remains open under the completion review below.
   and temporal readings, other following auxiliaries/particles and independent
   Korean review remain open.
 
+- [x] **COV-017ak — Concessive and counterfactual predicate endings.** Added
+  -ㄴ들/-은들, -(으)ㄹ망정, -(으)ㄹ지언정 and past -던들 with distinct coda,
+  irregular and prefinal boundaries. NIKL's 있은들/없은들 forms are retained;
+  -는들 is not substituted. Explicit copulas, 아니다, auxiliary chains,
+  답다 derivatives and polite 요 preserve ordered components. 학생인들 has
+  both 학생 + 인들 and 학생 + 이다 + 은들. Evidence: [130 judgments and three
+  integration tests](../tests/concessive_endings.rs), six complete annotated
+  training sentences, and [source/candidate review](concessive-ending-evaluation.json).
+  All six target corpus misses are recovered; exposed fixtures are not unseen
+  evaluation. The report links the novel 간들/한들 observations to their new
+  predicate paths. Broader 은들 prefinals, omitted copulas, discourse conditions
+  and independent Korean review remain open. The inherited 따다 + 어 + 를 +
+  이다 alternative in 딸이었던들 is tracked for COV-020 attachment review.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–v implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -1085,9 +1099,9 @@ review remains open under the completion review below.
   [source and individual-case review](concessive-designation-evaluation.json).
   No target particle annotations were found in the mined training/development
   data; full corpus recall is unchanged. Wider attachment and independent
-  Korean review remain open. Predicate **-ㄴ들/-은들 remains missing**: KAIST
-  MH2_0092-s333 한들 and novel 간들/한들 are tracked separately; a particle
-  alternative is not evidence that those predicate readings are recovered.
+  Korean review remain open. COV-017ak now recovers the separately tracked
+  predicate **-ㄴ들/-은들** in KAIST MH2_0092-s333 한들 and novel 간들/한들;
+  their particle alternatives remain distinct.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
@@ -1553,7 +1567,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 359 currently emitted canonical grammar forms.** The initial catalog
+  for all 363 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

@@ -2664,3 +2664,50 @@ before / 1.321 after**; headword-only times were **1.342 / 1.343 seconds**.
 Peak RSS was below **28 MiB**. These include JSONL serialization and dictionary
 work; the separately counted outputs and every timing are retained in the report.
 Other architectures and independent performance environments were not measured.
+
+## Concessive predicate and counterfactual audit (COV-017ak)
+
+The [source and candidate report](concessive-ending-evaluation.json) reviews
+seven KRDict entries for -ㄴ들/-은들, -(으)ㄹ망정, -(으)ㄹ지언정 and -던들.
+NIKL Q&A 330951 confirms 있은들/없은들 rather than -는들. The 130 distinct
+judgments (106 required / 24 forbidden) bring the main ledger to **2,578 required
+/ 1,588 forbidden**. They cover written allomorphs, irregular stems, finite
+prefinal licenses, explicit copulas, 아니다, auxiliary grouping, 답다 derivatives
+and polite 요. Particle 인들 remains separate from copula + 은들.
+
+Six complete unchanged UD 2.15 training sentences expose six targeted misses:
+KAIST grouped matches rise **59/65 → 64/65**, and GSD **13/14 → 14/14**. Every
+target becomes an exact grouped match; one unrelated KAIST miss remains. These
+are exposed regression fixtures, not unseen evaluation. Full development results
+remain **22,127/22,220** for KAIST and **9,847/9,989** for GSD, with unchanged
+per-case gold recovery. Mean candidates rise **6.0698019802 → 6.0703420342** and
+**5.5430974071 → 5.5443988387**, respectively. Frozen corpus baselines and all
+30 stress snapshots remain unchanged.
+
+Across 3,960 raw probe surfaces, 150 change, with 700 added candidates and no
+removals or provenance changes. Compatible filtering on the pinned 무정 passage
+adds 28 readings at 24 tokens (23 types), removing none. Verified byte spans,
+context and stable observation IDs preserve every change. The previously tracked
+간들/한들 predicate misses now have 가다/하다 + 은들 readings. Counterfactual
+그리하였던들/있었던들 and others gain past + 던들 paths. Contextual alternatives
+remain: 악인들/어른들 are plurals in the passage, 만들 is an adnominal 만들다,
+and 들어왔던들 retains multiple lexical/auxiliary hypotheses. 딸이었던들 also
+exposes the inherited 따다 + 어 + 를 + 이다 path for further COV-020 review.
+These observations remain unjudged pending independent review.
+
+Rust/web-feature tests, the full pinned corpus gate, Clippy, formatting, frontend
+build, browser/HTTP checks and Nix checks passed. Packaged full-dictionary checks
+cover all 130 judgments under both filters, 10 selected decompositions, all seven
+source links, CLI/API/export parity and desktop/mobile layout. The catalog has
+**363 canonical forms / 503 source IDs / 505 grammar fixture entries**; inventory
+reviews are **273 scoped / 441 unreviewed / one gap**. Broader 은들 prefinals,
+omitted copulas, discourse conditions and independent Korean review remain open.
+
+Three sequential local Nix release runs over 81,758 novel word tokens gave median
+compatible-filter times **1.325 seconds before / 1.322 after**; headword-only times
+were **1.340 / 1.341 seconds**. Peak RSS was below **29 MiB**. These include
+startup, dictionary work and JSONL serialization. Separate count passes find
+**120,806 → 120,834** compatible-filter analyses and **73,359 → 73,372** word
+tokens with a reading. The report retains every sample and documents the
+interrupted measurement harness and resumption. These local measurements do not
+establish performance on other machines or architectures.

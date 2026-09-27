@@ -265,6 +265,7 @@ try {
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
+  const concessiveEndings = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-concessive-endings.json"), "utf8"));
   const concessiveDesignation = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-concessive-designation.json"), "utf8"));
   const sourceParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-source-particles.json"), "utf8"));
   const coreCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-core-case.json"), "utf8"));
@@ -278,6 +279,7 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
+      ...concessiveEndings.LexicalResource.Lexicon.LexicalEntry,
       ...concessiveDesignation.LexicalResource.Lexicon.LexicalEntry,
       ...sourceParticles.LexicalResource.Lexicon.LexicalEntry,
       ...coreCase.LexicalResource.Lexicon.LexicalEntry,
@@ -615,6 +617,49 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const concessiveEndingCases = recipientLedger.cases.filter(c => c.id.startsWith("concessive-endings-"));
+  assert.equal(concessiveEndingCases.length, 130);
+  for (const c of concessiveEndingCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const concessiveEndingText = "한들 있은들 할망정 먹을망정 될지언정 있었을지언정 학생인들 먹고싶은들 확인했던들";
+  await submit(page, concessiveEndingText); await waitHeading(page, "한들");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms, sourceId] of [[0,["하","은들"],80346],[1,["있","은들"],80345],[2,["하","을망정"],80277],[3,["먹","을망정"],80274],[4,["되","을지언정"],77052],[5,["있","었","을지언정"],77050],[6,["학생","이","은들"],80346],[7,["먹","고","싶","은들"],80345],[8,["확인하","였","던들"],80347]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const choose = async fs => {
+      const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, fs);
+      assert.ok(value, JSON.stringify({i,forms:fs,options:await select.locator("option").allTextContents()}));
+      await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), fs);
+    };
+    if (i === 6) await choose(["학생", "인들"]);
+    await choose(forms);
+    await word.locator(".breakdown-part").last().click();
+    const source = Object.values(grammarLabels).flatMap(v => v.sources).find(s => s.id === sourceId);
+    const entryChoice = page.locator(".entry-choices button").filter({hasText:source.headword});
+    if (await entryChoice.count()) await entryChoice.click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), sourceId);
+  }
+  const concessiveEndingDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const concessiveEndingExport = JSON.parse(await readFile(await (await concessiveEndingDownload).path(), "utf8"));
+  const concessiveEndingExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:concessiveEndingText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(concessiveEndingExport.records, concessiveEndingExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-concessive-endings-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-concessive-endings-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const designationParticleCases = recipientLedger.cases.filter(c => c.id.startsWith("concessive-designation-"));
   assert.equal(designationParticleCases.length, 98);

@@ -2721,6 +2721,29 @@ supports -질랑. Bare adverbs do not inherit ㄹ랑 licenses merely because it
 uses coda recovery. Each 은 compound also retains its split base + 은 path.
 
 The corpus search found no target particle annotations in training/development.
-The similarly spelled predicate -ㄴ들/-은들 family remains missing and is not
-certified by these rules. Novel-context observations retain stable byte spans and
+The similarly spelled predicate -ㄴ들/-은들 family is covered separately by
+COV-017ak; it is not certified by these particle rules. Novel-context observations retain stable byte spans and
 unjudged status; dictionary matches alone do not establish the intended reading.
+
+## Concessive predicate endings (COV-017ak)
+
+The [seven-entry review](concessive-ending-evaluation.json) adds canonical 은들,
+을망정, 을지언정 and 던들. Full/attached forms use their own written boundaries,
+including ㄹ loss before ㄴ and retention before ㄹ, plus existing ㄷ/ㅅ/ㅂ/ㅎ
+irregular hypotheses. Bare verbs and adjectives, explicit 이다/아니다, auxiliary
+chains and irregular 답다 derivatives retain their separate lemma/component roles.
+NIKL Q&A 330951 specifies 있은들/없은들, not 있는들/없는들. The concessive
+particle 인들 remains separate from copula + 은들, including 학생인들.
+
+Prefinals follow the reviewed dictionary notes: 은들 permits honorific 시;
+망정/지언정 permit 시 and past 었. Counterfactual 던들 requires preceding 었,
+with optional honorific or doubled past, and is not decomposed as 더 + 은들.
+The new endings can follow existing auxiliaries but are not auxiliary connectors.
+Polite 요 may follow; general nominalization or copula-after-concession is not
+inferred. Unreviewed past/modal 은들 proposals and omitted-copula variants remain
+visible audit work, rather than being declared universally ungrammatical.
+
+Six unchanged UD training sentences recover six target misses. Development
+recall is unchanged; novel observations separately retain contextual alternatives
+and the inherited case-clause-before-copula concern in 딸이었던들. Neither a
+word-level candidate nor a source-backed test establishes contextual correctness.

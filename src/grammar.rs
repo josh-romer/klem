@@ -564,6 +564,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "던데요",
             "던가",
             "던지",
+            "던들",
             "나",
             "나요",
             "네",
@@ -762,6 +763,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("은가요", "가요", "은가요", 4),
             ("은데도", "데도", "은데도", 4),
             ("은데다가", "데다가", "은데다가", 4),
+            ("은들", "들", "은들", 4),
             ("을", "", "을", 8),
             ("을까", "까", "을까", 8),
             ("을까요", "까요", "을까요", 8),
@@ -772,6 +774,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을지", "지", "을지", 8),
             ("을는지", "는지", "을는지", 8),
             ("을지라도", "지라도", "을지라도", 8),
+            ("을망정", "망정", "을망정", 8),
+            ("을지언정", "지언정", "을지언정", 8),
             ("을수록", "수록", "을수록", 8),
             ("음", "", "음", 16),
             // Unlike -습니다/-습니까, -(으)ㅂ시다 has a vowel boundary:
@@ -1326,6 +1330,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.literary_assertion" => {
             "Recognize literary -(으)니라/-느니라 assertions with their distinct boundary and prefinal licenses; lexical class and contextual suitability remain separate evidence."
+        }
+        "ending.concessive" => {
+            "Recover concessive -(으)ㄴ들/-(으)ㄹ망정/지언정 or counterfactual -던들 with its reviewed stem and prefinal boundary; retain separate particle readings."
         }
         "ending.expectation_question" => {
             "Recover -(으)려나 as a question or shortened intention expression, preserving dictionary homonyms without inserting implicit 하다 or choosing a contextual sense."

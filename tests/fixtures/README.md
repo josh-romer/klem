@@ -1151,3 +1151,17 @@ metadata omitted; JSON reformatted. Eleven reviewed grammar entries are added to
 `krdict-grammar-labels.json`, retaining all senses, attachment notes and examples.
 Source-backed cases supplement the annotated corpus regressions: no target
 particle annotation was found in the mined training/development data.
+
+`krdict-concessive-endings.json` retains 50 primary lexical entries from
+the pinned September 2026 NIKL KRDict export under CC BY-SA 2.0 KR. Exact IDs
+appear in `docs/concessive-ending-evaluation.json`. Changes: first sense, English
+equivalents and one example group retained; WordForm/RelatedForm and global
+metadata omitted; JSON reformatted. Seven grammar entries added to
+`krdict-grammar-labels.json` retain every sense, usage note and example group.
+
+`kaist-concessive-endings.conllu` retains complete unchanged UD 2.15 training
+sentences MH2_0021-s154, MH2_0066-s44, MH2_0091-s451, MH2_0092-s53 and
+MH2_0092-s333. `gsd-concessive-endings.conllu` retains complete unchanged training
+sentence train-s3829. Dataset revisions, licenses and attribution are the
+KAIST/GSD ones listed above. These are exposed regression fixtures, not unseen
+evaluation; original annotations and frozen corpus baselines remain unchanged.

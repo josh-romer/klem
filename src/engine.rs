@@ -592,6 +592,25 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // The reviewed concessive paradigms differ: -(으)ㄴ들 lists
+                // bare stems and honorific 시; 망정/지언정 additionally list 었.
+                // A retrospective -던들 needs its own ending analysis.
+                if (ending.form == "은들" && p.morphs.iter().any(|m| m.form != "시"))
+                    || (matches!(ending.form, "을망정" | "을지언정")
+                        && p.morphs
+                            .iter()
+                            .any(|m| !matches!(m.form.as_str(), "시" | "었")))
+                {
+                    continue;
+                }
+                if ending.form == "던들"
+                    && (!p.morphs.last().is_some_and(|m| m.form == "었")
+                        || p.morphs
+                            .iter()
+                            .any(|m| !matches!(m.form.as_str(), "시" | "었")))
+                {
+                    continue;
+                }
                 // Result-transfer 어다(가) has a bare verb boundary, unlike
                 // literal 다가. Lexical 모시다 keeps its stem-internal 시.
                 if result_connective(ending.form) && !p.morphs.is_empty() {
@@ -781,6 +800,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "으니라" | "느니라") {
                     p.rules.push("ending.literary_assertion".into());
+                }
+                if matches!(ending.form, "은들" | "을망정" | "을지언정" | "던들") {
+                    p.rules.push("ending.concessive".into());
                 }
                 if factual_ra {
                     p.rules.push("ending.factual_ra".into());
@@ -1260,6 +1282,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "을지"
                 | "을는지"
                 | "을지라도"
+                | "을망정"
+                | "을지언정"
                 | "을수록"
                 | "음"
         );
@@ -2331,6 +2355,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "요" => {
             reporting_myeo(ending)
                 || reporting_ni(ending)
+                || matches!(ending, "은들" | "을망정" | "을지언정" | "던들")
                 || connective
                 || matches!(
                     ending,

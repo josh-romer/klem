@@ -16,11 +16,12 @@
     "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/chigo-evaluation.json": "c7f2927950286ae43279d140c887d5e9d016f0372064cd0ca10a0e8b97b8130d",
+    "docs/concessive-designation-evaluation.json": "c2a562fff045d8b3aa45b6366e5e1ca6697cddc1948899ef9905c84ed0a65ab4",
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "64b7a7d8f552b3bdf21de23fb7d24107e17955a94db5a9d0b872561f2701b5a0",
+    "docs/coverage-checklist.md": "5d8546a125ff4b8dd4d1b84d7c6fe2d73603ae04e33fc78fed128ca03361705b",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
@@ -32,8 +33,8 @@
     "docs/eya-evaluation.json": "2cbfe997765a9f065db634701e408fced2fc6fa40b806788f91b4fe5660db66c",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "b16149d088c922bfe531bf281a12af9c6323103418e23d3ef1ab84ca0f360ee2",
-    "docs/inventory-reviews.json": "39dd66c026d1f927f61728c046c8cd623d03945e356b4748e646e32e4a84b308",
+    "docs/inventory-audit.md": "e198ac8f3f74590c89831888f2900b87e9028f1be2d690ec419806b9f566dc95",
+    "docs/inventory-reviews.json": "575382e0860a309def81dfeb70a13d403e9a2bd09e15dcc693dcf21738728a79",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/nira-evaluation.json": "f5104870a3be746d817dc91c710b38c082ba8ded9a85bc685181a0c62c4ddea7",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
@@ -66,6 +67,7 @@
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/chigo_particles.rs": "116a92c14a3ad8cc5880be4f7d9052d9b6d85bdc5156114cc3c715b867832238",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
+    "tests/concessive_designation.rs": "228dee6cff8706d9c512ed422e074f04a2bbe81fb4fc06885cc274ae2002301a",
     "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
     "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
@@ -83,7 +85,7 @@
     "tests/fixtures/auxiliary-dictionary.json": "7a858ec78be92ae8867c4e65fb5b607a896a06e4843b0d3156a1a7acf4bb8ade",
     "tests/fixtures/dictionary-attachments.json": "22bc97fb09b8753945fc071428a15a1fd34cb9f531d793933428d26663b9dca6",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
-    "tests/fixtures/validity.json": "ba0f10a098c7a46dd279e21b1a4f19801ad3fedea6ea6abc0fc8bea44be6a1f0",
+    "tests/fixtures/validity.json": "6a6dbbec41affbd4d6968d90d7e849447f56f0d683f1eac1fa7877bf4f865786",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
     "tests/kkaena.rs": "63efa7b0ad133bfabd79b1b85d4a393608361596303c92a07b0e9df8d3fdc0a5",
@@ -111,7 +113,7 @@
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "ebc9daf8cb894b107b4a704aa6936b55c7a86327a4521a620b1d507e0480f33a"
+    "web/src/grammar-labels.json": "985d0ecc547779b7465f3bfb8329989f1c23066f30f82a62269840c60211f657"
   },
   "counts": {
     "entries": 715,
@@ -122,12 +124,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 459,
-      "scoped": 255,
+      "unreviewed": 448,
+      "scoped": 266,
       "gap": 1
     },
-    "with_catalog_links": 330,
-    "with_judgment_citations": 296
+    "with_catalog_links": 341,
+    "with_judgment_citations": 307
   },
   "entries": [
     {
@@ -50877,11 +50879,151 @@
         ]
       },
       "source_sha256": "c3d4cbda994b014ce1b6a621e1f78868c5eb9575d62c5dca5ac852ab784b81c7",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "ㄴ들",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-boundary-낸들",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-boundary-학자들",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-ndeul-nominalized",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-ndeul-polite",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-꿈엔들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-난들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-뭔들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-빨린들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-샌들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-우린들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-장산들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-학잔들",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:70267",
+        "source_sha256": "c3d4cbda994b014ce1b6a621e1f78868c5eb9575d62c5dca5ac852ab784b81c7",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "ㄴ들: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-학잔들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-우린들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-뭔들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-난들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-샌들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-장산들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-꿈엔들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-빨린들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-ndeul-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-ndeul-nominalized",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-학자들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-낸들",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -51266,11 +51408,169 @@
         ]
       },
       "source_sha256": "9d78daaa973d5ba8e20b32ed5e79a474a46052d82e6e1b07a9856ff07ee1a384",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "ㄹ랑",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-boundary-먹을랑",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-boundary-빨릴랑",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-boundary-책랑",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-boundary-학교갈랑",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-boundary-학교랑",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-ㄹ랑-emphasis-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-걷고설랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-걸어설랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-곳엘랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-먹고설랑-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-서울설랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-얘길랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-얘길랑-polite",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-하고설랑",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86492",
+        "source_sha256": "9d78daaa973d5ba8e20b32ed5e79a474a46052d82e6e1b07a9856ff07ee1a384",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "ㄹ랑: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-얘길랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-얘길랑-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-ㄹ랑-emphasis-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-곳엘랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-서울설랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-하고설랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-먹고설랑-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-걷고설랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-걸어설랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-책랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-학교랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-학교갈랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-빨릴랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-먹을랑",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -51304,11 +51604,133 @@
         ]
       },
       "source_sha256": "3a7012a00ae2c93be5c77df4d812881d8d407065fd83d6a0f55be9bb227abd5d",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "ㄹ랑은",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-가설랑은-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-가설랑은-split-eun",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-널랑은",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-널랑은-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-살아설랑은-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-살아설랑은-split-eun",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-자리에설랑은",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-자리에설랑은-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-찰랑은",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-찰랑은-split",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:89694",
+        "source_sha256": "3a7012a00ae2c93be5c77df4d812881d8d407065fd83d6a0f55be9bb227abd5d",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "ㄹ랑은: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-널랑은",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-널랑은-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-찰랑은",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-찰랑은-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-자리에설랑은",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-자리에설랑은-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-가설랑은-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-가설랑은-split-eun",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-살아설랑은-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-살아설랑은-split-eun",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -60318,11 +60740,115 @@
         ]
       },
       "source_sha256": "fe51ec5350fa57d1f56741efd8e36ff44fad117cfd0f43692875ab47fc80b867",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "설랑",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-boundary-갑니다설랑",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-거기설랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-거기설랑-polite",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-곳에설랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-먹고설랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-설랑-adverb",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-설랑-emphasis-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-설랑-formal",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86087",
+        "source_sha256": "fe51ec5350fa57d1f56741efd8e36ff44fad117cfd0f43692875ab47fc80b867",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "설랑: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-거기설랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-거기설랑-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-설랑-emphasis-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-곳에설랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-먹고설랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-설랑-adverb",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-설랑-formal",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-갑니다설랑",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -60356,11 +60882,115 @@
         ]
       },
       "source_sha256": "ea5e882b1ea9337c68bd950af552ac86f7b08d744210602e6d3b44212bcdc3da",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "설랑은",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-가설랑은",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-가설랑은-eun",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-살아설랑은",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-살아설랑은-eun",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-설랑은-adverb",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-설랑은-formal",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-여기설랑은",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-여기설랑은-split",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86088",
+        "source_sha256": "ea5e882b1ea9337c68bd950af552ac86f7b08d744210602e6d3b44212bcdc3da",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "설랑은: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-여기설랑은",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-여기설랑은-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-가설랑은",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-가설랑은-eun",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-살아설랑은",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-살아설랑은-eun",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-설랑은-adverb",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-설랑은-formal",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -62546,11 +63176,79 @@
         ]
       },
       "source_sha256": "972c107162ace4ab11f70b22adbf785d4dac589c9a27c783c0741107bd80726e",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "에설랑",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-에설랑-adverb",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-에설랑-formal",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-학교에설랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-학교에설랑-polite",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86576",
+        "source_sha256": "972c107162ace4ab11f70b22adbf785d4dac589c9a27c783c0741107bd80726e",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "에설랑: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-학교에설랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-학교에설랑-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-에설랑-adverb",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-에설랑-formal",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -65205,11 +65903,124 @@
         ]
       },
       "source_sha256": "489156674c902dff6dfc30567355094606bc53e77db85840d1d90fd8e9333edc",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "을랑",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-boundary-아이을랑",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-boundary-학교는을랑",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-을랑-adverb",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-을랑-emphasis-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-을랑-ending",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-을랑-rieul",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-을랑-vowel",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-책을랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-책을랑-polite",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86122",
+        "source_sha256": "489156674c902dff6dfc30567355094606bc53e77db85840d1d90fd8e9333edc",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "을랑: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-책을랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-책을랑-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑-emphasis-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑-vowel",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑-rieul",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑-adverb",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑-ending",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-아이을랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-학교는을랑",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -65243,11 +66054,97 @@
         ]
       },
       "source_sha256": "9f847cb8a3f712c6f56530aafcdf75c99360ad361755ffa18ee033260d312dbf",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "을랑은",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-말을랑은",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-말을랑은-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-을랑은-adverb",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-을랑은-ending",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-을랑은-rieul",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-을랑은-vowel",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86131",
+        "source_sha256": "9f847cb8a3f712c6f56530aafcdf75c99360ad361755ffa18ee033260d312dbf",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "을랑은: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-말을랑은",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-말을랑은-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑은-vowel",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑은-rieul",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑은-adverb",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-을랑은-ending",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -67669,11 +68566,133 @@
         ]
       },
       "source_sha256": "270434671d3967a859ff51cf4ebc84f3334bef06a0836e39912ea96914302339",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "인들",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-boundary-책을인들",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-boundary-학교가인들",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-indeul-nominalized",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-indeul-polite",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-말인들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-무엇인들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-상황인들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-조금인들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-집에서인들",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-힘인들",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:70053",
+        "source_sha256": "270434671d3967a859ff51cf4ebc84f3334bef06a0836e39912ea96914302339",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "인들: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-힘인들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-무엇인들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-상황인들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-말인들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-집에서인들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-조금인들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-indeul-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-indeul-nominalized",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-학교가인들",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-boundary-책을인들",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -67709,11 +68728,106 @@
         ]
       },
       "source_sha256": "0b0a679af8887f6d79aa8d731eed47aab91ebc5668184831773c655eedea41f3",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "일랑",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-미련일랑",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-미련일랑-polite",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-일랑-adverb",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-일랑-emphasis-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-일랑-ending",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-일랑-rieul",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-일랑-vowel",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86123",
+        "source_sha256": "0b0a679af8887f6d79aa8d731eed47aab91ebc5668184831773c655eedea41f3",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "일랑: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-미련일랑",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-미련일랑-polite",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑-emphasis-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑-vowel",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑-rieul",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑-adverb",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑-ending",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -67747,11 +68861,97 @@
         ]
       },
       "source_sha256": "8aa206644e392d700e9880d39f0cf068523503c3f05676c723d8dfbe39327d80",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "일랑은",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "concessive-designation-술일랑은",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-술일랑은-split",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-일랑은-adverb",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-일랑은-ending",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "concessive-designation-일랑은-rieul",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "concessive-designation-일랑은-vowel",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86132",
+        "source_sha256": "8aa206644e392d700e9880d39f0cf068523503c3f05676c723d8dfbe39327d80",
+        "status": "scoped",
+        "checklist": [
+          "COV-018v"
+        ],
+        "scope": "일랑은: source-listed nominal/adverbial or finite post-ending attachment, coda recovery where applicable, source-linked display and explicit split 은 alternatives. See source decisions in the evaluation report.",
+        "remaining": "General inner/outer attachment, contextual sense and independent Korean review remain open. Predicate -ㄴ들/-은들 is separately missing. This scoped disposition does not certify the entire entry.",
+        "evidence": [
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "concessive_designation_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/concessive_designation.rs",
+            "test": "emphatic_compounds_preserve_split_paths_and_lexical_ambiguity"
+          },
+          {
+            "path": "docs/concessive-designation-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "concessive-designation-술일랑은",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-술일랑은-split",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑은-vowel",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑은-rieul",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑은-adverb",
+            "judgment": "path"
+          },
+          {
+            "case": "concessive-designation-일랑은-ending",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

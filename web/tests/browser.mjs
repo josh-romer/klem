@@ -265,6 +265,7 @@ try {
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
+  const concessiveDesignation = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-concessive-designation.json"), "utf8"));
   const sourceParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-source-particles.json"), "utf8"));
   const coreCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-core-case.json"), "utf8"));
   const kkaena = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-kkaena.json"), "utf8"));
@@ -277,6 +278,7 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
+      ...concessiveDesignation.LexicalResource.Lexicon.LexicalEntry,
       ...sourceParticles.LexicalResource.Lexicon.LexicalEntry,
       ...coreCase.LexicalResource.Lexicon.LexicalEntry,
       ...kkaena.LexicalResource.Lexicon.LexicalEntry,
@@ -613,6 +615,48 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const designationParticleCases = recipientLedger.cases.filter(c => c.id.startsWith("concessive-designation-"));
+  assert.equal(designationParticleCases.length, 98);
+  for (const c of designationParticleCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const designationParticleText = "학잔들 힘인들 얘길랑 널랑은 책을랑 말을랑은 미련일랑 술일랑은 먹고설랑 가설랑은 학교에설랑";
+  await submit(page, designationParticleText); await waitHeading(page, "학잔들");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms, sourceId] of [[0,["학자","ㄴ들"],70267],[1,["힘","인들"],70053],[2,["얘기","ㄹ랑"],86492],[3,["너","ㄹ랑은"],89694],[4,["책","을랑"],86122],[5,["말","을랑은"],86131],[6,["미련","일랑"],86123],[7,["술","일랑은"],86132],[8,["먹","고","설랑"],86087],[9,["가","어","설랑은"],86088],[10,["학교","에설랑"],86576]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const choose = async fs => {
+      const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, fs);
+      assert.ok(value, JSON.stringify({i,forms:fs,options:await select.locator("option").allTextContents()}));
+      await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), fs);
+    };
+    if ([3,5,7,9].includes(i)) await choose([...forms.slice(0,-1), forms.at(-1).slice(0,-1), "은"]);
+    if (i === 8) await choose(["먹", "고서", "ㄹ랑"]);
+    if (i === 10) await choose(["학교", "에서", "ㄹ랑"]);
+    await choose(forms);
+    await word.locator(".breakdown-part").last().click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), sourceId);
+  }
+  const designationParticleDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const designationParticleExport = JSON.parse(await readFile(await (await designationParticleDownload).path(), "utf8"));
+  const designationParticleExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:designationParticleText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(designationParticleExport.records, designationParticleExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-concessive-designation-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-concessive-designation-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const sourceParticleCases = recipientLedger.cases.filter(c => c.id.startsWith("source-particles-"));
   assert.equal(sourceParticleCases.length, 99);

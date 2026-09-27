@@ -1500,6 +1500,19 @@ fn particle_allowed(
     after_case: bool,
     suffixes: &[Morpheme],
 ) -> bool {
+    // Designation particles have different inner boundaries. The long 은
+    // forms preserve the base particle's licenses, not unrestricted stacking.
+    if let Some(outer) = suffixes.first().map(|m| m.form.as_str()) {
+        let allowed = match outer {
+            "ㄹ랑" | "ㄹ랑은" => matches!(form, "에" | "에서" | "서"),
+            "설랑" | "설랑은" => form == "에",
+            "을랑" | "을랑은" | "일랑" | "일랑은" | "에설랑" => false,
+            _ => true,
+        };
+        if !allowed {
+            return false;
+        }
+    }
     if suffixes
         .first()
         .is_some_and(|m| matches!(m.form.as_str(), "다" | "다가"))
@@ -1610,6 +1623,8 @@ fn adverbial_focus_particle(form: &str) -> bool {
             | "라든지"
             | "이라야"
             | "라야"
+            | "ㄴ들"
+            | "인들"
     )
 }
 
@@ -1745,6 +1760,24 @@ fn nominals(
             pronunciation: None,
         });
     }
+    for (tail, coda, form, class) in [
+        ("들", 4, "ㄴ들", 4),
+        ("랑", 8, "ㄹ랑", 3),
+        ("랑은", 8, "ㄹ랑은", 4),
+    ] {
+        if let Some(base) = word.strip_suffix(tail)
+            && let Some((_, vowel, t)) = last(base)
+            && t == coda
+        {
+            recoveries.push(ParticleRecovery {
+                base: replace_last(base, vowel, 0).unwrap(),
+                form,
+                class,
+                contraction: Some("particle.coda"),
+                pronunciation: None,
+            });
+        }
+    }
     if let Some((_, v, t @ (4 | 8))) = last(word) {
         let base = replace_last(word, v, 0).unwrap();
         if t == 4 {
@@ -1819,7 +1852,8 @@ fn nominals(
                 out.push(a);
             }
         }
-        let flexible = particle.contraction.is_some() || matches!(particle.form, "요" | "들");
+        let flexible = particle.contraction.is_some_and(|r| r != "particle.coda")
+            || matches!(particle.form, "요" | "들");
         if flexible
             || choice_particle(particle.form).is_some_and(|family| family != 4)
             || adverbial_focus_particle(particle.form)
@@ -1869,6 +1903,10 @@ fn nominals(
                     | "보다"
                     | "만치"
                     | "만큼"
+                    | "ㄹ랑"
+                    | "ㄹ랑은"
+                    | "설랑"
+                    | "설랑은"
             ) {
             PredicateEnd::BeforeParticle(particle.form)
         } else {
@@ -2378,6 +2416,8 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "마는" => concessive_ending(ending),
         "를" => matches!(ending, "어" | "게" | "지" | "고"),
         "가" => ending == "지",
+        "ㄹ랑" | "ㄹ랑은" => matches!(ending, "고서" | "어서" | "지"),
+        "설랑" | "설랑은" => matches!(ending, "고" | "어"),
         _ => false,
     }
 }

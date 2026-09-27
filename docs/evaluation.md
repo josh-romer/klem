@@ -2621,3 +2621,46 @@ The packaged full-dictionary preview verifies all new judgments, both filters,
 four bundled/split pairs plus six role/means/locative breakdowns, all nine source
 links, CLI/API/export parity and desktop/mobile layout. Contextual precision,
 independent Korean review and the wider completion checklist remain open.
+
+## Concessive and designation particle audit (COV-018v)
+
+The [source and candidate report](concessive-designation-evaluation.json) reviews
+11 KRDict particle entries and NIKL's retained-이 and -질랑 guidance. The 98
+individual judgments (68 required / 30 forbidden) bring the main ledger to
+**2,472 required / 1,564 forbidden**. A further 149-surface equivalence check
+preserves split and bundled 은 forms across nominal, ending, auxiliary and
+copular paths. Dictionary-filtered CLI parity, NFD and ordered components are
+checked. The dictionary-policy ledger is unchanged.
+
+The 3,832-surface raw comparison finds 84 changed surfaces, 386 added candidates,
+no removals and no provenance changes. All 30 stress snapshots remain unchanged.
+Development gold recovery is unchanged: KAIST **22,127/22,220**, GSD
+**9,847/9,989**. Mean candidates rise from **6.0686318632 to 6.0698019802** and
+**5.5416958655 to 5.5430974071**, respectively. No target particle annotations
+were found in the searched training/development data; no recall gain is claimed.
+KAIST training MH2_0092-s333 instead exposes the still-missing predicate -ㄴ들.
+
+On the pinned 무정 passage, compatible filtering adds 15 readings at 11 tokens
+(10 types), removing none. Every changed token has a verified UTF-8 byte span,
+nearby context and stable observation ID. 거기인들/눈물인들/한숨인들/지금인들/
+일을랑/언제인들 fit concessive/designation uses in agent review; 악인들/만들
+and the missing predicate 간들/한들 demonstrate contextual alternatives that a
+headword or POS filter cannot resolve. All observations remain unjudged pending
+independent review; these are not a precision estimate or new unseen prose.
+
+The catalog now has **359 canonical forms / 496 source IDs / 498 grammar fixture
+entries**. Inventory dispositions are **266 scoped / 448 unreviewed / one gap**.
+Rust/web-feature tests, full corpus regressions, Clippy, formatting, frontend
+build and browser checks passed. Browser coverage includes all 98 judgments,
+17 selected decompositions, 11 grammar links, both filters, CLI/export parity
+and mobile layout. Wider attachment, predicate -ㄴ들/-은들 and independent
+Korean review remain open.
+
+The final Nix flake check and web package build passed on x86_64-linux. The
+packaged preview with the full dictionary passed the 98 distinct judgments and
+all browser selection/source/export checks. Three sequential release runs over
+81,758 novel word tokens gave median compatible-filter times **1.321 seconds
+before / 1.321 after**; headword-only times were **1.342 / 1.343 seconds**.
+Peak RSS was below **28 MiB**. These include JSONL serialization and dictionary
+work; the separately counted outputs and every timing are retained in the report.
+Other architectures and independent performance environments were not measured.

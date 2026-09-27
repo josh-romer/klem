@@ -1142,3 +1142,12 @@ unchanged development sentences dev-s266, dev-s703 and dev-s925. Source revision
 licenses and attribution are the UD 2.15 KAIST/GSD ones listed above. These are
 exposed regression fixtures, not unseen evaluation; split and bundled source
 annotations are both retained without rewriting the corpus or frozen baselines.
+
+`krdict-concessive-designation.json` retains 67 primary lexical entries from the
+pinned September 2026 NIKL KRDict export under CC BY-SA 2.0 KR. Exact IDs appear
+in `docs/concessive-designation-evaluation.json`. Changes: first sense, English
+equivalents and one example group retained; WordForm/RelatedForm and global
+metadata omitted; JSON reformatted. Eleven reviewed grammar entries are added to
+`krdict-grammar-labels.json`, retaining all senses, attachment notes and examples.
+Source-backed cases supplement the annotated corpus regressions: no target
+particle annotation was found in the mined training/development data.

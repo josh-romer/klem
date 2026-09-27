@@ -2699,3 +2699,28 @@ nominalization, including 있음으로써 and 지나감으로써. Locative 서 w
 vowels or consonants; this does not license the separate count-emphasis homonym
 on arbitrary nouns. Semantic appropriateness, inherited inner-particle hypotheses
 and novel homonyms remain explicitly unjudged rather than treated as precision gains.
+
+## Concessive and designation particles (COV-018v)
+
+The [source review](concessive-designation-evaluation.json) covers ㄴ들/인들 and
+ㄹ랑/을랑/일랑/설랑/에설랑, including ㄹ랑은/을랑은/일랑은/설랑은. Coda
+recovery removes exactly the attached ㄴ or ㄹ from an underlying open syllable;
+these canonical particles are distinct from topic 는, object 를 and plural 들.
+Concessive 인들 retains vowel-final attachment following NIKL Q&A 327751, even
+though KRDict's usage note describes consonant-final bases. The ㄴ들/인들 paths
+allow nominal and adverbial bases, case phrases and predicate nominalizations.
+Broader adverbial ending licenses are not inferred from that description.
+
+Designation 을랑/일랑 require a consonant-final nominal (including ㄹ).
+ㄹ랑(은) accepts reviewed 에/에서/서 particle phrases and 고서/어서/지 endings;
+설랑(은) accepts 에 phrases and 고/어 endings. Thus 먹고설랑 retains both
+먹다 + 고 + 설랑 and 먹다 + 고서 + ㄹ랑. KRDict's 설랑은 examples include
+가설랑은/살아설랑은 despite its nominal-only usage note; both corresponding
+ending decompositions are preserved. NIKL's standard-language commentary
+supports -질랑. Bare adverbs do not inherit ㄹ랑 licenses merely because it
+uses coda recovery. Each 은 compound also retains its split base + 은 path.
+
+The corpus search found no target particle annotations in training/development.
+The similarly spelled predicate -ㄴ들/-은들 family remains missing and is not
+certified by these rules. Novel-context observations retain stable byte spans and
+unjudged status; dictionary matches alone do not establish the intended reading.

@@ -999,6 +999,15 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("커녕", 4, 0),
             ("이란", 4, 1),
             ("란", 4, 2),
+            // NIKL 327751 also accepts uncontracted 새인들/장사인들.
+            ("인들", 4, 0),
+            ("을랑", 3, 1),
+            ("일랑", 3, 1),
+            ("설랑", 3, 0),
+            ("에설랑", 3, 0),
+            ("을랑은", 4, 1),
+            ("일랑은", 4, 1),
+            ("설랑은", 4, 0),
             ("만", 3, 0),
             ("마는", 3, 0),
             ("까지", 3, 0),
@@ -1190,6 +1199,7 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "particle.contraction.nkeonyeong" => {
             "Expand attached ㄴ커녕 to the particle 는커녕 after an open syllable."
         }
+        "particle.coda" => "Separate attached ㄴ들 or ㄹ랑(은) from the preceding open syllable.",
         "particle.contraction.l" => {
             "Expand attached ㄹ to object/emphatic 를 after an open syllable."
         }
@@ -1370,6 +1380,9 @@ mod label_tests {
         }
         for particle in particles() {
             forms.insert(particle.form.to_owned(), Particle);
+        }
+        for form in ["ㄴ들", "ㄹ랑", "ㄹ랑은"] {
+            forms.insert(form.to_owned(), Particle);
         }
         // Forms emitted outside the tables: copula endings, prefinal recovery,
         // and bounded derivation. Other synthetic contractions reuse table forms.

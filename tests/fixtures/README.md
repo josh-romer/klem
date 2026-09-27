@@ -1091,3 +1091,19 @@ joins adjacent nouns in 자전거+도로+이+라도; its recovered copula group 
 establish contextual correctness over the existing particle analysis. No source
 gold is rewritten. NIKL's compound decomposition and all source hashes appear in
 `docs/ra-condition-evaluation.json`.
+
+`krdict-kkaena.json` contains 22 primary lexical entries from the same September
+2026 NIKL KRDict export under CC BY-SA 2.0 KR. IDs: 15983, 17204, 26525, 28633,
+29970, 36672, 38264, 38536, 41471, 50523, 50525, 57305, 58161, 58272, 62332,
+63406, 64717, 64718, 66140, 76201, 87847, 91736. Changes: retain the first sense,
+English equivalents and one example group, omit WordForm/RelatedForm and global
+metadata, exclude idiom subentries, and reformat JSON. Grammar entry 69715 is
+added separately to `krdict-grammar-labels.json` with its sole sense and one
+example group. The source-attested head 아씨 is absent from the full snapshot;
+no fabricated entry fills that gap.
+
+`kaist-kkaena.conllu` preserves the complete unchanged UD 2.15 KAIST **test**
+sentence MH2_0110-s468, containing 족보깨나 → 족보 + 깨나. Source revision,
+license and attribution are the KAIST ones listed above. This sentence was
+inspected to develop COV-018s and is now an exposed regression fixture, not an
+unseen accuracy test. No pinned baseline or source annotation was rewritten.

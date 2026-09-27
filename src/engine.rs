@@ -1525,6 +1525,7 @@ fn particle_allowed(
                 | "치고서"
                 | "토록"
                 | "마냥"
+                | "깨나"
         )
     }) || (matches!(form, "이" | "가" | "을" | "를")
         && suffixes.iter().any(|m| {

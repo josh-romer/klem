@@ -16666,6 +16666,119 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:69715",
+      "source_sha256": "61c88d0457186ad3e0e1c88fd45a569af5ca4590c7e070fb535b49a01c245c4f",
+      "status": "scoped",
+      "checklist": [
+        "COV-018s"
+      ],
+      "scope": "Nominal degree 깨나 retains consonant/vowel/plural bases and spelling, with no preceding case or bare predicate/adverbial peeling. Existing 깨/깨다/깨나다 and 꽤 + 나 alternatives remain. Source-attested 아씨들깨나 is raw-only when 아씨 is absent from the dictionary.",
+      "remaining": "Semantic quantifiability, independent Korean review, existing nominalization/outer-particle/copula alternatives and wider combinations remain unjudged. This does not certify contextual precision.",
+      "evidence": [
+        {
+          "path": "tests/kkaena.rs",
+          "test": "kkaena_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/kkaena.rs",
+          "test": "kkaena_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/kkaena.rs",
+          "test": "annotated_kkaena_preserves_nominal_group"
+        },
+        {
+          "path": "tests/kkaena.rs",
+          "test": "kkaena_keeps_unknown_bases_and_requires_a_nonempty_head"
+        },
+        {
+          "path": "docs/kkaena-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "kkaena-sweat",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-math",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-money",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-strength",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-pedigree",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-spite",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-person",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-study",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-imitation",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-plural-dictionary",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-wrong-spelling",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-wrong-quite",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-bare-predicate",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-connective",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-final-ending",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-adverbial",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-subject-chain",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-object-chain",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-locative-chain",
+          "judgment": "path"
+        },
+        {
+          "case": "kkaena-repeat",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

@@ -2648,3 +2648,21 @@ NIKL report references. Existing broader nominal/copula composition can still
 produce unjudged alternatives. Matching GSD's 자전거도로 + 이다 annotation is a
 representation result, not proof that a copula is intended over the particle
 reading. Independent Korean review and wider auxiliary/particle licenses remain open.
+
+## Nominal degree 깨나 (COV-018s)
+
+KRDict [깨나](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69715)
+adds considerable amount/degree to a nominal base. It has no coda allomorph:
+땀깨나 and 족보깨나 recover 땀/족보. NIKL's
+[plural example](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?qna_seq=316035)
+accepts 아씨들깨나; nominal 들 stays separate. The engine requires a nonempty
+head and blocks preceding case/repeated-particle peeling at this boundary.
+Nominalization and outer particles use the existing ordinary nominal machinery;
+their contextual suitability remains unjudged.
+
+NIKL [distinguishes 꽤나 from 깨나](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6830).
+No spelling correction is inferred. Bare predicate/adverbial attachment is not
+licensed by this rule, and existing 깨다 + 나, 깨 + 나 and 꽤 + 나 paths remain.
+Unknown noun heads also remain raw hypotheses. In particular, KRDict lacks 아씨,
+so dictionary filtering can remove a source-attested analysis. Nominal POS alone
+does not establish the intended degree meaning or lexical sense.

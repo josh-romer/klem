@@ -2472,3 +2472,48 @@ all seven grammar sources and desktop/mobile layout. Browser selection checks
 both forms and grammatical roles because subject particle 이 and copula 이 can
 print identically. Independent Korean review and the remaining checklist
 families stay open.
+
+## Nominal degree 깨나 (COV-018s)
+
+The [source and candidate review](kkaena-evaluation.json) adds 깨나 after nominal
+bases, including 땀깨나, 족보깨나 and 사람들깨나. Plural 들 stays separate;
+깨 + 나, 깨다 + 나/으나, 깨나다 and 꽤 + 나 readings remain. Preceding case
+peeling and bare predicate/adverbial attachment receive no new license.
+
+The 27 new judgments contain 17 required and ten forbidden paths, bringing main
+validity totals to 2,262 required / 1,472 forbidden. The source-attested
+아씨들깨나 analysis remains available raw, but KRDict lacks 아씨. Both dictionary
+filters remove that path, and the browser preserves the unmatched word in the
+sentence and export. This dictionary coverage gap is tested explicitly.
+
+Across 3,550 surfaces from both candidate ledgers, stress fixtures and additional
+boundary probes, 31 candidates are added on 23 surfaces, with no removals or
+provenance changes. All thirty stress hashes and frozen corpus baselines remain
+unchanged. Unjudged additions include 따다/땋다 + 음 + 깨나 for 땀깨나 and
+어 + 깨나 for 어깨나. Whole unknown nominal strings and inherited nominalization,
+outer-particle and copula alternatives remain hypotheses, not precision gains.
+
+The complete KAIST test sentence MH2_0110-s468 now recovers 족보 + 깨나. It was
+inspected to develop this fix and is now an exposed regression case, not held-out
+evidence. It is the only changed test-case outcome: matches become 24,382/24,490
+from 24,381. Both development reports are unchanged: KAIST 22,127/22,220 and
+GSD 9,844/9,989, with mean candidate counts 6.028173 / 5.511763.
+The novel's compatible-filtered JSONL is byte-identical to the previous release:
+120,427 analyses / 73,327 tokens with readings across 81,758 word tokens.
+
+The inventory now has 231 scoped reviews / 483 unreviewed entries / one gap.
+The catalog has 341 canonical forms / 478 source IDs / 479 fixture entries.
+Rust/web-feature tests, Clippy, formatting, frozen corpus regression, frontend
+build, browser/HTTP checks, inventory verification, x86_64-linux Nix checks and
+the packaged web build pass. The packaged full-dictionary preview verifies all
+27 judgments, both filters, the dictionary gap, CLI/API/export parity, three
+selected breakdowns, source selection and desktop/mobile layout. Independent
+Korean review, contextual meaning and the broader checklist remain open.
+
+Three sequential local Nix release runs measured compatible median 1.200s versus
+1.219s before, with peak RSS below 29 MiB. These include JSONL serialization;
+variation is not evidence of a speedup or a throughput guarantee. The first
+measurement process terminated with SIGTERM; after verifying it and its children
+had stopped, the retry completed. Separate counts confirm unchanged output totals
+for both dictionary filters; headword-only remains 131,372 analyses / 73,382 tokens
+with readings.

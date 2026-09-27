@@ -19,7 +19,7 @@
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "f17b439e3484393517c9a526850a4b0c554dbf4d87719d56ed3921d24abc337a",
+    "docs/coverage-checklist.md": "4b8e2fdedb7bf01c3396e3e55865fc59ba15fe7c563b8503f67dfc01fa22f4b2",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
@@ -31,8 +31,9 @@
     "docs/eya-evaluation.json": "2cbfe997765a9f065db634701e408fced2fc6fa40b806788f91b4fe5660db66c",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "431fc50ba090d9eeaba7065ed86134b69f5fd63ef90af162ddddea01cc176887",
-    "docs/inventory-reviews.json": "6a4aadc4f228b32e7f1757cfc2b1eb32ae46abb8d39160a7f184759181ca033e",
+    "docs/inventory-audit.md": "211fb4b1c23daffb5e306eaf7cc3102e9277b7a6ad16e53a87f7dd10f3c4baab",
+    "docs/inventory-reviews.json": "ea0e57c6ce6fb84b1feb4d7df8fa2f32e18e52970d3477264fa24641b65d5fde",
+    "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/nira-evaluation.json": "f5104870a3be746d817dc91c710b38c082ba8ded9a85bc685181a0c62c4ddea7",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
@@ -79,9 +80,10 @@
     "tests/fixtures/auxiliary-dictionary.json": "7a858ec78be92ae8867c4e65fb5b607a896a06e4843b0d3156a1a7acf4bb8ade",
     "tests/fixtures/dictionary-attachments.json": "49e8173af55aad2049d3517fbe5996d8aa83b69264e57d26b35f7937c499a2c7",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
-    "tests/fixtures/validity.json": "535730824dd787a55c00a5ec0bf34c4d41c65e4d7a6017c73c73a3d33a3bb093",
+    "tests/fixtures/validity.json": "5b96003924f8ae49264bc4c5a6e560b5d37ed5ae84e7d6fa29fb780f6abc9bac",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
+    "tests/kkaena.rs": "63efa7b0ad133bfabd79b1b85d4a393608361596303c92a07b0e9df8d3fdc0a5",
     "tests/nira.rs": "cace34737dd52a13c3a646e8256d1f2c2c7d8e7fa3f0b9c6d4dd791cdb18a8fa",
     "tests/noh_contraction.rs": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
@@ -105,7 +107,7 @@
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "2a8638f1f6eb1ad7ee4e7959decd9cc0b29aafcdb6e2de03204f84ca4dae09a1"
+    "web/src/grammar-labels.json": "903f1aaa4adfa713fc8263bc2d5a8805e963c726a2421bd2af9897019b4f5a69"
   },
   "counts": {
     "entries": 715,
@@ -116,12 +118,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 484,
-      "scoped": 230,
+      "unreviewed": 483,
+      "scoped": 231,
       "gap": 1
     },
-    "with_catalog_links": 322,
-    "with_judgment_citations": 276
+    "with_catalog_links": 323,
+    "with_judgment_citations": 277
   },
   "entries": [
     {
@@ -52999,11 +53001,227 @@
         ]
       },
       "source_sha256": "61c88d0457186ad3e0e1c88fd45a569af5ca4590c7e070fb535b49a01c245c4f",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "깨나",
+          "kind": "particle"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "kkaena-adverbial",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-bare-predicate",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-connective",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-final-ending",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-imitation",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-locative-chain",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-math",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-money",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-object-chain",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-pedigree",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-person",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-plural-dictionary",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-repeat",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-spite",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-strength",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-study",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-subject-chain",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-sweat",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "kkaena-wrong-quite",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "kkaena-wrong-spelling",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:69715",
+        "source_sha256": "61c88d0457186ad3e0e1c88fd45a569af5ca4590c7e070fb535b49a01c245c4f",
+        "status": "scoped",
+        "checklist": [
+          "COV-018s"
+        ],
+        "scope": "Nominal degree 깨나 retains consonant/vowel/plural bases and spelling, with no preceding case or bare predicate/adverbial peeling. Existing 깨/깨다/깨나다 and 꽤 + 나 alternatives remain. Source-attested 아씨들깨나 is raw-only when 아씨 is absent from the dictionary.",
+        "remaining": "Semantic quantifiability, independent Korean review, existing nominalization/outer-particle/copula alternatives and wider combinations remain unjudged. This does not certify contextual precision.",
+        "evidence": [
+          {
+            "path": "tests/kkaena.rs",
+            "test": "kkaena_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/kkaena.rs",
+            "test": "kkaena_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/kkaena.rs",
+            "test": "annotated_kkaena_preserves_nominal_group"
+          },
+          {
+            "path": "tests/kkaena.rs",
+            "test": "kkaena_keeps_unknown_bases_and_requires_a_nonempty_head"
+          },
+          {
+            "path": "docs/kkaena-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "kkaena-sweat",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-math",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-money",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-strength",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-pedigree",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-spite",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-person",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-study",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-imitation",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-plural-dictionary",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-wrong-spelling",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-wrong-quite",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-bare-predicate",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-connective",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-final-ending",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-adverbial",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-subject-chain",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-object-chain",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-locative-chain",
+            "judgment": "path"
+          },
+          {
+            "case": "kkaena-repeat",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

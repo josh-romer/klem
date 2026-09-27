@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–aj/018a–k/018m–r/019a–g/019i–m/020a–k/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–aj/018a–k/018m–s/019a–g/019i–m/020a–k/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 230 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–aj/018e–k/018m–r/019d–g/019i–m/020d–h/020j–k; 484 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 231 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–aj/018e–k/018m–s/019d–g/019i–m/020d–h/020j–k; 483 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -784,7 +784,7 @@ review remains open under the completion review below.
   Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–r implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–s implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -1037,6 +1037,18 @@ review remains open under the completion review below.
   fixtures, the complete 꽃다발이라야 corpus sentence, browser alternatives and
   [review](ra-condition-evaluation.json). Nominalization, unknown lexical heads
   and further case/copula alternatives remain hypotheses, not contextual judgments.
+
+- [x] **COV-018s — Nominal degree 깨나.** 땀깨나, 족보깨나 and
+  사람들깨나 retain their nominal heads; plural 들 remains separate. The
+  existing 깨 + 나, 깨다 + 나/으나, 깨나다 and 꽤 + 나 readings remain.
+  No spelling repair, bare predicate/adverbial attachment or preceding-case
+  peeling is added. The source-attested 아씨들깨나 path remains raw-only when
+  its headword is absent from KRDict. Evidence: [four tests](../tests/kkaena.rs),
+  27 `kkaena-*` judgments, dictionary/CLI parity, browser display/export and
+  [source/candidate review](kkaena-evaluation.json). The complete KAIST test
+  sentence MH2_0110-s468 is now an exposed regression case, not held-out evidence.
+  Semantic quantifiability, wider particle combinations, inherited nominalization
+  and copula alternatives, and contextual sense selection remain open.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
@@ -1481,7 +1493,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 340 currently emitted canonical grammar forms.** The initial catalog
+  for all 341 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

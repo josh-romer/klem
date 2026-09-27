@@ -264,6 +264,7 @@ try {
   const shortRecipient = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
+  const kkaena = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-kkaena.json"), "utf8"));
   const raConditions = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ra-conditions.json"), "utf8"));
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
@@ -272,6 +273,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...kkaena.LexicalResource.Lexicon.LexicalEntry,
       ...raConditions.LexicalResource.Lexicon.LexicalEntry,
       ...eya.LexicalResource.Lexicon.LexicalEntry,
       ...vocative.LexicalResource.Lexicon.LexicalEntry,
@@ -605,6 +607,50 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Degree 깨나 preserves noun/plural structure and existing 깨다/깨/꽤 readings.
+  const kkaenaCases = recipientLedger.cases.filter(c=>c.id.startsWith("kkaena-"));
+  assert.equal(kkaenaCases.length,27);
+  for(const c of kkaenaCases) {
+    const token=(await (await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments) {
+      const index=token.analysis.analyses.findIndex(a=>JSON.stringify(a.lemmas.map(l=>l.text))===JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l=>l.kind))===JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m=>m.form))===JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m=>m.kind))===JSON.stringify(j.morpheme_kinds));
+      assert.equal(index>=0,j.verdict==="required",c.id);
+      if(index>=0) assert.notEqual(token.dictionary.readings[index].status,"incompatible",c.id);
+    }
+  }
+  const kkaenaText="땀깨나 족보깨나 사람들깨나 아씨들깨나 꽤나 깨나";
+  await submit(page,kkaenaText); await waitHeading(page,"땀깨나");
+  const unknownWord=page.locator(".breakdown-word").nth(3);
+  const unknownValue=await unknownWord.locator("select option").evaluateAll(os=>os.find(o=>o.textContent.replace(/^\d+\. /,"")==="아씨 + 들 + 깨나")?.value);
+  assert.ok(unknownValue); await unknownWord.locator("select").selectOption(unknownValue);
+  assert.deepEqual(await unknownWord.locator(".part-form").allTextContents(),["아씨","들","깨나"]);
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  assert.equal(await unknownWord.locator("select").isDisabled(),true);
+  assert.equal(await unknownWord.locator(".breakdown-unavailable").textContent(),"No matching reading");
+  for(const [i,forms] of [[0,["땀","깨나"]],[1,["족보","깨나"]],[2,["사람","들","깨나"]]]) {
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    await word.locator(".breakdown-part").last().click();
+    await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo=69715"]'));
+  }
+  const kkaenaDownload=page.waitForEvent("download");
+  await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const kkaenaExport=JSON.parse(await readFile(await (await kkaenaDownload).path(),"utf8"));
+  const kkaenaExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:kkaenaText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(kkaenaExport.records,kkaenaExpected);
+  assert.equal(kkaenaExport.records.filter(r=>r.kind==="word")[3].analysis.analyses.length,0);
+  await page.screenshot({path:resolve(tmpdir(),"klem-kkaena-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-kkaena-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Copular and particle homonyms retain their own source entries and role boundaries.
   const raConditionsCases = recipientLedger.cases.filter(c => c.id.startsWith("ra-conditions-"));

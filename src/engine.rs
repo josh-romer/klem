@@ -328,7 +328,7 @@ pub(crate) fn present_declarative(form: &str) -> bool {
 pub(crate) fn adjectival_question(form: &str) -> bool {
     matches!(
         form,
-        "으냐" | "으냐는" | "으냐며" | "으냐면서" | "으냐니" | "으냔"
+        "으냐" | "으냐고" | "으냐는" | "으냐며" | "으냐면서" | "으냐니" | "으냔"
     )
 }
 
@@ -527,6 +527,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     && p.morphs.iter().any(|m| m.form == "더"))
                     || (ending.form == "잔" && !p.morphs.is_empty())
                 {
+                    continue;
+                }
+                if ending.form == "느냐고" && p.morphs.iter().any(|m| m.form == "더") {
                     continue;
                 }
                 if adjectival_question(ending.form) && !p.morphs.is_empty() {
@@ -1202,6 +1205,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                             | "는가"
                             | "는가요"
                             | "느냐"
+                            | "느냐고"
                             | "느냐는"
                             | "느냐며"
                             | "느냐면서"
@@ -1242,6 +1246,9 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
 // Bounded adjective attachment inventory. The known suffix is ㅂ-irregular;
 // arbitrary lexical predicates still retain the engine's regular hypotheses.
 fn dap_suffix_allowed(p: &Predicate) -> bool {
+    if p.morphs.first().is_some_and(|m| m.form == "느냐고") {
+        return false;
+    }
     if !p.stem.ends_with('답') {
         return false;
     }
@@ -1293,6 +1300,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으나"
                 | "으나마"
                 | "으냐"
+                | "으냐고"
                 | "으냐는"
                 | "으냐며"
                 | "으냐면서"
@@ -1510,6 +1518,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
             "다며"
                 | "다면서"
                 | "느냐"
+                | "느냐고"
+                | "으냐고"
                 | "느니라"
                 | "느냐며"
                 | "느냐면서"
@@ -2014,6 +2024,7 @@ fn nominals(
                     | "만큼"
                     | "조차"
                     | "마저"
+                    | "밖에"
                     | "ㄹ랑"
                     | "ㄹ랑은"
                     | "설랑"
@@ -2036,6 +2047,9 @@ fn nominals(
                     }
                     if concessive {
                         a.rules.push("particle.concessive".into());
+                    }
+                    if particle.form == "밖에" && !nominalized {
+                        a.rules.push("particle.quoted_restrictive".into());
                     }
                     if matches!(particle.form, "조차" | "마저") && !nominalized {
                         a.rules.push("particle.additive_connective".into());
@@ -2409,6 +2423,13 @@ fn reporting_myeo(form: &str) -> bool {
     )
 }
 
+fn reporting_go(ending: &str) -> bool {
+    matches!(
+        ending,
+        "다고" | "는다고" | "라고" | "으라고" | "냐고" | "느냐고" | "으냐고" | "자고"
+    )
+}
+
 fn before_particle(ending: &str, particle: &str) -> bool {
     let connective = intention_connective(ending)
         || result_connective(ending)
@@ -2454,8 +2475,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 | "다면"
         );
     match particle {
+        "밖에" => reporting_go(ending),
         "요" => {
-            reporting_myeo(ending)
+            reporting_go(ending)
+                || reporting_myeo(ending)
                 || reporting_ni(ending)
                 || matches!(
                     ending,

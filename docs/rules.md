@@ -2919,3 +2919,22 @@ lexical and whole-word hypotheses remain. Broader copula omission and the
 quoted-clause + 밖에 observation need further review. The
 [evaluation](necessity-ending-evaluation.json) records those limits, exact source
 examples, composed probes and dictionary omissions.
+
+## Reported clauses before 밖에 and question allomorphs (COV-018z/017an)
+
+Restrictive 밖에 accepts the represented reported endings 다고/는다고,
+라고/으라고, 냐고/느냐고/으냐고 and 자고, with
+`particle.quoted_restrictive` provenance. It remains a particle after the ending;
+nominal quotation, copula, auxiliary, topic and polite components retain their
+roles. Exact KRDict declarative/copular examples and the KAIST discovery target
+anchor the rule. Further question/command/proposal combinations are explicitly
+compositional inferences. This does not decide contextual negative polarity.
+
+The previously missing 느냐고 and 으냐고 forms now have separate canonical
+endings and teaching sources. 으냐고 inherits the bare-adjective boundary and
+existing irregular recovery; 느냐고 rejects recovered 더. Known bare copula,
+auxiliary-adjective and 답다 roles retain their boundaries. The existing lexical
+adjectival-question policy evaluates each homonym separately: an unknown
+standalone auxiliary can keep a reading even when its lexical-verb homonyms
+conflict. General 냐고 and unknown lexical hypotheses remain.
+See the [individual-case review](quoted-bakke-evaluation.json).

@@ -2977,3 +2977,32 @@ Three interleaved release runs per version/filter give after medians of
 1.232 seconds (headword) and 1.236 seconds (compatible), with peak
 RSS of 28.1 MiB. The small sample is a bounded performance
 check, not evidence of statistical speed equivalence.
+
+## Reported clauses before 밖에 and quoted questions (COV-018z/017an)
+
+The [review](quoted-bakke-evaluation.json) adds **48 required / 8 forbidden** raw
+judgments, bringing the ledger to **2,927 / 1,687**. Four separate dictionary-policy
+cases bring that ledger to **150 required / 86 forbidden**. Tests preserve unknown
+standalone auxiliary homonyms while rejecting known lexical-verb entries before
+bare adjectival 으냐고. All required raw headwords are present in the fixture.
+
+The complete KAIST discovery sentence now matches all 12 converted rows, including
+못하다고밖에. Frozen evaluation gains 빼앗느냐고 (MH2_0169-s711/4) without
+losing prior matches or altering gold/baselines. The reported-question annotation
+splits 느냐+고; this analyzer uses a bundled canonical ending. The metric checks
+lexical groups, not identical morphological tokenization.
+
+Across 4,489 raw probes, 55 surfaces gain 256 analyses with no removals or
+provenance changes. In 무정, two records gain five analyses: 누이라고밖에
+and 있느냐고. The 누이 copula and 있다 question fit the surrounding text;
+other 누/누이다 hypotheses remain unjudged. The batch's 526 unjudged raw
+outputs remain visible. These measurements do not certify contextual precision.
+Full Rust/web tests, all 30 stress cases and memory-limited stress, pinned corpus
+checks, Clippy, formatting, TypeScript/Vite, browser checks and Nix CLI/web builds
+pass on x86_64 Linux. The packaged full-dictionary app passes all 60 new cases
+with both filters, source selection and API/CLI/export parity. Four desktop/mobile
+screenshots were inspected.
+
+Three interleaved release runs per version/filter give after medians of
+1.246 seconds (headword) and 1.234 seconds (compatible), with peak RSS
+of 28.1 MiB. This small sample does not establish statistical speed equivalence.

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–am/018a–k/018m–y/019a–g/019i–o/020a–m/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–an/018a–k/018m–z/019a–g/019i–o/020a–m/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 283 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–am/018e–k/018m–y/019d–g/019i–o/020d–h/020j–k; 431 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 284 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–an/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k; 430 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -220,7 +220,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–am implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–an implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -828,8 +828,19 @@ review remains open under the completion review below.
   Independent review, contextual interpretation and wider copula omission remain
   open rather than receiving an unsupported blanket license.
 
+- [x] **COV-017an — Explicit quoted-question allomorphs.** Implemented and
+  validated with COV-018z, including browser sources and Nix packages.
+  KRDict 87443/87444 supply -느냐고/-으냐고, including the previously missing
+  source example surfaces, their prefinal/irregular boundaries and separate
+  browser labels. The general 냐고 alternative remains. Per-entry dictionary
+  checks reject a known lexical verb before bare adjectival 으냐고 but retain
+  an unknown standalone auxiliary homonym. The frozen corpus gains
+  빼앗느냐고 (MH2_0169-s711/4); no previous matches are lost. This is lexical
+  recovery evidence, not a claim of full syntactic parsing or contextual class
+  selection. See the [shared evaluation](quoted-bakke-evaluation.json).
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–y cover post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -1177,15 +1188,19 @@ review remains open under the completion review below.
   Wider particle pairs, semantic restrictions and contextual sense choice remain
   separate review work.
 
-- [ ] **COV-018z — Quoted clauses before 밖에.** KAIST training
-  MH2_0072-s236/8 has 못하다고밖에 → 못하+다고+밖에 (px+ecs+jxc),
-  but the current analyzer does not recover 못하다. The complete source
-  sentence is preserved in [the discovery fixture](../tests/fixtures/kaist-necessity-search.conllu)
-  and [COV-017am review](necessity-ending-evaluation.json). Audit quoted-clause
-  attachment separately from noun/기-attached 밖에 and the necessity ending;
-  do not silently treat the annotation as an ending example or broaden every
-  connective. Source distribution, exact positive/negative role judgments,
-  dictionary behavior and display/export checks remain to be implemented.
+- [x] **COV-018z — Quoted clauses before 밖에.** Source review, regression
+  coverage, browser and Nix validation pass. The KAIST
+  못하다고밖에 target and all 12 converted rows in its complete sentence
+  now match. Full KRDict lexical examples attest 있다고밖에,
+  명궁이라고밖에, 능력이라고밖에 and 초능력이라고밖에는, beyond the
+  particle entry's short noun/기 note. Reported statements, copulas, questions,
+  commands and proposals preserve distinct ending/particle roles; combinations
+  beyond exact examples are marked inference. Nominal quotation alternatives,
+  auxiliaries, topic and polite components remain. [56 raw judgments and
+  dictionary/CLI tests](../tests/quoted_bakke.rs), four separate dictionary-policy
+  cases and [the source/candidate review](quoted-bakke-evaluation.json) record
+  the boundaries. Independent review, contextual polarity and further reported
+  paradigms remain open.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
@@ -1591,6 +1606,14 @@ review remains open under the completion review below.
   This finite inventory does not license all adverbs or select contextual senses.
   Novel alternatives, generic particle/copula attachment and independent review
   remain open, including the inherited 딸이었던들 and 왜요 alternatives.
+
+- [ ] **COV-020n — Factual copular ending ownership in dictionary filtering.**
+  The COV-018z novel review finds 누이다 + 라고 + 밖에 surviving alongside
+  command 으라고 and nominal 누이 + 이다 alternatives in 누이라고밖에.
+  KRDict 86500's factual sense licenses 이다/아니다 and honorific 시; inspect
+  recovered prefinal ownership and homonyms before adding per-entry conflicts.
+  Preserve the command and nominal/copular alternatives. The stable observation
+  and full candidate evidence are in [the quoted-clause review](quoted-bakke-evaluation.json).
 
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

@@ -535,6 +535,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "는데도",
             "는데다가",
             "느냐",
+            "느냐고",
             "느니라",
             "느라고",
             "고",
@@ -737,6 +738,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
             ("으냐", "냐", "으냐"),
+            ("으냐고", "냐고", "으냐고"),
             ("으냐는", "냐는", "으냐는"),
             ("으냐며", "냐며", "으냐며"),
             ("으냐면서", "냐면서", "으냐면서"),
@@ -1154,6 +1156,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "auxiliary.internal_particle" => {
             "Retain a licensed particle between an ending and the following auxiliary predicate."
+        }
+        "particle.quoted_restrictive" => {
+            "Attach restrictive 밖에 to a reported clause, preserving its ending and any auxiliary or copula components; contextual polarity is not resolved."
         }
         "particle.concessive" => {
             "Attach concessive 만/마는 after a licensed final ending; retain the distinct nominal 만 reading where applicable."

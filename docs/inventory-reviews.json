@@ -20746,6 +20746,54 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:70070",
+      "source_sha256": "e81a4e31b4af9b58635780685f527888ae4496f272f3acf2b8575de94ecf198a",
+      "status": "scoped",
+      "checklist": [
+        "COV-018z",
+        "COV-017an"
+      ],
+      "scope": "Restrictive 밖에 retains nominal/기 paths and gains represented reported-clause attachment, supported by full KRDict lexical examples and KAIST. Quoted endings, auxiliary/copula roles, nominal-quotation alternatives and outer topic/polite components remain distinct. Necessity 을밖에 remains a separate ending.",
+      "remaining": "The short entry note does not enumerate the reported-clause uses found elsewhere in KRDict. Negative/question polarity is contextual and not checked at token level. Independent review, further reported paradigms, arbitrary quotation spans and contextual sense selection remain pending.",
+      "evidence": [
+        {
+          "path": "tests/quoted_bakke.rs",
+          "test": "quoted_bakke_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/quoted_bakke.rs",
+          "test": "quoted_bakke_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/quoted_bakke.rs",
+          "test": "quoted_question_assesses_lexical_entries_without_erasing_unknown_auxiliary"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "quoted_restrictive_recovers_the_complete_discovery_sentence"
+        },
+        {
+          "path": "docs/quoted-bakke-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-quoted-bakke.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "quoted-bakke-preserve-너밖에",
+          "judgment": "path"
+        },
+        {
+          "case": "quoted-bakke-preserve-죽기밖에",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

@@ -266,6 +266,7 @@ try {
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
   const additiveParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-additive-particles.json"), "utf8"));
+  const quotedBakke = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-quoted-bakke.json"), "utf8"));
   const necessity = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-necessity.json"), "utf8"));
   const llachimyeon = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-llachimyeon.json"), "utf8"));
   const comparisonCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-comparison-case.json"), "utf8"));
@@ -288,6 +289,7 @@ try {
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
       ...hadaComplex.LexicalResource.Lexicon.LexicalEntry,
+      ...quotedBakke.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
       ...comparisonCase.LexicalResource.Lexicon.LexicalEntry,
@@ -720,6 +722,58 @@ try {
       if (j.verdict === "forbidden") assert.ok(token.dictionary.readings[i].lemmas[0].entries.some(e=>e.conflicts.some(c=>c.rule === "habitual_condition_verb" && c.morpheme_index === j.morphemes.length - 1)));
     }
   }
+  const quotedBakkePolicy = connectiveLedger.cases.filter(c => c.id.startsWith("quoted-bakke-"));
+  assert.equal(quotedBakkePolicy.length, 4);
+  for (const c of quotedBakkePolicy) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas) && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes));
+      assert.ok(index >= 0, c.id);
+      assert.equal(token.dictionary.readings[index].status === "incompatible", j.verdict === "forbidden", c.id);
+    }
+  }
+  const quotedBakkeCases = recipientLedger.cases.filter(c => c.id.startsWith("quoted-bakke-"));
+  assert.equal(quotedBakkeCases.length, 56);
+  for (const c of quotedBakkeCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const quotedBakkeText = "못하다고밖에 명궁이라고밖에 초능력이라고밖에는 보고있다고밖에 먹느냐고밖에 좋으냐고밖에";
+  await submit(page, quotedBakkeText); await waitHeading(page, "못하다고밖에");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["못하","다고","밖에"]],[1,["명궁","이","라고","밖에"]],[2,["초능력","이","라고","밖에","는"]],[3,["보","고","있","다고","밖에"]],[4,["먹","느냐고","밖에"]],[5,["좋","으냐고","밖에"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    await word.locator(".breakdown-part").nth(forms.indexOf("밖에")).click();
+    await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=70070"]'));
+    if (i >= 4) {
+      await word.locator(".breakdown-part").nth(1).click();
+      await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), i === 4 ? 87443 : 87444);
+    }
+
+  }
+  assert.equal(await page.locator(".breakdown-word").count(), 6);
+  const quotedBakkeDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const quotedBakkeExport = JSON.parse(await readFile(await (await quotedBakkeDownload).path(), "utf8"));
+  const quotedBakkeExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:quotedBakkeText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(quotedBakkeExport.records, quotedBakkeExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-quoted-bakke-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-quoted-bakke-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   const necessityCases = recipientLedger.cases.filter(c => c.id.startsWith("necessity-"));
   assert.equal(necessityCases.length, 66);
   for (const c of necessityCases) {

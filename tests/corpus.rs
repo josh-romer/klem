@@ -1820,3 +1820,18 @@ fn llachimyeon_recovers_complete_annotated_verb_and_existential_sentences() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn quoted_restrictive_recovers_the_complete_discovery_sentence() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-necessity-search.conllu").as_slice(),
+        Corpus::Kaist,
+        "quoted-bakke",
+    )
+    .unwrap();
+    let case = &report.cases["id:MH2_0072-s236/8"];
+    assert_eq!(case.surface, "못하다고밖에");
+    assert_eq!(case.expected, ["못하다"]);
+    assert!(case.matched);
+    assert!(report.cases.values().all(|c| c.matched));
+}

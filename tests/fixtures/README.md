@@ -1257,7 +1257,20 @@ grammar-source fixture; 70070 preserves the distinct restrictive particle.
 
 `kaist-necessity-search.conllu` preserves one complete KAIST training sentence
 under the corpus attribution and license above. Its 못하다고밖에 annotation
-is a quoted clause plus particle and remains an open miss, not a necessity-ending
+is a quoted clause plus particle, recovered by COV-018z; it is not a necessity-ending
 example. No annotated necessity-ending target was found in the training search.
 The NIKL spelling guide and online answer are linked rather than redistributed.
 See the [source and candidate review](../../docs/necessity-ending-evaluation.json).
+
+`krdict-quoted-bakke.json` contains 53 primary word entries and nine selected
+grammar-expression entries from the pinned NIKL Korean Basic Dictionary export.
+The dictionary attribution and reuse terms above apply. All senses, notes,
+forms and examples remain, with English equivalents only and RelatedForm omitted;
+same-number idioms are excluded. The grammar-source fixture also gains 87443/87444.
+The existing attachment fixture supplies 읽다 for the separate dictionary-policy
+negative. No required raw headword is missing from this fixture.
+
+This batch reuses the complete `kaist-necessity-search.conllu` discovery sentence,
+without editing its annotation. Its reported-clause target now matches. The
+frozen KAIST development gain is recorded by stable ID in the
+[review](../../docs/quoted-bakke-evaluation.json), not inserted into training data.

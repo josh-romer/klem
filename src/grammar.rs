@@ -829,6 +829,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을래요", "래요", "을래요", 8),
             ("을지", "지", "을지", 8),
             ("을는지", "는지", "을는지", 8),
+            ("을라고", "라고", "을라고", 8),
+            ("을라고요", "라고요", "을라고요", 8),
             ("을지라도", "지라도", "을지라도", 8),
             ("을밖에", "밖에", "을밖에", 8),
             ("을라치면", "라치면", "을라치면", 8),
@@ -1410,6 +1412,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.activity_reason" => {
             "Recognize full -느라고 and short -느라 reason/purpose endings after verbs or honorific 시; clause-level subject and meaning constraints require context."
+        }
+        "ending.rhetorical_llago" => {
+            "Recognize -(으)ㄹ라고 doubt and -(으)ㄹ라고요 doubt/strong affirmation; the surface can also occur as colloquial intention, which requires context."
         }
         "ending.reporting_short" => {
             "Recognize short reported statements, requests, proposals, questions and experiences; retain factual/command homonyms and surprise senses without inserting implicit 하다."

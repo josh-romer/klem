@@ -272,6 +272,7 @@ try {
   const requestAux = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-request-aux.json"), "utf8"));
   const shortReports = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-short-reports.json"), "utf8"));
   const neura = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-neura.json"), "utf8"));
+  const llago = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-llago.json"), "utf8"));
   const dajiman = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-dajiman.json"), "utf8"));
   const daji = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-daji.json"), "utf8"));
   const danda = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danda.json"), "utf8"));
@@ -307,6 +308,7 @@ try {
       ...requestAux.LexicalResource.Lexicon.LexicalEntry,
       ...shortReports.LexicalResource.Lexicon.LexicalEntry,
       ...neura.LexicalResource.Lexicon.LexicalEntry,
+      ...llago.LexicalResource.Lexicon.LexicalEntry,
       ...dajiman.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
@@ -866,6 +868,38 @@ try {
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-short-reports-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const llagoCases = recipientLedger.cases.filter(c => c.id.startsWith("llago-"));
+  assert.equal(llagoCases.length, 125);
+  for (const c of llagoCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a=>danikkaPath(a,j)), j.verdict === "required", c.id);
+  }
+  const llagoText = "늘릴라고 먹을라고 갈라고요 먹겠을라고요 학생일라고 학생다울라고 먹고싶을라고 풀었으려고 넓으려고";
+  await submit(page, llagoText); await waitHeading(page, "늘릴라고");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["늘리","을라고"]],[1,["먹","을라고"]],[2,["가","을라고요"]],[3,["먹","겠","을라고요"]],[4,["학생","이","을라고"]],[5,["학생","답","을라고"]],[6,["먹","고","싶","을라고"]],[7,["풀","었","으려고"]],[8,["넓","으려고"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 0) {
+      await word.locator(".breakdown-part").nth(1).click();
+      await page.locator(".entry-choices button").filter({hasText:"-을라고"}).first().click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=79416"]'));
+    }
+  }
+  const llagoDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const llagoExport = JSON.parse(await readFile(await (await llagoDownload).path(), "utf8"));
+  const llagoExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:llagoText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(llagoExport.records,llagoExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-llago-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-llago-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const neuraCases = recipientLedger.cases.filter(c => c.id.startsWith("neura-"));

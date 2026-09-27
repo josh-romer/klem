@@ -719,6 +719,18 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // KRDict 79416/79417 license honorific/past; the separate
+                // polite expression 86747 also lists 겠. Keep 요 bundled so
+                // that its broader license cannot leak to the bare ending.
+                if matches!(ending.form, "을라고" | "을라고요")
+                    && p.morphs.iter().any(|m| {
+                        !matches!(m.form.as_str(), "시" | "었")
+                            && !(ending.form == "을라고요"
+                                && matches!(m.form.as_str(), "겠" | "어야겠"))
+                    })
+                {
+                    continue;
+                }
                 // The question homonym of -(으)려나 allows adjectives and
                 // copulas as well as verbs, with 시/었/겠. It is distinct
                 // from the narrower shortened intention expression.
@@ -884,6 +896,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if activity_reason(ending.form) {
                     p.rules.push("ending.activity_reason".into());
+                }
+                if matches!(ending.form, "을라고" | "을라고요") {
+                    p.rules.push("ending.rhetorical_llago".into());
                 }
                 if short_report(ending.form) {
                     p.rules.push("ending.reporting_short".into());
@@ -1509,6 +1524,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "을까요"
                 | "을지"
                 | "을는지"
+                | "을라고"
+                | "을라고요"
                 | "을지라도"
                 | "을밖에"
                 | "을망정"

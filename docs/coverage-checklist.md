@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–au/018a–k/018m–z/019a–g/019i–r/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/018a–k/018m–z/019a–g/019i–r/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 321 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–au/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o; 393 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 323 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–av/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o; 391 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -953,13 +953,31 @@ review remains open under the completion review below.
   outer particles and independent review remain open. Two source entries enter
   the scoped queue. See the [evaluation](neura-evaluation.json).
 
-- [ ] **COV-017av — Doubt endings -ㄹ라고/-을라고 and intention homonyms.**
-  Confirmed in the unchanged GSD training sentence train-s1803: 늘릴라고 lacks
-  늘리다. KRDict 79417/79416 describe doubt/denial, while the sentence's context
-  suggests colloquial intention. Review the sources' distinct adjective/copula,
-  honorific and past licenses alongside the senses of -(으)려고 (68846/69067).
-  Keep factual/command 라고 separate. Preserve original gold; a lemma match
-  alone cannot certify the intended ending sense or colloquial spelling.
+- [x] **COV-017av — Doubt endings -ㄹ라고/-을라고 and intention homonyms.**
+  Added the rhetorical ending and separately licensed polite expression, with
+  adjective/copula, honorific/past and polite-only modal paths. [125 judgments](../tests/llago.rs)
+  (105 required, 20 forbidden) and all 50 example groups from six full entries
+  pass raw/dictionary/CLI checks. 늘릴라고 now recovers 늘리다 in the unchanged
+  GSD training gold; this is lemma recovery, not confirmation of its colloquial
+  intention sense. Factual/command 라고 and existing -(으)려고 remain distinct.
+  Full Rust/stress, frozen-corpus, browser and Nix/package checks pass. Frozen
+  gold matches are unchanged; three candidate means increase. The novel gains
+  21 hypotheses at 11 records, none removed, including lexical irregular
+  candidates needing COV-021d review. Two core sources receive scoped reviews;
+  the two polite expressions are tracked separately. Broader -(으)려고 license
+  corrections remain COV-017aw, with independent Korean review still pending.
+  See the [candidate/source/performance evaluation](llago-evaluation.json).
+
+- [ ] **COV-017aw — Intention connective versus final -(으)려고 licenses.**
+  Existing raw paths include 먹겠으려고, 먹었으려고한다 and
+  학생이려고한다. KRDict 68846/69067 distinguish verbal intention/change
+  connectives from final rhetorical senses (including 넓으려고,
+  풀었으려고 and 학생이려고). Review the connective's owning prefinal and
+  lexical/auxiliary class without removing those final homonyms. Audit the
+  asymmetric adjective notes and missing derived 학생다우려고 path with
+  additional sources before assigning dictionary conflicts. COV-017av preserves
+  all 25 source-example groups as regression evidence; it does not certify
+  the full attachment space of these two existing entries.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -1795,7 +1813,7 @@ review remains open under the completion review below.
   13 of 4,567 compared surfaces, zero removals/provenance changes, unchanged
   frozen-corpus match counts and byte-identical compatible-filtered novel output.
 
-- [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
+- [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
   COV-021c adds eight fixed complex-coda classes.** Remaining: ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
@@ -1842,6 +1860,17 @@ review remains open under the completion review below.
   inferred spellings from direct examples and hypothetical lemmas from dictionary
   words. The finite dictionary has three complex-coda 하다 heads, all covered;
   this does not close the remaining three pronunciation classes or all COV-021.
+- [ ] **COV-021d — Lexical regular/irregular compatibility.**
+  COV-017av's full-dictionary novel comparison adds 닿다 + 을라고 at 달라고
+  and 놓다 + 을라고 at 놀라고 through generic ㅎ recovery. Their dictionary
+  entries (62308, 89534, auxiliary 72578) preserve regular written forms
+  닿으니/놓으니. Audit per-entry spelling compatibility using forms and primary
+  rules, keeping lexical homonyms and unknown entries distinct. Cover these
+  concrete hypotheses and neighboring endings before defining general rejection
+  rules; pronunciation-only forms must not license written contractions.
+  Raw hypotheses remain visible; dictionary headword matching alone currently
+  retains these candidates. See [recorded additions](llago-evaluation.json).
+
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds
   source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb
@@ -1901,7 +1930,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 363 currently emitted canonical grammar forms.** The initial catalog
+  for all 415 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

@@ -2103,3 +2103,21 @@ fn neura_preserves_all_discovered_training_annotations() {
     assert_eq!(case.expected, vec!["떠다"]);
     assert!(case.matched, "id:train-s1803/4");
 }
+
+#[test]
+fn llago_recovers_original_training_lemma_without_rewriting_connective_gold() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-neura.conllu").as_slice(),
+        Corpus::Gsd,
+        "llago",
+    )
+    .unwrap();
+    let case = &report.cases["id:train-s1803/10"];
+    assert_eq!(case.surface, "늘릴라고");
+    assert_eq!(case.expected, vec!["늘리다"]);
+    assert!(case.matched);
+    assert!(
+        include_str!("fixtures/gsd-neura.conllu")
+            .contains("10\t늘릴라고\t늘리+ㄹ라고\tVERB\tVV+EC\t")
+    );
+}

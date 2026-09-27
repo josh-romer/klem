@@ -24542,6 +24542,240 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:79416",
+      "source_sha256": "20290baa42dd989c7734077e5c715051a0678e79000ad07aeddcd9e65a1775ab",
+      "status": "scoped",
+      "checklist": [
+        "COV-017av"
+      ],
+      "scope": "Final rhetorical ending after verbs/adjectives/copulas, with attached ㄹ/을 and irregular recovery; honorific/past prefinals. Polite expression 86747 additionally licenses 겠, kept separately bundled. All source example groups preserved and tested.",
+      "remaining": "Contextual doubt/intention distinction, broader outer particles and independent Korean review remain. This does not certify the intention homonyms 68846/69067; their connective/final boundary review is COV-017aw.",
+      "evidence": [
+        {
+          "path": "tests/llago.rs",
+          "test": "llago_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/llago.rs",
+          "test": "llago_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/llago.rs",
+          "test": "llago_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "llago_recovers_original_training_lemma_without_rewriting_connective_gold"
+        },
+        {
+          "path": "docs/llago-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "llago-source-79416-0",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-source-79416-1",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-source-79416-2",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-source-79416-3",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-0",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-1",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-2",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-3",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-4",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-5",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-6",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-7",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-8",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-9",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-10",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-11",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-12",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-13",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-14",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-15",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-16",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-17",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-18",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-19",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-20",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-composition-21",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-boundary-4",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-boundary-5",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-boundary-6",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-modal-0",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-modal-1",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-modal-2",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-을라고-no-intention-aux",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79417",
+      "source_sha256": "72e83ea897faf93ee7537d5d9e25168f2b795b8b309c7126d3b8742e5fa677d9",
+      "status": "scoped",
+      "checklist": [
+        "COV-017av"
+      ],
+      "scope": "Final rhetorical ending after verbs/adjectives/copulas, with attached ㄹ/을 and irregular recovery; honorific/past prefinals. Polite expression 86747 additionally licenses 겠, kept separately bundled. All source example groups preserved and tested.",
+      "remaining": "Contextual doubt/intention distinction, broader outer particles and independent Korean review remain. This does not certify the intention homonyms 68846/69067; their connective/final boundary review is COV-017aw.",
+      "evidence": [
+        {
+          "path": "tests/llago.rs",
+          "test": "llago_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/llago.rs",
+          "test": "llago_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/llago.rs",
+          "test": "llago_sources_preserve_all_entries_senses_and_example_excerpts"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "llago_recovers_original_training_lemma_without_rewriting_connective_gold"
+        },
+        {
+          "path": "docs/llago-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "llago-source-79417-0",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-source-79417-1",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-source-79417-2",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-source-79417-3",
+          "judgment": "path"
+        },
+        {
+          "case": "llago-source-79417-4",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

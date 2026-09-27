@@ -3174,3 +3174,33 @@ does not by itself establish wider short-form particle licenses. Clause subject,
 purpose versus cause and subsequent mood are outside token-level morphology.
 [The primary-source and candidate review](neura-evaluation.json) records these
 limits, every removed raw hypothesis, unchanged corpus gold and novel comparison.
+
+
+## Rhetorical -(으)ㄹ라고 and polite -(으)ㄹ라고요 (COV-017av)
+
+The canonical endings `을라고` and `을라고요` recover attached ㄹ after
+vowel/ㄹ stems and 을 after other consonants, including the existing irregular
+boundaries. KRDict [79417](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79417)
+and [79416](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=79416)
+license verbs, adjectives, copulas and honorific/past forms. The polite expression
+[86747](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86747)
+also lists 겠; [88111](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88111)
+includes both doubt and strong affirmation. Polite 요 stays bundled so this
+extra modal license does not leak to the bare ending. Retrospective 더 is not
+licensed. Known auxiliary adjectives and derived 답다 retain their adjective
+paths; no verb-only dictionary conflict is introduced.
+
+These final endings remain distinct from quoted commands `으라고`, factual
+`라고`, and `으려고`. The latter has both connective and final senses, so its
+existing adjective/past/copular rhetorical readings must survive a future
+connective-specific review (COV-017aw). The unchanged GSD train-s1803 annotation
+늘리+ㄹ라고/VV+EC is retained: recovering 늘리다 does not prove the dictionary
+final-ending sense matches the colloquial intention in that sentence. NIKL's
+[2025-09-22 explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=321117)
+distinguishes these meanings. This batch does not silently normalize spelling
+or add -(으)ㄹ라고 as an auxiliary intention connector.
+
+[Candidate and source tests](../tests/llago.rs) preserve six full entries,
+12 senses and all 50 example groups, test both dictionary filters and CLI parity,
+and leave unknown alternative hypotheses unjudged. Broader outer particles,
+contextual meaning and independent Korean review remain open.

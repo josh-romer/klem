@@ -2827,3 +2827,24 @@ supports the predicate restoration, not an inserted noun or copula.
 These three classes remain outside this extension, without a claim that all
 such hypothetical words are ungrammatical. Other ending families, independent
 linguistic review and all other open coverage items remain pending.
+
+## Nominal comparison particles (COV-018w audit)
+
+Existing 같이, 대로 and 처럼 particle rules preserve noun/pronoun bases with
+ordered `Particle` components. The pinned KRDict sources are
+[같이 2](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=22776),
+[대로 2](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=48410), and
+[처럼](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68275).
+The audit covers every distinct surface in their example groups: comparison
+and time emphasis for 같이, conformity and separate categories for 대로,
+and similarity for 처럼. Source sentences identify the illustrated senses;
+the analyzer does not choose a sense from sentence context.
+
+These particle entries do not license direct predicate 고/어서/는 attachment.
+The corresponding forbidden judgments constrain exact predicate/ending/particle
+roles. They do not reject nominal homographs or separately spaced bound-noun
+대로 constructions. Whole-word candidates and the existing optional 같다 + 이
+adverb derivation remain available; unknown derived lexical heads are still
+hypotheses until dictionary assessment. Wider particle chains and semantic
+attachment restrictions remain inventory review work. See the
+[source and regression audit](comparison-particle-audit.json).

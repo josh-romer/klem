@@ -111,6 +111,7 @@
               fileset = pkgs.lib.fileset.unions [
                 ./tools/review_inventory.py ./tools/test_review_inventory.py
                 ./docs ./tests ./web/src/grammar-labels.json
+                ./web/tests/browser.mjs
               ];
             };
           } ''

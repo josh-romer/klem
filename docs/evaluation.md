@@ -2858,3 +2858,20 @@ Separate count passes record **120,924 → 120,922** compatible-filter analyses,
 with **73,379** words retaining readings in both versions. All samples and counts
 are recorded, including startup, dictionary work and serialization. These local
 observations are not performance guarantees or a statistical speed comparison.
+
+## Existing comparison particles (COV-018w)
+
+The [source audit](comparison-particle-audit.json) checks all 24 distinct surfaces
+from the five senses of KRDict 같이 (22776), 대로 (48410), and 처럼 (68275).
+Nine direct predicate-ending attachments are forbidden by role-specific
+judgments. The ledger now contains **2,737 required / 1,641 forbidden** judgments;
+these are agent-authored source reviews, with independent Korean review pending.
+The inventory now has **277 scoped / 437 unreviewed / one unresolved gap**.
+There is no runtime rule or catalog change, and no corpus baseline was rewritten.
+
+Both dictionary filters preserve the required paths and agree with the CLI.
+The browser regressions cover the same cases plus ordered display, source links
+and export parity. Contextual senses remain distinct from morphology: the
+inspected 새처럼 default gloss uses the gap/space homonym of 새, although the
+source sentence refers to a bird. That reader-facing limitation is recorded as
+`comparison-particle-sae-gloss`; the dictionary still exposes the alternatives.

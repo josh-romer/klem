@@ -1201,3 +1201,13 @@ sentence MH2_0014-s209 from the pinned UD Korean-Kaist revision, including
 값하고. No annotation was rewritten and no shortened corpus example is claimed.
 See [the source report](../../docs/hada-complex-evaluation.json) and the existing
 dictionary/corpus attribution and licensing notices above.
+
+`krdict-comparison-particles.json` contains 45 primary KRDict word entries from
+NIKL's pinned September 2026 export under CC BY-SA 2.0 KR for COV-018w.
+It retains all senses, examples, notes and forms, including all homonyms of the
+selected lexical heads. Translations are restricted to English; RelatedForm
+links and same-ID idiom records are excluded. The three particle entries
+22776, 48410 and 68275 supply the source examples and attachment notes.
+Exact IDs, fixture hash, sense-to-case mappings and limitations are recorded in
+[the audit](../../docs/comparison-particle-audit.json). These examples are exposed
+regression evidence, not unseen evaluation or contextual sense annotations.

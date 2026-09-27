@@ -265,6 +265,7 @@ try {
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
+  const comparisonParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-comparison-particles.json"), "utf8"));
   const hadaComplex = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-hada-complex.json"), "utf8"));
   const adverbCopulas = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adverb-copulas.json"), "utf8"));
   const connectiveCopulas = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-connective-copulas.json"), "utf8"));
@@ -283,6 +284,7 @@ try {
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
       ...hadaComplex.LexicalResource.Lexicon.LexicalEntry,
+      ...comparisonParticles.LexicalResource.Lexicon.LexicalEntry,
       ...adverbCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...connectiveCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...concessiveEndings.LexicalResource.Lexicon.LexicalEntry,
@@ -661,6 +663,42 @@ try {
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path:resolve(tmpdir(),"klem-adverb-copulas-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const comparisonParticleCases = recipientLedger.cases.filter(c => c.id.startsWith("comparison-particle-"));
+  assert.equal(comparisonParticleCases.length, 33);
+  for (const c of comparisonParticleCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const comparisonParticleText = "친구같이 새벽같이 계획대로 공부대로 새처럼";
+  await submit(page, comparisonParticleText); await waitHeading(page, "친구같이");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["친구","같이"]],[1,["새벽","같이"]],[2,["계획","대로"]],[3,["공부","대로"]],[4,["새","처럼"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    await word.locator(".breakdown-part").last().click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), [22776,22776,48410,48410,68275][i]);
+  }
+  const comparisonParticleDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const comparisonParticleExport = JSON.parse(await readFile(await (await comparisonParticleDownload).path(), "utf8"));
+  const comparisonParticleExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:comparisonParticleText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(comparisonParticleExport.records, comparisonParticleExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-comparison-particle-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-comparison-particle-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const hadaComplexCases = recipientLedger.cases.filter(c => c.id.startsWith("hada-complex-"));

@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 274 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–v/019d–g/019i–o/020d–h/020j–k; 440 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 277 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–w/019d–g/019i–o/020d–h/020j–k; 437 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -799,7 +799,7 @@ review remains open under the completion review below.
   이다 alternative in 딸이었던들 is tracked for COV-020 attachment review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–v implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–w cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -1103,6 +1103,19 @@ review remains open under the completion review below.
   Korean review remain open. COV-017ak now recovers the separately tracked
   predicate **-ㄴ들/-은들** in KAIST MH2_0092-s333 한들 and novel 간들/한들;
   their particle alternatives remain distinct.
+
+- [x] **COV-018w — Existing 같이/대로/처럼 particle audit.** The 24 distinct
+  surface forms in all five source senses retain nominal + particle paths,
+  including 새벽같이/매일같이 and 겨울옷대로/공부대로. Nine judgments
+  reject direct 고/어서/는 ending attachment with no intervening nominal.
+  Existing 같다 + 이 hypotheses and whole-word readings remain available;
+  dictionary presence is separate from contextual validity. Evidence:
+  [33 stable judgments and three tests](../tests/comparison_particles.rs),
+  attributed offline dictionary fixtures, both dictionary filters and CLI parity,
+  ordered breakdowns, normalization, and [source audit](comparison-particle-audit.json).
+  This is an audit of existing behavior, with no engine or label change.
+  Contextual sense selection, wider particle chains, and bound-noun 대로
+  constructions remain separate review work; independent Korean review is pending.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

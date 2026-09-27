@@ -19804,6 +19804,243 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:22776",
+      "source_sha256": "7f7c02c85218758d24fbd030d28ccb8886e9c0dd2a3dc88718be2e28a4766569",
+      "status": "scoped",
+      "checklist": [
+        "COV-018w"
+      ],
+      "scope": "Comparison sense 1 and time-emphasis sense 2, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified.",
+      "remaining": "Contextual sense choice, semantic noun constraints and additional particle chains remain open. Separate bound-noun constructions and arbitrary joined compounds are outside this audit. Independent Korean review pending.",
+      "evidence": [
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particle_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particle_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particles_preserve_derivation_and_lexical_ambiguity"
+        },
+        {
+          "path": "docs/comparison-particle-audit.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-comparison-particles.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "comparison-particle-22776-친구",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-22776-칠흑",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-22776-꽃",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-22776-번개",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-22776-호랑이",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-22776-운동화",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-22776-새벽",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-22776-매일",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-22776-ending-고",
+          "judgment": "direct-ending"
+        },
+        {
+          "case": "comparison-particle-22776-ending-어서",
+          "judgment": "direct-ending"
+        },
+        {
+          "case": "comparison-particle-22776-ending-는",
+          "judgment": "direct-ending"
+        }
+      ]
+    },
+    {
+      "id": "krdict:48410",
+      "source_sha256": "3e270a2471bcff34fc692f232f0efd481323b29056ff7bbca461321832add62f",
+      "status": "scoped",
+      "checklist": [
+        "COV-018w"
+      ],
+      "scope": "Conformance sense 1 and separate-category sense 2, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified.",
+      "remaining": "Contextual sense choice, semantic noun constraints and additional particle chains remain open. Separate bound-noun constructions and arbitrary joined compounds are outside this audit. Independent Korean review pending.",
+      "evidence": [
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particle_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particle_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particles_preserve_derivation_and_lexical_ambiguity"
+        },
+        {
+          "path": "docs/comparison-particle-audit.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-comparison-particles.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "comparison-particle-48410-뜻",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-방법",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-계획",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-말",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-겨울옷",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-여름옷",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-공부",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-과외",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-사장",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-직원",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-돈",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-고생",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-48410-ending-고",
+          "judgment": "direct-ending"
+        },
+        {
+          "case": "comparison-particle-48410-ending-어서",
+          "judgment": "direct-ending"
+        },
+        {
+          "case": "comparison-particle-48410-ending-는",
+          "judgment": "direct-ending"
+        }
+      ]
+    },
+    {
+      "id": "krdict:68275",
+      "source_sha256": "11597960966fa46a79efd52d8783cb6d7ff2313945e9c81276c4c05bc8f2ebd1",
+      "status": "scoped",
+      "checklist": [
+        "COV-018w"
+      ],
+      "scope": "Similarity sense 1, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified.",
+      "remaining": "Contextual sense choice, semantic noun constraints and additional particle chains remain open. Separate bound-noun constructions and arbitrary joined compounds are outside this audit. Independent Korean review pending.",
+      "evidence": [
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particle_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particle_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/comparison_particles.rs",
+          "test": "comparison_particles_preserve_derivation_and_lexical_ambiguity"
+        },
+        {
+          "path": "docs/comparison-particle-audit.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-comparison-particles.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "comparison-particle-68275-때",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-68275-새",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-68275-처음",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-68275-너",
+          "judgment": "particle"
+        },
+        {
+          "case": "comparison-particle-68275-ending-고",
+          "judgment": "direct-ending"
+        },
+        {
+          "case": "comparison-particle-68275-ending-어서",
+          "judgment": "direct-ending"
+        },
+        {
+          "case": "comparison-particle-68275-ending-는",
+          "judgment": "direct-ending"
+        }
+      ]
     }
   ]
 }

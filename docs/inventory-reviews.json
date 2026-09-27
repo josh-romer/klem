@@ -8999,9 +8999,10 @@
       "status": "scoped",
       "checklist": [
         "COV-017u",
-        "COV-019k"
+        "COV-019k",
+        "COV-021d"
       ],
-      "scope": "놓아 → 놔 contraction preserves 어 놓다 after verbs (sense 1), adjectives and 이다 (sense 2); existing tense, auxiliary chains and lexical alternatives remain. Following result-transfer 어다/어다가 with ordered joined predicates; existing ordinary 어 connectors and other senses remain separate.",
+      "scope": "놓아 → 놔 contraction preserves 어 놓다 after verbs (sense 1), adjectives and 이다 (sense 2); existing tense, auxiliary chains and lexical alternatives remain. Following result-transfer 어다/어다가 with ordered joined predicates; existing ordinary 어 connectors and other senses remain separate. Written ㅎ compatibility uses the entry’s regular 으니 form and the owning inflection boundary; raw hypotheses and the separate 놓아→놔 contraction remain.",
       "remaining": "This is a spelling and role-preservation review, not certification of every contextual, lexical-subset or prefinal restriction. Full sentence sense selection remains outside the token-level generator. Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
@@ -9029,6 +9030,24 @@
         },
         {
           "path": "docs/result-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/hieut_compatibility.rs",
+          "test": "written_spelling_constraints_preserve_raw_headword_and_cli_contracts"
+        },
+        {
+          "path": "tests/hieut_compatibility.rs",
+          "test": "recovery_requirements_belong_to_each_owner_through_auxiliaries_and_copulas"
+        },
+        {
+          "path": "tests/hieut_compatibility.rs",
+          "test": "full_source_entries_and_all_written_ni_dispositions_are_preserved"
+        },
+        {
+          "path": "docs/hieut-compatibility-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
         }
       ],
       "judgments": [
@@ -9051,6 +9070,10 @@
         {
           "case": "result-connectives-다가-aux-놓다",
           "judgment": "path"
+        },
+        {
+          "case": "hieut-raw-aux-noh",
+          "judgment": "regular"
         }
       ]
     },
@@ -24880,6 +24903,42 @@
         {
           "case": "ryeo-expressions-source-86601-4",
           "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76437",
+      "source_sha256": "d2fed4dd1c3270eebbbdd2c5c1cff58aae37b80fd01b3cfb1d23a11b7a6f6fc2",
+      "status": "scoped",
+      "checklist": [
+        "COV-021d"
+      ],
+      "scope": "Written ㅎ compatibility uses this auxiliary entry’s regular 쌓으니 form and the owning inflection boundary. The source-licensed 먹다 + 어 + 쌓다 + 으니 path remains, while irregular-class hypotheses conflict; raw and headword-only hypotheses remain available.",
+      "remaining": "Other entry senses and attachment classes require separate review.",
+      "evidence": [
+        {
+          "path": "tests/hieut_compatibility.rs",
+          "test": "written_spelling_constraints_preserve_raw_headword_and_cli_contracts"
+        },
+        {
+          "path": "tests/hieut_compatibility.rs",
+          "test": "recovery_requirements_belong_to_each_owner_through_auxiliaries_and_copulas"
+        },
+        {
+          "path": "tests/hieut_compatibility.rs",
+          "test": "full_source_entries_and_all_written_ni_dispositions_are_preserved"
+        },
+        {
+          "path": "docs/hieut-compatibility-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "hieut-raw-aux-ssah",
+          "judgment": "regular"
         }
       ]
     }

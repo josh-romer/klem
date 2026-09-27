@@ -2,6 +2,8 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "hieut-raw-76437": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=76437",
+    "hieut-raw-72578": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=72578",
     "ryeo-expressions-86544": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86544",
     "ryeo-expressions-86601": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86601",
     "ryeo-expressions-86695": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86695",
@@ -1071,6 +1073,9 @@
     "hada": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=62888&nation=eng"
   },
   "cases": [
+    {"id": "hieut-raw-aux-noh", "surface": "먹어놓으니", "judgments": [{"id": "regular", "lemmas": ["먹다", "놓다"], "lemma_kinds": ["predicate", "auxiliary"], "morphemes": ["어", "으니"], "morpheme_kinds": ["ending", "ending"], "verdict": "required", "source": "hieut-raw-72578", "reason": "Preserve the source-licensed 어 auxiliary and its written regular 으니 inflection. Spelling ownership belongs to the auxiliary, independently of the first predicate."}]},
+    {"id": "hieut-raw-aux-ssah", "surface": "먹어쌓으니", "judgments": [{"id": "regular", "lemmas": ["먹다", "쌓다"], "lemma_kinds": ["predicate", "auxiliary"], "morphemes": ["어", "으니"], "morpheme_kinds": ["ending", "ending"], "verdict": "required", "source": "hieut-raw-76437", "reason": "Preserve the source-licensed 어 auxiliary and its written regular 으니 inflection. Spelling ownership belongs to the auxiliary, independently of the first predicate."}]},
+
     {"id": "ryeo-expressions-source-86544-0", "surface": "우스갯소리려니", "judgments": [{"id": "path", "lemmas": ["우스갯소리", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으려니"], "morpheme_kinds": ["ending"], "source": "ryeo-expressions-86544", "verdict": "required", "reason": "Exact dictionary example word. Source text and every example group are preserved; lexical 유학가다 is absent from the dictionary, so that source example is raw-only."}]},
     {"id": "ryeo-expressions-source-86544-1", "surface": "가려니", "judgments": [{"id": "path", "lemmas": ["가다"], "lemma_kinds": ["predicate"], "morphemes": ["으려니"], "morpheme_kinds": ["ending"], "source": "ryeo-expressions-86544", "verdict": "required", "reason": "Exact dictionary example word. Source text and every example group are preserved; lexical 유학가다 is absent from the dictionary, so that source example is raw-only."}]},
     {"id": "ryeo-expressions-source-86544-2", "surface": "그러려니", "judgments": [{"id": "path", "lemmas": ["그렇다"], "lemma_kinds": ["predicate"], "morphemes": ["으려니"], "morpheme_kinds": ["ending"], "source": "ryeo-expressions-86544", "verdict": "required", "reason": "Exact dictionary example word. Source text and every example group are preserved; lexical 유학가다 is absent from the dictionary, so that source example is raw-only."}]},

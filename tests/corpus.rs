@@ -2159,3 +2159,67 @@ fn ryeo_expressions_recover_unchanged_training_gold_and_preserve_source_mismatch
         }
     }
 }
+
+#[test]
+fn hieut_spelling_filter_preserves_seven_unchanged_training_gold_groups() {
+    use klem::dictionary::{DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict};
+    let path = std::env::temp_dir().join(format!("klem-hieut-corpus-{}.db", std::process::id()));
+    import_krdict(
+        &[std::path::PathBuf::from(
+            "tests/fixtures/krdict-hieut-compatibility.json",
+        )],
+        &path,
+        "hieut",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(&path).unwrap();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    for (kind, input, targets) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-hieut-compatibility.conllu").as_slice(),
+            vec![
+                ("id:M2TA_065-s131/3", "하얀", vec!["하얗다"]),
+                ("id:M2TA_073-s1/11", "놓았었다", vec!["놓다"]),
+                ("id:M2TA_091-s81/10", "달라고", vec!["달다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-hieut-compatibility.conllu").as_slice(),
+            vec![
+                ("id:train-s76/8", "내놓았으나", vec!["내놓다"]),
+                ("id:train-s207/5", "노란", vec!["노랗다"]),
+                ("id:train-s1043/14", "닿았고", vec!["닿다"]),
+                ("id:train-s1492/10", "닿아있어", vec!["닿다", "있다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "hieut").unwrap();
+        for (id, surface, expected) in targets {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched);
+            let mut word = klem::Lemmatizer::new().analyze_word(surface).unwrap();
+            let mut annotation = dictionary.annotate(&word).unwrap();
+            annotation.filter(&mut word, DictionaryFilter::Compatible);
+            assert!(
+                word.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(expected.iter().copied())),
+                "{id}"
+            );
+        }
+        if let Some(case) = report.cases.get("id:train-s1492/14") {
+            assert_eq!(case.surface, "못한다");
+            assert_eq!(case.expected, ["못", "하다"]);
+            assert!(!case.matched);
+        }
+    }
+    drop(dictionary);
+    drop(db);
+    std::fs::remove_file(path).unwrap();
+}

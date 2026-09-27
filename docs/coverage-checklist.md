@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax/018a–k/018m–z/019a–g/019i–r/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax/018a–k/018m–z/019a–g/019i–r/020a–o/021a–d/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 325 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–av/017ax/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o; 389 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 326 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–av/017ax/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 388 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -1846,7 +1846,9 @@ review remains open under the completion review below.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
-  COV-021c adds eight fixed complex-coda classes.** Remaining: ㄼ lexical
+  COV-021c adds eight fixed complex-coda classes; COV-021d adds per-entry
+  written ㅎ compatibility.** Remaining: lexical regular/irregular dictionary
+  compatibility for ㄷ/ㅅ/ㅂ/르 and other paradigms, ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
   The [dictionary discovery audit](hada-complex-coda-audit.json) found three
@@ -1891,16 +1893,28 @@ review remains open under the completion review below.
   inferred spellings from direct examples and hypothetical lemmas from dictionary
   words. The finite dictionary has three complex-coda 하다 heads, all covered;
   this does not close the remaining three pronunciation classes or all COV-021.
-- [ ] **COV-021d — Lexical regular/irregular compatibility.**
-  COV-017av's full-dictionary novel comparison adds 닿다 + 을라고 at 달라고
-  and 놓다 + 을라고 at 놀라고 through generic ㅎ recovery. Their dictionary
-  entries (62308, 89534, auxiliary 72578) preserve regular written forms
-  닿으니/놓으니. Audit per-entry spelling compatibility using forms and primary
-  rules, keeping lexical homonyms and unknown entries distinct. Cover these
-  concrete hypotheses and neighboring endings before defining general rejection
-  rules; pronunciation-only forms must not license written contractions.
-  Raw hypotheses remain visible; dictionary headword matching alone currently
-  retains these candidates. See [recorded additions](llago-evaluation.json).
+- [x] **COV-021d — Written ㅎ regular/irregular compatibility.**
+  **Implemented for per-entry written ㅎ paradigms.**
+  Per-entry written 니 forms classify 116 native entries: 46 regular, 66
+  irregular and four unknown. Pronunciation-only or missing forms do not infer
+  regularity; lexical homonyms keep separate evidence. Component-owned spelling
+  paths prevent one auxiliary's recovery from constraining another lemma.
+  닿다 at 달라고 and 놓다 at 놀라고 now conflict under compatible filtering;
+  raw/headword-only hypotheses, valid inflections and 놓아 → 놔 remain.
+  The reverse mismatch 하얗으니 is also checked against the irregular entry.
+  [Tests](../tests/hieut_compatibility.rs) cover 326 filter judgments, complete
+  source profiles, competing paths, legacy JSON, Unicode and both CLI filters.
+  Seven unchanged training groups survive filtering; all frozen corpus reports
+  remain byte-identical. The novel comparison retains raw/headword candidates
+  and traces 1,121 compatible-filter removals to explicit spelling conflicts.
+  All 6,577 compared surfaces retain their raw candidate components/order/rule
+  IDs; only owned spelling metadata changes. Rust, browser and x86_64-linux Nix
+  checks pass, including full-dictionary packaged API/CLI/export parity. Three
+  interleaved novel runs measured compatible-filter medians of 1.256 → 1.367 s
+  and peak RSS of 28,552 → 30,068 KiB. Other lexical irregular classes remain
+  under the broader COV-021 audit.
+  See [policy and API details](dictionary-attachments.md#written-ㅎ-inflection-compatibility-cov-021d)
+  and [individual-case evaluation](hieut-compatibility-evaluation.json).
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

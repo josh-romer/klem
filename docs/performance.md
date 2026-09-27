@@ -1,5 +1,23 @@
 # Performance
 
+## Written ㅎ compatibility (COV-021d)
+
+On 2026-09-27, three interleaved release CLI runs of the same MuJeong input
+compared `eed4184` with the written-spelling implementation. Startup, dictionary
+access and JSONL serialization are included; output was discarded. The full
+[samples and package paths](hieut-compatibility-evaluation.json) are recorded.
+
+| Filter | Before median | After median | Before peak RSS | After peak RSS |
+| --- | ---: | ---: | ---: | ---: |
+| Headword-only | 1.269 s | 1.388 s | 28,936 KiB | 29,860 KiB |
+| Compatible | 1.256 s | 1.367 s | 28,552 KiB | 30,068 KiB |
+
+The additional provenance and entry evidence cost about 9% in these local timing
+samples. They preserve every headword-only candidate and remove 1,121 conflicting
+compatible-filter candidates across 151 word types. These measurements do not
+establish statistical equivalence or predict other hardware/books. Earlier
+measurements below retain their original implementation scope.
+
 ## Full novel, current engine
 
 Measured 2026-09-26 on an AMD Ryzen AI MAX+ 395, Linux x86-64, Rust 1.98.1,

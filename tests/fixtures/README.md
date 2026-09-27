@@ -1440,3 +1440,27 @@ form and was not included. Six KAIST targets and one GSD target gain a match.
 The original 재견되려던 / 재건+되+려던 spelling mismatch, 상점이고 gold
 without a copula, and the Matsunaga-name annotation 마+쓰+나가 remain unchanged.
 No source annotation or held-out baseline is rewritten.
+
+`krdict-hieut-compatibility.json` preserves 136 full primary NIKL Korean Basic
+Dictionary entries from the pinned September 2026 export, under **CC BY-SA
+2.0 KR**, with the attribution and links above. All senses, notes, forms and
+examples are retained; equivalents are English-only and RelatedForm/same-ID
+idioms are omitted. `hieut-compatibility-sources.json` preserves the 116 native
+single-final-ㅎ verb/adjective/auxiliary entries and their written 니 dispositions:
+46 regular, 66 irregular, four unknown. These are spelling-profile dispositions,
+not certification of every sense or attachment in each entry. Source POS labels,
+including 땡그랗다 as 동사, remain unchanged.
+
+The `hieut-compat-*` cases in `dictionary-attachments.json` are scoped filter
+judgments: every required and forbidden path exists both raw and under headword
+filtering. Compatible filtering retains 175 and rejects 151. Four sources without
+usable written forms retain unknown hypotheses. Synthetic homonym and competing
+path tests are labeled as contract tests, not invented Korean dictionary evidence.
+
+`kaist-hieut-compatibility.conllu` and `gsd-hieut-compatibility.conllu` preserve
+three and four complete unchanged **training** sentences, respectively, under
+the corpus attribution and CC BY-SA 4.0 license above. Seven original gold groups
+survive compatible filtering. The unrelated 못한다 → 못+하다 mismatch remains.
+The four frozen full-corpus reports are unchanged. Sixteen optimization snapshots
+add optional spelling metadata; each retains its previous hash and independently
+verifies that removing only the new field reproduces the complete old output.

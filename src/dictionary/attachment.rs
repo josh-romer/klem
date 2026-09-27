@@ -2,7 +2,10 @@
 //! See docs/dictionary-attachments.md for sources, exceptions and exclusions.
 use super::{Annotation, Compatibility};
 use crate::engine::{PredicateClass, auxiliary_class};
-use crate::{Analysis, LemmaKind, MorphemeKind, WordAnalysis, breakdown::Component};
+use crate::{
+    Analysis, LemmaKind, MorphemeKind, SpellingClass, SpellingRecovery, WordAnalysis,
+    breakdown::Component,
+};
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeSet;
 
@@ -31,6 +34,7 @@ pub enum AttachmentRule {
     BareCopularEnding,
     BareAdjectivalReport,
     BareVerbalQuestion,
+    LexicalSpelling,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -195,6 +199,36 @@ impl Annotation {
     /// Missing entries, unclassified roles and unknown POS remain unknown.
     /// Only reviewed lexical constraints are applied; no sense is selected.
     pub fn assess(&self, analysis: &Analysis) -> ReadingAssessment {
+        if analysis.spelling_paths.is_empty() {
+            return self.assess_path(analysis, &[]);
+        }
+        let paths: Vec<_> = analysis
+            .spelling_paths
+            .iter()
+            .map(|p| self.assess_path(analysis, p))
+            .collect();
+        let mut merged = paths[0].clone();
+        merged.status = alternatives(paths.iter().map(|p| p.status));
+        for (li, lemma) in merged.lemmas.iter_mut().enumerate() {
+            lemma.status = alternatives(paths.iter().map(|p| p.lemmas[li].status));
+            for (ei, entry) in lemma.entries.iter_mut().enumerate() {
+                entry.status = alternatives(paths.iter().map(|p| p.lemmas[li].entries[ei].status));
+                entry.conflicts.clear();
+                if entry.status == Compatibility::Incompatible {
+                    for path in &paths {
+                        for conflict in &path.lemmas[li].entries[ei].conflicts {
+                            if !entry.conflicts.contains(conflict) {
+                                entry.conflicts.push(conflict.clone());
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        merged
+    }
+
+    fn assess_path(&self, analysis: &Analysis, spelling: &[SpellingRecovery]) -> ReadingAssessment {
         let Some(order) = analysis.breakdown() else {
             return ReadingAssessment {
                 status: Compatibility::Unknown,
@@ -398,6 +432,30 @@ impl Annotation {
                                 rule,
                                 morpheme_index: Some(i),
                             });
+                        }
+                    }
+                    // The morpheme index belongs to this component group, not
+                    // to every lemma sharing a unioned irregular rule name.
+                    if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary) {
+                        for recovery in spelling
+                            .iter()
+                            .filter(|r| morphs.contains(&Component::Morpheme(r.morpheme_index)))
+                        {
+                            if let Some(evidence) = &matched.hieut {
+                                let supported = match recovery.class {
+                                    SpellingClass::HieutRegular => !evidence.regular.is_empty(),
+                                    SpellingClass::HieutIrregular => !evidence.irregular.is_empty(),
+                                };
+                                if !supported {
+                                    status = Compatibility::Incompatible;
+                                    conflicts.push(AttachmentConflict {
+                                        rule: AttachmentRule::LexicalSpelling,
+                                        morpheme_index: Some(recovery.morpheme_index),
+                                    });
+                                }
+                            } else if status == Compatibility::Compatible {
+                                status = Compatibility::Unknown;
+                            }
                         }
                     }
                     EntryAssessment {

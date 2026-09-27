@@ -3261,3 +3261,22 @@ mismatches remain visible. Full expansions retain the COV-017aw conflicts;
 this batch does not impose their narrower intention restriction on these
 shortened forms. Broader omitted-copula variants and contextual sense selection
 remain outside this reviewed attachment scope.
+
+## Owned spelling hypotheses and dictionary evidence (COV-021d)
+
+Rule generation still preserves both lexical spelling hypotheses wherever the
+reverse rules produce them. Candidate lemma groups, morphemes, order and rule
+IDs are unchanged. The additional optional `spelling_paths` evidence records
+which component needs regular or irregular ㅎ inflection; the unioned `rules`
+field remains a set of provenance labels. Alternatives are kept separately when
+the same canonical analysis has more than one derivation. This evidence is
+propagated through prefinals, auxiliary chains, particles, nominalizations and
+copulas, and its retained allocations count toward the session cache budget.
+
+The [dictionary policy](dictionary-attachments.md#written-ㅎ-inflection-compatibility-cov-021d)
+compares these requirements with per-entry written forms. Raw and headword-only
+analyses remain available. `--dict-compatible` rejects unsupported spelling
+classes while preserving unknown entries and the distinct 놓아 → 놔 contraction.
+No pronunciation field, broad POS label, or unrelated auxiliary's recovery is
+used as proof of a spelling class. This does not resolve lexical classes for
+other irregular families or historical spelling.

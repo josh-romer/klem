@@ -1,4 +1,7 @@
-use crate::{Analysis, Error, Lemma, LemmaKind, Morpheme, MorphemeKind, WordAnalysis};
+use crate::{
+    Analysis, Error, Lemma, LemmaKind, Morpheme, MorphemeKind, SpellingClass, SpellingRecovery,
+    WordAnalysis,
+};
 use crate::{
     grammar::{self, Boundary, Recovery},
     hangul::*,
@@ -39,6 +42,7 @@ fn simple_nominal_derivations(word: &str) -> Vec<Analysis> {
                 morphemes: vec![morph(form, MorphemeKind::Suffix)],
                 rules: vec![rule.into()],
                 unchanged: false,
+                spelling_paths: Vec::new(),
             });
             // Only honorific + plural is licensed in this batch.
             if form == "들"
@@ -52,6 +56,7 @@ fn simple_nominal_derivations(word: &str) -> Vec<Analysis> {
                     ],
                     rules: vec!["suffix.honorific".into(), "suffix.plural".into()],
                     unchanged: false,
+                    spelling_paths: Vec::new(),
                 });
             }
         }
@@ -71,6 +76,7 @@ fn nominal_derivations(word: &str) -> Vec<Analysis> {
             morphemes: vec![],
             rules: vec![],
             unchanged: false,
+            spelling_paths: Vec::new(),
         });
         for mut a in bases {
             a.morphemes.push(morph("쯤", MorphemeKind::Suffix));
@@ -87,6 +93,7 @@ fn nominal_bases(word: &str) -> Vec<Analysis> {
         morphemes: vec![],
         rules: vec![],
         unchanged: false,
+        spelling_paths: Vec::new(),
     }];
     out.extend(nominal_derivations(word));
     out
@@ -129,6 +136,7 @@ fn adverb_derivation(word: &str) -> Option<Analysis> {
                     .into(),
                 ],
                 unchanged: false,
+                spelling_paths: Vec::new(),
             });
         }
     }
@@ -195,6 +203,7 @@ fn adverb_derivation(word: &str) -> Option<Analysis> {
         morphemes: vec![morph(suffix, MorphemeKind::Suffix)],
         rules,
         unchanged: false,
+        spelling_paths: Vec::new(),
     })
 }
 
@@ -214,7 +223,55 @@ struct Predicate {
     copula_contracted: bool,
     // Restored 이 belongs to a copula, never to a fabricated lexical verb.
     copula_only: bool,
+    spellings: Vec<SpellingRecovery>,
 }
+// Capture the local recovery before auxiliary rules are unioned. A retained
+// ㅎ at a vowel boundary requires the regular paradigm; ㅎ deletion/contraction
+// requires the irregular paradigm. Literal consonant endings impose neither.
+fn record_spelling(p: &mut Predicate, r: &Recovery, vowel_boundary: bool) {
+    if p.stem != r.stem || coda(&r.stem) != Some(27) {
+        return;
+    }
+    let class = if r.rules.iter().any(|r| r == "irregular.hieut") {
+        Some(SpellingClass::HieutIrregular)
+    } else if vowel_boundary || r.rules.iter().any(|r| r == "contraction.noh") {
+        Some(SpellingClass::HieutRegular)
+    } else {
+        None
+    };
+    if let Some(class) = class {
+        p.spellings.push(SpellingRecovery {
+            morpheme_index: p.morphs.len(),
+            class,
+        });
+    }
+}
+
+fn shifted_spellings(
+    spellings: &[SpellingRecovery],
+    offset: usize,
+) -> impl Iterator<Item = SpellingRecovery> + '_ {
+    spellings.iter().map(move |r| SpellingRecovery {
+        morpheme_index: r.morpheme_index + offset,
+        class: r.class,
+    })
+}
+
+// Append a predicate to an existing nominal/copular component sequence.
+fn append_predicate_morphs(a: &mut Analysis, p: &Predicate) {
+    let extra: Vec<_> = shifted_spellings(&p.spellings, a.morphemes.len()).collect();
+    if !extra.is_empty() {
+        if a.spelling_paths.is_empty() {
+            a.spelling_paths.push(extra);
+        } else {
+            for path in &mut a.spelling_paths {
+                path.extend(extra.iter().cloned());
+            }
+        }
+    }
+    a.morphemes.extend(p.morphs.clone());
+}
+
 type PrefinalMemo = HashMap<(String, u8, u8), Vec<Predicate>>;
 
 fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<Predicate> {
@@ -232,6 +289,7 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
         ha_contracted: false,
         copula_contracted: false,
         copula_only: false,
+        spellings: Vec::new(),
     }];
     let mut choices: Vec<(Recovery, u8, u8, &str, &str)> = vec![];
     if stage >= 4 {
@@ -292,6 +350,7 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
             }
             p.copula_contracted |=
                 r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");
+            record_spelling(&mut p, &r, matches!(form, "시" | "었" | "어야겠"));
             p.morphs.push(morph(form, MorphemeKind::Prefinal));
             p.rules.extend(r.rules.clone());
             p.rules.push(rule.into());
@@ -852,6 +911,10 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                let vowel_boundary = matches!(ending.boundary, Boundary::Aeo | Boundary::EuFull)
+                    || (matches!(ending.boundary, Boundary::Consonant)
+                        && ending.suffix.starts_with(['은', '을', '음', '으']));
+                record_spelling(&mut p, &r, vowel_boundary);
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
@@ -1034,6 +1097,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 for r in grammar::recover(base, suffix, boundary) {
                     // Honorific/past/modal may precede conjectural (으)리, not 더.
                     for mut p in prefinals(&r.stem, 3, 0, &mut memo) {
+                        record_spelling(&mut p, &r, matches!(boundary, Boundary::EuFull));
                         p.morphs.push(morph("으리", MorphemeKind::Prefinal));
                         p.morphs.push(morph(ending, MorphemeKind::Ending));
                         p.rules.extend(r.rules.clone());
@@ -1114,6 +1178,8 @@ fn predicates(word: &str) -> Vec<Predicate> {
             // an omitted copula (간편찮다 != 간편하 + 이다 + 지 + 않다).
             head.ha_contracted |= p.stem.ends_with('찮');
             head.auxiliaries.push("않".into());
+            head.spellings
+                .extend(shifted_spellings(&p.spellings, head.morphs.len()));
             head.morphs.extend(p.morphs.clone());
             head.rules.extend(p.rules.clone());
             head.rules
@@ -1132,6 +1198,11 @@ fn predicate_analysis(p: &Predicate) -> Analysis {
         morphemes: p.morphs.clone(),
         rules: p.rules.clone(),
         unchanged: false,
+        spelling_paths: if p.spellings.is_empty() {
+            Vec::new()
+        } else {
+            vec![p.spellings.clone()]
+        },
     }
 }
 
@@ -1153,7 +1224,7 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
                 continue;
             }
             a.morphemes.push(morph("답다", MorphemeKind::Suffix));
-            a.morphemes.extend(p.morphs.clone());
+            append_predicate_morphs(&mut a, p);
             a.rules.extend(p.rules.clone());
             a.rules.push("suffix.adjectival.dap".into());
             out.push(a);
@@ -1720,6 +1791,7 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
             morphemes: vec![],
             rules: vec!["copula.adverbial_base".into()],
             unchanged: false,
+            spelling_paths: Vec::new(),
         });
     }
     let expanded = match word {
@@ -1877,7 +1949,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         nominals(base, 5, false, &[], &mut bases);
         for mut a in bases {
             a.lemmas.push(lemma("이다", LemmaKind::Copula));
-            a.morphemes.extend(p.morphs.clone());
+            append_predicate_morphs(&mut a, p);
             a.rules.extend(p.rules.clone());
             a.rules.push("copula".into());
             if p.copula_contracted
@@ -1892,7 +1964,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     if p.morphs.len() == 1 && coda(&p.stem) == Some(0) && p.morphs[0].form == "다" {
         for mut a in copula_bases(&p.stem) {
             a.lemmas.push(lemma("이다", LemmaKind::Copula));
-            a.morphemes.extend(p.morphs.clone());
+            append_predicate_morphs(&mut a, p);
             a.rules.extend(p.rules.clone());
             a.rules.push("copula.zero".into());
             out.push(a);
@@ -2154,6 +2226,7 @@ fn nominals(
                 morphemes: morphs,
                 rules: vec![rule.into()],
                 unchanged: false,
+                spelling_paths: Vec::new(),
             });
         }
     }
@@ -2267,6 +2340,7 @@ fn nominals(
                     morphemes: morphs.clone(),
                     rules: vec!["particle".into()],
                     unchanged: false,
+                    spelling_paths: Vec::new(),
                 });
             }
         }
@@ -2290,6 +2364,7 @@ fn nominals(
                 morphemes: morphs.clone(),
                 rules: vec!["particle".into()],
                 unchanged: false,
+                spelling_paths: Vec::new(),
             });
         } else if (ordinary_adverbial_particle(particle.form) && adverbial_particle_chain(&morphs))
             || emphatic_case
@@ -2310,6 +2385,7 @@ fn nominals(
                     .into(),
                 ],
                 unchanged: false,
+                spelling_paths: Vec::new(),
             });
         }
         // Nominalizations accept ordinary particles; connective/final endings
@@ -2457,6 +2533,13 @@ fn nominals(
                 let mut split = out[i].clone();
                 let slot = split.morphemes.len() - suffixes.len() - 1;
                 debug_assert_eq!(split.morphemes[slot].form, particle.form);
+                for path in &mut split.spelling_paths {
+                    for r in path {
+                        if r.morpheme_index > slot {
+                            r.morpheme_index += 1;
+                        }
+                    }
+                }
                 split.morphemes.splice(
                     slot..=slot,
                     [
@@ -3089,6 +3172,9 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
                     }
                     joined.auxiliaries.push(tail.stem.clone());
                     joined.auxiliaries.extend(tail.auxiliaries.iter().cloned());
+                    joined
+                        .spellings
+                        .extend(shifted_spellings(&tail.spellings, joined.morphs.len()));
                     joined.morphs.extend(tail.morphs.iter().cloned());
                     rules.extend(tail.rules.iter().map(String::as_str));
                     rules.insert("auxiliary");
@@ -3128,6 +3214,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
         morphemes: vec![],
         rules: vec!["identity".into()],
         unchanged: true,
+        spelling_paths: Vec::new(),
     }];
     if has_hangul(&normalized) {
         // Closing quotation punctuation can leave 라는 in its own token.
@@ -3139,6 +3226,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
                 morphemes: vec![morph("라는", MorphemeKind::Ending)],
                 rules: vec!["copula.omitted_fragment".into(), "ending".into()],
                 unchanged: false,
+                spelling_paths: Vec::new(),
             });
         }
         out.extend(adverb_derivation(&normalized));
@@ -3185,6 +3273,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
                 morphemes: vec![morph("다", MorphemeKind::Ending)],
                 rules: vec!["copula.zero".into(), rule.into()],
                 unchanged: false,
+                spelling_paths: Vec::new(),
             };
             // This path has the same terminal-ending provenance as a Hangul base.
             a.rules.push("ending".into());
@@ -3196,6 +3285,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
                 morphemes: vec![morph("에요", MorphemeKind::Ending)],
                 rules: vec!["negative_copula.polite".into()],
                 unchanged: false,
+                spelling_paths: Vec::new(),
             });
         }
         with_auxiliaries(&normalized, PredicateEnd::Any, |p| {
@@ -3203,26 +3293,50 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
         });
         nominals(&normalized, 7, false, &[], &mut out);
     }
-    // Semantic duplicates share provenance; sorting is independent of hash order.
-    let mut unique: BTreeMap<(Vec<Lemma>, Vec<Morpheme>, bool), Vec<String>> = BTreeMap::new();
+    // Semantic duplicates share rule names, but spelling paths remain
+    // alternatives. A derivation with no spelling obligation subsumes others.
+    type Key = (Vec<Lemma>, Vec<Morpheme>, bool);
+    type Evidence = (Vec<String>, Vec<Vec<SpellingRecovery>>);
+    let mut unique: BTreeMap<Key, Evidence> = BTreeMap::new();
     for a in out {
-        unique
-            .entry((a.lemmas, a.morphemes, a.unchanged))
-            .or_default()
-            .extend(a.rules);
+        use std::collections::btree_map::Entry;
+        let paths = a.spelling_paths;
+        match unique.entry((a.lemmas, a.morphemes, a.unchanged)) {
+            Entry::Vacant(v) => {
+                v.insert((a.rules, paths));
+            }
+            Entry::Occupied(mut o) => {
+                let (rules, existing) = o.get_mut();
+                rules.extend(a.rules);
+                if paths.is_empty() {
+                    existing.clear();
+                } else if !existing.is_empty() {
+                    existing.extend(paths);
+                }
+            }
+        }
     }
     let analyses = unique
         .into_iter()
-        .map(|((lemmas, morphemes, unchanged), mut rules)| {
-            rules.sort();
-            rules.dedup();
-            Analysis {
-                lemmas,
-                morphemes,
-                rules,
-                unchanged,
-            }
-        })
+        .map(
+            |((lemmas, morphemes, unchanged), (mut rules, mut spelling_paths))| {
+                rules.sort();
+                rules.dedup();
+                for path in &mut spelling_paths {
+                    path.sort();
+                    path.dedup();
+                }
+                spelling_paths.sort();
+                spelling_paths.dedup();
+                Analysis {
+                    lemmas,
+                    morphemes,
+                    rules,
+                    unchanged,
+                    spelling_paths,
+                }
+            },
+        )
         .collect();
     Ok(WordAnalysis {
         normalized,
@@ -3243,6 +3357,11 @@ pub(crate) fn retained_bytes(result: &WordAnalysis) -> usize {
                     + a.lemmas.iter().map(|l| l.text.capacity()).sum::<usize>()
                     + a.morphemes.capacity() * size_of::<Morpheme>()
                     + a.morphemes.iter().map(|m| m.form.capacity()).sum::<usize>()
+                    + a.spelling_paths.capacity() * size_of::<Vec<SpellingRecovery>>()
+                    + a.spelling_paths
+                        .iter()
+                        .map(|p| p.capacity() * size_of::<SpellingRecovery>())
+                        .sum::<usize>()
                     + a.rules.capacity() * size_of::<String>()
                     + a.rules.iter().map(String::capacity).sum::<usize>()
             })

@@ -36,9 +36,11 @@
   },
   {
     "word": "먹어봐야했다",
-    "sha256": "0c0634f89bfa41f870e5917f5b8f2092e6ac7e27634410cb0154fb78637acf61",
+    "sha256": "c6bfe101936eb2e48a73a2867ccf2fcd539be30ffdbfb1907604b90e587a9ba6",
     "previous_sha256": "c1fe1ce88683bf48a148abaaae3d36043365cf4a7988cda576c86841cdf5aa1f",
-    "change": "COV-011: additive 하-deletion predicate hypotheses; prior analyses and provenance retained. Unknown lexical roots are not dictionary-verified."
+    "change": "COV-011: additive 하-deletion predicate hypotheses; prior analyses and provenance retained. Unknown lexical roots are not dictionary-verified.",
+    "before_spelling_sha256": "0c0634f89bfa41f870e5917f5b8f2092e6ac7e27634410cb0154fb78637acf61",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "먹어보고싶었다",
@@ -68,29 +70,37 @@
   },
   {
     "word": "먹어봄을",
-    "sha256": "53962c53cfdb2d091409e95a6b7101cd3961b9b366bc3c29e7382f6cf039c93e",
+    "sha256": "be4ba4e8bb71a041289d4f3b16dfd1ba3c42cc1633166644b80ea4e76ee497a7",
     "previous_sha256": "091426ce78396eb7e59d92c73bf4c86b563ffdd2137745101c3d61604b31805f",
-    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
+    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained.",
+    "before_spelling_sha256": "53962c53cfdb2d091409e95a6b7101cd3961b9b366bc3c29e7382f6cf039c93e",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "먹어봄으로써",
-    "sha256": "c8af2bfee2fe0c9fe48c9b33cb0e6270326bd9d44fc16b4b755b5bc99bfbd9e7"
+    "sha256": "601a73cf3422adaf9205d777f2196cbb48ad40616df3410b1a026aee0e62c2aa",
+    "before_spelling_sha256": "c8af2bfee2fe0c9fe48c9b33cb0e6270326bd9d44fc16b4b755b5bc99bfbd9e7",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "먹어봐야함을",
-    "sha256": "7163fe91ecb74933eebe8afd4ec26110142e9848fdc67b8a6e6dd0a135182040",
+    "sha256": "3fd62cd0a857a9012754d509ee4e40bbdff4227251c267d4bb1098e864af0755",
     "previous_sha256": "190ffd76abc7fe0e08167eebee167b6eda1fdc53cc82b0963d620ed8e8019537",
-    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
+    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained.",
+    "before_spelling_sha256": "7163fe91ecb74933eebe8afd4ec26110142e9848fdc67b8a6e6dd0a135182040",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "먹고있음을",
-    "sha256": "a117a8e5f73fbb003cd7d4a73e4212226c8bc4b91d4e23b00fbc5d690a84a1ea",
+    "sha256": "3d17ff5ac7fc0810567b91b79c00cf7091cb9b02137fa53b5fb19fe57ec0f9b2",
     "previous_sha256": "f5d239b74fbf82cd46349a85c8f226e708ec88ee7668e4f77b8bf9436528126c",
-    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
+    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained.",
+    "before_spelling_sha256": "a117a8e5f73fbb003cd7d4a73e4212226c8bc4b91d4e23b00fbc5d690a84a1ea",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "먹고싶은가를",
-    "sha256": "ed22759efbc91a2589dda658ab55cfa200267da41e8cb8ca40ce96f06c4b2444",
+    "sha256": "5f4b649cff480519689a7633ec37e03beafe3eea06fecd4bd0dff5fbf60493ff",
     "previous_sha256": "342a93a2750126645206c565d675c858e85d60485b7280bec268bf32df2193d1",
     "change": "COV-018t/019n: one additive unverified predicate 먹고싶은가다 + 어 + 를 from the newly enabled full post-ending 를 path. Every previous analysis and provenance remains; dictionary filtering rejects this unknown head. Individual review: docs/core-case-evaluation.json.",
     "previous_revisions": [
@@ -104,11 +114,13 @@
         "previous_sha256": "d2abc64ed4825a0d30e0e59b0648ed0f5f331cf1746fb15797a184ddd5c3ece0",
         "change": "COV-020h: One additive unverified nominal 먹고싶으 + omitted copula + 은가 + 를 hypothesis. The established 먹다 + 싶다 predicate analysis and every prior path/provenance remain. Dictionary filtering rejects the unknown nominal. Individual review: docs/question-copula-evaluation.json."
       }
-    ]
+    ],
+    "before_spelling_sha256": "ed22759efbc91a2589dda658ab55cfa200267da41e8cb8ca40ce96f06c4b2444",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "하지않았음을",
-    "sha256": "e6607184b42152837afd3b63d41800d9ba99bce3cff074547bf668f9be7c9331",
+    "sha256": "08953bf4dac9bc525d620d3a868a6838df39503f2e42da85a708027e5b11c10d",
     "previous_sha256": "4962c54fa6909f743b6abb8ab99f4b920fd80cde5c3468088405ebe49f4d61bf",
     "change": "COV-020c: one additive omitted-copula path with nominal 하. Every prior analysis retained; the nominal is a lexical hypothesis, not a dictionary-membership claim. Individual review: docs/omitted-copula-evaluation.json.",
     "previous_revisions": [
@@ -117,7 +129,9 @@
         "previous_sha256": "0959d841c9097ab1552fd05bf9b4177a266f42f2a0853066b3c5a47cd53aba6f",
         "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
       }
-    ]
+    ],
+    "before_spelling_sha256": "e6607184b42152837afd3b63d41800d9ba99bce3cff074547bf668f9be7c9331",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "먹게되었다",
@@ -127,7 +141,7 @@
   },
   {
     "word": "먹게하고있다",
-    "sha256": "e84d085d60e270dd91568bd0e5f545733ea348e61516897927a6d4dd33882e75",
+    "sha256": "2c742aaa34d03af6f0673d0c9b1a1aa65385aa04f253ab871ace8d206531b51f",
     "previous_sha256": "2d4f368d72caeace5cb40e3da629ead2cf2ada7bb57fdf761d39e2cdd38918df",
     "change": "COV-019f: Remove the previously unjudged 먹게하 + represented copula + 고 + 있다 hypothesis: the specific progressive expression requires a verb. All lexical/trial/causative candidates remain. Individual review: docs/continuative-class-evaluation.json.",
     "previous_revisions": [
@@ -141,7 +155,9 @@
         "previous_sha256": "e84d085d60e270dd91568bd0e5f545733ea348e61516897927a6d4dd33882e75",
         "change": "COV-020e: One unknown nominal 먹게하 + omitted copula + 고 + 있다 hypothesis; copula/progressive compatibility remains an explicit COV-019 review gap. Every previous candidate and provenance retained. Individual review: docs/omitted-connective-evaluation.json."
       }
-    ]
+    ],
+    "before_spelling_sha256": "e84d085d60e270dd91568bd0e5f545733ea348e61516897927a6d4dd33882e75",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "학생이고싶다",
@@ -164,9 +180,11 @@
   },
   {
     "word": "학생임을",
-    "sha256": "644eb2aef95f6225091ff47ef1b00582380b27494dbe50ccc4fd4da74c857aee",
+    "sha256": "50e466b2bb24ed8eb2325cf9cc3af88b2799803c037cfce5317249a874cf5725",
     "previous_sha256": "339712d1e767289d55a5a93b2e36d8818dc8ea6c0da5be1f6ecd593f61d5458a",
-    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
+    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained.",
+    "before_spelling_sha256": "644eb2aef95f6225091ff47ef1b00582380b27494dbe50ccc4fd4da74c857aee",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "의사다",
@@ -184,15 +202,19 @@
   },
   {
     "word": "의사였음을",
-    "sha256": "22d2e5a86adee0289c8f3d6e61590e386d39cba63ac7ff6468a95ef05168dbac",
+    "sha256": "349c4b9e040a905fd46f1a35c4fbc42cf5aee9dfe9af17311530e6558a142948",
     "previous_sha256": "3382b1c57e349423ca71e9cb49ec97e867fa14dc263037fd6e466d2c58473e9e",
-    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
+    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained.",
+    "before_spelling_sha256": "22d2e5a86adee0289c8f3d6e61590e386d39cba63ac7ff6468a95ef05168dbac",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "것임을",
-    "sha256": "10991f300943635eba0b4ea519038a10d64ef6b49f5609e72554cdefc58f52f6",
+    "sha256": "43754aa3671b24d8d317457406dfd28643ff3e65af7bed5278ddf82632c090aa",
     "previous_sha256": "16e44d772e8ecd18c5f05dfb3a122f1dd1ba3584044a2fe29ef2d34bab056e6f",
-    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained."
+    "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained.",
+    "before_spelling_sha256": "10991f300943635eba0b4ea519038a10d64ef6b49f5609e72554cdefc58f52f6",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "2년만이다",
@@ -215,7 +237,7 @@
   },
   {
     "word": "학교에서만은",
-    "sha256": "395b91df6376ba03c4b86d1a47b58d08ed2d5f20487084d03eade0370039025d",
+    "sha256": "1fc17af5b08fa2766f9e60adfb2bfe5474f9c3f4de8159b6698092e765f4599d",
     "previous_sha256": "cf7d40e917df214efa0067911240614a520293d6a5a7c17c392a75e924402a4d",
     "change": "COV-018n: additive unknown-class Adverbial hypotheses before ordinary focus particles; every previous candidate and provenance retained. These snapshots do not certify lexical membership or adverbial + copula composition. Individual review: docs/adverb-focus-evaluation.json.",
     "previous_revisions": [
@@ -224,13 +246,17 @@
         "previous_sha256": "be03f323e54320c63ac8d5876574d9b93b7275037d11306ffdb410e4925b9708",
         "change": "COV-018a: four additive 어/어서 + 만 + 은 predicate hypotheses. Previous analyses/provenance retained. Their unknown lexical roots are not certified as words."
       }
-    ]
+    ],
+    "before_spelling_sha256": "395b91df6376ba03c4b86d1a47b58d08ed2d5f20487084d03eade0370039025d",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "사람만으로도",
-    "sha256": "8420e84d2512bb29e97813b3cd2b10a2a29cd417b07011cb262165ead8bac04b",
+    "sha256": "f4340495033d30776dbaf0f9d87b4d85856514b1b9be3cb543ce9d16678d3a60",
     "previous_sha256": "94b98ff202b0c842254201ca3de924cafe15bf3319b7ecfc16823cd33d856c67",
-    "change": "COV-018n: additive unknown-class Adverbial hypotheses before ordinary focus particles; every previous candidate and provenance retained. These snapshots do not certify lexical membership or adverbial + copula composition. Individual review: docs/adverb-focus-evaluation.json."
+    "change": "COV-018n: additive unknown-class Adverbial hypotheses before ordinary focus particles; every previous candidate and provenance retained. These snapshots do not certify lexical membership or adverbial + copula composition. Individual review: docs/adverb-focus-evaluation.json.",
+    "before_spelling_sha256": "8420e84d2512bb29e97813b3cd2b10a2a29cd417b07011cb262165ead8bac04b",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "도와주었다",
@@ -240,7 +266,7 @@
   },
   {
     "word": "공부해야합니다",
-    "sha256": "7efaf68e3b2ee90a136800934e0e08b79c35fef11df1b12ec9b240ea7d9fc0da",
+    "sha256": "51cac357f57a3824e437b3feeac654d9a68106c700e6e17781e6d6d038dcd6f6",
     "previous_revisions": [
       {
         "sha256": "888b922990d73a8c6a00e8b81de4a0401dae22ab4243f64c91366965f406be52"
@@ -253,11 +279,13 @@
       }
     ],
     "previous_sha256": "00dc7027d7f287d5ed095c7e459e02b15a982fca7e6e3fec529e00d7e31ba391",
-    "change": "COV-018g: One unverified nominal 공부해야합니 + 다 hypothesis; the established predicate analyses remain. Every previous candidate and provenance retained. Individual review: docs/enumerative-da-evaluation.json."
+    "change": "COV-018g: One unverified nominal 공부해야합니 + 다 hypothesis; the established predicate analyses remain. Every previous candidate and provenance retained. Individual review: docs/enumerative-da-evaluation.json.",
+    "before_spelling_sha256": "7efaf68e3b2ee90a136800934e0e08b79c35fef11df1b12ec9b240ea7d9fc0da",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "들으셨겠어요",
-    "sha256": "05508b5764b605ea361c23a97953f78869626bf80f93585bfd51fe8e1a0a7aad",
+    "sha256": "fa9e3a3e4985c19bc65ffd3fc92395d845e7c3357267b9d6aeab7f6d0d844a8b",
     "previous_sha256": "eb0b56f616cf405d13c2e98cd47d0c0aeed70f1919965a74c99cc65c39eeb42f",
     "change": "COV-020f: Two new unverified nominal 들으 + omitted copula + honorific/past/modal paths, with bundled 어요 or separated 어 + 요. Existing 듣다/들다 predicate readings remain. The nominal identity and contextual honorific interpretation are unjudged. Every previous candidate and provenance retained. Individual review: docs/honorific-copula-evaluation.json.",
     "previous_revisions": [
@@ -271,13 +299,17 @@
         "previous_sha256": "8a80bcb1e2d0d1d737285c37cb6e1bc57c2a0324ab94b94876a6be6bb0d7a6bd",
         "change": "COV-020d: one additive vowel-final nominal + omitted copula + enumerative 요 hypothesis. All previous analyses retained. The unknown nominal 들으셨겠어 is not dictionary-verified. Individual review: docs/copula-yo-evaluation.json."
       }
-    ]
+    ],
+    "before_spelling_sha256": "05508b5764b605ea361c23a97953f78869626bf80f93585bfd51fe8e1a0a7aad",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "먹었었겠더라",
-    "sha256": "c3c3a8d62dcc2a3ef1bdc1587bd7a93513ffd9de5db8459650386a8caaa8e479",
+    "sha256": "2b9d72c59aba7e368808b668642872e0478446fbae739895d0fc1778bf6db308",
     "previous_sha256": "eef2fe3a11ef0d2e00dcd2b34420bf80720dfe21323814f551bd6221f6e64d2c",
-    "change": "COV-017l: remove 20 incompatible 더 + 어라/으라 paths; add 10 factual 더 + 라 paths for the same lexical/prefinal hypotheses. Bundled 더라 and all other paths retained. Individual review: docs/prefinal-license-evaluation.json."
+    "change": "COV-017l: remove 20 incompatible 더 + 어라/으라 paths; add 10 factual 더 + 라 paths for the same lexical/prefinal hypotheses. Bundled 더라 and all other paths retained. Individual review: docs/prefinal-license-evaluation.json.",
+    "before_spelling_sha256": "c3c3a8d62dcc2a3ef1bdc1587bd7a93513ffd9de5db8459650386a8caaa8e479",
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
   },
   {
     "word": "아니라서",

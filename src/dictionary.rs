@@ -218,11 +218,62 @@ pub fn pos_compatibility(lemma: &Lemma, entry: &EntrySummary) -> Compatibility {
     if accepted { Compatible } else { Incompatible }
 }
 
+/// Written conjugation evidence for the single-coda ㅎ paradigm. Pronunciations
+/// never populate these lists; absence of evidence does not imply regularity.
+#[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq, Eq)]
+pub struct HieutEvidence {
+    pub regular: Vec<String>,
+    pub irregular: Vec<String>,
+}
+
+impl HieutEvidence {
+    fn from_entry(entry: &Entry) -> Option<Self> {
+        let stem = entry.summary.headword.strip_suffix('다')?;
+        if crate::hangul::coda(stem) != Some(27) {
+            return None;
+        }
+        let mut evidence = Self::default();
+        for form in &entry.forms {
+            if form.kind != "활용" {
+                continue;
+            }
+            let written: String = form.written.nfc().collect();
+            if written.strip_suffix("으니") == Some(stem) {
+                evidence.regular.push(form.written.clone());
+            } else if crate::grammar::recover(&written, "니", crate::grammar::Boundary::EuZero)
+                .iter()
+                .any(|r| r.stem == stem && r.rules.iter().any(|r| r == "irregular.hieut"))
+            {
+                evidence.irregular.push(form.written.clone());
+            }
+        }
+        evidence.regular.sort();
+        evidence.regular.dedup();
+        evidence.irregular.sort();
+        evidence.irregular.dedup();
+        (!evidence.regular.is_empty() || !evidence.irregular.is_empty()).then_some(evidence)
+    }
+
+    fn retained_bytes(&self) -> usize {
+        [&self.regular, &self.irregular]
+            .into_iter()
+            .map(|forms| {
+                forms.capacity() * std::mem::size_of::<String>()
+                    + forms.iter().map(String::capacity).sum::<usize>()
+            })
+            .sum()
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct EntryMatch {
     #[serde(flatten)]
     pub entry: EntrySummary,
     pub pos_compatibility: Compatibility,
+    /// Per-entry spelling evidence; older annotations and uninformative entries
+    /// omit it. Homonyms never borrow each other's written forms.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub hieut: Option<HieutEvidence>,
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct LemmaMatches {
@@ -253,11 +304,16 @@ impl Annotation {
     }
 }
 
-/// FIFO cache of headword summaries, including negative lookups. The byte budget
+struct CachedLookup {
+    entries: Arc<Vec<EntrySummary>>,
+    hieut: Vec<Option<HieutEvidence>>,
+}
+
+/// FIFO cache of headword summaries and scoped spelling evidence, including negative lookups. The byte budget
 /// accounts for payload and container sizes, not allocator/SQLite overhead.
 pub struct DictionarySession<'a, D: Dictionary + ?Sized> {
     dictionary: &'a D,
-    cache: HashMap<String, (Arc<Vec<EntrySummary>>, usize)>,
+    cache: HashMap<String, (Arc<CachedLookup>, usize)>,
     order: VecDeque<String>,
     budget: usize,
     bytes: usize,
@@ -276,13 +332,43 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
         self.bytes
     }
     pub fn lookup(&mut self, word: &str) -> Result<Arc<Vec<EntrySummary>>> {
+        Ok(Arc::clone(&self.lookup_record(word)?.entries))
+    }
+    fn lookup_record(&mut self, word: &str) -> Result<Arc<CachedLookup>> {
         let key: String = word.nfc().collect();
         if let Some((entries, _)) = self.cache.get(&key) {
             return Ok(Arc::clone(entries));
         }
         let entries = Arc::new(self.dictionary.lookup(&key)?);
+        let mut hieut = Vec::with_capacity(entries.len());
+        for summary in entries.iter() {
+            let evidence = if summary
+                .headword
+                .strip_suffix('다')
+                .and_then(crate::hangul::coda)
+                == Some(27)
+                && matches!(
+                    summary.pos.as_str(),
+                    "동사" | "형용사" | "보조 동사" | "보조 형용사"
+                ) {
+                self.dictionary
+                    .entry(&summary.id)?
+                    .filter(|e| e.summary == *summary)
+                    .and_then(|e| HieutEvidence::from_entry(&e))
+            } else {
+                None
+            };
+            hieut.push(evidence);
+        }
         let size = 2 * (std::mem::size_of::<String>() + key.len())
-            + std::mem::size_of::<(Arc<Vec<EntrySummary>>, usize)>()
+            + std::mem::size_of::<(Arc<CachedLookup>, usize)>()
+            + std::mem::size_of::<CachedLookup>()
+            + hieut.capacity() * std::mem::size_of::<Option<HieutEvidence>>()
+            + hieut
+                .iter()
+                .flatten()
+                .map(HieutEvidence::retained_bytes)
+                .sum::<usize>()
             + std::mem::size_of::<Vec<EntrySummary>>()
             + entries
                 .iter()
@@ -294,6 +380,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         + e.pos.len()
                 })
                 .sum::<usize>();
+        let entries = Arc::new(CachedLookup { entries, hieut });
         if size <= self.budget {
             while self.bytes > self.budget - size {
                 if let Some(old) = self.order.pop_front()
@@ -316,12 +403,15 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
             .collect();
         let mut lemmas = Vec::with_capacity(keys.len());
         for lemma in keys {
-            let entries = self
-                .lookup(&lemma.text)?
+            let matched = self.lookup_record(&lemma.text)?;
+            let entries = matched
+                .entries
                 .iter()
-                .map(|entry| EntryMatch {
+                .zip(&matched.hieut)
+                .map(|(entry, hieut)| EntryMatch {
                     pos_compatibility: pos_compatibility(lemma, entry),
                     entry: entry.clone(),
+                    hieut: hieut.clone(),
                 })
                 .collect();
             lemmas.push(LemmaMatches {
@@ -341,5 +431,50 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
             .map(|a| annotation.assess(a))
             .collect();
         Ok(annotation)
+    }
+}
+
+#[cfg(test)]
+mod spelling_evidence_tests {
+    use super::*;
+    #[test]
+    fn hieut_evidence_uses_written_conjugations_not_pronunciation_or_pos_guesses() {
+        let source: serde_json::Value = serde_json::from_str(include_str!(
+            "../tests/fixtures/hieut-compatibility-sources.json"
+        ))
+        .unwrap();
+        let mut entry: Entry = serde_json::from_value(
+            source["source_entries"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .find(|e| e["id"] == "krdict:89534")
+                .unwrap()
+                .clone(),
+        )
+        .unwrap();
+        entry.forms = vec![WordForm {
+            kind: "발음".into(),
+            written: "놓으니".into(),
+            pronunciations: vec!["노니".into()],
+        }];
+        assert!(HieutEvidence::from_entry(&entry).is_none());
+        entry.forms[0].kind = "활용".into();
+        entry.forms[0].written.clear();
+        assert!(HieutEvidence::from_entry(&entry).is_none());
+        entry.forms[0].written = "놓으니".into();
+        let evidence = HieutEvidence::from_entry(&entry).unwrap();
+        assert_eq!(evidence.regular, ["놓으니"]);
+        assert!(evidence.irregular.is_empty());
+        // Synthetic dual-paradigm entry for the evidence contract, not a claim
+        // that standard 놓다 licenses the invented spelling 노니.
+        entry.forms.push(WordForm {
+            kind: "활용".into(),
+            written: "노니".into(),
+            pronunciations: vec![],
+        });
+        let evidence = HieutEvidence::from_entry(&entry).unwrap();
+        assert_eq!(evidence.regular, ["놓으니"]);
+        assert_eq!(evidence.irregular, ["노니"]);
     }
 }

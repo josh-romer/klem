@@ -1,0 +1,76 @@
+# sent_id = train-s76
+# text = 노무현 정부 들어서도 2003년 10.29 대책 등을 내놓았으나 제대로 실현되지 못했다.
+# translit = .no.mu.hyeon .jeong.bu .deul.eo.seo.do 2003.nyeon 10.29 .dae.chaeg .deung.eul .nae.noh.ass.eu.na .je.dae.ro .sil.hyeon.doe.ji .mos.haess.da.
+1	노무현	노무현	NOUN	NNP	_	3	nsubj	_	Translit=.no.mu.hyeon|LTranslit=.no.mu.hyeon
+2	정부	정부	NOUN	NNG	_	1	flat	_	Translit=.jeong.bu|LTranslit=.jeong.bu
+3	들어서도	들+어서+도	VERB	VV+EC+JX	_	8	advcl	_	Translit=.deul.eo.seo.do|LTranslit=.deul+.eo.seo+.do
+4	2003년	2003+년	NOUN	SN+NNB	_	8	obj	_	Translit=2003.nyeon|LTranslit=2003+.nyeon
+5	10.29	10.29	NUM	SN	NumType=Card	4	nummod	_	Translit=10.29|LTranslit=10.29
+6	대책	대책	NOUN	NNG	_	4	flat	_	Translit=.dae.chaeg|LTranslit=.dae.chaeg
+7	등을	등+을	NOUN	NNB+JKO	_	4	dep	_	Translit=.deung.eul|LTranslit=.deung+.eul
+8	내놓았으나	내놓+았+으나	VERB	VV+EP+EC	_	10	advcl	_	Translit=.nae.noh.ass.eu.na|LTranslit=.nae.noh+.ass+.eu.na
+9	제대로	제대로	ADV	MAG	_	10	advmod	_	Translit=.je.dae.ro|LTranslit=.je.dae.ro
+10	실현되지	실현+되+지	VERB	NNG+XSV+EC	_	0	root	_	Translit=.sil.hyeon.doe.ji|LTranslit=.sil.hyeon+.doe+.ji
+11	못했다	못하+았+다	VERB	VX+EP+EF	_	10	flat	_	SpaceAfter=No|Translit=.mos.haess.da|LTranslit=.mos.ha+.ass+.da
+12	.	.	PUNCT	SF	_	11	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s207
+# text = TV에서 볼 수 있었던 노란 도시락으로 배달해줍니다.
+# translit = TV.e.seo .bol .su .iss.eoss.deon .no.ran .do.si.rag.eu.ro .bae.dal.hae.jub.ni.da.
+1	TV에서	TV+에서	ADV	SL+JKB	_	2	advmod	_	Translit=TV.e.seo|LTranslit=TV+.e.seo
+2	볼	보+ㄹ	VERB	VV+ETM	_	3	dep	_	Translit=.bol|LTranslit=.bo+ㄹ
+3	수	수	NOUN	NNB	_	4	nsubj	_	Translit=.su|LTranslit=.su
+4	있었던	있+었+던	VERB	VV+EP+ETM	_	6	acl:relcl	_	Translit=.iss.eoss.deon|LTranslit=.iss+.eoss+.deon
+5	노란	노랗+ㄴ	ADJ	VA+ETM	_	6	amod	_	Translit=.no.ran|LTranslit=.no.rah+ㄴ
+6	도시락으로	도시락+으로	ADV	NNG+JKB	_	7	obl	_	Translit=.do.si.rag.eu.ro|LTranslit=.do.si.rag+.eu.ro
+7	배달해줍니다	배달+하+아+주+ㅂ니다	VERB	NNG+XSV+EC+VX+EF	_	0	root	_	SpaceAfter=No|Translit=.bae.dal.hae.jub.ni.da|LTranslit=.bae.dal+.ha+.a+.ju+ㅂ.ni.da
+8	.	.	PUNCT	SF	_	7	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1043
+# text = 칼등으로 자르는 시늉만 하기로 되어 있었는데 '아차'하는 순간 로프에 칼날이 닿았고 순식간에 30m 아래로 추락하여 발목이 부러지고 척추 등에 중상을 입었다.
+# translit = .kal.deung.eu.ro .ja.reu.neun .si.nyung.man .ha.gi.ro .doe.eo .iss.eoss.neun.de '.a.cha'.ha.neun .sun.gan .ro.peu.e .kal.nal.i .dah.ass.go .sun.sig.gan.e 30m .a.rae.ro .chu.rag.ha.yeo .bal.mog.i .bu.reo.ji.go .cheog.chu .deung.e .jung.sang.eul .ib.eoss.da.
+1	칼등으로	칼등+으로	ADV	NNG+JKB	_	2	obl	_	Translit=.kal.deung.eu.ro|LTranslit=.kal.deung+.eu.ro
+2	자르는	자르+는	VERB	VV+ETM	_	3	dep	_	Translit=.ja.reu.neun|LTranslit=.ja.reu+.neun
+3	시늉만	시늉+만	NOUN	NNG+JX	_	4	obj	_	Translit=.si.nyung.man|LTranslit=.si.nyung+.man
+4	하기로	하+기+로	ADV	VV+ETN+JKB	_	5	obl	_	Translit=.ha.gi.ro|LTranslit=.ha+.gi+.ro
+5	되어	되+어	VERB	VV+EC	_	14	advcl	_	Translit=.doe.eo|LTranslit=.doe+.eo
+6	있었는데	있+었+는데	VERB	VX+EP+EC	_	5	flat	_	Translit=.iss.eoss.neun.de|LTranslit=.iss+.eoss+.neun.de
+7	'	'	PUNCT	SS	_	8	punct	_	SpaceAfter=No|Translit='|LTranslit='
+8	아차	아차	INTJ	IC	_	14	discourse	_	SpaceAfter=No|Translit=.a.cha|LTranslit=.a.cha
+9	'	'	PUNCT	SS	_	8	punct	_	SpaceAfter=No|Translit='|LTranslit='
+10	하는	하+는	VERB	XSV+ETM	_	8	acl:relcl	_	Translit=.ha.neun|LTranslit=.ha+.neun
+11	순간	순간	ADV	NNG	_	8	appos	_	Translit=.sun.gan|LTranslit=.sun.gan
+12	로프에	로프+에	ADV	NNG+JKB	_	14	obl	_	Translit=.ro.peu.e|LTranslit=.ro.peu+.e
+13	칼날이	칼날+이	NOUN	NNG+JKS	_	14	nsubj	_	Translit=.kal.nal.i|LTranslit=.kal.nal+.i
+14	닿았고	닿+았+고	VERB	VV+EP+EC	_	0	root	_	Translit=.dah.ass.go|LTranslit=.dah+.ass+.go
+15	순식간에	순식간+에	ADV	NNG+JKB	_	18	obl	_	Translit=.sun.sig.gan.e|LTranslit=.sun.sig.gan+.e
+16	30m	30+m	NOUN	SN+SL	_	18	obl	_	Translit=30m|LTranslit=30+m
+17	아래로	아래+로	ADV	NNG+JKB	_	16	flat	_	Translit=.a.rae.ro|LTranslit=.a.rae+.ro
+18	추락하여	추락+하+아	VERB	NNG+XSV+EC	_	24	advcl	_	Translit=.chu.rag.ha.yeo|LTranslit=.chu.rag+.ha+.a
+19	발목이	발목+이	NOUN	NNG+JKS	_	20	nsubj	_	Translit=.bal.mog.i|LTranslit=.bal.mog+.i
+20	부러지고	부러지+고	VERB	VV+EC	_	14	conj	_	Translit=.bu.reo.ji.go|LTranslit=.bu.reo.ji+.go
+21	척추	척추	NOUN	NNG	_	24	obl	_	Translit=.cheog.chu|LTranslit=.cheog.chu
+22	등에	등+에	ADV	NNB+JKB	_	21	dep	_	Translit=.deung.e|LTranslit=.deung+.e
+23	중상을	중상+을	NOUN	NNG+JKO	_	24	obj	_	Translit=.jung.sang.eul|LTranslit=.jung.sang+.eul
+24	입었다	입+었+다	VERB	VV+EP+EF	_	14	conj	_	SpaceAfter=No|Translit=.ib.eoss.da|LTranslit=.ib+.eoss+.da
+25	.	.	PUNCT	SF	_	24	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1492
+# text = 지금은 낙향한 유복한 명문 사대부가의 가장으로 조정 실세와도 연이 닿아있어 지방관리들도 그를 함부로 못한다.
+# translit = .ji.geum.eun .nag.hyang.han .yu.bog.han .myeong.mun .sa.dae.bu.ga.yi .ga.jang.eu.ro .jo.jeong .sil.se.wa.do .yeon.i .dah.a.iss.eo .ji.bang.gwan.ri.deul.do .geu.reul .ham.bu.ro .mos.han.da.
+1	지금은	지금+은	ADV	NNG+JX	_	14	advmod	_	Translit=.ji.geum.eun|LTranslit=.ji.geum+.eun
+2	낙향한	낙향+하+ㄴ	VERB	NNG+XSV+ETM	_	6	acl:relcl	_	Translit=.nag.hyang.han|LTranslit=.nag.hyang+.ha+ㄴ
+3	유복한	유복+하+ㄴ	ADJ	XR+XSA+ETM	_	4	amod	_	Translit=.yu.bog.han|LTranslit=.yu.bog+.ha+ㄴ
+4	명문	명문	NOUN	NNG	_	6	nmod:poss	_	Translit=.myeong.mun|LTranslit=.myeong.mun
+5	사대부가의	사대부가+의	NOUN	NNG+JKG	_	4	flat	_	Translit=.sa.dae.bu.ga.yi|LTranslit=.sa.dae.bu.ga+.yi
+6	가장으로	가장+으로	ADV	NNG+JKB	_	10	obl	_	Translit=.ga.jang.eu.ro|LTranslit=.ga.jang+.eu.ro
+7	조정	조정	NOUN	NNG	_	10	obl	_	Translit=.jo.jeong|LTranslit=.jo.jeong
+8	실세와도	실세+와+도	ADV	NNG+JKB+JX	_	7	flat	_	Translit=.sil.se.wa.do|LTranslit=.sil.se+.wa+.do
+9	연이	연+이	NOUN	NNG+JKS	_	10	nsubj	_	Translit=.yeon.i|LTranslit=.yeon+.i
+10	닿아있어	닿+아+있+어	VERB	VV+EC+VX+EC	_	14	advcl	_	Translit=.dah.a.iss.eo|LTranslit=.dah+.a+.iss+.eo
+11	지방관리들도	지방+관리+들+도	NOUN	NNG+NNG+XSN+JX	_	14	nsubj	_	Translit=.ji.bang.gwan.ri.deul.do|LTranslit=.ji.bang+.gwan.ri+.deul+.do
+12	그를	그+를	PRON	NP+JKO	_	14	obj	_	Translit=.geu.reul|LTranslit=.geu+.reul
+13	함부로	함부로	ADV	MAG	_	14	advmod	_	Translit=.ham.bu.ro|LTranslit=.ham.bu.ro
+14	못한다	못+하+ㄴ다	VERB	MAG+VV+EF	_	0	root	_	SpaceAfter=No|Translit=.mos.han.da|LTranslit=.mos+.ha+ㄴ.da
+15	.	.	PUNCT	SF	_	14	punct	_	Translit=.|LTranslit=.
+

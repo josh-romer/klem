@@ -11,12 +11,27 @@ fn output_matches_reviewed_snapshots() {
     struct Snapshot {
         word: String,
         sha256: String,
+        before_spelling_sha256: Option<String>,
     }
     let snapshots: Vec<Snapshot> =
         serde_json::from_str(include_str!("fixtures/optimization.json")).unwrap();
     let engine = Lemmatizer::new();
     for snapshot in snapshots {
         let result = engine.analyze_word(&snapshot.word).unwrap();
+        if let Some(expected) = snapshot.before_spelling_sha256 {
+            let mut legacy = result.clone();
+            for a in &mut legacy.analyses {
+                a.spelling_paths.clear();
+            }
+            let mut json = serde_json::to_vec(&legacy).unwrap();
+            json.push(b'\n');
+            assert_eq!(
+                format!("{:x}", Sha256::digest(json)),
+                expected,
+                "{}: pre-spelling output changed",
+                snapshot.word
+            );
+        }
         let mut json = serde_json::to_vec(&result).unwrap();
         json.push(b'\n');
         assert_eq!(

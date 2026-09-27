@@ -74,7 +74,8 @@ The `dictionary::Dictionary` trait supports other sources, and
 for the API, source licensing, limitations and measured novel coverage.
 `--dict-compatible` also excludes known lexical-role/ending conflicts, preserving
 unknown classes and valid homonyms. The browser exposes this under its dictionary
-filter. See the [scoped policy](docs/dictionary-attachments.md).
+filter. See the [scoped policy](docs/dictionary-attachments.md), including per-entry
+written ㅎ inflection checks. Raw/headword-only candidates remain available.
 
 ## Browser app
 

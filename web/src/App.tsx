@@ -426,7 +426,7 @@ export default function App() {
             </button>
           </div>
           <Show when={compatible()}>
-            <p class="panel-caption">Checks cover lexical roles and reviewed ending restrictions. Unknown classes remain; context and other grammar are not checked.</p>
+            <p class="panel-caption">Checks cover lexical roles, reviewed endings, and dictionary spelling evidence. Unknown classes remain; context and other grammar are not checked.</p>
           </Show>
           <SentenceBreakdown
             result={result()!}

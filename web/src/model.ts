@@ -7,6 +7,7 @@ export interface Analysis {
   morphemes: { form: string; kind: string }[];
   rules: string[];
   unchanged: boolean;
+  spelling_paths?: { morpheme_index: number; class: "hieut_regular" | "hieut_irregular" }[][];
 }
 export const readingConditions = (analysis?: Analysis) =>
   analysis?.rules.filter((id) =>
@@ -20,6 +21,7 @@ export interface EntrySummary {
 }
 export interface EntryMatch extends EntrySummary {
   pos_compatibility: string;
+  hieut?: { regular: string[]; irregular: string[] };
 }
 export interface ReadingAssessment {
   status: "compatible" | "incompatible" | "unknown";

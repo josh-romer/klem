@@ -220,3 +220,58 @@ remain available and unknown classes are not silently rejected. KRDict 80327/803
 and NIKL consultation 313032 support this finite attachment policy. Clause-level
 meaning, subject identity and negative inheritance from ambiguous lexical heads
 remain unreviewed. See [evaluation](neura-evaluation.json) and [tests](../tests/neura.rs).
+
+## Written ㅎ inflection compatibility (COV-021d)
+
+The `lexical_spelling` conflict checks each dictionary entry's **written 활용
+forms**. A stem-preserving `-으니` form supplies regular-class evidence; a
+shortened `-니` form requiring ㅎ recovery supplies irregular-class evidence.
+Pronunciation fields supply neither. Both classes can coexist in an entry if
+both written paradigms are supplied. Missing evidence remains unknown, and
+homonyms never borrow forms from each other. The pinned source inventory has
+116 entries: 46 regular, 66 irregular, and four without a usable 니 paradigm.
+The source POS of 땡그랗다 remains 동사; its written forms, rather than a
+blanket adjective/verb guess, establish the spelling class.
+
+[NIKL's spelling explanation](https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&pageIndex=1&qna_seq=334394)
+distinguishes regular 좋다 and ㅎ-final verbs from irregular adjectives, and
+written forms from consonant loss in pronunciation. Thus 달라고 → 닿다 and
+놀라고 → 놓다 remain raw/headword-only hypotheses but conflict under
+`--dict-compatible`. Conversely, regular-spelling 하얗으니 conflicts with
+하얗다's irregular paradigm. Valid 닿으니, 하야니 and the separately
+licensed 놓아 → 놔 contraction remain available. Literal consonant endings
+such as 하얗고/하얗습니다 impose no spelling-class requirement.
+
+`Analysis.spelling_paths` is an optional list of alternative derivations for
+the same lemma/morpheme sequence. Each recovery records a `morpheme_index` and
+`class` (`hieut_regular` or `hieut_irregular`); ownership follows the ordered
+breakdown. Requirements inside a path coexist. Different paths are alternatives.
+The engine retains these alternatives when merging otherwise identical analyses,
+instead of treating the union of rule names as an ordered derivation. A path
+with no spelling requirements subsumes restricted alternatives.
+
+A reading is retained if any complete spelling path remains compatible or
+unknown. Its aggregate entry/lemma assessments summarize alternatives, while
+the overall status is computed on complete paths first. This prevents different
+owners from borrowing incompatible derivations from each other. The conflict's
+morpheme index identifies the affected prefinal or ending. In
+노래져놓으니, the first adjective requires irregular recovery and the final
+놓다 requires regular spelling; the latter does not inherit the former's rule.
+Nested nominalizations, copulas, repeated heads and auxiliaries preserve indices.
+
+`EntryMatch.hieut` optionally records the supporting regular/irregular written
+forms. The dictionary session caches these small profiles with the headword
+summaries, charging them against its existing byte budget. Complete definitions
+are read only to extract profiles for relevant single-ㅎ entries and are not
+retained in this cache. Old JSON without these optional fields is readable and
+retained conservatively; no missing field is treated as evidence of regularity.
+Rust callers constructing `Analysis` or `EntryMatch` literals initialize the new
+fields with `Vec::new()` or `None`, respectively. The SQLite schema is unchanged.
+
+[Tests](../tests/hieut_compatibility.rs) cover 326 policy judgments (175 required,
+151 forbidden), all 116 source profiles, dictionary/CLI parity, Unicode, cache
+bounds, competing derivations, synthetic homonyms and pronunciation-only evidence.
+The [evaluation](hieut-compatibility-evaluation.json) records raw-candidate
+preservation, seven unchanged training gold groups, and every novel removal.
+These checks cover the reviewed ㅎ spelling class; other lexical irregular
+classes and contextual sense selection remain separate work.

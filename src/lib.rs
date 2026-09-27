@@ -63,6 +63,22 @@ pub struct Morpheme {
     pub kind: MorphemeKind,
 }
 
+/// A lexical spelling class required at a particular inflection boundary.
+/// These are hypotheses until checked against a dictionary entry's written forms.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
+#[serde(rename_all = "snake_case")]
+pub enum SpellingClass {
+    HieutRegular,
+    HieutIrregular,
+}
+
+/// Ownership follows the lemma preceding this morpheme in `Analysis::breakdown`.
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
+pub struct SpellingRecovery {
+    pub morpheme_index: usize,
+    pub class: SpellingClass,
+}
+
 /// All components in one analysis coexist. Different analyses are alternatives.
 /// `rules` is the sorted union of supporting rule IDs, not an ordered derivation.
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
@@ -71,6 +87,12 @@ pub struct Analysis {
     pub morphemes: Vec<Morpheme>,
     pub rules: Vec<String>,
     pub unchanged: bool,
+    /// Alternative derivations of these same components. Every requirement in
+    /// one path coexists; different paths are alternatives, never merged into
+    /// one conjunction. Empty means no recorded spelling requirement (including
+    /// older serialized analyses), not proof of regularity or grammaticality.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub spelling_paths: Vec<Vec<SpellingRecovery>>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

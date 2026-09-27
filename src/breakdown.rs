@@ -151,6 +151,7 @@ mod tests {
             morphemes: vec![],
             rules: vec![],
             unchanged: false,
+            spelling_paths: Vec::new(),
         };
         assert!(a.breakdown().is_none());
         let mut a = Lemmatizer::new()

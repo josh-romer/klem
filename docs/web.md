@@ -57,7 +57,7 @@ Glosses use the first English headword gloss from the first POS-compatible entry
 and sense/homonym alternatives remain in the dictionary pane. Initial diagram
 selection prefers analyses with compatible or unclassified dictionary matches,
 then the fewest morphemes for a compact initial view. This is a display convenience,
-not contextual ranking. All 277 currently emitted canonical grammar forms have
+not contextual ranking. All 421 currently emitted canonical grammar forms have
 short teaching labels in the shared [catalog](../web/src/grammar-labels.json).
 These paraphrase common KRDict uses; they are not contextual translations or
 an exhaustive list of senses. Hover text lists each source ID and headword.
@@ -262,3 +262,8 @@ same `copula.omitted_fragment` rule and explanation survive dictionary-filtered
 JSON export. The normalized display expands omitted 이 without assigning it a
 surface span; punctuation and original token offsets stay unchanged. Explicit
 이라는 → 이다 + 라는 requires no omission notice.
+
+The conflict filter also checks reviewed written ㅎ spelling profiles against
+component-owned recovery requirements. Raw choices remain inspectable with the
+filter disabled. Export preserves optional `spelling_paths` and per-entry `hieut`
+evidence; see [the dictionary contract](dictionary-attachments.md#written-ㅎ-inflection-compatibility-cov-021d).

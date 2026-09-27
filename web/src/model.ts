@@ -7,7 +7,7 @@ export interface Analysis {
   morphemes: { form: string; kind: string }[];
   rules: string[];
   unchanged: boolean;
-  spelling_paths?: { morpheme_index: number; class: "hieut_regular" | "hieut_irregular" | "digeut_regular" | "digeut_irregular" | "siot_regular" | "siot_irregular" | "bieup_regular" | "bieup_irregular" }[][];
+  spelling_paths?: { morpheme_index: number; class: "hieut_regular" | "hieut_irregular" | "digeut_regular" | "digeut_irregular" | "siot_regular" | "siot_irregular" | "bieup_regular" | "bieup_irregular" | "reu_eu_deletion" | "reu_doubling" | "reo_addition" | "reu_uncontracted" }[][];
 }
 export const readingConditions = (analysis?: Analysis) =>
   analysis?.rules.filter((id) =>
@@ -21,6 +21,7 @@ export interface EntrySummary {
 }
 export interface EntryMatch extends EntrySummary {
   pos_compatibility: string;
+  reu?: { eu_deletion: string[]; rieul_doubling: string[]; reo: string[]; uncontracted: string[] };
   hieut?: { regular: string[]; irregular: string[] }; digeut?: { regular: string[]; irregular: string[] }; siot?: { regular: string[]; irregular: string[] }; bieup?: { regular: string[]; irregular: string[] };
 }
 export interface ReadingAssessment {

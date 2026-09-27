@@ -394,6 +394,12 @@ try {
   const bieupIds = new Set(bieupEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !bieupIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...bieupEntries);
+  const reuFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-reu.json"), "utf8"));
+  const reuEntries = reuFixture.LexicalResource.Lexicon.LexicalEntry;
+  const reuIds = new Set(reuEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !reuIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...reuEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -643,6 +649,34 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-bieup-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-bieup-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
+  const reuCases = connectiveLedger.cases.filter(c=>c.id.startsWith("reu-compat-"));
+  assert.equal(reuCases.length,663);
+  for(const c of reuCases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments) {
+      const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id+" raw");
+      const assessment=token.dictionary.readings[i];assert.equal(assessment.status==="incompatible",j.verdict==="forbidden",c.id);
+      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule==="lexical_spelling"))),c.id);
+    }
+  }
+  const reuText="치러 칠러 일러 이르러 눌러 누르러 푸르러졌어요 몰라보았어요 치렀음이었다";
+  const reuTokens=(await(await post("analyze",{text:reuText})).json()).records.filter(r=>r.analysis);
+  await submit(page,reuText);await waitHeading(page,"치러");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").uncheck();
+  const reuSelect=async(i,ls,ms)=>{
+    const index=reuTokens[i].analysis.analyses.findIndex(a=>JSON.stringify(a.lemmas.map(l=>l.text))===JSON.stringify(ls)&&JSON.stringify(a.morphemes.map(m=>m.form))===JSON.stringify(ms));
+    assert.ok(index>=0);await page.locator(".breakdown-word").nth(i).locator("select").selectOption(String(index));return String(index);
+  };
+  const invalidReu=await reuSelect(1,["치르다"],["어"]);
+  await page.getByLabel("Exclude known grammar conflicts").check();assert.equal(await page.locator(".breakdown-word").nth(1).locator(`option[value="${invalidReu}"]`).count(),0);
+  for(const [i,ls,ms]of [[0,["치르다"],["어"]],[2,["이르다"],["어"]],[3,["이르다"],["어"]],[4,["누르다"],["어"]],[5,["누르다"],["어"]],[6,["푸르다","지다"],["어","었","어요"]],[7,["모르다","보다"],["어","었","어요"]],[8,["치르다","이다"],["었","음","었","다"]]])await reuSelect(i,ls,ms);
+  const reuDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const reuExport=JSON.parse(await readFile(await(await reuDownload).path(),"utf8"));
+  const reuExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:reuText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);assert.deepEqual(reuExport.records,reuExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-reu-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-reu-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
   const connectiveCases = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-connectives-"));
   assert.equal(connectiveCases.length, 122);

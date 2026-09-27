@@ -233,19 +233,29 @@ fn record_spelling(p: &mut Predicate, r: &Recovery, vowel_boundary: bool) {
         return;
     }
     use SpellingClass::*;
-    let (regular, irregular, rule) = match coda(&r.stem) {
-        Some(27) => (HieutRegular, HieutIrregular, "irregular.hieut"),
-        Some(7) => (DigeutRegular, DigeutIrregular, "irregular.digeut"),
-        Some(19) => (SiotRegular, SiotIrregular, "irregular.siot"),
-        Some(17) => (BieupRegular, BieupIrregular, "irregular.bieup"),
-        _ => return,
-    };
-    let class = if r.rules.iter().any(|r| r == rule) {
-        Some(irregular)
-    } else if vowel_boundary || r.rules.iter().any(|r| r == "contraction.noh") {
-        Some(regular)
+    let class = if r.stem.ends_with('르') {
+        r.rules.iter().find_map(|rule| match rule.as_str() {
+            "deletion.eu" => Some(ReuEuDeletion),
+            "irregular.reu" => Some(ReuDoubling),
+            "irregular.reo" => Some(ReoAddition),
+            "boundary.regular" if vowel_boundary => Some(ReuUncontracted),
+            _ => None,
+        })
     } else {
-        None
+        let (regular, irregular, rule) = match coda(&r.stem) {
+            Some(27) => (HieutRegular, HieutIrregular, "irregular.hieut"),
+            Some(7) => (DigeutRegular, DigeutIrregular, "irregular.digeut"),
+            Some(19) => (SiotRegular, SiotIrregular, "irregular.siot"),
+            Some(17) => (BieupRegular, BieupIrregular, "irregular.bieup"),
+            _ => return,
+        };
+        if r.rules.iter().any(|r| r == rule) {
+            Some(irregular)
+        } else if vowel_boundary || r.rules.iter().any(|r| r == "contraction.noh") {
+            Some(regular)
+        } else {
+            None
+        }
     };
     if let Some(class) = class {
         p.spellings.push(SpellingRecovery {

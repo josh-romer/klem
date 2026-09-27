@@ -341,3 +341,47 @@ this rule. Ten entries without useful written evidence also remain unknown,
 including shortened 뵙다 and nonstandard cross-reference heads. Unknown retention
 is not a claim of grammatical correctness. Full source forms, hashes, individual
 judgments and observed output changes are in [the evaluation](bieup-evaluation.json).
+
+## Written 르/러 inflection compatibility (COV-021g)
+
+Written `활용` 아/어 forms now distinguish four recovery classes: ㅡ deletion
+(치러 → 치르다), ㄹ doubling (몰라 → 모르다), 러 addition (푸르러 → 푸르다),
+and uncontracted 르어. Each entry supplies its own evidence; 이르다 and 누르다
+homonyms can support different classes. The [149-entry inventory](../tests/fixtures/reu-sources.json)
+contains 8 deletion, 126 doubling, 6 러 and 9 unknown profiles. No native entry
+in this inventory supplies uncontracted 르어 evidence.
+
+Only written 아/어 forms distinguish these classes. Pronunciations and 니/ㄴ
+forms alone do not. Surrounding whitespace and Unicode normalization affect
+comparison, while the evidence retains original source strings. Unknown entries
+remain unknown, and multiple explicitly written classes may coexist in custom
+dictionaries. Literal and (으) endings impose no 르-class restriction. Past and
+auxiliary boundaries keep their own requirements: 치러놓으니 constrains 치르다
+by ㅡ deletion and 놓다 by its separate regular ㅎ paradigm.
+
+`EntryMatch` adds optional `reu: ReuEvidence`, with `eu_deletion`,
+`rieul_doubling`, `reo` and `uncontracted` written-form lists. `SpellingClass`
+adds `ReuEuDeletion`, `ReuDoubling`, `ReoAddition` and `ReuUncontracted`.
+Old JSON remains readable; missing evidence stays unknown. Rust callers using
+struct literals or exhaustive enum matches need these additions. The dictionary
+schema is unchanged. Relevant full entries are fetched once per cached lookup;
+only the scoped evidence is retained and charged to the existing cache budget.
+Raw candidates and `--dict-only` keep the existing possibilities.
+`--dict-compatible` excludes a path only when all its entry alternatives conflict.
+
+The source audit preserves all 404 written forms. Of these, 403 recover the
+listed headword after filtering. KRDict lists 서툰 under 서투르다, whereas
+[NIKL's explanation](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=324385)
+assigns it to 서툴다. The regression test retains this discrepancy and the
+existing 서툴다 analysis. It does not infer a general 르 deletion or silently
+rewrite the source. Separate shortened-headword relationships and attachment
+restrictions remain under COV-021.
+
+The class distinctions follow the written dictionary entries and NIKL's
+[다다르다 explanation](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8763)
+and [Article 18 discussion](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=322819).
+[Tests](../tests/reu.rs) cover every entry profile, 663 filter judgments,
+composition, unknown evidence, Unicode, legacy annotations and both CLI filters.
+Eight unchanged annotated training targets survive filtering. Individual cases,
+unjudged alternatives and novel/corpus comparisons are in the
+[evaluation](reu-evaluation.json). Independent language review remains pending.

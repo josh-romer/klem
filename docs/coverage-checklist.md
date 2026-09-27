@@ -1848,8 +1848,8 @@ review remains open under the completion review below.
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
   COV-021c adds eight fixed complex-coda classes; COV-021d adds per-entry
   written ㅎ compatibility; COV-021e adds ㄷ/ㅅ and COV-021f adds ㅂ
-  compatibility and three finite 오 spelling exceptions.** Remaining: lexical
-  regular/irregular dictionary compatibility for 르/러 and other paradigms, shortened-stem attachment
+  compatibility and three finite 오 spelling exceptions; COV-021g adds
+  per-entry 르/러 written paradigms.** Remaining: other lexical paradigms, shortened-stem attachment
   restrictions (e.g. 딛다/잡숫다), ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
@@ -1965,6 +1965,31 @@ review remains open under the completion review below.
   remain under COV-021, alongside 르/러 and other unreviewed paradigms.
   See [policy](dictionary-attachments.md#written-ㅂ-inflection-compatibility-cov-021f)
   and [individual-case evidence](bieup-evaluation.json).
+
+- [x] **COV-021g — Written 르/러 paradigm compatibility.**
+  **Implemented for per-entry written 아/어 paradigms.** Forms classify
+  149 entries: 8 vowel deletion,
+  126 ㄹ doubling, 6 러 addition and 9 unknown. 이르다/누르다 homonyms retain
+  independent evidence. Consonant/(으) endings impose no class restriction;
+  past/auxiliary boundaries retain component ownership. Raw/headword-only
+  candidates remain unchanged. The [tests](../tests/reu.rs) cover 663 policy
+  judgments, every source entry, unknown/legacy/custom-dictionary evidence,
+  Unicode and CLI parity. Eight unchanged training targets survive filtering.
+  All 404 written forms are audited: 403 recover their listed headword; 서툰
+  under 서투르다 is an explicit source discrepancy, with 서툴다 preserved.
+  All four frozen raw corpus reports remain byte-identical. Across 8,565 inputs,
+  raw components/order/rule IDs and prior spelling requirements remain unchanged.
+  The novel retains headword candidates and traces 1,231 compatible-filter
+  removals across 73 types to per-entry spelling conflicts.
+  Every dev/test row with a 르다 gold lemma is also checked: 524 previously
+  retained groups remain among 538 rows, with the 14 existing misses explicit.
+  Rust, browser and x86_64-linux Nix package checks pass, including full-dictionary
+  packaged API/CLI/export parity and desktop/mobile layouts. Three interleaved
+  release novel runs measured compatible-filter medians of 1.402 → 1.421 s
+  and peak RSS of 30,004 → 30,140 KiB; this is not a statistical equivalence claim.
+  Other paradigms and shortened-headword restrictions remain under COV-021.
+  See [policy](dictionary-attachments.md#written-르러-inflection-compatibility-cov-021g)
+  and [individual-case evidence](reu-evaluation.json).
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

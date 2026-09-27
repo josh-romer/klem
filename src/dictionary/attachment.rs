@@ -442,22 +442,37 @@ impl Annotation {
                             .filter(|r| morphs.contains(&Component::Morpheme(r.morpheme_index)))
                         {
                             use SpellingClass::*;
-                            let (evidence, regular) = match recovery.class {
-                                HieutRegular => (&matched.hieut, true),
-                                HieutIrregular => (&matched.hieut, false),
-                                DigeutRegular => (&matched.digeut, true),
-                                DigeutIrregular => (&matched.digeut, false),
-                                SiotRegular => (&matched.siot, true),
-                                SiotIrregular => (&matched.siot, false),
-                                BieupRegular => (&matched.bieup, true),
-                                BieupIrregular => (&matched.bieup, false),
+                            let consonant = |evidence: &Option<super::ConjugationEvidence>,
+                                             regular| {
+                                evidence.as_ref().map(|e| {
+                                    if regular {
+                                        !e.regular.is_empty()
+                                    } else {
+                                        !e.irregular.is_empty()
+                                    }
+                                })
                             };
-                            if let Some(evidence) = evidence {
-                                let supported = if regular {
-                                    !evidence.regular.is_empty()
-                                } else {
-                                    !evidence.irregular.is_empty()
-                                };
+                            let supported = match recovery.class {
+                                HieutRegular => consonant(&matched.hieut, true),
+                                HieutIrregular => consonant(&matched.hieut, false),
+                                DigeutRegular => consonant(&matched.digeut, true),
+                                DigeutIrregular => consonant(&matched.digeut, false),
+                                SiotRegular => consonant(&matched.siot, true),
+                                SiotIrregular => consonant(&matched.siot, false),
+                                BieupRegular => consonant(&matched.bieup, true),
+                                BieupIrregular => consonant(&matched.bieup, false),
+                                ReuEuDeletion => {
+                                    matched.reu.as_ref().map(|e| !e.eu_deletion.is_empty())
+                                }
+                                ReuDoubling => {
+                                    matched.reu.as_ref().map(|e| !e.rieul_doubling.is_empty())
+                                }
+                                ReoAddition => matched.reu.as_ref().map(|e| !e.reo.is_empty()),
+                                ReuUncontracted => {
+                                    matched.reu.as_ref().map(|e| !e.uncontracted.is_empty())
+                                }
+                            };
+                            if let Some(supported) = supported {
                                 if !supported {
                                     status = Compatibility::Incompatible;
                                     conflicts.push(AttachmentConflict {

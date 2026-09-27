@@ -277,6 +277,102 @@ impl ConjugationEvidence {
     }
 }
 
+/// Written 아/어 forms distinguish 르 vowel deletion, ㄹ doubling and 러.
+/// Consonant endings and pronunciations alone do not distinguish these classes.
+#[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq, Eq)]
+pub struct ReuEvidence {
+    pub eu_deletion: Vec<String>,
+    pub rieul_doubling: Vec<String>,
+    pub reo: Vec<String>,
+    pub uncontracted: Vec<String>,
+}
+impl ReuEvidence {
+    fn from_entry(entry: &Entry) -> Option<Self> {
+        let stem = entry.summary.headword.strip_suffix('다')?;
+        if !stem.ends_with('르') {
+            return None;
+        }
+        let mut evidence = Self::default();
+        for form in &entry.forms {
+            if form.kind != "활용" {
+                continue;
+            }
+            let written: String = form.written.trim().nfc().collect();
+            for recovery in crate::grammar::aeo(&written)
+                .iter()
+                .filter(|r| r.stem == stem)
+            {
+                for rule in &recovery.rules {
+                    let forms = match rule.as_str() {
+                        "deletion.eu" => &mut evidence.eu_deletion,
+                        "irregular.reu" => &mut evidence.rieul_doubling,
+                        "irregular.reo" => &mut evidence.reo,
+                        "boundary.regular" => &mut evidence.uncontracted,
+                        _ => continue,
+                    };
+                    forms.push(form.written.clone());
+                }
+            }
+        }
+        for forms in [
+            &mut evidence.eu_deletion,
+            &mut evidence.rieul_doubling,
+            &mut evidence.reo,
+            &mut evidence.uncontracted,
+        ] {
+            forms.sort();
+            forms.dedup();
+        }
+        (evidence != Self::default()).then_some(evidence)
+    }
+    fn retained_bytes(&self) -> usize {
+        [
+            &self.eu_deletion,
+            &self.rieul_doubling,
+            &self.reo,
+            &self.uncontracted,
+        ]
+        .into_iter()
+        .map(|forms| {
+            forms.capacity() * std::mem::size_of::<String>()
+                + forms.iter().map(String::capacity).sum::<usize>()
+        })
+        .sum()
+    }
+}
+
+enum CachedSpelling {
+    Consonant(ConjugationEvidence),
+    Reu(ReuEvidence),
+}
+impl CachedSpelling {
+    fn from_entry(entry: &Entry) -> Option<Self> {
+        if entry.summary.headword.ends_with("르다") {
+            ReuEvidence::from_entry(entry).map(Self::Reu)
+        } else {
+            ConjugationEvidence::from_entry(entry).map(Self::Consonant)
+        }
+    }
+    fn consonant(&self) -> Option<&ConjugationEvidence> {
+        match self {
+            Self::Consonant(e) => Some(e),
+            Self::Reu(_) => None,
+        }
+    }
+    fn reu(&self) -> Option<&ReuEvidence> {
+        match self {
+            Self::Reu(e) => Some(e),
+            Self::Consonant(_) => None,
+        }
+    }
+    fn retained_bytes(&self) -> usize {
+        match self {
+            Self::Consonant(e) => e.retained_bytes(),
+            Self::Reu(e) => e.retained_bytes(),
+        }
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct EntryMatch {
     #[serde(flatten)]
@@ -292,6 +388,8 @@ pub struct EntryMatch {
     pub siot: Option<ConjugationEvidence>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub bieup: Option<ConjugationEvidence>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub reu: Option<ReuEvidence>,
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct LemmaMatches {
@@ -324,7 +422,7 @@ impl Annotation {
 
 struct CachedLookup {
     entries: Arc<Vec<EntrySummary>>,
-    spelling: Vec<Option<ConjugationEvidence>>,
+    spelling: Vec<Option<CachedSpelling>>,
 }
 
 /// FIFO cache of headword summaries and scoped spelling evidence, including negative lookups. The byte budget
@@ -360,20 +458,22 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
         let entries = Arc::new(self.dictionary.lookup(&key)?);
         let mut spelling = Vec::with_capacity(entries.len());
         for summary in entries.iter() {
-            let evidence = if matches!(
-                summary
-                    .headword
-                    .strip_suffix('다')
-                    .and_then(crate::hangul::coda),
-                Some(7 | 17 | 19 | 27)
-            ) && matches!(
-                summary.pos.as_str(),
-                "동사" | "형용사" | "보조 동사" | "보조 형용사"
-            ) {
+            let evidence = if (summary.headword.ends_with("르다")
+                || matches!(
+                    summary
+                        .headword
+                        .strip_suffix('다')
+                        .and_then(crate::hangul::coda),
+                    Some(7 | 17 | 19 | 27)
+                ))
+                && matches!(
+                    summary.pos.as_str(),
+                    "동사" | "형용사" | "보조 동사" | "보조 형용사"
+                ) {
                 self.dictionary
                     .entry(&summary.id)?
                     .filter(|e| e.summary == *summary)
-                    .and_then(|e| ConjugationEvidence::from_entry(&e))
+                    .and_then(|e| CachedSpelling::from_entry(&e))
             } else {
                 None
             };
@@ -382,11 +482,11 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
         let size = 2 * (std::mem::size_of::<String>() + key.len())
             + std::mem::size_of::<(Arc<CachedLookup>, usize)>()
             + std::mem::size_of::<CachedLookup>()
-            + spelling.capacity() * std::mem::size_of::<Option<ConjugationEvidence>>()
+            + spelling.capacity() * std::mem::size_of::<Option<CachedSpelling>>()
             + spelling
                 .iter()
                 .flatten()
-                .map(ConjugationEvidence::retained_bytes)
+                .map(CachedSpelling::retained_bytes)
                 .sum::<usize>()
             + std::mem::size_of::<Vec<EntrySummary>>()
             + entries
@@ -430,8 +530,10 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                 .map(|(entry, evidence)| EntryMatch {
                     pos_compatibility: pos_compatibility(lemma, entry),
                     entry: entry.clone(),
+                    reu: evidence.as_ref().and_then(CachedSpelling::reu).cloned(),
                     hieut: evidence
                         .as_ref()
+                        .and_then(CachedSpelling::consonant)
                         .filter(|_| {
                             entry
                                 .headword
@@ -442,6 +544,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         .cloned(),
                     digeut: evidence
                         .as_ref()
+                        .and_then(CachedSpelling::consonant)
                         .filter(|_| {
                             entry
                                 .headword
@@ -452,6 +555,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         .cloned(),
                     siot: evidence
                         .as_ref()
+                        .and_then(CachedSpelling::consonant)
                         .filter(|_| {
                             entry
                                 .headword
@@ -462,6 +566,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         .cloned(),
                     bieup: evidence
                         .as_ref()
+                        .and_then(CachedSpelling::consonant)
                         .filter(|_| {
                             entry
                                 .headword

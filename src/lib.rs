@@ -76,6 +76,10 @@ pub enum SpellingClass {
     SiotIrregular,
     BieupRegular,
     BieupIrregular,
+    ReuEuDeletion,
+    ReuDoubling,
+    ReoAddition,
+    ReuUncontracted,
 }
 
 /// Ownership follows the lemma preceding this morpheme in `Analysis::breakdown`.

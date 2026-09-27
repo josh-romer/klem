@@ -1,0 +1,69 @@
+# sent_id = train-s323
+# text = 대학에서 치러지는 본고사의 시험절차는 학과시험, 면접시험, 체육시험, 신체검사로 이루어져 있다.
+# translit = .dae.hag.e.seo .chi.reo.ji.neun .bon.go.sa.yi .si.heom.jeol.cha.neun .hag.gwa.si.heom, .myeon.jeob.si.heom, .che.yug.si.heom, .sin.che.geom.sa.ro .i.ru.eo.jyeo .iss.da.
+1	대학에서	대학+에서	ADV	NNG+JKB	_	2	advmod	_	Translit=.dae.hag.e.seo|LTranslit=.dae.hag+.e.seo
+2	치러지는	치르+어+지+는	VERB	VV+EC+VX+ETM	_	3	acl:relcl	_	Translit=.chi.reo.ji.neun|LTranslit=.chi.reu+.eo+.ji+.neun
+3	본고사의	본고사+의	NOUN	NNG+JKG	_	4	nmod:poss	_	Translit=.bon.go.sa.yi|LTranslit=.bon.go.sa+.yi
+4	시험절차는	시험+절차+는	NOUN	NNG+NNG+JX	_	12	nsubj:pass	_	Translit=.si.heom.jeol.cha.neun|LTranslit=.si.heom+.jeol.cha+.neun
+5	학과시험	학과+시험	NOUN	NNG+NNG	_	12	obl	_	SpaceAfter=No|Translit=.hag.gwa.si.heom|LTranslit=.hag.gwa+.si.heom
+6	,	,	PUNCT	SP	_	7	punct	_	Translit=,|LTranslit=,
+7	면접시험	면접시험	NOUN	NNG	_	5	conj	_	SpaceAfter=No|Translit=.myeon.jeob.si.heom|LTranslit=.myeon.jeob.si.heom
+8	,	,	PUNCT	SP	_	7	punct	_	Translit=,|LTranslit=,
+9	체육시험	체육+시험	NOUN	NNG+NNG	_	5	conj	_	SpaceAfter=No|Translit=.che.yug.si.heom|LTranslit=.che.yug+.si.heom
+10	,	,	PUNCT	SP	_	11	punct	_	Translit=,|LTranslit=,
+11	신체검사로	신체검사+로	ADV	NNG+JKB	_	5	conj	_	Translit=.sin.che.geom.sa.ro|LTranslit=.sin.che.geom.sa+.ro
+12	이루어져	이루어지+어	VERB	VV+EC	_	0	root	_	Translit=.i.ru.eo.jyeo|LTranslit=.i.ru.eo.ji+.eo
+13	있다	있+다	VERB	VX+EF	_	12	flat	_	SpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da
+14	.	.	PUNCT	SF	_	13	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s769
+# text = 자리 잡으면 좋을지 몰라도 주로 공부 안 하는 애들 밀집 장소..
+# translit = .ja.ri .jab.eu.myeon .joh.eul.ji .mol.ra.do .ju.ro .gong.bu .an .ha.neun .ae.deul .mil.jib .jang.so..
+1	자리	자리	NOUN	NNG	_	2	obj	_	Translit=.ja.ri|LTranslit=.ja.ri
+2	잡으면	잡+으면	VERB	VV+EC	_	3	advcl	_	Translit=.jab.eu.myeon|LTranslit=.jab+.eu.myeon
+3	좋을지	좋+을지	VERB	VA+EC	_	4	ccomp	_	Translit=.joh.eul.ji|LTranslit=.joh+.eul.ji
+4	몰라도	모르+아도	VERB	VV+EC	_	8	advcl	_	Translit=.mol.ra.do|LTranslit=.mo.reu+.a.do
+5	주로	주로	ADV	MAG	_	8	advmod	_	Translit=.ju.ro|LTranslit=.ju.ro
+6	공부	공부	NOUN	NNG	_	8	obj	_	Translit=.gong.bu|LTranslit=.gong.bu
+7	안	안	ADV	MAG	_	8	advmod	_	Translit=.an|LTranslit=.an
+8	하는	하+는	VERB	VV+ETM	_	9	acl:relcl	_	Translit=.ha.neun|LTranslit=.ha+.neun
+9	애들	애+들	NOUN	NNG+XSN	_	10	nmod:poss	_	Translit=.ae.deul|LTranslit=.ae+.deul
+10	밀집	밀집	NOUN	NNG	_	0	root	_	Translit=.mil.jib|LTranslit=.mil.jib
+11	장소	장소	NOUN	NNG	_	10	flat	_	SpaceAfter=No|Translit=.jang.so|LTranslit=.jang.so
+12	..	..	PUNCT	SE	_	11	punct	_	Translit=..|LTranslit=..
+
+# sent_id = train-s838
+# text = 기원전 3세기와 기원전 2세기에 폰투스는 그 세력을 점점 확장하였고 마지막 왕인 미트리다테스 6세의 치세때는 최고조에 이르렀다.
+# translit = .gi.weon.jeon 3.se.gi.wa .gi.weon.jeon 2.se.gi.e .pon.tu.seu.neun .geu .se.ryeog.eul .jeom.jeom .hwag.jang.ha.yeoss.go .ma.ji.mag .wang.in .mi.teu.ri.da.te.seu 6.se.yi .chi.se.ddae.neun .choe.go.jo.e .i.reu.reoss.da.
+1	기원전	기원전	NOUN	NNG	_	9	nmod	_	Translit=.gi.weon.jeon|LTranslit=.gi.weon.jeon
+2	3세기와	3+세기+와	NOUN	SN+NNG+JC	_	1	flat	_	Translit=3.se.gi.wa|LTranslit=3+.se.gi+.wa
+3	기원전	기원전	NOUN	NNG	_	1	conj	_	Translit=.gi.weon.jeon|LTranslit=.gi.weon.jeon
+4	2세기에	2+세기+에	NOUN	SN+NNG+JKB	_	3	flat	_	Translit=2.se.gi.e|LTranslit=2+.se.gi+.e
+5	폰투스는	폰투스+는	NOUN	NNP+JX	_	9	nsubj	_	Translit=.pon.tu.seu.neun|LTranslit=.pon.tu.seu+.neun
+6	그	그	DET	MM	_	7	det	_	Translit=.geu|LTranslit=.geu
+7	세력을	세력+을	NOUN	NNG+JKO	_	9	obj	_	Translit=.se.ryeog.eul|LTranslit=.se.ryeog+.eul
+8	점점	점점	ADV	MAG	_	9	advmod	_	Translit=.jeom.jeom|LTranslit=.jeom.jeom
+9	확장하였고	확장+하+았+고	VERB	NNG+XSV+EP+EC	_	0	root	_	Translit=.hwag.jang.ha.yeoss.go|LTranslit=.hwag.jang+.ha+.ass+.go
+10	마지막	마지막	NOUN	NNG	_	12	acl:relcl	_	Translit=.ma.ji.mag|LTranslit=.ma.ji.mag
+11	왕인	왕+이+ㄴ	VERB	NNG+VCP+ETM	_	10	flat	_	Translit=.wang.in|LTranslit=.wang+.i+ㄴ
+12	미트리다테스	미트리다테스	NOUN	NNP	_	14	nmod:poss	_	Translit=.mi.teu.ri.da.te.seu|LTranslit=.mi.teu.ri.da.te.seu
+13	6세의	6+세+의	NOUN	SN+NNB+JKG	_	12	flat	_	Translit=6.se.yi|LTranslit=6+.se+.yi
+14	치세때는	치세+때+는	ADV	NNG+NNG+JX	_	16	advmod	_	Translit=.chi.se.ddae.neun|LTranslit=.chi.se+.ddae+.neun
+15	최고조에	최+고조+에	ADV	XPN+NNG+JKB	_	16	obl	_	Translit=.choe.go.jo.e|LTranslit=.choe+.go.jo+.e
+16	이르렀다	이르+었+다	VERB	VV+EP+EF	_	9	conj	_	SpaceAfter=No|Translit=.i.reu.reoss.da|LTranslit=.i.reu+.eoss+.da
+17	.	.	PUNCT	SF	_	16	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s908
+# text = 오는 길에 이희호 여사는 개성공단에 들러 입주기업들을 둘러볼 예정입니다.
+# translit = .o.neun .gil.e .i.hyi.ho .yeo.sa.neun .gae.seong.gong.dan.e .deul.reo .ib.ju.gi.eob.deul.eul .dul.reo.bol .ye.jeong.ib.ni.da.
+1	오는	오+는	VERB	VV+ETM	_	2	acl:relcl	_	Translit=.o.neun|LTranslit=.o+.neun
+2	길에	길+에	ADV	NNG+JKB	_	6	obl	_	Translit=.gil.e|LTranslit=.gil+.e
+3	이희호	이희호	NOUN	NNP	_	6	nsubj	_	Translit=.i.hyi.ho|LTranslit=.i.hyi.ho
+4	여사는	여사+는	NOUN	NNG+JX	_	3	flat	_	Translit=.yeo.sa.neun|LTranslit=.yeo.sa+.neun
+5	개성공단에	개성+공단+에	ADV	NNG+NNG+JKB	_	6	obl	_	Translit=.gae.seong.gong.dan.e|LTranslit=.gae.seong+.gong.dan+.e
+6	들러	들르+어	VERB	VV+EC	_	8	advcl	_	Translit=.deul.reo|LTranslit=.deul.reu+.eo
+7	입주기업들을	입주+기업+들+을	NOUN	NNG+NNG+XSN+JKO	_	8	obj	_	Translit=.ib.ju.gi.eob.deul.eul|LTranslit=.ib.ju+.gi.eob+.deul+.eul
+8	둘러볼	둘러보+ㄹ	VERB	VV+ETM	_	9	dep	_	Translit=.dul.reo.bol|LTranslit=.dul.reo.bo+ㄹ
+9	예정입니다	예정+이+ㅂ니다	VERB	NNG+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.ye.jeong.ib.ni.da|LTranslit=.ye.jeong+.i+ㅂ.ni.da
+10	.	.	PUNCT	SF	_	9	punct	_	Translit=.|LTranslit=.
+

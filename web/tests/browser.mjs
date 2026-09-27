@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const adjectivalQuestion = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adjectival-question.json"), "utf8"));
   const continuativeTopic = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-continuative-topic.json"), "utf8"));
   const adverbFocus = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adverb-focus.json"), "utf8"));
   const attachments = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-attachments.json"), "utf8"));
@@ -254,6 +255,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...adjectivalQuestion.LexicalResource.Lexicon.LexicalEntry,
       ...continuativeTopic.LexicalResource.Lexicon.LexicalEntry,
       ...adverbFocus.LexicalResource.Lexicon.LexicalEntry,
       ...attachments.LexicalResource.Lexicon.LexicalEntry,
@@ -942,6 +944,13 @@ try {
     ["공부해서야", ["공부하", "여서야"], "어서야", "Only after / emphatic reason", 86569, "ending"],
     ["나오면서부터", ["나오", "으면서", "부터"], "부터", "From / starting at", 70055, "particle"],
     ["통해서보다는", ["통하", "여서", "보다", "는"], "는", "Topic / contrast", 85851, "particle"],
+    ["먹고계시냐", ["먹", "고", "계시", "냐"], "냐", "Question", 76230],
+    ["먹고계시냐는", ["먹", "고", "계시", "냐는"], "냐는", "Quoted question", 86030],
+    ["먹고싶으냐", ["먹", "고", "싶", "으냐"], "으냐", "Question", 76235],
+    ["먹고싶으시냐", ["먹", "고", "싶", "시", "냐"], "냐", "Question", 76230],
+    ["먹고싶었냐", ["먹", "고", "싶", "었", "냐"], "냐", "Question", 76230],
+    ["먹고는있느냐", ["먹", "고", "는", "있", "느냐"], "느냐", "Question", 76231],
+    ["많으냐", ["많", "으냐"], "으냐", "Question", 76235],
     ["먹고는있다네", ["먹", "고", "는", "있", "다네"], "다네", "Information / report", 75191, "ending"],
     ["먹곤있다", ["먹", "고", "는", "있", "다"], "다", "Plain / dictionary ending", 85041],
     ["앉아는있다", ["앉", "어", "는", "있", "다"], "다", "Plain / dictionary ending", 85041],
@@ -1583,7 +1592,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

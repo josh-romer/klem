@@ -2378,3 +2378,32 @@ have a distinct 지 + 말다 hypothesis; this change does not certify its
 contextual meaning or the acceptability of every auxiliary ending. Further
 particle stacks, lexical/aspect restrictions and existential paradigms remain
 open under COV-019/019h.
+
+### Shared adjectival question-family attachment (COV-017ac / COV-019h)
+
+Canonical 으냐/으냐는/으냐며/으냐면서/으냐니/으냔 share the source-listed
+bare-adjective condition. Recovered 시/었/겠/더 markers do not license this
+family. Generic 냐 and verbal 느냐 have their own entries and remain available:
+먹고 싶었냐, 먹고 싶었느냐, 먹고 싶으시냐 and 먹고 싶으시느냐 retain
+those analyses. The change prevents a recovered prefinal from selecting the
+wrong canonical ending, even where two canonical forms have the same surface.
+
+At a represented auxiliary Verb slot, the adjectival family is rejected.
+Thus 먹고 있으냐 no longer yields 먹다 + 고 + 있다 + 으냐, while
+먹고 있냐 and 먹고 있느냐 remain. 먹고 계시냐 retains generic 냐.
+Negatives inherit the preceding represented class: 먹고 싶지 않으냐 is
+allowed, while the specific 먹다 + 보다 + 않다 path in 먹어보지않으냐 is
+not. Raw lexical heads, including standalone 있다, stay unknown; the optional
+dictionary policy preserves its existing existential exceptions. No unknown
+stem is rejected just because it is absent from a closed vocabulary.
+
+[The review](adjectival-question-evaluation.json) retains 21 source entries,
+including both homonyms for each of the -냐니 variants. The main 715-entry
+queue contains only the three plain endings; the remaining expression entries
+have source POS 품사 없음 and retain their explicit catalog mappings.
+This is a scoped attachment review, not an assertion of grammatical precision.
+
+Official guidance on 있다 does not establish a blanket auxiliary-wide ban on
+honorific 있으신다 or every past-adnominal 있은 construction. Those observations
+remain unjudged. Existing 계신가 and 계신/계시는 paths remain available;
+other existential question allomorphs still need separate evidence.

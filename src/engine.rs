@@ -323,6 +323,15 @@ pub(crate) fn present_declarative(form: &str) -> bool {
     )
 }
 
+// These are the adjectival 으냐 forms, distinct from general 냐 and verbal
+// 느냐. Their source notes license a bare adjective, not recovered prefinals.
+pub(crate) fn adjectival_question(form: &str) -> bool {
+    matches!(
+        form,
+        "으냐" | "으냐는" | "으냐며" | "으냐면서" | "으냐니" | "으냔"
+    )
+}
+
 fn predicates(word: &str) -> Vec<Predicate> {
     let mut out = vec![];
     let mut memo = HashMap::new();
@@ -467,8 +476,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // Quoted -며/-면서 families have separate prefinal licenses.
                 if (matches!(ending.form, "으라며" | "으라면서")
                     && p.morphs.iter().any(|m| m.form != "시"))
-                    || (matches!(ending.form, "자며" | "자면서" | "으냐며" | "으냐면서")
-                        && !p.morphs.is_empty())
+                    || (matches!(ending.form, "자며" | "자면서") && !p.morphs.is_empty())
                     || (matches!(
                         ending.form,
                         "다며" | "다면서" | "더라며" | "더라면서" | "느냐며" | "느냐면서"
@@ -481,7 +489,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // adjectival 으냐니 are bare, and 느냐니/더라니 exclude 더.
                 // Generic 냐니 + 더 remains outside this reviewed restriction.
                 if (ending.form == "으라니" && p.morphs.iter().any(|m| m.form != "시"))
-                    || (matches!(ending.form, "자니" | "으냐니") && !p.morphs.is_empty())
+                    || (ending.form == "자니" && !p.morphs.is_empty())
                     || (matches!(ending.form, "느냐니" | "더라니")
                         && p.morphs.iter().any(|m| m.form == "더"))
                 {
@@ -492,8 +500,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // bare verbs, including represented auxiliaries.
                 if (matches!(ending.form, "단" | "다간" | "다가는" | "느냔")
                     && p.morphs.iter().any(|m| m.form == "더"))
-                    || (matches!(ending.form, "잔" | "으냔") && !p.morphs.is_empty())
+                    || (ending.form == "잔" && !p.morphs.is_empty())
                 {
+                    continue;
+                }
+                if adjectival_question(ending.form) && !p.morphs.is_empty() {
                     continue;
                 }
                 // Present reported forms permit honorific 시 but no other
@@ -1050,7 +1061,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
                     Some(PredicateClass::Verb) => {
-                        matches!(m.form.as_str(), "으냐며" | "으냐면서" | "으냐니" | "으냔")
+                        adjectival_question(&m.form)
                             || (!report_stative
                                 && matches!(
                                     m.form.as_str(),

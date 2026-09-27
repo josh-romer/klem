@@ -940,3 +940,14 @@ License: [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
 Six additional source example groups and their IDs/sense/group indices are
 preserved in `docs/continuative-topic-evaluation.json`; joined test surfaces are
 explicit transformations of spaced examples, not corpus gold or spelling advice.
+
+`krdict-adjectival-question.json` contains 18 lexical entries for COV-017ac,
+projected from the pinned September 2026 National Institute of Korean Language
+Korean Basic Dictionary export. All selected homonyms, senses, attachment notes,
+English translations and first example groups are retained; forms, related
+entries and idiom subentries are omitted. License:
+[CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+`gsd-adjectival-question.conllu` preserves the complete GSD development sentence
+`dev-s820` byte-for-byte under the existing corpus attribution. It verifies that
+뭐하냐는 retains its gold lemma and general 냐는 ending while a distinct
+auxiliary adjectival-ending hypothesis is removed; no recall gain is claimed.

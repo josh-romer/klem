@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ab/018a–k/018m–n/019a–g/019i/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ac/018a–k/018m–n/019a–g/019i/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 191 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ab/018e–k/018m–n/019d–g/019i/020d–h; 523 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 194 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ac/018e–k/018m–n/019d–g/019i/020d–h; 520 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One additional
   entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ab implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ac implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -635,6 +635,25 @@ review remains open under the completion review below.
   copula omission, 하다 shortening, existential questions and lexical-class
   choices remain explicitly tracked followups under COV-018/020/021/019h/017aa.
 
+- [x] **COV-017ac — Shared adjectival question-family attachment.**
+  The six canonical 으냐/으냐는/으냐며/으냐면서/으냐니/으냔 forms now
+  share bare-adjective licensing. Plain 으냐 and 으냐는 no longer bypass
+  the known auxiliary-verb restriction; recovered prefinals cannot precede the
+  adjectival family. General 냐 and verbal 느냐 paths remain distinct, including
+  계시냐, 싶었냐 and 싶으시느냐. Negative auxiliaries inherit only represented
+  classes; unknown lexical heads remain available without a dictionary.
+  Evidence: [169 ledger cases](../tests/fixtures/validity.json) (120 required / 49
+  forbidden), [Unicode/dictionary/CLI tests](../tests/adjectival_question.rs),
+  one complete GSD sentence, browser source/selection checks, and
+  [source/candidate review](adjectival-question-evaluation.json). Twenty-one
+  ending/expression entries are reviewed; three grammar-POS entries receive
+  new scoped inventory dispositions. Thirty-six scoped hypotheses are removed
+  across 187 focused/stress/observation surfaces, without additions or provenance
+  changes. The only changed development token loses a distinct auxiliary
+  으냐는 hypothesis; its gold lemma and general 냐는 remain. Stress hashes
+  and all development recovery outcomes are unchanged. Broader existential
+  paradigms, honorific 있다 and past adnominals remain open under COV-019h.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–n implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -941,7 +960,9 @@ review remains open under the completion review below.
   not settle all existential paradigms; COV-019h retains that work.
 - [ ] **COV-019h — Further existential auxiliary paradigms.** **Partial:
   COV-017y applies shared present-declarative restrictions to auxiliary chains,
-  including 먹고있었는다고 and modal equivalents.** Remaining: honorific 있다
+  including 먹고있었는다고 and modal equivalents; COV-017ac unifies the
+  six bare-adjective question forms and preserves general 냐/verbal 느냐.**
+  Remaining: honorific 있다
   paradigms, existential question allomorphs and past adnominals. Probe observations
   such as 먹고있으신다네 and 앉아있은 remain explicitly unjudged in
   [the latest source review](present-license-evaluation.json). Official consultation

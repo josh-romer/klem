@@ -13132,6 +13132,196 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:76230",
+      "source_sha256": "11015cf7584b3547ca9ad6f1aa37f449961ba8521b4f4d3611f33b461f4c5a3f",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ac",
+        "COV-019h"
+      ],
+      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries.",
+      "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
+      "evidence": [
+        {
+          "path": "tests/adjectival_question.rs",
+          "test": "adjectival_question_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/adjectival_question.rs",
+          "test": "adjectival_question_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/adjectival-question-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "adjectival-question-0-existential-general",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-trial-general",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-honorific-aux-general",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-negative-verb-general",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-internal-topic-general",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-past-general",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-modal-general",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-honorific-general",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76231",
+      "source_sha256": "1fe166b252d11c80ec07123bb34fea43e312a6ba2714a2057cd921ca063c14a0",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ac",
+        "COV-019h"
+      ],
+      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries.",
+      "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
+      "evidence": [
+        {
+          "path": "tests/adjectival_question.rs",
+          "test": "adjectival_question_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/adjectival_question.rs",
+          "test": "adjectival_question_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/adjectival-question-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "adjectival-question-0-existential-verbal",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-trial-verbal",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-honorific-aux-verbal",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-negative-verb-verbal",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-internal-topic-verbal",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-past-verbal",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-modal-verbal",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-honorific-verbal",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76235",
+      "source_sha256": "0027968645504c8c9841b5acc46d89b23e9b70faf235915ae907c383fc31284e",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ac",
+        "COV-019h"
+      ],
+      "scope": "Bare adjectival 으냐 is distinct from general 냐 and verbal 느냐. Recovered prefinals and represented auxiliary Verb slots reject the adjectival family; general/verbal alternatives, adjective auxiliaries and inherited negative classes are checked. Unknown lexical heads are not blanket-rejected.",
+      "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
+      "evidence": [
+        {
+          "path": "tests/adjectival_question.rs",
+          "test": "adjectival_question_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/adjectival_question.rs",
+          "test": "adjectival_question_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/adjectival-question-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "adjectival-question-0-lexical",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-desire",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-negative-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-nested-wish",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-existential-adjectival",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-trial-adjectival",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-honorific-aux-adjectival",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-negative-verb-adjectival",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-internal-topic-adjectival",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-past-adjectival",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-modal-adjectival",
+          "judgment": "path"
+        },
+        {
+          "case": "adjectival-question-0-honorific-adjectival",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

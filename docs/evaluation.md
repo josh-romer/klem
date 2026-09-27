@@ -2002,3 +2002,58 @@ lookup and JSONL serialization to `/dev/null`, measured median compatible-policy
 time of 1.182s before and 1.209s after, with peak RSS around 28 MiB. These are
 local observations, not throughput guarantees; raw measurements and input/dictionary
 fingerprints are preserved in the source review.
+
+### COV-017ac / COV-019h: adjectival question-family licenses
+
+The six canonical 으냐/으냐는/으냐며/으냐면서/으냐니/으냔 forms now share
+one bare-adjective check. This closes the plain 으냐/으냐는 exceptions without
+removing general 냐 or verbal 느냐 alternatives. Known auxiliary Verb slots and
+recovered prefinals cannot select the adjectival family; unknown lexical heads
+and the optional dictionary policy's existing existential exceptions remain.
+See the [21-entry source and candidate review](adjectival-question-evaluation.json).
+
+There are 169 new stable cases (120 required / 49 forbidden), bringing the raw
+ledger to 2,890 cases and 1,732 required / 1,166 forbidden judgments. The separate
+63-case dictionary-policy ledger is unchanged. An 18-entry lexical fixture
+checks both dictionary filters and complete CLI/library annotation parity.
+All cases also exercise Unicode normalization and explainable component ordering.
+
+Inspection of 187 focused/stress/observation surfaces accounts for 36 removals,
+no additions and no changed existing provenance. Every removal selects the
+adjectival question family after a recovered prefinal or known auxiliary Verb.
+All thirty stress hashes and the fixed repeated-input stress checks remain.
+Honorific 먹고있으신다네 and past-adnominal 앉아있은/눌러있은 are retained
+as explicitly unjudged observations; this batch does not settle them.
+
+Development recovery outcomes are identical for every case: misses remain
+102 KAIST / 150 GSD. KAIST ambiguity is unchanged. GSD loses one non-gold
+무다 + 하다 + 어/으냐는 hypothesis in 뭐하냐는; its gold 뭐하다 and general
+냐는 path remain. The complete original `dev-s820` sentence is preserved and
+tested. Mean GSD candidates change from 5.490239 to 5.490139; no recall gain is
+claimed. Frozen corpus baselines remain untouched.
+
+Full Rust/web-feature tests, the pinned full-corpus regression, Clippy,
+formatting, frontend build, and offline inventory verification passed. Three
+plain ending entries gain scoped reviews, making 194 scoped / 520 unreviewed /
+one unresolved gap. The other eighteen reviewed expression entries have source
+POS 품사 없음 and remain linked through their explicit grammar catalog mappings.
+
+Browser/HTTP checks, `nix flake check` on x86_64-linux and `nix build .#web`
+passed. The packaged full-dictionary preview passed all 169 cases with raw and
+filtered CLI/API parity, five selected question breakdowns, source links and
+mobile layout checks. A broader comparison of all 2,604 distinct ledger surfaces
+found 37 removed analyses and no additions; the extra removal is the adjectival
+으냐 hypothesis after 더 in 먹더냐. Its existing required general 냐 reading
+remains.
+
+The pinned 81,758-word 무정 benchmark loses eight filtered analyses across four
+words: 네더냐, 계시냐, 주시더냐 and 아프더냐. All eight used 으냐 after
+recovered 시 and/or 더. Every affected word retains other readings. Compatible
+filter counts change from 119,554 to 119,546 analyses, with 73,248 tokens retaining
+at least one reading; headword-only counts change from 130,363 to 130,355, with
+73,303 matched tokens unchanged. Three sequential local Nix release runs per mode
+measured compatible-policy median time of 1.294s before and 1.308s after, with
+peak RSS around 28 MiB. These observations include dictionary lookup and JSONL
+serialization to `/dev/null`; they are not throughput guarantees. Individual
+removed and retained candidates, raw measurements and fingerprints are preserved
+in the source review.

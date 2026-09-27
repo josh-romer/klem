@@ -136,13 +136,7 @@ impl Annotation {
                         let verb = matched.entry.pos == "동사";
                         let rule = if crate::engine::present_declarative(form) && adjective {
                             Some(AttachmentRule::PresentDeclarativeVerb)
-                        } else if bare
-                            && verb
-                            && matches!(
-                                form,
-                                "으냐" | "으냐는" | "으냐며" | "으냐면서" | "으냐니" | "으냔"
-                            )
-                        {
+                        } else if bare && verb && crate::engine::adjectival_question(form) {
                             // Existential/honorific question paradigms remain
                             // COV-019h. Do not decide them from a broad POS label.
                             if matches!(lemma.text.as_str(), "있다" | "없다" | "계시다") {

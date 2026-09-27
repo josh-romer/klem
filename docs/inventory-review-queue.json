@@ -11,6 +11,7 @@
     "docs/adjectival-question-evaluation.json": "4445015d072de05933a5e94a469fa0a6e7dd80465e43d8053b1600451a876b42",
     "docs/adverb-focus-evaluation.json": "29a9df5e7ecbe61fc86baaaff1a0c0772497f7cf0d596af033a98b23d5171a03",
     "docs/attachment-connectives-evaluation.json": "6fb20e573bc84b86f20626f01a02ce4b7eded17942eb1528dbedc2cf12aaf6d1",
+    "docs/auxiliary-dictionary-evaluation.json": "3a23057927a41215e802791e6ab603987cc27f667a1f284a79c4906730b7b408",
     "docs/auxiliary-inventory.json": "16b7ac8ed9a8cb7f0b6cd9ef1251f1b4097a2abb02b36f4c3ad88b7e0e3c0cb9",
     "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
@@ -18,11 +19,11 @@
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "ed4b139730ede4289a8431ce9e27d4f327c2ec0837858b3b27944c96b9df0981",
+    "docs/coverage-checklist.md": "771a2052879ac22c7bd61a36ad4188cbdacc0e45ab79811733f243c23319a2c4",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
-    "docs/dictionary-attachments.md": "06399096eca316cdca48feec783505536e97b0e03028d5eb148e796347099da1",
+    "docs/dictionary-attachments.md": "8654fe1f2cc676ede5bc16242745300e71b4d596686b9f61158a13ad0d508002",
     "docs/doe-evaluation.json": "e59e50e002254721f521fd28d4ff90ca3b37abdc0915d5119b29b6e633743853",
     "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
@@ -30,7 +31,7 @@
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "cb9744e474e89f7e82c90f4cb2eb4ce5f05e2f698ef469dec13592ba4e437247",
-    "docs/inventory-reviews.json": "aed87e8710eb59c111086f28d1a8587c00943ff6461d74a26f2b59efe3c21583",
+    "docs/inventory-reviews.json": "d410fcb394071bd1abdd84295a3c4aaca45fd0f2965b54db06c74cabd0da7de0",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/prefinal-copula-evaluation.json": "51f8ee8c84b0909e7fae5d03bf40bd04783e85956b43a2f44d3c1a2b382af40e",
@@ -52,6 +53,7 @@
     "docs/uncertainty-evaluation.json": "902cb50f1ffca1bbcec76821cf8530b2c624ffee2203df4828a3d0d11754ab17",
     "tests/adjectival_question.rs": "143f121cd9a17c1aa7c603840a19cac415777dada7926c419d139baf8d134fd3",
     "tests/adverb_focus.rs": "e751644d2f97a5e9c0eec3791ebeee7f5aed4be3c646065de954eeb99284a0d9",
+    "tests/auxiliary_dictionary.rs": "3aeff2fc8693c99c0ff7ed86aba239b7372e318d7e4e87b1ef22105dc1b99dcb",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/chigo_particles.rs": "116a92c14a3ad8cc5880be4f7d9052d9b6d85bdc5156114cc3c715b867832238",
@@ -68,6 +70,7 @@
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
     "tests/extent_particles.rs": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
+    "tests/fixtures/auxiliary-dictionary.json": "7a858ec78be92ae8867c4e65fb5b607a896a06e4843b0d3156a1a7acf4bb8ade",
     "tests/fixtures/dictionary-attachments.json": "af99f91768b621f25d2f5a265635167459a7e3b0920110c87cc52b0cb0ffb703",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
     "tests/fixtures/validity.json": "56ab0663c190e0b5c7a8a63edba002ab438bac46207518684f484541bf5a06ef",
@@ -2578,9 +2581,10 @@
         "source_sha256": "5e535b671c27f4ffb2d53cc19c83a3fb2961a4254fa5d17883f791919dd78335",
         "status": "scoped",
         "checklist": [
-          "COV-019j"
+          "COV-019j",
+          "COV-019m"
         ],
-        "scope": "Sense 5 interrupted-intention contraction before 보다: 으려다/으려다가 with right 으니/으면 only, preserving joined lemma order and a Verb class.",
+        "scope": "Sense 5 interrupted-intention contraction before 보다: 으려다/으려다가 with right 으니/으면 only, preserving joined lemma order and a Verb class. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense.",
         "remaining": "Other connector senses, right prefinal/ending classes, contextual senses and Korean review remain open.",
         "evidence": [
           {
@@ -2597,6 +2601,16 @@
           },
           {
             "path": "docs/intention-connectives-evaluation.json"
+          },
+          {
+            "path": "tests/auxiliary_dictionary.rs",
+            "test": "auxiliary_entry_judgments_preserve_ownership_and_alternatives"
+          },
+          {
+            "path": "tests/fixtures/auxiliary-dictionary.json"
+          },
+          {
+            "path": "docs/auxiliary-dictionary-evaluation.json"
           }
         ],
         "judgments": [
@@ -5795,9 +5809,10 @@
         "source_sha256": "1cf2d85ba20accaf29c937d34d26d23f86591016955b73438f3889fb26647873",
         "status": "scoped",
         "checklist": [
-          "COV-019d"
+          "COV-019d",
+          "COV-019m"
         ],
-        "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged.",
+        "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense.",
         "remaining": "This disposition covers only the expressive left-class boundary, not all nine senses of this entry. Unknown lexical adjective/verb identity, lexical-subset and contextual compatibility, and other connector/prefinal restrictions remain open.",
         "evidence": [
           {
@@ -5814,6 +5829,16 @@
           },
           {
             "path": "docs/auxiliary-left-hada-evaluation.json"
+          },
+          {
+            "path": "tests/auxiliary_dictionary.rs",
+            "test": "auxiliary_entry_judgments_preserve_ownership_and_alternatives"
+          },
+          {
+            "path": "tests/fixtures/auxiliary-dictionary.json"
+          },
+          {
+            "path": "docs/auxiliary-dictionary-evaluation.json"
           }
         ],
         "judgments": [
@@ -6516,9 +6541,10 @@
         "source_sha256": "c6c04cc2d47e7566612a9f7bc4660d6a44a2c87de90b3044ac5a96d38f1685ca",
         "status": "scoped",
         "checklist": [
-          "COV-019l"
+          "COV-019l",
+          "COV-019m"
         ],
-        "scope": "Sense 1 inference 보다 after 으려나 with ordered joined components and represented Adjective inflection; other senses remain independent.",
+        "scope": "Sense 1 inference 보다 after 으려나 with ordered joined components and represented Adjective inflection; other senses remain independent. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense.",
         "remaining": "Contextual senses, other auxiliary links/internal particles, broader lexical constraints and independent Korean review remain open.",
         "evidence": [
           {
@@ -6535,6 +6561,16 @@
           },
           {
             "path": "docs/ryeona-evaluation.json"
+          },
+          {
+            "path": "tests/auxiliary_dictionary.rs",
+            "test": "auxiliary_entry_judgments_preserve_ownership_and_alternatives"
+          },
+          {
+            "path": "tests/fixtures/auxiliary-dictionary.json"
+          },
+          {
+            "path": "docs/auxiliary-dictionary-evaluation.json"
           }
         ],
         "judgments": [

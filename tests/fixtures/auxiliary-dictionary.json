@@ -1,0 +1,2190 @@
+{
+  "schema_version": 1,
+  "scope": "Per-entry dictionary evidence for represented auxiliary classes, not raw candidate validity or contextual sense selection.",
+  "source": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 export",
+  "license": "CC BY-SA 2.0 KR",
+  "cases": [
+    {
+      "id": "aux-class-inference",
+      "surface": "오려나봐",
+      "lemmas": [
+        {
+          "text": "오다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "으려나",
+          "kind": "ending"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-trial",
+      "surface": "먹어봐",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-go-ambiguous",
+      "surface": "먹고보다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The structural class is unresolved; broad dictionary classes cannot select a homonym."
+    },
+    {
+      "id": "aux-class-daga",
+      "surface": "먹다가보니",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "다가",
+          "kind": "ending"
+        },
+        {
+          "form": "으니",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-interrupted",
+      "surface": "먹으려다보니",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "으려다",
+          "kind": "ending"
+        },
+        {
+          "form": "으니",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-interrupted-full",
+      "surface": "먹으려다가보니",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "으려다가",
+          "kind": "ending"
+        },
+        {
+          "form": "으니",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-neunga",
+      "surface": "먹는가보다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "는가",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-eunga",
+      "surface": "좋은가보다",
+      "lemmas": [
+        {
+          "text": "좋다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "은가",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-deonga-0",
+      "surface": "먹던가보다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "더",
+          "kind": "prefinal"
+        },
+        {
+          "form": "은가",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-deonga-1",
+      "surface": "먹던가보다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "던가",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-na",
+      "surface": "먹나보다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "나",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-eulkka",
+      "surface": "먹을까보다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "을까",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-internal-particle-0",
+      "surface": "먹어들봐요",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "들",
+          "kind": "particle"
+        },
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "요",
+          "kind": "particle"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-internal-particle-1",
+      "surface": "먹어들봐요",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "들",
+          "kind": "particle"
+        },
+        {
+          "form": "어요",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-ha-expressive",
+      "surface": "좋아하다",
+      "lemmas": [
+        {
+          "text": "좋다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-ha-causative",
+      "surface": "먹게하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "게",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-ha-obligation",
+      "surface": "먹어야하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어야",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-ha-intention",
+      "surface": "먹으려하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "으려",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-ha-intention-go",
+      "surface": "먹으려고하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "으려고",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-ha-goja",
+      "surface": "먹고자하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고자",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-ha-wish",
+      "surface": "먹었으면하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "으면",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-ha-nominalized-0",
+      "surface": "먹기는하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "기",
+          "kind": "ending"
+        },
+        {
+          "form": "는",
+          "kind": "particle"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The structural class is unresolved; broad dictionary classes cannot select a homonym."
+    },
+    {
+      "id": "aux-class-ha-nominalized-1",
+      "surface": "먹기는하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "기는",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62888",
+          "entry_id": "krdict:62888",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62888"
+        },
+        {
+          "id": "entry-62899",
+          "entry_id": "krdict:62899",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62899"
+        }
+      ],
+      "reason": "The structural class is unresolved; broad dictionary classes cannot select a homonym."
+    },
+    {
+      "id": "aux-class-negative-adjective-71583",
+      "surface": "먹고싶지않다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "싶다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-negative-verb-71581",
+      "surface": "먹어보지않다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-negative-adjective-71287",
+      "surface": "먹고싶지아니하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "싶다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "아니하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71286",
+          "entry_id": "krdict:71286",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71286"
+        },
+        {
+          "id": "entry-71287",
+          "entry_id": "krdict:71287",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71287"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-negative-verb-71286",
+      "surface": "먹어보지아니하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "아니하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71286",
+          "entry_id": "krdict:71286",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71286"
+        },
+        {
+          "id": "entry-71287",
+          "entry_id": "krdict:71287",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71287"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-negative-adjective-26841",
+      "surface": "먹고싶지못하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "싶다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "못하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-26838",
+          "entry_id": "krdict:26838",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26838"
+        },
+        {
+          "id": "entry-26841",
+          "entry_id": "krdict:26841",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26841"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-negative-verb-26838",
+      "surface": "먹어보지못하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "못하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-26838",
+          "entry_id": "krdict:26838",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26838"
+        },
+        {
+          "id": "entry-26841",
+          "entry_id": "krdict:26841",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26841"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-limit",
+      "surface": "먹다못하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "못하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "다",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-26838",
+          "entry_id": "krdict:26838",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26838"
+        },
+        {
+          "id": "entry-26841",
+          "entry_id": "krdict:26841",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26841"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-dap",
+      "surface": "학생답지않다",
+      "lemmas": [
+        {
+          "text": "학생",
+          "kind": "nominal"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "답다",
+          "kind": "suffix"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-copula-0",
+      "surface": "학생이지않다",
+      "lemmas": [
+        {
+          "text": "학생",
+          "kind": "nominal"
+        },
+        {
+          "text": "이다",
+          "kind": "copula"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "이",
+          "kind": "particle"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "Copula inheritance remains a distinct engine class; these dictionary notes do not authorize equating it with an adjective."
+    },
+    {
+      "id": "aux-class-copula-1",
+      "surface": "학생이지않다",
+      "lemmas": [
+        {
+          "text": "학생",
+          "kind": "nominal"
+        },
+        {
+          "text": "이다",
+          "kind": "copula"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "Copula inheritance remains a distinct engine class; these dictionary notes do not authorize equating it with an adjective."
+    },
+    {
+      "id": "aux-class-yang",
+      "surface": "먹는양하다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "양하다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "는",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-67248",
+          "entry_id": "krdict:67248",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=67248"
+        },
+        {
+          "id": "entry-67249",
+          "entry_id": "krdict:67249",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=67249"
+        }
+      ],
+      "reason": "The structural class is unresolved; broad dictionary classes cannot select a homonym."
+    },
+    {
+      "id": "aux-class-ju-negative",
+      "surface": "먹어주지않다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "주다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-double-negative",
+      "surface": "먹고싶지않지않다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "싶다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 3,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 2
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 3,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-lexical-unknown",
+      "surface": "좋지않다",
+      "lemmas": [
+        {
+          "text": "좋다",
+          "kind": "predicate"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "The structural class is unresolved; broad dictionary classes cannot select a homonym."
+    },
+    {
+      "id": "aux-class-separate",
+      "surface": "않았다",
+      "lemmas": [
+        {
+          "text": "않다",
+          "kind": "predicate"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "었",
+          "kind": "prefinal"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 0,
+          "status": "unknown",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 0,
+          "status": "unknown",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "Token-initial auxiliary entries need the preceding token; preserve their unknown assessment."
+    },
+    {
+      "id": "aux-class-copula-reset-0",
+      "surface": "먹고싶음이지않다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "싶다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "이다",
+          "kind": "copula"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "음",
+          "kind": "ending"
+        },
+        {
+          "form": "이",
+          "kind": "particle"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 3,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 3,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "Copula inheritance remains a distinct engine class; these dictionary notes do not authorize equating it with an adjective."
+    },
+    {
+      "id": "aux-class-copula-reset-1",
+      "surface": "먹고싶음이지않다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "싶다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "이다",
+          "kind": "copula"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "고",
+          "kind": "ending"
+        },
+        {
+          "form": "음",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 3,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 3,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "Copula inheritance remains a distinct engine class; these dictionary notes do not authorize equating it with an adjective."
+    },
+    {
+      "id": "aux-class-same-lemma-trial",
+      "surface": "먹어보나보다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "나",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 1,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 1,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 0
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed verb class."
+    },
+    {
+      "id": "aux-class-same-lemma-inference",
+      "surface": "먹어보나보다",
+      "lemmas": [
+        {
+          "text": "먹다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "어",
+          "kind": "ending"
+        },
+        {
+          "form": "나",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-62171",
+          "entry_id": "krdict:62171",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171"
+        },
+        {
+          "id": "entry-62249",
+          "entry_id": "krdict:62249",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62249"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    },
+    {
+      "id": "aux-class-inference-negative",
+      "surface": "오려나보지않다",
+      "lemmas": [
+        {
+          "text": "오다",
+          "kind": "predicate"
+        },
+        {
+          "text": "보다",
+          "kind": "auxiliary"
+        },
+        {
+          "text": "않다",
+          "kind": "auxiliary"
+        }
+      ],
+      "morphemes": [
+        {
+          "form": "으려나",
+          "kind": "ending"
+        },
+        {
+          "form": "지",
+          "kind": "ending"
+        },
+        {
+          "form": "다",
+          "kind": "ending"
+        }
+      ],
+      "judgments": [
+        {
+          "id": "entry-71581",
+          "entry_id": "krdict:71581",
+          "lemma_index": 2,
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "auxiliary_class",
+              "morpheme_index": 1
+            }
+          ],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581"
+        },
+        {
+          "id": "entry-71583",
+          "entry_id": "krdict:71583",
+          "lemma_index": 2,
+          "status": "compatible",
+          "conflicts": [],
+          "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+        }
+      ],
+      "reason": "The represented auxiliary use has the reviewed adjective class."
+    }
+  ]
+}

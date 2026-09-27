@@ -1,4 +1,4 @@
-# Dictionary-backed attachment checks (COV-017aa / COV-017ag)
+# Dictionary-backed attachment checks (COV-017aa / COV-017ag / COV-019m)
 
 `--dict-compatible` keeps headword-matching analyses unless the dictionary supplies
 only conflicting lexical evidence for at least one component. It is an explicit,
@@ -29,6 +29,7 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `intention_verb` | Eleven reviewed verbal intention forms, shared with the engine | 좋으려다가 conflicts; 크려는 retains verbal 크다. |
 | `result_transfer_verb` | Canonical 어다/어다가 | 좋아다 conflicts; 모셔다 retains lexical 모시다. |
 | `negative_copula_command` | Lexical 아니다 with canonical command 으라니 | 아니라니 retains 아니다 + factual 라니, excluding its distinct command hypothesis. |
+| `auxiliary_class` | A represented auxiliary's known class, shared with the engine | 오려나봐 supports inference 보다 (보조 형용사), excluding the trial auxiliary-verb homonym from this reading's hint. |
 
 The present family is shared with the engine: 는다/는다고/는다는/는다면/는답니다/
 는다거나/는다든가/는다네/는다는데/는다며/는다면서/는다니/는단. Attached ㄴ
@@ -63,6 +64,21 @@ matched before the optional filter; raw and headword-only candidates are unchang
 
 ## Homonyms, unknowns and ownership
 
+The [auxiliary class review](auxiliary-dictionary-evaluation.json) and
+[43-case entry ledger](../tests/fixtures/auxiliary-dictionary.json) track 86
+per-entry judgments. Connector-specific 보다/하다 classes and the existing fixed
+auxiliary classes now constrain their own dictionary entries. Known verb/adjective
+classes propagate through 않다/아니하다/못하다; explicit 답다 derivation supplies
+an adjective class. Internal particles do not replace the connector. Two 보다
+slots in 먹어보나보다 independently select trial and inference homonyms.
+
+Unknown lexical heads, ambiguous 고 + 보다/기 + 하다 and 양하다 stay unresolved.
+The engine's copula class remains distinct: the reviewed negative-auxiliary notes
+do not justify converting it to a dictionary adjective class. Later copulas reset
+class inheritance, and general 하다 derivation does not establish a verb class.
+The browser uses the supported entry for its existing dictionary hint; KRDict's
+English hint can still be a romanization rather than a contextual translation.
+
 Each entry must satisfy both the proposed lexical role and the applicable ending
 check. Evidence from different homonyms is never mixed to make an otherwise
 unsupported entry pass. Any compatible entry preserves the lemma slot. If none
@@ -92,7 +108,8 @@ externally constructed analyses with no supported breakdown are unknown.
 `DictionarySession::annotate` adds `readings`, aligned with `WordAnalysis.analyses`.
 Each reading includes a status and lemma-slot assessments. Each entry assessment
 references its dictionary ID, status and conflict reasons, with a morpheme index
-for ending conflicts. `compatible` means only that the entry passes the checks
+for ending conflicts. An `auxiliary_class` conflict references the preceding
+connector's morpheme index, owned by the preceding component. `compatible` means only that the entry passes the checks
 above, not that every ending or sense is licensed.
 
 `Annotation::assess(&Analysis)` evaluates one reading.
@@ -111,7 +128,8 @@ existing input limits.
 
 ## Remaining scope
 
-Further lexical subsets, negative-auxiliary class inheritance, separately segmented
+Further lexical subsets, negative-auxiliary inheritance from dictionary lexical
+homonyms (rather than known represented classes), separately segmented
 으려 + 는 paths, other reporting/
 adnominal/question endings, sense-specific selection, existential paradigms and
 contextual command/wish judgments remain under COV-017/019. Incompatible is not a

@@ -2224,3 +2224,36 @@ remain 130,449 / 73,349. Three sequential local Nix release runs measured compat
 median 1.209s versus 1.201s before, with peak RSS below 29 MiB. These local timings
 include JSONL serialization and are not throughput guarantees. The novel does not
 exercise a new matched path; no novel recall or precision gain is claimed.
+
+## Auxiliary dictionary classes (COV-019m)
+
+The [entry-policy review](auxiliary-dictionary-evaluation.json) resolves the
+preceding batch's 오려나봐 mismatch. Dictionary assessment now shares the engine's
+known auxiliary classes: inference 보다 supports the adjective homonym, trial
+보다 supports the verb homonym, and known classes compose through negatives.
+Unknown lexical/provider classes, ambiguous uses, separately written auxiliaries
+and distinct copula inheritance remain preserved. KRDict's inference hint is
+`boda`; this selects the supported entry without inventing a contextual translation.
+
+The new ledger has 43 cases / 86 per-entry judgments, separate from raw validity
+and whole-reading filter judgments. It tests connector ownership, internal
+particles, 답다, repeated lemma slots, negative inheritance, copula resets,
+missing homonyms, unknown providers, Unicode, bounded caching and CLI parity.
+Across 3,286 surfaces, 324 entry assessments change on 245 surfaces. Raw,
+headword-only and compatible candidate groups remain identical, as do all thirty
+stress hashes. The complete frozen corpus regression passes without baseline edits.
+
+The 81,758-word novel retains 130,449 headword-only analyses / 73,349 tokens with
+readings and 119,628 compatible analyses / 73,294 tokens with readings. Both modes
+change entry assessments for 722 tokens across 239 types, without losing a
+candidate. Three sequential local Nix release runs measured compatible median
+1.210s versus 1.238s before, with peak RSS below 28 MiB. Timing variation is not
+evidence of a speedup; these measurements show no observed material regression.
+
+Rust/web-feature tests, Clippy, formatting, frontend build, browser/HTTP tests,
+inventory checks, x86_64-linux Nix flake checks and packaged web build pass.
+The packaged full-dictionary viewer verifies all 86 judgments, five slot-specific
+hints/source selections and desktop/mobile display. Existing inventory dispositions
+link the new evidence; counts remain 211 scoped / 503 unreviewed / one gap.
+Ordinary lexical-negative homonym consistency, contextual ranking, independent
+Korean review and the remaining checklist families stay open.

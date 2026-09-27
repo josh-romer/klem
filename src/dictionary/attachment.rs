@@ -1,6 +1,7 @@
 //! Scoped lexical attachment evidence, separate from dictionary-free generation.
 //! See docs/dictionary-attachments.md for sources, exceptions and exclusions.
 use super::{Annotation, Compatibility};
+use crate::engine::{PredicateClass, auxiliary_class};
 use crate::{Analysis, LemmaKind, MorphemeKind, WordAnalysis, breakdown::Component};
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeSet;
@@ -23,12 +24,16 @@ pub enum AttachmentRule {
     NegativeCopulaCommand,
     IntentionVerb,
     ResultTransferVerb,
+    AuxiliaryClass,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct AttachmentConflict {
     pub rule: AttachmentRule,
-    /// Index in Analysis::morphemes; absent for a lexical-role conflict.
+    /// Index in Analysis::morphemes; absent for a lexical-role conflict or
+    /// when an externally supplied auxiliary has no preceding connector.
+    /// Auxiliary-class conflicts reference the preceding connector, which
+    /// belongs to the previous lemma, rather than this auxiliary's ending.
     pub morpheme_index: Option<usize>,
 }
 
@@ -86,6 +91,8 @@ impl Annotation {
         };
         let mut lemmas = Vec::with_capacity(analysis.lemmas.len());
         let mut components = order.as_slice();
+        let mut previous_class = None;
+        let mut connector: Option<usize> = None;
         while let Some((Component::Lemma(index), rest)) = components.split_first() {
             let end = rest
                 .iter()
@@ -94,6 +101,15 @@ impl Annotation {
             let morphs = &rest[..end];
             components = &rest[end..];
             let lemma = &analysis.lemmas[*index];
+            let class = match lemma.kind {
+                LemmaKind::Auxiliary => auxiliary_class(
+                    lemma.text.strip_suffix('다').unwrap_or(&lemma.text),
+                    connector.map(|i| analysis.morphemes[i].form.as_str()),
+                    previous_class,
+                ),
+                LemmaKind::Copula => Some(PredicateClass::Copula),
+                _ => None,
+            };
             let ending = morphs.iter().find_map(|c| match c {
                 Component::Morpheme(i) if analysis.morphemes[*i].kind == MorphemeKind::Ending => {
                     Some(*i)
@@ -125,6 +141,20 @@ impl Annotation {
                         conflicts.push(AttachmentConflict {
                             rule: AttachmentRule::LexicalRole,
                             morpheme_index: None,
+                        });
+                    }
+                    if lemma.kind == LemmaKind::Auxiliary
+                        && status == Compatibility::Compatible
+                        && matches!(
+                            (class, matched.entry.pos.as_str()),
+                            (Some(PredicateClass::Verb), "보조 형용사")
+                                | (Some(PredicateClass::Adjective), "보조 동사")
+                        )
+                    {
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::AuxiliaryClass,
+                            morpheme_index: connector,
                         });
                     }
                     // Dictionary classes belong to the lexical head, not its
@@ -178,6 +208,20 @@ impl Annotation {
                 status: alternatives(entries.iter().map(|e| e.status)),
                 entries,
             });
+            // Preserve only represented structural knowledge, as the engine
+            // does. A dictionary homonym must not lend its lexical class to a
+            // different reading. Copulas reset the previous class; 답다 is an
+            // explicitly adjectival derivation, unlike general 하다 suffixes.
+            previous_class = if morphs.iter().any(|c| {
+                matches!(c, Component::Morpheme(i)
+                    if analysis.morphemes[*i].kind == MorphemeKind::Suffix
+                    && analysis.morphemes[*i].form == "답다")
+            }) {
+                Some(PredicateClass::Adjective)
+            } else {
+                class
+            };
+            connector = ending;
         }
         let status = if lemmas
             .iter()

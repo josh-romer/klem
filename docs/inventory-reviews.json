@@ -7,9 +7,10 @@
       "source_sha256": "1cf2d85ba20accaf29c937d34d26d23f86591016955b73438f3889fb26647873",
       "status": "scoped",
       "checklist": [
-        "COV-019d"
+        "COV-019d",
+        "COV-019m"
       ],
-      "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged.",
+      "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense.",
       "remaining": "This disposition covers only the expressive left-class boundary, not all nine senses of this entry. Unknown lexical adjective/verb identity, lexical-subset and contextual compatibility, and other connector/prefinal restrictions remain open.",
       "evidence": [
         {
@@ -26,6 +27,16 @@
         },
         {
           "path": "docs/auxiliary-left-hada-evaluation.json"
+        },
+        {
+          "path": "tests/auxiliary_dictionary.rs",
+          "test": "auxiliary_entry_judgments_preserve_ownership_and_alternatives"
+        },
+        {
+          "path": "tests/fixtures/auxiliary-dictionary.json"
+        },
+        {
+          "path": "docs/auxiliary-dictionary-evaluation.json"
         }
       ],
       "judgments": [
@@ -13681,9 +13692,10 @@
       "source_sha256": "5e535b671c27f4ffb2d53cc19c83a3fb2961a4254fa5d17883f791919dd78335",
       "status": "scoped",
       "checklist": [
-        "COV-019j"
+        "COV-019j",
+        "COV-019m"
       ],
-      "scope": "Sense 5 interrupted-intention contraction before 보다: 으려다/으려다가 with right 으니/으면 only, preserving joined lemma order and a Verb class.",
+      "scope": "Sense 5 interrupted-intention contraction before 보다: 으려다/으려다가 with right 으니/으면 only, preserving joined lemma order and a Verb class. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense.",
       "remaining": "Other connector senses, right prefinal/ending classes, contextual senses and Korean review remain open.",
       "evidence": [
         {
@@ -13700,6 +13712,16 @@
         },
         {
           "path": "docs/intention-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/auxiliary_dictionary.rs",
+          "test": "auxiliary_entry_judgments_preserve_ownership_and_alternatives"
+        },
+        {
+          "path": "tests/fixtures/auxiliary-dictionary.json"
+        },
+        {
+          "path": "docs/auxiliary-dictionary-evaluation.json"
         }
       ],
       "judgments": [
@@ -14831,9 +14853,10 @@
       "source_sha256": "c6c04cc2d47e7566612a9f7bc4660d6a44a2c87de90b3044ac5a96d38f1685ca",
       "status": "scoped",
       "checklist": [
-        "COV-019l"
+        "COV-019l",
+        "COV-019m"
       ],
-      "scope": "Sense 1 inference 보다 after 으려나 with ordered joined components and represented Adjective inflection; other senses remain independent.",
+      "scope": "Sense 1 inference 보다 after 으려나 with ordered joined components and represented Adjective inflection; other senses remain independent. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense.",
       "remaining": "Contextual senses, other auxiliary links/internal particles, broader lexical constraints and independent Korean review remain open.",
       "evidence": [
         {
@@ -14850,6 +14873,16 @@
         },
         {
           "path": "docs/ryeona-evaluation.json"
+        },
+        {
+          "path": "tests/auxiliary_dictionary.rs",
+          "test": "auxiliary_entry_judgments_preserve_ownership_and_alternatives"
+        },
+        {
+          "path": "tests/fixtures/auxiliary-dictionary.json"
+        },
+        {
+          "path": "docs/auxiliary-dictionary-evaluation.json"
         }
       ],
       "judgments": [

@@ -998,6 +998,18 @@ The grammar fixture also adds expression -려는 (86688), keeping -으려는
 (70 required / 52 forbidden), including homonyms, component ownership and the
 observed 노래다 ambiguity. All raw hypotheses and headword matches remain.
 
+`krdict-auxiliary-dictionary.json` contains 32 lexical entries from the September
+2026 Korean Basic Dictionary export for COV-019m. It retains English equivalents,
+all sense/attachment notes and one example group per sense, excluding idiom/proverb
+records that reuse lexical IDs. Attribution: National Institute of Korean Language;
+license: [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+`auxiliary-dictionary.json` records 86 per-entry policy judgments in 43 cases,
+with stable IDs, exact roles/morphemes, source URLs and conflict ownership. These
+judge dictionary evidence, not raw candidate validity or contextual sense ranking.
+The source review and complete candidate comparison are in
+[`auxiliary-dictionary-evaluation.json`](../../docs/auxiliary-dictionary-evaluation.json).
+The older `krdict-auxiliary-classes.json` remains a separate supplemental fixture.
+
 `krdict-ryeona.json` contains 76 lexical entries for COV-017ah / COV-019l from
 the September 2026 NIKL Korean Basic Dictionary export. All selected homonyms,
 senses, notes, English translations and first example groups remain; word/related

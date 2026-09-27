@@ -929,7 +929,7 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
 }
 
 #[derive(Clone, Copy)]
-enum PredicateClass {
+pub(crate) enum PredicateClass {
     Verb,
     Adjective,
     Copula,
@@ -938,7 +938,7 @@ enum PredicateClass {
 // Classes belong to a particular auxiliary use, not every homonym of a lemma.
 // Unclassified lexical heads stay unknown; negative auxiliaries inherit a
 // known preceding class. KRDict's 54-entry inventory supplies these classes.
-fn auxiliary_class(
+pub(crate) fn auxiliary_class(
     stem: &str,
     connector: Option<&str>,
     previous: Option<PredicateClass>,

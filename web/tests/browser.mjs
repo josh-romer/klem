@@ -258,8 +258,12 @@ try {
       return unit !== "관용구" && unit !== "속담";
     }).map((entry) => entry.val),
   );
+  const auxiliaryClasses = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-auxiliary-dictionary.json"), "utf8"),
+  );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
       ...ryeona.LexicalResource.Lexicon.LexicalEntry,
       ...attachmentConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...resultConnectives.LexicalResource.Lexicon.LexicalEntry,
@@ -496,6 +500,57 @@ try {
   await page.locator(".breakdown-word").first().locator(".breakdown-part").nth(1).click();
   await page.locator(".entry-choices button").filter({hasText: "-려는"}).click();
   await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=86688"]'));
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // A connector's known auxiliary class selects its supported homonym hint.
+  // The same headword can have different evidence in two slots of one reading.
+  const auxiliaryLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/auxiliary-dictionary.json"), "utf8"));
+  const auxiliaryPath = (a, c) => JSON.stringify(a.lemmas.map(l => [l.text, l.kind])) === JSON.stringify(c.lemmas.map(l => [l.text, l.kind]))
+    && JSON.stringify(a.morphemes.map(m => [m.form, m.kind])) === JSON.stringify(c.morphemes.map(m => [m.form, m.kind]));
+  for (const c of auxiliaryLedger.cases) {
+    const data = await (await post("analyze", {text: c.surface})).json();
+    const token = data.records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a, c));
+    assert(index >= 0, c.id);
+    for (const j of c.judgments) {
+      const e = token.dictionary.readings[index].lemmas[j.lemma_index].entries.find(e => e.id === j.entry_id);
+      assert.equal(e.status, j.status, `${c.id}: ${j.entry_id}`);
+      assert.deepEqual(e.conflicts, j.conflicts, c.id);
+    }
+  }
+  const auxiliaryText = "오려나봐 먹어봐 먹어보나보다 먹고싶지않다";
+  await submit(page, auxiliaryText);
+  await waitHeading(page, "오려나봐");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  const auxiliaryData = await (await post("analyze", {text: auxiliaryText})).json();
+  const auxiliaryWordIndices = auxiliaryData.records.flatMap((r, i) => r.analysis ? [i] : []);
+  for (const [i, caseId, slot, entryId] of [
+    [0, "aux-class-inference", 1, "krdict:62249"],
+    [1, "aux-class-trial", 1, "krdict:62171"],
+    [2, "aux-class-same-lemma-trial", 1, "krdict:62171"],
+    [2, "aux-class-same-lemma-inference", 2, "krdict:62249"],
+    [3, "aux-class-negative-adjective-71583", 2, "krdict:71583"],
+  ]) {
+    const c = auxiliaryLedger.cases.find(c => c.id === caseId);
+    const recordIndex = auxiliaryWordIndices[i];
+    const index = auxiliaryData.records[recordIndex].analysis.analyses.findIndex(a => auxiliaryPath(a, c));
+    const word = page.locator(".breakdown-word").nth(i);
+    await word.locator("select").selectOption(String(index));
+    const position = auxiliaryData.breakdowns[recordIndex][index].findIndex(p => p.lemma === slot);
+    assert.equal(await word.locator(".part-gloss").nth(position).innerText(), auxiliaryData.glosses[entryId]);
+    await word.locator(".breakdown-part").nth(position).click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), entryId.split(":")[1]);
+  }
+  const auxiliaryDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const auxiliaryExport = JSON.parse(await readFile(await (await auxiliaryDownload).path(), "utf8"));
+  const auxiliaryExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: auxiliaryText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(auxiliaryExport.records, auxiliaryExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-auxiliary-classes-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-auxiliary-classes-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Whole lexical adverbs survive both filters with their own role and gloss.
   const focusText = "아직도 퍽도 너무도 자세히는 일찍부터 아직까지도 오늘은 학교도";

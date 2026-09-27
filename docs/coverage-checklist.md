@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ah/018a–k/018m–n/019a–g/019i–l/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ah/018a–k/018m–n/019a–g/019i–m/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -1120,16 +1120,22 @@ review remains open under the completion review below.
   and `ryeona-class-boundary-*` ledger cases, [tests](../tests/ryeona.rs),
   dictionary/CLI/browser parity and the [source report](ryeona-evaluation.json).
 
-- [ ] **COV-019m — Dictionary evidence for known auxiliary classes.**
-  The engine treats inference 보다 after 으려나 as adjectival, but dictionary
-  assessments still accept both auxiliary-verb 62171 and auxiliary-adjective
-  62249. The packaged viewer consequently displays “try” for 오려나봐.
-  [The captured assessment](ryeona-evaluation.json) records this mismatch.
-  Propagate known structural classes into per-entry evidence and homonym/gloss
-  selection, preserving ambiguous classes, unknown providers, negative inheritance,
-  separately written auxiliaries and valid alternative readings. Add source-backed
-  dictionary judgments, ownership/CLI/browser checks and novel comparisons; this
-  is distinct from contextual sense ranking or a new morphological connector.
+- [x] **COV-019m — Dictionary evidence for known auxiliary classes.**
+  Shared structural classes now constrain individual auxiliary dictionary entries.
+  오려나봐 supports inference 보다 (62249), while 먹어봐 supports trial 보다
+  (62171); repeated 보다 slots can choose different homonyms. Known negative-class
+  inheritance and 답다 derivation compose through owned connectors, including
+  internal particles. Unknown provider POS, ambiguous classes, separately written
+  auxiliaries and valid alternative groups remain. Copula inheritance is preserved
+  as a distinct class, not assumed to be adjectival; ordinary lexical-negative
+  inheritance still needs a separate homonym-consistency audit under COV-019.
+  Evidence: [86 per-entry judgments in 43 cases](../tests/fixtures/auxiliary-dictionary.json),
+  [ownership/filter/CLI regressions](../tests/auxiliary_dictionary.rs), browser
+  homonym/source/export checks, and [candidate/novel comparisons](auxiliary-dictionary-evaluation.json).
+  Across 3,286 tracked surfaces, 324 entry assessments change on 245 surfaces;
+  raw, headword-only and compatible candidate groups and all 30 stress hashes
+  remain unchanged. This repairs dictionary evidence and display selection;
+  contextual sense ranking and new morphology are separate work.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

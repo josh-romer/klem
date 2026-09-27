@@ -870,6 +870,39 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-short-reports-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
+  const ryeogoCases = recipientLedger.cases.filter(c => c.id.startsWith("ryeogo-"));
+  assert.equal(ryeogoCases.length, 60);
+  for (const c of ryeogoCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a=>danikkaPath(a,j)), j.verdict === "required", c.id);
+  }
+  const ryeogoText = "학생다우려고 학생다우려고요 학생다우시려고 학생다웠으려고 넓으려고 풀었으려고 학생이려고";
+  await submit(page, ryeogoText); await waitHeading(page, "학생다우려고");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["학생","답","으려고"]],[1,["학생","답","으려고","요"]],[2,["학생","답","시","으려고"]],[3,["학생","답","었","으려고"]],[4,["넓","으려고"]],[5,["풀","었","으려고"]],[6,["학생","이","으려고"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 0) {
+      await word.locator(".breakdown-part").nth(2).click();
+      await page.locator(".entry-choices button").filter({hasText:"-으려고"}).first().click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=69067"]'));
+    }
+  }
+  assert.match(await page.locator(".breakdown-word").first().textContent(), /rhetorical question/);
+  const ryeogoDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const ryeogoExport = JSON.parse(await readFile(await (await ryeogoDownload).path(), "utf8"));
+  const ryeogoExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:ryeogoText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(ryeogoExport.records,ryeogoExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-ryeogo-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-ryeogo-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   const llagoCases = recipientLedger.cases.filter(c => c.id.startsWith("llago-"));
   assert.equal(llagoCases.length, 125);
   for (const c of llagoCases) {

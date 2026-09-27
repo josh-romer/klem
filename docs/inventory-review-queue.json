@@ -27,7 +27,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "f9e7036035374df015074bb5086aed9b871374dd9d6941f42daf22df4a1ec39f",
+    "docs/coverage-checklist.md": "2f07acc8d89273a148b0a4396c4e3b160c790c6bff0c0d79373af33740c9c82f",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
     "docs/danikka-evaluation.json": "a96097a93cd994b8f1b4dde8a91803e08f1a93300956547f2283e60ccf9999e4",
@@ -120,7 +120,7 @@
     "tests/fixtures/krdict-llachimyeon.json": "e52bab62a2b6ed1ad409736dfbaecb3a35944f61d42e9bab3b4555cf4fa0a279",
     "tests/fixtures/krdict-necessity.json": "5f37d701bb0de166de41e30da7ee763f852a18fd21caa4fbec0e3e91eec30041",
     "tests/fixtures/krdict-quoted-bakke.json": "e6e164a1bfeabeb9b70724a9ab78e86f0f4bd76e6bdca414fa9c7bb7c4dddd85",
-    "tests/fixtures/validity.json": "860c3be1737e776730d6bf7c0f886303437325910bc2c24dfbd271afe44d7075",
+    "tests/fixtures/validity.json": "f0c729bd6b32e555d10c6a69e974dafc6efb4401eff5be3eff34d72a64fb83ef",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
     "tests/jimaneun.rs": "f49f4ed45712b4365d0bd16f8e37fc882bc9079a2c711d0d806542a7e300d217",
@@ -157,8 +157,8 @@
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "0327af3789651214ae9e6b366b5960a2c80391e38a550e0ab789f871df9aa1ba",
-    "web/tests/browser.mjs": "64a5efbdade10af9d4f9cf6b13206db3cef27470f2fd524a4179bb66af19ce54"
+    "web/src/grammar-labels.json": "9c4015d96d22560eee8e8a0795380d00d74f5b5cb72b786881b6fd415fa287cc",
+    "web/tests/browser.mjs": "c32150ff86c0f3ce9f44de2c64e8cac71c43db7155dd14f1e2b4617fdfed864d"
   },
   "counts": {
     "entries": 715,
@@ -173,8 +173,8 @@
       "unreviewed": 391,
       "gap": 1
     },
-    "with_catalog_links": 375,
-    "with_judgment_citations": 362
+    "with_catalog_links": 376,
+    "with_judgment_citations": 363
   },
   "entries": [
     {
@@ -42016,7 +42016,12 @@
         ]
       },
       "source_sha256": "10ea71cb1706e1b6e6f2f46b31840b3bb52922c4f681a3bb73f0988a37229bc0",
-      "catalog": [],
+      "catalog": [
+        {
+          "form": "-으려고",
+          "kind": "ending"
+        }
+      ],
       "cited_judgments": [
         {
           "case": "llago-source-68846-0",
@@ -42075,6 +42080,11 @@
         },
         {
           "case": "llago-source-68846-9",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-학생이려고",
           "judgment": "path",
           "verdict": "required"
         }
@@ -51725,7 +51735,13 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "ryeogo-derived-short-neighbor",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
         "status": "unreviewed"
@@ -52174,6 +52190,61 @@
           "case": "llago-source-69067-9",
           "judgment": "path",
           "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-넓으려고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-풀었으려고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-학생다우려고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-학생다우려고요",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-학생다우려고요요",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ryeogo-derived-학생다우셨으려고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-학생다우시려고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-학생다우으려고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ryeogo-derived-학생다웠었으려고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-학생다웠으려고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ryeogo-derived-학생답으려고",
+          "judgment": "path",
+          "verdict": "forbidden"
         }
       ],
       "inventory_evidence": [],

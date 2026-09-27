@@ -3204,3 +3204,24 @@ or add -(으)ㄹ라고 as an auxiliary intention connector.
 12 senses and all 50 example groups, test both dictionary filters and CLI parity,
 and leave unknown alternative hypotheses unjudged. Broader outer particles,
 contextual meaning and independent Korean review remain open.
+
+
+## Derived rhetorical -(으)려고 (partial COV-017aw)
+
+The final rhetorical sense of KRDict 69067 allows adjectives, independently of
+its intention/change connective senses. Derived 답다 now uses its existing
+ㅂ-irregular boundary in 학생다우려고 and composes with honorific/past and
+polite 요. 학생답으려고 is not a valid spelling of that derived path. The
+short 으려 entry has no corresponding rhetorical adjective sense and retains
+its existing boundary. Both long allomorph source entries are linked from the
+browser label, which includes rhetorical questions as well as intention/change.
+
+The [source review](ryeogo-source-review.json) preserves the competing notes
+for direct and shortened expressions. It does not establish a universal POS or
+tense restriction: the broader connective/auxiliary audit remains open, with
+explicit preservation checks for conflicted expansions. In the reviewed
+direct finite 하다/들다 constructions (own endings 는다/다/어요/습니다),
+non-honorific prefinals on the immediately preceding owner and represented
+copulas are excluded. Earlier owners and right-hand tense remain available.
+Lexical adjectives stay hypotheses; broad dictionary conflicts and other
+auxiliary endpoints are not inferred.

@@ -1198,6 +1198,17 @@ pub(crate) fn auxiliary_class(
     }
 }
 
+// Direct finite intention constructions reviewed in COV-017aw. Related
+// shortened expressions have conflicting attachment notes (see the source
+// review), so do not extrapolate this check to every following 하다 form.
+fn finite_intention_auxiliary(stem: &str, morphs: &[Morpheme]) -> bool {
+    matches!(stem, "하" | "들")
+        && morphs
+            .iter()
+            .find(|m| m.kind == MorphemeKind::Ending)
+            .is_some_and(|m| matches!(m.form.as_str(), "는다" | "다" | "어요" | "습니다"))
+}
+
 fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
     if !a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary) {
         return true;
@@ -1207,6 +1218,18 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
     let mut connector = None;
     let mut previous_report_stative = false;
     for lemma in &a.lemmas {
+        // The copular rhetorical ending (학생이려고?) is not the intention
+        // connector in 학생이려고 한다. The class belongs to the left owner.
+        if lemma.kind == LemmaKind::Auxiliary
+            && connector == Some("으려고")
+            && matches!(previous, Some(PredicateClass::Copula))
+            && finite_intention_auxiliary(
+                lemma.text.strip_suffix('다').unwrap_or(&lemma.text),
+                &a.morphemes[cursor..],
+            )
+        {
+            return false;
+        }
         // Continuative/resultative 있다 and honorific 계시다 select verbs.
         // Check the immediately preceding represented role, including classes
         // inherited through negatives; an unknown lexical head stays unknown.
@@ -1516,6 +1539,9 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐지만"
                 | "으냐니까"
                 | "으려나"
+                // KRDict 69067 also has a final rhetorical adjective sense.
+                // Keep derived 답다 beside lexical adjectives such as 넓다.
+                | "으려고"
                 | "으리라"
                 | "으리"
                 | "으리라고"
@@ -2512,6 +2538,19 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
         false
     };
     if !bare_link {
+        return false;
+    }
+    // A final rhetorical -(으)려고 permits past (풀었으려고?), but the
+    // direct finite intention construction licenses only honorific 시 here.
+    // Inspect this connector's owner, preserving earlier and right-hand tense.
+    if connector == "으려고"
+        && finite_intention_auxiliary(&right.stem, &right.morphs)
+        && left.morphs[..index]
+            .iter()
+            .rev()
+            .take_while(|m| m.kind != MorphemeKind::Ending)
+            .any(|m| m.kind == MorphemeKind::Prefinal && m.form != "시")
+    {
         return false;
     }
     // Necessity/intention belongs outside progressive 고 있다/계시다:

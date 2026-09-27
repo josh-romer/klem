@@ -969,15 +969,39 @@ review remains open under the completion review below.
   See the [candidate/source/performance evaluation](llago-evaluation.json).
 
 - [ ] **COV-017aw — Intention connective versus final -(으)려고 licenses.**
-  Existing raw paths include 먹겠으려고, 먹었으려고한다 and
-  학생이려고한다. KRDict 68846/69067 distinguish verbal intention/change
+  The initial audit found 먹겠으려고, 먹었으려고한다 and 학생이려고한다.
+  The latter finite constructions are now constrained as described below. KRDict 68846/69067 distinguish verbal intention/change
   connectives from final rhetorical senses (including 넓으려고,
   풀었으려고 and 학생이려고). Review the connective's owning prefinal and
   lexical/auxiliary class without removing those final homonyms. Audit the
-  asymmetric adjective notes and missing derived 학생다우려고 path with
-  additional sources before assigning dictionary conflicts. COV-017av preserves
+  asymmetric adjective notes with additional sources before assigning dictionary
+  conflicts; the previously missing derived 학생다우려고 path is now present. COV-017av preserves
   all 25 source-example groups as regression evidence; it does not certify
   the full attachment space of these two existing entries.
+  **Partial implementation:** derived 학생다우려고 now has the adjective path,
+  and the browser label includes the rhetorical sense. Sixty candidate judgments
+  cover the derived path and direct 하다/들다 constructions ending in 는다,
+  다, 어요 or 습니다. These finite constructions reject a preceding represented
+  copula or non-honorific prefinal, preserving earlier owners and right-hand tense.
+  The [22-entry source review](ryeogo-source-review.json) records broader
+  adjective/copula and tense notes in related shortened expressions. Their full
+  expansions and lexical adjective/coercive readings remain unresolved; four
+  explicit preservation checks prevent blanket pruning. Broader dictionary
+  conflicts and standalone prefinal restrictions still need review. See the
+  [candidate and corpus evaluation](ryeogo-evaluation.json). Rust/stress, browser
+  and Nix/package checks pass; all frozen corpus reports and the complete
+  dictionary-filtered novel output are byte-identical. This item remains open.
+
+- [ ] **COV-017ax — Remaining shortened intention expressions.**
+  Add and review -(으)려니, -(으)려니까, -(으)려더라, -(으)려던,
+  -(으)려면서 and -(으)려든지 using the twelve full entries preserved in the
+  [source review](ryeogo-source-review.json). Seven recorded probes lack the
+  single-predicate canonical ending path: 먹으려니까, 가려니까, 먹으려던,
+  먹으려면서, 먹으려든지, 먹으려더라 and 가려니. 먹으려든지 currently
+  contains 먹다 through a separate auxiliary 들다 analysis; that is not evidence
+  for the shortened 하다 expression. Preserve alternatives while auditing each
+  source's adjective/copula, honorific, past/modal and allomorph notes alongside
+  its full expansion. Those conflicts also govern the remaining COV-017aw work.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

@@ -7066,9 +7066,10 @@
       "status": "scoped",
       "checklist": [
         "COV-017s",
-        "COV-017af"
+        "COV-017af",
+        "COV-017ag"
       ],
-      "scope": "Following-ending license of recovered 더, using this entry together with the retrospective source 85794. Existing homonymous senses and other attachment conditions are not collapsed. Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "scope": "Following-ending license of recovered 더, using this entry together with the retrospective source 85794. Existing homonymous senses and other attachment conditions are not collapsed. Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles. The optional dictionary policy now checks lexical adjective conflicts for this exact reviewed family, retaining verb homonyms and unknown classes.",
       "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope. Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
@@ -7108,6 +7109,20 @@
         },
         {
           "path": "docs/result-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "connective_attachment_checks_preserve_homonyms_and_unknown_classes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -13735,9 +13750,10 @@
       "source_sha256": "de6326ca4a99f4df29ff457bc418c1c904455837b4c0d8336fdb22032b4a0551",
       "status": "scoped",
       "checklist": [
-        "COV-017ae"
+        "COV-017ae",
+        "COV-017ag"
       ],
-      "scope": "Canonical 으려거든: eu allomorphs, irregulars, verb attachment, honorific-only recovered prefinals and existing ordered connective particles. Expression homonyms remain explicit dictionary alternatives.",
+      "scope": "Canonical 으려거든: eu allomorphs, irregulars, verb attachment, honorific-only recovered prefinals and existing ordered connective particles. Expression homonyms remain explicit dictionary alternatives. The optional dictionary policy now checks lexical adjective conflicts for this exact reviewed family, retaining verb homonyms and unknown classes.",
       "remaining": "Contextual conditional/intention choice, lexical classes, wider particle distribution and independent Korean review remain open.",
       "evidence": [
         {
@@ -13754,6 +13770,20 @@
         },
         {
           "path": "docs/intention-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "connective_attachment_checks_preserve_homonyms_and_unknown_classes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -13788,9 +13818,10 @@
       "source_sha256": "7b67fbc7e30e9a46341a231ff9783a2c22d466db71de5d4529c722e938daf1cf",
       "status": "scoped",
       "checklist": [
-        "COV-017ae"
+        "COV-017ae",
+        "COV-017ag"
       ],
-      "scope": "Canonical 으려거든: eu allomorphs, irregulars, verb attachment, honorific-only recovered prefinals and existing ordered connective particles. Expression homonyms remain explicit dictionary alternatives.",
+      "scope": "Canonical 으려거든: eu allomorphs, irregulars, verb attachment, honorific-only recovered prefinals and existing ordered connective particles. Expression homonyms remain explicit dictionary alternatives. The optional dictionary policy now checks lexical adjective conflicts for this exact reviewed family, retaining verb homonyms and unknown classes.",
       "remaining": "Contextual conditional/intention choice, lexical classes, wider particle distribution and independent Korean review remain open.",
       "evidence": [
         {
@@ -13807,6 +13838,20 @@
         },
         {
           "path": "docs/intention-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "connective_attachment_checks_preserve_homonyms_and_unknown_classes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -14024,9 +14069,10 @@
       "source_sha256": "8ac67a85e791808e14c8c1864caf08b5260d3ecb061279a04fe2092f434a7982",
       "status": "scoped",
       "checklist": [
-        "COV-017af"
+        "COV-017af",
+        "COV-017ag"
       ],
-      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles. The optional dictionary policy now checks lexical adjective conflicts for this exact reviewed family, retaining verb homonyms and unknown classes.",
       "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
@@ -14043,6 +14089,20 @@
         },
         {
           "path": "docs/result-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "connective_attachment_checks_preserve_homonyms_and_unknown_classes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -14069,9 +14129,10 @@
       "source_sha256": "7cf50805648f61f15d913f694d106af4896eb13818116e5967fd648062329246",
       "status": "scoped",
       "checklist": [
-        "COV-017af"
+        "COV-017af",
+        "COV-017ag"
       ],
-      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles. The optional dictionary policy now checks lexical adjective conflicts for this exact reviewed family, retaining verb homonyms and unknown classes.",
       "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
@@ -14088,6 +14149,20 @@
         },
         {
           "path": "docs/result-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "connective_attachment_checks_preserve_homonyms_and_unknown_classes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -14206,9 +14281,10 @@
       "source_sha256": "b4ad88a4ff1cea5453ce85435fa2d8bbacf84d54db9acd0836204319d303e5f3",
       "status": "scoped",
       "checklist": [
-        "COV-017af"
+        "COV-017af",
+        "COV-017ag"
       ],
-      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles. The optional dictionary policy now checks lexical adjective conflicts for this exact reviewed family, retaining verb homonyms and unknown classes.",
       "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
@@ -14225,6 +14301,20 @@
         },
         {
           "path": "docs/result-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "connective_attachment_checks_preserve_homonyms_and_unknown_classes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -14251,9 +14341,10 @@
       "source_sha256": "894cb200ac0c600e2d8a13b8db6b4d7d10f7a4bd0ddcf30432b12ca40d4e0c37",
       "status": "scoped",
       "checklist": [
-        "COV-017af"
+        "COV-017af",
+        "COV-017ag"
       ],
-      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles. The optional dictionary policy now checks lexical adjective conflicts for this exact reviewed family, retaining verb homonyms and unknown classes.",
       "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
@@ -14270,6 +14361,20 @@
         },
         {
           "path": "docs/result-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "connective_attachment_checks_preserve_homonyms_and_unknown_classes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -14292,9 +14397,10 @@
       "source_sha256": "8f12a6b5deabb9569f5ac1d2a6fc6bbd4129ee2549f4b73bccfe36e4f974f696",
       "status": "scoped",
       "checklist": [
-        "COV-017af"
+        "COV-017af",
+        "COV-017ag"
       ],
-      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles. The optional dictionary policy now checks lexical adjective conflicts for this exact reviewed family, retaining verb homonyms and unknown classes.",
       "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
@@ -14311,6 +14417,20 @@
         },
         {
           "path": "docs/result-connectives-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "connective_attachment_checks_preserve_homonyms_and_unknown_classes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -14327,6 +14447,38 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:79262",
+      "source_sha256": "b61193ab78c9fe689540275858888532144e96ebaaacb2b1cec0b340303ad89a",
+      "status": "gap",
+      "checklist": [
+        "COV-017ah"
+      ],
+      "scope": "Source-backed question allomorph lacks a canonical 으려나 analysis in current probes. Full source notes and unchanged raw outputs are recorded; expression homonyms remain separate.",
+      "remaining": "Implement and test the ending family with its allomorph, lexical-class, prefinal and homonym distinctions; contextual choice and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
+        }
+      ],
+      "judgments": []
+    },
+    {
+      "id": "krdict:79263",
+      "source_sha256": "fbdc3061fcd379bf32a818b0590b0435b731603622801616b2aabf8088843e03",
+      "status": "gap",
+      "checklist": [
+        "COV-017ah"
+      ],
+      "scope": "Source-backed question allomorph lacks a canonical 으려나 analysis in current probes. Full source notes and unchanged raw outputs are recorded; expression homonyms remain separate.",
+      "remaining": "Implement and test the ending family with its allomorph, lexical-class, prefinal and homonym distinctions; contextual choice and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "docs/attachment-connectives-evaluation.json"
+        }
+      ],
+      "judgments": []
     }
   ]
 }

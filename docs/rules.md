@@ -2495,8 +2495,8 @@ retains all six ending and four auxiliary entries. Both forms select bare verbs;
 recovered 시/었/겠/더 and represented adjective/copula classes are rejected.
 For example, 빌려다 and 주워다가 recover 빌리다 and 줍다. Lexical 모시다
 remains in 모셔다(가), since its 시 is part of the stem. Unknown lexical
-predicates remain hypotheses; dictionary presence and the finite compatibility
-policy do not enforce every new lexical or semantic restriction.
+predicates remain hypotheses. COV-017ag adds dictionary-backed adjective
+conflicts for this family; lexical senses and clause semantics remain unjudged.
 
 The NIKL teaching-grammar report, section 3.3.19 (printed pp.213–214), supports
 short 어다 and excludes recovered prefinals. Its clause-level subject, object,
@@ -2517,3 +2517,15 @@ The complete GSD 내려다 and 쳐다도 sentences concern looking down/up.
 Their recovered annotation components are reported without treating compound
 semantics as independent proof of result transfer. Compound segmentation and
 contextual interpretation remain outside this bounded connector change.
+
+### Dictionary classes for intention/result forms (COV-017ag)
+
+The raw engine retains unknown lexical classes. The optional
+[attachment policy](dictionary-attachments.md) now rejects adjective-only
+lexical entries before the same eleven verbal-intention and two result-transfer
+forms used by the engine's represented-class checks. Verb homonyms and unknown
+provider classes remain; honorifics/outer particles do not change the class.
+The ending is checked against its own component, preserving adjective +
+expressive 하다 + verbal ending chains. No broad 려 prefix rule is used:
+neighboring forms have different senses and attachment licenses.
+The raw rule and headword-only results remain unchanged.

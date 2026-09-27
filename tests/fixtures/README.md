@@ -902,8 +902,8 @@ These excerpts are adapted from the September 2026 KRDict export by the National
 Institute of Korean Language under CC BY-SA 2.0 KR. Changes: every selected
 homonym/sense, English equivalents only, first example group per sense, omit
 WordForm/RelatedForm/global metadata and idiom subentries, and reformat JSON.
-Source/license links are above. The catalog now has 324 forms, 456 source IDs
-and 457 grammar fixture entries; these are integration fixtures, not gold analyses.
+Source/license links are above. The catalog now has 324 forms, 457 source IDs
+and 458 grammar fixture entries; these are integration fixtures, not gold analyses.
 
 `kaist-short-clauses.conllu` retains complete, byte-identical development
 sentences MH2_0149-s11 and MH2_0169-s5 from the pinned KAIST corpus, under its
@@ -986,3 +986,14 @@ dev-s837 and dev-s107 byte-for-byte under the existing corpus attribution.
 The GSD directional look compounds are annotation matches, not evidence for a
 generic result-transfer + 보다 auxiliary rule. Research is paraphrased in
 `docs/result-connectives-evaluation.json`; no research PDF is redistributed.
+
+`krdict-attachment-connectives.json` adds 모시다, 노래 and 노랗다 for
+COV-017ag, reusing other lexical entries from `krdict-report-ni.json` and
+`krdict-attachments.json`. It preserves every selected sense/usage note,
+English translation and first example group from the September 2026 NIKL
+export; word/related forms and idiom subentries are omitted, under
+[CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+The grammar fixture also adds expression -려는 (86688), keeping -으려는
+(86717) selectable. The separate dictionary-policy ledger gains 122 cases
+(70 required / 52 forbidden), including homonyms, component ownership and the
+observed 노래다 ambiguity. All raw hypotheses and headword matches remain.

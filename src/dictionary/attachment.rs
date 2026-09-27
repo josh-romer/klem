@@ -21,6 +21,8 @@ pub enum AttachmentRule {
     PresentDeclarativeVerb,
     BareAdjectivalQuestion,
     NegativeCopulaCommand,
+    IntentionVerb,
+    ResultTransferVerb,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -136,6 +138,10 @@ impl Annotation {
                         let verb = matched.entry.pos == "동사";
                         let rule = if crate::engine::present_declarative(form) && adjective {
                             Some(AttachmentRule::PresentDeclarativeVerb)
+                        } else if adjective && crate::engine::verbal_intention(form) {
+                            Some(AttachmentRule::IntentionVerb)
+                        } else if adjective && crate::engine::result_connective(form) {
+                            Some(AttachmentRule::ResultTransferVerb)
                         } else if bare && verb && crate::engine::adjectival_question(form) {
                             // Existential/honorific question paradigms remain
                             // COV-019h. Do not decide them from a broad POS label.

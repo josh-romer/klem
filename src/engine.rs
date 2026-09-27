@@ -348,11 +348,11 @@ fn intention_connective(form: &str) -> bool {
     )
 }
 
-fn verbal_intention(form: &str) -> bool {
+pub(crate) fn verbal_intention(form: &str) -> bool {
     intention_connective(form) || matches!(form, "으려는" | "으려는가" | "으려는지")
 }
 
-fn result_connective(form: &str) -> bool {
+pub(crate) fn result_connective(form: &str) -> bool {
     matches!(form, "어다" | "어다가")
 }
 

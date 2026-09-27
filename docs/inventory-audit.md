@@ -18,7 +18,8 @@ The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
 The [manual ledger](inventory-reviews.json) currently contains **207 scoped
-reviews**, **one observed gap with unresolved acceptability**, and **507 entries
+reviews**, **three observed gaps** (two missing question allomorphs and the
+unresolved 마다 attachment), and **505 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence

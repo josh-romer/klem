@@ -20,8 +20,12 @@ impl Fixture {
         let path =
             std::env::temp_dir().join(format!("klem-attachments-{}-{name}.db", std::process::id()));
         import_krdict(
-            &["krdict-report-ni.json", "krdict-attachments.json"]
-                .map(|s| PathBuf::from("tests/fixtures").join(s)),
+            &[
+                "krdict-report-ni.json",
+                "krdict-attachments.json",
+                "krdict-attachment-connectives.json",
+            ]
+            .map(|s| PathBuf::from("tests/fixtures").join(s)),
             &path,
             "attachment-fixture",
         )
@@ -83,11 +87,91 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     })
     .unwrap();
     assert!(report.passed(), "{:?}", report.violations);
+    assert_eq!((report.required_total, report.forbidden_total), (109, 76));
     assert_eq!(
         report.required_total + report.forbidden_total,
         suite.cases.len()
     );
     assert!(!report.review_queue.is_empty());
+}
+
+#[test]
+fn connective_attachment_checks_preserve_homonyms_and_unknown_classes() {
+    let fixture = Fixture::new("connective-evidence");
+    let db = fixture.open();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    let engine = Lemmatizer::new();
+    let cases: Vec<_> = suite()
+        .cases
+        .into_iter()
+        .filter(|c| c.id.starts_with("attachment-connectives-") && c.id.ends_with("-homonym"))
+        .collect();
+    assert_eq!(cases.len(), 13);
+    for case in cases {
+        let word = engine.analyze_word(&case.surface).unwrap();
+        let form = &case.judgments[0].morphemes.as_ref().unwrap()[0];
+        let a = word
+            .analyses
+            .iter()
+            .find(|a| {
+                a.lemmas.len() == 1
+                    && a.lemmas[0].text == "크다"
+                    && a.morphemes.len() == 1
+                    && a.morphemes[0].form == *form
+            })
+            .unwrap();
+        let mut annotation = dictionary.annotate(&word).unwrap();
+        let assessed = annotation.assess(a);
+        assert_eq!(assessed.status, Compatibility::Compatible);
+        let entries = &assessed.lemmas[0].entries;
+        let verb = entries.iter().find(|e| e.id == "krdict:66584").unwrap();
+        assert_eq!(verb.status, Compatibility::Compatible);
+        let adjective = entries.iter().find(|e| e.id == "krdict:66586").unwrap();
+        assert_eq!(adjective.status, Compatibility::Incompatible);
+        assert_eq!(adjective.conflicts.len(), 1);
+        assert_eq!(adjective.conflicts[0].morpheme_index, Some(0));
+        assert_eq!(
+            adjective.conflicts[0].rule,
+            if matches!(form.as_str(), "어다" | "어다가") {
+                AttachmentRule::ResultTransferVerb
+            } else {
+                AttachmentRule::IntentionVerb
+            }
+        );
+
+        // Unknown provider classes cannot be replaced by another homonym's
+        // known adjective class; each entry supplies its own evidence.
+        let matches = annotation
+            .lemmas
+            .iter_mut()
+            .find(|m| m.lemma == a.lemmas[0])
+            .unwrap();
+        let verb = matches
+            .entries
+            .iter_mut()
+            .find(|e| e.entry.id == "krdict:66584")
+            .unwrap();
+        verb.entry.pos = "unmapped provider class".into();
+        verb.pos_compatibility = pos_compatibility(&matches.lemma, &verb.entry);
+        assert_eq!(annotation.assess(a).status, Compatibility::Unknown);
+        let mut filtered = word.clone();
+        annotation.filter(&mut filtered, DictionaryFilter::Compatible);
+        assert!(filtered.analyses.contains(a));
+
+        let matches = annotation
+            .lemmas
+            .iter_mut()
+            .find(|m| m.lemma == a.lemmas[0])
+            .unwrap();
+        let verb = matches
+            .entries
+            .iter_mut()
+            .find(|e| e.entry.id == "krdict:66584")
+            .unwrap();
+        verb.entry.pos = "명사".into();
+        verb.pos_compatibility = pos_compatibility(&matches.lemma, &verb.entry);
+        assert_eq!(annotation.assess(a).status, Compatibility::Incompatible);
+    }
 }
 
 #[test]

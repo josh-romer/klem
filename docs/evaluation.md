@@ -2149,3 +2149,38 @@ Nix release runs give compatible median 1.195s versus 1.209s before, with peak
 RSS below 29 MiB. Timing includes JSONL serialization and is a local observation,
 not a throughput guarantee. Raw measurements and individual changes are in the
 source report.
+
+### Dictionary connective classes (COV-017ag)
+
+The [source/output review](attachment-connectives-evaluation.json) adds 122
+policy judgments (70 required / 52 forbidden), bringing the separate dictionary
+ledger to 185 cases (109 / 76). Across 3,162 raw/stress/policy surfaces, raw and
+headword-only candidates are unchanged. The compatible filter removes 52
+individually tracked adjective conflicts; verb homonyms and unknown classes
+remain. The broad comparison found 노래다 → 노랗다 + 어다, now paired with
+a preservation judgment for 노래 + 이다 + 다. All 30 stress fingerprints and
+the frozen corpus baselines remain unchanged. This policy change does not
+claim a raw corpus recall gain; development misses remain 99 KAIST / 146 GSD.
+
+The catalog adds -려는 (86688), giving 324 forms / 457 source IDs / 458 grammar
+fixture entries. The review queue retains 207 scoped reviews and now records
+three observed gaps with 505 unreviewed entries. Two new gaps are the missing
+-(으)려나 question allomorphs; their full notes, separate expression homonyms
+and raw probes are preserved under COV-017ah. Negative-auxiliary lexical-class
+inheritance, contextual sense selection and independent Korean review remain open.
+
+Rust/web-feature and release tests, frozen corpus regression, Clippy, formatting,
+frontend build, browser/HTTP checks and inventory verification pass. Nix flake
+checks and the packaged web build pass on x86_64-linux. The packaged full-dictionary
+API/CLI checks all 122 new judgments; desktop/mobile inspection verifies the
+unmatched adjective-only word remains visible, verb homonyms use their own gloss,
+and auxiliary/copula components retain their order.
+
+All novel candidates are identical under both filters: compatible totals remain
+119,628 analyses / 73,294 matched tokens; headword-only totals remain 130,449 /
+73,349, across 81,758 word tokens. Per-entry conflict evidence adds 2,368 JSONL
+bytes per mode without removing valid homonym alternatives. Three sequential
+local Nix release runs measured compatible median 1.197s versus 1.200s before,
+with peak RSS below 29 MiB. This is a local timing observation, including JSONL
+serialization, not a throughput guarantee. No novel precision or recall gain is
+claimed. Raw measurements and comparisons are retained in the source report.

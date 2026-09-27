@@ -1,4 +1,4 @@
-# Dictionary-backed attachment checks (COV-017aa)
+# Dictionary-backed attachment checks (COV-017aa / COV-017ag)
 
 `--dict-compatible` keeps headword-matching analyses unless the dictionary supplies
 only conflicting lexical evidence for at least one component. It is an explicit,
@@ -26,6 +26,8 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `lexical_role` | Existing broad POS-to-role mapping | 가늘다 as a nominal base before omitted 이다 conflicts with its adjective-only entry. |
 | `present_declarative_verb` | Lexical predicates with the shared canonical present-declarative family, including honorific 시 | 가는다니 → 가늘다 + 는다니 conflicts; 먹는다니 remains. |
 | `bare_adjectival_question` | Bare lexical predicates with 으냐/으냐는/으냐며/으냐면서/으냐니/으냔 | 길으냐니 → 긷다 + 으냐니 conflicts; 좋으냐니 remains. |
+| `intention_verb` | Eleven reviewed verbal intention forms, shared with the engine | 좋으려다가 conflicts; 크려는 retains verbal 크다. |
+| `result_transfer_verb` | Canonical 어다/어다가 | 좋아다 conflicts; 모셔다 retains lexical 모시다. |
 | `negative_copula_command` | Lexical 아니다 with canonical command 으라니 | 아니라니 retains 아니다 + factual 라니, excluding its distinct command hypothesis. |
 
 The present family is shared with the engine: 는다/는다고/는다는/는다면/는답니다/
@@ -45,6 +47,19 @@ illustrates 행복하란, and
 [NIKL's consultation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=318597)
 explains wish uses of some adjective commands/proposals. 행복하란 and 행복하자
 therefore remain. Broader command restrictions need lexical and contextual review.
+
+The [connective extension](attachment-connectives-evaluation.json) adds the exact
+forms 으려거든/으려기에/으려는데/으려다/으려다가/으려더니/으려도/
+으려야/으려는/으려는가/으려는지 and 어다/어다가. KRDict notes select
+verbs for these forms. It does not apply a prefix-wide 려 restriction: 으려면,
+으려고 and 을는지 retain source-listed adjective uses. The check follows the
+lexical head's own ending, including after honorifics and before outer particles.
+In 좋아하려다가보면 and 좋아해다주었다 the restrictive ending belongs to
+auxiliary 하다, so lexical 좋다 must not be rejected. The exact 122 new policy
+cases include the observed irregular-derived 노래다 → 노랗다 + 어다 conflict
+and preservation of the distinct noun 노래 + 이다 + 다 reading. The policy ledger
+now has 185 cases (109 required / 76 forbidden). All are generated and headword
+matched before the optional filter; raw and headword-only candidates are unchanged.
 
 ## Homonyms, unknowns and ownership
 
@@ -96,7 +111,8 @@ existing input limits.
 
 ## Remaining scope
 
-Further lexical subsets, negative-auxiliary class inheritance, other reporting/
+Further lexical subsets, negative-auxiliary class inheritance, separately segmented
+으려 + 는 paths, other reporting/
 adnominal/question endings, sense-specific selection, existential paradigms and
 contextual command/wish judgments remain under COV-017/019. Incompatible is not a
 spelling-error diagnosis, and compatible/unknown is not a correctness guarantee.

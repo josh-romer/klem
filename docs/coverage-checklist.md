@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–af/018a–k/018m–n/019a–g/019i–k/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ag/018a–k/018m–n/019a–g/019i–k/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,9 +174,9 @@ review remains open under the completion review below.
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
   The [manual review ledger](inventory-reviews.json) records 207 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–af/018e–k/018m–n/019d–g/019i–k/020d–h; 507 entries have no disposition in this
-  ledger yet, including entries with implemented behavior elsewhere. One additional
-  entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
+  dispositions from COV-016/017m–n/017p–z/017aa–ag/018e–k/018m–n/019d–g/019i–k/020d–h; 505 entries have no disposition in this
+  ledger yet, including entries with implemented behavior elsewhere. Three entries record observed gaps: two question-ending allomorphs
+  (COV-017ah) are missing, and 마다 (COV-018l) has unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
   [review workflow](inventory-audit.md#persistent-entry-review-queue).
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–af implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ag implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -605,7 +605,8 @@ review remains open under the completion review below.
   unknown without their preceding word, not automatically conflicting. Wish
   uses 행복하란/행복하자 remain; this is not a blanket adjective-command ban.
   The [separate dictionary-policy ledger](../tests/fixtures/dictionary-attachments.json)
-  has 63 exact cases (39 required, 24 forbidden); all are present before filtering
+  initially had 63 exact cases (39 required, 24 forbidden); COV-017ag expands
+  it to 185 cases. All judgments are present before filtering
   and after headword-only filtering. The raw rule API and `--dict-only` candidate
   groups remain unchanged across 2,389 regression surfaces. Per-entry evidence,
   component ownership, Unicode/cache behavior, CLI/library parity and browser
@@ -710,6 +711,35 @@ review remains open under the completion review below.
   without losing prior gold recovery. Directional 내려다/쳐다도 annotation
   matches do not establish generic 어다 + 보다 composition. Clause-level
   transfer semantics, transitivity, lexical restrictions and Korean review remain.
+
+- [x] **COV-017ag — Dictionary classes for reviewed intention/result endings.**
+  The optional compatible filter shares the engine's eleven verbal intention
+  and two result-transfer forms. Lexical adjective-only entries conflict;
+  verbal homonyms remain, and unknown provider classes are not guessed.
+  Per-entry reasons identify `intention_verb` or `result_transfer_verb` and
+  the ending's component index. Honorifics/outer particles do not alter the
+  lexical class; auxiliary 하다 retains ownership of its own ending in
+  좋아하려다가보면 and 좋아해다주었다. Neighboring 으려면/으려고 and
+  을는지 retain their adjective readings. Negative-auxiliary class inheritance,
+  other ending families and contextual senses remain unreviewed.
+  Evidence: 122 [dictionary-policy cases](../tests/fixtures/dictionary-attachments.json)
+  (70 required / 52 forbidden), [entry/unknown/CLI/cache tests](../tests/dictionary_attachments.rs),
+  browser filtering/gloss/export/source selection, and
+  [source/candidate comparison](attachment-connectives-evaluation.json).
+  Across 3,162 surfaces, raw and headword-only candidates are unchanged; the
+  compatible filter removes 52 individually tracked conflicts. All 30 stress
+  fingerprints remain unchanged. The additional 노래다 → 노랗다 + 어다
+  conflict has its own regression; 노래 + 이다 + 다 remains. The catalog adds
+  source -려는 (86688) beside -으려는 (86717), preserving both expression IDs.
+
+- [ ] **COV-017ah — Missing -(으)려나 question family.** The dictionary
+  audit found that 좋으려나 and 먹으려나 lack the canonical 으려나 ending.
+  Review ending allomorphs 79262/79263 separately from shortened expression
+  homonyms 86503/86715: their verb/adjective/copula and prefinal notes differ.
+  Preserve existing lexical/particle alternatives and add source-backed
+  positive/negative cases, grammar labels, dictionary/browser evidence and
+  corpus comparisons. [Current probes and complete notes](attachment-connectives-evaluation.json)
+  record this implementation gap; no blanket 려-prefix attachment rule is valid.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–n implement post-ending, outer choice, emphatic,

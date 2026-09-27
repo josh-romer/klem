@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const attachmentConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-attachment-connectives.json"), "utf8"));
   const resultConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-result-connectives.json"), "utf8"));
   const intentionConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-intention-connectives.json"), "utf8"));
   const uncertainty = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-uncertainty.json"), "utf8"));
@@ -258,6 +259,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...attachmentConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...resultConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...intentionConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...uncertainty.LexicalResource.Lexicon.LexicalEntry,
@@ -451,6 +453,48 @@ try {
   await page.getByLabel("Dictionary matches only").uncheck();
   assert.equal(await page.getByLabel("Exclude known grammar conflicts").isChecked(), false);
   assert.equal(await page.getByLabel("Exclude known grammar conflicts").isDisabled(), true);
+  // The finite lexical check shares the reviewed intention/result families.
+  const connectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/dictionary-attachments.json"), "utf8"));
+  const connectiveCases = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-connectives-"));
+  assert.equal(connectiveCases.length, 122);
+  for (const c of connectiveCases) {
+    const data = await (await post("analyze", {text: c.surface})).json();
+    const token = data.records[0];
+    for (const j of c.judgments) {
+      const matches = a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds);
+      const index = token.analysis.analyses.findIndex(matches);
+      assert(index >= 0, `${c.id}: retain raw hypothesis`);
+      assert.equal(token.dictionary.readings[index].status === "incompatible", j.verdict === "forbidden", c.id);
+    }
+  }
+  const connectiveText = "크려는 좋으려다가 커다 좋아해다주었다";
+  await submit(page, connectiveText);
+  await waitHeading(page, "크려는");
+  await page.getByLabel("Dictionary matches only").check();
+  assert(await page.locator(".breakdown-word").nth(1).locator("option").count() > 0);
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  assert(await page.locator(".breakdown-word").nth(1).locator("select").isDisabled());
+  const connectiveData = await (await post("analyze", {text: connectiveText})).json();
+  const connectiveExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: connectiveText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  for (const [i, expected] of [[0, ["크", "으려는"]], [2, ["크", "어다"]], [3, ["좋", "어", "하", "여다", "주", "었", "다"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const choice = await select.locator("option").evaluateAll((options, parts) => options.find(o => o.textContent.replace(/^\d+\. /, "") === parts.join(" + "))?.value, expected);
+    assert.ok(choice, expected.join(" + "));
+    await select.selectOption(choice);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), expected);
+    if (i !== 3) assert.equal(await word.locator(".part-gloss").first().innerText(), connectiveData.glosses["krdict:66584"]);
+  }
+  const connectiveDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const connectiveExport = JSON.parse(await readFile(await (await connectiveDownload).path(), "utf8"));
+  assert.deepEqual(connectiveExport.records, connectiveExpected);
+  await page.locator(".breakdown-word").first().locator(".breakdown-part").nth(1).click();
+  await page.locator(".entry-choices button").filter({hasText: "-려는"}).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=86688"]'));
+  await page.getByLabel("Dictionary matches only").uncheck();
   // Whole lexical adverbs survive both filters with their own role and gloss.
   const focusText = "아직도 퍽도 너무도 자세히는 일찍부터 아직까지도 오늘은 학교도";
   await submit(page, focusText);
@@ -1292,8 +1336,8 @@ try {
   }
   for (const [word, expected, form, label, id] of [
     ["먹으려는", ["먹", "으려는"], "으려는", "Intending / about to", 86717],
-    ["살려는", ["살", "으려는"], "으려는", "Intending / about to", 86717],
-    ["먹으시려는", ["먹", "시", "으려는"], "으려는", "Intending / about to", 86717],
+    ["살려는", ["살", "으려는"], "으려는", "Intending / about to", 86688],
+    ["먹으시려는", ["먹", "시", "으려는"], "으려는", "Intending / about to", 86688],
     ["먹자는", ["먹", "자는"], "자는", "Quoted suggestion", 83896],
     ["먹어보자는", ["먹", "어", "보", "자는"], "자는", "Quoted suggestion", 83896],
     ["아니냐는", ["아니", "냐는"], "냐는", "Quoted question", 86030],
@@ -1310,17 +1354,20 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
     if (word === "살려는") assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
     await breakdown.getByRole("button", { name: `${form} ${label}`, exact: true }).click();
+    if (form === "으려는") {
+      await page.locator(".entry-choices button").filter({hasText: id === 86688 ? "-려는" : "-으려는"}).click();
+    }
     await page.waitForFunction((headword) =>
       document.querySelector(".entry-heading h2")?.textContent?.startsWith(headword)
       && document.querySelector(".entry-meta")?.textContent?.includes("품사 없음"),
-      `-${form}`,
+      id === 86688 ? "-려는" : `-${form}`,
     );
     assert.match(
       await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"),
       new RegExp(`ParaWordNo=${id}`),
     );
     const result = await (await post("analyze", { text: word })).json();
-    assert.deepEqual(result.grammar[`-${form}`].map((e) => e.id), [`krdict:${id}`]);
+    assert.deepEqual(result.grammar[`-${form}`].map((e) => e.id).sort(), grammarLabels[`-${form}`].sources.map(e => `krdict:${e.id}`).sort());
   }
   for (const [word, expected, form, label, id] of [
     ["있습니다만", ["있", "습니다", "만"], "만", "But / although", 86555],

@@ -1835,3 +1835,49 @@ fn quoted_restrictive_recovers_the_complete_discovery_sentence() {
     assert!(case.matched);
     assert!(report.cases.values().all(|c| c.matched));
 }
+
+#[test]
+fn familiar_reports_recover_annotated_training_targets() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-danda.conllu").as_slice(),
+        Corpus::Kaist,
+        "danda-kaist",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:M2TA_084-s11/4", "많단다", &["많다"][..]),
+        (
+            "id:M2TA_084-s36/6",
+            "아이디어란다",
+            &["아이디어", "이다"][..],
+        ),
+        ("id:M2TA_084-s57/3", "있단다", &["있다"][..]),
+        ("id:M2TA_084-s69/4", "많아진단다", &["많다", "지다"][..]),
+        ("id:M2TA_084-s78/5", "있단다", &["있다"][..]),
+        ("id:M2TA_084-s93/5", "않단다", &["않다"][..]),
+        ("id:M2TA_084-s109/3", "없단다", &["없다"][..]),
+        ("id:M2TA_084-s115/6", "많단다", &["많다"][..]),
+        ("id:M2TA_084-s164/4", "있단다", &["있다"][..]),
+        ("id:M2TA_084-s186/4", "차이란다", &["차이", "이다"][..]),
+        ("id:M2TA_084-s196/3", "많단다", &["많다"][..]),
+        ("id:MH2_0072-s580/12", "얻는단다", &["얻다"][..]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-danda.conllu").as_slice(),
+        Corpus::Gsd,
+        "danda-gsd",
+    )
+    .unwrap();
+    {
+        let (id, surface, expected) = ("id:train-s2513/3", "있단다", &["있다"][..]);
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}

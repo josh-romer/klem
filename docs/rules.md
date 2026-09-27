@@ -2938,3 +2938,27 @@ adjectival-question policy evaluates each homonym separately: an unknown
 standalone auxiliary can keep a reading even when its lexical-verb homonyms
 conflict. General 냐고 and unknown lexical hypotheses remain.
 See the [individual-case review](quoted-bakke-evaluation.json).
+
+
+## Familiar informative and reported endings (COV-017ao)
+
+The ending inventory includes 단다/는단다, 란다/으란다,
+냔다/느냔다/으냔다, 잔다 and 더란다. Attached ㄴ and full 는
+normalize to 는단다; copular/factual 란다 and command 으란다 remain
+separate candidates. Informative and reported senses share a component where
+appropriate; the engine does not insert an implicit reporting 하다 or speaker.
+
+Prefinals, irregular spelling, auxiliary ownership, represented 답다 and
+copulas follow the reviewed source boundaries. Both 먹다 + 더 + 란다 and
+먹다 + 더란다 remain available. Known lexical verb entries conflict with bare
+단다 under `--dict-compatible`; adjective homonyms, uncertain existential
+classes and standalone auxiliary entries are assessed individually. These
+restrictions do not move through prefinals, derivation, auxiliaries or copulas.
+Command/proposal wishes are not rejected solely because a lexical head has
+adjective POS. Raw lexical hypotheses remain separate from dictionary policy.
+
+[The evaluation](danda-evaluation.json) records fourteen complete KRDict source
+entries, 144 candidate judgments, 23 dictionary-policy judgments, thirteen
+annotated training targets, frozen corpus comparisons and novel alternatives.
+The candidate queue remains unjudged; these checks do not measure linguistic
+precision or choose a contextual reading.

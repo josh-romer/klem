@@ -26,7 +26,8 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "0a59ab06b082c8db7a8afc48742461d985fd7251b65ff6b9a4b2500fb7286222",
+    "docs/coverage-checklist.md": "80bb1e0efd60a0b60a6c4c15d4bc348ff3694c5c9db9080da030c8e3ba16ec14",
+    "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
@@ -39,8 +40,8 @@
     "docs/factual-prefinal-evaluation.json": "460e7619e554153cf572e6db83d0786906cfeb1744aa11ab59506657da85f227",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "2b3574d879a5cfcb5e4687d64295b71082457ebeb67c8c1f8beb9a9ca8166835",
-    "docs/inventory-reviews.json": "d03c3b26af728e4218a3f68d829a7f311a9731ecd71775184284531f4d0fe2cc",
+    "docs/inventory-audit.md": "ce3e9577539d22ebf50e48a99b95704bb5245f9431f8ca7e90956cddeb29dd6e",
+    "docs/inventory-reviews.json": "cfce99bd43203e47c274bb6c2d1bc400581477ab3f6c70164517140d048a0267",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/llachimyeon-evaluation.json": "086132bdac962ca93a716841860e9b80695d9dfde5874675c9661f944211abba",
     "docs/necessity-ending-evaluation.json": "68069546cd18497fd18878e6cc30cef8d010f0a3efcc288a03f249278953daad",
@@ -86,18 +87,19 @@
     "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/core_case.rs": "556f5fa2df29d0285552bf3e83a5cfbc9610c84c33fb1ac6e1bc02d7c2e5fbcb",
-    "tests/corpus.rs": "f63821fdcb73ad5d82ae36c866610ee32648893b98149cf84012010ea46404e6",
+    "tests/corpus.rs": "19c13e2884067482a5c0b717f27b3fd8de37f5d52c6ebdb23f68f6acab932d10",
+    "tests/danda.rs": "7ac20e77584b520909734f32132a24af40c5cd626db0ad0f73f866149f31943a",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
     "tests/dictionary.rs": "c604d5ae616f24d50dc5d3c8829103e41e57da810b34b19aa7265c67c2ea6f50",
-    "tests/dictionary_attachments.rs": "5f9d13f6df528ebb36dcbb75b0cb976084bd292aae451bcaded50c7ed5784331",
+    "tests/dictionary_attachments.rs": "391936db69c824d8a1023a135b5fe966e2b5d8d059e5e3c57ffa3ffca03fd8f3",
     "tests/doe_endings.rs": "f9da534bcfbbf4ad3c543afa015f541ad4ebebeacf1fb206046e40c68741132f",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
     "tests/extent_particles.rs": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
     "tests/eya.rs": "75f750a84f9169c40d6471880e9cf972e4f5104acec55d100ffbd00f0fddfdfd",
     "tests/fixtures/auxiliary-dictionary.json": "7a858ec78be92ae8867c4e65fb5b607a896a06e4843b0d3156a1a7acf4bb8ade",
-    "tests/fixtures/dictionary-attachments.json": "7a2800b5fce0939ef1a4a7067e54208caea5edc6047827ede8463bbc21d7d2d5",
+    "tests/fixtures/dictionary-attachments.json": "501ccefe3f693c965f7b3f7e09d20537c509bc2075eec2e0e118a14a5fcc0966",
     "tests/fixtures/kaist-additive-particles.conllu": "2de09cb69d1ee5f7a9f62447dcb993632556677cb7a9bc7a0471ac42064115fc",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
     "tests/fixtures/krdict-additive-particles.json": "b125fe0c49e06bd0ed333cccbc3fcbd67330ae6a01d8a2ab2a04d42bd888584a",
@@ -107,7 +109,7 @@
     "tests/fixtures/krdict-llachimyeon.json": "e52bab62a2b6ed1ad409736dfbaecb3a35944f61d42e9bab3b4555cf4fa0a279",
     "tests/fixtures/krdict-necessity.json": "5f37d701bb0de166de41e30da7ee763f852a18fd21caa4fbec0e3e91eec30041",
     "tests/fixtures/krdict-quoted-bakke.json": "e6e164a1bfeabeb9b70724a9ab78e86f0f4bd76e6bdca414fa9c7bb7c4dddd85",
-    "tests/fixtures/validity.json": "e966fa25d863af22da095ad90bdfe86ae52d20406a9a652b18e63cb5ba2d4468",
+    "tests/fixtures/validity.json": "18d3578f73a91f8a98185ed7530dd20102d4ca1143f9c227d55a81d5b06c54e6",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
     "tests/kkaena.rs": "63efa7b0ad133bfabd79b1b85d4a393608361596303c92a07b0e9df8d3fdc0a5",
@@ -139,8 +141,8 @@
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "5d81c45cdc9fc967aa139de1410ca339b28259944434d9e7d69e3ddd9a854572",
-    "web/tests/browser.mjs": "64b30f1a03c51fc9bf84dfb1cefd7c49dadb687e6c6c4f07723b8b60063305fb"
+    "web/src/grammar-labels.json": "cf595a5cba337b0306129e55a3d069305485d0bf648b37b56753ccf33c2eb229",
+    "web/tests/browser.mjs": "ab5e9a656b7d39e3fdab660cd243bf9e1b42d46a314b8ea500f2336ca41cd8b7"
   },
   "counts": {
     "entries": 715,
@@ -151,12 +153,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 427,
-      "scoped": 287,
+      "unreviewed": 423,
+      "scoped": 291,
       "gap": 1
     },
-    "with_catalog_links": 352,
-    "with_judgment_citations": 326
+    "with_catalog_links": 356,
+    "with_judgment_citations": 330
   },
   "entries": [
     {
@@ -10255,11 +10257,138 @@
         ]
       },
       "source_sha256": "e75f6d1eaa049879444e705e4e734b1d7c1a5a15bbf1597e1d9c3bcf92964120",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-는단다",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "danda-auxiliary-먹어본단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-boundary-살는단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-composition-먹으신단다-시-는단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-composition-산단다-는단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-lexical-놀란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-lexical-바란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-lexical-자란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79247-간단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79247-모른단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79247-주신단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79247-지낸단다",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:79247",
+        "source_sha256": "e75f6d1eaa049879444e705e4e734b1d7c1a5a15bbf1597e1d9c3bcf92964120",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ao"
+        ],
+        "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+        "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
+        "evidence": [
+          {
+            "path": "tests/danda.rs",
+            "test": "danda_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "familiar_reports_recover_annotated_training_targets"
+          },
+          {
+            "path": "docs/danda-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "danda-source-79247-간단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79247-모른단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79247-주신단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79247-지낸단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-산단다-는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-먹으신단다-시-는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-먹어본단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-lexical-바란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-lexical-자란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-lexical-놀란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-boundary-살는단다",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -22706,11 +22835,129 @@
         ]
       },
       "source_sha256": "ae63c03aa09150d92681f620c3b21e32c544ed4781a044ee434520006e7d0c90",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-는단다",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "danda-auxiliary-boundary-먹고싶는단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-auxiliary-boundary-먹고있는단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-auxiliary-먹지않는단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-boundary-먹겠는단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-boundary-먹었는단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-boundary-좋단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-boundary-학생답는단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-source-79236-않는단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79236-잃는단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79236-잡아먹는단다",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:79236",
+        "source_sha256": "ae63c03aa09150d92681f620c3b21e32c544ed4781a044ee434520006e7d0c90",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ao"
+        ],
+        "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+        "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
+        "evidence": [
+          {
+            "path": "tests/danda.rs",
+            "test": "danda_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "familiar_reports_recover_annotated_training_targets"
+          },
+          {
+            "path": "docs/danda-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "danda-source-79236-잡아먹는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79236-잃는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79236-않는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-먹지않는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-boundary-먹었는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-boundary-먹겠는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-boundary-좋단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-boundary-학생답는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-boundary-먹고싶는단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-boundary-먹고있는단다",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -27322,11 +27569,210 @@
         ]
       },
       "source_sha256": "c9e77ee8109f2ceb52328ea8d01bc17018165f4ab9aa77516d3254401a24c462",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-단다",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "danda-auxiliary-boundary-먹어보단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-auxiliary-먹고싶단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-auxiliary-먹고있단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-auxiliary-먹어보았단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-auxiliary-좋지않단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-boundary-먹더단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-boundary-학생이단다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "danda-composition-먹었단다-었-단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-composition-먹으시단다-시-단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-composition-뿍단다-단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-composition-좋단다-단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-copula-학생이었단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-derived-학생다웠단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-derived-학생답단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79234-기쁘단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79234-많단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79234-살았단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79234-얻었단다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-79234-힘들었단다",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:79234",
+        "source_sha256": "c9e77ee8109f2ceb52328ea8d01bc17018165f4ab9aa77516d3254401a24c462",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ao"
+        ],
+        "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+        "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
+        "evidence": [
+          {
+            "path": "tests/danda.rs",
+            "test": "danda_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "familiar_reports_recover_annotated_training_targets"
+          },
+          {
+            "path": "docs/danda-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "danda-source-79234-살았단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79234-얻었단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79234-기쁘단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79234-많단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-79234-힘들었단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-좋단다-단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-먹었단다-었-단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-먹으시단다-시-단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-뿍단다-단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-먹어보았단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-먹고싶단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-먹고있단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-좋지않단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-derived-학생답단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-derived-학생다웠단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-copula-학생이었단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-boundary-먹더단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-boundary-학생이단다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-boundary-먹어보단다",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -35385,11 +35831,156 @@
         ]
       },
       "source_sha256": "85e1ffd74e6ab4236139026818bfb21dfbc25e36a684319761057bac4da2e525",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-란다",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "danda-auxiliary-먹어보시란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-composition-먹더란다-더-란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-composition-먹었더란다-었-더-란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-composition-먹으리란다-으리-란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-composition-먹으시란다-시-란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-copula-학생이란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-derived-학생다우시란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-nominalization",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-copula-생신이란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-copula-작가시란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-copula-중이란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-copula-책이란다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "danda-source-copula-친구란다",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:79255",
+        "source_sha256": "85e1ffd74e6ab4236139026818bfb21dfbc25e36a684319761057bac4da2e525",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ao"
+        ],
+        "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+        "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
+        "evidence": [
+          {
+            "path": "tests/danda.rs",
+            "test": "danda_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "familiar_reports_recover_annotated_training_targets"
+          },
+          {
+            "path": "docs/danda-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "danda-source-copula-생신이란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-copula-작가시란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-copula-책이란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-copula-중이란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-source-copula-친구란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-먹으시란다-시-란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-먹더란다-더-란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-먹으리란다-으리-란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-composition-먹었더란다-었-더-란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-auxiliary-먹어보시란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-derived-학생다우시란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-copula-학생이란다",
+            "judgment": "path"
+          },
+          {
+            "case": "danda-nominalization",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

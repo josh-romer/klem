@@ -320,6 +320,7 @@ pub(crate) fn present_declarative(form: &str) -> bool {
             | "는다면서"
             | "는다니"
             | "는단"
+            | "는단다"
     )
 }
 
@@ -328,7 +329,7 @@ pub(crate) fn present_declarative(form: &str) -> bool {
 pub(crate) fn adjectival_question(form: &str) -> bool {
     matches!(
         form,
-        "으냐" | "으냐고" | "으냐는" | "으냐며" | "으냐면서" | "으냐니" | "으냔"
+        "으냐" | "으냐고" | "으냐는" | "으냐며" | "으냐면서" | "으냐니" | "으냔" | "으냔다"
     )
 }
 
@@ -529,6 +530,14 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // KRDict familiar reports: commands allow 시, proposals
+                // are bare, and statement/question/experience bundles reject 더.
+                if (ending.form == "잔다" && !p.morphs.is_empty())
+                    || (matches!(ending.form, "단다" | "냔다" | "느냔다" | "더란다")
+                        && p.morphs.iter().any(|m| m.form == "더"))
+                {
+                    continue;
+                }
                 if ending.form == "느냐고" && p.morphs.iter().any(|m| m.form == "더") {
                     continue;
                 }
@@ -681,6 +690,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "으라면"
                         | "으란"
                         | "으랍니다"
+                        | "으란다"
                         | "으라네"
                         | "으라는데"
                         | "으라거나"
@@ -712,6 +722,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             | "라는"
                             | "라면"
                             | "랍니다"
+                            | "란다"
                             | "라든가"
                             | "라네"
                             | "라는데"
@@ -776,6 +787,20 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "라든가"
                 ) {
                     p.rules.push("ending.quoted_alternative".into());
+                }
+                if matches!(
+                    ending.form,
+                    "단다"
+                        | "는단다"
+                        | "란다"
+                        | "으란다"
+                        | "잔다"
+                        | "냔다"
+                        | "느냔다"
+                        | "으냔다"
+                        | "더란다"
+                ) {
+                    p.rules.push("ending.reporting_familiar".into());
                 }
                 if matches!(ending.form, "답니다" | "는답니다" | "랍니다" | "으랍니다")
                 {
@@ -864,6 +889,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
         "라고",
         "라면",
         "랍니다",
+        "란다",
         "라든가",
         "라네",
         "라는데",
@@ -894,6 +920,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             .into(),
                             "ending".into(),
                         ]);
+                        if ending == "란다" {
+                            p.rules.push("ending.reporting_familiar".into());
+                        }
                         if ending == "랍니다" {
                             p.rules.push("ending.reporting_polite".into());
                         }
@@ -1186,6 +1215,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                         | "자면서"
                         | "자면"
                         | "으랍니다"
+                        | "으란다"
+                        | "잔다"
                         | "으라네"
                         | "으라는데"
                         | "으라거나"
@@ -1216,6 +1247,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                             | "느냐면서"
                             | "느냐니"
                             | "느냔"
+                            | "느냔다"
                     ),
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
@@ -1224,7 +1256,13 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                             || (!report_stative
                                 && matches!(
                                     m.form.as_str(),
-                                    "다거나" | "다든가" | "다네" | "다는데" | "다며" | "다면서"
+                                    "다거나"
+                                        | "다든가"
+                                        | "다네"
+                                        | "다는데"
+                                        | "다며"
+                                        | "다면서"
+                                        | "단다"
                                 ))
                     }
                     Some(PredicateClass::Copula) | None => false,
@@ -1251,7 +1289,10 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
 // Bounded adjective attachment inventory. The known suffix is ㅂ-irregular;
 // arbitrary lexical predicates still retain the engine's regular hypotheses.
 fn dap_suffix_allowed(p: &Predicate) -> bool {
-    if p.morphs.first().is_some_and(|m| m.form == "느냐고") {
+    if p.morphs
+        .first()
+        .is_some_and(|m| matches!(m.form.as_str(), "느냐고" | "느냔다"))
+    {
         return false;
     }
     if !p.stem.ends_with('답') {
@@ -1275,6 +1316,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                         | "자면서"
                         | "자면"
                         | "으랍니다"
+                        | "으란다"
+                        | "잔다"
                         | "으라네"
                         | "으라는데"
                         | "으라거나"
@@ -1311,6 +1354,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐면서"
                 | "으냐니"
                 | "으냔"
+                | "으냔다"
                 | "으려나"
                 | "으리라"
                 | "으리"
@@ -1344,6 +1388,9 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "다니"
             | "다면"
             | "답니다"
+            | "단다"
+            | "냔다"
+            | "더란다"
             | "다며"
             | "다면서"
             | "더라며"
@@ -1504,6 +1551,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                         | "으라면"
                         | "으란"
                         | "으랍니다"
+                        | "으란다"
+                        | "잔다"
                         | "으라네"
                         | "으라는데"
                         | "으라거나"
@@ -1525,6 +1574,9 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                 | "느냐"
                 | "느냐고"
                 | "으냐고"
+                | "느냔다"
+                | "으냔다"
+                | "단다"
                 | "느니라"
                 | "느냐며"
                 | "느냐면서"

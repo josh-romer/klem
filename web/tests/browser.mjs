@@ -267,6 +267,7 @@ try {
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
   const additiveParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-additive-particles.json"), "utf8"));
   const copularClass = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-copular-class.json"), "utf8"));
+  const danda = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danda.json"), "utf8"));
   const quotedBakke = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-quoted-bakke.json"), "utf8"));
   const necessity = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-necessity.json"), "utf8"));
   const llachimyeon = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-llachimyeon.json"), "utf8"));
@@ -292,6 +293,7 @@ try {
       ...hadaComplex.LexicalResource.Lexicon.LexicalEntry,
       ...copularClass.LexicalResource.Lexicon.LexicalEntry,
       ...quotedBakke.LexicalResource.Lexicon.LexicalEntry,
+      ...danda.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
       ...comparisonCase.LexicalResource.Lexicon.LexicalEntry,
@@ -724,6 +726,52 @@ try {
       if (j.verdict === "forbidden") assert.ok(token.dictionary.readings[i].lemmas[0].entries.some(e=>e.conflicts.some(c=>c.rule === "habitual_condition_verb" && c.morpheme_index === j.morphemes.length - 1)));
     }
   }
+  const dandaCases = recipientLedger.cases.filter(c => c.id.startsWith("danda-"));
+  assert.equal(dandaCases.length, 144);
+  const dandaPath = (a, j) => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+    && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+    && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes)
+    && JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds);
+  for (const c of dandaCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a=>dandaPath(a,j)), j.verdict === "required", c.id);
+  }
+  const dandaPolicy = connectiveLedger.cases.filter(c => c.id.startsWith("danda-policy-"));
+  assert.equal(dandaPolicy.length, 23);
+  for (const c of dandaPolicy) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const i = token.analysis.analyses.findIndex(a=>dandaPath(a,j));
+      assert.ok(i >= 0, c.id);
+      assert.equal(token.dictionary.readings[i].status === "incompatible", j.verdict === "forbidden", c.id);
+    }
+  }
+  const dandaText = "좋단다 먹는단다 학생이란다 먹으란다 뭐냔다 먹느냔다 좋으냔다 먹잔다 먹었더란다";
+  await submit(page, dandaText); await waitHeading(page, "좋단다");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["좋","단다"]],[1,["먹","는단다"]],[2,["학생","이","란다"]],[3,["먹","으란다"]],[4,["뭐","이","냔다"]],[5,["먹","느냔다"]],[6,["좋","으냔다"]],[7,["먹","잔다"]],[8,["먹","었","더란다"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 6) {
+      await word.locator(".breakdown-part").last().click();
+      await page.locator(".entry-choices button").filter({hasText:"-으냔다"}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=85925"]'));
+    }
+  }
+  const dandaDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const dandaExport = JSON.parse(await readFile(await (await dandaDownload).path(), "utf8"));
+  const dandaExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:dandaText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(dandaExport.records,dandaExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-danda-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-danda-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   const factualPrefinalCases = recipientLedger.cases.filter(c => c.id.startsWith("factual-prefinals-"));
   assert.equal(factualPrefinalCases.length, 63);
   for (const c of factualPrefinalCases) {

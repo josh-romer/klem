@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–an/018a–k/018m–z/019a–g/019i–o/020a–m/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ao/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 287 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–an/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 427 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 291 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ao/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 423 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -838,6 +838,20 @@ review remains open under the completion review below.
   빼앗느냐고 (MH2_0169-s711/4); no previous matches are lost. This is lexical
   recovery evidence, not a claim of full syntactic parsing or contextual class
   selection. See the [shared evaluation](quoted-bakke-evaluation.json).
+
+- [x] **COV-017ao — Familiar informative and reported endings.** Implemented
+  and validated with Rust, corpus, browser, full-dictionary packaged checks
+  and final Nix CLI/web builds. Covers 단다/는단다, factual 란다 versus command 으란다,
+  냔다/느냔다/으냔다, 잔다 and 더란다. Fourteen full KRDict entries
+  distinguish informative and reported senses without inserting implicit 하다.
+  [144 raw judgments](../tests/danda.rs) preserve prefinal, irregular,
+  auxiliary, 답다 and copula boundaries; 23 separate dictionary-policy judgments
+  preserve homonyms, uncertain existential classes and component ownership.
+  The complete KAIST/GSD training fixtures recover all 13 selected targets;
+  frozen KAIST test gains 나왔단다 and 있겠단다 without baseline edits.
+  Independent review, contextual interpretation and the unjudged candidates
+  remain open. The synthetic 뿍다 hypothesis has no dictionary entry.
+  See the [source and candidate review](danda-evaluation.json).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

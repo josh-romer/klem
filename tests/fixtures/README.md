@@ -1285,3 +1285,17 @@ Source file hashes and review scope are in
 [the copular attachment evaluation](../../docs/copular-class-evaluation.json).
 The companion policy judgments are agent-authored, with independent Korean
 review pending; the fixture itself is source text, not sentence gold.
+
+`krdict-danda.json` contains 111 primary word/selected grammar-expression
+entries from the pinned September 2026 NIKL Korean Basic Dictionary export,
+under **CC BY-SA 2.0 KR** and the attribution/reuse links above. Full senses,
+attachment notes, examples and forms are retained; equivalents are English only,
+RelatedForm and same-number idioms are omitted. Fourteen ending sources also
+appear in `krdict-grammar-labels.json`. The invented raw lexical hypothesis
+뿍다 has no dictionary entry; dictionary tests keep that omission explicit.
+
+`kaist-danda.conllu` and `gsd-danda.conllu` preserve respectively twelve and one
+complete training sentences from the pinned corpora, under their attribution
+and licenses above. No gold rows, spelling or tags were rewritten; KAIST's
+OrigLemma for 않단다 remains intact. Frozen evaluation gains remain in the
+[evaluation report](../../docs/danda-evaluation.json), not training fixtures.

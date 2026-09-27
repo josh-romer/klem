@@ -20917,6 +20917,318 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:79234",
+      "source_sha256": "c9e77ee8109f2ceb52328ea8d01bc17018165f4ab9aa77516d3254401a24c462",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ao"
+      ],
+      "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+      "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
+      "evidence": [
+        {
+          "path": "tests/danda.rs",
+          "test": "danda_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "familiar_reports_recover_annotated_training_targets"
+        },
+        {
+          "path": "docs/danda-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "danda-source-79234-살았단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79234-얻었단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79234-기쁘단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79234-많단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79234-힘들었단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-좋단다-단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-먹었단다-었-단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-먹으시단다-시-단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-뿍단다-단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-먹어보았단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-먹고싶단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-먹고있단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-좋지않단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-derived-학생답단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-derived-학생다웠단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-copula-학생이었단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-boundary-먹더단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-boundary-학생이단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-boundary-먹어보단다",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79247",
+      "source_sha256": "e75f6d1eaa049879444e705e4e734b1d7c1a5a15bbf1597e1d9c3bcf92964120",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ao"
+      ],
+      "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+      "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
+      "evidence": [
+        {
+          "path": "tests/danda.rs",
+          "test": "danda_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "familiar_reports_recover_annotated_training_targets"
+        },
+        {
+          "path": "docs/danda-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "danda-source-79247-간단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79247-모른단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79247-주신단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79247-지낸단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-산단다-는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-먹으신단다-시-는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-먹어본단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-lexical-바란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-lexical-자란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-lexical-놀란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-boundary-살는단다",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79236",
+      "source_sha256": "ae63c03aa09150d92681f620c3b21e32c544ed4781a044ee434520006e7d0c90",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ao"
+      ],
+      "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+      "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
+      "evidence": [
+        {
+          "path": "tests/danda.rs",
+          "test": "danda_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "familiar_reports_recover_annotated_training_targets"
+        },
+        {
+          "path": "docs/danda-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "danda-source-79236-잡아먹는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79236-잃는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-79236-않는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-먹지않는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-boundary-먹었는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-boundary-먹겠는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-boundary-좋단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-boundary-학생답는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-boundary-먹고싶는단다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-boundary-먹고있는단다",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79255",
+      "source_sha256": "85e1ffd74e6ab4236139026818bfb21dfbc25e36a684319761057bac4da2e525",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ao"
+      ],
+      "scope": "Informative familiar statement ending and related reported expression: source examples, canonical allomorphs, prefinal/irregular and represented auxiliary/derived/copular boundaries, per-entry dictionary compatibility and sourced browser label.",
+      "remaining": "Informative versus reported sense is not selected from context; broader ending/particle licenses and unjudged raw candidates need further review. Independent Korean-language review pending.",
+      "evidence": [
+        {
+          "path": "tests/danda.rs",
+          "test": "danda_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "familiar_reports_recover_annotated_training_targets"
+        },
+        {
+          "path": "docs/danda-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "danda-source-copula-생신이란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-copula-작가시란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-copula-책이란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-copula-중이란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-source-copula-친구란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-먹으시란다-시-란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-먹더란다-더-란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-먹으리란다-으리-란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-composition-먹었더란다-었-더-란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-auxiliary-먹어보시란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-derived-학생다우시란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-copula-학생이란다",
+          "judgment": "path"
+        },
+        {
+          "case": "danda-nominalization",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

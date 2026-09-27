@@ -504,6 +504,11 @@ pub(crate) fn endings() -> &'static [Ending] {
             "냔",
             "느냔",
             "답니다",
+            "단다",
+            "잔다",
+            "냔다",
+            "느냔다",
+            "더란다",
             "다네",
             "다는데",
             "더라네",
@@ -657,6 +662,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("더라며", "더라며", 0),
             ("더라면서", "더라면서", 0),
             ("더라니", "더라니", 0),
+            ("더란다", "더란다", 0),
+            ("냔다", "냔다", 0),
             // KRDict 85653 explicitly illustrates 누구냔.
             ("냔", "냔", 0),
         ] {
@@ -727,6 +734,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라고", "라고", "으라고"),
             ("으라는", "라는", "으라는"),
             ("으란", "란", "으란"),
+            ("으란다", "란다", "으란다"),
             ("으라면", "라면", "으라면"),
             ("으랍니다", "랍니다", "으랍니다"),
             ("으라네", "라네", "으라네"),
@@ -739,6 +747,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으십시오", "십시오", "으십시오"),
             ("으냐", "냐", "으냐"),
             ("으냐고", "냐고", "으냐고"),
+            ("으냔다", "냔다", "으냔다"),
             ("으냐는", "냐는", "으냐는"),
             ("으냐며", "냐며", "으냐며"),
             ("으냐면서", "냐면서", "으냐면서"),
@@ -818,6 +827,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다면서", "다면서", "는다면서", 4),
             ("는다니", "다니", "는다니", 4),
             ("는단", "단", "는단", 4),
+            ("는단다", "단다", "는단다", 4),
             ("는다거나", "다거나", "는다거나", 4),
             ("는다든가", "다든가", "는다든가", 4),
         ] {
@@ -888,6 +898,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라는",
             "라면",
             "랍니다",
+            "란다",
             "라든가",
             "라네",
             "라는데",
@@ -1337,6 +1348,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Recover 익숙히/특별히 behind shortened 익히/특히, using 익숙하다/특별하다 as lookup lemmas; retain the whole-word reading."
         }
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
+        "ending.reporting_familiar" => {
+            "Preserve familiar informative/reported statements, commands, questions, proposals and retrospective reports as distinct canonical endings; no implicit 하다 is inserted."
+        }
         "ending.reporting_polite" => {
             "Recognize a polite informative or reported-speech ending as one grammatical component; its sense and any implicit speaker are not inferred."
         }

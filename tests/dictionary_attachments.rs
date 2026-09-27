@@ -24,6 +24,7 @@ impl Fixture {
                 "krdict-report-ni.json",
                 "krdict-attachments.json",
                 "krdict-attachment-connectives.json",
+                "krdict-expressive-hada.json",
             ]
             .map(|s| PathBuf::from("tests/fixtures").join(s)),
             &path,
@@ -87,12 +88,125 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     })
     .unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (121, 79));
+    assert_eq!((report.required_total, report.forbidden_total), (143, 79));
     assert_eq!(
         report.required_total + report.forbidden_total,
         suite.cases.len()
     );
     assert!(!report.review_queue.is_empty());
+}
+
+#[test]
+fn expressive_hada_checks_each_lexical_homonym_and_negative_dependency() {
+    let fixture = Fixture::new("expressive");
+    let db = fixture.open();
+    let mut dictionary = DictionarySession::new(&db, 0);
+    let engine = Lemmatizer::new();
+    for (surface, head, _connector, status) in [
+        ("커한다", "크다", 0, Compatibility::Compatible),
+        ("읽지않아한다", "읽다", 1, Compatibility::Unknown),
+        ("읽지는않아한다", "읽다", 2, Compatibility::Unknown),
+        ("잘해서", "자다", 0, Compatibility::Unknown),
+        ("꺼려한다", "꺼리다", 0, Compatibility::Unknown),
+        ("내키지않아한다", "내키다", 1, Compatibility::Unknown),
+        ("먹어한다", "먹다", 0, Compatibility::Unknown),
+    ] {
+        let word = engine.analyze_word(surface).unwrap();
+        let a = word
+            .analyses
+            .iter()
+            .find(|a| {
+                a.lemmas[0].text == head
+                    && a.lemmas.last().unwrap().kind == LemmaKind::Auxiliary
+                    && a.lemmas.last().unwrap().text == "하다"
+            })
+            .unwrap();
+        let annotation = dictionary.annotate(&word).unwrap();
+        let assessment = annotation.assess(a);
+        assert_eq!(assessment.status, status, "{surface}");
+        let matched = annotation
+            .lemmas
+            .iter()
+            .find(|m| m.lemma == a.lemmas[0])
+            .unwrap();
+        let mut verbs = 0;
+        for entry in &matched.entries {
+            let evidence = assessment.lemmas[0]
+                .entries
+                .iter()
+                .find(|e| e.id == entry.entry.id)
+                .unwrap();
+            if entry.entry.pos == "동사" {
+                verbs += 1;
+                assert_eq!(evidence.status, Compatibility::Unknown);
+                assert!(evidence.conflicts.is_empty());
+            } else if entry.entry.pos == "형용사" {
+                assert_eq!(evidence.status, Compatibility::Compatible);
+            } else if entry.entry.pos == "보조 동사" {
+                assert_eq!(evidence.status, Compatibility::Unknown);
+            }
+        }
+        assert!(verbs > 0);
+        // An unrelated nominal homonym conflicts with the lexical role; an
+        // unrecognized provider POS must remain unknown instead of guessed.
+        let mut changed = annotation.clone();
+        let entries = &mut changed
+            .lemmas
+            .iter_mut()
+            .find(|m| m.lemma == a.lemmas[0])
+            .unwrap()
+            .entries;
+        entries.retain(|e| e.entry.pos == "동사");
+        assert_eq!(changed.assess(a).status, Compatibility::Unknown);
+        let slot = changed
+            .lemmas
+            .iter_mut()
+            .find(|m| m.lemma == a.lemmas[0])
+            .unwrap();
+        for entry in &mut slot.entries {
+            entry.entry.pos = "명사".into();
+            entry.pos_compatibility = pos_compatibility(&slot.lemma, &entry.entry);
+        }
+        assert_eq!(changed.assess(a).status, Compatibility::Incompatible);
+        let slot = changed
+            .lemmas
+            .iter_mut()
+            .find(|m| m.lemma == a.lemmas[0])
+            .unwrap();
+        slot.entries[0].entry.pos = "unmapped provider class".into();
+        slot.entries[0].pos_compatibility = pos_compatibility(&slot.lemma, &slot.entries[0].entry);
+        assert_eq!(changed.assess(a).status, Compatibility::Unknown);
+        let mut retained = word.clone();
+        changed.filter(&mut retained, DictionaryFilter::Compatible);
+        assert!(retained.analyses.contains(a));
+    }
+    // The uncertainty belongs to this attachment, not every earlier verb or
+    // every use of 하다. A new auxiliary class owns its following connector.
+    for surface in ["읽고싶어한다", "읽게한다", "읽어야한다", "읽어보려한다"] {
+        let word = engine.analyze_word(surface).unwrap();
+        let a = word
+            .analyses
+            .iter()
+            .find(|a| {
+                a.lemmas[0].text == "읽다"
+                    && a.lemmas.last().unwrap().kind == LemmaKind::Auxiliary
+                    && a.lemmas.last().unwrap().text == "하다"
+            })
+            .unwrap();
+        let annotation = dictionary.annotate(&word).unwrap();
+        let assessment = annotation.assess(a);
+        assert_eq!(
+            assessment.lemmas[0].status,
+            Compatibility::Compatible,
+            "{surface}"
+        );
+        assert!(
+            assessment.lemmas[0]
+                .entries
+                .iter()
+                .all(|e| e.status == Compatibility::Compatible)
+        );
+    }
 }
 
 #[test]

@@ -116,6 +116,25 @@ to auxiliary 하다, not lexical 가늘다. Nominalization, later copulas and ad
 suffixes likewise do not lend their ending to another lexical head. Malformed
 externally constructed analyses with no supported breakdown are unknown.
 
+## Lexical uncertainty before expressive 하다 (COV-019o)
+
+KRDict 62888 sense 9 describes adjective + 어 하다, but NIKL also licenses
+[some verbs, including 꺼리다](https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8227).
+[Article 47](https://www.korean.go.kr/kornorms/m/m_regltn.do) gives the negative
+phrase 내키지 않아 하다. A blanket lexical-verb conflict would lose valid paths.
+Each lexical verb entry is therefore assessed as **unknown** at this boundary,
+also through 지 + 않다/아니하다/못하다. A different auxiliary, derivational
+suffix or copula ends that dependency. Adjective entries remain compatible with
+this finite check; no homonym lends its POS to another entry.
+
+Twenty-two additional policy cases bring the whole-reading ledger to 222 cases
+(143 required / 79 forbidden). They preserve both sourced examples and unresolved
+hypotheses such as 잘해서 → 자다 + 어 + 를 + 하다. This is an evidence-status
+correction, not a precision gain or a new rejection rule. Filtering still retains
+unknown readings. The semantic verb subset needs further source/sense review;
+NIKL distinguishes lexical 즐겨 하다 from auxiliary usage. The token engine
+represents joined sequences without validating their spacing.
+
 ## Library and JSON
 
 `DictionarySession::annotate` adds `readings`, aligned with `WordAnalysis.analyses`.

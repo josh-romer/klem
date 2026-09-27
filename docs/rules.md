@@ -2666,3 +2666,18 @@ licensed by this rule, and existing 깨다 + 나, 깨 + 나 and 꽤 + 나 paths 
 Unknown noun heads also remain raw hypotheses. In particular, KRDict lacks 아씨,
 so dictionary filtering can remove a source-attested analysis. Nominal POS alone
 does not establish the intended degree meaning or lexical sense.
+
+## Core cases and emphasis (COV-018t/019n)
+
+Bundled 게로/에게로/한테로 share the ordering stage of split recipient + 로;
+these alternatives retain the written pronoun base (내/네/제). Nominal suffixes
+remain separate. The [source review](core-case-evaluation.json) records case,
+recipient and honorific attachment notes without inferring animacy or discourse roles.
+
+Emphatic adverb attachment is finite: 도대체+가, 맘껏/매번/매일+을, and
+빨리/곧이+를. The 빨리 derivation 빠르다+이 also remains. Full 를 follows
+canonical 어/게/지/고, and 가 follows 지. These particles can intervene before
+an already licensed auxiliary; contracted ㄹ maps to canonical 를. This does
+not license arbitrary particles, ending/auxiliary pairs or adverbs. Example
+물얼봐야지 comes from KRDict's ㄹ entry; 곧이를 comes from NIKL and has no
+곧이 headword in the pinned dictionary. Unknown raw hypotheses remain visible.

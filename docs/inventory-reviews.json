@@ -8,10 +8,11 @@
       "status": "scoped",
       "checklist": [
         "COV-019d",
-        "COV-019m"
+        "COV-019m",
+        "COV-019o"
       ],
-      "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense.",
-      "remaining": "This disposition covers only the expressive left-class boundary, not all nine senses of this entry. Unknown lexical adjective/verb identity, lexical-subset and contextual compatibility, and other connector/prefinal restrictions remain open.",
+      "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense. Lexical verbs before 어 하다, including 지 negatives, are explicitly unknown under dictionary assessment: NIKL licenses some verbs, so adjective-only sense 9 does not justify blanket pruning.",
+      "remaining": "This disposition covers only the expressive left-class boundary, not all nine senses of this entry. Unknown lexical adjective/verb identity, lexical-subset and contextual compatibility, and other connector/prefinal restrictions remain open. Resolve the semantic verb subset with evidence beyond this KRDict entry; 자다+어+를+하다 in 잘해서 remains unjudged.",
       "evidence": [
         {
           "path": "tests/auxiliary_left_class.rs",
@@ -37,6 +38,16 @@
         },
         {
           "path": "docs/auxiliary-dictionary-evaluation.json"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "expressive_hada_checks_each_lexical_homonym_and_negative_dependency"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
         }
       ],
       "judgments": [
@@ -10142,10 +10153,12 @@
       "source_sha256": "d7afd7c8919b7f2d692fbeeace44e96faa1c632d2ee938cedcaa062ddedf0d9c",
       "status": "scoped",
       "checklist": [
-        "COV-018k"
+        "COV-018k",
+        "COV-018t",
+        "COV-019n"
       ],
-      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
-      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles. 가 adds 지-ending emphasis, internal 지+가 before negative auxiliaries, and finite 도대체 adverb emphasis.",
+      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open. Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
       "evidence": [
         {
           "path": "tests/range_case_particles.rs",
@@ -10161,6 +10174,17 @@
         },
         {
           "path": "docs/range-case-evaluation.json"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
         }
       ],
       "judgments": [
@@ -10203,6 +10227,38 @@
         {
           "case": "range-case-forbidden-17",
           "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-도대체",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-boundary-도대체",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-post-ga",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-corpus-ga",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-corpus-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-negative-ga",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-wrong-ga",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-bad-ga-link",
+          "judgment": "path"
         }
       ]
     },
@@ -10211,10 +10267,12 @@
       "source_sha256": "7ba7680ed1c5e5d14cd9b6bb337b1a5553c69ad94555805a23c935d296b27fe5",
       "status": "scoped",
       "checklist": [
-        "COV-018k"
+        "COV-018k",
+        "COV-018t",
+        "COV-019n"
       ],
-      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
-      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles. Full 를 dispatch now reaches reviewed 어/게/지/고 endings and finite 빨리/곧이 adverbs; licensed auxiliary connectors remain enforced.",
+      "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open. Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
       "evidence": [
         {
           "path": "tests/range_case_particles.rs",
@@ -10230,6 +10288,17 @@
         },
         {
           "path": "docs/range-case-evaluation.json"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
         }
       ],
       "judgments": [
@@ -10283,6 +10352,82 @@
         },
         {
           "case": "range-case-forbidden-16",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-빨리",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-derived",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-boundary-빨리",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-boundary-학교",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-post-ji",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-post-eo",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-post-ge",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-post-go",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-corpus-reul",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-try",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-causative",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-progressive",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-final",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adnominal",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-bad-link",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-repeated-link",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-paper",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-spaced-lexical",
           "judgment": "path"
         }
       ]
@@ -16776,6 +16921,690 @@
         },
         {
           "case": "kkaena-repeat",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:66970",
+      "source_sha256": "91b94551febe1102002e2df0b1c4d0fd62bcbdaf62150ef43056d7fa801685b3",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "게로 preserves 내/네/제 surface pronouns; bundled and 게+로 paths coexist.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-게로",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-게로-split",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-게로-only",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-게로-genitive",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-게로-repeat",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-게로-inner-case",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-게로-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-네-게로",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-제-게로",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:69701",
+      "source_sha256": "9147c934d8ec09e1602319595b21ae7232c91bcfeb3b5a76f13cfbfc56f7048d",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "Honorific recipient 께 retains noun, 님 and plural boundaries.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-honorific-recipient",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-honorific-recipient-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-honorific-recipient-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-honorific",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73012",
+      "source_sha256": "3a091215bd5fd2deb14d3115f60a36673bbebc9b87ed51af1c8bcf0afccd3f8a",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "Honorific subject 께서 retains noun, 님 and plural boundaries.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-honorific-subject",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-honorific-subject-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-honorific-subject-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-honorific-plural",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:69713",
+      "source_sha256": "81b337a7ed7175df43e6cb98a03e79639ab58dc7ff486a6ae60c1c368e04388e",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "에게 retains noun and plural recipient paths.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-recipient",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-recipient-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-recipient-verb",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70320",
+      "source_sha256": "e637906032a79e5ff326b3035202f2bd954b25c700f7091537b3768621000a7b",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "에게로 adds bundled direction alongside 에게+로, including the KAIST 작가에게로 example.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-에게로",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-에게로-split",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-에게로-only",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-에게로-genitive",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-에게로-repeat",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-에게로-inner-case",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-에게로-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-recipient-plural",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-recipient-corpus",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70321",
+      "source_sha256": "0d06f9b889764dbd37edd29d1ffb13dee4bdf7b0924f20d7a25d5fa54664edaf",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "에게서 retains nominal source paths and outer topic marking.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-recipient-source",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-recipient-source-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-recipient-source-verb",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:68853",
+      "source_sha256": "741d0a90e418ec720f81c3365e7ad4f725bcf400b342c01a5504dd6bfdf72707",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "에서 retains nominal location/source/agent paths and permits 의; contextual senses stay unresolved.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-locative",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-locative-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-locative-verb",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85784",
+      "source_sha256": "a8d89a2ab343d4217a175c0a464101e4b1ccee552df9f8ce47aec9f181ea7c6c",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "으로 retains non-ㄹ consonant attachment, rejects vowel/ㄹ allomorph mismatch, and composes with 의.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-direction",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-direction-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-direction-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-direction-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-direction-rieul",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86355",
+      "source_sha256": "2e68798d46e8bfab3696fb20d1f7838bd9a3bc2a49f025f7d3e9eb5fdb6e0bb6",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "을 retains consonant-final nominal/plural paths and finite emphatic adverbs 맘껏/매번/매일.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-object",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-object-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-object-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-plural-object",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-맘껏",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-매번",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-매일",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-nominal-매번",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-nominal-매일",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-adverb-boundary-맘껏",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-wrong-eul",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86290",
+      "source_sha256": "176990c2bc3745240ead89c4f8d4154637b53b2ce2b5d7707b5b544ed2b697db",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "의 retains nominal genitive paths and reviewed preceding-particle forms 에서의/으로의.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-genitive",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-genitive-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-locative-genitive",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-direction-genitive",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86289",
+      "source_sha256": "92f10bf5fcad45cca67676395b37a1abb267cb5216f57c5f2f74439f4e928399",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "이 retains consonant-final nominal/plural subject/complement paths; broad adverbial emphasis remains open.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-subject",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-subject-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-subject-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-plural",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:69714",
+      "source_sha256": "3edf2d1a7e9eebe8133e609b2a8ca7334524f5dfc4fc182d7acb762a5d7ae1c9",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "한테 retains colloquial nominal recipient paths.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-colloquial",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-colloquial-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-colloquial-verb",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:83881",
+      "source_sha256": "796ca321c50b4246f1f44cb9146c85bcc43d8894f68c29e864b1c1fa8a772590",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "한테로 adds bundled recipient direction alongside 한테+로.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-한테로",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-한테로-split",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-한테로-only",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-한테로-genitive",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-한테로-repeat",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-한테로-inner-case",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-한테로-verb",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:68864",
+      "source_sha256": "986106d647dc46c93899ea55f93bc2854ed159c7bfa6de61235474fa003608d6",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t"
+      ],
+      "scope": "한테서 retains colloquial nominal source paths.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-colloquial-source",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-colloquial-source-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-colloquial-source-verb",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85760",
+      "source_sha256": "f80d4be314d93c7c31ea0c2c8b8ce145944c3c4f11be4e90498b8ae323c0f174",
+      "status": "scoped",
+      "checklist": [
+        "COV-018t",
+        "COV-019n"
+      ],
+      "scope": "Contracted ㄹ preserves canonical 를 after reviewed 어/게/지/고 ending boundaries, including source 물얼봐야지, and finite 빨리 adverb usage.",
+      "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/core_case.rs",
+          "test": "core_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/core-case-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "core-case-adverb-contracted",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-post-ji-short",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-try-short",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-negative-short",
+          "judgment": "path"
+        },
+        {
+          "case": "core-case-bad-contracted",
           "judgment": "path"
         }
       ]

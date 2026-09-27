@@ -1054,6 +1054,11 @@ pub(crate) fn particles() -> &'static [Particle] {
             // underlying 나/너/저 + 에게 contraction.
             ("게", 1, 0),
             ("게서", 1, 0),
+            // Bundled recipient + directional case; the outer stage matches
+            // the existing 게/에게/한테 + 로 decomposition.
+            ("게로", 2, 0),
+            ("에게로", 2, 0),
+            ("한테로", 2, 0),
             ("한테", 1, 0),
             ("한테다", 1, 0),
             ("한테다가", 1, 0),
@@ -1249,6 +1254,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "particle" => "Remove a particle with licensed order and boundary allomorph.",
         "particle.adverbial_focus" => {
             "An adverbial base can take reviewed focus particles 도/은/는/만/까지/부터 and compatible outer particles. Preserve separate nominal and whole-word hypotheses; dictionary and context determine the lexical class."
+        }
+        "particle.adverbial_case" => {
+            "Recover a source-listed emphatic adverb with 가/을/를, preserving its adverbial role and any separately licensed outer particles."
         }
         "copula" => "Separate a nominal and the affirmative copula 이다.",
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",

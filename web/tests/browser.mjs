@@ -264,6 +264,8 @@ try {
   const shortRecipient = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
+  const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
+  const coreCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-core-case.json"), "utf8"));
   const kkaena = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-kkaena.json"), "utf8"));
   const raConditions = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ra-conditions.json"), "utf8"));
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
@@ -273,6 +275,8 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
+      ...coreCase.LexicalResource.Lexicon.LexicalEntry,
       ...kkaena.LexicalResource.Lexicon.LexicalEntry,
       ...raConditions.LexicalResource.Lexicon.LexicalEntry,
       ...eya.LexicalResource.Lexicon.LexicalEntry,
@@ -608,6 +612,43 @@ try {
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
+  const coreCaseCases=recipientLedger.cases.filter(c=>c.id.startsWith("core-case-"));
+  assert.equal(coreCaseCases.length,105);
+  for(const c of coreCaseCases) {
+    const token=(await (await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments) {
+      const index=token.analysis.analyses.findIndex(a=>JSON.stringify(a.lemmas.map(l=>l.text))===JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l=>l.kind))===JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m=>m.form))===JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m=>m.kind))===JSON.stringify(j.morpheme_kinds));
+      assert.equal(index>=0,j.verdict==="required",c.id);
+      if(index>=0) assert.notEqual(token.dictionary.readings[index].status,"incompatible",c.id);
+    }
+  }
+  const coreCaseText="맘껏을 빨리를 익지가않는다 물얼봐야지 내게로 친구에게로 친구한테로 선생님께서 학생의 책을 집으로 선생님께 친구에게 친구한테 친구에게서 친구한테서 학교에서 학생이 곧이를";
+  await submit(page,coreCaseText); await waitHeading(page,"맘껏을");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const [i,forms,partIndex,sourceId] of [[0,["맘껏","을"],1,86355],[1,["빨리","를"],1,85764],[2,["익","지","가","않","는다"],2,66341],[3,["묻","어","를","보","어야지"],2,85764],[4,["내","게로"],1,66970],[5,["친구","에게로"],1,70320],[6,["친구","한테로"],1,83881],[7,["선생님","께서"],1,73012],[8,["학생","의"],1,86290],[9,["책","을"],1,86355],[10,["집","으로"],1,85784],[11,["선생님","께"],1,69701],[12,["친구","에게"],1,69713],[13,["친구","한테"],1,69714],[14,["친구","에게서"],1,70321],[15,["친구","한테서"],1,68864],[16,["학교","에서"],1,68853],[17,["학생","이"],1,86289]]) {
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,forms.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    await word.locator(".breakdown-part").nth(partIndex).click();
+    await page.waitForFunction(id=>document.querySelector(`a[href*="ParaWordNo=${id}"]`),sourceId);
+  }
+  const coreCaseDownload=page.waitForEvent("download");
+  await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const coreCaseExport=JSON.parse(await readFile(await (await coreCaseDownload).path(),"utf8"));
+  const coreCaseExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:coreCaseText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(coreCaseExport.records,coreCaseExpected);
+  assert(!coreCaseExport.records.filter(r=>r.kind==="word").at(-1).analysis.analyses.some(a=>a.lemmas.some(l=>l.text==="곧이")));
+  await page.screenshot({path:resolve(tmpdir(),"klem-core-case-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-core-case-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   // Degree 깨나 preserves noun/plural structure and existing 깨다/깨/꽤 readings.
   const kkaenaCases = recipientLedger.cases.filter(c=>c.id.startsWith("kkaena-"));
   assert.equal(kkaenaCases.length,27);
@@ -775,6 +816,47 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-vocative-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
+  const expressivePolicies = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-expressive-"));
+  assert.equal(expressivePolicies.length, 22);
+  for (const [cases, policy] of [[expressivePolicies, true]]) {
+    for (const c of cases) {
+      const data = await (await post("analyze", {text: c.surface})).json(), token = data.records[0];
+      for (const j of c.judgments) {
+        const match = a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+          && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+          && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+          && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds);
+        const index = token.analysis.analyses.findIndex(match);
+        assert.equal(index >= 0, policy || j.verdict === "required", c.id);
+        if (index >= 0) assert.equal(token.dictionary.readings[index].status === "incompatible", j.verdict === "forbidden", c.id);
+      }
+    }
+  }
+  const expressiveText = "잘해서 커한다 읽지않아한다 좋아를한다";
+  await submit(page, expressiveText); await waitHeading(page, "잘해서");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();
+  const expressiveData = await (await post("analyze", {text: expressiveText})).json();
+  const badIndex = expressiveData.records[0].analysis.analyses.findIndex(a => a.lemmas[0].text === "자다" && a.lemmas.at(-1).text === "하다");
+  assert.ok(badIndex >= 0);
+  const firstOptions = page.locator(".breakdown-word").nth(0).locator("select option");
+  assert.ok((await firstOptions.evaluateAll(os => os.map(o => o.value))).includes(String(badIndex)));
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  assert.ok((await firstOptions.evaluateAll(os => os.map(o => o.value))).includes(String(badIndex)));
+  assert.equal(expressiveData.records[0].dictionary.readings[badIndex].status, "unknown");
+  for (const [i, forms] of [[0, ["잘하", "여서"]], [1, ["크", "어", "하", "는다"]], [3, ["좋", "어", "를", "하", "는다"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()})); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 1) assert.equal(await word.locator(".part-gloss").first().innerText(), expressiveData.glosses["krdict:66586"]);
+  }
+  const expressiveDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const expressiveExport = JSON.parse(await readFile(await (await expressiveDownload).path(), "utf8"));
+  const expressiveExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: expressiveText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(expressiveExport.records, expressiveExpected);
+  await page.getByLabel("Dictionary matches only").uncheck();
   // Literary assertions retain distinct forms, copulas and lexical homonyms.
   const niraCases = recipientLedger.cases.filter(c => c.id.startsWith("nira-"));
   const niraPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-nira-"));
@@ -867,7 +949,7 @@ try {
     "I; me",
     "Topic / contrast",
     "Korean; Korean language",
-    "Object marker",
+    "Object / emphasis",
     "study",
     "Polite informal",
   ]);
@@ -945,7 +1027,7 @@ try {
   assert.deepEqual(await breakdown.locator(".part-gloss").allTextContents(), [
     "intellectual",
     "Plural",
-    "Object marker",
+    "Object / emphasis",
   ]);
   assert.equal(await page.locator(".candidate").count(), 1);
   await breakdown
@@ -1225,13 +1307,13 @@ try {
     ["학교에서만치", ["학교", "에서", "만치"], "만치", "As much as / limited to", 80343, "particle"],
     ["있어서만치는", ["있", "어서", "만치", "는"], "는", "Topic / contrast", 85851, "particle"],
     ["있어서만큼은", ["있", "어서", "만큼", "은"], "은", "Topic / contrast", 86111, "particle"],
-    ["역사까지를", ["역사", "까지", "를"], "를", "Object marker", 85764, "particle"],
-    ["여기까지가", ["여기", "까지", "가"], "가", "Subject marker", 66341, "particle"],
+    ["역사까지를", ["역사", "까지", "를"], "를", "Object / emphasis", 85764, "particle"],
+    ["여기까지가", ["여기", "까지", "가"], "가", "Subject / emphasis", 66341, "particle"],
     ["페이지까지로", ["페이지", "까지", "로"], "로", "Direction / means / role", 85761, "particle"],
     ["정착되기까지에는", ["정착되", "기", "까지", "에", "는"], "는", "Topic / contrast", 85851, "particle"],
-    ["제목부터가", ["제목", "부터", "가"], "가", "Subject marker", 66341, "particle"],
-    ["교수님들까지가", ["교수", "님", "들", "까지", "가"], "가", "Subject marker", 66341, "particle"],
-    ["역사까질", ["역사", "까지", "를"], "를", "Object marker", 85764, "particle"],
+    ["제목부터가", ["제목", "부터", "가"], "가", "Subject / emphasis", 66341, "particle"],
+    ["교수님들까지가", ["교수", "님", "들", "까지", "가"], "가", "Subject / emphasis", 66341, "particle"],
+    ["역사까질", ["역사", "까지", "를"], "를", "Object / emphasis", 85764, "particle"],
     ["아파트치고", ["아파트", "치고"], "치고", "Generalization / exception", 73015, "particle"],
     ["학생치고는", ["학생", "치고는"], "치고는", "Against expectations", 83882, "particle"],
     ["음식치고서", ["음식", "치고서"], "치고서", "Emphatic generalization / exception", 73016, "particle"],

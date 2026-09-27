@@ -1107,3 +1107,23 @@ sentence MH2_0110-s468, containing 족보깨나 → 족보 + 깨나. Source revi
 license and attribution are the KAIST ones listed above. This sentence was
 inspected to develop COV-018s and is now an exposed regression fixture, not an
 unseen accuracy test. No pinned baseline or source annotation was rewritten.
+
+`krdict-core-case.json` contains 79 primary lexical entries from the pinned
+September 2026 NIKL KRDict export (CC BY-SA 2.0 KR); exact IDs and source hashes
+are recorded in `docs/core-case-evaluation.json`. Changes: first sense, English
+equivalents and one example group retained, WordForm/RelatedForm and global
+metadata omitted, primary words only, JSON reformatted. The 17 reviewed grammar
+entries in `krdict-grammar-labels.json` retain all senses and example groups.
+`krdict-expressive-hada.json` adds eight primary lexical entries (26838, 26841,
+29719, 41145, 41561, 69511, 70073, 91168) using the same transformations and
+license; the remaining policy heads are in the existing attachment fixtures.
+The missing head 곧이 is intentionally not fabricated.
+
+`kaist-core-case.conllu` preserves complete unchanged train sentences M2TA_076-s13
+and MH2_0032-s14. `gsd-core-case.conllu` preserves complete unchanged development
+sentences dev-s248, dev-s869, dev-s150 and dev-s393. Source revisions, licenses
+and attribution are the UD 2.15 KAIST/GSD ones listed above. They are exposed
+regressions, not unseen evaluation. The school-name 강원체고를 annotation and
+partial 잘해서 recovery remain observations rather than correctness claims.
+The 먹고싶은가를 stress snapshot history records its one new unknown predicate
+hypothesis and retains all previous hashes/candidates; see the core-case report.

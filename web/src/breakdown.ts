@@ -61,8 +61,13 @@ export function parts(
       // already represents a copula, so prefer its explicit source homonym.
       const copulaEntry = lemma.kind === "copula" && lemma.text === "이다"
         ? entries.find((e) => e.id === "krdict:86232") : undefined;
+      const assessment = token.dictionary?.readings?.[candidate]?.lemmas
+        .find((l) => l.lemma_index === component.lemma);
       const entry =
         copulaEntry ??
+        entries.find((e) => assessment?.entries.some(
+          (a) => a.id === e.id && a.status === "compatible",
+        )) ??
         entries.find((e) => e.pos_compatibility === "compatible") ??
         entries.find((e) => e.pos_compatibility === "unknown") ??
         entries.find((e) => token.dictionary?.readings?.[candidate]?.lemmas

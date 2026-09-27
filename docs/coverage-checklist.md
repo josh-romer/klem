@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–aj/018a–k/018m–s/019a–g/019i–m/020a–k/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–aj/018a–k/018m–t/019a–g/019i–o/020a–k/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 231 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–aj/018e–k/018m–s/019d–g/019i–m/020d–h/020j–k; 483 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 246 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–aj/018e–k/018m–t/019d–g/019i–o/020d–h/020j–k; 468 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -784,7 +784,7 @@ review remains open under the completion review below.
   Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–s implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–t implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -1050,6 +1050,18 @@ review remains open under the completion review below.
   Semantic quantifiability, wider particle combinations, inherited nominalization
   and copula alternatives, and contextual sense selection remain open.
 
+- [x] **COV-018t — Core cases and recipient directions.** Bundled 게로/에게로/
+  한테로 coexist with split recipient + 로 readings. Nominal/plural/honorific
+  boundaries, case allomorphs and 에서의/으로의 are reviewed. Finite emphatic
+  adverbs add 도대체가, 맘껏을/매번을/매일을 and 빨리를/곧이를; 빨리
+  also retains its 빠르다 + 이 derivation. KRDict lacks 곧이, so its raw path
+  is removed by both dictionary filters. Evidence: 105 stable morphology judgments
+  (69 required / 36 forbidden), [five tests](../tests/core_case.rs), six complete
+  annotated sentences, browser/CLI/export checks and [review](core-case-evaluation.json).
+  Animate/honorific semantics, other emphatic adverb bases and contextual senses
+  remain open. The GSD 강원체고를 copula match and 잘해서 partial component
+  match are tracked observations, not correctness gains.
+
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -1237,6 +1249,27 @@ review remains open under the completion review below.
   raw, headword-only and compatible candidate groups and all 30 stress hashes
   remain unchanged. This repairs dictionary evidence and display selection;
   contextual sense ranking and new morphology are separate work.
+
+- [x] **COV-019n — Internal emphatic case particles.** Full 를 after 어/게/지/고
+  and 가 after 지 compose only with licensed auxiliaries: 찾지를못했다,
+  익지가않는다, 들어를보세요, 먹게를했다 and 먹고를있다. Contracted
+  ㄹ retains canonical 를 in 물얼봐야지 and 먹질않았다. Exact role/ordering,
+  invalid connector boundaries and full/contracted equivalence are covered by
+  [core-case tests](../tests/core_case.rs) and the [review](core-case-evaluation.json).
+  One stress case gains a reviewed unknown predicate; previous candidates and
+  provenance remain. Wider particle combinations remain under COV-019.
+
+- [x] **COV-019o — Explicit dictionary uncertainty before expressive 하다.**
+  KRDict's adjective note is insufficient to reject all lexical verbs: NIKL
+  licenses 꺼려 하다 and 내키지 않아 하다. Per-entry assessment now marks
+  lexical verb attachments unknown, following only class-preserving 지 negatives.
+  Adjective homonyms, class-resetting auxiliaries and raw candidates remain.
+  Evidence: 22 additional [policy cases](../tests/fixtures/dictionary-attachments.json),
+  [per-entry tests](../tests/dictionary_attachments.rs), browser homonym/export
+  checks and [source review](core-case-evaluation.json). These tests preserve
+  uncertainty, not certify the intended readings. The semantic verb subset and
+  lexical-negative homonym consistency for other constraints remain unresolved;
+  in particular 잘해서 → 자다 + 어 + 를 + 하다 is still an unjudged option.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
@@ -1493,7 +1526,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 341 currently emitted canonical grammar forms.** The initial catalog
+  for all 344 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

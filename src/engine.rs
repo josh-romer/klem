@@ -1526,6 +1526,9 @@ fn particle_allowed(
                 | "토록"
                 | "마냥"
                 | "깨나"
+                | "게로"
+                | "에게로"
+                | "한테로"
         )
     }) || (matches!(form, "이" | "가" | "을" | "를")
         && suffixes.iter().any(|m| {
@@ -1595,6 +1598,16 @@ fn adverbial_focus_particle(form: &str) -> bool {
 // into a nominal before arbitrary subject/object/case marking.
 fn ordinary_adverbial_particle(form: &str) -> bool {
     matches!(form, "도" | "은" | "는" | "만" | "까지" | "부터")
+}
+
+// These case-shaped emphasis uses are lexical, unlike ordinary focus
+// particles. KRDict gives 도대체가, 맘껏을/매번을/매일을 and 빨리를;
+// NIKL also gives 곧이를. Do not infer arbitrary adverb case marking.
+fn emphatic_adverb_case(base: &str, form: &str) -> bool {
+    matches!(
+        (base, form),
+        ("도대체", "가") | ("맘껏" | "매번" | "매일", "을") | ("빨리" | "곧이", "를")
+    )
 }
 
 fn adverbial_particle_chain(morphemes: &[Morpheme]) -> bool {
@@ -1744,13 +1757,18 @@ fn nominals(
         let mut morphs = vec![morph(particle.form, MorphemeKind::Particle)];
         morphs.extend_from_slice(suffixes);
         let start = out.len();
+        let emphatic_case =
+            emphatic_adverb_case(base, particle.form) && adverbial_particle_chain(suffixes);
         // Only reviewed adverb-compatible particles. Subject/object marking
         // must not mistake this adverbial path for a nominalization.
-        if adverbial_particle_chain(&morphs)
+        if (adverbial_particle_chain(&morphs) || emphatic_case)
             && let Some(mut a) = adverb_derivation(base)
         {
             a.morphemes.extend(morphs.clone());
             a.rules.push("particle".into());
+            if emphatic_case {
+                a.rules.push("particle.adverbial_case".into());
+            }
             out.push(a);
         }
         let enumerative_da = particle.class == 4 && matches!(particle.form, "다" | "이다");
@@ -1792,11 +1810,21 @@ fn nominals(
                 rules: vec!["particle".into()],
                 unchanged: false,
             });
-        } else if ordinary_adverbial_particle(particle.form) && adverbial_particle_chain(&morphs) {
+        } else if (ordinary_adverbial_particle(particle.form) && adverbial_particle_chain(&morphs))
+            || emphatic_case
+        {
             out.push(Analysis {
                 lemmas: vec![lemma(base, LemmaKind::Adverbial)],
                 morphemes: morphs.clone(),
-                rules: vec!["particle".into(), "particle.adverbial_focus".into()],
+                rules: vec![
+                    "particle".into(),
+                    if emphatic_case {
+                        "particle.adverbial_case"
+                    } else {
+                        "particle.adverbial_focus"
+                    }
+                    .into(),
+                ],
                 unchanged: false,
             });
         }
@@ -1806,6 +1834,8 @@ fn nominals(
             || matches!(
                 particle.form,
                 "은" | "는"
+                    | "가"
+                    | "를"
                     | "도"
                     | "만"
                     | "마는"
@@ -2017,6 +2047,10 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
                     || (connector == "지" && aux_allowed(&right.stem, connector))
             }
             "나" => right.stem == "하" && connector == "기",
+            "가" | "를" => {
+                before_particle(connector, &particles[0].form)
+                    && aux_allowed(&right.stem, connector)
+            }
             "야" => {
                 (right.stem == "하" && connector == "기")
                     || (right.stem == "말" && connector == "고")
@@ -2070,7 +2104,7 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
 // bounded to one reviewed slot and leave the packed search iterative.
 fn connector_predicates(word: &str) -> Vec<Predicate> {
     let mut out = predicates(word);
-    for particle in ["들", "도", "만", "는", "야", "나"] {
+    for particle in ["들", "도", "만", "는", "야", "나", "가", "를"] {
         if let Some(base) = word.strip_suffix(particle) {
             for mut p in predicates(base) {
                 let ending = &p.morphs.last().unwrap().form;
@@ -2091,6 +2125,23 @@ fn connector_predicates(word: &str) -> Vec<Predicate> {
                         .extend(["particle".into(), "particle.contraction.n".into()]);
                     out.push(p);
                 }
+            }
+        }
+    }
+    // Emphatic ㄹ is the contracted spelling of 를 after the same licensed
+    // connectors. Preserve full and contracted internal-particle paths.
+    if let Some((_, v, 8)) = last(word) {
+        let base = replace_last(word, v, 0).unwrap();
+        for mut p in predicates(&base) {
+            if p.connector
+                && p.morphs
+                    .last()
+                    .is_some_and(|m| before_particle(&m.form, "를"))
+            {
+                p.morphs.push(morph("를", MorphemeKind::Particle));
+                p.rules
+                    .extend(["particle".into(), "particle.contraction.l".into()]);
+                out.push(p);
             }
         }
     }
@@ -2304,6 +2355,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         }
         "마는" => concessive_ending(ending),
         "를" => matches!(ending, "어" | "게" | "지" | "고"),
+        "가" => ending == "지",
         _ => false,
     }
 }

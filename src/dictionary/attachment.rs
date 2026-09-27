@@ -79,6 +79,45 @@ fn alternatives(statuses: impl Iterator<Item = Compatibility>) -> Compatibility 
     }
 }
 
+// Return the connector whose expressive 하다 use depends on this lexical
+// head's class. Only 지-negatives preserve that dependency; a different
+// auxiliary, a copula or a derivational suffix starts a new class boundary.
+// Compute the requirement once, then assess each headword entry independently.
+fn expressive_hada_connector(analysis: &Analysis, mut rest: &[Component]) -> Option<usize> {
+    loop {
+        let next = rest.iter().position(|c| matches!(c, Component::Lemma(_)))?;
+        let morphs = &rest[..next];
+        if morphs.iter().any(|c| {
+            matches!(c, Component::Morpheme(i)
+            if analysis.morphemes[*i].kind == MorphemeKind::Suffix)
+        }) {
+            return None;
+        }
+        let connector = morphs.iter().find_map(|c| match c {
+            Component::Morpheme(i) if analysis.morphemes[*i].kind == MorphemeKind::Ending => {
+                Some(*i)
+            }
+            _ => None,
+        })?;
+        let Component::Lemma(index) = rest[next] else {
+            return None;
+        };
+        let lemma = &analysis.lemmas[index];
+        if lemma.kind != LemmaKind::Auxiliary {
+            return None;
+        }
+        let form = analysis.morphemes[connector].form.as_str();
+        if lemma.text == "하다" && form == "어" {
+            return Some(connector);
+        }
+        if form != "지" || !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+        {
+            return None;
+        }
+        rest = &rest[next + 1..];
+    }
+}
+
 impl Annotation {
     /// Check a complete analysis against this annotation's headword evidence.
     /// Missing entries, unclassified roles and unknown POS remain unknown.
@@ -120,6 +159,11 @@ impl Annotation {
             let bare = morphs
                 .first()
                 .is_some_and(|c| matches!(c, Component::Morpheme(i) if Some(*i) == ending));
+            let expressive_connector = if lemma.kind == LemmaKind::Predicate {
+                expressive_hada_connector(analysis, rest)
+            } else {
+                None
+            };
             let entries: Vec<_> = self
                 .lemmas
                 .iter()
@@ -157,6 +201,16 @@ impl Annotation {
                             rule: AttachmentRule::AuxiliaryClass,
                             morpheme_index: connector,
                         });
+                    }
+                    if status == Compatibility::Compatible
+                        && matched.entry.pos == "동사"
+                        && expressive_connector.is_some()
+                    {
+                        // KRDict 62888 sense 9 describes adjective attachment,
+                        // but NIKL also licenses some verbs (꺼려 하다,
+                        // 내키지 않아 하다). Broad verb POS cannot decide this
+                        // lexical subset, including through negative auxiliaries.
+                        status = Compatibility::Unknown;
                     }
                     // Dictionary classes belong to the lexical head, not its
                     // auxiliary, derived suffix or a later copula's ending.

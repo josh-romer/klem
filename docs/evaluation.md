@@ -2517,3 +2517,61 @@ measurement process terminated with SIGTERM; after verifying it and its children
 had stopped, the retry completed. Separate counts confirm unchanged output totals
 for both dictionary filters; headword-only remains 131,372 analyses / 73,382 tokens
 with readings.
+
+
+## Core cases, internal emphasis and lexical uncertainty (COV-018t/019n/019o)
+
+The [source and candidate review](core-case-evaluation.json) audits seventeen
+core case/recipient entries and revisits auxiliary 하다. Bundled 게로/에게로/
+한테로 coexist with split recipient + 로; 내/네/제 retain their written forms.
+Finite emphatic adverb paths cover 도대체가, 맘껏을/매번을/매일을 and 빨리를/
+곧이를. Full 를 after 어/게/지/고 and 가 after 지 compose with licensed auxiliaries,
+including contracted ㄹ in 물얼봐야지 and 먹질않았다. 곧이 is absent from the
+pinned dictionary, so its source-supported raw path disappears under both filters.
+
+The main ledger gains 105 judgments (69 required / 36 forbidden), reaching
+2,331 required / 1,508 forbidden. Six complete unchanged KAIST/GSD sentences are
+exposed regressions. KAIST development matches remain 22,127/22,220. GSD moves
+from 9,844 to 9,847/9,989: 속이지를 and 질리지가 recover their predicate groups,
+but 강원체고를 is an incidental copula match in a school name, not a correctness
+gain. 잘해서 gains only partial component recovery through an unjudged alternative;
+its lexical 잘하다 path remains. Mean candidate counts are 6.064851 / 5.540294.
+Frozen full-corpus baselines pass without modification.
+
+Across 3,669 distinct ledger/stress/probe surfaces, 159 candidates are added on
+81 surfaces, with no removals or provenance changes. One stress snapshot,
+먹고싶은가를, gains the unknown predicate 먹고싶은가다 + 어 + 를. Its history
+retains previous hashes; all previous candidates/provenance remain, and the full
+dictionary removes that addition. The other 29 hashes and 64-ga probe are unchanged.
+
+NIKL licenses some lexical verbs before 어 하다 (꺼려 하다 and 내키지 않아 하다),
+so KRDict's adjective note alone cannot justify blanket verb pruning. Per-entry
+assessment now marks this lexical verb attachment unknown, including through
+class-preserving 지 negatives; other auxiliaries, copulas and suffixes reset the
+dependency. Twenty-two additional policy cases bring that ledger to 222 cases
+(143 required / 79 forbidden). These preserve uncertainty, not certify every path.
+The browser now prefers a per-reading compatible homonym before broad POS evidence,
+so 커한다 shows adjectival 크다 while its verbal entry remains inspectable.
+Contextual senses remain unresolved: 내 can still show “creek” in 내게로 and 묻다
+can show “bury” in 물얼봐야지 rather than the intended “ask”.
+
+The compatible novel output adds 337 candidates across 290 tokens / 97 types,
+with no removals or provenance changes. Including evidence-only changes, 698
+records / 169 types differ. It contains 120,764 candidates over 73,356 tokens with
+readings out of 81,758 word tokens. Headword-only output has 131,950 candidates
+and 73,413 tokens with readings. These are coverage/ambiguity counts, not precision.
+Three sequential local Nix release runs per mode measured compatible median
+1.303s versus 1.309s before, and headword-only median 1.317s versus 1.305s.
+Peak RSS remained below 29 MiB. Measurements include JSONL serialization; small
+variation is not evidence of a speedup or a throughput guarantee.
+
+The inventory has 246 scoped reviews / 468 unreviewed entries / one gap; the
+catalog has 344 canonical forms / 481 source IDs / 483 grammar fixture entries.
+Rust/web-feature tests, focused entry/unknown/class-reset regressions, Clippy,
+formatting, frozen corpus checks, frontend build, full browser/HTTP suite,
+inventory verification and x86_64-linux Nix checks pass. The packaged preview
+checks all new morphology/policy judgments, both filters, eighteen selected
+breakdowns and source links, compatible homonym hints, dictionary gaps, CLI/API/
+export parity and desktop/mobile layout. Broader semantic/lexical restrictions,
+independent Korean review, fresh-prose evaluation and the remaining checklist
+items remain open.

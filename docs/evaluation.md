@@ -2894,3 +2894,31 @@ The source dictionary lacks proper name 승규, so both dictionary filters remov
 that raw valid morphology path. The thesis's conflicting prose and ambiguous
 밖에 segmentation are recorded explicitly. Further comparison-particle case
 chains are tracked under COV-018y rather than being silently treated as covered.
+
+## Case/comparison particle chains (COV-018y)
+
+The [evaluation](comparison-case-evaluation.json) adds 18 required and four
+forbidden judgments, bringing the ledger to **2,797 required / 1,653 forbidden**.
+Six complete KAIST training sentences preserve five newly recovered targets and
+a sixth with a surface/annotation spelling disagreement. An unrelated 원리을
+row is also retained literally. These are exposed regression fixtures.
+
+The four frozen partitions preserve all prior matches and component sets, and
+gain two KAIST test matches (청에서처럼, 문명세계에서처럼). Across 4,326 raw
+probe surfaces, 17 change with 33 additions and no removals. The whole 무정 novel
+produces byte-identical compatible-filtered JSONL before and after. Hypothetical
+nominal heads and the existing 읽하다 shortening remain unjudged, with the full
+review queue retained. 모스크바 and 로스앤젤레스 are recovered raw but removed
+by both dictionary filters because the pinned KRDict lacks those headwords.
+
+The short 서 combination is marked as inference, rather than a primary-source
+quotation. Independent linguistic review and further case/comparison pairs remain
+open.
+
+Rust/web tests, the full pinned corpus gate, all 30 stress snapshots, Clippy,
+formatting, inventory checks, browser tests and Nix CLI/web builds pass on
+x86_64 Linux. The packaged app also passes full-dictionary API/CLI/filter/export
+checks and desktop/mobile inspection. Three interleaved release samples per
+version/filter give after medians of 1.283 seconds (headword) and 1.268 seconds
+(compatible), with peak RSS below 29 MiB. This is a bounded performance check,
+not a claim of statistical speed equivalence.

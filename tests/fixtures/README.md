@@ -1223,3 +1223,15 @@ attribution and CC BY-SA 4.0 license above apply. The thesis PDF used for
 additional grammar evidence is not redistributed. Exact source IDs, hashes,
 sentence/token IDs and four target gains are in the
 [review](../../docs/additive-particle-evaluation.json).
+
+`krdict-comparison-case.json` contains 25 primary word entries from the same
+pinned NIKL Korean Basic Dictionary export. All senses, notes, forms and examples
+are retained, with English equivalents only and RelatedForm omitted; same-number
+idioms are excluded. The dictionary's attribution and reuse terms above apply.
+모스크바 and 로스앤젤레스 have no primary headword entries in this snapshot and
+remain explicit dictionary-coverage omissions. `kaist-comparison-case.conllu`
+preserves six complete training sentences under the KAIST attribution/license
+above. Five comparison targets are correctly spelled; 커뮤니케이션에서어럼 and
+the unrelated 원리을 remain verbatim source observations. No annotation repairs
+were made. The NIKL teacher-training PDF is cited, not redistributed. See the
+[source and individual-case evaluation](../../docs/comparison-case-evaluation.json).

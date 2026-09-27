@@ -18,6 +18,7 @@
     "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/chigo-evaluation.json": "c7f2927950286ae43279d140c887d5e9d016f0372064cd0ca10a0e8b97b8130d",
+    "docs/comparison-case-evaluation.json": "94f56ff6b757d0d2cf61204bb03213e2057428f6f4d0c128c3eef133e23651b2",
     "docs/comparison-particle-audit.json": "8c0df1d3bfcd0131180f20298850f260267c25016ff022d09e984d0eb4064c83",
     "docs/concessive-designation-evaluation.json": "c2a562fff045d8b3aa45b6366e5e1ca6697cddc1948899ef9905c84ed0a65ab4",
     "docs/concessive-ending-evaluation.json": "d710e7c326c43a7ae472a5ec35b43f936c179c2afc26b608b149cb0a3caeedca",
@@ -25,7 +26,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "9931744fd87911024e83c015c151ecd74f08344811a0e79c9f5ecc038ed21c6f",
+    "docs/coverage-checklist.md": "72be4d4d7ab312beb66f13d44a4e35d09a7705c16abd37100432a2a4fd60bb65",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
@@ -38,7 +39,7 @@
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "8a13d0a24c38c99cc2cf8ece16cbe889865debebf9d44a72f5f4afd9f98c06be",
-    "docs/inventory-reviews.json": "3df3df57d595e3d5e5ae84c2485cbfcc04ce1dc7eeba815f83f4ef8f7de78cb7",
+    "docs/inventory-reviews.json": "b0300cf2e1d7ea0f255bb51f39bbeb985a0f050a1a8ae0c8fbe7025abc0e47c5",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/nira-evaluation.json": "f5104870a3be746d817dc91c710b38c082ba8ded9a85bc685181a0c62c4ddea7",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
@@ -73,6 +74,7 @@
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/chigo_particles.rs": "116a92c14a3ad8cc5880be4f7d9052d9b6d85bdc5156114cc3c715b867832238",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
+    "tests/comparison_case.rs": "e623a85baf58e25253ba0426bad9836e4331bc7ef3d728b64a408707fd4adf31",
     "tests/comparison_particles.rs": "b952185fb9649dfea149abb33f8c37ba4452c926d2ab8ada39ac6d62e5059920",
     "tests/concessive_designation.rs": "228dee6cff8706d9c512ed422e074f04a2bbe81fb4fc06885cc274ae2002301a",
     "tests/concessive_endings.rs": "1dfde65ac303643dfe2bc0009924dcfd64ef214a6c9e1d3089179edff79e8551",
@@ -80,7 +82,7 @@
     "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/core_case.rs": "556f5fa2df29d0285552bf3e83a5cfbc9610c84c33fb1ac6e1bc02d7c2e5fbcb",
-    "tests/corpus.rs": "cf431d4c0862e570f23c4bad537b5a1fa3477a026cbdf10a876f1d38c7cd43e3",
+    "tests/corpus.rs": "0cd8764bb6234ab09669160cb8b9ab0c7554ae4db99a7ba895f72252d6cb8799",
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
     "tests/dictionary.rs": "c604d5ae616f24d50dc5d3c8829103e41e57da810b34b19aa7265c67c2ea6f50",
@@ -95,8 +97,9 @@
     "tests/fixtures/kaist-additive-particles.conllu": "2de09cb69d1ee5f7a9f62447dcb993632556677cb7a9bc7a0471ac42064115fc",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
     "tests/fixtures/krdict-additive-particles.json": "b125fe0c49e06bd0ed333cccbc3fcbd67330ae6a01d8a2ab2a04d42bd888584a",
+    "tests/fixtures/krdict-comparison-case.json": "c02f2fdd45911e9feb0d8eefe6bffa99da84d9b6d184c8bf0c636b816ec9e424",
     "tests/fixtures/krdict-comparison-particles.json": "7d855feab4200f6c6752599b977255bba5e3ff5a95f4b214cb9c2c4147a7a3a6",
-    "tests/fixtures/validity.json": "85c1306ed819bff4278cf1e7e0a0dc771ecbf755bffd7c5013aab157159fc49f",
+    "tests/fixtures/validity.json": "9a6d5e5b9bddd3691e60d2bab179dddef12dd0b66c1608790fce21447df1a15f",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
     "tests/kkaena.rs": "63efa7b0ad133bfabd79b1b85d4a393608361596303c92a07b0e9df8d3fdc0a5",
@@ -125,7 +128,7 @@
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
     "web/src/grammar-labels.json": "6d669748e93182067be3a801a58de3cfc43f1113a2533c85f4c9688b6fe878f2",
-    "web/tests/browser.mjs": "fbaa7a9a92db7d3178a3acd2b007d9944c6a084815e669ef79a7a54bc4580a0c"
+    "web/tests/browser.mjs": "673569d1a7137fe2cde6b6f9ffd789e8a14a4f93e6daab08c6b5cb96b5240b0c"
   },
   "counts": {
     "entries": 715,
@@ -53617,6 +53620,11 @@
       ],
       "cited_judgments": [
         {
+          "case": "comparison-case-nominal-gati",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "comparison-particle-22776-ending-고",
           "judgment": "direct-ending",
           "verdict": "forbidden"
@@ -53678,9 +53686,10 @@
         "source_sha256": "7f7c02c85218758d24fbd030d28ccb8886e9c0dd2a3dc88718be2e28a4766569",
         "status": "scoped",
         "checklist": [
-          "COV-018w"
+          "COV-018w",
+          "COV-018y"
         ],
-        "scope": "Comparison sense 1 and time-emphasis sense 2, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified.",
+        "scope": "Comparison sense 1 and time-emphasis sense 2, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified. Case phrases followed by the separate adverb 같이 do not license the same particle chain; spaced token boundaries and lexical 같이 alternatives are preserved.",
         "remaining": "Contextual sense choice, semantic noun constraints and additional particle chains remain open. Separate bound-noun constructions and arbitrary joined compounds are outside this audit. Independent Korean review pending.",
         "evidence": [
           {
@@ -53703,6 +53712,24 @@
           },
           {
             "path": "web/tests/browser.mjs"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_provenance_and_spaced_adverb_remain_distinct"
+          },
+          {
+            "path": "docs/comparison-case-evaluation.json"
+          },
+          {
+            "path": "tests/fixtures/krdict-comparison-case.json"
           }
         ],
         "judgments": [
@@ -53749,6 +53776,10 @@
           {
             "case": "comparison-particle-22776-ending-는",
             "judgment": "direct-ending"
+          },
+          {
+            "case": "comparison-case-nominal-gati",
+            "judgment": "path"
           }
         ]
       }
@@ -62327,6 +62358,16 @@
       ],
       "cited_judgments": [
         {
+          "case": "comparison-case-short-집",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "comparison-case-short-학교",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "emphatic-locative-coda",
           "judgment": "group",
           "verdict": "required"
@@ -62358,9 +62399,10 @@
         "source_sha256": "866f4b60064e13ae9fc2780171639a54a3dc8dd2e4213d204dd50aba63fa93f8",
         "status": "scoped",
         "checklist": [
-          "COV-018u"
+          "COV-018u",
+          "COV-018y"
         ],
-        "scope": "Locative/source 서 retains vowel and consonant nominal attachment, including 학교서/서울서, separately from count-emphasis homonym 86557.",
+        "scope": "Locative/source 서 retains vowel and consonant nominal attachment, including 학교서/서울서, separately from count-emphasis homonym 86557. Short locative 서 composes with 처럼 by explicit inference from this entry and the NIKL/KAIST case-comparison pattern; count-emphasis 서 is separate.",
         "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
         "evidence": [
           {
@@ -62381,6 +62423,24 @@
           },
           {
             "path": "docs/source-particle-evaluation.json"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_provenance_and_spaced_adverb_remain_distinct"
+          },
+          {
+            "path": "docs/comparison-case-evaluation.json"
+          },
+          {
+            "path": "tests/fixtures/krdict-comparison-case.json"
           }
         ],
         "judgments": [
@@ -62398,6 +62458,14 @@
           },
           {
             "case": "source-particles-서-ending",
+            "judgment": "path"
+          },
+          {
+            "case": "comparison-case-short-학교",
+            "judgment": "path"
+          },
+          {
+            "case": "comparison-case-short-집",
             "judgment": "path"
           }
         ]
@@ -71042,6 +71110,11 @@
       ],
       "cited_judgments": [
         {
+          "case": "comparison-case-nominal-cheoreom",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "comparison-particle-68275-ending-고",
           "judgment": "direct-ending",
           "verdict": "forbidden"
@@ -71083,9 +71156,10 @@
         "source_sha256": "11597960966fa46a79efd52d8783cb6d7ff2313945e9c81276c4c05bc8f2ebd1",
         "status": "scoped",
         "checklist": [
-          "COV-018w"
+          "COV-018w",
+          "COV-018y"
         ],
-        "scope": "Similarity sense 1, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified.",
+        "scope": "Similarity sense 1, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified. NIKL and KAIST additionally support 에/에서 before 처럼; locative 서 composition is an explicit inference. Plural, nominalized and outer-particle probes retain their roles.",
         "remaining": "Contextual sense choice, semantic noun constraints and additional particle chains remain open. Separate bound-noun constructions and arbitrary joined compounds are outside this audit. Independent Korean review pending.",
         "evidence": [
           {
@@ -71108,6 +71182,24 @@
           },
           {
             "path": "web/tests/browser.mjs"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/comparison_case.rs",
+            "test": "comparison_case_provenance_and_spaced_adverb_remain_distinct"
+          },
+          {
+            "path": "docs/comparison-case-evaluation.json"
+          },
+          {
+            "path": "tests/fixtures/krdict-comparison-case.json"
           }
         ],
         "judgments": [
@@ -71138,6 +71230,10 @@
           {
             "case": "comparison-particle-68275-ending-는",
             "judgment": "direct-ending"
+          },
+          {
+            "case": "comparison-case-nominal-cheoreom",
+            "judgment": "path"
           }
         ]
       }

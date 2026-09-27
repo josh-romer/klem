@@ -2871,3 +2871,17 @@ unjudged because it may involve noun 밖 plus 에 rather than particle 밖에.
 The source's contextual negative examples and conflicting prose do not justify
 global bans on lexical heads or genitive combinations. See the
 [source, annotation and individual-case review](additive-particle-evaluation.json).
+
+## Case phrases before comparison (COV-018y)
+
+The reviewed `에/에서/서 + 처럼` pairs cross the particle ordering stages with
+`particle.comparison_case` provenance. NIKL directly illustrates 학교에서처럼만;
+KAIST supplies 에 as well as 에서. Short locative 서 is an explicit composition
+inference from KRDict 86712, distinct from count-emphasis 서. Plural suffixes,
+nominalization and outer particles retain their existing roles.
+
+NIKL distinguishes nominal particle 같이 from the separate adverb in 친구와 같이
+and 친구하고 같이. This change preserves that spacing and does not extend the
+case exception to 같이 or 대로. Existing whole-word and hypothetical nominal
+readings remain; the [case review](comparison-case-evaluation.json) records the
+unjudged alternatives, source distinctions and dictionary omissions.

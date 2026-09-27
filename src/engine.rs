@@ -1630,6 +1630,13 @@ fn particle_allowed(
         || (outer == Some("의") && matches!(class, 2 | 3) && form != "의")
         || outer.is_some_and(|outer| range_case_link(form, outer))
         || outer.is_some_and(|outer| additive_particle_link(form, outer))
+        || outer.is_some_and(|outer| comparison_case_link(form, outer))
+}
+
+// NIKL's 학교에서처럼(만), KAIST's 전에처럼, and locative short 서.
+// 같이 after a case phrase is a separate adverb, not this particle chain.
+fn comparison_case_link(inner: &str, outer: &str) -> bool {
+    outer == "처럼" && matches!(inner, "에" | "에서" | "서")
 }
 
 // Concrete additive combinations in Wei (2020), examples 31 and 35.
@@ -2036,6 +2043,12 @@ fn nominals(
             );
         }
         for a in &mut out[start..] {
+            if suffixes
+                .first()
+                .is_some_and(|m| comparison_case_link(particle.form, &m.form))
+            {
+                a.rules.push("particle.comparison_case".into());
+            }
             if suffixes
                 .first()
                 .is_some_and(|m| additive_particle_link(particle.form, &m.form))

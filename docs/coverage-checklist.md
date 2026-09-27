@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ak/018a–k/018m–v/019a–g/019i–o/020a–m/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ak/018a–k/018m–y/019a–g/019i–o/020a–m/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -175,7 +175,7 @@ review remains open under the completion review below.
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
   The [manual review ledger](inventory-reviews.json) records 279 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–x/019d–g/019i–o/020d–h/020j–k; 435 entries have no disposition in this
+  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–y/019d–g/019i–o/020d–h/020j–k; 435 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -799,7 +799,7 @@ review remains open under the completion review below.
   이다 alternative in 딸이었던들 is tracked for COV-020 attachment review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–x cover post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–y cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -1132,12 +1132,20 @@ review remains open under the completion review below.
   More adverb bases, ending/particle combinations and independent Korean review
   remain open. The fixture's unrelated 있을라치면 miss belongs to COV-017.
 
-- [ ] **COV-018y — Case phrases before comparison particles.** NIKL spelling
-  Article 41 gives 학교에서처럼, but the engine currently misses
-  학교 + 에서 + 처럼. COV-018w audited nominal examples only. Review this
-  case-particle boundary, related 같이/처럼 distributions, and negative paths
-  without opening unrestricted case repetition. The discovery and source link
-  are recorded as `comparison-case-chain` in the [additive review](additive-particle-evaluation.json).
+- [x] **COV-018y — Case phrases before comparison particles.** Reviewed
+  에/에서/서 + 처럼 chains recover 학교에서처럼만, 전에처럼 and 학교서처럼,
+  with existing plural, nominalized and outer-particle composition. NIKL directly
+  attests 에서; KAIST supplies 에 and 에서. Short locative 서 is explicitly an
+  inference from KRDict, pending independent Korean review. Case phrases before
+  separate adverb 같이 retain their token boundary; no shared particle exception
+  or unrestricted case repetition is introduced. Evidence: [22 judgments and
+  three tests](../tests/comparison_case.rs), [six full training sentences](../tests/fixtures/kaist-comparison-case.conllu),
+  both dictionary filters, CLI parity, browser selection/export, and the
+  [individual-case review](comparison-case-evaluation.json). Five valid training
+  targets and two frozen KAIST test cases become matches. Source spelling
+  disagreements and two proper-name dictionary omissions remain explicit.
+  Wider particle pairs, semantic restrictions and contextual sense choice remain
+  separate review work.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

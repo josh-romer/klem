@@ -18318,9 +18318,10 @@
       "source_sha256": "866f4b60064e13ae9fc2780171639a54a3dc8dd2e4213d204dd50aba63fa93f8",
       "status": "scoped",
       "checklist": [
-        "COV-018u"
+        "COV-018u",
+        "COV-018y"
       ],
-      "scope": "Locative/source 서 retains vowel and consonant nominal attachment, including 학교서/서울서, separately from count-emphasis homonym 86557.",
+      "scope": "Locative/source 서 retains vowel and consonant nominal attachment, including 학교서/서울서, separately from count-emphasis homonym 86557. Short locative 서 composes with 처럼 by explicit inference from this entry and the NIKL/KAIST case-comparison pattern; count-emphasis 서 is separate.",
       "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
       "evidence": [
         {
@@ -18341,6 +18342,24 @@
         },
         {
           "path": "docs/source-particle-evaluation.json"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_provenance_and_spaced_adverb_remain_distinct"
+        },
+        {
+          "path": "docs/comparison-case-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-comparison-case.json"
         }
       ],
       "judgments": [
@@ -18358,6 +18377,14 @@
         },
         {
           "case": "source-particles-서-ending",
+          "judgment": "path"
+        },
+        {
+          "case": "comparison-case-short-학교",
+          "judgment": "path"
+        },
+        {
+          "case": "comparison-case-short-집",
           "judgment": "path"
         }
       ]
@@ -19810,9 +19837,10 @@
       "source_sha256": "7f7c02c85218758d24fbd030d28ccb8886e9c0dd2a3dc88718be2e28a4766569",
       "status": "scoped",
       "checklist": [
-        "COV-018w"
+        "COV-018w",
+        "COV-018y"
       ],
-      "scope": "Comparison sense 1 and time-emphasis sense 2, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified.",
+      "scope": "Comparison sense 1 and time-emphasis sense 2, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified. Case phrases followed by the separate adverb 같이 do not license the same particle chain; spaced token boundaries and lexical 같이 alternatives are preserved.",
       "remaining": "Contextual sense choice, semantic noun constraints and additional particle chains remain open. Separate bound-noun constructions and arbitrary joined compounds are outside this audit. Independent Korean review pending.",
       "evidence": [
         {
@@ -19835,6 +19863,24 @@
         },
         {
           "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_provenance_and_spaced_adverb_remain_distinct"
+        },
+        {
+          "path": "docs/comparison-case-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-comparison-case.json"
         }
       ],
       "judgments": [
@@ -19881,6 +19927,10 @@
         {
           "case": "comparison-particle-22776-ending-는",
           "judgment": "direct-ending"
+        },
+        {
+          "case": "comparison-case-nominal-gati",
+          "judgment": "path"
         }
       ]
     },
@@ -19984,9 +20034,10 @@
       "source_sha256": "11597960966fa46a79efd52d8783cb6d7ff2313945e9c81276c4c05bc8f2ebd1",
       "status": "scoped",
       "checklist": [
-        "COV-018w"
+        "COV-018w",
+        "COV-018y"
       ],
-      "scope": "Similarity sense 1, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified.",
+      "scope": "Similarity sense 1, including every distinct source example surface. Existing nominal plus particle paths and rejection of direct predicate 고/어서/는 + particle paths; dictionary filters, CLI parity, normalization and ordered breakdowns verified. NIKL and KAIST additionally support 에/에서 before 처럼; locative 서 composition is an explicit inference. Plural, nominalized and outer-particle probes retain their roles.",
       "remaining": "Contextual sense choice, semantic noun constraints and additional particle chains remain open. Separate bound-noun constructions and arbitrary joined compounds are outside this audit. Independent Korean review pending.",
       "evidence": [
         {
@@ -20009,6 +20060,24 @@
         },
         {
           "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/comparison_case.rs",
+          "test": "comparison_case_provenance_and_spaced_adverb_remain_distinct"
+        },
+        {
+          "path": "docs/comparison-case-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-comparison-case.json"
         }
       ],
       "judgments": [
@@ -20039,6 +20108,10 @@
         {
           "case": "comparison-particle-68275-ending-는",
           "judgment": "direct-ending"
+        },
+        {
+          "case": "comparison-case-nominal-cheoreom",
+          "judgment": "path"
         }
       ]
     },

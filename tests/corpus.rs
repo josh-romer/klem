@@ -1779,3 +1779,25 @@ fn additive_particles_recover_connectives_and_preserve_nominalized_clauses() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn comparison_case_recovers_five_annotated_targets_without_rewriting_typo() {
+    let input = include_bytes!("fixtures/kaist-comparison-case.conllu");
+    let report = corpus::evaluate(input.as_slice(), Corpus::Kaist, "comparison-case").unwrap();
+    for (id, surface, expected) in [
+        ("id:MH2_0032-s99/3", "음악에서처럼", "음악"),
+        ("id:MH2_0045-s12/10", "모스크바에서처럼", "모스크바"),
+        ("id:MH2_0046-s41/1", "이상에서처럼", "이상"),
+        ("id:MH2_0062-s336/1", "로스앤젤레스에서처럼", "로스앤젤레스"),
+        ("id:MH2_0185-s74/1", "전에처럼", "전"),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [expected]);
+        assert!(case.matched, "{id}");
+    }
+    // Keep the source observation visible without judging a spelling repair.
+    let typo = &report.cases["id:MH2_0062-s114/7"];
+    assert_eq!(typo.surface, "커뮤니케이션에서어럼");
+    assert_eq!(typo.expected, ["커뮤니케이션"]);
+}

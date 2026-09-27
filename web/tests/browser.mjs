@@ -266,6 +266,7 @@ try {
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
   const additiveParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-additive-particles.json"), "utf8"));
+  const comparisonCase = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-comparison-case.json"), "utf8"));
   const comparisonParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-comparison-particles.json"), "utf8"));
   const hadaComplex = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-hada-complex.json"), "utf8"));
   const adverbCopulas = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adverb-copulas.json"), "utf8"));
@@ -285,6 +286,7 @@ try {
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
       ...hadaComplex.LexicalResource.Lexicon.LexicalEntry,
+      ...comparisonCase.LexicalResource.Lexicon.LexicalEntry,
       ...comparisonParticles.LexicalResource.Lexicon.LexicalEntry,
       ...additiveParticles.LexicalResource.Lexicon.LexicalEntry,
       ...adverbCopulas.LexicalResource.Lexicon.LexicalEntry,
@@ -701,6 +703,43 @@ try {
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path:resolve(tmpdir(),"klem-additive-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const comparisonCaseCases = recipientLedger.cases.filter(c => c.id.startsWith("comparison-case-"));
+  assert.equal(comparisonCaseCases.length, 22);
+  for (const c of comparisonCaseCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const comparisonCaseText = "학교에서처럼만 전에처럼 학교서처럼 회사들에서처럼 친구같이 친구와 같이";
+  await submit(page, comparisonCaseText); await waitHeading(page, "학교에서처럼만");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["학교","에서","처럼","만"]],[1,["전","에","처럼"]],[2,["학교","서","처럼"]],[3,["회사","들","에서","처럼"]],[4,["친구","같이"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    await word.locator(".breakdown-part").nth(forms.indexOf(i === 4 ? "같이" : "처럼")).click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), [68275,68275,68275,68275,22776][i]);
+  }
+  assert.equal(await page.locator(".breakdown-word").count(), 7);
+  const comparisonCaseDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const comparisonCaseExport = JSON.parse(await readFile(await (await comparisonCaseDownload).path(), "utf8"));
+  const comparisonCaseExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:comparisonCaseText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(comparisonCaseExport.records, comparisonCaseExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-comparison-case-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-comparison-case-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const comparisonParticleCases = recipientLedger.cases.filter(c => c.id.startsWith("comparison-particle-"));

@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const adverbFocus = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adverb-focus.json"), "utf8"));
   const attachments = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-attachments.json"), "utf8"));
   const shortClauses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-short-clauses.json"), "utf8"));
   const reportNi = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-report-ni.json"), "utf8"));
@@ -252,6 +253,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...adverbFocus.LexicalResource.Lexicon.LexicalEntry,
       ...attachments.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryInventory.LexicalResource.Lexicon.LexicalEntry,
       ...adverbExpansion.LexicalResource.Lexicon.LexicalEntry,
@@ -439,6 +441,35 @@ try {
   await page.getByLabel("Dictionary matches only").uncheck();
   assert.equal(await page.getByLabel("Exclude known grammar conflicts").isChecked(), false);
   assert.equal(await page.getByLabel("Exclude known grammar conflicts").isDisabled(), true);
+  // Whole lexical adverbs survive both filters with their own role and gloss.
+  const focusText = "아직도 퍽도 너무도 자세히는 일찍부터 아직까지도 오늘은 학교도";
+  await submit(page, focusText);
+  await waitHeading(page, "아직도");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  const focusData = await (await post("analyze", { text: focusText })).json();
+  const focusExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], { input: focusText, encoding: "utf8" }).trim().split("\n").map(JSON.parse);
+  const focusWords = focusExpected.filter((r) => r.kind === "word");
+  for (let i = 0; i < focusWords.length; i++) {
+    const block = page.locator(".breakdown-word").nth(i);
+    assert.equal(await block.locator("option").count(), focusWords[i].analysis.analyses.length);
+  }
+  assert.deepEqual(await page.locator(".breakdown-word").first().locator(".part-form").allTextContents(), ["아직", "도"]);
+  assert.deepEqual(await page.locator(".breakdown-word").nth(5).locator(".part-form").allTextContents(), ["아직", "까지", "도"]);
+  assert.equal(await page.locator(".breakdown-word").first().locator(".part-gloss").first().innerText(), focusData.glosses["krdict:71254"]);
+  assert(focusWords[6].analysis.analyses.some((a) => a.lemmas[0].kind === "adverbial"));
+  assert(focusWords[6].analysis.analyses.some((a) => a.lemmas[0].kind === "nominal"));
+  assert(focusWords[7].analysis.analyses.every((a) => a.lemmas[0].kind !== "adverbial"));
+  const focusDownload = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Export JSON" }).click();
+  const focusExport = JSON.parse(await readFile(await (await focusDownload).path(), "utf8"));
+  assert.deepEqual(focusExport.records, focusExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-adverb-focus-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+  await page.screenshot({path: resolve(tmpdir(), "klem-adverb-focus-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   await submit(page, "저는 한국어를 공부해요.");
   await waitHeading(page, "저는");
   await page.getByLabel("Dictionary matches only").check();
@@ -464,12 +495,12 @@ try {
   ]);
   assert.match(await breakdown.innerText(), /Expanded \/ normalized/);
   const selector = breakdown.getByRole("combobox").first();
-  assert.equal(await selector.locator("option").count(), 2);
+  assert.equal(await selector.locator("option").count(), 3);
   await breakdown
     .getByRole("button", { name: "Show all combinations", exact: true })
     .click();
-  assert.equal(await breakdown.locator(".combination-list li").count(), 4);
-  await selector.selectOption({ label: "2. 절 + 는" });
+  assert.equal(await breakdown.locator(".combination-list li").count(), 6);
+  await selector.selectOption({ label: "3. 절 + 는" });
   assert.deepEqual(
     await breakdown
       .locator(".breakdown-word")

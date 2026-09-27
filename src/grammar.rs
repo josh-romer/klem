@@ -1209,6 +1209,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "A factual 라-family ending follows its licensed prefinal, distinct from the homonymous command ending."
         }
         "particle" => "Remove a particle with licensed order and boundary allomorph.",
+        "particle.adverbial_focus" => {
+            "An adverbial base can take reviewed focus particles 도/은/는/만/까지/부터 and compatible outer particles. Preserve separate nominal and whole-word hypotheses; dictionary and context determine the lexical class."
+        }
         "copula" => "Separate a nominal and the affirmative copula 이다.",
         "copula.zero" => "Restore the omitted copula after a vowel-final nominal.",
         "copula.omitted_ending" => {

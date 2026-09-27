@@ -919,3 +919,14 @@ attribution and license as the other KRDict fixtures.
 `dictionary-attachments.json` is a separate source-linked judgment ledger for
 the explicit dictionary conflict policy: its forbidden readings remain raw rule
 hypotheses. See `docs/dictionary-attachments.md` for scope and exceptions.
+
+`krdict-adverb-focus.json` contains 28 lexical entries for COV-018n, retaining
+every selected homonym/sense, English equivalents and the first example group
+from the pinned September 2026 KRDict export. WordForm/RelatedForm/global metadata
+and idiom subentries are omitted. Attribute the National Institute of Korean
+Language, Korean Basic Dictionary, under CC BY-SA 2.0 KR as above.
+`kaist-adverb-focus.conllu` preserves complete development sentences
+MH2_0069-s118 and MH2_0159-s76; `gsd-adverb-focus.conllu` preserves dev-s382,
+dev-s750 and dev-s814. All are byte-identical to the pinned corpus sentences
+and retain their original corpus licensing and annotations. Six ADV tokens
+explicitly segment an adverb plus a focus particle.

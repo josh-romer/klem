@@ -2329,3 +2329,23 @@ components do not insert a silent reporting 하다 or become auxiliary connector
 Nouns such as 세단 and 판단 retain whole-word readings alongside newly possible
 formal hypotheses. Sentence-context selection, extra particles, other copula
 omissions and expanded 하다 shortening remain separate review scopes.
+
+## Adverbial focus particles (COV-018n)
+
+Ordinary 도/은/는/만/까지/부터 permit separate Adverbial hypotheses, including
+아직 + 도, 자세히 + 는, 일찍 + 부터 and 아직 + 까지 + 도. These paths use
+existing allomorph/order rules and require an adverb-compatible particle chain;
+they do not license arbitrary subject/object/genitive marking. Source-listed
+derivations also compose with range particles, such as 가깝다 + 이 + 까지.
+
+The raw engine retains nominal, whole-word and unknown-class alternatives.
+Dictionary presence alone does not select a role; `--dict-compatible` can retain
+아직 as an adverb and 학교 as a noun, while 오늘/지금 retain genuine homonyms.
+The rule is `particle.adverbial_focus`. See the [source review and measurements](adverb-focus-evaluation.json)
+and [NIKL's auxiliary-particle definition](https://kli.korean.go.kr/term/trgtWord/indexTrgtWord.do?trgtWordNo=2207030).
+
+No new noun-case, arbitrary adverb derivation or contextual lexical-sense rule
+is implied. The inherited particle + explicit-copula composition can also gain
+adverbial-base hypotheses; those still require the separate COV-020 attachment
+audit. Individual notes for other particles, including 조차/마저, remain distinct
+from the general auxiliary-particle class definition.

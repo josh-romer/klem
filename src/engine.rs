@@ -1454,6 +1454,22 @@ fn adverbial_focus_particle(form: &str) -> bool {
     )
 }
 
+// Ordinary focus particles with reviewed adverbial attachment. The surrounding
+// particle chain must also be adverb-compatible: this does not turn an adverb
+// into a nominal before arbitrary subject/object/case marking.
+fn ordinary_adverbial_particle(form: &str) -> bool {
+    matches!(form, "도" | "은" | "는" | "만" | "까지" | "부터")
+}
+
+fn adverbial_particle_chain(morphemes: &[Morpheme]) -> bool {
+    morphemes.iter().all(|m| {
+        ordinary_adverbial_particle(&m.form)
+            || matches!(m.form.as_str(), "요" | "들")
+            || choice_particle(&m.form).is_some_and(|family| family != 4)
+            || adverbial_focus_particle(&m.form)
+    })
+}
+
 // Closed pronoun paradigms supplement productive ㄴ/ㄹ attachment. The old
 // bare 거/것 representations remain available for compatibility; expanded
 // demonstratives use the case allomorph appropriate to their recovered noun.
@@ -1594,11 +1610,8 @@ fn nominals(
         let start = out.len();
         // Only reviewed adverb-compatible particles. Subject/object marking
         // must not mistake this adverbial path for a nominalization.
-        if morphs.iter().all(|m| {
-            matches!(m.form.as_str(), "도" | "만" | "는" | "은" | "요" | "들")
-                || choice_particle(&m.form).is_some_and(|family| family != 4)
-                || adverbial_focus_particle(&m.form)
-        }) && let Some(mut a) = adverb_derivation(base)
+        if adverbial_particle_chain(&morphs)
+            && let Some(mut a) = adverb_derivation(base)
         {
             a.morphemes.extend(morphs.clone());
             a.rules.push("particle".into());
@@ -1641,6 +1654,13 @@ fn nominals(
                 lemmas: vec![lemma(base, LemmaKind::Adverbial)],
                 morphemes: morphs.clone(),
                 rules: vec!["particle".into()],
+                unchanged: false,
+            });
+        } else if ordinary_adverbial_particle(particle.form) && adverbial_particle_chain(&morphs) {
+            out.push(Analysis {
+                lemmas: vec![lemma(base, LemmaKind::Adverbial)],
+                morphemes: morphs.clone(),
+                rules: vec!["particle".into(), "particle.adverbial_focus".into()],
                 unchanged: false,
             });
         }

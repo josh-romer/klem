@@ -1908,3 +1908,53 @@ separately written 싶었다, dictionary-free mode and mobile layout. Inspected
 screenshots show factual 아니라니, adjectival 늦으냐니 and 싶 + 었 + 다, with no
 JavaScript errors or horizontal overflow. The policy remains finite; broader
 attachment work, independent Korean review and fresh-passage evaluation remain.
+
+## Adverbial focus attachment (COV-018n)
+
+[The review](adverb-focus-evaluation.json) adds lexical Adverbial alternatives
+before 도/은/는/만/까지/부터 with compatible outer chains and reviewed range
+particles after source-listed derived adverbs. Nominal/identity paths remain.
+New adverbial paths do not inherit arbitrary noun-case marking; the dictionary
+conflict filter now keeps 아직 + 도 while excluding its nominal-role hypothesis.
+Genuine noun/adverb homonyms remain separately inspectable.
+
+**55 new cases (38 required / 17 forbidden)** bring the raw ledger to **2,669
+cases, 1,579 required / 1,098 forbidden**. A 28-entry dictionary fixture retains
+all selected homonyms/senses. Five complete, unchanged KAIST/GSD development
+sentences explicitly annotate six adverb-plus-particle tokens. Their lemma
+strings already matched through nominal hypotheses, so no lemma-recall gain
+is claimed. The separate 63-case dictionary-policy ledger remains unchanged.
+
+All development case outcomes are identical: **102 KAIST / 150 GSD misses**.
+Mean candidate counts increase from 5.837174 to **5.987264** (KAIST) and 5.374412
+to **5.490239** (GSD). Across 82 focused/stress surfaces, 54 candidates are added,
+none removed and no existing provenance changes. Three stress snapshots gain
+four unknown-class adverbial hypotheses; each old hash/history is retained.
+The inherited adverbial + particle + copula hypotheses remain unjudged under
+COV-020. Corpus baselines are unchanged.
+
+On the pinned novel, the conflict filter retains **119,554 analyses**, 1,166
+more than before, with no losses. Complete filtered readings increase from
+73,162 to **73,248 word tokens**: 86 gains across 18 types, including 58 아직도
+tokens. These are lexical coverage figures, not contextual accuracy. The report
+retains every newly matched type and its readings. 퍽's sound-word and intensifier
+homonyms illustrate why POS compatibility cannot select a contextual sense.
+
+Three local release CLI runs per mode, including JSONL serialization, give
+median conflict-filter times of **1.29 s before / 1.32 s after**, with peak RSS
+around **27–28 MiB**. Headword-only output grows from 118.0 MB to 122.6 MB and
+conflict-filtered output from 113.0 MB to 113.9 MB. These are local observations,
+not throughput guarantees. The grammar catalog is unchanged. Two new scoped
+inventory reviews and four updated reviews leave **191 scoped / one observed
+gap / 523 unreviewed** entries.
+
+Formatting, Rust tests, Clippy, all **66,570 frozen corpus cases**, stress/memory
+regressions, frontend build, browser/HTTP checks and offline inventory verification
+pass. `nix flake check` and `nix build .#web` pass on x86_64-linux; other declared
+systems were not executed. The packaged full-dictionary preview passes all
+**38 required / 17 forbidden** new judgments with CLI/API parity. Browser checks
+cover both dictionary policies, noun/adverb homonyms, ordered components, exports,
+source entries and mobile layout. Inspected screenshots show 아직 + 도,
+자세히 + 는, 일찍 + 부터 and 아직 + 까지 + 도, with no JavaScript errors or
+horizontal overflow. Independent Korean review, fresh-passage validation and the
+other open checklist families remain pending.

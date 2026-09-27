@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ab/018a–k/018m/019a–g/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ab/018a–k/018m–n/019a–g/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 189 scoped
-  dispositions from COV-016/017m–n/017p–z/017ab/018e–k/018m/019d–g/020d–h; 525 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 191 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ab/018e–k/018m–n/019d–g/020d–h; 523 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One additional
   entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -636,7 +636,7 @@ review remains open under the completion review below.
   choices remain explicitly tracked followups under COV-018/020/021/019h/017aa.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–n implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -813,15 +813,24 @@ review remains open under the completion review below.
   joining is a separate representation; its valid homonym is not forbidden by
   an exact particle-role judgment. COV-018 remains open.
 
-- [ ] **COV-018n — Adverbial bases before ordinary focus particles.** The
-  COV-017aa novel audit finds 아직도/퍽도/너무도/자세히는/아직까지 with only
-  nominal-role decompositions despite adverb-only headwords. The optional role
-  filter correctly excludes those nominal hypotheses but exposes the missing
-  adverbial alternatives. Review source-backed 도/은/는/까지 and related licenses,
-  preserve existing whole words and genuine nominal homonyms, and test exact
-  Adverbial roles in the raw API plus dictionary/CLI/browser filtering. Do not
-  generalize to arbitrary adverb + noun case marking. The full loss sample is
-  retained in [the dictionary-policy report](dictionary-attachment-evaluation.json).
+- [x] **COV-018n — Adverbial bases before ordinary focus particles.** Added
+  dictionary-free Adverbial alternatives before 도/은/는/만/까지/부터, including
+  아직도, 퍽도, 너무도, 자세히는 and 아직까지. New paths check the whole
+  particle chain; arbitrary noun-case marking is not inherited. Source-listed
+  derived adverbs also accept reviewed range particles. Nominal and unchanged
+  candidates remain, including genuine 오늘/지금 homonyms. The optional dictionary
+  conflict filter distinguishes 학교 + 도 as nominal and 아직 + 도 as adverbial.
+  Evidence: [55 ledger cases](../tests/fixtures/validity.json) (38 required / 17
+  forbidden), [role/dictionary/CLI tests](../tests/adverb_focus.rs), 28 attributed
+  lexical entries and five complete KAIST/GSD sentences covering six explicitly
+  annotated adverb-particle tokens. Browser choices, glosses and exports agree
+  with the CLI. [The review](adverb-focus-evaluation.json) records 54 additions
+  across 82 surfaces with no removals/provenance changes; three stress hashes
+  have four reviewed new hypotheses with old hashes preserved. Corpus lemma
+  recall is unchanged; the novel gains complete filtered readings for 86 tokens
+  across 18 types without losing any previous filtered readings. The inherited
+  adverbial + particle + copula hypotheses remain unjudged under COV-020;
+  additional particle subclasses and contextual sense selection remain open.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

@@ -2016,9 +2016,10 @@
       "source_sha256": "ebb654c09997decffab497c9b63dc680f350e94e1d0fb6e8843cd411363b3e77",
       "status": "scoped",
       "checklist": [
-        "COV-018h"
+        "COV-018h",
+        "COV-018n"
       ],
-      "scope": "Consonant-final connective endings accept emphatic 은 through the existing connective inventory; the vowel-final 는 partner and explicit allomorph checks remain. Arbitrary adnominal/formal final endings are excluded.",
+      "scope": "Consonant-final connective endings accept emphatic 은 through the existing connective inventory; the vowel-final 는 partner and explicit allomorph checks remain. Arbitrary adnominal/formal final endings are excluded. COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만.",
       "remaining": "Contextual sense, lexical eligibility, further prefinal/ending/auxiliary constraints and other omitted-copula families remain open. This is scoped evidence, not full-entry certification.",
       "evidence": [
         {
@@ -2039,6 +2040,21 @@
         },
         {
           "path": "docs/omitted-connective-evaluation.json"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_roles_preserve_sources_unicode_order_and_unknown_heads"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_dictionary_filters_keep_lexical_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "annotated_adverb_particle_tokens_have_an_adverbial_analysis"
+        },
+        {
+          "path": "docs/adverb-focus-evaluation.json"
         }
       ],
       "judgments": [
@@ -2064,6 +2080,38 @@
         },
         {
           "case": "omitted-connectives-topic-adnominal",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-8",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-29",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-1",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-nominal-0",
           "judgment": "path"
         }
       ]
@@ -2331,9 +2379,10 @@
       "source_sha256": "8dc9d6effae6930841dcff3f5badde2d9f2daa86d2849f6ee8f649ffd905278d",
       "status": "scoped",
       "checklist": [
-        "COV-019e"
+        "COV-019e",
+        "COV-018n"
       ],
-      "scope": "One contrastive 는 between connector 고 and 싶다, preserving particle order and vowel allomorph. Other attachments remain independently scoped.",
+      "scope": "One contrastive 는 between connector 고 and 싶다, preserving particle order and vowel allomorph. Other attachments remain independently scoped. COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만.",
       "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
       "evidence": [
         {
@@ -2350,6 +2399,21 @@
         },
         {
           "path": "docs/desire-topic-evaluation.json"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_roles_preserve_sources_unicode_order_and_unknown_heads"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_dictionary_filters_keep_lexical_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "annotated_adverb_particle_tokens_have_an_adverbial_analysis"
+        },
+        {
+          "path": "docs/adverb-focus-evaluation.json"
         }
       ],
       "judgments": [
@@ -2359,6 +2423,30 @@
         },
         {
           "case": "desire-topic-allomorph",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-26",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-0",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-13",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-nominal-3",
           "judgment": "path"
         }
       ]
@@ -3385,9 +3473,10 @@
       "status": "scoped",
       "checklist": [
         "COV-018i",
-        "COV-018k"
+        "COV-018k",
+        "COV-018n"
       ],
-      "scope": "부터 after 어서/고 source examples and corpus-backed 으면서, retaining existing outer particle order. Also source-attested following 가, with existing composition preserved.",
+      "scope": "부터 after 어서/고 source examples and corpus-backed 으면서, retaining existing outer particle order. Also source-attested following 가, with existing composition preserved. COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만.",
       "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification. Further range/case combinations remain unjudged in range-case-evaluation.json.",
       "evidence": [
         {
@@ -3423,6 +3512,21 @@
         },
         {
           "path": "docs/range-case-evaluation.json"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_roles_preserve_sources_unicode_order_and_unknown_heads"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_dictionary_filters_keep_lexical_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "annotated_adverb_particle_tokens_have_an_adverbial_analysis"
+        },
+        {
+          "path": "docs/adverb-focus-evaluation.json"
         }
       ],
       "judgments": [
@@ -3484,6 +3588,38 @@
         },
         {
           "case": "range-case-forbidden-13",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-6",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-22",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-23",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-derived-1",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-14",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-derived-forbidden-1",
           "judgment": "path"
         }
       ]
@@ -9511,9 +9647,10 @@
       "source_sha256": "c94c4f49f9ef563ce0146cc7b262a64cd776ae4e318f99a46630ccad557cfe14",
       "status": "scoped",
       "checklist": [
-        "COV-018k"
+        "COV-018k",
+        "COV-018n"
       ],
-      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles. COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만.",
       "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
       "evidence": [
         {
@@ -9530,6 +9667,21 @@
         },
         {
           "path": "docs/range-case-evaluation.json"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_roles_preserve_sources_unicode_order_and_unknown_heads"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_dictionary_filters_keep_lexical_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "annotated_adverb_particle_tokens_have_an_adverbial_analysis"
+        },
+        {
+          "path": "docs/adverb-focus-evaluation.json"
         }
       ],
       "judgments": [
@@ -9547,6 +9699,50 @@
         },
         {
           "case": "range-case-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-28",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-derived-0",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-derived-2",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-10",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-11",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-derived-forbidden-0",
           "judgment": "path"
         }
       ]
@@ -12567,6 +12763,152 @@
         },
         {
           "case": "short-clause-forbidden-46",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86258",
+      "source_sha256": "ef01fcbdb93ddc2337341fc8a8c18cd4dafc370e5a490c87e127d2733b94520c",
+      "status": "scoped",
+      "checklist": [
+        "COV-018n"
+      ],
+      "scope": " COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만.",
+      "remaining": "Additional semantic/particle-chain restrictions and independent Korean review remain open; this is not full-entry coverage.",
+      "evidence": [
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_roles_preserve_sources_unicode_order_and_unknown_heads"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_dictionary_filters_keep_lexical_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "annotated_adverb_particle_tokens_have_an_adverbial_analysis"
+        },
+        {
+          "path": "docs/adverb-focus-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "adverb-focus-required-0",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-24",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-25",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-30",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-2",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-3",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-4",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-5",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-6",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-7",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-8",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-9",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-forbidden-12",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-nominal-1",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-nominal-2",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86554",
+      "source_sha256": "a548fdc6ab651f5408cf289c957eeab7c307e80e2262e54ac3301d84e93e2034",
+      "status": "scoped",
+      "checklist": [
+        "COV-018n"
+      ],
+      "scope": " COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만.",
+      "remaining": "Additional semantic/particle-chain restrictions and independent Korean review remain open; this is not full-entry coverage.",
+      "evidence": [
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_roles_preserve_sources_unicode_order_and_unknown_heads"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "adverbial_focus_dictionary_filters_keep_lexical_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/adverb_focus.rs",
+          "test": "annotated_adverb_particle_tokens_have_an_adverbial_analysis"
+        },
+        {
+          "path": "docs/adverb-focus-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "adverb-focus-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-focus-required-27",
           "judgment": "path"
         }
       ]

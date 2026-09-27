@@ -80,6 +80,19 @@ Sources include KRDict [이거](https://krdict.korean.go.kr/kor/dicSearch/Search
 [뭐](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=84991), and
 the ㄴ/ㄹ examples. Other pronoun contractions are not implied by this finite paradigm.
 
+Independent [게](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66937)
+and [게서](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66974)
+particles preserve the nominal base: 내게 → 내 + 게, 네게서도 → 네 + 게서 + 도,
+and 내겐 → 내 + 게 + 는. Existing case stages permit ordinary outer particles
+and contracted topic/object particles; 게 also supplies a recipient case base
+for emphatic 다/다가. Predicate-ending -게 remains a separate role and lookup.
+The source notes select person/animal referents and especially 내/네/제; arbitrary
+nominal hypotheses do not certify contextual suitability. NIKL's
+[네게 consultation](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=308388)
+supports preserving 네 + 게 rather than inventing a 너 + 에게 expansion. Other
+personal-pronoun normalization and corpus segmentation differences remain open.
+See [COV-018o's review](short-recipient-evaluation.json).
+
 [Polite 요](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86116)
 and [distributive 들](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86264)
 occupy separate outer slots: ordinary particles → 들 → 요. They attach to nominal

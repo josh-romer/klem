@@ -998,6 +998,18 @@ The grammar fixture also adds expression -려는 (86688), keeping -으려는
 (70 required / 52 forbidden), including homonyms, component ownership and the
 observed 노래다 ambiguity. All raw hypotheses and headword matches remain.
 
+`krdict-short-recipient.json` contains 30 lexical entries for COV-018o from the
+September 2026 Korean Basic Dictionary export. It retains English equivalents,
+all sense/attachment notes and one example group per sense. Attribution: National
+Institute of Korean Language; license: [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+Grammar entries 66937 (게) and 66974 (게서) are in `krdict-grammar-labels.json`.
+`kaist-short-recipient.conllu` preserves complete unchanged KAIST DEV sentence
+M2TA_089-s64 and TRAIN sentences M2TA_083-s41, M2TA_087-s64 and MH2_0091-s39,
+with the same upstream attribution/license as the existing KAIST excerpts. The
+four explicit pronoun-particle tokens retain 내/네/제. Different 나 + 에게
+annotations elsewhere are recorded as segmentation differences in the
+[source review](../../docs/short-recipient-evaluation.json), not rewritten.
+
 `krdict-auxiliary-dictionary.json` contains 32 lexical entries from the September
 2026 Korean Basic Dictionary export for COV-019m. It retains English equivalents,
 all sense/attachment notes and one example group per sense, excluding idiom/proverb

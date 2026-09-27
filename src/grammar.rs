@@ -1037,6 +1037,11 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("에게다", 1, 0),
             ("에게다가", 1, 0),
             ("에게서", 1, 0),
+            // Independent KRDict particles, especially 내게/네게/제게.
+            // Preserve their surface pronoun bases rather than inventing an
+            // underlying 나/너/저 + 에게 contraction.
+            ("게", 1, 0),
+            ("게서", 1, 0),
             ("한테", 1, 0),
             ("한테다", 1, 0),
             ("한테다가", 1, 0),

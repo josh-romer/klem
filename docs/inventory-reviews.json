@@ -14972,6 +14972,384 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:66937",
+      "source_sha256": "df3aaea36928a80b658091918e71d21695718258f2703fba8c76c7fa8c220081",
+      "status": "scoped",
+      "checklist": [
+        "COV-018o"
+      ],
+      "scope": "Independent recipient/source particle preserves its represented nominal base, with reviewed outer case/focus stages, contracted topic/object particles and predicate-ending homonyms. Surface pronouns are not automatically expanded to 나/너/저 + 에게.",
+      "remaining": "Person/animal lexical eligibility, contextual suitability, broader particle chains and personal-pronoun normalization remain unreviewed; dictionary membership does not settle them.",
+      "evidence": [
+        {
+          "path": "tests/short_recipient.rs",
+          "test": "short_recipient_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_recipient.rs",
+          "test": "annotated_short_recipient_preserves_pronoun_bases_and_particle_roles"
+        },
+        {
+          "path": "docs/short-recipient-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-recipient-내-게-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게-도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게-는",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게-만",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게-요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게-만은",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게-까지",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게-부터",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게-라도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-겐",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-겐요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-겔",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-내-게-게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-내-게-에게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-는",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-만",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-만은",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-까지",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-부터",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게-라도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-겐",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-겐요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-겔",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-네-게-게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-네-게-에게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-는",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-만",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-만은",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-까지",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-부터",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게-라도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-겐",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-겐요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-겔",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-제-게-게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-제-게-에게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-boundary-먹고게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-boundary-먹게",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:66974",
+      "source_sha256": "2a1110b0177a62a66daed06d2ee6300921b2b7ab3a28699f3b6b5b2190e009b1",
+      "status": "scoped",
+      "checklist": [
+        "COV-018o"
+      ],
+      "scope": "Independent recipient/source particle preserves its represented nominal base, with reviewed outer case/focus stages, contracted topic/object particles and predicate-ending homonyms. Surface pronouns are not automatically expanded to 나/너/저 + 에게.",
+      "remaining": "Person/animal lexical eligibility, contextual suitability, broader particle chains and personal-pronoun normalization remain unreviewed; dictionary membership does not settle them.",
+      "evidence": [
+        {
+          "path": "tests/short_recipient.rs",
+          "test": "short_recipient_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/short_recipient.rs",
+          "test": "annotated_short_recipient_preserves_pronoun_bases_and_particle_roles"
+        },
+        {
+          "path": "docs/short-recipient-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "short-recipient-내-게서-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게서-도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게서-는",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게서-만",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게서-요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게서-만은",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게서-까지",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게서-부터",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게서-라도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-내-게선",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-내-게서-게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-내-게서-에게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-는",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-만",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-만은",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-까지",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-부터",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게서-라도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-네-게선",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-네-게서-게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-네-게서-에게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-는",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-만",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-요",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-만은",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-까지",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-부터",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게서-라도",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-제-게선",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-제-게서-게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-repeated-제-게서-에게",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-boundary-먹고게서",
+          "judgment": "path"
+        },
+        {
+          "case": "short-recipient-boundary-크게서",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

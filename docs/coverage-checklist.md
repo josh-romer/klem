@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-09-26.
+Last reviewed: 2026-09-27.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ah/018a–k/018m–n/019a–g/019i–m/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ah/018a–k/018m–o/019a–g/019i–m/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 211 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ah/018e–k/018m–n/019d–g/019i–l/020d–h; 503 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 213 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ah/018e–k/018m–o/019d–g/019i–m/020d–h; 501 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -753,7 +753,7 @@ review remains open under the completion review below.
   alternative 좋다 + 지다 remains. Following inference 보다 is COV-019l.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–n implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–o implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -948,6 +948,25 @@ review remains open under the completion review below.
   across 18 types without losing any previous filtered readings. The inherited
   adverbial + particle + copula hypotheses remain unjudged under COV-020;
   additional particle subclasses and contextual sense selection remain open.
+
+- [x] **COV-018o — Independent 게/게서 recipient and source particles.**
+  내게/네게/제게 and 내게서/네게서/제게서 now preserve their represented
+  pronoun base plus the dictionary-listed particle. Ordinary outer particles,
+  contracted topics (내겐/내게선), emphatic object marking and 게 + 다/다가
+  compose through existing particle stages. Whole words and predicate-ending 게
+  remain selectable. [NIKL's analysis](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=308388)
+  explicitly distinguishes 네 + 게 from a 너에게 contraction; some corpus
+  annotations use the latter segmentation, which is retained as a separate
+  normalization question. Source notes permit person/animal nominal referents;
+  lexical and contextual eligibility is not established by dictionary presence.
+  Evidence: [93 ledger cases](../tests/fixtures/validity.json) (77 required /
+  16 forbidden), [path/dictionary/CLI and corpus tests](../tests/short_recipient.rs),
+  four complete unchanged KAIST sentences, browser particle/ending source
+  selection and export, and [the candidate/corpus/novel review](short-recipient-evaluation.json).
+  Across 3,377 tracked surfaces, 114 hypotheses are added on 104 surfaces;
+  none are removed, no old provenance changes, and all 30 stress hashes remain.
+  Broader personal-pronoun normalization and particle-marked copula bases remain
+  under COV-018/020.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

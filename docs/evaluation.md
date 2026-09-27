@@ -2257,3 +2257,40 @@ hints/source selections and desktop/mobile display. Existing inventory dispositi
 link the new evidence; counts remain 211 scoped / 503 unreviewed / one gap.
 Ordinary lexical-negative homonym consistency, contextual ranking, independent
 Korean review and the remaining checklist families stay open.
+
+## Independent 게/게서 particles (COV-018o)
+
+The [source and candidate review](short-recipient-evaluation.json) adds independent
+recipient/source particles 게 and 게서. 내게, 네게 and 제게 retain their represented
+pronoun bases, following the dictionary and NIKL's explicit 네 + 게 analysis.
+Existing outer particles, contracted topic/object particles and 게 + emphatic
+다/다가 compose; predicate-ending 게 remains a separate candidate and source entry.
+
+The 93 new ledger cases contain 77 required and 16 forbidden paths. Main totals
+are 2,114 required / 1,398 forbidden judgments. Four full unchanged KAIST sentences
+exercise the source's pronoun segmentation; alternative 나 + 에게 annotations in
+other corpus rows are recorded without changing gold or silently expanding the
+surface base. The grammar catalog now has 327 canonical forms / 463 distinct
+source IDs / 464 grammar fixture entries. Two scoped source dispositions give
+213 scoped / 501 unreviewed / one unresolved inventory gap.
+
+Across 3,377 tracked surfaces, 114 candidates are added on 104 surfaces, with no
+removals or provenance changes; all thirty stress hashes remain intact. KAIST
+development recovers M2TA_089-s64/2 제게 → 제, leaving 98 misses and 22,122/22,220
+grouped matches. GSD remains at 146 misses and 9,843/9,989 matches. Other development
+case outcomes are identical. Mean candidate counts become 6.008731 / 5.506858.
+All frozen corpus regressions pass without baseline edits.
+
+The novel gains 231 compatible candidates across 225 tokens / 64 types, with no
+previous candidate removed. The report retains every changed analysis, including
+unjudged lexical hypotheses such as 길 + 게 and 정답 + 게 and inherited copula
+alternatives. These are not all precision gains: broad nominal POS does not
+establish a person/animal referent. The viewer can still choose the noun hint
+“creek” for 내; the exact assessment is retained as unresolved homonym selection.
+
+Rust, Clippy, formatting, frontend/browser/HTTP tests, inventory verification,
+x86_64-linux Nix flake checks and the packaged web build pass. The packaged
+full-dictionary viewer verifies all 93 judgments, CLI/API parity, four displayed
+words, particle source selection and desktop/mobile layout. Three local sequential
+Nix release measurements give compatible median 1.215s versus 1.199s before,
+with peak RSS below 29 MiB. These are local observations, not throughput guarantees.

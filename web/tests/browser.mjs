@@ -261,8 +261,12 @@ try {
   const auxiliaryClasses = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-auxiliary-dictionary.json"), "utf8"),
   );
+  const shortRecipient = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
+  );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
       ...ryeona.LexicalResource.Lexicon.LexicalEntry,
       ...attachmentConnectives.LexicalResource.Lexicon.LexicalEntry,
@@ -550,6 +554,46 @@ try {
   await page.setViewportSize({width: 390, height: 844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-auxiliary-classes-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Independent 게/게서 particles preserve 내/네/제 and their grammar homonyms.
+  const recipientLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
+  const recipientCases = recipientLedger.cases.filter(c => c.id.startsWith("short-recipient-"));
+  assert.equal(recipientCases.length, 93);
+  for (const c of recipientCases) {
+    const data = await (await post("analyze", {text: c.surface})).json(), token = data.records[0];
+    for (const j of c.judgments) {
+      const match = a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds);
+      const index = token.analysis.analyses.findIndex(match);
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const recipientText = "내겐 네게서도 제게다가 먹게";
+  await submit(page, recipientText);
+  await waitHeading(page, "내겐");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, expected, sourceId] of [[0, ["내", "게", "는"], 66937], [1, ["네", "게서", "도"], 66974], [2, ["제", "게", "다가"], 66937]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, expected);
+    assert.ok(value, expected.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), expected);
+    await word.locator(".breakdown-part").nth(1).click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), sourceId);
+  }
+  const recipientDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const recipientExport = JSON.parse(await readFile(await (await recipientDownload).path(), "utf8"));
+  const recipientExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: recipientText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(recipientExport.records, recipientExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Whole lexical adverbs survive both filters with their own role and gloss.

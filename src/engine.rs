@@ -1465,7 +1465,7 @@ fn particle_allowed(
         .is_some_and(|m| matches!(m.form.as_str(), "다" | "다가"))
         && !matches!(
             form,
-            "에" | "에서" | "서" | "에게" | "한테" | "께" | "로" | "으로"
+            "에" | "에서" | "서" | "에게" | "게" | "한테" | "께" | "로" | "으로"
         )
     {
         return false;
@@ -1845,7 +1845,7 @@ fn nominals(
             }
             if matches!(
                 particle.form,
-                "보고" | "더러" | "에게다" | "에게다가" | "한테다" | "한테다가"
+                "보고" | "더러" | "게" | "게서" | "에게다" | "에게다가" | "한테다" | "한테다가"
             ) {
                 a.rules.push("particle.recipient".into());
             }

@@ -1,4 +1,4 @@
-# Dictionary-backed attachment checks (COV-017aa / COV-017ag / COV-019m)
+# Dictionary-backed attachment checks (COV-017aa / COV-017ag / COV-017ai / COV-019m)
 
 `--dict-compatible` keeps headword-matching analyses unless the dictionary supplies
 only conflicting lexical evidence for at least one component. It is an explicit,
@@ -30,6 +30,7 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `result_transfer_verb` | Canonical 어다/어다가 | 좋아다 conflicts; 모셔다 retains lexical 모시다. |
 | `negative_copula_command` | Lexical 아니다 with canonical command 으라니 | 아니라니 retains 아니다 + factual 라니, excluding its distinct command hypothesis. |
 | `auxiliary_class` | A represented auxiliary's known class, shared with the engine | 오려나봐 supports inference 보다 (보조 형용사), excluding the trial auxiliary-verb homonym from this reading's hint. |
+| `literary_assertion_class` | Bare lexical predicates with 으니라/느니라 | 읽으니라 conflicts with its verb-only entry; 크니라 and 크느니라 retain their respective adjective/verb homonyms. |
 
 The present family is shared with the engine: 는다/는다고/는다는/는다면/는답니다/
 는다거나/는다든가/는다네/는다는데/는다며/는다면서/는다니/는단. Attached ㄴ
@@ -63,6 +64,18 @@ now has 185 cases (109 required / 76 forbidden). All are generated and headword
 matched before the optional filter; raw and headword-only candidates are unchanged.
 
 ## Homonyms, unknowns and ownership
+
+The [literary assertion extension](nira-evaluation.json) adds fifteen policy cases
+(12 required / 3 forbidden), bringing the whole-reading policy ledger to 200
+cases (121 required / 79 forbidden). The new lexical check applies only at a bare
+stem boundary. Honorific 시 can precede either family; past/modal markers can
+precede 느니라. Source-listed existential predicates retain their exceptional
+behavior, with uncertain verbal 으니라 uses marked unknown. A token-initial
+auxiliary remains unknown: 먹으니라 keeps its auxiliary homonym even though its
+lexical verb entries conflict. The narrower 읽다 case has no such homonym.
+Source-attested negative 니라 and uncertain inherited negative classes are not
+categorically decided from the engine's structural POS. These limits remain
+explicit in COV-019h and the review's unjudged observations.
 
 The [auxiliary class review](auxiliary-dictionary-evaluation.json) and
 [43-case entry ledger](../tests/fixtures/auxiliary-dictionary.json) track 86

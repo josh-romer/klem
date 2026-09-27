@@ -25,6 +25,7 @@ pub enum AttachmentRule {
     IntentionVerb,
     ResultTransferVerb,
     AuxiliaryClass,
+    LiteraryAssertionClass,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -166,7 +167,20 @@ impl Annotation {
                         let form = analysis.morphemes[i].form.as_str();
                         let adjective = matched.entry.pos == "형용사";
                         let verb = matched.entry.pos == "동사";
-                        let rule = if crate::engine::present_declarative(form) && adjective {
+                        let rule = if bare
+                            && ((form == "으니라" && verb)
+                                || (form == "느니라"
+                                    && adjective
+                                    && !lemma.text.ends_with("있다")
+                                    && !lemma.text.ends_with("없다")))
+                        {
+                            if matches!(lemma.text.as_str(), "있다" | "없다" | "계시다") {
+                                status = Compatibility::Unknown;
+                                None
+                            } else {
+                                Some(AttachmentRule::LiteraryAssertionClass)
+                            }
+                        } else if crate::engine::present_declarative(form) && adjective {
                             Some(AttachmentRule::PresentDeclarativeVerb)
                         } else if adjective && crate::engine::verbal_intention(form) {
                             Some(AttachmentRule::IntentionVerb)

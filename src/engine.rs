@@ -532,6 +532,17 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if adjectival_question(ending.form) && !p.morphs.is_empty() {
                     continue;
                 }
+                // Literary assertion forms have separate source licenses:
+                // -(으)니라 permits 시; -느니라 also permits past/modal forms.
+                // Their lexical adjective/verb classes remain hypotheses.
+                if (ending.form == "으니라" && p.morphs.iter().any(|m| m.form != "시"))
+                    || (ending.form == "느니라"
+                        && p.morphs
+                            .iter()
+                            .any(|m| !matches!(m.form.as_str(), "시" | "었" | "겠" | "어야겠")))
+                {
+                    continue;
+                }
                 // Present reported forms permit honorific 시 but no other
                 // prefinals; past/modal use their plain 다- counterparts.
                 if present_declarative(ending.form) && p.morphs.iter().any(|m| m.form != "시") {
@@ -762,6 +773,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if ending.form == "으려나" {
                     p.rules.push("ending.expectation_question".into());
+                }
+                if matches!(ending.form, "으니라" | "느니라") {
+                    p.rules.push("ending.literary_assertion".into());
                 }
                 if factual_ra {
                     p.rules.push("ending.factual_ra".into());
@@ -1064,6 +1078,21 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                 .get(cursor)
                 .filter(|m| m.kind == MorphemeKind::Ending)
         {
+            if bare
+                // Negative paradigms are not resolved from inherited POS:
+                // KRDict -으니라 even illustrates 되지는 않으니라.
+                && !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+                && ((m.form == "느니라"
+                    && matches!(
+                        class,
+                        Some(PredicateClass::Adjective | PredicateClass::Copula)
+                    ))
+                    || (m.form == "으니라"
+                        && matches!(class, Some(PredicateClass::Verb))
+                        && !matches!(lemma.text.as_str(), "있다" | "계시다")))
+            {
+                return false;
+            }
             if bare_stative_iss && present_declarative(&m.form) {
                 return false;
             }
@@ -1192,6 +1221,9 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         return false;
     }
     let first = p.morphs[0].form.as_str();
+    if first == "느니라" {
+        return false;
+    }
     let vowel = first.starts_with('어')
         || first.starts_with('은')
         || matches!(
@@ -1200,6 +1232,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으면"
                 | "으니까"
                 | "으니"
+                | "으니라"
                 | "으며"
                 | "으면서"
                 | "으므로"
@@ -1385,6 +1418,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
             m.form.as_str(),
             "다며"
                 | "다면서"
+                | "느니라"
                 | "느냐며"
                 | "느냐면서"
                 | "느냐니"

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ah/018a–k/018m–o/019a–g/019i–m/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ai/018a–k/018m–o/019a–g/019i–m/020a–j/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 213 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ah/018e–k/018m–o/019d–g/019i–m/020d–h; 501 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 216 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ai/018e–k/018m–o/019d–g/019i–m/020d–h/020j; 498 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ah implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ai implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -752,6 +752,23 @@ review remains open under the completion review below.
   The corpus lexical lemma lacks a dictionary headword; the required dictionary
   alternative 좋다 + 지다 remains. Following inference 보다 is COV-019l.
 
+- [x] **COV-017ai — Literary assertions -(으)니라/-느니라.**
+  Added dictionary-listed stative/copular 으니라 and verbal/existential 느니라,
+  with ㄹ/allomorph and irregular boundaries. The first permits honorific 시;
+  the second additionally permits past/modal markers. Known auxiliary and 답다
+  classes constrain bare attachment, while uncertain negative/existential
+  paradigms remain visible: KRDict explicitly illustrates 되지는 않으니라.
+  The optional dictionary policy checks bare lexical class conflicts, preserves
+  valid 크다/늦다 homonyms, separately written auxiliaries and unknown providers,
+  and follows each ending's owner. It does not treat honorific/past/modal use as
+  bare lexical attachment. Evidence: [54 morphology cases](../tests/fixtures/validity.json)
+  (37 required / 17 forbidden), [15 dictionary-policy cases](../tests/fixtures/dictionary-attachments.json)
+  (12 required / 3 forbidden), [tests](../tests/nira.rs), three complete unchanged
+  KAIST sentences, browser source/homonym/export checks and
+  [the source/output review](nira-evaluation.json). Vowel-final omitted copulas
+  are COV-020j. This modern dictionary-listed literary register does not imply
+  general historical or dialectal grammar coverage.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–o implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -1162,7 +1179,8 @@ review remains open under the completion review below.
   finite 거/것 nominal alternatives; COV-020d adds enumerative -요 and
   COV-020e adds reviewed consonant-initial ending families; COV-020f adds
   honorific omission and short 세요; COV-020g adds modal/retrospective omission;
-  COV-020h adds attached question endings; COV-020i adds nominal approximation -쯤.**
+  COV-020h adds attached question endings; COV-020i adds nominal approximation -쯤;
+  COV-020j adds literary 니라 omission.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -1299,6 +1317,17 @@ review remains open under the completion review below.
   [tests](../tests/approximation.rs), stable `approximation-*` ledger cases,
   `approximation_suffix_preserves_dictionary_and_cli_parity`, browser source
   selections, and [source/candidate review](approximation-evaluation.json).
+
+- [x] **COV-020j — Omitted copula before literary 니라.**
+  그림자니라 exposes 그림자 + 이다 + 으니라, alongside explicit 그림자이니라
+  and consonant-final 학생이니라. Existing nominalization and honorific-copula
+  recovery remain available. A consonant-final nominal still requires 이;
+  no lexical predicate is invented from the reconstructed copula. Bare copulas
+  reject 느니라, while licensed prefinals can precede it (학생이었느니라).
+  The unchanged KAIST DEV MH2_0159-s305 sentence supplies the omitted-copula
+  annotation. Evidence: COV-017ai's [tests](../tests/nira.rs), ledger boundaries,
+  dictionary/browser parity and [review](nira-evaluation.json). Broader
+  particle-marked bases remain COV-020; historical tense uses are not inferred.
 
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation

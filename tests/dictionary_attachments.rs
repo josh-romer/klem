@@ -87,7 +87,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     })
     .unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (109, 76));
+    assert_eq!((report.required_total, report.forbidden_total), (121, 79));
     assert_eq!(
         report.required_total + report.forbidden_total,
         suite.cases.len()

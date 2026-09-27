@@ -532,6 +532,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "는데도",
             "는데다가",
             "느냐",
+            "느니라",
             "느라고",
             "고",
             "고서",
@@ -624,6 +625,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("니까", "습니까", 17),
             ("니", "니", 0),
             ("니", "으니", 0),
+            ("니라", "으니라", 0),
             ("니까", "으니까", 0),
             ("고", "고", 0),
             ("지만", "지만", 0),
@@ -694,6 +696,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으면", "면", "으면"),
             ("으니까", "니까", "으니까"),
             ("으니", "니", "으니"),
+            ("으니라", "니라", "으니라"),
             ("으며", "며", "으며"),
             ("으면서", "면서", "으면서"),
             ("으므로", "므로", "으므로"),
@@ -1284,6 +1287,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.result_connective" => {
             "Recover -아/어/여다(가) at a bare verb boundary, preserving the short and full forms and reviewed following auxiliaries; sentence-level transfer and object constraints are not inferred."
+        }
+        "ending.literary_assertion" => {
+            "Recognize literary -(으)니라/-느니라 assertions with their distinct boundary and prefinal licenses; lexical class and contextual suitability remain separate evidence."
         }
         "ending.expectation_question" => {
             "Recover -(으)려나 as a question or shortened intention expression, preserving dictionary homonyms without inserting implicit 하다 or choosing a contextual sense."

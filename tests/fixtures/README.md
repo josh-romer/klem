@@ -998,6 +998,19 @@ The grammar fixture also adds expression -려는 (86688), keeping -으려는
 (70 required / 52 forbidden), including homonyms, component ownership and the
 observed 노래다 ambiguity. All raw hypotheses and headword matches remain.
 
+`krdict-nira.json` contains 51 lexical entries for COV-017ai/COV-020j from the
+September 2026 Korean Basic Dictionary export. All sense/attachment notes and
+English equivalents are retained, with one example group per sense. Attribution:
+National Institute of Korean Language; license:
+[CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+Grammar entries 86126/86127/86128 are in `krdict-grammar-labels.json`.
+`kaist-nira.conllu` retains the complete unchanged DEV sentences MH2_0159-s301
+and MH2_0159-s305 and TRAIN sentence M2TA_084-s95, with the same upstream
+attribution/license as the existing KAIST excerpts. The lexical/derived love
+predicate, omitted nominal copula and consonant-final adjective are independently
+tested. See the [source review](../../docs/nira-evaluation.json) for register,
+negative/existential uncertainty and the separate dictionary-policy judgments.
+
 `krdict-short-recipient.json` contains 30 lexical entries for COV-018o from the
 September 2026 Korean Basic Dictionary export. It retains English equivalents,
 all sense/attachment notes and one example group per sense. Attribution: National

@@ -61,6 +61,29 @@ recovers 지식인 + 들 + 을 but 지식인들를 does not recover that path.
 The separate 들 particle after nominals, adverbs, and licensed endings is
 implemented as described below. General derivational suffix analysis remains open.
 
+## Literary assertions (COV-017ai / COV-020j)
+
+Canonical 으니라 represents dictionary [-니라](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86127)
+and [-으니라](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86126),
+with their vowel/ㄹ versus other-consonant boundary and existing irregular recovery.
+The stative/copular family permits recovered honorific 시. Literal
+[-느니라](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86128)
+has verbal/existential attachment, ㄹ deletion, and 시/었/겠 prefinal licenses.
+Retrospective 더 and future 으리 are not inherited by either family. The existing
+bundled 어야겠 passes through 느니라's modal slot; its contextual interpretation
+is not independently judged.
+
+Explicit and omitted copulas remain represented: 학생이니라 → 학생 + 이다 + 으니라,
+그림자니라 → 그림자 + 이다 + 으니라. Omission requires the existing vowel-final
+boundary; bare copulas do not take 느니라, while 학생이었느니라 retains its past.
+Auxiliary/답다 classes constrain bare forms. Negative and existential subtleties
+are preserved for review; the source itself illustrates 되지는 않으니라.
+The optional dictionary policy checks bare lexical adjective/verb conflicts
+without borrowing a later auxiliary's ending or dropping unknown provider and
+separately written auxiliary entries. See [the review](nira-evaluation.json).
+These dictionary-listed literary forms do not implement general historical
+Korean, contextual interpretation, or additional particle/auxiliary attachment.
+
 ## Particle and pronoun expansion (P1)
 
 The contracted particles [ㄴ](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85847)

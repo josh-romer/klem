@@ -264,8 +264,12 @@ try {
   const shortRecipient = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
+  const nira = JSON.parse(
+    await readFile(resolve(root, "tests/fixtures/krdict-nira.json"), "utf8"),
+  );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...nira.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
       ...ryeona.LexicalResource.Lexicon.LexicalEntry,
@@ -594,6 +598,50 @@ try {
   await page.setViewportSize({width: 390, height: 844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Literary assertions retain distinct forms, copulas and lexical homonyms.
+  const niraCases = recipientLedger.cases.filter(c => c.id.startsWith("nira-"));
+  const niraPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-nira-"));
+  assert.equal(niraCases.length, 54); assert.equal(niraPolicies.length, 15);
+  for (const [cases, policy] of [[niraCases, false], [niraPolicies, true]]) {
+    for (const c of cases) {
+      const data = await (await post("analyze", {text: c.surface})).json(), token = data.records[0];
+      for (const j of c.judgments) {
+        const match = a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+          && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+          && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+          && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds);
+        const index = token.analysis.analyses.findIndex(match);
+        assert.equal(index >= 0, policy || j.verdict === "required", c.id);
+        if (index >= 0) assert.equal(token.dictionary.readings[index].status === "incompatible", j.verdict === "forbidden", c.id);
+      }
+    }
+  }
+  const niraText = "사랑하느니라 그림자니라 같으니라 크니라 크느니라";
+  await submit(page, niraText); await waitHeading(page, "사랑하느니라");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  const niraData = await (await post("analyze", {text: niraText})).json();
+  for (const [i, expected, sourceId] of [[0, ["사랑하", "느니라"], 86128], [1, ["그림자", "이", "으니라"], 86126], [2, ["같", "으니라"], 86126], [3, ["크", "으니라"], 86126], [4, ["크", "느니라"], 86128]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, expected);
+    assert.ok(value, expected.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), expected);
+    if (i >= 3) assert.equal(await word.locator(".part-gloss").first().innerText(), niraData.glosses[i === 3 ? "krdict:66586" : "krdict:66584"]);
+    await word.locator(".breakdown-part").last().click();
+    if (sourceId === 86126) await page.locator(".entry-choices button").filter({hasText: "-으니라"}).click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), sourceId);
+  }
+  const niraDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const niraExport = JSON.parse(await readFile(await (await niraDownload).path(), "utf8"));
+  const niraExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: niraText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(niraExport.records, niraExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-nira-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-nira-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Whole lexical adverbs survive both filters with their own role and gloss.

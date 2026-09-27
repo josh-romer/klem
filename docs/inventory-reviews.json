@@ -15350,6 +15350,321 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:86126",
+      "source_sha256": "b3fe6206168f327c27317082e84cf222a45fae4a19c0e776160700ed265a73f9",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ai",
+        "COV-020j"
+      ],
+      "scope": "Dictionary-listed literary assertion forms with separate boundary/prefinal licenses, known structural classes, finite lexical dictionary conflicts, and vowel-final omitted copulas. Unknown and negative/existential alternatives remain visible.",
+      "remaining": "Historical tense uses, negative/existential paradigm details, other following particles/auxiliaries, particle-marked copula bases and contextual interpretation remain outside these finite judgments. Independent Korean review is pending.",
+      "evidence": [
+        {
+          "path": "tests/nira.rs",
+          "test": "nira_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/nira.rs",
+          "test": "nira_lexical_evidence_preserves_homonyms_unknowns_and_ownership"
+        },
+        {
+          "path": "tests/nira.rs",
+          "test": "annotated_nira_preserves_lexical_and_omitted_copula_groups"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/nira-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "nira-bare-좋으니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-같으니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-먹고싶으니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-되지는않으니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-길으니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-가으니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-먹었으니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-좋겠으니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-class-boundary-학생으니라",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86127",
+      "source_sha256": "2c3d8630c5a1a7bb0dac913a1efef4c0d3f4fd4d8aa09f40b9713b3cf53289aa",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ai",
+        "COV-020j"
+      ],
+      "scope": "Dictionary-listed literary assertion forms with separate boundary/prefinal licenses, known structural classes, finite lexical dictionary conflicts, and vowel-final omitted copulas. Unknown and negative/existential alternatives remain visible.",
+      "remaining": "Historical tense uses, negative/existential paradigm details, other following particles/auxiliaries, particle-marked copula bases and contextual interpretation remain outside these finite judgments. Independent Korean review is pending.",
+      "evidence": [
+        {
+          "path": "tests/nira.rs",
+          "test": "nira_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/nira.rs",
+          "test": "nira_lexical_evidence_preserves_homonyms_unknowns_and_ownership"
+        },
+        {
+          "path": "tests/nira.rs",
+          "test": "annotated_nira_preserves_lexical_and_omitted_copula_groups"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/nira-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "nira-bare-예쁘니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-기니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-추우니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-어려우니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-파라니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-아니니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-먹으시니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-좋으시니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-학생이니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-그림자니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-의사이니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-의사시니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-학생다우니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-좋니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-길니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-먹더니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-class-boundary-학생니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-class-boundary-먹어보니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-class-boundary-먹느니라보다",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86128",
+      "source_sha256": "2997166773a64ecf62d8625b942c3bae092dafc3a1beaf98d1141111678f805e",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ai",
+        "COV-020j"
+      ],
+      "scope": "Dictionary-listed literary assertion forms with separate boundary/prefinal licenses, known structural classes, finite lexical dictionary conflicts, and vowel-final omitted copulas. Unknown and negative/existential alternatives remain visible.",
+      "remaining": "Historical tense uses, negative/existential paradigm details, other following particles/auxiliaries, particle-marked copula bases and contextual interpretation remain outside these finite judgments. Independent Korean review is pending.",
+      "evidence": [
+        {
+          "path": "tests/nira.rs",
+          "test": "nira_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/nira.rs",
+          "test": "nira_lexical_evidence_preserves_homonyms_unknowns_and_ownership"
+        },
+        {
+          "path": "tests/nira.rs",
+          "test": "annotated_nira_preserves_lexical_and_omitted_copula_groups"
+        },
+        {
+          "path": "tests/fixtures/dictionary-attachments.json"
+        },
+        {
+          "path": "docs/nira-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "nira-bare-먹느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-가느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-사느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-듣느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-사랑하느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-있느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-없느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-bare-계시느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-먹으시느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-좋으시느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-먹었느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-좋았느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-먹겠느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-좋겠느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-prefinal-먹으셨겠느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-학생이었느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-학생다웠느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-먹어보느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-먹고있느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-composition-먹고싶었느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-살느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-먹더느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-boundary-먹으리느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-class-boundary-학생이느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-class-boundary-학생답느니라",
+          "judgment": "path"
+        },
+        {
+          "case": "nira-class-boundary-먹고싶느니라",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

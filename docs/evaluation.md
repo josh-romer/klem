@@ -2294,3 +2294,46 @@ full-dictionary viewer verifies all 93 judgments, CLI/API parity, four displayed
 words, particle source selection and desktop/mobile layout. Three local sequential
 Nix release measurements give compatible median 1.215s versus 1.199s before,
 with peak RSS below 29 MiB. These are local observations, not throughput guarantees.
+
+## Literary assertions (COV-017ai / COV-020j)
+
+The [source and candidate review](nira-evaluation.json) adds dictionary-listed
+-(으)니라 and -느니라, their distinct boundary/prefinal licenses, known auxiliary
+classes, and vowel-final omitted copulas. 그림자니라 recovers 그림자 + 이다 +
+으니라. The optional dictionary policy separates bare lexical verb/adjective
+conflicts while preserving valid homonyms, existential uncertainty and separately
+written auxiliaries. KRDict's 되지는 않으니라 example prevents a blanket inherited
+verb-class rejection for negative auxiliaries; further negative/existential
+judgments remain open.
+
+The batch adds 54 morphology judgments (37 required / 17 forbidden), 15 dictionary
+policy judgments (12 required / 3 forbidden), and three complete unchanged KAIST
+sentences. Main validity totals are 2,151 required / 1,415 forbidden; dictionary
+policy totals are 121 required / 79 forbidden. Three source dispositions bring
+the inventory to 216 scoped / 498 unreviewed / one unresolved gap. The catalog
+has 329 canonical forms / 466 distinct source IDs / 467 grammar fixture entries.
+
+Across 3,441 tracked surfaces, 373 candidates are added on 60 surfaces, with no
+removals or provenance changes; all thirty stress hashes remain unchanged.
+KAIST development recovers 사랑하느니라 and 그림자니라, giving 22,124/22,220
+grouped matches and 96 misses. GSD remains at 9,843/9,989 and 146 misses. Mean
+candidate counts become 6.016877 / 5.508860. Frozen corpus regressions pass
+without baseline edits. These reused development cases are regression evidence,
+not an independent precision estimate.
+
+The novel gains 70 compatible candidates across 67 tokens / nine types, with
+no prior candidate removed. In 57 아니라 tokens the added candidate is
+아 + 이다 + 으니라, an unjudged nominal/copula hypothesis alongside the existing
+아니다 reading. Other inherited particle/copula alternatives also remain
+unjudged; additions are not all precision gains. Compatible totals become
+119,929 analyses / 73,317 tokens with readings; headword-only totals become
+130,825 / 73,372 across 81,758 word tokens.
+
+Rust/web-feature tests, Clippy, formatting, frontend/browser/HTTP tests, inventory
+verification, x86_64-linux Nix flake checks and the packaged web build pass.
+The packaged full-dictionary preview checks all 69 judgments, CLI/API/export
+parity, five displayed breakdowns, all three source entries and desktop/mobile
+layout. Three sequential local release runs measured compatible median 1.258s
+versus 1.227s before, with peak RSS below 29 MiB. These local measurements include
+JSONL serialization and are not throughput guarantees. Independent Korean review,
+contextual selection and the remaining checklist families stay open.

@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 284 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–an/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k; 430 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 287 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–an/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 427 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -1618,13 +1618,23 @@ review remains open under the completion review below.
   removes 59 paths at 56 occurrences / 16 word types; every changed context is
   recorded with stable policy IDs in [the review](copular-class-evaluation.json).
   Rust, browser, full-dictionary packaged preview and Nix checks pass. Missing
-  KRDict 모란 remains a vocabulary gap; quoted/Hanja-separated copulas still require contextual token handling.
-- [ ] **COV-020o — Family-specific factual prefinal licenses.** The bare check
-  does not resolve recovered 시/더/으리 attachment. KRDict 라는데 lists 이다/
-  아니다/시, while the engine also generates 먹다 + 더 + 라는데 alongside the
-  distinct bundled 더라는데. Review those sources before rejecting either path.
-  KRDict 라서 and NIKL consultation 318485 differ on listed prefinals; preserve
-  that uncertainty, including noncopular 시, rather than inferring a broad ban.
+  KRDict 모란 remains a vocabulary gap; quoted/Hanja-separated copulas still
+  require contextual token handling.
+- [x] **COV-020o — Family-specific factual prefinal licenses.** Source audit,
+  regression, browser and Nix checks pass. A 51-cell matrix records
+  17 endings with 시/더/으리: 42 source-listed paths and nine unlisted combinations,
+  without treating source omission as a universal ban. Fixed missing factual
+  시 + 란 for noncopular predicates, also through irregular recovery, auxiliaries
+  and 답다; command 으란 remains separate. Added 63 raw judgments (59 required /
+  4 forbidden) and three retained dictionary-policy paths. COV-017v already
+  documents the wider 더라는데/라는데요 support for split 라는데 paths; the
+  initial followup observation duplicated that earlier review.
+  KRDict 라서 and NIKL 318485 still differ: a normative restriction is explicitly
+  deferred pending authoritative clarification. Generated source-listed hypotheses
+  remain; their contextual grammaticality is not certified. The
+  [review](factual-prefinal-evaluation.json) records 48 added candidates across
+  13 of 4,567 compared surfaces, zero removals/provenance changes, unchanged
+  frozen-corpus match counts and byte-identical compatible-filtered novel output.
 
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

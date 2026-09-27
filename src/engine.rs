@@ -731,8 +731,13 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "란" {
                     let copular = (p.stem.ends_with('이') || p.stem == "아니")
                         && p.morphs.iter().all(|m| m.form == "시");
-                    let retrospective = p.morphs.last().is_some_and(|m| m.form == "더");
-                    if !copular && !retrospective {
+                    // KRDict 86297 also licenses honorific 시, as does the
+                    // full factual 라는 form. Keep this distinct from 으란.
+                    let licensed_prefinal = p
+                        .morphs
+                        .last()
+                        .is_some_and(|m| matches!(m.form.as_str(), "시" | "더"));
+                    if !copular && !licensed_prefinal {
                         continue;
                     }
                 }

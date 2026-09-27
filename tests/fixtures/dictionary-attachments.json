@@ -2,6 +2,7 @@
   "schema_version": 1,
   "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
   "sources": {
+    "factual-prefinals-86297": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86297",
     "copular-class-nominal-quote": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70074",
     "copular-class-68832": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68832",
     "copular-class-86500": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86500",
@@ -106,6 +107,10 @@
     "attachment-connectives-86232": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86232"
   },
   "cases": [
+    {"id": "factual-prefinals-policy-matrix-시-란", "surface": "먹으시란", "judgments": [{"id": "policy", "lemmas": ["먹다"], "lemma_kinds": ["predicate"], "morphemes": ["시", "란"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "factual-prefinals-86297", "reason": "Retain the recovered honorific factual short quotation through both dictionary filters; it is not a bare lexical factual ending."}]},
+    {"id": "factual-prefinals-policy-auxiliary", "surface": "먹어보시란", "judgments": [{"id": "policy", "lemmas": ["먹다", "보다"], "lemma_kinds": ["predicate", "auxiliary"], "morphemes": ["어", "시", "란"], "morpheme_kinds": ["ending", "prefinal", "ending"], "verdict": "required", "source": "factual-prefinals-86297", "reason": "Retain the recovered honorific factual short quotation through both dictionary filters; it is not a bare lexical factual ending."}]},
+    {"id": "factual-prefinals-policy-derived", "surface": "학생다우시란", "judgments": [{"id": "policy", "lemmas": ["학생"], "lemma_kinds": ["nominal"], "morphemes": ["답다", "시", "란"], "morpheme_kinds": ["suffix", "prefinal", "ending"], "verdict": "required", "source": "factual-prefinals-86297", "reason": "Retain the recovered honorific factual short quotation through both dictionary filters; it is not a bare lexical factual ending."}]},
+
     {"id": "copular-class-novel-1", "surface": "이라", "judgments": [{"id": "policy", "lemmas": ["이다"], "lemma_kinds": ["predicate"], "morphemes": ["라"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "copular-class-80212", "reason": "Observed in pinned 무정 at bytes 7147..7153; the known lexical verb cannot own this bare factual ending. This is a candidate-policy judgment, not a contextually selected sentence parse. Full occurrences and source ownership are retained in docs/copular-class-evaluation.json."}]},
     {"id": "copular-class-novel-2", "surface": "누이라고", "judgments": [{"id": "policy", "lemmas": ["누이다"], "lemma_kinds": ["predicate"], "morphemes": ["라고"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "copular-class-86500", "reason": "Observed in pinned 무정 at bytes 15173..15185; the known lexical verb cannot own this bare factual ending. This is a candidate-policy judgment, not a contextually selected sentence parse. Full occurrences and source ownership are retained in docs/copular-class-evaluation.json."}]},
     {"id": "copular-class-novel-3", "surface": "누이라고밖에", "judgments": [{"id": "policy", "lemmas": ["누이다"], "lemma_kinds": ["predicate"], "morphemes": ["라고", "밖에"], "morpheme_kinds": ["ending", "particle"], "verdict": "forbidden", "source": "copular-class-86500", "reason": "Observed in pinned 무정 at bytes 15318..15336; the known lexical verb cannot own this bare factual ending. This is a candidate-policy judgment, not a contextually selected sentence parse. Full occurrences and source ownership are retained in docs/copular-class-evaluation.json."}]},

@@ -3027,3 +3027,32 @@ Three interleaved release runs per version/filter measured after medians of
 1.249 seconds (headword-only) and 1.252 seconds (compatible), with peak RSS below
 28 MiB. Startup, dictionary access and JSONL serialization are included; this
 small sample does not establish statistical performance equivalence.
+
+
+### Factual prefinal source audit (COV-020o)
+
+The [51-cell source audit](factual-prefinal-evaluation.json) fixes noncopular
+honorific 시 + 란 while preserving command 으란 and existing copular/retrospective
+paths. It adds 63 raw judgments (59 required / 4 forbidden), totaling 2,986 /
+1,691; three filter-preservation cases bring the policy ledger to 216 / 128.
+All 48 candidate additions across 13 of 4,567 compared surfaces retain their
+provenance; no old path is removed. Frozen KAIST/GSD matches are unchanged and
+the 179,112-record compatible-filtered novel output is byte-identical.
+
+There is no new independently annotated corpus example for this honorific short
+quotation; the cases compose explicit dictionary attachment notes. The batch's
+956 unjudged nonidentity outputs remain review work, not a precision estimate.
+Existing COV-017v evidence already supports the broader 라는데 family. Normative
+라서 prefinal restrictions are deferred because pinned KRDict and NIKL 318485
+differ; source-listed hypotheses remain without a claim of contextual validity.
+Three scoped inventory dispositions bring the review to 287 scoped / 427
+unreviewed / one gap. Rust/stress, pinned corpus, lint/format, frontend build,
+browser and Nix checks pass on x86_64 Linux. The packaged full-dictionary app
+passes all 63 raw and three policy cases under both filters; five selected
+paths, source links and API/CLI/export parity were checked, with four
+desktop/mobile screenshots inspected.
+
+Three interleaved release runs per version/filter measured after medians of
+1.237 seconds (headword-only) and 1.226 seconds (compatible), with peak RSS
+about 28.2 MiB. Startup, dictionary access and JSONL serialization are included;
+this small sample does not establish statistical performance equivalence.

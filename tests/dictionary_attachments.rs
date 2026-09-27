@@ -104,7 +104,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     })
     .unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (213, 128));
+    assert_eq!((report.required_total, report.forbidden_total), (216, 128));
     assert_eq!(
         report.required_total + report.forbidden_total,
         suite.cases.len()

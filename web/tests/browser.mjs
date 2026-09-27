@@ -724,6 +724,44 @@ try {
       if (j.verdict === "forbidden") assert.ok(token.dictionary.readings[i].lemmas[0].entries.some(e=>e.conflicts.some(c=>c.rule === "habitual_condition_verb" && c.morpheme_index === j.morphemes.length - 1)));
     }
   }
+  const factualPrefinalCases = recipientLedger.cases.filter(c => c.id.startsWith("factual-prefinals-"));
+  assert.equal(factualPrefinalCases.length, 63);
+  for (const c of factualPrefinalCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const i = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(i >= 0, j.verdict === "required", c.id);
+    }
+  }
+  const factualPrefinalText = "먹으시란 먹어보시란 학생다우시란 학생이시란";
+  await submit(page, factualPrefinalText); await waitHeading(page, "먹으시란");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["먹","시","란"]],[0,["먹","시","으란"]],[1,["먹","어","보","시","란"]],[2,["학생","답","시","란"]],[3,["학생","이","시","란"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 1) {
+      await word.locator(".breakdown-part").last().click();
+      await page.locator(".entry-choices button").filter({hasText: "-란"}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=86297"]'));
+    }
+  }
+  const factualPrefinalDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const factualPrefinalExport = JSON.parse(await readFile(await (await factualPrefinalDownload).path(), "utf8"));
+  const factualPrefinalExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:factualPrefinalText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(factualPrefinalExport.records, factualPrefinalExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-factual-prefinals-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-factual-prefinals-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   const copularCases = connectiveLedger.cases.filter(c => c.id.startsWith("copular-class-"));
   assert.equal(copularCases.length, 105);
   for (const c of copularCases) {

@@ -176,3 +176,33 @@ fn factual_components_and_quoted_bundle_have_distinct_roles_and_provenance() {
         );
     }
 }
+
+#[path = "../tools/validity.rs"]
+mod validity;
+
+#[test]
+fn factual_prefinal_source_matrix_and_honorific_short_quotes() {
+    let mut suite: validity::Suite =
+        serde_json::from_str(include_str!("fixtures/validity.json")).unwrap();
+    suite
+        .cases
+        .retain(|c| c.id.starts_with("factual-prefinals-"));
+    let report = validity::evaluate(&suite).unwrap();
+    assert!(report.passed(), "{:?}", report.violations);
+    assert_eq!((report.required_total, report.forbidden_total), (59, 4));
+    let engine = Lemmatizer::new();
+    for case in suite.cases {
+        let word = engine.analyze_word(&case.surface).unwrap();
+        assert_eq!(
+            word,
+            engine
+                .analyze_word(&case.surface.nfd().collect::<String>())
+                .unwrap()
+        );
+        assert!(word.analyses.iter().any(|a| a.unchanged));
+        for a in word.analyses {
+            assert!(a.breakdown().is_some());
+            assert!(a.rules.iter().all(|r| klem::rule_explanation(r).is_some()));
+        }
+    }
+}

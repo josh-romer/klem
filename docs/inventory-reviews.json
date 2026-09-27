@@ -20794,6 +20794,129 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:80212",
+      "source_sha256": "f6f40a0910073f9d7f3bcb4b59e2f1eb37d461d9b7be6b4b9e460d0e9c213fdc",
+      "status": "scoped",
+      "checklist": [
+        "COV-020n",
+        "COV-020o"
+      ],
+      "scope": "Bare factual copular lexical ownership and pinned-source honorific/retrospective/conjectural attachment. Full entry notes and examples reviewed via krdict-copular-class fixture; source-matrix cases preserve the finite canonical paths without selecting a sentence sense.",
+      "remaining": "Independent Korean review, contextual senses and other attachment combinations remain open. For 라서, the pinned KRDict prefinal list differs from NIKL consultation 318485; preserve generated hypotheses while deferring a normative restriction pending authoritative clarification. This is not full-entry grammaticality certification.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_licenses.rs",
+          "test": "factual_prefinal_source_matrix_and_honorific_short_quotes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/krdict-copular-class.json"
+        },
+        {
+          "path": "docs/factual-prefinal-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "factual-prefinals-matrix-시-라",
+          "judgment": "path"
+        },
+        {
+          "case": "factual-prefinals-matrix-더-라",
+          "judgment": "path"
+        },
+        {
+          "case": "factual-prefinals-matrix-으리-라",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:68832",
+      "source_sha256": "c664f33ba4e8403dec7a31d7ac68fb9b3787e9b55a276d55603ce497398e7f66",
+      "status": "scoped",
+      "checklist": [
+        "COV-020n",
+        "COV-020o"
+      ],
+      "scope": "Bare factual copular lexical ownership and pinned-source honorific/retrospective/conjectural attachment. Full entry notes and examples reviewed via krdict-copular-class fixture; source-matrix cases preserve the finite canonical paths without selecting a sentence sense.",
+      "remaining": "Independent Korean review, contextual senses and other attachment combinations remain open. For 라서, the pinned KRDict prefinal list differs from NIKL consultation 318485; preserve generated hypotheses while deferring a normative restriction pending authoritative clarification. This is not full-entry grammaticality certification.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_licenses.rs",
+          "test": "factual_prefinal_source_matrix_and_honorific_short_quotes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/krdict-copular-class.json"
+        },
+        {
+          "path": "docs/factual-prefinal-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "factual-prefinals-matrix-시-라면",
+          "judgment": "path"
+        },
+        {
+          "case": "factual-prefinals-matrix-더-라면",
+          "judgment": "path"
+        },
+        {
+          "case": "factual-prefinals-matrix-으리-라면",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80211",
+      "source_sha256": "5733779e74a6dbf444fdd6ca71d0553a26a19b431bf76b33793befb9d9056b2d",
+      "status": "scoped",
+      "checklist": [
+        "COV-020n",
+        "COV-020o"
+      ],
+      "scope": "Bare factual copular lexical ownership and pinned-source honorific/retrospective/conjectural attachment. Full entry notes and examples reviewed via krdict-copular-class fixture; source-matrix cases preserve the finite canonical paths without selecting a sentence sense.",
+      "remaining": "Independent Korean review, contextual senses and other attachment combinations remain open. For 라서, the pinned KRDict prefinal list differs from NIKL consultation 318485; preserve generated hypotheses while deferring a normative restriction pending authoritative clarification. This is not full-entry grammaticality certification.",
+      "evidence": [
+        {
+          "path": "tests/prefinal_licenses.rs",
+          "test": "factual_prefinal_source_matrix_and_honorific_short_quotes"
+        },
+        {
+          "path": "tests/dictionary_attachments.rs",
+          "test": "source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy"
+        },
+        {
+          "path": "tests/fixtures/krdict-copular-class.json"
+        },
+        {
+          "path": "docs/factual-prefinal-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "factual-prefinals-matrix-시-라서",
+          "judgment": "path"
+        },
+        {
+          "case": "factual-prefinals-matrix-더-라서",
+          "judgment": "path"
+        },
+        {
+          "case": "factual-prefinals-matrix-으리-라서",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

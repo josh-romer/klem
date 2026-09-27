@@ -2184,3 +2184,43 @@ local Nix release runs measured compatible median 1.197s versus 1.200s before,
 with peak RSS below 29 MiB. This is a local timing observation, including JSONL
 serialization, not a throughput guarantee. No novel precision or recall gain is
 claimed. Raw measurements and comparisons are retained in the source report.
+
+### Expectation questions and inference 보다 (COV-017ah / COV-019l)
+
+[The source/candidate comparison](ryeona-evaluation.json) records 69 required
+and 23 forbidden judgments across question/expression homonyms and inference
+보다. The main ledger now has 3,411 cases / 2,037 required / 1,382 forbidden
+judgments; the separate dictionary-policy ledger remains 185 cases. Across
+3,253 distinct ledger/policy/stress surfaces, 313 candidates are added without
+removing prior analyses or changing their provenance. All 30 stress fingerprints
+remain unchanged. New candidates remain hypotheses rather than precision evidence.
+
+All KAIST/GSD development rows are identical; misses remain 99 / 146. KAIST test
+recovers 좋아지다 for 좋아지려나 in MH2_0010-s336/7, moving from 24,378 to
+24,379 grouped matches out of 24,490 converted rows. No previous group or component
+recovery is lost. The complete test sentence is now explicit regression evidence;
+its source tags and segmentation are retained, and no held-out precision claim is
+made. The gold lexical head lacks a dictionary entry, while 좋다 + 지다 remains
+a tested dictionary-backed reading. Frozen corpus baselines are untouched.
+
+The catalog has 325 canonical forms / 461 source IDs / 462 grammar entries.
+Two prior question gaps become scoped reviews; new bounded reviews cover inference
+보다 and polite 요, giving 211 scoped / 503 unreviewed / one unresolved gap.
+The notes retain the question/expression distinction, modal composition limits,
+other auxiliary/particle and copula-omission followups, and Korean review work.
+
+Rust/web-feature and Nix release suites, frozen corpus regression, Clippy,
+formatting, frontend build, browser/HTTP checks and inventory verification pass.
+Nix flake checks and the packaged web build pass on x86_64-linux. The packaged
+full-dictionary API/CLI checks all 92 judgments, with five selected desktop/mobile
+breakdowns and source selection. Visual inspection also exposed COV-019m:
+inference 보다 has the correct morphological class, but dictionary assessments
+still admit its verbal homonym and display “try.” The exact assessment is retained;
+this batch does not claim that auxiliary dictionary-class selection is complete.
+
+The novel's compatible-filtered candidates are identical across 81,758 tokens.
+Totals remain 119,628 analyses / 73,294 tokens with readings; headword-only totals
+remain 130,449 / 73,349. Three sequential local Nix release runs measured compatible
+median 1.209s versus 1.201s before, with peak RSS below 29 MiB. These local timings
+include JSONL serialization and are not throughput guarantees. The novel does not
+exercise a new matched path; no novel recall or precision gain is claimed.

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ag/018a–k/018m–n/019a–g/019i–k/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ah/018a–k/018m–n/019a–g/019i–l/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,10 +173,10 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 207 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ag/018e–k/018m–n/019d–g/019i–k/020d–h; 505 entries have no disposition in this
-  ledger yet, including entries with implemented behavior elsewhere. Three entries record observed gaps: two question-ending allomorphs
-  (COV-017ah) are missing, and 마다 (COV-018l) has unresolved acceptability. Neither
+  The [manual review ledger](inventory-reviews.json) records 211 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ah/018e–k/018m–n/019d–g/019i–l/020d–h; 503 entries have no disposition in this
+  ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
+  acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
   [review workflow](inventory-audit.md#persistent-entry-review-queue).
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ag implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ah implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -732,14 +732,25 @@ review remains open under the completion review below.
   conflict has its own regression; 노래 + 이다 + 다 remains. The catalog adds
   source -려는 (86688) beside -으려는 (86717), preserving both expression IDs.
 
-- [ ] **COV-017ah — Missing -(으)려나 question family.** The dictionary
-  audit found that 좋으려나 and 먹으려나 lack the canonical 으려나 ending.
-  Review ending allomorphs 79262/79263 separately from shortened expression
-  homonyms 86503/86715: their verb/adjective/copula and prefinal notes differ.
-  Preserve existing lexical/particle alternatives and add source-backed
-  positive/negative cases, grammar labels, dictionary/browser evidence and
-  corpus comparisons. [Current probes and complete notes](attachment-connectives-evaluation.json)
-  record this implementation gap; no blanket 려-prefix attachment rule is valid.
+- [x] **COV-017ah — -(으)려나 question and expression homonyms.**
+  Canonical 으려나 recovers both allomorphs with existing irregular handling.
+  The question ending allows verbs/adjectives/copulas and 시/었/겠; recovered
+  더/으리 are rejected. The engine's atomic 어야겠 follows its final modal
+  boundary, with contextual scope unjudged. The two shortened intention-expression
+  sources retain narrower notes without suppressing valid question readings or
+  inserting 하다. Four dictionary homonyms remain separately selectable.
+  Polite 요, explicit copulas, existing omitted honorific copulas and 답다
+  derivation compose; broader nominal/particle and omitted-copula uses remain open.
+  Evidence: [92 cases](../tests/fixtures/validity.json) (69 required / 23 forbidden),
+  [Unicode/class/dictionary/CLI/corpus tests](../tests/ryeona.rs), eight source
+  reviews, browser allomorph/homonym selection and [comparison](ryeona-evaluation.json).
+  Across 3,253 ledger/policy/stress surfaces, 313 candidates are added with no
+  removals or provenance changes; all 30 stress fingerprints are unchanged.
+  Development results remain identical (99 KAIST / 146 GSD misses). The unchanged
+  KAIST TEST sentence MH2_0010-s336 newly recovers 좋아지다 for 좋아지려나;
+  this sentence is now explicit regression evidence, not held-out evaluation.
+  The corpus lexical lemma lacks a dictionary headword; the required dictionary
+  alternative 좋다 + 지다 remains. Following inference 보다 is COV-019l.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–n implement post-ending, outer choice, emphatic,
@@ -1098,6 +1109,28 @@ review remains open under the completion review below.
   with COV-017af's [tests](../tests/result_connectives.rs) and
   [source report](result-connectives-evaluation.json).
 
+- [x] **COV-019l — Inference 보다 after -(으)려나.** Joined 오려나보다,
+  좋으려나봐 and 좋아지려나보다 expose ordered predicates. KRDict auxiliary
+  보다 sense 1 (62249), expression entries 75177/76465 and the complete KAIST
+  sentence directly support the connector. This 보다 has an Adjective class;
+  present 는다/는 and incompatible following auxiliaries are rejected, including
+  through inherited negative classes. Its ordinary past and polite inflection
+  remains. Other following auxiliaries (including 싶다), internal particles and
+  contextual inference choice remain unreviewed. Evidence: `ryeona-following-*`
+  and `ryeona-class-boundary-*` ledger cases, [tests](../tests/ryeona.rs),
+  dictionary/CLI/browser parity and the [source report](ryeona-evaluation.json).
+
+- [ ] **COV-019m — Dictionary evidence for known auxiliary classes.**
+  The engine treats inference 보다 after 으려나 as adjectival, but dictionary
+  assessments still accept both auxiliary-verb 62171 and auxiliary-adjective
+  62249. The packaged viewer consequently displays “try” for 오려나봐.
+  [The captured assessment](ryeona-evaluation.json) records this mismatch.
+  Propagate known structural classes into per-entry evidence and homonym/gloss
+  selection, preserving ambiguous classes, unknown providers, negative inheritance,
+  separately written auxiliaries and valid alternative readings. Add source-backed
+  dictionary judgments, ownership/CLI/browser checks and novel comparisons; this
+  is distinct from contextual sense ranking or a new morphological connector.
+
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
@@ -1330,7 +1363,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 324 currently emitted canonical grammar forms.** The initial catalog
+  for all 325 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

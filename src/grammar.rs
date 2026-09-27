@@ -274,6 +274,7 @@ pub(crate) const AUXILIARY_CONNECTORS: &[&str] = &[
     "다가",
     "으려다",
     "으려다가",
+    "으려나",
     "어다",
     "어다가",
     "는가",
@@ -703,6 +704,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으려는", "려는", "으려는"),
             ("으려는가", "려는가", "으려는가"),
             ("으려는지", "려는지", "으려는지"),
+            ("으려나", "려나", "으려나"),
             ("으려거든", "려거든", "으려거든"),
             ("으려기에", "려기에", "으려기에"),
             ("으려는데", "려는데", "으려는데"),
@@ -1277,6 +1279,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.result_connective" => {
             "Recover -아/어/여다(가) at a bare verb boundary, preserving the short and full forms and reviewed following auxiliaries; sentence-level transfer and object constraints are not inferred."
+        }
+        "ending.expectation_question" => {
+            "Recover -(으)려나 as a question or shortened intention expression, preserving dictionary homonyms without inserting implicit 하다 or choosing a contextual sense."
         }
         "ending.reporting_ni" => {
             "Recognize a surprise, reported statement, command, proposal or question in a -니 family; preserve homonyms without inserting an implicit reporting verb or selecting a contextual sense."

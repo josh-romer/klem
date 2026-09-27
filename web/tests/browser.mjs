@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const ryeona = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ryeona.json"), "utf8"));
   const attachmentConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-attachment-connectives.json"), "utf8"));
   const resultConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-result-connectives.json"), "utf8"));
   const intentionConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-intention-connectives.json"), "utf8"));
@@ -259,6 +260,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...ryeona.LexicalResource.Lexicon.LexicalEntry,
       ...attachmentConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...resultConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...intentionConnectives.LexicalResource.Lexicon.LexicalEntry,
@@ -1478,6 +1480,14 @@ try {
 
   // Intention and uncertainty forms expose allomorphs and expression homonyms.
   for (const [word, expected, form, label, id, key = `-${form}`] of [
+    ["좋으려나", ["좋", "으려나"], "으려나", "Wonder / intention question", 79263],
+    ["가려나", ["가", "으려나"], "으려나", "Wonder / intention question", 79262],
+    ["가려나", ["가", "으려나"], "으려나", "Wonder / intention question", 86503],
+    ["먹으려나", ["먹", "으려나"], "으려나", "Wonder / intention question", 86715],
+    ["모였으려나", ["모이", "었", "으려나"], "으려나", "Wonder / intention question", 79263],
+    ["학생이려나", ["학생", "이", "으려나"], "으려나", "Wonder / intention question", 79262],
+    ["오려나봐", ["오", "으려나", "보", "어"], "으려나", "Wonder / intention question", 79262],
+    ["좋으려나요", ["좋", "으려나", "요"], "으려나", "Wonder / intention question", 79263],
     ["잡아다", ["잡", "어다"], "어다", "Then / using the result", 86096],
     ["빌려다", ["빌리", "어다"], "어다", "Then / using the result", 86097],
     ["해다", ["하", "여다"], "여다", "Then / using the result", 86144, "-어다"],
@@ -1709,7 +1719,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-") || c.id.startsWith("uncertainty-") || c.id.startsWith("intention-connectives-") || c.id.startsWith("result-connectives-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-") || c.id.startsWith("uncertainty-") || c.id.startsWith("intention-connectives-") || c.id.startsWith("result-connectives-") || c.id.startsWith("ryeona-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

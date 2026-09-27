@@ -14451,34 +14451,494 @@
     {
       "id": "krdict:79262",
       "source_sha256": "b61193ab78c9fe689540275858888532144e96ebaaacb2b1cec0b340303ad89a",
-      "status": "gap",
+      "status": "scoped",
       "checklist": [
         "COV-017ah"
       ],
-      "scope": "Source-backed question allomorph lacks a canonical 으려나 analysis in current probes. Full source notes and unchanged raw outputs are recorded; expression homonyms remain separate.",
-      "remaining": "Implement and test the ending family with its allomorph, lexical-class, prefinal and homonym distinctions; contextual choice and independent Korean review remain open.",
+      "scope": "Short question allomorph 려나: eu/irregular boundary, verb/adjective/copula attachment and honorific 시, preserving expression homonyms.",
+      "remaining": "Contextual senses, other auxiliary links/internal particles, broader lexical constraints and independent Korean review remain open.",
       "evidence": [
         {
-          "path": "docs/attachment-connectives-evaluation.json"
+          "path": "tests/ryeona.rs",
+          "test": "ryeona_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/ryeona.rs",
+          "test": "ryeona_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/ryeona.rs",
+          "test": "annotated_ryeona_preserves_gold_and_dictionary_decomposition"
+        },
+        {
+          "path": "docs/ryeona-evaluation.json"
         }
       ],
-      "judgments": []
+      "judgments": [
+        {
+          "case": "ryeona-bare-4",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-5",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-8",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-9",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-14",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-15",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-16",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-17",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-18",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-19",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-20",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-24",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-25",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-26",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-27",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-28",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-29",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-30",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-3",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-3",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-4",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-5",
+          "judgment": "path"
+        }
+      ],
+      "previous_dispositions": [
+        {
+          "id": "krdict:79262",
+          "source_sha256": "b61193ab78c9fe689540275858888532144e96ebaaacb2b1cec0b340303ad89a",
+          "status": "gap",
+          "checklist": [
+            "COV-017ah"
+          ],
+          "scope": "Source-backed question allomorph lacks a canonical 으려나 analysis in current probes. Full source notes and unchanged raw outputs are recorded; expression homonyms remain separate.",
+          "remaining": "Implement and test the ending family with its allomorph, lexical-class, prefinal and homonym distinctions; contextual choice and independent Korean review remain open.",
+          "evidence": [
+            {
+              "path": "docs/attachment-connectives-evaluation.json"
+            }
+          ],
+          "judgments": []
+        }
+      ]
     },
     {
       "id": "krdict:79263",
       "source_sha256": "fbdc3061fcd379bf32a818b0590b0435b731603622801616b2aabf8088843e03",
-      "status": "gap",
+      "status": "scoped",
       "checklist": [
         "COV-017ah"
       ],
-      "scope": "Source-backed question allomorph lacks a canonical 으려나 analysis in current probes. Full source notes and unchanged raw outputs are recorded; expression homonyms remain separate.",
-      "remaining": "Implement and test the ending family with its allomorph, lexical-class, prefinal and homonym distinctions; contextual choice and independent Korean review remain open.",
+      "scope": "Full question allomorph 으려나: eu/irregular boundary, verbs/adjectives and past/modal markers, preserving source segmentation and the inference connector.",
+      "remaining": "Contextual senses, other auxiliary links/internal particles, broader lexical constraints and independent Korean review remain open.",
       "evidence": [
         {
-          "path": "docs/attachment-connectives-evaluation.json"
+          "path": "tests/ryeona.rs",
+          "test": "ryeona_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/ryeona.rs",
+          "test": "ryeona_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/ryeona.rs",
+          "test": "annotated_ryeona_preserves_gold_and_dictionary_decomposition"
+        },
+        {
+          "path": "docs/ryeona-evaluation.json"
         }
       ],
-      "judgments": []
+      "judgments": [
+        {
+          "case": "ryeona-bare-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-10",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-11",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-12",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-13",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-21",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-22",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-bare-23",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-4",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-5",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-6",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-7",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-8",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-9",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-10",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-11",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-12",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-6",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-7",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-8",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-9",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-10",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-composition-11",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-following-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-boundary-4",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-prefinal-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-9",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-10",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-11",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-12",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-13",
+          "judgment": "path"
+        }
+      ],
+      "previous_dispositions": [
+        {
+          "id": "krdict:79263",
+          "source_sha256": "fbdc3061fcd379bf32a818b0590b0435b731603622801616b2aabf8088843e03",
+          "status": "gap",
+          "checklist": [
+            "COV-017ah"
+          ],
+          "scope": "Source-backed question allomorph lacks a canonical 으려나 analysis in current probes. Full source notes and unchanged raw outputs are recorded; expression homonyms remain separate.",
+          "remaining": "Implement and test the ending family with its allomorph, lexical-class, prefinal and homonym distinctions; contextual choice and independent Korean review remain open.",
+          "evidence": [
+            {
+              "path": "docs/attachment-connectives-evaluation.json"
+            }
+          ],
+          "judgments": []
+        }
+      ]
+    },
+    {
+      "id": "krdict:62249",
+      "source_sha256": "c6c04cc2d47e7566612a9f7bc4660d6a44a2c87de90b3044ac5a96d38f1685ca",
+      "status": "scoped",
+      "checklist": [
+        "COV-019l"
+      ],
+      "scope": "Sense 1 inference 보다 after 으려나 with ordered joined components and represented Adjective inflection; other senses remain independent.",
+      "remaining": "Contextual senses, other auxiliary links/internal particles, broader lexical constraints and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/ryeona.rs",
+          "test": "ryeona_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/ryeona.rs",
+          "test": "ryeona_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/ryeona.rs",
+          "test": "annotated_ryeona_preserves_gold_and_dictionary_decomposition"
+        },
+        {
+          "path": "docs/ryeona-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "ryeona-following-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-following-5",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-following-6",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-following-7",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-polite-4",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-4",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-5",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-6",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-7",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-class-boundary-8",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86116",
+      "source_sha256": "29064a11377b1737feea0727efbd79325d74e7cc184d2c020a05d677f9e94301",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ah"
+      ],
+      "scope": "Sense 1 polite 요 after the informal final question 으려나, with no doubled polite particle or general nominalization license.",
+      "remaining": "Contextual senses, other auxiliary links/internal particles, broader lexical constraints and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/ryeona.rs",
+          "test": "ryeona_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/ryeona.rs",
+          "test": "ryeona_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/ryeona.rs",
+          "test": "annotated_ryeona_preserves_gold_and_dictionary_decomposition"
+        },
+        {
+          "path": "docs/ryeona-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "ryeona-polite-0",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-polite-1",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-polite-2",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeona-polite-3",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

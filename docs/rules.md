@@ -2529,3 +2529,30 @@ The ending is checked against its own component, preserving adjective +
 expressive 하다 + verbal ending chains. No broad 려 prefix rule is used:
 neighboring forms have different senses and attachment licenses.
 The raw rule and headword-only results remain unchanged.
+
+### Expectation questions and inference 보다 (COV-017ah / COV-019l)
+
+Canonical 으려나 represents both -(으)려나 question endings and their
+shortened -(으)려고 하나 expression homonyms. The [source report](ryeona-evaluation.json)
+retains all four source IDs, senses and notes. The question permits lexical
+verbs/adjectives and 이다, with existing eu allomorphs and irregular recovery;
+시/었/겠 are licensed, while recovered 더/으리 are excluded. Existing atomic
+어야겠 can use its final modal boundary; its contextual scope is unjudged.
+The expression's narrower verb notes do not invalidate a homographic question
+reading. No implicit 하다 lemma or contextual sense is selected.
+
+좋으려나, 파라려나, 모였으려나, 학생이려나 and 학생다우려나 retain
+ordered lexical/copula/suffix components. Polite 요 follows the informal final
+question, separately from an auxiliary's ordinary 어요 ending. The new form
+is not added to generic nominalization, quoted-clause particle or copula-base
+rules. Existing omitted honorific copulas can compose, as in 의사시려나;
+generic omission before 려나 needs its own COV-020 review.
+
+Inference 보다 can follow 으려나. Both the auxiliary's first KRDict sense
+and the two -려나 보다 expression sources provide direct examples. The
+following 보다 has an Adjective class, preserving ordinary past/polite forms
+while excluding verbal 는다/는 endings and invalid inherited negative chains.
+Other following auxiliaries and internal particle combinations remain unreviewed.
+The full KAIST TEST sentence MH2_0010-s336 attests 좋아지려나 보다; its
+lexical 좋아지다 annotation is retained alongside the dictionary-backed
+좋다 + 지다 alternative, without rewriting the source segmentation.

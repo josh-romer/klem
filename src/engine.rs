@@ -613,6 +613,16 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // The question homonym of -(으)려나 allows adjectives and
+                // copulas as well as verbs, with 시/었/겠. It is distinct
+                // from the narrower shortened intention expression.
+                if ending.form == "으려나"
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었" | "겠" | "어야겠"))
+                {
+                    continue;
+                }
                 // Commands/quoted commands and formal request/proposal
                 // endings do not inherit past, modal or retrospective slots.
                 // Keep honorific and unknown lexical-stem alternatives.
@@ -749,6 +759,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if result_connective(ending.form) {
                     p.rules.push("ending.result_connective".into());
+                }
+                if ending.form == "으려나" {
+                    p.rules.push("ending.expectation_question".into());
                 }
                 if factual_ra {
                     p.rules.push("ending.factual_ra".into());
@@ -940,7 +953,9 @@ fn auxiliary_class(
         "못하" => previous,
         "보" => match connector {
             Some("어" | "다가" | "으려다" | "으려다가") => Some(Verb),
-            Some("는가" | "은가" | "던가" | "나" | "을까") => Some(Adjective),
+            Some("는가" | "은가" | "던가" | "나" | "을까" | "으려나") => {
+                Some(Adjective)
+            }
             _ => None,
         },
         "하" => match connector {
@@ -1196,6 +1211,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐면서"
                 | "으냐니"
                 | "으냔"
+                | "으려나"
                 | "으리라"
                 | "으리"
                 | "으리라고"
@@ -1886,6 +1902,7 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
         "다" | "다가" => matches!(stem, "보" | "못하") || (connector == "다" && stem == "싶"),
         "으려다" | "으려다가" => stem == "보",
         "어다" | "어다가" => matches!(stem, "주" | "드리" | "놓" | "두"),
+        "으려나" => stem == "보",
         "는가" | "은가" | "던가" | "나" | "을까" => matches!(stem, "보" | "싶"),
         "으면" => matches!(stem, "하" | "싶"),
         "기도" | "기는" | "기만" | "고자" => stem == "하",
@@ -2131,6 +2148,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 || matches!(
                     ending,
                     "군" | "구나"
+                        | "으려나"
                         | "네"
                         | "나"
                         | "니"

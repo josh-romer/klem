@@ -1127,3 +1127,18 @@ regressions, not unseen evaluation. The school-name 강원체고를 annotation a
 partial 잘해서 recovery remain observations rather than correctness claims.
 The 먹고싶은가를 stress snapshot history records its one new unknown predicate
 hypothesis and retains all previous hashes/candidates; see the core-case report.
+
+`krdict-source-particles.json` retains 36 primary lexical entries from the pinned
+September 2026 NIKL KRDict export under CC BY-SA 2.0 KR. Exact IDs are in
+`docs/source-particle-evaluation.json`. Changes: first sense, English equivalents
+and one example group retained; WordForm/RelatedForm and global metadata omitted;
+primary words only; JSON reformatted. The nine reviewed grammar entries in
+`krdict-grammar-labels.json` retain all senses and example groups. Four source
+compound entries are added; existing role/means and locative entries are expanded.
+
+`kaist-source-particles.conllu` preserves complete unchanged development sentences
+MH2_0169-s369 and MH2_0069-s91. `gsd-source-particles.conllu` preserves complete
+unchanged development sentences dev-s266, dev-s703 and dev-s925. Source revisions,
+licenses and attribution are the UD 2.15 KAIST/GSD ones listed above. These are
+exposed regression fixtures, not unseen evaluation; split and bundled source
+annotations are both retained without rewriting the corpus or frozen baselines.

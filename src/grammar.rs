@@ -1003,6 +1003,12 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("마는", 3, 0),
             ("까지", 3, 0),
             ("부터", 3, 0),
+            // Bundled source particles retain the outer stage of 부터.
+            // Their inner case boundary is restored when peeling the base.
+            ("으로부터", 3, 3),
+            ("로부터", 3, 4),
+            ("에서부터", 3, 0),
+            ("서부터", 3, 0),
             ("마다", 3, 0),
             ("만큼", 3, 0),
             ("만치", 3, 0),

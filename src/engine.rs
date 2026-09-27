@@ -1550,7 +1550,8 @@ fn particle_allowed(
     let outer = suffixes.first().map(|m| m.form.as_str());
     class < stage
         || (after_case && form == "만")
-        || (outer == Some("만") && matches!(form, "까지" | "부터"))
+        || (outer == Some("만")
+            && (matches!(form, "까지" | "부터") || source_particle_prefix(form).is_some()))
         || (outer == Some("의") && matches!(class, 2 | 3) && form != "의")
         || outer.is_some_and(|outer| range_case_link(form, outer))
 }
@@ -1558,10 +1559,29 @@ fn particle_allowed(
 // Source-attested case marking after a range particle. These pairs cross
 // the usual case-before-focus stages; they do not reorder every particle.
 fn range_case_link(inner: &str, outer: &str) -> bool {
+    let inner = if source_particle_prefix(inner).is_some() {
+        "부터"
+    } else {
+        inner
+    };
+    let outer = source_particle_prefix(outer).map_or(outer, |(form, _)| form);
     matches!(
         (inner, outer),
         ("까지", "가" | "를" | "에" | "로") | ("부터", "가")
     )
+}
+
+// A bundled source particle has two boundaries: 부터 governs what follows,
+// while its case prefix governs what may precede it. Preserve the same stage
+// and reviewed exceptions as the existing split path (e.g. 만+으로+부터).
+fn source_particle_prefix(form: &str) -> Option<(&'static str, u8)> {
+    match form {
+        "으로부터" => Some(("으로", 2)),
+        "로부터" => Some(("로", 2)),
+        "에서부터" => Some(("에서", 1)),
+        "서부터" => Some(("서", 1)),
+        _ => None,
+    }
 }
 
 fn choice_particle(form: &str) -> Option<u8> {
@@ -1877,17 +1897,19 @@ fn nominals(
                 }
             });
         }
+        let inner_class =
+            source_particle_prefix(particle.form).map_or(particle.class, |(_, class)| class);
         let next = if after_case && particle.form == "만" {
             1
         } else {
-            particle.class
+            inner_class
         };
         // Enumerative 다/이다 follows a nominal, not a preceding case phrase.
         if particle.form != "마는" && !enumerative_da {
             nominals(
                 base,
                 next,
-                particle.class == 1 || particle.class == 2,
+                inner_class == 1 || inner_class == 2,
                 &morphs,
                 out,
             );

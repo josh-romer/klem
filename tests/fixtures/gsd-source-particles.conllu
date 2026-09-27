@@ -1,0 +1,44 @@
+# sent_id = dev-s266
+# text = 현재는 일본으로부터 독립하여 공화정이 들어서면서 군주제가 폐지되어 사용하지 않게 되었다.
+# translit = .hyeon.jae.neun .il.bon.eu.ro.bu.teo .dog.rib.ha.yeo .gong.hwa.jeong.i .deul.eo.seo.myeon.seo .gun.ju.je.ga .pye.ji.doe.eo .sa.yong.ha.ji .anh.ge .doe.eoss.da.
+1	현재는	현재+는	ADV	NNG+JX	_	3	advmod	_	Translit=.hyeon.jae.neun|LTranslit=.hyeon.jae+.neun
+2	일본으로부터	일본+으로부터	ADV	NNP+JKB	_	3	advmod	_	Translit=.il.bon.eu.ro.bu.teo|LTranslit=.il.bon+.eu.ro.bu.teo
+3	독립하여	독립+하+아	VERB	NNG+XSV+EC	_	5	advcl	_	Translit=.dog.rib.ha.yeo|LTranslit=.dog.rib+.ha+.a
+4	공화정이	공화정+이	NOUN	NNG+JKS	_	5	nsubj	_	Translit=.gong.hwa.jeong.i|LTranslit=.gong.hwa.jeong+.i
+5	들어서면서	들어서+면서	VERB	VV+EC	_	7	advcl	_	Translit=.deul.eo.seo.myeon.seo|LTranslit=.deul.eo.seo+.myeon.seo
+6	군주제가	군주제+가	NOUN	NNG+JKS	_	7	nsubj:pass	_	Translit=.gun.ju.je.ga|LTranslit=.gun.ju.je+.ga
+7	폐지되어	폐지+되+어	VERB	NNG+XSV+EC	_	8	advcl	_	Translit=.pye.ji.doe.eo|LTranslit=.pye.ji+.doe+.eo
+8	사용하지	사용+하+지	VERB	NNG+XSV+EC	_	0	root	_	Translit=.sa.yong.ha.ji|LTranslit=.sa.yong+.ha+.ji
+9	않게	않+게	VERB	VX+EC	_	8	flat	_	Translit=.anh.ge|LTranslit=.anh+.ge
+10	되었다	되+었+다	VERB	VV+EP+EF	_	8	flat	_	SpaceAfter=No|Translit=.doe.eoss.da|LTranslit=.doe+.eoss+.da
+11	.	.	PUNCT	SF	_	10	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s703
+# text = 또한 대회에 스폰서십을 도입하여 코카콜라가 후원함으로써 대회가 활성화되었다.
+# translit = .ddo.han .dae.hoe.e .seu.pon.seo.sib.eul .do.ib.ha.yeo .ko.ka.kol.ra.ga .hu.weon.ham.eu.ro.sseo .dae.hoe.ga .hwal.seong.hwa.doe.eoss.da.
+1	또한	또한	ADV	MAG	_	8	advmod	_	Translit=.ddo.han|LTranslit=.ddo.han
+2	대회에	대회+에	ADV	NNG+JKB	_	4	obl	_	Translit=.dae.hoe.e|LTranslit=.dae.hoe+.e
+3	스폰서십을	스폰서십+을	NOUN	NNG+JKO	_	4	obj	_	Translit=.seu.pon.seo.sib.eul|LTranslit=.seu.pon.seo.sib+.eul
+4	도입하여	도입+하+아	VERB	NNG+XSV+EC	_	6	advcl	_	Translit=.do.ib.ha.yeo|LTranslit=.do.ib+.ha+.a
+5	코카콜라가	코카콜라+가	NOUN	NNP+JKS	_	6	nsubj	_	Translit=.ko.ka.kol.ra.ga|LTranslit=.ko.ka.kol.ra+.ga
+6	후원함으로써	후원+하+ㅁ+으로써	ADV	NNG+XSV+ETN+JKB	_	8	advmod	_	Translit=.hu.weon.ham.eu.ro.sseo|LTranslit=.hu.weon+.ha+ㅁ+.eu.ro.sseo
+7	대회가	대회+가	NOUN	NNG+JKS	_	8	nsubj:pass	_	Translit=.dae.hoe.ga|LTranslit=.dae.hoe+.ga
+8	활성화되었다	활성화+되+었+다	VERB	NNG+XSV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.hwal.seong.hwa.doe.eoss.da|LTranslit=.hwal.seong.hwa+.doe+.eoss+.da
+9	.	.	PUNCT	SF	_	8	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s925
+# text = 2012년 1월 10일부터 속편이 연속 TV 드라마로서 화요일 21시 범위에 방송되었다.
+# translit = 2012.nyeon 1.weol 10.il.bu.teo .sog.pyeon.i .yeon.sog TV .deu.ra.ma.ro.seo .hwa.yo.il 21.si .beom.wi.e .bang.song.doe.eoss.da.
+1	2012년	2012+년	NOUN	SN+NNB	_	11	obl	_	Translit=2012.nyeon|LTranslit=2012+.nyeon
+2	1월	1+월	NOUN	SN+NNB	_	1	flat	_	Translit=1.weol|LTranslit=1+.weol
+3	10일부터	10+일+부터	ADV	SN+NNB+JX	_	1	flat	_	Translit=10.il.bu.teo|LTranslit=10+.il+.bu.teo
+4	속편이	속편+이	NOUN	NNG+JKS	_	11	nsubj:pass	_	Translit=.sog.pyeon.i|LTranslit=.sog.pyeon+.i
+5	연속	연속	NOUN	NNG	_	11	obl	_	Translit=.yeon.sog|LTranslit=.yeon.sog
+6	TV	TV	NOUN	SL	_	5	flat	_	Translit=TV|LTranslit=TV
+7	드라마로서	드라마+로서	ADV	NNG+JKB	_	5	flat	_	Translit=.deu.ra.ma.ro.seo|LTranslit=.deu.ra.ma+.ro.seo
+8	화요일	화요일	NOUN	NNG	_	11	obl	_	Translit=.hwa.yo.il|LTranslit=.hwa.yo.il
+9	21시	21+시	NOUN	SN+NNB	_	8	flat	_	Translit=21.si|LTranslit=21+.si
+10	범위에	범위+에	ADV	NNG+JKB	_	8	flat	_	Translit=.beom.wi.e|LTranslit=.beom.wi+.e
+11	방송되었다	방송+되+었+다	VERB	NNG+XSV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.bang.song.doe.eoss.da|LTranslit=.bang.song+.doe+.eoss+.da
+12	.	.	PUNCT	SF	_	11	punct	_	Translit=.|LTranslit=.
+

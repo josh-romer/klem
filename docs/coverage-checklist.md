@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–aj/018a–k/018m–t/019a–g/019i–o/020a–k/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–aj/018a–k/018m–u/019a–g/019i–o/020a–k/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 246 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–aj/018e–k/018m–t/019d–g/019i–o/020d–h/020j–k; 468 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 255 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–aj/018e–k/018m–u/019d–g/019i–o/020d–h/020j–k; 459 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -784,7 +784,7 @@ review remains open under the completion review below.
   Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–t implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–u implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -1061,6 +1061,19 @@ review remains open under the completion review below.
   Animate/honorific semantics, other emphatic adverb bases and contextual senses
   remain open. The GSD 강원체고를 copula match and 잘해서 partial component
   match are tracked observations, not correctness gains.
+
+- [x] **COV-018u — Source compounds and role/means case audit.** Dictionary
+  로부터/으로부터/에서부터/서부터 alternatives now coexist with split case +
+  부터 paths. Their inner case boundary and outer 부터 boundary remain separate:
+  inner 만/까지 and outer topic/focus/genitive/subject options preserve the split
+  behavior. Existing (으)로서/(으)로써 coda distinctions, 음 nominalizations and
+  locative 서 are reviewed. Evidence: 99 stable judgments (73 required / 26
+  forbidden), [four tests](../tests/source_particles.rs), an 868-surface
+  split/bundled equivalence check, five complete annotated sentences, browser
+  alternatives/source/export checks and [review](source-particle-evaluation.json).
+  Contextual senses, count-emphasis 서 and wider inner-particle acceptability
+  remain open. The report assigns stable observation IDs to 학교+가+로써,
+  선생님+이+로서 and novel 와/나+서부터 homonyms; these are unjudged readings.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
@@ -1526,7 +1539,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 344 currently emitted canonical grammar forms.** The initial catalog
+  for all 348 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

@@ -17608,6 +17608,695 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:80332",
+      "source_sha256": "8b28e1182b693dadd9cfc4376cd0a4032c00aa89cdef49760892508114c59967",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "Vowel/ㄹ-final 로부터 retains split 로+부터 and shares its inner case and outer source boundaries.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-로부터-bare-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-bare-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-는-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-는-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-도-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-도-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-만-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-만-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-의-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-의-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-가-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-가-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-repeat",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-bare-ending",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-adverb",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-nominalization",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-rieul-source",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-source-plural",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-corpus-kaist",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로부터-wrong-coda",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80331",
+      "source_sha256": "d3d33165f97561261ed830c7f71c4a45cd0c613340ce20c457627830b71af1b6",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "Non-ㄹ-consonant 으로부터 retains split 으로+부터 and nominalizations, with both attachment boundaries preserved.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-으로부터-bare-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-bare-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-는-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-는-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-도-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-도-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-만-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-만-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-의-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-의-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-가-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-가-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-repeat",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-bare-ending",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-adverb",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-nominal-source",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-corpus-gsd",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-wrong-학교",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로부터-wrong-교실",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70333",
+      "source_sha256": "2ff97c266cd8d0dc3d8a3b4a0e4dcd16b172c000362081f0a81f45ece49893f3",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "Nominal 에서부터 retains split 에서+부터, with focus/genitive/subject outer options preserved.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-에서부터-bare-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-bare-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-는-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-는-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-도-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-도-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-만-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-만-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-의-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-의-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-가-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-가-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-repeat",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-bare-ending",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-adverb",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-에서부터-nominalization",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-corpus-idea",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86713",
+      "source_sha256": "987a841df4f7337f6a05df40e2ca1fc56adbb10f9a70dee5a63f7bb39f670610",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "Nominal 서부터 retains split 서+부터 after vowels/consonants; distinct predicate endings ending in 서 remain separate.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-서부터-bare-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-bare-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-는-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-는-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-도-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-도-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-만-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-만-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-의-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-의-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-가-bundle",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-가-split",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-repeat",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-bare-ending",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-adverb",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서부터-nominalization",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-consonant-short",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70301",
+      "source_sha256": "4568d54f4f20979bef3d811f47a9ae6314b37390e46840e7dd0ddee9c6e20c81",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "로서 role/capacity particle retains vowel/ㄹ allomorph and ordinary topic marking.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-role-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-role-rieul",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-corpus-drama",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로서-wrong-coda",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로서-ending",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70300",
+      "source_sha256": "7efdc00aff159e0db11f5740f78f69a3a8ea5356859ee3eb369260ae11e65ea5",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "으로서 role/capacity particle retains non-ㄹ-consonant allomorph and honorific nominal bases.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-role-consonant",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-role-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로서-wrong-학교",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로서-wrong-교실",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로서-ending",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80297",
+      "source_sha256": "ee5f32d385c2f8d5dc091a195526369ccba9a152ca5c01017a2fdb588635e5e4",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "로써 means/material/completion particle retains vowel/ㄹ allomorph; it is not replaced with role 로서.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-means-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-means-rieul",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로써-wrong-coda",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-로써-ending",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80296",
+      "source_sha256": "996e4494cc546670332ad455d93999b445745206a216e9c68926bdaed24bdd3d",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "으로써 retains non-ㄹ-consonant allomorph and source-listed 음 nominalization, including 있음으로써/지나감으로써.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-means-consonant",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-means-nominal",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-means-go",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-corpus-huwon",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로써-wrong-학교",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로써-wrong-교실",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-으로써-ending",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86712",
+      "source_sha256": "866f4b60064e13ae9fc2780171639a54a3dc8dd2e4213d204dd50aba63fa93f8",
+      "status": "scoped",
+      "checklist": [
+        "COV-018u"
+      ],
+      "scope": "Locative/source 서 retains vowel and consonant nominal attachment, including 학교서/서울서, separately from count-emphasis homonym 86557.",
+      "remaining": "Semantic roles and contextual senses are unresolved. Inherited inner-particle combinations remain hypotheses, with individually tracked role-case and novel homonym observations. Count-emphasis 서 is separate. This is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particles_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_compounds_preserve_both_boundaries_and_all_split_alternatives"
+        },
+        {
+          "path": "tests/source_particles.rs",
+          "test": "source_particle_corpus_fixtures_preserve_split_and_bundled_annotations"
+        },
+        {
+          "path": "docs/source-particle-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "source-particles-locative-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-locative-coda",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-locative-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "source-particles-서-ending",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

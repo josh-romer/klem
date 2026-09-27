@@ -2575,3 +2575,49 @@ breakdowns and source links, compatible homonym hints, dictionary gaps, CLI/API/
 export parity and desktop/mobile layout. Broader semantic/lexical restrictions,
 independent Korean review, fresh-prose evaluation and the remaining checklist
 items remain open.
+
+
+## Source compounds and role/means audit (COV-018u)
+
+The [source/candidate review](source-particle-evaluation.json) audits nine entries
+and adds bundled 로부터/으로부터/에서부터/서부터 alongside their split case +
+부터 alternatives. The compound's inner case boundary and outer source boundary
+remain distinct, preserving existing inner 만/까지/에게 and outer topic/focus/
+genitive/subject behavior. Existing (으)로서 and (으)로써 allomorphs, 음 nominalization
+and locative 서 are covered without conflating their source senses.
+
+The main ledger gains 99 judgments (73 required / 26 forbidden), reaching
+2,404 required / 1,534 forbidden. An 868-surface equivalence check verifies both
+split-to-bundled and bundled-to-split alternatives, including unknown-script
+pronunciation assumptions, nominalizations and nested copulas. Five complete
+unchanged KAIST/GSD development sentences preserve both annotation conventions;
+they are exposed regressions, not held-out evidence. Every development-case outcome
+is unchanged: KAIST 22,127/22,220 and GSD 9,847/9,989, with mean candidate counts
+6.068632 / 5.541696. Frozen corpus baselines and all thirty stress snapshots pass
+without modification; the 64-ga probe is also unchanged.
+
+Across 3,747 distinct ledger/stress/probe surfaces, 112 candidates are added on
+58 surfaces, with no removals or provenance changes. The compatible novel output
+adds 27 candidates across 27 tokens / 18 types, also with no removals or provenance
+changes. Every changed novel token now has a validated original UTF-8 byte span.
+Individual observations retain nearby context for 와서부터/와서부터는/나서부터:
+the nominal 와/나 + 서부터 alternatives do not establish the intended reading,
+and the existing predicate ending + 부터 paths remain. Preexisting 학교+가+로써
+and 선생님+이+로서 receive separate unjudged observation IDs. Broader inner-particle
+acceptability, semantic selection and count-emphasis 서 remain open.
+
+The novel has 120,791 compatible candidates over 73,356 tokens with readings out
+of 81,758 word tokens; headword-only output has 131,978 candidates over 73,413
+such tokens. Token coverage is unchanged. Three sequential local Nix release runs
+per mode measured compatible median 1.320s versus 1.290s before, and headword-only
+median 1.329s versus 1.312s. Peak RSS stayed below 29 MiB. These measurements include
+JSONL serialization and are not a throughput guarantee or a precision estimate.
+
+The inventory now has 255 scoped reviews / 459 unreviewed entries / one gap.
+The catalog has 348 canonical forms / 485 source IDs / 487 grammar fixture entries.
+Rust/web-feature tests, Clippy, formatting, full corpus regressions, frontend build,
+full browser/HTTP checks, inventory verification and x86_64-linux Nix checks pass.
+The packaged full-dictionary preview verifies all new judgments, both filters,
+four bundled/split pairs plus six role/means/locative breakdowns, all nine source
+links, CLI/API/export parity and desktop/mobile layout. Contextual precision,
+independent Korean review and the wider completion checklist remain open.

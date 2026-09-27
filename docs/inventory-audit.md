@@ -17,9 +17,9 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **246 scoped
+The [manual ledger](inventory-reviews.json) currently contains **255 scoped
 reviews**, **one observed gap with unresolved acceptability** (마다), and
-**468 entries
+**459 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence

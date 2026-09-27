@@ -2681,3 +2681,21 @@ an already licensed auxiliary; contracted ㄹ maps to canonical 를. This does
 not license arbitrary particles, ending/auxiliary pairs or adverbs. Example
 물얼봐야지 comes from KRDict's ㄹ entry; 곧이를 comes from NIKL and has no
 곧이 headword in the pinned dictionary. Unknown raw hypotheses remain visible.
+
+## Source compounds and role/means cases (COV-018u)
+
+The [source review](source-particle-evaluation.json) preserves KRDict's distinct
+로부터/으로부터/에서부터/서부터 entries alongside split case + 부터 paths.
+The compound's outer stage is 부터; its inner stage is the prefix 로/으로/에서/
+서. Coda conditions are checked at that prefix. This preserves 입만으로부터,
+여기까지로부터 and 학교로부터만 without opening repeated case stages. Existing
+range-case exceptions also apply to each corresponding boundary. Both forms keep
+the same lemma groups, including nominalizations, plural suffixes, unknown-script
+pronunciation assumptions and nested copulas; there is no analysis-count cutoff.
+
+Role/capacity (으)로서 and means/material (으)로써 remain distinct source entries.
+Both use 로 after vowels/ㄹ and 으로 after other consonants. 음+으로써 retains
+nominalization, including 있음으로써 and 지나감으로써. Locative 서 works after
+vowels or consonants; this does not license the separate count-emphasis homonym
+on arbitrary nouns. Semantic appropriateness, inherited inner-particle hypotheses
+and novel homonyms remain explicitly unjudged rather than treated as precision gains.

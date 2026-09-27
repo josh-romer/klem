@@ -2111,3 +2111,41 @@ RSS below 29 MiB. This is local timing evidence, not a speedup guarantee.
 Rust, Clippy, frozen corpora, frontend, browser/HTTP and Nix checks pass on
 x86_64-linux. The packaged full-dictionary API/CLI smoke covers all 252 cases;
 desktop/mobile inspection covers five breakdowns, an auxiliary and a source pane.
+
+### Result-transfer connectives (COV-017af / COV-019k)
+
+[The source/output comparison](result-connectives-evaluation.json) records 51
+required and 34 forbidden judgments. The main ledger now has 3,319 cases /
+1,968 required / 1,359 forbidden judgments; the separate dictionary-policy ledger
+is unchanged. Across 3,059 ledger/stress surfaces, 174 candidates are added,
+23 unsupported full-form paths removed and 146 retained paths gain provenance.
+One stress fingerprint changes: 의사다 gains an unknown predicate + 어다
+hypothesis that full-dictionary headword filtering removes. Its noun-based
+readings remain; the other 29 fingerprints are unchanged.
+
+KAIST gains 가져다 → 가지다; GSD gains two 내려다 → 내리다 cases and
+쳐다도 → 치다. The directional GSD compounds are annotation matches, not
+proof of a generic 어다 + 보다 rule. Development misses are 99 KAIST / 146 GSD,
+with no previously recovered gold group or component set lost. Frozen baselines
+remain untouched. Catalog coverage is 324 canonical forms, 456 source IDs and
+457 grammar entries. The inventory has 207 scoped reviews, one unresolved gap
+and 507 unreviewed entries. These are bounded regression results, not a claim
+of linguistic completeness or measured precision.
+
+Rust/web-feature and Nix release tests, the frozen full-corpus regression,
+Clippy, formatting, frontend build, browser/HTTP checks and inventory verification
+passed. `nix flake check` and `nix build .#web` passed on x86_64-linux. The
+packaged full-dictionary preview checks all 85 cases with CLI/API parity, five
+selected breakdowns, dictionary source selection and desktop/mobile inspection.
+
+The pinned 81,758-word-token novel gains 21 compatible-filtered analyses and
+loses one unsupported noun 들 + copula 이다 + 어다가 path in 들여다가;
+its lexical 들이다 reading remains. Another 159 retained analyses gain rule
+provenance. No token loses all readings. Compatible totals become 119,628
+analyses / 73,294 tokens with readings; headword-only totals become 130,449 /
+73,349. New hypotheses include inherited irregular ambiguities and unjudged
+lexical/contextual choices, so additions do not measure precision. Three local
+Nix release runs give compatible median 1.195s versus 1.209s before, with peak
+RSS below 29 MiB. Timing includes JSONL serialization and is a local observation,
+not a throughput guarantee. Raw measurements and individual changes are in the
+source report.

@@ -7065,10 +7065,11 @@
       "source_sha256": "a7fa3df82dcf7ae0ee0f12c833dad70eb8e6968d3714318cbbb2a433659161b5",
       "status": "scoped",
       "checklist": [
-        "COV-017s"
+        "COV-017s",
+        "COV-017af"
       ],
-      "scope": "Following-ending license of recovered 더, using this entry together with the retrospective source 85794. Existing homonymous senses and other attachment conditions are not collapsed.",
-      "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
+      "scope": "Following-ending license of recovered 더, using this entry together with the retrospective source 85794. Existing homonymous senses and other attachment conditions are not collapsed. Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope. Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/retrospective_connectives.rs",
@@ -7092,6 +7093,21 @@
         },
         {
           "path": "docs/retrospective-connective-evaluation.json"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -7101,6 +7117,110 @@
         },
         {
           "case": "retrospective-connective-preserved-27",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-4",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-5",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-6",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-7",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-8",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-9",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-10",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-11",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-12",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-16",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-negative-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-negative-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-suffix",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-wrong-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-wrong-ha",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-bare-coda",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-particle-는",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-particle-도",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-particle-요",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-double-polite",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-object",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-wrong-aux-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-wrong-aux-있다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-wrong-aux-하다",
           "judgment": "path"
         }
       ]
@@ -8809,10 +8929,11 @@
       "source_sha256": "7c1658175309712206dca685203013c7373590c505323d76706cf0a364ab762a",
       "status": "scoped",
       "checklist": [
-        "COV-017u"
+        "COV-017u",
+        "COV-019k"
       ],
-      "scope": "놓아 → 놔 contraction preserves 어 놓다 after verbs (sense 1), adjectives and 이다 (sense 2); existing tense, auxiliary chains and lexical alternatives remain.",
-      "remaining": "This is a spelling and role-preservation review, not certification of every contextual, lexical-subset or prefinal restriction. Full sentence sense selection remains outside the token-level generator.",
+      "scope": "놓아 → 놔 contraction preserves 어 놓다 after verbs (sense 1), adjectives and 이다 (sense 2); existing tense, auxiliary chains and lexical alternatives remain. Following result-transfer 어다/어다가 with ordered joined predicates; existing ordinary 어 connectors and other senses remain separate.",
+      "remaining": "This is a spelling and role-preservation review, not certification of every contextual, lexical-subset or prefinal restriction. Full sentence sense selection remains outside the token-level generator. Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/noh_contraction.rs",
@@ -8824,6 +8945,21 @@
         },
         {
           "path": "docs/noh-contraction-evaluation.json"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
         }
       ],
       "judgments": [
@@ -8837,6 +8973,14 @@
         },
         {
           "case": "noh-auxiliary-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-aux-놓다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-aux-놓다",
           "judgment": "path"
         }
       ]
@@ -13756,6 +13900,430 @@
         },
         {
           "case": "intention-connectives-거든-outer-reject-를",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:48279",
+      "source_sha256": "c191c42d1fe1eb4147a31fec27d27861f60bb33c0c4bcabfcce87187e764c999",
+      "status": "scoped",
+      "checklist": [
+        "COV-019k"
+      ],
+      "scope": "Following result-transfer 어다/어다가 with ordered joined predicates; existing ordinary 어 connectors and other senses remain separate.",
+      "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "result-connectives-다-aux-두다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-aux-두다",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:59252",
+      "source_sha256": "2f50d044cb5c1e4bc4cb3e3ed2120f8799b5e501653bdb59cc8e9348e6940a01",
+      "status": "scoped",
+      "checklist": [
+        "COV-019k"
+      ],
+      "scope": "Following result-transfer 어다/어다가 with ordered joined predicates; existing ordinary 어 connectors and other senses remain separate.",
+      "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "result-connectives-다-aux-드리다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-aux-드리다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-honorific-aux",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:77245",
+      "source_sha256": "e53b2e6819717f8ad06c7cd0eb0adc354964bbd77f2993948f25664158fdd023",
+      "status": "scoped",
+      "checklist": [
+        "COV-019k"
+      ],
+      "scope": "Following result-transfer 어다/어다가 with ordered joined predicates; existing ordinary 어 connectors and other senses remain separate.",
+      "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "result-connectives-다-aux-주다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-aux-주다",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86096",
+      "source_sha256": "8ac67a85e791808e14c8c1864caf08b5260d3ecb061279a04fe2092f434a7982",
+      "status": "scoped",
+      "checklist": [
+        "COV-017af"
+      ],
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "result-connectives-다-stem-0",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-1",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-2",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-3",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86097",
+      "source_sha256": "7cf50805648f61f15d913f694d106af4896eb13818116e5967fd648062329246",
+      "status": "scoped",
+      "checklist": [
+        "COV-017af"
+      ],
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "result-connectives-다-stem-4",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-5",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-6",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-7",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-8",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-9",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-10",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-11",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-12",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-16",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-negative-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-negative-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-suffix",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-wrong-vowel",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-wrong-ha",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-bare-coda",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-particle-는",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-particle-도",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-particle-요",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-double-polite",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-object",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-wrong-aux-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-wrong-aux-있다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-wrong-aux-하다",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-compound-gold",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86098",
+      "source_sha256": "b4ad88a4ff1cea5453ce85435fa2d8bbacf84d54db9acd0836204319d303e5f3",
+      "status": "scoped",
+      "checklist": [
+        "COV-017af"
+      ],
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "result-connectives-다가-stem-0",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-1",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-2",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-3",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86143",
+      "source_sha256": "894cb200ac0c600e2d8a13b8db6b4d7d10f7a4bd0ddcf30432b12ca40d4e0c37",
+      "status": "scoped",
+      "checklist": [
+        "COV-017af"
+      ],
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "result-connectives-다가-stem-13",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-14",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다가-stem-15",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86144",
+      "source_sha256": "8f12a6b5deabb9569f5ac1d2a6fc6bbd4129ee2549f4b73bccfe36e4f974f696",
+      "status": "scoped",
+      "checklist": [
+        "COV-017af"
+      ],
+      "scope": "Short/full result-transfer 어다/어다가: allomorphs, contractions, bare represented verb attachment, lexical 모시다 preservation and existing ordered connective particles.",
+      "remaining": "Clause-level subject/object/location constraints, transitivity, lexical senses, other connectors and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "result_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/result_connectives.rs",
+          "test": "additional_annotated_results_keep_directional_compound_limits_visible"
+        },
+        {
+          "path": "docs/result-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "result-connectives-다-stem-13",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-14",
+          "judgment": "path"
+        },
+        {
+          "case": "result-connectives-다-stem-15",
           "judgment": "path"
         }
       ]

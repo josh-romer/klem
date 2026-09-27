@@ -2484,5 +2484,36 @@ question/expression auxiliary combinations are not added by this batch.
 The new GSD gold match 갈려는데 → 갈다 is recorded as incidental: its complete
 sentence concerns going to Daejeon and apparently intends 가다. The engine
 retains its ordinary ㄹ-stem hypothesis but does not repair the spelling or
-change the annotation. The two 내려다 → 내리다 misses remain; their annotated
-어다 contraction belongs to a different rule family.
+change the annotation. The two 내려다 → 내리다 annotation matches are covered separately by
+COV-017af; they do not establish a generic 어다 + 보다 auxiliary connector.
+
+### Result-transfer connectives and auxiliaries (COV-017af / COV-019k)
+
+Canonical 어다 and 어다가 represent -아/어/여다(가), with existing vowel
+contractions and irregular stems. The [ten-entry source review](result-connectives-evaluation.json)
+retains all six ending and four auxiliary entries. Both forms select bare verbs;
+recovered 시/었/겠/더 and represented adjective/copula classes are rejected.
+For example, 빌려다 and 주워다가 recover 빌리다 and 줍다. Lexical 모시다
+remains in 모셔다(가), since its 시 is part of the stem. Unknown lexical
+predicates remain hypotheses; dictionary presence and the finite compatibility
+policy do not enforce every new lexical or semantic restriction.
+
+The NIKL teaching-grammar report, section 3.3.19 (printed pp.213–214), supports
+short 어다 and excludes recovered prefinals. Its clause-level subject, object,
+transitivity and location conditions are not inferred from isolated tokens.
+Literal 다/다가, including past 잡았다가, retains its separate rule.
+The new `ending.result_connective` provenance identifies both short and full
+result-transfer paths. Existing ordered connective particles remain available.
+
+The reviewed connectors can precede 주다/드리다/놓다/두다, preserving the
+ordered components in 가져다주었다, 모셔다드렸어요 and 빌려다놓았다.
+KRDict 드리다 directly attests spaced 모셔다 드리고; NIKL illustrates 주다
+and 드리다. Yang (2020), section 2.2 (printed p.37), describes the four following
+auxiliaries in a primary-journal indexed excerpt; the full PDF was unavailable.
+No generic 어다 + 보다 or new internal-particle connector is introduced.
+Ordinary 어 놓다 retains its separate adjective/copula senses.
+
+The complete GSD 내려다 and 쳐다도 sentences concern looking down/up.
+Their recovered annotation components are reported without treating compound
+semantics as independent proof of result transfer. Compound segmentation and
+contextual interpretation remain outside this bounded connector change.

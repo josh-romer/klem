@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ae/018a–k/018m–n/019a–g/019i–j/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–af/018a–k/018m–n/019a–g/019i–k/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 199 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ae/018e–k/018m–n/019d–g/019i–j/020d–h; 515 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 207 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–af/018e–k/018m–n/019d–g/019i–k/020d–h; 507 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One additional
   entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ae implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–af implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -693,6 +693,24 @@ review remains open under the completion review below.
   gold recovery lost. Following auxiliary composition is scoped in COV-019j;
   lexical/contextual constraints, other 려 expressions and Korean review remain.
 
+- [x] **COV-017af — Short/full result-transfer connectives.** Canonical
+  어다 and 어다가 recover all six -아/어/여다(가) source forms, with ordinary
+  contraction and irregular recovery. Both select bare verbs: recovered
+  시/었/겠/더, represented adjective auxiliaries, copulas and 답다 are rejected.
+  Lexical 모시다 remains valid in 모셔다(가); its 시 is part of the stem.
+  Existing literal 다/다가 and the separate interrupted-intention forms remain.
+  Evidence: [85 stable cases](../tests/fixtures/validity.json) (51 required /
+  34 forbidden), [class/Unicode/dictionary/CLI and corpus tests](../tests/result_connectives.rs),
+  five unchanged annotated sentences, six grammar sources, browser allomorph
+  selection, and [source/output review](result-connectives-evaluation.json).
+  Across 3,059 ledger/stress surfaces, 174 candidates are added, 23 unsupported
+  paths removed and 146 retained paths gain provenance. One reviewed stress hash
+  changes (의사다 gains an unknown predicate hypothesis removed by dictionary
+  filtering); 29 remain unchanged. Development misses fall to 99 KAIST / 146 GSD
+  without losing prior gold recovery. Directional 내려다/쳐다도 annotation
+  matches do not establish generic 어다 + 보다 composition. Clause-level
+  transfer semantics, transitivity, lexical restrictions and Korean review remain.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–n implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -1038,6 +1056,18 @@ review remains open under the completion review below.
   dictionary/CLI and browser chain parity. Other senses and connector/prefinal
   classes of 보다 remain unreviewed; this is a bounded connector disposition.
 
+- [x] **COV-019k — Result-transfer auxiliaries.** Canonical 어다/어다가
+  can precede 주다, 드리다, 놓다 and 두다. Joined 가져다주었다,
+  모셔다드렸어요 and 빌려다놓았다 expose ordered predicate groups. The
+  source review combines all four KRDict auxiliary entries, NIKL's teaching
+  grammar report and Yang (2020)'s indexed primary-journal excerpt; the latter's
+  full PDF was unavailable. Other following auxiliaries and internal particles
+  are not licensed by this batch. Existing ordinary 어 놓다 adjective/copula
+  senses remain distinct. Shared subjects, surviving objects, transitivity and
+  location constraints require lexical/contextual review. Evidence is shared
+  with COV-017af's [tests](../tests/result_connectives.rs) and
+  [source report](result-connectives-evaluation.json).
+
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
@@ -1270,7 +1300,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 323 currently emitted canonical grammar forms.** The initial catalog
+  for all 324 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

@@ -352,6 +352,10 @@ fn verbal_intention(form: &str) -> bool {
     intention_connective(form) || matches!(form, "으려는" | "으려는가" | "으려는지")
 }
 
+fn result_connective(form: &str) -> bool {
+    matches!(form, "어다" | "어다가")
+}
+
 fn predicates(word: &str) -> Vec<Predicate> {
     let mut out = vec![];
     let mut memo = HashMap::new();
@@ -461,6 +465,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             | "어야"
                             | "어야지"
                             | "어야죠"
+                            | "어다"
                             | "어다가"
                             | "어서는"
                             | "어서도"
@@ -574,6 +579,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         .iter()
                         .any(|m| !matches!(m.form.as_str(), "시" | "었"))
                 {
+                    continue;
+                }
+                // Result-transfer 어다(가) has a bare verb boundary, unlike
+                // literal 다가. Lexical 모시다 keeps its stem-internal 시.
+                if result_connective(ending.form) && !p.morphs.is_empty() {
                     continue;
                 }
                 // Literal 고서 permits honorific 시, not a recovered tense/
@@ -736,6 +746,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if intention_connective(ending.form) {
                     p.rules.push("ending.intention_connective".into());
+                }
+                if result_connective(ending.form) {
+                    p.rules.push("ending.result_connective".into());
                 }
                 if factual_ra {
                     p.rules.push("ending.factual_ra".into());
@@ -1039,7 +1052,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             if bare_stative_iss && present_declarative(&m.form) {
                 return false;
             }
-            if verbal_intention(&m.form)
+            if (verbal_intention(&m.form) || result_connective(&m.form))
                 && matches!(
                     class,
                     Some(PredicateClass::Adjective | PredicateClass::Copula)
@@ -1141,6 +1154,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         .is_some_and(|m| {
             present_declarative(&m.form)
                 || verbal_intention(&m.form)
+                || result_connective(&m.form)
                 || matches!(
                     m.form.as_str(),
                     "으라며"
@@ -1319,6 +1333,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         .is_some_and(|m| {
             present_declarative(&m.form)
                 || verbal_intention(&m.form)
+                || result_connective(&m.form)
                 || matches!(
                     m.form.as_str(),
                     "으라며"
@@ -1870,6 +1885,7 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
         "기로" | "자고" => stem == "들",
         "다" | "다가" => matches!(stem, "보" | "못하") || (connector == "다" && stem == "싶"),
         "으려다" | "으려다가" => stem == "보",
+        "어다" | "어다가" => matches!(stem, "주" | "드리" | "놓" | "두"),
         "는가" | "은가" | "던가" | "나" | "을까" => matches!(stem, "보" | "싶"),
         "으면" => matches!(stem, "하" | "싶"),
         "기도" | "기는" | "기만" | "고자" => stem == "하",
@@ -2065,12 +2081,12 @@ fn reporting_myeo(form: &str) -> bool {
 
 fn before_particle(ending: &str, particle: &str) -> bool {
     let connective = intention_connective(ending)
+        || result_connective(ending)
         || matches!(
             ending,
             "어" | "어서"
                 | "어도"
                 | "어야"
-                | "어다가"
                 | "고"
                 | "고서"
                 | "게"

@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const resultConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-result-connectives.json"), "utf8"));
   const intentionConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-intention-connectives.json"), "utf8"));
   const uncertainty = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-uncertainty.json"), "utf8"));
   const adjectivalQuestion = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adjectival-question.json"), "utf8"));
@@ -257,6 +258,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...resultConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...intentionConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...uncertainty.LexicalResource.Lexicon.LexicalEntry,
       ...adjectivalQuestion.LexicalResource.Lexicon.LexicalEntry,
@@ -1428,7 +1430,15 @@ try {
   assert.equal(await breakdown.locator(".reading-condition").count(), 0);
 
   // Intention and uncertainty forms expose allomorphs and expression homonyms.
-  for (const [word, expected, form, label, id] of [
+  for (const [word, expected, form, label, id, key = `-${form}`] of [
+    ["잡아다", ["잡", "어다"], "어다", "Then / using the result", 86096],
+    ["빌려다", ["빌리", "어다"], "어다", "Then / using the result", 86097],
+    ["해다", ["하", "여다"], "여다", "Then / using the result", 86144, "-어다"],
+    ["잡아다가", ["잡", "어다가"], "어다가", "Then / using the result", 86098],
+    ["빌려다가", ["빌리", "어다가"], "어다가", "Then / using the result", 86099],
+    ["해다가", ["하", "여다가"], "여다가", "Then / using the result", 86143, "-어다가"],
+    ["모셔다드렸어요", ["모시", "어다", "드리", "었", "어요"], "어다", "Then / using the result", 86097],
+    ["빌려다놓았다", ["빌리", "어다", "놓", "었", "다"], "어다", "Then / using the result", 86097],
     ["먹으려거든", ["먹", "으려거든"], "으려거든", "Conditional intention", 80336],
     ["살려거든", ["살", "으려거든"], "으려거든", "Conditional intention", 80334],
     ["먹으려기에", ["먹", "으려기에"], "으려기에", "Intention as a reason", 86547],
@@ -1470,8 +1480,8 @@ try {
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
     await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).click();
     const result = await (await post("analyze", {text: word})).json();
-    const sources = result.grammar[`-${form}`];
-    assert.deepEqual(sources.map(e => e.id).sort(), grammarLabels[`-${form}`].sources.map(e => `krdict:${e.id}`).sort());
+    const sources = result.grammar[key];
+    assert.deepEqual(sources.map(e => e.id).sort(), grammarLabels[key].sources.map(e => `krdict:${e.id}`).sort());
     const entry = sources.find(e => e.id === `krdict:${id}`);
     const index = await page.locator(".entry-choices button").evaluateAll((buttons, e) =>
       buttons.findIndex(b => b.querySelector("span")?.textContent === e.headword + (e.homonym === "0" ? "" : e.homonym)
@@ -1652,7 +1662,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-") || c.id.startsWith("uncertainty-") || c.id.startsWith("intention-connectives-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-") || c.id.startsWith("uncertainty-") || c.id.startsWith("intention-connectives-") || c.id.startsWith("result-connectives-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);
@@ -1828,6 +1838,9 @@ try {
     await breakdown.getByRole("combobox").selectOption(choice);
     assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), ["가", form]);
     await breakdown.getByRole("button", { name: `${form} ${label}`, exact: true }).click();
+    if (form === "어다가") {
+      await page.locator(".entry-choices button").filter({ hasText: "-어다가" }).click();
+    }
     await page.waitForFunction((headword) => document.querySelector(".entry-heading h2")?.textContent?.startsWith(headword), `-${form}`);
     assert.match(await page.getByRole("link", { name: "Open original dictionary entry" }).getAttribute("href"), new RegExp(`ParaWordNo=${id}`));
   }

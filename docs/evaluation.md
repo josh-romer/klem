@@ -2809,3 +2809,52 @@ Separate count passes find **120,887 → 120,924** compatible-filter analyses an
 **73,377 → 73,379** words with readings. Samples include startup, dictionary work
 and JSONL serialization; all timings and counts are retained in the report. These
 local measurements are not guarantees for other machines or workloads.
+
+## Fixed complex-coda 하다 shortening (COV-021c)
+
+The [source and candidate report](hada-complex-evaluation.json) extends the 22
+existing shortening endings to eight fixed complex-coda classes: ㄳ/ㄺ/ㄿ/ㅄ
+use deletion, and ㄵ/ㄻ/ㄽ/ㄾ use aspiration. This is an inference from the
+published spelling and pronunciation rules. The dictionary supplies three actual
+하다 heads (한몫하다, 값하다, 꼴값하다); structural tests for other classes
+include hypothetical words without asserting dictionary membership.
+
+Review also fixed a restored-predicate bug in -찮- expansion: inserted 하 cannot
+become a noun before an invented copula. Fifty-four judgments (28 required /
+26 forbidden) bring the main ledger to **2,713 required / 1,632 forbidden**.
+The 22-entry lexical fixture preserves all senses and pronunciation forms.
+One complete unchanged KAIST training sentence retains 값하고, with grouped
+recovery unchanged at **9/9**. No shortened corpus attestation is claimed.
+
+Across 4,223 raw probes, 70 surfaces change: **87 additions / six removals**,
+with no provenance-only changes. All six removed copula paths are recorded
+individually. Full development grouped recovery stays **22,132/22,220** (KAIST)
+and **9,848/9,989** (GSD), without changed case-level recoveries. Mean candidate
+counts move **6.0720972097 → 6.0756975698** and remain **5.5452998298**,
+respectively. All 30 stress snapshots and frozen corpus baselines are unchanged.
+
+On the pinned novel, compatible filtering removes exactly two readings and adds
+none. 귀찮은 and 귀찮게 lose nominal 귀하 + 이다 + 지 + 않다 paths and keep
+the intended adjective 귀찮다. Verified byte spans, context and individual ledger
+cases track both removals. This is a source-backed agent review, not an independent
+precision estimate. Other contextual alternatives and previous open observations
+remain unresolved.
+
+Rust/web-feature tests, dictionary filters and CLI parity, formatting, Clippy and
+the full pinned corpus gate pass. Inventory dispositions and grammar-label counts
+are unchanged. ㄼ exceptions, ㄶ/ㅀ before 하, further ending/particle families
+and independent linguistic review remain open.
+
+The full browser/HTTP suite and packaged full-dictionary preview pass all 54
+judgments across 52 cases, both filters, six explicit breakdown selections,
+dictionary source access and CLI/API/export parity. Desktop/mobile screenshots
+were inspected. Nix flake checks and the web package build pass on x86_64-linux;
+frontend assets are unchanged and other architectures were not exercised.
+
+Three sequential local release runs on 81,758 word tokens gave median
+compatible-filter times **1.293 seconds before / 1.320 after**; headword-only
+medians were **1.312 / 1.307 seconds**. Peak RSS across runs was **28.09 MiB**.
+Separate count passes record **120,924 → 120,922** compatible-filter analyses,
+with **73,379** words retaining readings in both versions. All samples and counts
+are recorded, including startup, dictionary work and serialization. These local
+observations are not performance guarantees or a statistical speed comparison.

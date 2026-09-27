@@ -1,0 +1,4686 @@
+{
+  "schema_version": 1,
+  "before_revision": "d6fe641",
+  "scope": "COV-021c: eight fixed complex-coda pronunciation classes before the existing 22 Article 40 shortening endings, and prevention of a fabricated nominal/copula path from Article 39 restored 하.",
+  "sources": [
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&pageIndex=1&qna_seq=326633",
+      "answer_date": "2026-01-20",
+      "interpretation": "The official answer distinguishes full 하 deletion after stop pronunciations from aspiration elsewhere. It explicitly bases the rule on sound rather than written coda."
+    },
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=315279",
+      "answer_date": "2025-05-23",
+      "interpretation": "The official answer reproduces pronunciation Articles 10–11 with their exceptions. Eight reviewed clusters have fixed stop/sonorant classes before 하. ㄺ before a ㄱ-initial verb ending is a distinct environment from the restored 하 boundary; ㄼ has lexical exceptions."
+    },
+    {
+      "url": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=84&pageIndex=1&qna_seq=335814",
+      "answer_date": "2026-09-16",
+      "interpretation": "The official answer distinguishes spelling Article 39 negative contraction from Article 40 하 shortening. The expansion of -찮- restores predicate 하지, not a nominal plus an omitted copula."
+    }
+  ],
+  "coda_classes": {
+    "deletion": [
+      "ㄳ",
+      "ㄺ",
+      "ㄿ",
+      "ㅄ"
+    ],
+    "aspiration": [
+      "ㄵ",
+      "ㄻ",
+      "ㄽ",
+      "ㄾ"
+    ],
+    "pending": [
+      "ㄼ",
+      "ㄶ",
+      "ㅀ"
+    ]
+  },
+  "dictionary_discovery": {
+    "path": "docs/hada-complex-coda-audit.json",
+    "sha256": "4fd48ad387052335677605906da35f16f693a2b509c2c339b692564a6727f986",
+    "status": "Historical discovery-stage probes are preserved; COV-021c resolves the three recorded target lemmas. The discovery audit is not rewritten to resemble a post-change result."
+  },
+  "judgments": {
+    "cases": 52,
+    "required": 28,
+    "forbidden": 26,
+    "total_required": 2713,
+    "total_forbidden": 1632,
+    "independent_review": "pending"
+  },
+  "lexical_fixture": {
+    "path": "tests/fixtures/krdict-hada-complex.json",
+    "entries": 22,
+    "ids": [
+      15400,
+      15807,
+      17186,
+      20178,
+      23031,
+      23032,
+      26544,
+      34895,
+      34900,
+      37050,
+      38151,
+      62888,
+      62899,
+      71581,
+      71583,
+      73277,
+      84889,
+      84890,
+      85020,
+      86118,
+      86232,
+      92457
+    ],
+    "preservation": "All primary-word senses, notes, examples and pronunciation/inflection forms retained; translations restricted to English and RelatedForm links omitted. Idiom entries sharing an ID are excluded."
+  },
+  "candidate_comparison": {
+    "distinct_surfaces": 4223,
+    "changed_surfaces": 70,
+    "added": 87,
+    "removed": 6,
+    "provenance_changes": 0,
+    "changes": [
+      {
+        "surface": "간편찮다",
+        "added": [],
+        "removed": [
+          {
+            "lemmas": [
+              {
+                "text": "간편하",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값건대",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "건대",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값기",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값기도했다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "auxiliary.internal_particle",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "irregular.ha",
+              "particle",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기도",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "irregular.ha",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값기로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값잖다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값지",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값지만요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "말다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "deletion.ha",
+              "ending",
+              "irregular.mal",
+              "particle",
+              "particle.contraction.n",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "만",
+                "kind": "particle"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "particle",
+              "particle.concessive",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지만",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지만요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "값지않았다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "괜찮아요",
+        "added": [],
+        "removed": [
+          {
+            "lemmas": [
+              {
+                "text": "괜하",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "괜하",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": []
+      },
+      {
+        "surface": "귀찮게",
+        "added": [],
+        "removed": [
+          {
+            "lemmas": [
+              {
+                "text": "귀하",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": []
+      },
+      {
+        "surface": "귀찮은",
+        "added": [],
+        "removed": [
+          {
+            "lemmas": [
+              {
+                "text": "귀하",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.negative",
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": []
+      },
+      {
+        "surface": "꼴값건대",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "건대",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "꼴값기도했다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "auxiliary.internal_particle",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "irregular.ha",
+              "particle",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기도",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "irregular.ha",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "꼴값기로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "꼴값잖다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "꼴값지",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "꼴값지만요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "말다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "deletion.ha",
+              "ending",
+              "irregular.mal",
+              "particle",
+              "particle.contraction.n",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "만",
+                "kind": "particle"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "particle",
+              "particle.concessive",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지만",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지만요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "꼴값지않았다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "꼴값하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "넋기",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "넋하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "넋기로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "넋하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넋하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "넋다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "넋하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "넋잖다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "넋하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "넋지",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "넋하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "만만찮았다",
+        "added": [],
+        "removed": [
+          {
+            "lemmas": [
+              {
+                "text": "만만하",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": []
+      },
+      {
+        "surface": "먹어없다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "먹어없하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "삶찮다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "삶하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "삶치",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "삶하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "삶키",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "삶하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "삶키로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "삶하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "삶하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "삶타",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "삶하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "앉찮다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "앉하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "앉치",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "앉하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "앉키",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "앉하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "앉키로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "앉하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "앉하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "앉타",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "앉하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "외곬찮다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "외곬하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "외곬치",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "외곬하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "외곬키",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "외곬하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "외곬키로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "외곬하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "외곬하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "외곬타",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "외곬하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읊기",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읊하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읊기로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읊하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "읊하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읊다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읊하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읊잖다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읊하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읊지",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읊하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읽게한다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읽하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읽잖아한다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읽하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "boundary.regular",
+              "contraction.negative",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읽지는않아한다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읽하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "auxiliary.internal_particle",
+              "boundary.attached",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읽지못해한다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읽하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "못하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "deletion.ha",
+              "ending",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읽지아니해한다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읽하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "아니하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "deletion.ha",
+              "ending",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "읽지않아한다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "읽하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "boundary.regular",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "한몫건대",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "건대",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "한몫기도했다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "auxiliary.internal_particle",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "irregular.ha",
+              "particle",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기도",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "irregular.ha",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "한몫기로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "한몫잖다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "한몫지",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "한몫지만요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "말다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "deletion.ha",
+              "ending",
+              "irregular.mal",
+              "particle",
+              "particle.contraction.n",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "만",
+                "kind": "particle"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "particle",
+              "particle.concessive",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지만",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지만요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "한몫지않았다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "한몫하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "핥찮다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "핥하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "핥치",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "핥하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "핥키",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "핥하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "핥키로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "핥하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "핥하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "핥타",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "핥하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.ha_aspiration",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "흙기",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "흙하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "흙기로",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "흙하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기",
+                "kind": "ending"
+              },
+              {
+                "form": "로",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending",
+              "nominalization",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "흙하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "기로",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "흙다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "흙하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "흙잖다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "흙하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "흙지",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "흙하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      }
+    ]
+  },
+  "novel_comparison": {
+    "input": "data/books/mujeong.txt",
+    "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+    "records": 179112,
+    "before_jsonl_sha256": "9ec931ac8ff69ac672fa5468027a46db2975ed1b05127bab3777ec623d04cda9",
+    "after_jsonl_sha256": "1a73119b410fc4303880d606e43bcb15c7e64527387cfcdd9c10ae214767ac3f",
+    "changed_records": 2,
+    "changed_types": 2,
+    "added": 0,
+    "removed": 2,
+    "provenance_changes": 0,
+    "changes": [
+      {
+        "surface": "귀찮은",
+        "span": {
+          "start": 253859,
+          "end": 253868
+        },
+        "added": [],
+        "removed": [
+          {
+            "lemmas": [
+              {
+                "text": "귀하",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.negative",
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": []
+      },
+      {
+        "surface": "귀찮게",
+        "span": {
+          "start": 441253,
+          "end": 441262
+        },
+        "added": [],
+        "removed": [
+          {
+            "lemmas": [
+              {
+                "text": "귀하",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.negative",
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "provenance_changes": []
+      }
+    ]
+  },
+  "corpus_comparison": {
+    "kaist": {
+      "before": {
+        "schema_version": 2,
+        "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "corpus": "kaist",
+        "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+        "rows": 25278,
+        "excluded_rows": 2990,
+        "malformed_rows": 0,
+        "converted_rows": 22220,
+        "unsupported": {
+          "no_lexical_component": 67,
+          "orphan_nominal_suffix": 1
+        },
+        "grouped_matches": 22132,
+        "gold_lemmas": 23681,
+        "recovered_gold_lemmas": 23605,
+        "transformed_rows": 17169,
+        "transformed_matches": 17081,
+        "adapter_coverage": 0.9969490308686288,
+        "grouped_lemma_recall": 0.996039603960396,
+        "lemma_recall": 0.9967906760694227,
+        "transformed_grouped_recall": 0.9948744830799697,
+        "mean_candidates": 6.072097209720972,
+        "p95_candidates": 13,
+        "max_candidates": 41,
+        "common_misses": [
+          {
+            "surface": "라",
+            "expected": [
+              "이다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "지적이고",
+            "expected": [
+              "지적"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "Willaiam_Collins는",
+            "expected": [
+              "Willaiam_Collins"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈아보자였다",
+            "expected": [
+              "갈다",
+              "보다",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갑작스런",
+            "expected": [
+              "갑작스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거추장스로운",
+            "expected": [
+              "거추장스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거치며출판산업도",
+            "expected": [
+              "거치다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "것이라기보다는",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고결하였을런지",
+            "expected": [
+              "고결하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고통스런",
+            "expected": [
+              "고통스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그다지커다란",
+            "expected": [
+              "그다지"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "근대라는",
+            "expected": [
+              "근대"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기계적이고",
+            "expected": [
+              "기계적"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "나서가",
+            "expected": [
+              "나다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "노래스런",
+            "expected": [
+              "노래스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "달아줘라는",
+            "expected": [
+              "달다",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "대로",
+            "expected": [
+              "데"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "대안인가라는",
+            "expected": [
+              "대안",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "독제체제가",
+            "expected": [
+              "독재체제"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "드의",
+            "expected": [
+              "등"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "등록케",
+            "expected": [
+              "등록하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "때문에,",
+            "expected": [
+              "때문에"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "라이프찌히에서",
+            "expected": [
+              "라이프치히"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "마당에출판의",
+            "expected": [
+              "마당"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "망해야지만",
+            "expected": [
+              "망하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "먹혀들",
+            "expected": [
+              "먹히다",
+              "들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "뭔가",
+            "expected": [
+              "무어",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "민주주의라는",
+            "expected": [
+              "민주주의"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "바뀌였다",
+            "expected": [
+              "바뀌다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "배타적이고",
+            "expected": [
+              "배타적"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "after": {
+        "schema_version": 2,
+        "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "corpus": "kaist",
+        "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+        "rows": 25278,
+        "excluded_rows": 2990,
+        "malformed_rows": 0,
+        "converted_rows": 22220,
+        "unsupported": {
+          "no_lexical_component": 67,
+          "orphan_nominal_suffix": 1
+        },
+        "grouped_matches": 22132,
+        "gold_lemmas": 23681,
+        "recovered_gold_lemmas": 23605,
+        "transformed_rows": 17169,
+        "transformed_matches": 17081,
+        "adapter_coverage": 0.9969490308686288,
+        "grouped_lemma_recall": 0.996039603960396,
+        "lemma_recall": 0.9967906760694227,
+        "transformed_grouped_recall": 0.9948744830799697,
+        "mean_candidates": 6.075697569756976,
+        "p95_candidates": 13,
+        "max_candidates": 41,
+        "common_misses": [
+          {
+            "surface": "라",
+            "expected": [
+              "이다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "지적이고",
+            "expected": [
+              "지적"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "Willaiam_Collins는",
+            "expected": [
+              "Willaiam_Collins"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈아보자였다",
+            "expected": [
+              "갈다",
+              "보다",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갑작스런",
+            "expected": [
+              "갑작스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거추장스로운",
+            "expected": [
+              "거추장스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거치며출판산업도",
+            "expected": [
+              "거치다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "것이라기보다는",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고결하였을런지",
+            "expected": [
+              "고결하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고통스런",
+            "expected": [
+              "고통스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그다지커다란",
+            "expected": [
+              "그다지"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "근대라는",
+            "expected": [
+              "근대"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기계적이고",
+            "expected": [
+              "기계적"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "나서가",
+            "expected": [
+              "나다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "노래스런",
+            "expected": [
+              "노래스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "달아줘라는",
+            "expected": [
+              "달다",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "대로",
+            "expected": [
+              "데"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "대안인가라는",
+            "expected": [
+              "대안",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "독제체제가",
+            "expected": [
+              "독재체제"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "드의",
+            "expected": [
+              "등"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "등록케",
+            "expected": [
+              "등록하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "때문에,",
+            "expected": [
+              "때문에"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "라이프찌히에서",
+            "expected": [
+              "라이프치히"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "마당에출판의",
+            "expected": [
+              "마당"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "망해야지만",
+            "expected": [
+              "망하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "먹혀들",
+            "expected": [
+              "먹히다",
+              "들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "뭔가",
+            "expected": [
+              "무어",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "민주주의라는",
+            "expected": [
+              "민주주의"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "바뀌였다",
+            "expected": [
+              "바뀌다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "배타적이고",
+            "expected": [
+              "배타적"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "changed_cases": []
+    },
+    "gsd": {
+      "before": {
+        "schema_version": 2,
+        "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "corpus": "gsd",
+        "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+        "rows": 11958,
+        "excluded_rows": 1813,
+        "malformed_rows": 0,
+        "converted_rows": 9989,
+        "unsupported": {
+          "no_lexical_component": 148,
+          "orphan_derivational_suffix": 2,
+          "orphan_nominal_suffix": 5,
+          "unsegmented_predicate_nominal": 1
+        },
+        "grouped_matches": 9848,
+        "gold_lemmas": 10481,
+        "recovered_gold_lemmas": 10277,
+        "transformed_rows": 6470,
+        "transformed_matches": 6329,
+        "adapter_coverage": 0.9846229669788072,
+        "grouped_lemma_recall": 0.9858844729202122,
+        "lemma_recall": 0.9805362083770632,
+        "transformed_grouped_recall": 0.9782071097372489,
+        "mean_candidates": 5.5452998298127945,
+        "p95_candidates": 12,
+        "max_candidates": 35,
+        "common_misses": [
+          {
+            "surface": "끝내줘요",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 3
+          },
+          {
+            "surface": "고양이과",
+            "expected": [
+              "고양이"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "데이",
+            "expected": [
+              "데"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "2.36m를",
+            "expected": [
+              "2.36m"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "3-1로",
+            "expected": [
+              "3-1"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "5-4로",
+            "expected": [
+              "5-4"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "가믈란",
+            "expected": [
+              "가믈"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "각광받고",
+            "expected": [
+              "각광",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "각광받으며",
+            "expected": [
+              "각광",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈천리의",
+            "expected": [
+              "가다",
+              "천리"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "감사드리고",
+            "expected": [
+              "감사",
+              "드리다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "강된장밥은",
+            "expected": [
+              "강되다",
+              "장밥"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "강추합니다",
+            "expected": [
+              "강",
+              "추하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거기",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "걸복건귀는",
+            "expected": [
+              "것",
+              "이다",
+              "복건귀"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "걸아가는",
+            "expected": [
+              "걸다",
+              "가다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고치구",
+            "expected": [
+              "고치다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "귀기울일만한",
+            "expected": [
+              "귀",
+              "기울이다",
+              "만하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그랬는데",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그레요",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그림같은",
+            "expected": [
+              "그림",
+              "같다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기증받게",
+            "expected": [
+              "기증",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기차타고",
+            "expected": [
+              "기차",
+              "타다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "깊으셔셔",
+            "expected": [
+              "깊다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "깨끗하구요",
+            "expected": [
+              "깨끗하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "끝내줍니다",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내다팔던",
+            "expected": [
+              "내다",
+              "팔다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내렸다는대",
+            "expected": [
+              "내리다",
+              "대"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "넘",
+            "expected": [
+              "넘다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "느꼇습니다",
+            "expected": [
+              "느다",
+              "꼇다"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "after": {
+        "schema_version": 2,
+        "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "corpus": "gsd",
+        "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+        "rows": 11958,
+        "excluded_rows": 1813,
+        "malformed_rows": 0,
+        "converted_rows": 9989,
+        "unsupported": {
+          "no_lexical_component": 148,
+          "orphan_derivational_suffix": 2,
+          "orphan_nominal_suffix": 5,
+          "unsegmented_predicate_nominal": 1
+        },
+        "grouped_matches": 9848,
+        "gold_lemmas": 10481,
+        "recovered_gold_lemmas": 10277,
+        "transformed_rows": 6470,
+        "transformed_matches": 6329,
+        "adapter_coverage": 0.9846229669788072,
+        "grouped_lemma_recall": 0.9858844729202122,
+        "lemma_recall": 0.9805362083770632,
+        "transformed_grouped_recall": 0.9782071097372489,
+        "mean_candidates": 5.5452998298127945,
+        "p95_candidates": 12,
+        "max_candidates": 35,
+        "common_misses": [
+          {
+            "surface": "끝내줘요",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 3
+          },
+          {
+            "surface": "고양이과",
+            "expected": [
+              "고양이"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "데이",
+            "expected": [
+              "데"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "2.36m를",
+            "expected": [
+              "2.36m"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "3-1로",
+            "expected": [
+              "3-1"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "5-4로",
+            "expected": [
+              "5-4"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "가믈란",
+            "expected": [
+              "가믈"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "각광받고",
+            "expected": [
+              "각광",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "각광받으며",
+            "expected": [
+              "각광",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈천리의",
+            "expected": [
+              "가다",
+              "천리"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "감사드리고",
+            "expected": [
+              "감사",
+              "드리다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "강된장밥은",
+            "expected": [
+              "강되다",
+              "장밥"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "강추합니다",
+            "expected": [
+              "강",
+              "추하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거기",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "걸복건귀는",
+            "expected": [
+              "것",
+              "이다",
+              "복건귀"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "걸아가는",
+            "expected": [
+              "걸다",
+              "가다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고치구",
+            "expected": [
+              "고치다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "귀기울일만한",
+            "expected": [
+              "귀",
+              "기울이다",
+              "만하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그랬는데",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그레요",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그림같은",
+            "expected": [
+              "그림",
+              "같다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기증받게",
+            "expected": [
+              "기증",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기차타고",
+            "expected": [
+              "기차",
+              "타다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "깊으셔셔",
+            "expected": [
+              "깊다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "깨끗하구요",
+            "expected": [
+              "깨끗하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "끝내줍니다",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내다팔던",
+            "expected": [
+              "내다",
+              "팔다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내렸다는대",
+            "expected": [
+              "내리다",
+              "대"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "넘",
+            "expected": [
+              "넘다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "느꼇습니다",
+            "expected": [
+              "느다",
+              "꼇다"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "changed_cases": []
+    }
+  },
+  "annotated_fixture": {
+    "path": "tests/fixtures/kaist-hada-complex.conllu",
+    "sha256": "2ac4c29aa20dc675329c84a2e14ba6675e06390dd045d0c76b166b1d9578b303",
+    "partition": "train",
+    "sentence_id": "MH2_0014-s209",
+    "target": "id:MH2_0014-s209/11",
+    "before": {
+      "schema_version": 2,
+      "input_sha256": "2ac4c29aa20dc675329c84a2e14ba6675e06390dd045d0c76b166b1d9578b303",
+      "corpus": "kaist",
+      "input": "tests/fixtures/kaist-hada-complex.conllu",
+      "rows": 13,
+      "excluded_rows": 4,
+      "malformed_rows": 0,
+      "converted_rows": 9,
+      "unsupported": {},
+      "grouped_matches": 9,
+      "gold_lemmas": 9,
+      "recovered_gold_lemmas": 9,
+      "transformed_rows": 3,
+      "transformed_matches": 3,
+      "adapter_coverage": 1.0,
+      "grouped_lemma_recall": 1.0,
+      "lemma_recall": 1.0,
+      "transformed_grouped_recall": 1.0,
+      "mean_candidates": 3.5555555555555554,
+      "p95_candidates": 10,
+      "max_candidates": 10,
+      "common_misses": []
+    },
+    "after": {
+      "schema_version": 2,
+      "input_sha256": "2ac4c29aa20dc675329c84a2e14ba6675e06390dd045d0c76b166b1d9578b303",
+      "corpus": "kaist",
+      "input": "tests/fixtures/kaist-hada-complex.conllu",
+      "rows": 13,
+      "excluded_rows": 4,
+      "malformed_rows": 0,
+      "converted_rows": 9,
+      "unsupported": {},
+      "grouped_matches": 9,
+      "gold_lemmas": 9,
+      "recovered_gold_lemmas": 9,
+      "transformed_rows": 3,
+      "transformed_matches": 3,
+      "adapter_coverage": 1.0,
+      "grouped_lemma_recall": 1.0,
+      "lemma_recall": 1.0,
+      "transformed_grouped_recall": 1.0,
+      "mean_candidates": 3.5555555555555554,
+      "p95_candidates": 10,
+      "max_candidates": 10,
+      "common_misses": []
+    },
+    "note": "The source has unshortened 값하고. This unchanged full sentence verifies preservation; no abbreviated corpus example or recall gain is claimed."
+  },
+  "individual_observations": [
+    {
+      "id": "hada-complex-raw-removed-ec09b3021e8212b9",
+      "surface": "간편찮다",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "간편하",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "않다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "지",
+            "kind": "ending"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.negative",
+          "copula",
+          "copula.omitted_ending",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "verdict": "forbidden",
+      "reason": "The nominal consumes 하 inserted by negative expansion. The expansion cannot introduce an independent nominal plus copula. Other lexical/negative paths are preserved.",
+      "source": "negative-shortening"
+    },
+    {
+      "id": "hada-complex-raw-removed-94d2c5bd0fddfdb4",
+      "surface": "괜찮아요",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "괜하",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "않다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "지",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.negative",
+          "copula",
+          "copula.omitted_ending",
+          "ending",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false
+      },
+      "verdict": "forbidden",
+      "reason": "The nominal consumes 하 inserted by negative expansion. The expansion cannot introduce an independent nominal plus copula. Other lexical/negative paths are preserved.",
+      "source": "negative-shortening"
+    },
+    {
+      "id": "hada-complex-raw-removed-b09f52f8c4ac8fe1",
+      "surface": "괜찮아요",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "괜하",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "않다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "지",
+            "kind": "ending"
+          },
+          {
+            "form": "어요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.negative",
+          "copula",
+          "copula.omitted_ending",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "verdict": "forbidden",
+      "reason": "The nominal consumes 하 inserted by negative expansion. The expansion cannot introduce an independent nominal plus copula. Other lexical/negative paths are preserved.",
+      "source": "negative-shortening"
+    },
+    {
+      "id": "hada-complex-raw-removed-f832eb929b66efd2",
+      "surface": "귀찮게",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "귀하",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "않다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "지",
+            "kind": "ending"
+          },
+          {
+            "form": "게",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.negative",
+          "copula",
+          "copula.omitted_ending",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "verdict": "forbidden",
+      "reason": "The nominal consumes 하 inserted by negative expansion. The expansion cannot introduce an independent nominal plus copula. Other lexical/negative paths are preserved.",
+      "source": "negative-shortening"
+    },
+    {
+      "id": "hada-complex-raw-removed-3aee138d0e6082c0",
+      "surface": "귀찮은",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "귀하",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "않다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "지",
+            "kind": "ending"
+          },
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.eu",
+          "contraction.negative",
+          "copula",
+          "copula.omitted_ending",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "verdict": "forbidden",
+      "reason": "The nominal consumes 하 inserted by negative expansion. The expansion cannot introduce an independent nominal plus copula. Other lexical/negative paths are preserved.",
+      "source": "negative-shortening"
+    },
+    {
+      "id": "hada-complex-raw-removed-fd775dafcf6f5460",
+      "surface": "만만찮았다",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "만만하",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "않다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "지",
+            "kind": "ending"
+          },
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.negative",
+          "copula",
+          "copula.omitted_ending",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "verdict": "forbidden",
+      "reason": "The nominal consumes 하 inserted by negative expansion. The expansion cannot introduce an independent nominal plus copula. Other lexical/negative paths are preserved.",
+      "source": "negative-shortening"
+    },
+    {
+      "id": "hada-complex-novel-253859",
+      "surface": "귀찮은",
+      "span": {
+        "start": 253859,
+        "end": 253868
+      },
+      "context": "였다. 그러므로 그가 오늘 저녁에 한 일이 결코 도덕이나 양심에 거슬리는 행위인 줄로는 생각지 아니한다. 다만 귀찮은 법률이라는 것이 있어 ‘부녀의 의사를 거슬리고 육교를 한 것’을 강간죄라 할 것이 두려울 뿐이었다. 그러므",
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "귀하",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "contraction.negative",
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "verdict": "forbidden",
+      "ledger_case": "hada-complex-novel-귀찮은",
+      "reason": "The passage uses the adjective 귀찮다. Removed reading contains unrelated nominal 귀하 plus an invented copula after expansion. The adjective is required separately. This agent judgment is not an independently measured precision score."
+    },
+    {
+      "id": "hada-complex-novel-441253",
+      "surface": "귀찮게",
+      "span": {
+        "start": 441253,
+        "end": 441262
+      },
+      "context": "다. 이렇게 학생들이 청하는 것을 보고는 형식은 더욱 만족하였다. 무론 여러 학생 중에는 형식의 하는 이야기를 귀찮게 여기는 자도 있고, 형식이 한창 정성으로 이야기할 때에 일부러 한눈도 팔며 공책에 붓장난을 하는 자도 있었으",
+      "removed": [
+        {
+          "lemmas": [
+            {
+              "text": "귀하",
+              "kind": "nominal"
+            },
+            {
+              "text": "이다",
+              "kind": "copula"
+            },
+            {
+              "text": "않다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "지",
+              "kind": "ending"
+            },
+            {
+              "form": "게",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.negative",
+            "copula",
+            "copula.omitted_ending",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ],
+      "verdict": "forbidden",
+      "ledger_case": "hada-complex-novel-귀찮게",
+      "reason": "The passage uses the adjective 귀찮다. Removed reading contains unrelated nominal 귀하 plus an invented copula after expansion. The adjective is required separately. This agent judgment is not an independently measured precision score."
+    }
+  ],
+  "verification": [
+    "54 exact judgments pass raw and under both filters, with CLI/library parity, NFD, order/kind checks, bounded dictionary cache and explanations.",
+    "All 22 shortening ending pairs preserve full predicate analyses across eight fixed coda classes and reject the opposite shortening. These structural probes include hypothetical words and do not assert lexical membership.",
+    "Full Rust web-feature suite, all 30 frozen stress snapshots, full pinned corpus gate and Clippy pass; no baseline or snapshot changed.",
+    "Full browser/HTTP suite passes all 54 judgments in 52 cases, six selected breakdowns, dictionary source access, export parity and desktop/mobile checks; screenshots inspected.",
+    "Nix flake check and web package build pass on x86_64-linux. Release tests include the final novel regressions. Other architectures were not exercised; frontend assets are unchanged.",
+    "All 22 lexical fixture entries were compared against the original export, and all 11 export files match the pinned lock hashes.",
+    "Packaged full-dictionary preview passes all 54 judgments in 52 cases under both filters, six explicit selections, source access, CLI/API/export parity, and desktop/mobile checks; both screenshots inspected."
+  ],
+  "remaining": [
+    "ㄼ lexical pronunciation exceptions and ㄶ/ㅀ before 하 remain unresolved, without a blanket claim of ungrammaticality.",
+    "Additional shortening ending/particle families remain under COV-021.",
+    "Hypothetical restored lemmas such as 읽하다 are raw spelling candidates, not dictionary claims. Contextual sense selection and independent Korean review remain pending.",
+    "All other open coverage-checklist items remain active."
+  ],
+  "decisions": [
+    "Apply sound-based spelling restoration to eight fixed classes; retain written complex codas and the existing ending inventory.",
+    "Preserve raw lexical hypotheses even when no dictionary entry exists. Both dictionary filters remain separate policies.",
+    "Carry the restored-predicate flag through -찮- expansion so inserted 하 cannot be consumed as a nominal in copula composition.",
+    "The novel has two removals and no additions under compatible filtering. Both removals have stable byte offsets, context and ledger regressions."
+  ],
+  "source_sha256": {
+    "src/engine.rs": "db94be0ae933c87a106480abcf261425e193c4a3edbcb5d7855ad4348d0e0222",
+    "src/grammar.rs": "1a12cb30d91e7b83466df8a144cae8a06342423f35b4572e6d88822f1cc0fda4",
+    "tests/hada_complex.rs": "c6fd4c54ea86066e598865b43685f9e95043365466f1675a7e14d3fc33647886",
+    "tests/corpus.rs": "cf80e5cbe7759f85a1488a68838bbda075bba608191db5813d66332a6766e904",
+    "tests/fixtures/validity.json": "0b1b9bad0add8629fc5eb7fc0de1a27383e358e9598d6a484da8b7fbde89a89c",
+    "tests/fixtures/krdict-hada-complex.json": "36baf791cf9ccb42cd20d2ed01b493cd06f5ab6850b764fa73217a0dca245463",
+    "web/tests/browser.mjs": "111905f1cc51c5af8e87dac935220fd81558e7b782318ca6128f969c3dfe9563"
+  },
+  "release_package": {
+    "cli": "/nix/store/mgyzlysgmyln0dfdx4r0bdq22cx673d3-klem-0.1.0/bin/klem",
+    "assets": "/nix/store/ls2dwm44spf1qrgfp3j4wv42n3qlzjyf-klem-web-assets-0.1.0/share/klem-web"
+  },
+  "performance": {
+    "input": "data/books/mujeong.txt",
+    "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+    "dictionary_fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+    "measurement": "Three sequential local Nix release CLI runs per mode serializing JSONL to /dev/null; count passes are separate. Includes startup, tokenization, dictionary lookup, assessment and serialization. Not a throughput guarantee.",
+    "runs": {
+      "headword_before": {
+        "seconds": [
+          1.4223851599999762,
+          1.3056925939999928,
+          1.312013474998821
+        ],
+        "median_seconds": 1.312013474998821,
+        "peak_rss_kib": [
+          28256,
+          28044,
+          28440
+        ],
+        "output_counts": {
+          "jsonl_bytes": 124188999,
+          "records": 179112,
+          "word_tokens": 81758,
+          "analyses": 132120,
+          "word_tokens_with_reading": 73436,
+          "reading_unknown": 23371,
+          "reading_compatible": 97553,
+          "reading_incompatible": 11196
+        },
+        "dictionary_fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234"
+      },
+      "compatible_before": {
+        "seconds": [
+          1.2843489309998404,
+          1.2933400919991982,
+          1.2968349769998895
+        ],
+        "median_seconds": 1.2933400919991982,
+        "peak_rss_kib": [
+          28744,
+          28712,
+          28632
+        ],
+        "output_counts": {
+          "jsonl_bytes": 115082005,
+          "records": 179112,
+          "word_tokens": 81758,
+          "analyses": 120924,
+          "word_tokens_with_reading": 73379,
+          "reading_unknown": 23371,
+          "reading_compatible": 97553
+        },
+        "dictionary_fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234"
+      },
+      "headword_after": {
+        "seconds": [
+          1.3061911540007713,
+          1.3075733790010418,
+          1.307164054000168
+        ],
+        "median_seconds": 1.307164054000168,
+        "peak_rss_kib": [
+          28760,
+          28460,
+          28020
+        ],
+        "output_counts": {
+          "jsonl_bytes": 124185576,
+          "records": 179112,
+          "word_tokens": 81758,
+          "analyses": 132118,
+          "word_tokens_with_reading": 73436,
+          "reading_unknown": 23371,
+          "reading_compatible": 97551,
+          "reading_incompatible": 11196
+        },
+        "dictionary_fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234"
+      },
+      "compatible": {
+        "seconds": [
+          1.3209877649987902,
+          1.3122719969996979,
+          1.3197773239990056
+        ],
+        "median_seconds": 1.3197773239990056,
+        "peak_rss_kib": [
+          28184,
+          28692,
+          28200
+        ],
+        "output_counts": {
+          "jsonl_bytes": 115078582,
+          "records": 179112,
+          "word_tokens": 81758,
+          "analyses": 120922,
+          "word_tokens_with_reading": 73379,
+          "reading_unknown": 23371,
+          "reading_compatible": 97551
+        },
+        "dictionary_fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234"
+      }
+    }
+  }
+}

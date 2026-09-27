@@ -1191,3 +1191,13 @@ MH2_0045-s446. The GSD counterpart preserves train-s72, train-s122, train-s969,
 train-s2154, train-s2648, train-s3031, train-s4389 and development dev-s524.
 Revisions, attribution and CC BY-SA 4.0 terms above apply. These are exposed
 regressions; role-specific tests are distinct from grouped-lemma recall.
+
+`krdict-hada-complex.json` contains 22 primary KRDict word entries selected from
+the pinned local LMF export for COV-021c. It retains all senses, notes, examples
+and pronunciation/inflection forms; translations are restricted to English and
+RelatedForm links are omitted. Same-number idiom entries are not substituted for
+their lexical heads. `kaist-hada-complex.conllu` preserves the full training
+sentence MH2_0014-s209 from the pinned UD Korean-Kaist revision, including
+값하고. No annotation was rewritten and no shortened corpus example is claimed.
+See [the source report](../../docs/hada-complex-evaluation.json) and the existing
+dictionary/corpus attribution and licensing notices above.

@@ -201,8 +201,9 @@ in [NIKL's explanation](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?
 They are suffix-boundary recoveries, not global replacements of 케/치/타.
 The literal, unshortened forms remain available.
 
-- `deletion.ha` restores 하 after a simple coda with stop realization [ㄱ/ㄷ/ㅂ].
-  The implemented spelling classes are ㄱ/ㄲ/ㅋ, ㄷ/ㅅ/ㅆ/ㅈ/ㅊ/ㅌ, and ㅂ/ㅍ.
+- `deletion.ha` restores 하 after a reviewed coda with stop realization [ㄱ/ㄷ/ㅂ].
+  The original simple-coda classes are ㄱ/ㄲ/ㅋ, ㄷ/ㅅ/ㅆ/ㅈ/ㅊ/ㅌ, and ㅂ/ㅍ;
+  COV-021c adds the reviewed complex-coda classes below.
   Tests include 생각지, 생각건대, 생각다, 깨끗지, 넉넉지, 익숙지, and 섭섭지.
 - `contraction.ha_aspiration` restores 하 after an open syllable or ㄴ/ㄹ/ㅁ/ㅇ
   coda, reversing the following aspirated ㄱ/ㄷ/ㅈ. Examples include 간편케,
@@ -221,8 +222,9 @@ the browser shows 생각하 + 건대 and the JSON retains 생각하다 plus endi
 
 Restored 하 stays part of a predicate. It cannot be reused as a nominal before
 an omitted copula. No bare 케/치/타 rewrites to 하다 without a base, and foreign
-letters/numbers do not supply a guessed coda class. Complex codas, further ending
-families remain separate audit work under COV-013. COV-021a below adds Article 39
+letters/numbers do not supply a guessed coda class. COV-021c below adds eight
+fixed complex-coda classes; remaining classes and further ending families stay
+under audit. COV-021a below adds Article 39
 잖/찮 recovery.
 
 Dictionary-free recovery can add unknown lexical hypotheses such as 걷하다
@@ -665,7 +667,8 @@ compose in 넉넉잖다 → 넉넉하다 + 지 + 않다 + 다. Incorrect 하 del
 the existing aspiration boundary: open syllables and ㄴ/ㄹ/ㅁ/ㅇ permit it,
 while stop-final 거북찮다 does not restore 거북하다. This follows
 [NIKL’s explicit 거북잖다/생각잖다 explanation](https://www.korean.go.kr/nkview/nklife/1994_1/4_10.html).
-Complex coda classes remain part of the COV-021 audit.
+COV-021c adds eight fixed complex-coda classes and prevents a restored 하
+from becoming a nominal before an omitted copula. Remaining classes stay open.
 
 The expansion is represented as a predicate followed by an auxiliary, with
 `contraction.negative` provenance. Both sides retain their own prefinals and
@@ -1252,7 +1255,8 @@ full forms across vowel, sonorant and stop codas, including NFD, ordered
 breakdowns, wrong-class rejections and joined auxiliaries.
 
 This does not license contraction without a preceding base, guess non-Hangul
-pronunciation, handle complex codas, or repair spellings such as 등록케. It can
+pronunciation, or repair spellings such as 등록케. COV-021c below extends the
+original simple-coda scope to eight fixed complex-coda classes. Recovery can
 emit unknown lexical hypotheses: the extra measured GSD match for 이시가키와
 is an annotation anomaly, separately documented in the
 [evaluation](hada-ki-evaluation.json), not a validated predicate. The original
@@ -2792,3 +2796,34 @@ Noun/adverb homonyms and the naturalness of particular copula senses still need
 contextual judgment. In the novel, why questions with polite 요 additionally gain
 an enumerative-copula 요 alternative; that is recorded as unjudged, not intended.
 Broader adverb licenses and the inherited 딸이었던들 case-clause path remain open.
+
+## Fixed complex codas before shortened 하다 (COV-021c)
+
+The [source and comparison report](hada-complex-evaluation.json) combines
+[NIKL's Article 40 explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&pageIndex=1&qna_seq=326633)
+with its reproduction of
+[pronunciation Articles 10–11](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=315279).
+The inference applies the coda's pronunciation before restored 하, not the
+newly adjacent ending consonant: ㄳ/ㄺ/ㄿ/ㅄ permit deletion, while
+ㄵ/ㄻ/ㄽ/ㄾ permit aspiration. The existing 22 shortening endings and their
+composition paths apply. No spelling is changed to a simplified final consonant.
+
+The dictionary records 한몫하다 [한모카다], 값하다 [가파다], and
+꼴값하다 [꼴까파다]. Their inferred shortened forms include 한몫지, 값기로
+and 꼴값지않았다. These are applications of the rules, not direct corpus
+attestations of the shortened spellings. The retained full KAIST sentence
+contains 값하고; the discovery search did not find a shortened example.
+The tests also use hypothetical 하다 words to cover every new fixed coda
+class. A valid spelling reversal does not establish dictionary membership.
+
+Review also found that -찮- could restore 하지 and then reinterpret the
+inserted 하 as part of a noun before an omitted copula. This is now excluded:
+간편찮다 keeps 간편하다 + 지 + 않다 + 다, and loses the fabricated
+간편하 + 이다 + 지 + 않다 + 다 path. Original lexical candidates remain.
+The [Article 39/40 answer](https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=84&pageIndex=1&qna_seq=335814)
+supports the predicate restoration, not an inserted noun or copula.
+
+ㄼ has word-dependent pronunciations; ㄶ/ㅀ need a separate audit before 하.
+These three classes remain outside this extension, without a claim that all
+such hypothetical words are ungrammatical. Other ending families, independent
+linguistic review and all other open coverage items remain pending.

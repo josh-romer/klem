@@ -265,6 +265,7 @@ try {
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
+  const hadaComplex = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-hada-complex.json"), "utf8"));
   const adverbCopulas = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adverb-copulas.json"), "utf8"));
   const connectiveCopulas = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-connective-copulas.json"), "utf8"));
   const concessiveEndings = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-concessive-endings.json"), "utf8"));
@@ -281,6 +282,7 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
+      ...hadaComplex.LexicalResource.Lexicon.LexicalEntry,
       ...adverbCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...connectiveCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...concessiveEndings.LexicalResource.Lexicon.LexicalEntry,
@@ -659,6 +661,43 @@ try {
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path:resolve(tmpdir(),"klem-adverb-copulas-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const hadaComplexCases = recipientLedger.cases.filter(c => c.id.startsWith("hada-complex-"));
+  assert.equal(hadaComplexCases.length, 52);
+  for (const c of hadaComplexCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const hadaComplexText = "한몫지 값기로 꼴값지않았다 값진 귀찮은 귀찮게";
+  await submit(page, hadaComplexText); await waitHeading(page, "한몫지");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["한몫하","지"]],[1,["값하","기로"]],[2,["꼴값하","지","않","었","다"]],[3,["값지","은"]],[4,["귀찮","은"]],[5,["귀찮","게"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+  }
+  await page.locator(".breakdown-word").first().locator(".breakdown-part").first().click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=84890"]'));
+  const hadaComplexDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const hadaComplexExport = JSON.parse(await readFile(await (await hadaComplexDownload).path(), "utf8"));
+  const hadaComplexExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:hadaComplexText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(hadaComplexExport.records, hadaComplexExpected);
+  assert.ok(hadaComplexExport.records[0].analysis.analyses.some(a => a.rules.includes("deletion.ha")));
+  await page.screenshot({path:resolve(tmpdir(),"klem-hada-complex-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-hada-complex-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const connectiveCopulaCases = recipientLedger.cases.filter(c => c.id.startsWith("connective-copula-"));

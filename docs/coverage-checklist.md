@@ -152,7 +152,8 @@ review remains open under the completion review below.
   [dictionary tests](../tests/dictionary.rs), nine `hada-*` judgment cases,
   and browser normalization/grammar-entry checks. Source:
   [NIKL's Article 40 explanation](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=325451).
-  COV-021a adds 잖/찮 contractions. Complex codas and other ending families remain COV-013
+  COV-021a adds 잖/찮 contractions; COV-021c adds eight fixed complex-coda classes.
+  Other coda and ending families remain COV-013
   audit work. See [the implemented scope](rules.md#shortened-hada-cov-011).
 - [x] **COV-012 — Adverbial derivation.** **Implemented for bounded -이 families.**
   Adjective bases ending in 같/없, the stems 굳/길/깊/높/많, and the historical
@@ -1509,16 +1510,14 @@ review remains open under the completion review below.
   remain open, including the inherited 딸이었던들 and 왜요 alternatives.
 
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
-  forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation
-  and ending/particle families. Do not extend stop/sonorant rules without
-  pronunciation evidence.
-  The [complex-coda discovery audit](hada-complex-coda-audit.json) examines all
-  7,571 pinned dictionary entries ending in 하다 and finds three with a complex
-  coda immediately before 하: 한몫하다, 값하다 and 꼴값하다. It preserves their
-  pronunciations, all senses and training/development search hits. Full forms
-  recover today; the proposed shortened 지/기 forms do not. These are pending
-  implementation targets, not new correctness judgments. Other cluster classes
-  still need pronunciation review; dictionary absence does not close their scope.
+  forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
+  COV-021c adds eight fixed complex-coda classes.** Remaining: ㄼ lexical
+  pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
+  families. Do not extend stop/sonorant rules without pronunciation evidence.
+  The [dictionary discovery audit](hada-complex-coda-audit.json) found three
+  complex-coda 하다 words among 7,571 entries: 한몫하다, 값하다 and 꼴값하다.
+  COV-021c now recovers their licensed shortened forms. Dictionary absence does
+  not establish that hypothetical words in other coda classes are impossible.
 - [x] **COV-021a — Article 39 negative contractions.** 잖 recovers 지 + 않다;
   찮 restores 하지 + 않다. The left predicate uses existing spelling and
   prefinal recovery; the negative auxiliary retains its own inflection.
@@ -1544,6 +1543,19 @@ review remains open under the completion review below.
   annotation of the place name 이시가키와. No prior candidates, gold groups,
   component recoveries or stress fingerprints are lost. See
   [scope and sources](rules.md#shortened-hada-nominalizations-cov-021b).
+- [x] **COV-021c — Fixed complex-coda shortening and predicate restoration.**
+  Pronunciation Articles 10–11 plus spelling Article 40 license deletion after
+  ㄳ/ㄺ/ㄿ/ㅄ and aspiration after ㄵ/ㄻ/ㄽ/ㄾ. The 22 existing shortening
+  endings retain full-form predicate parity, NFD, nominalization, auxiliaries
+  and negative contractions; original spellings and lexical readings remain.
+  Restored 하 in -찮- cannot become a nominal before an invented copula.
+  The 54 `hada-complex-*` judgments (28 required / 26 forbidden),
+  [class/composition tests](../tests/hada_complex.rs), one unchanged KAIST
+  sentence, dictionary/CLI parity and browser selection/export checks provide
+  regression evidence. [Evaluation](hada-complex-evaluation.json) distinguishes
+  inferred spellings from direct examples and hypothetical lemmas from dictionary
+  words. The finite dictionary has three complex-coda 하다 heads, all covered;
+  this does not close the remaining three pronunciation classes or all COV-021.
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds
   source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb

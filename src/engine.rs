@@ -908,6 +908,10 @@ fn predicates(word: &str) -> Vec<Predicate> {
             if head.morphs.last().is_none_or(|m| m.form != "지") {
                 continue;
             }
+            // -찮 restores predicate 하, just like Article 40 shortening.
+            // Do not reinterpret that inserted 하 as a nominal followed by
+            // an omitted copula (간편찮다 != 간편하 + 이다 + 지 + 않다).
+            head.ha_contracted |= p.stem.ends_with('찮');
             head.auxiliaries.push("않".into());
             head.morphs.extend(p.morphs.clone());
             head.rules.extend(p.rules.clone());

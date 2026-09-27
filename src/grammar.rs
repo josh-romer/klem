@@ -298,14 +298,17 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
     match boundary {
         Boundary::HaDeletion | Boundary::HaAspiration => {
             // Article 40: stop-final bases lose all of 하; vowels/sonorants
-            // retain ㅎ, which aspirates the following onset. Complex codas
-            // need a separate pronunciation audit, so are not guessed here.
+            // retain ㅎ, which aspirates the following onset. COV-021c adds
+            // fixed complex-coda classes from pronunciation Articles 10–11:
+            // ㄳ/ㄺ/ㄿ/ㅄ are stops; ㄵ/ㄻ/ㄽ/ㄾ are sonorants. Classify
+            // before the restored 하, not before the shortened ending's onset.
+            // ㄼ (lexical exceptions), ㄶ and ㅀ remain under review.
             let allowed = match boundary {
                 Boundary::HaDeletion => matches!(
                     coda(base),
-                    Some(1 | 2 | 7 | 17 | 19 | 20 | 22 | 23 | 24 | 25 | 26)
+                    Some(1 | 2 | 3 | 7 | 9 | 14 | 17 | 18 | 19 | 20 | 22 | 23 | 24 | 25 | 26)
                 ),
-                _ => matches!(coda(base), Some(0 | 4 | 8 | 16 | 21)),
+                _ => matches!(coda(base), Some(0 | 4 | 5 | 8 | 10 | 12 | 13 | 16 | 21)),
             };
             if allowed {
                 push(
@@ -1194,7 +1197,7 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Expand historical 달리/빨리 to 다르다/빠르다 plus -이; not a general 르 inflection rule."
         }
         "deletion.ha" => {
-            "Restore 하 deleted after a ㄱ/ㄷ/ㅂ-sounding simple coda before a licensed consonant ending."
+            "Restore 하 deleted after a reviewed ㄱ/ㄷ/ㅂ-sounding coda before a licensed consonant ending."
         }
         "contraction.ha_aspiration" => {
             "Restore 하 whose ㅎ aspirates the following ㄱ/ㄷ/ㅈ after a vowel or sonorant base."

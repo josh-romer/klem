@@ -1737,3 +1737,18 @@ fn connective_copulas_recover_six_annotated_training_cases() {
         }
     }
 }
+
+#[test]
+fn complex_hada_preserves_annotated_unshortened_predicate() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-hada-complex.conllu").as_slice(),
+        corpus::Corpus::Kaist,
+        "complex-hada",
+    )
+    .unwrap();
+    let case = &report.cases["id:MH2_0014-s209/11"];
+    assert_eq!(case.surface, "값하고");
+    assert_eq!(case.expected, ["값하다"]);
+    assert!(case.matched);
+    assert_eq!(report.grouped_matches, 9);
+}

@@ -2885,3 +2885,20 @@ and 친구하고 같이. This change preserves that spacing and does not extend 
 case exception to 같이 or 대로. Existing whole-word and hypothetical nominal
 readings remain; the [case review](comparison-case-evaluation.json) records the
 unjudged alternatives, source distinctions and dictionary omissions.
+
+## Recurring-condition endings (COV-017al)
+
+`을라치면` is the canonical form for `-ㄹ라치면/-을라치면`, with provenance
+`ending.habitual_condition`. It uses attached ㄹ after vowel/ㄹ stems and 을
+after other consonants. Regular and existing irregular recovery remain available.
+The reviewed prefinal is 시; recovered past/modal/retrospective stacks do not
+borrow that license. Auxiliary verb groups and polite 요 compose, while explicit
+copulas, 답다-derived adjectives and known adjective auxiliaries do not.
+
+KRDict and NIKL describe verb attachment, but the dictionary examples and KAIST
+explicitly attest 있을라치면. The lexical 있다 entry is retained. The separate
+dictionary policy checks other known adjective entries per homonym, including
+through 지-negatives, and stops at a different auxiliary/suffix/copula. Unknown
+lexical heads remain raw hypotheses. The [review](llachimyeon-evaluation.json)
+distinguishes primary examples, composition probes, lexical conflicts and the
+unjudged candidate queue.

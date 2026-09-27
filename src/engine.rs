@@ -592,6 +592,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // KRDict 86489/86616 list verb stems and honorific 시,
+                // not a recovered past/modal/retrospective stack.
+                if ending.form == "을라치면" && p.morphs.iter().any(|m| m.form != "시") {
+                    continue;
+                }
                 // The reviewed concessive paradigms differ: -(으)ㄴ들 lists
                 // bare stems and honorific 시; 망정/지언정 additionally list 었.
                 // A retrospective -던들 needs its own ending analysis.
@@ -800,6 +805,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "으니라" | "느니라") {
                     p.rules.push("ending.literary_assertion".into());
+                }
+                if ending.form == "을라치면" {
+                    p.rules.push("ending.habitual_condition".into());
                 }
                 if matches!(ending.form, "은들" | "을망정" | "을지언정" | "던들") {
                     p.rules.push("ending.concessive".into());
@@ -1163,6 +1171,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                         | "으라거나"
                         | "자거나"
                         | "고서"
+                        | "을라치면"
                 )
             {
                 return false;
@@ -1247,6 +1256,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                         | "으라거나"
                         | "자거나"
                         | "고서"
+                        | "을라치면"
                 )
         })
     {
@@ -1461,6 +1471,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                         | "자면서"
                         | "자면"
                         | "고서"
+                        | "을라치면"
                         | "으라"
                         | "으라고"
                         | "으라는"
@@ -2433,7 +2444,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "요" => {
             reporting_myeo(ending)
                 || reporting_ni(ending)
-                || matches!(ending, "은들" | "을망정" | "을지언정" | "던들")
+                || matches!(ending, "은들" | "을망정" | "을지언정" | "던들" | "을라치면")
                 || connective
                 || matches!(
                     ending,

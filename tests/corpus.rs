@@ -1801,3 +1801,22 @@ fn comparison_case_recovers_five_annotated_targets_without_rewriting_typo() {
     assert_eq!(typo.surface, "커뮤니케이션에서어럼");
     assert_eq!(typo.expected, ["커뮤니케이션"]);
 }
+
+#[test]
+fn llachimyeon_recovers_complete_annotated_verb_and_existential_sentences() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-llachimyeon.conllu").as_slice(),
+        Corpus::Kaist,
+        "llachimyeon",
+    )
+    .unwrap();
+    for (id, surface, lemma) in [
+        ("id:MH2_0045-s282/13", "먹을라치면", "먹다"),
+        ("id:MH2_0045-s309/7", "있을라치면", "있다"),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [lemma]);
+        assert!(case.matched, "{id}");
+    }
+}

@@ -2922,3 +2922,29 @@ checks and desktop/mobile inspection. Three interleaved release samples per
 version/filter give after medians of 1.283 seconds (headword) and 1.268 seconds
 (compatible), with peak RSS below 29 MiB. This is a bounded performance check,
 not a claim of statistical speed equivalence.
+
+## Recurring conditions (COV-017al)
+
+The [evaluation](llachimyeon-evaluation.json) adds **29 required / 13 forbidden**
+raw judgments, bringing the main ledger to **2,826 / 1,666**. Ten separate
+dictionary-policy cases bring that ledger to **148 required / 84 forbidden**.
+Raw and headword-only hypotheses remain; compatible filtering evaluates lexical
+adjective entries separately, preserves existential 있다, distinguishes 늦다
+homonyms and carries the requirement through 지-negatives. A different auxiliary
+resets the class dependency.
+
+Two complete KAIST training sentences recover 먹을라치면 and 있을라치면; all
+37 converted rows now match. The latter closes the COV-018x observed miss. The
+four frozen corpus partitions retain every prior match and recovered component
+set. Across 4,376 raw probes, 48 surfaces gain 200 candidates with no removals.
+Compatible-filtered 무정 output remains byte-identical across all 179,112 records.
+The raw review queue remains explicitly unjudged; passing required cases does
+not certify all added candidates.
+
+Rust/web tests, all 30 stress snapshots, the pinned corpus gate, Clippy, formatting,
+TypeScript/Vite, browser checks and Nix CLI/web builds pass on x86_64 Linux. The
+packaged full-dictionary app passes all 52 new cases with both filters, source
+selection and API/CLI/export parity. Desktop/mobile screenshots were inspected.
+Three interleaved release samples per version/filter give after medians of
+1.283 seconds (headword) and 1.314 seconds (compatible), below 29 MiB peak RSS.
+The small sample does not establish statistical speed equivalence.

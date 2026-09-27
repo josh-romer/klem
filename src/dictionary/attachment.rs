@@ -26,6 +26,7 @@ pub enum AttachmentRule {
     ResultTransferVerb,
     AuxiliaryClass,
     LiteraryAssertionClass,
+    HabitualConditionVerb,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -118,6 +119,42 @@ fn expressive_hada_connector(analysis: &Analysis, mut rest: &[Component]) -> Opt
     }
 }
 
+// -(으)ㄹ라치면 keeps its lexical class requirement through 지-negatives.
+// Other auxiliaries, derivation and copulas establish their own class boundary.
+fn habitual_condition_ending(analysis: &Analysis, mut rest: &[Component]) -> Option<usize> {
+    loop {
+        let end = rest
+            .iter()
+            .position(|c| matches!(c, Component::Lemma(_)))
+            .unwrap_or(rest.len());
+        let morphs = &rest[..end];
+        if morphs.iter().any(|c| matches!(c, Component::Morpheme(i) if analysis.morphemes[*i].kind == MorphemeKind::Suffix)) {
+            return None;
+        }
+        let ending = morphs.iter().find_map(|c| match c {
+            Component::Morpheme(i) if analysis.morphemes[*i].kind == MorphemeKind::Ending => {
+                Some(*i)
+            }
+            _ => None,
+        })?;
+        match analysis.morphemes[ending].form.as_str() {
+            "을라치면" => return Some(ending),
+            "지" => (),
+            _ => return None,
+        }
+        let Component::Lemma(index) = rest.get(end)? else {
+            return None;
+        };
+        let lemma = &analysis.lemmas[*index];
+        if lemma.kind != LemmaKind::Auxiliary
+            || !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+        {
+            return None;
+        }
+        rest = &rest[end + 1..];
+    }
+}
+
 impl Annotation {
     /// Check a complete analysis against this annotation's headword evidence.
     /// Missing entries, unclassified roles and unknown POS remain unknown.
@@ -164,6 +201,9 @@ impl Annotation {
             } else {
                 None
             };
+            let habitual_ending = (lemma.kind == LemmaKind::Predicate)
+                .then(|| habitual_condition_ending(analysis, rest))
+                .flatten();
             let entries: Vec<_> = self
                 .lemmas
                 .iter()
@@ -211,6 +251,18 @@ impl Annotation {
                         // 내키지 않아 하다). Broad verb POS cannot decide this
                         // lexical subset, including through negative auxiliaries.
                         status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && matched.entry.pos == "형용사"
+                        && lemma.text != "있다"
+                        && let Some(i) = habitual_ending
+                    {
+                        // Both KRDict and KAIST explicitly attest 있을라치면.
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::HabitualConditionVerb,
+                            morpheme_index: Some(i),
+                        });
                     }
                     // Dictionary classes belong to the lexical head, not its
                     // auxiliary, derived suffix or a later copula's ending.

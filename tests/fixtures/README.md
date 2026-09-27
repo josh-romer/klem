@@ -1235,3 +1235,15 @@ above. Five comparison targets are correctly spelled; 커뮤니케이션에서�
 the unrelated 원리을 remain verbatim source observations. No annotation repairs
 were made. The NIKL teacher-training PDF is cited, not redistributed. See the
 [source and individual-case evaluation](../../docs/comparison-case-evaluation.json).
+
+`krdict-llachimyeon.json` selects 68 primary word entries from the pinned NIKL
+Korean Basic Dictionary export. All senses, notes, examples and forms remain,
+with English equivalents only and RelatedForm omitted. The existing dictionary
+attribution and reuse terms above apply. The grammar-source fixture gains
+86489/86616; the general attachment fixture gains 예쁘다 and five 지다 homonyms
+for class-conflict and class-reset checks.
+
+`kaist-llachimyeon.conllu` preserves two full training sentences under the KAIST
+attribution and license above. No spelling, tags or gold rows were rewritten.
+The NIKL 2006 grammar answer and 2007 spelling guide are linked rather than
+redistributed. See the [source review](../../docs/llachimyeon-evaluation.json).

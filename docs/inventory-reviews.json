@@ -20230,6 +20230,236 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:86489",
+      "source_sha256": "f40792824d23af6a4364374f34810b08a62a31ae131c397089cb3bca94ee5565",
+      "status": "scoped",
+      "checklist": [
+        "COV-017al"
+      ],
+      "scope": "One recurring-condition ending with reviewed vowel/ㄹ versus other-coda allomorphs, honorific 시, all source example surfaces, irregular and auxiliary composition, and polite 요. Explicit copulas/답다/known adjective auxiliaries are excluded. Dictionary adjective conflicts retain attested 있다 and assess each homonym independently, including lexical class inheritance through 지-negatives.",
+      "remaining": "Independent Korean-language review and contextual recurring-condition semantics remain pending. Other prefinals and additional following particles require their own evidence. Raw unknown lexical hypotheses are retained; this is not full precision certification.",
+      "evidence": [
+        {
+          "path": "tests/llachimyeon.rs",
+          "test": "llachimyeon_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/llachimyeon.rs",
+          "test": "llachimyeon_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/llachimyeon.rs",
+          "test": "llachimyeon_dictionary_assesses_homonyms_and_existential_exception"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "llachimyeon_recovers_complete_annotated_verb_and_existential_sentences"
+        },
+        {
+          "path": "docs/llachimyeon-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-llachimyeon.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "llachimyeon-source-시작하다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-source-가다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-source-모이다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-source-나가다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-살다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-알다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-듣다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-눕다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-돕다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-짓다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-붓다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-걷다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-boundary-잡다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-honorific-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-honorific-가다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-lexical-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-aux-try",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-aux-negative-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-polite-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-polite-가다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-wrong-boundary-가을라치면",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-wrong-boundary-살을라치면",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-wrong-boundary-먹라치면",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-wrong-boundary-먹으라치면",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-prefinal-먹었을라치면",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-prefinal-먹겠을라치면",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-prefinal-먹덜라치면",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-prefinal-먹으셨을라치면",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-copula-학생",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-copula-의사",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-derived-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-adjective-auxiliary",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-adjective-negative",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86616",
+      "source_sha256": "4e4c79dcddc9df65adfe3813cb88f23a8a0c8ef04188b4a66591a70f9f25413b",
+      "status": "scoped",
+      "checklist": [
+        "COV-017al"
+      ],
+      "scope": "One recurring-condition ending with reviewed vowel/ㄹ versus other-coda allomorphs, honorific 시, all source example surfaces, irregular and auxiliary composition, and polite 요. Explicit copulas/답다/known adjective auxiliaries are excluded. Dictionary adjective conflicts retain attested 있다 and assess each homonym independently, including lexical class inheritance through 지-negatives.",
+      "remaining": "Independent Korean-language review and contextual recurring-condition semantics remain pending. Other prefinals and additional following particles require their own evidence. Raw unknown lexical hypotheses are retained; this is not full precision certification.",
+      "evidence": [
+        {
+          "path": "tests/llachimyeon.rs",
+          "test": "llachimyeon_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/llachimyeon.rs",
+          "test": "llachimyeon_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/llachimyeon.rs",
+          "test": "llachimyeon_dictionary_assesses_homonyms_and_existential_exception"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "llachimyeon_recovers_complete_annotated_verb_and_existential_sentences"
+        },
+        {
+          "path": "docs/llachimyeon-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-llachimyeon.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "llachimyeon-source-받다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-source-씻다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-source-있다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-source-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "llachimyeon-aux-negative",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

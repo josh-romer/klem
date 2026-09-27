@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ak/018a–k/018m–y/019a–g/019i–o/020a–m/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–al/018a–k/018m–y/019a–g/019i–o/020a–m/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 279 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–y/019d–g/019i–o/020d–h/020j–k; 435 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 281 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–al/018e–k/018m–y/019d–g/019i–o/020d–h/020j–k; 433 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -220,7 +220,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ak implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–al implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -798,6 +798,31 @@ review remains open under the completion review below.
   and independent Korean review remain open. The inherited 따다 + 어 + 를 +
   이다 alternative in 딸이었던들 is tracked for COV-020 attachment review.
 
+- [x] **COV-017al — Recurring-condition -(으)ㄹ라치면.** Added both allomorphs
+  with honorific 시, regular/irregular verb recovery, auxiliary groups and polite
+  요. Source-attested existential 있다 remains available. Explicit copulas,
+  derived 답다, represented adjective auxiliaries and unsupported prefinal stacks
+  do not inherit the verb license. Dictionary filtering checks lexical adjective
+  entries separately from raw generation, follows the dependency through
+  지-negatives, and resets it at other auxiliaries. 늦다 homonyms remain separate;
+  unknown evidence stays unknown. Evidence: [42 raw judgments and class/CLI tests](../tests/llachimyeon.rs),
+  ten [dictionary-policy judgments](../tests/fixtures/dictionary-attachments.json),
+  two [complete KAIST sentences](../tests/fixtures/kaist-llachimyeon.conllu),
+  browser source/selection/export checks and [source/candidate review](llachimyeon-evaluation.json).
+  Both target gaps are recovered, including the COV-018x 있을라치면 observation.
+  All 37 converted fixture rows match; frozen evaluation and novel output remain
+  unchanged. Independent Korean review, contextual sense selection and wider
+  combinations remain open.
+
+- [ ] **COV-017am — Necessity ending -(으)ㄹ밖에.** NIKL's spelling guide
+  illustrates 내놓을밖에 and 나을밖에; current predicate paths are missing.
+  KRDict [ㄹ밖에](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85762)
+  and [을밖에](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85772)
+  list verb/adjective/copula boundaries and distinguish honorific from past
+  attachment. Audit the ending separately from nominal restrictive particle 밖에;
+  do not inherit COV-017al's verb-only or honorific-only constraints. Discovery
+  probes and sources are preserved in the [COV-017al review](llachimyeon-evaluation.json).
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–y cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -1130,7 +1155,7 @@ review remains open under the completion review below.
   dictionary filtering. The thesis's ambiguous 밖에 example and conflicting
   generalizations remain unjudged; no universal semantic pruning is inferred.
   More adverb bases, ending/particle combinations and independent Korean review
-  remain open. The fixture's unrelated 있을라치면 miss belongs to COV-017.
+  remain open. COV-017al now recovers the fixture's previously unrelated 있을라치면 miss.
 
 - [x] **COV-018y — Case phrases before comparison particles.** Reviewed
   에/에서/서 + 처럼 chains recover 학교에서처럼만, 전에처럼 and 학교서처럼,

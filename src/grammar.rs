@@ -779,6 +779,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을지", "지", "을지", 8),
             ("을는지", "는지", "을는지", 8),
             ("을지라도", "지라도", "을지라도", 8),
+            ("을라치면", "라치면", "을라치면", 8),
             ("을망정", "망정", "을망정", 8),
             ("을지언정", "지언정", "을지언정", 8),
             ("을수록", "수록", "을수록", 8),
@@ -1353,6 +1354,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "copula.connective_seo" => {
             "Attach a copula to a clause ending in -아/어/여서; preserve the connective rather than treating it as a nominalizer. The clause's contextual meaning remains unresolved."
+        }
+        "ending.habitual_condition" => {
+            "Recover -(으)ㄹ라치면 as one conditional ending, with its verb/honorific boundary and attested 있다 use."
         }
         "ending.concessive" => {
             "Recover concessive -(으)ㄴ들/-(으)ㄹ망정/지언정 or counterfactual -던들 with its reviewed stem and prefinal boundary; retain separate particle readings."

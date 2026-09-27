@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–as/018a–k/018m–z/019a–g/019i–p/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–as/018a–k/018m–z/019a–g/019i–q/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 310 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–as/018e–k/018m–z/019d–g/019i–p/020d–h/020j–k/020n–o; 404 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 311 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–as/018e–k/018m–z/019d–g/019i–q/020d–h/020j–k/020n–o; 403 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -923,6 +923,19 @@ review remains open under the completion review below.
   outside its POS-filtered queue. Broader paradigms and independent review remain.
   See the [source and candidate evaluation](danikka-evaluation.json).
 
+- [ ] **COV-017at — Short reported statements, requests, proposals and questions.**
+  Review the -대/-래/-재/-냬 families, their polite forms, prefinal licenses,
+  copular/factual versus command readings, and auxiliary composition.
+  Confirmed gap: 도와달래 lacks 돕다 + 달다 + 어 + 으래; existing 을래
+  intention or lexical 달래다 readings do not replace the quoted request.
+  KRDict [으래 80914](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80914)
+  and [래 86535](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86535)
+  identify the contraction from -(으)라고 해; NIKL's
+  [consultation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=261&pageIndex=1&qna_seq=334707)
+  explicitly distinguishes 달래 from retrospective 달라데. COV-019q fixes
+  composition with existing report endings; it does not implement this family.
+  Preserve short-report homonyms and original corpus annotations during review.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -1507,6 +1520,21 @@ review remains open under the completion review below.
   Boundary judgments address auxiliary roles only, not separate independent
   verbs. Lexical-subset restrictions, further internal particles and contextual
   sense selection remain under COV-019; this is a scoped source audit.
+
+- [x] **COV-019q — Request auxiliary across existing quoted-command endings.**
+  Added twelve right-ending combinations after 어 달다, including the source's
+  도와 달라며, 빌려 달라는데, 도와 달라네 and 받아 달라지. Existing
+  달라/다오 and quoted forms remain; ordinary tense/honorific inflections and
+  factual 라-family components remain excluded from this auxiliary role.
+  Source notes, all 17 examples of the auxiliary and its three expression
+  entries, plus twelve corroborating excerpts are retained. Evidence:
+  [118 ledger judgments](../tests/request_aux.rs) (72 required / 46 forbidden),
+  per-entry dictionary homonym checks, CLI/browser/export parity, and
+  [the review](request-aux-evaluation.json). Seven unchanged annotated training
+  targets remain matched; 매단 and 나달은 retain their original conflicting
+  auxiliary annotations as explicit mismatches. No corpus baseline is repaired.
+  New short-report endings such as 으래 remain COV-017at; wider lexical and
+  particle restrictions remain under COV-019.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

@@ -1372,3 +1372,20 @@ sentence/token IDs and original annotations. It covers two joined examples
 per 가/오/나가/나/내/버리 auxiliary; no matching joined 치우 token was found
 with the documented ecx+px selection criterion. This is regression coverage,
 not a held-out benchmark. The KAIST CC BY-SA 4.0 attribution above applies.
+
+`krdict-request-aux.json` contains 109 complete primary entries from the same
+September 2026 KRDict export (National Institute of Korean Language, CC BY-SA
+2.0 KR). All senses, notes, forms and examples are retained; equivalents are
+English only, and RelatedForm/global metadata and same-ID idioms are omitted.
+`request-aux-sources.json` retains 54 normalized source entries, 29 exact
+excerpts (including every example from 달다 and the three 아/어/여 달다
+expressions), plus authored corpus dispositions. The dictionary-derived text
+has the same source license; the review annotations are project-authored.
+Source hashes are in [the review](../../docs/request-aux-evaluation.json).
+
+`kaist-request-aux.conllu` and `gsd-request-aux.conllu` retain five and four
+complete, unchanged training sentences from the pinned corpora. Seven target
+tokens retain their matching request groups. 매단 and 나달은 retain original
+auxiliary annotations despite the conflicting context; tests record the two
+mismatches instead of rewriting gold or broadening the request paradigm. These
+fixtures use the corpus attribution and CC BY-SA 4.0 license above.

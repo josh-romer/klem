@@ -1,0 +1,71 @@
+# sent_id = train-s347
+# text = 2010년 12월, 방응모 관계자들 및 조선일보측은 '친일반민족행위자 결정을 취소해달라'며 법원에 낸 소송에서 원고 패소 판결을 받았다.
+# translit = 2010.nyeon 12.weol, .bang.eung.mo .gwan.gye.ja.deul .mich .jo.seon.il.bo.cheug.eun '.chin.il.ban.min.jog.haeng.wi.ja .gyeol.jeong.eul .chwi.so.hae.dal.ra'.myeo .beob.weon.e .naen .so.song.e.seo .weon.go .pae.so .pan.gyeol.eul .bad.ass.da.
+1	2010년	2010+년	NOUN	SN+NNB	_	20	nmod	_	Translit=2010.nyeon|LTranslit=2010+.nyeon
+2	12월	12+월	NOUN	SN+NNB	_	1	flat	_	SpaceAfter=No|Translit=12.weol|LTranslit=12+.weol
+3	,	,	PUNCT	SP	_	2	punct	_	Translit=,|LTranslit=,
+4	방응모	방응모	NOUN	NNP	_	20	nsubj	_	Translit=.bang.eung.mo|LTranslit=.bang.eung.mo
+5	관계자들	관계자+들	NOUN	NNG+XSN	_	4	flat	_	Translit=.gwan.gye.ja.deul|LTranslit=.gwan.gye.ja+.deul
+6	및	및	CCONJ	MAJ	_	7	cc	_	Translit=.mich|LTranslit=.mich
+7	조선일보측은	조선일보+측+은	NOUN	NNP+NNB+JX	_	4	conj	_	Translit=.jo.seon.il.bo.cheug.eun|LTranslit=.jo.seon.il.bo+.cheug+.eun
+8	'	'	PUNCT	SS	_	11	punct	_	SpaceAfter=No|Translit='|LTranslit='
+9	친일반민족행위자	친+일반+민족+행위자	NOUN	XPN+NNG+NNG+NNG	_	11	obj	_	Translit=.chin.il.ban.min.jog.haeng.wi.ja|LTranslit=.chin+.il.ban+.min.jog+.haeng.wi.ja
+10	결정을	결정+을	NOUN	NNG+JKO	_	9	flat	_	Translit=.gyeol.jeong.eul|LTranslit=.gyeol.jeong+.eul
+11	취소해달라	취소+하+아+달+라	VERB	NNG+XSV+EC+VX+EC	_	16	acl:relcl	_	SpaceAfter=No|Translit=.chwi.so.hae.dal.ra|LTranslit=.chwi.so+.ha+.a+.dal+.ra
+12	'	'	PUNCT	SS	_	11	punct	_	SpaceAfter=No|Translit='|LTranslit='
+13	며	며	VERB	EC	_	11	advcl	_	Translit=.myeo|LTranslit=.myeo
+14	법원에	법원+에	ADV	NNG+JKB	_	11	obl	_	Translit=.beob.weon.e|LTranslit=.beob.weon+.e
+15	낸	내+ㄴ	VERB	VV+ETM	_	11	appos	_	Translit=.naen|LTranslit=.nae+ㄴ
+16	소송에서	소송+에서	ADV	NNG+JKB	_	20	advmod	_	Translit=.so.song.e.seo|LTranslit=.so.song+.e.seo
+17	원고	원고	NOUN	NNG	_	20	obj	_	Translit=.weon.go|LTranslit=.weon.go
+18	패소	패소	NOUN	NNG	_	17	flat	_	Translit=.pae.so|LTranslit=.pae.so
+19	판결을	판결+을	NOUN	NNG+JKO	_	17	flat	_	Translit=.pan.gyeol.eul|LTranslit=.pan.gyeol+.eul
+20	받았다	받+았+다	VERB	VV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.bad.ass.da|LTranslit=.bad+.ass+.da
+21	.	.	PUNCT	SF	_	20	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s580
+# text = 양이 너무 많아서 남겼지만 싸달라고 하니 친절하게 싸주셨다.
+# translit = .yang.i .neo.mu .manh.a.seo .nam.gyeoss.ji.man .ssa.dal.ra.go .ha.ni .chin.jeol.ha.ge .ssa.ju.syeoss.da.
+1	양이	양+이	NOUN	NNG+JKS	_	3	nsubj	_	Translit=.yang.i|LTranslit=.yang+.i
+2	너무	너무	ADV	MAG	_	3	advmod	_	Translit=.neo.mu|LTranslit=.neo.mu
+3	많아서	많+아서	VERB	VA+EC	_	4	advcl	_	Translit=.manh.a.seo|LTranslit=.manh+.a.seo
+4	남겼지만	남기+었+지만	VERB	VV+EP+EC	_	0	root	_	Translit=.nam.gyeoss.ji.man|LTranslit=.nam.gi+.eoss+.ji.man
+5	싸달라고	싸+아+달+라고	VERB	VV+EC+VX+EC	_	6	ccomp	_	Translit=.ssa.dal.ra.go|LTranslit=.ssa+.a+.dal+.ra.go
+6	하니	하+니	VERB	VX+EC	_	8	advcl	_	Translit=.ha.ni|LTranslit=.ha+.ni
+7	친절하게	친절+하+게	ADV	NNG+XSA+EC	_	8	advmod	_	Translit=.chin.jeol.ha.ge|LTranslit=.chin.jeol+.ha+.ge
+8	싸주셨다	싸+아+주+시+었+다	VERB	VV+EC+VX+EP+EP+EF	_	4	conj	_	SpaceAfter=No|Translit=.ssa.ju.syeoss.da|LTranslit=.ssa+.a+.ju+.si+.eoss+.da
+9	.	.	PUNCT	SF	_	8	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s854
+# text = '유럽 망명설'에 대해서는 부인하는 한편, 자신의 아들에 대한 프라이버시를 지켜달라고 기자에게 요구하기도 했다.
+# translit = '.yu.reob .mang.myeong.seol'.e .dae.hae.seo.neun .bu.in.ha.neun .han.pyeon, .ja.sin.yi .a.deul.e .dae.han .peu.ra.i.beo.si.reul .ji.kyeo.dal.ra.go .gi.ja.e.ge .yo.gu.ha.gi.do .haess.da.
+1	'	'	PUNCT	SS	_	2	punct	_	SpaceAfter=No|Translit='|LTranslit='
+2	유럽	유럽	PROPN	NNP	_	7	obl	_	Translit=.yu.reob|LTranslit=.yu.reob
+3	망명설	망명설	NOUN	NNG	_	2	flat	_	SpaceAfter=No|Translit=.mang.myeong.seol|LTranslit=.mang.myeong.seol
+4	'	'	PUNCT	SS	_	3	punct	_	SpaceAfter=No|Translit='|LTranslit='
+5	에	에	ADP	JKB	_	3	case	_	Translit=.e|LTranslit=.e
+6	대해서는	대하+아서+는	ADV	VV+EC+JX	_	2	appos	_	Translit=.dae.hae.seo.neun|LTranslit=.dae.ha+.a.seo+.neun
+7	부인하는	부인+하+는	VERB	NNG+XSV+ETM	_	17	advcl	_	Translit=.bu.in.ha.neun|LTranslit=.bu.in+.ha+.neun
+8	한편	한편	NOUN	NNG	_	7	obl	_	OrigDeprel=mark|SpaceAfter=No|Translit=.han.pyeon|LTranslit=.han.pyeon
+9	,	,	PUNCT	SP	_	8	punct	_	Translit=,|LTranslit=,
+10	자신의	자신+의	PRON	NNG+JKG	_	11	det:poss	_	Translit=.ja.sin.yi|LTranslit=.ja.sin+.yi
+11	아들에	아들+에	ADV	NNG+JKB	_	12	obl	_	Translit=.a.deul.e|LTranslit=.a.deul+.e
+12	대한	대하+ㄴ	VERB	VV+ETM	_	13	dep	_	Translit=.dae.han|LTranslit=.dae.ha+ㄴ
+13	프라이버시를	프라이버시+를	NOUN	NNG+JKO	_	14	obj	_	Translit=.peu.ra.i.beo.si.reul|LTranslit=.peu.ra.i.beo.si+.reul
+14	지켜달라고	지키+어+달+라고	VERB	VV+EC+VX+EC	_	17	ccomp	_	Translit=.ji.kyeo.dal.ra.go|LTranslit=.ji.ki+.eo+.dal+.ra.go
+15	기자에게	기자+에게	NOUN	NNG+JKB	_	17	iobj	_	Translit=.gi.ja.e.ge|LTranslit=.gi.ja+.e.ge
+16	요구하기도	요구+하+기+도	NOUN	NNG+XSV+ETN+JX	_	17	obj	_	Translit=.yo.gu.ha.gi.do|LTranslit=.yo.gu+.ha+.gi+.do
+17	했다	하+았+다	VERB	VX+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.haess.da|LTranslit=.ha+.ass+.da
+18	.	.	PUNCT	SF	_	17	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s4354
+# text = 나달은 2009년 갑작스런 슬럼프에 빠져 들었다.
+# translit = .na.dal.eun 2009.nyeon .gab.jag.seu.reon .seul.reom.peu.e .bba.jyeo .deul.eoss.da.
+1	나달은	나+아+달+은	NOUN	VV+EC+VX+ETM	_	5	nsubj	_	Translit=.na.dal.eun|LTranslit=.na+.a+.dal+.eun
+2	2009년	2009+년	NOUN	SN+NNB	_	5	nmod	_	Translit=2009.nyeon|LTranslit=2009+.nyeon
+3	갑작스런	갑작스럽+ㄴ	ADJ	VA+ETM	_	4	amod	_	Translit=.gab.jag.seu.reon|LTranslit=.gab.jag.seu.reob+ㄴ
+4	슬럼프에	슬럼프+에	ADV	NNG+JKB	_	5	obl	_	Translit=.seul.reom.peu.e|LTranslit=.seul.reom.peu+.e
+5	빠져	빠지+어	VERB	VV+EC	_	0	root	_	Translit=.bba.jyeo|LTranslit=.bba.ji+.eo
+6	들었다	들+었+다	VERB	VV+EP+EF	_	5	flat	_	SpaceAfter=No|Translit=.deul.eoss.da|LTranslit=.deul+.eoss+.da
+7	.	.	PUNCT	SF	_	6	punct	_	Translit=.|LTranslit=.
+

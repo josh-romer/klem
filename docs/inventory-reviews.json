@@ -23208,6 +23208,422 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:62361",
+      "source_sha256": "ad8773bf9cf9b90a1e023afe8ddfca9ed7ac91661772b30b6a2219ab8406080b",
+      "status": "scoped",
+      "checklist": [
+        "COV-019q"
+      ],
+      "scope": "Reviewed every source example and the 아/어/여 달다 expression notes. Restricted 달라/다오 composes with all seventeen currently implemented canonical command/request endings, including twelve newly enabled reports; ordinary tense/honorific slots remain excluded. Existing outer particles, lexical homonyms and exact auxiliary ownership remain distinct.",
+      "remaining": "Unimplemented short-report endings (notably 으래) remain COV-017at. Wider lexical/semantic left restrictions, additional internal particles and independent Korean-language review remain open. Two annotated corpus disagreements are preserved without broadening the request paradigm.",
+      "evidence": [
+        {
+          "path": "tests/request_aux.rs",
+          "test": "request_sources_preserve_full_entries_and_exact_examples"
+        },
+        {
+          "path": "tests/request_aux.rs",
+          "test": "request_paths_preserve_roles_boundaries_and_unicode"
+        },
+        {
+          "path": "tests/request_aux.rs",
+          "test": "request_dictionary_filters_and_cli_preserve_exact_groups"
+        },
+        {
+          "path": "tests/request_aux.rs",
+          "test": "request_auxiliary_evidence_does_not_borrow_lexical_homonyms"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "request_auxiliaries_preserve_training_targets_and_annotation_disagreements"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/request-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "request-aux-source-62361-1",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-source-62361-2",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-source-62361-3",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-source-62361-4",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-source-62361-5",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라고",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라는",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으란",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으란다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라지",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라죠",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라지만",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라니까",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라면",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으랍니다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라네",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라는데",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라며",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라면서",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라니",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-으라거나",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-family-오",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라며",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라면서",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라네",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라는데",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라니",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라지",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라지만",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라니까",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-polite-으라고",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-composition-먹지말아달라면서",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-composition-도와만달라며",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-composition-도와달라는데도",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-composition-도와달라니까는요",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-composition-도와달라니깐",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-composition-도와달라든가",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달았다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달겠다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와다는",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와단",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달아",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달자",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달고",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달지",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달면",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-boundary-도와달라고요요",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라고",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라는",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으란",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으란",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으란다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으란다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라지",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라지",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라죠",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라죠",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라지만",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라지만",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라니까",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라면",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으랍니다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으랍니다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라네",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라네",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라는데",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라는데",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라며",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라며",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라면서",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라면서",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라니",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라니",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-honorific-으라거나",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-past-으라거나",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-connector-고",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-connector-지",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-connector-게",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-lexical-달았다",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-lexical-달라며",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-lexical-매단",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-kaist-MH2_0021-s85-8",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-kaist-MH2_0083-s77-8",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-kaist-MH2_0083-s365-3",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-kaist-MH2_0092-s340-8",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-kaist-MH2_0127-s206-11",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-gsd-train-s347-11",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-gsd-train-s580-5",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-gsd-train-s854-14",
+          "judgment": "path"
+        },
+        {
+          "case": "request-aux-corpus-gsd-train-s4354-1",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

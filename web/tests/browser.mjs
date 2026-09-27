@@ -269,6 +269,7 @@ try {
   const copularClass = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-copular-class.json"), "utf8"));
   const jimaneun = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-jimaneun.json"), "utf8"));
   const danikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danikka.json"), "utf8"));
+  const requestAux = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-request-aux.json"), "utf8"));
   const dajiman = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-dajiman.json"), "utf8"));
   const daji = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-daji.json"), "utf8"));
   const danda = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danda.json"), "utf8"));
@@ -301,6 +302,7 @@ try {
       ...daji.LexicalResource.Lexicon.LexicalEntry,
       ...jimaneun.LexicalResource.Lexicon.LexicalEntry,
       ...danikka.LexicalResource.Lexicon.LexicalEntry,
+      ...requestAux.LexicalResource.Lexicon.LexicalEntry,
       ...dajiman.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
@@ -818,6 +820,42 @@ try {
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-danikka-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const requestAuxCases = recipientLedger.cases.filter(c => c.id.startsWith("request-aux-"));
+  assert.equal(requestAuxCases.length, 118);
+  for (const c of requestAuxCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => danikkaPath(a,j));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const requestAuxText = "도와달라며 빌려달라는데 도와달란다 도와달라지만 도와달랍니다 도와달라죠 꿔달란 먹지말아달라면서 도와달라는데도";
+  await submit(page, requestAuxText); await waitHeading(page, "도와달라며");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["돕","어","달","으라며"]],[1,["빌리","어","달","으라는데"]],[2,["돕","어","달","으란다"]],[3,["돕","어","달","으라지만"]],[4,["돕","어","달","으랍니다"]],[5,["돕","어","달","으라죠"]],[6,["꾸","어","달","으란"]],[7,["먹","지","말","어","달","으라면서"]],[8,["돕","어","달","으라는데","도"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 0) {
+      await word.locator(".breakdown-part").nth(2).click();
+      await page.locator(".entry-choices button").filter({hasText:"달다"}).filter({hasText:"보조 동사"}).first().click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=62361"]'));
+    }
+  }
+  const requestAuxDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const requestAuxExport = JSON.parse(await readFile(await (await requestAuxDownload).path(), "utf8"));
+  const requestAuxExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:requestAuxText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(requestAuxExport.records,requestAuxExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-request-aux-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-request-aux-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const dajimanCases = recipientLedger.cases.filter(c => c.id.startsWith("dajiman-"));

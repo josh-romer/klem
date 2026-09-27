@@ -1,0 +1,3487 @@
+{
+  "schema_version": 1,
+  "before_revision": "a0c6292",
+  "scope": "COV-019q: complete the existing quoted-command ending combinations of restricted request auxiliary 달다. Twelve existing canonical endings become available after 어 달다; no new ending family or label is introduced.",
+  "source_fixture": "tests/fixtures/request-aux-sources.json",
+  "dictionary_fixture": "tests/fixtures/krdict-request-aux.json",
+  "source_entries": 54,
+  "fully_sampled_entries": [
+    "krdict:62361",
+    "krdict:72219",
+    "krdict:72218",
+    "krdict:72217"
+  ],
+  "source_examples": 29,
+  "fully_sampled_example_groups": 17,
+  "fixture_entries": 109,
+  "source_hashes": {
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3"
+  },
+  "added_right_endings": [
+    "으란",
+    "으란다",
+    "으라지",
+    "으라죠",
+    "으라지만",
+    "으랍니다",
+    "으라네",
+    "으라는데",
+    "으라며",
+    "으라면서",
+    "으라니",
+    "으라거나"
+  ],
+  "preserved_right_endings": [
+    "으라",
+    "으라고",
+    "으라는",
+    "으라면",
+    "으라니까",
+    "오"
+  ],
+  "restrictions": [
+    "The immediately following ending is a single reviewed request/quoted-command form. Past, modal, retrospective and honorific prefinals on the auxiliary remain outside the restricted paradigm.",
+    "Factual 라-family endings are not substituted for command 으라 forms. Ordinary lexical 달다 homonyms remain distinct.",
+    "Existing outer-particle rules operate after the completed request group; internal-particle and connector licenses are unchanged.",
+    "The primary auxiliary entry and three 아/어/여 달다 expression entries have every example represented. Corroborating excerpts are distinguished from inferred combinations, notably 달랍니다 and 달라지만, which compose the auxiliary with independently sourced command-ending rules.",
+    "The literal requests, contracted reports and dictionary senses are morphological alternatives; no implicit reporting 하다 or speaker/sense interpretation is inserted."
+  ],
+  "ledger": {
+    "cases": 118,
+    "required": 72,
+    "forbidden": 46,
+    "required_before": 35,
+    "required_after": 72,
+    "forbidden_present": 0,
+    "newly_satisfied_case_ids": [
+      "request-aux-source-62361-1",
+      "request-aux-source-72219-3",
+      "request-aux-source-72218-2",
+      "request-aux-source-72218-4",
+      "request-aux-source-72217-4",
+      "request-aux-source-69108-1",
+      "request-aux-source-82259-1",
+      "request-aux-source-86340-1",
+      "request-aux-source-86511-1",
+      "request-aux-source-86527-1",
+      "request-aux-source-82333-1",
+      "request-aux-source-86069-1",
+      "request-aux-source-60691-1",
+      "request-aux-source-36633-1",
+      "request-aux-source-85788-1",
+      "request-aux-family-으란",
+      "request-aux-family-으란다",
+      "request-aux-family-으라지",
+      "request-aux-family-으라죠",
+      "request-aux-family-으라지만",
+      "request-aux-family-으랍니다",
+      "request-aux-family-으라네",
+      "request-aux-family-으라는데",
+      "request-aux-family-으라며",
+      "request-aux-family-으라면서",
+      "request-aux-family-으라니",
+      "request-aux-family-으라거나",
+      "request-aux-polite-으라며",
+      "request-aux-polite-으라면서",
+      "request-aux-polite-으라네",
+      "request-aux-polite-으라는데",
+      "request-aux-polite-으라니",
+      "request-aux-polite-으라지",
+      "request-aux-polite-으라지만",
+      "request-aux-composition-먹지말아달라면서",
+      "request-aux-composition-도와만달라며",
+      "request-aux-composition-도와달라는데도"
+    ],
+    "unjudged_nonidentity": 1186
+  },
+  "raw_comparison": {
+    "distinct_surfaces": 5639,
+    "changed_surfaces": 35,
+    "added": 85,
+    "removed": 0,
+    "provenance_changes": 0,
+    "changes": [
+      {
+        "surface": "가르쳐달라며",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "가르치다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "꿔달란",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "꾸다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으란",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "나가게해달라거나",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "나가겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.quoted_alternative",
+              "irregular.ha",
+              "irregular.hieut"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나가게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.quoted_alternative",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나가게하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.quoted_alternative",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나가게핳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.quoted_alternative",
+              "irregular.hieut"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나가게해다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.quoted_alternative"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "ending.quoted_alternative",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "나다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "게",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "ending.quoted_alternative",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "놀아달라는데도",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "녿다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.digeut",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "놀다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "ending.reporting_ne",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "놀아다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_ne",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "놀으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "deletion.eu",
+              "ending",
+              "ending.reporting_ne",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라거나",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.quoted_alternative"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라거나",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.quoted_alternative",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라네",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라네",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ne"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라네",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라네요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라네",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ne",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라네",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.bieup",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라는데",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ne"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라는데도",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ne",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              },
+              {
+                "form": "도",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.bieup",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라는데요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ne",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.bieup",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라니",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ni"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ni",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라니요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라니",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ni",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라니",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ni",
+              "irregular.bieup",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라며",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라며요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_myeo",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.bieup",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라면서",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라면서요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_myeo",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.bieup",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라죠",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라죠",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_confirmation"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라죠",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_confirmation",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라지",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_confirmation"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_confirmation",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라지만",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지만",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_contrast"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지만",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_contrast",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라지만요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지만",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_contrast",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지만",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_contrast",
+              "irregular.bieup",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달라지요",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_confirmation",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_confirmation",
+              "irregular.bieup",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달란",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으란",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으란",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.adnominal_expression",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달란다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으란다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_familiar"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으란다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_familiar",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와달랍니다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으랍니다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으랍니다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_polite",
+              "irregular.bieup"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "도와만달라며",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "도오다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "만",
+                "kind": "particle"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "auxiliary.internal_particle",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_myeo",
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "돕다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "만",
+                "kind": "particle"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "auxiliary.internal_particle",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.bieup",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "말해달라면서",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "마다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "를",
+                "kind": "particle"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "auxiliary.internal_particle",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.ha",
+              "particle",
+              "particle.contraction.l"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "말하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "말핳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.hieut"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "말해다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "먹게달라며",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "먹겋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.hieut"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹게다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "먹지말아달라면서",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "먹다",
+                "kind": "predicate"
+              },
+              {
+                "text": "말다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹지맏다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_myeo",
+              "irregular.digeut"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹지말다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹지말아다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹지말으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "deletion.eu",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "먹하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "말다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "deletion.ha",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "받아달라지",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "받다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "ending.reporting_confirmation"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "받아다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_confirmation"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "받으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "deletion.eu",
+              "ending",
+              "ending.reporting_confirmation"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "보여달라니",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "보",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "copula",
+              "ending",
+              "ending.reporting_ni"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "보이다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ni"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "빌려달라는데",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "빌리다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_ne"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "빌려달라죠",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "빌리다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라죠",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.vowel",
+              "ending",
+              "ending.reporting_confirmation"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "소개해달라는데",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "소갛다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.ha",
+              "irregular.hieut"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "소개다",
+                "kind": "predicate"
+              },
+              {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "소개하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "소개핳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_ne",
+              "irregular.hieut"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "소개해다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라는데",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_ne"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "찾아달라며",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "찾다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "찾아다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "찾으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으라며",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "deletion.eu",
+              "ending",
+              "ending.reporting_myeo"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      },
+      {
+        "surface": "해달란다",
+        "added": [
+          {
+            "lemmas": [
+              {
+                "text": "하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으란다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_familiar",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "핳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으란다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "ending.reporting_familiar",
+              "irregular.hieut"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "해다",
+                "kind": "predicate"
+              },
+              {
+                "text": "달다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으란다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending",
+              "ending.reporting_familiar"
+            ],
+            "unchanged": false
+          }
+        ],
+        "removed": [],
+        "provenance_changes": []
+      }
+    ]
+  },
+  "novel_comparison": {
+    "input": "data/books/mujeong.txt",
+    "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+    "records": 179112,
+    "before_jsonl_sha256": "0e64830e40685af699d4af0294aa4e89e2ca1939f890d540f4a9a1d1e771c6e2",
+    "after_jsonl_sha256": "0e64830e40685af699d4af0294aa4e89e2ca1939f890d540f4a9a1d1e771c6e2",
+    "changed_records": 0,
+    "changed_types": 0,
+    "changes": []
+  },
+  "corpus": {
+    "training_source_sha256": {
+      "kaist": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "gsd": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8"
+    },
+    "targets": [
+      {
+        "corpus": "kaist",
+        "id": "id:MH2_0021-s85/8",
+        "surface": "지켜달라고",
+        "expected": [
+          "지키다",
+          "달다"
+        ],
+        "annotation": "지키+어+달+라+고",
+        "pos": "pvg+ecx+px+ef+jcr",
+        "expected_matched": true,
+        "case": "request-aux-corpus-kaist-MH2_0021-s85-8"
+      },
+      {
+        "corpus": "kaist",
+        "id": "id:MH2_0083-s77/8",
+        "surface": "사달라",
+        "expected": [
+          "사다",
+          "달다"
+        ],
+        "annotation": "사+아+달+라",
+        "pos": "pvg+ecx+px+ef",
+        "expected_matched": true,
+        "case": "request-aux-corpus-kaist-MH2_0083-s77-8"
+      },
+      {
+        "corpus": "kaist",
+        "id": "id:MH2_0083-s365/3",
+        "surface": "해달라",
+        "expected": [
+          "하다",
+          "달다"
+        ],
+        "annotation": "하+어+달+라",
+        "pos": "pvg+ecx+px+ef",
+        "expected_matched": true,
+        "case": "request-aux-corpus-kaist-MH2_0083-s365-3"
+      },
+      {
+        "corpus": "kaist",
+        "id": "id:MH2_0092-s340/8",
+        "surface": "매단",
+        "expected": [
+          "매다",
+          "달다"
+        ],
+        "annotation": "매+어+달+ㄴ",
+        "pos": "pvg+ecx+px+etm",
+        "expected_matched": false,
+        "case": "request-aux-corpus-kaist-MH2_0092-s340-8"
+      },
+      {
+        "corpus": "kaist",
+        "id": "id:MH2_0127-s206/11",
+        "surface": "가르쳐달라고",
+        "expected": [
+          "가르치다",
+          "달다"
+        ],
+        "annotation": "가르치+어+달+라+고",
+        "pos": "pvg+ecx+px+ef+jcr",
+        "expected_matched": true,
+        "case": "request-aux-corpus-kaist-MH2_0127-s206-11"
+      },
+      {
+        "corpus": "gsd",
+        "id": "id:train-s347/11",
+        "surface": "취소해달라",
+        "expected": [
+          "취소하다",
+          "달다"
+        ],
+        "annotation": "취소+하+아+달+라",
+        "pos": "NNG+XSV+EC+VX+EC",
+        "expected_matched": true,
+        "case": "request-aux-corpus-gsd-train-s347-11"
+      },
+      {
+        "corpus": "gsd",
+        "id": "id:train-s580/5",
+        "surface": "싸달라고",
+        "expected": [
+          "싸다",
+          "달다"
+        ],
+        "annotation": "싸+아+달+라고",
+        "pos": "VV+EC+VX+EC",
+        "expected_matched": true,
+        "case": "request-aux-corpus-gsd-train-s580-5"
+      },
+      {
+        "corpus": "gsd",
+        "id": "id:train-s854/14",
+        "surface": "지켜달라고",
+        "expected": [
+          "지키다",
+          "달다"
+        ],
+        "annotation": "지키+어+달+라고",
+        "pos": "VV+EC+VX+EC",
+        "expected_matched": true,
+        "case": "request-aux-corpus-gsd-train-s854-14"
+      },
+      {
+        "corpus": "gsd",
+        "id": "id:train-s4354/1",
+        "surface": "나달은",
+        "expected": [
+          "나다",
+          "달다"
+        ],
+        "annotation": "나+아+달+은",
+        "pos": "VV+EC+VX+ETM",
+        "expected_matched": false,
+        "case": "request-aux-corpus-gsd-train-s4354-1"
+      }
+    ],
+    "selected_matched": 7,
+    "selected_total": 9,
+    "selection": "All joined training tokens whose aligned morphology has 달 with px/VX after at least two components, in the pinned KAIST and GSD training partitions. None uses one of the newly enabled report endings. Complete sentences and original annotations are retained.",
+    "annotation_disagreements": [
+      {
+        "id": "id:MH2_0092-s340/8",
+        "surface": "매단",
+        "annotation": "매+어+달+ㄴ / pvg+ecx+px+etm",
+        "interpretation": "The context describes hanging/tethering to a cart. The source annotation treats 달 as an auxiliary, whereas the dictionary-backed compound 매달다 is retained separately. Request 달다 is not given unrestricted adnominal 은 to satisfy this token."
+      },
+      {
+        "id": "id:train-s4354/1",
+        "surface": "나달은",
+        "annotation": "나+아+달+은 / VV+EC+VX+ETM",
+        "interpretation": "The sentence names Nadal entering a slump. The morphology annotation disagrees with that nominal context; it remains unmodified and unmatched. No request auxiliary rule is inferred from it."
+      }
+    ],
+    "comparisons": [
+      {
+        "corpus": "kaist",
+        "partition": "dev",
+        "matched": 22133,
+        "converted": 22220,
+        "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "byte_identical": true
+      },
+      {
+        "corpus": "kaist",
+        "partition": "test",
+        "matched": 24391,
+        "converted": 24490,
+        "input_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+        "byte_identical": true
+      },
+      {
+        "corpus": "kaist",
+        "partition": "fixture",
+        "matched": 51,
+        "converted": 52,
+        "input_sha256": "751b1a1427ad9a376cfc2d3c5dfb3ebdff429836bbcdaecac792e9021a7fa4bc",
+        "byte_identical": true
+      },
+      {
+        "corpus": "gsd",
+        "partition": "dev",
+        "matched": 9848,
+        "converted": 9989,
+        "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "byte_identical": true
+      },
+      {
+        "corpus": "gsd",
+        "partition": "test",
+        "matched": 9736,
+        "converted": 9871,
+        "input_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+        "byte_identical": true
+      },
+      {
+        "corpus": "gsd",
+        "partition": "fixture",
+        "matched": 41,
+        "converted": 43,
+        "input_sha256": "48f6f64a3ac49a8e3696cd2523a921e2043e78e880c4845cb1108f782d03821e",
+        "byte_identical": true
+      }
+    ]
+  },
+  "remaining": [
+    "COV-017at tracks the distinct unimplemented short-report family: 도와달래 needs command-report 으래, which is not licensed by this ending-composition repair.",
+    "Other left-class/lexical/semantic restrictions, additional internal particles and auxiliaries remain under COV-019.",
+    "Cross-token parsing, contextual sense ranking and general spacing repair remain deferred.",
+    "Independent Korean-language review and linguistic precision estimation remain pending."
+  ],
+  "validation": {
+    "checks_passed": [
+      "cargo test --locked --offline --features web (including candidate, dictionary and stress regressions)",
+      "cargo clippy --locked --offline --all-targets --features web -- -D warnings",
+      "cargo fmt --all -- --check",
+      "cargo test --locked --offline --features web --test corpus pinned_full_corpus_regressions -- --ignored",
+      "python3 -m unittest discover -s tools -p test_review_inventory.py",
+      "CHROMIUM_PATH=/path/to/chromium node web/tests/browser.mjs",
+      "python3 tools/review_inventory.py --verify",
+      "nix flake check (x86_64-linux)",
+      "nix build .#klem .#web (x86_64-linux)"
+    ],
+    "browser": {
+      "raw_cases": 118,
+      "selected_breakdowns": 9,
+      "source_entry_link": "krdict:62361",
+      "cli_api_export_parity": true,
+      "viewports": [
+        [
+          1440,
+          1100
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "screenshots_inspected": true,
+      "horizontal_overflow": false,
+      "page_errors": [],
+      "known_limit": "Lexical glosses remain hints; 먹다 can initially show its be-deaf homonym. No contextual ranking is claimed."
+    },
+    "nix": {
+      "system": "x86_64-linux",
+      "cli": "/nix/store/p4b7vqzpyzj3vjs4d200qxqdfki7c531-klem-0.1.0/bin/klem",
+      "web": "/nix/store/xcl14gmn8p6rah4pqwvnr1z16v5kr7y9-klem-web/bin/klem-web",
+      "other_systems": "aarch64-linux and aarch64-darwin were not checked"
+    },
+    "packaged_full_dictionary": {
+      "cases": 118,
+      "policies": [
+        "headword",
+        "compatible"
+      ],
+      "selected_breakdowns": 9,
+      "api_cli_export_parity": true,
+      "desktop_mobile_screenshots_inspected": true,
+      "horizontal_overflow": false,
+      "page_errors": []
+    },
+    "performance": {
+      "input": "data/books/mujeong.txt",
+      "before_binary": "/tmp/klem-continuation-aux-result/bin/klem",
+      "after_binary": "/nix/store/p4b7vqzpyzj3vjs4d200qxqdfki7c531-klem-0.1.0/bin/klem",
+      "method": "Three interleaved release CLI runs per version/filter, including startup, dictionary access and JSONL serialization; stdout discarded. Linux per-child peak RSS. Measurements do not establish statistical equivalence.",
+      "results": {
+        "--dict-only": {
+          "before": {
+            "samples": [
+              {
+                "seconds": 1.3699400080004125,
+                "max_rss_kib": 28140
+              },
+              {
+                "seconds": 1.2512734459996864,
+                "max_rss_kib": 28636
+              },
+              {
+                "seconds": 1.2613834380026674,
+                "max_rss_kib": 28312
+              }
+            ],
+            "median_seconds": 1.2613834380026674,
+            "peak_rss_kib": 28636
+          },
+          "after": {
+            "samples": [
+              {
+                "seconds": 1.2448676409985637,
+                "max_rss_kib": 28356
+              },
+              {
+                "seconds": 1.249574355999357,
+                "max_rss_kib": 28488
+              },
+              {
+                "seconds": 1.2535216389987909,
+                "max_rss_kib": 28300
+              }
+            ],
+            "median_seconds": 1.249574355999357,
+            "peak_rss_kib": 28488
+          }
+        },
+        "--dict-compatible": {
+          "before": {
+            "samples": [
+              {
+                "seconds": 1.232901770999888,
+                "max_rss_kib": 28548
+              },
+              {
+                "seconds": 1.2461561159980192,
+                "max_rss_kib": 28444
+              },
+              {
+                "seconds": 1.2454738599990378,
+                "max_rss_kib": 28644
+              }
+            ],
+            "median_seconds": 1.2454738599990378,
+            "peak_rss_kib": 28644
+          },
+          "after": {
+            "samples": [
+              {
+                "seconds": 1.2394946579988755,
+                "max_rss_kib": 28440
+              },
+              {
+                "seconds": 1.2314434430008987,
+                "max_rss_kib": 28424
+              },
+              {
+                "seconds": 1.2601332109989016,
+                "max_rss_kib": 28704
+              }
+            ],
+            "median_seconds": 1.2394946579988755,
+            "peak_rss_kib": 28704
+          }
+        }
+      }
+    },
+    "inventory": {
+      "scoped": 311,
+      "unreviewed": 403,
+      "gap": 1,
+      "all_715_source_records_and_hashes_unchanged": true
+    }
+  }
+}

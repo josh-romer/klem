@@ -1984,3 +1984,47 @@ fn continuation_auxiliaries_preserve_twelve_unchanged_training_targets() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn request_auxiliaries_preserve_training_targets_and_annotation_disagreements() {
+    let sources: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/request-aux-sources.json")).unwrap();
+    let targets = sources["corpus_targets"].as_array().unwrap();
+    assert_eq!(targets.len(), 9);
+    let mut matched = 0;
+    let mut mismatched = 0;
+    for (name, kind, bytes) in [
+        (
+            "kaist",
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-request-aux.conllu").as_slice(),
+        ),
+        (
+            "gsd",
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-request-aux.conllu").as_slice(),
+        ),
+    ] {
+        let report = corpus::evaluate(bytes, kind, "request-aux").unwrap();
+        for target in targets.iter().filter(|t| t["corpus"] == name) {
+            let id = target["id"].as_str().unwrap();
+            let case = &report.cases[id];
+            assert_eq!(case.surface, target["surface"].as_str().unwrap());
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                target["expected"]
+            );
+            assert_eq!(
+                case.matched,
+                target["expected_matched"].as_bool().unwrap(),
+                "{id}"
+            );
+            if case.matched {
+                matched += 1;
+            } else {
+                mismatched += 1;
+            }
+        }
+    }
+    assert_eq!((matched, mismatched), (7, 2));
+}

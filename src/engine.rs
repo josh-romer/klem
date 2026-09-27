@@ -2473,9 +2473,30 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
     let right_forms: Vec<_> = right.morphs.iter().map(|m| m.form.as_str()).collect();
     match right.stem.as_str() {
         "가지" | "갖" => right_forms == ["고"],
+        // 달다 has the restricted request paradigm 달라/다오. Quoted
+        // requests also use the reviewed command endings (e.g. the source
+        // entry's 도와 달라며). Do not inherit ordinary tense or honorific
+        // slots, factual 라-family endings, or arbitrary following endings.
         "달" => matches!(
             right_forms.as_slice(),
-            ["으라" | "으라고" | "으라는" | "으라면" | "으라니까" | "오"]
+            ["으라"
+                | "으라고"
+                | "으라는"
+                | "으란"
+                | "으란다"
+                | "으라지"
+                | "으라죠"
+                | "으라지만"
+                | "으라니까"
+                | "으라면"
+                | "으랍니다"
+                | "으라네"
+                | "으라는데"
+                | "으라며"
+                | "으라면서"
+                | "으라니"
+                | "으라거나"
+                | "오"]
         ),
         "보" if matches!(connector, "다" | "다가" | "으려다" | "으려다가") => {
             matches!(right_forms.as_slice(), ["으니" | "으면"])

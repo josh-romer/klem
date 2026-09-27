@@ -3092,3 +3092,30 @@ snapshot, so dictionary filters retain 번지다 + 나가다 while removing that
 unknown whole-word hypothesis. The raw API preserves it. Connector boundaries
 in this audit constrain the auxiliary-role path, not independent sequential
 verbs or cross-token sentence readings. Further internal particles remain open.
+
+## Quoted request auxiliary endings (COV-019q)
+
+[달다](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62361)
+has the restricted request forms 달라/다오. Its own example 도와 달라며
+also demonstrates a quoted command. Joined input now retains 돕다 + 달다
+before all seventeen implemented command components: 으라, 으라고, 으라는,
+으란, 으란다, 으라지, 으라죠, 으라지만, 으라니까, 으라면, 으랍니다,
+으라네, 으라는데, 으라며, 으라면서, 으라니 and 으라거나. The special
+다오 form retains canonical 오. This enables twelve previously blocked
+combinations without introducing an implicit reporting 하다.
+
+The auxiliary's immediately following form stays bare: general command endings'
+honorific license does not authorize 달다 + 시, and ordinary tense, adnominal,
+connective and factual/copular forms do not become request inflections. These
+restrictions apply to the auxiliary role; lexical 달다 homonyms remain.
+Existing particles may follow a completed group (도와달라는데도), and existing
+internal-particle and negative chains compose (도와만달라며, 먹지말아달라면서).
+The examples are tolerant joined input, not spelling or sense recommendations.
+
+[The review](request-aux-evaluation.json) retains complete dictionary sources,
+exact excerpts, all output additions, and two unchanged corpus annotation
+disagreements. It distinguishes source-attested requests from inferred ending
+combinations. Short reported forms such as 도와달래 still need the separate
+으래 family under COV-017at; they are not replaced by intention 을래 or a
+lexical 달래다 hypothesis. Contextual role/sense selection and further lexical
+or particle restrictions remain open.

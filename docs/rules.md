@@ -2592,3 +2592,21 @@ Other following auxiliaries and internal particle combinations remain unreviewed
 The full KAIST TEST sentence MH2_0010-s336 attests 좋아지려나 보다; its
 lexical 좋아지다 annotation is retained alongside the dictionary-backed
 좋다 + 지다 alternative, without rewriting the source segmentation.
+
+## Vocative particles (COV-018p)
+
+이여 attaches after consonant-final nouns, while the existing 여 follows
+vowel-final nouns. Respectful address uses 이시여 after consonants and 시여
+after vowels. ㄹ is a consonant for these pairs. The independent familiar
+아/야 pair keeps its existing boundary and the homonymous emphatic 야 path.
+All remain particles: 검이여 → 검 + 이여; 왕자시여 → 왕자 + 시여;
+하나님이시여 → 하나님 + 이시여; 국민들이여 → 국민 + 들 + 이여.
+
+The [review](vocative-evaluation.json) retains KRDict entries 86565, 70337,
+86583, 86621, 86091 and 86092, including attachment notes and source hashes.
+Whole-word, copula and predicate-ending alternatives remain. Non-Hangul noun
+pronunciation is conditional as for existing particles. Nominalization and
+outer-particle/copula composition still follow existing machinery; this bounded
+review does not certify every resulting combination. Dictionary nominal POS
+cannot determine whether a referent is being addressed, the speaker's relative
+status, or the intended sense. General sentence parsing is outside this rule.

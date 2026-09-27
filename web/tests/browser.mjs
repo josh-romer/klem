@@ -264,11 +264,13 @@ try {
   const shortRecipient = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
+  const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const nira = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-nira.json"), "utf8"),
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...vocative.LexicalResource.Lexicon.LexicalEntry,
       ...nira.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -599,6 +601,43 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Vocative allomorphs preserve nominal roles and their distinct source entries.
+  const vocativeCases = recipientLedger.cases.filter(c => c.id.startsWith("vocative-"));
+  assert.equal(vocativeCases.length, 34);
+  for (const c of vocativeCases) {
+    const data = await (await post("analyze", {text:c.surface})).json(), token = data.records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if(index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const vocativeText = "검이여 왕자시여 하나님이시여 젊은이여 국민들이여";
+  await submit(page, vocativeText); await waitHeading(page, "검이여");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const [i, expected, sourceId] of [[0,["검","이여"],86621],[1,["왕자","시여"],86091],[2,["하나님","이시여"],86092],[3,["젊은이","여"],86583],[4,["국민","들","이여"],86621]]) {
+    const word=page.locator(".breakdown-word").nth(i), select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,forms)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===forms.join(" + "))?.value,expected);
+    assert.ok(value,expected.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(),expected);
+    await word.locator(".breakdown-part").last().click();
+    await page.waitForFunction(id=>document.querySelector(`a[href*="ParaWordNo=${id}"]`),sourceId);
+  }
+  const vocativeDownload=page.waitForEvent("download");
+  await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const vocativeExport=JSON.parse(await readFile(await (await vocativeDownload).path(),"utf8"));
+  const vocativeExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:vocativeText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(vocativeExport.records,vocativeExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-vocative-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-vocative-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Literary assertions retain distinct forms, copulas and lexical homonyms.
   const niraCases = recipientLedger.cases.filter(c => c.id.startsWith("nira-"));

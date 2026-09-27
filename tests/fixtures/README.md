@@ -1046,3 +1046,17 @@ complete UD 2.15 KAIST **test** sentence MH2_0010-s336 byte-for-byte, under the
 existing corpus attribution/license. It is now targeted regression evidence,
 not an independent test observation. Corpus 좋아지다 lacks a KRDict headword;
 좋다 + 지다 supplies the independently tested dictionary-backed alternative.
+
+`krdict-vocative.json` contains 31 lexical entries for COV-018p from the local
+September 2026 Korean Basic Dictionary export (National Institute of Korean
+Language), licensed under CC BY-SA 2.0 KR. Source IDs and definitions are retained;
+non-English translations, related forms and word forms are omitted, with at most
+one example group per sense. The grammar fixture adds 이여 (86621), 시여 (86091)
+and 이시여 (86092); existing 아/야/여 source entries remain.
+
+`kaist-vocative.conllu` contains two complete, unchanged UD Korean KAIST 2.15
+sentences: development MH2_0159-s260 and training M2TA_091-s1, covering 검이여
+and 젊은이여. Corpus attribution and CC BY-SA 4.0 licensing follow the pinned
+KAIST source above. The development observation motivated this fix and is
+regression evidence, not held-out evaluation. The source and output review is
+`docs/vocative-evaluation.json`.

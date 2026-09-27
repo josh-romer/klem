@@ -15665,6 +15665,340 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:70337",
+      "source_sha256": "f35718789f0c58c07b25aed6b5560c0be9b6a9b0605686b1ace4013c3dc60151",
+      "status": "scoped",
+      "checklist": [
+        "COV-018p"
+      ],
+      "scope": "Nominal vocative 야 with its source-listed consonant/vowel boundary, ㄹ treatment, nominal suffix composition, and dictionary/CLI/browser representation.",
+      "remaining": "Noun POS does not establish addressability, relative status or contextual sense. All inherited outer-particle, nominalization and copula combinations are not independently certified here. Non-Hangul final pronunciation is conditional. Homonymous uses and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "annotated_vocative_preserves_nominal_groups"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_keeps_pronunciation_assumptions_and_homonymous_paths"
+        },
+        {
+          "path": "docs/vocative-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "vocative-required-3",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-4",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-23",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86091",
+      "source_sha256": "f051045562446811af921204e72dee5b4701977cad5b7420b92838b7a1aab11a",
+      "status": "scoped",
+      "checklist": [
+        "COV-018p"
+      ],
+      "scope": "Nominal vocative 시여 with its source-listed consonant/vowel boundary, ㄹ treatment, nominal suffix composition, and dictionary/CLI/browser representation.",
+      "remaining": "Noun POS does not establish addressability, relative status or contextual sense. All inherited outer-particle, nominalization and copula combinations are not independently certified here. Non-Hangul final pronunciation is conditional. Homonymous uses and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "annotated_vocative_preserves_nominal_groups"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_keeps_pronunciation_assumptions_and_homonymous_paths"
+        },
+        {
+          "path": "docs/vocative-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "vocative-required-12",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-13",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-14",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-28",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-29",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-33",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86092",
+      "source_sha256": "513227186bd24492f290a25b36a826c8c73a7965607c0451d414713818a4acf1",
+      "status": "scoped",
+      "checklist": [
+        "COV-018p"
+      ],
+      "scope": "Nominal vocative 이시여 with its source-listed consonant/vowel boundary, ㄹ treatment, nominal suffix composition, and dictionary/CLI/browser representation.",
+      "remaining": "Noun POS does not establish addressability, relative status or contextual sense. All inherited outer-particle, nominalization and copula combinations are not independently certified here. Non-Hangul final pronunciation is conditional. Homonymous uses and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "annotated_vocative_preserves_nominal_groups"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_keeps_pronunciation_assumptions_and_homonymous_paths"
+        },
+        {
+          "path": "docs/vocative-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "vocative-required-15",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-16",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-17",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-20",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-21",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-30",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-31",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-34",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86565",
+      "source_sha256": "b1020740c8cd490b4f02e56d013b55a0ec4be343f300034ac0051ff00745fa69",
+      "status": "scoped",
+      "checklist": [
+        "COV-018p"
+      ],
+      "scope": "Nominal vocative 아 with its source-listed consonant/vowel boundary, ㄹ treatment, nominal suffix composition, and dictionary/CLI/browser representation.",
+      "remaining": "Noun POS does not establish addressability, relative status or contextual sense. All inherited outer-particle, nominalization and copula combinations are not independently certified here. Non-Hangul final pronunciation is conditional. Homonymous uses and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "annotated_vocative_preserves_nominal_groups"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_keeps_pronunciation_assumptions_and_homonymous_paths"
+        },
+        {
+          "path": "docs/vocative-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "vocative-required-1",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-2",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-22",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86583",
+      "source_sha256": "1d63ddc1255f4709182fb599698819767b7ffd5d2f5e3c0a866352227302a1be",
+      "status": "scoped",
+      "checklist": [
+        "COV-018p"
+      ],
+      "scope": "Nominal vocative 여 with its source-listed consonant/vowel boundary, ㄹ treatment, nominal suffix composition, and dictionary/CLI/browser representation.",
+      "remaining": "Noun POS does not establish addressability, relative status or contextual sense. All inherited outer-particle, nominalization and copula combinations are not independently certified here. Non-Hangul final pronunciation is conditional. Homonymous uses and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "annotated_vocative_preserves_nominal_groups"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_keeps_pronunciation_assumptions_and_homonymous_paths"
+        },
+        {
+          "path": "docs/vocative-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "vocative-required-5",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-6",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-7",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-24",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-25",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86621",
+      "source_sha256": "09335233fd1b9cd7f2000aa86c32db6dc9314e4cf7c9caaa73429411fc5e3410",
+      "status": "scoped",
+      "checklist": [
+        "COV-018p"
+      ],
+      "scope": "Nominal vocative 이여 with its source-listed consonant/vowel boundary, ㄹ treatment, nominal suffix composition, and dictionary/CLI/browser representation.",
+      "remaining": "Noun POS does not establish addressability, relative status or contextual sense. All inherited outer-particle, nominalization and copula combinations are not independently certified here. Non-Hangul final pronunciation is conditional. Homonymous uses and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "annotated_vocative_preserves_nominal_groups"
+        },
+        {
+          "path": "tests/vocative.rs",
+          "test": "vocative_keeps_pronunciation_assumptions_and_homonymous_paths"
+        },
+        {
+          "path": "docs/vocative-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "vocative-required-8",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-9",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-10",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-11",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-18",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-required-19",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-26",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-27",
+          "judgment": "path"
+        },
+        {
+          "case": "vocative-forbidden-32",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

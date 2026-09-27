@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ai/018a–k/018m–o/019a–g/019i–m/020a–j/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ai/018a–k/018m–p/019a–g/019i–m/020a–j/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 216 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ai/018e–k/018m–o/019d–g/019i–m/020d–h/020j; 498 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 222 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ai/018e–k/018m–p/019d–g/019i–m/020d–h/020j; 492 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -770,7 +770,7 @@ review remains open under the completion review below.
   general historical or dialectal grammar coverage.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–o implement post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–p implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -984,6 +984,20 @@ review remains open under the completion review below.
   none are removed, no old provenance changes, and all 30 stress hashes remain.
   Broader personal-pronoun normalization and particle-marked copula bases remain
   under COV-018/020.
+
+- [x] **COV-018p — Vocative allomorphs and respectful address.** Added
+  consonant-final 이여 and the honorific 시여/이시여 pair as nominal particles,
+  preserving their surface forms. Reviewed the existing 아/야 and 여 boundaries;
+  ㄹ counts as a consonant here. 검이여 exposes 검 + 이여, and 국민들이여
+  exposes 국민 + 들 + 이여. Honorific suffixes compose independently of the
+  respectful particle, as in 선생님이시여. Copula/ending and whole-word readings
+  remain available. Evidence: [34 required/forbidden judgments](../tests/fixtures/validity.json),
+  [boundary, dictionary/CLI and Unicode tests](../tests/vocative.rs), two complete
+  unchanged KAIST sentences, browser source/export checks and
+  [source/output review](vocative-evaluation.json). Foreign final pronunciation
+  remains conditional; noun POS does not establish contextual addressability.
+  This scope does not certify all inherited outer-particle/copula combinations
+  or decide politeness and sentence meaning. Independent Korean review remains open.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

@@ -2337,3 +2337,45 @@ layout. Three sequential local release runs measured compatible median 1.258s
 versus 1.227s before, with peak RSS below 29 MiB. These local measurements include
 JSONL serialization and are not throughput guarantees. Independent Korean review,
 contextual selection and the remaining checklist families stay open.
+
+## Vocative particles (COV-018p)
+
+The [source and candidate review](vocative-evaluation.json) adds nominal 이여,
+시여 and 이시여, and records the existing 아/야/여 boundaries. Consonant/vowel
+selection includes ㄹ as a consonant. Plural and honorific nominal suffixes
+compose, while whole-word and copula alternatives remain. The six source entries
+have explicit review dispositions, giving 222 scoped / 492 unreviewed / one gap.
+The grammar catalog has 332 canonical forms / 469 source IDs / 470 fixture entries.
+
+The 34 new judgments contain 21 required and 13 forbidden paths, bringing main
+validity totals to 2,172 required / 1,428 forbidden. Two complete unchanged KAIST
+sentences cover 검이여 and 젊은이여. The former development miss now matches,
+giving 22,125/22,220 grouped matches and 95 misses; GSD remains at 9,843/9,989 and
+146 misses. Mean candidate counts are 6.017012 / 5.508860. This motivating
+development case is regression evidence, not held-out evaluation.
+
+Across 3,475 tracked surfaces, 39 candidates are added on 19 surfaces, without
+removals or provenance changes. All thirty stress hashes and frozen corpus
+baselines remain unchanged. The raw additions include ordinary unknown-head and
+nominalization hypotheses, such as 젊은 + 이여 and 보다 + 음 + 이여. They are
+retained in the report without asserting contextual correctness. Noun POS does
+not establish addressability, politeness or an intended sentence interpretation.
+
+The novel gains five compatible readings across three types: 선생이시여 (three
+tokens), 아버지시여 and 하느님이시여. All additions are the expected noun plus
+respectful vocative particle; no prior candidates are removed. This does not
+resolve competing contextual interpretations or certify every inherited particle,
+nominalization or copula composition.
+
+Compatible totals become 119,934 analyses / 73,322 tokens with readings;
+headword-only totals become 130,830 / 73,377, across 81,758 word tokens.
+Three sequential local Nix release runs measured compatible median 1.251s versus
+1.267s before, with peak RSS below 28 MiB. These include JSONL serialization;
+timing variation is not evidence of a speedup or a throughput guarantee.
+
+Rust/web-feature tests, Clippy, formatting, frozen corpus regression, frontend
+build, browser/HTTP tests, inventory verification, x86_64-linux Nix flake checks
+and the packaged web build pass. The full-dictionary preview verifies all 34
+judgments, CLI/API/export parity, five displayed breakdowns, particle sources
+and desktop/mobile layout. Independent Korean review and the remaining checklist
+families stay open.

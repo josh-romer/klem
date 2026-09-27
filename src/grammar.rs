@@ -1071,6 +1071,9 @@ pub(crate) fn particles() -> &'static [Particle] {
             ("야", 1, 2),
             ("아", 1, 1),
             ("여", 1, 2),
+            ("이여", 1, 1),
+            ("시여", 1, 2),
+            ("이시여", 1, 1),
             // Outer slots: ordinary particles -> distributive 들 -> polite 요.
             ("들", 5, 0),
             ("요", 6, 0),

@@ -1340,3 +1340,17 @@ Original spelling, lemmas, tags and OrigLemma remain, including the differing
 높으시지마는 → 높+으시+지+만 annotation. These targets already matched at the
 lemma level. [The evaluation](../../docs/jimaneun-evaluation.json) distinguishes
 that result from the new dictionary-based ending structure.
+
+`krdict-danikka.json` contains 157 primary word/selected grammar-expression
+entries from the pinned September 2026 NIKL Korean Basic Dictionary export,
+under **CC BY-SA 2.0 KR**, with the attribution and links above. All senses,
+notes, examples and forms remain; equivalents are English only, RelatedForm
+and same-number idioms are omitted. The 47 family sources also appear in
+`krdict-grammar-labels.json`; their original conflicting notes and typographical
+examples remain unchanged. [The source report](../../docs/danikka-evaluation.json)
+records them separately from authored judgments.
+
+`kaist-danikka.conllu` preserves two complete unchanged training sentences from
+the pinned KAIST corpus, under the corpus attribution/license above. Their
+말하자니까 and 미워하자니까 annotations support the two newly recovered lemma
+groups. No held-out baseline or source annotation was replaced.

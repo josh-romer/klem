@@ -448,6 +448,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                             | "다지"
                             | "다죠"
                             | "다지만"
+                            | "다니까"
                             | "다네"
                             | "다는데"
                             | "다며"
@@ -512,10 +513,15 @@ pub(crate) fn endings() -> &'static [Ending] {
             "다지",
             "다죠",
             "다지만",
+            "다니까",
             "냐지만",
+            "냐니까",
             "느냐지만",
+            "느냐니까",
             "자지만",
+            "자니까",
             "더라지만",
+            "더라니까",
             "잔다",
             "냔다",
             "느냔다",
@@ -677,7 +683,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("더라니", "더라니", 0),
             ("더란다", "더란다", 0),
             ("더라지만", "더라지만", 0),
+            ("더라니까", "더라니까", 0),
             ("냐지만", "냐지만", 0),
+            ("냐니까", "냐니까", 0),
             ("냔다", "냔다", 0),
             // KRDict 85653 explicitly illustrates 누구냔.
             ("냔", "냔", 0),
@@ -753,6 +761,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라지", "라지", "으라지"),
             ("으라죠", "라죠", "으라죠"),
             ("으라지만", "라지만", "으라지만"),
+            ("으라니까", "라니까", "으라니까"),
             ("으라면", "라면", "으라면"),
             ("으랍니다", "랍니다", "으랍니다"),
             ("으라네", "라네", "으라네"),
@@ -766,6 +775,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으냐", "냐", "으냐"),
             ("으냐고", "냐고", "으냐고"),
             ("으냐지만", "냐지만", "으냐지만"),
+            ("으냐니까", "냐니까", "으냐니까"),
             ("으냔다", "냔다", "으냔다"),
             ("으냐는", "냐는", "으냐는"),
             ("으냐며", "냐며", "으냐며"),
@@ -850,6 +860,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다지", "다지", "는다지", 4),
             ("는다죠", "다죠", "는다죠", 4),
             ("는다지만", "다지만", "는다지만", 4),
+            ("는다니까", "다니까", "는다니까", 4),
             ("는다거나", "다거나", "는다거나", 4),
             ("는다든가", "다든가", "는다든가", 4),
         ] {
@@ -925,6 +936,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라지",
             "라죠",
             "라지만",
+            "라니까",
             "라든가",
             "라네",
             "라는데",
@@ -1374,6 +1386,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Recover 익숙히/특별히 behind shortened 익히/특히, using 익숙하다/특별하다 as lookup lemmas; retain the whole-word reading."
         }
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
+        "ending.reporting_reason" => {
+            "Recognize repeated assertions, commands, questions, proposals and reports used as reasons; preserve source homonyms without inserting an implicit reporting verb."
+        }
         "ending.reporting_contrast" => {
             "Recognize contrasting reported statements, commands, questions, proposals and retrospective reports; preserve canonical alternatives without inserting an implicit reporting verb."
         }

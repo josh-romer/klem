@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ar/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–as/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 296 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 418 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 303 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–as/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 411 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -220,7 +220,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ar implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–as implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -904,6 +904,24 @@ review remains open under the completion review below.
   The novel gains ending alternatives at 62 tokens, with none removed.
   Wider outer particles and contextual interpretation remain open.
   See the [source and candidate evaluation](jimaneun-evaluation.json).
+
+- [x] **COV-017as — Assertive and reason-reporting -다니까 family.**
+  Rust/stress/corpus, browser, Nix and full-dictionary package checks pass.
+  Nine canonical statement, factual,
+  command, question, proposal and retrospective endings compose with source-listed
+  full 는, contracted ㄴ and polite 요. 47 full KRDict entries retain all senses;
+  76 exact source-example tokens sample all 74 senses and two additional cases.
+  [223 raw judgments](../tests/danikka.rs) and 49 dictionary-policy judgments
+  cover class/allomorph/prefinal boundaries, copulas, auxiliaries and 답다.
+  도와달라니까 retains request auxiliary 달다. The explicit 들으냐니까는
+  example conflicts with its adjective-only note, so that lexical-head/topic
+  reading remains Unknown in dictionary assessment; bare/polite-only forms
+  retain the usual class check. Source typos are preserved without spelling repair.
+  Two unchanged KAIST training targets gain matches; frozen reports are unchanged.
+  Three novel hypotheses are added at two tokens, with no prior candidates removed.
+  Seven ending entries enter the scoped inventory; forty expression sources are
+  outside its POS-filtered queue. Broader paradigms and independent review remain.
+  See the [source and candidate evaluation](danikka-evaluation.json).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

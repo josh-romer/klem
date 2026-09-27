@@ -29,6 +29,7 @@ impl Fixture {
             "krdict-danda.json",
             "krdict-daji.json",
             "krdict-dajiman.json",
+            "krdict-danikka.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -107,7 +108,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     })
     .unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (304, 150));
+    assert_eq!((report.required_total, report.forbidden_total), (341, 162));
     assert_eq!(
         report.required_total + report.forbidden_total,
         suite.cases.len()

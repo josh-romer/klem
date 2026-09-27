@@ -268,6 +268,7 @@ try {
   const additiveParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-additive-particles.json"), "utf8"));
   const copularClass = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-copular-class.json"), "utf8"));
   const jimaneun = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-jimaneun.json"), "utf8"));
+  const danikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danikka.json"), "utf8"));
   const dajiman = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-dajiman.json"), "utf8"));
   const daji = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-daji.json"), "utf8"));
   const danda = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-danda.json"), "utf8"));
@@ -299,6 +300,7 @@ try {
       ...danda.LexicalResource.Lexicon.LexicalEntry,
       ...daji.LexicalResource.Lexicon.LexicalEntry,
       ...jimaneun.LexicalResource.Lexicon.LexicalEntry,
+      ...danikka.LexicalResource.Lexicon.LexicalEntry,
       ...dajiman.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
@@ -770,6 +772,52 @@ try {
   await page.setViewportSize({width:390,height:844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-jimaneun-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const danikkaCases = recipientLedger.cases.filter(c => c.id.startsWith("danikka-"));
+  assert.equal(danikkaCases.length, 223);
+  const danikkaPath = (a, j) => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+    && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+    && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes)
+    && JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds);
+  for (const c of danikkaCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a=>danikkaPath(a,j)), j.verdict === "required", c.id);
+  }
+  const danikkaPolicy = connectiveLedger.cases.filter(c => c.id.startsWith("danikka-policy-"));
+  assert.equal(danikkaPolicy.length, 49);
+  for (const c of danikkaPolicy) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const i = token.analysis.analyses.findIndex(a=>danikkaPath(a,j));
+      assert.ok(i >= 0, c.id);
+      assert.equal(token.dictionary.readings[i].status === "incompatible", j.verdict === "forbidden", c.id);
+    }
+  }
+  const danikkaText = "좋다니까는 먹는다니깐 학생이라니까요 먹으라니까는 먹냐니까 먹느냐니깐 좋으냐니까요 먹자니까 먹더라니까요 도와달라니까 들으냐니까는";
+  await submit(page, danikkaText); await waitHeading(page, "좋다니까는");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["좋","다니까","는"]],[1,["먹","는다니까","는"]],[2,["학생","이","라니까","요"]],[3,["먹","으라니까","는"]],[4,["먹","냐니까"]],[5,["먹","느냐니까","는"]],[6,["좋","으냐니까","요"]],[7,["먹","자니까"]],[8,["먹","더","라니까","요"]],[8,["먹","더라니까","요"]],[9,["돕","어","달","으라니까"]],[10,["듣","으냐니까","는"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    if (i === 0) {
+      await word.locator(".breakdown-part").nth(1).click();
+      await page.locator(".entry-choices button").filter({hasText:"-다니까"}).first().click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=74687"]'));
+    }
+  }
+  const danikkaDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const danikkaExport = JSON.parse(await readFile(await (await danikkaDownload).path(), "utf8"));
+  const danikkaExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:danikkaText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(danikkaExport.records,danikkaExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-danikka-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-danikka-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const dajimanCases = recipientLedger.cases.filter(c => c.id.startsWith("dajiman-"));

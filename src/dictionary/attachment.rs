@@ -101,6 +101,7 @@ fn bare_copular_ending(form: &str) -> bool {
             | "라지"
             | "라죠"
             | "라지만"
+            | "라니까"
             | "라든가"
             | "라네"
             | "라는데"
@@ -315,7 +316,7 @@ impl Annotation {
                             // and standalone auxiliaries are not rejected.
                             Some(AttachmentRule::BareCopularEnding)
                         } else if bare
-                            && matches!(form, "단다" | "다지" | "다죠" | "다지만")
+                            && matches!(form, "단다" | "다지" | "다죠" | "다지만" | "다니까")
                             && verb
                         {
                             // Lexical existential/honorific senses cannot be
@@ -340,12 +341,12 @@ impl Annotation {
                                 Some(AttachmentRule::LiteraryAssertionClass)
                             }
                         } else if bare
-                            && form == "느냐지만"
+                            && matches!(form, "느냐지만" | "느냐니까")
                             && adjective
                             && !lemma.text.ends_with("있다")
                             && !lemma.text.ends_with("없다")
                         {
-                            // KRDict 85642 explicitly includes existential
+                            // KRDict 85642/80829 explicitly include existential
                             // adjectives. This finite policy does not infer
                             // restrictions for other question families.
                             Some(AttachmentRule::BareVerbalQuestion)
@@ -358,7 +359,15 @@ impl Annotation {
                         } else if bare && verb && crate::engine::adjectival_question(form) {
                             // Existential/honorific question paradigms remain
                             // COV-019h. Do not decide them from a broad POS label.
-                            if matches!(lemma.text.as_str(), "있다" | "없다" | "계시다") {
+                            if matches!(lemma.text.as_str(), "있다" | "없다" | "계시다")
+                                // KRDict 86329 says adjective but explicitly
+                                // illustrates 듣다 in 들으냐니까는. Keep the
+                                // source conflict unknown, scoped to this tail.
+                                || (form == "으냐니까"
+                                    && lemma.text == "듣다"
+                                    && analysis.morphemes.get(i + 1).is_some_and(|m|
+                                        m.kind == crate::MorphemeKind::Particle && m.form == "는"))
+                            {
                                 status = Compatibility::Unknown;
                                 None
                             } else {

@@ -1941,3 +1941,22 @@ fn long_contrast_preserves_six_unchanged_training_targets() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn reporting_reason_recovers_two_unchanged_training_targets() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-danikka.conllu").as_slice(),
+        Corpus::Kaist,
+        "danikka",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:MH2_0037-s84/8", "말하자니까", vec!["말하다"]),
+        ("id:MH2_0185-s43/4", "미워하자니까", vec!["미워하다"]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}

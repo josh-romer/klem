@@ -3039,3 +3039,37 @@ all output additions and six complete unchanged KAIST training sentences.
 Those corpus targets already had matching lemmas through other readings;
 높으시지마는 retains its original 높+으시+지+만 annotation. The bundled
 ending regression does not rewrite gold or claim a corpus recall gain.
+
+
+## Assertive and reason-reporting endings (COV-017as)
+
+다니까/는다니까, factual 라니까 and command 으라니까 keep the source's
+assertive/repeated and reported-reason senses available without inserting an
+implicit reporting 하다. Generic 냐니까, verbal 느냐니까, adjectival 으냐니까,
+proposal 자니까 and retrospective 더라니까 have their own class and prefinal
+boundaries. Both bundled 더라니까 and split 더 + 라니까 remain. The factual
+라니까 source explicitly lists 더/으리; no shorter-note inference is needed.
+
+The source-listed -니까는 and contracted -니깐 variants use the same canonical
+base ending plus particle 는; -니까요 uses outer 요. Existing Unicode handling,
+coda conditions and particle-order checks apply, including repeated-particle
+rejection. This does not add unrelated particles or an auxiliary connector.
+The request auxiliary 달다 now accepts quoted command 으라니까, supported by
+the exact 도와달라니까 example in KRDict 88164.
+
+Known lexical verb/adjective entries are assessed separately. Existential
+adjectives remain before 느냐니까 as explicitly listed; negative auxiliaries are
+not rejected solely from an inherited adjective class. Wider existential and
+negative paradigms remain open. KRDict 86329's adjective note conflicts with its
+example 들으냐니까는. The 듣다 + 으냐니까 + 는 path is therefore Unknown and
+retained by compatible filtering, including contracted-topic spelling. The
+exception does not extend to the bare or merely polite adjectival ending.
+Generic 냐니까 retains the broader source pattern despite narrower notes on
+some outer variants. One source spells 읽으라는까는; its original text remains,
+and this batch adds no typo-repair rule.
+
+[The report](danikka-evaluation.json) preserves 47 complete source entries,
+source-note conflicts, every raw output addition, dictionary judgments and
+unjudged candidates. Complete training sentences support 말하자니까 and
+미워하자니까; frozen corpus gold and baselines are unchanged. Tests verify
+morphological alternatives, not their intended sentence meaning.

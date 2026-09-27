@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax/018a–k/018m–z/019a–g/019i–r/020a–o/021a–d/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax/018a–k/018m–z/019a–g/019i–r/020a–o/021a–e/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -1847,8 +1847,9 @@ review remains open under the completion review below.
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
   COV-021c adds eight fixed complex-coda classes; COV-021d adds per-entry
-  written ㅎ compatibility.** Remaining: lexical regular/irregular dictionary
-  compatibility for ㄷ/ㅅ/ㅂ/르 and other paradigms, ㄼ lexical
+  written ㅎ compatibility; COV-021e adds ㄷ/ㅅ compatibility.** Remaining: lexical regular/irregular dictionary
+  compatibility for ㅂ/르 and other paradigms, shortened-stem attachment
+  restrictions (e.g. 딛다/잡숫다), ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
   The [dictionary discovery audit](hada-complex-coda-audit.json) found three
@@ -1915,6 +1916,28 @@ review remains open under the completion review below.
   under the broader COV-021 audit.
   See [policy and API details](dictionary-attachments.md#written-ㅎ-inflection-compatibility-cov-021d)
   and [individual-case evaluation](hieut-compatibility-evaluation.json).
+
+- [x] **COV-021e — Written ㄷ/ㅅ regular/irregular compatibility.**
+  **Implemented for per-entry written ㄷ/ㅅ paradigms.** The native inventory has
+  124 entries: 65 regular, 54 irregular and five without a usable written 니
+  paradigm. Real 걷다/묻다 homonyms keep separate evidence; a matching regular
+  entry cannot veto a supported irregular homonym. Compatible filtering rejects
+  the unsupported 믿다 at 밀으면, 듣다 at 듣으니 and 짓다 at 짓어 hypotheses.
+  Raw/headword-only candidates remain; prefinals, auxiliary chains and
+  nominalization/copula combinations retain their owning spelling requirements.
+  [Tests](../tests/digeut_siot.rs) cover 347 policy cases and every source entry;
+  eight unchanged training targets survive filtering. All four frozen corpus
+  reports remain byte-identical, and 6,897 compared inputs preserve their raw
+  candidate components/order/rule IDs and earlier ㅎ requirements. The novel
+  comparison traces 309 compatible-filter removals across 109 word types to
+  written spelling conflicts without removing headword-only candidates.
+  Rust, browser and x86_64-linux Nix checks pass, including packaged full-dictionary
+  API/CLI/export parity. Three interleaved novel runs measured compatible-filter
+  medians of 1.356 → 1.378 s and peak RSS of 29,848 → 30,240 KiB.
+  껴묻다/내딛다/딛다/잡숫다/줄짓다 remain unknown; separate shortened-stem
+  attachment notes, ㅂ/르 and other lexical classes remain under COV-021.
+  See [policy](dictionary-attachments.md#written-ㄷㅅ-inflection-compatibility-cov-021e)
+  and [individual-case evidence](digeut-siot-evaluation.json).
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

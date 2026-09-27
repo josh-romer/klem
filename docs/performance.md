@@ -1,5 +1,22 @@
 # Performance
 
+## Written ㄷ/ㅅ compatibility (COV-021e)
+
+On 2026-09-27, three interleaved release CLI runs of the same MuJeong input
+compared `f377ec1` with the added ㄷ/ㅅ evidence. Startup, dictionary access and
+JSONL serialization are included; output was discarded. The complete
+[samples and package paths](digeut-siot-evaluation.json) are recorded.
+
+| Filter | Before median | After median | Before peak RSS | After peak RSS |
+| --- | ---: | ---: | ---: | ---: |
+| Headword-only | 1.373 s | 1.403 s | 29,864 KiB | 30,120 KiB |
+| Compatible | 1.356 s | 1.378 s | 29,848 KiB | 30,240 KiB |
+
+The added classes preserve headword-only candidates and remove 309 conflicting
+compatible-filter candidates across 109 word types. The roughly 2% timing
+increase in these local samples does not establish a portable performance bound
+or statistical equivalence. Earlier measurements retain their original scope.
+
 ## Written ㅎ compatibility (COV-021d)
 
 On 2026-09-27, three interleaved release CLI runs of the same MuJeong input

@@ -275,3 +275,36 @@ The [evaluation](hieut-compatibility-evaluation.json) records raw-candidate
 preservation, seven unchanged training gold groups, and every novel removal.
 These checks cover the reviewed ㅎ spelling class; other lexical irregular
 classes and contextual sense selection remain separate work.
+
+## Written ㄷ/ㅅ inflection compatibility (COV-021e)
+
+The same component-owned spelling checks now cover ㄷ and ㅅ. Each entry's
+written `활용` forms distinguish retained-consonant `stem + 으니` from ㄷ→ㄹ
+or deleted-ㅅ forms before 으니. Pronunciations never classify an entry. The
+[124-entry source inventory](../tests/fixtures/digeut-siot-sources.json) contains
+65 regular, 54 irregular and five unknown entries. Full source senses, notes,
+forms and examples are retained, with English equivalents.
+
+Real homonyms remain separate: 걷으니 supports the regular 걷다 entries while
+걸으니 supports the irregular entry; 묻으니 and 물으니 likewise select different
+entry evidence. Both complete readings survive when any matching entry supports
+them. The filter does not choose a sense in context. 믿다 at 밀으면, 듣다 at
+듣으니 and 짓다 at 짓어 conflict, while raw and headword-only hypotheses remain.
+Vowel endings, prefinals, auxiliaries and nominalizations retain their own
+requirements, e.g. 들어놓으니 has ㄷ irregular evidence on 듣다 and ㅎ regular
+evidence on 놓다. Literal consonant endings impose no such requirement.
+
+`SpellingClass` adds `DigeutRegular`, `DigeutIrregular`, `SiotRegular` and
+`SiotIrregular`. `EntryMatch` adds optional `digeut` and `siot` evidence fields
+with the same regular/irregular written-form lists as `hieut`.
+`ConjugationEvidence` is the shared Rust structure; `HieutEvidence` remains a
+type alias. Old JSON stays readable; absent fields remain unknown. Rust struct
+literals and exhaustive enum matches must account for the additions. SQLite's
+schema is unchanged, and the existing dictionary-cache budget charges evidence.
+
+껴묻다, 내딛다, 딛다, 잡숫다 and 줄짓다 lack an informative 니 paradigm.
+They remain unknown. Some shortened forms have separate consonant-only notes;
+this classifier does not implement those attachment restrictions. Retaining an
+unknown candidate does not certify its spelling. Other irregular classes remain
+in COV-021. See [the case evaluation](digeut-siot-evaluation.json) for source
+hashes, individual judgments, novel removals and the remaining unjudged queue.

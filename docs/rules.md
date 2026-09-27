@@ -3280,3 +3280,14 @@ classes while preserving unknown entries and the distinct 놓아 → 놔 contrac
 No pronunciation field, broad POS label, or unrelated auxiliary's recovery is
 used as proof of a spelling class. This does not resolve lexical classes for
 other irregular families or historical spelling.
+
+### Written ㄷ/ㅅ hypotheses (COV-021e)
+
+Owned spelling paths also record ㄷ→ㄹ and ㅅ deletion, or retention before
+vowel endings. These are lexical-class hypotheses: the raw generator continues
+to enumerate them, while compatible dictionary filtering checks each matching
+entry's written forms. An ambiguous surface such as 물어 keeps both 묻다 and
+물다 hypotheses where their entries support them. The existing ㅎ derivation
+paths, candidate order and rule IDs are preserved. The
+[filter contract](dictionary-attachments.md#written-ㄷㅅ-inflection-compatibility-cov-021e)
+details homonyms, missing evidence and API changes.

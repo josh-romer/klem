@@ -70,6 +70,10 @@ pub struct Morpheme {
 pub enum SpellingClass {
     HieutRegular,
     HieutIrregular,
+    DigeutRegular,
+    DigeutIrregular,
+    SiotRegular,
+    SiotIrregular,
 }
 
 /// Ownership follows the lemma preceding this morpheme in `Analysis::breakdown`.

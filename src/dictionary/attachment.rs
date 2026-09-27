@@ -441,10 +441,20 @@ impl Annotation {
                             .iter()
                             .filter(|r| morphs.contains(&Component::Morpheme(r.morpheme_index)))
                         {
-                            if let Some(evidence) = &matched.hieut {
-                                let supported = match recovery.class {
-                                    SpellingClass::HieutRegular => !evidence.regular.is_empty(),
-                                    SpellingClass::HieutIrregular => !evidence.irregular.is_empty(),
+                            use SpellingClass::*;
+                            let (evidence, regular) = match recovery.class {
+                                HieutRegular => (&matched.hieut, true),
+                                HieutIrregular => (&matched.hieut, false),
+                                DigeutRegular => (&matched.digeut, true),
+                                DigeutIrregular => (&matched.digeut, false),
+                                SiotRegular => (&matched.siot, true),
+                                SiotIrregular => (&matched.siot, false),
+                            };
+                            if let Some(evidence) = evidence {
+                                let supported = if regular {
+                                    !evidence.regular.is_empty()
+                                } else {
+                                    !evidence.irregular.is_empty()
                                 };
                                 if !supported {
                                     status = Compatibility::Incompatible;

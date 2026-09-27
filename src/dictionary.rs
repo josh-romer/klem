@@ -218,20 +218,27 @@ pub fn pos_compatibility(lemma: &Lemma, entry: &EntrySummary) -> Compatibility {
     if accepted { Compatible } else { Incompatible }
 }
 
-/// Written conjugation evidence for the single-coda ㅎ paradigm. Pronunciations
+/// Written conjugation evidence for a reviewed consonant paradigm. Pronunciations
 /// never populate these lists; absence of evidence does not imply regularity.
 #[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq, Eq)]
-pub struct HieutEvidence {
+pub struct ConjugationEvidence {
     pub regular: Vec<String>,
     pub irregular: Vec<String>,
 }
 
-impl HieutEvidence {
+/// Backward-compatible name for the original ㅎ evidence structure.
+pub type HieutEvidence = ConjugationEvidence;
+
+impl ConjugationEvidence {
     fn from_entry(entry: &Entry) -> Option<Self> {
         let stem = entry.summary.headword.strip_suffix('다')?;
-        if crate::hangul::coda(stem) != Some(27) {
-            return None;
-        }
+        use crate::grammar::Boundary;
+        let (suffix, boundary, rule) = match crate::hangul::coda(stem) {
+            Some(27) => ("니", Boundary::EuZero, "irregular.hieut"),
+            Some(7) => ("으니", Boundary::EuFull, "irregular.digeut"),
+            Some(19) => ("으니", Boundary::EuFull, "irregular.siot"),
+            _ => return None,
+        };
         let mut evidence = Self::default();
         for form in &entry.forms {
             if form.kind != "활용" {
@@ -240,9 +247,9 @@ impl HieutEvidence {
             let written: String = form.written.nfc().collect();
             if written.strip_suffix("으니") == Some(stem) {
                 evidence.regular.push(form.written.clone());
-            } else if crate::grammar::recover(&written, "니", crate::grammar::Boundary::EuZero)
+            } else if crate::grammar::recover(&written, suffix, boundary)
                 .iter()
-                .any(|r| r.stem == stem && r.rules.iter().any(|r| r == "irregular.hieut"))
+                .any(|r| r.stem == stem && r.rules.iter().any(|r| r == rule))
             {
                 evidence.irregular.push(form.written.clone());
             }
@@ -274,6 +281,10 @@ pub struct EntryMatch {
     /// omit it. Homonyms never borrow each other's written forms.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub hieut: Option<HieutEvidence>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub digeut: Option<ConjugationEvidence>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub siot: Option<ConjugationEvidence>,
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct LemmaMatches {
@@ -306,7 +317,7 @@ impl Annotation {
 
 struct CachedLookup {
     entries: Arc<Vec<EntrySummary>>,
-    hieut: Vec<Option<HieutEvidence>>,
+    spelling: Vec<Option<ConjugationEvidence>>,
 }
 
 /// FIFO cache of headword summaries and scoped spelling evidence, including negative lookups. The byte budget
@@ -340,34 +351,35 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
             return Ok(Arc::clone(entries));
         }
         let entries = Arc::new(self.dictionary.lookup(&key)?);
-        let mut hieut = Vec::with_capacity(entries.len());
+        let mut spelling = Vec::with_capacity(entries.len());
         for summary in entries.iter() {
-            let evidence = if summary
-                .headword
-                .strip_suffix('다')
-                .and_then(crate::hangul::coda)
-                == Some(27)
-                && matches!(
-                    summary.pos.as_str(),
-                    "동사" | "형용사" | "보조 동사" | "보조 형용사"
-                ) {
+            let evidence = if matches!(
+                summary
+                    .headword
+                    .strip_suffix('다')
+                    .and_then(crate::hangul::coda),
+                Some(7 | 19 | 27)
+            ) && matches!(
+                summary.pos.as_str(),
+                "동사" | "형용사" | "보조 동사" | "보조 형용사"
+            ) {
                 self.dictionary
                     .entry(&summary.id)?
                     .filter(|e| e.summary == *summary)
-                    .and_then(|e| HieutEvidence::from_entry(&e))
+                    .and_then(|e| ConjugationEvidence::from_entry(&e))
             } else {
                 None
             };
-            hieut.push(evidence);
+            spelling.push(evidence);
         }
         let size = 2 * (std::mem::size_of::<String>() + key.len())
             + std::mem::size_of::<(Arc<CachedLookup>, usize)>()
             + std::mem::size_of::<CachedLookup>()
-            + hieut.capacity() * std::mem::size_of::<Option<HieutEvidence>>()
-            + hieut
+            + spelling.capacity() * std::mem::size_of::<Option<ConjugationEvidence>>()
+            + spelling
                 .iter()
                 .flatten()
-                .map(HieutEvidence::retained_bytes)
+                .map(ConjugationEvidence::retained_bytes)
                 .sum::<usize>()
             + std::mem::size_of::<Vec<EntrySummary>>()
             + entries
@@ -380,7 +392,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         + e.pos.len()
                 })
                 .sum::<usize>();
-        let entries = Arc::new(CachedLookup { entries, hieut });
+        let entries = Arc::new(CachedLookup { entries, spelling });
         if size <= self.budget {
             while self.bytes > self.budget - size {
                 if let Some(old) = self.order.pop_front()
@@ -407,11 +419,40 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
             let entries = matched
                 .entries
                 .iter()
-                .zip(&matched.hieut)
-                .map(|(entry, hieut)| EntryMatch {
+                .zip(&matched.spelling)
+                .map(|(entry, evidence)| EntryMatch {
                     pos_compatibility: pos_compatibility(lemma, entry),
                     entry: entry.clone(),
-                    hieut: hieut.clone(),
+                    hieut: evidence
+                        .as_ref()
+                        .filter(|_| {
+                            entry
+                                .headword
+                                .strip_suffix('다')
+                                .and_then(crate::hangul::coda)
+                                == Some(27)
+                        })
+                        .cloned(),
+                    digeut: evidence
+                        .as_ref()
+                        .filter(|_| {
+                            entry
+                                .headword
+                                .strip_suffix('다')
+                                .and_then(crate::hangul::coda)
+                                == Some(7)
+                        })
+                        .cloned(),
+                    siot: evidence
+                        .as_ref()
+                        .filter(|_| {
+                            entry
+                                .headword
+                                .strip_suffix('다')
+                                .and_then(crate::hangul::coda)
+                                == Some(19)
+                        })
+                        .cloned(),
                 })
                 .collect();
             lemmas.push(LemmaMatches {

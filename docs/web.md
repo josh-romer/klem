@@ -263,7 +263,7 @@ JSON export. The normalized display expands omitted 이 without assigning it a
 surface span; punctuation and original token offsets stay unchanged. Explicit
 이라는 → 이다 + 라는 requires no omission notice.
 
-The conflict filter also checks reviewed written ㅎ spelling profiles against
+The conflict filter also checks reviewed written ㅎ/ㄷ/ㅅ spelling profiles against
 component-owned recovery requirements. Raw choices remain inspectable with the
-filter disabled. Export preserves optional `spelling_paths` and per-entry `hieut`
-evidence; see [the dictionary contract](dictionary-attachments.md#written-ㅎ-inflection-compatibility-cov-021d).
+filter disabled. Export preserves optional `spelling_paths` and per-entry `hieut`, `digeut` and
+`siot` evidence; see [the dictionary contract](dictionary-attachments.md#written-ㄷㅅ-inflection-compatibility-cov-021e).

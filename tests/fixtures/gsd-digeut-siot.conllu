@@ -1,0 +1,97 @@
+# sent_id = train-s1888
+# text = 언덕 꼭대기의 글로리에테를 그레이트 파르테레(Great Parterre)라고 부르는데 조각상이 열을 지어 세워져 있다.
+# translit = .eon.deog .ggog.dae.gi.yi .geul.ro.ri.e.te.reul .geu.re.i.teu .pa.reu.te.re(Great Parterre).ra.go .bu.reu.neun.de .jo.gag.sang.i .yeol.eul .ji.eo .se.weo.jyeo .iss.da.
+1	언덕	언덕	NOUN	NNG	_	3	nmod:poss	_	Translit=.eon.deog|LTranslit=.eon.deog
+2	꼭대기의	꼭대기+의	NOUN	NNG+JKG	_	1	flat	_	Translit=.ggog.dae.gi.yi|LTranslit=.ggog.dae.gi+.yi
+3	글로리에테를	글로리에테+를	NOUN	NNP+JKO	_	11	obj	_	Translit=.geul.ro.ri.e.te.reul|LTranslit=.geul.ro.ri.e.te+.reul
+4	그레이트	그레이트	NOUN	NNP	_	11	ccomp	_	Translit=.geu.re.i.teu|LTranslit=.geu.re.i.teu
+5	파르테레	파르테레	PROPN	NNP	_	4	flat	_	SpaceAfter=No|Translit=.pa.reu.te.re|LTranslit=.pa.reu.te.re
+6	(	(	PUNCT	SS	_	7	punct	_	SpaceAfter=No|Translit=(|LTranslit=(
+7	Great	Great	NOUN	SL	_	5	flat	_	Translit=Great|LTranslit=Great
+8	Parterre	Parterre	NOUN	SL	_	5	appos	_	SpaceAfter=No|Translit=Parterre|LTranslit=Parterre
+9	)	)	PUNCT	SS	_	8	punct	_	SpaceAfter=No|Translit=)|LTranslit=)
+10	라고	라고	ADP	JKQ	_	5	case	_	Translit=.ra.go|LTranslit=.ra.go
+11	부르는데	부르+는데	VERB	VV+EC	_	15	advcl	_	Translit=.bu.reu.neun.de|LTranslit=.bu.reu+.neun.de
+12	조각상이	조각상+이	NOUN	NNG+JKS	_	15	nsubj:pass	_	Translit=.jo.gag.sang.i|LTranslit=.jo.gag.sang+.i
+13	열을	열+을	NOUN	NNG+JKO	_	14	obj	_	Translit=.yeol.eul|LTranslit=.yeol+.eul
+14	지어	짓+어	VERB	VV+EC	_	15	advcl	_	Translit=.ji.eo|LTranslit=.jis+.eo
+15	세워져	세우+어+지+어	VERB	VV+EC+VX+EC	_	0	root	_	Translit=.se.weo.jyeo|LTranslit=.se.u+.eo+.ji+.eo
+16	있다	있+다	VERB	VX+EF	_	15	flat	_	SpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da
+17	.	.	PUNCT	SF	_	16	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s3178
+# text = 2008년 1심 재판부는 "카드사가 책임의 3분의 1을 져야 한다"고 이씨 일부 승소판결을 한 데 이어 항소심 재판부는 지난해 10월 "카드사 책임을 절반으로 제한한다"고 카드사 책임을 더 물었다.
+# translit = 2008.nyeon 1.sim .jae.pan.bu.neun ".ka.deu.sa.ga .chaeg.im.yi 3.bun.yi 1.eul .jyeo.ya .han.da".go .i.ssi .il.bu .seung.so.pan.gyeol.eul .han .de .i.eo .hang.so.sim .jae.pan.bu.neun .ji.nan.hae 10.weol ".ka.deu.sa .chaeg.im.eul .jeol.ban.eu.ro .je.han.han.da".go .ka.deu.sa .chaeg.im.eul .deo .mul.eoss.da.
+1	2008년	2008+년	NOUN	SN+NNB	_	16	nmod	_	Translit=2008.nyeon|LTranslit=2008+.nyeon
+2	1심	1+심	NOUN	SN+NNG	_	16	nsubj	_	Translit=1.sim|LTranslit=1+.sim
+3	재판부는	재판부+는	NOUN	NNG+JX	_	2	flat	_	Translit=.jae.pan.bu.neun|LTranslit=.jae.pan.bu+.neun
+4	"	"	PUNCT	SS	_	9	punct	_	SpaceAfter=No|Translit="|LTranslit="
+5	카드사가	카드사+가	NOUN	NNG+JKS	_	9	nsubj	_	Translit=.ka.deu.sa.ga|LTranslit=.ka.deu.sa+.ga
+6	책임의	책임+의	NOUN	NNG+JKG	_	9	obj	_	Translit=.chaeg.im.yi|LTranslit=.chaeg.im+.yi
+7	3분의	3+분+의	NOUN	SN+XSN+JKG	_	6	flat	_	Translit=3.bun.yi|LTranslit=3+.bun+.yi
+8	1을	1+을	NUM	SN+JKO	NumType=Card	6	flat	_	Translit=1.eul|LTranslit=1+.eul
+9	져야	지+어야	VERB	VV+EC	_	13	ccomp	_	Translit=.jyeo.ya|LTranslit=.ji+.eo.ya
+10	한다	하	AUX	VX+EC	_	9	aux	_	OrigLemma=하+ㄴ다|SpaceAfter=No|Translit=.han.da|LTranslit=.ha
+11	"	"	PUNCT	SS	_	9	punct	_	SpaceAfter=No|Translit="|LTranslit="
+12	고	고	ADP	JKQ	_	9	case	_	Translit=.go|LTranslit=.go
+13	이씨	이+씨	NOUN	NNP+NNB	_	16	obj	_	Translit=.i.ssi|LTranslit=.i+.ssi
+14	일부	일부	NOUN	NNG	_	13	flat	_	Translit=.il.bu|LTranslit=.il.bu
+15	승소판결을	승소+판결+을	NOUN	NNG+NNG+JKO	_	13	flat	_	Translit=.seung.so.pan.gyeol.eul|LTranslit=.seung.so+.pan.gyeol+.eul
+16	한	하+ㄴ	VERB	VV+ETM	_	17	dep	_	Translit=.han|LTranslit=.ha+ㄴ
+17	데	데	ADV	NNB	_	18	advmod	_	Translit=.de|LTranslit=.de
+18	이어	잇+어	VERB	VV+EC	_	33	advcl	_	Translit=.i.eo|LTranslit=.is+.eo
+19	항소심	항소심	NOUN	NNG	_	33	nsubj	_	Translit=.hang.so.sim|LTranslit=.hang.so.sim
+20	재판부는	재판부+는	NOUN	NNG+JX	_	19	flat	_	Translit=.jae.pan.bu.neun|LTranslit=.jae.pan.bu+.neun
+21	지난해	지난해	NOUN	NNG	_	33	nmod	_	Translit=.ji.nan.hae|LTranslit=.ji.nan.hae
+22	10월	10+월	NOUN	SN+NNB	_	21	flat	_	Translit=10.weol|LTranslit=10+.weol
+23	"	"	PUNCT	SS	_	27	punct	_	SpaceAfter=No|Translit="|LTranslit="
+24	카드사	카드사	NOUN	NNG	_	27	obj	_	Translit=.ka.deu.sa|LTranslit=.ka.deu.sa
+25	책임을	책임+을	NOUN	NNG+JKO	_	24	flat	_	Translit=.chaeg.im.eul|LTranslit=.chaeg.im+.eul
+26	절반으로	절반+으로	ADV	NNG+JKB	_	27	obl	_	Translit=.jeol.ban.eu.ro|LTranslit=.jeol.ban+.eu.ro
+27	제한한다	제한+하+ㄴ다	VERB	NNG+XSV+EC	_	33	ccomp	_	SpaceAfter=No|Translit=.je.han.han.da|LTranslit=.je.han+.ha+ㄴ.da
+28	"	"	PUNCT	SS	_	27	punct	_	SpaceAfter=No|Translit="|LTranslit="
+29	고	고	ADP	JKQ	_	27	case	_	Translit=.go|LTranslit=.go
+30	카드사	카드사	NOUN	NNG	_	33	obj	_	Translit=.ka.deu.sa|LTranslit=.ka.deu.sa
+31	책임을	책임+을	NOUN	NNG+JKO	_	30	flat	_	Translit=.chaeg.im.eul|LTranslit=.chaeg.im+.eul
+32	더	더	ADV	MAG	_	33	advmod	_	Translit=.deo|LTranslit=.deo
+33	물었다	묻+었+다	VERB	VV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.mul.eoss.da|LTranslit=.mud+.eoss+.da
+34	.	.	PUNCT	SF	_	33	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s3463
+# text = "경기 마치고 영입을 시도하려 했는데 그라운드에서 울고 있길래 말을 못 걸었다"라고 말하며 크게 웃었다.
+# translit = ".gyeong.gi .ma.chi.go .yeong.ib.eul .si.do.ha.ryeo .haess.neun.de .geu.ra.un.deu.e.seo .ul.go .iss.gil.rae .mal.eul .mos .geol.eoss.da".ra.go .mal.ha.myeo .keu.ge .us.eoss.da.
+1	"	"	PUNCT	SS	_	12	punct	_	SpaceAfter=No|Translit="|LTranslit="
+2	경기	경기	NOUN	NNG	_	3	obj	_	Translit=.gyeong.gi|LTranslit=.gyeong.gi
+3	마치고	마치+고	VERB	VV+EC	_	5	advcl	_	Translit=.ma.chi.go|LTranslit=.ma.chi+.go
+4	영입을	영입+을	NOUN	NNG+JKO	_	5	obj	_	Translit=.yeong.ib.eul|LTranslit=.yeong.ib+.eul
+5	시도하려	시도+하+려	VERB	NNG+XSV+EC	_	8	advcl	_	Translit=.si.do.ha.ryeo|LTranslit=.si.do+.ha+.ryeo
+6	했는데	하+았+는데	VERB	VX+EP+EC	_	5	flat	_	Translit=.haess.neun.de|LTranslit=.ha+.ass+.neun.de
+7	그라운드에서	그라운드+에서	ADV	NNG+JKB	_	8	advmod	_	Translit=.geu.ra.un.deu.e.seo|LTranslit=.geu.ra.un.deu+.e.seo
+8	울고	울+고	VERB	VV+EC	_	12	advcl	_	Translit=.ul.go|LTranslit=.ul+.go
+9	있길래	있+길래	VERB	VX+EC	_	8	flat	_	Translit=.iss.gil.rae|LTranslit=.iss+.gil.rae
+10	말을	말+을	NOUN	NNG+JKO	_	12	obj	_	Translit=.mal.eul|LTranslit=.mal+.eul
+11	못	못	ADV	MAG	_	12	advmod	_	Translit=.mos|LTranslit=.mos
+12	걸었다	걸+었+다	VERB	VV+EP+EF	_	15	ccomp	_	SpaceAfter=No|Translit=.geol.eoss.da|LTranslit=.geol+.eoss+.da
+13	"	"	PUNCT	SS	_	12	punct	_	SpaceAfter=No|Translit="|LTranslit="
+14	라고	라고	ADP	JKQ	_	12	case	_	Translit=.ra.go|LTranslit=.ra.go
+15	말하며	말+하+며	VERB	NNG+XSV+EC	_	17	advcl	_	Translit=.mal.ha.myeo|LTranslit=.mal+.ha+.myeo
+16	크게	크+게	ADV	VA+EC	_	17	advmod	_	Translit=.keu.ge|LTranslit=.keu+.ge
+17	웃었다	웃+었+다	VERB	VV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.us.eoss.da|LTranslit=.us+.eoss+.da
+18	.	.	PUNCT	SF	_	17	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s4215
+# text = 후에 그는 '노래 ', '시골'등을 지었다.
+# translit = .hu.e .geu.neun '.no.rae ', '.si.gol'.deung.eul .ji.eoss.da.
+1	후에	후+에	ADV	NNG+JKB	_	4	obl	_	Translit=.hu.e|LTranslit=.hu+.e
+2	그는	그+는	PRON	NP+JX	_	4	nsubj	_	Translit=.geu.neun|LTranslit=.geu+.neun
+3	'	'	PUNCT	SS	_	4	punct	_	SpaceAfter=No|Translit='|LTranslit='
+4	노래	노래	NOUN	NNG	_	0	root	_	Translit=.no.rae|LTranslit=.no.rae
+5	'	'	PUNCT	SS	_	4	punct	_	SpaceAfter=No|Translit='|LTranslit='
+6	,	,	PUNCT	SP	_	8	punct	_	Translit=,|LTranslit=,
+7	'	'	PUNCT	SS	_	8	punct	_	SpaceAfter=No|Translit='|LTranslit='
+8	시골	시골	NOUN	NNG	_	4	appos	_	SpaceAfter=No|Translit=.si.gol|LTranslit=.si.gol
+9	'	'	PUNCT	SS	_	8	punct	_	SpaceAfter=No|Translit='|LTranslit='
+10	등을	등+을	NOUN	NNB+JKO	_	8	dep	_	Translit=.deung.eul|LTranslit=.deung+.eul
+11	지었다	짓+었+다	VERB	VV+EP+EF	_	4	appos	_	SpaceAfter=No|Translit=.ji.eoss.da|LTranslit=.jis+.eoss+.da
+12	.	.	PUNCT	SF	_	4	punct	_	Translit=.|LTranslit=.
+

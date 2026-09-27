@@ -1464,3 +1464,21 @@ survive compatible filtering. The unrelated 못한다 → 못+하다 mismatch re
 The four frozen full-corpus reports are unchanged. Sixteen optimization snapshots
 add optional spelling metadata; each retains its previous hash and independently
 verifies that removing only the new field reproduces the complete old output.
+
+`krdict-digeut-siot.json` contains 138 full primary KRDict entries with English
+translations for COV-021e. `digeut-siot-sources.json` preserves the normalized
+124-entry ㄷ/ㅅ inventory and individually reviewed written 니 dispositions:
+65 regular, 54 irregular, five unknown. Homonymous 걷다 and 묻다 entries have
+separate paradigms. Both files retain the NIKL attribution and CC BY-SA 2.0 KR
+source terms. Other-language equivalents and related entries are omitted;
+senses, notes, forms and example groups of each primary entry remain intact.
+
+The 347 `ds-compat-*` policy cases in `dictionary-attachments.json` require
+197 retained and 150 conflicting paths. All are generated raw and retained by
+headword-only filtering. These judgments test lexical spelling evidence; unknown
+entries remain unjudged linguistically. `digeut_siot.rs` separately tests every
+source entry and both paradigms, real homonyms and mixed spelling-class owners.
+`kaist-digeut-siot.conllu` and `gsd-digeut-siot.conllu` preserve eight complete
+training sentences whose target lemma groups survive compatible filtering.
+Four optimization snapshots add only ㄷ/ㅅ metadata; their previous hashes and
+pre-existing ㅎ requirements are checked separately from the full new JSON hash.

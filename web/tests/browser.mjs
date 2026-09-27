@@ -384,6 +384,11 @@ try {
   const hieutIds = new Set(hieutEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !hieutIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...hieutEntries);
+  const dsFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-digeut-siot.json"), "utf8"));
+  const dsEntries = dsFixture.LexicalResource.Lexicon.LexicalEntry;
+  const dsIds = new Set(dsEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !dsIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...dsEntries);
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -574,6 +579,38 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-hieut-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
 
+  const dsCases = connectiveLedger.cases.filter(c => c.id.startsWith("ds-compat-"));
+  assert.equal(dsCases.length, 347);
+  for (const c of dsCases) {
+    const token=(await (await post("analyze",{text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id+" raw");
+      const assessment=token.dictionary.readings[i];assert.equal(assessment.status==="incompatible",j.verdict==="forbidden",c.id);
+      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule==="lexical_spelling"))),c.id);
+    }
+  }
+  const dsText="믿으면 밀으면 들으니 듣으니 지어 짓어 걸으니 걷으니 들어놓으니";
+  const dsTokens=(await(await post("analyze",{text:dsText})).json()).records.filter(r=>r.analysis);
+  await submit(page,dsText);await waitHeading(page,"믿으면");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();
+  const dsSelect=async(i,ls,ms)=>{
+    const index=dsTokens[i].analysis.analyses.findIndex(a=>JSON.stringify(a.lemmas.map(l=>l.text))===JSON.stringify(ls)&&JSON.stringify(a.morphemes.map(m=>m.form))===JSON.stringify(ms));
+    assert.ok(index>=0);await page.locator(".breakdown-word").nth(i).locator("select").selectOption(String(index));return String(index);
+  };
+  const dsInvalid=[];
+  for(const [i,ls,ms]of [[1,["믿다"],["으면"]],[3,["듣다"],["으니"]],[5,["짓다"],["어"]]])dsInvalid.push([i,await dsSelect(i,ls,ms)]);
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const [i,v]of dsInvalid)assert.equal(await page.locator(".breakdown-word").nth(i).locator(`option[value="${v}"]`).count(),0);
+  for(const [i,ls,ms]of [[0,["믿다"],["으면"]],[2,["듣다"],["으니"]],[4,["짓다"],["어"]],[6,["걷다"],["으니"]],[7,["걷다"],["으니"]],[8,["듣다","놓다"],["어","으니"]]])await dsSelect(i,ls,ms);
+  const dsDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const dsExport=JSON.parse(await readFile(await(await dsDownload).path(),"utf8"));
+  const dsExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:dsText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(dsExport.records,dsExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-digeut-siot-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-digeut-siot-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
   const connectiveCases = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-connectives-"));
   assert.equal(connectiveCases.length, 122);
   for (const c of connectiveCases) {

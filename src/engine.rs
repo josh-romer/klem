@@ -225,17 +225,24 @@ struct Predicate {
     copula_only: bool,
     spellings: Vec<SpellingRecovery>,
 }
-// Capture the local recovery before auxiliary rules are unioned. A retained
-// ㅎ at a vowel boundary requires the regular paradigm; ㅎ deletion/contraction
-// requires the irregular paradigm. Literal consonant endings impose neither.
+// Capture the local recovery before auxiliary rules are unioned. Retaining a
+// reviewed consonant before a vowel requires its regular paradigm; an irregular
+// recovery requires that entry's irregular paradigm. Consonant endings do not.
 fn record_spelling(p: &mut Predicate, r: &Recovery, vowel_boundary: bool) {
-    if p.stem != r.stem || coda(&r.stem) != Some(27) {
+    if p.stem != r.stem {
         return;
     }
-    let class = if r.rules.iter().any(|r| r == "irregular.hieut") {
-        Some(SpellingClass::HieutIrregular)
+    use SpellingClass::*;
+    let (regular, irregular, rule) = match coda(&r.stem) {
+        Some(27) => (HieutRegular, HieutIrregular, "irregular.hieut"),
+        Some(7) => (DigeutRegular, DigeutIrregular, "irregular.digeut"),
+        Some(19) => (SiotRegular, SiotIrregular, "irregular.siot"),
+        _ => return,
+    };
+    let class = if r.rules.iter().any(|r| r == rule) {
+        Some(irregular)
     } else if vowel_boundary || r.rules.iter().any(|r| r == "contraction.noh") {
-        Some(SpellingClass::HieutRegular)
+        Some(regular)
     } else {
         None
     };

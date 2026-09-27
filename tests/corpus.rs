@@ -2223,3 +2223,63 @@ fn hieut_spelling_filter_preserves_seven_unchanged_training_gold_groups() {
     drop(db);
     std::fs::remove_file(path).unwrap();
 }
+
+#[test]
+fn digeut_siot_filter_preserves_eight_unchanged_training_gold_groups() {
+    use klem::dictionary::{DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict};
+    let path = std::env::temp_dir().join(format!("klem-ds-corpus-{}.db", std::process::id()));
+    import_krdict(
+        &[std::path::PathBuf::from(
+            "tests/fixtures/krdict-digeut-siot.json",
+        )],
+        &path,
+        "digeut-siot",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(&path).unwrap();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    for (kind, input, targets) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-digeut-siot.conllu").as_slice(),
+            vec![
+                ("id:M2TA_087-s47/7", "들었다", vec!["듣다"]),
+                ("id:MH2_0028-s17/20", "웃었다", vec!["웃다"]),
+                ("id:MH2_0037-s81/5", "묻어", vec!["묻다"]),
+                ("id:M2TA_087-s3/6", "물었다", vec!["묻다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-digeut-siot.conllu").as_slice(),
+            vec![
+                ("id:train-s1888/14", "지어", vec!["짓다"]),
+                ("id:train-s3178/33", "물었다", vec!["묻다"]),
+                ("id:train-s3463/17", "웃었다", vec!["웃다"]),
+                ("id:train-s4215/11", "지었다", vec!["짓다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "digeut-siot").unwrap();
+        for (id, surface, expected) in targets {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched);
+            let mut word = klem::Lemmatizer::new().analyze_word(surface).unwrap();
+            let mut annotation = dictionary.annotate(&word).unwrap();
+            annotation.filter(&mut word, DictionaryFilter::Compatible);
+            assert!(
+                word.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(expected.iter().copied())),
+                "{id}"
+            );
+        }
+    }
+    drop(dictionary);
+    drop(db);
+    std::fs::remove_file(path).unwrap();
+}

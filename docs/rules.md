@@ -2747,3 +2747,24 @@ Six unchanged UD training sentences recover six target misses. Development
 recall is unchanged; novel observations separately retain contextual alternatives
 and the inherited case-clause-before-copula concern in 딸이었던들. Neither a
 word-level candidate nor a source-backed test establishes contextual correctness.
+
+## Connective clauses before copulas (COV-020l)
+
+[NIKL OpenDict sense 008](https://opendict.korean.go.kr/dictionary/view?sense_no=1282606&viewType=confirm)
+licenses 이다 after -어서, including temporal 넘어서였다 and causal 나서이다.
+`copula_bases` now accepts canonical 어서 beside nominalizers 기/음, preserving
+its Ending role and adding `copula.connective_seo` rather than `nominalization`.
+Existing vowel contractions, irregulars, honorifics, auxiliary groups and 답다
+composition remain available, as do already reviewed explicit/omitted copulas.
+The outer copula may itself be nominalized; its nominalization is distinct from
+the inner connective. No new generic particle or auxiliary connector is licensed.
+
+NIKL's [2025 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=315761)
+and [2026 clarification](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=90&pageIndex=1&qna_seq=334605)
+show why a noun-only restriction would lose valid paths. They do not establish
+that every particle-marked clause accepts 이다. In particular, the inherited
+따다 + 어 + 를 + 이다 hypothesis in 딸이었던들 remains unjudged. Bare adverb
+roles and other quoted/connective clauses require further source review.
+See [the evaluation](connective-copula-evaluation.json) for corpus exposure,
+all candidate changes and individual novel contexts. No contextual precision
+claim follows from these word-level candidates.

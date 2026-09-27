@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ak/018a–k/018m–v/019a–g/019i–o/020a–k/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ak/018a–k/018m–v/019a–g/019i–o/020a–l/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -1319,7 +1319,7 @@ review remains open under the completion review below.
   COV-020e adds reviewed consonant-initial ending families; COV-020f adds
   honorific omission and short 세요; COV-020g adds modal/retrospective omission;
   COV-020h adds attached question endings; COV-020i adds nominal approximation -쯤;
-  COV-020j adds literary 니라 omission; COV-020k adds conditional/concessive 라 endings.**
+  COV-020j adds literary 니라 omission; COV-020k adds conditional/concessive 라 endings; COV-020l adds direct 어서 clauses.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -1478,6 +1478,21 @@ review remains open under the completion review below.
   [tests](../tests/ra_conditions.rs), full corpus fixtures and
   [review](ra-condition-evaluation.json). Broader particle-marked nominal/copula
   attachment and contextual interpretation remain COV-020 and completion review.
+
+- [x] **COV-020l — Connective -어서 clauses before copulas.** 넘어서였다,
+  나서이다, 생각해서다 and 추워서인지 preserve the connective before 이다,
+  with existing explicit/omitted copulas, irregular stems, auxiliaries and 답다.
+  The new provenance distinguishes this boundary from nominalization.
+  Evidence: [53 judgments and composition/filter tests](../tests/connective_copulas.rs),
+  six full annotated training sentences tested in `connective_copulas_recover_six_annotated_training_cases`,
+  browser selection/export checks and [source/candidate review](connective-copula-evaluation.json).
+  Five development misses gain exact grouped matches without lost recoveries.
+  Novel additions are individually unjudged contextual alternatives. The inherited
+  따다 + 어 + 를 + 이다 alternative in 딸이었던들 remains a source-review
+  question; this extension does not certify that path or generic clause attachment.
+  Adverbial copulas and other quoted/connective bases remain open: `제법이다`
+  has no compatible dictionary reading in the recorded probe, while `먼저다`
+  retains a nominal homonym and does not establish adverb-role coverage.
 
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation

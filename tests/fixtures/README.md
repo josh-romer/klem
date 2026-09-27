@@ -1165,3 +1165,16 @@ MH2_0092-s333. `gsd-concessive-endings.conllu` retains complete unchanged traini
 sentence train-s3829. Dataset revisions, licenses and attribution are the
 KAIST/GSD ones listed above. These are exposed regression fixtures, not unseen
 evaluation; original annotations and frozen corpus baselines remain unchanged.
+
+`krdict-connective-copulas.json` retains 51 primary lexical entries from the pinned
+September 2026 NIKL KRDict export under CC BY-SA 2.0 KR. Exact IDs are recorded in
+`docs/connective-copula-evaluation.json`. Changes: first sense, English equivalents
+and one example group retained; WordForm/RelatedForm and global metadata omitted;
+JSON reformatted. Source/license links are above. No new grammar catalog form is
+introduced: this tests composition of existing 어서 and 이다 components.
+
+`kaist-connective-copulas.conllu` preserves complete unchanged UD 2.15 training
+sentences M2TA_076-s9, M2TA_087-s148 and MH2_0024-s192; the GSD counterpart
+preserves train-s130, train-s1439 and train-s3861. Revisions, attribution and
+CC BY-SA 4.0 terms above apply. They are exposed regression evidence, not unseen
+accuracy measurements. The report separately records incidental test-row exposure.

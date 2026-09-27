@@ -2711,3 +2711,51 @@ startup, dictionary work and JSONL serialization. Separate count passes find
 tokens with a reading. The report retains every sample and documents the
 interrupted measurement harness and resumption. These local measurements do not
 establish performance on other machines or architectures.
+
+## Connective clauses before copulas (COV-020l)
+
+The [source and candidate report](connective-copula-evaluation.json) adds direct
+-아/어/여서 + 이다 composition, following NIKL OpenDict's temporal and causal
+examples. The connective retains its Ending role and a distinct
+`copula.connective_seo` explanation. Existing nominalization, auxiliary,
+derivational and explicit/omitted-copula paths remain available.
+
+The 53 judgments (46 required / 7 forbidden) bring the main ledger to **2,624
+required / 1,595 forbidden**. Both dictionary filters, CLI parity, NFD, identity,
+ordered nested components and provenance are tested. Six full unchanged training
+sentences recover all six target misses: both KAIST and GSD fixture grouped
+matches rise **30/33 → 33/33**. Full KAIST development recovery rises
+**22,127/22,220 → 22,132/22,220**, while GSD remains **9,847/9,989**, without
+lost recoveries. Mean candidates rise **6.0703420342 → 6.0716471647** and
+**5.5443988387 → 5.5444989488**, respectively. These are exposed regression
+results. The report also records incidental exposure to five test-partition rows;
+those rows must not later be described as unseen.
+
+Across 4,008 probe surfaces, 62 change, adding 175 candidates with no removals or
+provenance changes. All 30 stress snapshots remain unchanged. On the pinned novel,
+compatible filtering adds 53 candidates at 23 tokens (17 types). Every changed
+token has a verified byte span and stable observation ID. The additions include
+contextually unintended alternatives for lexical 나서다/들어서다/돌아서다
+and connective-plus-particle constructions; they remain unjudged. No novel
+precision gain is claimed. The original 딸이었던들 case-clause alternative
+remains unresolved: the sources do not justify a blanket ban on non-noun copula
+bases. Other connective, quoted and adverbial bases still require review.
+
+Rust/web-feature tests, the full pinned corpus gate, Clippy and formatting pass.
+Inventory dispositions and the grammar catalog are unchanged: this extends
+composition of existing components, not a new grammar form.
+
+The full browser/HTTP suite and packaged full-dictionary preview passed all 53
+judgments, both filters, six selected breakdowns and CLI/API/export parity, with
+desktop/mobile screenshots inspected. Nix flake checks and the web package build
+passed on x86_64-linux. Frontend assets were unchanged; the cached asset check
+passed. Other architectures were not exercised. The report records `제법이다`
+as a remaining adverbial-base miss for the next copula audit.
+
+Three sequential release runs on 81,758 word tokens gave median compatible-filter
+times **1.334 seconds before / 1.326 after**; headword-only medians were
+**1.355 / 1.351 seconds**. Peak RSS across these runs was **27.94 MiB**.
+Separate count passes find **120,834 → 120,887** compatible-filter analyses and
+**73,372 → 73,377** words with readings. Timings include startup, dictionary work
+and JSONL serialization; every sample and count is retained in the report. These
+local observations are not guarantees for other workloads or machines.

@@ -1705,3 +1705,35 @@ fn short_clauses_recover_annotated_quoted_adnominals() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn connective_copulas_recover_six_annotated_training_cases() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-connective-copulas.conllu").as_slice(),
+            vec![
+                ("id:M2TA_076-s9/15", "위해서이다", vec!["위하다", "이다"]),
+                ("id:M2TA_087-s148/9", "다녀서였다", vec!["다니다", "이다"]),
+                ("id:MH2_0024-s192/9", "이르러서이다", vec!["이르다", "이다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-connective-copulas.conllu").as_slice(),
+            vec![
+                ("id:train-s130/4", "없어서인지", vec!["없다", "이다"]),
+                ("id:train-s1439/13", "위해서였다", vec!["위하다", "이다"]),
+                ("id:train-s3861/19", "위해서다", vec!["위하다", "이다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "connective-copulas").unwrap();
+        for (id, surface, expected) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched, "{id}");
+        }
+    }
+}

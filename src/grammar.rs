@@ -1331,6 +1331,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "ending.literary_assertion" => {
             "Recognize literary -(으)니라/-느니라 assertions with their distinct boundary and prefinal licenses; lexical class and contextual suitability remain separate evidence."
         }
+        "copula.connective_seo" => {
+            "Attach a copula to a clause ending in -아/어/여서; preserve the connective rather than treating it as a nominalizer. The clause's contextual meaning remains unresolved."
+        }
         "ending.concessive" => {
             "Recover concessive -(으)ㄴ들/-(으)ㄹ망정/지언정 or counterfactual -던들 with its reviewed stem and prefinal boundary; retain separate particle readings."
         }

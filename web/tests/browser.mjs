@@ -265,6 +265,7 @@ try {
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
+  const connectiveCopulas = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-connective-copulas.json"), "utf8"));
   const concessiveEndings = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-concessive-endings.json"), "utf8"));
   const concessiveDesignation = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-concessive-designation.json"), "utf8"));
   const sourceParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-source-particles.json"), "utf8"));
@@ -279,6 +280,7 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
+      ...connectiveCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...concessiveEndings.LexicalResource.Lexicon.LexicalEntry,
       ...concessiveDesignation.LexicalResource.Lexicon.LexicalEntry,
       ...sourceParticles.LexicalResource.Lexicon.LexicalEntry,
@@ -617,6 +619,41 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const connectiveCopulaCases = recipientLedger.cases.filter(c => c.id.startsWith("connective-copula-"));
+  assert.equal(connectiveCopulaCases.length, 53);
+  for (const c of connectiveCopulaCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const connectiveCopulaText = "넘어서였다 나서이다 추워서인지 먹어봐서다 학생다워서다 딸이었던들";
+  await submit(page, connectiveCopulaText); await waitHeading(page, "넘어서였다");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["넘","어서","이","었","다"]],[1,["나","어서","이","다"]],[2,["춥","어서","이","은지"]],[3,["먹","어","보","어서","이","다"]],[4,["학생","답","어서","이","다"]],[5,["딸","이","었","던들"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+  }
+  const connectiveCopulaDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const connectiveCopulaExport = JSON.parse(await readFile(await (await connectiveCopulaDownload).path(), "utf8"));
+  const connectiveCopulaExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:connectiveCopulaText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(connectiveCopulaExport.records, connectiveCopulaExpected);
+  assert.ok(connectiveCopulaExport.records[0].analysis.analyses.some(a => a.rules.includes("copula.connective_seo")));
+  await page.screenshot({path:resolve(tmpdir(),"klem-connective-copulas-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-connective-copulas-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const concessiveEndingCases = recipientLedger.cases.filter(c => c.id.startsWith("concessive-endings-"));
   assert.equal(concessiveEndingCases.length, 130);

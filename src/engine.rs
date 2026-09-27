@@ -1392,11 +1392,18 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
         a.rules.push("nominal.colloquial_geot".into());
         out.push(a);
     }
-    // Direct nominalizations need no intervening particle. Quoted questions
-    // and connective clauses have separate attachment licenses.
+    // Direct nominalizations and the reviewed -어서 clause need no particle.
+    // Keep the connective's role and provenance distinct from nominalization.
     with_auxiliaries(word, PredicateEnd::CopulaBase, |p| {
         for mut a in expand_predicate(&p) {
-            a.rules.push("nominalization".into());
+            a.rules.push(
+                if p.morphs.last().is_some_and(|m| m.form == "어서") {
+                    "copula.connective_seo"
+                } else {
+                    "nominalization"
+                }
+                .into(),
+            );
             out.push(a);
         }
     });
@@ -2244,7 +2251,7 @@ impl PredicateEnd {
         matches!(self, Self::Any)
             || p.morphs.last().is_some_and(|m| {
                 if matches!(self, Self::CopulaBase) {
-                    return matches!(m.form.as_str(), "기" | "음");
+                    return matches!(m.form.as_str(), "기" | "음" | "어서");
                 }
                 if matches!(self, Self::BeforeParticle("마는")) {
                     return concessive_ending(&m.form);

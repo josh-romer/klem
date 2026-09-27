@@ -1,0 +1,56 @@
+# sent_id = train-s130
+# text = 주변에 고층 건물이 없어서인지 햇볕이 더욱 잘 드는 것 같다
+# translit = .ju.byeon.e .go.cheung .geon.mul.i .eobs.eo.seo.in.ji .haes.byeot.i .deo.ug .jal .deu.neun .geos .gat.da
+1	주변에	주변+에	ADV	NNG+JKB	_	4	obl	_	Translit=.ju.byeon.e|LTranslit=.ju.byeon+.e
+2	고층	고층	NOUN	NNG	_	4	nsubj	_	Translit=.go.cheung|LTranslit=.go.cheung
+3	건물이	건물+이	NOUN	NNG+JKS	_	2	flat	_	Translit=.geon.mul.i|LTranslit=.geon.mul+.i
+4	없어서인지	없+어서+이+ㄴ지	VERB	VA+EC+VCP+EC	_	10	advcl	_	Translit=.eobs.eo.seo.in.ji|LTranslit=.eobs+.eo.seo+.i+ㄴ.ji
+5	햇볕이	햇볕+이	NOUN	NNG+JKS	_	8	nsubj	_	Translit=.haes.byeot.i|LTranslit=.haes.byeot+.i
+6	더욱	더욱	ADV	MAG	_	7	advmod	_	Translit=.deo.ug|LTranslit=.deo.ug
+7	잘	잘	ADV	MAG	_	8	advmod	_	Translit=.jal|LTranslit=.jal
+8	드는	들+는	VERB	VV+ETM	_	9	dep	_	Translit=.deu.neun|LTranslit=.deul+.neun
+9	것	것	NOUN	NNB	_	10	nsubj	_	Translit=.geos|LTranslit=.geos
+10	같다	같+다	ADJ	VA+EC	_	0	root	_	Translit=.gat.da|LTranslit=.gat+.da
+
+# sent_id = train-s1439
+# text = 당초 궁예가 현재의 구철원에서 송악으로 도읍을 옮긴 이유는 왕건 세력의 도움을 받기 위해서였다.
+# translit = .dang.cho .gung.ye.ga .hyeon.jae.yi .gu.cheol.weon.e.seo .song.ag.eu.ro .do.eub.eul .orm.gin .i.yu.neun .wang.geon .se.ryeog.yi .do.um.eul .bad.gi .wi.hae.seo.yeoss.da.
+1	당초	당초	ADV	NNG	_	7	advmod	_	Translit=.dang.cho|LTranslit=.dang.cho
+2	궁예가	궁예+가	NOUN	NNP+JKS	_	7	nsubj	_	Translit=.gung.ye.ga|LTranslit=.gung.ye+.ga
+3	현재의	현재+의	NOUN	NNG+JKG	_	4	nmod:poss	_	Translit=.hyeon.jae.yi|LTranslit=.hyeon.jae+.yi
+4	구철원에서	구철원+에서	ADV	NNP+JKB	_	7	advmod	_	Translit=.gu.cheol.weon.e.seo|LTranslit=.gu.cheol.weon+.e.seo
+5	송악으로	송악+으로	ADV	NNP+JKB	_	7	obl	_	Translit=.song.ag.eu.ro|LTranslit=.song.ag+.eu.ro
+6	도읍을	도읍+을	NOUN	NNG+JKO	_	7	obj	_	Translit=.do.eub.eul|LTranslit=.do.eub+.eul
+7	옮긴	옮기+ㄴ	VERB	VV+ETM	_	8	acl:relcl	_	Translit=.orm.gin|LTranslit=.orm.gi+ㄴ
+8	이유는	이유+는	NOUN	NNG+JX	_	13	nsubj	_	Translit=.i.yu.neun|LTranslit=.i.yu+.neun
+9	왕건	왕건	NOUN	NNP	_	11	nmod:poss	_	Translit=.wang.geon|LTranslit=.wang.geon
+10	세력의	세력+의	NOUN	NNG+JKG	_	9	flat	_	Translit=.se.ryeog.yi|LTranslit=.se.ryeog+.yi
+11	도움을	도움+을	NOUN	NNG+JKO	_	12	obj	_	Translit=.do.um.eul|LTranslit=.do.um+.eul
+12	받기	받+기	NOUN	VV+ETN	_	13	obj	_	Translit=.bad.gi|LTranslit=.bad+.gi
+13	위해서였다	위하+아서+이+었+다	ADJ	VV+EC+VCP+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.wi.hae.seo.yeoss.da|LTranslit=.wi.ha+.a.seo+.i+.eoss+.da
+14	.	.	PUNCT	SF	_	13	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s3861
+# text = 2일 발매된 앨범 '슈퍼 굿 슈퍼 배드'(Super good Super bad)를 국내에 알리기 위해서다.
+# translit = 2.il .bal.mae.doen .ael.beom '.syu.peo .gus .syu.peo .bae.deu'(Super good Super bad).reul .gug.nae.e .al.ri.gi .wi.hae.seo.da.
+1	2일	2+일	NOUN	SN+NNB	_	2	nmod	_	Translit=2.il|LTranslit=2+.il
+2	발매된	발매+되+ㄴ	VERB	NNG+XSV+ETM	_	3	acl:relcl	_	Translit=.bal.mae.doen|LTranslit=.bal.mae+.doe+ㄴ
+3	앨범	앨범	NOUN	NNG	_	18	obj	_	Translit=.ael.beom|LTranslit=.ael.beom
+4	'	'	PUNCT	SS	_	5	punct	_	SpaceAfter=No|Translit='|LTranslit='
+5	슈퍼	슈퍼	NOUN	NNG	_	3	flat	_	Translit=.syu.peo|LTranslit=.syu.peo
+6	굿	굿	NOUN	NNG	_	3	flat	_	Translit=.gus|LTranslit=.gus
+7	슈퍼	슈퍼	NOUN	NNG	_	3	flat	_	Translit=.syu.peo|LTranslit=.syu.peo
+8	배드	배드	NOUN	NNG	_	3	appos	_	SpaceAfter=No|Translit=.bae.deu|LTranslit=.bae.deu
+9	'	'	PUNCT	SS	_	8	punct	_	SpaceAfter=No|Translit='|LTranslit='
+10	(	(	PUNCT	SS	_	11	punct	_	SpaceAfter=No|Translit=(|LTranslit=(
+11	Super	Super	NOUN	SL	_	8	flat	_	Translit=Super|LTranslit=Super
+12	good	good	NOUN	SL	_	3	flat	_	Translit=good|LTranslit=good
+13	Super	Super	NOUN	SL	_	3	flat	_	Translit=Super|LTranslit=Super
+14	bad	bad	NOUN	SL	_	8	appos	_	SpaceAfter=No|Translit=bad|LTranslit=bad
+15	)	)	PUNCT	SS	_	14	punct	_	SpaceAfter=No|Translit=)|LTranslit=)
+16	를	를	ADP	JKO	_	8	obj	_	Translit=.reul|LTranslit=.reul
+17	국내에	국내+에	ADV	NNG+JKB	_	18	obl	_	Translit=.gug.nae.e|LTranslit=.gug.nae+.e
+18	알리기	알리+기	NOUN	VV+ETN	_	19	obj	_	Translit=.al.ri.gi|LTranslit=.al.ri+.gi
+19	위해서다	위하+아서+이+다	VERB	VV+EC+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.wi.hae.seo.da|LTranslit=.wi.ha+.a.seo+.i+.da
+20	.	.	PUNCT	SF	_	19	punct	_	Translit=.|LTranslit=.
+

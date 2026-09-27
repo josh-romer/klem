@@ -1896,3 +1896,25 @@ fn confirming_polite_source_annotation_remains_visible_without_gold_repair() {
     // The source tags 지 as VX. The confirmed ending is represented as
     // 다지 + 요, so this annotation is not counted as a newly recovered gold row.
 }
+
+#[test]
+fn contrasting_reports_recover_annotated_targets_and_keep_the_neighboring_copula() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-dajiman.conllu").as_slice(),
+        Corpus::Kaist,
+        "dajiman",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:MH2_0017-s299/2", "없다지만", &["없다"][..]),
+        ("id:MH2_0083-s51/9", "나라지만", &["나라", "이다"][..]),
+        ("id:MH2_0094-s1419/2", "분담한다지만", &["분담하다"][..]),
+        ("id:MH2_0176-s33/3", "여왕이라지만", &["여왕", "이다"][..]),
+        ("id:MH2_0193-s63/8", "있다지만", &["있다"][..]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, expected);
+        assert!(case.matched, "{id}");
+    }
+}

@@ -29,6 +29,7 @@ pub enum AttachmentRule {
     HabitualConditionVerb,
     BareCopularEnding,
     BareAdjectivalReport,
+    BareVerbalQuestion,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -99,6 +100,7 @@ fn bare_copular_ending(form: &str) -> bool {
             | "란다"
             | "라지"
             | "라죠"
+            | "라지만"
             | "라든가"
             | "라네"
             | "라는데"
@@ -312,7 +314,10 @@ impl Annotation {
                             // source-listed adjective exception. Unknown POS
                             // and standalone auxiliaries are not rejected.
                             Some(AttachmentRule::BareCopularEnding)
-                        } else if bare && matches!(form, "단다" | "다지" | "다죠") && verb {
+                        } else if bare
+                            && matches!(form, "단다" | "다지" | "다죠" | "다지만")
+                            && verb
+                        {
                             // Lexical existential/honorific senses cannot be
                             // decided from the broad verbal POS alone.
                             if matches!(lemma.text.as_str(), "있다" | "없다" | "계시다") {
@@ -334,6 +339,16 @@ impl Annotation {
                             } else {
                                 Some(AttachmentRule::LiteraryAssertionClass)
                             }
+                        } else if bare
+                            && form == "느냐지만"
+                            && adjective
+                            && !lemma.text.ends_with("있다")
+                            && !lemma.text.ends_with("없다")
+                        {
+                            // KRDict 85642 explicitly includes existential
+                            // adjectives. This finite policy does not infer
+                            // restrictions for other question families.
+                            Some(AttachmentRule::BareVerbalQuestion)
                         } else if crate::engine::present_declarative(form) && adjective {
                             Some(AttachmentRule::PresentDeclarativeVerb)
                         } else if adjective && crate::engine::verbal_intention(form) {

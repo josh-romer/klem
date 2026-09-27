@@ -8,6 +8,11 @@ initial inventory pass, not completion of the linguistic audit.
 
 ## Persistent entry review queue
 
+This queue covers entries tagged 어미, 조사, 보조 동사 or 보조 형용사.
+Grammar expressions tagged 품사 없음 are reviewed in the ending-family
+checklist and their source reports, without inflating these 715-entry counts.
+For example, [COV-017aq](dajiman-evaluation.json) covers ten such entries.
+
 The [current queue](inventory-review-queue.json) contains all 715 source entries,
 with separate IDs/POS for homonyms, every sense's definition and attachment
 notes, patterns, and up to two source example groups per sense. The full source

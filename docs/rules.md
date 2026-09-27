@@ -2986,3 +2986,33 @@ recovery borrowed from 으 allomorphs. This also corrects the older 는단다
 family; every observed removed candidate is recorded separately. The
 [source/candidate report](daji-evaluation.json) preserves the unchanged corpus
 annotation mismatch, novel alternatives and unresolved candidate queue.
+
+
+## Contrasting reported clauses (COV-017aq)
+
+다지만/는다지만, factual 라지만 and command 으라지만 represent an
+acknowledged or reported statement/command followed by a contrasting situation.
+냐지만/느냐지만/으냐지만 cover questions or objections; 자지만 covers
+proposals and 더라지만 recalled reports. Each remains a grammatical component
+without an inferred reporting 하다 or speaker. One polite 요 is supported as an
+explicitly inferred connective extension; broader particle chains are not added.
+
+The longer 더라지만 entry explicitly supports retrospective reports, including
+omitted vowel-final copulas. Both the bundled ending and 더 + 라지만 remain.
+This split reading uses the longer entry as evidence; the shorter 라지만 note
+alone lists 시/으리, so its note must not be presented as attesting 더.
+
+KRDict 85642 explicitly includes 있다/없다/계시다 and adjectives ending in
+있다/없다 before 느냐지만. The dictionary filter retains those entries while
+rejecting a known non-existential adjective directly before that exact ending.
+Verb/adjective homonyms are assessed individually. This finite check is not
+extended to other question families. Prefinals and later auxiliary, derived or
+copular components keep their own attachment conditions. Inherited adjective
+class alone does not adjudicate negative auxiliaries; COV-019h remains open.
+The generic 냐지만 entry's 먹냐지만 example is preserved despite its narrower
+attachment note. No blanket consonant restriction is inferred from that note.
+
+The [evaluation](dajiman-evaluation.json) preserves complete source entries,
+individual candidate judgments, corpus gains, novel equality and the unjudged
+queue. These checks do not measure linguistic precision or select a contextual
+reading.

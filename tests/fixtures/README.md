@@ -1313,3 +1313,17 @@ the GSD attribution/license above. Its 좋+다+지+요 / VA+EC+VX+EC annotation
 is unchanged and converts to 좋다 + 지다; this is an explicit annotation/model
 mismatch, not a newly recovered gold target. See the
 [evaluation report](../../docs/daji-evaluation.json) for frozen corpus results.
+
+`krdict-dajiman.json` contains 99 primary word/selected grammar-expression
+entries from the pinned September 2026 NIKL Korean Basic Dictionary export,
+under **CC BY-SA 2.0 KR** and the attribution/reuse links above. Full senses,
+attachment notes, examples and forms remain; equivalents are English only,
+RelatedForm and same-number idioms are omitted. Ten contrasting-report sources
+also appear in `krdict-grammar-labels.json`. No required headword is missing.
+
+`kaist-dajiman.conllu` preserves five complete training sentences from the
+pinned KAIST corpus, under its attribution/license above. Four targets use
+contrasting reported endings; 나라지만 retains the neighboring 나라 + 이다 + 지만
+annotation. OrigLemma on 있다지만, spelling and all gold tags remain unchanged.
+The [evaluation](../../docs/dajiman-evaluation.json) records two frozen test gains
+separately; no baseline or held-out source row was moved into training fixtures.

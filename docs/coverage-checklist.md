@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ap/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–aq/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -220,7 +220,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–an implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–aq implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -868,6 +868,26 @@ review remains open under the completion review below.
   conversion), with its mismatch reported rather than rewriting gold.
   Independent Korean review, contextual interpretation and the unjudged queue
   remain open. See the [source and candidate evaluation](daji-evaluation.json).
+
+- [x] **COV-017aq — Contrasting reported clauses (-다지만 family).**
+  Rust/corpus, browser, full-dictionary packaged runtime and Nix checks pass.
+  Ten full KRDict grammar-expression entries
+  cover 다지만/는다지만, factual 라지만 versus command 으라지만,
+  냐지만/느냐지만/으냐지만, 자지만 and 더라지만, with one inferred polite 요.
+  Both bundled 더라지만 and its split retrospective alternative remain;
+  the latter uses the explicit longer entry, not just the shorter 라지만 note.
+  [160 raw judgments](../tests/dajiman.rs) and 45 dictionary-policy judgments
+  cover prefinal/irregular boundaries and lexical/auxiliary/derived/copular
+  ownership. Per-entry question checks retain explicit existential adjectives
+  and compatible verb homonyms; negative auxiliaries are not rejected solely
+  from an inherited adjective class. Wider negative paradigms remain COV-019h.
+  Four newly recovered KAIST training targets and two frozen test gains are
+  recorded without changing gold or baselines; the neighboring 나라 + 이다 + 지만
+  parse remains. The full dictionary-compatible novel output is byte-identical.
+  These ten expressions have POS 품사 없음 and are outside the 715-entry queue;
+  its 295 scoped/419 unreviewed counts are unchanged. Broader outer particles,
+  contextual interpretation and independent Korean review remain open.
+  See the [source and candidate evaluation](dajiman-evaluation.json).
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

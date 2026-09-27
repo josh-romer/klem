@@ -1960,3 +1960,27 @@ fn reporting_reason_recovers_two_unchanged_training_targets() {
         assert!(case.matched, "{id}");
     }
 }
+
+#[test]
+fn continuation_auxiliaries_preserve_twelve_unchanged_training_targets() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-continuation-aux.conllu").as_slice(),
+        Corpus::Kaist,
+        "continuation-aux",
+    )
+    .unwrap();
+    let sources: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/continuation-aux-sources.json")).unwrap();
+    let targets = sources["corpus_targets"].as_array().unwrap();
+    assert_eq!(targets.len(), 12);
+    for target in targets {
+        let id = target["id"].as_str().unwrap();
+        let case = &report.cases[id];
+        assert_eq!(case.surface, target["surface"].as_str().unwrap());
+        assert_eq!(
+            serde_json::to_value(&case.expected).unwrap(),
+            target["expected"]
+        );
+        assert!(case.matched, "{id}");
+    }
+}

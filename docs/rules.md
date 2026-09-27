@@ -3073,3 +3073,22 @@ source-note conflicts, every raw output addition, dictionary judgments and
 unjudged candidates. Complete training sentences support 말하자니까 and
 미워하자니까; frozen corpus gold and baselines are unchanged. Tests verify
 morphological alternatives, not their intended sentence meaning.
+
+## Continuation and completion auxiliary audit (COV-019p)
+
+The existing 어 connector supports 가다, 오다, 나가다, 나다, 내다,
+버리다 and 치우다; 나다 also accepts 고. The [source review](continuation-aux-evaluation.json)
+covers every sense and example group of those seven KRDict entries, including
+adjective 어두워 가서, chained 깊어 가고 있다, repeated-action 쉬어 가면서,
+honorific 살아 오셨다, completed-action 듣고 난, nominalized 읽어 내기가,
+and contracted 갈아 치운. Exact spaced source excerpts are retained; joined
+regressions exercise tolerant token input and do not certify standard spacing.
+
+가다's explicit adjective examples prevent a blanket verb-only left-class rule.
+Other lexical/semantic subsets remain unreviewed; dictionary presence and POS
+compatibility do not choose a sense. Whole-word 늘어나다/살아오다/살아가다
+hypotheses coexist with decompositions. 번져나가다 is absent from this dictionary
+snapshot, so dictionary filters retain 번지다 + 나가다 while removing that
+unknown whole-word hypothesis. The raw API preserves it. Connector boundaries
+in this audit constrain the auxiliary-role path, not independent sequential
+verbs or cross-token sentence readings. Further internal particles remain open.

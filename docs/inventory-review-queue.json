@@ -22,11 +22,12 @@
     "docs/comparison-particle-audit.json": "8c0df1d3bfcd0131180f20298850f260267c25016ff022d09e984d0eb4064c83",
     "docs/concessive-designation-evaluation.json": "c2a562fff045d8b3aa45b6366e5e1ca6697cddc1948899ef9905c84ed0a65ab4",
     "docs/concessive-ending-evaluation.json": "d710e7c326c43a7ae472a5ec35b43f936c179c2afc26b608b149cb0a3caeedca",
+    "docs/continuation-aux-evaluation.json": "ae3a45875f7f60a14b1ac59e046cf49ee6f67f12583828352dafc6209a0e11bc",
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "6677b60f5f87ba10588f4c9aea3325bca765cdae89c2d39cd4fb44373ea9bdbd",
+    "docs/coverage-checklist.md": "5a91ce6e022a52ac653e72afaff6d60e941bf3241c2daacf050be0aefbecfc69",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
     "docs/danikka-evaluation.json": "a96097a93cd994b8f1b4dde8a91803e08f1a93300956547f2283e60ccf9999e4",
@@ -42,8 +43,8 @@
     "docs/factual-prefinal-evaluation.json": "460e7619e554153cf572e6db83d0786906cfeb1744aa11ab59506657da85f227",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "e24273bc7776cddfc69e5b46bef490cc5911318d739b68e84aed644f72e79181",
-    "docs/inventory-reviews.json": "b1f286c6f2dc9fe94f40823ea7a9959c082dfb7e6064d544dafeace5c2fedfff",
+    "docs/inventory-audit.md": "0badee64785783dd344ff3b7b802eb05b9fc36da4e98fc792296af5573b2146a",
+    "docs/inventory-reviews.json": "777821407d36d240c3914ee96e20dd70c9175c18dc6dc7efa2241293be83be02",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/llachimyeon-evaluation.json": "086132bdac962ca93a716841860e9b80695d9dfde5874675c9661f944211abba",
@@ -86,11 +87,12 @@
     "tests/comparison_particles.rs": "b952185fb9649dfea149abb33f8c37ba4452c926d2ab8ada39ac6d62e5059920",
     "tests/concessive_designation.rs": "228dee6cff8706d9c512ed422e074f04a2bbe81fb4fc06885cc274ae2002301a",
     "tests/concessive_endings.rs": "1dfde65ac303643dfe2bc0009924dcfd64ef214a6c9e1d3089179edff79e8551",
+    "tests/continuation_aux.rs": "42cfb0c08c87397255092d7aa4032d46407397ab7ba95381f480eb8df5ddd92a",
     "tests/continuative_class.rs": "912445000e4d392b8b8992ba46bdc83bc9be2042a5657ad9eb03bd65b49d70dd",
     "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/core_case.rs": "556f5fa2df29d0285552bf3e83a5cfbc9610c84c33fb1ac6e1bc02d7c2e5fbcb",
-    "tests/corpus.rs": "edf8bf197a498f711045b6554b7e59f838ce56d875ae2ef324b220d0c2f04490",
+    "tests/corpus.rs": "3cdbe3790c43f843351c5bd03727e8e176b6c86d125c0ab3d7b64260a6f6ca1d",
     "tests/daji.rs": "172b18762b2adaa5e59a0e0f592d7f1fad4ef48515a175d3f420e2bd391f658d",
     "tests/danda.rs": "7ac20e77584b520909734f32132a24af40c5cd626db0ad0f73f866149f31943a",
     "tests/danikka.rs": "83c656930be046c9933bf273098c3155a4b333338376e7d75c8cc1ec20e7043b",
@@ -114,7 +116,7 @@
     "tests/fixtures/krdict-llachimyeon.json": "e52bab62a2b6ed1ad409736dfbaecb3a35944f61d42e9bab3b4555cf4fa0a279",
     "tests/fixtures/krdict-necessity.json": "5f37d701bb0de166de41e30da7ee763f852a18fd21caa4fbec0e3e91eec30041",
     "tests/fixtures/krdict-quoted-bakke.json": "e6e164a1bfeabeb9b70724a9ab78e86f0f4bd76e6bdca414fa9c7bb7c4dddd85",
-    "tests/fixtures/validity.json": "c04e066e0b17a2da8ebbd5a6ab7eb8d1bafac06b5e4afb9d5e90d54d13f1f0e2",
+    "tests/fixtures/validity.json": "cdc1d49daab642d92a58d16ff81e06b75db25fef32f6e682545cfd94a07bafa9",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
     "tests/jimaneun.rs": "f49f4ed45712b4365d0bd16f8e37fc882bc9079a2c711d0d806542a7e300d217",
@@ -159,12 +161,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 411,
-      "scoped": 303,
+      "scoped": 310,
+      "unreviewed": 404,
       "gap": 1
     },
     "with_catalog_links": 368,
-    "with_judgment_citations": 342
+    "with_judgment_citations": 347
   },
   "entries": [
     {
@@ -252,12 +254,209 @@
       },
       "source_sha256": "178c758b7288c056ae8de1b5ea35605b09790ce1c0671beabbe0865cbd04c853",
       "catalog": [],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "continuation-aux-compound-split-살아갔다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-compound-whole-살아갔다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-connector-28764-게",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-28764-고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-28764-지",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_064-s22-12",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_065-s5-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-present-28764",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-5",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-6",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-7",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-2-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-2-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-28764-2-3",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:28764",
+        "source_sha256": "178c758b7288c056ae8de1b5ea35605b09790ce1c0671beabbe0865cbd04c853",
+        "status": "scoped",
+        "checklist": [
+          "COV-019p"
+        ],
+        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+        "evidence": [
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_sources_cover_every_sense_and_example_group"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+          },
+          {
+            "path": "docs/continuation-aux-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuation-aux-source-28764-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-1-5",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-1-6",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-1-7",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-2-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-2-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-28764-2-3",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-compound-split-살아갔다",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-compound-whole-살아갔다",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-28764-지",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-28764-게",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-28764-고",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-present-28764",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_064-s22-12",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_065-s5-4",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -977,13 +1176,146 @@
           "case": "aux-inventory-naga-wrong",
           "judgment": "group",
           "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-compound-split-번져나갔다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-connector-26813-게",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-26813-고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-26813-지",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-corpus-MH2_0014-s421-11",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-corpus-MH2_0046-s414-24",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-present-26813",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-26813-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-26813-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-26813-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-26813-1-4",
+          "judgment": "path",
+          "verdict": "required"
         }
       ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:26813",
+        "source_sha256": "51a909b23c1aa628e744a05d50388f7939b00d4b813dc839da5f08c6168b65e8",
+        "status": "scoped",
+        "checklist": [
+          "COV-019p"
+        ],
+        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+        "evidence": [
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_sources_cover_every_sense_and_example_group"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+          },
+          {
+            "path": "docs/continuation-aux-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuation-aux-source-26813-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-26813-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-26813-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-26813-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-compound-split-번져나갔다",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-26813-지",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-26813-게",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-26813-고",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-present-26813",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-MH2_0014-s421-11",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-MH2_0046-s414-24",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -1076,13 +1408,182 @@
           "case": "aux-inventory-nada",
           "judgment": "group",
           "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-compound-split-늘어났다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-compound-whole-늘어났다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-connector-62134-게",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-62134-지",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_065-s109-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_066-s53-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-present-62134",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62134-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62134-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-5",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-6",
+          "judgment": "path",
+          "verdict": "required"
         }
       ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:62134",
+        "source_sha256": "63cc1a3e3af226bf8742e2be893eec00c88fb270bb6e9a9e264a9015dbf15187",
+        "status": "scoped",
+        "checklist": [
+          "COV-019p"
+        ],
+        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+        "evidence": [
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_sources_cover_every_sense_and_example_group"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+          },
+          {
+            "path": "docs/continuation-aux-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuation-aux-source-62134-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62134-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62134-2-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62134-2-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62134-2-3",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62134-2-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62134-2-5",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62134-2-6",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-compound-split-늘어났다",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-compound-whole-늘어났다",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-62134-지",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-62134-게",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-present-62134",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_065-s109-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_066-s53-2",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -1153,12 +1654,155 @@
       },
       "source_sha256": "ba511369dd7db0ead64a89d52043c8abba64c371204409f7791ef1101d8467a5",
       "catalog": [],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "continuation-aux-connector-60625-게",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-60625-고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-60625-지",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_064-s4-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_065-s24-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-present-60625",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-5",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-6",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:60625",
+        "source_sha256": "ba511369dd7db0ead64a89d52043c8abba64c371204409f7791ef1101d8467a5",
+        "status": "scoped",
+        "checklist": [
+          "COV-019p"
+        ],
+        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+        "evidence": [
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_sources_cover_every_sense_and_example_group"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+          },
+          {
+            "path": "docs/continuation-aux-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuation-aux-source-60625-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-60625-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-60625-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-60625-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-60625-1-5",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-60625-1-6",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-60625-지",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-60625-게",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-60625-고",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-present-60625",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_064-s4-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_065-s24-2",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -2420,12 +3064,137 @@
       },
       "source_sha256": "6869a0725b35d5afe81416c926c7c69f221caa444434f8249b351286aed7ee24",
       "catalog": [],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "continuation-aux-connector-62601-게",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-62601-고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-62601-지",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_073-s36-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_082-s34-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-present-62601",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62601-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62601-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62601-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-62601-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:62601",
+        "source_sha256": "6869a0725b35d5afe81416c926c7c69f221caa444434f8249b351286aed7ee24",
+        "status": "scoped",
+        "checklist": [
+          "COV-019p"
+        ],
+        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+        "evidence": [
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_sources_cover_every_sense_and_example_group"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+          },
+          {
+            "path": "docs/continuation-aux-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuation-aux-source-62601-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62601-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62601-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-62601-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-62601-지",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-62601-게",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-62601-고",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-present-62601",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_073-s36-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_082-s34-4",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -3243,12 +4012,155 @@
       },
       "source_sha256": "bb251e27f92a506bd5b29981e72bc8351f594c3d771d0abe59f1002f2d25e876",
       "catalog": [],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "continuation-aux-compound-split-살아왔다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-compound-whole-살아왔다",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-connector-69517-게",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-69517-고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-69517-지",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_064-s44-6",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_065-s31-8",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-present-69517",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-69517-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-69517-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-69517-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-69517-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:69517",
+        "source_sha256": "bb251e27f92a506bd5b29981e72bc8351f594c3d771d0abe59f1002f2d25e876",
+        "status": "scoped",
+        "checklist": [
+          "COV-019p"
+        ],
+        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+        "evidence": [
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_sources_cover_every_sense_and_example_group"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+          },
+          {
+            "path": "docs/continuation-aux-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuation-aux-source-69517-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-69517-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-69517-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-69517-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-compound-split-살아왔다",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-compound-whole-살아왔다",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-69517-지",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-69517-게",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-69517-고",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-present-69517",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_064-s44-6",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-corpus-M2TA_065-s31-8",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -5490,12 +6402,155 @@
       },
       "source_sha256": "88a3a620a404a85e382c9d1154e4f141e0c4898b5d695158646425e4ba7140a6",
       "catalog": [],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "continuation-aux-connector-74290-게",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-74290-고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-connector-74290-지",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "continuation-aux-present-74290",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-5",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-6",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-7",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-8",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:74290",
+        "source_sha256": "88a3a620a404a85e382c9d1154e4f141e0c4898b5d695158646425e4ba7140a6",
+        "status": "scoped",
+        "checklist": [
+          "COV-019p"
+        ],
+        "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+        "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+        "evidence": [
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_sources_cover_every_sense_and_example_group"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+          },
+          {
+            "path": "tests/continuation_aux.rs",
+            "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+          },
+          {
+            "path": "tests/corpus.rs",
+            "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+          },
+          {
+            "path": "docs/continuation-aux-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "continuation-aux-source-74290-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-74290-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-74290-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-74290-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-74290-1-5",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-74290-1-6",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-74290-1-7",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-source-74290-1-8",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-74290-지",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-74290-게",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-connector-74290-고",
+            "judgment": "path"
+          },
+          {
+            "case": "continuation-aux-present-74290",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

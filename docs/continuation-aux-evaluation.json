@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "before_revision": "ece3892",
+  "scope": "COV-019p: review existing continuation/completion auxiliary paths against every sense and example group of seven complete KRDict entries. No runtime or grammar catalog change.",
+  "source_fixture": "tests/fixtures/continuation-aux-sources.json",
+  "dictionary_fixture": "tests/fixtures/krdict-continuation-aux.json",
+  "source_hashes": {
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3"
+  },
+  "fixture_entries": 94,
+  "source_entries": 7,
+  "source_senses": 9,
+  "source_example_groups": 44,
+  "ledger": {
+    "prefix": "continuation-aux-",
+    "cases": 90,
+    "required": 70,
+    "forbidden": 20
+  },
+  "decisions": [
+    {
+      "entries": [
+        "krdict:28764"
+      ],
+      "decision": "Both continuation/state-change and occasional repetition senses retain 어. Explicit adjective examples 어두워 가서 and 깊어 가고 있다 rule out a blanket verb-only left-class rejection. Second-sense examples 가며/가면서 are preserved without assigning that sense to other right endings."
+    },
+    {
+      "entries": [
+        "krdict:69517"
+      ],
+      "decision": "Continuation 어 오다 preserves honorific, past, adnominal and connective source forms. 밝아 와서 is kept alongside other examples; no broader lexical/adjective restriction is inferred solely from the verb attachment note."
+    },
+    {
+      "entries": [
+        "krdict:26813",
+        "krdict:60625",
+        "krdict:62601",
+        "krdict:74290"
+      ],
+      "decision": "Retain source 어 connectors, contractions and right inflections, including nominal 기 + 가 and honorific + past. Verb-only source notes are retained, but this audit does not establish a general semantic or lexical-subset filter."
+    },
+    {
+      "entries": [
+        "krdict:62134"
+      ],
+      "decision": "Keep both 어 completion/achievement and 고 completed-action connectors, with separate source sense/example references. Contextual differences and lexicalized compounds are not collapsed."
+    },
+    {
+      "entries": [
+        "krdict:28764",
+        "krdict:69517",
+        "krdict:26813",
+        "krdict:62134",
+        "krdict:60625",
+        "krdict:62601",
+        "krdict:74290"
+      ],
+      "decision": "Twenty alternate 지/게/고 connector judgments forbid only the specified auxiliary-role group (고 remains for 나다). These do not reject sentences containing separate independent verbs. Present verb inflection and downstream auxiliary ownership are covered."
+    }
+  ],
+  "ambiguity": {
+    "preserved_compounds": [
+      "늘어나다",
+      "살아오다",
+      "살아가다"
+    ],
+    "missing_compound": "번져나가다 is a raw lexical hypothesis absent from the dictionary fixture/full snapshot; dictionary filters retain 번지다 + 나가다. It is not labeled an attested compound.",
+    "source_examples_are": "Exact spaced excerpts retained separately from tolerant joined test inputs. The tests are not spelling recommendations or cross-token parsing."
+  },
+  "corpus": {
+    "path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+    "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+    "fixture": "tests/fixtures/kaist-continuation-aux.conllu",
+    "sentences": 12,
+    "targets": [
+      {
+        "id": "id:M2TA_064-s22/12",
+        "surface": "저어갈",
+        "expected": [
+          "젓다",
+          "가다"
+        ],
+        "annotation": "젓+어+가+ㄹ",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-M2TA_064-s22-12"
+      },
+      {
+        "id": "id:M2TA_065-s5/4",
+        "surface": "살아갈",
+        "expected": [
+          "살다",
+          "가다"
+        ],
+        "annotation": "살+아+가+ㄹ",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-M2TA_065-s5-4"
+      },
+      {
+        "id": "id:M2TA_064-s44/6",
+        "surface": "살아온",
+        "expected": [
+          "살다",
+          "오다"
+        ],
+        "annotation": "살+아+오+ㄴ",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-M2TA_064-s44-6"
+      },
+      {
+        "id": "id:M2TA_065-s31/8",
+        "surface": "들여왔다",
+        "expected": [
+          "들이다",
+          "오다"
+        ],
+        "annotation": "들이+어+오+았+다",
+        "pos": "pvg+ecx+px+ep+ecs",
+        "case": "continuation-aux-corpus-M2TA_065-s31-8"
+      },
+      {
+        "id": "id:MH2_0014-s421/11",
+        "surface": "해나갈",
+        "expected": [
+          "하다",
+          "나가다"
+        ],
+        "annotation": "하+어+나가+ㄹ",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-MH2_0014-s421-11"
+      },
+      {
+        "id": "id:MH2_0046-s414/24",
+        "surface": "따져나간",
+        "expected": [
+          "따지다",
+          "나가다"
+        ],
+        "annotation": "따지+어+나가+ㄴ",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-MH2_0046-s414-24"
+      },
+      {
+        "id": "id:M2TA_065-s109/4",
+        "surface": "생겨난",
+        "expected": [
+          "생기다",
+          "나다"
+        ],
+        "annotation": "생기+어+나+ㄴ",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-M2TA_065-s109-4"
+      },
+      {
+        "id": "id:M2TA_066-s53/2",
+        "surface": "하고난",
+        "expected": [
+          "하다",
+          "나다"
+        ],
+        "annotation": "하+고+나+ㄴ",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-M2TA_066-s53-2"
+      },
+      {
+        "id": "id:M2TA_064-s4/4",
+        "surface": "뽑아낸다고",
+        "expected": [
+          "뽑다",
+          "내다"
+        ],
+        "annotation": "뽑+아+내+ㄴ다고",
+        "pos": "pvg+ecx+px+ecs",
+        "case": "continuation-aux-corpus-M2TA_064-s4-4"
+      },
+      {
+        "id": "id:M2TA_065-s24/2",
+        "surface": "이겨내는",
+        "expected": [
+          "이기다",
+          "내다"
+        ],
+        "annotation": "이기+어+내+는",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-M2TA_065-s24-2"
+      },
+      {
+        "id": "id:M2TA_073-s36/4",
+        "surface": "되어버리는",
+        "expected": [
+          "되다",
+          "버리다"
+        ],
+        "annotation": "되+어+버리+는",
+        "pos": "pvg+ecx+px+etm",
+        "case": "continuation-aux-corpus-M2TA_073-s36-4"
+      },
+      {
+        "id": "id:M2TA_082-s34/4",
+        "surface": "벗어버리고",
+        "expected": [
+          "벗다",
+          "버리다"
+        ],
+        "annotation": "벗+어+버리+고",
+        "pos": "pvg+ecx+px+ecc",
+        "case": "continuation-aux-corpus-M2TA_082-s34-4"
+      }
+    ],
+    "selection": "First two tokens in source order for each of 가/오/나가/나/내/버리 with an explicit immediately preceding ecx and a px tag on the auxiliary. No matching joined 치우 token was found with this criterion in this training partition; dictionary examples cover that entry. Complete source sentences and original annotations are unchanged."
+  },
+  "remaining": [
+    "Semantic left-class and lexical-subset restrictions, including stative and negative attachments, require further review under COV-019.",
+    "Additional internal particles and particle chains were not licensed or forbidden by this audit.",
+    "Contextual sense selection, cross-token parsing and general spelling/spacing repair remain outside this token-level candidate generator.",
+    "Independent Korean-language review and a linguistic precision estimate remain pending."
+  ],
+  "validation": {
+    "raw_comparison": {
+      "distinct_surfaces": 87,
+      "changed_surfaces": 0,
+      "before_binary": "/tmp/klem-danikka-result/bin/klem",
+      "after_binary": "target/debug/klem",
+      "comparison": "Full raw JSON equality, including order and provenance; regression/source changes only."
+    },
+    "candidate_review": {
+      "required_present": 70,
+      "forbidden_present": 0,
+      "unjudged_nonidentity": 864,
+      "interpretation": "Unjudged hypotheses remain explicit; neither passed judgments nor dictionary compatibility establish linguistic precision."
+    },
+    "checks_passed": [
+      "cargo test --locked --offline --features web (including candidate, dictionary, Unicode and stress regressions)",
+      "cargo clippy --locked --offline --all-targets --features web -- -D warnings",
+      "cargo fmt --all -- --check",
+      "cargo test --locked --offline --features web --test corpus pinned_full_corpus_regressions -- --ignored",
+      "python3 -m unittest discover -s tools -p test_review_inventory.py",
+      "python3 tools/review_inventory.py --verify",
+      "nix flake check (x86_64-linux)",
+      "nix build .#klem .#web (x86_64-linux)"
+    ],
+    "corpus": {
+      "new_training_targets_matched": 12,
+      "new_training_targets": 12,
+      "frozen_partitions": [
+        "KAIST dev",
+        "KAIST test",
+        "GSD dev",
+        "GSD test"
+      ],
+      "result": "All existing per-case baseline checks passed; no baselines, source annotations or runtime/adapters changed."
+    },
+    "browser": {
+      "application_revision": "ece3892 (runtime and frontend unchanged)",
+      "raw_cases": 90,
+      "policies": [
+        "headword",
+        "compatible"
+      ],
+      "api_cli_export_parity": true,
+      "selected_breakdowns": 9,
+      "source_entry_link": "krdict:28764",
+      "viewports": [
+        [
+          1440,
+          1100
+        ],
+        [
+          390,
+          844
+        ]
+      ],
+      "screenshots_inspected": true,
+      "horizontal_overflow": false,
+      "page_errors": [],
+      "selected_input": "어두워가서 깊어가고있다 쉬어가면서 살아오셨다 넘쳐났다 듣고난 길러내는 갈아치운 번져나갔다",
+      "known_limit": "Glosses remain dictionary hints: 쉬다 and 듣다 may initially show other lexical senses; contextual sense ranking remains deferred."
+    },
+    "performance": "No engine, dictionary policy, web runtime or package configuration changed. No new performance measurement is claimed.",
+    "nix": {
+      "system": "x86_64-linux",
+      "cli": "/nix/store/qiz90prbmw2rxsbc3rj0izvr7gnwr64b-klem-0.1.0/bin/klem",
+      "web": "/nix/store/qmb1zc8r45grdqkj21g65wsqydz1l6zn-klem-web/bin/klem-web",
+      "other_systems": "aarch64-linux and aarch64-darwin were not checked"
+    },
+    "inventory": {
+      "scoped": 310,
+      "unreviewed": 404,
+      "gap": 1,
+      "all_715_source_records_and_hashes_unchanged": true
+    }
+  }
+}

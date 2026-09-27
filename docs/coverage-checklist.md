@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–as/018a–k/018m–z/019a–g/019i–o/020a–o/021a–c/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–as/018a–k/018m–z/019a–g/019i–p/020a–o/021a–c/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 303 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–as/018e–k/018m–z/019d–g/019i–o/020d–h/020j–k/020n–o; 411 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 310 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–as/018e–k/018m–z/019d–g/019i–p/020d–h/020j–k/020n–o; 404 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -1494,6 +1494,19 @@ review remains open under the completion review below.
   uncertainty, not certify the intended readings. The semantic verb subset and
   lexical-negative homonym consistency for other constraints remain unresolved;
   in particular 잘해서 → 자다 + 어 + 를 + 하다 is still an unjudged option.
+
+- [x] **COV-019p — Continuation and completion source-sense audit.**
+  Reviewed all nine senses and 44 example groups of 가다, 오다, 나가다,
+  나다, 내다, 버리다 and 치우다. Existing 어 links and both 어/고 나다
+  paths pass; no runtime change was needed. Explicit adjective examples before
+  가다 prevent a blanket verb-only filter. Exact spaced excerpts remain separate
+  from tolerant joined inputs, and compound alternatives remain distinct.
+  Evidence: 90 `continuation-aux-*` ledger cases (70 required / 20 forbidden),
+  [source/role/Unicode/dictionary/CLI tests](../tests/continuation_aux.rs), twelve
+  unchanged annotated KAIST training targets, and [the review](continuation-aux-evaluation.json).
+  Boundary judgments address auxiliary roles only, not separate independent
+  verbs. Lexical-subset restrictions, further internal particles and contextual
+  sense selection remain under COV-019; this is a scoped source audit.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

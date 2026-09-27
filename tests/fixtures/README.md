@@ -1354,3 +1354,21 @@ records them separately from authored judgments.
 the pinned KAIST corpus, under the corpus attribution/license above. Their
 말하자니까 and 미워하자니까 annotations support the two newly recovered lemma
 groups. No held-out baseline or source annotation was replaced.
+
+`krdict-continuation-aux.json` contains 94 full primary KRDict entries from the
+same September 2026 export (National Institute of Korean Language, CC BY-SA
+2.0 KR). All senses, notes, examples and forms are retained; equivalents are
+limited to English, RelatedForm/global metadata and same-ID idioms are omitted.
+`continuation-aux-sources.json` retains the seven reviewed entries as normalized
+importer output and identifies all 44 source example groups, their exact spaced
+excerpts, and the separate joined-input ledger cases. These dictionary-derived
+parts have the same source license. The review annotations are project-authored;
+they do not resolve contextual senses or certify spacing. Source file hashes
+are in [the evaluation](../../docs/continuation-aux-evaluation.json).
+
+`kaist-continuation-aux.conllu` contains twelve complete, unchanged sentences
+from the pinned KAIST **training** partition. The source fixture lists the exact
+sentence/token IDs and original annotations. It covers two joined examples
+per 가/오/나가/나/내/버리 auxiliary; no matching joined 치우 token was found
+with the documented ecx+px selection criterion. This is regression coverage,
+not a held-out benchmark. The KAIST CC BY-SA 4.0 attribution above applies.

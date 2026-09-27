@@ -22589,6 +22589,625 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:28764",
+      "source_sha256": "178c758b7288c056ae8de1b5ea35605b09790ce1c0671beabbe0865cbd04c853",
+      "status": "scoped",
+      "checklist": [
+        "COV-019p"
+      ],
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "evidence": [
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_sources_cover_every_sense_and_example_group"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+        },
+        {
+          "path": "docs/continuation-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuation-aux-source-28764-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-28764-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-compound-split-살아갔다",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-compound-whole-살아갔다",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-28764-지",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-28764-게",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-28764-고",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-present-28764",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_064-s22-12",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_065-s5-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:69517",
+      "source_sha256": "bb251e27f92a506bd5b29981e72bc8351f594c3d771d0abe59f1002f2d25e876",
+      "status": "scoped",
+      "checklist": [
+        "COV-019p"
+      ],
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "evidence": [
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_sources_cover_every_sense_and_example_group"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+        },
+        {
+          "path": "docs/continuation-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuation-aux-source-69517-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-69517-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-69517-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-69517-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-compound-split-살아왔다",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-compound-whole-살아왔다",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-69517-지",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-69517-게",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-69517-고",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-present-69517",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_064-s44-6",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_065-s31-8",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:26813",
+      "source_sha256": "51a909b23c1aa628e744a05d50388f7939b00d4b813dc839da5f08c6168b65e8",
+      "status": "scoped",
+      "checklist": [
+        "COV-019p"
+      ],
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "evidence": [
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_sources_cover_every_sense_and_example_group"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+        },
+        {
+          "path": "docs/continuation-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuation-aux-source-26813-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-26813-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-26813-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-26813-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-compound-split-번져나갔다",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-26813-지",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-26813-게",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-26813-고",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-present-26813",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-MH2_0014-s421-11",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-MH2_0046-s414-24",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:62134",
+      "source_sha256": "63cc1a3e3af226bf8742e2be893eec00c88fb270bb6e9a9e264a9015dbf15187",
+      "status": "scoped",
+      "checklist": [
+        "COV-019p"
+      ],
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "evidence": [
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_sources_cover_every_sense_and_example_group"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+        },
+        {
+          "path": "docs/continuation-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuation-aux-source-62134-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62134-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-5",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62134-2-6",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-compound-split-늘어났다",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-compound-whole-늘어났다",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-62134-지",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-62134-게",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-present-62134",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_065-s109-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_066-s53-2",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:60625",
+      "source_sha256": "ba511369dd7db0ead64a89d52043c8abba64c371204409f7791ef1101d8467a5",
+      "status": "scoped",
+      "checklist": [
+        "COV-019p"
+      ],
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "evidence": [
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_sources_cover_every_sense_and_example_group"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+        },
+        {
+          "path": "docs/continuation-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuation-aux-source-60625-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-60625-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-60625-지",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-60625-게",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-60625-고",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-present-60625",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_064-s4-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_065-s24-2",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:62601",
+      "source_sha256": "6869a0725b35d5afe81416c926c7c69f221caa444434f8249b351286aed7ee24",
+      "status": "scoped",
+      "checklist": [
+        "COV-019p"
+      ],
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "evidence": [
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_sources_cover_every_sense_and_example_group"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+        },
+        {
+          "path": "docs/continuation-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuation-aux-source-62601-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62601-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62601-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-62601-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-62601-지",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-62601-게",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-62601-고",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-present-62601",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_073-s36-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-corpus-M2TA_082-s34-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:74290",
+      "source_sha256": "88a3a620a404a85e382c9d1154e4f141e0c4898b5d695158646425e4ba7140a6",
+      "status": "scoped",
+      "checklist": [
+        "COV-019p"
+      ],
+      "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "evidence": [
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_sources_cover_every_sense_and_example_group"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_paths_preserve_roles_boundaries_and_unicode"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_filters_and_cli_preserve_exact_groups"
+        },
+        {
+          "path": "tests/continuation_aux.rs",
+          "test": "continuation_dictionary_keeps_the_split_when_the_compound_is_missing"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "continuation_auxiliaries_preserve_twelve_unchanged_training_targets"
+        },
+        {
+          "path": "docs/continuation-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "continuation-aux-source-74290-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-source-74290-1-8",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-74290-지",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-74290-게",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-connector-74290-고",
+          "judgment": "path"
+        },
+        {
+          "case": "continuation-aux-present-74290",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

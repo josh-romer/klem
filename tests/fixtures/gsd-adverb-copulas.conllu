@@ -1,0 +1,95 @@
+# sent_id = train-s72
+# text = 서비스가 정말 별로입니다.
+# translit = .seo.bi.seu.ga .jeong.mal .byeol.ro.ib.ni.da.
+1	서비스가	서비스+가	NOUN	NNG+JKS	_	3	nsubj	_	Translit=.seo.bi.seu.ga|LTranslit=.seo.bi.seu+.ga
+2	정말	정말	ADV	MAG	_	3	advmod	_	Translit=.jeong.mal|LTranslit=.jeong.mal
+3	별로입니다	별로+이+ㅂ니다	VERB	MAG+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.byeol.ro.ib.ni.da|LTranslit=.byeol.ro+.i+ㅂ.ni.da
+4	.	.	PUNCT	SF	_	3	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s122
+# text = 지금까지 운행된 것은 아래 그대로이다.
+# translit = .ji.geum.gga.ji .un.haeng.doen .geos.eun .a.rae .geu.dae.ro.i.da.
+1	지금까지	지금+까지	ADV	NNG+JX	_	2	advmod	_	Translit=.ji.geum.gga.ji|LTranslit=.ji.geum+.gga.ji
+2	운행된	운행+되+ㄴ	VERB	NNG+XSV+ETM	_	3	acl:relcl	_	Translit=.un.haeng.doen|LTranslit=.un.haeng+.doe+ㄴ
+3	것은	것+은	NOUN	NNB+JX	_	5	nsubj	_	Translit=.geos.eun|LTranslit=.geos+.eun
+4	아래	아래	ADV	NNG	_	5	advmod	_	Translit=.a.rae|LTranslit=.a.rae
+5	그대로이다	그대로+이+다	VERB	MAG+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.geu.dae.ro.i.da|LTranslit=.geu.dae.ro+.i+.da
+6	.	.	PUNCT	SF	_	5	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s969
+# text = 변두리 결혼식 부폐 생각하면 딱입니다.
+# translit = .byeon.du.ri .gyeol.hon.sig .bu.pye .saeng.gag.ha.myeon .ddag.ib.ni.da.
+1	변두리	변두리	NOUN	NNG	_	4	obj	_	Translit=.byeon.du.ri|LTranslit=.byeon.du.ri
+2	결혼식	결혼식	NOUN	NNG	_	1	flat	_	Translit=.gyeol.hon.sig|LTranslit=.gyeol.hon.sig
+3	부폐	부폐	NOUN	NNG	_	1	flat	_	Translit=.bu.pye|LTranslit=.bu.pye
+4	생각하면	생각+하+면	VERB	NNG+XSV+EC	_	5	advcl	_	Translit=.saeng.gag.ha.myeon|LTranslit=.saeng.gag+.ha+.myeon
+5	딱입니다	딱+이+ㅂ니다	VERB	MAG+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.ddag.ib.ni.da|LTranslit=.ddag+.i+ㅂ.ni.da
+6	.	.	PUNCT	SF	_	5	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s2154
+# text = 소스 부족해서 문의했더니 원래 정량이 그만큼이라는 아주 불친절한 주인의 답변에 맛이 뚝 떨어졌다는..
+# translit = .so.seu .bu.jog.hae.seo .mun.yi.haess.deo.ni .weon.rae .jeong.ryang.i .geu.man.keum.i.ra.neun .a.ju .bul.chin.jeol.han .ju.in.yi .dab.byeon.e .mas.i .ddug .ddeol.eo.jyeoss.da.neun..
+1	소스	소스	NOUN	NNG	_	2	nsubj	_	Translit=.so.seu|LTranslit=.so.seu
+2	부족해서	부족+하+아서	VERB	NNG+XSA+EC	_	3	advcl	_	Translit=.bu.jog.hae.seo|LTranslit=.bu.jog+.ha+.a.seo
+3	문의했더니	문의+하+았+더니	VERB	NNG+XSV+EP+EC	_	10	advcl	_	Translit=.mun.yi.haess.deo.ni|LTranslit=.mun.yi+.ha+.ass+.deo.ni
+4	원래	원래	ADV	NNG	_	6	advmod	_	Translit=.weon.rae|LTranslit=.weon.rae
+5	정량이	정량+이	NOUN	NNG+JKS	_	6	nsubj	_	Translit=.jeong.ryang.i|LTranslit=.jeong.ryang+.i
+6	그만큼이라는	그만큼+이+라는	VERB	MAG+VCP+ETM	_	10	acl:relcl	_	Translit=.geu.man.keum.i.ra.neun|LTranslit=.geu.man.keum+.i+.ra.neun
+7	아주	아주	ADV	MAG	_	8	advmod	_	Translit=.a.ju|LTranslit=.a.ju
+8	불친절한	불+친절+하+ㄴ	VERB	XPN+NNG+XSA+ETM	_	10	acl:relcl	_	Translit=.bul.chin.jeol.han|LTranslit=.bul+.chin.jeol+.ha+ㄴ
+9	주인의	주인+의	NOUN	NNG+JKG	_	10	nmod:poss	_	Translit=.ju.in.yi|LTranslit=.ju.in+.yi
+10	답변에	답변+에	ADV	NNG+JKB	_	13	obl	_	Translit=.dab.byeon.e|LTranslit=.dab.byeon+.e
+11	맛이	맛+이	NOUN	NNG+JKS	_	13	nsubj	_	Translit=.mas.i|LTranslit=.mas+.i
+12	뚝	뚝	ADV	MAG	_	13	advmod	_	Translit=.ddug|LTranslit=.ddug
+13	떨어졌다는	떨어지+었+다는	VERB	VV+EP+ETM	_	0	root	_	SpaceAfter=No|Translit=.ddeol.eo.jyeoss.da.neun|LTranslit=.ddeol.eo.ji+.eoss+.da.neun
+14	..	..	PUNCT	SE	_	13	punct	_	Translit=..|LTranslit=..
+
+# sent_id = train-s2648
+# text = 닭이 먼저니 달걀이 먼저니
+# translit = .darg.i .meon.jeo.ni .dal.gyal.i .meon.jeo.ni
+1	닭이	닭+이	NOUN	NNG+JKS	_	2	nsubj	_	Translit=.darg.i|LTranslit=.darg+.i
+2	먼저니	먼저+이+니	VERB	MAG+VCP+EC	_	4	advcl	_	Translit=.meon.jeo.ni|LTranslit=.meon.jeo+.i+.ni
+3	달걀이	달걀+이	NOUN	NNG+JKS	_	4	nsubj	_	Translit=.dal.gyal.i|LTranslit=.dal.gyal+.i
+4	먼저니	먼저+이+니	VERB	MAG+VCP+EC	_	0	root	_	Translit=.meon.jeo.ni|LTranslit=.meon.jeo+.i+.ni
+
+# sent_id = train-s3031
+# text = 일곡지구 롯데리아는 정말 맛있는데 여긴 머 그냥 그럭저럭이다
+# translit = .il.gog.ji.gu .ros.de.ri.a.neun .jeong.mal .mas.iss.neun.de .yeo.gin .meo .geu.nyang .geu.reog.jeo.reog.i.da
+1	일곡지구	일곡+지구	NOUN	NNP+NNG	_	4	nsubj	_	Translit=.il.gog.ji.gu|LTranslit=.il.gog+.ji.gu
+2	롯데리아는	롯데리아+는	NOUN	NNP+JX	_	1	flat	_	Translit=.ros.de.ri.a.neun|LTranslit=.ros.de.ri.a+.neun
+3	정말	정말	ADV	MAG	_	4	advmod	_	Translit=.jeong.mal|LTranslit=.jeong.mal
+4	맛있는데	맛있+는데	VERB	VA+EC	_	8	advcl	_	Translit=.mas.iss.neun.de|LTranslit=.mas.iss+.neun.de
+5	여긴	여기+ㄴ	PRON	NP+JX	_	8	nsubj	_	Translit=.yeo.gin|LTranslit=.yeo.gi+ㄴ
+6	머	머	ADV	NP	_	8	advmod	_	Translit=.meo|LTranslit=.meo
+7	그냥	그냥	ADV	MAG	_	8	advmod	_	Translit=.geu.nyang|LTranslit=.geu.nyang
+8	그럭저럭이다	그럭저럭+이+다	ADJ	MAG+VCP+EC	_	0	root	_	Translit=.geu.reog.jeo.reog.i.da|LTranslit=.geu.reog.jeo.reog+.i+.da
+
+# sent_id = train-s4389
+# text = 테팔 멀티 미니 블렌더에 재료를 넣고 곱게 갈아만 주면 돼 바쁜 아침에 그만이다.
+# translit = .te.pal .meol.ti .mi.ni .beul.ren.deo.e .jae.ryo.reul .neoh.go .gob.ge .gal.a.man .ju.myeon .dwae .ba.bbeun .a.chim.e .geu.man.i.da.
+1	테팔	테팔	NOUN	NNG	_	6	obl	_	Translit=.te.pal|LTranslit=.te.pal
+2	멀티	멀티	NOUN	NNG	_	1	flat	_	Translit=.meol.ti|LTranslit=.meol.ti
+3	미니	미니	NOUN	NNG	_	1	flat	_	Translit=.mi.ni|LTranslit=.mi.ni
+4	블렌더에	블렌더+에	ADV	NNG+JKB	_	1	flat	_	Translit=.beul.ren.deo.e|LTranslit=.beul.ren.deo+.e
+5	재료를	재료+를	NOUN	NNG+JKO	_	6	obj	_	Translit=.jae.ryo.reul|LTranslit=.jae.ryo+.reul
+6	넣고	넣+고	VERB	VV+EC	_	10	advcl	_	Translit=.neoh.go|LTranslit=.neoh+.go
+7	곱게	곱+게	ADV	VA+EC	_	8	advmod	_	Translit=.gob.ge|LTranslit=.gob+.ge
+8	갈아만	갈+아+만	VERB	VV+EC+JX	_	6	conj	_	Translit=.gal.a.man|LTranslit=.gal+.a+.man
+9	주면	주+면	VERB	VX+EC	_	6	flat	_	Translit=.ju.myeon|LTranslit=.ju+.myeon
+10	돼	되+어	VERB	VV+EC	_	13	advcl	_	Translit=.dwae|LTranslit=.doe+.eo
+11	바쁜	바쁘+ㄴ	ADJ	VA+ETM	_	12	amod	_	Translit=.ba.bbeun|LTranslit=.ba.bbeu+ㄴ
+12	아침에	아침+에	ADV	NNG+JKB	_	13	obl	_	Translit=.a.chim.e|LTranslit=.a.chim+.e
+13	그만이다	그만+이+다	VERB	MAG+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.geu.man.i.da|LTranslit=.geu.man+.i+.da
+14	.	.	PUNCT	SF	_	13	punct	_	Translit=.|LTranslit=.
+
+# sent_id = dev-s524
+# text = 맛은 물론이며 구수한 사장님의 마음과 미묘한 손맛
+# translit = .mas.eun .mul.ron.i.myeo .gu.su.han .sa.jang.nim.yi .ma.eum.gwa .mi.myo.han .son.mas
+1	맛은	맛+은	NOUN	NNG+JX	_	2	nsubj	_	Translit=.mas.eun|LTranslit=.mas+.eun
+2	물론이며	물론+이+며	VERB	MAG+VCP+EC	_	7	advcl	_	Translit=.mul.ron.i.myeo|LTranslit=.mul.ron+.i+.myeo
+3	구수한	구수+하+ㄴ	ADJ	XR+XSA+ETM	_	4	amod	_	Translit=.gu.su.han|LTranslit=.gu.su+.ha+ㄴ
+4	사장님의	사장+님+의	NOUN	NNG+XSN+JKG	_	5	nmod:poss	_	Translit=.sa.jang.nim.yi|LTranslit=.sa.jang+.nim+.yi
+5	마음과	마음+과	NOUN	NNG+JC	_	0	root	_	Translit=.ma.eum.gwa|LTranslit=.ma.eum+.gwa
+6	미묘한	미묘+하+ㄴ	ADJ	XR+XSA+ETM	_	7	amod	_	Translit=.mi.myo.han|LTranslit=.mi.myo+.ha+ㄴ
+7	손맛	손맛	NOUN	NNG	_	5	conj	_	Translit=.son.mas|LTranslit=.son.mas
+

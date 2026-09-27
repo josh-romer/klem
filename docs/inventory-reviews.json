@@ -13454,9 +13454,10 @@
       "status": "scoped",
       "checklist": [
         "COV-017ac",
-        "COV-019h"
+        "COV-019h",
+        "COV-020m"
       ],
-      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries.",
+      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries.",
       "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
       "evidence": [
         {
@@ -13469,6 +13470,17 @@
         },
         {
           "path": "docs/adjectival-question-evaluation.json"
+        },
+        {
+          "path": "tests/adverb_copulas.rs",
+          "test": "adverb_copulas_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/adverb_copulas.rs",
+          "test": "annotated_adverb_copulas_preserve_roles_beside_nominal_homonyms"
+        },
+        {
+          "path": "docs/adverb-copula-evaluation.json"
         }
       ],
       "judgments": [
@@ -13503,6 +13515,22 @@
         {
           "case": "adjectival-question-0-honorific-general",
           "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-뭐냐",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-왜냐",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-별로냐",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-boundary-제법냐",
+          "judgment": "path"
         }
       ]
     },
@@ -13512,9 +13540,10 @@
       "status": "scoped",
       "checklist": [
         "COV-017ac",
-        "COV-019h"
+        "COV-019h",
+        "COV-020m"
       ],
-      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries.",
+      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries.",
       "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
       "evidence": [
         {
@@ -13527,6 +13556,17 @@
         },
         {
           "path": "docs/adjectival-question-evaluation.json"
+        },
+        {
+          "path": "tests/adverb_copulas.rs",
+          "test": "adverb_copulas_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/adverb_copulas.rs",
+          "test": "annotated_adverb_copulas_preserve_roles_beside_nominal_homonyms"
+        },
+        {
+          "path": "docs/adverb-copula-evaluation.json"
         }
       ],
       "judgments": [
@@ -13560,6 +13600,30 @@
         },
         {
           "case": "adjectival-question-0-honorific-verbal",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-제법이시느냐",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-제법이었느냐",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-학생이겠느냐",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-boundary-학생이느냐",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-boundary-먹음이느냐",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-boundary-제법이느냐",
           "judgment": "path"
         }
       ]
@@ -19696,6 +19760,47 @@
         },
         {
           "case": "concessive-endings-deondeul-honorific-only",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76243",
+      "source_sha256": "c89b506508822ecc0a942cefbad1ace0c707937c10632eb44e3eb82a1ae89e45",
+      "status": "scoped",
+      "checklist": [
+        "COV-020m"
+      ],
+      "scope": "Quoted question -냐고: existing predicate/copular forms and reviewed vowel-final omitted copula. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries.",
+      "remaining": "Broader discourse, homonym and contextual attachment review remains open.",
+      "evidence": [
+        {
+          "path": "tests/adverb_copulas.rs",
+          "test": "adverb_copulas_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/adverb_copulas.rs",
+          "test": "annotated_adverb_copulas_preserve_roles_beside_nominal_homonyms"
+        },
+        {
+          "path": "docs/adverb-copula-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "adverb-copula-누구냐고",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-의사냐고",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-학생이냐고",
+          "judgment": "path"
+        },
+        {
+          "case": "adverb-copula-boundary-학생냐고",
           "judgment": "path"
         }
       ]

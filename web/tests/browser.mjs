@@ -265,6 +265,7 @@ try {
     await readFile(resolve(root, "tests/fixtures/krdict-short-recipient.json"), "utf8"),
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
+  const adverbCopulas = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adverb-copulas.json"), "utf8"));
   const connectiveCopulas = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-connective-copulas.json"), "utf8"));
   const concessiveEndings = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-concessive-endings.json"), "utf8"));
   const concessiveDesignation = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-concessive-designation.json"), "utf8"));
@@ -280,6 +281,7 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
+      ...adverbCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...connectiveCopulas.LexicalResource.Lexicon.LexicalEntry,
       ...concessiveEndings.LexicalResource.Lexicon.LexicalEntry,
       ...concessiveDesignation.LexicalResource.Lexicon.LexicalEntry,
@@ -619,6 +621,45 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-short-recipient-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const adverbCopulaCases = recipientLedger.cases.filter(c => c.id.startsWith("adverb-copula-"));
+  assert.equal(adverbCopulaCases.length, 72);
+  for (const c of adverbCopulaCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const adverbCopulaText = "제법이다 들쑥날쑥이다 별로였어요 딱입니다 왜냐고 먼저니 그럭저럭이다";
+  const adverbCopulaTokens = (await (await post("analyze", {text:adverbCopulaText})).json()).records.filter(r => r.kind === "word");
+  await submit(page, adverbCopulaText); await waitHeading(page, "제법이다");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["제법","이","다"]],[1,["들쑥날쑥","이","다"]],[2,["별로","이","었","어요"]],[3,["딱","이","습니다"]],[4,["왜","이","냐고"]],[5,["먼저","이","니"]],[6,["그럭저럭","이","다"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const adverbIndices = adverbCopulaTokens[i].analysis.analyses.flatMap((a, index) => a.lemmas[0].kind === "adverbial" ? [index] : []);
+    const value = await select.locator("option").evaluateAll((os, {forms, adverbIndices}) => os.find(o => adverbIndices.includes(Number(o.value)) && o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, {forms, adverbIndices});
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+  }
+  await page.locator(".breakdown-word").first().locator(".breakdown-part").first().click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=31789"]'));
+  const adverbCopulaDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const adverbCopulaExport = JSON.parse(await readFile(await (await adverbCopulaDownload).path(), "utf8"));
+  const adverbCopulaExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:adverbCopulaText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(adverbCopulaExport.records, adverbCopulaExpected);
+  assert.ok(adverbCopulaExport.records[0].analysis.analyses.some(a => a.rules.includes("copula.adverbial_base")));
+  await page.screenshot({path:resolve(tmpdir(),"klem-adverb-copulas-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-adverb-copulas-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   const connectiveCopulaCases = recipientLedger.cases.filter(c => c.id.startsWith("connective-copula-"));
   assert.equal(connectiveCopulaCases.length, 53);

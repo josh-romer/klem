@@ -1178,3 +1178,16 @@ sentences M2TA_076-s9, M2TA_087-s148 and MH2_0024-s192; the GSD counterpart
 preserves train-s130, train-s1439 and train-s3861. Revisions, attribution and
 CC BY-SA 4.0 terms above apply. They are exposed regression evidence, not unseen
 accuracy measurements. The report separately records incidental test-row exposure.
+
+`krdict-adverb-copulas.json` retains 38 primary entries from the pinned September
+2026 NIKL KRDict export, under CC BY-SA 2.0 KR. Exact IDs are recorded in
+`docs/adverb-copula-evaluation.json`. Changes: all senses/notes/example groups and
+English equivalents retained, WordForm/RelatedForm and global metadata omitted,
+JSON reformatted. Source and license links are above. It includes the three
+question endings reviewed with the adverb/copula attachment scope.
+
+`kaist-adverb-copulas.conllu` preserves the complete unchanged training sentence
+MH2_0045-s446. The GSD counterpart preserves train-s72, train-s122, train-s969,
+train-s2154, train-s2648, train-s3031, train-s4389 and development dev-s524.
+Revisions, attribution and CC BY-SA 4.0 terms above apply. These are exposed
+regressions; role-specific tests are distinct from grouped-lemma recall.

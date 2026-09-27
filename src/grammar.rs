@@ -624,6 +624,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("지", "을지", 8),
             ("니다", "습니다", 17),
             ("니까", "습니까", 17),
+            ("냐", "냐", 0),
+            ("냐고", "냐고", 0),
             ("니", "니", 0),
             ("니", "으니", 0),
             ("니라", "으니라", 0),
@@ -1330,6 +1332,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.literary_assertion" => {
             "Recognize literary -(으)니라/-느니라 assertions with their distinct boundary and prefinal licenses; lexical class and contextual suitability remain separate evidence."
+        }
+        "copula.adverbial_base" => {
+            "Retain a source-attested adverbial base before a copula, separately from any nominal homonym; the source inventory does not select its contextual sense."
         }
         "copula.connective_seo" => {
             "Attach a copula to a clause ending in -아/어/여서; preserve the connective rather than treating it as a nominalizer. The clause's contextual meaning remains unresolved."

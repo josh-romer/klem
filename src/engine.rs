@@ -1380,6 +1380,32 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
 
 fn copula_bases(word: &str) -> Vec<Analysis> {
     let mut out = nominal_bases(word);
+    // COV-020m: source-attested adverbial copula bases. Preserve a separate
+    // nominal homonym where present; an adverb POS alone is not a license for
+    // every adverb or every contextual sense. See docs/adverb-copula-evaluation.json.
+    if matches!(
+        word,
+        "고만"
+            | "그만"
+            | "그럭저럭"
+            | "그대로"
+            | "그만큼"
+            | "딱"
+            | "들쑥날쑥"
+            | "들쭉날쭉"
+            | "먼저"
+            | "물론"
+            | "별로"
+            | "왜"
+            | "제법"
+    ) {
+        out.push(Analysis {
+            lemmas: vec![lemma(word, LemmaKind::Adverbial)],
+            morphemes: vec![],
+            rules: vec!["copula.adverbial_base".into()],
+            unchanged: false,
+        });
+    }
     let expanded = match word {
         "거" => Some("것"),
         "이거" => Some("이것"),
@@ -1455,6 +1481,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
             m.form.as_str(),
             "다며"
                 | "다면서"
+                | "느냐"
                 | "느니라"
                 | "느냐며"
                 | "느냐면서"

@@ -2768,3 +2768,27 @@ roles and other quoted/connective clauses require further source review.
 See [the evaluation](connective-copula-evaluation.json) for corpus exposure,
 all candidate changes and individual novel contexts. No contextual precision
 claim follows from these word-level candidates.
+
+## Attested adverbial copula bases and 냐 omission (COV-020m)
+
+The finite [source audit](adverb-copula-evaluation.json) adds Adverbial-role bases
+for 고만, 그만, 그럭저럭, 그대로, 그만큼, 딱, 들쑥날쑥, 들쭉날쭉,
+먼저, 물론, 별로, 왜 and 제법. KRDict directly illustrates four of these;
+the pinned UD training/development annotations supply the remaining adverb-role
+uses. All relevant dictionary senses/notes/examples are retained in the fixture.
+Nominal homonyms remain separate. `copula.adverbial_base` explains the added role;
+it neither converts an adverb into a noun nor relaxes dictionary POS matching.
+Existing inflection, auxiliaries, nominalization and omitted copulas compose.
+
+The same audit adds vowel-final 이 omission before 냐/냐고, supported by KRDict's
+뭐냐 example and annotated 왜냐고. Consonant-final bases still require 이.
+KRDict -느냐 excludes bare copulas; the first-ending 느냐 path is rejected,
+while its listed 시/었/겠 boundaries remain. These are separate from lexical
+verbs ending in 이 and from other question-ending families.
+
+The audit distinguishes 21 supported adverb-role observations from two 짱 POS
+mismatches, nonstandard 그닥/별루 and GSD's erroneous 다이아 decomposition.
+Noun/adverb homonyms and the naturalness of particular copula senses still need
+contextual judgment. In the novel, why questions with polite 요 additionally gain
+an enumerative-copula 요 alternative; that is recorded as unjudged, not intended.
+Broader adverb licenses and the inherited 딸이었던들 case-clause path remain open.

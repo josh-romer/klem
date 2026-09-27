@@ -2759,3 +2759,53 @@ Separate count passes find **120,834 → 120,887** compatible-filter analyses an
 **73,372 → 73,377** words with readings. Timings include startup, dictionary work
 and JSONL serialization; every sample and count is retained in the report. These
 local observations are not guarantees for other workloads or machines.
+
+## Adverbial copula bases and 냐 questions (COV-020m)
+
+The [source and candidate report](adverb-copula-evaluation.json) adds 13 attested
+adverbial bases before 이다 while preserving nominal homonyms. 제법이다 now
+survives compatible filtering. The same audit adds vowel-final 냐/냐고 omission
+and rejects bare copula + 느냐, retaining the licensed 시/었/겠 forms.
+
+The 72 judgments (61 required / 11 forbidden) bring the main ledger to **2,685
+required / 1,606 forbidden**. Both filters, CLI parity, NFD, component order and
+provenance are tested. Nine complete unchanged corpus sentences retain their
+annotations. KAIST excerpt grouped matches rise **5/6 → 6/6** (왜냐고); GSD
+remains **58/58**. A separate role audit finds **0 → 21** compatible
+Adverbial + Copula matches among 26 observed training/development rows. Two 짱
+POS mismatches, nonstandard 그닥/별루 and the erroneous 다이아 split remain
+individually recorded. This role audit must not be conflated with lemma recall.
+
+Full development grouped recovery remains **22,132/22,220** for KAIST and rises
+**9,847/9,989 → 9,848/9,989** for GSD (뭐냐), without lost recoveries. Mean
+candidates rise **6.0716471647 → 6.0720972097** and **5.5444989488 → 5.5452998298**.
+Across 4,074 probes, 83 surfaces change, with 102 additions, six removals and no
+provenance-only changes. All six removals are documented bare-copula 느냐
+hypotheses. All 30 stress snapshots and frozen corpus baselines remain unchanged.
+
+Compatible filtering on the pinned novel adds 37 readings at 36 tokens (20 types),
+removing none. Verified byte spans, context and stable observation IDs retain
+all changes. 그만 copulas and omitted questions gain relevant options; noun/adverb
+homonyms, nominal suffix 이 alternatives, and new copular interpretations of
+하냐/계시냐/오냐/왜요 remain contextual alternatives. The report keeps every
+observation unjudged pending independent review and claims no precision estimate.
+
+Rust/web-feature tests, Clippy, formatting, the full pinned corpus gate and the
+full browser/HTTP suite pass. The catalog is unchanged; inventory reviews are
+**274 scoped / 440 unreviewed / one gap**. The finite adverb inventory, broader
+particle/copula attachment and independent Korean review remain open.
+
+Nix flake checks and the web package build passed on x86_64-linux. Packaged
+full-dictionary checks passed all 72 judgments under both filters, seven explicitly
+selected adverbial readings, dictionary source access, and CLI/API/export parity.
+Desktop/mobile screenshots were inspected. Tests distinguish adverbial and noun
+roles even when their displayed component strings are identical. Frontend assets
+were unchanged; no other architectures were measured.
+
+Three sequential release runs on 81,758 word tokens gave median compatible-filter
+times **1.343 seconds before / 1.341 after**; headword-only medians were
+**1.371 / 1.354 seconds**. Peak RSS across these runs was **27.99 MiB**.
+Separate count passes find **120,887 → 120,924** compatible-filter analyses and
+**73,377 → 73,379** words with readings. Samples include startup, dictionary work
+and JSONL serialization; all timings and counts are retained in the report. These
+local measurements are not guarantees for other machines or workloads.

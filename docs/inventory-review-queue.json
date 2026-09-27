@@ -9,6 +9,7 @@
   },
   "evidence_sha256": {
     "docs/adjectival-question-evaluation.json": "4445015d072de05933a5e94a469fa0a6e7dd80465e43d8053b1600451a876b42",
+    "docs/adverb-copula-evaluation.json": "ee996be5cd3d8ae7d9e8468f57fe70ef1dfc32b7af89f6dd229d772225aeacab",
     "docs/adverb-focus-evaluation.json": "29a9df5e7ecbe61fc86baaaff1a0c0772497f7cf0d596af033a98b23d5171a03",
     "docs/attachment-connectives-evaluation.json": "6fb20e573bc84b86f20626f01a02ce4b7eded17942eb1528dbedc2cf12aaf6d1",
     "docs/auxiliary-dictionary-evaluation.json": "3a23057927a41215e802791e6ab603987cc27f667a1f284a79c4906730b7b408",
@@ -22,7 +23,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "7b7d139bdae43a2053754ea3236264378329d96e0e8e016d892cd2a95a357856",
+    "docs/coverage-checklist.md": "508de2fd7b527e3f755131f8f63f1f83a8aa1a543c0f02a70081f0f60699c603",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
@@ -34,8 +35,8 @@
     "docs/eya-evaluation.json": "2cbfe997765a9f065db634701e408fced2fc6fa40b806788f91b4fe5660db66c",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "ffed67793f600089d16df188aa4c94f4db637a0288daf8e9d52c4403cd29d698",
-    "docs/inventory-reviews.json": "5110807dd1ca7d0919ad7da606d4787eac2ad69367a872f0975d2810f0a1408b",
+    "docs/inventory-audit.md": "509755b094828857c230384f39cd97acdd3c034f6bddcecb6ba589c98d6e3a98",
+    "docs/inventory-reviews.json": "2dfb3005b32f5d66f5fed8e83af9cad3b354e0d024f8f32d30961095c7234989",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/nira-evaluation.json": "f5104870a3be746d817dc91c710b38c082ba8ded9a85bc685181a0c62c4ddea7",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
@@ -62,6 +63,7 @@
     "docs/uncertainty-evaluation.json": "902cb50f1ffca1bbcec76821cf8530b2c624ffee2203df4828a3d0d11754ab17",
     "docs/vocative-evaluation.json": "d21badd5f8bca6e27a72946744619b55ae8e3329c6e3e8d21e3a33ead5525b46",
     "tests/adjectival_question.rs": "143f121cd9a17c1aa7c603840a19cac415777dada7926c419d139baf8d134fd3",
+    "tests/adverb_copulas.rs": "f17c288a41b8248d9a90f485c1545994427c14811e6ad1b08da596f232c2cf21",
     "tests/adverb_focus.rs": "e751644d2f97a5e9c0eec3791ebeee7f5aed4be3c646065de954eeb99284a0d9",
     "tests/auxiliary_dictionary.rs": "3aeff2fc8693c99c0ff7ed86aba239b7372e318d7e4e87b1ef22105dc1b99dcb",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
@@ -87,7 +89,7 @@
     "tests/fixtures/auxiliary-dictionary.json": "7a858ec78be92ae8867c4e65fb5b607a896a06e4843b0d3156a1a7acf4bb8ade",
     "tests/fixtures/dictionary-attachments.json": "22bc97fb09b8753945fc071428a15a1fd34cb9f531d793933428d26663b9dca6",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
-    "tests/fixtures/validity.json": "ef90a149c16f964e8003fe589a18869d0ac1b3a21716f10ff91dc276b41a0abf",
+    "tests/fixtures/validity.json": "7f56207878f6c01bc056ef1e00d6497b8c947441aab8eca670979e15f5b424b1",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
     "tests/kkaena.rs": "63efa7b0ad133bfabd79b1b85d4a393608361596303c92a07b0e9df8d3fdc0a5",
@@ -126,12 +128,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 441,
-      "scoped": 273,
+      "unreviewed": 440,
+      "scoped": 274,
       "gap": 1
     },
     "with_catalog_links": 348,
-    "with_judgment_citations": 314
+    "with_judgment_citations": 315
   },
   "entries": [
     {
@@ -18139,6 +18141,26 @@
           "case": "adjectival-question-0-trial-general",
           "judgment": "path",
           "verdict": "required"
+        },
+        {
+          "case": "adverb-copula-boundary-제법냐",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adverb-copula-뭐냐",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adverb-copula-별로냐",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adverb-copula-왜냐",
+          "judgment": "path",
+          "verdict": "required"
         }
       ],
       "inventory_evidence": [],
@@ -18148,9 +18170,10 @@
         "status": "scoped",
         "checklist": [
           "COV-017ac",
-          "COV-019h"
+          "COV-019h",
+          "COV-020m"
         ],
-        "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries.",
+        "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries.",
         "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
         "evidence": [
           {
@@ -18163,6 +18186,17 @@
           },
           {
             "path": "docs/adjectival-question-evaluation.json"
+          },
+          {
+            "path": "tests/adverb_copulas.rs",
+            "test": "adverb_copulas_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/adverb_copulas.rs",
+            "test": "annotated_adverb_copulas_preserve_roles_beside_nominal_homonyms"
+          },
+          {
+            "path": "docs/adverb-copula-evaluation.json"
           }
         ],
         "judgments": [
@@ -18196,6 +18230,22 @@
           },
           {
             "case": "adjectival-question-0-honorific-general",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-뭐냐",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-왜냐",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-별로냐",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-boundary-제법냐",
             "judgment": "path"
           }
         ]
@@ -18253,10 +18303,69 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "adverb-copula-boundary-학생냐고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adverb-copula-누구냐고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adverb-copula-의사냐고",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adverb-copula-학생이냐고",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:76243",
+        "source_sha256": "c89b506508822ecc0a942cefbad1ace0c707937c10632eb44e3eb82a1ae89e45",
+        "status": "scoped",
+        "checklist": [
+          "COV-020m"
+        ],
+        "scope": "Quoted question -냐고: existing predicate/copular forms and reviewed vowel-final omitted copula. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries.",
+        "remaining": "Broader discourse, homonym and contextual attachment review remains open.",
+        "evidence": [
+          {
+            "path": "tests/adverb_copulas.rs",
+            "test": "adverb_copulas_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/adverb_copulas.rs",
+            "test": "annotated_adverb_copulas_preserve_roles_beside_nominal_homonyms"
+          },
+          {
+            "path": "docs/adverb-copula-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "adverb-copula-누구냐고",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-의사냐고",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-학생이냐고",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-boundary-학생냐고",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -18545,6 +18654,36 @@
           "case": "adjectival-question-0-trial-verbal",
           "judgment": "path",
           "verdict": "required"
+        },
+        {
+          "case": "adverb-copula-boundary-먹음이느냐",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adverb-copula-boundary-제법이느냐",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adverb-copula-boundary-학생이느냐",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "adverb-copula-제법이시느냐",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adverb-copula-제법이었느냐",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "adverb-copula-학생이겠느냐",
+          "judgment": "path",
+          "verdict": "required"
         }
       ],
       "inventory_evidence": [],
@@ -18554,9 +18693,10 @@
         "status": "scoped",
         "checklist": [
           "COV-017ac",
-          "COV-019h"
+          "COV-019h",
+          "COV-020m"
         ],
-        "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries.",
+        "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries.",
         "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
         "evidence": [
           {
@@ -18569,6 +18709,17 @@
           },
           {
             "path": "docs/adjectival-question-evaluation.json"
+          },
+          {
+            "path": "tests/adverb_copulas.rs",
+            "test": "adverb_copulas_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/adverb_copulas.rs",
+            "test": "annotated_adverb_copulas_preserve_roles_beside_nominal_homonyms"
+          },
+          {
+            "path": "docs/adverb-copula-evaluation.json"
           }
         ],
         "judgments": [
@@ -18602,6 +18753,30 @@
           },
           {
             "case": "adjectival-question-0-honorific-verbal",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-제법이시느냐",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-제법이었느냐",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-학생이겠느냐",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-boundary-학생이느냐",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-boundary-먹음이느냐",
+            "judgment": "path"
+          },
+          {
+            "case": "adverb-copula-boundary-제법이느냐",
             "judgment": "path"
           }
         ]

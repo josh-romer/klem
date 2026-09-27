@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ak/018a–k/018m–v/019a–g/019i–o/020a–l/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ak/018a–k/018m–v/019a–g/019i–o/020a–m/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 273 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–v/019d–g/019i–o/020d–h/020j–k; 441 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 274 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–v/019d–g/019i–o/020d–h/020j–k; 440 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -1319,7 +1319,7 @@ review remains open under the completion review below.
   COV-020e adds reviewed consonant-initial ending families; COV-020f adds
   honorific omission and short 세요; COV-020g adds modal/retrospective omission;
   COV-020h adds attached question endings; COV-020i adds nominal approximation -쯤;
-  COV-020j adds literary 니라 omission; COV-020k adds conditional/concessive 라 endings; COV-020l adds direct 어서 clauses.**
+  COV-020j adds literary 니라 omission; COV-020k adds conditional/concessive 라 endings; COV-020l adds direct 어서 clauses; COV-020m adds reviewed adverb bases and 냐 questions.**
   Remaining: additional suffix order and adjective ending licenses, other
   omitted-copula endings/prefinals, and particle-marked nominal bases. Quoted or
   connective clauses before copulas need a separate source/representation audit;
@@ -1490,9 +1490,23 @@ review remains open under the completion review below.
   Novel additions are individually unjudged contextual alternatives. The inherited
   따다 + 어 + 를 + 이다 alternative in 딸이었던들 remains a source-review
   question; this extension does not certify that path or generic clause attachment.
-  Adverbial copulas and other quoted/connective bases remain open: `제법이다`
-  has no compatible dictionary reading in the recorded probe, while `먼저다`
-  retains a nominal homonym and does not establish adverb-role coverage.
+  COV-020m resolves the recorded `제법이다` adverb-role miss; other quoted/
+  connective bases and the wider adverb inventory remain open.
+
+- [x] **COV-020m — Source-attested adverbial copulas and 냐 questions.** Added
+  Adverbial + Copula readings for 고만/그만/그럭저럭/그대로/그만큼/딱/
+  들쑥날쑥/들쭉날쭉/먼저/물론/별로/왜/제법, retaining nominal homonyms.
+  `제법이다` now survives compatible filtering. Vowel-final 냐/냐고 omission
+  recovers 뭐냐/왜냐고; bare copula + 느냐 is rejected while 시/었/겠 forms
+  remain. Evidence: [72 judgments and role/filter tests](../tests/adverb_copulas.rs),
+  nine complete annotated sentences, browser dictionary/selection/export checks,
+  and [source/candidate review](adverb-copula-evaluation.json). The separate audit
+  recovers compatible Adverbial + Copula roles for 21 of 26 training/development
+  observations; five nonstandard or questionable annotations remain identified.
+  GSD development adds one grouped match, 뭐냐, with no lost recoveries.
+  This finite inventory does not license all adverbs or select contextual senses.
+  Novel alternatives, generic particle/copula attachment and independent review
+  remain open, including the inherited 딸이었던들 and 왜요 alternatives.
 
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations.** Remaining: Article 40 complex coda pronunciation

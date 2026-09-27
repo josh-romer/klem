@@ -1211,3 +1211,15 @@ links and same-ID idiom records are excluded. The three particle entries
 Exact IDs, fixture hash, sense-to-case mappings and limitations are recorded in
 [the audit](../../docs/comparison-particle-audit.json). These examples are exposed
 regression evidence, not unseen evaluation or contextual sense annotations.
+
+`krdict-additive-particles.json` selects 59 primary word entries from NIKL's
+pinned September 2026 KRDict export (CC BY-SA 2.0 KR). All senses, notes,
+examples and forms remain; equivalents are English only and RelatedForm is
+omitted. Same-ID idioms are excluded. 나라 supports an unresolved segmentation
+probe; the source's proper name 승규 is absent and is not fabricated in the
+fixture. `kaist-additive-particles.conllu` preserves ten complete training
+sentences from the pinned KAIST revision, with no annotation edits. The corpus
+attribution and CC BY-SA 4.0 license above apply. The thesis PDF used for
+additional grammar evidence is not redistributed. Exact source IDs, hashes,
+sentence/token IDs and four target gains are in the
+[review](../../docs/additive-particle-evaluation.json).

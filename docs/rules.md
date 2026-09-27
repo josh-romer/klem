@@ -2848,3 +2848,26 @@ adverb derivation remain available; unknown derived lexical heads are still
 hypotheses until dictionary assessment. Wider particle chains and semantic
 attachment restrictions remain inventory review work. See the
 [source and regression audit](comparison-particle-audit.json).
+
+## Additive connectives and particle order (COV-018x)
+
+조차 permits canonical 어서/으려고/다가, and 마저 permits 어서, following
+concrete examples in 위유 (2020), printed pages 27–32. KAIST independently
+attests 거룩하게조차 and supports 게 before 조차. These paths carry
+`particle.additive_connective`, distinct from existing nominalization and
+indirect-question paths. Predicate classes, prefinals, explicit copulas,
+auxiliary groups and 답다 derivation retain their existing licenses.
+
+The finite adverbs 잠깐/조금/천천히 gain an Adverbial alternative before 조차,
+with `particle.additive_adverb` and compatible outer focus particles. Nominal
+and whole-word alternatives remain. This is not a general adverb license for
+조차 or 마저. The thesis's 오늘마저 example also permits nominal 오늘 and
+therefore does not establish a separate adverbial path.
+
+The source's 까지 + 조차/마저 and 조차/마저 + 가/를 examples use explicit
+ordering exceptions with `particle.additive_chain`. No blanket reversal of
+case and focus ordering is added. The ambiguous 나라밖에조차 example is left
+unjudged because it may involve noun 밖 plus 에 rather than particle 밖에.
+The source's contextual negative examples and conflicting prose do not justify
+global bans on lexical heads or genitive combinations. See the
+[source, annotation and individual-case review](additive-particle-evaluation.json).

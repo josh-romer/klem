@@ -2875,3 +2875,22 @@ and export parity. Contextual senses remain distinct from morphology: the
 inspected 새처럼 default gloss uses the gap/space homonym of 새, although the
 source sentence refers to a bird. That reader-facing limitation is recorded as
 `comparison-particle-sae-gloss`; the dictionary still exposes the alternatives.
+
+## Additive distribution (COV-018x)
+
+The [review](additive-particle-evaluation.json) records 50 source-backed judgments
+(42 required, eight forbidden), bringing the ledger to **2,779 required /
+1,649 forbidden**. Ten complete KAIST training sentences preserve ten additive
+targets, recovering four previously missing connective cases. The fixture's
+unrelated 있을라치면 miss remains visible; these exposed examples are not an
+unseen benchmark. All 66,570 frozen cases retain their matches and component
+sets. A 4,306-surface comparison adds 68 analyses on 27 surfaces and removes
+none. Those additions include unverified lexical hypotheses; the report does
+not equate candidate growth with correctness. Compatible-filtered output for
+the existing 무정 passage is byte-for-byte unchanged.
+
+The inventory now has **279 scoped / 435 unreviewed / one unresolved gap**.
+The source dictionary lacks proper name 승규, so both dictionary filters remove
+that raw valid morphology path. The thesis's conflicting prose and ambiguous
+밖에 segmentation are recorded explicitly. Further comparison-particle case
+chains are tracked under COV-018y rather than being silently treated as covered.

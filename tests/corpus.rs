@@ -1752,3 +1752,30 @@ fn complex_hada_preserves_annotated_unshortened_predicate() {
     assert!(case.matched);
     assert_eq!(report.grouped_matches, 9);
 }
+
+#[test]
+fn additive_particles_recover_connectives_and_preserve_nominalized_clauses() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-additive-particles.conllu").as_slice(),
+        Corpus::Kaist,
+        "additive-particles",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:M2TA_091-s76/4", "그른지조차", "그르다"),
+        ("id:MH2_0017-s174/4", "대해서조차", "대하다"),
+        ("id:MH2_0026-s81/14", "서성거리기조차", "서성거리다"),
+        ("id:MH2_0045-s154/14", "거룩하게조차", "거룩하다"),
+        ("id:MH2_0045-s309/10", "느끼기조차", "느끼다"),
+        ("id:MH2_0127-s34/6", "자명함조차", "자명하다"),
+        ("id:MH2_0132-s137/15", "있어서조차", "있다"),
+        ("id:MH2_0132-s306/5", "있어서조차", "있다"),
+        ("id:MH2_0148-s363/5", "존재했는지조차", "존재하다"),
+        ("id:MH2_0195-s204/17", "측은함마저", "측은하다"),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, [expected]);
+        assert!(case.matched, "{id}");
+    }
+}

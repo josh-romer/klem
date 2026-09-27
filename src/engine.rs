@@ -1629,6 +1629,16 @@ fn particle_allowed(
             && (matches!(form, "까지" | "부터") || source_particle_prefix(form).is_some()))
         || (outer == Some("의") && matches!(class, 2 | 3) && form != "의")
         || outer.is_some_and(|outer| range_case_link(form, outer))
+        || outer.is_some_and(|outer| additive_particle_link(form, outer))
+}
+
+// Concrete additive combinations in Wei (2020), examples 31 and 35.
+// Do not turn the source's broad case/auxiliary categories into free ordering.
+fn additive_particle_link(inner: &str, outer: &str) -> bool {
+    matches!(
+        (inner, outer),
+        ("까지", "조차" | "마저") | ("조차" | "마저", "가" | "를")
+    )
 }
 
 // Source-attested case marking after a range particle. These pairs cross
@@ -1874,6 +1884,9 @@ fn nominals(
         let start = out.len();
         let emphatic_case =
             emphatic_adverb_case(base, particle.form) && adverbial_particle_chain(suffixes);
+        let additive_adverb = particle.form == "조차"
+            && matches!(base, "잠깐" | "조금" | "천천히")
+            && adverbial_particle_chain(suffixes);
         // Only reviewed adverb-compatible particles. Subject/object marking
         // must not mistake this adverbial path for a nominalization.
         if (adverbial_particle_chain(&morphs) || emphatic_case)
@@ -1928,13 +1941,16 @@ fn nominals(
             });
         } else if (ordinary_adverbial_particle(particle.form) && adverbial_particle_chain(&morphs))
             || emphatic_case
+            || additive_adverb
         {
             out.push(Analysis {
                 lemmas: vec![lemma(base, LemmaKind::Adverbial)],
                 morphemes: morphs.clone(),
                 rules: vec![
                     "particle".into(),
-                    if emphatic_case {
+                    if additive_adverb {
+                        "particle.additive_adverb"
+                    } else if emphatic_case {
                         "particle.adverbial_case"
                     } else {
                         "particle.adverbial_focus"
@@ -1965,6 +1981,8 @@ fn nominals(
                     | "보다"
                     | "만치"
                     | "만큼"
+                    | "조차"
+                    | "마저"
                     | "ㄹ랑"
                     | "ㄹ랑은"
                     | "설랑"
@@ -1987,6 +2005,9 @@ fn nominals(
                     }
                     if concessive {
                         a.rules.push("particle.concessive".into());
+                    }
+                    if matches!(particle.form, "조차" | "마저") && !nominalized {
+                        a.rules.push("particle.additive_connective".into());
                     }
                     if matches!(particle.form, "만치" | "만큼")
                         && p.morphs.last().is_some_and(|m| m.form == "어서")
@@ -2015,6 +2036,12 @@ fn nominals(
             );
         }
         for a in &mut out[start..] {
+            if suffixes
+                .first()
+                .is_some_and(|m| additive_particle_link(particle.form, &m.form))
+            {
+                a.rules.push("particle.additive_chain".into());
+            }
             if suffixes
                 .first()
                 .is_some_and(|m| range_case_link(particle.form, &m.form))
@@ -2469,6 +2496,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
         "부터" => matches!(ending, "어서" | "고" | "으면서"),
         "보다" => ending == "어서",
         "만치" | "만큼" => ending == "어서",
+        // KAIST additionally attests 거룩하게조차. This is distinct from
+        // nominalized indirect questions, accepted by PredicateEnd above.
+        "조차" => matches!(ending, "어서" | "으려고" | "다가" | "게"),
+        "마저" => ending == "어서",
         "만" => {
             concessive_ending(ending)
                 || matches!(

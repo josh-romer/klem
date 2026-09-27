@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 277 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–w/019d–g/019i–o/020d–h/020j–k; 437 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 279 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ak/018e–k/018m–x/019d–g/019i–o/020d–h/020j–k; 435 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -799,7 +799,7 @@ review remains open under the completion review below.
   이다 alternative in 딸이었던들 is tracked for COV-020 attachment review.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
-  **Partial: COV-018a–k and COV-018m–w cover post-ending, outer choice, emphatic,
+  **Partial: COV-018a–k and COV-018m–x cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
   including nominal (이)라고 alternatives, the noun-attached 치고 family and
   source-attested case marking after range particles, and comparison/extent particles.**
@@ -1116,6 +1116,28 @@ review remains open under the completion review below.
   This is an audit of existing behavior, with no engine or label change.
   Contextual sense selection, wider particle chains, and bound-noun 대로
   constructions remain separate review work; independent Korean review is pending.
+
+- [x] **COV-018x — Additive connective and particle distribution.** 조차 accepts
+  어서/으려고/다가 and the KAIST-attested 게, while 마저 accepts 어서.
+  잠깐/조금/천천히 gain separate adverbial 조차 paths. 까지 + 조차/마저 and
+  조차/마저 + 가/를 cross the existing ordering stages only at these reviewed
+  pairs. Nominalized questions, auxiliaries, copulas, suffixes and outer particles
+  retain their roles. Evidence: [50 judgments and three tests](../tests/additive_particles.rs),
+  [ten complete KAIST sentences](../tests/fixtures/kaist-additive-particles.conllu),
+  dictionary/CLI parity and [source and case review](additive-particle-evaluation.json).
+  All ten target groups are recovered, including four new matches. The proper
+  name 승규 remains a raw candidate but is absent from KRDict and removed by
+  dictionary filtering. The thesis's ambiguous 밖에 example and conflicting
+  generalizations remain unjudged; no universal semantic pruning is inferred.
+  More adverb bases, ending/particle combinations and independent Korean review
+  remain open. The fixture's unrelated 있을라치면 miss belongs to COV-017.
+
+- [ ] **COV-018y — Case phrases before comparison particles.** NIKL spelling
+  Article 41 gives 학교에서처럼, but the engine currently misses
+  학교 + 에서 + 처럼. COV-018w audited nominal examples only. Review this
+  case-particle boundary, related 같이/처럼 distributions, and negative paths
+  without opening unrestricted case repetition. The discovery and source link
+  are recorded as `comparison-case-chain` in the [additive review](additive-particle-evaluation.json).
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

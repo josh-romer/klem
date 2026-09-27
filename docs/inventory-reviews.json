@@ -20041,6 +20041,122 @@
           "judgment": "direct-ending"
         }
       ]
+    },
+    {
+      "id": "krdict:70345",
+      "source_sha256": "1d039984ee8c3017bd88fbaf6a78bbb2f6cf8af67be9425f8340a08b1da835e3",
+      "status": "scoped",
+      "checklist": [
+        "COV-018x"
+      ],
+      "scope": "Nominal examples plus 어서/으려고/다가/게, finite 잠깐/조금/천천히 adverbs, and 까지/subject/object ordering. Existing nominalization and question paths, copulas, auxiliary groups and derivations retain their roles. Nonnominal evidence is separately attributed to the thesis and KAIST.",
+      "remaining": "Contextual polarity and sense restrictions, wider adverb/ending/particle distribution, genitive acceptability, and independent Korean review remain open. The thesis’s ambiguous 밖에 example and contradictory prose do not justify universal rules.",
+      "evidence": [
+        {
+          "path": "tests/additive_particles.rs",
+          "test": "additive_particle_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/additive_particles.rs",
+          "test": "additive_particle_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/additive_particles.rs",
+          "test": "additive_paths_keep_specific_provenance_and_finite_adverb_scope"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "additive_particles_recover_connectives_and_preserve_nominalized_clauses"
+        },
+        {
+          "path": "docs/additive-particle-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-additive-particles.json"
+        },
+        {
+          "path": "tests/fixtures/kaist-additive-particles.conllu"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "additive-noun-승규",
+          "judgment": "path"
+        },
+        {
+          "case": "additive-noun-점",
+          "judgment": "path"
+        },
+        {
+          "case": "additive-noun-친구",
+          "judgment": "path"
+        },
+        {
+          "case": "additive-noun-의식",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:70332",
+      "source_sha256": "dcd3cc959f7813e53cecc4a2c9a4df86e75d8c0b1daa0643be805004c1e75873",
+      "status": "scoped",
+      "checklist": [
+        "COV-018x"
+      ],
+      "scope": "Nominal examples plus 어서 and 까지/subject/object ordering. Existing nominalization and question paths, copulas, auxiliary groups and derivations retain their roles. Nonnominal evidence is separately attributed to the thesis and KAIST.",
+      "remaining": "Contextual polarity and sense restrictions, wider adverb/ending/particle distribution, genitive acceptability, and independent Korean review remain open. The thesis’s ambiguous 밖에 example and contradictory prose do not justify universal rules.",
+      "evidence": [
+        {
+          "path": "tests/additive_particles.rs",
+          "test": "additive_particle_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/additive_particles.rs",
+          "test": "additive_particle_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/additive_particles.rs",
+          "test": "additive_paths_keep_specific_provenance_and_finite_adverb_scope"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "additive_particles_recover_connectives_and_preserve_nominalized_clauses"
+        },
+        {
+          "path": "docs/additive-particle-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-additive-particles.json"
+        },
+        {
+          "path": "tests/fixtures/kaist-additive-particles.conllu"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "additive-noun-바람",
+          "judgment": "path"
+        },
+        {
+          "case": "additive-noun-도로",
+          "judgment": "path"
+        },
+        {
+          "case": "additive-noun-집",
+          "judgment": "path"
+        },
+        {
+          "case": "additive-noun-딸",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

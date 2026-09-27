@@ -1277,6 +1277,15 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "A factual 라-family ending follows its licensed prefinal, distinct from the homonymous command ending."
         }
         "particle" => "Remove a particle with licensed order and boundary allomorph.",
+        "particle.additive_connective" => {
+            "Recover reviewed connective endings before additive 조차 or 마저, separately from nominalization."
+        }
+        "particle.additive_adverb" => {
+            "Recover source-attested 잠깐/조금/천천히 before 조차 while preserving the adverbial role."
+        }
+        "particle.additive_chain" => {
+            "Recover reviewed 까지 plus an additive particle, or an additive particle plus subject/object case, in source order."
+        }
         "particle.adverbial_focus" => {
             "An adverbial base can take reviewed focus particles 도/은/는/만/까지/부터 and compatible outer particles. Preserve separate nominal and whole-word hypotheses; dictionary and context determine the lexical class."
         }

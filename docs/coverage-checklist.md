@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ad/018a–k/018m–n/019a–g/019i/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ae/018a–k/018m–n/019a–g/019i–j/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 196 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ad/018e–k/018m–n/019d–g/019i/020d–h; 518 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 199 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ae/018e–k/018m–n/019d–g/019i–j/020d–h; 515 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One additional
   entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ad implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ae implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -672,6 +672,27 @@ review remains open under the completion review below.
   Nonstandard 을런지 spelling repair, broader intention-family/class licenses,
   contextual particle distribution and independent Korean review remain open.
 
+- [x] **COV-017ae — Intention connectives and represented verb attachment.**
+  Eight canonical forms cover -(으)려거든/기에/는데/다/다가/더니/도/야.
+  Both allomorphs, irregular stems and honorific 시 are supported; recovered
+  past/modal/retrospective slots are rejected. Known adjective auxiliaries,
+  copulas, inherited negative classes and 답다 cannot supply the verb slot.
+  Existing 으려는 now shares this represented-class check; lexical heads remain
+  unknown, and other 려 families retain their separate source licenses.
+  Ordered connective particles compose, including source-attested 려는데요.
+  The conditional form preserves both 어미 and expression dictionary homonyms.
+  Evidence: [252 stable cases](../tests/fixtures/validity.json) (130 required /
+  122 forbidden), [boundary/Unicode/dictionary/CLI tests](../tests/intention_connectives.rs),
+  two unchanged complete annotated sentences, 18 new grammar sources, browser
+  allomorph/homonym selection, and [source/candidate comparison](intention-connectives-evaluation.json).
+  Across 2,974 ledger/stress surfaces, 765 hypotheses are added and three
+  represented nonverbal 으려는 paths removed; no provenance or stress hashes
+  change. KAIST 하려다 → 하다 is recovered. GSD 갈려는데 → 갈다 is an
+  incidental annotation match in a sentence apparently intending 가다, not
+  spelling repair. Development misses are 100 KAIST / 149 GSD, with no prior
+  gold recovery lost. Following auxiliary composition is scoped in COV-019j;
+  lexical/contextual constraints, other 려 expressions and Korean review remain.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–n implement post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -1004,6 +1025,19 @@ review remains open under the completion review below.
   More internal particles, lexical subsets, contextual suitability and COV-019h
   existential paradigms remain open; this is not cross-token parsing.
 
+- [x] **COV-019j — Interrupted intention before 보니/보면.**
+  -(으)려다/다가 can precede auxiliary 보다 only with 으니/으면, preserving
+  the existing 다(가) 보다 restriction. 먹으려다보니 and 먹으려다가보면
+  expose 먹다 + 보다 without inserting the contracted expression's implicit
+  하다. The complete KAIST MH2_0169-s336 sentence directly attests spaced
+  하려다 보니. Auxiliary 보다 inherits a Verb class for following checks;
+  unrestricted 보다/보았다, 싶다 and other shortened-expression connectors
+  are not enabled. Evidence: `intention-connectives-*-aux-*` ledger judgments,
+  the [annotated/joined path test](../tests/intention_connectives.rs),
+  [KRDict 보다 sense review](intention-connectives-evaluation.json) (62171),
+  dictionary/CLI and browser chain parity. Other senses and connector/prefinal
+  classes of 보다 remain unreviewed; this is a bounded connector disposition.
+
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and
@@ -1236,7 +1270,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 315 currently emitted canonical grammar forms.** The initial catalog
+  for all 323 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

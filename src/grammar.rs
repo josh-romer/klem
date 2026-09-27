@@ -272,6 +272,8 @@ pub(crate) const AUXILIARY_CONNECTORS: &[&str] = &[
     "자고",
     "다",
     "다가",
+    "으려다",
+    "으려다가",
     "는가",
     "은가",
     "던가",
@@ -698,6 +700,14 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으려는", "려는", "으려는"),
             ("으려는가", "려는가", "으려는가"),
             ("으려는지", "려는지", "으려는지"),
+            ("으려거든", "려거든", "으려거든"),
+            ("으려기에", "려기에", "으려기에"),
+            ("으려는데", "려는데", "으려는데"),
+            ("으려다", "려다", "으려다"),
+            ("으려다가", "려다가", "으려다가"),
+            ("으려더니", "려더니", "으려더니"),
+            ("으려도", "려도", "으려도"),
+            ("으려야", "려야", "으려야"),
             ("으라", "라", "으라"),
             ("으라고", "라고", "으라고"),
             ("으라는", "라는", "으라는"),
@@ -1258,6 +1268,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.uncertainty" => {
             "Recover -(으)ㄹ는지 or the shortened -(으)려는가/지 expression with its own boundary and prefinal licenses; no implicit 하다 or contextual sense is selected."
+        }
+        "ending.intention_connective" => {
+            "Recover a reviewed -(으)려 connective or shortened intention expression as one component, with verb attachment and honorific 시; no implicit 하다 or contextual sense is selected."
         }
         "ending.reporting_ni" => {
             "Recognize a surprise, reported statement, command, proposal or question in a -니 family; preserve homonyms without inserting an implicit reporting verb or selecting a contextual sense."

@@ -332,6 +332,26 @@ pub(crate) fn adjectival_question(form: &str) -> bool {
     )
 }
 
+// Reviewed intention connectives share verb attachment and honorific 시 only.
+// Other 려 families have different source licenses; do not match by prefix.
+fn intention_connective(form: &str) -> bool {
+    matches!(
+        form,
+        "으려거든"
+            | "으려기에"
+            | "으려는데"
+            | "으려다"
+            | "으려다가"
+            | "으려더니"
+            | "으려도"
+            | "으려야"
+    )
+}
+
+fn verbal_intention(form: &str) -> bool {
+    intention_connective(form) || matches!(form, "으려는" | "으려는가" | "으려는지")
+}
+
 fn predicates(word: &str) -> Vec<Predicate> {
     let mut out = vec![];
     let mut memo = HashMap::new();
@@ -571,8 +591,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 // Reviewed shortened adnominals: intention permits honorific
                 // 시; proposal quotation is currently scoped to bare stems.
-                if (matches!(ending.form, "으려는" | "으려는가" | "으려는지")
-                    && p.morphs.iter().any(|m| m.form != "시"))
+                if (verbal_intention(ending.form) && p.morphs.iter().any(|m| m.form != "시"))
                     || (matches!(ending.form, "자는" | "자거나") && !p.morphs.is_empty())
                 {
                     continue;
@@ -714,6 +733,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if matches!(ending.form, "을는지" | "으려는가" | "으려는지") {
                     p.rules.push("ending.uncertainty".into());
+                }
+                if intention_connective(ending.form) {
+                    p.rules.push("ending.intention_connective".into());
                 }
                 if factual_ra {
                     p.rules.push("ending.factual_ra".into());
@@ -904,7 +926,7 @@ fn auxiliary_class(
         "못하" if matches!(connector, Some("다" | "다가")) => Some(Adjective),
         "못하" => previous,
         "보" => match connector {
-            Some("어" | "다가") => Some(Verb),
+            Some("어" | "다가" | "으려다" | "으려다가") => Some(Verb),
             Some("는가" | "은가" | "던가" | "나" | "을까") => Some(Adjective),
             _ => None,
         },
@@ -1017,8 +1039,11 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             if bare_stative_iss && present_declarative(&m.form) {
                 return false;
             }
-            if matches!(m.form.as_str(), "으려는가" | "으려는지")
-                && matches!(class, Some(PredicateClass::Copula))
+            if verbal_intention(&m.form)
+                && matches!(
+                    class,
+                    Some(PredicateClass::Adjective | PredicateClass::Copula)
+                )
             {
                 return false;
             }
@@ -1049,8 +1074,6 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                         | "으라거나"
                         | "자거나"
                         | "고서"
-                        | "으려는가"
-                        | "으려는지"
                 )
             {
                 return false;
@@ -1117,6 +1140,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
         .find(|m| m.kind == MorphemeKind::Ending)
         .is_some_and(|m| {
             present_declarative(&m.form)
+                || verbal_intention(&m.form)
                 || matches!(
                     m.form.as_str(),
                     "으라며"
@@ -1133,8 +1157,6 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                         | "으라거나"
                         | "자거나"
                         | "고서"
-                        | "으려는가"
-                        | "으려는지"
                 )
         })
     {
@@ -1296,6 +1318,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         .find(|m| m.kind == MorphemeKind::Ending)
         .is_some_and(|m| {
             present_declarative(&m.form)
+                || verbal_intention(&m.form)
                 || matches!(
                     m.form.as_str(),
                     "으라며"
@@ -1307,8 +1330,6 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                         | "자면서"
                         | "자면"
                         | "고서"
-                        | "으려는가"
-                        | "으려는지"
                         | "으라"
                         | "으라고"
                         | "으라는"
@@ -1848,6 +1869,7 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
         "으려" | "으려고" => matches!(stem, "들" | "하"),
         "기로" | "자고" => stem == "들",
         "다" | "다가" => matches!(stem, "보" | "못하") || (connector == "다" && stem == "싶"),
+        "으려다" | "으려다가" => stem == "보",
         "는가" | "은가" | "던가" | "나" | "을까" => matches!(stem, "보" | "싶"),
         "으면" => matches!(stem, "하" | "싶"),
         "기도" | "기는" | "기만" | "고자" => stem == "하",
@@ -1928,7 +1950,7 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
             right_forms.as_slice(),
             ["으라" | "으라고" | "으라는" | "으라면" | "오"]
         ),
-        "보" if matches!(connector, "다" | "다가") => {
+        "보" if matches!(connector, "다" | "다가" | "으려다" | "으려다가") => {
             matches!(right_forms.as_slice(), ["으니" | "으면"])
         }
         _ => true,
@@ -2042,48 +2064,49 @@ fn reporting_myeo(form: &str) -> bool {
 }
 
 fn before_particle(ending: &str, particle: &str) -> bool {
-    let connective = matches!(
-        ending,
-        "어" | "어서"
-            | "어도"
-            | "어야"
-            | "어다가"
-            | "고"
-            | "고서"
-            | "게"
-            | "지"
-            | "지만"
-            | "는데"
-            | "은데"
-            | "던데"
-            | "거든"
-            | "으면"
-            | "으니"
-            | "으니까"
-            | "으며"
-            | "으면서"
-            | "으므로"
-            | "으려고"
-            | "으려면"
-            | "으려"
-            | "고자"
-            | "느라고"
-            | "도록"
-            | "더라도"
-            | "더니"
-            | "거나"
-            | "든지"
-            | "자마자"
-            | "라고"
-            | "으라고"
-            | "다고"
-            | "는다고"
-            | "냐고"
-            | "자고"
-            | "라서"
-            | "라면"
-            | "다면"
-    );
+    let connective = intention_connective(ending)
+        || matches!(
+            ending,
+            "어" | "어서"
+                | "어도"
+                | "어야"
+                | "어다가"
+                | "고"
+                | "고서"
+                | "게"
+                | "지"
+                | "지만"
+                | "는데"
+                | "은데"
+                | "던데"
+                | "거든"
+                | "으면"
+                | "으니"
+                | "으니까"
+                | "으며"
+                | "으면서"
+                | "으므로"
+                | "으려고"
+                | "으려면"
+                | "으려"
+                | "고자"
+                | "느라고"
+                | "도록"
+                | "더라도"
+                | "더니"
+                | "거나"
+                | "든지"
+                | "자마자"
+                | "라고"
+                | "으라고"
+                | "다고"
+                | "는다고"
+                | "냐고"
+                | "자고"
+                | "라서"
+                | "라면"
+                | "다면"
+        );
     match particle {
         "요" => {
             reporting_myeo(ending)

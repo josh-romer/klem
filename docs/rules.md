@@ -2444,3 +2444,45 @@ connector is enabled in this batch; composition of these bundled expressions
 with following auxiliaries remains unreviewed. The viewer
 links all six sources and preserves uncertainty between connective/final senses.
 Nonstandard 을런지 is not silently normalized to 을는지.
+
+### Intention connectives and interrupted-intention auxiliaries (COV-017ae / COV-019j)
+
+Eight canonical forms represent -(으)려거든, -(으)려기에, -(으)려는데,
+-(으)려다, -(으)려다가, -(으)려더니, -(으)려도 and -(으)려야. Their
+[21-entry review](intention-connectives-evaluation.json) retains all source notes
+and senses: 18 new ending/expression entries, the two existing -(으)려는
+entries, and auxiliary 보다. The two conditional allomorphs each have separate
+어미 and 품사 없음 homonyms; all four source entries remain selectable.
+
+The reviewed family selects verbs and permits honorific 시, with existing
+non-ㄹ consonant/full 으 versus vowel-or-ㄹ/zero 으 boundaries and irregular
+recovery. Recovered 었/겠/더 cannot precede these forms. For example,
+먹으시려다가 and 들으려더니 recover 먹다 and 듣다. Represented adjective
+auxiliaries, copulas and 답다 do not supply the verb slot, including classes
+inherited through negatives. The existing 으려는 now shares that check; general
+lexical predicates remain unknown to the dictionary-free engine. This is an
+exact form inventory, not a prefix rule for all 려 expressions: other families
+have different source notes, including adjective/copula/past licenses.
+
+Connective 요/는/도 composition follows the existing ordered particle system.
+KRDict 만기일, 쥐색 and 첨부하다 directly attest 려는데요. Other combinations
+are compositional hypotheses, with contextual distribution still unreviewed.
+Expressions remain bundled; no implicit reporting/intention 하다 is inserted,
+and dictionary matching or the finite compatibility policy is not a judgment
+of every lexical sense or attachment.
+
+The [려다 source](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86697)
+and its counterparts describe interrupted intentions or impending changes.
+Canonical 으려다/으려다가 may precede 보다 with 으니/으면, as in
+먹으려다보니 and 먹으려다가보면. This extends the existing 다(가) 보니/보면
+restriction from [보다 sense 5](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62171)
+to the shortened expression; KAIST directly attests 하려다 보니. The following
+auxiliary has a represented Verb class. Other right endings, arbitrary auxiliary
+verbs, internal topic insertion at this new connector, and other shortened
+question/expression auxiliary combinations are not added by this batch.
+
+The new GSD gold match 갈려는데 → 갈다 is recorded as incidental: its complete
+sentence concerns going to Daejeon and apparently intends 가다. The engine
+retains its ordinary ㄹ-stem hypothesis but does not repair the spelling or
+change the annotation. The two 내려다 → 내리다 misses remain; their annotated
+어다 contraction belongs to a different rule family.

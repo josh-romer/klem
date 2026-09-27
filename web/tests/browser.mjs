@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const intentionConnectives = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-intention-connectives.json"), "utf8"));
   const uncertainty = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-uncertainty.json"), "utf8"));
   const adjectivalQuestion = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adjectival-question.json"), "utf8"));
   const continuativeTopic = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-continuative-topic.json"), "utf8"));
@@ -256,6 +257,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...intentionConnectives.LexicalResource.Lexicon.LexicalEntry,
       ...uncertainty.LexicalResource.Lexicon.LexicalEntry,
       ...adjectivalQuestion.LexicalResource.Lexicon.LexicalEntry,
       ...continuativeTopic.LexicalResource.Lexicon.LexicalEntry,
@@ -1425,8 +1427,27 @@ try {
   assert.match(await breakdown.innerText(), /ABC는/);
   assert.equal(await breakdown.locator(".reading-condition").count(), 0);
 
-  // Uncertainty forms have two allomorph sources, including expression POS.
+  // Intention and uncertainty forms expose allomorphs and expression homonyms.
   for (const [word, expected, form, label, id] of [
+    ["먹으려거든", ["먹", "으려거든"], "으려거든", "Conditional intention", 80336],
+    ["살려거든", ["살", "으려거든"], "으려거든", "Conditional intention", 80334],
+    ["먹으려기에", ["먹", "으려기에"], "으려기에", "Intention as a reason", 86547],
+    ["살려기에", ["살", "으려기에"], "으려기에", "Intention as a reason", 86539],
+    ["먹으려는데", ["먹", "으려는데"], "으려는데", "Intention / impending situation", 86720],
+    ["살려는데", ["살", "으려는데"], "으려는데", "Intention / impending situation", 86691],
+    ["먹으려다", ["먹", "으려다"], "으려다", "Interrupted intention", 86727],
+    ["살려다", ["살", "으려다"], "으려다", "Interrupted intention", 86697],
+    ["먹으려다가", ["먹", "으려다가"], "으려다가", "Interrupted intention", 86729],
+    ["살려다가", ["살", "으려다가"], "으려다가", "Interrupted intention", 86699],
+    ["먹으려더니", ["먹", "으려더니"], "으려더니", "Intention followed by a change", 86730],
+    ["살려더니", ["살", "으려더니"], "으려더니", "Intention followed by a change", 86700],
+    ["먹으려도", ["먹", "으려도"], "으려도", "Despite intending", 86737],
+    ["살려도", ["살", "으려도"], "으려도", "Despite intending", 86705],
+    ["먹으려야", ["먹", "으려야"], "으려야", "Intention as a condition", 86742],
+    ["살려야", ["살", "으려야"], "으려야", "Intention as a condition", 86709],
+    ["가려거든", ["가", "으려거든"], "으려거든", "Conditional intention", 80335],
+    ["먹으려거든", ["먹", "으려거든"], "으려거든", "Conditional intention", 80337],
+    ["먹으려다보니", ["먹", "으려다", "보", "으니"], "으려다", "Interrupted intention", 86727],
     ["같을는지", ["같", "을는지"], "을는지", "Uncertain possibility / question", 86615],
     ["갔을는지", ["가", "었", "을는지"], "을는지", "Uncertain possibility / question", 86615],
     ["살는지", ["살", "을는지"], "을는지", "Uncertain possibility / question", 86488],
@@ -1631,7 +1652,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-") || c.id.startsWith("uncertainty-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-") || c.id.startsWith("uncertainty-") || c.id.startsWith("intention-connectives-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

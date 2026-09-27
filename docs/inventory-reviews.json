@@ -13516,6 +13516,249 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:62171",
+      "source_sha256": "5e535b671c27f4ffb2d53cc19c83a3fb2961a4254fa5d17883f791919dd78335",
+      "status": "scoped",
+      "checklist": [
+        "COV-019j"
+      ],
+      "scope": "Sense 5 interrupted-intention contraction before 보다: 으려다/으려다가 with right 으니/으면 only, preserving joined lemma order and a Verb class.",
+      "remaining": "Other connector senses, right prefinal/ending classes, contextual senses and Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "intention_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "intention_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "annotated_intention_keeps_sources_and_distinguishes_incidental_gold"
+        },
+        {
+          "path": "docs/intention-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intention-connectives-다-aux-으니",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다-aux-으면",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다-aux-reject-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다-aux-reject-보았다",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다-aux-reject-싶다",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다가-aux-으니",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다가-aux-으면",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다가-aux-reject-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다가-aux-reject-보았다",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-다가-aux-reject-싶다",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80334",
+      "source_sha256": "de6326ca4a99f4df29ff457bc418c1c904455837b4c0d8336fdb22032b4a0551",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ae"
+      ],
+      "scope": "Canonical 으려거든: eu allomorphs, irregulars, verb attachment, honorific-only recovered prefinals and existing ordered connective particles. Expression homonyms remain explicit dictionary alternatives.",
+      "remaining": "Contextual conditional/intention choice, lexical classes, wider particle distribution and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "intention_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "intention_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "annotated_intention_keeps_sources_and_distinguishes_incidental_gold"
+        },
+        {
+          "path": "docs/intention-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intention-connectives-거든-stem-0",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-stem-1",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-stem-4",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-stem-6",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-honorific-rieul",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80336",
+      "source_sha256": "7b67fbc7e30e9a46341a231ff9783a2c22d466db71de5d4529c722e938daf1cf",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ae"
+      ],
+      "scope": "Canonical 으려거든: eu allomorphs, irregulars, verb attachment, honorific-only recovered prefinals and existing ordered connective particles. Expression homonyms remain explicit dictionary alternatives.",
+      "remaining": "Contextual conditional/intention choice, lexical classes, wider particle distribution and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "intention_connectives_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "intention_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/intention_connectives.rs",
+          "test": "annotated_intention_keeps_sources_and_distinguishes_incidental_gold"
+        },
+        {
+          "path": "docs/intention-connectives-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intention-connectives-거든-stem-2",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-stem-3",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-stem-5",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-trial",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-known-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-expressive",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-past",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-retrospective",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-adjective-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-adjective-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-copula-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-suffix",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-wrong-coda",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-extra-eu",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-wrong-irregular",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-outer-요",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-outer-reject-요요",
+          "judgment": "path"
+        },
+        {
+          "case": "intention-connectives-거든-outer-reject-를",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

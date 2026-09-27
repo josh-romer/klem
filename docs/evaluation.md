@@ -2081,3 +2081,33 @@ throughput guarantee. Rust tests, Clippy, frozen corpora, browser/HTTP checks,
 frontend build, `nix flake check` and the packaged web launcher passed on
 x86_64-linux. Full-dictionary packaged API/CLI parity covers all 92 new cases;
 desktop/mobile inspection covers five selected breakdowns and the grammar pane.
+
+### Intention connectives and interrupted-intention auxiliaries (COV-017ae / COV-019j)
+
+[The source/output comparison](intention-connectives-evaluation.json) records
+130 required and 122 forbidden judgments across eight new canonical forms and
+the existing 으려는 attachment check. The ledger has 3,234 cases / 1,917 required /
+1,325 forbidden judgments; the separate dictionary-policy ledger is unchanged.
+Across all 2,974 ledger/stress surfaces, 765 candidates are added and three
+known nonverbal 으려는 paths removed, without provenance changes. All thirty
+stress fingerprints remain unchanged. Candidate additions are not automatically
+linguistic judgments; unknown stems and contextual ambiguities remain visible.
+
+KAIST gains 하려다 → 하다. GSD gains the annotated 갈다 for 갈려는데,
+but the complete sentence apparently intends 가다; that gain is incidental.
+Development misses are 100 KAIST / 149 GSD with no prior group/component loss.
+Two complete source sentences are retained without annotation changes. The
+catalog has 323 forms, 451 distinct source IDs and 452 offline grammar entries.
+The 715-entry review queue has 199 scoped dispositions, one unresolved gap and
+515 unreviewed entries; the 16 new 품사 없음 expressions are reviewed explicitly
+in the report/catalog rather than silently added to this POS-limited queue.
+
+The pinned novel gains 24 compatible-filtered analyses and loses one represented
+보 + 이다 + 으려는 hypothesis across 23 word occurrences (17 surface types).
+Lexical 보이다 + 으려는 remains; no token loses all readings. Added 데다 and
+뜨다 + 나다 alternatives remain unjudged in context. Three local Nix release
+runs give compatible-mode median 1.2080 seconds versus 1.2275 before, with peak
+RSS below 29 MiB. This is local timing evidence, not a speedup guarantee.
+Rust, Clippy, frozen corpora, frontend, browser/HTTP and Nix checks pass on
+x86_64-linux. The packaged full-dictionary API/CLI smoke covers all 252 cases;
+desktop/mobile inspection covers five breakdowns, an auxiliary and a source pane.

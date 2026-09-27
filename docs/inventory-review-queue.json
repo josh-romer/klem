@@ -17,7 +17,7 @@
     "docs/continuative-class-evaluation.json": "2edc92f9446e40846e33a46b3618640b7e162c3dd917fb1bd26c4ab3e727a38d",
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
-    "docs/coverage-checklist.md": "6adb8fb4dea3b5f3d298d9b6fd43f13687f795392296b3e020ec1f0ae1619cad",
+    "docs/coverage-checklist.md": "d97be2bfdff5709946c19178b08494b9dcaacf07f127a573186114fad15767f5",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
@@ -27,8 +27,9 @@
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
     "docs/extent-evaluation.json": "c612ab51f814696b827b15aceee416bef3193efc774e0ada438f8520e95311b5",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
-    "docs/inventory-audit.md": "effc946ad89da2c40cf36795fb0cf8647120a6d81f6f1b45c718725aa68b3019",
-    "docs/inventory-reviews.json": "f905eea41246262f646cd5c33089c54b0737d1923f3208436e60f3b0e3c1f971",
+    "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
+    "docs/inventory-audit.md": "6fd03ad23da2029ce9806decdccfa13c440278df67f552d4fea6559b8b8bce62",
+    "docs/inventory-reviews.json": "f75aabfcfd08afb2d3bbee710b6a0f627e0bf0dcf9f0982ad457f899e1957d21",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
     "docs/prefinal-copula-evaluation.json": "51f8ee8c84b0909e7fae5d03bf40bd04783e85956b43a2f44d3c1a2b382af40e",
@@ -66,8 +67,9 @@
     "tests/extent_particles.rs": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
     "tests/fixtures/dictionary-attachments.json": "f985e9f8c9587c44377552f64961210c6ee0ed0e5e2193df7b5ec6a01000701f",
     "tests/fixtures/kaist-range-case.conllu": "7a22565728434d5e04f7b044cf2953ccb033248d2898c3e04132bdd04f97b1c7",
-    "tests/fixtures/validity.json": "d299a1e5756d1b0464119f39f40bd9c2a0c65462bd650ede8a8b57daf246a891",
+    "tests/fixtures/validity.json": "da1bb70e333fb3f184eaf21ba8495e7fd93cf62aff413d517bd18ed54a5ade73",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
+    "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
     "tests/noh_contraction.rs": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
     "tests/prefinal_copulas.rs": "2898476eead2aec9180ac1775bc0742ad86fcfa65ea690c865a687e63113d003",
@@ -85,7 +87,7 @@
     "tests/short_clauses.rs": "d3e1dbb93de840f53c3474ebf4e41e346dc57a0d1225c5d5738226d52ede46a3",
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
-    "web/src/grammar-labels.json": "a6524433208ede92d10f6a65da79abf650ba2bc02ce5954b4f54aa83f9dcf461"
+    "web/src/grammar-labels.json": "aae8bdcecca5f978cd6d26dc86b4f3b59495ec61d04dff4bd829de68dc9759d3"
   },
   "counts": {
     "entries": 715,
@@ -96,12 +98,12 @@
       "조사": 157
     },
     "by_review": {
-      "unreviewed": 518,
-      "scoped": 196,
+      "unreviewed": 515,
+      "scoped": 199,
       "gap": 1
     },
-    "with_catalog_links": 297,
-    "with_judgment_citations": 243
+    "with_catalog_links": 299,
+    "with_judgment_citations": 245
   },
   "entries": [
     {
@@ -2375,6 +2377,56 @@
           "verdict": "forbidden"
         },
         {
+          "case": "intention-connectives-다-aux-reject-보다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-다-aux-reject-보았다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-다-aux-reject-싶다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-다-aux-으니",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-다-aux-으면",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-다가-aux-reject-보다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-다가-aux-reject-보았다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-다가-aux-reject-싶다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-다가-aux-으니",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-다가-aux-으면",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "negative-aux-bad-connector",
           "judgment": "group",
           "verdict": "forbidden"
@@ -2384,7 +2436,73 @@
         "docs/auxiliary-inventory.json"
       ],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:62171",
+        "source_sha256": "5e535b671c27f4ffb2d53cc19c83a3fb2961a4254fa5d17883f791919dd78335",
+        "status": "scoped",
+        "checklist": [
+          "COV-019j"
+        ],
+        "scope": "Sense 5 interrupted-intention contraction before 보다: 으려다/으려다가 with right 으니/으면 only, preserving joined lemma order and a Verb class.",
+        "remaining": "Other connector senses, right prefinal/ending classes, contextual senses and Korean review remain open.",
+        "evidence": [
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "intention_connectives_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "intention_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "annotated_intention_keeps_sources_and_distinguishes_incidental_gold"
+          },
+          {
+            "path": "docs/intention-connectives-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "intention-connectives-다-aux-으니",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다-aux-으면",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다-aux-reject-보다",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다-aux-reject-보았다",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다-aux-reject-싶다",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다가-aux-으니",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다가-aux-으면",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다가-aux-reject-보다",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다가-aux-reject-보았다",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-다가-aux-reject-싶다",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -32587,11 +32705,97 @@
         ]
       },
       "source_sha256": "de6326ca4a99f4df29ff457bc418c1c904455837b4c0d8336fdb22032b4a0551",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-으려거든",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "intention-connectives-거든-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-honorific-rieul",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-stem-0",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-stem-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-stem-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-stem-6",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:80334",
+        "source_sha256": "de6326ca4a99f4df29ff457bc418c1c904455837b4c0d8336fdb22032b4a0551",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ae"
+        ],
+        "scope": "Canonical 으려거든: eu allomorphs, irregulars, verb attachment, honorific-only recovered prefinals and existing ordered connective particles. Expression homonyms remain explicit dictionary alternatives.",
+        "remaining": "Contextual conditional/intention choice, lexical classes, wider particle distribution and independent Korean review remain open.",
+        "evidence": [
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "intention_connectives_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "intention_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "annotated_intention_keeps_sources_and_distinguishes_incidental_gold"
+          },
+          {
+            "path": "docs/intention-connectives-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "intention-connectives-거든-stem-0",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-stem-1",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-stem-4",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-stem-6",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-honorific-rieul",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -40944,11 +41148,250 @@
         ]
       },
       "source_sha256": "7b67fbc7e30e9a46341a231ff9783a2c22d466db71de5d4529c722e938daf1cf",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-으려거든",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "intention-connectives-거든-adjective",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-adjective-honorific",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-adjective-negative",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-copula",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-copula-negative",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-expressive",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-extra-eu",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-known-negative",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-modal",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-negative",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-outer-reject-를",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-outer-reject-요요",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-outer-요",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-past",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-retrospective",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-stem-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-stem-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-stem-5",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-suffix",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-topic",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-trial",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "intention-connectives-거든-wrong-coda",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "intention-connectives-거든-wrong-irregular",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:80336",
+        "source_sha256": "7b67fbc7e30e9a46341a231ff9783a2c22d466db71de5d4529c722e938daf1cf",
+        "status": "scoped",
+        "checklist": [
+          "COV-017ae"
+        ],
+        "scope": "Canonical 으려거든: eu allomorphs, irregulars, verb attachment, honorific-only recovered prefinals and existing ordered connective particles. Expression homonyms remain explicit dictionary alternatives.",
+        "remaining": "Contextual conditional/intention choice, lexical classes, wider particle distribution and independent Korean review remain open.",
+        "evidence": [
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "intention_connectives_preserves_class_boundaries_and_ordered_components"
+          },
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "intention_connectives_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/intention_connectives.rs",
+            "test": "annotated_intention_keeps_sources_and_distinguishes_incidental_gold"
+          },
+          {
+            "path": "docs/intention-connectives-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "intention-connectives-거든-stem-2",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-stem-3",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-stem-5",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-trial",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-negative",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-known-negative",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-topic",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-expressive",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-past",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-modal",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-retrospective",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-adjective",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-adjective-honorific",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-adjective-negative",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-copula",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-copula-negative",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-suffix",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-wrong-coda",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-extra-eu",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-wrong-irregular",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-outer-요",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-outer-reject-요요",
+            "judgment": "path"
+          },
+          {
+            "case": "intention-connectives-거든-outer-reject-를",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

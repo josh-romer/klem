@@ -902,8 +902,8 @@ These excerpts are adapted from the September 2026 KRDict export by the National
 Institute of Korean Language under CC BY-SA 2.0 KR. Changes: every selected
 homonym/sense, English equivalents only, first example group per sense, omit
 WordForm/RelatedForm/global metadata and idiom subentries, and reformat JSON.
-Source/license links are above. The catalog now has 315 forms, 433 source IDs
-and 434 grammar fixture entries; these are integration fixtures, not gold analyses.
+Source/license links are above. The catalog now has 323 forms, 451 source IDs
+and 452 grammar fixture entries; these are integration fixtures, not gold analyses.
 
 `kaist-short-clauses.conllu` retains complete, byte-identical development
 sentences MH2_0149-s11 and MH2_0169-s5 from the pinned KAIST corpus, under its
@@ -962,3 +962,14 @@ Source license: [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0
 `kaist-uncertainty.conllu` preserves complete KAIST development sentence
 MH2_0159-s309 byte-for-byte under the existing corpus attribution. Token 16,
 같을는지 / 같+을는지 / paa+ecs, now recovers its unchanged gold lemma.
+
+`krdict-intention-connectives.json` contains 30 lexical entries for COV-017ae /
+COV-019j, projected from the September 2026 NIKL Korean Basic Dictionary export.
+All selected homonyms/senses, notes, English translations and first example
+groups remain; word/related forms and idiom subentries are omitted. The grammar
+fixture adds 18 source entries listed in `intention-connectives-evaluation.json`.
+All projections use [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+`kaist-intention-connectives.conllu` and `gsd-intention-connectives.conllu` retain
+complete development sentences MH2_0169-s336 and dev-s560 byte-for-byte under the
+existing corpus attribution. KAIST 하려다 gains the intended 하다; GSD 갈려는데
+matches annotated 갈다 incidentally, with the original sentence/tag preserved.

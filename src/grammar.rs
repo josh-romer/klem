@@ -696,6 +696,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으려면", "려면", "으려면"),
             ("으려", "려", "으려"),
             ("으려는", "려는", "으려는"),
+            ("으려는가", "려는가", "으려는가"),
+            ("으려는지", "려는지", "으려는지"),
             ("으라", "라", "으라"),
             ("으라고", "라고", "으라고"),
             ("으라는", "라는", "으라는"),
@@ -750,6 +752,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을래", "래", "을래", 8),
             ("을래요", "래요", "을래요", 8),
             ("을지", "지", "을지", 8),
+            ("을는지", "는지", "을는지", 8),
             ("을지라도", "지라도", "을지라도", 8),
             ("을수록", "수록", "을수록", 8),
             ("음", "", "음", 16),
@@ -1252,6 +1255,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.short_clause" => {
             "Recognize a reviewed contracted quotation or change/conditional family as one component; preserve homonyms without adding an implicit reporting verb or choosing a contextual sense."
+        }
+        "ending.uncertainty" => {
+            "Recover -(으)ㄹ는지 or the shortened -(으)려는가/지 expression with its own boundary and prefinal licenses; no implicit 하다 or contextual sense is selected."
         }
         "ending.reporting_ni" => {
             "Recognize a surprise, reported statement, command, proposal or question in a -니 family; preserve homonyms without inserting an implicit reporting verb or selecting a contextual sense."

@@ -13322,6 +13322,200 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:86488",
+      "source_sha256": "a9c1928639dfac85b4973abf87610935c94e791da499f6673ef3dd50f6c32f30",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ad"
+      ],
+      "scope": "Canonical 을는지: own consonant/attached-ㄹ allomorphs and irregulars, source-listed honorific/past licenses, explicit copulas, auxiliary classes and 답다 derivation; existing ordered nominal/question particles. Unknown lexical heads and whole-word alternatives retained.",
+      "remaining": "Contextual connective/final sense choice, particle distribution, lexical classes, nonstandard spelling and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/uncertainty.rs",
+          "test": "uncertainty_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/uncertainty.rs",
+          "test": "uncertainty_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/uncertainty-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "uncertainty-possibility-0",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-possibility-1",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-possibility-5",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-possibility-7",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-possibility-8",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-negative-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-verb-aux",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-suffix",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-outer-나올는지-는",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-outer-나올는지-도",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-outer-나올는지-요",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-double-polite-나올는지",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-direct-copula-나올는지",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86615",
+      "source_sha256": "d52ffaa5570bed16f2f885abcebf44f718fdc07b14e35e924087a70cc7917771",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ad"
+      ],
+      "scope": "Canonical 을는지: own consonant/attached-ㄹ allomorphs and irregulars, source-listed honorific/past licenses, explicit copulas, auxiliary classes and 답다 derivation; existing ordered nominal/question particles. Unknown lexical heads and whole-word alternatives retained.",
+      "remaining": "Contextual connective/final sense choice, particle distribution, lexical classes, nonstandard spelling and independent Korean review remain open.",
+      "evidence": [
+        {
+          "path": "tests/uncertainty.rs",
+          "test": "uncertainty_preserves_class_boundaries_and_ordered_components"
+        },
+        {
+          "path": "tests/uncertainty.rs",
+          "test": "uncertainty_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "docs/uncertainty-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "uncertainty-possibility-2",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-possibility-3",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-possibility-4",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-possibility-6",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-possibility-9",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-past",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-double-past",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-honorific-past",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-adjective-aux",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-modal",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-retrospective",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-coda",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-extra-eu",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-open",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-regular-dap",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-spelling-repair",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-outer-먹을는지-는",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-outer-먹을는지-도",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-outer-먹을는지-요",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-double-polite-먹을는지",
+          "judgment": "path"
+        },
+        {
+          "case": "uncertainty-direct-copula-먹을는지",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

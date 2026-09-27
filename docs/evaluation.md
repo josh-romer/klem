@@ -2057,3 +2057,27 @@ peak RSS around 28 MiB. These observations include dictionary lookup and JSONL
 serialization to `/dev/null`; they are not throughput guarantees. Individual
 removed and retained candidates, raw measurements and fingerprints are preserved
 in the source review.
+
+### Uncertain possibility and intention questions (COV-017ad)
+
+[The comparison](uncertainty-evaluation.json) records 55 required and 37 forbidden
+paths, all six grammar sources and the complete unchanged KAIST sentence.
+KAIST development gains 같을는지 → 같다 (101 misses remain); GSD stays at
+150 misses. No previously recovered gold group or component set is lost.
+All thirty stress fingerprints remain unchanged. The main judgment ledger now
+contains 2,982 cases with 1,787 required and 1,203 forbidden judgments; the separate
+dictionary-policy ledger is unchanged. Catalog coverage is 315 canonical forms,
+433 distinct source IDs and 434 offline grammar entries. The inventory has 196
+scoped dispositions, one unresolved observed gap and 518 unreviewed entries.
+These counts are scoped regression evidence, not a linguistic precision estimate.
+
+The pinned 81,758-word-token novel gains 39 compatible-filtered analyses across
+30 tokens (23 surface types), with no old reading removed. These include
+unjudged inherited irregular and nominal/copula alternatives; source-backed
+required judgments are reported separately. Three local Nix release runs give
+compatible-mode median 1.2141 seconds versus 1.1912 before, with peak RSS below
+29 MiB. Timing includes JSONL serialization and is a local observation, not a
+throughput guarantee. Rust tests, Clippy, frozen corpora, browser/HTTP checks,
+frontend build, `nix flake check` and the packaged web launcher passed on
+x86_64-linux. Full-dictionary packaged API/CLI parity covers all 92 new cases;
+desktop/mobile inspection covers five selected breakdowns and the grammar pane.

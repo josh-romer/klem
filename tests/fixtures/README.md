@@ -902,8 +902,8 @@ These excerpts are adapted from the September 2026 KRDict export by the National
 Institute of Korean Language under CC BY-SA 2.0 KR. Changes: every selected
 homonym/sense, English equivalents only, first example group per sense, omit
 WordForm/RelatedForm/global metadata and idiom subentries, and reformat JSON.
-Source/license links are above. The catalog now has 312 forms, 427 source IDs
-and 428 grammar fixture entries; these are integration fixtures, not gold analyses.
+Source/license links are above. The catalog now has 315 forms, 433 source IDs
+and 434 grammar fixture entries; these are integration fixtures, not gold analyses.
 
 `kaist-short-clauses.conllu` retains complete, byte-identical development
 sentences MH2_0149-s11 and MH2_0169-s5 from the pinned KAIST corpus, under its
@@ -951,3 +951,14 @@ entries and idiom subentries are omitted. License:
 `dev-s820` byte-for-byte under the existing corpus attribution. It verifies that
 뭐하냐는 retains its gold lemma and general 냐는 ending while a distinct
 auxiliary adjectival-ending hypothesis is removed; no recall gain is claimed.
+
+`krdict-uncertainty.json` contains 37 lexical entries for COV-017ad, projected
+from the September 2026 National Institute of Korean Language Korean Basic
+Dictionary export. All selected homonyms/senses, notes, English translations
+and first example groups are retained; word/related forms and idiom subentries
+are omitted. Six grammar entries (86488, 86615, 86689, 86719, 86693, 86721)
+are added to `krdict-grammar-labels.json` under the same projection policy.
+Source license: [CC BY-SA 2.0 KR](https://creativecommons.org/licenses/by-sa/2.0/kr/).
+`kaist-uncertainty.conllu` preserves complete KAIST development sentence
+MH2_0159-s309 byte-for-byte under the existing corpus attribution. Token 16,
+같을는지 / 같+을는지 / paa+ecs, now recovers its unchanged gold lemma.

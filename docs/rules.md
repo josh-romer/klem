@@ -2407,3 +2407,40 @@ Official guidance on 있다 does not establish a blanket auxiliary-wide ban on
 honorific 있으신다 or every past-adnominal 있은 construction. Those observations
 remain unjudged. Existing 계신가 and 계신/계시는 paths remain available;
 other existential question allomorphs still need separate evidence.
+
+### Uncertain possibility and shortened intention questions (COV-017ad)
+
+The [source review](uncertainty-evaluation.json) retains all attachment notes and
+senses of six KRDict entries. Canonical 을는지 represents
+[-ㄹ는지](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86488)
+and [-을는지](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86615):
+갈는지, 살는지 and 먹을는지 recover 가다, 살다 and 먹다. Source-listed
+verbs, adjectives and explicit copulas can precede it; recovered 시/었 are
+licensed, including their existing ordered combinations, while 겠/더 are not.
+Source examples include 좋을는지, 갔을는지, 학생일는지 and 아닐는지.
+The lexical predicate representation of 아니다 is preserved. Explicit 답다
+requires its ㅂ-irregular vowel boundary: 학생다울는지, not 학생답을는지.
+
+Canonical 으려는가 represents
+[-려는가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86689)
+and [-으려는가](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86719);
+으려는지 represents
+[-려는지](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86693)
+and [-으려는지](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86721).
+These shortened expressions remain single grammatical components, without an
+invented 하다 lemma. The source lists verb attachment and honorific 시;
+recovered past/modal/retrospective slots are rejected. Represented adjective
+auxiliaries, copulas and 답다 cannot license these forms, including known classes
+inherited through negative auxiliaries. Dictionary-free lexical heads remain
+unknown. The finite dictionary conflict policy is unchanged; headword presence
+or compatibility with its existing checks does not establish verbal intention.
+Existing 으려는 and other intention endings retain their separate audit scope.
+
+The forms compose with the existing nominal/question outer-particle order.
+KRDict 발간 (56561) directly attests 나올는지는; NIKL FAQ 8675 attests
+있을는지요. This structural composition does not decide contextual acceptability
+for every particle or sentence sense. Duplicate 요 and direct ending + copula are not licensed. No new auxiliary
+connector is enabled in this batch; composition of these bundled expressions
+with following auxiliaries remains unreviewed. The viewer
+links all six sources and preserves uncertainty between connective/final senses.
+Nonstandard 을런지 is not silently normalized to 을는지.

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–ac/018a–k/018m–n/019a–g/019i/020a–i/021a–b/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–ad/018a–k/018m–n/019a–g/019i/020a–i/021a–b/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -173,8 +173,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 194 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ac/018e–k/018m–n/019d–g/019i/020d–h; 520 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 196 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ad/018e–k/018m–n/019d–g/019i/020d–h; 518 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One additional
   entry (마다, COV-018l) records an observed gap with unresolved acceptability. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -219,7 +219,7 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ac implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–ad implemented.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -653,6 +653,24 @@ review remains open under the completion review below.
   으냐는 hypothesis; its gold lemma and general 냐는 remain. Stress hashes
   and all development recovery outcomes are unchanged. Broader existential
   paradigms, honorific 있다 and past adnominals remain open under COV-019h.
+
+- [x] **COV-017ad — Uncertain possibility and shortened intention questions.**
+  -(으)ㄹ는지 and -(으)려는가/지 now expose canonical 을는지, 으려는가
+  and 으려는지. Boundary and irregular recovery retain ㄹ; possibility admits
+  honorific/past markers, while the intention expressions admit only honorific
+  시. The latter reject represented adjective auxiliaries, inherited known
+  adjective/copula negatives, direct copulas and 답다 derivation. Unknown lexical
+  heads remain; dictionary filtering does not certify every lexical attachment.
+  Existing ordered nominal/question particles compose, including 나올는지는
+  and 있을는지요. No implicit 하다 or contextual sense is selected.
+  Evidence: [92 stable judgments](../tests/fixtures/validity.json) (55 required /
+  37 forbidden), [Unicode/dictionary/CLI tests](../tests/uncertainty.rs),
+  the complete unchanged KAIST MH2_0159-s309 sentence, six dictionary grammar
+  sources, browser source/selection checks and [review](uncertainty-evaluation.json).
+  같을는지 recovers 같다, leaving 101 KAIST and 150 GSD development misses;
+  no prior gold recovery is lost. All thirty stress fingerprints are unchanged.
+  Nonstandard 을런지 spelling repair, broader intention-family/class licenses,
+  contextual particle distribution and independent Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–n implement post-ending, outer choice, emphatic,
@@ -1218,7 +1236,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 312 currently emitted canonical grammar forms.** The initial catalog
+  for all 315 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

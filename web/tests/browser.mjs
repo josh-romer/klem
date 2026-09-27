@@ -137,6 +137,7 @@ try {
   const enumerativeParticles = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-enumerative-particles.json"), "utf8"),
   );
+  const uncertainty = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-uncertainty.json"), "utf8"));
   const adjectivalQuestion = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adjectival-question.json"), "utf8"));
   const continuativeTopic = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-continuative-topic.json"), "utf8"));
   const adverbFocus = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-adverb-focus.json"), "utf8"));
@@ -255,6 +256,7 @@ try {
   );
   fixture.LexicalResource.Lexicon.LexicalEntry.push(
     ...[
+      ...uncertainty.LexicalResource.Lexicon.LexicalEntry,
       ...adjectivalQuestion.LexicalResource.Lexicon.LexicalEntry,
       ...continuativeTopic.LexicalResource.Lexicon.LexicalEntry,
       ...adverbFocus.LexicalResource.Lexicon.LexicalEntry,
@@ -1423,6 +1425,43 @@ try {
   assert.match(await breakdown.innerText(), /ABC는/);
   assert.equal(await breakdown.locator(".reading-condition").count(), 0);
 
+  // Uncertainty forms have two allomorph sources, including expression POS.
+  for (const [word, expected, form, label, id] of [
+    ["같을는지", ["같", "을는지"], "을는지", "Uncertain possibility / question", 86615],
+    ["갔을는지", ["가", "었", "을는지"], "을는지", "Uncertain possibility / question", 86615],
+    ["살는지", ["살", "을는지"], "을는지", "Uncertain possibility / question", 86488],
+    ["먹으려는가", ["먹", "으려는가"], "으려는가", "Intention / impending event question", 86719],
+    ["가려는가", ["가", "으려는가"], "으려는가", "Intention / impending event question", 86689],
+    ["먹으려는지", ["먹", "으려는지"], "으려는지", "Uncertain intention / impending event", 86721],
+    ["먹으시려는지", ["먹", "시", "으려는지"], "으려는지", "Uncertain intention / impending event", 86693],
+  ]) {
+    await submit(page, word);
+    await waitHeading(page, word);
+    const selector = breakdown.getByRole("combobox");
+    if (await selector.count()) {
+      const choice = await selector.locator("option").evaluateAll(
+        (options, text) => options.find(o => o.textContent.replace(/^\d+\. /, "") === text)?.value,
+        expected.join(" + "),
+      );
+      assert.ok(choice, word);
+      await selector.selectOption(choice);
+    }
+    assert.deepEqual(await breakdown.locator(".part-form").allTextContents(), expected);
+    await breakdown.getByRole("button", {name: `${form} ${label}`, exact: true}).click();
+    const result = await (await post("analyze", {text: word})).json();
+    const sources = result.grammar[`-${form}`];
+    assert.deepEqual(sources.map(e => e.id).sort(), grammarLabels[`-${form}`].sources.map(e => `krdict:${e.id}`).sort());
+    const entry = sources.find(e => e.id === `krdict:${id}`);
+    const index = await page.locator(".entry-choices button").evaluateAll((buttons, e) =>
+      buttons.findIndex(b => b.querySelector("span")?.textContent === e.headword + (e.homonym === "0" ? "" : e.homonym)
+        && b.querySelector("small")?.textContent === e.pos), entry);
+    assert.ok(index >= 0, `${word}: ${id}`);
+    await page.locator(".entry-choices button").nth(index).click();
+    await page.waitForFunction(id => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute("href")?.includes(`ParaWordNo=${id}`), id);
+    const cli = JSON.parse(execFileSync(cliBin, ["word", word], {encoding: "utf8"}));
+    assert.deepEqual(result.records[0].analysis.analyses, cli.analyses);
+  }
+
   // Missing labels, expression POS, component links, and normalized spellings.
   for (const [word, expected, form, label, id, key] of [
     ["먹습니다", ["먹", "습니다"], "습니다", "Formal polite statement", 79398, "-습니다"],
@@ -1592,7 +1631,7 @@ try {
   }
   const retrospectiveLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/validity.json"), "utf8"));
   const retrospectiveResults = new Map();
-  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-")))) {
+  for (const c of retrospectiveLedger.cases.filter(c => (c.id.startsWith("retrospective-license-") || c.id.startsWith("retrospective-connective-") || c.id.startsWith("retrospective-adnominal-") || c.id.startsWith("question-copula-") || c.id.startsWith("noh-") || c.id.startsWith("report-ne-") || c.id.startsWith("doe-") || c.id.startsWith("chigo-") || c.id.startsWith("range-case-") || c.id.startsWith("extent-") || c.id.startsWith("approximation-") || c.id.startsWith("report-myeo-") || c.id.startsWith("stative-report-") || c.id.startsWith("present-license-") || c.id.startsWith("report-ni-") || c.id.startsWith("short-clause-") || c.id.startsWith("continuative-topic-") || c.id.startsWith("adjectival-question-") || c.id.startsWith("uncertainty-")))) {
     for (const j of c.judgments.filter(j => j.verdict === "forbidden")) {
       if (!retrospectiveResults.has(c.surface)) retrospectiveResults.set(c.surface, await (await post("analyze", {text: c.surface})).json());
       const data = retrospectiveResults.get(c.surface);

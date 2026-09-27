@@ -561,10 +561,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if ending.form == "고서" && p.morphs.iter().any(|m| m.form != "시") {
                     continue;
                 }
-                // The adjective 으냐는 allomorph is a bare-stem path;
-                // prefinals use 냐는/느냐는. Retrospective 더 precedes 냐는.
-                if (ending.form == "으냐는" && !p.morphs.is_empty())
-                    || (ending.form == "느냐는" && p.morphs.iter().any(|m| m.form == "더"))
+                // Retrospective 더 precedes 냐는, not 느냐는. Adjectival
+                // question prefinals are checked by the shared family above.
+                if (ending.form == "느냐는" && p.morphs.iter().any(|m| m.form == "더"))
                     || (matches!(ending.form, "잖아" | "잖아요")
                         && p.morphs.iter().any(|m| m.form == "더"))
                 {
@@ -572,8 +571,16 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 // Reviewed shortened adnominals: intention permits honorific
                 // 시; proposal quotation is currently scoped to bare stems.
-                if (ending.form == "으려는" && p.morphs.iter().any(|m| m.form != "시"))
+                if (matches!(ending.form, "으려는" | "으려는가" | "으려는지")
+                    && p.morphs.iter().any(|m| m.form != "시"))
                     || (matches!(ending.form, "자는" | "자거나") && !p.morphs.is_empty())
+                {
+                    continue;
+                }
+                if ending.form == "을는지"
+                    && p.morphs
+                        .iter()
+                        .any(|m| !matches!(m.form.as_str(), "시" | "었"))
                 {
                     continue;
                 }
@@ -704,6 +711,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if reporting_myeo(ending.form) {
                     p.rules.push("ending.reporting_myeo".into());
+                }
+                if matches!(ending.form, "을는지" | "으려는가" | "으려는지") {
+                    p.rules.push("ending.uncertainty".into());
                 }
                 if factual_ra {
                     p.rules.push("ending.factual_ra".into());
@@ -1007,6 +1017,11 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             if bare_stative_iss && present_declarative(&m.form) {
                 return false;
             }
+            if matches!(m.form.as_str(), "으려는가" | "으려는지")
+                && matches!(class, Some(PredicateClass::Copula))
+            {
+                return false;
+            }
             if present_declarative(&m.form)
                 && matches!(
                     class,
@@ -1034,6 +1049,8 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                         | "으라거나"
                         | "자거나"
                         | "고서"
+                        | "으려는가"
+                        | "으려는지"
                 )
             {
                 return false;
@@ -1116,6 +1133,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                         | "으라거나"
                         | "자거나"
                         | "고서"
+                        | "으려는가"
+                        | "으려는지"
                 )
         })
     {
@@ -1148,6 +1167,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "을까"
                 | "을까요"
                 | "을지"
+                | "을는지"
                 | "을지라도"
                 | "을수록"
                 | "음"
@@ -1287,6 +1307,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                         | "자면서"
                         | "자면"
                         | "고서"
+                        | "으려는가"
+                        | "으려는지"
                         | "으라"
                         | "으라고"
                         | "으라는"
@@ -1963,7 +1985,16 @@ impl PredicateEnd {
                 }
                 matches!(
                     m.form.as_str(),
-                    "기" | "음" | "는가" | "은가" | "는지" | "은지" | "던가" | "던지"
+                    "기" | "음"
+                        | "는가"
+                        | "은가"
+                        | "는지"
+                        | "은지"
+                        | "던가"
+                        | "던지"
+                        | "을는지"
+                        | "으려는가"
+                        | "으려는지"
                 ) || match self {
                     Self::BeforeParticle(form) => before_particle(&m.form, form),
                     _ => false,

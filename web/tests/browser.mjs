@@ -266,6 +266,7 @@ try {
   );
   const expressiveHada = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-expressive-hada.json"), "utf8"));
   const additiveParticles = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-additive-particles.json"), "utf8"));
+  const copularClass = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-copular-class.json"), "utf8"));
   const quotedBakke = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-quoted-bakke.json"), "utf8"));
   const necessity = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-necessity.json"), "utf8"));
   const llachimyeon = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-llachimyeon.json"), "utf8"));
@@ -289,6 +290,7 @@ try {
     ...[
       ...expressiveHada.LexicalResource.Lexicon.LexicalEntry,
       ...hadaComplex.LexicalResource.Lexicon.LexicalEntry,
+      ...copularClass.LexicalResource.Lexicon.LexicalEntry,
       ...quotedBakke.LexicalResource.Lexicon.LexicalEntry,
       ...necessity.LexicalResource.Lexicon.LexicalEntry,
       ...llachimyeon.LexicalResource.Lexicon.LexicalEntry,
@@ -722,6 +724,52 @@ try {
       if (j.verdict === "forbidden") assert.ok(token.dictionary.readings[i].lemmas[0].entries.some(e=>e.conflicts.some(c=>c.rule === "habitual_condition_verb" && c.morpheme_index === j.morphemes.length - 1)));
     }
   }
+  const copularCases = connectiveLedger.cases.filter(c => c.id.startsWith("copular-class-"));
+  assert.equal(copularCases.length, 105);
+  for (const c of copularCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const i = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.ok(i >= 0, c.id);
+      const assessment = token.dictionary.readings[i];
+      assert.equal(assessment.status === "incompatible", j.verdict === "forbidden", c.id);
+      if (j.verdict === "forbidden") assert.ok(assessment.lemmas[0].entries.some(e => e.conflicts.some(c => c.rule === "bare_copular_ending" && c.morpheme_index === 0)));
+    }
+  }
+  const copularText = "누이라고밖에 아니라고 누이시라고 먹더라고 먹음이라고 행복하란";
+  await submit(page, copularText); await waitHeading(page, "누이라고밖에");
+  await page.getByLabel("Dictionary matches only").check();
+  const copularData = await (await post("analyze", {text:copularText})).json();
+  const copularAnalyses = copularData.records[0].analysis.analyses;
+  const factualIndex = copularAnalyses.findIndex(a => a.lemmas.length === 1 && a.lemmas[0].kind === "predicate" && a.morphemes[0].form === "라고");
+  const nominalQuoteIndex = copularAnalyses.findIndex(a => a.lemmas.length === 1 && a.lemmas[0].text === "누이" && a.lemmas[0].kind === "nominal" && a.morphemes[0].kind === "particle");
+  assert.ok(factualIndex >= 0 && nominalQuoteIndex >= 0);
+  const firstCopularSelect = page.locator(".breakdown-word").first().locator("select");
+  assert.equal(await firstCopularSelect.locator(`option[value="${factualIndex}"]`).count(), 1);
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  assert.equal(await firstCopularSelect.locator(`option[value="${factualIndex}"]`).count(), 0);
+  assert.equal(await firstCopularSelect.locator(`option[value="${nominalQuoteIndex}"]`).count(), 1);
+  for (const [i, forms] of [[0,["누이","이","라고","밖에"]],[0,["누이","으라고","밖에"]],[1,["아니","라고"]],[2,["누이","시","라고"]],[3,["먹","더","라고"]],[4,["먹","음","이","라고"]],[5,["행복하","으란"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, forms) => os.find(o => o.textContent.replace(/^\d+\. /, "") === forms.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+  }
+  const copularDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const copularExport = JSON.parse(await readFile(await (await copularDownload).path(), "utf8"));
+  const copularExpected = execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:copularText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(copularExport.records, copularExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-copular-class-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-copular-class-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   const quotedBakkePolicy = connectiveLedger.cases.filter(c => c.id.startsWith("quoted-bakke-"));
   assert.equal(quotedBakkePolicy.length, 4);
   for (const c of quotedBakkePolicy) {

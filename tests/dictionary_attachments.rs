@@ -19,18 +19,34 @@ impl Fixture {
     fn new(name: &str) -> Self {
         let path =
             std::env::temp_dir().join(format!("klem-attachments-{}-{name}.db", std::process::id()));
-        import_krdict(
-            &[
-                "krdict-report-ni.json",
-                "krdict-attachments.json",
-                "krdict-attachment-connectives.json",
-                "krdict-expressive-hada.json",
-            ]
-            .map(|s| PathBuf::from("tests/fixtures").join(s)),
-            &path,
-            "attachment-fixture",
-        )
-        .unwrap();
+        let mut entries = std::collections::BTreeMap::new();
+        for file in [
+            "krdict-report-ni.json",
+            "krdict-attachments.json",
+            "krdict-attachment-connectives.json",
+            "krdict-expressive-hada.json",
+            "krdict-copular-class.json",
+        ] {
+            let data: serde_json::Value = serde_json::from_slice(
+                &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
+            )
+            .unwrap();
+            for entry in data["LexicalResource"]["Lexicon"]["LexicalEntry"]
+                .as_array()
+                .unwrap()
+            {
+                entries
+                    .entry(entry["val"].to_string())
+                    .or_insert(entry.clone());
+            }
+        }
+        let input = path.with_extension("json");
+        fs::write(&input, serde_json::to_vec(&serde_json::json!({
+            "LexicalResource": {"Lexicon": {"LexicalEntry": entries.into_values().collect::<Vec<_>>()}}
+        })).unwrap()).unwrap();
+        let imported = import_krdict(std::slice::from_ref(&input), &path, "attachment-fixture");
+        fs::remove_file(input).unwrap();
+        imported.unwrap();
         Self(path)
     }
     fn open(&self) -> SqliteDictionary {
@@ -88,7 +104,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     })
     .unwrap();
     assert!(report.passed(), "{:?}", report.violations);
-    assert_eq!((report.required_total, report.forbidden_total), (150, 86));
+    assert_eq!((report.required_total, report.forbidden_total), (213, 128));
     assert_eq!(
         report.required_total + report.forbidden_total,
         suite.cases.len()
@@ -498,5 +514,110 @@ fn dictionary_attachment_cli_library_unicode_and_cache_parity() {
             String::from_utf8_lossy(&output.stderr)
                 .contains("--dict-compatible requires --dictionary")
         );
+    }
+}
+
+#[test]
+fn copular_endings_distinguish_lexical_ida_and_keep_unknown_entry_classes() {
+    let fixture = Fixture::new("copular-class");
+    let db = fixture.open();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    let engine = Lemmatizer::new();
+    for surface in ["이라고", "누이라고밖에"] {
+        let word = engine.analyze_word(surface).unwrap();
+        let annotation = dictionary.annotate(&word).unwrap();
+        let factual = word
+            .analyses
+            .iter()
+            .find(|a| {
+                a.lemmas.len() == 1
+                    && a.lemmas[0].kind == LemmaKind::Predicate
+                    && a.morphemes[0].form == "라고"
+            })
+            .unwrap();
+        let evidence = annotation.assess(factual);
+        assert_eq!(evidence.status, Compatibility::Incompatible);
+        for entry in &evidence.lemmas[0].entries {
+            assert_eq!(entry.status, Compatibility::Incompatible);
+            let expected = if matches!(
+                entry.id.as_str(),
+                "krdict:92457" | "krdict:45654" | "krdict:45655"
+            ) {
+                (AttachmentRule::BareCopularEnding, Some(0))
+            } else {
+                (AttachmentRule::LexicalRole, None)
+            };
+            assert!(
+                entry
+                    .conflicts
+                    .iter()
+                    .any(|c| (c.rule, c.morpheme_index) == expected),
+                "{entry:?}"
+            );
+        }
+        let copula = word
+            .analyses
+            .iter()
+            .find(|a| {
+                a.lemmas.len() == 2
+                    && a.lemmas[1].kind == LemmaKind::Copula
+                    && a.morphemes[0].form == "라고"
+            })
+            .unwrap();
+        let copula_evidence = annotation.assess(copula);
+        let entries = &copula_evidence.lemmas[1].entries;
+        assert_eq!(
+            entries
+                .iter()
+                .find(|e| e.id == "krdict:86232")
+                .unwrap()
+                .status,
+            Compatibility::Compatible
+        );
+        assert_eq!(
+            entries
+                .iter()
+                .find(|e| e.id == "krdict:92457")
+                .unwrap()
+                .status,
+            Compatibility::Incompatible
+        );
+
+        // Synthetic provider boundaries: no known entry may lend its POS to
+        // another homonym. Standalone auxiliary and unmapped POS stay unknown.
+        for (pos, expected) in [
+            ("형용사", Compatibility::Incompatible),
+            ("보조 동사", Compatibility::Unknown),
+            ("보조 형용사", Compatibility::Unknown),
+            ("provider-specific", Compatibility::Unknown),
+        ] {
+            let mut changed = annotation.clone();
+            let slot = changed
+                .lemmas
+                .iter_mut()
+                .find(|m| m.lemma == factual.lemmas[0])
+                .unwrap();
+            let entry = slot
+                .entries
+                .iter_mut()
+                .find(|e| e.entry.pos == "동사")
+                .unwrap();
+            entry.entry.pos = pos.into();
+            entry.pos_compatibility = pos_compatibility(&slot.lemma, &entry.entry);
+            let assessment = changed.assess(factual);
+            assert_eq!(assessment.status, expected, "{surface}: {pos}");
+            let mut filtered = word.clone();
+            changed.filter(&mut filtered, DictionaryFilter::Compatible);
+            assert_eq!(
+                filtered.analyses.contains(factual),
+                expected != Compatibility::Incompatible
+            );
+        }
+        let mut missing = annotation.clone();
+        missing.lemmas.retain(|m| m.lemma != factual.lemmas[0]);
+        assert_eq!(missing.assess(factual).status, Compatibility::Unknown);
+        let mut filtered = word.clone();
+        missing.filter(&mut filtered, DictionaryFilter::Compatible);
+        assert!(!filtered.analyses.contains(factual));
     }
 }

@@ -3006,3 +3006,24 @@ screenshots were inspected.
 Three interleaved release runs per version/filter give after medians of
 1.246 seconds (headword) and 1.234 seconds (compatible), with peak RSS
 of 28.1 MiB. This small sample does not establish statistical speed equivalence.
+
+
+### Bare factual copular attachment (COV-020n)
+
+The [source and candidate review](copular-class-evaluation.json) adds 105
+policy judgments (63 retained / 42 excluded), totaling 341 (213 / 128). Raw
+candidate generation remains unchanged on 4,533 regression/stress/probe surfaces;
+headword-only candidates remain unchanged throughout the 179,112-record novel.
+Compatible filtering removes 59 readings at 56 occurrences / 16 word types.
+Every affected occurrence retains its byte span, context, surviving candidates
+and stable policy judgment IDs. This is a scoped conflict audit, not an overall
+precision measurement. Missing dictionary 모란 and cross-token quoted copulas
+remain explicit limits. Rust/stress, pinned corpus, lint/format, frontend build,
+browser and Nix checks pass on x86_64 Linux. The packaged full-dictionary app
+passes all 105 policy cases with both filters, role-aware selection and JSON
+export parity; four desktop/mobile screenshots were inspected.
+
+Three interleaved release runs per version/filter measured after medians of
+1.249 seconds (headword-only) and 1.252 seconds (compatible), with peak RSS below
+28 MiB. Startup, dictionary access and JSONL serialization are included; this
+small sample does not establish statistical performance equivalence.

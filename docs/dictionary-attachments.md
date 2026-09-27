@@ -25,10 +25,11 @@ ledger because an unknown-class rule hypothesis must still be generated.
 |---|---|---|
 | `lexical_role` | Existing broad POS-to-role mapping | 가늘다 as a nominal base before omitted 이다 conflicts with its adjective-only entry. |
 | `present_declarative_verb` | Lexical predicates with the shared canonical present-declarative family, including honorific 시 | 가는다니 → 가늘다 + 는다니 conflicts; 먹는다니 remains. |
-| `bare_adjectival_question` | Bare lexical predicates with 으냐/으냐는/으냐며/으냐면서/으냐니/으냔 | 길으냐니 → 긷다 + 으냐니 conflicts; 좋으냐니 remains. |
+| `bare_adjectival_question` | Bare lexical predicates with 으냐/으냐고/으냐는/으냐며/으냐면서/으냐니/으냔 | 길으냐니 → 긷다 + 으냐니 conflicts; 좋으냐니 remains. |
 | `intention_verb` | Eleven reviewed verbal intention forms, shared with the engine | 좋으려다가 conflicts; 크려는 retains verbal 크다. |
 | `result_transfer_verb` | Canonical 어다/어다가 | 좋아다 conflicts; 모셔다 retains lexical 모시다. |
 | `habitual_condition_verb` | Canonical 을라치면, directly or through 지-negatives | Known adjective entries conflict; attested 있다 and verbal 늦다 remain. Different auxiliaries reset the dependency. |
+| `bare_copular_ending` | Seventeen exact factual 라-family endings at a bare lexical predicate boundary | 누이다 + 라고 conflicts; 누이다 + 으라고 and 누이 + 이다 + 라고 remain. |
 | `negative_copula_command` | Lexical 아니다 with canonical command 으라니 | 아니라니 retains 아니다 + factual 라니, excluding its distinct command hypothesis. |
 | `auxiliary_class` | A represented auxiliary's known class, shared with the engine | 오려나봐 supports inference 보다 (보조 형용사), excluding the trial auxiliary-verb homonym from this reading's hint. |
 | `literary_assertion_class` | Bare lexical predicates with 으니라/느니라 | 읽으니라 conflicts with its verb-only entry; 크니라 and 크느니라 retain their respective adjective/verb homonyms. |
@@ -180,3 +181,31 @@ adnominal/question endings, sense-specific selection, existential paradigms and
 contextual command/wish judgments remain under COV-017/019. Incompatible is not a
 spelling-error diagnosis, and compatible/unknown is not a correctness guarantee.
 Independent Korean review and fresh-prose evaluation remain pending.
+
+## Bare factual copular endings (COV-020n)
+
+The exact canonical forms 라/라도/라야/라야만/라서/라고/라는/라면/
+랍니다/라든가/라네/라는데/라며/라면서/라니/라거나/란 distinguish
+factual copular attachment from commands. At a bare lexical predicate boundary,
+known verb/adjective entries conflict with these factual forms, except the
+source-listed adjective 아니다. The verb 이다 (carry on the head) conflicts;
+the separate copular 이다 role retains its particle entry. Command canonical
+forms such as 으라고 and 으란 remain, including the wish 행복하란.
+
+The check follows the current component's first ending. A prefinal or derivational
+suffix ends the bare boundary; a later copula owns its own ending. Thus 먹음이라고
+keeps 먹다 + 음 + 이다 + 라고. Token-initial auxiliary entries and unrecognized
+provider POS remain unknown; a missing dictionary entry is not evidence of a
+conflict. Outer particles do not change attachment: 누이라고밖에 loses the
+known verb's factual reading while retaining the command and nominal-copula paths.
+
+This adds 105 policy judgments (63 retained / 42 excluded), bringing the policy
+ledger to 341 judgments (213 retained / 128 excluded). These are filter judgments,
+not independent gold grammaticality labels. The full source fixture retains every
+sense, note and example for the reviewed ending homonyms. The prefinal scope is
+intentionally unresolved: the pinned KRDict 라서 entry lists 시/더/으리, whereas
+[NIKL's July 2025 consultation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=318485)
+cites a narrower standard-dictionary note and does not supply a noncopular example
+after 시. This check neither rejects nor newly licenses those prefinal paths.
+See [the evaluation record](copular-class-evaluation.json) for source IDs,
+output comparisons, validation, and remaining review limits.

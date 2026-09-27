@@ -1274,3 +1274,14 @@ This batch reuses the complete `kaist-necessity-search.conllu` discovery sentenc
 without editing its annotation. Its reported-clause target now matches. The
 frozen KAIST development gain is recorded by stable ID in the
 [review](../../docs/quoted-bakke-evaluation.json), not inserted into training data.
+
+`krdict-copular-class.json` is an adapted excerpt of the September 2026 official
+KRDict LMF export, National Institute of Korean Language, **CC BY-SA 2.0 KR**.
+It retains all senses, attachment notes, examples and word forms for 53 primary
+word/grammar-expression entries; English equivalents only, no RelatedForm,
+idiom subentries or global export metadata. Source and license links are at the
+start of this file. IDs: 15078, 15983, 26847, 26878, 45653, 45654, 45655, 58272, 59531, 61190, 61953, 62091, 62171, 62249, 68832, 69044, 69108, 70060, 72481, 73964, 75476, 76427, 77243, 78220, 78807, 79275, 80211, 80212, 80230, 80237, 80246, 80698, 81469, 81584, 81809, 82122, 82217, 82259, 85121, 86057, 86118, 86232, 86297, 86367, 86370, 86500, 86501, 86509, 86511, 86519, 86638, 91162, 92457.
+Source file hashes and review scope are in
+[the copular attachment evaluation](../../docs/copular-class-evaluation.json).
+The companion policy judgments are agent-authored, with independent Korean
+review pending; the fixture itself is source text, not sentence gold.

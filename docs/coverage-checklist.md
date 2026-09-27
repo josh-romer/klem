@@ -1607,13 +1607,24 @@ review remains open under the completion review below.
   Novel alternatives, generic particle/copula attachment and independent review
   remain open, including the inherited 딸이었던들 and 왜요 alternatives.
 
-- [ ] **COV-020n — Factual copular ending ownership in dictionary filtering.**
-  The COV-018z novel review finds 누이다 + 라고 + 밖에 surviving alongside
-  command 으라고 and nominal 누이 + 이다 alternatives in 누이라고밖에.
-  KRDict 86500's factual sense licenses 이다/아니다 and honorific 시; inspect
-  recovered prefinal ownership and homonyms before adding per-entry conflicts.
-  Preserve the command and nominal/copular alternatives. The stable observation
-  and full candidate evidence are in [the quoted-clause review](quoted-bakke-evaluation.json).
+- [x] **COV-020n — Factual copular ending ownership in dictionary filtering.**
+  Implemented a bare lexical attachment check for 17 exact factual 라-family
+  canonical endings, retaining distinct command forms, 아니다, nominal quotation,
+  copular 이다, recovered prefinals and unknown entry classes. The lexical verb
+  이다 cannot borrow the copula entry's role. Added 105 policy judgments
+  (63 retained / 42 excluded), including all 18 distinct removed novel paths.
+  Raw output is identical on 4,533 regression/stress/probe surfaces; headword-only
+  candidates are unchanged across 179,112 novel records. Compatible filtering
+  removes 59 paths at 56 occurrences / 16 word types; every changed context is
+  recorded with stable policy IDs in [the review](copular-class-evaluation.json).
+  Rust, browser, full-dictionary packaged preview and Nix checks pass. Missing
+  KRDict 모란 remains a vocabulary gap; quoted/Hanja-separated copulas still require contextual token handling.
+- [ ] **COV-020o — Family-specific factual prefinal licenses.** The bare check
+  does not resolve recovered 시/더/으리 attachment. KRDict 라는데 lists 이다/
+  아니다/시, while the engine also generates 먹다 + 더 + 라는데 alongside the
+  distinct bundled 더라는데. Review those sources before rejecting either path.
+  KRDict 라서 and NIKL consultation 318485 differ on listed prefinals; preserve
+  that uncertainty, including noncopular 시, rather than inferring a broad ban.
 
 - [ ] **COV-021 — Remaining 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

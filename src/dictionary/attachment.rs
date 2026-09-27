@@ -27,6 +27,7 @@ pub enum AttachmentRule {
     AuxiliaryClass,
     LiteraryAssertionClass,
     HabitualConditionVerb,
+    BareCopularEnding,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -78,6 +79,31 @@ fn alternatives(statuses: impl Iterator<Item = Compatibility>) -> Compatibility 
     } else {
         Compatibility::Incompatible
     }
+}
+
+// Exact factual forms, distinct from canonical command 으라/으라고/etc.
+// KRDict licenses bare 이다/아니다, with family-specific prefinal extensions.
+// This policy does not decide those extensions from the lexical head's POS.
+fn bare_copular_ending(form: &str) -> bool {
+    matches!(
+        form,
+        "라" | "라도"
+            | "라야"
+            | "라야만"
+            | "라서"
+            | "라고"
+            | "라는"
+            | "라면"
+            | "랍니다"
+            | "라든가"
+            | "라네"
+            | "라는데"
+            | "라며"
+            | "라면서"
+            | "라니"
+            | "라거나"
+            | "란"
+    )
 }
 
 // Return the connector whose expressive 하다 use depends on this lexical
@@ -274,6 +300,15 @@ impl Annotation {
                         let adjective = matched.entry.pos == "형용사";
                         let verb = matched.entry.pos == "동사";
                         let rule = if bare
+                            && bare_copular_ending(form)
+                            && (verb || (adjective && lemma.text != "아니다"))
+                        {
+                            // Verb 이다 (carry on the head) is not copular 이다.
+                            // The latter has its own role/entry; 아니다 is the
+                            // source-listed adjective exception. Unknown POS
+                            // and standalone auxiliaries are not rejected.
+                            Some(AttachmentRule::BareCopularEnding)
+                        } else if bare
                             && ((form == "으니라" && verb)
                                 || (form == "느니라"
                                     && adjective

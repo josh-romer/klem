@@ -1093,8 +1093,12 @@ review remains open under the completion review below.
   dictionary filter, with a stable byte-span case ID and context recorded.
   Three interleaved release runs per filter retain median processing times of
   about 1.5 seconds for 179,112 records; these measurements do not establish
-  statistical equivalence. Wider combinations and independent linguistic review
-  remain open.
+  statistical equivalence. The next confirmed missing family is -(으)리까 and
+  explicit 오/으오/사오 combinations: the [source audit](rikka-source-audit.json)
+  records seven primary senses, eleven missing direct paths and separate
+  attachment licenses, plus unannotated novel spans for subsequent comparison.
+  Runtime implementation and regressions for this family remain pending. Wider
+  combinations and independent linguistic review remain open.
   See [basic evaluation](polite-evaluation.json) and
   [humble evaluation](humble-evaluation.json) and
   [bundle evaluation](optsi-evaluation.json). The bundle probe comparison adds

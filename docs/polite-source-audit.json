@@ -154,14 +154,14 @@
         "자오",
         "잡"
       ],
-      "work": "Audit modern lexical subset discovered during source review. Preserve relexicalized whole predicates; do not apply historical ㄷ/ㅈ/ㅊ stripping productively."
+      "work": "The modern 듣/묻/받/좇 subset, distinct 자오/자옵/잡/자옵시 components and relexicalized whole predicates are implemented and tested in tests/jaop.rs. Twenty-four primary tokens, 336 structural cases and ten dictionary-policy cases are recorded in docs/jaop-evaluation.json. Additional following combinations and independent review remain open; historical coda distributions are not productive modern licenses."
     },
     {
       "forms": [
         "으옵",
         "으리다"
       ],
-      "work": "Broader outer-ending compatibility and contextual register remain unestablished. Implementation validation is recorded separately in docs/polite-evaluation.json."
+      "work": "Additional outer-ending compatibility and contextual register remain open. 나이다 and 나이까 combinations now have separate source-backed evaluations; the next confirmed missing family is -(으)리까 and its explicit 오/으오/사오 combinations, audited in docs/rikka-source-audit.json. The 리다 final remains distinct from conjectural 으리 + 라."
     }
   ],
   "missing_primary_krdict_headwords": {
@@ -263,5 +263,53 @@
     "boundary": "Existing vowel/ㄹ versus other-consonant recovery for (으)옵시; closed-stem 사옵시 retains ㄹ. Local irregular spelling hypotheses stay owned by the actual boundary.",
     "order": "Closed bundles explicitly admit earlier past/modal, and allow following endings. Consume one polite quota across the bundle; retain at most two past markers and existing following-ending licenses.",
     "interpretation": "Direct primary examples and inferred structural matrices are distinguished. The rhetorical 으려고 past license is preserved; narrower intention composition is separately tested. No independent contextual precision claim."
+  },
+  "implemented_lexical_humble": {
+    "canonical_prefinals": [
+      "자옵",
+      "잡",
+      "자옵시"
+    ],
+    "source_fixture": "tests/fixtures/jaop-sources.json",
+    "tests": "tests/jaop.rs",
+    "evaluation": "docs/jaop-evaluation.json",
+    "ledger_cases": 336,
+    "required": 154,
+    "forbidden": 182,
+    "primary_examples": 24,
+    "full_native_lexical_entries": 69,
+    "scope": "Reviewed modern 듣/묻/받/좇 lexical subset and independently retained whole predicates. No productive historical coda stripping."
+  },
+  "implemented_literary_finals": [
+    {
+      "form": "나이다",
+      "source_fixture": "tests/fixtures/jaop-sources.json",
+      "evaluation": "docs/jaop-evaluation.json",
+      "scope": "Bare verbal/existential class and source-listed polite/humble retained-ㅂ combinations; copula alternatives preserved."
+    },
+    {
+      "form": "나이까",
+      "source_fixture": "tests/fixtures/naikka-sources.json",
+      "tests": "tests/naikka.rs",
+      "evaluation": "docs/naikka-evaluation.json",
+      "ledger_cases": 147,
+      "required": 118,
+      "forbidden": 29,
+      "policy_cases": 11,
+      "primary_examples": 8,
+      "full_native_lexical_entries": 58,
+      "scope": "Separate question rule; source-listed bare classes and polite/humble components. Corpus preservation does not prove new-ending correctness."
+    }
+  ],
+  "next_confirmed_gap": {
+    "forms": [
+      "리까",
+      "으리까",
+      "오리까",
+      "으오리까",
+      "사오리까"
+    ],
+    "audit": "docs/rikka-source-audit.json",
+    "status": "Eleven directly attested paths absent from b96d161. Primary notes and explicit component analyses reviewed; runtime implementation and regressions pending."
   }
 }

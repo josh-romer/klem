@@ -144,7 +144,11 @@ fn complete_native_paradigms_keep_homonym_evidence_separate() {
                 .iter()
                 .find(|e| e.id == id)
                 .unwrap();
-            let expected = if class == "unknown" {
+            let expected = if matches!(id, "krdict:41863" | "krdict:54454" | "krdict:73124") {
+                // COV-021h supplies an independent consonant-only restriction;
+                // the written regular/irregular profile remains unknown.
+                Compatibility::Incompatible
+            } else if class == "unknown" {
                 Compatibility::Unknown
             } else if class == spelling {
                 Compatibility::Compatible

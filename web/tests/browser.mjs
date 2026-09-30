@@ -399,6 +399,12 @@ try {
   const reuIds = new Set(reuEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !reuIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...reuEntries);
+  const shortStemFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-short-stems.json"),"utf8"));
+  const shortStemEntries = shortStemFixture.LexicalResource.Lexicon.LexicalEntry;
+  const shortStemIds = new Set(shortStemEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!shortStemIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...shortStemEntries);
+
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -562,7 +568,7 @@ try {
       const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id+" raw");
       const assessment=token.dictionary.readings[i];
       assert.equal(assessment.status==="incompatible",j.verdict==="forbidden",c.id);
-      if(j.verdict==="forbidden") assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule==="lexical_spelling"))),c.id);
+      if(j.verdict==="forbidden") assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule===(j.source.startsWith("short-stem-")?"short_stem_ending":"lexical_spelling")))),c.id);
     }
   }
   const hieutText="달라고 놀라고 닿으니 놔요 하야니 하얗으니 노래져놓으니 노래져놀라고";
@@ -597,7 +603,7 @@ try {
     for (const j of c.judgments) {
       const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id+" raw");
       const assessment=token.dictionary.readings[i];assert.equal(assessment.status==="incompatible",j.verdict==="forbidden",c.id);
-      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule==="lexical_spelling"))),c.id);
+      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule===(j.source.startsWith("short-stem-")?"short_stem_ending":"lexical_spelling")))),c.id);
     }
   }
   const dsText="믿으면 밀으면 들으니 듣으니 지어 짓어 걸으니 걷으니 들어놓으니";
@@ -629,7 +635,7 @@ try {
     for(const j of c.judgments) {
       const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id+" raw");
       const assessment=token.dictionary.readings[i];assert.equal(assessment.status==="incompatible",j.verdict==="forbidden",c.id);
-      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule==="lexical_spelling"))),c.id);
+      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule===(j.source.startsWith("short-stem-")?"short_stem_ending":"lexical_spelling")))),c.id);
     }
   }
   const bieupText="입으면 이우면 도와 고와 곱아 구워 굽어 곱디고와 듣자오니 받자와 학생다워놓으니";
@@ -657,7 +663,7 @@ try {
     for(const j of c.judgments) {
       const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id+" raw");
       const assessment=token.dictionary.readings[i];assert.equal(assessment.status==="incompatible",j.verdict==="forbidden",c.id);
-      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule==="lexical_spelling"))),c.id);
+      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule===(j.source.startsWith("short-stem-")?"short_stem_ending":"lexical_spelling")))),c.id);
     }
   }
   const reuText="치러 칠러 일러 이르러 눌러 누르러 푸르러졌어요 몰라보았어요 치렀음이었다";
@@ -677,6 +683,34 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-reu-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-reu-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
+  const shortStemCases = connectiveLedger.cases.filter(c=>c.id.startsWith("short-stem-"));
+  assert.equal(shortStemCases.length,223);
+  for(const c of shortStemCases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments) {
+      const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id+" raw");
+      const assessment=token.dictionary.readings[i];assert.equal(assessment.status==="incompatible",j.verdict==="forbidden",c.id);
+      if(j.verdict==="forbidden")assert.ok(assessment.lemmas.some(l=>l.entries.some(e=>e.conflicts.some(c=>c.rule==="short_stem_ending"))),c.id);
+    }
+  }
+  const shortStemText="딛고 딛어 머물러 서둘러 머묾이었다 까불어 뵙고 찾아뵈면";
+  const shortStemTokens=(await(await post("analyze",{text:shortStemText})).json()).records.filter(r=>r.analysis);
+  await submit(page,shortStemText);await waitHeading(page,"딛고");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").uncheck();
+  const shortStemSelect=async(i,ls,ms)=>{
+    const index=shortStemTokens[i].analysis.analyses.findIndex(a=>JSON.stringify(a.lemmas.map(l=>l.text))===JSON.stringify(ls)&&JSON.stringify(a.morphemes.map(m=>m.form))===JSON.stringify(ms));
+    assert.ok(index>=0);await page.locator(".breakdown-word").nth(i).locator("select").selectOption(String(index));return String(index);
+  };
+  const invalidShortStem=await shortStemSelect(1,["딛다"],["어"]);
+  await page.getByLabel("Exclude known grammar conflicts").check();assert.equal(await page.locator(".breakdown-word").nth(1).locator(`option[value="${invalidShortStem}"]`).count(),0);
+  for(const [i,ls,ms]of [[0,["딛다"],["고"]],[2,["머물다"],["으러"]],[3,["서두르다"],["어"]],[4,["머물다","이다"],["음","었","다"]],[5,["까불다"],["어"]],[6,["뵙다"],["고"]],[7,["찾아뵈다"],["으면"]]])await shortStemSelect(i,ls,ms);
+  const shortStemDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const shortStemExport=JSON.parse(await readFile(await(await shortStemDownload).path(),"utf8"));
+  const shortStemExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:shortStemText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);assert.deepEqual(shortStemExport.records,shortStemExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-shortStem-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-shortStem-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
   const connectiveCases = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-connectives-"));
   assert.equal(connectiveCases.length, 122);

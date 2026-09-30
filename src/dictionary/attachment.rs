@@ -35,6 +35,7 @@ pub enum AttachmentRule {
     BareAdjectivalReport,
     BareVerbalQuestion,
     LexicalSpelling,
+    ShortStemEnding,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
@@ -191,6 +192,49 @@ fn habitual_condition_ending(analysis: &Analysis, mut rest: &[Component]) -> Opt
             return None;
         }
         rest = &rest[end + 1..];
+    }
+}
+
+// NIKL's restricted short stems, bound to reviewed KRDict entry identities.
+// A headword alone cannot distinguish 까불다 (winnow) from 까불다 (act up),
+// or the unrelated 굴다/일다/붓다 homonyms. See short-stem-inventory.json.
+fn short_stem_conflict(entry: &super::EntrySummary, first: &crate::Morpheme) -> bool {
+    if !matches!(first.kind, MorphemeKind::Ending | MorphemeKind::Prefinal) {
+        return false;
+    }
+    let consonant_only = match (
+        entry.id.as_str(),
+        entry.headword.as_str(),
+        entry.pos.as_str(),
+    ) {
+        ("krdict:29738", "갖다", "동사")
+        | ("krdict:73401", "갖다", "보조 동사")
+        | ("krdict:54454", "딛다", "동사")
+        | ("krdict:41863", "내딛다", "동사")
+        | ("krdict:73124", "잡숫다", "동사")
+        | ("krdict:62815", "뵙다", "동사")
+        | ("krdict:83942", "찾아뵙다", "동사") => true,
+        ("krdict:23620", "건들다", "동사")
+        | ("krdict:38390", "까불다", "동사")
+        | ("krdict:15980", "머물다", "동사")
+        | ("krdict:601166", "서둘다", "동사")
+        | ("krdict:29045", "서툴다", "형용사") => false,
+        _ => return false,
+    };
+    let form = first.form.as_str();
+    if consonant_only {
+        // Canonical 시 represents -(으)시-. Other vowel-initial canonical
+        // endings include 은/을/음 and 읍시다, even when their surface onset
+        // disappeared through a hypothetical irregular recovery.
+        form == "시"
+            || form.chars().next().is_some_and(|c| {
+                let code = c as u32;
+                (0xAC00..=0xD7A3).contains(&code) && (code - 0xAC00) / 588 == 11
+            })
+    } else {
+        // ㄹ short stems retain 니/면/은/을/음 allomorphs, including 머묾.
+        // Only the 아/어 family and past 었 (including 어야겠) are blocked.
+        form.starts_with(['어', '었'])
     }
 }
 
@@ -433,6 +477,16 @@ impl Annotation {
                                 morpheme_index: Some(i),
                             });
                         }
+                    }
+                    if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary)
+                        && let Some(Component::Morpheme(i)) = morphs.first()
+                        && short_stem_conflict(&matched.entry, &analysis.morphemes[*i])
+                    {
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::ShortStemEnding,
+                            morpheme_index: Some(*i),
+                        });
                     }
                     // The morpheme index belongs to this component group, not
                     // to every lemma sharing a unioned irregular rule name.

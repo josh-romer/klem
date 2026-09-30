@@ -267,3 +267,10 @@ The conflict filter also checks reviewed written ㅎ/ㄷ/ㅅ/ㅂ/르/러 spellin
 component-owned recovery requirements. Raw choices remain inspectable with the
 filter disabled. Export preserves optional `spelling_paths` and per-entry `hieut`, `digeut`, `siot` and
 `bieup` and `reu` evidence; see [the dictionary contract](dictionary-attachments.md#written-르러-inflection-compatibility-cov-021g).
+
+The optional conflict filter also applies the finite
+[short-stem restrictions](dictionary-attachments.md#restricted-short-stem-endings-cov-021h).
+It preserves unrelated homonyms and short-stem purpose endings, and exports
+`short_stem_ending` conflicts with their owning morpheme index. Normative
+source disagreements remain documented; headword-only filtering retains the
+original hypotheses.

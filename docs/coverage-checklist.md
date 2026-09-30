@@ -1849,8 +1849,9 @@ review remains open under the completion review below.
   COV-021c adds eight fixed complex-coda classes; COV-021d adds per-entry
   written ㅎ compatibility; COV-021e adds ㄷ/ㅅ and COV-021f adds ㅂ
   compatibility and three finite 오 spelling exceptions; COV-021g adds
-  per-entry 르/러 written paradigms.** Remaining: other lexical paradigms, shortened-stem attachment
-  restrictions (e.g. 딛다/잡숫다), ㄼ lexical
+  per-entry 르/러 written paradigms; COV-021h adds twelve entry-specific
+  shortened-stem restrictions.** Remaining: other lexical paradigms and unmapped
+  shortened-stem senses, ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
   The [dictionary discovery audit](hada-complex-coda-audit.json) found three
@@ -1990,6 +1991,28 @@ review remains open under the completion review below.
   Other paradigms and shortened-headword restrictions remain under COV-021.
   See [policy](dictionary-attachments.md#written-르러-inflection-compatibility-cov-021g)
   and [individual-case evidence](reu-evaluation.json).
+
+- [x] **COV-021h — Entry-specific shortened-stem attachment restrictions.**
+  **Finite native-entry implementation and regression coverage pass.**
+  A [source inventory](short-stem-inventory.json) binds seven consonant-only
+  and five no-아/어 restrictions to native entry identities. It distinguishes
+  the 까불다 homonyms and records unavailable or unrelated source senses.
+  First-owned-boundary checks preserve later auxiliaries/prefinals/copulas and
+  valid ㄹ-stem (으) allomorphs. Three contradictory KRDict written forms and
+  the unchanged KAIST 내딛었다 annotation are tracked explicitly; raw candidates
+  remain. Ten earlier unknown-retention judgments are superseded with preserved
+  before/after evidence. [Tests](../tests/short_stems.rs) cover 223 policy cases,
+  complete native sources, homonyms, boundaries and CLI parity. Seven unchanged
+  training groups survive filtering; all 45 previously retained scoped dev/test
+  groups remain among 46 rows. The 8,769-input raw comparison is byte-identical.
+  Novel filtering removes only six 갖은 → 갖다 + 은 readings; lexical 갖은 remains.
+  Full Rust, browser, Nix builds and packaged API/CLI/export checks pass. Three
+  interleaved release runs process 179,112 novel records in median 1.508 seconds
+  with headword filtering and 1.509 seconds with compatibility filtering, using
+  less than 30 MiB peak child RSS; these timings are observational. Independent
+  Korean review and unavailable source senses remain open.
+  See [policy](dictionary-attachments.md#restricted-short-stem-endings-cov-021h)
+  and [evaluation](short-stem-evaluation.json).
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

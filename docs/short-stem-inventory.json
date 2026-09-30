@@ -1,0 +1,664 @@
+{
+  "schema_version": 1,
+  "status": "Finite native-entry restrictions implemented and validated; unavailable source senses and independent Korean-language review remain open.",
+  "source_snapshot": "tests/fixtures/short-stem-sources.json",
+  "entry_bindings": [
+    {
+      "entry": "krdict:29738",
+      "headword": "갖다",
+      "pos": "동사",
+      "restriction": "consonant_only",
+      "source": "https://www.korean.go.kr/nkview/nknews/200309/62_3.html"
+    },
+    {
+      "entry": "krdict:73401",
+      "headword": "갖다",
+      "pos": "보조 동사",
+      "restriction": "consonant_only",
+      "source": "https://www.korean.go.kr/nkview/nknews/200309/62_3.html"
+    },
+    {
+      "entry": "krdict:54454",
+      "headword": "딛다",
+      "pos": "동사",
+      "restriction": "consonant_only",
+      "source": "https://www.korean.go.kr/nkview/nknews/200309/62_3.html"
+    },
+    {
+      "entry": "krdict:41863",
+      "headword": "내딛다",
+      "pos": "동사",
+      "restriction": "consonant_only",
+      "source": "https://www.korean.go.kr/nkview/nknews/200309/62_3.html"
+    },
+    {
+      "entry": "krdict:73124",
+      "headword": "잡숫다",
+      "pos": "동사",
+      "restriction": "consonant_only",
+      "source": "https://www.korean.go.kr/nkview/nknews/200005/22_2.htm"
+    },
+    {
+      "entry": "krdict:62815",
+      "headword": "뵙다",
+      "pos": "동사",
+      "restriction": "consonant_only",
+      "source": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5731"
+    },
+    {
+      "entry": "krdict:83942",
+      "headword": "찾아뵙다",
+      "pos": "동사",
+      "restriction": "consonant_only",
+      "source": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=326748"
+    },
+    {
+      "entry": "krdict:23620",
+      "headword": "건들다",
+      "pos": "동사",
+      "restriction": "no_aeo",
+      "source": "https://www.korean.go.kr/nkview/nklife/2003_3/2003_0316.pdf"
+    },
+    {
+      "entry": "krdict:38390",
+      "headword": "까불다",
+      "pos": "동사",
+      "restriction": "no_aeo",
+      "source": "https://www.korean.go.kr/nkview/nklife/2003_3/2003_0316.pdf"
+    },
+    {
+      "entry": "krdict:15980",
+      "headword": "머물다",
+      "pos": "동사",
+      "restriction": "no_aeo",
+      "source": "https://www.korean.go.kr/nkview/nklife/2003_3/2003_0316.pdf"
+    },
+    {
+      "entry": "krdict:601166",
+      "headword": "서둘다",
+      "pos": "동사",
+      "restriction": "no_aeo",
+      "source": "https://www.korean.go.kr/nkview/nklife/2003_3/2003_0316.pdf"
+    },
+    {
+      "entry": "krdict:29045",
+      "headword": "서툴다",
+      "pos": "형용사",
+      "restriction": "no_aeo",
+      "source": "https://www.korean.go.kr/nkview/nklife/2003_3/2003_0316.pdf"
+    }
+  ],
+  "source_mapping": {
+    "unavailable_heads": [
+      "깨뜰다",
+      "꺼둘다",
+      "뒤까불다",
+      "쓸까슬다",
+      "가직다",
+      "뉘웇다",
+      "문다",
+      "및다",
+      "부릍다",
+      "빅다",
+      "지정닺다",
+      "헗다",
+      "흖다"
+    ],
+    "unrelated_native_heads": [
+      "굴다",
+      "들까불다",
+      "썰다",
+      "일다",
+      "붓다"
+    ],
+    "homonym_example": "KRDict 38390 까불다 (winnow/shake) corresponds to 까부르다; 42138 까불다 (act up) remains unrestricted. 굴다/들까불다/썰다/일다/붓다 native meanings do not establish the respective shortened senses listed in the older NIKL source."
+  },
+  "policy": "Restrictions are external normative evidence bound to exact KRDict ID, headword and POS. Apply only to the first owned ending/prefinal of a predicate or auxiliary; a suffix, prefinal, auxiliary or copula starts its own attachment domain. Raw generation and headword filtering remain unchanged. Unknown external dictionary identities are not guessed.",
+  "restrictions": {
+    "consonant_only": "Seven native entries reject vowel-initial normalized ending/prefinal forms, plus normalized 시 for -(으)시-. Literal 니? and later vowel endings after 겠 remain.",
+    "no_aeo": "Five ㄹ short entries reject only the normalized 어 family and 었. Consonant/(으) allomorphs remain, including 머물면/머묾/머문."
+  },
+  "source_conflicts": [
+    {
+      "entry": "krdict:23620",
+      "form": "건들어",
+      "kind": "written form conflicts with normative restriction"
+    },
+    {
+      "entry": "krdict:38390",
+      "form": "까불어",
+      "kind": "written form conflicts with normative restriction; unrelated homonym keeps the surface"
+    },
+    {
+      "entry": "krdict:29045",
+      "form": "서툴어",
+      "kind": "written form conflicts with normative restriction"
+    }
+  ],
+  "superseded_judgments": [
+    {
+      "before": {
+        "id": "bieup-compat-inventory-62815-regular",
+        "surface": "뵙으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "뵙다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "bieup-62815",
+            "verdict": "required",
+            "reason": "Written per-entry ㅂ paradigms distinguish retained consonants from irregular recovery. Homonyms remain alternatives; unknown evidence is retained, not a positive grammaticality claim."
+          }
+        ]
+      },
+      "after": {
+        "id": "bieup-compat-inventory-62815-regular",
+        "surface": "뵙으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "뵙다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-62815",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "bieup-compat-inventory-62815-irregular",
+        "surface": "뵈우니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "뵙다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "bieup-62815",
+            "verdict": "required",
+            "reason": "Written per-entry ㅂ paradigms distinguish retained consonants from irregular recovery. Homonyms remain alternatives; unknown evidence is retained, not a positive grammaticality claim."
+          }
+        ]
+      },
+      "after": {
+        "id": "bieup-compat-inventory-62815-irregular",
+        "surface": "뵈우니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "뵙다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-62815",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "bieup-compat-inventory-83942-regular",
+        "surface": "찾아뵙으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "찾아뵙다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "bieup-83942",
+            "verdict": "required",
+            "reason": "Written per-entry ㅂ paradigms distinguish retained consonants from irregular recovery. Homonyms remain alternatives; unknown evidence is retained, not a positive grammaticality claim."
+          }
+        ]
+      },
+      "after": {
+        "id": "bieup-compat-inventory-83942-regular",
+        "surface": "찾아뵙으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "찾아뵙다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-83942",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "bieup-compat-inventory-83942-irregular",
+        "surface": "찾아뵈우니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "찾아뵙다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "bieup-83942",
+            "verdict": "required",
+            "reason": "Written per-entry ㅂ paradigms distinguish retained consonants from irregular recovery. Homonyms remain alternatives; unknown evidence is retained, not a positive grammaticality claim."
+          }
+        ]
+      },
+      "after": {
+        "id": "bieup-compat-inventory-83942-irregular",
+        "surface": "찾아뵈우니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "찾아뵙다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-83942",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "ds-compat-inventory-41863-regular",
+        "surface": "내딛으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "내딛다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "ds-41863",
+            "verdict": "required",
+            "reason": "This entry’s written paradigm is checked separately by ID. Whole-reading retention is an alternative over homonyms, including entries whose written paradigm is unknown; retaining unknown is not a grammaticality judgment."
+          }
+        ]
+      },
+      "after": {
+        "id": "ds-compat-inventory-41863-regular",
+        "surface": "내딛으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "내딛다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-41863",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "ds-compat-inventory-41863-irregular",
+        "surface": "내딜으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "내딛다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "ds-41863",
+            "verdict": "required",
+            "reason": "This entry’s written paradigm is checked separately by ID. Whole-reading retention is an alternative over homonyms, including entries whose written paradigm is unknown; retaining unknown is not a grammaticality judgment."
+          }
+        ]
+      },
+      "after": {
+        "id": "ds-compat-inventory-41863-irregular",
+        "surface": "내딜으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "내딛다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-41863",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "ds-compat-inventory-54454-regular",
+        "surface": "딛으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "딛다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "ds-54454",
+            "verdict": "required",
+            "reason": "This entry’s written paradigm is checked separately by ID. Whole-reading retention is an alternative over homonyms, including entries whose written paradigm is unknown; retaining unknown is not a grammaticality judgment."
+          }
+        ]
+      },
+      "after": {
+        "id": "ds-compat-inventory-54454-regular",
+        "surface": "딛으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "딛다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-54454",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "ds-compat-inventory-54454-irregular",
+        "surface": "딜으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "딛다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "ds-54454",
+            "verdict": "required",
+            "reason": "This entry’s written paradigm is checked separately by ID. Whole-reading retention is an alternative over homonyms, including entries whose written paradigm is unknown; retaining unknown is not a grammaticality judgment."
+          }
+        ]
+      },
+      "after": {
+        "id": "ds-compat-inventory-54454-irregular",
+        "surface": "딜으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "딛다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-54454",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "ds-compat-inventory-73124-regular",
+        "surface": "잡숫으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "잡숫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "ds-73124",
+            "verdict": "required",
+            "reason": "This entry’s written paradigm is checked separately by ID. Whole-reading retention is an alternative over homonyms, including entries whose written paradigm is unknown; retaining unknown is not a grammaticality judgment."
+          }
+        ]
+      },
+      "after": {
+        "id": "ds-compat-inventory-73124-regular",
+        "surface": "잡숫으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "잡숫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-73124",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    },
+    {
+      "before": {
+        "id": "ds-compat-inventory-73124-irregular",
+        "surface": "잡수으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "잡숫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "ds-73124",
+            "verdict": "required",
+            "reason": "This entry’s written paradigm is checked separately by ID. Whole-reading retention is an alternative over homonyms, including entries whose written paradigm is unknown; retaining unknown is not a grammaticality judgment."
+          }
+        ]
+      },
+      "after": {
+        "id": "ds-compat-inventory-73124-irregular",
+        "surface": "잡수으니",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "잡숫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "short-stem-73124",
+            "verdict": "forbidden",
+            "reason": "COV-021h supersedes earlier unknown spelling-class retention: NIKL explicitly restricts this lexical short stem to consonant endings. Its written regular/irregular class still remains unknown."
+          }
+        ]
+      }
+    }
+  ],
+  "remaining": [
+    "Independent Korean-language review",
+    "Source heads absent from the pinned dictionary need entry-specific evidence before constraints can be mapped; no speculative headword-wide rule",
+    "General long/short lookup aliases and historical/dialectal paradigms remain separate"
+  ],
+  "source_ambiguities": [
+    {
+      "surface": "머물러",
+      "short_head": "머물다",
+      "long_head": "머무르다",
+      "short_ending": "으러",
+      "long_ending": "어",
+      "review": "The untyped written form also has a valid purpose-ending analysis for the short stem; the 아/어 reading belongs to the long stem. Neither a lemma alias nor a missing raw candidate is inferred."
+    },
+    {
+      "surface": "서둘러",
+      "short_head": "서둘다",
+      "long_head": "서두르다",
+      "short_ending": "으러",
+      "long_ending": "어",
+      "review": "The untyped written form also has a valid purpose-ending analysis for the short stem; the 아/어 reading belongs to the long stem. Neither a lemma alias nor a missing raw candidate is inferred."
+    }
+  ],
+  "evaluation": "docs/short-stem-evaluation.json"
+}

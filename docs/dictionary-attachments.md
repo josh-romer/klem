@@ -385,3 +385,49 @@ composition, unknown evidence, Unicode, legacy annotations and both CLI filters.
 Eight unchanged annotated training targets survive filtering. Individual cases,
 unjudged alternatives and novel/corpus comparisons are in the
 [evaluation](reu-evaluation.json). Independent language review remains pending.
+
+## Restricted short-stem endings (COV-021h)
+
+Some shortened predicates have explicit attachment restrictions. The
+[inventory](short-stem-inventory.json) binds these to twelve reviewed KRDict
+entries by ID, headword and POS. Seven entries allow consonant endings only:
+갖다 (verb and auxiliary), 딛다, 내딛다, 잡숫다, 뵙다 and 찾아뵙다.
+Five ㄹ-final entries reject the 아/어 family and past 었 while retaining
+(으) allomorphs: 건들다, 까불다 in its winnowing/shaking sense, 머물다,
+서둘다 and 서툴다. Thus 딛어/딛으니 conflict, but 딛고 and 딛겠어요 remain;
+머물면/머문/머묾 remain alongside the full-stem forms.
+
+The policy follows NIKL's [short-stem explanation](https://www.korean.go.kr/nkview/nklife/2003_3/2003_0316.pdf),
+[갖다/딛다 discussion](https://www.korean.go.kr/nkview/nknews/200309/62_3.html),
+[뵙다 entry explanation](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5731)
+and [찾아뵙다 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=326748).
+The [broader source list](https://www.korean.go.kr/nkview/nknews/200005/22_2.htm)
+is mapped by meaning, not spelling alone: the native 굴다, 들까불다, 썰다,
+일다 and 붓다 entries do not establish the corresponding shortened senses.
+The “act up” 까불다 homonym remains compatible with 까불어. Source-listed
+senses absent from the pinned dictionary are recorded without guessing bindings.
+
+Only the first ending or prefinal belonging to that lemma is checked.
+Normalized 시 represents -(으)시-; a later vowel ending after 겠, an auxiliary,
+a derivational suffix or a copula cannot impose a restriction on the earlier
+root. `AttachmentRule::ShortStemEnding` identifies the owning morpheme.
+This adds no raw candidate metadata or dictionary schema fields. An unknown
+external dictionary ID does not inherit the policy merely by matching a headword.
+Raw candidates and `--dict-only` remain; `--dict-compatible` uses the finite
+normative policy in addition to written spelling evidence.
+
+Three KRDict written forms conflict with these normative sources: 건들어,
+까불어 in its winnowing sense, and 서툴어. The original entries are preserved,
+and the conflict is tested explicitly. Untyped 머물러/서둘러 forms are ambiguous:
+the short stems take purpose ending 으러, while the long stems take 어. Both
+analyses remain; no long/short lemma alias is introduced.
+
+Ten earlier “unknown spelling class, retain” judgments for 딛다/내딛다/잡숫다/
+뵙다/찾아뵙다 now have independent short-stem conflicts. Their prior and current
+judgments are recorded in the inventory; their written regular/irregular profiles
+remain unknown. An unchanged KAIST training sentence contains 내딛었다, which
+this normative policy rejects while retaining its original annotation and raw
+candidate. Seven other unchanged training groups survive filtering.
+[Tests](../tests/short_stems.rs) and [individual-case evaluation](short-stem-evaluation.json)
+record the scope and source disagreements. Independent language review remains
+pending; this is not a contextual grammar or precision guarantee.

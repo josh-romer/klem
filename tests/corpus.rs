@@ -2399,3 +2399,114 @@ fn reu_filter_preserves_eight_unchanged_training_gold_groups() {
     drop(db);
     std::fs::remove_file(path).unwrap();
 }
+
+#[test]
+fn short_stems_filter_preserves_seven_unchanged_training_gold_groups() {
+    use klem::dictionary::{DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict};
+    let path =
+        std::env::temp_dir().join(format!("klem-short_stems-corpus-{}.db", std::process::id()));
+    import_krdict(
+        &[std::path::PathBuf::from(
+            "tests/fixtures/krdict-short-stems.json",
+        )],
+        &path,
+        "short_stems",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(&path).unwrap();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    for (kind, input, targets) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-short-stems.conllu").as_slice(),
+            vec![
+                ("id:M2TA_064-s31/7", "갖게", vec!["갖다"]),
+                ("id:MH2_0013-s57/4", "머물던", vec!["머물다"]),
+                ("id:MH2_0037-s336/9", "딛고", vec!["딛다"]),
+                ("id:MH2_0094-s1502/9", "디딜", vec!["디디다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-short-stems.conllu").as_slice(),
+            vec![
+                ("id:train-s515/14", "갖고", vec!["갖다"]),
+                ("id:train-s950/5", "머물던", vec!["머물다"]),
+                ("id:train-s1006/10", "디딜", vec!["디디다"]),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "short_stems").unwrap();
+        for (id, surface, expected) in targets {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, expected);
+            assert!(case.matched);
+            let mut word = klem::Lemmatizer::new().analyze_word(surface).unwrap();
+            let mut annotation = dictionary.annotate(&word).unwrap();
+            annotation.filter(&mut word, DictionaryFilter::Compatible);
+            assert!(
+                word.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| l.text.as_str())
+                    .eq(expected.iter().copied())),
+                "{id}"
+            );
+        }
+    }
+    drop(dictionary);
+    drop(db);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
+fn short_stem_normative_conflict_preserves_the_original_training_annotation() {
+    use klem::dictionary::{
+        AttachmentRule, Compatibility, DictionarySession, SqliteDictionary, import_krdict,
+    };
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-short-stems.conllu").as_slice(),
+        Corpus::Kaist,
+        "short-stems",
+    )
+    .unwrap();
+    let case = &report.cases["id:MH2_0092-s328/10"];
+    assert_eq!(case.surface, "내딛었다");
+    assert_eq!(case.expected, ["내딛다"]);
+    assert!(case.matched);
+    let path = std::env::temp_dir().join(format!(
+        "klem-short-stem-conflict-{}.db",
+        std::process::id()
+    ));
+    import_krdict(
+        &[std::path::PathBuf::from(
+            "tests/fixtures/krdict-short-stems.json",
+        )],
+        &path,
+        "short-stems",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(&path).unwrap();
+    let word = klem::Lemmatizer::new().analyze_word(&case.surface).unwrap();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    let annotation = dictionary.annotate(&word).unwrap();
+    let a = word
+        .analyses
+        .iter()
+        .find(|a| {
+            a.lemmas.iter().map(|l| l.text.as_str()).eq(["내딛다"])
+                && a.morphemes.iter().map(|m| m.form.as_str()).eq(["었", "다"])
+        })
+        .unwrap();
+    let assessment = annotation.assess(a);
+    assert_eq!(assessment.status, Compatibility::Incompatible);
+    assert!(assessment.lemmas[0].entries.iter().all(|e| {
+        e.conflicts
+            .iter()
+            .any(|c| c.rule == AttachmentRule::ShortStemEnding && c.morpheme_index == Some(0))
+    }));
+    drop(dictionary);
+    drop(db);
+    std::fs::remove_file(path).unwrap();
+}

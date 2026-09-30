@@ -390,6 +390,15 @@ fn prefinals(
                 choices.push((r, 3, pasts, "으옵", "prefinal.polite"));
             }
         }
+        // Literary 누구오리까 attests omitted 이 before polite 오. Keep
+        // nominal recovery separate from predicate irregulars. The outer
+        // ending check below limits this recovery to the reviewed question;
+        // a general omission license would also invent 여자와 = 여자+이+오+어.
+        if following.polite_open {
+            for r in grammar::recover(stem, "오", Boundary::OmittedCopula(0)) {
+                choices.push((r, 3, pasts, "으옵", "prefinal.polite"));
+            }
+        }
         // These are distinct modern literary paradigms, not additional
         // allomorphs of 으옵. Their preceding consonant is kept, including ㄹ.
         let suffix = if following.polite_open {
@@ -517,6 +526,8 @@ fn prefinals(
                 p.rules.push(
                     if form == "시" {
                         "copula.omitted_honorific"
+                    } else if form == "으옵" {
+                        "copula.omitted_polite"
                     } else {
                         "copula.omitted_prefinal"
                     }
@@ -649,6 +660,13 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 &mut memo,
             ) {
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
+                if p.rules.iter().any(|r| r == "copula.omitted_polite")
+                    && (ending.form != "으리까"
+                        || p.morphs.len() != 1
+                        || p.morphs[0].form != "으옵")
+                {
+                    continue;
+                }
                 // NIKL 112447/416361 license honorific/past/modal and attested
                 // polite families, but does not list retrospective 더.
                 if literary_na_ending(ending.form) && p.morphs.iter().any(|m| m.form == "더") {

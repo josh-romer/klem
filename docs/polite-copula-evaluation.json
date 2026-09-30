@@ -1,0 +1,4058 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017az",
+  "baseline_commit": "f511275",
+  "review_status": "Agent structural inferences; independent Korean review pending. Not a precision benchmark.",
+  "cases": {
+    "candidate_cases": 25,
+    "required": 13,
+    "forbidden": 12,
+    "unchanged_output_controls": 8,
+    "complete_native_entries": 26
+  },
+  "native_fixture_integrity": {
+    "complete_entries_compared": 26,
+    "passed": true,
+    "method": "Compare all native entry fields, notes/forms/senses/examples and English equivalents to hashed pinned LMF exports; omit RelatedForm and non-English equivalents."
+  },
+  "source_audit": "docs/polite-copula-source-audit.json",
+  "source_fixture": "tests/fixtures/polite-copula-sources.json",
+  "raw_comparison": {
+    "distinct_surfaces": 9908,
+    "changed_surfaces": 68,
+    "added_candidates": 76,
+    "removed_candidates": 0,
+    "classification": {
+      "unjudged": 67,
+      "required": 9
+    },
+    "interpretation": "New grammar hypotheses are retained; only explicit ledger matches are judged. Unjudged candidates are not certified correct.",
+    "changes": [
+      {
+        "surface": "가오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "가",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "거오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "것",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "nominal.colloquial_geot",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "거",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-거-ri",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "기쁘오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기쁘",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "누구오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "누구",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-누구-ri",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "누구이오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "누구이",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "도우사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "도우사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "도우오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "도우",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "돕사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "돕사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "듣사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "듣사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "듣자오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "듣자",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "들사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "들사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "들어주오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "들어주",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "들으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "들으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "들자오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "들자",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "말씀하오리까마는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "말씀하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                },
+                {
+                  "form": "마는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "particle",
+                "particle.concessive",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "말씀하오리까만",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "말씀하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                },
+                {
+                  "form": "만",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "particle",
+                "particle.concessive",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "머오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "머",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹겠사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹겠사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹겠으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹겠으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹기오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹하다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "기",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "deletion.ha",
+                "ending",
+                "ending.literary_question_ri",
+                "nominalization",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹기",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "기",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "nominalization",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-nominalizer",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹사오사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사오사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹어보기오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어보다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "기",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "nominalization",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "보다",
+                  "kind": "auxiliary"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "기",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "boundary.regular",
+                "contraction.identical",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "nominalization",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "보다",
+                  "kind": "auxiliary"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "기",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "deletion.eu",
+                "ending",
+                "ending.literary_question_ri",
+                "nominalization",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어보기",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "보다",
+                  "kind": "auxiliary"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "기",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "nominalization",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-nominalized-aux",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹어주오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어주",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹었사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹었사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹었으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹었으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹으시오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으시",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "묻자오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "묻자",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "물으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "물으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "믿으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "믿으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "믿자오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "믿자",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "받자오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "받자",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "보오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "보",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "부르오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "부르",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "비오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "비",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "살사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "살사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "심으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "심으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "아사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "아사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "아오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "아",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "알사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "알사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "어디오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "어디",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-어디-ri",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "어디오리까만",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "어디",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                },
+                {
+                  "form": "만",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "particle",
+                "particle.concessive",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-short-concessive",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "어찌하오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "어찌하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "없사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "없사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "없으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "없으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "의사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "의사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-의사-ri",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "읽사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "읽사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "읽으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "읽으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "있으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "있으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "좇자오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "좇자",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "좋사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "좋사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "좋으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "좋으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "지사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "지사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "지으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "지으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "짓사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "짓사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "친구오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "친구",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-친구-ri",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "친구오리까마는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "친구",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                },
+                {
+                  "form": "마는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "particle",
+                "particle.concessive",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "copula-polite-concessive",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "친구오오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "친구오",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "친구으오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "친구으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "크오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "크",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "하사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "하사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "하오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "하오오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "하오",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "학생다우오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생다우",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "학생답사오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생답사",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "학생이오리까",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생이",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "이",
+                  "kind": "particle"
+                },
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "particle",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      }
+    ]
+  },
+  "corpus_comparison": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+      "before_sha256": "8d9f49a6b97b605fbb3525c55105b642343d2c2ea52e6e91d83a05bc2526a056",
+      "after_sha256": "8d9f49a6b97b605fbb3525c55105b642343d2c2ea52e6e91d83a05bc2526a056",
+      "byte_identical": true,
+      "grouped_matches": 22133,
+      "converted_rows": 22220
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "input_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+      "before_sha256": "aa73f41430d01f5b61ce378de70a77b7f6d33252206206e961dfbaff96399158",
+      "after_sha256": "aa73f41430d01f5b61ce378de70a77b7f6d33252206206e961dfbaff96399158",
+      "byte_identical": true,
+      "grouped_matches": 24391,
+      "converted_rows": 24490
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+      "before_sha256": "9d46c652f832173428a3556e9850a60ddca07c6ea6d07f481bf9b6ad196be498",
+      "after_sha256": "9d46c652f832173428a3556e9850a60ddca07c6ea6d07f481bf9b6ad196be498",
+      "byte_identical": true,
+      "grouped_matches": 9848,
+      "converted_rows": 9989
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "input_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+      "before_sha256": "d9e52fa182b79ad00b3324a007ad2b8fdf296281d5c6babe9d1c0dfeabca7c86",
+      "after_sha256": "d9e52fa182b79ad00b3324a007ad2b8fdf296281d5c6babe9d1c0dfeabca7c86",
+      "byte_identical": true,
+      "grouped_matches": 9737,
+      "converted_rows": 9871
+    }
+  ],
+  "novel_comparison": [
+    {
+      "policy": "--dict-only",
+      "input": "data/books/mujeong.txt",
+      "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "51590ffa4845018094465464793176f125fe332ad58c9aeaba8a1ae7edc38138",
+      "after_jsonl_sha256": "60c23498d11294d1b4976e47db5730c48a574953430b3331cc6703f2692e5059",
+      "changed_records": 3,
+      "added_candidates": 3,
+      "removed_candidates": 0,
+      "changes": [
+        {
+          "surface": "누구오리까",
+          "span": {
+            "start": 321722,
+            "end": 321737
+          },
+          "added": [
+            {
+              "lemmas": [
+                {
+                  "text": "누구",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            }
+          ],
+          "removed": [],
+          "case_id": "mujeong-rikka-321722-321737",
+          "context": {
+            "byte_start": 321592,
+            "byte_end": 321867,
+            "text": " 그래도 끊어지지 아니하고 부지하였나이다.\n\n부친과 두 형을 여읜 후, 이 몸이 세상에 믿을 이가 누구오리까. 선생께서도 아시려니와 이 몸이 의지할 곳이 어디오리까. 아아, 하늘뿐이로소이다. 땅이 있을 뿐"
+          },
+          "candidate_reviews": [
+            {
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "누구",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으옵",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "으리까",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "copula",
+                  "copula.omitted_ending",
+                  "copula.omitted_polite",
+                  "ending",
+                  "ending.literary_question_ri",
+                  "prefinal.polite"
+                ],
+                "unchanged": false
+              },
+              "status": "required-structural",
+              "ledger_case": "copula-polite-누구-ri",
+              "reason": "Exact source-attested/novel structural reading; not independently annotated gold."
+            }
+          ]
+        },
+        {
+          "surface": "어디오리까",
+          "span": {
+            "start": 321799,
+            "end": 321814
+          },
+          "added": [
+            {
+              "lemmas": [
+                {
+                  "text": "어디",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            }
+          ],
+          "removed": [],
+          "case_id": "mujeong-rikka-321799-321814",
+          "context": {
+            "byte_start": 321669,
+            "byte_end": 321944,
+            "text": "을 여읜 후, 이 몸이 세상에 믿을 이가 누구오리까. 선생께서도 아시려니와 이 몸이 의지할 곳이 어디오리까. 아아, 하늘뿐이로소이다. 땅이 있을 뿐이로소이다. 그리하고 세상에 있어서는 선생뿐이로소이다"
+          },
+          "candidate_reviews": [
+            {
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "어디",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으옵",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "으리까",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "copula",
+                  "copula.omitted_ending",
+                  "copula.omitted_polite",
+                  "ending",
+                  "ending.literary_question_ri",
+                  "prefinal.polite"
+                ],
+                "unchanged": false
+              },
+              "status": "required-structural",
+              "ledger_case": "copula-polite-어디-ri",
+              "reason": "Exact source-attested/novel structural reading; not independently annotated gold."
+            }
+          ]
+        },
+        {
+          "surface": "비오리까마는",
+          "span": {
+            "start": 524952,
+            "end": 524970
+          },
+          "added": [
+            {
+              "lemmas": [
+                {
+                  "text": "비",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                },
+                {
+                  "form": "마는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "particle",
+                "particle.concessive",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            }
+          ],
+          "removed": [],
+          "case_id": "mujeong-rikka-524952-524970",
+          "context": {
+            "byte_start": 524822,
+            "byte_end": 525100,
+            "text": "시옵소서. 저희는 무지몽매한 죄인 무리라 무슨 공로 있어 감히 거룩하신 하느님 우리 여호와께 비오리까마는 다만 우리를 위하여 십자가에 보혈을 흘리시고 하느님 보좌 우편에 앉아 계신 우리 구주 예수 그"
+          },
+          "candidate_reviews": [
+            {
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "비",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으옵",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "으리까",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "마는",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "copula",
+                  "copula.omitted_ending",
+                  "copula.omitted_polite",
+                  "ending",
+                  "ending.literary_question_ri",
+                  "particle",
+                  "particle.concessive",
+                  "prefinal.polite"
+                ],
+                "unchanged": false
+              },
+              "status": "unjudged",
+              "ledger_case": null,
+              "reason": "The added nominal 비 + 이다 hypothesis remains distinct from retained 비다/빌다 predicate alternatives. Prayer context suggests 빌다; dictionary presence does not certify this nominal reading."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "policy": "--dict-compatible",
+      "input": "data/books/mujeong.txt",
+      "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "1d569afcf6f1f68f93d43ecad2f2c53a77843750702c72c37e64236ebe572762",
+      "after_jsonl_sha256": "8a5ec48af37ecb623002a15d5e7584962b972b2b8fa4cad0cea7a397510b3f4a",
+      "changed_records": 3,
+      "added_candidates": 3,
+      "removed_candidates": 0,
+      "changes": [
+        {
+          "surface": "누구오리까",
+          "span": {
+            "start": 321722,
+            "end": 321737
+          },
+          "added": [
+            {
+              "lemmas": [
+                {
+                  "text": "누구",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            }
+          ],
+          "removed": [],
+          "case_id": "mujeong-rikka-321722-321737",
+          "context": {
+            "byte_start": 321592,
+            "byte_end": 321867,
+            "text": " 그래도 끊어지지 아니하고 부지하였나이다.\n\n부친과 두 형을 여읜 후, 이 몸이 세상에 믿을 이가 누구오리까. 선생께서도 아시려니와 이 몸이 의지할 곳이 어디오리까. 아아, 하늘뿐이로소이다. 땅이 있을 뿐"
+          },
+          "candidate_reviews": [
+            {
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "누구",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으옵",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "으리까",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "copula",
+                  "copula.omitted_ending",
+                  "copula.omitted_polite",
+                  "ending",
+                  "ending.literary_question_ri",
+                  "prefinal.polite"
+                ],
+                "unchanged": false
+              },
+              "status": "required-structural",
+              "ledger_case": "copula-polite-누구-ri",
+              "reason": "Exact source-attested/novel structural reading; not independently annotated gold."
+            }
+          ]
+        },
+        {
+          "surface": "어디오리까",
+          "span": {
+            "start": 321799,
+            "end": 321814
+          },
+          "added": [
+            {
+              "lemmas": [
+                {
+                  "text": "어디",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            }
+          ],
+          "removed": [],
+          "case_id": "mujeong-rikka-321799-321814",
+          "context": {
+            "byte_start": 321669,
+            "byte_end": 321944,
+            "text": "을 여읜 후, 이 몸이 세상에 믿을 이가 누구오리까. 선생께서도 아시려니와 이 몸이 의지할 곳이 어디오리까. 아아, 하늘뿐이로소이다. 땅이 있을 뿐이로소이다. 그리하고 세상에 있어서는 선생뿐이로소이다"
+          },
+          "candidate_reviews": [
+            {
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "어디",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으옵",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "으리까",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "copula",
+                  "copula.omitted_ending",
+                  "copula.omitted_polite",
+                  "ending",
+                  "ending.literary_question_ri",
+                  "prefinal.polite"
+                ],
+                "unchanged": false
+              },
+              "status": "required-structural",
+              "ledger_case": "copula-polite-어디-ri",
+              "reason": "Exact source-attested/novel structural reading; not independently annotated gold."
+            }
+          ]
+        },
+        {
+          "surface": "비오리까마는",
+          "span": {
+            "start": 524952,
+            "end": 524970
+          },
+          "added": [
+            {
+              "lemmas": [
+                {
+                  "text": "비",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "으리까",
+                  "kind": "ending"
+                },
+                {
+                  "form": "마는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_polite",
+                "ending",
+                "ending.literary_question_ri",
+                "particle",
+                "particle.concessive",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            }
+          ],
+          "removed": [],
+          "case_id": "mujeong-rikka-524952-524970",
+          "context": {
+            "byte_start": 524822,
+            "byte_end": 525100,
+            "text": "시옵소서. 저희는 무지몽매한 죄인 무리라 무슨 공로 있어 감히 거룩하신 하느님 우리 여호와께 비오리까마는 다만 우리를 위하여 십자가에 보혈을 흘리시고 하느님 보좌 우편에 앉아 계신 우리 구주 예수 그"
+          },
+          "candidate_reviews": [
+            {
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "비",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "으옵",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "으리까",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "마는",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.eu",
+                  "copula",
+                  "copula.omitted_ending",
+                  "copula.omitted_polite",
+                  "ending",
+                  "ending.literary_question_ri",
+                  "particle",
+                  "particle.concessive",
+                  "prefinal.polite"
+                ],
+                "unchanged": false
+              },
+              "status": "unjudged",
+              "ledger_case": null,
+              "reason": "The added nominal 비 + 이다 hypothesis remains distinct from retained 비다/빌다 predicate alternatives. Prayer context suggests 빌다; dictionary presence does not certify this nominal reading."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "full_rust": true,
+    "stress_snapshots_preserved": true,
+    "clippy": true,
+    "format": true,
+    "pinned_full_corpus_regressions": true,
+    "browser_http_full": true,
+    "cli_library_dictionary_filters": true,
+    "desktop_mobile_inspected": true,
+    "nix_packages": true,
+    "nix_flake_check": true,
+    "release_real_dictionary_http_cli_parity": true
+  },
+  "platform_scope": "x86_64-linux; other flake targets not executed.",
+  "remaining": "Other basic polite allomorphs/followers, intervening prefinals, bundled honorific omission, 리까요 and contextual register need separate review. Generalization was retracted after individual-change review.",
+  "performance": {
+    "input": "data/books/mujeong.txt",
+    "before_binary": "/tmp/klem-rikka-result/bin/klem",
+    "after_binary": "/nix/store/nwmphj14hkxxsvz4jvzwfci5rsaw14zr-klem-0.1.0/bin/klem",
+    "method": "Three interleaved release CLI runs per version/filter, including startup, dictionary access and JSONL serialization; stdout discarded. Linux per-child peak RSS. Measurements do not establish statistical equivalence.",
+    "results": {
+      "--dict-only": {
+        "before": {
+          "samples": [
+            {
+              "seconds": 1.6540362879750319,
+              "max_rss_kib": 29856
+            },
+            {
+              "seconds": 1.5380363970180042,
+              "max_rss_kib": 29280
+            },
+            {
+              "seconds": 1.5710176089778543,
+              "max_rss_kib": 30384
+            }
+          ],
+          "median_seconds": 1.5710176089778543,
+          "peak_rss_kib": 30384
+        },
+        "after": {
+          "samples": [
+            {
+              "seconds": 1.5148406960070133,
+              "max_rss_kib": 29968
+            },
+            {
+              "seconds": 1.5605123410350643,
+              "max_rss_kib": 30076
+            },
+            {
+              "seconds": 1.490576202981174,
+              "max_rss_kib": 29468
+            }
+          ],
+          "median_seconds": 1.5148406960070133,
+          "peak_rss_kib": 30076
+        }
+      },
+      "--dict-compatible": {
+        "before": {
+          "samples": [
+            {
+              "seconds": 1.4900628859759308,
+              "max_rss_kib": 30272
+            },
+            {
+              "seconds": 1.5004949850263074,
+              "max_rss_kib": 30052
+            },
+            {
+              "seconds": 1.5529939300031401,
+              "max_rss_kib": 29504
+            }
+          ],
+          "median_seconds": 1.5004949850263074,
+          "peak_rss_kib": 30272
+        },
+        "after": {
+          "samples": [
+            {
+              "seconds": 1.5039288330008276,
+              "max_rss_kib": 29400
+            },
+            {
+              "seconds": 1.52429040602874,
+              "max_rss_kib": 30416
+            },
+            {
+              "seconds": 1.5028242630069144,
+              "max_rss_kib": 29964
+            }
+          ],
+          "median_seconds": 1.5039288330008276,
+          "peak_rss_kib": 30416
+        }
+      }
+    }
+  },
+  "binary_provenance": {
+    "/tmp/klem-before-polite-copula": "4f93a8c5f5c960f492ac571b7615dd85b875bee1ff34078d029a90d7727f2d97",
+    "target/debug/klem": "c982367f9625f90a79b382f22c0b2c7e369054a58296bfa04bf41b532b135fd8",
+    "target/debug/klem-web": "1b3486ee4dcf7aeb01428485a0b1e0d3c1343a208e427ba264c213ed7a3727ec",
+    "/tmp/klem-rikka-result/bin/klem": "1491d401b2dfeb7718b06ae8fa83e0066329ee47060ca8b3e7b4a8f370bbb491",
+    "/tmp/klem-polite-copula-result/bin/klem": "6a24858596dcb8d865b1e779d649f01ac5f2e4ddd626c90b8376e8aed4053322",
+    "/tmp/klem-polite-copula-result/bin/klem-web": "02ca49cbb8f378333b165f29ae133c9729126f1fe204dff1fe8cb7f5b48414dd"
+  }
+}

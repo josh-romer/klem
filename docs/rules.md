@@ -99,8 +99,18 @@ this vowel boundary; spelling requirements retain their original owners.
 Vowel-final copula omission and post-question 마는/만 have separate paths.
 No conjecture/intention sense is selected. The [seven-sense baseline audit](rikka-source-audit.json),
 [regressions](../tests/rikka.rs) and [evaluation](rikka-evaluation.json) retain
-individual source and comparison cases. Historical 리까요 and omitted copulas
-before polite prefinals remain open.
+individual source and comparison cases. Omitted copular 이 directly before
+polite 오 + 리까 now recovers 누구오리까 and 어디오리까, preserving separate
+nominal, copula, polite and question components. Nominalizations and outer
+마는/만 retain their existing licenses. The publisher's Choi Min-sun Psalms
+text also attests 누구오리까; its morphological interpretation is structural
+inference, not annotated gold. Other polite followers, intervening prefinals,
+bundled honorific omission and 리까요 remain open. The rejected broad draft
+would have introduced 여자와 → 여자 + 이다 + 으옵 + 어; no existing stress
+snapshot was regenerated to accept that change. See the
+[source audit](polite-copula-source-audit.json),
+[draft correction](polite-copula-draft-corrections.json) and
+[individual comparisons](polite-copula-evaluation.json).
 
 Lexical membership in an irregular class remains a hypothesis. For example,
 `들어` admits `들다` and `듣다`. Some generated stems may not exist in dictionaries.

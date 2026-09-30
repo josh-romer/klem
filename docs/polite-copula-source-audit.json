@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017az",
+  "baseline_commit": "f511275",
+  "review_status": "Agent structural inferences; independent Korean review pending. Not a precision benchmark.",
+  "supported": "Vowel-final omitted 이 directly before basic polite 오 + 리까; ordinary nominal/collapsed 거 and nominalizations use existing copula base recovery. Outer 마는/만 preserve their existing licenses.",
+  "primary_reviews": [
+    {
+      "url": "https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8005&mn_id=217&pageIndex=1",
+      "review": "NIKL describes easily omitted copular 이 after vowels, with 그대로다 as its example. This is general omission evidence, not a direct license for every polite follower."
+    },
+    {
+      "url": "https://www.korean.go.kr/nkview/nklife/1998_1/8-5.html",
+      "locator": "Section 2.2",
+      "review": "Basic polite vowel/consonant allomorphs and broad distribution are distinct from copula omission. Ri question is not divided into conjectural 리 + 까."
+    },
+    {
+      "url": "https://bible.cbck.or.kr/Pscms/Ps/34",
+      "locator": "Verse 10, publisher Psalm route Ps/34",
+      "review": "Read the publisher text. Direct 누구오리까 token in the Choi Min-sun translation confirms literary use beyond the pinned 1917 novel. Does not supply annotated morphological gold or contemporary ordinary-register acceptance."
+    }
+  ],
+  "baseline_binary_sha256": "4f93a8c5f5c960f492ac571b7615dd85b875bee1ff34078d029a90d7727f2d97",
+  "baseline_evaluator_sha256": "324634f593b68f75945754f534dc77fa56f5e19ea79fb3effddc01ec547e26b4",
+  "pinned_annotated_corpora": {
+    "method": "For ordinary token rows in all six pinned UD files, use OrigLemma when present, otherwise LEMMA; align + morphemes with XPOS and select only exact audited forms tagged EP/ep.",
+    "forms": [
+      "사오",
+      "사옵",
+      "사옵시",
+      "삽",
+      "오",
+      "옵",
+      "옵시",
+      "으오",
+      "으옵",
+      "으옵시"
+    ],
+    "files": [
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+        "sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "explicit_prefinal_hits": []
+      },
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+        "sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+        "explicit_prefinal_hits": []
+      },
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+        "sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+        "explicit_prefinal_hits": []
+      },
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+        "sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "explicit_prefinal_hits": []
+      },
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+        "sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+        "explicit_prefinal_hits": []
+      },
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+        "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+        "explicit_prefinal_hits": []
+      }
+    ],
+    "explicit_prefinal_hits": 0,
+    "caveat": "Zero exact EP hits does not prove that the corpora have no polite usage. Broad surface scans include lexical 오다 and final 오; those are not new polite-prefinal gold cases."
+  },
+  "gold_caveat": "The six-file polite audit has zero exact polite EP hits; no new annotated omitted-polite question gold is claimed. Four complete output reports are preserved byte-for-byte.",
+  "novel_input": {
+    "path": "data/books/mujeong.txt",
+    "sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc"
+  },
+  "draft_correction": "docs/polite-copula-draft-corrections.json",
+  "remaining": "Other basic polite allomorphs/followers, intervening prefinals, bundled honorific omission, 리까요 and contextual register need separate review. Generalization was retracted after individual-change review."
+}

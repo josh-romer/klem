@@ -1610,3 +1610,13 @@ baseline outputs. Their `리까` substring crosses a morpheme boundary; they
 are preservation tests, not gold for the new question. The six possible novel
 question spans remain unannotated; `리까요` and omitted-copula polite-prefinal
 paths remain separately open. See the [baseline source audit](../../docs/rikka-source-audit.json).
+# Omitted copula before a literary polite question
+
+`polite-copula-sources.json` attributes the 26 complete native lexical entries
+in `krdict-polite-copula.json` and distinguishes publisher attestation from
+agent morphological inference. The 25 `copula-polite-*` ledger cases include
+13 required and 12 forbidden paths. `polite-copula-preserved.json` keeps eight
+complete baseline outputs for unrelated polite followers and lexical
+contractions; these are preservation controls, not new gold. See
+`tests/polite_copulas.rs` and `docs/polite-copula-evaluation.json` for CLI/filter
+parity, NFD, component order, local spelling ownership and individual changes.

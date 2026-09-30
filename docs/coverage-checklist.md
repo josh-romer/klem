@@ -1116,8 +1116,28 @@ review remains open under the completion review below.
   per dictionary filter measured roughly 1.5-second medians for 179,112 records
   and about 30 MiB peak RSS; this is descriptive performance evidence rather
   than statistical equivalence.
-  Historical 리까요 and omitted-copula polite-prefinal paths remain open,
-  alongside wider combinations and independent linguistic review.
+  Direct omitted-copula 오 + 리까 now handles 누구오리까 and 어디오리까.
+  The current publisher text of Choi Min-sun's Psalms translation independently
+  attests 누구오리까; this supports literary occurrence, not an annotated parse.
+  Twenty-five `copula-polite-*` cases (13 required, 12 forbidden), eight complete
+  unchanged-output controls and 26 complete native entries are tracked in
+  [tests](../tests/polite_copulas.rs), the
+  [source audit](polite-copula-source-audit.json) and
+  [evaluation](polite-copula-evaluation.json). Across 9,908 probe surfaces,
+  68 change with 76 additions and no removals; 67 additions remain unjudged.
+  All four complete frozen corpus reports are byte-identical, proving
+  preservation rather than new omitted-polite gold. Under each dictionary
+  filter the novel adds three paths at three records: the two requested
+  structural readings and an unjudged nominal 비 + 이다 alternative at
+  비오리까마는. Each has its stable byte-span ID, full candidate and context.
+  The [draft correction](polite-copula-draft-corrections.json) records why
+  generic omission before every polite follower was retracted: it introduced
+  unsupported contracted 어 paths and changed a reviewed stress fingerprint.
+  Three interleaved release runs per filter measured roughly 1.5-second
+  medians and about 30 MiB peak RSS for the 179,112-record novel; this is
+  descriptive evidence, not statistical equivalence.
+  Broader polite allomorphs/followers, intervening markers, bundled honorific
+  omission, 리까요 and independent linguistic review remain open.
   See [basic evaluation](polite-evaluation.json) and
   [humble evaluation](humble-evaluation.json) and
   [bundle evaluation](optsi-evaluation.json). The bundle probe comparison adds

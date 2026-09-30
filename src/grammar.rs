@@ -1438,6 +1438,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "copula.omitted_prefinal" => {
             "Restore omitted copular 이 before modal 겠 or retrospective 더 after a vowel-final nominal, retaining prefinal order and ending restrictions."
         }
+        "copula.omitted_polite" => {
+            "Restore omitted copular 이 after a vowel-final nominal before literary polite 오 + 리까; preserve the nominal and separate copula, polite and question components. Further polite followers require separate review."
+        }
         "nominal.colloquial_geot" => {
             "Expand the colloquial 거/이거/그거/저거 nominal to 것/이것/그것/저것 before a copula; preserve the short lexical alternative."
         }

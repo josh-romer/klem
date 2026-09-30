@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const politeCopula = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite-copula.json"), "utf8"));
   const rikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-rikka.json"), "utf8"));
   const naikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-naikka.json"), "utf8"));
   const jaop = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-jaop.json"), "utf8"));
@@ -339,6 +340,7 @@ try {
       ...jaop.LexicalResource.Lexicon.LexicalEntry,
       ...naikka.LexicalResource.Lexicon.LexicalEntry,
       ...rikka.LexicalResource.Lexicon.LexicalEntry,
+      ...politeCopula.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -2428,6 +2430,46 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-jaop-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Omitted copulas keep visible nominal, copula, polite and final components.
+  const politeCopulaCases = recipientLedger.cases.filter(c => c.id.startsWith("copula-polite-"));
+  assert.equal(politeCopulaCases.length, 25);
+  for (const c of politeCopulaCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const found = token.analysis.analyses.some(a =>
+        JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(found, j.verdict === "required", c.id);
+    }
+  }
+  const politeCopulaText = "누구오리까 어디오리까 친구이옵니다 먹어보기오리까";
+  await submit(page, politeCopulaText); await waitHeading(page, "누구오리까");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [
+    [0, ["누구", "이", "으옵", "으리까"]],
+    [1, ["어디", "이", "으옵", "으리까"]],
+    [2, ["친구", "이", "으옵", "습니다"]],
+    [3, ["먹", "어", "보", "기", "이", "으옵", "으리까"]],
+  ]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, forms.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+  }
+  const politeCopulaDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const politeCopulaExport = JSON.parse(await readFile(await (await politeCopulaDownload).path(), "utf8"));
+  const politeCopulaExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: politeCopulaText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(politeCopulaExport.records, politeCopulaExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-polite-copula-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-polite-copula-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1000});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Literary questions preserve prefinal components and dictionary homonyms.
   const rikkaCases = recipientLedger.cases.filter(c => c.id.startsWith("rikka-"));

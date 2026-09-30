@@ -161,7 +161,7 @@
         "으옵",
         "으리다"
       ],
-      "work": "Additional outer-ending compatibility and contextual register remain open. 나이다 and 나이까 combinations now have separate source-backed evaluations; -(으)리까 and its explicit 오/으오/사오 combinations now have a separately tested implementation and evaluation, preserving their distinct source class. Historical 리까요 and omitted-copula polite-prefinal paths remain open. The 리다 final remains distinct from conjectural 으리 + 라."
+      "work": "Additional outer-ending compatibility and contextual register remain open. 나이다 and 나이까 combinations now have separate source-backed evaluations; -(으)리까 and its explicit 오/으오/사오 combinations now have a separately tested implementation and evaluation, preserving their distinct source class. Direct omitted copular 이 before 오 + 리까 is now separately implemented and evaluated. Broader omitted polite followers/allomorphs, intervening prefinals and 리까요 remain open. The 리다 final remains distinct from conjectural 으리 + 라."
     }
   ],
   "missing_primary_krdict_headwords": {
@@ -312,5 +312,14 @@
     "audit": "docs/rikka-source-audit.json",
     "status": "The eleven baseline-missing direct paths now have their own implementation and 172 candidate cases, ten policy cases and complete native fixtures. See docs/rikka-evaluation.json. Historical 리까요 and omitted-copula polite-prefinal paths remain open.",
     "evaluation": "docs/rikka-evaluation.json"
+  },
+  "implemented_omitted_copula_question": {
+    "forms": [
+      "누구오리까",
+      "어디오리까"
+    ],
+    "scope": "Omitted vowel-final copular 이 directly before basic polite 오 + 리까; broader followers/allomorphs remain open.",
+    "evaluation": "docs/polite-copula-evaluation.json",
+    "draft_correction": "docs/polite-copula-draft-corrections.json"
   }
 }

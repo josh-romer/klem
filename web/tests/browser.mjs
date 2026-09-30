@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const neuniComparison = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-neuni-comparison.json"),"utf8"));
   const quotedNeuni = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-quoted-neuni.json"),"utf8"));
   const neuni = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-neuni.json"),"utf8"));
   const ba = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-ba.json"),"utf8"));
@@ -355,6 +356,7 @@ try {
       ...ba.LexicalResource.Lexicon.LexicalEntry,
       ...neuni.LexicalResource.Lexicon.LexicalEntry,
       ...quotedNeuni.LexicalResource.Lexicon.LexicalEntry,
+      ...neuniComparison.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -1333,6 +1335,51 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-quoted-neuni-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-quoted-neuni-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const neuniComparisonCases = recipientLedger.cases.filter(c => c.id.startsWith("comparative-neuni-"));
+  const neuniComparisonPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("comparative-neuni-"));
+  assert.equal(neuniComparisonCases.length,58); assert.equal(neuniComparisonPolicies.length,12);
+  for (const [cases,policy] of [[neuniComparisonCases,false],[neuniComparisonPolicies,true]]) {
+    for (const c of cases) {
+      const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+      const cli=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      const {dictionary,...analysis}=cli;
+      assert.deepEqual(token.analysis,analysis); assert.deepEqual(token.dictionary,dictionary);
+      for (const j of c.judgments) {
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if (policy) {
+          for (const a of found) {
+            const index=token.analysis.analyses.indexOf(a);
+            assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+          }
+        }
+      }
+    }
+  }
+  const neuniComparisonText="받느니보다 사느니보다 앉아있느니보다 대답하느니보다는 보내고있느니보다는 크느니보다 좋느니보다는 먹었느니보다는";
+  const neuniComparisonData=await(await post("analyze",{text:neuniComparisonText})).json();
+  for(const[form,id]of[["느니보다","krdict:85729"],["느니보다는","krdict:85731"]]){
+    assert.deepEqual(neuniComparisonData.grammar["-"+form].map(e=>e.id),[id]);
+    assert.equal(neuniComparisonData.grammar["-"+form][0].pos,"품사 없음");
+  }
+  await submit(page,neuniComparisonText);await waitHeading(page,"받느니보다");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms,label]of[[0,["받","느니보다"],"Rather than"],[1,["살","느니보다"],"Rather than"],[2,["앉","어","있","느니보다"],"Rather than"],[3,["대답하","느니보다는"],"Rather than (emphasized)"],[4,["보내","고","있","느니보다는"],"Rather than (emphasized)"],[5,["크","느니보다"],"Rather than"],[7,["먹","었","느니보다는"],"Rather than (emphasized)"]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes(label));
+  }
+  const neuniComparisonDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const neuniComparisonExport=JSON.parse(await readFile(await(await neuniComparisonDownload).path(),"utf8"));
+  const neuniComparisonExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:neuniComparisonText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(neuniComparisonExport.records,neuniComparisonExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-comparative-neuni-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-comparative-neuni-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const eumseCases = recipientLedger.cases.filter(c => c.id.startsWith("eumse-"));

@@ -3556,3 +3556,19 @@ roles remain dictionary-unknown, not certified readings. Verbal/adjectival 크�
 homonyms are checked independently. The native missing-space 결혼을하라느니
 is preserved as COV-020p; ending coverage does not infer arbitrary object/predicate
 joining. All 11 senses and 49 complete example groups are unchanged.
+
+## Exact comparative expressions (COV-017be)
+
+The complete pinned KRDict entries 85729 (-느니보다) and 85731 (-느니보다는)
+license verbs, existential predicates/compounds and honorific 으시. Both retain
+POS 품사 없음 and lexicalUnit 문법‧표현; they are exact reviewed bundles,
+not an unrestricted 느니 + 보다 particle rule. Literal ㄴ-onset spelling
+preserves ㄹ deletion and independent 사다/살다 candidates. The existing
+immediate-owner check rejects represented non-existential adjective/copula
+classes; optional dictionary policy checks each lexical homonym separately.
+Only 시 is source-listed. Generic unlisted prefinal hypotheses remain unknown,
+including the existing open 사오 spelling of canonical 사옵. Original complete
+example groups remain unchanged; two joined auxiliary inputs are explicit
+tolerant inferences. No contraction 느니보단, wider followers, or contextual
+clause choice is certified. See the [source audit](neuni-comparison-source-audit.json)
+and [candidate comparison](neuni-comparison-evaluation.json).

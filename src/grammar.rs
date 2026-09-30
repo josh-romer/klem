@@ -590,6 +590,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "느니",
             "느니만",
             "느니만큼",
+            "느니보다",
+            "느니보다는",
             "나이다",
             "나이까",
             "느라고",
@@ -1331,7 +1333,7 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Recover source-reviewed listings of quoted statements, questions, commands, proposals and retrospective reports as distinct bundles. Preserve copular/command homonyms and immediate owners; contextual interpretation and unreviewed polite prefinals are not inferred."
         }
         "ending.neuni" => {
-            "Recover comparative/enumerative/assertive 느니, comparative 느니만/니만 and causal 느니만큼/으니만큼 as reviewed bundles. Contextual sense and unreviewed prefinal combinations are not inferred."
+            "Recover comparative/enumerative/assertive 느니, comparative 느니만/니만/느니보다/느니보다는 and causal 느니만큼/으니만큼 as reviewed bundles. Contextual sense and unreviewed prefinal combinations are not inferred."
         }
         "ending.background_ba" => {
             "Recover literary background connectives -ㄴ바/-은바, -는바 and -던바. Preserve the ending bundle separately from adnominal plus bound noun 바; contextual background and sense are not inferred."

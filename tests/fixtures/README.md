@@ -1698,3 +1698,11 @@ resultative, question-class and contextual cases remain in the source review.
   and four exact target annotations. KRDict and KAIST disagree on the lexical POS
   of 열등하다; the original annotation remains unchanged. Exact expressions
   느냐느니 88986 and 더라느니 86074 retain 품사 없음 outside the inventory queue.
+
+- `krdict-neuni-comparison.json` contains 43 complete attributed native entries
+  for COV-017be, omitting only RelatedForm/non-English equivalents. The manifest
+  `neuni-comparison-sources.json` preserves hashes, exact expression identities
+  85729/85731 with 품사 없음, both senses/all eight example groups, eight direct
+  token cases and two explicitly joined auxiliary inputs. The six pinned corpus
+  files contain no corresponding annotated token; no artificial corpus case is
+  substituted for an original annotation.

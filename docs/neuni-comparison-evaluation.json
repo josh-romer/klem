@@ -1,0 +1,7313 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017be",
+  "reviewed_at": "2026-09-30",
+  "before_revision": "435cebc",
+  "sources": {
+    "manifest": "tests/fixtures/neuni-comparison-sources.json",
+    "audit": "docs/neuni-comparison-source-audit.json",
+    "primary_entries": 2,
+    "senses": 2,
+    "complete_example_groups": 8,
+    "direct_token_cases": 8,
+    "explicit_joined_auxiliary_inputs": 2,
+    "native_entries": 43,
+    "integrity": {
+      "native_entries_verified": 43,
+      "export_hashes_verified": 11,
+      "omissions": [
+        "RelatedForm",
+        "non-English equivalents"
+      ],
+      "result": "All fixture entries match complete pinned native sources exactly after documented omissions."
+    },
+    "attribution": "National Institute of Korean Language KRDict pinned September 2026 LMF export; full entries except RelatedForm and non-English equivalents.",
+    "license": "CC BY-SA 2.0 KR",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/"
+  },
+  "implementation": {
+    "forms": [
+      "느니보다",
+      "느니보다는"
+    ],
+    "provenance": "ending.neuni",
+    "boundaries": "Literal ㄴ-onset bundles reuse regular/vowel spelling and ㄹ deletion; 사느니 preserves both 사다 and 살다 hypotheses. No split into arbitrary nominal particles is invented.",
+    "owners": "Existing bare_neuni_verb policy checks immediate verb/existential owners and each dictionary homonym independently. Represented non-existential adjective/copula owners are rejected without borrowing an earlier lexical head role.",
+    "prefinals": "Exact source-listed 시 stays known; unlisted generic 었/겠/더/사옵 hypotheses remain optional-dictionary unknown. The source does not establish a universal ban on omitted combinations.",
+    "expressions": "Exact IDs 85729 and 85731 preserve POS 품사 없음 and lexicalUnit 문법‧표현 outside the 715-entry queue; teaching labels use only these exact source identities."
+  },
+  "judgments": {
+    "raw_required": 48,
+    "raw_forbidden": 10,
+    "policy_required": 8,
+    "policy_forbidden": 4,
+    "review_status": "Agent-authored source-backed structural hypotheses; independent Korean review pending."
+  },
+  "raw_candidate_comparison": {
+    "before_revision": "435cebc",
+    "before_binary": "/tmp/klem-before-neuni-comparison",
+    "before_binary_sha256": "b5749f2e3c71462b504f963fa2b555542e91865daacc802331b172ae103f4da9",
+    "after_binary_sha256": "fa6ee4fe4c33043f24fe6eb446d09f031e9a3003fb8f8c4f861de9aa98b8d8e5",
+    "distinct_surfaces": 10479,
+    "changed_surfaces": 55,
+    "added_candidates": 148,
+    "removed_candidates": 0,
+    "classification": {
+      "required": 45,
+      "unjudged": 99,
+      "dictionary-conflict": 4
+    },
+    "interpretation": "Every changed raw hypothesis is retained with provenance and explicit judgment references. Unjudged alternatives are not certified linguistically valid.",
+    "changes": [
+      {
+        "surface": "가느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "가다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-11",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "갈다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "가느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "갈다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "가다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-35",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "계시느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "계다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "계시다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-16",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "곌다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.rieul",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "계",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_honorific",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "계실다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "곟다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.honorific"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "계시느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "계시다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-40",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "계실다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "곌다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.rieul",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "계",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_honorific",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "계다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "곟다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.honorific"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "기르느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기를다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기르다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-source-85729-2-0",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "기시느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "길다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.rieul",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-21",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기시다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기실다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "깋다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.honorific"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_honorific",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "기시느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기실다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "길다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.rieul",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-45",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "깋다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.honorific"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_honorific",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "기시다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "대답하느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "대답하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-source-85731-1-0",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "대답할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "많느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "많다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "dictionary-conflict",
+            "judgments": [
+              {
+                "case": "comparative-neuni-policy-1",
+                "judgment": "path",
+                "verdict": "forbidden",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "많느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "많다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "dictionary-conflict",
+            "judgments": [
+              {
+                "case": "comparative-neuni-policy-7",
+                "judgment": "path",
+                "verdict": "forbidden",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "맛있느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "맛있다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-17",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-policy-3",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "맛있느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "맛있다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-41",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-policy-9",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹겠느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹겠다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "겠",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.modal"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-unknown-26",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹겋다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.past"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹게다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni",
+                "prefinal.past"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹겠느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹겠다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹겋다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.past"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹게다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni",
+                "prefinal.past"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "겠",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.modal"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-unknown-50",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹고싶느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹고싶다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹고싶느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹고싶다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹고있느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "있다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "고",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-22",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹고있다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹고있느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹고있다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "있다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "고",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-46",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-10",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-policy-5",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-34",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-policy-11",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹더느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-unknown-27",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹덜다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹더느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹덜다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "더",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.retrospective"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-unknown-51",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹더다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹사오느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사오다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹살다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.rieul",
+                "ending",
+                "ending.neuni",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "사옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.consonant",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.humble_saop"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-unknown-28",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹샇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.polite"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사올다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "오다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹사오느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사오다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사올다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹샇다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.polite"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹살다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.rieul",
+                "ending",
+                "ending.neuni",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "사옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.consonant",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.humble_saop"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-unknown-52",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으옵",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.polite"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹사다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "오다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹어주느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "주다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-23",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어주다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "주다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "deletion.eu",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "주다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어줄다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹어주느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "주다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "주다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-47",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "주다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "deletion.eu",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어주다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어줄다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹었느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.eu",
+                "ending",
+                "ending.neuni",
+                "prefinal.past"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni",
+                "prefinal.past"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.past"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-unknown-25",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹었다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹었느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹어다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni",
+                "prefinal.past"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.eu",
+                "ending",
+                "ending.neuni",
+                "prefinal.past"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹었다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "었",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.past"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-unknown-49",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹으시느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으실다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-20",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹읗다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.honorific"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹을다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.rieul",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으시다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_honorific",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹으시느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-44",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹읗다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "irregular.hieut",
+                "prefinal.honorific"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹을다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "deletion.rieul",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "boundary.regular",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으시다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으실다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹으",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "시",
+                  "kind": "prefinal"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "copula",
+                "copula.omitted_ending",
+                "copula.omitted_honorific",
+                "ending",
+                "ending.neuni",
+                "prefinal.honorific"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹지못하느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹지못하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹하다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "못하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "지",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "deletion.ha",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "못하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "지",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-24",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹지못할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "먹지못하느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹지못할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹하다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "못하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "지",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "deletion.ha",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "못하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "지",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-owner-48",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹지못하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "받느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "받다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-source-85729-1-0",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "보내고있느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "보내고있다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "보내다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "있다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "고",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-joined-85731",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "사느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "사다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-13",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "살다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-source-85729-4-0",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-positive-12",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "사느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "사다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-37",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "살다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-36",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "속이느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "속이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-source-85731-2-0",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "속일다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "앉아있느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "앉다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "있다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-joined-85729",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "앉으다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "있다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "deletion.eu",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "앉아있다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "앉아다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "있다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "contraction.identical",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "앓느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "앓다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-source-85731-4-0",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "없느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "없다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-15",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "없느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "없다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-39",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "있느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "있다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-source-85729-3-0",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-positive-14",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "있느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "있다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-source-85731-3-0",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-positive-38",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "재미없느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "재미없다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-18",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-policy-4",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "재미없느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "재미없다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-42",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-policy-10",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "좋느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "좋다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "dictionary-conflict",
+            "judgments": [
+              {
+                "case": "comparative-neuni-policy-0",
+                "judgment": "path",
+                "verdict": "forbidden",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "좋느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "좋다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "dictionary-conflict",
+            "judgments": [
+              {
+                "case": "comparative-neuni-policy-6",
+                "judgment": "path",
+                "verdict": "forbidden",
+                "ledger": 1
+              }
+            ]
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "친구느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "친굴다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "친구다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "친구느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "친구다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "친굴다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "크느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "크다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-19",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-policy-2",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 1
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "클다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "크느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "크다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "required",
+            "judgments": [
+              {
+                "case": "comparative-neuni-positive-43",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 0
+              },
+              {
+                "case": "comparative-neuni-policy-8",
+                "judgment": "path",
+                "verdict": "required",
+                "ledger": 1
+              }
+            ]
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "클다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "학생답느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생답다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "학생답느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생답다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "학생이느니보다",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생일다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      },
+      {
+        "surface": "학생이느니보다는",
+        "added": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "학생일다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "느니보다는",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending",
+                "ending.neuni"
+              ],
+              "unchanged": false
+            },
+            "status": "unjudged",
+            "judgments": []
+          }
+        ],
+        "removed": []
+      }
+    ]
+  },
+  "corpus": {
+    "frozen_reports": [
+      {
+        "corpus": "kaist",
+        "split": "dev",
+        "before_summary": {
+          "schema_version": 2,
+          "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+          "corpus": "kaist",
+          "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+          "rows": 25278,
+          "excluded_rows": 2990,
+          "malformed_rows": 0,
+          "converted_rows": 22220,
+          "unsupported": {
+            "no_lexical_component": 67,
+            "orphan_nominal_suffix": 1
+          },
+          "grouped_matches": 22134,
+          "gold_lemmas": 23681,
+          "recovered_gold_lemmas": 23607,
+          "transformed_rows": 17169,
+          "transformed_matches": 17083,
+          "adapter_coverage": 0.9969490308686288,
+          "grouped_lemma_recall": 0.9961296129612961,
+          "lemma_recall": 0.9968751319623327,
+          "transformed_grouped_recall": 0.9949909721008795,
+          "mean_candidates": 6.1194869486948695,
+          "p95_candidates": 13,
+          "max_candidates": 41,
+          "common_misses": [
+            {
+              "surface": "라",
+              "expected": [
+                "이다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "지적이고",
+              "expected": [
+                "지적"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "Willaiam_Collins는",
+              "expected": [
+                "Willaiam_Collins"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "갈아보자였다",
+              "expected": [
+                "갈다",
+                "보다",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "갑작스런",
+              "expected": [
+                "갑작스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "거추장스로운",
+              "expected": [
+                "거추장스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "거치며출판산업도",
+              "expected": [
+                "거치다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "것이라기보다는",
+              "expected": [
+                "것",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고결하였을런지",
+              "expected": [
+                "고결하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고통스런",
+              "expected": [
+                "고통스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그다지커다란",
+              "expected": [
+                "그다지"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "근대라는",
+              "expected": [
+                "근대"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기계적이고",
+              "expected": [
+                "기계적"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "나서가",
+              "expected": [
+                "나다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "노래스런",
+              "expected": [
+                "노래스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "달아줘라는",
+              "expected": [
+                "달다",
+                "주다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "대로",
+              "expected": [
+                "데"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "대안인가라는",
+              "expected": [
+                "대안",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "독제체제가",
+              "expected": [
+                "독재체제"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "드의",
+              "expected": [
+                "등"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "등록케",
+              "expected": [
+                "등록하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "때문에,",
+              "expected": [
+                "때문에"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "라이프찌히에서",
+              "expected": [
+                "라이프치히"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "마당에출판의",
+              "expected": [
+                "마당"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "망해야지만",
+              "expected": [
+                "망하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "먹혀들",
+              "expected": [
+                "먹히다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "뭔가",
+              "expected": [
+                "무어",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "민주주의라는",
+              "expected": [
+                "민주주의"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "바뀌였다",
+              "expected": [
+                "바뀌다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "배타적이고",
+              "expected": [
+                "배타적"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "after_summary": {
+          "schema_version": 2,
+          "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+          "corpus": "kaist",
+          "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+          "rows": 25278,
+          "excluded_rows": 2990,
+          "malformed_rows": 0,
+          "converted_rows": 22220,
+          "unsupported": {
+            "no_lexical_component": 67,
+            "orphan_nominal_suffix": 1
+          },
+          "grouped_matches": 22134,
+          "gold_lemmas": 23681,
+          "recovered_gold_lemmas": 23607,
+          "transformed_rows": 17169,
+          "transformed_matches": 17083,
+          "adapter_coverage": 0.9969490308686288,
+          "grouped_lemma_recall": 0.9961296129612961,
+          "lemma_recall": 0.9968751319623327,
+          "transformed_grouped_recall": 0.9949909721008795,
+          "mean_candidates": 6.1194869486948695,
+          "p95_candidates": 13,
+          "max_candidates": 41,
+          "common_misses": [
+            {
+              "surface": "라",
+              "expected": [
+                "이다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "지적이고",
+              "expected": [
+                "지적"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "Willaiam_Collins는",
+              "expected": [
+                "Willaiam_Collins"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "갈아보자였다",
+              "expected": [
+                "갈다",
+                "보다",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "갑작스런",
+              "expected": [
+                "갑작스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "거추장스로운",
+              "expected": [
+                "거추장스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "거치며출판산업도",
+              "expected": [
+                "거치다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "것이라기보다는",
+              "expected": [
+                "것",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고결하였을런지",
+              "expected": [
+                "고결하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고통스런",
+              "expected": [
+                "고통스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그다지커다란",
+              "expected": [
+                "그다지"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "근대라는",
+              "expected": [
+                "근대"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기계적이고",
+              "expected": [
+                "기계적"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "나서가",
+              "expected": [
+                "나다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "노래스런",
+              "expected": [
+                "노래스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "달아줘라는",
+              "expected": [
+                "달다",
+                "주다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "대로",
+              "expected": [
+                "데"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "대안인가라는",
+              "expected": [
+                "대안",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "독제체제가",
+              "expected": [
+                "독재체제"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "드의",
+              "expected": [
+                "등"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "등록케",
+              "expected": [
+                "등록하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "때문에,",
+              "expected": [
+                "때문에"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "라이프찌히에서",
+              "expected": [
+                "라이프치히"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "마당에출판의",
+              "expected": [
+                "마당"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "망해야지만",
+              "expected": [
+                "망하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "먹혀들",
+              "expected": [
+                "먹히다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "뭔가",
+              "expected": [
+                "무어",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "민주주의라는",
+              "expected": [
+                "민주주의"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "바뀌였다",
+              "expected": [
+                "바뀌다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "배타적이고",
+              "expected": [
+                "배타적"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "before_sha256": "b4860b64a4c78515ebeb23c46a1c97b1d6e714a77344b690428002aaba8ef94b",
+        "after_sha256": "b4860b64a4c78515ebeb23c46a1c97b1d6e714a77344b690428002aaba8ef94b",
+        "byte_identical": true,
+        "changed_cases": []
+      },
+      {
+        "corpus": "kaist",
+        "split": "test",
+        "before_summary": {
+          "schema_version": 2,
+          "input_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+          "corpus": "kaist",
+          "input": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+          "rows": 28366,
+          "excluded_rows": 3716,
+          "malformed_rows": 0,
+          "converted_rows": 24490,
+          "unsupported": {
+            "no_lexical_component": 150,
+            "orphan_derivational_suffix": 1,
+            "orphan_nominal_suffix": 4,
+            "unsupported_tag": 5
+          },
+          "grouped_matches": 24392,
+          "gold_lemmas": 26023,
+          "recovered_gold_lemmas": 25928,
+          "transformed_rows": 18215,
+          "transformed_matches": 18117,
+          "adapter_coverage": 0.9935091277890467,
+          "grouped_lemma_recall": 0.9959983666802776,
+          "lemma_recall": 0.9963493832379049,
+          "transformed_grouped_recall": 0.9946198188306341,
+          "mean_candidates": 5.913066557778685,
+          "p95_candidates": 13,
+          "max_candidates": 45,
+          "common_misses": [
+            {
+              "surface": "고풍스런",
+              "expected": [
+                "고풍스럽다"
+              ],
+              "count": 3
+            },
+            {
+              "surface": "그러는",
+              "expected": [
+                "그렇다"
+              ],
+              "count": 3
+            },
+            {
+              "surface": "있어서의",
+              "expected": [
+                "있다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "20.2로",
+              "expected": [
+                "20.2"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "22.5로",
+              "expected": [
+                "22.5"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "24.0가",
+              "expected": [
+                "24.0"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "24.4를",
+              "expected": [
+                "24.4"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "26.3로",
+              "expected": [
+                "26.3"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "40마리를",
+              "expected": [
+                "40여마리"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "가계든",
+              "expected": [
+                "가계",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "감소되어왔다",
+              "expected": [
+                "감소되다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "개방이라기보다는",
+              "expected": [
+                "개방",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "결론으로서가",
+              "expected": [
+                "결론"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고급스런",
+              "expected": [
+                "고급스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고학",
+              "expected": [
+                "과학"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "국내시장에서든",
+              "expected": [
+                "국내시장"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "군인인지라",
+              "expected": [
+                "군인",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그것으로서가",
+              "expected": [
+                "그것"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그래서인지",
+              "expected": [
+                "그러다",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그렇다더라도",
+              "expected": [
+                "그렇다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그밖의",
+              "expected": [
+                "그"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기후라서",
+              "expected": [
+                "기후"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "내다볼",
+              "expected": [
+                "내다",
+                "보다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "덤벼든다",
+              "expected": [
+                "덤비어들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "되었는가라는",
+              "expected": [
+                "되다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "드러나며",
+              "expected": [
+                "들다",
+                "나다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "드러난다",
+              "expected": [
+                "들다",
+                "나다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "들으면서",
+              "expected": [
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "들은",
+              "expected": [
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "따라",
+              "expected": [
+                "따라오다"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "after_summary": {
+          "schema_version": 2,
+          "input_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+          "corpus": "kaist",
+          "input": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+          "rows": 28366,
+          "excluded_rows": 3716,
+          "malformed_rows": 0,
+          "converted_rows": 24490,
+          "unsupported": {
+            "no_lexical_component": 150,
+            "orphan_derivational_suffix": 1,
+            "orphan_nominal_suffix": 4,
+            "unsupported_tag": 5
+          },
+          "grouped_matches": 24392,
+          "gold_lemmas": 26023,
+          "recovered_gold_lemmas": 25928,
+          "transformed_rows": 18215,
+          "transformed_matches": 18117,
+          "adapter_coverage": 0.9935091277890467,
+          "grouped_lemma_recall": 0.9959983666802776,
+          "lemma_recall": 0.9963493832379049,
+          "transformed_grouped_recall": 0.9946198188306341,
+          "mean_candidates": 5.913066557778685,
+          "p95_candidates": 13,
+          "max_candidates": 45,
+          "common_misses": [
+            {
+              "surface": "고풍스런",
+              "expected": [
+                "고풍스럽다"
+              ],
+              "count": 3
+            },
+            {
+              "surface": "그러는",
+              "expected": [
+                "그렇다"
+              ],
+              "count": 3
+            },
+            {
+              "surface": "있어서의",
+              "expected": [
+                "있다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "20.2로",
+              "expected": [
+                "20.2"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "22.5로",
+              "expected": [
+                "22.5"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "24.0가",
+              "expected": [
+                "24.0"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "24.4를",
+              "expected": [
+                "24.4"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "26.3로",
+              "expected": [
+                "26.3"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "40마리를",
+              "expected": [
+                "40여마리"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "가계든",
+              "expected": [
+                "가계",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "감소되어왔다",
+              "expected": [
+                "감소되다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "개방이라기보다는",
+              "expected": [
+                "개방",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "결론으로서가",
+              "expected": [
+                "결론"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고급스런",
+              "expected": [
+                "고급스럽다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고학",
+              "expected": [
+                "과학"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "국내시장에서든",
+              "expected": [
+                "국내시장"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "군인인지라",
+              "expected": [
+                "군인",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그것으로서가",
+              "expected": [
+                "그것"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그래서인지",
+              "expected": [
+                "그러다",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그렇다더라도",
+              "expected": [
+                "그렇다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그밖의",
+              "expected": [
+                "그"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기후라서",
+              "expected": [
+                "기후"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "내다볼",
+              "expected": [
+                "내다",
+                "보다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "덤벼든다",
+              "expected": [
+                "덤비어들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "되었는가라는",
+              "expected": [
+                "되다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "드러나며",
+              "expected": [
+                "들다",
+                "나다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "드러난다",
+              "expected": [
+                "들다",
+                "나다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "들으면서",
+              "expected": [
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "들은",
+              "expected": [
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "따라",
+              "expected": [
+                "따라오다"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "before_sha256": "f0bd1cf4e8644d018340120f045fc1a32d1d35bfdb956e89205bea13d633ca42",
+        "after_sha256": "f0bd1cf4e8644d018340120f045fc1a32d1d35bfdb956e89205bea13d633ca42",
+        "byte_identical": true,
+        "changed_cases": []
+      },
+      {
+        "corpus": "gsd",
+        "split": "dev",
+        "before_summary": {
+          "schema_version": 2,
+          "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+          "corpus": "gsd",
+          "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+          "rows": 11958,
+          "excluded_rows": 1813,
+          "malformed_rows": 0,
+          "converted_rows": 9989,
+          "unsupported": {
+            "no_lexical_component": 148,
+            "orphan_derivational_suffix": 2,
+            "orphan_nominal_suffix": 5,
+            "unsegmented_predicate_nominal": 1
+          },
+          "grouped_matches": 9848,
+          "gold_lemmas": 10481,
+          "recovered_gold_lemmas": 10278,
+          "transformed_rows": 6470,
+          "transformed_matches": 6329,
+          "adapter_coverage": 0.9846229669788072,
+          "grouped_lemma_recall": 0.9858844729202122,
+          "lemma_recall": 0.9806316191203129,
+          "transformed_grouped_recall": 0.9782071097372489,
+          "mean_candidates": 5.588247071778957,
+          "p95_candidates": 12,
+          "max_candidates": 35,
+          "common_misses": [
+            {
+              "surface": "끝내줘요",
+              "expected": [
+                "끝내",
+                "주다"
+              ],
+              "count": 3
+            },
+            {
+              "surface": "고양이과",
+              "expected": [
+                "고양이"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "데이",
+              "expected": [
+                "데"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "2.36m를",
+              "expected": [
+                "2.36m"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "3-1로",
+              "expected": [
+                "3-1"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "5-4로",
+              "expected": [
+                "5-4"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "가믈란",
+              "expected": [
+                "가믈"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "각광받고",
+              "expected": [
+                "각광",
+                "받다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "각광받으며",
+              "expected": [
+                "각광",
+                "받다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "갈천리의",
+              "expected": [
+                "가다",
+                "천리"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "감사드리고",
+              "expected": [
+                "감사",
+                "드리다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "강된장밥은",
+              "expected": [
+                "강되다",
+                "장밥"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "강추합니다",
+              "expected": [
+                "강",
+                "추하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "거기",
+              "expected": [
+                "것",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "걸복건귀는",
+              "expected": [
+                "것",
+                "이다",
+                "복건귀"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "걸아가는",
+              "expected": [
+                "걸다",
+                "가다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고치구",
+              "expected": [
+                "고치다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "귀기울일만한",
+              "expected": [
+                "귀",
+                "기울이다",
+                "만하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그랬는데",
+              "expected": [
+                "그러다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그레요",
+              "expected": [
+                "그러다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그림같은",
+              "expected": [
+                "그림",
+                "같다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기증받게",
+              "expected": [
+                "기증",
+                "받다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기차타고",
+              "expected": [
+                "기차",
+                "타다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "깊으셔셔",
+              "expected": [
+                "깊다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "깨끗하구요",
+              "expected": [
+                "깨끗하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "끝내줍니다",
+              "expected": [
+                "끝내",
+                "주다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "내다팔던",
+              "expected": [
+                "내다",
+                "팔다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "내렸다는대",
+              "expected": [
+                "내리다",
+                "대"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "넘",
+              "expected": [
+                "넘다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "느꼇습니다",
+              "expected": [
+                "느다",
+                "꼇다"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "after_summary": {
+          "schema_version": 2,
+          "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+          "corpus": "gsd",
+          "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+          "rows": 11958,
+          "excluded_rows": 1813,
+          "malformed_rows": 0,
+          "converted_rows": 9989,
+          "unsupported": {
+            "no_lexical_component": 148,
+            "orphan_derivational_suffix": 2,
+            "orphan_nominal_suffix": 5,
+            "unsegmented_predicate_nominal": 1
+          },
+          "grouped_matches": 9848,
+          "gold_lemmas": 10481,
+          "recovered_gold_lemmas": 10278,
+          "transformed_rows": 6470,
+          "transformed_matches": 6329,
+          "adapter_coverage": 0.9846229669788072,
+          "grouped_lemma_recall": 0.9858844729202122,
+          "lemma_recall": 0.9806316191203129,
+          "transformed_grouped_recall": 0.9782071097372489,
+          "mean_candidates": 5.588247071778957,
+          "p95_candidates": 12,
+          "max_candidates": 35,
+          "common_misses": [
+            {
+              "surface": "끝내줘요",
+              "expected": [
+                "끝내",
+                "주다"
+              ],
+              "count": 3
+            },
+            {
+              "surface": "고양이과",
+              "expected": [
+                "고양이"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "데이",
+              "expected": [
+                "데"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "2.36m를",
+              "expected": [
+                "2.36m"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "3-1로",
+              "expected": [
+                "3-1"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "5-4로",
+              "expected": [
+                "5-4"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "가믈란",
+              "expected": [
+                "가믈"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "각광받고",
+              "expected": [
+                "각광",
+                "받다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "각광받으며",
+              "expected": [
+                "각광",
+                "받다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "갈천리의",
+              "expected": [
+                "가다",
+                "천리"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "감사드리고",
+              "expected": [
+                "감사",
+                "드리다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "강된장밥은",
+              "expected": [
+                "강되다",
+                "장밥"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "강추합니다",
+              "expected": [
+                "강",
+                "추하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "거기",
+              "expected": [
+                "것",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "걸복건귀는",
+              "expected": [
+                "것",
+                "이다",
+                "복건귀"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "걸아가는",
+              "expected": [
+                "걸다",
+                "가다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고치구",
+              "expected": [
+                "고치다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "귀기울일만한",
+              "expected": [
+                "귀",
+                "기울이다",
+                "만하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그랬는데",
+              "expected": [
+                "그러다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그레요",
+              "expected": [
+                "그러다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그림같은",
+              "expected": [
+                "그림",
+                "같다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기증받게",
+              "expected": [
+                "기증",
+                "받다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기차타고",
+              "expected": [
+                "기차",
+                "타다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "깊으셔셔",
+              "expected": [
+                "깊다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "깨끗하구요",
+              "expected": [
+                "깨끗하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "끝내줍니다",
+              "expected": [
+                "끝내",
+                "주다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "내다팔던",
+              "expected": [
+                "내다",
+                "팔다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "내렸다는대",
+              "expected": [
+                "내리다",
+                "대"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "넘",
+              "expected": [
+                "넘다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "느꼇습니다",
+              "expected": [
+                "느다",
+                "꼇다"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "before_sha256": "9d46c652f832173428a3556e9850a60ddca07c6ea6d07f481bf9b6ad196be498",
+        "after_sha256": "9d46c652f832173428a3556e9850a60ddca07c6ea6d07f481bf9b6ad196be498",
+        "byte_identical": true,
+        "changed_cases": []
+      },
+      {
+        "corpus": "gsd",
+        "split": "test",
+        "before_summary": {
+          "schema_version": 2,
+          "input_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+          "corpus": "gsd",
+          "input": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+          "rows": 11677,
+          "excluded_rows": 1643,
+          "malformed_rows": 0,
+          "converted_rows": 9871,
+          "unsupported": {
+            "no_lexical_component": 159,
+            "orphan_derivational_suffix": 1,
+            "orphan_nominal_suffix": 2,
+            "unsupported_tag": 1
+          },
+          "grouped_matches": 9737,
+          "gold_lemmas": 10367,
+          "recovered_gold_lemmas": 10174,
+          "transformed_rows": 6412,
+          "transformed_matches": 6278,
+          "adapter_coverage": 0.9837552322104843,
+          "grouped_lemma_recall": 0.9864248809644413,
+          "lemma_recall": 0.9813832352657471,
+          "transformed_grouped_recall": 0.9791016843418591,
+          "mean_candidates": 5.678654644919461,
+          "p95_candidates": 12,
+          "max_candidates": 53,
+          "common_misses": [
+            {
+              "surface": "구박받는",
+              "expected": [
+                "구박",
+                "받다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "드시러",
+              "expected": [
+                "들시다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "못하고",
+              "expected": [
+                "못",
+                "하다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "순두부찌게",
+              "expected": [
+                "순두부",
+                "찌다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "존나",
+              "expected": [
+                "존"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "키로야",
+              "expected": [
+                "하다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "1-0으로",
+              "expected": [
+                "1-0"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "1인분",
+              "expected": [
+                "1",
+                "이다",
+                "분"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "3-1로",
+              "expected": [
+                "3-1"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "39.4m가",
+              "expected": [
+                "39.4m"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "M&A는",
+              "expected": [
+                "M&A"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "가실라면",
+              "expected": [
+                "가실",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "갈은",
+              "expected": [
+                "갈다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "거기",
+              "expected": [
+                "것",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고생했었든데",
+              "expected": [
+                "고생하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "괜찮더라구요",
+              "expected": [
+                "괜찮다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "구이",
+              "expected": [
+                "구"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "구입해야겠네요",
+              "expected": [
+                "구입하다",
+                "하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "구해주실려고",
+              "expected": [
+                "구하다",
+                "주다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "굴으",
+              "expected": [
+                "굴다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "균류을",
+              "expected": [
+                "균류"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그래도",
+              "expected": [
+                "그러다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그래도",
+              "expected": [
+                "그리하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기대해봄직하다",
+              "expected": [
+                "기대하다",
+                "보다",
+                "하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기차타고",
+              "expected": [
+                "기차",
+                "타다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "김남길",
+              "expected": [
+                "김",
+                "남기다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "김여진은",
+              "expected": [
+                "김여지"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "꼬맹으도",
+              "expected": [
+                "꼬맹"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "끝내줍니다",
+              "expected": [
+                "끝내",
+                "주다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "난방식",
+              "expected": [
+                "나다",
+                "방식"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "after_summary": {
+          "schema_version": 2,
+          "input_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+          "corpus": "gsd",
+          "input": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+          "rows": 11677,
+          "excluded_rows": 1643,
+          "malformed_rows": 0,
+          "converted_rows": 9871,
+          "unsupported": {
+            "no_lexical_component": 159,
+            "orphan_derivational_suffix": 1,
+            "orphan_nominal_suffix": 2,
+            "unsupported_tag": 1
+          },
+          "grouped_matches": 9737,
+          "gold_lemmas": 10367,
+          "recovered_gold_lemmas": 10174,
+          "transformed_rows": 6412,
+          "transformed_matches": 6278,
+          "adapter_coverage": 0.9837552322104843,
+          "grouped_lemma_recall": 0.9864248809644413,
+          "lemma_recall": 0.9813832352657471,
+          "transformed_grouped_recall": 0.9791016843418591,
+          "mean_candidates": 5.678654644919461,
+          "p95_candidates": 12,
+          "max_candidates": 53,
+          "common_misses": [
+            {
+              "surface": "구박받는",
+              "expected": [
+                "구박",
+                "받다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "드시러",
+              "expected": [
+                "들시다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "못하고",
+              "expected": [
+                "못",
+                "하다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "순두부찌게",
+              "expected": [
+                "순두부",
+                "찌다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "존나",
+              "expected": [
+                "존"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "키로야",
+              "expected": [
+                "하다"
+              ],
+              "count": 2
+            },
+            {
+              "surface": "1-0으로",
+              "expected": [
+                "1-0"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "1인분",
+              "expected": [
+                "1",
+                "이다",
+                "분"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "3-1로",
+              "expected": [
+                "3-1"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "39.4m가",
+              "expected": [
+                "39.4m"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "M&A는",
+              "expected": [
+                "M&A"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "가실라면",
+              "expected": [
+                "가실",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "갈은",
+              "expected": [
+                "갈다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "거기",
+              "expected": [
+                "것",
+                "이다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "고생했었든데",
+              "expected": [
+                "고생하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "괜찮더라구요",
+              "expected": [
+                "괜찮다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "구이",
+              "expected": [
+                "구"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "구입해야겠네요",
+              "expected": [
+                "구입하다",
+                "하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "구해주실려고",
+              "expected": [
+                "구하다",
+                "주다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "굴으",
+              "expected": [
+                "굴다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "균류을",
+              "expected": [
+                "균류"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그래도",
+              "expected": [
+                "그러다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "그래도",
+              "expected": [
+                "그리하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기대해봄직하다",
+              "expected": [
+                "기대하다",
+                "보다",
+                "하다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "기차타고",
+              "expected": [
+                "기차",
+                "타다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "김남길",
+              "expected": [
+                "김",
+                "남기다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "김여진은",
+              "expected": [
+                "김여지"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "꼬맹으도",
+              "expected": [
+                "꼬맹"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "끝내줍니다",
+              "expected": [
+                "끝내",
+                "주다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "난방식",
+              "expected": [
+                "나다",
+                "방식"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "before_sha256": "a897275bb003aab6823cc3217e46d57527057dcb71f11902a2d121abd3cf3cac",
+        "after_sha256": "a897275bb003aab6823cc3217e46d57527057dcb71f11902a2d121abd3cf3cac",
+        "byte_identical": true,
+        "changed_cases": []
+      }
+    ],
+    "six_file_discovery": [
+      {
+        "corpus": "kaist",
+        "split": "train",
+        "file": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+        "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+        "hits": []
+      },
+      {
+        "corpus": "kaist",
+        "split": "dev",
+        "file": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+        "sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "hits": []
+      },
+      {
+        "corpus": "kaist",
+        "split": "test",
+        "file": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+        "sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+        "hits": []
+      },
+      {
+        "corpus": "gsd",
+        "split": "train",
+        "file": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+        "sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+        "hits": []
+      },
+      {
+        "corpus": "gsd",
+        "split": "dev",
+        "file": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+        "sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "hits": []
+      },
+      {
+        "corpus": "gsd",
+        "split": "test",
+        "file": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+        "sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+        "hits": []
+      }
+    ]
+  },
+  "novel": {
+    "discovery": {
+      "file": "data/books/mujeong.txt",
+      "sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "hits": []
+    },
+    "debug_comparisons": [
+      {
+        "policy": "--dict-only",
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "before_binary": "/tmp/klem-before-neuni-comparison",
+        "after_binary": "/home/josh/projects/klem/target/debug/klem",
+        "before_jsonl_sha256": "881c939c3314524075050e676181229aac2343f5d2802e4d5e55e1488b2b9b6e",
+        "after_jsonl_sha256": "881c939c3314524075050e676181229aac2343f5d2802e4d5e55e1488b2b9b6e",
+        "changed_records": 0,
+        "added_candidates": 0,
+        "removed_candidates": 0,
+        "changes": []
+      },
+      {
+        "policy": "--dict-compatible",
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "before_binary": "/tmp/klem-before-neuni-comparison",
+        "after_binary": "/home/josh/projects/klem/target/debug/klem",
+        "before_jsonl_sha256": "c490a1b91dffeb643f7ae094319730eb4dd46da885be21668d39263e563bfeb4",
+        "after_jsonl_sha256": "c490a1b91dffeb643f7ae094319730eb4dd46da885be21668d39263e563bfeb4",
+        "changed_records": 0,
+        "added_candidates": 0,
+        "removed_candidates": 0,
+        "changes": []
+      }
+    ],
+    "release_comparisons": [
+      {
+        "policy": "--dict-only",
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "before_binary": "/tmp/klem-release-before-neuni-comparison",
+        "after_binary": "/nix/store/j1swwjqb43h6palmw5lfxr256p611sdn-klem-0.1.0/bin/klem",
+        "before_jsonl_sha256": "881c939c3314524075050e676181229aac2343f5d2802e4d5e55e1488b2b9b6e",
+        "after_jsonl_sha256": "881c939c3314524075050e676181229aac2343f5d2802e4d5e55e1488b2b9b6e",
+        "changed_records": 0,
+        "added_candidates": 0,
+        "removed_candidates": 0,
+        "changes": []
+      },
+      {
+        "policy": "--dict-compatible",
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "before_binary": "/tmp/klem-release-before-neuni-comparison",
+        "after_binary": "/nix/store/j1swwjqb43h6palmw5lfxr256p611sdn-klem-0.1.0/bin/klem",
+        "before_jsonl_sha256": "c490a1b91dffeb643f7ae094319730eb4dd46da885be21668d39263e563bfeb4",
+        "after_jsonl_sha256": "c490a1b91dffeb643f7ae094319730eb4dd46da885be21668d39263e563bfeb4",
+        "changed_records": 0,
+        "added_candidates": 0,
+        "removed_candidates": 0,
+        "changes": []
+      }
+    ]
+  },
+  "draft_corrections": [
+    {
+      "draft": "Case IDs used neuni-comparison-",
+      "corrected": "Case IDs use comparative-neuni-",
+      "reason": "The earlier neuni- batch selector includes every matching prefix. A distinct stable prefix keeps individual batch counts and browser coverage independent."
+    },
+    {
+      "draft": "길으시느니보다 / 길으시느니보다는",
+      "corrected": "기시느니보다 / 기시느니보다는",
+      "reason": "Existing ㄹ-final honorific spelling deletes ㄹ before 시. The ending rules were not loosened to accept the wrong spelling."
+    },
+    {
+      "draft": "먹사옵느니보다 / 먹사옵느니보다는",
+      "corrected": "먹사오느니보다 / 먹사오느니보다는",
+      "reason": "Existing humble-prefinal spelling uses the open 사오 surface before this ㄴ onset; canonical 사옵 remains. Such combinations are unlisted and dictionary-unknown, not certified grammatical."
+    }
+  ],
+  "limitations": [
+    "Only exact source-reviewed bundles 느니보다/느니보다는; no inferred general particle licenses or contraction 느니보단.",
+    "Both entries have POS 품사 없음 and lexicalUnit 문법‧표현 outside the 715-entry ending/particle/auxiliary queue.",
+    "Only 시 is listed; other generic prefinal hypotheses remain dictionary-unknown.",
+    "Contextual suitability, wider followers and independent linguistic review remain unresolved.",
+    "Eight direct native token cases and two explicitly joined auxiliary inputs preserve original example text."
+  ],
+  "validation": {
+    "rust_features_web_including_stress": "passed",
+    "clippy_all_targets_deny_warnings": "passed",
+    "format": "passed",
+    "frontend_typescript_vite": "passed",
+    "browser": "passed: all 58 raw / 12 policy cases, two exact expression source IDs, seven selected component paths, unknown prefinal retention, compatible JSON export/CLI parity and mobile width; both screenshots inspected",
+    "full_pinned_corpus_gate": "passed; four complete frozen dev/test reports byte-identical, no baseline regenerated",
+    "nix_packages": "passed; CLI/web builds and packaged complete-dictionary checks",
+    "nix_flake_checks": "passed: three x86_64-linux checks; other systems not executed",
+    "live_preview": "passed: refreshed packaged 8081 preview, all family cases/both filters, prior controls, exact HTTP/CLI parity and byte-identical tested JavaScript"
+  },
+  "status": "Exact comparative expressions implemented and checked; contextual readings, wider followers/contractions and independent Korean review remain open.",
+  "release_performance": {
+    "input": "data/books/mujeong.txt",
+    "before_binary": "/tmp/klem-release-before-neuni-comparison",
+    "after_binary": "/nix/store/j1swwjqb43h6palmw5lfxr256p611sdn-klem-0.1.0/bin/klem",
+    "method": "Three interleaved release CLI runs per version/filter, including startup, dictionary access and JSONL serialization; stdout discarded. Linux per-child peak RSS. Measurements do not establish statistical equivalence.",
+    "results": {
+      "--dict-only": {
+        "before": {
+          "samples": [
+            {
+              "seconds": 1.7765061619575135,
+              "max_rss_kib": 29752
+            },
+            {
+              "seconds": 1.7603009640006348,
+              "max_rss_kib": 29856
+            },
+            {
+              "seconds": 1.7423651599674486,
+              "max_rss_kib": 29608
+            }
+          ],
+          "median_seconds": 1.7603009640006348,
+          "peak_rss_kib": 29856
+        },
+        "after": {
+          "samples": [
+            {
+              "seconds": 1.841039291000925,
+              "max_rss_kib": 30040
+            },
+            {
+              "seconds": 1.7832301469752565,
+              "max_rss_kib": 29304
+            },
+            {
+              "seconds": 1.7574353819945827,
+              "max_rss_kib": 29532
+            }
+          ],
+          "median_seconds": 1.7832301469752565,
+          "peak_rss_kib": 30040
+        }
+      },
+      "--dict-compatible": {
+        "before": {
+          "samples": [
+            {
+              "seconds": 1.7394796590087935,
+              "max_rss_kib": 29156
+            },
+            {
+              "seconds": 1.7408014980028383,
+              "max_rss_kib": 28928
+            },
+            {
+              "seconds": 1.7242978480062447,
+              "max_rss_kib": 29672
+            }
+          ],
+          "median_seconds": 1.7394796590087935,
+          "peak_rss_kib": 29672
+        },
+        "after": {
+          "samples": [
+            {
+              "seconds": 1.7365866749896668,
+              "max_rss_kib": 30172
+            },
+            {
+              "seconds": 1.7096885039936751,
+              "max_rss_kib": 29992
+            },
+            {
+              "seconds": 1.7396303240093403,
+              "max_rss_kib": 30080
+            }
+          ],
+          "median_seconds": 1.7365866749896668,
+          "peak_rss_kib": 30172
+        }
+      }
+    },
+    "tested_after_binary_sha256": "5fbea4d927bc5f3b9551c20f71988804080bad47b3aaed6fdf1433b41a9349bd"
+  },
+  "runtime_checks": {
+    "8082": {
+      "served_js_sha256": "d8afc3b1b71c30ff60e18b4c7593af90912431e6ffcfd2972a7b96a2fb1c7ff5",
+      "url": "http://127.0.0.1:8082",
+      "binary": "/nix/store/vmikcmy3ww4dznhq4axn12kwh7hh1ljg-klem-0.1.0/bin/klem",
+      "binary_sha256": "5fbea4d927bc5f3b9551c20f71988804080bad47b3aaed6fdf1433b41a9349bd",
+      "dictionary": "data/dictionaries/krdict/krdict.db",
+      "raw_cases": 58,
+      "policy_cases": 12,
+      "http_cli_exact_parity": true,
+      "both_filters_passed": true,
+      "grammar_source_ids": [
+        "krdict:85729",
+        "krdict:85731"
+      ],
+      "prior_preview_controls": 6,
+      "assets_index_passed": true
+    },
+    "8081": {
+      "served_js_sha256": "d8afc3b1b71c30ff60e18b4c7593af90912431e6ffcfd2972a7b96a2fb1c7ff5",
+      "url": "http://127.0.0.1:8081",
+      "binary": "/nix/store/vmikcmy3ww4dznhq4axn12kwh7hh1ljg-klem-0.1.0/bin/klem",
+      "binary_sha256": "5fbea4d927bc5f3b9551c20f71988804080bad47b3aaed6fdf1433b41a9349bd",
+      "dictionary": "data/dictionaries/krdict/krdict.db",
+      "raw_cases": 58,
+      "policy_cases": 12,
+      "http_cli_exact_parity": true,
+      "both_filters_passed": true,
+      "grammar_source_ids": [
+        "krdict:85729",
+        "krdict:85731"
+      ],
+      "prior_preview_controls": 6,
+      "assets_index_passed": true
+    }
+  },
+  "verification_logs": {
+    "/tmp/klem-neuni-comparison-rust.log": {
+      "sha256": "7a44738d98184aaed7bfa51835a85a3132852d41ad46175af4bb680055439285",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-final-targeted.log": {
+      "sha256": "944ef047995832ea5192195e0fe1aeb358524cd1c4e6b7febac8ecebc44fdb5a",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-clippy.log": {
+      "sha256": "861ff4bc262f2098dc30ef5cc27fa4f6ea7a71f9a7e153cb0509cc7cce9b007f",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-fmt.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-build.log": {
+      "sha256": "99f71393b9903dca098310bb446022a4bdee195ea9996f351a787195555210a6",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-frontend.log": {
+      "sha256": "f6dc5e980a4a73a7b0ee018a5da7562665ec3154185afb21645d2f5d1c321f2a",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-browser.log": {
+      "sha256": "597d9ec213ff51d3f24125453313799234baece7bb2185f56e17e1d96a201767",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-corpus-gate.log": {
+      "sha256": "e376203fb9f622102682f8cf10d5cacb387f86412a997c26f37d08759a9cd868",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-inventory-tests.log": {
+      "sha256": "f1d3cbb20f163ae5e2fff4defbe5e5555b64befbe115d13f5522afb4216ccf1a",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-inventory-verify.log": {
+      "sha256": "26ba4492b088102ee485c778a0a5f0c8bacc176186e59a7a8fa53ef060392dae",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-nix-build.log": {
+      "sha256": "53d60f2270dfe7f21424da4f7b8474ccb785af76a72b3877726d072c58df5c1f",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-final-nix-build.log": {
+      "sha256": "57e45453e175e65798abdabef9ff7063c183ed9060d78f1044f79e4f2bb56970",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-flake-check.log": {
+      "sha256": "782ec4c61b333aa3badef8b9ffff7af165060e4b5cfbf7f7750a010c9f514d3d",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-packaged-smoke.log": {
+      "sha256": "e78e63a46c0de7cc3b533eb4cb46518d496dbc1a3ae23079739bf526851c4ed3",
+      "result": "passed"
+    },
+    "/tmp/klem-neuni-comparison-live-check.log": {
+      "sha256": "90ac2bb5cf9ebbfc8251b5cfef4f2b683d9aae9b55ef12665a7b3823be946e75",
+      "result": "passed"
+    }
+  },
+  "nix_outputs": {
+    "cli": "/nix/store/vmikcmy3ww4dznhq4axn12kwh7hh1ljg-klem-0.1.0",
+    "wrapper": "/nix/store/s2ag25q0b7kz9szy1nimcnm3z8pz46wl-klem-web",
+    "assets": "/nix/store/1x12bminny41n4xv4mhnnjrybzk6c2m4-klem-web-assets-0.1.0/share/klem-web",
+    "cli_sha256": "5fbea4d927bc5f3b9551c20f71988804080bad47b3aaed6fdf1433b41a9349bd",
+    "served_js_sha256": "d8afc3b1b71c30ff60e18b4c7593af90912431e6ffcfd2972a7b96a2fb1c7ff5",
+    "initial_to_final_package_inputs": "Only tests/fixtures/README.md changed between initial package build and full flake check; final package outputs are resolved from the rebuilt wrapper and validated again."
+  }
+}

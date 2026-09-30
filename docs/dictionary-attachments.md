@@ -509,3 +509,11 @@ Use a genuinely generated 쌓이다 + 라느니 path to test the optional factua
 copula conflict; bare 기다리다 + 라느니 is already excluded by the raw boundary.
 The [individual report](quoted-neuni-evaluation.json) preserves these draft
 corrections and exact source IDs, including expressions outside the POS queue.
+
+COV-017be extends `bare_neuni_verb` to exact 느니보다/느니보다는. It preserves
+verb/existential lexical entries and marks ordinary adjective entries conflicting
+independently, including two 크다 homonyms. Only the local source-listed 시
+prefinal is known; generic unlisted markers stay unknown and survive compatible
+filtering. Both teaching entries retain exact 품사 없음 expression identities
+outside the inventory. The [individual evaluation](neuni-comparison-evaluation.json)
+keeps raw additions separate from policy judgments and unjudged alternatives.

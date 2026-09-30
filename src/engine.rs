@@ -646,7 +646,10 @@ pub(crate) fn quoted_neuni_ending(form: &str) -> bool {
 }
 
 pub(crate) fn neuni_verbal_ending(form: &str) -> bool {
-    matches!(form, "느니" | "느니만" | "느니만큼")
+    matches!(
+        form,
+        "느니" | "느니만" | "느니만큼" | "느니보다" | "느니보다는"
+    )
 }
 
 pub(crate) fn result_connective(form: &str) -> bool {

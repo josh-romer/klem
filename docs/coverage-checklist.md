@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bd/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–be/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -175,7 +175,7 @@ review remains open under the completion review below.
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
   The [manual review ledger](inventory-reviews.json) records 355 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bd/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 359 entries have no disposition in this
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–be/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 359 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -221,7 +221,7 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bd implemented; COV-017aw/az remain open.**
+  COV-017ax–ay/017ba–be implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1286,8 +1286,29 @@ review remains open under the completion review below.
   novel streams are byte-identical; the four new annotated matches are training
   observations. Rust/stress, pinned corpus, lint/format, frontend/browser and
   x86_64 Linux Nix package/flake checks pass; the refreshed preview has exact complete-
-  dictionary HTTP/CLI and asset parity. Contextual sense, wider prefinals/followers, unknown auxiliary roles and independent Korean review remain
+  dictionary HTTP/CLI and asset parity. Contextual sense, wider prefinals/followers,
+  unknown auxiliary roles and independent Korean review remain
   open under COV-017/COV-013.
+
+- [x] **COV-017be — Exact comparative 느니보다/느니보다는 expressions.**
+  Both native expression entries preserve 품사 없음 outside the 715-entry queue.
+  Source-listed verbs, existential predicates/compounds and 시 use the existing
+  literal ㄴ-onset boundary and immediate-owner checks. Unlisted generic prefinals
+  remain dictionary-unknown; ordinary adjective/verb homonyms are checked separately.
+  Evidence: 58 raw cases (48 required / 10 forbidden), twelve policy cases
+  (eight required / four forbidden), 43 complete native entries, eight complete
+  example groups/direct tokens and two explicitly joined auxiliary inputs,
+  [four regression tests](../tests/neuni_comparison.rs),
+  [source audit](neuni-comparison-source-audit.json) and
+  [individual evaluation](neuni-comparison-evaluation.json). The comparison adds
+  148 candidates across 55 of 10,479 inputs without removals; 99 remain unjudged.
+  All four frozen corpus reports are byte-identical; both 179,112-record novel
+  streams are byte-identical in debug/release comparisons. Six-file discovery and the novel
+  have no exact target occurrences; no annotated recall gain or novel positive
+  coverage is claimed. Rust/stress, lint/format, frontend/browser, pinned corpus
+  and x86_64 Linux Nix package/flake checks pass. The refreshed preview has exact
+  complete-dictionary HTTP/CLI and asset parity. Contextual choice, wider followers,
+  contraction 느니보단 and independent Korean review remain open under COV-017/COV-013.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -2381,7 +2402,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 453 currently emitted canonical grammar forms.** The initial catalog
+  for all 455 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

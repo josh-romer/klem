@@ -3273,3 +3273,20 @@ serves the tested JavaScript byte for byte. The catalog has 453 canonical forms 
 judgment-cited entries. Exact expressions 88986/86074 are reviewed outside the
 queue. COV-020p, wider distributions/followers and independent Korean/contextual
 review remain unresolved.
+
+COV-017be evidence is retained in [the comparative expression report](neuni-comparison-evaluation.json).
+All eight complete native example groups supply direct token cases; two joined
+auxiliary phrases remain explicitly inferred inputs. The full pinned six-file
+corpus discovery and complete novel contain no suffix-shaped targets. Their
+checks verify regression stability, not positive coverage for this family.
+Every added raw hypothesis is retained with source judgments or unjudged status;
+independent Korean review and contextual sense selection remain pending.
+
+The COV-017be release novel comparison is byte-identical under both filters.
+Three interleaved release runs per version/filter, including startup, SQLite
+access and JSONL serialization, have median before/after times of 1.760/1.783s
+(headword) and 1.739/1.737s (compatible), with observed peaks around 30MiB.
+These twelve samples are descriptive and do not establish statistical equivalence.
+Both filter hashes and all individual raw additions, classifications and provenance
+are retained in the report. The refreshed packaged preview serves the tested
+JavaScript and passes complete-dictionary parity for all 58 raw/twelve policy cases.

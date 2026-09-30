@@ -697,3 +697,21 @@ training groups become matches; all four frozen dev/test reports remain identica
 The original missing-space input remains explicit COV-020p work. The queue now
 has 355 scoped, 359 unreviewed and one gap across 715 entries, with 405 catalog-
 linked and 393 judgment-cited entries. See [individual evidence](quoted-neuni-evaluation.json).
+
+COV-017be adds two exact comparative expressions, KRDict 85729/85731. Their
+complete native entries, two senses and all eight example groups are reviewed
+outside the 715-entry queue because their POS is 품사 없음 and lexical unit
+문법‧표현. The queue remains 355 scoped / 359 unreviewed / one gap, with
+405 linked and 393 judgment-cited entries. The catalog now has 455 canonical
+forms and 636 unique source identities; the native label fixture has 682 entries.
+The [manifest](../tests/fixtures/neuni-comparison-sources.json) preserves 43
+complete native entries and source hashes, while the [evaluation](neuni-comparison-evaluation.json)
+tracks 48 required / ten forbidden raw and eight retained / four excluded policy
+paths. No broad expression fallback or general 보다 follower license is added.
+
+The COV-017be complete comparison retains 148 added hypotheses at 55 of 10,479
+surfaces without removals: 45 required, four dictionary conflicts and 99 unjudged.
+Both full novel filters preserve all 179,112 records byte for byte, as do all four
+frozen corpus reports; neither dataset has an exact target occurrence. Full
+Rust/stress, pinned corpus, lint/format, browser/frontend and x86_64 Linux Nix
+checks pass. The packaged preview has complete-dictionary CLI/HTTP/asset parity.

@@ -27,7 +27,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "9443d3ce11b663b0c69cb350a57fc928255aef4c7c6c5b2881e33c05b5039a38",
+    "docs/coverage-checklist.md": "49f0ad9106f9b5791d80df92a840d6c7b81984a8b946fb4d78197f5a5490029b",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
     "docs/danikka-evaluation.json": "a96097a93cd994b8f1b4dde8a91803e08f1a93300956547f2283e60ccf9999e4",
@@ -44,8 +44,8 @@
     "docs/hieut-compatibility-evaluation.json": "43dc0adf65291282668771380f247ff34af9d0e84fd21625f36136ab87ee5d92",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "02326b775f5a4f6999d45ab46fa4e48cf9d3d6826caad4b9a4bcdf4edd076946",
-    "docs/inventory-reviews.json": "7df05b4ab8ce243b07bee9f6672954346c521d1e18bdd1cb7282c20decac52a6",
+    "docs/inventory-audit.md": "10347d0f69b4cd339f4590900e6b513d0db3b3fc933fdfc92cebbbbc2d72dd43",
+    "docs/inventory-reviews.json": "41946d3626c405833c01d28186a80c660f79a17c9ba8dcda4539aa25ce1bb537",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/llachimyeon-evaluation.json": "086132bdac962ca93a716841860e9b80695d9dfde5874675c9661f944211abba",
@@ -56,6 +56,9 @@
     "docs/nira-evaluation.json": "f5104870a3be746d817dc91c710b38c082ba8ded9a85bc685181a0c62c4ddea7",
     "docs/noh-contraction-evaluation.json": "06bef8268c38fe281bd74efc63a5fb60541e317d479be585adea03a83ee47e72",
     "docs/omitted-connective-evaluation.json": "ab04da59def867b6e6f38cd0c01d9224a0d87bc8d6b4d8a242d573006ba8a585",
+    "docs/polite-evaluation.json": "a8987ef3eee7ca652b6b5b93763baad58ad22013bab1322e6d772ec37d09ab26",
+    "docs/polite-snapshot-changes.json": "9781b58845ab29c0c9a64640de19685c3b9d02ddd366f199d9511f790f61d146",
+    "docs/polite-source-audit.json": "9ee59213af14b7de0f6741ab08c029d45cc1117991bc3ec99f4bde239be67695",
     "docs/prefinal-copula-evaluation.json": "51f8ee8c84b0909e7fae5d03bf40bd04783e85956b43a2f44d3c1a2b382af40e",
     "docs/present-license-evaluation.json": "4d98eb7ed44a3c774a11c2ea47292fc6fe7944fba57ba0cc333a6be20ecde308",
     "docs/question-copula-evaluation.json": "cdb143dfc27c253b3c87f875b6c010fae684c05f8e08dbb6dce5325577bd9d54",
@@ -100,7 +103,7 @@
     "tests/continuative_topic.rs": "e206120ba4b37ee5344ce2af4ef6ced18d64e14279e2931a161f71236035579a",
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/core_case.rs": "556f5fa2df29d0285552bf3e83a5cfbc9610c84c33fb1ac6e1bc02d7c2e5fbcb",
-    "tests/corpus.rs": "542471eb10642bd55f207fa891a679b1d239a8d2b0d62d363f80040cabe3ea99",
+    "tests/corpus.rs": "ad43f3e95a3195a07707f9b174064c3817a3e38d2d7a7ebbda13646dddba4f63",
     "tests/daji.rs": "172b18762b2adaa5e59a0e0f592d7f1fad4ef48515a175d3f420e2bd391f658d",
     "tests/danda.rs": "7ac20e77584b520909734f32132a24af40c5cd626db0ad0f73f866149f31943a",
     "tests/danikka.rs": "83c656930be046c9933bf273098c3155a4b333338376e7d75c8cc1ec20e7043b",
@@ -124,8 +127,9 @@
     "tests/fixtures/krdict-llachimyeon.json": "e52bab62a2b6ed1ad409736dfbaecb3a35944f61d42e9bab3b4555cf4fa0a279",
     "tests/fixtures/krdict-necessity.json": "5f37d701bb0de166de41e30da7ee763f852a18fd21caa4fbec0e3e91eec30041",
     "tests/fixtures/krdict-quoted-bakke.json": "e6e164a1bfeabeb9b70724a9ab78e86f0f4bd76e6bdca414fa9c7bb7c4dddd85",
+    "tests/fixtures/polite-sources.json": "2e70e5b9f357377788fc748d0d2937a506ed15ce56b84bd22d6a50a2d4ef5bff",
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
-    "tests/fixtures/validity.json": "be5377df51e09dfca5b1d637c65e8e43d93f77e6a9e5a3aff49f20fc5770f184",
+    "tests/fixtures/validity.json": "75cbd2df451e7b93c7a07c89ce7acc527c09ee0ae3bff5f567496a2cb33f2576",
     "tests/hieut_compatibility.rs": "f557736f7275cbdb7e73217b9a760e9054e99ca29c6d1a9c747ea35ad807d4e6",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
@@ -138,6 +142,7 @@
     "tests/nira.rs": "cace34737dd52a13c3a646e8256d1f2c2c7d8e7fa3f0b9c6d4dd791cdb18a8fa",
     "tests/noh_contraction.rs": "f323cae0922d2e82e1f035c471ff9a01fa1f793859f41ece8018678e9dbcd4ba",
     "tests/omitted_connectives.rs": "acbd08b69202ea346a6ab01fe621f49e6fc934b151b0f0fdf470e47337271be7",
+    "tests/polite.rs": "77ea4a81b4e706437d3769e7c0ff0df80b2987c45b0d48c8fe08cf09c1a8fbf3",
     "tests/prefinal_copulas.rs": "2898476eead2aec9180ac1775bc0742ad86fcfa65ea690c865a687e63113d003",
     "tests/prefinal_licenses.rs": "700471bed14d600ccd8678a05fa59d6fa3620b135a60c3149a7b32c4c5f5bdb8",
     "tests/present_licenses.rs": "eaff7b990aa9fab07bb1978c5dbc99709cf9955e722dcd875a69d5b3981302d9",
@@ -165,8 +170,8 @@
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "e808a12824f543b3fa4e3ba9b59453a872bb6dbf3fe3a00f766bb1b08ce095c3",
-    "web/tests/browser.mjs": "9627202ac687c0d9a0bc452d04d95a6f54888d3bbf1f9d38ba380548f40d1dd9"
+    "web/src/grammar-labels.json": "4e715de89479a58eef793e394893fcd9f8ecc0ef68ad7863177d35fbaf04a074",
+    "web/tests/browser.mjs": "bc0eb34346f07a9ddc268fc2a24e48f03a9120e25a66822895ca97099eb2ebb7"
   },
   "counts": {
     "entries": 715,
@@ -177,12 +182,12 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 330,
-      "unreviewed": 384,
+      "scoped": 332,
+      "unreviewed": 382,
       "gap": 1
     },
-    "with_catalog_links": 382,
-    "with_judgment_citations": 370
+    "with_catalog_links": 384,
+    "with_judgment_citations": 372
   },
   "entries": [
     {
@@ -49714,11 +49719,93 @@
         ]
       },
       "source_sha256": "52448dbb8e2434d17915faf756ddd68b4dfdf1302e55e0148b7434c35c9820ca",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-으옵-",
+          "kind": "prefinal"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "polite-ri-source-86107-0",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "polite-ri-source-86107-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "polite-source-86107-0",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "polite-source-86107-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "polite-source-86107-2",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86107",
+        "source_sha256": "52448dbb8e2434d17915faf756ddd68b4dfdf1302e55e0148b7434c35c9820ca",
+        "status": "scoped",
+        "checklist": [
+          "COV-017az"
+        ],
+        "scope": "COV-017az additionally reviews the (으)오/(으)옵 paradigm with both preceding and following boundaries, honorific/tense/modal order, separate auxiliary/derivation ownership, and the source-listed 오리다 examples as polite prefinal plus a final 리다 bundle. Full primary entry notes/senses/example groups remain intact; positive, negative, raw and both dictionary-filter paths are executable.",
+        "remaining": "Broader COV-017az 옵시/으옵시/사옵시 and 사옵/사오/삽 paradigms, newly identified modern 자옵 lexical restrictions, broader outer-ending combinations and independent Korean-language review remain open. This disposition does not certify every entry combination or contextual speech register.",
+        "evidence": [
+          {
+            "path": "tests/polite.rs",
+            "test": "polite_native_sources_preserve_full_entries_and_final_bundles"
+          },
+          {
+            "path": "tests/polite.rs",
+            "test": "polite_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/fixtures/polite-sources.json"
+          },
+          {
+            "path": "docs/polite-source-audit.json"
+          },
+          {
+            "path": "docs/polite-snapshot-changes.json"
+          },
+          {
+            "path": "docs/polite-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "polite-ri-source-86107-0",
+            "judgment": "path"
+          },
+          {
+            "case": "polite-ri-source-86107-1",
+            "judgment": "path"
+          },
+          {
+            "case": "polite-source-86107-0",
+            "judgment": "path"
+          },
+          {
+            "case": "polite-source-86107-1",
+            "judgment": "path"
+          },
+          {
+            "case": "polite-source-86107-2",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -49753,6 +49840,10 @@
       },
       "source_sha256": "7e6c0e706d5a397979296a1a285c111c8ca99bc0d3453eab409ebe077c02fb3c",
       "catalog": [
+        {
+          "form": "-으옵-",
+          "kind": "prefinal"
+        },
         {
           "form": "-으옵소서",
           "kind": "ending"
@@ -49789,8 +49880,8 @@
           "COV-017ay",
           "COV-017az"
         ],
-        "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope.",
-        "remaining": "General polite prefinal attachment and tense/modal/retrospective order remain COV-017az, including 읽으옵고. Contextual prayer suitability, contextual sense selection and independent Korean-language review remain pending. This is not certification of every entry combination.",
+        "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope. COV-017az additionally reviews the (으)오/(으)옵 paradigm with both preceding and following boundaries, honorific/tense/modal order, separate auxiliary/derivation ownership, and the source-listed 오리다 examples as polite prefinal plus a final 리다 bundle. Full primary entry notes/senses/example groups remain intact; positive, negative, raw and both dictionary-filter paths are executable.",
+        "remaining": "Broader COV-017az 옵시/으옵시/사옵시 and 사옵/사오/삽 paradigms, newly identified modern 자옵 lexical restrictions, broader outer-ending combinations and independent Korean-language review remain open. This disposition does not certify every entry combination or contextual speech register.",
         "evidence": [
           {
             "path": "tests/soseo.rs",
@@ -49812,6 +49903,26 @@
           },
           {
             "path": "tests/fixtures/soseo-sources.json"
+          },
+          {
+            "path": "tests/polite.rs",
+            "test": "polite_native_sources_preserve_full_entries_and_final_bundles"
+          },
+          {
+            "path": "tests/polite.rs",
+            "test": "polite_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/fixtures/polite-sources.json"
+          },
+          {
+            "path": "docs/polite-source-audit.json"
+          },
+          {
+            "path": "docs/polite-snapshot-changes.json"
+          },
+          {
+            "path": "docs/polite-evaluation.json"
           }
         ],
         "judgments": [
@@ -55612,11 +55723,84 @@
         ]
       },
       "source_sha256": "564ec8da4b78747b558ba38b198a2480ba7f20c160e9a4976381429faca93eb1",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-으옵-",
+          "kind": "prefinal"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "polite-ri-source-86108-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "polite-source-86108-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "polite-source-86108-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "polite-source-86108-5",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:86108",
+        "source_sha256": "564ec8da4b78747b558ba38b198a2480ba7f20c160e9a4976381429faca93eb1",
+        "status": "scoped",
+        "checklist": [
+          "COV-017az"
+        ],
+        "scope": "COV-017az additionally reviews the (으)오/(으)옵 paradigm with both preceding and following boundaries, honorific/tense/modal order, separate auxiliary/derivation ownership, and the source-listed 오리다 examples as polite prefinal plus a final 리다 bundle. Full primary entry notes/senses/example groups remain intact; positive, negative, raw and both dictionary-filter paths are executable.",
+        "remaining": "Broader COV-017az 옵시/으옵시/사옵시 and 사옵/사오/삽 paradigms, newly identified modern 자옵 lexical restrictions, broader outer-ending combinations and independent Korean-language review remain open. This disposition does not certify every entry combination or contextual speech register.",
+        "evidence": [
+          {
+            "path": "tests/polite.rs",
+            "test": "polite_native_sources_preserve_full_entries_and_final_bundles"
+          },
+          {
+            "path": "tests/polite.rs",
+            "test": "polite_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/fixtures/polite-sources.json"
+          },
+          {
+            "path": "docs/polite-source-audit.json"
+          },
+          {
+            "path": "docs/polite-snapshot-changes.json"
+          },
+          {
+            "path": "docs/polite-evaluation.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "polite-ri-source-86108-2",
+            "judgment": "path"
+          },
+          {
+            "case": "polite-source-86108-3",
+            "judgment": "path"
+          },
+          {
+            "case": "polite-source-86108-4",
+            "judgment": "path"
+          },
+          {
+            "case": "polite-source-86108-5",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -55652,11 +55836,20 @@
       "source_sha256": "7ddc14c0f31b792f913889511851660f07921d87fbfc1a465827c1a21d0fc758",
       "catalog": [
         {
+          "form": "-으옵-",
+          "kind": "prefinal"
+        },
+        {
           "form": "-으옵소서",
           "kind": "ending"
         }
       ],
       "cited_judgments": [
+        {
+          "case": "polite-source-86110-6",
+          "judgment": "path",
+          "verdict": "required"
+        },
         {
           "case": "soseo-source-86110-0",
           "judgment": "path",
@@ -55682,8 +55875,8 @@
           "COV-017ay",
           "COV-017az"
         ],
-        "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope.",
-        "remaining": "General polite prefinal attachment and tense/modal/retrospective order remain COV-017az, including 읽으옵고. Contextual prayer suitability, contextual sense selection and independent Korean-language review remain pending. This is not certification of every entry combination.",
+        "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope. COV-017az additionally reviews the (으)오/(으)옵 paradigm with both preceding and following boundaries, honorific/tense/modal order, separate auxiliary/derivation ownership, and the source-listed 오리다 examples as polite prefinal plus a final 리다 bundle. Full primary entry notes/senses/example groups remain intact; positive, negative, raw and both dictionary-filter paths are executable.",
+        "remaining": "Broader COV-017az 옵시/으옵시/사옵시 and 사옵/사오/삽 paradigms, newly identified modern 자옵 lexical restrictions, broader outer-ending combinations and independent Korean-language review remain open. This disposition does not certify every entry combination or contextual speech register.",
         "evidence": [
           {
             "path": "tests/soseo.rs",
@@ -55705,6 +55898,26 @@
           },
           {
             "path": "tests/fixtures/soseo-sources.json"
+          },
+          {
+            "path": "tests/polite.rs",
+            "test": "polite_native_sources_preserve_full_entries_and_final_bundles"
+          },
+          {
+            "path": "tests/polite.rs",
+            "test": "polite_dictionary_filters_preserve_roles_and_cli_parity"
+          },
+          {
+            "path": "tests/fixtures/polite-sources.json"
+          },
+          {
+            "path": "docs/polite-source-audit.json"
+          },
+          {
+            "path": "docs/polite-snapshot-changes.json"
+          },
+          {
+            "path": "docs/polite-evaluation.json"
           }
         ],
         "judgments": [
@@ -55718,6 +55931,10 @@
           },
           {
             "case": "soseo-source-86110-2",
+            "judgment": "path"
+          },
+          {
+            "case": "polite-source-86110-6",
             "judgment": "path"
           }
         ]

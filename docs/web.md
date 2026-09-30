@@ -57,10 +57,16 @@ Glosses use the first English headword gloss from the first POS-compatible entry
 and sense/homonym alternatives remain in the dictionary pane. Initial diagram
 selection prefers analyses with compatible or unclassified dictionary matches,
 then the fewest morphemes for a compact initial view. This is a display convenience,
-not contextual ranking. All 421 currently emitted canonical grammar forms have
+not contextual ranking. All 425 currently emitted canonical grammar forms have
 short teaching labels in the shared [catalog](../web/src/grammar-labels.json).
 These paraphrase common KRDict uses; they are not contextual translations or
 an exhaustive list of senses. Hover text lists each source ID and headword.
+For grammar absent from the pinned dictionary, a label can cite primary articles
+through `references` (title and HTTPS URL). The diagram shows a “Grammar source”
+link, which also works without a connected dictionary. For example, 으리다
+links to NIKL's discussion of its final-ending bundle; its API grammar-entry
+list is empty. These references do not create dictionary matches or alter
+candidate filtering.
 Bundled forms such as 기가 cite their component entries; joined 는데다가 links
 to the spaced dictionary expression -는 데다가, and 어야죠 links to -어야지요.
 The entry pane preserves the source's actual headword and POS. Generic role

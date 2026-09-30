@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-09-29.
+Last reviewed: 2026-09-30.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 326 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–av/017ax/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 388 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 332 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–av/017ax–az/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 382 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -220,7 +220,8 @@ review remains open under the completion review below.
   `comparative-*` ledger cases, two full [KAIST sentences](../tests/fixtures/kaist-comparative.conllu),
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
-- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–au implemented.**
+- [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
+  COV-017ax–ay implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1035,6 +1036,18 @@ review remains open under the completion review below.
   establish general prefinal attachment, tense/modal order or segmentation.
   Distinguish modern literary usage from historical/dialectal coverage, which
   remains deferred. Do not infer a general paradigm solely from 옵소서.
+  **Partial:** the basic (으)오/(으)옵 paradigm now emits canonical 으옵,
+  selecting allomorphs from both boundaries and preserving honorific, past,
+  modal, auxiliary and derivation ownership. 읽으옵고 is covered. The three
+  native 오리다 examples retain polite + final 으리다 components; the final
+  bundle has a primary NIKL reference instead of an invented KRDict entry.
+  Evidence: 133 stable `polite-*` cases (93 required, 40 forbidden), ten direct
+  native tokens, 48 full native fixture entries, [tests](../tests/polite.rs),
+  [source audit](polite-source-audit.json), and the individually reviewed
+  [snapshot additions](polite-snapshot-changes.json). General 옵시/으옵시,
+  사옵/사오/삽, their licensed combinations and newly identified modern 자옵
+  lexical restrictions remain open. Validation progress is recorded in the
+  [evaluation](polite-evaluation.json); this row remains incomplete.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -2102,7 +2115,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 423 currently emitted canonical grammar forms.** The initial catalog
+  for all 425 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,
@@ -2112,6 +2125,9 @@ review remains open under the completion review below.
   regressions cover ten representative labels, source panes, normalized order,
   and unchanged CLI candidates. Labels describe common functions, not contextual
   senses; independent linguistic review remains in the completion review.
+  Forms missing from the pinned dictionary may cite verified primary references;
+  으리다 links to NIKL's source article and retains an empty API dictionary-entry
+  list. Browser source links work independently of a connected dictionary.
   Evidence: [label data](../web/src/grammar-labels.json),
   [inventory test](../src/grammar.rs), [source tests](../src/bin/klem-web/grammar_labels.rs),
   [audit](grammar-label-evaluation.json),

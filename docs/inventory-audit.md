@@ -22,9 +22,9 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **326 scoped
+The [manual ledger](inventory-reviews.json) currently contains **332 scoped
 reviews**, **one observed gap with unresolved acceptability** (마다), and
-**388 entries
+**382 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
@@ -625,3 +625,25 @@ structural inference and unjudged outputs. The queue now contains 330 scoped,
 384 unreviewed and one observed gap across 715 entries, with 382 catalog-linked
 and 370 cited entries. Scoped dispositions are not whole-entry coverage or
 independent linguistic certification.
+
+### Basic polite-prefinal dispositions (COV-017az, in progress)
+
+Two new scoped dispositions cover KRDict 86107/86108, while 86109/86110's
+existing final-bundle dispositions now also record the basic polite paradigm.
+Both boundaries select (으)오/(으)옵; tense/modal order, spelling ownership and
+auxiliary/답다 composition remain explicit. The ten native tokens include
+읽으옵고 and all three 오리다 examples, with a separately represented final
+리다 bundle. Missing primary KRDict grammar entries can have primary-reference
+teaching labels without fabricated dictionary matches.
+
+The [evaluation](polite-evaluation.json) records 133 judgments (93 required,
+40 forbidden), 48 complete native entries, 808 additions and no removals across
+8,990 probes. Of those additions, 716 remain unjudged. One frozen corpus partial
+gain in a proper-name context is preserved as an annotation disagreement, not
+a correctness claim. The compatible-filter novel gains 336 hypotheses across
+204 records with no removals; these passage additions remain unjudged. The
+current queue has **332 scoped, 382 unreviewed and one observed gap**, with
+384 catalog-linked and 372 cited entries. General 옵시/으옵시/사옵시 and
+사옵/사오/삽, modern 자옵 lexical restrictions, broader ending licenses and
+independent Korean-language review remain open under the original COV-017az
+scope. See the [primary-source audit](polite-source-audit.json).

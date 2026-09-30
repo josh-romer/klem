@@ -1,0 +1,39 @@
+# sent_id = test-s188
+# text = 배우 강혜정, 이윤지, 남명렬, 정원중 등이 참여해 화제를 모은 연극 <프루프 영화 <뷰티풀 마인드 천재수학자 존 내쉬와 그의 가상의 딸을 소재로 쓰여진 작품으로 생동감 있고 참신한 드라마로 평가받고 있다.
+# translit = .bae.u .gang.hye.jeong, .i.yun.ji, .nam.myeong.ryeol, .jeong.weon.jung .deung.i .cham.yeo.hae .hwa.je.reul .mo.eun .yeon.geug <.peu.ru.peu .yeong.hwa <.byu.ti.pul .ma.in.deu .cheon.jae.su.hag.ja .jon .nae.swi.wa .geu.yi .ga.sang.yi .ddal.eul .so.jae.ro .sseu.yeo.jin .jag.pum.eu.ro .saeng.dong.gam .iss.go .cham.sin.han .deu.ra.ma.ro .pyeong.ga.bad.go .iss.da.
+1	배우	배우	NOUN	NNG	_	10	nsubj	_	Translit=.bae.u|LTranslit=.bae.u
+2	강혜정	강혜정	NOUN	NNP	_	1	conj	_	SpaceAfter=No|Translit=.gang.hye.jeong|LTranslit=.gang.hye.jeong
+3	,	,	PUNCT	SP	_	4	punct	_	Translit=,|LTranslit=,
+4	이윤지	이윤+지	NOUN	NNG+NNG	_	1	conj	_	SpaceAfter=No|Translit=.i.yun.ji|LTranslit=.i.yun+.ji
+5	,	,	PUNCT	SP	_	4	punct	_	Translit=,|LTranslit=,
+6	남명렬	남명렬	NOUN	NNP	_	1	conj	_	SpaceAfter=No|Translit=.nam.myeong.ryeol|LTranslit=.nam.myeong.ryeol
+7	,	,	PUNCT	SP	_	8	punct	_	Translit=,|LTranslit=,
+8	정원중	정원중	NOUN	NNP	_	1	flat	_	Translit=.jeong.weon.jung|LTranslit=.jeong.weon.jung
+9	등이	등+이	NOUN	NNB+JKS	_	1	dep	_	Translit=.deung.i|LTranslit=.deung+.i
+10	참여해	참여+하+아	VERB	NNG+XSV+EC	_	12	advcl	_	Translit=.cham.yeo.hae|LTranslit=.cham.yeo+.ha+.a
+11	화제를	화제+를	NOUN	NNG+JKO	_	12	obj	_	Translit=.hwa.je.reul|LTranslit=.hwa.je+.reul
+12	모은	모으+ㄴ	VERB	VV+ETM	_	13	acl:relcl	_	Translit=.mo.eun|LTranslit=.mo.eu+ㄴ
+13	연극	연극	NOUN	NNG	_	28	nsubj	_	Translit=.yeon.geug|LTranslit=.yeon.geug
+14	<	<	PUNCT	SS	_	15	punct	_	SpaceAfter=No|Translit=<|LTranslit=<
+15	프루프	프루프	PROPN	NNP	_	13	flat	_	Translit=.peu.ru.peu|LTranslit=.peu.ru.peu
+16	영화	영화	NOUN	NNG	_	25	nmod:poss	_	Translit=.yeong.hwa|LTranslit=.yeong.hwa
+17	<	<	PUNCT	SS	_	18	punct	_	SpaceAfter=No|Translit=<|LTranslit=<
+18	뷰티풀	뷰티풀	NOUN	NNG	_	16	flat	_	Translit=.byu.ti.pul|LTranslit=.byu.ti.pul
+19	마인드	마인드	NOUN	NNG	_	16	flat	_	Translit=.ma.in.deu|LTranslit=.ma.in.deu
+20	천재수학자	천재+수학자	NOUN	NNG+NNG	_	26	obj	_	Translit=.cheon.jae.su.hag.ja|LTranslit=.cheon.jae+.su.hag.ja
+21	존	존	NOUN	NNP	_	20	flat	_	Translit=.jon|LTranslit=.jon
+22	내쉬와	내쉬+아+오+아	NOUN	VV+EC+VX+EC	_	20	flat	_	Translit=.nae.swi.wa|LTranslit=.nae.swi+.a+.o+.a
+23	그의	그+의	PRON	NP+JKG	_	25	det:poss	_	Translit=.geu.yi|LTranslit=.geu+.yi
+24	가상의	가상+의	NOUN	NNG+JKG	_	25	nmod:poss	_	Translit=.ga.sang.yi|LTranslit=.ga.sang+.yi
+25	딸을	딸+을	NOUN	NNG+JKO	_	20	conj	_	Translit=.ddal.eul|LTranslit=.ddal+.eul
+26	소재로	소재+로	ADV	NNG+JKB	_	27	obl	_	Translit=.so.jae.ro|LTranslit=.so.jae+.ro
+27	쓰여진	쓰이+어+지+ㄴ	VERB	VV+EC+VX+ETM	_	28	acl:relcl	_	Translit=.sseu.yeo.jin|LTranslit=.sseu.i+.eo+.ji+ㄴ
+28	작품으로	작품+으로	ADV	NNG+JKB	_	33	obl	_	Translit=.jag.pum.eu.ro|LTranslit=.jag.pum+.eu.ro
+29	생동감	생동감	NOUN	NNG	_	30	nsubj	_	Translit=.saeng.dong.gam|LTranslit=.saeng.dong.gam
+30	있고	있+고	VERB	VV+EC	_	32	amod	_	Translit=.iss.go|LTranslit=.iss+.go
+31	참신한	참신+하+ㄴ	ADJ	XR+XSA+ETM	_	30	conj	_	Translit=.cham.sin.han|LTranslit=.cham.sin+.ha+ㄴ
+32	드라마로	드라마+로	ADV	NNG+JKB	_	33	obl	_	Translit=.deu.ra.ma.ro|LTranslit=.deu.ra.ma+.ro
+33	평가받고	평가+받+고	VERB	NNG+VV+EC	_	0	root	_	Translit=.pyeong.ga.bad.go|LTranslit=.pyeong.ga+.bad+.go
+34	있다	있+다	VERB	VX+EF	_	33	flat	_	SpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da
+35	.	.	PUNCT	SF	_	34	punct	_	Translit=.|LTranslit=.
+

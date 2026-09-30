@@ -64,6 +64,7 @@ export default function SentenceBreakdown(props: {
   };
   function component(part: Part, index: number) {
     return (
+      <span class="breakdown-component">
       <button
         classList={{
           "breakdown-part": true,
@@ -82,6 +83,14 @@ export default function SentenceBreakdown(props: {
         </span>
         <span class="part-gloss">{part.label}</span>
       </button>
+      <Show when={part.references?.length}>
+        <span class="grammar-references" aria-label={`Sources for ${part.form}`}>
+          <For each={part.references}>
+            {(reference) => <a href={reference.url} target="_blank" rel="noreferrer" title={reference.title}>Grammar source</a>}
+          </For>
+        </span>
+      </Show>
+      </span>
     );
   }
   return (

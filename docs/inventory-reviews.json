@@ -25229,8 +25229,8 @@
         "COV-017ay",
         "COV-017az"
       ],
-      "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope.",
-      "remaining": "General polite prefinal attachment and tense/modal/retrospective order remain COV-017az, including 읽으옵고. Contextual prayer suitability, contextual sense selection and independent Korean-language review remain pending. This is not certification of every entry combination.",
+      "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope. COV-017az additionally reviews the (으)오/(으)옵 paradigm with both preceding and following boundaries, honorific/tense/modal order, separate auxiliary/derivation ownership, and the source-listed 오리다 examples as polite prefinal plus a final 리다 bundle. Full primary entry notes/senses/example groups remain intact; positive, negative, raw and both dictionary-filter paths are executable.",
+      "remaining": "Broader COV-017az 옵시/으옵시/사옵시 and 사옵/사오/삽 paradigms, newly identified modern 자옵 lexical restrictions, broader outer-ending combinations and independent Korean-language review remain open. This disposition does not certify every entry combination or contextual speech register.",
       "evidence": [
         {
           "path": "tests/soseo.rs",
@@ -25252,6 +25252,26 @@
         },
         {
           "path": "tests/fixtures/soseo-sources.json"
+        },
+        {
+          "path": "tests/polite.rs",
+          "test": "polite_native_sources_preserve_full_entries_and_final_bundles"
+        },
+        {
+          "path": "tests/polite.rs",
+          "test": "polite_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/fixtures/polite-sources.json"
+        },
+        {
+          "path": "docs/polite-source-audit.json"
+        },
+        {
+          "path": "docs/polite-snapshot-changes.json"
+        },
+        {
+          "path": "docs/polite-evaluation.json"
         }
       ],
       "judgments": [
@@ -25281,8 +25301,8 @@
         "COV-017ay",
         "COV-017az"
       ],
-      "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope.",
-      "remaining": "General polite prefinal attachment and tense/modal/retrospective order remain COV-017az, including 읽으옵고. Contextual prayer suitability, contextual sense selection and independent Korean-language review remain pending. This is not certification of every entry combination.",
+      "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope. COV-017az additionally reviews the (으)오/(으)옵 paradigm with both preceding and following boundaries, honorific/tense/modal order, separate auxiliary/derivation ownership, and the source-listed 오리다 examples as polite prefinal plus a final 리다 bundle. Full primary entry notes/senses/example groups remain intact; positive, negative, raw and both dictionary-filter paths are executable.",
+      "remaining": "Broader COV-017az 옵시/으옵시/사옵시 and 사옵/사오/삽 paradigms, newly identified modern 자옵 lexical restrictions, broader outer-ending combinations and independent Korean-language review remain open. This disposition does not certify every entry combination or contextual speech register.",
       "evidence": [
         {
           "path": "tests/soseo.rs",
@@ -25304,6 +25324,26 @@
         },
         {
           "path": "tests/fixtures/soseo-sources.json"
+        },
+        {
+          "path": "tests/polite.rs",
+          "test": "polite_native_sources_preserve_full_entries_and_final_bundles"
+        },
+        {
+          "path": "tests/polite.rs",
+          "test": "polite_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/fixtures/polite-sources.json"
+        },
+        {
+          "path": "docs/polite-source-audit.json"
+        },
+        {
+          "path": "docs/polite-snapshot-changes.json"
+        },
+        {
+          "path": "docs/polite-evaluation.json"
         }
       ],
       "judgments": [
@@ -25317,6 +25357,114 @@
         },
         {
           "case": "soseo-source-86110-2",
+          "judgment": "path"
+        },
+        {
+          "case": "polite-source-86110-6",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86107",
+      "source_sha256": "52448dbb8e2434d17915faf756ddd68b4dfdf1302e55e0148b7434c35c9820ca",
+      "status": "scoped",
+      "checklist": [
+        "COV-017az"
+      ],
+      "scope": "COV-017az additionally reviews the (으)오/(으)옵 paradigm with both preceding and following boundaries, honorific/tense/modal order, separate auxiliary/derivation ownership, and the source-listed 오리다 examples as polite prefinal plus a final 리다 bundle. Full primary entry notes/senses/example groups remain intact; positive, negative, raw and both dictionary-filter paths are executable.",
+      "remaining": "Broader COV-017az 옵시/으옵시/사옵시 and 사옵/사오/삽 paradigms, newly identified modern 자옵 lexical restrictions, broader outer-ending combinations and independent Korean-language review remain open. This disposition does not certify every entry combination or contextual speech register.",
+      "evidence": [
+        {
+          "path": "tests/polite.rs",
+          "test": "polite_native_sources_preserve_full_entries_and_final_bundles"
+        },
+        {
+          "path": "tests/polite.rs",
+          "test": "polite_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/fixtures/polite-sources.json"
+        },
+        {
+          "path": "docs/polite-source-audit.json"
+        },
+        {
+          "path": "docs/polite-snapshot-changes.json"
+        },
+        {
+          "path": "docs/polite-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "polite-ri-source-86107-0",
+          "judgment": "path"
+        },
+        {
+          "case": "polite-ri-source-86107-1",
+          "judgment": "path"
+        },
+        {
+          "case": "polite-source-86107-0",
+          "judgment": "path"
+        },
+        {
+          "case": "polite-source-86107-1",
+          "judgment": "path"
+        },
+        {
+          "case": "polite-source-86107-2",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86108",
+      "source_sha256": "564ec8da4b78747b558ba38b198a2480ba7f20c160e9a4976381429faca93eb1",
+      "status": "scoped",
+      "checklist": [
+        "COV-017az"
+      ],
+      "scope": "COV-017az additionally reviews the (으)오/(으)옵 paradigm with both preceding and following boundaries, honorific/tense/modal order, separate auxiliary/derivation ownership, and the source-listed 오리다 examples as polite prefinal plus a final 리다 bundle. Full primary entry notes/senses/example groups remain intact; positive, negative, raw and both dictionary-filter paths are executable.",
+      "remaining": "Broader COV-017az 옵시/으옵시/사옵시 and 사옵/사오/삽 paradigms, newly identified modern 자옵 lexical restrictions, broader outer-ending combinations and independent Korean-language review remain open. This disposition does not certify every entry combination or contextual speech register.",
+      "evidence": [
+        {
+          "path": "tests/polite.rs",
+          "test": "polite_native_sources_preserve_full_entries_and_final_bundles"
+        },
+        {
+          "path": "tests/polite.rs",
+          "test": "polite_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/fixtures/polite-sources.json"
+        },
+        {
+          "path": "docs/polite-source-audit.json"
+        },
+        {
+          "path": "docs/polite-snapshot-changes.json"
+        },
+        {
+          "path": "docs/polite-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "polite-ri-source-86108-2",
+          "judgment": "path"
+        },
+        {
+          "case": "polite-source-86108-3",
+          "judgment": "path"
+        },
+        {
+          "case": "polite-source-86108-4",
+          "judgment": "path"
+        },
+        {
+          "case": "polite-source-86108-5",
           "judgment": "path"
         }
       ]

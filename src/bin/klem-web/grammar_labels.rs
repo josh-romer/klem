@@ -159,5 +159,12 @@ mod tests {
                 .unwrap()
                 .is_empty()
         );
+        // A primary research reference does not impersonate a KRDict entry.
+        assert!(catalog()["-으리다"].sources.is_empty());
+        assert!(
+            lookup(&mut session, MorphemeKind::Ending, "-으리다")
+                .unwrap()
+                .is_empty()
+        );
     }
 }

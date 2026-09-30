@@ -290,10 +290,29 @@ fn append_predicate_morphs(a: &mut Analysis, p: &Predicate) {
     a.morphemes.extend(p.morphs.clone());
 }
 
-type PrefinalMemo = HashMap<(String, u8, u8), Vec<Predicate>>;
+// The polite allomorph depends on the following boundary as well as the stem.
+// ㄴ/ㄹ/ㅁ and vowel/mediating-vowel endings take 오; other consonants take 옵.
+fn polite_open_boundary(suffix: &str, boundary: Boundary) -> bool {
+    matches!(
+        boundary,
+        Boundary::Aeo | Boundary::EuFull | Boundary::EuZero | Boundary::Attached(_)
+    ) || suffix
+        .chars()
+        .next()
+        .and_then(crate::hangul::split)
+        .is_some_and(|(initial, _, _)| matches!(initial, 2 | 5 | 6 | 11))
+}
 
-fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<Predicate> {
-    let key = (stem.to_owned(), stage, pasts);
+type PrefinalMemo = HashMap<(String, u8, u8, bool), Vec<Predicate>>;
+
+fn prefinals(
+    stem: &str,
+    stage: u8,
+    pasts: u8,
+    polite_open: bool,
+    memo: &mut PrefinalMemo,
+) -> Vec<Predicate> {
+    let key = (stem.to_owned(), stage, pasts, polite_open);
     if let Some(result) = memo.get(&key) {
         return result.clone();
     }
@@ -310,10 +329,22 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
         spellings: Vec::new(),
     }];
     let mut choices: Vec<(Recovery, u8, u8, &str, &str)> = vec![];
-    if stage >= 4 {
+    if stage >= 5 {
         for boundary in [Boundary::Literal, Boundary::OmittedCopula(0)] {
             for r in grammar::recover(stem, "더", boundary) {
-                choices.push((r, 3, pasts, "더", "prefinal.retrospective"));
+                choices.push((r, 4, pasts, "더", "prefinal.retrospective"));
+            }
+        }
+    }
+    if stage >= 4 {
+        let variants = if polite_open {
+            [("으오", Boundary::EuFull), ("오", Boundary::EuZero)]
+        } else {
+            [("으옵", Boundary::EuFull), ("옵", Boundary::EuZero)]
+        };
+        for (suffix, boundary) in variants {
+            for r in grammar::recover(stem, suffix, boundary) {
+                choices.push((r, 3, pasts, "으옵", "prefinal.polite"));
             }
         }
     }
@@ -354,7 +385,8 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
         }
     }
     for (r, next, count, form, rule) in choices {
-        for mut p in prefinals(&r.stem, next, count, memo) {
+        let open = matches!(form, "었" | "어야겠");
+        for mut p in prefinals(&r.stem, next, count, open, memo) {
             if r.rules.iter().any(|r| r == "copula.omitted_ending") {
                 p.copula_only = true;
                 p.rules.push(
@@ -368,7 +400,7 @@ fn prefinals(stem: &str, stage: u8, pasts: u8, memo: &mut PrefinalMemo) -> Vec<P
             }
             p.copula_contracted |=
                 r.stem.ends_with('이') && r.rules.iter().any(|r| r == "contraction.vowel");
-            record_spelling(&mut p, &r, matches!(form, "시" | "었" | "어야겠"));
+            record_spelling(&mut p, &r, matches!(form, "시" | "었" | "어야겠" | "으옵"));
             p.morphs.push(morph(form, MorphemeKind::Prefinal));
             p.rules.extend(r.rules.clone());
             p.rules.push(rule.into());
@@ -472,14 +504,20 @@ fn predicates(word: &str) -> Vec<Predicate> {
         _ => None,
     };
     if let Some(form) = short_mal {
-        let mut p = prefinals("말", 0, 0, &mut memo).remove(0);
+        let mut p = prefinals("말", 0, 0, false, &mut memo).remove(0);
         p.morphs.push(morph(form, MorphemeKind::Ending));
         p.rules.extend(["ending".into(), "irregular.mal".into()]);
         out.push(p);
     }
     for ending in grammar::matching_endings(word) {
         for r in grammar::recover(word, ending.suffix, ending.boundary) {
-            for mut p in prefinals(&r.stem, 4, 0, &mut memo) {
+            for mut p in prefinals(
+                &r.stem,
+                5,
+                0,
+                polite_open_boundary(ending.suffix, ending.boundary),
+                &mut memo,
+            ) {
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
                 if ending.form == "요" {
                     // This connective attaches to bare 이다/아니다 only.
@@ -719,7 +757,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 // Reviewed intention/concession families have different
                 // prefinal licenses; do not inherit every terminal marker.
-                if (matches!(ending.form, "으리라고" | "으나마")
+                if (matches!(ending.form, "으리라고" | "으리다" | "으나마")
                     && p.morphs.iter().any(|m| m.form == "더"))
                     || (ending.form == "을지라도"
                         && p.morphs
@@ -938,6 +976,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
+                if ending.form == "으리다" {
+                    p.rules.push("ending.literary_ri".into());
+                }
                 if ending.form == "으되" {
                     p.rules.push("ending.contrast_doe".into());
                 }
@@ -1116,7 +1157,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
             for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
                 for r in grammar::recover(base, suffix, boundary) {
                     // Honorific/past/modal may precede conjectural (으)리, not 더.
-                    for mut p in prefinals(&r.stem, 3, 0, &mut memo) {
+                    for mut p in prefinals(&r.stem, 3, 0, true, &mut memo) {
                         record_spelling(&mut p, &r, matches!(boundary, Boundary::EuFull));
                         p.morphs.push(morph("으리", MorphemeKind::Prefinal));
                         p.morphs.push(morph(ending, MorphemeKind::Ending));
@@ -1653,6 +1694,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으니라"
                 | "으소서"
                 | "으옵소서"
+                | "으옵"
                 | "으며"
                 | "으면서"
                 | "으므로"

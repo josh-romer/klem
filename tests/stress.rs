@@ -14,14 +14,31 @@ fn output_matches_reviewed_snapshots() {
         before_spelling_sha256: Option<String>,
         before_digeut_siot_sha256: Option<String>,
         before_bieup_sha256: Option<String>,
+        before_polite_sha256: Option<String>,
     }
     let snapshots: Vec<Snapshot> =
         serde_json::from_str(include_str!("fixtures/optimization.json")).unwrap();
     let engine = Lemmatizer::new();
     for snapshot in snapshots {
         let result = engine.analyze_word(&snapshot.word).unwrap();
+        let mut previous_grammar = result.clone();
+        if let Some(expected) = snapshot.before_polite_sha256 {
+            // The additive polite paths were individually reviewed; retain
+            // the exact prior output as well as its older spelling audits.
+            previous_grammar
+                .analyses
+                .retain(|a| !a.morphemes.iter().any(|m| m.form == "으옵"));
+            let mut json = serde_json::to_vec(&previous_grammar).unwrap();
+            json.push(b'\n');
+            assert_eq!(
+                format!("{:x}", Sha256::digest(json)),
+                expected,
+                "{}: pre-polite output changed",
+                snapshot.word
+            );
+        }
         if let Some(expected) = snapshot.before_bieup_sha256 {
-            let mut previous = result.clone();
+            let mut previous = previous_grammar.clone();
             for a in &mut previous.analyses {
                 for path in &mut a.spelling_paths {
                     path.retain(|r| {
@@ -47,7 +64,7 @@ fn output_matches_reviewed_snapshots() {
             );
         }
         if let Some(expected) = snapshot.before_digeut_siot_sha256 {
-            let mut previous = result.clone();
+            let mut previous = previous_grammar.clone();
             for a in &mut previous.analyses {
                 for path in &mut a.spelling_paths {
                     path.retain(|r| {
@@ -73,7 +90,7 @@ fn output_matches_reviewed_snapshots() {
             );
         }
         if let Some(expected) = snapshot.before_spelling_sha256 {
-            let mut legacy = result.clone();
+            let mut legacy = previous_grammar.clone();
             for a in &mut legacy.analyses {
                 a.spelling_paths.clear();
             }

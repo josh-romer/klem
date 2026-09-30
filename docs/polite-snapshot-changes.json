@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "before_revision": "6e092ba",
+  "changes": [
+    {
+      "word": "도와주었다",
+      "before_sha256": "1921fac6b784254efc0f928ff48a9fa4d00181fa54029d77ab6e5f979f286974",
+      "after_sha256": "6211c3828cfe2f2efcb3826b5bcbf212c065cb9a5042dbac93e516a54749e76b",
+      "added": [
+        {
+          "lemmas": [
+            {
+              "text": "도다",
+              "kind": "predicate"
+            },
+            {
+              "text": "주다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으옵",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "prefinal.past",
+            "prefinal.polite"
+          ],
+          "unchanged": false
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돟다",
+              "kind": "predicate"
+            },
+            {
+              "text": "주다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으옵",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "ending",
+            "irregular.hieut",
+            "prefinal.past",
+            "prefinal.polite"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "hieut_irregular"
+              }
+            ]
+          ]
+        },
+        {
+          "lemmas": [
+            {
+              "text": "돌다",
+              "kind": "predicate"
+            },
+            {
+              "text": "주다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "으옵",
+              "kind": "prefinal"
+            },
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "었",
+              "kind": "prefinal"
+            },
+            {
+              "form": "다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.regular",
+            "contraction.vowel",
+            "deletion.rieul",
+            "ending",
+            "prefinal.past",
+            "prefinal.polite"
+          ],
+          "unchanged": false
+        }
+      ],
+      "removed": [],
+      "review": "Individually inspected surface and component boundary recoveries; these are raw hypotheses, not contextual linguistic judgments."
+    }
+  ]
+}

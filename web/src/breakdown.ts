@@ -13,6 +13,7 @@ interface GrammarLabel {
   kind: string;
   label: string;
   sources: { id: number; headword: string; pos: string }[];
+  references?: { title: string; url: string }[];
   note?: string;
 }
 // Teaching hints describe common functions, not a contextually selected sense.
@@ -22,6 +23,7 @@ export interface Part {
   label: string;
   grammar: boolean;
   entry?: string;
+  references?: { title: string; url: string }[];
   hint: string;
 }
 export function options(token: Token, only: boolean, compatible = false) {
@@ -147,7 +149,8 @@ export function parts(
         m.kind,
       grammar: true,
       entry: entry?.id,
-      hint: `${key} · Common function; other uses may apply.${label ? ` Label sources: KRDict ${label.sources.map((s) => `${s.id} (${s.headword})`).join(", ")}.${label.note ? ` ${label.note}` : ""}` : ""}`,
+      references: label?.references,
+      hint: `${key} · Common function; other uses may apply.${label ? `${label.sources.length ? ` Label sources: KRDict ${label.sources.map((s) => `${s.id} (${s.headword})`).join(", ")}.` : ""}${label.references?.length ? ` References: ${label.references.map(r => r.title).join("; ")}.` : ""}${label.note ? ` ${label.note}` : ""}` : ""}`,
     };
   });
 }

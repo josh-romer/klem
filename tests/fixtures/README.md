@@ -1504,3 +1504,29 @@ inserted into the source fixture or the engine.
 sentences and their original annotations. Their target groups survive compatible
 filtering. One optimization snapshot adds only ㅂ metadata and tests its prior
 hash after removing that metadata; existing ㅎ/ㄷ/ㅅ evidence is preserved.
+
+`krdict-polite.json` retains 48 complete primary entries, with English
+equivalents, for COV-017az's basic (으)오/(으)옵 prefinal and the final 리다
+bundle. `polite-sources.json` preserves four normalized grammar entries
+(86107–86110), all 16 example groups and upstream file hashes. Attribution:
+NIKL Korean Basic Dictionary, September 2026; CC BY-SA 2.0 KR. Related forms
+and non-English equivalents are omitted; original notes/examples remain intact.
+The grammar-label fixture adds complete entries 86107/86108 under this policy.
+
+The 133 `polite-*` judgments require 93 paths and forbid 40 exact paths.
+Ten tokens are direct native attestations; remaining positive combinations are
+source-backed morphological inferences. No annotated corpus token is invented:
+none of the six pinned corpus files explicitly tags these audited forms EP/ep.
+The source audit records this narrower claim and the remaining named paradigms.
+Canonical 으리다 has no primary entry in the pinned KRDict export; its teaching
+label links NIKL's 1998 source article without fabricating a dictionary ID.
+The 도와주었다 snapshot gains exactly three raw polite hypotheses; its original
+full hash and historical spelling projections remain executable regressions.
+
+`gsd-polite-annotation-conflict.conllu` copies the complete, unchanged frozen
+GSD test sentence `test-s188` under its existing corpus attribution/license
+above. Its 내쉬와 row has original `VV+EC+VX+EC` tags in a proper-name-looking
+context. Basic polite recovery adds a partial 내쉬다 match, while the annotated
+two-lemma group remains unrecovered. The test preserves this disagreement and
+the nominal 내쉬 + 와 alternative; it does not certify the new partial match
+as a contextually correct analysis or repair the gold annotation.

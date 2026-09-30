@@ -293,6 +293,7 @@ try {
   const raConditions = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ra-conditions.json"), "utf8"));
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
+  const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
   const nira = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-nira.json"), "utf8"),
   );
@@ -328,6 +329,7 @@ try {
       ...eya.LexicalResource.Lexicon.LexicalEntry,
       ...vocative.LexicalResource.Lexicon.LexicalEntry,
       ...nira.LexicalResource.Lexicon.LexicalEntry,
+      ...polite.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
       ...ryeona.LexicalResource.Lexicon.LexicalEntry,
@@ -2175,6 +2177,67 @@ try {
   await page.screenshot({path: resolve(tmpdir(), "klem-soseo-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
+  // General polite prefinals keep both boundaries and the separate 리다 bundle.
+  const politeCases = recipientLedger.cases.filter(c => c.id.startsWith("polite-"));
+  assert.equal(politeCases.length, 133);
+  for (const c of politeCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a =>
+        JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const politeText = "읽으옵고 하시오니 먹었으옵고 학생다우옵고 떠나오리다";
+  const politeData = await (await post("analyze", {text: politeText})).json();
+  assert.deepEqual(politeData.grammar["-으옵-"].map(e => e.id).sort(),
+    [86107, 86108, 86109, 86110].map(i => `krdict:${i}`).sort());
+  assert.deepEqual(politeData.grammar["-으리다"], []);
+  await submit(page, politeText); await waitHeading(page, "읽으옵고");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [
+    [0, ["읽", "으옵", "고"]],
+    [1, ["하", "시", "으옵", "으니"]],
+    [2, ["먹", "었", "으옵", "고"]],
+    [3, ["학생", "답", "으옵", "고"]],
+    [4, ["떠나", "으옵", "으리다"]],
+  ]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, forms.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    const prefinal = word.locator(".breakdown-part").filter({has: page.locator('.part-form', {hasText: /^으옵$/})});
+    assert.equal(await prefinal.locator(".part-gloss").innerText(), "Politeness (literary)");
+    assert.match(await prefinal.getAttribute("title"), /86107.*86108.*86109.*86110/);
+    await prefinal.click();
+    for (const [sourceHead, sourceId] of [["-오-", 86107], ["-으오-", 86108], ["-옵-", 86109], ["-으옵-", 86110]]) {
+      await page.locator(".entry-choices button").filter({hasText: sourceHead}).click();
+      await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), sourceId);
+    }
+  }
+  const riWord = page.locator(".breakdown-word").nth(4);
+  assert.equal(await riWord.locator(".part-gloss").last().innerText(), "Literary formal future / intention");
+  assert.equal(await riWord.locator(".breakdown-part").last().isDisabled(), true);
+  const riReference = riWord.getByRole("link", {name: "Grammar source", exact: true});
+  assert.equal(await riReference.getAttribute("href"), grammarLabels["-으리다"].references[0].url);
+  assert.equal(await riReference.getAttribute("target"), "_blank");
+  assert.equal(await riReference.getAttribute("rel"), "noreferrer");
+  const politeDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const politeExport = JSON.parse(await readFile(await (await politeDownload).path(), "utf8"));
+  const politeExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: politeText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(politeExport.records, politeExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-polite-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-polite-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
   // Literary assertions retain distinct forms, copulas and lexical homonyms.
   const niraCases = recipientLedger.cases.filter(c => c.id.startsWith("nira-"));
   const niraPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-nira-"));
@@ -3739,6 +3802,12 @@ try {
     await page.locator(".notice").innerText(),
     /Dictionary not connected/,
   );
+  await submit(page, "떠나오리다"); await waitHeading(page, "떠나오리다");
+  const riSelect = page.locator(".breakdown-word select");
+  const riValue = await riSelect.locator("option").evaluateAll(os => os.find(o => o.textContent.replace(/^\d+\. /, "") === "떠나 + 으옵 + 으리다")?.value);
+  assert.ok(riValue); await riSelect.selectOption(riValue);
+  assert.equal(await page.getByRole("link", {name: "Grammar source", exact: true}).getAttribute("href"), grammarLabels["-으리다"].references[0].url);
+  assert.deepEqual(errors, [], "Reference labels must work without a dictionary too");
   await page.getByLabel("Your sentence", { exact: true }).fill("");
   assert.equal(
     await page

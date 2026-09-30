@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "corrections": [
+    {
+      "surface": "먹고싶으옵고",
+      "old_assumption": "BieupRegular spelling requirement on auxiliary 싶다",
+      "new_judgment": "No ㅂ spelling-path requirement: 싶 ends in ㅍ.",
+      "reason": "The new ownership test misidentified the final consonant. Runtime recovery was already correct; use 먹어놓으옵고 for auxiliary-owned HieutRegular at morpheme index 1 and keep an explicit no-false-ㅂ assertion for 싶다.",
+      "test": "polite_prefinals_preserve_lexical_oda_and_spelling_ownership"
+    }
+  ]
+}

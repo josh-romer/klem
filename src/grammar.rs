@@ -816,6 +816,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으나마", "나마", "으나마"),
             ("으리라", "리라", "으리라"),
             ("으리라고", "리라고", "으리라고"),
+            // Literary/formal future or intention: keep 리다 as a final
+            // bundle, distinct from conjectural 으리 + factual 라.
+            // NIKL, 임동훈 (1998), 어미의 사전적 처리, section 2.2.
+            ("으리다", "리다", "으리다"),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -1353,6 +1357,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.past" => "Recover 았/었; at most two past markers are licensed.",
         "prefinal.honorific" => "Recover honorific (으)시 before tense/modal markers.",
         "prefinal.modal" => "Recover 겠 after honorific or past markers.",
+        "prefinal.polite" => {
+            "Recover polite (으)오/(으)옵 before its licensed following boundary, after honorific/past/modal markers; contextual politeness is not selected."
+        }
         "prefinal.obligation" => {
             "Recover the intention or necessity expression -아/어/여야겠- as one prefinal-position bundle, without inserting an implicit 하다."
         }
@@ -1489,6 +1496,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "ending.reporting_ne" => {
             "Recognize a 다네/다는데-family information or reported-speech component, keeping copular/factual and command allomorphs separate; do not infer an implicit 하다 or contextual sense."
         }
+        "ending.literary_ri" => {
+            "Recover the literary/formal (으)리다 final bundle; do not split it into conjectural 으리 and plain 다."
+        }
         "ending.contrast_doe" => {
             "Recognize 되/으되 contrast, qualification or quotation, selecting the written allomorph by the lexical/prefinal boundary rather than general vowel-triggered recovery."
         }
@@ -1539,7 +1549,7 @@ mod label_tests {
         for form in ["에요", "야"] {
             forms.insert(format!("-{form}"), Ending);
         }
-        for form in ["시", "었", "겠", "더", "으리", "어야겠"] {
+        for form in ["시", "었", "겠", "더", "으리", "어야겠", "으옵"] {
             forms.insert(format!("-{form}-"), Prefinal);
         }
         for form in ["님", "들", "적", "답다", "이", "히", "쯤"] {
@@ -1555,7 +1565,22 @@ mod label_tests {
             let label = &labels[&key];
             assert_eq!(label["kind"], serde_json::to_value(kind).unwrap(), "{key}");
             assert!(!label["label"].as_str().unwrap().trim().is_empty(), "{key}");
-            assert!(!label["sources"].as_array().unwrap().is_empty(), "{key}");
+            let sources = label["sources"].as_array().unwrap();
+            let references = label["references"].as_array();
+            assert!(
+                !sources.is_empty() || references.is_some_and(|r| !r.is_empty()),
+                "{key}: missing source evidence"
+            );
+            for reference in references.into_iter().flatten() {
+                assert!(
+                    !reference["title"].as_str().unwrap().trim().is_empty(),
+                    "{key}"
+                );
+                assert!(
+                    reference["url"].as_str().unwrap().starts_with("https://"),
+                    "{key}"
+                );
+            }
         }
     }
 }

@@ -2548,3 +2548,33 @@ fn prayer_endings_preserve_two_unchanged_kaist_training_annotations() {
     drop(db);
     std::fs::remove_file(path).unwrap();
 }
+
+#[test]
+fn polite_partial_match_preserves_original_proper_name_annotation_conflict() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/gsd-polite-annotation-conflict.conllu").as_slice(),
+        Corpus::Gsd,
+        "gsd-polite-annotation-conflict",
+    )
+    .unwrap();
+    let case = report.cases.get("id:test-s188/22").unwrap();
+    assert_eq!(case.surface, "내쉬와");
+    assert_eq!(case.expected, ["내쉬다", "오다"]);
+    assert!(!case.matched);
+    assert_eq!(case.recovered_sets, [vec![0]]);
+    // The unchanged source tags a proper-name-looking context as predicates.
+    // A new partial lemma match is not evidence of correct sentence analysis.
+    let word = klem::Lemmatizer::new().analyze_word("내쉬와").unwrap();
+    assert!(word.analyses.iter().any(|a| {
+        a.lemmas.iter().map(|l| l.text.as_str()).eq(["내쉬"])
+            && a.lemmas[0].kind == klem::LemmaKind::Nominal
+            && a.morphemes.iter().map(|m| m.form.as_str()).eq(["와"])
+    }));
+    assert!(word.analyses.iter().any(|a| {
+        a.lemmas.iter().map(|l| l.text.as_str()).eq(["내쉬다"])
+            && a.morphemes
+                .iter()
+                .map(|m| m.form.as_str())
+                .eq(["으옵", "어"])
+    }));
+}

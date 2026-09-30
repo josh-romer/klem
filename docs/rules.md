@@ -20,7 +20,9 @@ lookup table. `src/grammar.rs` holds endings and spelling transformations;
 | ㄷ / ㅅ / ㅂ | 들어, 들으면, 지어, 지으면, 추워, 추운, 도와 |
 | ㅎ / 르 / 러 | 빨개, 빨간, 그래, 그러면, 몰라, 불러, 이르러 |
 | ㄹ deletion | 사는, 삽니다, 사세요, 사니까, 사느냐 |
-| Prefinal order | honorific → past (up to twice) → 겠 → 더 → terminal |
+| Prefinal order | honorific → past (up to twice) → 겠 → polite → 더 → terminal; ending-specific licenses apply |
+| Literary polite prefinal | 읽으옵고, 하시오니, 먹었으옵고; canonical 으옵 |
+| Literary formal final bundle | 드리오리다, 떠나오리다, 먹으오리다; canonical 으리다 |
 | Ending allomorphs | 먹으리라 / 가리라; interrogative 먹니 / connective 먹으니 |
 | Copulas | 학생입니다, 학생이었다, 의사였다, 의사예요, 학생이에요 |
 | Particle chains | 학교에서는, 학교에서만은, 사람만으로도, 길로 |
@@ -39,6 +41,17 @@ and expands final paths iteratively. It does not cache copies of entire chains.
 There is no arbitrary search-depth, beam-width,
 or candidate-count cutoff. Distinct analyses are materialized, so termination
 does not imply constant cost.
+
+The basic polite prefinal has both a preceding and following allomorph boundary.
+Vowel/ㄹ stems use 오/옵 (dropping ㄹ); other consonants use 으오/으옵, with
+local spelling-class hypotheses retained. Vowel or mediating-vowel endings and
+ㄴ/ㄹ/ㅁ take 오; other consonants take 옵. Formal ㅂ니다 is inverted before
+this check, yielding 하 + 으옵 + 습니다 for 하옵니다. Honorific 시 remains a
+separate preceding component. 리다/으리다 is a final bundle, not 으리 + 다;
+the three native 오리다 examples expose the preceding polite component.
+The [source audit](polite-source-audit.json) retains the remaining 옵시 and
+사옵/사오/삽 work under COV-017az. These rules do not choose contextual intent
+or speech register.
 
 Lexical membership in an irregular class remains a hypothesis. For example,
 `들어` admits `들다` and `듣다`. Some generated stems may not exist in dictionaries.

@@ -166,7 +166,15 @@ mod tests {
                 .unwrap()
                 .is_empty()
         );
-        for key in ["-사옵-", "-삽-", "-으옵시-", "-사옵시-"] {
+        for key in [
+            "-사옵-",
+            "-삽-",
+            "-으옵시-",
+            "-사옵시-",
+            "-자옵-",
+            "-잡-",
+            "-자옵시-",
+        ] {
             assert!(catalog()[key].sources.is_empty());
             assert!(
                 lookup(&mut session, MorphemeKind::Prefinal, key)
@@ -174,5 +182,11 @@ mod tests {
                     .is_empty()
             );
         }
+        assert!(catalog()["-나이다"].sources.is_empty());
+        assert!(
+            lookup(&mut session, MorphemeKind::Ending, "-나이다")
+                .unwrap()
+                .is_empty()
+        );
     }
 }

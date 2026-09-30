@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const jaop = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-jaop.json"), "utf8"));
   const optsi = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-optsi.json"), "utf8"));
   const humble = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-humble.json"), "utf8"));
   const nira = JSON.parse(
@@ -333,6 +334,7 @@ try {
       ...nira.LexicalResource.Lexicon.LexicalEntry,
       ...polite.LexicalResource.Lexicon.LexicalEntry,
       ...optsi.LexicalResource.Lexicon.LexicalEntry,
+      ...jaop.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -2352,6 +2354,75 @@ try {
   await page.setViewportSize({width: 390, height: 844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-optsi-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Restricted humble forms retain whole predicates and reference-only grammar.
+  const jaopCases = recipientLedger.cases.filter(c => c.id.startsWith("jaop-"));
+  const jaopPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("jaop-"));
+  assert.equal(jaopCases.length, 336); assert.equal(jaopPolicies.length, 10);
+  for (const [cases, policy] of [[jaopCases, false], [jaopPolicies, true]]) {
+    for (const c of cases) {
+      const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+      for (const j of c.judgments) {
+        const index = token.analysis.analyses.findIndex(a =>
+          JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+          && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+          && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+          && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+        assert.equal(index >= 0, policy || j.verdict === "required", c.id);
+        if (index >= 0) assert.equal(token.dictionary.readings[index].status === "incompatible", policy && j.verdict === "forbidden", c.id);
+      }
+    }
+  }
+  const jaopText = "받자옵건대 듣자와 좇잡나이다 받자옵시고 받자오시면 소원이옵나이다 비나이다";
+  const jaopData = await (await post("analyze", {text: jaopText})).json();
+  for (const key of ["-자옵-", "-잡-", "-자옵시-", "-나이다"]) assert.deepEqual(jaopData.grammar[key], []);
+  await submit(page, jaopText); await waitHeading(page, "받자옵건대");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms, keys] of [
+    [0, ["받", "자옵", "건대"], ["-자옵-"]],
+    [1, ["듣", "자옵", "어"], ["-자옵-"]],
+    [2, ["좇", "잡", "나이다"], ["-잡-", "-나이다"]],
+    [3, ["받", "자옵시", "고"], ["-자옵시-"]],
+    [4, ["받", "자옵", "시", "으면"], ["-자옵-"]],
+    [5, ["소원", "이", "으옵", "나이다"], ["-나이다"]],
+    [6, ["빌", "나이다"], ["-나이다"]],
+  ]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, forms.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    for (const key of keys) {
+      const form = key.endsWith("-") ? key.slice(1, -1) : key.slice(1);
+      const part = word.locator(".breakdown-part").filter({has: page.locator('.part-form', {hasText: new RegExp(`^${form}$`)})});
+      assert.equal(await part.locator(".part-gloss").innerText(), grammarLabels[key].label);
+      assert.equal(await part.isDisabled(), true);
+    }
+    const references = word.getByRole("link", {name: "Grammar source", exact: true});
+    const expected = keys.flatMap(key => grammarLabels[key].references);
+    assert.equal(await references.count(), expected.length);
+    for (let r = 0; r < expected.length; r++) {
+      assert.equal(await references.nth(r).getAttribute("href"), expected[r].url);
+      assert.equal(await references.nth(r).getAttribute("target"), "_blank");
+      assert.equal(await references.nth(r).getAttribute("rel"), "noreferrer");
+    }
+  }
+  // The same surface offers the full KRDict predicate as an independent choice.
+  const jaopWhole = page.locator(".breakdown-word").nth(1);
+  const jaopWholeValue = await jaopWhole.locator("select option").evaluateAll(os => os.find(o => o.textContent.replace(/^\d+\. /, "") === "듣잡 + 어")?.value);
+  assert.ok(jaopWholeValue); await jaopWhole.locator("select").selectOption(jaopWholeValue);
+  assert.deepEqual(await jaopWhole.locator(".part-form").allTextContents(), ["듣잡", "어"]);
+  assert.equal(await jaopWhole.getByRole("link", {name: "Grammar source", exact: true}).count(), 0);
+  const jaopDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const jaopExport = JSON.parse(await readFile(await (await jaopDownload).path(), "utf8"));
+  const jaopExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: jaopText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(jaopExport.records, jaopExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-jaop-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-jaop-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Literary assertions retain distinct forms, copulas and lexical homonyms.

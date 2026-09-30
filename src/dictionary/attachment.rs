@@ -30,6 +30,7 @@ pub enum AttachmentRule {
     NeuraVerb,
     AuxiliaryClass,
     LiteraryAssertionClass,
+    BareLiteraryDeclarative,
     HabitualConditionVerb,
     BareCopularEnding,
     BareAdjectivalReport,
@@ -420,6 +421,12 @@ impl Annotation {
                             } else {
                                 Some(AttachmentRule::LiteraryAssertionClass)
                             }
+                        } else if bare
+                            && form == "나이다"
+                            && adjective
+                            && !matches!(lemma.text.as_str(), "있다" | "없다" | "계시다")
+                        {
+                            Some(AttachmentRule::BareLiteraryDeclarative)
                         } else if bare
                             && matches!(form, "느냐지만" | "느냐니까" | "느냬")
                             && adjective

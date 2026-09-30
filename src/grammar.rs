@@ -581,6 +581,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "느냐",
             "느냐고",
             "느니라",
+            "나이다",
             "느라고",
             "느라",
             "고",
@@ -1378,6 +1379,15 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.honorific_polite" => {
             "Recover the NIKL literary honorific bundle (으)옵시 or 사옵시 as one prefinal, keeping its stem boundary and tense/modal ownership separate from the 옵소서 final bundle."
         }
+        "prefinal.lexical_jaop" => {
+            "Recover modern literary 자오/자옵 immediately after the reviewed 듣/묻/받/좇 lexical subset; preserve whole-predicate alternatives and the following allomorph boundary."
+        }
+        "prefinal.lexical_jap" => {
+            "Recover the separate consonant-following 잡 form only after the reviewed 듣/묻/받/좇 subset; do not extend historical coda distributions productively."
+        }
+        "prefinal.lexical_jaopsi" => {
+            "Recover NIKL's single 자옵시 subject-honorific bundle after the reviewed lexical subset; keep later tense/modal markers separate."
+        }
         "prefinal.obligation" => {
             "Recover the intention or necessity expression -아/어/여야겠- as one prefinal-position bundle, without inserting an implicit 하다."
         }
@@ -1579,6 +1589,9 @@ mod label_tests {
             "삽",
             "으옵시",
             "사옵시",
+            "자옵",
+            "잡",
+            "자옵시",
         ] {
             forms.insert(format!("-{form}-"), Prefinal);
         }

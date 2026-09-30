@@ -310,6 +310,11 @@ impl PrefinalFollowing {
 }
 
 fn prefinal_following(suffix: &str, boundary: Boundary) -> PrefinalFollowing {
+    // NIKL explicitly attests 옵/사옵/자옵 + 나이다 despite its ㄴ onset.
+    // This final bundle's retained ㅂ does not extend to ordinary 니/면 forms.
+    if suffix == "나이다" {
+        return PrefinalFollowing::CONSONANT;
+    }
     let vowel_boundary = matches!(
         boundary,
         Boundary::Aeo | Boundary::EuFull | Boundary::EuZero | Boundary::Attached(_)
@@ -328,7 +333,13 @@ fn prefinal_following(suffix: &str, boundary: Boundary) -> PrefinalFollowing {
 type PrefinalMemo = HashMap<(String, u8, u8, PrefinalFollowing, bool), Vec<Predicate>>;
 
 fn honorific_prefinal(form: &str) -> bool {
-    matches!(form, "시" | "으옵시" | "사옵시")
+    matches!(form, "시" | "으옵시" | "사옵시" | "자옵시")
+}
+
+fn jaop_stem(stem: &str) -> bool {
+    // Modern sources describe a lexical subset, not every ㄷ/ㅈ/ㅊ stem.
+    // Do not split historical/unknown compounds or intervene with earlier 시.
+    matches!(stem, "듣" | "묻" | "받" | "좇")
 }
 
 fn prefinals(
@@ -390,6 +401,35 @@ fn prefinals(
             }
         }
     }
+    if polite_available {
+        // The source lists 받자오시면: ordinary 시 can follow the lexical
+        // 자오 form. This finite bare-root recovery also works at stage 0;
+        // it does not reopen the productive polite or tense stages.
+        let suffix = if following.polite_open {
+            "자오"
+        } else {
+            "자옵"
+        };
+        for r in grammar::recover(stem, suffix, Boundary::Literal) {
+            if jaop_stem(&r.stem) {
+                choices.push((r, 0, pasts, "자옵", "prefinal.lexical_jaop"));
+            }
+        }
+        if following.consonant {
+            for r in grammar::recover(stem, "잡", Boundary::Literal) {
+                if jaop_stem(&r.stem) {
+                    choices.push((r, 0, pasts, "잡", "prefinal.lexical_jap"));
+                }
+            }
+        }
+        if stage >= 1 {
+            for r in grammar::recover(stem, "자옵시", Boundary::Literal) {
+                if jaop_stem(&r.stem) {
+                    choices.push((r, 0, pasts, "자옵시", "prefinal.lexical_jaopsi"));
+                }
+            }
+        }
+    }
     if stage >= 1 && polite_available {
         // NIKL treats these as single honorific bundles. Their notes allow
         // following endings, including tense/modal markers, and explicitly
@@ -444,9 +484,15 @@ fn prefinals(
     }
     for (r, next, count, form, rule) in choices {
         let bundle = matches!(form, "으옵시" | "사옵시");
-        let available =
-            polite_available && !matches!(form, "으옵" | "사옵" | "삽" | "으옵시" | "사옵시");
-        let following = if matches!(form, "었" | "어야겠") {
+        let available = polite_available
+            && !matches!(
+                form,
+                "으옵" | "사옵" | "삽" | "으옵시" | "사옵시" | "자옵" | "잡" | "자옵시"
+            );
+        // Ordinary (으)시 has a vowel/mediating-vowel boundary. The finite
+        // 자옵 family permits following 시 and therefore needs this context
+        // even at stage 0; consonant-only 잡 must not borrow that allomorph.
+        let following = if matches!(form, "시" | "었" | "어야겠") {
             PrefinalFollowing::OPEN
         } else {
             PrefinalFollowing::CONSONANT
@@ -598,6 +644,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 &mut memo,
             ) {
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
+                // NIKL 112447 licenses honorific/past/modal and the attested
+                // polite families, but does not list retrospective 더.
+                if ending.form == "나이다" && p.morphs.iter().any(|m| m.form == "더") {
+                    continue;
+                }
                 if ending.form == "요" {
                     // This connective attaches to bare 이다/아니다 only.
                     // A lexical stem ending in 이 is not sufficient evidence.
@@ -781,7 +832,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     && p.morphs.iter().any(|m| {
                         !matches!(
                             m.form.as_str(),
-                            "으옵시" | "사옵시" | "시" | "었" | "겠" | "어야겠"
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "었" | "겠" | "어야겠"
                         )
                     }))
                     || (ending.form == "재" && !p.morphs.is_empty())
@@ -811,7 +862,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         && p.morphs.iter().any(|m| {
                             !matches!(
                                 m.form.as_str(),
-                                "으옵시" | "사옵시" | "시" | "었" | "겠" | "어야겠"
+                                "으옵시" | "사옵시" | "자옵시" | "시" | "었" | "겠" | "어야겠"
                             )
                         }))
                 {
@@ -840,13 +891,16 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     && p.morphs.iter().any(|m| {
                         !matches!(
                             m.form.as_str(),
-                            "으옵시" | "사옵시" | "시" | "었" | "겠" | "어야겠"
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "었" | "겠" | "어야겠"
                         )
                     }))
                     || (ending.form == "길래"
-                        && p.morphs
-                            .iter()
-                            .any(|m| !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었")))
+                        && p.morphs.iter().any(|m| {
+                            !matches!(
+                                m.form.as_str(),
+                                "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                            )
+                        }))
                 {
                     continue;
                 }
@@ -855,9 +909,12 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if (matches!(ending.form, "으리라고" | "으리다" | "으나마")
                     && p.morphs.iter().any(|m| m.form == "더"))
                     || (ending.form == "을지라도"
-                        && p.morphs
-                            .iter()
-                            .any(|m| !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었")))
+                        && p.morphs.iter().any(|m| {
+                            !matches!(
+                                m.form.as_str(),
+                                "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                            )
+                        }))
                     || (ending.form == "자면"
                         && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
                 {
@@ -866,9 +923,12 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // KRDict -다가 licenses honorific and past markers. Keep
                 // the existing vowel-boundary -어다가 path independent.
                 if ending.form == "다가"
-                    && p.morphs
-                        .iter()
-                        .any(|m| !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었"))
+                    && p.morphs.iter().any(|m| {
+                        !matches!(
+                            m.form.as_str(),
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                        )
+                    })
                 {
                     continue;
                 }
@@ -882,9 +942,12 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // KRDict 85762/85772 permit predicates/copulas, honorific
                 // 시 and past 었; this final ending is not particle 밖에.
                 if ending.form == "을밖에"
-                    && p.morphs
-                        .iter()
-                        .any(|m| !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었"))
+                    && p.morphs.iter().any(|m| {
+                        !matches!(
+                            m.form.as_str(),
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                        )
+                    })
                 {
                     continue;
                 }
@@ -893,17 +956,23 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // A retrospective -던들 needs its own ending analysis.
                 if (ending.form == "은들" && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
                     || (matches!(ending.form, "을망정" | "을지언정")
-                        && p.morphs
-                            .iter()
-                            .any(|m| !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었")))
+                        && p.morphs.iter().any(|m| {
+                            !matches!(
+                                m.form.as_str(),
+                                "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                            )
+                        }))
                 {
                     continue;
                 }
                 if ending.form == "던들"
                     && (!p.morphs.last().is_some_and(|m| m.form == "었")
-                        || p.morphs
-                            .iter()
-                            .any(|m| !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었")))
+                        || p.morphs.iter().any(|m| {
+                            !matches!(
+                                m.form.as_str(),
+                                "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                            )
+                        }))
                 {
                     continue;
                 }
@@ -935,9 +1004,12 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     continue;
                 }
                 if ending.form == "을는지"
-                    && p.morphs
-                        .iter()
-                        .any(|m| !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었"))
+                    && p.morphs.iter().any(|m| {
+                        !matches!(
+                            m.form.as_str(),
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                        )
+                    })
                 {
                     continue;
                 }
@@ -946,9 +1018,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // that its broader license cannot leak to the bare ending.
                 if matches!(ending.form, "을라고" | "을라고요")
                     && p.morphs.iter().any(|m| {
-                        !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었")
-                            && !(ending.form == "을라고요"
-                                && matches!(m.form.as_str(), "겠" | "어야겠"))
+                        !matches!(
+                            m.form.as_str(),
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                        ) && !(ending.form == "을라고요"
+                            && matches!(m.form.as_str(), "겠" | "어야겠"))
                     })
                 {
                     continue;
@@ -973,7 +1047,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     && p.morphs.iter().any(|m| {
                         !matches!(
                             m.form.as_str(),
-                            "으옵시" | "사옵시" | "시" | "었" | "겠" | "어야겠"
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "었" | "겠" | "어야겠"
                         )
                     })
                 {
@@ -1057,7 +1131,10 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     // KRDict 86297 also licenses honorific 시, as does the
                     // full factual 라는 form. Keep this distinct from 으란.
                     let licensed_prefinal = p.morphs.last().is_some_and(|m| {
-                        matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "더")
+                        matches!(
+                            m.form.as_str(),
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "더"
+                        )
                     });
                     if !copular && !licensed_prefinal {
                         continue;
@@ -1065,9 +1142,12 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 // KRDict 82342 lists bare predicates, honorific 시 and past 었.
                 if ending.form == "든가"
-                    && p.morphs
-                        .iter()
-                        .any(|m| !matches!(m.form.as_str(), "으옵시" | "사옵시" | "시" | "었"))
+                    && p.morphs.iter().any(|m| {
+                        !matches!(
+                            m.form.as_str(),
+                            "으옵시" | "사옵시" | "자옵시" | "시" | "었"
+                        )
+                    })
                 {
                     continue;
                 }
@@ -1614,6 +1694,23 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             if bare_stative_iss && present_declarative(&m.form) {
                 return false;
             }
+            // NIKL's bare 나이다 stems are verbs or the three existential /
+            // honorific heads. Polite + 나이다 directly attests adjectives and
+            // copulas, so apply this only before any prefinal intervenes.
+            // Negative auxiliary class inheritance remains independently open.
+            if bare
+                && m.form == "나이다"
+                && matches!(
+                    class,
+                    Some(PredicateClass::Adjective | PredicateClass::Copula)
+                )
+                && !matches!(
+                    lemma.text.as_str(),
+                    "있다" | "없다" | "계시다" | "않다" | "아니하다" | "못하다"
+                )
+            {
+                return false;
+            }
             if (verbal_intention(&m.form) || result_connective(&m.form) || activity_reason(&m.form))
                 && matches!(
                     class,
@@ -2011,6 +2108,11 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
 }
 
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
+    // Bare 나이다 is verbal/existential. Its direct copula examples instead
+    // include a polite prefinal (e.g. 소원이옵나이다); retain those paths.
+    if p.morphs.first().is_some_and(|m| m.form == "나이다") {
+        return;
+    }
     // Commands and proposals are not nominal copula endings. The factual
     // 라-family homonyms preserve copular readings such as 학생이라고.
     if p.morphs

@@ -1057,13 +1057,33 @@ review remains open under the completion review below.
   [source fixture](../tests/fixtures/optsi-sources.json). The
   [draft correction](optsi-draft-corrections.json) preserves the past-permitting
   rhetorical 으려고 sense while testing the narrower intention construction.
-  Wider bundled combinations, modern 자옵 lexical restrictions, additional
-  source-listed following endings and their licensed combinations remain open.
+  Modern 자오/자옵, consonant-following 잡 and bundled 자옵시 now use the
+  source-reviewed 듣/묻/받/좇 lexical subset, preserving the whole dictionary
+  predicates 듣잡다/받잡다 as independent alternatives. The newly required
+  나이다 ending keeps the source-attested retained-ㅂ polite combinations,
+  ordinary ㄹ deletion, bare verbal/existential classes and intervening
+  prefinals. Twenty-four primary tokens and 336 stable `jaop-*` cases (154
+  required, 182 forbidden), 69 complete native entries and ten dictionary-policy
+  cases are tracked in [tests](../tests/jaop.rs), the
+  [source fixture](../tests/fixtures/jaop-sources.json), and
+  [evaluation](jaop-evaluation.json). The [draft correction](jaop-draft-corrections.json)
+  preserves verbal 멀다 instead of rejecting all homonyms. The raw comparison
+  adds 322 candidates across 162 of 9,573 probes with no removals; 185 are
+  unjudged. Frozen corpus recall and per-token results remain identical; mean
+  candidate counts rise slightly. The separate 하나이다
+  candidate comparison retains annotated 하나 + 이 + 다 alongside the new
+  literary alternative. The full 179,112-record novel adds 22 paths at 19 records
+  under each dictionary filter and removes none. Three additions match required
+  structural ledger paths; the other 19 remain unjudged, including contextual
+  alternatives retained alongside existing readings. Wider bundled combinations,
+  additional source-listed
+  endings including 나이까 and their licensed combinations remain open.
   See [basic evaluation](polite-evaluation.json) and
   [humble evaluation](humble-evaluation.json) and
   [bundle evaluation](optsi-evaluation.json). The bundle probe comparison adds
   568 candidates across 140 of 9,276 surfaces without removals; 439 are unjudged.
-  All four frozen corpus reports are byte-identical. The full novel adds one
+  In that earlier bundle comparison, all four frozen corpus reports are
+  byte-identical. The full novel adds one
   morphological path for 하옵시고 under each dictionary filter; its contextual
   interpretation remains unjudged. This row remains incomplete.
 
@@ -2133,7 +2153,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 427 currently emitted canonical grammar forms.** The initial catalog
+  for all 433 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

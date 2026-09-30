@@ -33,6 +33,7 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `negative_copula_command` | Lexical 아니다 with canonical command 으라니 | 아니라니 retains 아니다 + factual 라니, excluding its distinct command hypothesis. |
 | `auxiliary_class` | A represented auxiliary's known class, shared with the engine | 오려나봐 supports inference 보다 (보조 형용사), excluding the trial auxiliary-verb homonym from this reading's hint. |
 | `literary_assertion_class` | Bare lexical predicates with 으니라/느니라 | 읽으니라 conflicts with its verb-only entry; 크니라 and 크느니라 retain their respective adjective/verb homonyms. |
+| `bare_literary_declarative` | Bare lexical predicates with 나이다 | Known adjectives conflict, with 있다/없다/계시다 exceptions. 머나이다 retains the verb 멀다 while its adjective homonym conflicts; listed intervening prefinals keep their own licenses. |
 
 The present family is shared with the engine: 는다/는다고/는다는/는다면/는답니다/
 는다거나/는다든가/는다네/는다는데/는다며/는다면서/는다니/는단. Attached ㄴ
@@ -66,6 +67,15 @@ now has 185 cases (109 required / 76 forbidden). All are generated and headword
 matched before the optional filter; raw and headword-only candidates are unchanged.
 
 ## Homonyms, unknowns and ownership
+
+The [restricted humble and 나이다 review](jaop-evaluation.json) adds ten
+dictionary-policy cases (seven required, three forbidden). Bare 나이다 licenses
+verbs and the explicitly listed existential/honorific heads. Intervening
+honorific, past or polite prefinals allow the source-attested adjective and
+copula examples. These checks do not choose a contextual sense or resolve
+negative-auxiliary inheritance. The preserved [draft correction](jaop-draft-corrections.json)
+records why the negative ㄹ-stem case uses adjective-only 힘들다 rather than
+the ambiguous 멀다. Separate per-entry checks keep the verbal 멀다 alternative.
 
 The [literary assertion extension](nira-evaluation.json) adds fifteen policy cases
 (12 required / 3 forbidden), bringing the whole-reading policy ledger to 200

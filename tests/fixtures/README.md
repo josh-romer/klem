@@ -1554,3 +1554,26 @@ auxiliary/답다/copula composition, reference links and browser JSON export par
 `docs/optsi-draft-corrections.json` preserves the draft confusion between the
 past-permitting rhetorical 으려고 sense and the narrower intention construction.
 Earlier committed judgments are unchanged. COV-017az remains incomplete.
+
+`jaop-sources.json` records 24 direct primary tokens for the restricted modern
+자오/자옵, consonant-following 잡, bundled 자옵시, and 나이다 ending. The
+336 stable `jaop-*` cases require 154 paths and forbid 182 exact paths. The
+2010 authors' lexical-subset review bounds segmented recovery to 듣다/묻다/
+받다/좇다; historical coda distributions and arbitrary compounds are not
+generalized. The full KRDict predicates 듣잡다/받잡다 remain independent
+alternatives. `krdict-jaop.json` preserves 69 complete native entries, English
+equivalents only, under the KRDict attribution and CC BY-SA 2.0 KR license above.
+Eight primary grammar pages have recorded hashes and paraphrased attachment
+notes; reference-only labels have no manufactured KRDict IDs.
+
+Ten dictionary-policy cases add seven required and three forbidden readings.
+They keep bare existential/honorific heads and source-listed intervening
+prefinals, rejecting known bare adjectives with 나이다. The uncommitted draft
+correction in `docs/jaop-draft-corrections.json` replaces a negative 멀다 scope
+that incorrectly included its verb homonym. Eighteen earlier-prefinal negatives
+use correctly spelled ㄷ/harmony boundaries to isolate the attachment-order
+restriction; their original drafts remain in the correction log. Separate entry assessments preserve
+that verb while rejecting its adjective entry. The frozen 하나이다 ambiguity
+is tracked individually in `docs/jaop-evaluation.json` and tested without
+replacing the annotated 하나 + 이 + 다 reading. Unjudged raw hypotheses and
+contextual register remain unresolved; this is not a precision certification.

@@ -37,6 +37,7 @@ impl Fixture {
             "krdict-bieup.json",
             "krdict-reu.json",
             "krdict-short-stems.json",
+            "krdict-jaop.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -53,6 +54,7 @@ impl Fixture {
                         | "krdict-bieup.json"
                         | "krdict-reu.json"
                         | "krdict-short-stems.json"
+                        | "krdict-jaop.json"
                 ) {
                     // Full native entries supply written forms absent from older
                     // POS-only fixtures; do not borrow evidence by headword.
@@ -130,13 +132,58 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (1643, 1555)
+        (1650, 1558)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,
         suite.cases.len()
     );
     assert!(!report.review_queue.is_empty());
+}
+
+#[test]
+fn literary_naida_preserves_verbal_homonyms_and_identifies_the_adjective_conflict() {
+    let fixture = Fixture::new("naida-homonyms");
+    let db = fixture.open();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    let word = Lemmatizer::new().analyze_word("머나이다").unwrap();
+    let a = word
+        .analyses
+        .iter()
+        .find(|a| {
+            a.lemmas.iter().map(|l| l.text.as_str()).eq(["멀다"])
+                && a.morphemes.iter().map(|m| m.form.as_str()).eq(["나이다"])
+        })
+        .unwrap();
+    let annotation = dictionary.annotate(&word).unwrap();
+    let assessment = annotation.assess(a);
+    assert_eq!(assessment.status, Compatibility::Compatible);
+    for (id, status) in [
+        ("krdict:54855", Compatibility::Compatible),
+        ("krdict:26833", Compatibility::Incompatible),
+    ] {
+        let evidence = assessment.lemmas[0]
+            .entries
+            .iter()
+            .find(|e| e.id == id)
+            .unwrap();
+        assert_eq!(evidence.status, status);
+        if status == Compatibility::Incompatible {
+            assert!(
+                evidence
+                    .conflicts
+                    .iter()
+                    .any(|c| c.rule == AttachmentRule::BareLiteraryDeclarative
+                        && c.morpheme_index == Some(0))
+            );
+        } else {
+            assert!(evidence.conflicts.is_empty());
+        }
+    }
+    let mut filtered = word.clone();
+    let mut annotation = annotation;
+    annotation.filter(&mut filtered, DictionaryFilter::Compatible);
+    assert!(filtered.analyses.contains(a));
 }
 
 #[test]

@@ -1,0 +1,1119 @@
+{
+  "schema_version": 1,
+  "status": "Correction of an uncommitted agent-authored draft; no previously committed judgment changed.",
+  "corrections": [
+    {
+      "before": {
+        "id": "jaop-attachment-adjective-rieul",
+        "surface": "머나이다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "멀다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "나이다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-112447",
+            "reason": "Scoped dictionary policy: bare 나이다 licenses verbs and explicitly listed existential/honorific heads. Reject a known bare adjective; preserve listed intervening honorific/past/polite markers. Raw and headword-only hypotheses remain available."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-attachment-adjective-rieul",
+        "surface": "힘드나이다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "힘들다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "나이다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-112447",
+            "reason": "Scoped dictionary policy: bare 나이다 licenses verbs and explicitly listed existential/honorific heads. Reject a known bare adjective; preserve listed intervening honorific/past/polite markers. Raw and headword-only hypotheses remain available. Use the single-class 힘들다 entry; 멀다 also has a verb homonym whose valid path must survive."
+          }
+        ]
+      },
+      "reason": "Full native entries reveal 멀다 has both verb and adjective homonyms. A lemma-only forbidden scope wrongly rejects the verb; 힘들다 has only an adjective entry."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-듣-시-자옵",
+        "surface": "듣으시자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-듣-시-자옵",
+        "surface": "들으시자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-듣-시-잡",
+        "surface": "듣으시잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-듣-시-잡",
+        "surface": "들으시잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-듣-시-자옵시",
+        "surface": "듣으시자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-듣-시-자옵시",
+        "surface": "들으시자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-듣-었-자옵",
+        "surface": "듣었자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-듣-었-자옵",
+        "surface": "들었자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-듣-었-잡",
+        "surface": "듣었잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-듣-었-잡",
+        "surface": "들었잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-듣-었-자옵시",
+        "surface": "듣었자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-듣-었-자옵시",
+        "surface": "들었자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "듣다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-묻-시-자옵",
+        "surface": "묻으시자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-묻-시-자옵",
+        "surface": "물으시자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-묻-시-잡",
+        "surface": "묻으시잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-묻-시-잡",
+        "surface": "물으시잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-묻-시-자옵시",
+        "surface": "묻으시자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-묻-시-자옵시",
+        "surface": "물으시자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-묻-었-자옵",
+        "surface": "묻었자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-묻-었-자옵",
+        "surface": "물었자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-묻-었-잡",
+        "surface": "묻었잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-묻-었-잡",
+        "surface": "물었잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-묻-었-자옵시",
+        "surface": "묻었자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-묻-었-자옵시",
+        "surface": "물었자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "묻다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-받-었-자옵",
+        "surface": "받었자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "받다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-받-었-자옵",
+        "surface": "받았자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "받다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-받-었-잡",
+        "surface": "받었잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "받다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-받-었-잡",
+        "surface": "받았잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "받다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-받-었-자옵시",
+        "surface": "받었자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "받다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-받-었-자옵시",
+        "surface": "받았자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "받다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-좇-었-자옵",
+        "surface": "좇었자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "좇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-좇-었-자옵",
+        "surface": "좇았자옵고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "좇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-좇-었-잡",
+        "surface": "좇었잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "좇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-좇-었-잡",
+        "surface": "좇았잡고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "좇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "잡",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    },
+    {
+      "before": {
+        "id": "jaop-earlier-좇-었-자옵시",
+        "surface": "좇었자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "좇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "jaop-earlier-좇-었-자옵시",
+        "surface": "좇았자옵시고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "좇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "자옵시",
+              "고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "jaop-subset",
+            "reason": "Only this exact path is forbidden: it extends the finite modern lexical subset, violates a following allomorph, repeats the polite position, or violates independently reviewed ending order. Other lexical hypotheses remain unjudged. Correctly inflect the earlier ㄷ/harmony boundary to isolate the immediate bare-root restriction."
+          }
+        ]
+      },
+      "reason": "Strengthen an uncommitted negative case: correctly spelled earlier prefinal prevents an unrelated spelling conflict from masking the target lexical attachment-order violation."
+    }
+  ]
+}

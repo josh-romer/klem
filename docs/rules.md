@@ -3572,3 +3572,22 @@ example groups remain unchanged; two joined auxiliary inputs are explicit
 tolerant inferences. No contraction 느니보단, wider followers, or contextual
 clause choice is certified. See the [source audit](neuni-comparison-source-audit.json)
 and [candidate comparison](neuni-comparison-evaluation.json).
+
+## Explicit missing-space hypotheses (COV-020p)
+
+`spacing::suggest` implements a separate opt-in dictionary-backed graph, preserving
+unchanged word candidates and original UTF-8 spans. Paths contain nominal case
+phrase(s) and a separately analyzed predicate; multiple case-marked words, existing
+outer particles, plural/derivational suffixes, pronoun/case contractions and 음/기
+nominalizations reuse the original word rules. Headword matches and no known
+compatibility conflict are required independently for every segment; unknown
+entries/homonyms remain. No flat nominal-particle auxiliary chain is introduced.
+
+The primary native token 결혼을하라느니 stays unchanged in source entry 86079.
+Its explicit 결혼을 하라느니 proposal retains 결혼 + 을 followed by 하다 +
+으라느니; additional dictionary-backed partitions remain unjudged. Article 2/41
+primary consultations justify word/particle spacing principles, not the contextual
+correctness of every proposed partition. See [the audit](spacing-source-audit.json).
+The default bounds (64 NFC characters, 256 probes, 16 alternatives) report
+truncation. `complete` is scoped to this template/dictionary. General corrections,
+dictionary-unknown words and contextual sentence grammar are outside this template.

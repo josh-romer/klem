@@ -18,6 +18,7 @@ import { readingConditions, type Result } from "./model";
 
 export default function SentenceBreakdown(props: {
   result: Result;
+  label?: string;
   only: boolean;
   compatible: boolean;
   selected: number;
@@ -94,7 +95,7 @@ export default function SentenceBreakdown(props: {
     );
   }
   return (
-    <section class="breakdown" aria-label="Sentence breakdown">
+    <section class="breakdown" aria-label={props.label ?? "Sentence breakdown"}>
       <div class="section-heading">
         <div>
           <span class="eyebrow">SENTENCE BREAKDOWN</span>

@@ -517,3 +517,12 @@ prefinal is known; generic unlisted markers stay unknown and survive compatible
 filtering. Both teaching entries retain exact 품사 없음 expression identities
 outside the inventory. The [individual evaluation](neuni-comparison-evaluation.json)
 keeps raw additions separate from policy judgments and unjudged alternatives.
+
+COV-020p spacing suggestions apply the existing compatible/headword policy to
+each proposed word separately. The original word annotations and filters remain
+intact. Prefix roles require a nominal case phrase or explicit 음/기 nominalization,
+not an arbitrary connective/particle; the final word has its own predicate and
+possible auxiliary groups. Extra partitions and unknown roles stay visible as
+hypotheses. [The evaluation](spacing-evaluation.json) records every affected
+occurrence and explicit limits rather than certifying a sentence from dictionary
+membership or creating a headword such as 결혼을하다.

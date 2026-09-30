@@ -77,6 +77,31 @@ unknown classes and valid homonyms. The browser exposes this under its dictionar
 filter. See the [scoped policy](docs/dictionary-attachments.md), including per-entry
 written ㅎ inflection checks. Raw/headword-only candidates remain available.
 
+## Missing-space suggestions
+
+With a dictionary, `--suggest-spacing` adds explicit alternatives for nominal
+case phrases followed by a predicate, including multiple case-marked words:
+
+```sh
+nix run . -- word 결혼을하라느니 --dictionary data/dictionaries/krdict/krdict.db --suggest-spacing
+nix run . -- text novel.txt --dictionary data/dictionaries/krdict/krdict.db --suggest-spacing > novel.jsonl
+```
+
+The original word analyses stay intact. The separate `spacing.alternatives`
+contains independent proposed word records, dictionary assessments, ordered
+breakdowns and original UTF-8 spans; `inserted_at` identifies proposed boundary
+positions, not edits to the input. For example, 결혼을 하라느니 retains
+결혼 + 을 and 하다 + 으라느니 as two words, rather than creating 결혼을하다.
+
+The default per-word bounds are 64 NFC characters, 256 segment probes and
+16 alternatives. `--spacing-max-chars`, `--spacing-probes` and `--spacing-limit`
+configure these limits. Reached bounds set `complete: false` and `limited_by`;
+`complete` concerns only this template and dictionary, not all Korean segmentation.
+Unlisted dictionary vocabulary and contextual sentence validity are not inferred.
+The library exposes `spacing::suggest` with reusable `Session`/`DictionarySession`
+caches and `SpacingLimits`. This optional search has its own word cache budget.
+The browser offers the same behavior through **Suggest missing spaces**.
+
 ## Browser app
 
 Paste a Korean sentence, select a word, and explore its grouped analyses and

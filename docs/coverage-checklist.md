@@ -2163,15 +2163,31 @@ review remains open under the completion review below.
   13 of 4,567 compared surfaces, zero removals/provenance changes, unchanged
   frozen-corpus match counts and byte-identical compatible-filtered novel output.
 
-- [ ] **COV-020p — Missing spaces across nominal case and lexical predicates.**
-  KRDict 86079 sense 2, example group 5 contains the unchanged original input
-  결혼을하라느니. Its explicit components would be 결혼 + 을 followed by
-  하다 + 으라느니, but the current word analysis does not split an object phrase
-  and a separate lexical predicate inside one Hangul run. Preserve original byte
-  spans and an explicit spacing/segmentation hypothesis if support is added;
-  do not invent a dictionary head 결혼을하다, silently rewrite the source, or
-  make arbitrary nominal-particle endings auxiliary connectors. Source observation
-  and original example text: [quoted-listing audit](quoted-neuni-source-audit.json).
+- [x] **COV-020p — Missing spaces across nominal case and lexical predicates.**
+  The preserved native 결혼을하라느니 now has an explicit dictionary-backed
+  결혼을 하라느니 hypothesis. `spacing::suggest`, CLI `--suggest-spacing` and
+  the browser's **Suggest missing spaces** keep original word candidates and
+  byte spans, while each proposed word retains independent readings/dictionary
+  assessments. Multiple case phrases, plurals, outer particles, contractions and
+  음/기 nominalizations compose before a separately analyzed predicate. No
+  dictionary head 결혼을하다 or nominal-particle auxiliary link is invented.
+  Every search reports whether the declared template/dictionary search completed;
+  default 64 NFC characters / 256 segment probes / 16 alternatives are configurable
+  in CLI/library and truncation is visible. Twenty stable cases (14 required /
+  six forbidden) in [the spacing ledger](../tests/fixtures/spacing-validity.json),
+  47 complete native entries and [six tests](../tests/spacing.rs) cover original
+  source identity, exact grouped components, NFD/original UTF-8 spans, streaming
+  CLI parity, cache immutability, limits and ambiguous-prefix stress. Failed suffix
+  searches are memoized without merging successful prefix alternatives. [Source audit](spacing-source-audit.json)
+  and [individual evaluation](spacing-evaluation.json) retain extra partitions
+  as unjudged. Default output is unchanged across 10,514 raw inputs, all four
+  frozen corpus reports and both 179,112-record novel streams. Opt-in spacing
+  retains 5,555 unjudged hypotheses at 4,940 novel occurrences, with original
+  spans/context and no reached limits; this is not a segmentation recall claim.
+  Rust/stress, lint/format, frontend/browser, pinned corpus, final x86_64 Linux
+  Nix and refreshed packaged-preview checks pass. General
+  word-spacing correction, missing dictionary vocabulary and contextual sentence
+  interpretation are outside this rule template; no broader segmentation is certified.
 
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;

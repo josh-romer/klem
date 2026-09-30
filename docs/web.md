@@ -45,6 +45,10 @@ both Rust binaries, runs their offline tests, and type-checks/builds the fronten
 - **Dictionary matches only** keeps an analysis only when every lemma has a
   headword match, regardless of POS. Unknown words remain in the sentence; select
   one to see the empty-match explanation. Switch the filter off to explore them.
+- **Suggest missing spaces** requests separate dictionary-backed case-phrase/predicate
+  hypotheses. Each proposed word has independent reading selectors and linked
+  definitions. Original spelling remains visible; suggestions are not automatic
+  corrections. Search-limit notices report that more alternatives may exist.
 - Click a linked lemma or a dictionary-entry tab to read meanings and examples.
 - Expand a card's rule explanation to inspect how it was recovered.
 - **Export JSON** downloads the current result, with the filter applied. It
@@ -57,7 +61,7 @@ Glosses use the first English headword gloss from the first POS-compatible entry
 and sense/homonym alternatives remain in the dictionary pane. Initial diagram
 selection prefers analyses with compatible or unclassified dictionary matches,
 then the fewest morphemes for a compact initial view. This is a display convenience,
-not contextual ranking. All 439 currently emitted canonical grammar forms have
+not contextual ranking. All 455 currently emitted canonical grammar forms have
 short teaching labels in the shared [catalog](../web/src/grammar-labels.json).
 These paraphrase common KRDict uses; they are not contextual translations or
 an exhaustive list of senses. Hover text lists each source ID and headword.
@@ -297,3 +301,22 @@ label and four actual external NIKL sense links. The grammar API entry list
 stays empty when no KRDict entry exists. Explicit `오/으오/사오` forms appear
 as separate prefinal components, alongside the existing dictionary-backed
 polite entries; clicking a reference does not select a contextual sense.
+
+## Optional spacing API
+
+`POST /api/analyze` additionally accepts `suggest_spacing: true` when a dictionary
+is connected (otherwise HTTP 409). Existing requests/results remain unchanged.
+Each word record then has a `spacing` sidecar identical to CLI `--suggest-spacing`:
+`rule`, `complete`, `limited_by`, `segment_probes`, `limits`, and `alternatives`.
+An alternative has `spaced`, absolute original UTF-8 `inserted_at` positions, and
+independent `records`; each proposed word keeps `surface`, `span`, `analysis`,
+`dictionary`, and aligned `breakdowns`. These substrings cover the original word
+without gaps/overlap, including NFD input. No guessed character alignment is
+assigned to expanded morphemes. Parent records/candidates are never replaced.
+
+The existing 8,000-byte/64-scalar request bounds still apply. The spacing search
+adds per-word 64 NFC characters / 256 segment probes / 16 alternatives; reached
+bounds are explicit. Export includes every returned hypothesis and each word's
+alternatives, alongside the filtered parent records. Known conflicts are excluded
+within suggestions; unknown roles remain. The API adds grammar/gloss/source
+metadata for those independent words, without inventing a sentence parse.

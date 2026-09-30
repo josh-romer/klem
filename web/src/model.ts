@@ -36,12 +36,29 @@ export interface Annotation {
   readings?: ReadingAssessment[];
   lemmas: { lemma: Lemma; entries: EntryMatch[] }[];
 }
+export interface SpacingSegment extends Token {
+  breakdowns: (Component[] | null)[];
+}
+export interface SpacingHypothesis {
+  spaced: string;
+  inserted_at: number[];
+  records: SpacingSegment[];
+}
+export interface SpacingSuggestions {
+  rule: string;
+  alternatives: SpacingHypothesis[];
+  complete: boolean;
+  limited_by: string[];
+  segment_probes: number;
+  limits: { token_chars: number; segment_probes: number; alternatives: number };
+}
 export interface Token {
   surface: string;
   span: { start: number; end: number };
   kind: string;
   analysis: { normalized: string; analyses: Analysis[] } | null;
   dictionary: Annotation | null;
+  spacing?: SpacingSuggestions;
 }
 export interface Result {
   records: Token[];

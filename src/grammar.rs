@@ -1332,6 +1332,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "ending.quoted_neuni" => {
             "Recover source-reviewed listings of quoted statements, questions, commands, proposals and retrospective reports as distinct bundles. Preserve copular/command homonyms and immediate owners; contextual interpretation and unreviewed polite prefinals are not inferred."
         }
+        "spacing.nominal_case_predicate" => {
+            "Offer explicit missing-space hypotheses between dictionary-backed nominal case phrases and a separately analyzed predicate. Preserve original byte spans and every word's independent readings; sentence grammar and intended spacing are not validated."
+        }
         "ending.neuni" => {
             "Recover comparative/enumerative/assertive 느니, comparative 느니만/니만/느니보다/느니보다는 and causal 느니만큼/으니만큼 as reviewed bundles. Contextual sense and unreviewed prefinal combinations are not inferred."
         }

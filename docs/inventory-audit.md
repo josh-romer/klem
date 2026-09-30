@@ -715,3 +715,21 @@ Both full novel filters preserve all 179,112 records byte for byte, as do all fo
 frozen corpus reports; neither dataset has an exact target occurrence. Full
 Rust/stress, pinned corpus, lint/format, browser/frontend and x86_64 Linux Nix
 checks pass. The packaged preview has complete-dictionary CLI/HTTP/asset parity.
+
+COV-020p implements separate opt-in spacing hypotheses for the original native
+86079 example 결혼을하라느니. This representation reuses reviewed word endings/
+particles and does not add grammar source IDs or inventory dispositions. The
+715-entry queue remains 355 scoped / 359 unreviewed / one gap, with 405 catalog-
+linked and 393 judgment-cited entries; the catalog remains 455 canonical forms.
+Twenty stable component/segmentation judgments are tracked separately because
+independent words must not become a single lemma/auxiliary analysis. Source
+identity, native hashes and scope are retained in [the manifest](../tests/fixtures/spacing-sources.json)
+and [audit](spacing-source-audit.json); additional output partitions remain unjudged.
+
+COV-020p now has six focused spacing/source/Unicode/limit/search-stress tests,
+full Rust/stress and pinned corpus gates, lint/format, frontend/browser, final
+x86_64 Linux Nix checks and a refreshed complete-dictionary packaged preview.
+No morphology/catalog review totals changed. All 10,514 raw comparisons, four
+frozen reports and both default novel streams remain unchanged. Every opt-in
+novel hypothesis is retained with an unjudged status and reconstructable original
+span/context in [the individual observation record](spacing-novel-observations.json).

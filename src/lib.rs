@@ -11,6 +11,7 @@ mod engine;
 mod grammar;
 mod hangul;
 mod pronunciation;
+pub mod spacing;
 mod text;
 
 use serde::{Deserialize, Serialize};

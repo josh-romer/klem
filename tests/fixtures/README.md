@@ -1706,3 +1706,16 @@ resultative, question-class and contextual cases remain in the source review.
   token cases and two explicitly joined auxiliary inputs. The six pinned corpus
   files contain no corresponding annotated token; no artificial corpus case is
   substituted for an original annotation.
+
+- `krdict-spacing.json` preserves 47 complete attributed native entries for
+  COV-020p, omitting only RelatedForm/non-English equivalents. `spacing-sources.json`
+  records export hashes and the unchanged 86079 sense-2/group-5 input
+  결혼을하라느니. `spacing-validity.json` has twenty stable segmentation/component
+  cases (14 required/six forbidden); invented variants are labeled agent-authored,
+  distinct from the direct native observation. No unannotated input is presented
+  as a new corpus gold case, and words/auxiliary roles are not flattened together.
+
+  The spacing tests also exercise a repeated ambiguous case-phrase prefix with
+  both a missing final dictionary word and a successful final predicate. This is
+  an engineering stress input, distinct from the linguistic case ledger. Exhausted
+  failed suffix searches are memoized; successful prefix alternatives remain.

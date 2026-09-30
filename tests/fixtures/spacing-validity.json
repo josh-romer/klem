@@ -1,0 +1,796 @@
+{
+  "schema_version": 1,
+  "review_status": "Agent-authored spacing/component hypotheses; independent Korean review and intended sentence segmentation remain unresolved.",
+  "sources": {
+    "krdict-86079": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86079&nation=eng",
+    "nikl-word-spacing": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&pageIndex=1&qna_seq=324061"
+  },
+  "cases": [
+    {
+      "id": "spacing-native-86079-2-5",
+      "surface": "결혼을하라느니",
+      "source": "krdict-86079",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "결혼을",
+              "lemmas": [
+                "결혼"
+              ],
+              "morphemes": [
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "하라느니",
+              "lemmas": [
+                "하다"
+              ],
+              "morphemes": [
+                "으라느니"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Unchanged direct primary token with an explicit proposed boundary; contextual sentence analysis remains separate."
+        }
+      ]
+    },
+    {
+      "id": "spacing-object",
+      "surface": "책을읽어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "책을",
+              "lemmas": [
+                "책"
+              ],
+              "morphemes": [
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "읽어요",
+              "lemmas": [
+                "읽다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-plural-object",
+      "surface": "책들을읽었어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "책들을",
+              "lemmas": [
+                "책"
+              ],
+              "morphemes": [
+                "들",
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "읽었어요",
+              "lemmas": [
+                "읽다"
+              ],
+              "morphemes": [
+                "었",
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-multiple-case-phrases",
+      "surface": "학교에서책을읽어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "학교에서",
+              "lemmas": [
+                "학교"
+              ],
+              "morphemes": [
+                "에서"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "책을",
+              "lemmas": [
+                "책"
+              ],
+              "morphemes": [
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "읽어요",
+              "lemmas": [
+                "읽다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-case-topic",
+      "surface": "학교에서는책을읽어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "학교에서는",
+              "lemmas": [
+                "학교"
+              ],
+              "morphemes": [
+                "에서",
+                "는"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "책을",
+              "lemmas": [
+                "책"
+              ],
+              "morphemes": [
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "읽어요",
+              "lemmas": [
+                "읽다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-nominalized-object",
+      "surface": "먹기를좋아해요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "먹기를",
+              "lemmas": [
+                "먹다"
+              ],
+              "morphemes": [
+                "기",
+                "를"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            },
+            {
+              "surface": "좋아해요",
+              "lemmas": [
+                "좋아하다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-contracted-object",
+      "surface": "뭘봐요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "뭘",
+              "lemmas": [
+                "뭐"
+              ],
+              "morphemes": [
+                "를"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "봐요",
+              "lemmas": [
+                "보다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-contracted-object-full-pronoun",
+      "surface": "뭘봐요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "뭘",
+              "lemmas": [
+                "무엇"
+              ],
+              "morphemes": [
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "봐요",
+              "lemmas": [
+                "보다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-contracted-case",
+      "surface": "학교엘가요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "학교엘",
+              "lemmas": [
+                "학교"
+              ],
+              "morphemes": [
+                "에",
+                "를"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "가요",
+              "lemmas": [
+                "가다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-contracted-case-topic",
+      "surface": "학교에선가요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "학교에선",
+              "lemmas": [
+                "학교"
+              ],
+              "morphemes": [
+                "에서",
+                "는"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "가요",
+              "lemmas": [
+                "가다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-subject",
+      "surface": "학생이됐어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "학생이",
+              "lemmas": [
+                "학생"
+              ],
+              "morphemes": [
+                "이"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "됐어요",
+              "lemmas": [
+                "되다"
+              ],
+              "morphemes": [
+                "었",
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-instrumental",
+      "surface": "학생으로서말했어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "학생으로서",
+              "lemmas": [
+                "학생"
+              ],
+              "morphemes": [
+                "으로서"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "말했어요",
+              "lemmas": [
+                "말하다"
+              ],
+              "morphemes": [
+                "었",
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-original-plural-case",
+      "surface": "지식인들을봐요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "지식인들을",
+              "lemmas": [
+                "지식인"
+              ],
+              "morphemes": [
+                "들",
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "봐요",
+              "lemmas": [
+                "보다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-auxiliary-predicate",
+      "surface": "책을읽고있어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "required",
+          "segments": [
+            {
+              "surface": "책을",
+              "lemmas": [
+                "책"
+              ],
+              "morphemes": [
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "읽고있어요",
+              "lemmas": [
+                "읽다",
+                "있다"
+              ],
+              "morphemes": [
+                "고",
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate",
+                "auxiliary"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-object-case-error",
+      "surface": "책를읽어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "forbidden",
+          "segments": [
+            {
+              "surface": "책를",
+              "lemmas": [
+                "책"
+              ],
+              "morphemes": [
+                "를"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "읽어요",
+              "lemmas": [
+                "읽다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-object-vowel-error",
+      "surface": "학교을가요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "forbidden",
+          "segments": [
+            {
+              "surface": "학교을",
+              "lemmas": [
+                "학교"
+              ],
+              "morphemes": [
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "가요",
+              "lemmas": [
+                "가다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-unknown-vocabulary",
+      "surface": "ZZZ을읽어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "forbidden",
+          "segments": [
+            {
+              "surface": "ZZZ을",
+              "lemmas": [
+                "ZZZ"
+              ],
+              "morphemes": [
+                "을"
+              ],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "읽어요",
+              "lemmas": [
+                "읽다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-bare-noun-is-not-case",
+      "surface": "책읽어요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "forbidden",
+          "segments": [
+            {
+              "surface": "책",
+              "lemmas": [
+                "책"
+              ],
+              "morphemes": [],
+              "lemma_kinds": [
+                "nominal"
+              ]
+            },
+            {
+              "surface": "읽어요",
+              "lemmas": [
+                "읽다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-connective-is-not-nominal",
+      "surface": "먹고는좋아해요",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "forbidden",
+          "segments": [
+            {
+              "surface": "먹고는",
+              "lemmas": [
+                "먹다"
+              ],
+              "morphemes": [
+                "고",
+                "는"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            },
+            {
+              "surface": "좋아해요",
+              "lemmas": [
+                "좋아하다"
+              ],
+              "morphemes": [
+                "어요"
+              ],
+              "lemma_kinds": [
+                "predicate"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    },
+    {
+      "id": "spacing-no-fabricated-auxiliary",
+      "surface": "결혼을하라느니",
+      "source": "nikl-word-spacing",
+      "judgments": [
+        {
+          "id": "segmentation",
+          "verdict": "forbidden",
+          "segments": [
+            {
+              "surface": "결혼을하라느니",
+              "lemmas": [
+                "결혼",
+                "하다"
+              ],
+              "morphemes": [
+                "을",
+                "으라느니"
+              ],
+              "lemma_kinds": [
+                "nominal",
+                "auxiliary"
+              ]
+            }
+          ],
+          "reason": "Agent-authored structural spacing hypothesis using independently analyzed dictionary words. Not an annotated or primary-quoted sentence; intended wording/meaning is not certified."
+        }
+      ]
+    }
+  ]
+}

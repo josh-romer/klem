@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const spacingNative = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-spacing.json"),"utf8"));
   const neuniComparison = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-neuni-comparison.json"),"utf8"));
   const quotedNeuni = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-quoted-neuni.json"),"utf8"));
   const neuni = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-neuni.json"),"utf8"));
@@ -357,6 +358,7 @@ try {
       ...neuni.LexicalResource.Lexicon.LexicalEntry,
       ...quotedNeuni.LexicalResource.Lexicon.LexicalEntry,
       ...neuniComparison.LexicalResource.Lexicon.LexicalEntry,
+      ...spacingNative.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -1380,6 +1382,42 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-comparative-neuni-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-comparative-neuni-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const spacingLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/spacing-validity.json"),"utf8"));
+  assert.equal(spacingLedger.cases.length,20);
+  const spacingMatch = (a,j) => a.records.length===j.segments.length && a.records.every((r,i)=>r.surface===j.segments[i].surface && r.analysis.analyses.some(p=>p.lemmas.map(l=>l.text).join("\0")===j.segments[i].lemmas.join("\0") && p.lemmas.map(l=>l.kind).join("\0")===j.segments[i].lemma_kinds.join("\0") && p.morphemes.map(m=>m.form).join("\0")===j.segments[i].morphemes.join("\0")));
+  for (const c of spacingLedger.cases) {
+    const token=(await(await post("analyze",{text:c.surface,suggest_spacing:true})).json()).records[0];
+    const cli=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database,"--suggest-spacing"],{encoding:"utf8"}));
+    const {dictionary,spacing,...analysis}=cli;
+    assert.deepEqual(token.analysis,analysis);assert.deepEqual(token.dictionary,dictionary);assert.deepEqual(token.spacing,spacing);assert.equal(spacing.complete,true,c.id);
+    for(const j of c.judgments)assert.equal(spacing.alternatives.some(a=>spacingMatch(a,j)),j.verdict==="required",c.id);
+    const ordinary=(await(await post("analyze",{text:c.surface})).json()).records[0];assert.equal(ordinary.spacing,undefined);assert.deepEqual(ordinary.analysis,token.analysis);assert.deepEqual(ordinary.dictionary,token.dictionary);
+  }
+  const spacingNfd="결혼을하라느니".normalize("NFD"),spacingPrefix="前🙂 ";
+  const spacingUnicode=(await(await post("analyze",{text:spacingPrefix+spacingNfd,suggest_spacing:true})).json()).records.find(r=>r.surface===spacingNfd);
+  assert.equal(spacingUnicode.span.start,new TextEncoder().encode(spacingPrefix).length);
+  for(const a of spacingUnicode.spacing.alternatives){let offset=spacingUnicode.span.start;for(const r of a.records){assert.equal(r.span.start,offset);offset=r.span.end;}assert.equal(offset,spacingUnicode.span.end);}
+  const spacingText="결혼을하라느니 학교에서는책을읽어요";
+  await submit(page,spacingText);await waitHeading(page,"결혼을하라느니");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  await page.getByLabel("Suggest missing spaces").check();await waitHeading(page,"결혼을하라느니");
+  const spacingSection=page.getByRole("region",{name:"Missing-space suggestions",exact:true});await spacingSection.waitFor();
+  const spacingCard=spacingSection.locator(".spacing-hypothesis").filter({has:page.getByRole("heading",{name:"결혼을 하라느니",exact:true})});
+  assert.deepEqual(await spacingCard.locator(".part-form").allTextContents(),["결혼","을","하","으라느니"]);
+  assert.ok((await spacingCard.locator(".part-gloss").allTextContents()).includes("Listed command"));
+  const spacingChain=spacingSection.locator(".spacing-hypothesis").filter({has:page.getByRole("heading",{name:"학교에서는 책을 읽어요",exact:true})});
+  assert.equal(await spacingChain.locator(".breakdown-word").count(),3);
+  await spacingCard.locator(".breakdown-part.lexical").first().click();await page.waitForFunction(()=>document.querySelector(".entry-heading h2")?.textContent?.trim()==="결혼");
+  const spacingDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const spacingExport=JSON.parse(await readFile(await(await spacingDownload).path(),"utf8"));
+  const spacingExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible","--suggest-spacing"],{input:spacingText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(spacingExport.records,spacingExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-spacing-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-spacing-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Suggest missing spaces").uncheck();await waitHeading(page,"결혼을하라느니");assert.equal(await page.getByRole("region",{name:"Missing-space suggestions",exact:true}).count(),0);
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const eumseCases = recipientLedger.cases.filter(c => c.id.startsWith("eumse-"));
@@ -4480,6 +4518,9 @@ try {
   assert.deepEqual(errors, [], "Browser must not report runtime errors");
   const without = await start(false);
   await page.goto(without);
+  assert.equal(await page.getByLabel("Suggest missing spaces").isDisabled(),true);
+  const spacingWithout=await fetch(without+"/api/analyze",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({text:"結婚",suggest_spacing:true})});
+  assert.equal(spacingWithout.status,409);
   assert.equal(await page.getByLabel("Exclude known grammar conflicts").isDisabled(), true);
   await page.waitForSelector(".reading");
   assert.equal(

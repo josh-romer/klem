@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020p",
+  "reviewed_at": "2026-09-30",
+  "before_revision": "73c8515",
+  "source_observation": {
+    "entry_id": 86079,
+    "sense_id": "2",
+    "example_group": 5,
+    "original": "결혼을하라느니",
+    "native_group": {
+      "feat": [
+        {
+          "att": "type",
+          "val": "대화"
+        },
+        {
+          "att": "example",
+          "val": "주변에서 결혼을하라느니 혼자 살라느니 말이 많네."
+        },
+        {
+          "att": "example",
+          "val": "물어보는 본인들은 어떻게 했다니?"
+        }
+      ]
+    },
+    "case_id": "spacing-native-86079-2-5",
+    "judgment_id": "segmentation",
+    "input_unchanged": true
+  },
+  "primary_web_reviews": [
+    {
+      "url": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&pageIndex=1&qna_seq=324061",
+      "finding": "Complete current primary consultation read: distinct words are spaced, particles stay attached to their word; compound/suffix cases are distinct. This is not evidence that every proposed split is correct."
+    },
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&pageIndex=1&qna_seq=321432",
+      "finding": "Complete current primary article 41 explanation read: particle chains stay attached, including chains after endings."
+    },
+    {
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86079&nation=eng",
+      "finding": "Both current senses/all ten example groups read. Sense 2 group 5 preserves original 결혼을하라느니 without a space; no silent source correction is made."
+    }
+  ],
+  "implementation": "A separate dictionary-backed graph enumerates case-marked nominal word(s) followed by an independently analyzed lexical predicate. Existing raw word analyses and dictionary rules remain intact.",
+  "display_order": "Fewer proposed spaces first, then original byte boundaries; this is a presentation order, not contextual confidence.",
+  "case_role": "Existing class-1/2 nominal-particle grammar slots, including their licensed outer particles, plurals/suffixes, pronoun/case contractions and 음/기 nominalizations. No arbitrary connective is promoted to a nominal and no particle is made an auxiliary connector.",
+  "dictionary_policy": "Every lemma in each segment must have a headword match and no known compatibility conflict. Unknown roles and per-entry homonyms are retained. Their sentence-level suitability is unjudged.",
+  "limits": {
+    "token_chars": 64,
+    "segment_probes": 256,
+    "alternatives": 16,
+    "semantics": "Reached bounds mark complete=false with explicit limited_by reasons. CLI/library limits are configurable. Original tokens/candidates/spans remain present."
+  },
+  "source_manifest": "tests/fixtures/spacing-sources.json",
+  "candidate_ledger": "tests/fixtures/spacing-validity.json",
+  "limitations": [
+    "No ranking or contextual sentence validation. Extra dictionary-backed partitions remain unjudged rather than silently suppressed.",
+    "Complete means complete for this template and connected dictionary within reported limits, not all Korean word segmentation.",
+    "Unknown dictionary vocabulary, bare noun/topic/adverb word splitting and general sentence parsing remain separate coverage work.",
+    "Limits are explicit and configurable; original word analyses, cache results and UTF-8 spans remain unchanged."
+  ],
+  "status": "Six library/CLI/source/Unicode/limit/ambiguous-prefix tests, full Rust/stress, lint/format, frontend/browser, frozen/pinned corpus, complete default/opt-in novel, final Nix package/flake and refreshed preview checks pass. Candidate interpretation and independent Korean review remain unresolved.",
+  "search_memoization": "A suffix is remembered as impossible only after a complete search emits no hypotheses. It is independent of the prefix under this explicit template. Successful continuations remain separately enumerated for every prefix; reached limits never mark a suffix as an exhausted dead end."
+}

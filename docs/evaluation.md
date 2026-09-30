@@ -3290,3 +3290,31 @@ These twelve samples are descriptive and do not establish statistical equivalenc
 Both filter hashes and all individual raw additions, classifications and provenance
 are retained in the report. The refreshed packaged preview serves the tested
 JavaScript and passes complete-dictionary parity for all 58 raw/twelve policy cases.
+
+COV-020p spacing hypotheses have a separate [twenty-case ledger](../tests/fixtures/spacing-validity.json)
+and [individual report](spacing-evaluation.json). The original native source and
+word candidates stay unchanged. Exact suggested words/components, independent
+dictionary assessments, original NFC/NFD UTF-8 spans, limits and CLI/API/export
+parity are tested; extra dictionary-backed partitions remain explicitly unjudged.
+Default corpus/novel comparisons verify stability, while opt-in novel observations
+are contextual hypotheses and not annotated recall gains.
+
+The COV-020p final comparisons preserve all 10,514 raw inputs and all four
+frozen corpus reports. Both default novel filters retain all 179,112 records
+byte for byte. Opt-in spacing produces 5,555 unjudged hypotheses at 4,940
+occurrences; both filters have identical spacing sidecars, no reached limits,
+and unchanged parent records. [Compact individual observations](spacing-novel-observations.json)
+retain all spans, context, per-word analyses and dictionary assessments and were
+verified to reconstruct every individual observation exactly. No annotated spacing
+recall or linguistic precision is claimed. Full final debug/release stream hashes
+are identical to the originally recorded outputs.
+
+Three interleaved final release runs per version/filter have before/after medians
+of 1.642/1.639s (headword) and 1.711/1.655s (compatible); opt-in spacing medians
+are 2.122s and 2.109s. Observed peaks are about 29MiB normally and 40MiB with
+spacing enabled. These eighteen samples include startup, SQLite access and JSONL
+serialization with stdout discarded; they do not establish statistical equivalence.
+A repeated ambiguous-prefix stress case with a raised probe limit drops from
+about 1.715s to 0.054s in one before/after release observation after memoizing
+exhausted failed suffixes. Its exported counts/completeness remain identical;
+the regression also checks sixteen distinct successful prefixes.

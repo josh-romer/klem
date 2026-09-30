@@ -22,6 +22,7 @@ import {
   type Token,
 } from "./model";
 import SentenceBreakdown from "./SentenceBreakdown";
+import SpacingSuggestions from "./SpacingSuggestions";
 
 const initial = "어제 친구와 맛있는 음식을 먹어봤어요.";
 const examples = [
@@ -76,6 +77,7 @@ export default function App() {
   const [error, setError] = createSignal("");
   const [only, setOnly] = createSignal(false);
   const [compatible, setCompatible] = createSignal(false);
+  const [suggestSpacing, setSuggestSpacing] = createSignal(false);
   const [selected, setSelected] = createSignal(0);
   const [visible, setVisible] = createSignal(20);
   const [entryId, setEntryId] = createSignal<string>();
@@ -140,7 +142,7 @@ export default function App() {
     try {
       const data = await api<Result>(
         "analyze",
-        { text: value },
+        { text: value, ...(suggestSpacing() ? { suggest_spacing: true } : {}) },
         request.signal,
       );
       if (current !== generation) return;
@@ -421,6 +423,12 @@ export default function App() {
               <span class="switch" />
               <span>Exclude known grammar conflicts</span>
             </label>
+            <label classList={{ "filter-control": true, disabled: !status()?.dictionary }}>
+              <input type="checkbox" checked={suggestSpacing()} disabled={!status()?.dictionary}
+                onChange={(e) => { setSuggestSpacing(e.currentTarget.checked); void analyze(); }} />
+              <span class="switch" />
+              <span>Suggest missing spaces</span>
+            </label>
             <button class="export" onClick={download}>
               Export JSON <span aria-hidden="true">↗</span>
             </button>
@@ -436,6 +444,7 @@ export default function App() {
             onWord={choose}
             onEntry={setEntryId}
           />
+          <SpacingSuggestions result={result()!} onWord={choose} onEntry={setEntryId} />
           <div class="workspace">
             <section class="analysis-panel" aria-label="Word analyses">
               <div class="panel-heading">

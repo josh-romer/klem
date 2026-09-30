@@ -2,7 +2,7 @@
 use klem::dictionary::{
     Compatibility, Dictionary, DictionarySession, EntrySummary, Result, SqliteDictionary,
 };
-use klem::{Lemmatizer, MorphemeKind, TokenKind, Tokenizer};
+use klem::{Lemmatizer, MorphemeKind, Session, TokenKind, Tokenizer, WordAnalysis};
 use serde::Deserialize;
 use serde_json::{Value, json};
 use std::{
@@ -10,6 +10,7 @@ use std::{
     env, fs,
     io::Read,
     path::{Component, Path, PathBuf},
+    sync::Arc,
     time::Instant,
 };
 use tiny_http::{Header, Method, Request, Response, Server, StatusCode};
@@ -25,6 +26,8 @@ const HELP: &str = "klem-web — local Korean sentence explorer\n\nUsage: klem-w
 #[serde(deny_unknown_fields)]
 struct AnalyzeRequest {
     text: String,
+    #[serde(default)]
+    suggest_spacing: bool,
 }
 #[derive(Deserialize)]
 #[serde(deny_unknown_fields)]
@@ -51,25 +54,23 @@ fn validate_text(text: &str) -> std::result::Result<(), &'static str> {
     Ok(())
 }
 
-fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
-    validate_text(text)?;
-    let start = Instant::now();
-    let engine = Lemmatizer::new();
-    let mut lookups = dictionary.map(|d| DictionarySession::new(d, 4 * 1024 * 1024));
-    let mut rules = BTreeMap::new();
-    let mut records = Vec::new();
-    let mut breakdowns = Vec::new();
-    let mut glosses: BTreeMap<String, Option<String>> = BTreeMap::new();
-    let mut grammar: BTreeMap<String, Vec<EntrySummary>> = BTreeMap::new();
-    for token in engine.analyze_text(text) {
-        let annotation = if let (Some(a), Some(d)) = (&token.analysis, &mut lookups) {
-            Some(d.annotate(a)?)
-        } else {
-            None
-        };
+#[derive(Default)]
+struct RenderMetadata {
+    rules: BTreeMap<String, &'static str>,
+    glosses: BTreeMap<String, Option<String>>,
+    grammar: BTreeMap<String, Vec<EntrySummary>>,
+}
+impl RenderMetadata {
+    fn add(
+        &mut self,
+        analysis: &WordAnalysis,
+        annotation: Option<&klem::dictionary::Annotation>,
+        database: Option<&SqliteDictionary>,
+        lookups: &mut Option<DictionarySession<'_, SqliteDictionary>>,
+    ) -> Result<()> {
         // Short hints for compatible homonyms. Full senses remain available on demand;
         // neither dictionary order nor POS compatibility chooses a contextual sense.
-        if let (Some(annotation), Some(db)) = (&annotation, dictionary) {
+        if let (Some(annotation), Some(db)) = (annotation, database) {
             let supported: BTreeSet<_> = annotation
                 .readings
                 .iter()
@@ -83,7 +84,7 @@ fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
                     e.pos_compatibility != Compatibility::Incompatible
                         || supported.contains(e.entry.id.as_str())
                 }) {
-                    if glosses.contains_key(&entry.entry.id) {
+                    if self.glosses.contains_key(&entry.entry.id) {
                         continue;
                     }
                     let gloss = db.entry(&entry.entry.id)?.and_then(|e| {
@@ -93,9 +94,64 @@ fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
                             .find(|t| t.language == "영어" && !t.lemma.is_empty())
                             .map(|t| t.lemma)
                     });
-                    glosses.insert(entry.entry.id.clone(), gloss);
+                    self.glosses.insert(entry.entry.id.clone(), gloss);
                 }
             }
+        }
+        for a in &analysis.analyses {
+            if let Some(lookups) = lookups {
+                for m in &a.morphemes {
+                    let headword = match m.kind {
+                        MorphemeKind::Particle => m.form.clone(),
+                        MorphemeKind::Ending | MorphemeKind::Suffix => format!("-{}", m.form),
+                        MorphemeKind::Prefinal => format!("-{}-", m.form),
+                    };
+                    if !self.grammar.contains_key(&headword) {
+                        self.grammar.insert(
+                            headword.clone(),
+                            grammar_labels::lookup(lookups, m.kind, &headword)?,
+                        );
+                    }
+                }
+            }
+            for rule in &a.rules {
+                self.rules.insert(
+                    rule.clone(),
+                    klem::rule_explanation(rule).unwrap_or("No explanation available."),
+                );
+            }
+        }
+        Ok(())
+    }
+}
+#[cfg(test)]
+fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
+    analyze_with_spacing(text, dictionary, false)
+}
+fn analyze_with_spacing(
+    text: &str,
+    dictionary: Option<&SqliteDictionary>,
+    suggest_spacing: bool,
+) -> Result<Value> {
+    validate_text(text)?;
+    if suggest_spacing && dictionary.is_none() {
+        return Err("Missing-space suggestions require a connected dictionary.".into());
+    }
+    let start = Instant::now();
+    let engine = Arc::new(Lemmatizer::new());
+    let mut words = suggest_spacing.then(|| Session::new(engine.clone(), 8 * 1024 * 1024));
+    let mut lookups = dictionary.map(|d| DictionarySession::new(d, 4 * 1024 * 1024));
+    let mut metadata = RenderMetadata::default();
+    let mut records = Vec::new();
+    let mut breakdowns = Vec::new();
+    for token in engine.analyze_text(text) {
+        let annotation = if let (Some(a), Some(d)) = (&token.analysis, &mut lookups) {
+            Some(d.annotate(a)?)
+        } else {
+            None
+        };
+        if let Some(a) = &token.analysis {
+            metadata.add(a, annotation.as_ref(), dictionary, &mut lookups)?;
         }
         breakdowns.push(
             token
@@ -103,37 +159,48 @@ fn analyze(text: &str, dictionary: Option<&SqliteDictionary>) -> Result<Value> {
                 .as_ref()
                 .map(|a| a.analyses.iter().map(|a| a.breakdown()).collect::<Vec<_>>()),
         );
-        if let Some(analysis) = &token.analysis {
-            for a in &analysis.analyses {
-                if let Some(lookups) = &mut lookups {
-                    for m in &a.morphemes {
-                        let headword = match m.kind {
-                            MorphemeKind::Particle => m.form.clone(),
-                            MorphemeKind::Ending | MorphemeKind::Suffix => format!("-{}", m.form),
-                            MorphemeKind::Prefinal => format!("-{}-", m.form),
-                        };
-                        if !grammar.contains_key(&headword) {
-                            grammar.insert(
-                                headword.clone(),
-                                grammar_labels::lookup(lookups, m.kind, &headword)?,
-                            );
-                        }
-                    }
-                }
-                for rule in &a.rules {
-                    rules.insert(
-                        rule.clone(),
-                        klem::rule_explanation(rule).unwrap_or("No explanation available."),
-                    );
+        let spacing = if token.kind == TokenKind::Word
+            && let (Some(words), Some(lookups)) = (&mut words, &mut lookups)
+        {
+            Some(klem::spacing::suggest(
+                words,
+                lookups,
+                &token.surface,
+                token.span.start,
+                klem::spacing::SpacingLimits::default(),
+            )?)
+        } else {
+            None
+        };
+        if let Some(spacing) = &spacing {
+            metadata.rules.insert(
+                spacing.rule.into(),
+                klem::rule_explanation(spacing.rule).expect("spacing explanation"),
+            );
+            for alternative in &spacing.alternatives {
+                for segment in &alternative.records {
+                    metadata.add(
+                        segment
+                            .record
+                            .analysis
+                            .as_ref()
+                            .expect("analyzed spacing segment"),
+                        Some(&segment.dictionary),
+                        dictionary,
+                        &mut lookups,
+                    )?;
                 }
             }
         }
         let mut record = serde_json::to_value(token)?;
         record["dictionary"] = serde_json::to_value(annotation)?;
+        if let Some(spacing) = spacing {
+            record["spacing"] = serde_json::to_value(spacing)?;
+        }
         records.push(record);
     }
     Ok(
-        json!({"records":records, "rules":rules, "breakdowns":breakdowns, "glosses":glosses, "grammar":grammar, "elapsed_ms":start.elapsed().as_secs_f64()*1000.0}),
+        json!({"records":records, "rules":metadata.rules, "breakdowns":breakdowns, "glosses":metadata.glosses, "grammar":metadata.grammar, "elapsed_ms":start.elapsed().as_secs_f64()*1000.0}),
     )
 }
 
@@ -282,7 +349,15 @@ fn handle(mut request: Request, root: &Path, dictionary: Option<&SqliteDictionar
             fail(request, 422, message);
             return;
         }
-        match analyze(&input.text, dictionary) {
+        if input.suggest_spacing && dictionary.is_none() {
+            fail(
+                request,
+                409,
+                "Missing-space suggestions require a connected dictionary.",
+            );
+            return;
+        }
+        match analyze_with_spacing(&input.text, dictionary, input.suggest_spacing) {
             Ok(value) => json_response(request, 200, value),
             Err(e) => {
                 eprintln!("klem-web: {e}");

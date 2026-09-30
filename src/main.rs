@@ -11,13 +11,15 @@ use std::{
 
 const HELP: &str = "klem — Korean lemma candidates\n\nUsage:\n  klem word <word> [--format jsonl|text]\n  klem text [file|-] [--format jsonl|text] [--cache-bytes N]\n  klem explain <rule-id>\n\nJSON Lines is the default. Text records include original UTF-8 byte offsets.\nText input defaults to stdin. Cache defaults to 8 MiB; use 0 to disable.\nAll candidates are grammatical hypotheses, not dictionary-verified words.\n";
 
-const DICTIONARY_HELP: &str = "\nOffline dictionaries:\n  klem dict import-krdict <json-directory|file> <new.db> --snapshot <label>\n  klem dict info <db>\n  klem dict lookup <db> <headword>\n  klem dict entry <db> <entry-id>\n  klem word <word> --dictionary <db> [--dict-only | --dict-compatible]\n  klem text [file|-] --dictionary <db> [--dict-only | --dict-compatible]\nDictionary annotations require JSONL and preserve every candidate by default.\n--dict-only requires --dictionary and keeps analyses with dictionary entries\nfor every lemma, regardless of POS compatibility. Unmatched words retain an\nempty analyses array; text records and offsets are preserved.\n--dict-compatible additionally excludes known lexical-role/attachment conflicts.\nUnknown classes remain; the finite checks do not prove grammatical correctness.\n";
+const DICTIONARY_HELP: &str = "\nOffline dictionaries:\n  klem dict import-krdict <json-directory|file> <new.db> --snapshot <label>\n  klem dict info <db>\n  klem dict lookup <db> <headword>\n  klem dict entry <db> <entry-id>\n  klem word <word> --dictionary <db> [--dict-only | --dict-compatible]\n  klem text [file|-] --dictionary <db> [--dict-only | --dict-compatible]\nDictionary annotations require JSONL and preserve every candidate by default.\n--dict-only requires --dictionary and keeps analyses with dictionary entries\nfor every lemma, regardless of POS compatibility. Unmatched words retain an\nempty analyses array; text records and offsets are preserved.\n--dict-compatible additionally excludes known lexical-role/attachment conflicts.\nUnknown classes remain; the finite checks do not prove grammatical correctness.\n--suggest-spacing adds separate dictionary-backed case-phrase/predicate hypotheses.\nOriginal tokens and candidates stay intact; no sentence grammar is inferred.\nOptional bounds: --spacing-limit N (16), --spacing-probes N (256),\n--spacing-max-chars N (64 NFC characters). Reached bounds are reported.\n";
 
 #[derive(Serialize)]
 struct Annotated<T> {
     #[serde(flatten)]
     record: T,
     dictionary: Option<Annotation>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    spacing: Option<klem::spacing::SpacingSuggestions>,
 }
 
 fn run() -> klem::dictionary::Result<()> {
@@ -43,6 +45,9 @@ fn run() -> klem::dictionary::Result<()> {
     let mut dictionary_path = None;
     let mut dict_only = false;
     let mut dict_compatible = false;
+    let mut suggest_spacing = false;
+    let mut spacing_limits = klem::spacing::SpacingLimits::default();
+    let mut spacing_options = false;
     while let Some(arg) = args.next() {
         match arg.as_str() {
             "--help" | "-h" => {
@@ -50,6 +55,19 @@ fn run() -> klem::dictionary::Result<()> {
                 return Ok(());
             }
             "--format" => format = args.next().ok_or("--format needs jsonl or text")?,
+            "--suggest-spacing" => suggest_spacing = true,
+            "--spacing-limit" | "--spacing-probes" | "--spacing-max-chars" => {
+                spacing_options = true;
+                let value = args
+                    .next()
+                    .ok_or("spacing limits need an integer")?
+                    .parse()?;
+                match arg.as_str() {
+                    "--spacing-limit" => spacing_limits.alternatives = value,
+                    "--spacing-probes" => spacing_limits.segment_probes = value,
+                    _ => spacing_limits.token_chars = value,
+                }
+            }
             "--dict-only" => dict_only = true,
             "--dict-compatible" => dict_compatible = true,
             "--dictionary" => {
@@ -79,6 +97,12 @@ fn run() -> klem::dictionary::Result<()> {
     }
     if !matches!(format.as_str(), "jsonl" | "text") {
         return Err("--format must be jsonl or text".into());
+    }
+    if spacing_options && !suggest_spacing {
+        return Err("spacing limits require --suggest-spacing".into());
+    }
+    if suggest_spacing && dictionary_path.is_none() {
+        return Err("--suggest-spacing requires --dictionary <db>".into());
     }
     if (dict_only || dict_compatible) && dictionary_path.is_none() {
         return Err(if dict_compatible {
@@ -112,6 +136,18 @@ fn run() -> klem::dictionary::Result<()> {
             let mut result = engine.analyze_word(&word)?;
             if format == "jsonl" {
                 if let Some(session) = &mut dictionary_session {
+                    let spacing = if suggest_spacing {
+                        let mut words = Session::new(engine.clone(), budget);
+                        Some(klem::spacing::suggest(
+                            &mut words,
+                            session,
+                            &word,
+                            0,
+                            spacing_limits,
+                        )?)
+                    } else {
+                        None
+                    };
                     let mut annotation = session.annotate(&result)?;
                     if let Some(policy) = filter {
                         annotation.filter(&mut result, policy);
@@ -121,6 +157,7 @@ fn run() -> klem::dictionary::Result<()> {
                         &Annotated {
                             record: &result,
                             dictionary: Some(annotation),
+                            spacing,
                         },
                     )?;
                 } else {
@@ -150,9 +187,26 @@ fn run() -> klem::dictionary::Result<()> {
                 None | Some("-") => Box::new(io::stdin().lock()),
                 Some(path) => Box::new(File::open(path)?),
             };
+            let mut spacing_words = suggest_spacing.then(|| Session::new(engine.clone(), budget));
             let mut session = Session::new(engine, budget);
             klem::analyze_reader(reader, &mut session, |mut record| {
                 if let Some(dictionary) = &mut dictionary_session {
+                    let spacing = if record.kind == klem::TokenKind::Word
+                        && let Some(words) = &mut spacing_words
+                    {
+                        Some(
+                            klem::spacing::suggest(
+                                words,
+                                dictionary,
+                                &record.surface,
+                                record.span.start,
+                                spacing_limits,
+                            )
+                            .map_err(io::Error::other)?,
+                        )
+                    } else {
+                        None
+                    };
                     let mut annotation = record
                         .analysis
                         .as_ref()
@@ -171,6 +225,7 @@ fn run() -> klem::dictionary::Result<()> {
                         &Annotated {
                             record: &record,
                             dictionary: annotation,
+                            spacing,
                         },
                     )?;
                     writeln!(out)

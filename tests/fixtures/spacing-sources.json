@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-020p",
+  "before_revision": "73c8515",
+  "attribution": "National Institute of Korean Language KRDict pinned September 2026 native LMF exports. RelatedForm and non-English equivalents omitted.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "native_fixture": "tests/fixtures/krdict-spacing.json",
+  "entry_ids": [
+    15983,
+    17199,
+    26847,
+    27500,
+    27525,
+    27833,
+    27929,
+    27932,
+    28454,
+    28764,
+    31665,
+    31670,
+    48214,
+    50189,
+    50193,
+    50559,
+    58272,
+    61190,
+    62103,
+    62171,
+    62249,
+    62575,
+    62579,
+    62595,
+    62888,
+    62899,
+    68752,
+    68756,
+    68795,
+    68796,
+    68797,
+    70060,
+    71468,
+    73276,
+    73277,
+    77243,
+    84991,
+    86079,
+    86118,
+    86232,
+    86264,
+    87964,
+    89697,
+    89858,
+    90912,
+    92457,
+    600512
+  ],
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "source_observation": {
+    "entry_id": 86079,
+    "sense_id": "2",
+    "example_group": 5,
+    "original": "결혼을하라느니",
+    "native_group": {
+      "feat": [
+        {
+          "att": "type",
+          "val": "대화"
+        },
+        {
+          "att": "example",
+          "val": "주변에서 결혼을하라느니 혼자 살라느니 말이 많네."
+        },
+        {
+          "att": "example",
+          "val": "물어보는 본인들은 어떻게 했다니?"
+        }
+      ]
+    },
+    "case_id": "spacing-native-86079-2-5",
+    "judgment_id": "segmentation",
+    "input_unchanged": true
+  },
+  "primary_spacing_reference": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&pageIndex=1&qna_seq=324061",
+  "judgments": {
+    "required": 14,
+    "forbidden": 6
+  },
+  "scope": "Separate opt-in dictionary-backed case-phrase(s) then lexical-predicate spacing hypotheses. Case/topic/plural/nominalization/contraction structures are inherited from the existing word engine; no arbitrary particle is made an auxiliary connector. Each original substring retains independent word alternatives.",
+  "limitations": [
+    "No ranking or contextual sentence validation. Extra dictionary-backed partitions remain unjudged rather than silently suppressed.",
+    "Complete means complete for this template and connected dictionary within reported limits, not all Korean word segmentation.",
+    "Unknown dictionary vocabulary, bare noun/topic/adverb word splitting and general sentence parsing remain separate coverage work.",
+    "Limits are explicit and configurable; original word analyses, cache results and UTF-8 spans remain unchanged."
+  ]
+}

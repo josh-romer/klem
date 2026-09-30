@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "review_status": "Agent-authored structural inferences from primary NIKL sources; independent Korean-language review pending.",
+  "attribution": "KRDict lexical fixtures: National Institute of Korean Language, CC BY-SA 2.0 KR; complete primary entries, English equivalents only. External grammar references are not fabricated KRDict entries.",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "entry_ids": [
+    15722,
+    15983,
+    17186,
+    17203,
+    26847,
+    27500,
+    28764,
+    31670,
+    45157,
+    46165,
+    50557,
+    58272,
+    61190,
+    62171,
+    62249,
+    62657,
+    62888,
+    62899,
+    64358,
+    64511,
+    64703,
+    66585,
+    68752,
+    69471,
+    69478,
+    69579,
+    70060,
+    71581,
+    71583,
+    72578,
+    73277,
+    74104,
+    77243,
+    77245,
+    79033,
+    82136,
+    86118,
+    86232,
+    89445,
+    89534,
+    89917,
+    92457
+  ],
+  "primary_examples": [
+    {
+      "case_id": "optsi-source-open",
+      "surface": "주옵시고",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=503872"
+    },
+    {
+      "case_id": "optsi-source-eu",
+      "surface": "깊으옵시어",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=431790"
+    },
+    {
+      "case_id": "optsi-source-saop",
+      "surface": "깊사옵시고",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=185242"
+    },
+    {
+      "case_id": "optsi-source-bundle",
+      "surface": "하옵시고",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=315692"
+    }
+  ],
+  "primary_attachment_reviews": [
+    {
+      "sense_no": 503872,
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=503872",
+      "notes_paraphrase": "After bare vowel or ㄹ stems, before other endings; a bundled stronger subject honorific.",
+      "source_html_sha256": "0bd0d2e682591598d99480ae9c46e3a77b5b632e6730edc66a952b96a602ab49"
+    },
+    {
+      "sense_no": 431790,
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=431790",
+      "notes_paraphrase": "After non-ㄹ consonant stems or past/modal markers, before other endings; a bundled stronger subject honorific.",
+      "source_html_sha256": "bad5a863d551c93453f4c61bfabec4d897a944904cca574a8f6f1ebef718b999"
+    },
+    {
+      "sense_no": 185242,
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=185242",
+      "notes_paraphrase": "After consonant stems or past/modal markers, before other endings; a bundled humble subject honorific.",
+      "source_html_sha256": "c10eb862fd71f14c893ab8c942d798506106e127e690ed643227f485f663b8a1"
+    }
+  ],
+  "required": 132,
+  "forbidden": 35,
+  "remaining": "COV-017az: modern 자옵 lexical restrictions, additional licensed ending combinations and independent Korean review remain open.",
+  "draft_corrections": "docs/optsi-draft-corrections.json"
+}

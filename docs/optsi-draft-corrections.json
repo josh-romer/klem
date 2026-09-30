@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "status": "Draft correction before adoption; prior committed judgments unchanged. Independent Korean review pending.",
+  "corrections": [
+    {
+      "draft": {
+        "id": "optsi-past-intention",
+        "surface": "하옵셨으려고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵시",
+              "었",
+              "으려고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "optsi-eu",
+            "reason": "Only this exact path is forbidden: it violates a reviewed stem/allomorph boundary, repeats the polite/honorific position, or breaks the following ending’s existing tense/modal/mood license. Unknown lexical stems and other analyses remain visible."
+          }
+        ]
+      },
+      "reviewed": {
+        "id": "optsi-past-rhetorical",
+        "surface": "하옵셨으려고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵시",
+              "었",
+              "으려고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "required",
+            "source": "ryeogo-rhetorical",
+            "reason": "Corrected draft: KRDict 69067 sense 3 explicitly licenses past on the final rhetorical homonym. Bundle + past is a morphological inference, not certification of contextual register or sense."
+          }
+        ]
+      },
+      "replacement_negative": {
+        "id": "optsi-past-intention",
+        "surface": "하옵셨으려다가",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵시",
+              "었",
+              "으려다가"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "optsi-eu",
+            "reason": "The reviewed intention connective 으려다가 permits honorific but excludes past on its owner. The rhetorical homonym of 으려고 does not license this separate ending."
+          }
+        ]
+      },
+      "reason": "The draft conflated the intention connective with the final rhetorical homonym. KRDict 69067 sense 3 expressly permits past. Preserve that candidate and separately test the narrower connective and direct finite auxiliary boundary."
+    },
+    {
+      "draft": {
+        "id": "optsi-modal-present",
+        "surface": "하옵시겠신다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵시",
+              "겠",
+              "는다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "optsi-eu",
+            "reason": "Only this exact path is forbidden: it violates a reviewed stem/allomorph boundary, repeats the polite/honorific position, or breaks the following ending’s existing tense/modal/mood license. Unknown lexical stems and other analyses remain visible."
+          }
+        ]
+      },
+      "reviewed": {
+        "id": "optsi-modal-present",
+        "surface": "하옵시겠는다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵시",
+              "겠",
+              "는다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "optsi-eu",
+            "reason": "The following present declarative ending licenses subject honorific but excludes the stated past/modal component. Use the actual consonant-stem 는다 allomorph so this tests ordering rather than a spelling mismatch; unknown lexical alternatives remain visible."
+          }
+        ]
+      },
+      "reason": "Strengthened negative surface: the draft inserted an extra 시 before ㄴ다 and could fail solely on spelling. The corrected surface isolates the present-ending prefinal license, with the same forbidden path and judgment counts."
+    },
+    {
+      "draft": {
+        "id": "optsi-past-present",
+        "surface": "하옵셨신다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵시",
+              "었",
+              "는다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "optsi-eu",
+            "reason": "Only this exact path is forbidden: it violates a reviewed stem/allomorph boundary, repeats the polite/honorific position, or breaks the following ending’s existing tense/modal/mood license. Unknown lexical stems and other analyses remain visible."
+          }
+        ]
+      },
+      "reviewed": {
+        "id": "optsi-past-present",
+        "surface": "하옵셨는다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵시",
+              "었",
+              "는다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "optsi-eu",
+            "reason": "The following present declarative ending licenses subject honorific but excludes the stated past/modal component. Use the actual consonant-stem 는다 allomorph so this tests ordering rather than a spelling mismatch; unknown lexical alternatives remain visible."
+          }
+        ]
+      },
+      "reason": "Strengthened negative surface: the draft inserted an extra 시 before ㄴ다 and could fail solely on spelling. The corrected surface isolates the present-ending prefinal license, with the same forbidden path and judgment counts."
+    }
+  ]
+}

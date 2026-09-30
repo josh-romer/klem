@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const optsi = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-optsi.json"), "utf8"));
   const humble = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-humble.json"), "utf8"));
   const nira = JSON.parse(
     await readFile(resolve(root, "tests/fixtures/krdict-nira.json"), "utf8"),
@@ -331,6 +332,7 @@ try {
       ...vocative.LexicalResource.Lexicon.LexicalEntry,
       ...nira.LexicalResource.Lexicon.LexicalEntry,
       ...polite.LexicalResource.Lexicon.LexicalEntry,
+      ...optsi.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -2294,6 +2296,62 @@ try {
   await page.setViewportSize({width: 390, height: 844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-humble-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Bundled literary honorific prefinals preserve component identity and references.
+  const optsiCases = recipientLedger.cases.filter(c => c.id.startsWith("optsi-"));
+  assert.equal(optsiCases.length, 167);
+  for (const c of optsiCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) {
+      const index = token.analysis.analyses.findIndex(a =>
+        JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const optsiText = "주옵시고 깊으옵시어 깊사옵시고 하옵셨다 먹어주옵시고 학생답사옵시고";
+  const optsiData = await (await post("analyze", {text: optsiText})).json();
+  assert.deepEqual(optsiData.grammar["-으옵시-"], []);
+  assert.deepEqual(optsiData.grammar["-사옵시-"], []);
+  await submit(page, optsiText); await waitHeading(page, "주옵시고");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms, key] of [
+    [0, ["주", "으옵시", "고"], "-으옵시-"],
+    [1, ["깊", "으옵시", "어"], "-으옵시-"],
+    [2, ["깊", "사옵시", "고"], "-사옵시-"],
+    [3, ["하", "으옵시", "었", "다"], "-으옵시-"],
+    [4, ["먹", "어", "주", "으옵시", "고"], "-으옵시-"],
+    [5, ["학생", "답", "사옵시", "고"], "-사옵시-"],
+  ]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, forms.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    const part = word.locator(".breakdown-part").filter({has: page.locator('.part-form', {hasText: new RegExp(`^${key.slice(1, -1)}$`)})});
+    assert.equal(await part.locator(".part-gloss").innerText(), grammarLabels[key].label);
+    assert.equal(await part.isDisabled(), true);
+    const references = word.getByRole("link", {name: "Grammar source", exact: true});
+    assert.equal(await references.count(), grammarLabels[key].references.length);
+    for (let r = 0; r < grammarLabels[key].references.length; r++) {
+      assert.equal(await references.nth(r).getAttribute("href"), grammarLabels[key].references[r].url);
+      assert.equal(await references.nth(r).getAttribute("target"), "_blank");
+      assert.equal(await references.nth(r).getAttribute("rel"), "noreferrer");
+    }
+  }
+  const optsiDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const optsiExport = JSON.parse(await readFile(await (await optsiDownload).path(), "utf8"));
+  const optsiExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: optsiText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(optsiExport.records, optsiExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-optsi-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-optsi-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Literary assertions retain distinct forms, copulas and lexical homonyms.

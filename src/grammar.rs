@@ -1375,6 +1375,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.humble_sap" => {
             "Recover the separate literary humble 삽 paradigm after a consonant stem or past/modal marker, before a consonant-initial ending. No vowel allomorph is inferred."
         }
+        "prefinal.honorific_polite" => {
+            "Recover the NIKL literary honorific bundle (으)옵시 or 사옵시 as one prefinal, keeping its stem boundary and tense/modal ownership separate from the 옵소서 final bundle."
+        }
         "prefinal.obligation" => {
             "Recover the intention or necessity expression -아/어/여야겠- as one prefinal-position bundle, without inserting an implicit 하다."
         }
@@ -1574,6 +1577,8 @@ mod label_tests {
             "으옵",
             "사옵",
             "삽",
+            "으옵시",
+            "사옵시",
         ] {
             forms.insert(format!("-{form}-"), Prefinal);
         }

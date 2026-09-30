@@ -1050,10 +1050,22 @@ review remains open under the completion review below.
   and 130 stable `humble-*` cases (96 required, 34 forbidden) are tracked in
   [tests](../tests/humble.rs) and the [source fixture](../tests/fixtures/humble-sources.json).
   Their teaching labels link actual external entries without invented KRDict IDs.
-  General 옵시/으옵시/사옵시, modern 자옵 lexical restrictions, additional
+  Bundled 옵시/으옵시 and distinct 사옵시 now retain one prefinal component,
+  local spelling ownership and source-listed earlier past/modal licenses. Four
+  primary tokens and 167 stable `optsi-*` cases (132 required, 35 forbidden)
+  are tracked in [tests](../tests/optsi.rs) and the
+  [source fixture](../tests/fixtures/optsi-sources.json). The
+  [draft correction](optsi-draft-corrections.json) preserves the past-permitting
+  rhetorical 으려고 sense while testing the narrower intention construction.
+  Wider bundled combinations, modern 자옵 lexical restrictions, additional
   source-listed following endings and their licensed combinations remain open.
   See [basic evaluation](polite-evaluation.json) and
-  [humble evaluation](humble-evaluation.json); this row remains incomplete.
+  [humble evaluation](humble-evaluation.json) and
+  [bundle evaluation](optsi-evaluation.json). The bundle probe comparison adds
+  568 candidates across 140 of 9,276 surfaces without removals; 439 are unjudged.
+  All four frozen corpus reports are byte-identical. The full novel adds one
+  morphological path for 하옵시고 under each dictionary filter; its contextual
+  interpretation remains unjudged. This row remains incomplete.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

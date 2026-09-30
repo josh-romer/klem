@@ -1542,3 +1542,15 @@ context. Basic polite recovery adds a partial 내쉬다 match, while the annotat
 two-lemma group remains unrecovered. The test preserves this disagreement and
 the nominal 내쉬 + 와 alternative; it does not certify the new partial match
 as a contextually correct analysis or repair the gold annotation.
+
+`optsi-sources.json` records four direct primary tokens and attachment notes for
+bundled (으)옵시 and 사옵시. The 167 `optsi-*` cases require 132 exact paths
+and forbid 35; the inferred following-ending matrix is not contextual gold.
+`krdict-optsi.json` preserves 42 complete primary lexical entries with English
+equivalents under the KRDict CC BY-SA 2.0 KR attribution above. Grammar references
+point to actual 우리말샘 entries instead of fabricated KRDict IDs. Tests cover
+NFD/identity, raw and both dictionary-filter results, spelling-owner indices,
+auxiliary/답다/copula composition, reference links and browser JSON export parity.
+`docs/optsi-draft-corrections.json` preserves the draft confusion between the
+past-permitting rhetorical 으려고 sense and the narrower intention construction.
+Earlier committed judgments are unchanged. COV-017az remains incomplete.

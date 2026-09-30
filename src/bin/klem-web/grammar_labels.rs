@@ -166,7 +166,7 @@ mod tests {
                 .unwrap()
                 .is_empty()
         );
-        for key in ["-사옵-", "-삽-"] {
+        for key in ["-사옵-", "-삽-", "-으옵시-", "-사옵시-"] {
             assert!(catalog()[key].sources.is_empty());
             assert!(
                 lookup(&mut session, MorphemeKind::Prefinal, key)

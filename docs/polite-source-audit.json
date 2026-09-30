@@ -133,7 +133,7 @@
         "으옵시",
         "사옵시"
       ],
-      "work": "Implement bundled honorific paradigm and source-backed attachment/order/ending tests; include primary-reference browser labels because these primary headwords are absent from KRDict."
+      "work": "The bundled honorific paradigm and 167 structural attachment/order/ending cases are implemented in tests/optsi.rs. Broader combinations and independent contextual/register review remain open; primary-reference labels do not create KRDict entries."
     },
     {
       "forms": [
@@ -248,5 +248,20 @@
     "primary_examples": 5,
     "full_native_lexical_entries": 30,
     "interpretation": "Direct attestations and inferred structural cases remain distinguished. No contextual precision or exhaustive following-ending claim."
+  },
+  "implemented_bundled_honorific": {
+    "canonical_prefinals": [
+      "으옵시",
+      "사옵시"
+    ],
+    "source_fixture": "tests/fixtures/optsi-sources.json",
+    "ledger_cases": 167,
+    "required": 132,
+    "forbidden": 35,
+    "primary_examples": 4,
+    "full_native_lexical_entries": 42,
+    "boundary": "Existing vowel/ㄹ versus other-consonant recovery for (으)옵시; closed-stem 사옵시 retains ㄹ. Local irregular spelling hypotheses stay owned by the actual boundary.",
+    "order": "Closed bundles explicitly admit earlier past/modal, and allow following endings. Consume one polite quota across the bundle; retain at most two past markers and existing following-ending licenses.",
+    "interpretation": "Direct primary examples and inferred structural matrices are distinguished. The rhetorical 으려고 past license is preserved; narrower intention composition is separately tested. No independent contextual precision claim."
   }
 }

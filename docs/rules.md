@@ -22,6 +22,7 @@ lookup table. `src/grammar.rs` holds endings and spelling transformations;
 | ㄹ deletion | 사는, 삽니다, 사세요, 사니까, 사느냐 |
 | Prefinal order | honorific → past (up to twice) → 겠 → polite → 더 → terminal; ending-specific licenses apply |
 | Literary polite prefinal | 읽으옵고, 하시오니, 먹었으옵고; canonical 으옵 |
+| Bundled literary honorifics | 주옵시고, 깊으옵시어; canonical 으옵시. 깊사옵시고; distinct 사옵시 |
 | Literary humble prefinals | 믿사옵고, 알사옵니다; canonical 사옵. 먹삽고; distinct 삽 |
 | Literary formal final bundle | 드리오리다, 떠나오리다, 먹으오리다; canonical 으리다 |
 | Ending allomorphs | 먹으리라 / 가리라; interrogative 먹니 / connective 먹으니 |
@@ -35,7 +36,7 @@ lookup table. `src/grammar.rs` holds endings and spelling transformations;
 | Demonstrative contractions | 이게/그게/저게, 이건/그건/저건, 이걸/그걸/저걸, 뭘 |
 | Outer particles | 저도요, 친구는요, 빨리요, 빨리들, 먹어들 |
 
-Prefinal traversal decreases grammatical stage or consumes a past-marker slot.
+Prefinal traversal decreases grammatical stage or consumes a finite past/polite slot.
 Particle traversal consumes input with finite ordering rules. Auxiliary analysis
 stores shared links between shorter input prefixes, reuses equal suffix recoveries,
 and expands final paths iteratively. It does not cache copies of entire chains.
@@ -57,9 +58,28 @@ The separate 삽 paradigm has no vowel allomorph and precedes consonant-initial
 endings: `믿었삽더니 → 믿다 + 었 + 삽 + 더니`. The immediate consonant
 boundary does not create vowel-irregular spelling requirements. Earlier
 honorific/past/modal components and auxiliary/답다 owners stay separate; the
-polite slot cannot repeat. Additional source-listed final forms, bundled 옵시
-and modern 자옵 restrictions remain open in the [source audit](polite-source-audit.json).
-These rules do not choose contextual intent or speech register.
+polite slot cannot repeat. Additional source-listed final forms and modern 자옵 restrictions remain open
+in the [source audit](polite-source-audit.json).
+NIKL treats [옵시](https://opendict.korean.go.kr/dictionary/view?sense_no=503872)
+and [으옵시](https://opendict.korean.go.kr/dictionary/view?sense_no=431790) as a
+single stronger subject-honorific prefinal, represented as canonical 으옵시.
+It uses the existing vowel/ㄹ versus other-consonant boundary and local spelling
+hypotheses. [사옵시](https://opendict.korean.go.kr/dictionary/view?sense_no=185242)
+stays distinct and retains consonant codas, including ㄹ. The closed variants
+explicitly permit preceding 었/겠; following tense/modal components remain
+separate, e.g. `하옵셨다 → 하다 + 으옵시 + 었 + 다`. Recovery consumes the
+polite slot even when it returns to an earlier tense/modal stage, so another
+polite prefinal cannot repeat across the bundle. Direct earlier 시 is excluded;
+an earlier 시 owned through a licensed past boundary remains separate.
+The bundle occupies existing subject-honorific licenses without removing an
+ending's independent tense/modal restrictions. Following-ending combinations
+are agent-authored structural inferences, not independent register judgments.
+The final rhetorical 으려고 sense retains its past license; the narrower
+intention connective and direct finite 으려고 하다 boundary do not inherit it.
+See [regressions](../tests/optsi.rs), [primary evidence](../tests/fixtures/optsi-sources.json)
+and [draft correction](optsi-draft-corrections.json). Grammar labels link real
+primary pages and do not create KRDict entries. These rules do not choose
+contextual intent or speech register.
 
 Lexical membership in an irregular class remains a hypothesis. For example,
 `들어` admits `들다` and `듣다`. Some generated stems may not exist in dictionaries.

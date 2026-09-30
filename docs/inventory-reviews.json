@@ -10589,7 +10589,7 @@
         "COV-018l"
       ],
       "scope": "Observed KAIST 편마다에도 → 편 + 마다 + 에 + 도 is currently unrecovered. The complete source sentence and grammar-source review are retained for investigation.",
-      "remaining": "Linguistic acceptability, distribution and register remain unresolved; this observation is neither required nor forbidden. Read full distribution evidence and obtain Korean review before generalizing 마다 + 에.",
+      "remaining": "Linguistic acceptability, lexical/semantic distribution and regional/register scope remain unresolved. A six-file train/dev/test search finds only the original KAIST occurrence. Full distribution and regional primary sources still need retrieval and Korean review before generalizing 마다 + 에; no required/forbidden judgment is assigned.",
       "evidence": [
         {
           "path": "docs/range-case-evaluation.json"
@@ -10600,6 +10600,9 @@
         },
         {
           "path": "tests/fixtures/kaist-range-case.conllu"
+        },
+        {
+          "path": "docs/mada-distribution-audit.json"
         }
       ],
       "judgments": []

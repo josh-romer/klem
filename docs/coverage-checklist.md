@@ -1170,8 +1170,11 @@ review remains open under the completion review below.
   attachment but does not settle following case marking. The primary paper's
   abstract links distribution to semantic restrictions; the full distribution
   evidence and Korean review are still needed. This observed gap is neither
-  a required nor forbidden candidate judgment. See the named followup and
-  bibliography in [the review](range-case-evaluation.json).
+  a required nor forbidden candidate judgment. A [six-file discovery audit](mada-distribution-audit.json)
+  finds only that original occurrence across pinned train/dev/test partitions,
+  records current filter behavior, and tracks primary full-text retrieval and
+  regional-distribution leads. See the named followup and bibliography in
+  [the review](range-case-evaluation.json).
 
 - [x] **COV-018m — Comparison and extent particles.** Noun-attached 토록
   and 마냥, noun/particle 만치, and explicit 어서 + 만치/만큼 now compose

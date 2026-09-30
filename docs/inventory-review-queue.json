@@ -27,7 +27,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "b012b6b1d9f92b0f47e938e8c2cf82d43abf3ff543d7fa11a37016c5af65e2e1",
+    "docs/coverage-checklist.md": "714610a981c837a2e1738e9d934d83af78133b464d6b72151f04e220f31fd5a7",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
     "docs/danikka-evaluation.json": "a96097a93cd994b8f1b4dde8a91803e08f1a93300956547f2283e60ccf9999e4",
@@ -45,11 +45,12 @@
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
     "docs/inventory-audit.md": "0cfc06abfd529d4cc7c5262954c80ec530d44401b06e57ca668ce2f464f6c37a",
-    "docs/inventory-reviews.json": "e5ac48979bf116c1418d1e938767890813c4514349d5a2f60082931c3bc84be6",
+    "docs/inventory-reviews.json": "76329b019f846a75be18d300baacbf6f015b14792118f01d3cfba9dd4db44af8",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
     "docs/kkaena-evaluation.json": "75eae3076010f48d2c0ba96ccef4ca0f4a84d363010a09d998e1840eb3ceca41",
     "docs/llachimyeon-evaluation.json": "086132bdac962ca93a716841860e9b80695d9dfde5874675c9661f944211abba",
     "docs/llago-evaluation.json": "2d55ea7bee715911fc19ae1bf3163334a0567755208dd02784e524819d67bb9c",
+    "docs/mada-distribution-audit.json": "19103d04c36ce9f526f1287ef33989f0c806958319c67dcd5ad895cc19058a8f",
     "docs/necessity-ending-evaluation.json": "68069546cd18497fd18878e6cc30cef8d010f0a3efcc288a03f249278953daad",
     "docs/neura-evaluation.json": "e40b3af8428a663d83ba0d34f035a704bbd9d44b6e4f38b28d6508d7668952d9",
     "docs/nira-evaluation.json": "f5104870a3be746d817dc91c710b38c082ba8ded9a85bc685181a0c62c4ddea7",
@@ -60,7 +61,7 @@
     "docs/question-copula-evaluation.json": "cdb143dfc27c253b3c87f875b6c010fae684c05f8e08dbb6dce5325577bd9d54",
     "docs/quoted-bakke-evaluation.json": "d2c6f0a36b1ca2434e63b56882a4d95457f388b3db73f1b40d43aa8d25701829",
     "docs/ra-condition-evaluation.json": "0817e9fdc9ee882146264d6289acaf33831f5c41a5496aabb5a1cec3bf500876",
-    "docs/range-case-evaluation.json": "8b8a7899117a8a515954311e116645fbfc3cdb474ecc166348348b5558f40fc2",
+    "docs/range-case-evaluation.json": "6cc9bb661e750c25256d528a27c1ea8fd75b46c8d0b8d44b37ed5a4310719b37",
     "docs/report-myeo-evaluation.json": "f989e221a0cbec6480bf944fa6c369eb9a2abd23a15a75a054209b5fc829a7e3",
     "docs/report-ne-evaluation.json": "8d28d2e754686d1f19f33057772de046f5d0b1a35c4314920247a285e046aa1b",
     "docs/report-ni-evaluation.json": "67e24c6258712fe074b57efbb7bc67bf067b965c035ebf2b7e6e5ca09196022f",
@@ -69792,7 +69793,7 @@
           "COV-018l"
         ],
         "scope": "Observed KAIST 편마다에도 → 편 + 마다 + 에 + 도 is currently unrecovered. The complete source sentence and grammar-source review are retained for investigation.",
-        "remaining": "Linguistic acceptability, distribution and register remain unresolved; this observation is neither required nor forbidden. Read full distribution evidence and obtain Korean review before generalizing 마다 + 에.",
+        "remaining": "Linguistic acceptability, lexical/semantic distribution and regional/register scope remain unresolved. A six-file train/dev/test search finds only the original KAIST occurrence. Full distribution and regional primary sources still need retrieval and Korean review before generalizing 마다 + 에; no required/forbidden judgment is assigned.",
         "evidence": [
           {
             "path": "docs/range-case-evaluation.json"
@@ -69803,6 +69804,9 @@
           },
           {
             "path": "tests/fixtures/kaist-range-case.conllu"
+          },
+          {
+            "path": "docs/mada-distribution-audit.json"
           }
         ],
         "judgments": []

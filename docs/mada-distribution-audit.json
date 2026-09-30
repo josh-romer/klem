@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-018l",
+  "status": "Distribution unresolved; discovery evidence expanded without changing generation or correctness judgments.",
+  "reviewed_at": "2026-09-29",
+  "revision": "72efedb",
+  "scope": "Exact substring 마다에 in all six pinned KAIST/GSD train/dev/test files; source and current raw/headword/compatible behavior for eight probes. This does not cover other spellings, corpora, omitted particles or lexical/semantic distribution.",
+  "corpus_search": {
+    "substring": "마다에",
+    "matching_rows": 1,
+    "files": [
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+        "sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "hits": []
+      },
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+        "sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+        "hits": []
+      },
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+        "sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+        "hits": []
+      },
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+        "sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "hits": [
+          {
+            "sent_id": "MH2_0159-s285",
+            "rows": [
+              [
+                "15",
+                "편마다에도",
+                "편+마다+에+도",
+                "ADV",
+                "ncn+jxc+jca+jxc",
+                "_",
+                "17",
+                "advcl",
+                "_",
+                "Translit=.pyeon.ma.da.e.do|LTranslit=.pyeon+.ma.da+.e+.do"
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+        "sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+        "hits": []
+      },
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+        "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+        "hits": []
+      }
+    ],
+    "existing_fixture": "tests/fixtures/kaist-range-case.conllu",
+    "existing_observation_test": "range_case_particles_recover_annotated_history",
+    "source_annotation_policy": "Retain MH2_0159-s285/15 unchanged. Its ADV ncn+jxc+jca+jxc segmentation is evidence of an annotated occurrence, not independent acceptability validation."
+  },
+  "dictionary": {
+    "entry_id": "krdict:70331",
+    "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70331",
+    "headword": "마다",
+    "pos": "조사",
+    "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+    "attachment_notes": [
+      "명사 뒤에 붙여 쓴다."
+    ],
+    "sense_count": 2,
+    "finding": "Both senses retain noun attachment; neither supplies a following-case license. The source examples do not resolve 마다 + 에."
+  },
+  "probes": [
+    {
+      "surface": "편마다",
+      "target_lemma": {
+        "text": "편",
+        "kind": "nominal"
+      },
+      "target_morphemes": [
+        {
+          "form": "마다",
+          "kind": "particle"
+        }
+      ],
+      "judgment": "unjudged discovery probe; generated presence is not grammatical acceptability",
+      "raw": {
+        "target_present": true,
+        "candidate_count": 8
+      },
+      "--dict-only": {
+        "target_present": true,
+        "candidate_count": 1
+      },
+      "--dict-compatible": {
+        "target_present": true,
+        "candidate_count": 1
+      }
+    },
+    {
+      "surface": "편마다도",
+      "target_lemma": {
+        "text": "편",
+        "kind": "nominal"
+      },
+      "target_morphemes": [
+        {
+          "form": "마다",
+          "kind": "particle"
+        },
+        {
+          "form": "도",
+          "kind": "particle"
+        }
+      ],
+      "judgment": "unjudged discovery probe; generated presence is not grammatical acceptability",
+      "raw": {
+        "target_present": true,
+        "candidate_count": 9
+      },
+      "--dict-only": {
+        "target_present": true,
+        "candidate_count": 1
+      },
+      "--dict-compatible": {
+        "target_present": true,
+        "candidate_count": 1
+      }
+    },
+    {
+      "surface": "편마다에",
+      "target_lemma": {
+        "text": "편",
+        "kind": "nominal"
+      },
+      "target_morphemes": [
+        {
+          "form": "마다",
+          "kind": "particle"
+        },
+        {
+          "form": "에",
+          "kind": "particle"
+        }
+      ],
+      "judgment": "unjudged discovery probe; generated presence is not grammatical acceptability",
+      "raw": {
+        "target_present": false,
+        "candidate_count": 4
+      },
+      "--dict-only": {
+        "target_present": false,
+        "candidate_count": 0
+      },
+      "--dict-compatible": {
+        "target_present": false,
+        "candidate_count": 0
+      }
+    },
+    {
+      "surface": "편마다에도",
+      "target_lemma": {
+        "text": "편",
+        "kind": "nominal"
+      },
+      "target_morphemes": [
+        {
+          "form": "마다",
+          "kind": "particle"
+        },
+        {
+          "form": "에",
+          "kind": "particle"
+        },
+        {
+          "form": "도",
+          "kind": "particle"
+        }
+      ],
+      "judgment": "unjudged discovery probe; generated presence is not grammatical acceptability",
+      "raw": {
+        "target_present": false,
+        "candidate_count": 8
+      },
+      "--dict-only": {
+        "target_present": false,
+        "candidate_count": 0
+      },
+      "--dict-compatible": {
+        "target_present": false,
+        "candidate_count": 0
+      }
+    },
+    {
+      "surface": "집마다에",
+      "target_lemma": {
+        "text": "집",
+        "kind": "nominal"
+      },
+      "target_morphemes": [
+        {
+          "form": "마다",
+          "kind": "particle"
+        },
+        {
+          "form": "에",
+          "kind": "particle"
+        }
+      ],
+      "judgment": "unjudged discovery probe; generated presence is not grammatical acceptability",
+      "raw": {
+        "target_present": false,
+        "candidate_count": 4
+      },
+      "--dict-only": {
+        "target_present": false,
+        "candidate_count": 0
+      },
+      "--dict-compatible": {
+        "target_present": false,
+        "candidate_count": 0
+      }
+    },
+    {
+      "surface": "집마다에는",
+      "target_lemma": {
+        "text": "집",
+        "kind": "nominal"
+      },
+      "target_morphemes": [
+        {
+          "form": "마다",
+          "kind": "particle"
+        },
+        {
+          "form": "에",
+          "kind": "particle"
+        },
+        {
+          "form": "는",
+          "kind": "particle"
+        }
+      ],
+      "judgment": "unjudged discovery probe; generated presence is not grammatical acceptability",
+      "raw": {
+        "target_present": false,
+        "candidate_count": 13
+      },
+      "--dict-only": {
+        "target_present": false,
+        "candidate_count": 0
+      },
+      "--dict-compatible": {
+        "target_present": false,
+        "candidate_count": 0
+      }
+    },
+    {
+      "surface": "학생마다",
+      "target_lemma": {
+        "text": "학생",
+        "kind": "nominal"
+      },
+      "target_morphemes": [
+        {
+          "form": "마다",
+          "kind": "particle"
+        }
+      ],
+      "judgment": "unjudged discovery probe; generated presence is not grammatical acceptability",
+      "raw": {
+        "target_present": true,
+        "candidate_count": 8
+      },
+      "--dict-only": {
+        "target_present": true,
+        "candidate_count": 1
+      },
+      "--dict-compatible": {
+        "target_present": true,
+        "candidate_count": 1
+      }
+    },
+    {
+      "surface": "학생마다에게",
+      "target_lemma": {
+        "text": "학생",
+        "kind": "nominal"
+      },
+      "target_morphemes": [
+        {
+          "form": "마다",
+          "kind": "particle"
+        },
+        {
+          "form": "에게",
+          "kind": "particle"
+        }
+      ],
+      "judgment": "unjudged discovery probe; generated presence is not grammatical acceptability",
+      "raw": {
+        "target_present": false,
+        "candidate_count": 6
+      },
+      "--dict-only": {
+        "target_present": false,
+        "candidate_count": 0
+      },
+      "--dict-compatible": {
+        "target_present": false,
+        "candidate_count": 0
+      }
+    }
+  ],
+  "primary_research": [
+    {
+      "title": "Yoo, Hyun-Kyung (2007), 조사 마다의 의미와 분포",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001059464",
+      "doi": "10.15811/jkl.2007..49.005",
+      "access": "Author abstract and bibliographic record read; full distribution section remains unavailable.",
+      "finding": "The abstract links distributive semantics to noun attachment and distribution; it does not settle following locative marking.",
+      "retrieval_leads": [
+        {
+          "url": "https://www.riss.or.kr/search/detail/DetailView.do?control_no=6c35c686e85df48ed18150b21a227875&keyword=&p_mat_type=1a0202e37d52c72d",
+          "status": "Search index labels a ScienceON free-original link, but the record failed direct retrieval; full access not established."
+        },
+        {
+          "url": "https://kiss.kstudy.com/Detail/Ar?key=2632906",
+          "status": "Public bibliographic page read; full text not obtained."
+        }
+      ]
+    },
+    {
+      "title": "통일 초등 국어 교과서 개발 기초 연구집, 교육과정 및 교과서 체제 (2018-02)",
+      "url": "https://www.mirae-n.com/UPLOAD/EShop/EduN/MTM/Unity/%EA%B8%B0%EC%B4%88%20%EC%97%B0%EA%B5%AC%20%EC%9E%90%EB%A3%8C%EC%A7%91.pdf",
+      "access": "Search-index excerpt only; both web retrieval and direct publisher download timed out.",
+      "finding": "The indexed page 110 discusses -마다에(서/는) in a North/South comparison. This is a regional-distribution lead requiring full source/context review, not a basis for changing this occurrence or forbidding the construction."
+    }
+  ],
+  "decision": {
+    "generation_change": false,
+    "required_or_forbidden_judgments_added": 0,
+    "reason": "The single observed corpus form and noun-attachment dictionary notes do not establish productivity or normative/regional acceptability. The unresolved distribution evidence must not be replaced by a broad case-after-mada rule or an unsupported forbidden judgment.",
+    "next_evidence": [
+      "Obtain the 2007 paper distribution section through an authorized public/library copy or another directly applicable primary source.",
+      "Read the full 2018 regional discussion and its cited source; determine whether the current modern-South-Korean release scope includes the observed register.",
+      "Compare lexical/semantic conditions and obtain independent Korean review before assigning required/forbidden judgments."
+    ]
+  }
+}

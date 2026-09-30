@@ -310,9 +310,9 @@ impl PrefinalFollowing {
 }
 
 fn prefinal_following(suffix: &str, boundary: Boundary) -> PrefinalFollowing {
-    // NIKL explicitly attests 옵/사옵/자옵 + 나이다 despite its ㄴ onset.
-    // This final bundle's retained ㅂ does not extend to ordinary 니/면 forms.
-    if suffix == "나이다" {
+    // NIKL explicitly attests 옵/사옵 + 나이다/나이까 despite their ㄴ onset.
+    // These final combinations' retained ㅂ does not extend to ordinary 니/면.
+    if literary_na_ending(suffix) {
         return PrefinalFollowing::CONSONANT;
     }
     let vowel_boundary = matches!(
@@ -334,6 +334,11 @@ type PrefinalMemo = HashMap<(String, u8, u8, PrefinalFollowing, bool), Vec<Predi
 
 fn honorific_prefinal(form: &str) -> bool {
     matches!(form, "시" | "으옵시" | "사옵시" | "자옵시")
+}
+
+pub(crate) fn literary_na_ending(form: &str) -> bool {
+    // Only these two source-reviewed finals share this attachment class.
+    matches!(form, "나이다" | "나이까")
 }
 
 fn jaop_stem(stem: &str) -> bool {
@@ -644,9 +649,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 &mut memo,
             ) {
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
-                // NIKL 112447 licenses honorific/past/modal and the attested
+                // NIKL 112447/416361 license honorific/past/modal and attested
                 // polite families, but does not list retrospective 더.
-                if ending.form == "나이다" && p.morphs.iter().any(|m| m.form == "더") {
+                if literary_na_ending(ending.form) && p.morphs.iter().any(|m| m.form == "더") {
                     continue;
                 }
                 if ending.form == "요" {
@@ -1694,12 +1699,12 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             if bare_stative_iss && present_declarative(&m.form) {
                 return false;
             }
-            // NIKL's bare 나이다 stems are verbs or the three existential /
-            // honorific heads. Polite + 나이다 directly attests adjectives and
+            // NIKL's bare 나이다/나이까 stems are verbs or three existential /
+            // honorific heads. Polite combinations directly attest adjectives and
             // copulas, so apply this only before any prefinal intervenes.
             // Negative auxiliary class inheritance remains independently open.
             if bare
-                && m.form == "나이다"
+                && literary_na_ending(&m.form)
                 && matches!(
                     class,
                     Some(PredicateClass::Adjective | PredicateClass::Copula)
@@ -2108,9 +2113,12 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
 }
 
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
-    // Bare 나이다 is verbal/existential. Its direct copula examples instead
+    // Bare 나이다/나이까 is verbal/existential. Direct copula examples instead
     // include a polite prefinal (e.g. 소원이옵나이다); retain those paths.
-    if p.morphs.first().is_some_and(|m| m.form == "나이다") {
+    if p.morphs
+        .first()
+        .is_some_and(|m| literary_na_ending(&m.form))
+    {
         return;
     }
     // Commands and proposals are not nominal copula endings. The factual

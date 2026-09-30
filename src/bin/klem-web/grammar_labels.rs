@@ -188,5 +188,11 @@ mod tests {
                 .unwrap()
                 .is_empty()
         );
+        assert!(catalog()["-나이까"].sources.is_empty());
+        assert!(
+            lookup(&mut session, MorphemeKind::Ending, "-나이까")
+                .unwrap()
+                .is_empty()
+        );
     }
 }

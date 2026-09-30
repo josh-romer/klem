@@ -31,6 +31,7 @@ pub enum AttachmentRule {
     AuxiliaryClass,
     LiteraryAssertionClass,
     BareLiteraryDeclarative,
+    BareLiteraryQuestion,
     HabitualConditionVerb,
     BareCopularEnding,
     BareAdjectivalReport,
@@ -422,11 +423,15 @@ impl Annotation {
                                 Some(AttachmentRule::LiteraryAssertionClass)
                             }
                         } else if bare
-                            && form == "나이다"
+                            && crate::engine::literary_na_ending(form)
                             && adjective
                             && !matches!(lemma.text.as_str(), "있다" | "없다" | "계시다")
                         {
-                            Some(AttachmentRule::BareLiteraryDeclarative)
+                            Some(if form == "나이다" {
+                                AttachmentRule::BareLiteraryDeclarative
+                            } else {
+                                AttachmentRule::BareLiteraryQuestion
+                            })
                         } else if bare
                             && matches!(form, "느냐지만" | "느냐니까" | "느냬")
                             && adjective

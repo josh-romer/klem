@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const naikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-naikka.json"), "utf8"));
   const jaop = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-jaop.json"), "utf8"));
   const optsi = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-optsi.json"), "utf8"));
   const humble = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-humble.json"), "utf8"));
@@ -335,6 +336,7 @@ try {
       ...polite.LexicalResource.Lexicon.LexicalEntry,
       ...optsi.LexicalResource.Lexicon.LexicalEntry,
       ...jaop.LexicalResource.Lexicon.LexicalEntry,
+      ...naikka.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -2423,6 +2425,66 @@ try {
   await page.setViewportSize({width: 390, height: 844});
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-jaop-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Literary questions preserve prefinal components and dictionary homonyms.
+  const naikkaCases = recipientLedger.cases.filter(c => c.id.startsWith("naikka-"));
+  const naikkaPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("naikka-"));
+  assert.equal(naikkaCases.length, 147); assert.equal(naikkaPolicies.length, 11);
+  for (const [cases, policy] of [[naikkaCases, false], [naikkaPolicies, true]]) {
+    for (const c of cases) {
+      const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+      for (const j of c.judgments) {
+        const index = token.analysis.analyses.findIndex(a =>
+          JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+          && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+          && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+          && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+        assert.equal(index >= 0, policy || j.verdict === "required", c.id);
+        if (index >= 0) assert.equal(token.dictionary.readings[index].status === "incompatible", policy && j.verdict === "forbidden", c.id);
+      }
+    }
+  }
+  const naikkaText = "가시나이까 사람이옵나이까 깊사옵나이까 받자옵시나이까 먹어놓으옵나이까 학생다웠나이까 하옵셨나이까";
+  const naikkaData = await (await post("analyze", {text: naikkaText})).json();
+  assert.deepEqual(naikkaData.grammar["-나이까"], []);
+  await submit(page, naikkaText); await waitHeading(page, "가시나이까");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms, keys] of [
+    [0, ["가", "시", "나이까"], ["-나이까"]],
+    [1, ["사람", "이", "으옵", "나이까"], ["-나이까"]],
+    [2, ["깊", "사옵", "나이까"], ["-사옵-", "-나이까"]],
+    [3, ["받", "자옵시", "나이까"], ["-자옵시-", "-나이까"]],
+    [4, ["먹", "어", "놓", "으옵", "나이까"], ["-나이까"]],
+    [5, ["학생", "답", "었", "나이까"], ["-나이까"]],
+    [6, ["하", "으옵시", "었", "나이까"], ["-으옵시-", "-나이까"]],
+  ]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, forms.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    const part = word.locator(".breakdown-part").filter({has: page.locator('.part-form', {hasText: /^나이까$/})});
+    assert.equal(await part.locator(".part-gloss").innerText(), grammarLabels["-나이까"].label);
+    assert.equal(await part.isDisabled(), true);
+    const references = word.getByRole("link", {name: "Grammar source", exact: true});
+    const expected = keys.flatMap(key => grammarLabels[key].references);
+    assert.equal(await references.count(), expected.length);
+    for (let r = 0; r < expected.length; r++) {
+      assert.equal(await references.nth(r).getAttribute("href"), expected[r].url);
+      assert.equal(await references.nth(r).getAttribute("target"), "_blank");
+      assert.equal(await references.nth(r).getAttribute("rel"), "noreferrer");
+    }
+  }
+  const naikkaDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const naikkaExport = JSON.parse(await readFile(await (await naikkaDownload).path(), "utf8"));
+  const naikkaExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: naikkaText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(naikkaExport.records, naikkaExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-naikka-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-naikka-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Literary assertions retain distinct forms, copulas and lexical homonyms.

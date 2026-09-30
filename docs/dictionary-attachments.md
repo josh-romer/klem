@@ -34,6 +34,7 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `auxiliary_class` | A represented auxiliary's known class, shared with the engine | 오려나봐 supports inference 보다 (보조 형용사), excluding the trial auxiliary-verb homonym from this reading's hint. |
 | `literary_assertion_class` | Bare lexical predicates with 으니라/느니라 | 읽으니라 conflicts with its verb-only entry; 크니라 and 크느니라 retain their respective adjective/verb homonyms. |
 | `bare_literary_declarative` | Bare lexical predicates with 나이다 | Known adjectives conflict, with 있다/없다/계시다 exceptions. 머나이다 retains the verb 멀다 while its adjective homonym conflicts; listed intervening prefinals keep their own licenses. |
+| `bare_literary_question` | Bare lexical predicates with 나이까 | The corresponding NIKL verbal/existential class; compatible verb homonyms and unknown provider classes survive. Intervening prefinals retain their separate licenses. |
 
 The present family is shared with the engine: 는다/는다고/는다는/는다면/는답니다/
 는다거나/는다든가/는다네/는다는데/는다며/는다면서/는다니/는단. Attached ㄴ
@@ -76,6 +77,13 @@ copula examples. These checks do not choose a contextual sense or resolve
 negative-auxiliary inheritance. The preserved [draft correction](jaop-draft-corrections.json)
 records why the negative ㄹ-stem case uses adjective-only 힘들다 rather than
 the ambiguous 멀다. Separate per-entry checks keep the verbal 멀다 alternative.
+
+The [나이까 review](naikka-evaluation.json) adds eleven policy cases (eight
+required, three forbidden), retaining the same explicitly listed bare
+existential/honorific heads and supported prefinals. The question conflict has
+its own serialized rule, preserving the existing declarative rule identity.
+Per-entry tests keep verbal 멀다 alongside its conflicting adjective homonym
+and verify that an unrecognized provider POS remains unknown.
 
 The [literary assertion extension](nira-evaluation.json) adds fifteen policy cases
 (12 required / 3 forbidden), bringing the whole-reading policy ledger to 200

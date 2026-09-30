@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "status": "Correction of an uncommitted agent-authored draft; previously committed judgments unchanged.",
+  "corrections": [
+    {
+      "before": {
+        "id": "naikka-polite-past",
+        "surface": "하왔나이까",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵",
+              "었",
+              "나이까"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "required",
+            "source": "naikka-416361",
+            "reason": "Agent-authored structural inference from the NIKL attachment notes and previously reviewed prefinal boundaries. Judge this exact path; contextual register, sense and other emitted hypotheses remain unjudged."
+          }
+        ]
+      },
+      "after": {
+        "id": "naikka-polite-past",
+        "surface": "하왔나이까",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으옵",
+              "었",
+              "나이까"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "naikka-order",
+            "reason": "The reviewed modern basic-politeness position follows tense. This exact 으옵 + 었 path reverses that order; independently licensed subject-honorific bundles and restricted lexical forms keep their own earlier positions."
+          }
+        ]
+      },
+      "required_counterexample": {
+        "id": "naikka-corrected-polite-past-order",
+        "surface": "했으옵나이까",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "하다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으옵",
+              "나이까"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "required",
+            "source": "naikka-431758",
+            "reason": "Supported contrasting order: NIKL explicitly licenses 으옵나이까 after past 었. Preserve earlier tense as a separate component."
+          }
+        ]
+      },
+      "source": "https://encykorea.aks.ac.kr/Article/E0039599",
+      "location": "기능: reviewed subject honorific → tense/modal → humble/politeness positions.",
+      "reason": "The draft confused basic politeness with earlier-position subject-honorific bundles. Do not reopen ordinary polite recovery through past based on that unsupported inference."
+    }
+  ],
+  "test_corrections": [
+    {
+      "test": "naikka_spelling_requirements_keep_their_original_component_owners",
+      "before": "Expected a lexical ㅂ-irregular requirement for the nominal owner in 학생다웠나이까.",
+      "after": "Require fixed 답다 suffix recovery and irregular rule provenance, with no dictionary spelling requirement attached to 학생.",
+      "reason": "The existing COV-021f ownership contract consumes fixed suffix spelling evidence; tests/bieup.rs already verifies this separation from nominal lexical entries."
+    }
+  ]
+}

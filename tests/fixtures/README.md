@@ -1577,3 +1577,20 @@ that verb while rejecting its adjective entry. The frozen 하나이다 ambiguity
 is tracked individually in `docs/jaop-evaluation.json` and tested without
 replacing the annotated 하나 + 이 + 다 reading. Unjudged raw hypotheses and
 contextual register remain unresolved; this is not a precision certification.
+
+`naikka-sources.json` records eight direct tokens and four hashed NIKL primary
+entries for 나이까, 옵나이까, 으옵나이까 and 사옵나이까. The 147 stable
+`naikka-*` cases require 118 exact paths and forbid 29, with eleven separate
+dictionary-policy cases (eight required, three forbidden). `krdict-naikka.json`
+preserves 58 complete lexical entries with English equivalents under the native
+KRDict attribution and CC BY-SA 2.0 KR policy above. The reference-only question
+label has no fabricated KRDict entry. Bare lexical adjective conflicts preserve
+verbal homonyms and unknown provider classes, while prefinal, auxiliary, copula
+and fixed 답다 spelling ownership remain distinct.
+
+`docs/naikka-draft-corrections.json` retains the uncommitted confusion between
+basic politeness and earlier subject-honorific bundles: 하왔나이까 must not
+gain 으옵 + 었 through this reviewed modern order; 했으옵나이까 tests the
+supported opposite order. Previously committed judgments are unchanged. No
+annotated corpus example is fabricated when the pinned corpora contain no
+나이까 token. Structural tests do not establish contextual register correctness.

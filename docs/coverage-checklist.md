@@ -1076,8 +1076,25 @@ review remains open under the completion review below.
   under each dictionary filter and removes none. Three additions match required
   structural ledger paths; the other 19 remain unjudged, including contextual
   alternatives retained alongside existing readings. Wider bundled combinations,
-  additional source-listed
-  endings including 나이까 and their licensed combinations remain open.
+  additional source-listed endings and their licensed combinations remain open.
+  The 나이까 question and explicit 옵/으옵/사옵 combinations now preserve
+  separate prefinal components with the same source-listed bare verbal/
+  existential class and independent question conflict rule. Eight primary tokens,
+  147 stable `naikka-*` cases (118 required, 29 forbidden), eleven policy cases,
+  and 58 complete native entries are tracked in [tests](../tests/naikka.rs), the
+  [source fixture](../tests/fixtures/naikka-sources.json), and
+  [evaluation](naikka-evaluation.json). The [draft correction](naikka-draft-corrections.json)
+  keeps basic politeness outside past tense instead of borrowing the separate
+  subject-honorific bundle's earlier position. Across 9,720 probe surfaces,
+  146 change with 642 added paths and no removals; 522 additions remain unjudged.
+  All four frozen corpus reports are byte-identical and contain no normalized
+  나이까 tokens, establishing preservation rather than new-ending validation.
+  The full novel adds one unjudged 하다 + 나이까 path at 하나이까 under each
+  dictionary filter, with a stable byte-span case ID and context recorded.
+  Three interleaved release runs per filter retain median processing times of
+  about 1.5 seconds for 179,112 records; these measurements do not establish
+  statistical equivalence. Wider combinations and independent linguistic review
+  remain open.
   See [basic evaluation](polite-evaluation.json) and
   [humble evaluation](humble-evaluation.json) and
   [bundle evaluation](optsi-evaluation.json). The bundle probe comparison adds
@@ -2153,7 +2170,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 433 currently emitted canonical grammar forms.** The initial catalog
+  for all 434 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

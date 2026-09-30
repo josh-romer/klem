@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const ryeogoLicenses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ryeogo-licenses.json"), "utf8"));
   const politeCopula = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite-copula.json"), "utf8"));
   const rikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-rikka.json"), "utf8"));
   const naikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-naikka.json"), "utf8"));
@@ -341,6 +342,7 @@ try {
       ...naikka.LexicalResource.Lexicon.LexicalEntry,
       ...rikka.LexicalResource.Lexicon.LexicalEntry,
       ...politeCopula.LexicalResource.Lexicon.LexicalEntry,
+      ...ryeogoLicenses.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -1149,6 +1151,44 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-ryeogo-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
+  // Intention adjective uncertainty is distinct from a forbidden candidate.
+  const ryeogoLicenseLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/ryeogo-license-assessments.json"), "utf8"));
+  assert.equal(ryeogoLicenseLedger.cases.length, 45);
+  for (const c of ryeogoLicenseLedger.cases) {
+    {
+      const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+      const i = token.analysis.analyses.findIndex(a =>
+        JSON.stringify(a.lemmas.map(l => [l.text,l.kind])) === JSON.stringify(c.lemmas.map(l => [l.text,l.kind]))
+        && JSON.stringify(a.morphemes.map(m => [m.form,m.kind])) === JSON.stringify(c.morphemes.map(m => [m.form,m.kind])));
+      assert.ok(i >= 0, c.id);
+      for (const j of c.judgments) {
+        const entry = token.dictionary.readings[i].lemmas[j.lemma_index].entries.find(e => e.id === j.entry_id);
+        assert.ok(entry, `${c.id}/${j.id}`); assert.equal(entry.status,j.status,`${c.id}/${j.id}`); assert.deepEqual(entry.conflicts,j.conflicts);
+      }
+    }
+  }
+  const ryeogoLicenseText = "재미있으려고한다 크려고한다 있으려고한다 좋지않으려고한다 좋아지려고한다 학생다우려고한다 크려고";
+  await submit(page, ryeogoLicenseText); await waitHeading(page, "재미있으려고한다");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms] of [[0,["재미있","으려고","하","는다"]],[1,["크","으려고","하","는다"]],[2,["있","으려고","하","는다"]],[3,["좋","지","않","으려고","하","는다"]],[4,["좋","어","지","으려고","하","는다"]],[5,["학생","답","으려고","하","는다"]],[6,["크","으려고"]]]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value); assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+  }
+  const ryeogoLicenseDownload = page.waitForEvent("download");
+  await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const ryeogoLicenseExport = JSON.parse(await readFile(await (await ryeogoLicenseDownload).path(),"utf8"));
+  const ryeogoLicenseExpected = execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:ryeogoLicenseText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(ryeogoLicenseExport.records,ryeogoLicenseExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-ryeogo-licenses-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-ryeogo-licenses-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
   const llagoCases = recipientLedger.cases.filter(c => c.id.startsWith("llago-"));
   assert.equal(llagoCases.length, 125);
   for (const c of llagoCases) {

@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 332 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–av/017ax–az/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 382 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 334 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 380 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -988,10 +988,26 @@ review remains open under the completion review below.
   adjective/copula and tense notes in related shortened expressions. Their full
   expansions and lexical adjective/coercive readings remain unresolved; four
   explicit preservation checks prevent blanket pruning. Broader dictionary
-  conflicts and standalone prefinal restrictions still need review. See the
-  [candidate and corpus evaluation](ryeogo-evaluation.json). Rust/stress, browser
-  and Nix/package checks pass; all frozen corpus reports and the complete
-  dictionary-filtered novel output are byte-identical. This item remains open.
+  conflicts and standalone prefinal restrictions still need review. The
+  follow-up [primary-source audit](ryeogo-license-source-audit.json) retrieves
+  NIKL's full adjective state-making answer and both OpenDict final homonyms,
+  resolving the vowel-adjective note asymmetry. Represented intention
+  하다/들다 now marks known adjective entries `unknown`, independently of
+  compatible verb homonyms. Negatives inherit the dependency; explicit 답다
+  and adjective auxiliaries use their own class, while other auxiliaries reset
+  ownership. Both dictionary filters retain these uncertain paths. Forty-five
+  stable cases track 66 entry judgments, separately from raw required/forbidden
+  judgments; 53 complete native entries preserve provenance. See the
+  [follow-up evaluation](ryeogo-licenses-evaluation.json) and
+  [earlier candidate evaluation](ryeogo-evaluation.json). Standalone prefinal
+  exclusions and conflicting full expansions remain open; uncertainty does not
+  certify state-making uses. The unchanged KAIST training sentence
+  `MH2_0014-s388` explicitly annotates `인간적이려고 하는` as a copular
+  connective construction; this competing evidence is tracked before broader
+  exclusions. All four complete frozen corpus reports and both filtered novel
+  outputs are byte-identical. Rust/stress, browser and x86_64 Linux Nix
+  package/flake checks pass.
+  This item remains open.
 
 - [x] **COV-017ax — Remaining shortened intention expressions.**
   **Implemented for the reviewed attachment scope.** All six canonical paths

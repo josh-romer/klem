@@ -25768,6 +25768,122 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:68846",
+      "source_sha256": "10ea71cb1706e1b6e6f2f46b31840b3bb52922c4f681a3bb73f0988a37229bc0",
+      "status": "scoped",
+      "checklist": [
+        "COV-017aw"
+      ],
+      "scope": "Separate final rhetorical licenses from verbal intention/change. Existing finite auxiliary restrictions and derived rhetorical paths have stable raw judgments. Adjective intention auxiliary entries now remain explicitly unknown through local negative/답다 ownership, supported by the retrieved NIKL answer and separate OpenDict final homonyms.",
+      "remaining": "Broader standalone prefinal attachment and source-conflicted expanded expressions remain open. State-making requires lexical/contextual evidence; this disposition does not certify all senses or full attachment space.",
+      "evidence": [
+        {
+          "path": "tests/ryeogo_licenses.rs",
+          "test": "intention_class_assessments_preserve_homonyms_and_component_ownership"
+        },
+        {
+          "path": "tests/ryeogo.rs",
+          "test": "source_conflicted_expansions_remain_hypotheses_pending_review"
+        },
+        {
+          "path": "tests/fixtures/ryeogo-license-assessments.json"
+        },
+        {
+          "path": "tests/fixtures/ryeogo-license-sources.json"
+        },
+        {
+          "path": "docs/ryeogo-license-source-audit.json"
+        },
+        {
+          "path": "docs/ryeogo-licenses-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "ryeogo-derived-학생이려고",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:69067",
+      "source_sha256": "332f3370103f8d4d93d9044de28b5410fb46af3be8e0bd0927951a9097bb6172",
+      "status": "scoped",
+      "checklist": [
+        "COV-017aw"
+      ],
+      "scope": "Separate final rhetorical licenses from verbal intention/change. Existing finite auxiliary restrictions and derived rhetorical paths have stable raw judgments. Adjective intention auxiliary entries now remain explicitly unknown through local negative/답다 ownership, supported by the retrieved NIKL answer and separate OpenDict final homonyms.",
+      "remaining": "Broader standalone prefinal attachment and source-conflicted expanded expressions remain open. State-making requires lexical/contextual evidence; this disposition does not certify all senses or full attachment space.",
+      "evidence": [
+        {
+          "path": "tests/ryeogo_licenses.rs",
+          "test": "intention_class_assessments_preserve_homonyms_and_component_ownership"
+        },
+        {
+          "path": "tests/ryeogo.rs",
+          "test": "source_conflicted_expansions_remain_hypotheses_pending_review"
+        },
+        {
+          "path": "tests/fixtures/ryeogo-license-assessments.json"
+        },
+        {
+          "path": "tests/fixtures/ryeogo-license-sources.json"
+        },
+        {
+          "path": "docs/ryeogo-license-source-audit.json"
+        },
+        {
+          "path": "docs/ryeogo-licenses-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "ryeogo-derived-학생다우려고",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-학생다우려고요",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-학생다우시려고",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-학생다웠으려고",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-학생다우셨으려고",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-학생다웠었으려고",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-학생답으려고",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-학생다우으려고",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-학생다우려고요요",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-넓으려고",
+          "judgment": "path"
+        },
+        {
+          "case": "ryeogo-derived-풀었으려고",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

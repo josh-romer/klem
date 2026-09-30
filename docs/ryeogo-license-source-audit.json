@@ -1,0 +1,1409 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017aw",
+  "baseline_commit": "f2300ef",
+  "baseline_binary_sha256": "c982367f9625f90a79b382f22c0b2c7e369054a58296bfa04bf41b532b135fd8",
+  "baseline_evaluator_sha256": "4cd6a97507924590ec52e7c6e99e840e11c23b4c84fbce680af632e4e6b2ecec",
+  "review_status": "Agent-authored structural judgments; independent Korean review pending. Not a precision benchmark.",
+  "primary_reviews": [
+    {
+      "id": "opendict:334080",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=334080",
+      "retrieved": "2026-09-30",
+      "html_sha256": "b0c84987cb1e7b207e6c81154fd9026cd6bfce103524e1d771ac969436efc186",
+      "sense": "Intention connective",
+      "reviewed_attachment": "Vowel or ㄹ-final verbs, or honorific 으시.",
+      "direct_surface_tokens": [
+        "일어나려고",
+        "살려고",
+        "마련하려고",
+        "떠나려고"
+      ],
+      "interpretation": "Full public entry read; only surface tokens and a paraphrase are retained. Ending homonym is not inferred from surface alone."
+    },
+    {
+      "id": "opendict:337466",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=337466",
+      "retrieved": "2026-09-30",
+      "html_sha256": "4c2137dc8b87f7ef9c5d22cab6449ecaf901f8eb5b28b8ca8dcd5baee1b0a662",
+      "sense": "Impending-change connective",
+      "reviewed_attachment": "Vowel or ㄹ-final verbs, or honorific 으시.",
+      "direct_surface_tokens": [
+        "쏟아지려고",
+        "출발하려고"
+      ],
+      "interpretation": "Full public entry read; only surface tokens and a paraphrase are retained. Ending homonym is not inferred from surface alone."
+    },
+    {
+      "id": "opendict:346255",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=346255",
+      "retrieved": "2026-09-30",
+      "html_sha256": "24c4005f4b0bec9df088f9206d8d2b811e9a10ae4205918969e4c300d663d334",
+      "sense": "Final rhetorical ending",
+      "reviewed_attachment": "Copula 이다, vowel or ㄹ-final predicates (verbs and adjectives), or honorific 으시.",
+      "direct_surface_tokens": [
+        "하려고",
+        "버리려고",
+        "크려고"
+      ],
+      "interpretation": "Full public entry read; only surface tokens and a paraphrase are retained. Ending homonym is not inferred from surface alone."
+    },
+    {
+      "id": "opendict:481109",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=481109",
+      "retrieved": "2026-09-30",
+      "html_sha256": "acdc3c1fdbcd9325f6787cfab3445dfb69183bd70cd6b0fa3df0802006c14bc6",
+      "sense": "Intention connective",
+      "reviewed_attachment": "Consonant-final verbs excluding ㄹ.",
+      "direct_surface_tokens": [
+        "잡으려고",
+        "찾으려고"
+      ],
+      "interpretation": "Full public entry read; only surface tokens and a paraphrase are retained. Ending homonym is not inferred from surface alone."
+    },
+    {
+      "id": "opendict:484600",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=484600",
+      "retrieved": "2026-09-30",
+      "html_sha256": "3901818fea3f88588c3678db46a7a4d33a8bb76d5d4206e711b93c5af6e52554",
+      "sense": "Impending-change connective",
+      "reviewed_attachment": "Consonant-final verbs excluding ㄹ.",
+      "direct_surface_tokens": [
+        "돋으려고"
+      ],
+      "interpretation": "Full public entry read; only surface tokens and a paraphrase are retained. Ending homonym is not inferred from surface alone."
+    },
+    {
+      "id": "opendict:505219",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=505219",
+      "retrieved": "2026-09-30",
+      "html_sha256": "37ef29016767a52fac607fb61ebd4d6187d4a3ee5feb35c44a5783c717da182f",
+      "sense": "Final rhetorical ending",
+      "reviewed_attachment": "Consonant-final predicates excluding ㄹ, or past 었.",
+      "direct_surface_tokens": [
+        "넓으려고",
+        "먹으려고"
+      ],
+      "interpretation": "Full public entry read; only surface tokens and a paraphrase are retained. Ending homonym is not inferred from surface alone."
+    },
+    {
+      "id": "nikl:q335000",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=335000",
+      "question_date": "2026-08-21",
+      "answer_date": "2026-08-24",
+      "retrieved": "2026-09-30",
+      "html_sha256": "fcb9b81405939f84ae21851a8ade9c3b499779d9ee3dfd931326fbb6b038cb0e",
+      "answer_retrieved": true,
+      "review": "The answer classifies 재미있다/맛있다/멋있다 as adjectives despite adnominal 는. It describes intention attachment as normatively verbal, while acknowledging actual 재미있으려고 with a state-making interpretation. It declines a categorical analysis because theories differ. This does not license every adjective in every context, or justify blanket removal.",
+      "direct_surface_tokens": [
+        "재미있으려고"
+      ]
+    },
+    {
+      "id": "nikl:adj2003",
+      "url": "https://www.korean.go.kr/nkview/nklife/2003_2/2003_0212.pdf",
+      "title": "형용사",
+      "author": "유현경",
+      "publication": "새국어생활 13(2), 2003 summer",
+      "pdf_sha256": "11a7680274858c63679fec829fee5a7d2e684f13b0216844c14d044ee955bd37",
+      "locator": "Printed pages 192–193 (existential verbal/adjectival distinction) and 197 (intention connective restrictions).",
+      "review": "The article distinguishes verbal human-stay 있다 from adjectival possession/existence and describes adjective restrictions on purpose/intention connectives. This supports independent homonym assessment, not transferring a verb entry’s evidence to its adjective homonym. The 2026 consultation supplies additional uncertainty for state-making uses."
+    }
+  ],
+  "implemented": "Mark known adjective intention readings unknown per entry when 으려고 is followed by represented auxiliary 하다/들다. 지-negatives preserve dependency, including explicit adjectival 답다; different auxiliaries and copulas reset it. Known conflicts take precedence. Preserve final rhetorical and source-conflicted expanded-expression hypotheses.",
+  "not_inferred": [
+    "No modal/retrospective rejection from absence in a final-entry attachment note.",
+    "No universal adjective connective rejection or acceptance from the isolated state-making consultation.",
+    "No contextual selection among homonyms; dictionary compatibility is a scoped policy.",
+    "No new pruning of the four previously preserved expanded-expression paths."
+  ],
+  "annotated_corpora": {
+    "method": "Read all six pinned files; align OrigLemma or LEMMA with XPOS and retain exact 려고/으려고 components with connective/final ending tags. No substring or surface-only hit is called annotated gold.",
+    "files": [
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+        "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+        "exact_annotated_ending_hits": [
+          {
+            "sentence_id": "M2TA_064-s15",
+            "token_id": "6",
+            "surface": "챙기려고",
+            "original_lemma": "챙기+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_083-s30",
+            "token_id": "3",
+            "surface": "되려고",
+            "original_lemma": "되+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_084-s28",
+            "token_id": "4",
+            "surface": "다듬으려고",
+            "original_lemma": "다듬+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_087-s60",
+            "token_id": "5",
+            "surface": "보려고",
+            "original_lemma": "보+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_087-s137",
+            "token_id": "12",
+            "surface": "살려고",
+            "original_lemma": "살+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_088-s16",
+            "token_id": "10",
+            "surface": "주려고",
+            "original_lemma": "주+려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "M2TA_088-s19",
+            "token_id": "3",
+            "surface": "잡으려고",
+            "original_lemma": "잡+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_088-s63",
+            "token_id": "6",
+            "surface": "독점하려고",
+            "original_lemma": "독점+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "M2TA_088-s66",
+            "token_id": "6",
+            "surface": "사로잡으려고",
+            "original_lemma": "사로잡+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_092-s60",
+            "token_id": "5",
+            "surface": "보려고",
+            "original_lemma": "보+려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0013-s202",
+            "token_id": "15",
+            "surface": "통합하려고",
+            "original_lemma": "통합+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0014-s388",
+            "token_id": "8",
+            "surface": "인간적이려고",
+            "original_lemma": "인간+적+이+려고",
+            "xpos": "ncn+xsn+jp+ecs"
+          },
+          {
+            "sentence_id": "MH2_0014-s392",
+            "token_id": "4",
+            "surface": "세우려고",
+            "original_lemma": "세우+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0014-s394",
+            "token_id": "8",
+            "surface": "이해하려고",
+            "original_lemma": "이해+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0014-s403",
+            "token_id": "4",
+            "surface": "되려고",
+            "original_lemma": "되+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0017-s103",
+            "token_id": "12",
+            "surface": "본받으려고",
+            "original_lemma": "본받+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0017-s200",
+            "token_id": "9",
+            "surface": "헤아리려고",
+            "original_lemma": "헤아리+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0021-s149",
+            "token_id": "15",
+            "surface": "보려고",
+            "original_lemma": "보+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0021-s271",
+            "token_id": "5",
+            "surface": "살아보려고",
+            "original_lemma": "살+아+보+려고",
+            "xpos": "pvg+ecx+px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0024-s125",
+            "token_id": "19",
+            "surface": "판단하려고",
+            "original_lemma": "판단+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0026-s47",
+            "token_id": "6",
+            "surface": "찍으려고",
+            "original_lemma": "찍+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0026-s85",
+            "token_id": "7",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0032-s95",
+            "token_id": "12",
+            "surface": "포착하려고",
+            "original_lemma": "포착+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0034-s111",
+            "token_id": "7",
+            "surface": "도모하려고",
+            "original_lemma": "도모+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0035-s153",
+            "token_id": "9",
+            "surface": "살려고",
+            "original_lemma": "살+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0035-s174",
+            "token_id": "11",
+            "surface": "실천하려고",
+            "original_lemma": "실천+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0035-s240",
+            "token_id": "6",
+            "surface": "구원하려고",
+            "original_lemma": "구원+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0035-s267",
+            "token_id": "14",
+            "surface": "대처하려고",
+            "original_lemma": "대처+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0035-s334",
+            "token_id": "5",
+            "surface": "정화하려고",
+            "original_lemma": "정화+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0035-s340",
+            "token_id": "8",
+            "surface": "잡으려고",
+            "original_lemma": "잡+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0035-s365",
+            "token_id": "5",
+            "surface": "내놓으려고",
+            "original_lemma": "내놓+으려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0037-s561",
+            "token_id": "7",
+            "surface": "차지하려",
+            "original_lemma": "차지+하+려고",
+            "xpos": "ncps+xsm+ecx"
+          },
+          {
+            "sentence_id": "MH2_0037-s580",
+            "token_id": "9",
+            "surface": "양보하려고",
+            "original_lemma": "양보+하+려고",
+            "xpos": "ncps+xsm+ecx"
+          },
+          {
+            "sentence_id": "MH2_0037-s581",
+            "token_id": "6",
+            "surface": "포기하려고도",
+            "original_lemma": "포기+하+려고+도",
+            "xpos": "ncpa+xsv+ecs+jxc"
+          },
+          {
+            "sentence_id": "MH2_0042-s150",
+            "token_id": "1",
+            "surface": "처분하려고",
+            "original_lemma": "처분+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0045-s57",
+            "token_id": "9",
+            "surface": "확인하려고",
+            "original_lemma": "확인+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0046-s13",
+            "token_id": "12",
+            "surface": "살펴보려고",
+            "original_lemma": "살피+어+보+려고",
+            "xpos": "pvg+ecx+px+ecx"
+          },
+          {
+            "sentence_id": "MH2_0046-s183",
+            "token_id": "14",
+            "surface": "지향하려고",
+            "original_lemma": "지향+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0066-s122",
+            "token_id": "5",
+            "surface": "해결하려고",
+            "original_lemma": "해결+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0068-s329",
+            "token_id": "13",
+            "surface": "넣으려고",
+            "original_lemma": "넣+으려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0068-s421",
+            "token_id": "12",
+            "surface": "보위하려고",
+            "original_lemma": "보위+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0071-s279",
+            "token_id": "11",
+            "surface": "않으려고",
+            "original_lemma": "않+으려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0071-s334",
+            "token_id": "11",
+            "surface": "행사하려고",
+            "original_lemma": "행사+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0081-s216",
+            "token_id": "5",
+            "surface": "인식하려고",
+            "original_lemma": "인식+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0083-s322",
+            "token_id": "17",
+            "surface": "알려고",
+            "original_lemma": "알+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s61",
+            "token_id": "12",
+            "surface": "않으려고",
+            "original_lemma": "않+으려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s78",
+            "token_id": "13",
+            "surface": "쓰려고",
+            "original_lemma": "쓰+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s176",
+            "token_id": "7",
+            "surface": "자려고",
+            "original_lemma": "자+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s270",
+            "token_id": "7",
+            "surface": "않으려고",
+            "original_lemma": "않+으려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s284",
+            "token_id": "11",
+            "surface": "안주하려고",
+            "original_lemma": "안주+하+려고",
+            "xpos": "ncps+xsm+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s286",
+            "token_id": "17",
+            "surface": "집중시키려고",
+            "original_lemma": "집중+시키+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s296",
+            "token_id": "12",
+            "surface": "않으려고",
+            "original_lemma": "않+으려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s303",
+            "token_id": "11",
+            "surface": "가라앉히려고",
+            "original_lemma": "가라앉히+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s309",
+            "token_id": "6",
+            "surface": "잘하려고",
+            "original_lemma": "잘하+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s420",
+            "token_id": "4",
+            "surface": "증식하려고",
+            "original_lemma": "증식+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s433",
+            "token_id": "3",
+            "surface": "도망가려고",
+            "original_lemma": "도망가+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s438",
+            "token_id": "4",
+            "surface": "않으려고",
+            "original_lemma": "않+으려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0091-s497",
+            "token_id": "14",
+            "surface": "느껴보려고",
+            "original_lemma": "느끼+어+보+려고",
+            "xpos": "pvg+ecx+px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0092-s415",
+            "token_id": "10",
+            "surface": "구하려고",
+            "original_lemma": "구하+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0094-s638",
+            "token_id": "7",
+            "surface": "높이려고",
+            "original_lemma": "높이+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0094-s826",
+            "token_id": "7",
+            "surface": "보완하려고",
+            "original_lemma": "보완+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0094-s1332",
+            "token_id": "6",
+            "surface": "버리려고",
+            "original_lemma": "버리+려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0094-s1362",
+            "token_id": "16",
+            "surface": "억누르려고",
+            "original_lemma": "억누르+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0094-s1372",
+            "token_id": "8",
+            "surface": "잡으려고",
+            "original_lemma": "잡+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0107-s25",
+            "token_id": "9",
+            "surface": "나가려고",
+            "original_lemma": "나가+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0107-s41",
+            "token_id": "11",
+            "surface": "논증하려고",
+            "original_lemma": "논증+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0107-s97",
+            "token_id": "5",
+            "surface": "파악하려고",
+            "original_lemma": "파악+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0107-s120",
+            "token_id": "3",
+            "surface": "공부하려고",
+            "original_lemma": "공부+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0107-s123",
+            "token_id": "12",
+            "surface": "얻으려고",
+            "original_lemma": "얻+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0107-s132",
+            "token_id": "16",
+            "surface": "설명하려고",
+            "original_lemma": "설명+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0107-s136",
+            "token_id": "14",
+            "surface": "논증하려고",
+            "original_lemma": "논증+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0112-s98",
+            "token_id": "4",
+            "surface": "되려고",
+            "original_lemma": "되+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0127-s59",
+            "token_id": "10",
+            "surface": "벌려고",
+            "original_lemma": "벌+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0127-s111",
+            "token_id": "3",
+            "surface": "지배하려고",
+            "original_lemma": "지배+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0127-s191",
+            "token_id": "12",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0127-s270",
+            "token_id": "5",
+            "surface": "평가하려고",
+            "original_lemma": "평가+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0127-s376",
+            "token_id": "11",
+            "surface": "입증하려고",
+            "original_lemma": "입증+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0132-s15",
+            "token_id": "4",
+            "surface": "쓰려고",
+            "original_lemma": "쓰+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0132-s17",
+            "token_id": "20",
+            "surface": "가르치려고",
+            "original_lemma": "가르치+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0132-s19",
+            "token_id": "16",
+            "surface": "기초지으려고",
+            "original_lemma": "기초짓+으려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0132-s88",
+            "token_id": "8",
+            "surface": "설립하려고",
+            "original_lemma": "설립+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0132-s156",
+            "token_id": "5",
+            "surface": "따르려고",
+            "original_lemma": "따르+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0132-s268",
+            "token_id": "4",
+            "surface": "제창하려고",
+            "original_lemma": "제창+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0132-s331",
+            "token_id": "5",
+            "surface": "생각하려고",
+            "original_lemma": "생각+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0132-s406",
+            "token_id": "7",
+            "surface": "믿으려고",
+            "original_lemma": "믿+으려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0145-s84",
+            "token_id": "7",
+            "surface": "정벌하려고",
+            "original_lemma": "정벌+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0146-s138",
+            "token_id": "20",
+            "surface": "극복하려고",
+            "original_lemma": "극복+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0147-s108",
+            "token_id": "7",
+            "surface": "구하려고",
+            "original_lemma": "구하+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0148-s4",
+            "token_id": "6",
+            "surface": "시작하려고",
+            "original_lemma": "시작+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s8",
+            "token_id": "9",
+            "surface": "식히려고",
+            "original_lemma": "식히+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s60",
+            "token_id": "11",
+            "surface": "주려고",
+            "original_lemma": "주+려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s103",
+            "token_id": "8",
+            "surface": "입증하려고",
+            "original_lemma": "입증+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s113",
+            "token_id": "6",
+            "surface": "없애려고",
+            "original_lemma": "없애+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s148",
+            "token_id": "3",
+            "surface": "체포되려고",
+            "original_lemma": "체포+되+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s238",
+            "token_id": "17",
+            "surface": "주입시키려고",
+            "original_lemma": "주입+시키+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s300",
+            "token_id": "7",
+            "surface": "이기려고",
+            "original_lemma": "이기+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s329",
+            "token_id": "13",
+            "surface": "맺으려고",
+            "original_lemma": "맺+으려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s369",
+            "token_id": "9",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s370",
+            "token_id": "3",
+            "surface": "자살하려고",
+            "original_lemma": "자살+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0148-s414",
+            "token_id": "3",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0163-s1",
+            "token_id": "18",
+            "surface": "드러내려고",
+            "original_lemma": "드러내+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0174-s34",
+            "token_id": "8",
+            "surface": "보려고",
+            "original_lemma": "보+려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0174-s89",
+            "token_id": "3",
+            "surface": "떠나려고",
+            "original_lemma": "떠나+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0174-s91",
+            "token_id": "7",
+            "surface": "내려치려고",
+            "original_lemma": "내려치+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0174-s197",
+            "token_id": "5",
+            "surface": "두려고",
+            "original_lemma": "두+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0174-s233",
+            "token_id": "7",
+            "surface": "죽이려고",
+            "original_lemma": "죽이+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0174-s294",
+            "token_id": "5",
+            "surface": "도망치려고",
+            "original_lemma": "도망치+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0182-s67",
+            "token_id": "5",
+            "surface": "가려고",
+            "original_lemma": "가+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0184-s235",
+            "token_id": "10",
+            "surface": "질서화하려고",
+            "original_lemma": "질서화+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0184-s425",
+            "token_id": "16",
+            "surface": "만들려고",
+            "original_lemma": "만들+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0184-s479",
+            "token_id": "19",
+            "surface": "만들려고",
+            "original_lemma": "만들+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0184-s590",
+            "token_id": "13",
+            "surface": "쳐부수려고",
+            "original_lemma": "쳐부수+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0185-s166",
+            "token_id": "6",
+            "surface": "이해하려고",
+            "original_lemma": "이해+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0185-s311",
+            "token_id": "13",
+            "surface": "시작되려고",
+            "original_lemma": "시작+되+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0185-s313",
+            "token_id": "10",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0204-s9",
+            "token_id": "16",
+            "surface": "이해하려고",
+            "original_lemma": "이해+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0204-s23",
+            "token_id": "7",
+            "surface": "이해하려고",
+            "original_lemma": "이해+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0285-s95",
+            "token_id": "7",
+            "surface": "바라보려고",
+            "original_lemma": "바라보+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0285-s164",
+            "token_id": "13",
+            "surface": "내리려고",
+            "original_lemma": "내리+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0285-s220",
+            "token_id": "8",
+            "surface": "먹이려고",
+            "original_lemma": "먹이+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0286-s43",
+            "token_id": "4",
+            "surface": "되려고",
+            "original_lemma": "되+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0286-s131",
+            "token_id": "3",
+            "surface": "전하려고",
+            "original_lemma": "전하+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0286-s216",
+            "token_id": "5",
+            "surface": "실감하려고",
+            "original_lemma": "실감+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0286-s405",
+            "token_id": "9",
+            "surface": "보려고",
+            "original_lemma": "보+려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0372-s13",
+            "token_id": "17",
+            "surface": "찾으려고",
+            "original_lemma": "찾+으려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0372-s129",
+            "token_id": "3",
+            "surface": "익사시키려고",
+            "original_lemma": "익사+시키+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0372-s129",
+            "token_id": "9",
+            "surface": "구하려고",
+            "original_lemma": "구하+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0372-s143",
+            "token_id": "9",
+            "surface": "반박하려고",
+            "original_lemma": "반박+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0372-s150",
+            "token_id": "7",
+            "surface": "해결하려고",
+            "original_lemma": "해결+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          }
+        ]
+      },
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+        "sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "exact_annotated_ending_hits": [
+          {
+            "sentence_id": "MH2_0069-s9",
+            "token_id": "10",
+            "surface": "보려고",
+            "original_lemma": "보+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0069-s98",
+            "token_id": "18",
+            "surface": "통제하려고",
+            "original_lemma": "통제+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0069-s99",
+            "token_id": "8",
+            "surface": "극복하려고",
+            "original_lemma": "극복+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0069-s124",
+            "token_id": "14",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "px+ecx"
+          },
+          {
+            "sentence_id": "MH2_0069-s184",
+            "token_id": "10",
+            "surface": "두려고",
+            "original_lemma": "두+려고",
+            "xpos": "px+ecx"
+          },
+          {
+            "sentence_id": "MH2_0069-s184",
+            "token_id": "18",
+            "surface": "독점하려고",
+            "original_lemma": "독점+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0069-s212",
+            "token_id": "6",
+            "surface": "꾀하려고",
+            "original_lemma": "꾀하+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0159-s69",
+            "token_id": "18",
+            "surface": "보려고",
+            "original_lemma": "보+려고",
+            "xpos": "px+ecx"
+          },
+          {
+            "sentence_id": "MH2_0169-s273",
+            "token_id": "6",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "px+ecs"
+          },
+          {
+            "sentence_id": "MH2_0169-s337",
+            "token_id": "6",
+            "surface": "소개하려고",
+            "original_lemma": "소개+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0169-s510",
+            "token_id": "6",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0169-s559",
+            "token_id": "4",
+            "surface": "이루려고",
+            "original_lemma": "이루+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0169-s621",
+            "token_id": "11",
+            "surface": "두려고",
+            "original_lemma": "두+려고",
+            "xpos": "px+ecx"
+          },
+          {
+            "sentence_id": "MH2_0169-s661",
+            "token_id": "15",
+            "surface": "육성하려고",
+            "original_lemma": "육성+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0209-s57",
+            "token_id": "8",
+            "surface": "만들려고",
+            "original_lemma": "만들+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0209-s104",
+            "token_id": "7",
+            "surface": "만들려고",
+            "original_lemma": "만들+려고",
+            "xpos": "pvg+ecs"
+          }
+        ]
+      },
+      {
+        "path": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+        "sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+        "exact_annotated_ending_hits": [
+          {
+            "sentence_id": "M2TA_070-s12",
+            "token_id": "3",
+            "surface": "내세우려고",
+            "original_lemma": "내세우+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_070-s55",
+            "token_id": "12",
+            "surface": "해결하려고",
+            "original_lemma": "해결+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "M2TA_070-s58",
+            "token_id": "4",
+            "surface": "침략하려고",
+            "original_lemma": "침략+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "M2TA_070-s60",
+            "token_id": "7",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_070-s60",
+            "token_id": "17",
+            "surface": "낮추려고",
+            "original_lemma": "낮추+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "M2TA_070-s62",
+            "token_id": "7",
+            "surface": "넘기려고",
+            "original_lemma": "넘기+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "M2TA_090-s33",
+            "token_id": "4",
+            "surface": "하려고",
+            "original_lemma": "하+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0010-s104",
+            "token_id": "7",
+            "surface": "가려고",
+            "original_lemma": "가+려고",
+            "xpos": "pvg+ecs"
+          },
+          {
+            "sentence_id": "MH2_0010-s276",
+            "token_id": "13",
+            "surface": "합류하려고",
+            "original_lemma": "합류+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0180-s30",
+            "token_id": "15",
+            "surface": "인식하려고",
+            "original_lemma": "인식+하+려고",
+            "xpos": "ncpa+xsv+ecs"
+          },
+          {
+            "sentence_id": "MH2_0180-s90",
+            "token_id": "6",
+            "surface": "벗어나려고",
+            "original_lemma": "벗어나+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0180-s113",
+            "token_id": "7",
+            "surface": "경험하려고",
+            "original_lemma": "경험+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0180-s266",
+            "token_id": "16",
+            "surface": "해명하려고",
+            "original_lemma": "해명+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0190-s263",
+            "token_id": "7",
+            "surface": "즐기려고",
+            "original_lemma": "즐기+려고",
+            "xpos": "pvg+ecx"
+          },
+          {
+            "sentence_id": "MH2_0190-s310",
+            "token_id": "18",
+            "surface": "활용하려고",
+            "original_lemma": "활용+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0190-s353",
+            "token_id": "7",
+            "surface": "인정하려고",
+            "original_lemma": "인정+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          },
+          {
+            "sentence_id": "MH2_0190-s361",
+            "token_id": "17",
+            "surface": "적용하려고",
+            "original_lemma": "적용+하+려고",
+            "xpos": "ncpa+xsv+ecx"
+          }
+        ]
+      },
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+        "sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+        "exact_annotated_ending_hits": [
+          {
+            "sentence_id": "train-s642",
+            "token_id": "4",
+            "surface": "살려고",
+            "original_lemma": "살+려고",
+            "xpos": "VV+EC"
+          },
+          {
+            "sentence_id": "train-s1020",
+            "token_id": "14",
+            "surface": "뽑으려고",
+            "original_lemma": "뽑+으려고",
+            "xpos": "VV+EC"
+          },
+          {
+            "sentence_id": "train-s1425",
+            "token_id": "3",
+            "surface": "진출하려고",
+            "original_lemma": "진출+하+려고",
+            "xpos": "NNG+XSV+EC"
+          },
+          {
+            "sentence_id": "train-s3849",
+            "token_id": "10",
+            "surface": "추진하려고",
+            "original_lemma": "추진+하+려고",
+            "xpos": "NNG+XSV+EC"
+          }
+        ]
+      },
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+        "sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "exact_annotated_ending_hits": [
+          {
+            "sentence_id": "dev-s37",
+            "token_id": "10",
+            "surface": "알려고",
+            "original_lemma": "알+려고",
+            "xpos": "VV+EC"
+          },
+          {
+            "sentence_id": "dev-s419",
+            "token_id": "31",
+            "surface": "주려고",
+            "original_lemma": "주+려고",
+            "xpos": "VV+EC"
+          }
+        ]
+      },
+      {
+        "path": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+        "sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+        "exact_annotated_ending_hits": [
+          {
+            "sentence_id": "test-s167",
+            "token_id": "4",
+            "surface": "구해주실려고",
+            "original_lemma": "구하+아+주+시+ㄹ+려고",
+            "xpos": "VV+EC+VX+EP+ETM+EC"
+          },
+          {
+            "sentence_id": "test-s479",
+            "token_id": "4",
+            "surface": "사려고",
+            "original_lemma": "사+려고",
+            "xpos": "VV+EC"
+          }
+        ]
+      }
+    ],
+    "total_hits": 170
+  },
+  "native_fixture": "tests/fixtures/ryeogo-license-sources.json",
+  "entry_ledger": "tests/fixtures/ryeogo-license-assessments.json",
+  "remaining": [
+    "Resolve source-conflicted copula/past/modal expanded-expression boundaries together with shortened expressions.",
+    "Review standalone prefinal licenses with explicit positive and exclusion evidence.",
+    "Resolve contextual state-making interpretations beyond broad POS, with independent Korean review.",
+    "The unmodified KAIST sentence MH2_0014-s388 explicitly annotates 인간적이려고 + separately written 하는. Resolve this copular/state-making counterevidence before expanding finite copula exclusions."
+  ],
+  "competing_copular_gold": {
+    "source_path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+    "source_sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+    "sentence_id": "MH2_0014-s388",
+    "original_sentence": "# sent_id = MH2_0014-s388\n# text = 의견의 차이, 충돌, 타협 등은 인간적이려고 하는 증거이다.\n# translit = .yi.gyeon.yi .cha.i, .chung.dol, .ta.hyeob .deung.eun .in.gan.jeog.i.ryeo.go .ha.neun .jeung.geo.i.da.\n1\t의견의\t의견+의\tNOUN\tncn+jcm\t_\t2\tnmod\t_\tTranslit=.yi.gyeon.yi|LTranslit=.yi.gyeon+.yi\n2\t차이\t차이\tNOUN\tncn\t_\t4\tcompound\t_\tSpaceAfter=No|Translit=.cha.i|LTranslit=.cha.i\n3\t,\t,\tPUNCT\tsp\t_\t2\tpunct\t_\tTranslit=,|LTranslit=,\n4\t충돌\t충돌\tNOUN\tncpa\t_\t7\tcompound\t_\tSpaceAfter=No|Translit=.chung.dol|LTranslit=.chung.dol\n5\t,\t,\tPUNCT\tsp\t_\t6\tpunct\t_\tTranslit=,|LTranslit=,\n6\t타협\t타협\tNOUN\tncpa\t_\t4\tconj\t_\tTranslit=.ta.hyeob|LTranslit=.ta.hyeob\n7\t등은\t등+은\tNOUN\tnbn+jxt\t_\t10\tdislocated\t_\tTranslit=.deung.eun|LTranslit=.deung+.eun\n8\t인간적이려고\t인간+적+이+려고\tSCONJ\tncn+xsn+jp+ecs\t_\t9\tccomp\t_\tTranslit=.in.gan.jeog.i.ryeo.go|LTranslit=.in.gan+.jeog+.i+.ryeo.go\n9\t하는\t하+는\tVERB\tpvg+etm\t_\t10\tccomp\t_\tTranslit=.ha.neun|LTranslit=.ha+.neun\n10\t증거이다\t증거+이+다\tVERB\tncn+jp+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.jeung.geo.i.da|LTranslit=.jeung.geo+.i+.da\n11\t.\t.\tPUNCT\tsf\t_\t10\tpunct\t_\tTranslit=.|LTranslit=.",
+    "fixture_sha256": "7f557dabb6e312143694999045c45232f8eb884582cb5e3098135f68ee4fc0b5",
+    "byte_identical_evaluator_output": true,
+    "summary": {
+      "schema_version": 2,
+      "input_sha256": "7f557dabb6e312143694999045c45232f8eb884582cb5e3098135f68ee4fc0b5",
+      "corpus": "kaist",
+      "input": "/tmp/klem-ryeogo-licenses-copula-gold.conllu",
+      "rows": 11,
+      "excluded_rows": 3,
+      "malformed_rows": 0,
+      "converted_rows": 8,
+      "unsupported": {},
+      "grouped_matches": 8,
+      "gold_lemmas": 10,
+      "recovered_gold_lemmas": 10,
+      "transformed_rows": 5,
+      "transformed_matches": 5,
+      "adapter_coverage": 1.0,
+      "grouped_lemma_recall": 1.0,
+      "lemma_recall": 1.0,
+      "transformed_grouped_recall": 1.0,
+      "mean_candidates": 5.25,
+      "p95_candidates": 10,
+      "max_candidates": 10,
+      "common_misses": []
+    },
+    "token_result": {
+      "id": "id:MH2_0014-s388/8",
+      "surface": "인간적이려고",
+      "expected": [
+        "인간적",
+        "이다"
+      ],
+      "matched": true,
+      "recovered": 2,
+      "recovered_sets": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "interpretation": "Unmodified KAIST training annotation explicitly treats 인간적이려고 as nominal + relational suffix + copula + connective ending, followed by separately written 하는. This is competing corpus evidence for the broader copula/state-making audit; preservation does not make the annotated usage a universal normative license."
+  }
+}

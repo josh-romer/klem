@@ -3298,6 +3298,20 @@ copulas are excluded. Earlier owners and right-hand tense remain available.
 Lexical adjectives stay hypotheses; broad dictionary conflicts and other
 auxiliary endpoints are not inferred.
 
+The follow-up [source audit](ryeogo-license-source-audit.json) reads OpenDict's
+separate final senses: vowel-final predicates include adjectives (크려고),
+and the consonant-final sense includes past 었. NIKL's retrieved 2026-08-24
+answer acknowledges adjective state-making uses without resolving them
+categorically. Before represented 으려고 + auxiliary 하다/들다, the dictionary
+assessment therefore marks known adjective entries **unknown**, retaining
+independent compatible verb homonyms (크다, 있다). The dependency follows
+지-negatives and explicit 답다; different auxiliaries and copulas reset it.
+Known role/ending/spelling conflicts take precedence. Final rhetorical uses
+keep their existing assessment. This policy does not choose a sentence sense,
+reject all adjectives, or prune the preserved full-expression conflicts.
+[Forty-five cases](../tests/fixtures/ryeogo-license-assessments.json) track
+66 per-entry judgments; unknown is separate from raw forbidden judgments.
+
 ## Shortened intention expressions and assumption -(으)려니 (COV-017ax)
 
 The analyzer preserves `으려니`, `으려니까`, `으려더라`, `으려던`,

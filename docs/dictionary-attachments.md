@@ -455,3 +455,23 @@ from the `나이까` class. Its ten policy cases preserve seven licensed reading
 and exclude three known local spelling conflicts; both verbal and adjectival
 `멀다` homonyms survive. Headword-only and unfiltered candidates keep the
 underlying spelling hypotheses. These checks do not select a question sense.
+
+## Intention adjective uncertainty (COV-017aw)
+
+The [primary-source follow-up](ryeogo-license-source-audit.json) separates final
+rhetorical -(으)려고 from verbal intention/change connective uses. The final
+entries license adjectives, with a past license for -으려고. NIKL's full
+2026-08-24 consultation acknowledges actual adjective state-making uses and
+leaves their analysis open. Broad adjective POS therefore cannot decide a
+represented intention construction categorically.
+
+Before 으려고 + auxiliary 하다/들다, known adjective entries become **unknown**,
+with no invented conflict. Independent verb homonyms remain compatible. The
+check follows 지-negatives and explicitly adjectival 답다; represented adjective
+auxiliaries are assessed under their own class. A different auxiliary or copula
+resets the dependency. Known role, ending and spelling conflicts take precedence.
+Both filters retain unknown readings; raw candidates are unchanged. The separate
+[entry ledger](../tests/fixtures/ryeogo-license-assessments.json) covers 45 cases
+and 66 judgments, including final homonyms, ownership boundaries and provider
+uncertainty. This does not resolve source-conflicted full expansions or
+standalone prefinal licenses. See [the evaluation](ryeogo-licenses-evaluation.json).

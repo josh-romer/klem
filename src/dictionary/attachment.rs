@@ -161,6 +161,45 @@ fn expressive_hada_connector(analysis: &Analysis, mut rest: &[Component]) -> Opt
     }
 }
 
+// A final rhetorical -(으)려고 does not require a verbal head. Only a
+// represented intention auxiliary establishes the connective reading here.
+// 지-negatives preserve the head's class; other auxiliaries reset ownership.
+fn intention_auxiliary_connector(analysis: &Analysis, mut rest: &[Component]) -> Option<usize> {
+    loop {
+        let next = rest.iter().position(|c| matches!(c, Component::Lemma(_)))?;
+        let morphs = &rest[..next];
+        if morphs.iter().any(|c| {
+            matches!(c, Component::Morpheme(i)
+                if analysis.morphemes[*i].kind == MorphemeKind::Suffix
+                && analysis.morphemes[*i].form != "답다")
+        }) {
+            return None;
+        }
+        let connector = morphs.iter().find_map(|c| match c {
+            Component::Morpheme(i) if analysis.morphemes[*i].kind == MorphemeKind::Ending => {
+                Some(*i)
+            }
+            _ => None,
+        })?;
+        let Component::Lemma(index) = rest[next] else {
+            return None;
+        };
+        let lemma = &analysis.lemmas[index];
+        if lemma.kind != LemmaKind::Auxiliary {
+            return None;
+        }
+        let form = analysis.morphemes[connector].form.as_str();
+        if form == "으려고" && matches!(lemma.text.as_str(), "하다" | "들다") {
+            return Some(connector);
+        }
+        if form != "지" || !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+        {
+            return None;
+        }
+        rest = &rest[next + 1..];
+    }
+}
+
 // -(으)ㄹ라치면 keeps its lexical class requirement through 지-negatives.
 // Other auxiliaries, derivation and copulas establish their own class boundary.
 fn habitual_condition_ending(analysis: &Analysis, mut rest: &[Component]) -> Option<usize> {
@@ -319,6 +358,12 @@ impl Annotation {
             let habitual_ending = (lemma.kind == LemmaKind::Predicate)
                 .then(|| habitual_condition_ending(analysis, rest))
                 .flatten();
+            let intention_connector = intention_auxiliary_connector(analysis, rest);
+            let derived_adjective = morphs.iter().any(|c| {
+                matches!(c, Component::Morpheme(i)
+                    if analysis.morphemes[*i].kind == MorphemeKind::Suffix
+                    && analysis.morphemes[*i].form == "답다")
+            });
             let entries: Vec<_> = self
                 .lemmas
                 .iter()
@@ -550,6 +595,23 @@ impl Annotation {
                                 status = Compatibility::Unknown;
                             }
                         }
+                    }
+                    if status == Compatibility::Compatible
+                        && intention_connector.is_some()
+                        && (derived_adjective
+                            || (lemma.kind == LemmaKind::Predicate
+                                && matched.entry.pos == "형용사")
+                            || (lemma.kind == LemmaKind::Auxiliary
+                                && matches!(class, Some(PredicateClass::Adjective))
+                                && matched.entry.pos == "보조 형용사"))
+                    {
+                        // The connective/auxiliary entries specify verbs, but
+                        // NIKL Q&A 335000 leaves adjective state-making uses
+                        // unresolved. Preserve that uncertainty per entry,
+                        // including inherited negatives and explicit 답다.
+                        // Known role, ending and spelling conflicts above
+                        // take precedence; no contextual sense is selected.
+                        status = Compatibility::Unknown;
                     }
                     EntryAssessment {
                         id: matched.entry.id.clone(),

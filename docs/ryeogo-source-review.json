@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "Partial COV-017aw implementation: derived rhetorical adjectives and reviewed direct finite intention auxiliary boundaries. No blanket POS or prefinal rejection across all senses/contexts.",
+  "status": "Partial COV-017aw: derived rhetorical adjectives, reviewed finite auxiliary boundaries, and per-entry intention adjective uncertainty. No blanket POS or prefinal rejection.",
   "attribution": "National Institute of Korean Language, Korean Basic Dictionary, local September 2026 export. English equivalents retained; all senses, notes, forms and example groups preserved for these entries.",
   "license": "CC BY-SA 2.0 KR",
   "source_entries": [
@@ -1901,7 +1901,7 @@
         "krdict:88110",
         "krdict:86714"
       ],
-      "finding": "The full-coda final notes explicitly include adjectives and past, while zero/ㄹ forms list verbs, copulas and honorific. Do not infer rejection of all vowel adjectives from this asymmetry without additional evidence."
+      "finding": "KRDict’s long-allomorph adjective notes are asymmetric. Follow-up OpenDict final -려고 346255 explicitly lists predicates and illustrates 크려고; 505219 licenses consonant predicates or past 었. Final vowel adjectives are preserved independently of intention auxiliary uncertainty."
     },
     {
       "id": "direct-connective",
@@ -1936,9 +1936,9 @@
     {
       "id": "contextual-coercion-question",
       "sources": [
-        "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&pageIndex=1&qna_seq=335000&searchCondition=&searchKeyword="
+        "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=335000"
       ],
-      "finding": "A 2026-08-21 question gives adjective 재미있다 with intention -(으)려고. Search results show a response discussing state-making interpretation and uncertainty, but the opened page exposes only the question. Do not treat that question or the incompletely retrieved response as an authoritative blanket license or rejection."
+      "finding": "Follow-up audit retrieved the full 2026-08-24 answer. NIKL acknowledges state-making 재미있으려고 and declines categorical analysis. See docs/ryeogo-license-source-audit.json for retrieval hash and per-entry uncertainty; neither blanket acceptance nor blanket rejection is inferred."
     }
   ],
   "primary_research": [
@@ -1960,14 +1960,15 @@
   ],
   "remaining": [
     "Decide per-ending ownership of prefinal restrictions without deleting final rhetorical or source-conflicted expanded-expression candidates.",
-    "Review adjective/coercive readings and negative-auxiliary class inheritance before adding dictionary conflicts.",
+    "Resolve lexical/contextual adjective state-making beyond broad POS; uncertainty is now explicit per entry, including negative inheritance.",
     "Audit shortened-expression source conflicts, including copula and past/modal claims, alongside their full expansions.",
     "Verify the final restriction implementation against frozen corpora and a complete novel; independent Korean review remains pending."
   ],
   "implemented_scope": {
     "derived_adjective": "Known ㅂ-irregular 답다 now permits the long final rhetorical ending.",
     "finite_auxiliary": "For canonical 으려고 followed by auxiliary 하다/들다 whose own ending is 는다, 다, 어요 or 습니다: exclude non-honorific prefinals on the immediately preceding owner and represented copula class. Right-hand tense and earlier owners remain available.",
-    "not_inferred": "No blanket adjective rejection, no global modal/retrospective restriction on standalone 으려고, and no new pruning for source-conflicted shortened-expression expansions. Their audit remains open."
+    "not_inferred": "No blanket adjective rejection, no global modal/retrospective restriction on standalone 으려고, and no new pruning for source-conflicted shortened-expression expansions. Their audit remains open.",
+    "adjective_intention_uncertainty": "Per-entry unknown for known adjectives before represented 으려고 + auxiliary 하다/들다, through reviewed 지 negatives; explicit 답다 and represented adjective auxiliaries preserve local ownership. No raw pruning; see tests/ryeogo_licenses.rs."
   },
   "related_expression_gap_probes": [
     {
@@ -2056,5 +2057,6 @@
       "canonical_path_present": false,
       "existing_relevant_analyses": []
     }
-  ]
+  ],
+  "follow_up": "docs/ryeogo-license-source-audit.json"
 }

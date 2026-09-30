@@ -3,6 +3,27 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn quoted_neuni_recovers_the_unchanged_kaist_training_tokens() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-quoted-neuni.conllu").as_slice(),
+        Corpus::Kaist,
+        "quoted-neuni",
+    )
+    .unwrap();
+    for (id, surface, head) in [
+        ("id:MH2_0051-s68/9", "우월하다느니", "우월하다"),
+        ("id:MH2_0051-s68/10", "열등하다느니", "열등하다"),
+        ("id:MH2_0081-s23/7", "살았다느니", "살다"),
+        ("id:MH2_0081-s23/11", "살았다느니", "살다"),
+    ] {
+        let c = &report.cases[id];
+        assert_eq!(c.surface, surface);
+        assert_eq!(c.expected, [head]);
+        assert!(c.matched, "{id}: {c:?}");
+    }
+}
+
+#[test]
 fn neuni_recovers_the_unchanged_source_tokens() {
     for (kind, input, targets) in [
         (

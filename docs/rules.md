@@ -3524,3 +3524,35 @@ Two joined inputs are tolerant structural inferences; original source spacing
 is unchanged. Quoted 다느니 listings and additional followers require separate
 review (COV-017bd). No implicit 못하다 fusion or generic expression fallback
 is introduced.
+
+## Quoted listings (COV-017bd)
+
+The ten source entries preserve statements 다느니/ㄴ다느니/는다느니,
+questions 냐느니/느냐느니/으냐느니, commands (으)라느니, proposals 자느니
+and retrospective 더라느니 as distinct bundles. See the complete native
+[fixture](../tests/fixtures/krdict-quoted-neuni.json) and
+[source audit](quoted-neuni-source-audit.json). Their contextual listing meanings
+are not selected by the generator; the sentence-level relationship between repeated
+clauses remains separate. Present verb attachment uses attached ㄴ/ㄹ deletion
+or non-ㄹ consonant 는다느니; plain bare adjective statements use 다느니.
+Article 40 타느니 recovery retains its own written-form evidence.
+
+[-라느니](https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86079&nation=eng)
+has factual/copular and command senses. Canonical 라느니 preserves copulas/
+아니다 or listed 시/더/으리, while 으라느니 preserves the command boundary
+and existing honorific hypotheses. Retrospective 더라느니 stays a separate
+bundle beside the explicitly licensed 더 + 라느니 path. Neither factual
+copula recovery nor omitted-copula spelling inflects a nominal stem.
+The native 사 달라느니 example supports an explicitly joined 사다 + 어 + 달다
++ 으라느니 inference; the finite request paradigm gains only that bare command
+tail, retaining its tense/honorific/factual exclusions.
+
+Bare adjective question 으냐느니 excludes prefinals, and general 냐느니 remains
+distinct. 느냐느니 lists verbs and existential adjectives; broader raw lexical
+classes remain hypotheses until per-entry dictionary evidence is applied.
+Exact expressions 88986/86074 retain 품사 없음 outside the queue, without a
+broad unknown-POS fallback. Unlisted local polite markers and unknown auxiliary
+roles remain dictionary-unknown, not certified readings. Verbal/adjectival 크다
+homonyms are checked independently. The native missing-space 결혼을하라느니
+is preserved as COV-020p; ending coverage does not infer arbitrary object/predicate
+joining. All 11 senses and 49 complete example groups are unchanged.

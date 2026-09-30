@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bc/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bd/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 347 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bc/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 367 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 355 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bd/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 359 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -221,7 +221,7 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bc implemented; COV-017aw/az remain open.**
+  COV-017ax–ay/017ba–bd implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1265,15 +1265,29 @@ review remains open under the completion review below.
   and independent Korean
   review remain open under COV-017/COV-013.
 
-- [ ] **COV-017bd — Quoted listings with 다느니/ㄴ다느니/는다느니.**
-  Separate the quoted assertion/listing construction from plain 느니. The pinned
-  KAIST train file retains 우월하다느니/열등하다느니 at MH2_0051-s68/9,10
-  and two 살았다느니 tokens at MH2_0081-s23/7,11 in the
-  [complete discovery audit](neuni-source-audit.json). Preserve those stable source
-  sentence/token IDs when writing regression fixtures.
-  Review all native senses/attachment notes and any directly supported quoted
-  command/proposal/question variants; preserve their distinct owners, prefinals
-  and source identities. Plain 느니 coverage does not certify these four tokens.
+- [x] **COV-017bd — Quoted statements/questions/commands/proposals with 느니.**
+  Nine bundles now preserve canonical 다느니/는다느니/라느니/으라느니/자느니/
+  냐느니/느냐느니/으냐느니/더라느니 from ten primary entries, all 11 senses
+  and 49 complete example groups. Factual/copular 라느니 stays distinct from
+  command 으라느니, including its explicit 시/더/으리 licenses. The source
+  사 달라느니 extends only the bare request tail; no ordinary tense/honorific
+  paradigm is borrowed for 달다. Exact expressions 88986/86074 retain 품사 없음
+  outside the inventory queue. Evidence: 176 raw cases (133 required / 43 forbidden),
+  16 policy cases (9 required / 7 forbidden), 143 complete native entries, 90 direct
+  token cases and three explicitly joined auxiliary inputs, [four tests](../tests/quoted_neuni.rs),
+  four annotated KAIST train tokens in two unchanged original sentences,
+  [source audit](quoted-neuni-source-audit.json) and
+  [individual evaluation](quoted-neuni-evaluation.json). Corpus 열등하다 uses
+  a verbal derivation tag while KRDict labels it adjective; the original annotation
+  is preserved without pretending to settle POS from lemma recovery. The original
+  unspaced 결혼을하라느니 is an explicit COV-020p observation. The comparison
+  retains 821 added candidates across 160 of 10,425 surfaces without removals;
+  693 remain unjudged. All four frozen full dev/test reports and both 179,112-record
+  novel streams are byte-identical; the four new annotated matches are training
+  observations. Rust/stress, pinned corpus, lint/format, frontend/browser and
+  x86_64 Linux Nix package/flake checks pass; the refreshed preview has exact complete-
+  dictionary HTTP/CLI and asset parity. Contextual sense, wider prefinals/followers, unknown auxiliary roles and independent Korean review remain
+  open under COV-017/COV-013.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -2128,6 +2142,16 @@ review remains open under the completion review below.
   13 of 4,567 compared surfaces, zero removals/provenance changes, unchanged
   frozen-corpus match counts and byte-identical compatible-filtered novel output.
 
+- [ ] **COV-020p — Missing spaces across nominal case and lexical predicates.**
+  KRDict 86079 sense 2, example group 5 contains the unchanged original input
+  결혼을하라느니. Its explicit components would be 결혼 + 을 followed by
+  하다 + 으라느니, but the current word analysis does not split an object phrase
+  and a separate lexical predicate inside one Hangul run. Preserve original byte
+  spans and an explicit spacing/segmentation hypothesis if support is added;
+  do not invent a dictionary head 결혼을하다, silently rewrite the source, or
+  make arbitrary nominal-particle endings auxiliary connectors. Source observation
+  and original example text: [quoted-listing audit](quoted-neuni-source-audit.json).
+
 - [ ] **COV-021 — Remaining spelling and 하다 shortening.** **Partial: Article 39 잖/찮
   forms are covered by COV-021a; COV-021b adds shortened 기 nominalizations;
   COV-021c adds eight fixed complex-coda classes; COV-021d adds per-entry
@@ -2357,7 +2381,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 444 currently emitted canonical grammar forms.** The initial catalog
+  for all 453 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

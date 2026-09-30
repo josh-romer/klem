@@ -498,3 +498,14 @@ does not settle its standalone auxiliary entry. The regression ledger uses
 기다리다 (a lexical verb without this auxiliary homonym) for the whole-reading
 conflict and separately checks preservation of the unknown 가다 reading.
 See [the source audit](neuni-source-audit.json) and [regressions](../tests/neuni.rs).
+
+COV-017bd extends the existing per-entry report/question/copula policies to
+quoted listing bundles. Bare 다느니 identifies ordinary lexical verb conflicts;
+present 는다느니 and verbal 느냐느니 independently preserve verb homonyms.
+Bare adjective 으냐느니 and factual 라느니 retain their distinct class evidence.
+Standalone auxiliary entries and unlisted polite prefinals remain unknown. The
+source notes do not justify blanket lexical-adjective command/wish exclusion.
+Use a genuinely generated 쌓이다 + 라느니 path to test the optional factual
+copula conflict; bare 기다리다 + 라느니 is already excluded by the raw boundary.
+The [individual report](quoted-neuni-evaluation.json) preserves these draft
+corrections and exact source IDs, including expressions outside the POS queue.

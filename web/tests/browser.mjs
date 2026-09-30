@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const quotedNeuni = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-quoted-neuni.json"),"utf8"));
   const neuni = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-neuni.json"),"utf8"));
   const ba = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-ba.json"),"utf8"));
   const eumse = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-eumse.json"),"utf8"));
@@ -353,6 +354,7 @@ try {
       ...eumse.LexicalResource.Lexicon.LexicalEntry,
       ...ba.LexicalResource.Lexicon.LexicalEntry,
       ...neuni.LexicalResource.Lexicon.LexicalEntry,
+      ...quotedNeuni.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -1286,6 +1288,51 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-neuni-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-neuni-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const quotedNeuniCases = recipientLedger.cases.filter(c => c.id.startsWith("quoted-neuni-"));
+  const quotedNeuniPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("quoted-neuni-"));
+  assert.equal(quotedNeuniCases.length,176); assert.equal(quotedNeuniPolicies.length,16);
+  for (const [cases,policy] of [[quotedNeuniCases,false],[quotedNeuniPolicies,true]]) {
+    for (const c of cases) {
+      const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+      const cli=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      const {dictionary,...analysis}=cli;
+      assert.deepEqual(token.analysis,analysis); assert.deepEqual(token.dictionary,dictionary);
+      for (const j of c.judgments) {
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if (policy) {
+          for (const a of found) {
+            const index=token.analysis.analyses.indexOf(a);
+            assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+          }
+        }
+      }
+    }
+  }
+  const quotedNeuniText="우월하다느니 산다느니 친구라느니 먹으시라느니 사달라느니 먹자느니 얼마냐느니 사느냐느니 나으냐느니 먹었더라느니 먹으리라느니 크다느니 큰다느니 좋느냐느니";
+  const quotedNeuniData=await(await post("analyze",{text:quotedNeuniText})).json();
+  for(const[form,ids]of[["다느니",["krdict:86911"]],["는다느니",["krdict:86068","krdict:86069"]],["라느니",["krdict:86079"]],["으라느니",["krdict:86079","krdict:86080"]],["자느니",["krdict:86070"]],["냐느니",["krdict:88983"]],["느냐느니",["krdict:88986"]],["으냐느니",["krdict:88987"]],["더라느니",["krdict:86074"]]]){
+    assert.deepEqual(quotedNeuniData.grammar["-"+form].map(e=>e.id).sort(),ids);
+  }
+  for(const form of["느냐느니","더라느니"])assert.equal(quotedNeuniData.grammar["-"+form][0].pos,"품사 없음");
+  await submit(page,quotedNeuniText);await waitHeading(page,"우월하다느니");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms,label]of[[0,["우월하","다느니"],"Listed statement"],[1,["살","는다느니"],"Listed action"],[2,["친구","이","라느니"],"Listed copular / factual statement"],[3,["먹","시","라느니"],"Listed copular / factual statement"],[3,["먹","시","으라느니"],"Listed command"],[4,["사","어","달","으라느니"],"Listed command"],[5,["먹","자느니"],"Listed proposal"],[6,["얼마","이","냐느니"],"Listed question"],[7,["살","느냐느니"],"Listed verbal / existential question"],[8,["낫","으냐느니"],"Listed adjective question"],[9,["먹","었","더라느니"],"Listed recalled statement"],[10,["먹","으리","라느니"],"Listed copular / factual statement"],[11,["크","다느니"],"Listed statement"],[12,["크","는다느니"],"Listed action"]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes(label));
+  }
+  const quotedNeuniDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const quotedNeuniExport=JSON.parse(await readFile(await(await quotedNeuniDownload).path(),"utf8"));
+  const quotedNeuniExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:quotedNeuniText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(quotedNeuniExport.records,quotedNeuniExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-quoted-neuni-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-quoted-neuni-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const eumseCases = recipientLedger.cases.filter(c => c.id.startsWith("eumse-"));

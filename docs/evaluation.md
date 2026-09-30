@@ -3226,3 +3226,50 @@ and 386 judgment-cited entries. Exact expression 85824 (품사 없음) is review
 outside that queue. Contextual sense, wider prefinals/followers, distribution
 conflicts, missing full comparative entry and independent Korean review remain
 open; these counts do not estimate linguistic precision.
+
+## Quoted listings (COV-017bd)
+
+The [source and individual evidence](quoted-neuni-evaluation.json) adds nine
+canonical statement/question/command/proposal/retrospective bundles from ten
+primary entries. All 11 senses and 49 complete example groups remain intact in
+143 complete attributed native entries. Ninety direct token cases and three
+explicitly joined auxiliary inputs have source-backed structural judgments.
+The original malformed 결혼을하라느니 remains an explicit COV-020p spacing
+observation. Four corrected draft assumptions are retained in the audit: vowel
+크다 uses attached 큰다느니, ㄹ-final 들다 uses short 들라느니, the optional
+copular conflict is tested on genuinely generated 쌓이다 + 라느니, and the
+primary-attested request tail 사 달라느니 is added to the finite 달다 inventory.
+
+The 176 new raw cases contain 133 required / 43 forbidden paths; 16 policy cases
+contain nine required / seven forbidden paths. Global totals are 5,538 / 2,708
+raw and 1,700 / 1,588 policy judgments. The full comparison retains 821 added
+candidates across 160 of 10,425 surfaces without removals: 121 match required
+judgments, seven have optional dictionary conflicts and 693 remain unjudged.
+These counts are not linguistic precision estimates. Standalone auxiliary roles,
+unlisted polite prefinals and contextual listing senses remain unresolved.
+
+All four selected KAIST training tokens become grouped matches from previous
+misses. The original verbal derivation tag for 열등하다 remains distinct from
+KRDict's adjective entry; lemma recovery does not resolve this annotation
+conflict. All four complete frozen development/test reports remain byte-identical,
+with no holdout recall gain or baseline regeneration. The pinned regression gate
+passes. The novel has no strict ending-shaped target occurrence; both filters
+preserve byte-identical streams across all 179,112 records. Debug and release
+hashes match, but this negative discovery is not positive novel coverage evidence.
+
+Three interleaved release samples per version/filter measured headword medians
+of 1.617 seconds before / 1.659 after and compatible medians of
+1.581 / 1.588 seconds. Full samples and peak child RSS are retained;
+small descriptive samples do not establish statistical performance equivalence.
+Rust/stress, lint/format, frontend build, complete browser, pinned corpus and Nix
+CLI/web package tests pass on x86_64 Linux. Complete-dictionary HTTP checks cover
+all 176 raw / 16 policy cases, both filters, nine labels/ten source IDs and six
+prior controls. Fourteen selected component choices preserve copular/command
+homonyms, conjectural prefinals and request auxiliaries; filtered export matches
+the CLI. Desktop/mobile screenshots are inspected and the refreshed 8081 preview
+serves the tested JavaScript byte for byte. The catalog has 453 canonical forms /
+634 source IDs / 680 grammar fixture entries. The inventory has 355 scoped /
+359 unreviewed / one gap across 715 entries, with 405 catalog-linked and 393
+judgment-cited entries. Exact expressions 88986/86074 are reviewed outside the
+queue. COV-020p, wider distributions/followers and independent Korean/contextual
+review remain unresolved.

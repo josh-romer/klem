@@ -1687,3 +1687,14 @@ resultative, question-class and contextual cases remain in the source review.
   five targeted annotated tokens; the original train/test identities remain in
   the source manifest. Quoted 다느니 observations remain separate open work.
   KRDict 85824 retains POS 품사 없음 and its exact expression identity.
+
+- `krdict-quoted-neuni.json` preserves 143 complete attributed native entries for
+  COV-017bd, with only RelatedForm and non-English equivalents omitted.
+  `quoted-neuni-sources.json` retains export SHA-256 values, all ten primary
+  entries/11 senses/49 complete example groups, 90 direct token cases and three
+  explicitly joined auxiliary inputs. The malformed native 결혼을하라느니 is
+  preserved as an unresolved COV-020p observation, not a silently corrected token.
+  `kaist-quoted-neuni.conllu` preserves two complete unchanged training sentences
+  and four exact target annotations. KRDict and KAIST disagree on the lexical POS
+  of 열등하다; the original annotation remains unchanged. Exact expressions
+  느냐느니 88986 and 더라느니 86074 retain 품사 없음 outside the inventory queue.

@@ -687,3 +687,13 @@ remain distinct open COV-017bd work. The queue now has 347 scoped, 367 unreviewe
 and one gap across 715 entries, with 397 catalog-linked and 386 judgment-cited
 entries. Contextual correctness and independent Korean-language review remain
 open. See [individual evidence](neuni-evaluation.json).
+
+The COV-017bd quoted-listing audit reviews eight native ending entries
+86068/86069/86911/86079/86080/86070/88983/88987 and separately preserves exact
+expressions 88986/86074 (품사 없음) outside the queue. All ten entries' 11 senses
+and 49 complete example groups remain intact; per-entry class policy keeps
+homonyms, unknown auxiliary roles and unlisted polite markers independent. Four
+training groups become matches; all four frozen dev/test reports remain identical.
+The original missing-space input remains explicit COV-020p work. The queue now
+has 355 scoped, 359 unreviewed and one gap across 715 entries, with 405 catalog-
+linked and 393 judgment-cited entries. See [individual evidence](quoted-neuni-evaluation.json).

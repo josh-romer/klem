@@ -575,6 +575,7 @@ pub(crate) fn present_declarative(form: &str) -> bool {
             | "는다죠"
             | "는다지만"
             | "는다니까"
+            | "는다느니"
     )
 }
 
@@ -594,6 +595,7 @@ pub(crate) fn adjectival_question(form: &str) -> bool {
             | "으냬"
             | "으냐지만"
             | "으냐니까"
+            | "으냐느니"
     )
 }
 
@@ -626,6 +628,21 @@ fn ryeo_expression(form: &str) -> bool {
 
 pub(crate) fn activity_reason(form: &str) -> bool {
     matches!(form, "느라" | "느라고")
+}
+
+pub(crate) fn quoted_neuni_ending(form: &str) -> bool {
+    matches!(
+        form,
+        "다느니"
+            | "는다느니"
+            | "라느니"
+            | "으라느니"
+            | "자느니"
+            | "냐느니"
+            | "느냐느니"
+            | "으냐느니"
+            | "더라느니"
+    )
 }
 
 pub(crate) fn neuni_verbal_ending(form: &str) -> bool {
@@ -842,6 +859,18 @@ fn predicates(word: &str) -> Vec<Predicate> {
                     && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
                     || (ending.form == "자니" && !p.morphs.is_empty())
                     || (matches!(ending.form, "느냐니" | "더라니")
+                        && p.morphs.iter().any(|m| m.form == "더"))
+                {
+                    continue;
+                }
+                // Quoted listings retain distinct source licenses. Commands
+                // allow honorifics, proposals are bare, and the statement/
+                // verbal-question/retrospective bundles do not repeat 더.
+                // General 냐느니 keeps unreviewed markers as hypotheses.
+                if (ending.form == "으라느니"
+                    && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
+                    || (ending.form == "자느니" && !p.morphs.is_empty())
+                    || (matches!(ending.form, "다느니" | "느냐느니" | "더라느니")
                         && p.morphs.iter().any(|m| m.form == "더"))
                 {
                     continue;
@@ -1166,6 +1195,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                             | "라며"
                             | "라면서"
                             | "라니"
+                            | "라느니"
                     );
                 if factual_ra
                     && !p.morphs.last().is_some_and(|m| {
@@ -1211,6 +1241,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.rules.push("ending".into());
                 if ending.form == "으리다" {
                     p.rules.push("ending.literary_ri".into());
+                }
+                if quoted_neuni_ending(ending.form) {
+                    p.rules.push("ending.quoted_neuni".into());
                 }
                 if neuni_verbal_ending(ending.form) || matches!(ending.form, "니만" | "으니만큼")
                 {
@@ -1398,6 +1431,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
         "라며",
         "라면서",
         "라니",
+        "라느니",
     ] {
         if let Some(base) = word.strip_suffix(ending) {
             for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
@@ -1447,6 +1481,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         }
                         if ending == "라든가" {
                             p.rules.push("ending.quoted_alternative".into());
+                        }
+                        if quoted_neuni_ending(ending) {
+                            p.rules.push("ending.quoted_neuni".into());
                         }
                         if reporting_ni(ending) {
                             p.rules.push("ending.reporting_ni".into());
@@ -1877,6 +1914,8 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                     "으라며"
                         | "으라면서"
                         | "으라니"
+                        | "으라느니"
+                        | "자느니"
                         | "자니"
                         | "잔"
                         | "자며"
@@ -1917,6 +1956,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                             | "는가"
                             | "는가요"
                             | "느냐"
+                            | "느냐느니"
                             | "느냐고"
                             | "느냐는"
                             | "느냐며"
@@ -1943,6 +1983,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                                         | "다죠"
                                         | "다지만"
                                         | "다니까"
+                                        | "다느니"
                                         | "대"
                                 ))
                     }
@@ -1983,7 +2024,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
     if p.morphs.first().is_some_and(|m| {
         matches!(
             m.form.as_str(),
-            "느냐고" | "느냔다" | "느냐지만" | "느냐니까" | "느냬"
+            "느냐고" | "느냐느니" | "느냐다" | "느냐지만" | "느냐니까" | "느냬"
         )
     }) {
         return false;
@@ -2004,6 +2045,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                     "으라며"
                         | "으라면서"
                         | "으라니"
+                        | "으라느니"
+                        | "자느니"
                         | "자니"
                         | "잔"
                         | "자며"
@@ -2061,6 +2104,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으냐며"
                 | "으냐면서"
                 | "으냐니"
+                | "으냐느니"
                 | "으냔"
                 | "으냔다"
                 | "으냬"
@@ -2112,6 +2156,9 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "다고"
             | "다는"
             | "다니"
+            | "다느니"
+            | "냐느니"
+            | "더라느니"
             | "다면"
             | "답니다"
             | "단다"
@@ -2294,6 +2341,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                     "으라며"
                         | "으라면서"
                         | "으라니"
+                        | "으라느니"
+                        | "자느니"
                         | "자니"
                         | "잔"
                         | "자며"
@@ -2336,6 +2385,9 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
         matches!(
             m.form.as_str(),
             "다며"
+                | "다느니"
+                | "느냐느니"
+                | "으냐느니"
                 | "다면서"
                 | "느냐"
                 | "느냐고"
@@ -3171,6 +3223,7 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
                 | "으라며"
                 | "으라면서"
                 | "으라니"
+                | "으라느니"
                 | "으라거나"
                 | "오"]
         ),

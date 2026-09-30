@@ -107,6 +107,10 @@ fn unreviewed_neuni_prefinals(
         "느니만" | "느니만큼" => &["시"],
         "니만" => &[],
         "으니만큼" => &["시", "었", "겠", "더", "으옵"],
+        "다느니" | "냐느니" | "느냐느니" | "더라느니" => &["시", "었", "겠"],
+        "는다느니" | "으라느니" => &["시"],
+        "라느니" => &["시", "더", "으리"],
+        "자느니" | "으냐느니" => &[],
         _ => return false,
     };
     components
@@ -145,6 +149,7 @@ fn bare_copular_ending(form: &str) -> bool {
             | "라며"
             | "라면서"
             | "라니"
+            | "라느니"
             | "라거나"
             | "란"
     )
@@ -480,7 +485,10 @@ impl Annotation {
                             // and standalone auxiliaries are not rejected.
                             Some(AttachmentRule::BareCopularEnding)
                         } else if bare
-                            && matches!(form, "단다" | "다지" | "다죠" | "다지만" | "다니까" | "대")
+                            && matches!(
+                                form,
+                                "단다" | "다지" | "다죠" | "다지만" | "다니까" | "다느니" | "대"
+                            )
                             && verb
                         {
                             // Lexical existential/honorific senses cannot be
@@ -515,7 +523,7 @@ impl Annotation {
                                 AttachmentRule::BareLiteraryQuestion
                             })
                         } else if bare
-                            && matches!(form, "느냐지만" | "느냐니까" | "느냬")
+                            && matches!(form, "느냐지만" | "느냐니까" | "느냬" | "느냐느니")
                             && adjective
                             && !lemma.text.ends_with("있다")
                             && !lemma.text.ends_with("없다")
@@ -595,7 +603,10 @@ impl Annotation {
                             } else {
                                 Some(AttachmentRule::BareAdjectivalQuestion)
                             }
-                        } else if adjective && lemma.text == "아니다" && form == "으라니" {
+                        } else if adjective
+                            && lemma.text == "아니다"
+                            && matches!(form, "으라니" | "으라느니")
+                        {
                             // Preserve factual 라니. Do not generalize this to
                             // all adjective commands/proposals: wishes exist.
                             Some(AttachmentRule::NegativeCopulaCommand)

@@ -450,6 +450,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                         suffix,
                         "다" | "다고"
                             | "다니"
+                            | "다느니"
                             | "단"
                             | "다는"
                             | "다면"
@@ -536,6 +537,11 @@ pub(crate) fn endings() -> &'static [Ending] {
             "다죠",
             "다지만",
             "다니까",
+            "다느니",
+            "냐느니",
+            "느냐느니",
+            "자느니",
+            "더라느니",
             "냐지만",
             "냐니까",
             "느냐지만",
@@ -711,6 +717,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("더라며", "더라며", 0),
             ("더라면서", "더라면서", 0),
             ("더라니", "더라니", 0),
+            ("더라느니", "더라느니", 0),
+            ("냐느니", "냐느니", 0),
             ("더란다", "더란다", 0),
             ("더래", "더래", 0),
             ("냬", "냬", 0),
@@ -823,6 +831,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라며", "라며", "으라며"),
             ("으라면서", "라면서", "으라면서"),
             ("으라니", "라니", "으라니"),
+            ("으라느니", "라느니", "으라느니"),
             ("으라거나", "라거나", "으라거나"),
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
@@ -840,6 +849,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으냐며", "냐며", "으냐며"),
             ("으냐면서", "냐면서", "으냐면서"),
             ("으냐니", "냐니", "으냐니"),
+            ("으냐느니", "냐느니", "으냐느니"),
             ("으냔", "냔", "으냔"),
             ("으나", "나", "으나"),
             ("으나마", "나마", "으나마"),
@@ -928,6 +938,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다며", "다며", "는다며", 4),
             ("는다면서", "다면서", "는다면서", 4),
             ("는다니", "다니", "는다니", 4),
+            ("는다느니", "다느니", "는다느니", 4),
             ("는단", "단", "는단", 4),
             ("는단다", "단다", "는단다", 4),
             ("는대", "대", "는대", 4),
@@ -981,6 +992,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("다고", "타고"),
             ("다는", "타는"),
             ("다니", "타니"),
+            ("다느니", "타느니"),
             ("다면", "타면"),
             ("도록", "토록"),
             ("고자", "코자"),
@@ -1018,6 +1030,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라며",
             "라면서",
             "라니",
+            "라느니",
         ] {
             for boundary in [Copular, ZeroCopula] {
                 out.push(Ending {
@@ -1313,6 +1326,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.recipient" => {
             "This recipient reading requires a contextually appropriate referent (typically a person or animate/personified entity); lexical and contextual eligibility are not inferred."
+        }
+        "ending.quoted_neuni" => {
+            "Recover source-reviewed listings of quoted statements, questions, commands, proposals and retrospective reports as distinct bundles. Preserve copular/command homonyms and immediate owners; contextual interpretation and unreviewed polite prefinals are not inferred."
         }
         "ending.neuni" => {
             "Recover comparative/enumerative/assertive 느니, comparative 느니만/니만 and causal 느니만큼/으니만큼 as reviewed bundles. Contextual sense and unreviewed prefinal combinations are not inferred."

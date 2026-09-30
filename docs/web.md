@@ -57,7 +57,7 @@ Glosses use the first English headword gloss from the first POS-compatible entry
 and sense/homonym alternatives remain in the dictionary pane. Initial diagram
 selection prefers analyses with compatible or unclassified dictionary matches,
 then the fewest morphemes for a compact initial view. This is a display convenience,
-not contextual ranking. All 434 currently emitted canonical grammar forms have
+not contextual ranking. All 435 currently emitted canonical grammar forms have
 short teaching labels in the shared [catalog](../web/src/grammar-labels.json).
 These paraphrase common KRDict uses; they are not contextual translations or
 an exhaustive list of senses. Hover text lists each source ID and headword.
@@ -291,3 +291,9 @@ It preserves unrelated homonyms and short-stem purpose endings, and exports
 `short_stem_ending` conflicts with their owning morpheme index. Normative
 source disagreements remain documented; headword-only filtering retains the
 original hypotheses.
+
+Literary `-(으)리까` questions retain their own conjecture/intention teaching
+label and four actual external NIKL sense links. The grammar API entry list
+stays empty when no KRDict entry exists. Explicit `오/으오/사오` forms appear
+as separate prefinal components, alongside the existing dictionary-backed
+polite entries; clicking a reference does not select a contextual sense.

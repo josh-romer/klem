@@ -718,6 +718,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("려니", "으려니", 0),
             // KRDict 85653 explicitly illustrates 누구냔.
             ("냔", "냔", 0),
+            // 리까 lists 이다 attachment; omitted 이 keeps the existing
+            // vowel-final nominal condition and never inflects the nominal.
+            ("리까", "으리까", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -831,6 +834,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             // bundle, distinct from conjectural 으리 + factual 라.
             // NIKL, 임동훈 (1998), 어미의 사전적 처리, section 2.2.
             ("으리다", "리다", "으리다"),
+            // NIKL 리까/으리까 are final questions; polite 오/사오
+            // remain separate prefinals rather than part of this ending.
+            ("으리까", "리까", "으리까"),
         ] {
             out.push(Ending {
                 suffix: full,
@@ -1527,6 +1533,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.literary_ri" => {
             "Recover the literary/formal (으)리다 final bundle; do not split it into conjectural 으리 and plain 다."
+        }
+        "ending.literary_question_ri" => {
+            "Recover the literary/formal -(으)리까 question with its own stem and preceding-marker licenses; preserve explicit polite/humble components without selecting intention or conjectural sense."
         }
         "ending.contrast_doe" => {
             "Recognize 되/으되 contrast, qualification or quotation, selecting the written allomorph by the lexical/prefinal boundary rather than general vowel-triggered recovery."

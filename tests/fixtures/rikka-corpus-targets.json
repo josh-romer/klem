@@ -1,0 +1,1102 @@
+{
+  "schema_version": 1,
+  "interpretation": "Ten primary annotated rows contain a 리까 substring across a lexical/adverbial base plus 까지. Preserve the old raw output; these are not gold for the new literary ending.",
+  "sources": [
+    {
+      "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+      "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566"
+    },
+    {
+      "input": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+      "input_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa"
+    },
+    {
+      "input": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+      "input_sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8"
+    },
+    {
+      "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+      "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa"
+    },
+    {
+      "input": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+      "input_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97"
+    },
+    {
+      "input": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+      "input_sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "rikka-substring-ko_gsd-ud-test-3995",
+      "line_number": 3995,
+      "sentence_id": "test-s232",
+      "raw_row": "10\t거리까지\t거리+까지\tADV\tNNG+JX\t_\t11\tadvmod\t_\tTranslit=.geo.ri.gga.ji|LTranslit=.geo.ri+.gga.ji",
+      "surface": "거리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "거리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "거리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "거리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "거리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "거리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "거리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_gsd-ud-train-20444",
+      "line_number": 20444,
+      "sentence_id": "train-s1198",
+      "raw_row": "11\t거리까지\t거리+까지\tADV\tNNG+JX\t_\t10\tflat\t_\tTranslit=.geo.ri.gga.ji|LTranslit=.geo.ri+.gga.ji",
+      "surface": "거리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "거리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "거리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "거리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "거리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "거리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "거리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_gsd-ud-train-36907",
+      "line_number": 36907,
+      "sentence_id": "train-s2171",
+      "raw_row": "8\t멀리까지\t멀리+까지\tADV\tMAG+JX\t_\t10\tadvmod\t_\tTranslit=.meol.ri.gga.ji|LTranslit=.meol.ri+.gga.ji",
+      "surface": "멀리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "멀리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멀리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멀리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멀리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멀리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멀리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_gsd-ud-train-43117",
+      "line_number": 43117,
+      "sentence_id": "train-s2528",
+      "raw_row": "2\t떡사리까지\t떡+사리+까지\tADV\tNNG+NNG+JX\t_\t4\tadvmod\t_\tTranslit=.ddeog.sa.ri.gga.ji|LTranslit=.ddeog+.sa.ri+.gga.ji",
+      "surface": "떡사리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "떡사리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "떡사리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "떡사리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "떡사리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "떡사리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "떡사리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_kaist-ud-dev-25732",
+      "line_number": 25732,
+      "sentence_id": "MH2_0169-s382",
+      "raw_row": "6\t무리까지\t무리+까지\tADV\tncn+jxc\t_\t7\tadvcl\t_\tTranslit=.mu.ri.gga.ji|LTranslit=.mu.ri+.gga.ji",
+      "surface": "무리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "무리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "무리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "무리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "무리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "무리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "무리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_kaist-ud-test-6427",
+      "line_number": 6427,
+      "sentence_id": "MH2_0010-s256",
+      "raw_row": "11\t봉우리까지\t봉우리+까지\tADV\tncn+jxc\t_\t12\tadvcl\t_\tTranslit=.bong.u.ri.gga.ji|LTranslit=.bong.u.ri+.gga.ji",
+      "surface": "봉우리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "봉우리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "봉우리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "봉우리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "봉우리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "봉우리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "봉우리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_kaist-ud-train-2669",
+      "line_number": 2669,
+      "sentence_id": "M2TA_065-s132",
+      "raw_row": "1\t뿌리까지\t뿌리+까지\tADV\tncn+jxc\t_\t2\tadvcl\t_\tTranslit=.bbu.ri.gga.ji|LTranslit=.bbu.ri+.gga.ji",
+      "surface": "뿌리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "뿌리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "뿌리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "뿌리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "뿌리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "뿌리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "뿌리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_kaist-ud-train-3252",
+      "line_number": 3252,
+      "sentence_id": "M2TA_066-s19",
+      "raw_row": "12\t가장자리까지\t가장자리+까지\tADV\tncn+jxc\t_\t13\tadvcl\t_\tTranslit=.ga.jang.ja.ri.gga.ji|LTranslit=.ga.jang.ja.ri+.gga.ji",
+      "surface": "가장자리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "가장자리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "가장자리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "가장자리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "가장자리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "가장자리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "가장자리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_kaist-ud-train-8054",
+      "line_number": 8054,
+      "sentence_id": "M2TA_073-s18",
+      "raw_row": "6\t가장자리까지\t가장자리+까지\tADV\tncn+jxc\t_\t8\tadvcl\t_\tTranslit=.ga.jang.ja.ri.gga.ji|LTranslit=.ga.jang.ja.ri+.gga.ji",
+      "surface": "가장자리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "가장자리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "가장자리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "가장자리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "가장자리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "가장자리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "가장자리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "rikka-substring-ko_kaist-ud-train-83528",
+      "line_number": 83528,
+      "sentence_id": "MH2_0037-s325",
+      "raw_row": "8\t멀리까지\t멀리+까지\tADV\tncn+jxc\t_\t14\tadvmod\t_\tSpaceAfter=No|Translit=.meol.ri.gga.ji|LTranslit=.meol.ri+.gga.ji",
+      "surface": "멀리까지",
+      "classification": "lexical_or_adverbial_base_plus_kkaJi",
+      "interpretation": "The 리까 substring crosses the annotated base/까지 boundary; this is not an annotated 리까 question token. Other valid alternative analyses are not enumerated by corpus gold.",
+      "baseline_analysis": {
+        "normalized": "멀리까지",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멀리",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멀리",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "까지",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멀리까",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멀리까다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멀리까지",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          }
+        ]
+      }
+    }
+  ]
+}

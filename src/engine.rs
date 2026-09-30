@@ -654,6 +654,19 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if literary_na_ending(ending.form) && p.morphs.iter().any(|m| m.form == "더") {
                     continue;
                 }
+                // NIKL 리까/으리까 list bare predicates/copula, honorific,
+                // past and polite 오. 사오리까 independently licenses the
+                // humble combination, including earlier 겠. Do not borrow
+                // that license for an immediately preceding bare modal.
+                if ending.form == "으리까"
+                    && (p.morphs.iter().any(|m| m.form == "더")
+                        || p.morphs.last().is_some_and(|m| {
+                            !honorific_prefinal(&m.form)
+                                && !matches!(m.form.as_str(), "었" | "으옵" | "사옵" | "자옵")
+                        }))
+                {
+                    continue;
+                }
                 if ending.form == "요" {
                     // This connective attaches to bare 이다/아니다 only.
                     // A lexical stem ending in 이 is not sufficient evidence.
@@ -1165,6 +1178,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.rules.push("ending".into());
                 if ending.form == "으리다" {
                     p.rules.push("ending.literary_ri".into());
+                }
+                if ending.form == "으리까" {
+                    p.rules.push("ending.literary_question_ri".into());
                 }
                 if ending.form == "으되" {
                     p.rules.push("ending.contrast_doe".into());
@@ -1930,6 +1946,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으리라"
                 | "으리"
                 | "으리라고"
+                | "으리까"
                 | "을"
                 | "을까"
                 | "을까요"
@@ -3116,7 +3133,7 @@ impl PredicateEnd {
 fn concessive_ending(ending: &str) -> bool {
     matches!(
         ending,
-        "다" | "는다" | "습니다" | "냐" | "느냐" | "으냐" | "자" | "지" | "더니"
+        "다" | "는다" | "습니다" | "냐" | "느냐" | "으냐" | "으리까" | "자" | "지" | "더니"
     )
 }
 

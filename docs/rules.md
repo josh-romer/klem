@@ -58,8 +58,15 @@ The separate 삽 paradigm has no vowel allomorph and precedes consonant-initial
 endings: `믿었삽더니 → 믿다 + 었 + 삽 + 더니`. The immediate consonant
 boundary does not create vowel-irregular spelling requirements. Earlier
 honorific/past/modal components and auxiliary/답다 owners stay separate; the
-polite slot cannot repeat. Additional source-listed final forms and modern 자옵 restrictions remain open
-in the [source audit](polite-source-audit.json).
+polite slot cannot repeat. The reviewed modern 자오/자옵/잡/자옵시 forms
+use the finite 듣/묻/받/좇 subset; historical coda-based stripping is not
+productive. Whole 듣잡다/받잡다 predicates remain separate alternatives.
+Source-listed 나이다 and 나이까 retain ㅂ in polite combinations despite
+ㄴ onset. Their bare classes are verbs or listed existential/honorific heads;
+intervening polite markers retain source-attested adjective/copula examples.
+See the [source audit](polite-source-audit.json) and
+[question regression](../tests/naikka.rs). Wider following combinations and
+independent contextual/register review remain open.
 NIKL treats [옵시](https://opendict.korean.go.kr/dictionary/view?sense_no=503872)
 and [으옵시](https://opendict.korean.go.kr/dictionary/view?sense_no=431790) as a
 single stronger subject-honorific prefinal, represented as canonical 으옵시.
@@ -80,6 +87,20 @@ See [regressions](../tests/optsi.rs), [primary evidence](../tests/fixtures/optsi
 and [draft correction](optsi-draft-corrections.json). Grammar labels link real
 primary pages and do not create KRDict entries. These rules do not choose
 contextual intent or speech register.
+
+The separate literary question `-(으)리까` permits predicates, adjectives and
+이다, with vowel/ㄹ versus other-consonant allomorphs. Unlike ㄴ-initial
+나이까, it retains ㄹ immediately before 리까: 살리까 → 살다 + 으리까.
+Explicit 오리까/으오리까/사오리까 combinations expose the existing polite
+components separately. The final licenses honorific/past and the reviewed
+polite/humble boundaries; source-listed 겠 before 사오 does not license bare
+겠 + 으리까. Retrospective 더 is excluded. Fixed 답다 uses its 다우 form at
+this vowel boundary; spelling requirements retain their original owners.
+Vowel-final copula omission and post-question 마는/만 have separate paths.
+No conjecture/intention sense is selected. The [seven-sense baseline audit](rikka-source-audit.json),
+[regressions](../tests/rikka.rs) and [evaluation](rikka-evaluation.json) retain
+individual source and comparison cases. Historical 리까요 and omitted copulas
+before polite prefinals remain open.
 
 Lexical membership in an irregular class remains a hypothesis. For example,
 `들어` admits `들다` and `듣다`. Some generated stems may not exist in dictionaries.

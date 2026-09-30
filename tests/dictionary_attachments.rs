@@ -39,6 +39,7 @@ impl Fixture {
             "krdict-short-stems.json",
             "krdict-jaop.json",
             "krdict-naikka.json",
+            "krdict-rikka.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -57,6 +58,7 @@ impl Fixture {
                         | "krdict-short-stems.json"
                         | "krdict-jaop.json"
                         | "krdict-naikka.json"
+                        | "krdict-rikka.json"
                 ) {
                     // Full native entries supply written forms absent from older
                     // POS-only fixtures; do not borrow evidence by headword.
@@ -134,7 +136,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (1658, 1561)
+        (1665, 1564)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,
@@ -234,6 +236,37 @@ fn literary_naikka_keeps_compatible_homonyms_and_unknown_provider_classes() {
     slot.entries[0].entry.pos = "unrecognized-provider-class".into();
     slot.entries[0].pos_compatibility = pos_compatibility(&slot.lemma, &slot.entries[0].entry);
     assert_eq!(unknown.assess(a).status, Compatibility::Unknown);
+}
+
+#[test]
+fn literary_rikka_preserves_both_verbal_and_adjectival_homonyms() {
+    let fixture = Fixture::new("rikka-homonyms");
+    let db = fixture.open();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    let mut word = Lemmatizer::new().analyze_word("멀리까").unwrap();
+    let analysis = word
+        .analyses
+        .iter()
+        .find(|a| {
+            a.lemmas.iter().map(|l| l.text.as_str()).eq(["멀다"])
+                && a.morphemes.iter().map(|m| m.form.as_str()).eq(["으리까"])
+        })
+        .unwrap()
+        .clone();
+    let mut annotation = dictionary.annotate(&word).unwrap();
+    let assessment = annotation.assess(&analysis);
+    assert_eq!(assessment.status, Compatibility::Compatible);
+    for id in ["krdict:54855", "krdict:26833"] {
+        let evidence = assessment.lemmas[0]
+            .entries
+            .iter()
+            .find(|e| e.id == id)
+            .unwrap();
+        assert_eq!(evidence.status, Compatibility::Compatible);
+        assert!(evidence.conflicts.is_empty());
+    }
+    annotation.filter(&mut word, DictionaryFilter::Compatible);
+    assert!(word.analyses.contains(&analysis));
 }
 
 #[test]

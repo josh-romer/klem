@@ -1594,3 +1594,19 @@ gain 으옵 + 었 through this reviewed modern order; 했으옵나이까 tests t
 supported opposite order. Previously committed judgments are unchanged. No
 annotated corpus example is fabricated when the pinned corpora contain no
 나이까 token. Structural tests do not establish contextual register correctness.
+
+`krdict-rikka.json` and `rikka-sources.json` cover COV-017az’s literary
+`-(으)리까` questions and explicit polite/humble combinations. The 64 full native
+entries preserve source forms, notes, all senses/example groups and English
+translations; only RelatedForm and other translation languages are omitted.
+Seven separately identified primary senses supply eleven direct tokens. The
+172 stable `rikka-*` cases contain 137 required and 35 forbidden paths; ten
+compatible-filter cases contain seven required and three forbidden paths.
+Adjective/copula classes differ from bare `나이까`, `ㄹ` stays before `리까`,
+and fixed `답다` follows its vowel-boundary spelling. Polite `오/으오/사오`
+components and spelling ownership remain separate from the final question.
+`rikka-corpus-targets.json` saves ten actual annotated base + `까지` rows and
+baseline outputs. Their `리까` substring crosses a morpheme boundary; they
+are preservation tests, not gold for the new question. The six possible novel
+question spans remain unannotated; `리까요` and omitted-copula polite-prefinal
+paths remain separately open. See the [baseline source audit](../../docs/rikka-source-audit.json).

@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const rikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-rikka.json"), "utf8"));
   const naikka = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-naikka.json"), "utf8"));
   const jaop = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-jaop.json"), "utf8"));
   const optsi = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-optsi.json"), "utf8"));
@@ -337,6 +338,7 @@ try {
       ...optsi.LexicalResource.Lexicon.LexicalEntry,
       ...jaop.LexicalResource.Lexicon.LexicalEntry,
       ...naikka.LexicalResource.Lexicon.LexicalEntry,
+      ...rikka.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -2426,6 +2428,66 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-jaop-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Literary questions preserve prefinal components and dictionary homonyms.
+  const rikkaCases = recipientLedger.cases.filter(c => c.id.startsWith("rikka-"));
+  const rikkaPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("rikka-"));
+  assert.equal(rikkaCases.length, 172); assert.equal(rikkaPolicies.length, 10);
+  for (const [cases, policy] of [[rikkaCases, false], [rikkaPolicies, true]]) {
+    for (const c of cases) {
+      const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+      for (const j of c.judgments) {
+        const index = token.analysis.analyses.findIndex(a =>
+          JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+          && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+          && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+          && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds));
+        assert.equal(index >= 0, policy || j.verdict === "required", c.id);
+        if (index >= 0) assert.equal(token.dictionary.readings[index].status === "incompatible", policy && j.verdict === "forbidden", c.id);
+      }
+    }
+  }
+  const rikkaText = "가리까 먹사오리까 친구리까 들어주오리까 학생다우리까 하옵셨으리까 말씀하오리까마는";
+  const rikkaData = await (await post("analyze", {text: rikkaText})).json();
+  assert.deepEqual(rikkaData.grammar["-으리까"], []);
+  await submit(page, rikkaText); await waitHeading(page, "가리까");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms, keys] of [
+    [0, ["가", "으리까"], ["-으리까"]],
+    [1, ["먹", "사옵", "으리까"], ["-사옵-", "-으리까"]],
+    [2, ["친구", "이", "으리까"], ["-으리까"]],
+    [3, ["듣", "어", "주", "으옵", "으리까"], ["-으리까"]],
+    [4, ["학생", "답", "으리까"], ["-으리까"]],
+    [5, ["하", "으옵시", "었", "으리까"], ["-으옵시-", "-으리까"]],
+    [6, ["말씀하", "으옵", "으리까", "마는"], ["-으리까"]],
+  ]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, forms.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    const part = word.locator(".breakdown-part").filter({has: page.locator('.part-form', {hasText: /^으리까$/})});
+    assert.equal(await part.locator(".part-gloss").innerText(), grammarLabels["-으리까"].label);
+    assert.equal(await part.isDisabled(), true);
+    const references = word.getByRole("link", {name: "Grammar source", exact: true});
+    const expected = keys.flatMap(key => grammarLabels[key].references);
+    assert.equal(await references.count(), expected.length);
+    for (let r = 0; r < expected.length; r++) {
+      assert.equal(await references.nth(r).getAttribute("href"), expected[r].url);
+      assert.equal(await references.nth(r).getAttribute("target"), "_blank");
+      assert.equal(await references.nth(r).getAttribute("rel"), "noreferrer");
+    }
+  }
+  const rikkaDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const rikkaExport = JSON.parse(await readFile(await (await rikkaDownload).path(), "utf8"));
+  const rikkaExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: rikkaText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(rikkaExport.records, rikkaExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-rikka-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-rikka-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1000});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Literary questions preserve prefinal components and dictionary homonyms.
   const naikkaCases = recipientLedger.cases.filter(c => c.id.startsWith("naikka-"));

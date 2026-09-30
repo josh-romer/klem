@@ -161,7 +161,7 @@
         "으옵",
         "으리다"
       ],
-      "work": "Additional outer-ending compatibility and contextual register remain open. 나이다 and 나이까 combinations now have separate source-backed evaluations; the next confirmed missing family is -(으)리까 and its explicit 오/으오/사오 combinations, audited in docs/rikka-source-audit.json. The 리다 final remains distinct from conjectural 으리 + 라."
+      "work": "Additional outer-ending compatibility and contextual register remain open. 나이다 and 나이까 combinations now have separate source-backed evaluations; -(으)리까 and its explicit 오/으오/사오 combinations now have a separately tested implementation and evaluation, preserving their distinct source class. Historical 리까요 and omitted-copula polite-prefinal paths remain open. The 리다 final remains distinct from conjectural 으리 + 라."
     }
   ],
   "missing_primary_krdict_headwords": {
@@ -301,7 +301,7 @@
       "scope": "Separate question rule; source-listed bare classes and polite/humble components. Corpus preservation does not prove new-ending correctness."
     }
   ],
-  "next_confirmed_gap": {
+  "implemented_literary_question_ri": {
     "forms": [
       "리까",
       "으리까",
@@ -310,6 +310,7 @@
       "사오리까"
     ],
     "audit": "docs/rikka-source-audit.json",
-    "status": "Eleven directly attested paths absent from b96d161. Primary notes and explicit component analyses reviewed; runtime implementation and regressions pending."
+    "status": "The eleven baseline-missing direct paths now have their own implementation and 172 candidate cases, ten policy cases and complete native fixtures. See docs/rikka-evaluation.json. Historical 리까요 and omitted-copula polite-prefinal paths remain open.",
+    "evaluation": "docs/rikka-evaluation.json"
   }
 }

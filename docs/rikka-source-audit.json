@@ -2,7 +2,7 @@
   "schema_version": 1,
   "checklist": "COV-017az",
   "baseline_commit": "b96d161",
-  "status": "Confirmed implementation gap; primary-source audit only. The runtime and candidate ledger do not implement this family yet.",
+  "status": "Preserved b96d161 baseline audit; the eleven missing direct paths are now implemented with exact regressions. Broader listed limits remain open.",
   "review_status": "Agent source review. Independent Korean-language/contextual review remains pending.",
   "canonical_ending_proposal": "으리까",
   "primary_attachment_reviews": [
@@ -2779,7 +2779,7 @@
   },
   "implementation_requirements": [
     "Preserve explicit polite/humble prefinal components and the final question as separate parts.",
-    "Use the reviewed vowel/ㄹ versus other-consonant boundary; verify ㄹ deletion and local irregular spelling ownership.",
+    "Use the reviewed vowel/ㄹ versus other-consonant boundary; retain ㄹ immediately before 리까, and verify local irregular spelling ownership. Basic polite 오 retains its separate ㄹ-deleting preceding boundary.",
     "Keep direct predicate/adjective/copula, honorific and past licenses separate from naikka’s bare verbal/existential class.",
     "The 사오리까 source explicitly licenses earlier 겠; do not use that to certify bare 겠 + 으리까.",
     "Audit honorific bundles, lexical 자오, retrospective rejection, multiple prefinal order, auxiliary/derivation ownership, whole-word alternatives and external grammar references.",
@@ -2791,5 +2791,22 @@
     "baseline_paths": "all eleven proposed exact paths absent",
     "corpus_triage": "passed: all ten hits are annotated lexical/adverbial bases plus 까지",
     "nix_flake": "passed: documentation source audit and refreshed inventory queue; runtime packages unchanged"
+  },
+  "draft_correction": {
+    "original_instruction": "Verify ㄹ deletion at the rikka boundary.",
+    "corrected_instruction": "Retain ㄹ before 리까; test 살리까 versus forbidden 사리까 for 살다. Deletion belongs to the distinct following 오/시 boundary.",
+    "basis": "Primary -리까 attachment notes explicitly list ㄹ stems; existing drops_rieul excludes ㄹ-initial endings. No committed candidate judgment was changed."
+  },
+  "implementation": {
+    "tests": "tests/rikka.rs",
+    "source_fixture": "tests/fixtures/rikka-sources.json",
+    "ledger_cases": 172,
+    "required": 137,
+    "forbidden": 35,
+    "policy_cases": 10,
+    "native_entries": 64,
+    "remaining": "Historical 리까요 and omitted-copula polite-prefinal readings are not established by this patch. Broader COV-017az and independent review remain open.",
+    "evaluation": "docs/rikka-evaluation.json",
+    "validation": "Passed Rust, Clippy, pinned corpus, full/browser native dictionary checks, Nix package builds and flake checks; platform scope x86_64-linux."
   }
 }

@@ -449,3 +449,9 @@ candidate. Seven other unchanged training groups survive filtering.
 [Tests](../tests/short_stems.rs) and [individual-case evaluation](short-stem-evaluation.json)
 record the scope and source disagreements. Independent language review remains
 pending; this is not a contextual grammar or precision guarantee.
+
+COV-017az’s `-(으)리까` permits bare lexical adjectives and copulas, separately
+from the `나이까` class. Its ten policy cases preserve seven licensed readings
+and exclude three known local spelling conflicts; both verbal and adjectival
+`멀다` homonyms survive. Headword-only and unfiltered candidates keep the
+underlying spelling hypotheses. These checks do not select a question sense.

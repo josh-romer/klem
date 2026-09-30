@@ -194,5 +194,11 @@ mod tests {
                 .unwrap()
                 .is_empty()
         );
+        assert!(catalog()["-으리까"].sources.is_empty());
+        assert!(
+            lookup(&mut session, MorphemeKind::Ending, "-으리까")
+                .unwrap()
+                .is_empty()
+        );
     }
 }

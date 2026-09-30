@@ -1093,12 +1093,31 @@ review remains open under the completion review below.
   dictionary filter, with a stable byte-span case ID and context recorded.
   Three interleaved release runs per filter retain median processing times of
   about 1.5 seconds for 179,112 records; these measurements do not establish
-  statistical equivalence. The next confirmed missing family is -(으)리까 and
-  explicit 오/으오/사오 combinations: the [source audit](rikka-source-audit.json)
-  records seven primary senses, eleven missing direct paths and separate
-  attachment licenses, plus unannotated novel spans for subsequent comparison.
-  Runtime implementation and regressions for this family remain pending. Wider
-  combinations and independent linguistic review remain open.
+  statistical equivalence. The -(으)리까 question now preserves predicate,
+  adjective and copula classes, retained ㄹ, vowel-final copula omission and
+  explicit 오/으오/사오 components. Reviewed prefinal licenses, local spelling,
+  auxiliary/답다 ownership and post-question 마는/만 are tested separately.
+  Eleven direct primary tokens from seven senses, 172 stable `rikka-*` cases
+  (137 required, 35 forbidden), ten policy cases and 64 full native entries are
+  tracked in [tests](../tests/rikka.rs), the
+  [source fixture](../tests/fixtures/rikka-sources.json),
+  [baseline audit](rikka-source-audit.json) and [evaluation](rikka-evaluation.json).
+  The source audit corrects its initial ㄹ-deletion instruction: 리까 retains ㄹ;
+  the separate basic polite boundary keeps its reviewed deletion. Across 9,886
+  probe surfaces, 160 change with 1,031 additions and no removals; 898 additions
+  remain unjudged. All four frozen corpus reports are byte-identical. Ten
+  substring hits across all six pinned files are lexical/adverbial base + 까지,
+  preserving their old outputs rather than providing question-ending gold.
+  The full novel adds four paths at three records under each dictionary filter
+  and removes none. Two additions match required structural ledger paths;
+  the two alternatives at 비오리까마는 remain unjudged. All eight marker spans
+  retain individual tracking, including the three unresolved question forms
+  and two lexical 소리 + 까지 false positives. Three interleaved release runs
+  per dictionary filter measured roughly 1.5-second medians for 179,112 records
+  and about 30 MiB peak RSS; this is descriptive performance evidence rather
+  than statistical equivalence.
+  Historical 리까요 and omitted-copula polite-prefinal paths remain open,
+  alongside wider combinations and independent linguistic review.
   See [basic evaluation](polite-evaluation.json) and
   [humble evaluation](humble-evaluation.json) and
   [bundle evaluation](optsi-evaluation.json). The bundle probe comparison adds
@@ -2174,7 +2193,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 434 currently emitted canonical grammar forms.** The initial catalog
+  for all 435 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

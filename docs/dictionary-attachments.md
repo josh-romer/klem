@@ -37,6 +37,8 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `bare_literary_question` | Bare lexical predicates with 나이까 | The corresponding NIKL verbal/existential class; compatible verb homonyms and unknown provider classes survive. Intervening prefinals retain their separate licenses. |
 | `volitional_promise_verb` | Bare lexical predicates with canonical 음세 | Keeps valid verb homonyms such as 크다 while identifying the adjective entry conflict; generic prefinal combinations remain unknown. |
 | `bare_background_verb` | Bare lexical predicates with canonical 는바 | Identifies adjective-entry conflicts; keeps verb homonyms, 있다/없다/계시다 and adjectives ending in 있다/없다. Listed prefinals and other ending owners do not inherit this bare constraint. |
+| `bare_neuni_verb` | Bare lexical adjective entries with 느니/느니만/느니만큼 | Identifies ordinary adjective conflicts per entry, preserving verb homonyms and listed existential classes. Compound existential adjectives remain unknown for 느니만. |
+| `bare_niman_adjective` | Bare lexical verb entries with 니만 | Identifies the verb-entry conflict for the reviewed comparative expression; standalone auxiliary roles and prefinal variants remain unknown. |
 
 The present family is shared with the engine: 는다/는다고/는다는/는다면/는답니다/
 는다거나/는다든가/는다네/는다는데/는다며/는다면서/는다니/는단. Attached ㄴ
@@ -487,3 +489,12 @@ constrain a later auxiliary's connector. Final rhetorical forms are independent.
 Known class/role/spelling conflicts still take precedence. Relational -적
 state-making hypotheses can now reach finite 하다/들다 without being asserted
 contextually correct; both filters retain the unknown readings.
+
+The COV-017bc comparison/reason bundles preserve unknown evidence explicitly.
+Bare verbal 으니만큼 is compatible for primary-attested 알다, while other
+bare verbs remain unknown under the KRDict/NIKL distribution disagreement.
+Unlisted local prefinals also remain unknown. A lexical conflict for 가다 + 니만
+does not settle its standalone auxiliary entry. The regression ledger uses
+기다리다 (a lexical verb without this auxiliary homonym) for the whole-reading
+conflict and separately checks preservation of the unknown 가다 reading.
+See [the source audit](neuni-source-audit.json) and [regressions](../tests/neuni.rs).

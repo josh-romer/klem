@@ -26818,6 +26818,816 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:80839",
+      "source_sha256": "ef79674fc0a55af74c4544377c6eee757f3306d98715815daf67ea0f18506755",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bc"
+      ],
+      "scope": "All senses and complete native example groups reviewed for comparative/enumerative/assertive 느니 and comparison/reason bundles 느니만/느니만큼/으니만큼; source-backed allomorphs, local owners, homonyms and optional per-entry conflict/unknown handling. Expression 니만 is separately reviewed by exact 85824 identity outside this queue.",
+      "remaining": "Contextual sense selection, broader prefinal combinations and verbal/adjectival distribution disagreement, auxiliary role ambiguity, quoted listing/followers and independent Korean-language review remain unresolved. Scoped status does not certify every generated candidate.",
+      "evidence": [
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_bundles_preserve_local_boundaries_and_ordered_owners"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_sources_preserve_all_native_senses_groups_and_exact_expression_identity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_dictionary_filters_preserve_source_paths_unicode_and_cli_parity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_homonyms_and_unreviewed_distributions_remain_independent"
+        },
+        {
+          "path": "tests/fixtures/neuni-sources.json"
+        },
+        {
+          "path": "docs/neuni-source-audit.json"
+        },
+        {
+          "path": "docs/neuni-evaluation.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neuni-source-80839-1-12",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-80839-2-13",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-80839-3-14",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-80839-4-15",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-80839-5-16",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85722",
+      "source_sha256": "06571f9fcee4bba7f248b8bd3f48d8b0eebcfda0c45ba7df984502869e0082ee",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bc"
+      ],
+      "scope": "All senses and complete native example groups reviewed for comparative/enumerative/assertive 느니 and comparison/reason bundles 느니만/느니만큼/으니만큼; source-backed allomorphs, local owners, homonyms and optional per-entry conflict/unknown handling. Expression 니만 is separately reviewed by exact 85824 identity outside this queue.",
+      "remaining": "Contextual sense selection, broader prefinal combinations and verbal/adjectival distribution disagreement, auxiliary role ambiguity, quoted listing/followers and independent Korean-language review remain unresolved. Scoped status does not certify every generated candidate.",
+      "evidence": [
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_bundles_preserve_local_boundaries_and_ordered_owners"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_sources_preserve_all_native_senses_groups_and_exact_expression_identity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_dictionary_filters_preserve_source_paths_unicode_and_cli_parity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_homonyms_and_unreviewed_distributions_remain_independent"
+        },
+        {
+          "path": "tests/fixtures/neuni-sources.json"
+        },
+        {
+          "path": "docs/neuni-source-audit.json"
+        },
+        {
+          "path": "docs/neuni-evaluation.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neuni-source-85722-1-0",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85722-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85722-3-2",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85722-4-3",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니-가",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니-먹",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니-사",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니-아",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니-노",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니-있",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니-없",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니-계시",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-honorific-가시느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-honorific-먹으시느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니-살",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니-알",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니-놀",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-nonvowel-negative-느니-들",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-nonvowel-negative-느니-도우",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생이느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생답느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-먹고싶느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생답지않느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-role-negative-먹느니를",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85723",
+      "source_sha256": "1b6be624f6750a63da1ba9e24cd2ff2e77a57969ad479b413383fe2daa727dc3",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bc"
+      ],
+      "scope": "All senses and complete native example groups reviewed for comparative/enumerative/assertive 느니 and comparison/reason bundles 느니만/느니만큼/으니만큼; source-backed allomorphs, local owners, homonyms and optional per-entry conflict/unknown handling. Expression 니만 is separately reviewed by exact 85824 identity outside this queue.",
+      "remaining": "Contextual sense selection, broader prefinal combinations and verbal/adjectival distribution disagreement, auxiliary role ambiguity, quoted listing/followers and independent Korean-language review remain unresolved. Scoped status does not certify every generated candidate.",
+      "evidence": [
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_bundles_preserve_local_boundaries_and_ordered_owners"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_sources_preserve_all_native_senses_groups_and_exact_expression_identity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_dictionary_filters_preserve_source_paths_unicode_and_cli_parity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_homonyms_and_unreviewed_distributions_remain_independent"
+        },
+        {
+          "path": "tests/fixtures/neuni-sources.json"
+        },
+        {
+          "path": "docs/neuni-source-audit.json"
+        },
+        {
+          "path": "docs/neuni-evaluation.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neuni-source-85723-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85723-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85723-2-6",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85723-2-7",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85723-3-8",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85723-3-9",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85723-4-10",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85723-4-11",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-먹었느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-먹겠느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-좋았느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-좋겠느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-먹으셨느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-먹으시겠느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-맛있느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-재미없느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-먹어보느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-먹지않느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-먹고있느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-살아계시느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-좋아지느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-먹고싶었느니",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-학생다웠느니",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85725",
+      "source_sha256": "1af1c3b77ee4698d7b75007a565e76b11db5951b9940693a07ffd346c2b1ed8a",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bc"
+      ],
+      "scope": "All senses and complete native example groups reviewed for comparative/enumerative/assertive 느니 and comparison/reason bundles 느니만/느니만큼/으니만큼; source-backed allomorphs, local owners, homonyms and optional per-entry conflict/unknown handling. Expression 니만 is separately reviewed by exact 85824 identity outside this queue.",
+      "remaining": "Contextual sense selection, broader prefinal combinations and verbal/adjectival distribution disagreement, auxiliary role ambiguity, quoted listing/followers and independent Korean-language review remain unresolved. Scoped status does not certify every generated candidate.",
+      "evidence": [
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_bundles_preserve_local_boundaries_and_ordered_owners"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_sources_preserve_all_native_senses_groups_and_exact_expression_identity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_dictionary_filters_preserve_source_paths_unicode_and_cli_parity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_homonyms_and_unreviewed_distributions_remain_independent"
+        },
+        {
+          "path": "tests/fixtures/neuni-sources.json"
+        },
+        {
+          "path": "docs/neuni-source-audit.json"
+        },
+        {
+          "path": "docs/neuni-evaluation.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neuni-source-85725-1-17",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85725-2-18",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85725-3-19",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85725-3-20",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85725-4-21",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85725-5-22",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만-가",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만-먹",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만-사",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만-아",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만-노",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만-있",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만-없",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만-계시",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-honorific-가시느니만",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-honorific-먹으시느니만",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니만-살",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니만-알",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니만-놀",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-nonvowel-negative-느니만-들",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-nonvowel-negative-느니만-도우",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-좋아지느니만",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생이느니만",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생답느니만",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-먹고싶느니만",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생답지않느니만",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-role-negative-먹느니만다",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85726",
+      "source_sha256": "1fa40935839c58b14fa4373219fb58de248517e95e73dfa77f1880f4a083660a",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bc"
+      ],
+      "scope": "All senses and complete native example groups reviewed for comparative/enumerative/assertive 느니 and comparison/reason bundles 느니만/느니만큼/으니만큼; source-backed allomorphs, local owners, homonyms and optional per-entry conflict/unknown handling. Expression 니만 is separately reviewed by exact 85824 identity outside this queue.",
+      "remaining": "Contextual sense selection, broader prefinal combinations and verbal/adjectival distribution disagreement, auxiliary role ambiguity, quoted listing/followers and independent Korean-language review remain unresolved. Scoped status does not certify every generated candidate.",
+      "evidence": [
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_bundles_preserve_local_boundaries_and_ordered_owners"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_sources_preserve_all_native_senses_groups_and_exact_expression_identity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_dictionary_filters_preserve_source_paths_unicode_and_cli_parity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_homonyms_and_unreviewed_distributions_remain_independent"
+        },
+        {
+          "path": "tests/fixtures/neuni-sources.json"
+        },
+        {
+          "path": "docs/neuni-source-audit.json"
+        },
+        {
+          "path": "docs/neuni-evaluation.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neuni-source-85726-1-23",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85726-2-24",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85726-3-25",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85726-4-26",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85726-5-27",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만큼-가",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만큼-먹",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만큼-사",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만큼-아",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만큼-노",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만큼-있",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만큼-없",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-bare-느니만큼-계시",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-honorific-가시느니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-honorific-먹으시느니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니만큼-살",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니만큼-알",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-rieul-negative-느니만큼-놀",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-nonvowel-negative-느니만큼-들",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-nonvowel-negative-느니만큼-도우",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-listed-맛있느니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-먹어보느니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생이느니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생답느니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-먹고싶느니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-class-negative-학생답지않느니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-role-negative-먹느니만큼고",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85727",
+      "source_sha256": "70b8a84ca9ac85b60008296837af58a94d27dfa3e68822f842fd5d5ba037a957",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bc"
+      ],
+      "scope": "All senses and complete native example groups reviewed for comparative/enumerative/assertive 느니 and comparison/reason bundles 느니만/느니만큼/으니만큼; source-backed allomorphs, local owners, homonyms and optional per-entry conflict/unknown handling. Expression 니만 is separately reviewed by exact 85824 identity outside this queue.",
+      "remaining": "Contextual sense selection, broader prefinal combinations and verbal/adjectival distribution disagreement, auxiliary role ambiguity, quoted listing/followers and independent Korean-language review remain unresolved. Scoped status does not certify every generated candidate.",
+      "evidence": [
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_bundles_preserve_local_boundaries_and_ordered_owners"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_sources_preserve_all_native_senses_groups_and_exact_expression_identity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_dictionary_filters_preserve_source_paths_unicode_and_cli_parity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_homonyms_and_unreviewed_distributions_remain_independent"
+        },
+        {
+          "path": "tests/fixtures/neuni-sources.json"
+        },
+        {
+          "path": "docs/neuni-source-audit.json"
+        },
+        {
+          "path": "docs/neuni-evaluation.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neuni-source-85727-1-32",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85727-2-33",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85727-3-34",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85727-4-35",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-owner-학생다우니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-예쁘니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-머니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-먹으시니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-먹더니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-먹으오니만큼",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85728",
+      "source_sha256": "61372ce47d41f733b794db928487efd1a41ca4e329ee0e40b1a5e9f394acdece",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bc"
+      ],
+      "scope": "All senses and complete native example groups reviewed for comparative/enumerative/assertive 느니 and comparison/reason bundles 느니만/느니만큼/으니만큼; source-backed allomorphs, local owners, homonyms and optional per-entry conflict/unknown handling. Expression 니만 is separately reviewed by exact 85824 identity outside this queue.",
+      "remaining": "Contextual sense selection, broader prefinal combinations and verbal/adjectival distribution disagreement, auxiliary role ambiguity, quoted listing/followers and independent Korean-language review remain unresolved. Scoped status does not certify every generated candidate.",
+      "evidence": [
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_bundles_preserve_local_boundaries_and_ordered_owners"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_sources_preserve_all_native_senses_groups_and_exact_expression_identity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_dictionary_filters_preserve_source_paths_unicode_and_cli_parity"
+        },
+        {
+          "path": "tests/neuni.rs",
+          "test": "neuni_homonyms_and_unreviewed_distributions_remain_independent"
+        },
+        {
+          "path": "tests/fixtures/neuni-sources.json"
+        },
+        {
+          "path": "docs/neuni-source-audit.json"
+        },
+        {
+          "path": "docs/neuni-evaluation.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "neuni-source-85728-1-36",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85728-2-37",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-source-85728-3-38",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-좋으니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-많으니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-먹었으니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-먹겠으니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-먹으셨으니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-먹으시겠으니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-boundary-좋니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-boundary-멀으니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-boundary-가으니만큼",
+          "judgment": "path"
+        },
+        {
+          "case": "neuni-reason-boundary-먹었니만큼",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

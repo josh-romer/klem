@@ -34,6 +34,8 @@ pub enum AttachmentRule {
     BareLiteraryQuestion,
     VolitionalPromiseVerb,
     BareBackgroundVerb,
+    BareNeuniVerb,
+    BareNimanAdjective,
     HabitualConditionVerb,
     BareCopularEnding,
     BareAdjectivalReport,
@@ -91,6 +93,30 @@ fn alternatives(statuses: impl Iterator<Item = Compatibility>) -> Compatibility 
     } else {
         Compatibility::Incompatible
     }
+}
+
+// Check only this owner's prefinals, leaving derivational suffixes independent.
+// Generic hypotheses survive when the reviewed entry does not settle them.
+fn unreviewed_neuni_prefinals(
+    analysis: &Analysis,
+    components: &[Component],
+    ending: usize,
+) -> bool {
+    let listed: &[&str] = match analysis.morphemes[ending].form.as_str() {
+        "느니" => &["시", "었", "겠"],
+        "느니만" | "느니만큼" => &["시"],
+        "니만" => &[],
+        "으니만큼" => &["시", "었", "겠", "더", "으옵"],
+        _ => return false,
+    };
+    components
+        .iter()
+        .take_while(|c| !matches!(c, Component::Morpheme(i) if *i == ending))
+        .any(|c| {
+            matches!(c, Component::Morpheme(i)
+            if analysis.morphemes[*i].kind == MorphemeKind::Prefinal
+            && !listed.contains(&analysis.morphemes[*i].form.as_str()))
+        })
 }
 
 // Exact factual forms, distinct from canonical command 으라/으라고/etc.
@@ -506,6 +532,34 @@ impl Annotation {
                             && lemma.text != "계시다"
                         {
                             Some(AttachmentRule::BareBackgroundVerb)
+                        } else if bare
+                            && crate::engine::neuni_verbal_ending(form)
+                            && adjective
+                            && !lemma.text.ends_with("있다")
+                            && !lemma.text.ends_with("없다")
+                            && lemma.text != "계시다"
+                        {
+                            Some(AttachmentRule::BareNeuniVerb)
+                        } else if bare
+                            && form == "느니만"
+                            && adjective
+                            && (lemma.text.ends_with("있다") || lemma.text.ends_with("없다"))
+                            && !matches!(lemma.text.as_str(), "있다" | "없다")
+                        {
+                            // This entry lists the three existential heads,
+                            // unlike the explicit compound notes on 느니 and
+                            // 느니만큼. Keep the remaining distribution open.
+                            status = Compatibility::Unknown;
+                            None
+                        } else if bare && form == "니만" && verb {
+                            Some(AttachmentRule::BareNimanAdjective)
+                        } else if bare && form == "으니만큼" && verb && lemma.text != "알다" {
+                            // KRDict 85727/85728 narrow bare adjective note
+                            // conflicts with NIKL 331720 broader predicate
+                            // description. 알다 is explicitly attested there.
+                            // Keep other verbal distributions unresolved.
+                            status = Compatibility::Unknown;
+                            None
                         } else if bare && form == "음세" && adjective {
                             Some(AttachmentRule::VolitionalPromiseVerb)
                         } else if crate::engine::present_declarative(form) && adjective {
@@ -563,6 +617,11 @@ impl Annotation {
                         // The reviewed sources list bare verbs. Generic
                         // prefinal hypotheses survive without claiming that
                         // this new final licenses every such combination.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| unreviewed_neuni_prefinals(analysis, morphs, i))
+                    {
                         status = Compatibility::Unknown;
                     }
                     if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary)

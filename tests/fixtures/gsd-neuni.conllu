@@ -1,0 +1,45 @@
+# sent_id = train-s1183
+# text = 한국국적을 가지고 있는 해외영주권자의 경우에는 사실상 한국인이니만큼 국방의 의무를 다해야하지만, 손호영은 이에 해당되지 않는 미국시민권자다.
+# translit = .han.gug.gug.jeog.eul .ga.ji.go .iss.neun .hae.oe.yeong.ju.gweon.ja.yi .gyeong.u.e.neun .sa.sil.sang .han.gug.in.i.ni.man.keum .gug.bang.yi .yi.mu.reul .da.hae.ya.ha.ji.man, .son.ho.yeong.eun .i.e .hae.dang.doe.ji .anh.neun .mi.gug.si.min.gweon.ja.da.
+1	한국국적을	한국+국적+을	NOUN	NNP+NNG+JKO	_	2	obj	_	Translit=.han.gug.gug.jeog.eul|LTranslit=.han.gug+.gug.jeog+.eul
+2	가지고	가지+고	VERB	VV+EC	_	4	acl:relcl	_	Translit=.ga.ji.go|LTranslit=.ga.ji+.go
+3	있는	있+는	VERB	VX+ETM	_	2	flat	_	Translit=.iss.neun|LTranslit=.iss+.neun
+4	해외영주권자의	해외+영주권자+의	NOUN	NNG+NNG+JKG	_	5	nmod:poss	_	Translit=.hae.oe.yeong.ju.gweon.ja.yi|LTranslit=.hae.oe+.yeong.ju.gweon.ja+.yi
+5	경우에는	경우+에+는	ADV	NNG+JKB+JX	_	10	advmod	_	Translit=.gyeong.u.e.neun|LTranslit=.gyeong.u+.e+.neun
+6	사실상	사실+상	ADV	NNG+XSN	_	10	advmod	_	Translit=.sa.sil.sang|LTranslit=.sa.sil+.sang
+7	한국인이니만큼	한국인+이+니만큼	ADV	NNG+VCP+EC	_	10	advmod	_	Translit=.han.gug.in.i.ni.man.keum|LTranslit=.han.gug.in+.i+.ni.man.keum
+8	국방의	국방+의	NOUN	NNG+JKG	_	9	nmod:poss	_	Translit=.gug.bang.yi|LTranslit=.gug.bang+.yi
+9	의무를	의무+를	NOUN	NNG+JKO	_	10	obj	_	Translit=.yi.mu.reul|LTranslit=.yi.mu+.reul
+10	다해야하지만	다+하+아야+하+지만	VERB	MAG+XSV+EC+VX+EC	_	16	advcl	_	SpaceAfter=No|Translit=.da.hae.ya.ha.ji.man|LTranslit=.da+.ha+.a.ya+.ha+.ji.man
+11	,	,	PUNCT	SP	_	10	punct	_	Translit=,|LTranslit=,
+12	손호영은	손호영+은	NOUN	NNP+JX	_	16	nsubj	_	Translit=.son.ho.yeong.eun|LTranslit=.son.ho.yeong+.eun
+13	이에	이+에	ADV	NP+JKB	_	14	obl	_	Translit=.i.e|LTranslit=.i+.e
+14	해당되지	해당+되+지	VERB	NNG+XSV+EC	_	16	acl:relcl	_	Translit=.hae.dang.doe.ji|LTranslit=.hae.dang+.doe+.ji
+15	않는	않+는	VERB	VX+ETM	_	14	flat	_	Translit=.anh.neun|LTranslit=.anh+.neun
+16	미국시민권자다	미국+시민권자+이+다	VERB	NNP+NNG+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.mi.gug.si.min.gweon.ja.da|LTranslit=.mi.gug+.si.min.gweon.ja+.i+.da
+17	.	.	PUNCT	SF	_	16	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s2477
+# text = 이에 그는 딸을 빼앗기느니 차라리 살해하겠다고 마음먹고 한달 뒤 자신이 사는 17층 아파트에서 창문으로 던져 숨지게 한 혐의로 구속기소됐다.
+# translit = .i.e .geu.neun .ddal.eul .bbae.as.gi.neu.ni .cha.ra.ri .sal.hae.ha.gess.da.go .ma.eum.meog.go .han.dal .dwi .ja.sin.i .sa.neun 17.cheung .a.pa.teu.e.seo .chang.mun.eu.ro .deon.jyeo .sum.ji.ge .han .hyeom.yi.ro .gu.sog.gi.so.dwaess.da.
+1	이에	이+에	ADV	NNB+JKB	_	7	obl	_	Translit=.i.e|LTranslit=.i+.e
+2	그는	그+는	PRON	NP+JX	_	7	nsubj	_	Translit=.geu.neun|LTranslit=.geu+.neun
+3	딸을	딸+을	NOUN	NNG+JKO	_	4	obj	_	Translit=.ddal.eul|LTranslit=.ddal+.eul
+4	빼앗기느니	빼앗기+느니	VERB	VV+EC	_	7	advcl	_	Translit=.bbae.as.gi.neu.ni|LTranslit=.bbae.as.gi+.neu.ni
+5	차라리	차라리	ADV	MAG	_	6	advmod	_	Translit=.cha.ra.ri|LTranslit=.cha.ra.ri
+6	살해하겠다고	살해+하+겠+다고	VERB	NNG+XSV+EP+EC	_	7	ccomp	_	Translit=.sal.hae.ha.gess.da.go|LTranslit=.sal.hae+.ha+.gess+.da.go
+7	마음먹고	마음먹+고	VERB	VV+EC	_	16	advcl	_	Translit=.ma.eum.meog.go|LTranslit=.ma.eum.meog+.go
+8	한달	한+달	NOUN	MM+NNG	_	16	nmod	_	Translit=.han.dal|LTranslit=.han+.dal
+9	뒤	뒤	ADP	NNG	_	8	case	_	Translit=.dwi|LTranslit=.dwi
+10	자신이	자신+이	PRON	NNG+JKS	_	11	nsubj	_	Translit=.ja.sin.i|LTranslit=.ja.sin+.i
+11	사는	살+는	VERB	VV+ETM	_	12	acl:relcl	_	Translit=.sa.neun|LTranslit=.sal+.neun
+12	17층	17+층	NOUN	SN+XSN	_	15	obl	_	Translit=17.cheung|LTranslit=17+.cheung
+13	아파트에서	아파트+에서	ADV	NNG+JKB	_	12	flat	_	Translit=.a.pa.teu.e.seo|LTranslit=.a.pa.teu+.e.seo
+14	창문으로	창문+으로	ADV	NNG+JKB	_	15	obl	_	Translit=.chang.mun.eu.ro|LTranslit=.chang.mun+.eu.ro
+15	던져	던지+어	VERB	VV+EC	_	16	advcl	_	Translit=.deon.jyeo|LTranslit=.deon.ji+.eo
+16	숨지게	숨지+게	VERB	VV+EC	_	18	dep	_	Translit=.sum.ji.ge|LTranslit=.sum.ji+.ge
+17	한	한	VERB	MM	_	16	flat	_	Translit=.han|LTranslit=.han
+18	혐의로	혐의+로	ADV	NNG+JKB	_	19	obl	_	Translit=.hyeom.yi.ro|LTranslit=.hyeom.yi+.ro
+19	구속기소됐다	구속+기소+되+었+다	VERB	NNG+NNG+XSV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.gu.sog.gi.so.dwaess.da|LTranslit=.gu.sog+.gi.so+.doe+.eoss+.da
+20	.	.	PUNCT	SF	_	19	punct	_	Translit=.|LTranslit=.
+

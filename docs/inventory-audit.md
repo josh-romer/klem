@@ -676,3 +676,14 @@ target is claimed. The queue now has 340 scoped, 374 unreviewed and one gap
 across 715 entries, with 390 catalog-linked and 379 judgment-cited entries.
 Bound noun composition, wider paradigms, negative inheritance and independent
 Korean/contextual review remain unresolved. See [individual evidence](background-ba-evaluation.json).
+
+The COV-017bc comparison/reason audit reviews seven native ending entries
+80839/85722/85723/85725/85726/85727/85728 and separately preserves the exact
+85824 expression (품사 없음) outside the queue. All eight entries' senses and
+34 complete example groups remain intact; optional per-entry policy preserves
+unknown source-disagreement, prefinal and auxiliary-role readings. Five selected
+annotated tokens become grouped matches, while four quoted listing observations
+remain distinct open COV-017bd work. The queue now has 347 scoped, 367 unreviewed
+and one gap across 715 entries, with 397 catalog-linked and 386 judgment-cited
+entries. Contextual correctness and independent Korean-language review remain
+open. See [individual evidence](neuni-evaluation.json).

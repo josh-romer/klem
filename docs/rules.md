@@ -3489,3 +3489,38 @@ added without direct evidence. Wider polite/historical paradigms, bound-noun
 composition, negative inheritance and independent Korean review remain open.
 See [sources](../tests/fixtures/ba-sources.json), [regressions](../tests/background_ba.rs)
 and [individual evaluation](background-ba-evaluation.json).
+
+## Comparison, listing/assertion and reason bundles (COV-017bc)
+
+The three native [-느니](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85722)
+entries (85722, 85723, 80839) describe comparison, contrasting claims and final
+assertion. Their structural union remains one ending bundle; the program does
+not decide which contextual sense applies. [-느니만](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85725)
+and [-느니만큼](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85726)
+retain their comparison/reason bundles. Literal 느니 forms delete ㄹ before ㄴ.
+[-니만](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85824)
+is an exact source-reviewed expression with 품사 없음 and vowel/ㄹ attachment;
+no missing full 으니만 entry is fabricated. [-니만큼](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85727)
+and [-으니만큼](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85728)
+normalize to 으니만큼 with distinct short/full boundaries.
+
+Immediate known bare adjectives/copulas reject verbal 느니 bundles unless the
+source existential class applies; immediate known verbs reject 니만. Dictionary
+policy applies to each lexical homonym and local owner. A standalone auxiliary
+entry is role-unknown. Generic prefinals remain raw hypotheses; unreviewed local
+prefinals become dictionary-unknown, not automatic conflicts. The exact reviewed
+prefinals are recorded in [the individual evaluation](neuni-evaluation.json).
+
+[NIKL 331720](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&pageIndex=1&qna_seq=331720)
+explicitly accepts 아느니만큼 and 아니만큼 from 알다 with ㄹ deletion. Its
+broader predicate description conflicts with KRDict's narrower bare adjective
+notes: 알다 is source-attested and compatible, while other bare verbal reason
+paths remain unknown. [NIKL 309000](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=309000)
+distinguishes bare adjective enumeration with 으니/니; shared causal/question
+spellings remain separate. [임동훈's primary dictionary treatment](https://www.korean.go.kr/nkview/nklife/1998_1/8-5.html)
+warns against uniform productive 느 + 니 decomposition. All eight entries and
+34 complete example groups survive in [the native fixture](../tests/fixtures/krdict-neuni.json).
+Two joined inputs are tolerant structural inferences; original source spacing
+is unchanged. Quoted 다느니 listings and additional followers require separate
+review (COV-017bd). No implicit 못하다 fusion or generic expression fallback
+is introduced.

@@ -1677,3 +1677,13 @@ resultative, question-class and contextual cases remain in the source review.
   six pinned corpus discovery records. Corpus hits are lexical 이른바; there is
   no annotated ending target. The NIKL contextual spelling answer is separately
   attributed; segmentation judgments are agent-authored, not independent review.
+
+- `krdict-neuni.json` preserves 103 complete attributed native entries for
+  COV-017bc, with only RelatedForm and non-English equivalents omitted.
+  `neuni-sources.json` records all contributing export hashes, eight grammar/
+  expression entries, 34 complete example groups, 37 directly attested token
+  cases and two explicitly joined inputs. `kaist-neuni.conllu` and
+  `gsd-neuni.conllu` preserve four unchanged complete source sentences with
+  five targeted annotated tokens; the original train/test identities remain in
+  the source manifest. Quoted 다느니 observations remain separate open work.
+  KRDict 85824 retains POS 품사 없음 and its exact expression identity.

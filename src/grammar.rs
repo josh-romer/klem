@@ -581,6 +581,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             "느냐",
             "느냐고",
             "느니라",
+            "느니",
+            "느니만",
+            "느니만큼",
             "나이다",
             "나이까",
             "느라고",
@@ -731,6 +734,15 @@ pub(crate) fn endings() -> &'static [Ending] {
                 connector: matches!(suffix, "지" | "고"),
             });
         }
+        // KRDict 85824 is an exact reviewed comparative expression with
+        // no POS, not a license to reinterpret arbitrary expressions. Its
+        // vowel/ㄹ variant is retained without inventing a missing full entry.
+        out.push(Ending {
+            suffix: "니만",
+            form: "니만",
+            boundary: EuZero,
+            connector: false,
+        });
         // Enumerative -요 is a copula/아니다 ending, distinct from polite 요.
         for boundary in [Copular, OmittedCopula(0)] {
             out.push(Ending {
@@ -767,6 +779,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으면", "면", "으면"),
             ("으니까", "니까", "으니까"),
             ("으니", "니", "으니"),
+            ("으니만큼", "니만큼", "으니만큼"),
             ("으니라", "니라", "으니라"),
             ("으며", "며", "으며"),
             ("으면서", "면서", "으면서"),
@@ -1300,6 +1313,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.recipient" => {
             "This recipient reading requires a contextually appropriate referent (typically a person or animate/personified entity); lexical and contextual eligibility are not inferred."
+        }
+        "ending.neuni" => {
+            "Recover comparative/enumerative/assertive 느니, comparative 느니만/니만 and causal 느니만큼/으니만큼 as reviewed bundles. Contextual sense and unreviewed prefinal combinations are not inferred."
         }
         "ending.background_ba" => {
             "Recover literary background connectives -ㄴ바/-은바, -는바 and -던바. Preserve the ending bundle separately from adnominal plus bound noun 바; contextual background and sense are not inferred."

@@ -628,6 +628,10 @@ pub(crate) fn activity_reason(form: &str) -> bool {
     matches!(form, "느라" | "느라고")
 }
 
+pub(crate) fn neuni_verbal_ending(form: &str) -> bool {
+    matches!(form, "느니" | "느니만" | "느니만큼")
+}
+
 pub(crate) fn result_connective(form: &str) -> bool {
     matches!(form, "어다" | "어다가")
 }
@@ -1207,6 +1211,10 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.rules.push("ending".into());
                 if ending.form == "으리다" {
                     p.rules.push("ending.literary_ri".into());
+                }
+                if neuni_verbal_ending(ending.form) || matches!(ending.form, "니만" | "으니만큼")
+                {
+                    p.rules.push("ending.neuni".into());
                 }
                 if matches!(ending.form, "은바" | "는바" | "던바") {
                     p.rules.push("ending.background_ba".into());
@@ -1795,6 +1803,23 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             {
                 return false;
             }
+            // These class checks belong to the immediate bare owner.
+            // A prefinal/other auxiliary establishes a distinct boundary.
+            if bare
+                && neuni_verbal_ending(&m.form)
+                && matches!(
+                    class,
+                    Some(PredicateClass::Adjective | PredicateClass::Copula)
+                )
+                && !lemma.text.ends_with("있다")
+                && !lemma.text.ends_with("없다")
+                && lemma.text != "계시다"
+            {
+                return false;
+            }
+            if bare && m.form == "니만" && matches!(class, Some(PredicateClass::Verb)) {
+                return false;
+            }
             // The existential exception belongs to this ending's owner.
             if bare
                 && m.form == "는바"
@@ -1951,7 +1976,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
 fn dap_suffix_allowed(p: &Predicate) -> bool {
     if p.morphs
         .first()
-        .is_some_and(|m| matches!(m.form.as_str(), "음세" | "는바"))
+        .is_some_and(|m| neuni_verbal_ending(&m.form) || matches!(m.form.as_str(), "음세" | "는바"))
     {
         return false;
     }
@@ -2018,6 +2043,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으면"
                 | "으니까"
                 | "으니"
+                | "니만"
+                | "으니만큼"
                 | "으니라"
                 | "으소서"
                 | "으옵소서"
@@ -2240,10 +2267,11 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     // 나이다/나이까 is verbal/existential.
     // Direct copula examples for the latter instead
     // include a polite prefinal (e.g. 소원이옵나이다); retain those paths.
-    if p.morphs
-        .first()
-        .is_some_and(|m| literary_na_ending(&m.form) || matches!(m.form.as_str(), "음세" | "는바"))
-    {
+    if p.morphs.first().is_some_and(|m| {
+        literary_na_ending(&m.form)
+            || neuni_verbal_ending(&m.form)
+            || matches!(m.form.as_str(), "음세" | "는바")
+    }) {
         return;
     }
     // Commands and proposals are not nominal copula endings. The factual

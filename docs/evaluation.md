@@ -3177,3 +3177,52 @@ with 390 catalog-linked and 379 judgment-cited entries. These are coverage
 counts, not a linguistic precision estimate. Bound noun 바 composition,
 omitted-copula variants, wider polite/historical prefinals, negative inheritance,
 contextual sense selection and independent Korean-language review remain open.
+
+## Comparison/listing/assertion and reason bundles (COV-017bc)
+
+[Source and individual evidence](neuni-evaluation.json) adds five canonical
+bundles 느니/느니만/느니만큼/니만/으니만큼. All senses and 34 complete native
+example groups from eight entries remain intact in 103 attributed lexical
+entries. Thirty-seven example token cases are directly attested, with two
+explicitly joined auxiliary inputs. The separate source audit records conflicting
+KRDict/NIKL bare verbal distributions and the absent full comparative entry;
+those gaps are preserved rather than treated as established conflicts/licenses.
+
+The 151 new raw cases contain 111 required and 40 forbidden paths; the 16 policy
+cases contain ten required and six forbidden paths. Global ledgers now contain
+5,405 required / 2,665 forbidden raw judgments and 1,691 / 1,581 policy judgments.
+The complete comparison retains 666 added candidates across 148 of 10,265
+surfaces with no removals: 106 match required judgments, six have optional
+known dictionary conflicts, and 554 remain unjudged. A corrected draft judgment
+uses lexical-only 기다리다 for a 니만 conflict; 가다's standalone auxiliary
+entry stays unknown, independently of its conflicting verb entry.
+
+All five selected annotated corpus tokens now recover their expected grouped
+lemmas; none did at the previous revision. Four are training observations. The
+single frozen KAIST test token 기다리느니 changes from missing to matched,
+increasing its grouped matches from 24,391 to 24,392. All other frozen per-token
+records remain unchanged; baseline files are not regenerated. The four quoted
+listing tokens are distinct unresolved COV-017bd evidence and are not claimed
+as plain 느니 coverage. The complete pinned regression gate passes.
+
+Both dictionary filters preserve all 179,112 novel records and previous analyses,
+adding 17 alternatives at 12 occurrences with no removals. Every occurrence's
+contextual correctness remains unjudged, including retrospective 들어오시더니만
+alternatives retained with unknown prefinal distributions. Debug and release
+JSONL hashes match. Three interleaved release samples per version/filter measured
+headword medians of 1.611 seconds before / 1.632 after and compatible medians of
+1.552 / 1.554 seconds; full samples and child peak RSS are retained. These small
+samples are descriptive and do not prove statistical performance equivalence.
+
+Rust/stress, Clippy/format, frontend build, full browser, pinned corpus and Nix
+CLI/web packages pass on x86_64 Linux. Complete-dictionary packaged HTTP checks
+cover all 151 raw / 16 policy cases, both filters, eight source IDs and six prior
+controls. Nine selected browser component choices and compatible JSON export
+match the CLI. Desktop/mobile screenshots are inspected; the refreshed 8081
+preview serves the tested JavaScript byte for byte. The catalog now has 444
+canonical forms / 624 source IDs / 670 native grammar fixture entries. The
+715-entry queue has 347 scoped / 367 unreviewed / one gap, with 397 catalog-linked
+and 386 judgment-cited entries. Exact expression 85824 (품사 없음) is reviewed
+outside that queue. Contextual sense, wider prefinals/followers, distribution
+conflicts, missing full comparative entry and independent Korean review remain
+open; these counts do not estimate linguistic precision.

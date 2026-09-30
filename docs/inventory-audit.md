@@ -612,3 +612,16 @@ original readings, including noun-context 세단 and 판단. This does not certi
 contextual correctness. Further particles, omitted copulas, shortening,
 existential questions and lexical classes remain explicit followups; independent
 Korean-language review is still pending.
+
+### Prayer final-ending dispositions (COV-017ay)
+
+Four new scoped dispositions cover KRDict 78535/80927 소서/으소서 and
+86109/86110 only as evidence for the modern 옵소서/으옵소서 final bundle.
+Complete native senses, notes and examples are retained. General polite
+prefinals, including source example 읽으옵고, remain COV-017az. The
+[candidate evaluation](soseo-evaluation.json) and
+[draft corrections](soseo-draft-corrections.json) distinguish source tokens,
+structural inference and unjudged outputs. The queue now contains 330 scoped,
+384 unreviewed and one observed gap across 715 entries, with 382 catalog-linked
+and 370 cited entries. Scoped dispositions are not whole-entry coverage or
+independent linguistic certification.

@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "status": "Draft judgments corrected before adoption; previous committed judgments unchanged. Independent Korean review pending.",
+  "corrections": [
+    {
+      "id": "soseo-inference-13",
+      "draft": {
+        "id": "soseo-inference-13",
+        "surface": "들으소서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "들다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으소서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "source": "soseo-80927",
+            "reason": "Source-backed morphological inference for the modern prayer/request ending: immediate (으) allomorph, optional owned honorific, and existing predicate/auxiliary composition. Contextual suitability is not inferred."
+          }
+        ]
+      },
+      "reviewed": {
+        "id": "soseo-inference-13",
+        "surface": "들으소서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "들다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으소서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "soseo-rieul",
+            "reason": "Corrected draft inference: a ㄹ-final stem drops ㄹ before 소서; 들으소서 and 물으소서 instead permit the separate ㄷ-irregular 듣다/묻다 readings. This judgment forbids only the stated ㄹ lemma path."
+          }
+        ]
+      },
+      "reason": "Corrected draft inference: a ㄹ-final stem drops ㄹ before 소서; 들으소서 and 물으소서 instead permit the separate ㄷ-irregular 듣다/묻다 readings. This judgment forbids only the stated ㄹ lemma path."
+    },
+    {
+      "id": "soseo-inference-14",
+      "draft": {
+        "id": "soseo-inference-14",
+        "surface": "물으소서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "물다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으소서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "source": "soseo-80927",
+            "reason": "Source-backed morphological inference for the modern prayer/request ending: immediate (으) allomorph, optional owned honorific, and existing predicate/auxiliary composition. Contextual suitability is not inferred."
+          }
+        ]
+      },
+      "reviewed": {
+        "id": "soseo-inference-14",
+        "surface": "물으소서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "물다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으소서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "forbidden",
+            "source": "soseo-rieul",
+            "reason": "Corrected draft inference: a ㄹ-final stem drops ㄹ before 소서; 들으소서 and 물으소서 instead permit the separate ㄷ-irregular 듣다/묻다 readings. This judgment forbids only the stated ㄹ lemma path."
+          }
+        ]
+      },
+      "reason": "Corrected draft inference: a ㄹ-final stem drops ㄹ before 소서; 들으소서 and 물으소서 instead permit the separate ㄷ-irregular 듣다/묻다 readings. This judgment forbids only the stated ㄹ lemma path."
+    },
+    {
+      "id": "soseo-composition-3",
+      "draft": {
+        "id": "soseo-composition-3",
+        "surface": "먹고계소서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "먹다",
+              "계시다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "고",
+              "으소서"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "ending"
+            ],
+            "verdict": "required",
+            "source": "soseo-78535",
+            "reason": "Source-backed morphological inference for the modern prayer/request ending: immediate (으) allomorph, optional owned honorific, and existing predicate/auxiliary composition. Contextual suitability is not inferred."
+          }
+        ]
+      },
+      "reviewed": {
+        "id": "soseo-composition-3",
+        "surface": "먹고계시소서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "먹다",
+              "계시다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "고",
+              "으소서"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "ending"
+            ],
+            "verdict": "required",
+            "source": "soseo-78535",
+            "reason": "Corrected draft surface: lexical 계시다 retains its stem-internal 시. The final ending is owned by auxiliary 계시다 after 고."
+          }
+        ]
+      },
+      "reason": "Corrected draft surface: lexical 계시다 retains its stem-internal 시. The final ending is owned by auxiliary 계시다 after 고."
+    }
+  ]
+}

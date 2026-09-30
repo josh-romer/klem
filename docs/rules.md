@@ -3302,3 +3302,30 @@ uses the same local recovery; it does not rewrite arbitrary -곱다/-잡다 head
 Thirty-six raw judgments preserve these paths and forbid their swapped vowel
 counterparts. All other lexical ㅂ regularity remains a dictionary hypothesis,
 checked by the [compatible filter](dictionary-attachments.md#written-ㅂ-inflection-compatibility-cov-021f).
+
+### Modern literary prayer/request finals (COV-017ay)
+
+`하소서 → 하다 + 으소서`, `들으소서 → 듣다 + 으소서`, and
+`하옵소서 → 하다 + 으옵소서` use the immediate (으) allomorph. ㄹ drops
+before 소서/옵소서: `사옵소서 → 살다 + 으옵소서`. Dictionary-backed lexical
+spelling restrictions remain separate from raw recovery hypotheses.
+
+KRDict 78535/80927 document 소서/으소서 for verbs and adjectives in prayer and
+literary writing. Entries 86109/86110 retain all original polite-prefinal
+examples. [NIKL's synchronic analysis](https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=315692)
+licenses a single 옵소서 final bundle: `하시옵소서 → 하다 + 시 + 으옵소서`.
+The normalized canonical endings are 으소서 and 으옵소서. Their owning
+predicate may carry honorific 시; this implementation does not import general
+past/modal/retrospective prefinal licenses into the request bundle.
+
+Existing auxiliary paths compose, with the final attached to the right-hand
+predicate: `먹어주시옵소서 → 먹다 + 어 + 주다 + 시 + 으옵소서`.
+`먹고계시소서` retains lexical 계시다's stem-internal 시. Derived 답다 uses its
+ㅂ-irregular boundary: `학생다우소서 → 학생 + 답다 + 으소서`.
+The reviewed finals do not license represented copulas or function as auxiliary
+connectors. Unknown lexical heads and whole-word alternatives remain.
+
+The [evaluation](soseo-evaluation.json) distinguishes direct source tokens,
+morphological inference, corrected draft judgments and unjudged output. General
+polite prefinals, including the unchanged source token 읽으옵고, remain COV-017az.
+Historical/dialectal paradigms and contextual prayer suitability are separate.

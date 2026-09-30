@@ -467,10 +467,11 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
     out
 }
 
-// Stem-final ㄹ drops before ㄴ/ㅂ/ㅅ-initial endings and -오.
+// Stem-final ㄹ drops before ㄴ/ㅂ/ㅅ-initial endings and -오/-옵.
 // Attached consonants are handled separately by Boundary::Attached.
 fn drops_rieul(suffix: &str) -> bool {
     suffix.starts_with('오')
+        || suffix.starts_with('옵')
         || suffix
             .chars()
             .next()
@@ -796,6 +797,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라거나", "라거나", "으라거나"),
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
+            // Modern prayers/literary requests; the polite 옵소서 form is
+            // a synchronic ending bundle (NIKL consultation 315692).
+            ("으소서", "소서", "으소서"),
+            ("으옵소서", "옵소서", "으옵소서"),
             ("으냐", "냐", "으냐"),
             ("으냐고", "냐고", "으냐고"),
             ("으냐지만", "냐지만", "으냐지만"),

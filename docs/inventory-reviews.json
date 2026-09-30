@@ -24944,6 +24944,382 @@
           "judgment": "regular"
         }
       ]
+    },
+    {
+      "id": "krdict:78535",
+      "source_sha256": "11b9844f22394603907e3e4a054aea8a13e5e15db6d7f88ad6b1b7a16154863d",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ay",
+        "COV-017az"
+      ],
+      "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope.",
+      "remaining": "General polite prefinal attachment and tense/modal/retrospective order remain COV-017az, including 읽으옵고. Contextual prayer suitability, contextual sense selection and independent Korean-language review remain pending. This is not certification of every entry combination.",
+      "evidence": [
+        {
+          "path": "tests/soseo.rs",
+          "test": "native_prayer_sources_retain_all_senses_and_example_groups"
+        },
+        {
+          "path": "tests/soseo.rs",
+          "test": "soseo_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prayer_endings_preserve_two_unchanged_kaist_training_annotations"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/soseo-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/soseo-sources.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "soseo-source-78535-0",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-78535-1",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-78535-2",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-78535-3",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-0",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-1",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-2",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-3",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-4",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-5",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-6",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-7",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-8",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-9",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-10",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-11",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-12",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-13",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-14",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-boundary-4",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-boundary-5",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-boundary-6",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-composition-boundary-7",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80927",
+      "source_sha256": "fd0a04c3c21c408a312f08e0a3178e5dd9060d54faf6998ad5ac5caccc9fdf7c",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ay",
+        "COV-017az"
+      ],
+      "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope.",
+      "remaining": "General polite prefinal attachment and tense/modal/retrospective order remain COV-017az, including 읽으옵고. Contextual prayer suitability, contextual sense selection and independent Korean-language review remain pending. This is not certification of every entry combination.",
+      "evidence": [
+        {
+          "path": "tests/soseo.rs",
+          "test": "native_prayer_sources_retain_all_senses_and_example_groups"
+        },
+        {
+          "path": "tests/soseo.rs",
+          "test": "soseo_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prayer_endings_preserve_two_unchanged_kaist_training_annotations"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/soseo-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/soseo-sources.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "soseo-source-80927-0",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-80927-1",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-80927-2",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-80927-3",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-0",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-1",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-2",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-5",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-6",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-7",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-8",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-9",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-11",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-inference-12",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-5",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-6",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-7",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-8",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-9",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-12",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-13",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-boundary-14",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86109",
+      "source_sha256": "7e6c0e706d5a397979296a1a285c111c8ca99bc0d3453eab409ebe077c02fb3c",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ay",
+        "COV-017az"
+      ],
+      "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope.",
+      "remaining": "General polite prefinal attachment and tense/modal/retrospective order remain COV-017az, including 읽으옵고. Contextual prayer suitability, contextual sense selection and independent Korean-language review remain pending. This is not certification of every entry combination.",
+      "evidence": [
+        {
+          "path": "tests/soseo.rs",
+          "test": "native_prayer_sources_retain_all_senses_and_example_groups"
+        },
+        {
+          "path": "tests/soseo.rs",
+          "test": "soseo_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prayer_endings_preserve_two_unchanged_kaist_training_annotations"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/soseo-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/soseo-sources.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "soseo-source-86109-0",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-86109-1",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-86109-2",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-86109-3",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:86110",
+      "source_sha256": "7ddc14c0f31b792f913889511851660f07921d87fbfc1a465827c1a21d0fc758",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ay",
+        "COV-017az"
+      ],
+      "scope": "Reviewed complete notes, senses and examples for modern literary/request prayer endings: immediate (으) allomorph, verb/adjective attachment, ㄹ deletion, and source-backed synchronic 옵소서 final bundle with separate preceding honorific 시. Exact ledger judgments, native import, CLI/library parity, source/example audit and browser display cover this bounded final-ending scope.",
+      "remaining": "General polite prefinal attachment and tense/modal/retrospective order remain COV-017az, including 읽으옵고. Contextual prayer suitability, contextual sense selection and independent Korean-language review remain pending. This is not certification of every entry combination.",
+      "evidence": [
+        {
+          "path": "tests/soseo.rs",
+          "test": "native_prayer_sources_retain_all_senses_and_example_groups"
+        },
+        {
+          "path": "tests/soseo.rs",
+          "test": "soseo_dictionary_filters_preserve_roles_and_cli_parity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "prayer_endings_preserve_two_unchanged_kaist_training_annotations"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/soseo-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/soseo-sources.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "soseo-source-86110-0",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-86110-1",
+          "judgment": "path"
+        },
+        {
+          "case": "soseo-source-86110-2",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

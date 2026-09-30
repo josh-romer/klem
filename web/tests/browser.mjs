@@ -406,6 +406,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...shortStemEntries);
 
 
+  const soseoFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-soseo.json"), "utf8"));
+  const soseoEntries = soseoFixture.LexicalResource.Lexicon.LexicalEntry;
+  const soseoIds = new Set(soseoEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !soseoIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...soseoEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -2111,6 +2117,63 @@ try {
   const expressiveExport = JSON.parse(await readFile(await (await expressiveDownload).path(), "utf8"));
   const expressiveExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: expressiveText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
   assert.deepEqual(expressiveExport.records, expressiveExpected);
+  await page.getByLabel("Dictionary matches only").uncheck();
+  // Modern prayer finals: exact ledger paths, bundles, labels and source entries.
+  const soseoCases = recipientLedger.cases.filter(c => c.id.startsWith("soseo-"));
+  assert.equal(soseoCases.length, 91);
+  for (const c of soseoCases) {
+    const data = await (await post("analyze", {text: c.surface})).json();
+    const token = data.records[0];
+    for (const j of c.judgments) {
+      const matches = a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas)
+        && JSON.stringify(a.lemmas.map(l => l.kind)) === JSON.stringify(j.lemma_kinds)
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes)
+        && JSON.stringify(a.morphemes.map(m => m.kind)) === JSON.stringify(j.morpheme_kinds);
+      const index = token.analysis.analyses.findIndex(matches);
+      assert.equal(index >= 0, j.verdict === "required", c.id);
+      if (index >= 0) assert.notEqual(token.dictionary.readings[index].status, "incompatible", c.id);
+    }
+  }
+  const soseoPolicies = connectiveLedger.cases.filter(c => c.id.startsWith("attachment-soseo-"));
+  assert.equal(soseoPolicies.length, 4);
+  for (const c of soseoPolicies) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    const j = c.judgments[0];
+    const index = token.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(j.lemmas) && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(j.morphemes));
+    assert.ok(index >= 0, c.id);
+    assert.equal(token.dictionary.readings[index].status, "incompatible", c.id);
+    assert.ok(token.dictionary.readings[index].lemmas.some(l => l.entries.some(e => e.conflicts.some(c => c.rule === "short_stem_ending"))), c.id);
+  }
+  const soseoText = "들으소서 하옵소서 먹어주시옵소서 학생다우소서";
+  await submit(page, soseoText); await waitHeading(page, "들으소서");
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i, forms, sourceHead, sourceId, label] of [
+    [0, ["듣", "으소서"], "-으소서", 80927, "Formal request / prayer"],
+    [1, ["하", "으옵소서"], "-옵-", 86109, "Formal request / prayer (polite)"],
+    [2, ["먹", "어", "주", "시", "으옵소서"], "-으옵-", 86110, "Formal request / prayer (polite)"],
+    [3, ["학생", "답", "으소서"], "-소서", 78535, "Formal request / prayer"],
+  ]) {
+    const word = page.locator(".breakdown-word").nth(i), select = word.locator("select");
+    const value = await select.locator("option").evaluateAll((os, fs) => os.find(o => o.textContent.replace(/^\d+\. /, "") === fs.join(" + "))?.value, forms);
+    assert.ok(value, forms.join(" + ")); await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(), forms);
+    assert.equal(await word.locator(".part-gloss").last().innerText(), label);
+    await word.locator(".breakdown-part").last().click();
+    const choice = page.locator(".entry-choices button").filter({hasText: sourceHead});
+    if (await choice.count()) await choice.click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), sourceId);
+  }
+  const soseoDownload = page.waitForEvent("download");
+  await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+  const soseoExport = JSON.parse(await readFile(await (await soseoDownload).path(), "utf8"));
+  const soseoExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: soseoText, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(soseoExport.records, soseoExpected);
+  await page.screenshot({path: resolve(tmpdir(), "klem-soseo-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-soseo-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Dictionary matches only").uncheck();
   // Literary assertions retain distinct forms, copulas and lexical homonyms.
   const niraCases = recipientLedger.cases.filter(c => c.id.startsWith("nira-"));

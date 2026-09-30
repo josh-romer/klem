@@ -860,6 +860,8 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         | "으라거나"
                         | "으세요"
                         | "으십시오"
+                        | "으소서"
+                        | "으옵소서"
                         | "읍시다"
                 ) && p.morphs.iter().any(|m| m.form != "시")
                 {
@@ -1649,6 +1651,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으니까"
                 | "으니"
                 | "으니라"
+                | "으소서"
+                | "으옵소서"
                 | "으며"
                 | "으면서"
                 | "으므로"
@@ -1906,6 +1910,8 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
                         | "으라거나"
                         | "자거나"
                         | "으십시오"
+                        | "으소서"
+                        | "으옵소서"
                         | "읍시다"
                 )
         })

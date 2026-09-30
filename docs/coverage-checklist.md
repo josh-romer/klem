@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-09-27.
+Last reviewed: 2026-09-29.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax/018a–k/018m–z/019a–g/019i–r/020a–o/021a–f/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -1009,6 +1009,32 @@ review remains open under the completion review below.
   comparison adds 59 hypotheses across 41 records, with no removals; this is
   candidate preservation, not contextual validation. See the
   [candidate and corpus evaluation](ryeo-expressions-evaluation.json).
+
+- [x] **COV-017ay — Modern literary/request prayer endings.** Implementation
+  and targeted tests cover 소서/으소서 and the synchronic 옵소서/으옵소서
+  final bundle, canonical 으소서/으옵소서. Verbs and adjectives take the
+  immediate (으) allomorph, ㄹ drops, and preceding honorific 시 stays separate.
+  Existing auxiliary and 답다 derivations retain component ownership; represented
+  copulas, wrong allomorphs and final-as-connector paths are excluded. This is
+  structural recovery, without judging a prayer's contextual suitability.
+  Evidence: 91 stable `soseo-*` judgments (59 required, 32 forbidden), four
+  `attachment-soseo-*` shortened-stem policy cases, complete native fixtures,
+  two original KAIST training annotations, [tests](../tests/soseo.rs),
+  [corpus test](../tests/corpus.rs), [browser tests](../web/tests/browser.mjs),
+  [draft corrections](soseo-draft-corrections.json), and
+  [candidate comparison](soseo-evaluation.json). Rust/stress, pinned corpus,
+  lint/format, browser, packaged native-dictionary and x86_64 Linux Nix checks
+  pass. All 340 probe additions retain provenance; 277 remain unjudged. The
+  full novel gains ten hypotheses across six records, with no removals under
+  either dictionary filter. Independent Korean review remains pending.
+
+- [ ] **COV-017az — General polite prefinal paradigms.** Audit -오-/-으오-,
+  -옵-/-으옵-, 옵시-, 사옵-/사오-/삽 and their licensed combinations separately
+  from COV-017ay's final bundle. Preserve full native source examples, including
+  읽으옵고 in KRDict 86110; the modern final-ending implementation does not
+  establish general prefinal attachment, tense/modal order or segmentation.
+  Distinguish modern literary usage from historical/dialectal coverage, which
+  remains deferred. Do not infer a general paradigm solely from 옵소서.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -2076,7 +2102,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 421 currently emitted canonical grammar forms.** The initial catalog
+  for all 423 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

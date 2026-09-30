@@ -2510,3 +2510,41 @@ fn short_stem_normative_conflict_preserves_the_original_training_annotation() {
     drop(db);
     std::fs::remove_file(path).unwrap();
 }
+
+#[test]
+fn prayer_endings_preserve_two_unchanged_kaist_training_annotations() {
+    use klem::dictionary::{DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict};
+    let path = std::env::temp_dir().join(format!("klem-soseo-corpus-{}.db", std::process::id()));
+    import_krdict(
+        &[std::path::PathBuf::from("tests/fixtures/krdict-soseo.json")],
+        &path,
+        "soseo",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(&path).unwrap();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-soseo.conllu").as_slice(),
+        Corpus::Kaist,
+        "soseo",
+    )
+    .unwrap();
+    for id in ["id:MH2_0176-s30/5", "id:MH2_0176-s31/5"] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, "주옵소서");
+        assert_eq!(case.expected, ["주다"]);
+        assert!(case.matched);
+        for policy in [DictionaryFilter::Headword, DictionaryFilter::Compatible] {
+            let mut word = klem::Lemmatizer::new().analyze_word(&case.surface).unwrap();
+            let mut annotation = dictionary.annotate(&word).unwrap();
+            annotation.filter(&mut word, policy);
+            assert!(word.analyses.iter().any(|a| a.lemmas.len() == 1
+                && a.lemmas[0].text == "주다"
+                && a.morphemes.len() == 1
+                && a.morphemes[0].form == "으옵소서"));
+        }
+    }
+    drop(dictionary);
+    drop(db);
+    std::fs::remove_file(path).unwrap();
+}

@@ -3056,3 +3056,40 @@ Three interleaved release runs per version/filter measured after medians of
 1.237 seconds (headword-only) and 1.226 seconds (compatible), with peak RSS
 about 28.2 MiB. Startup, dictionary access and JSONL serialization are included;
 this small sample does not establish statistical performance equivalence.
+
+### Modern literary/request prayer finals (COV-017ay)
+
+The [candidate and source review](soseo-evaluation.json) implements
+소서/으소서 and the synchronic 옵소서/으옵소서 bundle, with separate preceding
+honorific 시. It adds 91 raw cases (59 required / 32 forbidden), bringing the
+raw ledger to 4,398 / 2,207. Four shortened-stem policy judgments bring that
+ledger to 1,643 / 1,555. Complete native fixtures preserve all senses, notes,
+forms and example groups, with English equivalents. Fifteen direct tokens
+cover fifteen of sixteen grammar example groups; 읽으옵고 remains explicitly
+outside this final bundle under COV-017az. Three draft expectation corrections
+are [recorded individually](soseo-draft-corrections.json).
+
+Across 8,862 distinct probe surfaces, all 340 additions use the new finals and
+no previous analysis is removed. Fifty-nine match required judgments, four
+are entry-specific dictionary conflicts, and 277 remain unjudged. All four
+frozen development/test corpus outputs are byte-identical. The two original
+KAIST training 주옵소서 annotations now recover 주다; the complete unchanged
+fixture improves from eight to ten of ten converted rows. These are recall
+and preservation observations, not a linguistic precision estimate.
+
+Both filters retain all 179,112 novel records and byte spans, adding ten
+hypotheses across six occurrences of 하소서, 물으소서 and 주시옵소서.
+주다 and 줄다 remain alternatives for the last form; context is not selected.
+All ten novel additions remain unjudged without independent annotation.
+Rust/stress, pinned corpus, lint/format, frontend build, full browser and Nix
+checks pass on x86_64 Linux. The packaged native-dictionary browser passes the
+91 raw and four policy cases, source panes, responsive display and CLI export
+parity; desktop/mobile screenshots were inspected.
+
+Three interleaved release runs per version/filter measured after medians of
+1.478 seconds (headword-only) and 1.469 seconds (compatible), with peak RSS
+below 30 MiB. Startup, dictionary access and JSONL serialization are included;
+these small samples do not establish statistical performance equivalence.
+The review queue now has 330 scoped entries, 384 unreviewed and one observed
+gap. General polite prefinal paradigms, contextual suitability and independent
+Korean-language review remain open.

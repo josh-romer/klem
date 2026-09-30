@@ -1026,6 +1026,10 @@ review remains open under the completion review below.
   release runs process the 179,112-record novel in median 1.55 s (headword)
   and 1.52 s (compatible), with peak RSS below 30 MiB; this small sample
   does not establish statistical equivalence. The local preview is refreshed.
+  The source audit also records Cho (2026), DOI `10.19033/sks.2026.3.91.35`,
+  as a primary research lead. The official one-page preview and abstract
+  distinguish final senses but provide no prefinal judgments; full-text review
+  remains pending and supplies no new generation or attachment policy.
   This item remains open.
 
 - [x] **COV-017ax — Remaining shortened intention expressions.**

@@ -3432,3 +3432,29 @@ The [evaluation](soseo-evaluation.json) distinguishes direct source tokens,
 morphological inference, corrected draft judgments and unjudged output. General
 polite prefinals, including the unchanged source token 읽으옵고, remain COV-017az.
 Historical/dialectal paradigms and contextual prayer suitability are separate.
+
+## Bare verbal promise -ㅁ세/-음세 (COV-017ba)
+
+KRDict [-ㅁ세](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78483)
+and [-음세](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78496)
+list a sentence-final willingness/promise ending with verb attachment and a
+first-person discourse tendency. Native examples include 연락함세, 삼세,
+입음세 and 읽음세. Both variants normalize to 음세; this is distinct from
+nominalizing 음 followed by an invented 세 particle.
+
+Vowels take attached ㅁ. ㄹ retains its coda as ㄻ: 삶세 → 살다 + 음세,
+whereas 삼세 → 사다 + 음세. Other consonants take 음, with existing local
+regular/ㄷ/ㅅ/ㅂ spelling hypotheses preserved. Auxiliary components keep their
+owners: 들어줌세 → 듣다 + 어 + 주다 + 음세. A bare represented copula,
+답다-derived adjective or known adjectival auxiliary does not inherit the
+verb license. Unknown lexical heads remain hypotheses; dictionary presence
+and sentence context remain separate checks.
+
+The optional dictionary conflict policy checks each bare lexical entry, keeping
+a verb homonym alongside an identified adjective conflict. It does not decide
+first-person reference, willingness, temporal meaning or contextual sense.
+Generic prefinal combinations receive Unknown and remain in the explicit
+review queue. No blanket required/forbidden prefinal paradigm is inferred from
+the bare native examples. Wider final followers and negative-class inheritance
+also need review. See the [complete sources](../tests/fixtures/eumse-sources.json),
+[boundary/role tests](../tests/eumse.rs) and [individual evaluation](eumse-evaluation.json).

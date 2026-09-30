@@ -25980,6 +25980,304 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:78483",
+      "source_sha256": "486b7d07072392c107b1e2b33e3feac78aca68fc5be76b27ddb899b95cb1b44e",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ba"
+      ],
+      "scope": "All source senses and complete native example groups reviewed for bare-verb promise final -ㅁ세/-음세, canonical 음세, retained ㄹ+ㅁ and existing local regular/irregular boundaries. Exact represented copula, derived-adjective and known auxiliary-adjective classes are separated from unknown lexical hypotheses. Per-entry dictionary policy preserves verb homonyms and labels prefinal combinations unknown.",
+      "remaining": "Prefinal paradigms, wider following particles/endings, first-person discourse/semantic suitability, negative-auxiliary inheritance and independent Korean-language review remain open. The scoped disposition does not certify all hypotheses containing 음세.",
+      "evidence": [
+        {
+          "path": "tests/eumse.rs",
+          "test": "eumse_keeps_retained_rieul_allomorphs_and_ordered_auxiliary_owners"
+        },
+        {
+          "path": "tests/eumse.rs",
+          "test": "eumse_native_examples_preserve_every_example_group_and_source_identity"
+        },
+        {
+          "path": "tests/eumse.rs",
+          "test": "eumse_dictionary_filters_keep_source_paths_and_cli_parity"
+        },
+        {
+          "path": "tests/eumse.rs",
+          "test": "eumse_per_entry_classes_do_not_reject_verbal_homonyms_or_certify_prefinals"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "eumse_recovers_the_unchanged_kaist_auxiliary_token"
+        },
+        {
+          "path": "docs/eumse-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/eumse-sources.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "eumse-source-78483-1",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-source-78483-2",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-source-78483-3",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-source-78483-4",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-source-78483-5",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-source-78483-6",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-감세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-옴세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-함세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-씀세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-삶세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-앎세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-놂세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-듦세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-attached-머묾세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-owner-먹어봄세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-owner-먹어줌세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-owner-들어줌세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-owner-좋아짐세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-owner-좋아함세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-삼세-살다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-삶세-사다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-암세-알다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-놈세-놀다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-머뭄세-머물다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-먹세-먹다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-role-학생임세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-role-친구임세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-role-학생다움세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-role-먹고싶음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-role-연락함세를",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-role-연락함세다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-role-연락함세고",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:78496",
+      "source_sha256": "a2077db5adb44b8fde2c62bbae67503be53c7617b5cf2406ddc857ff4526d60b",
+      "status": "scoped",
+      "checklist": [
+        "COV-017ba"
+      ],
+      "scope": "All source senses and complete native example groups reviewed for bare-verb promise final -ㅁ세/-음세, canonical 음세, retained ㄹ+ㅁ and existing local regular/irregular boundaries. Exact represented copula, derived-adjective and known auxiliary-adjective classes are separated from unknown lexical hypotheses. Per-entry dictionary policy preserves verb homonyms and labels prefinal combinations unknown.",
+      "remaining": "Prefinal paradigms, wider following particles/endings, first-person discourse/semantic suitability, negative-auxiliary inheritance and independent Korean-language review remain open. The scoped disposition does not certify all hypotheses containing 음세.",
+      "evidence": [
+        {
+          "path": "tests/eumse.rs",
+          "test": "eumse_keeps_retained_rieul_allomorphs_and_ordered_auxiliary_owners"
+        },
+        {
+          "path": "tests/eumse.rs",
+          "test": "eumse_native_examples_preserve_every_example_group_and_source_identity"
+        },
+        {
+          "path": "tests/eumse.rs",
+          "test": "eumse_dictionary_filters_keep_source_paths_and_cli_parity"
+        },
+        {
+          "path": "tests/eumse.rs",
+          "test": "eumse_per_entry_classes_do_not_reject_verbal_homonyms_or_certify_prefinals"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "eumse_recovers_the_unchanged_kaist_auxiliary_token"
+        },
+        {
+          "path": "docs/eumse-evaluation.json"
+        },
+        {
+          "path": "tests/fixtures/eumse-sources.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "eumse-source-78496-1",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-source-78496-2",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-source-78496-3",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-source-78496-4",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-먹음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-갚음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-묶음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-들음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-부음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-도움세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-지음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-걸음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-vowel-누움세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-owner-먹지않음세",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-가음세-가다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-살음세-살다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-알음세-알다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-놀음세-놀다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-boundary-머물음세-머물다",
+          "judgment": "path"
+        },
+        {
+          "case": "eumse-novel-맡음세",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

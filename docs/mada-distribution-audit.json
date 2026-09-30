@@ -350,5 +350,32 @@
       "Read the full 2018 regional discussion and its cited source; determine whether the current modern-South-Korean release scope includes the observed register.",
       "Compare lexical/semantic conditions and obtain independent Korean review before assigning required/forbidden judgments."
     ]
+  },
+  "retrieval_recheck": {
+    "reviewed_at": "2026-09-30",
+    "revision": "c8ad669",
+    "attempts": [
+      {
+        "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001059464",
+        "result": "Web tool read bibliographic record and abstract. Direct HTTPS returned HTTP 400."
+      },
+      {
+        "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiOrteView.kci?sereArticleSearchBean.artiId=ART001059464",
+        "result": "Web preview retrieval failed; direct HTTPS returned HTTP 400. No preview content obtained."
+      },
+      {
+        "url": "https://www.riss.or.kr/search/detail/DetailView.do?control_no=6c35c686e85df48ed18150b21a227875&keyword=&p_mat_type=1a0202e37d52c72d",
+        "result": "Direct HTTPS certificate hostname mismatch. Canonical www.riss.kr record returned an unexpected TLS EOF; web tool unavailable. No ScienceON original link obtained."
+      },
+      {
+        "url": "https://www.mirae-n.com/UPLOAD/EShop/EduN/MTM/Unity/%EA%B8%B0%EC%B4%88%20%EC%97%B0%EA%B5%AC%20%EC%9E%90%EB%A3%8C%EC%A7%91.pdf",
+        "result": "Publisher PDF direct retry timed out after 35 seconds; web retrieval also timed out. Full regional discussion remains unavailable."
+      }
+    ],
+    "secondary_lead": {
+      "url": "https://m.korean.go.kr/nkview/kyear/2008/2008_07.html",
+      "finding": "NIKL yearbook summarizes the 2007 study as observing five combinations with other particles, without enumerating them. This is a secondary research summary, not primary distribution evidence or a license for 마다 + 에."
+    },
+    "decision": "COV-018l remains open with no generation change or required/forbidden 마다 judgment. Obtain directly applicable distribution evidence instead of repeatedly treating inaccessible previews or abstracts as full-text review."
   }
 }

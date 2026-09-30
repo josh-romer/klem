@@ -878,6 +878,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("을지언정", "지언정", "을지언정", 8),
             ("을수록", "수록", "을수록", 8),
             ("음", "", "음", 16),
+            // KRDict 78483/78496: a promise final, distinct from nominal 음.
+            // ㄹ + ㅁ retains ㄹ as ㄻ (삶세), rather than deleting it.
+            ("음세", "세", "음세", 16),
             // Unlike -습니다/-습니까, -(으)ㅂ시다 has a vowel boundary:
             // 들읍시다, 부읍시다, 도웁시다. The attached variant drops ㄹ.
             ("읍시다", "시다", "읍시다", 17),
@@ -1293,6 +1296,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.recipient" => {
             "This recipient reading requires a contextually appropriate referent (typically a person or animate/personified entity); lexical and contextual eligibility are not inferred."
+        }
+        "ending.volitional_promise" => {
+            "Recover promise final -ㅁ세/-음세 as canonical 음세; ㄹ is retained before attached ㅁ. Speaker and contextual suitability are not inferred."
         }
         "ending.choice" => {
             "Recognize the literal choice ending -든가 with its reviewed prefinal licenses, separately from particle 든가."

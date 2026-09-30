@@ -3,6 +3,22 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn eumse_recovers_the_unchanged_kaist_auxiliary_token() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-eumse.conllu").as_slice(),
+        Corpus::Kaist,
+        "eumse",
+    )
+    .unwrap();
+    let case = &report.cases["id:MH2_0149-s26/4"];
+    assert_eq!(case.surface, "줌세");
+    assert_eq!(case.expected, ["주다"]);
+    assert!(case.matched);
+    assert_eq!(report.cases.len(), 4);
+    assert!(report.cases.values().all(|c| c.matched));
+}
+
+#[test]
 fn existential_lexical_gold_stays_distinct_from_auxiliary_inference() {
     for (corpus, input, cases) in [
         (

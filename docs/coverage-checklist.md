@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 334 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 380 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 336 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 378 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -221,7 +221,7 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay implemented; COV-017aw/az remain open.**
+  COV-017ax–ay/017ba implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1185,6 +1185,32 @@ review remains open under the completion review below.
   byte-identical. The full novel adds one
   morphological path for 하옵시고 under each dictionary filter; its contextual
   interpretation remains unjudged. This row remains incomplete.
+
+- [x] **COV-017ba — Bare verbal promise -ㅁ세/-음세.** The inventory audit
+  found missing `연락함세`, `삼세`, `입음세` and `읽음세`. Canonical 음세 now
+  preserves attached ㅁ, retained ㄹ + ㅁ (삶세), and local regular/irregular
+  vowel boundaries. Bare represented copulas, 답다-derived adjectives and known
+  adjectival auxiliary owners do not inherit verb attachment; unknown lexical
+  alternatives remain. Per-entry dictionary checks preserve valid verb homonyms
+  such as 크다/멀다/쓰다/있다 while identifying their adjective conflicts.
+  Generic prefinal combinations are explicitly unknown, not certified licenses.
+  Evidence: 55 stable `eumse-*` raw cases (37 required / 18 forbidden), 14
+  dictionary-policy cases (8 required / 6 forbidden), all ten complete native
+  example groups, 87 complete attributed entries, [tests](../tests/eumse.rs),
+  one complete unchanged KAIST development sentence, CLI/library Unicode and
+  component parity, and browser labels/choices/export. The
+  [individual comparison](eumse-evaluation.json) retains all 199 added paths
+  across 64 of 10,011 surfaces with no removals; 154 additions remain unjudged.
+  KAIST `MH2_0149-s26/4` 줌세 now recovers 주다; this is the sole changed frozen
+  corpus case. The other three full reports are byte-identical. The full
+  179,112-record novel adds only the source-backed 맡다 + 음세 reading at
+  맡음세 under each dictionary filter, with no removed readings. Three
+  interleaved release runs per filter measured roughly 1.5-second medians and
+  about 30 MiB peak RSS; these are descriptive measurements. Rust/stress,
+  lint/format, frontend/browser and x86_64 Linux Nix package/flake checks pass; the
+  packaged preview on 8081 is refreshed and verified. Prefinal
+  paradigms, negative inheritance, following particles/endings and independent
+  Korean-language/contextual review remain open under COV-017/COV-013.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

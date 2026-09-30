@@ -1656,3 +1656,15 @@ and GSD exports, retaining their original licenses and attribution above.
 The target lexical tokens are 있은, 있으신 and 계신가; they do not supply
 auxiliary past-adnominal gold. All 33 converted tokens match. Unresolved
 resultative, question-class and contextual cases remain in the source review.
+
+- `krdict-eumse.json` preserves 87 complete attributed native lexical entries
+  supporting COV-017ba's bare-verb promise ending, local written conjugations,
+  auxiliaries and homonyms. Only RelatedForm and non-English equivalents are
+  omitted. `eumse-sources.json` records all original export SHA-256 hashes,
+  all ten complete grammar-entry example groups, nine directly attested tokens
+  and one explicitly joined source construction. It separates raw judgments,
+  optional dictionary-policy judgments, corpus evidence and unjudged prefinals.
+  `kaist-eumse.conllu` is the complete unchanged KAIST development sentence
+  MH2_0149-s26, including the original 주+ㅁ세 annotation. The novel occurrence
+  맡음세 is unannotated literary evidence; its segmentation is source-backed
+  inference. These are agent-authored judgments, not independent Korean review.

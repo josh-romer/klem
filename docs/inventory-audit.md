@@ -658,3 +658,12 @@ contextual precision or completion of the broader row.
 General 옵시/으옵시/사옵시, modern 자옵 lexical restrictions, broader ending licenses and
 independent Korean-language review remain open under the original COV-017az
 scope. See the [primary-source audit](polite-source-audit.json).
+
+The COV-017ba bare-promise audit reviews KRDict 78483/78496 against every
+native example group, exact boundary/owner regressions, a preserved KAIST
+annotation and the novel occurrence 맡음세. The queue now has 336 scoped,
+378 unreviewed and one observed gap across 715 entries, with 386 catalog-linked
+and 375 judgment-cited entries. These counts describe dispositions and links,
+not a precision estimate. Prefinal combinations remain explicitly unknown;
+see [the individual review](eumse-evaluation.json). COV-018l's public-source
+retrieval recheck still leaves 마다 + 에 unresolved.

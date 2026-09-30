@@ -32,6 +32,7 @@ pub enum AttachmentRule {
     LiteraryAssertionClass,
     BareLiteraryDeclarative,
     BareLiteraryQuestion,
+    VolitionalPromiseVerb,
     HabitualConditionVerb,
     BareCopularEnding,
     BareAdjectivalReport,
@@ -496,6 +497,8 @@ impl Annotation {
                             // adjectives. This finite policy does not infer
                             // restrictions for other question families.
                             Some(AttachmentRule::BareVerbalQuestion)
+                        } else if bare && form == "음세" && adjective {
+                            Some(AttachmentRule::VolitionalPromiseVerb)
                         } else if crate::engine::present_declarative(form) && adjective {
                             Some(AttachmentRule::PresentDeclarativeVerb)
                         } else if adjective && crate::engine::verbal_intention(form) {
@@ -543,6 +546,15 @@ impl Annotation {
                                 morpheme_index: Some(i),
                             });
                         }
+                    }
+                    if status == Compatibility::Compatible
+                        && !bare
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "음세")
+                    {
+                        // The reviewed sources list bare verbs. Generic
+                        // prefinal hypotheses survive without claiming that
+                        // this new final licenses every such combination.
+                        status = Compatibility::Unknown;
                     }
                     if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary)
                         && let Some(Component::Morpheme(i)) = morphs.first()

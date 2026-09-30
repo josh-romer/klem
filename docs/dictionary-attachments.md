@@ -35,6 +35,7 @@ ledger because an unknown-class rule hypothesis must still be generated.
 | `literary_assertion_class` | Bare lexical predicates with 으니라/느니라 | 읽으니라 conflicts with its verb-only entry; 크니라 and 크느니라 retain their respective adjective/verb homonyms. |
 | `bare_literary_declarative` | Bare lexical predicates with 나이다 | Known adjectives conflict, with 있다/없다/계시다 exceptions. 머나이다 retains the verb 멀다 while its adjective homonym conflicts; listed intervening prefinals keep their own licenses. |
 | `bare_literary_question` | Bare lexical predicates with 나이까 | The corresponding NIKL verbal/existential class; compatible verb homonyms and unknown provider classes survive. Intervening prefinals retain their separate licenses. |
+| `volitional_promise_verb` | Bare lexical predicates with canonical 음세 | Keeps valid verb homonyms such as 크다 while identifying the adjective entry conflict; generic prefinal combinations remain unknown. |
 
 The present family is shared with the engine: 는다/는다고/는다는/는다면/는답니다/
 는다거나/는다든가/는다네/는다는데/는다며/는다면서/는다니/는단. Attached ㄴ

@@ -3093,3 +3093,40 @@ these small samples do not establish statistical performance equivalence.
 The review queue now has 330 scoped entries, 384 unreviewed and one observed
 gap. General polite prefinal paradigms, contextual suitability and independent
 Korean-language review remain open.
+
+## Bare verbal promise -ㅁ세/-음세 (COV-017ba)
+
+The [source and individual review](eumse-evaluation.json) records two newly
+reviewed grammar entries, ten complete native example groups and 87 complete
+native lexical entries verified against the pinned original exports. There are
+55 new raw cases (37 required / 18 forbidden) and 14 separate dictionary-policy
+cases (8 required / 6 forbidden). Required and forbidden scopes retain exact
+lemma/morpheme roles; unknown lexical and prefinal alternatives are not counted
+as correct. Generic prefinal combinations remain dictionary-unknown.
+
+Across 10,011 comparison surfaces, 199 hypotheses are added on 64 surfaces,
+with no removals: 39 match required paths, six match optional dictionary
+conflicts and 154 remain unjudged. Every addition retains its full analysis,
+provenance and judgment links. Existing stress fingerprints remain unchanged.
+KAIST development gains only MH2_0149-s26/4 줌세 → 주다, from 22,133 to
+22,134 of 22,220 grouped matches; the complete original sentence is preserved.
+The other three full frozen reports are byte-identical. Six-file substring
+triage also finds lexical 금세; it is not relabeled as ending gold.
+
+Both dictionary filters add one source-backed 맡다 + 음세 reading at the
+novel's byte span 258807..258816 (맡음세), across all 179,112 records. No
+previous filtered reading is removed. This literary occurrence is unannotated,
+and its structural judgment follows the primary dictionary note. Browser
+checks cover both source entries, the new raw/policy cases, visible choices,
+normalized components and filtered export; desktop/mobile screenshots were
+inspected. First-person semantics, negative-class inheritance, wider followers
+and independent Korean-language review remain open.
+
+Three interleaved release runs per version/filter measured after-change medians
+of 1.538 seconds (headword only) and 1.526 seconds (compatible), compared with
+1.546 and 1.521 seconds before. Peak child RSS stayed around 30 MiB. These are
+descriptive measurements, not evidence of statistical equivalence. Both Nix
+packages and the packaged Rust suite pass on x86_64 Linux. The refreshed
+8081 preview passes exact HTTP/CLI checks against the complete dictionary,
+source identity checks and prior plural/humble/question controls; its served
+JavaScript is byte-identical to the browser-tested local bundle.

@@ -2,6 +2,11 @@
   "schema_version": 1,
   "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
   "sources": {
+    "eumse-17203": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=17203",
+    "eumse-66585": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66585",
+    "eumse-74104": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=74104",
+    "eumse-78483": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78483",
+    "eumse-78496": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78496",
     "rikka-1": "https://opendict.korean.go.kr/dictionary/view?sense_no=1",
     "rikka-39911": "https://opendict.korean.go.kr/dictionary/view?sense_no=39911",
     "rikka-20153": "https://opendict.korean.go.kr/dictionary/view?sense_no=20153",
@@ -8707,6 +8712,20 @@
           "reason": "Preserve the distinct noun 노래 + copula 이다 + 다 reading; rejecting an adjectival result-transfer hypothesis must not reject the entire surface."
         }
       ]
-    }
+    },
+    {"id": "eumse-policy-큼세", "surface": "큼세", "judgments": [{"id": "path", "lemmas": ["크다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "eumse-78483", "reason": "Structural continuation of the source-listed bare-verb promise ending and its local allomorph; contextual eligibility is not certified."}]},
+    {"id": "eumse-policy-씀세", "surface": "씀세", "judgments": [{"id": "path", "lemmas": ["쓰다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "eumse-78483", "reason": "Structural continuation of the source-listed bare-verb promise ending and its local allomorph; contextual eligibility is not certified."}]},
+    {"id": "eumse-policy-멂세", "surface": "멂세", "judgments": [{"id": "path", "lemmas": ["멀다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "eumse-78483", "reason": "Structural continuation of the source-listed bare-verb promise ending and its local allomorph; contextual eligibility is not certified."}]},
+    {"id": "eumse-policy-있음세", "surface": "있음세", "judgments": [{"id": "path", "lemmas": ["있다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "eumse-78496", "reason": "Structural continuation of the source-listed bare-verb promise ending and its local allomorph; contextual eligibility is not certified."}]},
+    {"id": "eumse-policy-들음세", "surface": "들음세", "judgments": [{"id": "path", "lemmas": ["듣다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "eumse-78496", "reason": "Structural continuation of the source-listed bare-verb promise ending and its local allomorph; contextual eligibility is not certified."}]},
+    {"id": "eumse-policy-먹음세", "surface": "먹음세", "judgments": [{"id": "path", "lemmas": ["먹다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "eumse-78496", "reason": "Structural continuation of the source-listed bare-verb promise ending and its local allomorph; contextual eligibility is not certified."}]},
+    {"id": "eumse-policy-먹어봄세", "surface": "먹어봄세", "judgments": [{"id": "path", "lemmas": ["먹다", "보다"], "lemma_kinds": ["predicate", "auxiliary"], "morphemes": ["어", "음세"], "morpheme_kinds": ["ending", "ending"], "verdict": "required", "source": "eumse-78483", "reason": "Structural continuation of the source-listed bare-verb promise ending and its local allomorph; contextual eligibility is not certified."}]},
+    {"id": "eumse-policy-좋아짐세", "surface": "좋아짐세", "judgments": [{"id": "path", "lemmas": ["좋다", "지다"], "lemma_kinds": ["predicate", "auxiliary"], "morphemes": ["어", "음세"], "morpheme_kinds": ["ending", "ending"], "verdict": "required", "source": "eumse-78483", "reason": "Structural continuation of the source-listed bare-verb promise ending and its local allomorph; contextual eligibility is not certified."}]},
+    {"id": "eumse-policy-좋음세", "surface": "좋음세", "judgments": [{"id": "path", "lemmas": ["좋다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "eumse-78496", "reason": "Raw/headword hypotheses retain this lexical head; compatible filtering excludes its bare adjective class or the source-attested irregular spelling conflict."}]},
+    {"id": "eumse-policy-많음세", "surface": "많음세", "judgments": [{"id": "path", "lemmas": ["많다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "eumse-78496", "reason": "Raw/headword hypotheses retain this lexical head; compatible filtering excludes its bare adjective class or the source-attested irregular spelling conflict."}]},
+    {"id": "eumse-policy-아님세", "surface": "아님세", "judgments": [{"id": "path", "lemmas": ["아니다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "eumse-78483", "reason": "Raw/headword hypotheses retain this lexical head; compatible filtering excludes its bare adjective class or the source-attested irregular spelling conflict."}]},
+    {"id": "eumse-policy-듣음세", "surface": "듣음세", "judgments": [{"id": "path", "lemmas": ["듣다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "eumse-74104", "reason": "Raw/headword hypotheses retain this lexical head; compatible filtering excludes its bare adjective class or the source-attested irregular spelling conflict."}]},
+    {"id": "eumse-policy-짓음세", "surface": "짓음세", "judgments": [{"id": "path", "lemmas": ["짓다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "eumse-66585", "reason": "Raw/headword hypotheses retain this lexical head; compatible filtering excludes its bare adjective class or the source-attested irregular spelling conflict."}]},
+    {"id": "eumse-policy-돕음세", "surface": "돕음세", "judgments": [{"id": "path", "lemmas": ["돕다"], "lemma_kinds": ["predicate"], "morphemes": ["음세"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "eumse-17203", "reason": "Raw/headword hypotheses retain this lexical head; compatible filtering excludes its bare adjective class or the source-attested irregular spelling conflict."}]}
   ]
 }

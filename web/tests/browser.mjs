@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const eumse = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-eumse.json"),"utf8"));
   const existentialParadigms = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-existential-paradigms.json"),"utf8"));
   const ryeogoExpansions = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-ryeogo-expansions.json"),"utf8"));
   const ryeogoLicenses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ryeogo-licenses.json"), "utf8"));
@@ -347,6 +348,7 @@ try {
       ...ryeogoLicenses.LexicalResource.Lexicon.LexicalEntry,
       ...ryeogoExpansions.LexicalResource.Lexicon.LexicalEntry,
       ...existentialParadigms.LexicalResource.Lexicon.LexicalEntry,
+      ...eumse.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -1191,6 +1193,48 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-ryeogo-licenses-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const eumseCases = recipientLedger.cases.filter(c => c.id.startsWith("eumse-"));
+  const eumsePolicies = connectiveLedger.cases.filter(c => c.id.startsWith("eumse-"));
+  assert.equal(eumseCases.length,55); assert.equal(eumsePolicies.length,14);
+  for (const [cases,policy] of [[eumseCases,false],[eumsePolicies,true]]) {
+    for (const c of cases) {
+      const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+      const cli=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      const {dictionary,...analysis}=cli;
+      assert.deepEqual(token.analysis,analysis); assert.deepEqual(token.dictionary,dictionary);
+      for (const j of c.judgments) {
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if (policy) {
+          for (const a of found) {
+            const index=token.analysis.analyses.indexOf(a);
+            assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+          }
+        }
+      }
+    }
+  }
+  const eumseText="연락함세 삼세 삶세 읽음세 들어줌세 좋아짐세 큼세 좋음세";
+  const eumseData=await(await post("analyze",{text:eumseText})).json();
+  assert.deepEqual(eumseData.grammar["-음세"].map(e=>e.id).sort(),["krdict:78483","krdict:78496"]);
+  await submit(page,eumseText);await waitHeading(page,"연락함세");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i,forms]of [[0,["연락하","음세"]],[1,["사","음세"]],[2,["살","음세"]],[3,["읽","음세"]],[4,["듣","어","주","음세"]],[5,["좋","어","지","음세"]],[6,["크","음세"]]]) {
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes("Willing promise"));
+  }
+  const eumseDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const eumseExport=JSON.parse(await readFile(await(await eumseDownload).path(),"utf8"));
+  const eumseExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:eumseText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(eumseExport.records,eumseExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-eumse-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-eumse-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const existentialCases = recipientLedger.cases.filter(c => c.id.startsWith("existential-paradigm-"));

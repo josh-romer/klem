@@ -3318,3 +3318,28 @@ A repeated ambiguous-prefix stress case with a raised probe limit drops from
 about 1.715s to 0.054s in one before/after release observation after memoizing
 exhausted failed suffixes. Its exported counts/completeness remain identical;
 the regression also checks sixteen distinct successful prefixes.
+
+COV-017bf retains [all candidate changes](geol-evaluation.json) and
+[complete primary/annotated evidence](geol-source-audit.json). Four original
+training tokens (둘걸, 특기인걸요, 할걸, 먹을걸요) gain grouped lemma recovery.
+The GSD 먹을걸요 token retains its original EC tag even though the dictionary
+expression is terminal; annotation differences are not silently rewritten.
+The other 37 suffix-shaped corpus observations are preserved with their
+original non-target tags, including bound nouns/pronouns and lexical names.
+No frozen dev/test baseline is regenerated. Both full novel filters preserve
+all 179,112 records/spans and existing paths, adding ten candidates at eight
+occurrences; each added novel path remains unjudged. Malformed primary
+끝난던걸요 remains unresolved instead of being silently corrected.
+
+The final COV-017bf comparison adds 1,832 candidates at 299 of 10,803 NFC/NFD
+inputs with no removals; 266 match required judgments, two match optional
+dictionary conflicts, and 1,564 remain unjudged. Debug/release novel output
+hashes match under both filters. All 5,555 optional spacing alternatives are
+identical before/after. Three interleaved release runs per version/filter
+(including startup, SQLite and JSONL serialization) give median before/after
+times of 1.622/1.624s for headword and 1.614/1.643s for compatible filtering,
+with observed peaks around 29.4MiB. These twelve samples are descriptive and
+do not establish statistical equivalence. Rust/stress, pinned corpus,
+lint/format, browser/frontend, inventory tooling and three x86_64 Linux Nix
+checks pass. The refreshed packaged preview and final production assets have
+complete-dictionary HTTP/CLI/export parity and inspected desktop/mobile views.

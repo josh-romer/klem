@@ -2,6 +2,19 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "geol-76460": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=76460&nation=eng",
+    "geol-76475": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=76475&nation=eng",
+    "geol-81040": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81040&nation=eng",
+    "geol-81045": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81045&nation=eng",
+    "geol-81050": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81050&nation=eng",
+    "geol-81056": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81056&nation=eng",
+    "geol-85849": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=85849&nation=eng",
+    "geol-85850": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=85850&nation=eng",
+    "geol-86045": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86045&nation=eng",
+    "geol-86267": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86267&nation=eng",
+    "geol-86369": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86369&nation=eng",
+    "geol-86746": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86746&nation=eng",
+    "geol-nikl-333984": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=44&qna_seq=333984",
     "comparative-neuni-85729": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85729",
     "comparative-neuni-85731": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85731",
     "quoted-neuni-86068": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86068",
@@ -9621,6 +9634,4202 @@
     {"id": "comparative-neuni-boundary-54", "surface": "학생이느니보다는", "judgments": [{"id": "path", "lemmas": ["학생", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["느니보다는"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "comparative-neuni-85731", "reason": "Wrong retained ㄹ spelling or represented immediate non-existential adjective/copula owner, not an earlier lexical-head class inference."}]},
     {"id": "comparative-neuni-boundary-55", "surface": "친구느니보다는", "judgments": [{"id": "path", "lemmas": ["친구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["느니보다는"], "morpheme_kinds": ["ending"], "verdict": "forbidden", "source": "comparative-neuni-85731", "reason": "Wrong retained ㄹ spelling or represented immediate non-existential adjective/copula owner, not an earlier lexical-head class inference."}]},
     {"id": "comparative-neuni-boundary-56", "surface": "먹고싶느니보다는", "judgments": [{"id": "path", "lemmas": ["먹다", "싶다"], "lemma_kinds": ["predicate", "auxiliary"], "morphemes": ["고", "느니보다는"], "morpheme_kinds": ["ending", "ending"], "verdict": "forbidden", "source": "comparative-neuni-85731", "reason": "Wrong retained ㄹ spelling or represented immediate non-existential adjective/copula owner, not an earlier lexical-head class inference."}]},
-    {"id": "comparative-neuni-boundary-57", "surface": "학생답느니보다는", "judgments": [{"id": "path", "lemmas": ["학생"], "lemma_kinds": ["nominal"], "morphemes": ["답다", "느니보다는"], "morpheme_kinds": ["suffix", "ending"], "verdict": "forbidden", "source": "comparative-neuni-85731", "reason": "Wrong retained ㄹ spelling or represented immediate non-existential adjective/copula owner, not an earlier lexical-head class inference."}]}
+    {"id": "comparative-neuni-boundary-57", "surface": "학생답느니보다는", "judgments": [{"id": "path", "lemmas": ["학생"], "lemma_kinds": ["nominal"], "morphemes": ["답다", "느니보다는"], "morpheme_kinds": ["suffix", "ending"], "verdict": "forbidden", "source": "comparative-neuni-85731", "reason": "Wrong retained ㄹ spelling or represented immediate non-existential adjective/copula owner, not an earlier lexical-head class inference."}]},
+    {
+      "id": "geol-source-76460-1-0-0-4",
+      "surface": "될걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "되다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-1-1-0-3",
+      "surface": "아플걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아프다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-1-2-0-3",
+      "surface": "추울걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "춥다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-1-3-0-4",
+      "surface": "빠를걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "빠르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-1-4-0-5",
+      "surface": "살걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-1-5-0-3",
+      "surface": "계실걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-1-6-1-6",
+      "surface": "캐럴일걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "캐럴",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-2-0-0-5",
+      "surface": "나갈걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-2-1-0-5",
+      "surface": "올걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-2-2-0-5",
+      "surface": "될걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "되다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-2-3-0-11",
+      "surface": "둘걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "두다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-2-4-0-8",
+      "surface": "취직할걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "취직하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76460-2-5-1-6",
+      "surface": "공부할걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "공부하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76460",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-1-0-0-2",
+      "surface": "좁을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좁다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-1-1-0-4",
+      "surface": "맞을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "맞다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-1-2-0-7",
+      "surface": "없었을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-1-3-0-7",
+      "surface": "지났을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "지나다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-1-4-0-8",
+      "surface": "있을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-1-5-0-8",
+      "surface": "않을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-1-6-1-6",
+      "surface": "않았을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-2-0-0-6",
+      "surface": "좋았을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-2-1-0-6",
+      "surface": "있을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-2-2-0-6",
+      "surface": "팔았을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "팔다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-2-3-0-6",
+      "surface": "잘했을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-76475-2-4-1-6",
+      "surface": "참을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "참다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81040-1-0-0-6",
+      "surface": "괜찮은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "괜찮다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81040-1-1-0-7",
+      "surface": "좋은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81040-1-2-0-4",
+      "surface": "많은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81040-2-0-0-10",
+      "surface": "않은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81040-2-1-0-8",
+      "surface": "잡은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잡다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81040-2-2-0-7",
+      "surface": "참은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "참다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81040-2-3-1-2",
+      "surface": "들은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "듣다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-1-0-0-5",
+      "surface": "오신걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-1-1-0-3",
+      "surface": "먼걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "멀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-1-2-0-6",
+      "surface": "아닌걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-1-3-1-4",
+      "surface": "대단한걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "대단하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-2-0-0-4",
+      "surface": "마찬가진걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "마찬가지",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-2-1-0-6",
+      "surface": "나쁜걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "나쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-2-2-0-6",
+      "surface": "지운걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "지우다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-2-3-0-6",
+      "surface": "멈춘걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "멈추다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81045-2-4-1-3",
+      "surface": "끝난걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "끝나다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81045",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81050-1-0-0-4",
+      "surface": "재미있는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "재미있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81050-1-1-0-6",
+      "surface": "춥겠는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "춥다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81050-1-2-0-6",
+      "surface": "갔는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81050-1-3-1-7",
+      "surface": "어울리겠는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "어울리다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81050-2-0-0-7",
+      "surface": "없는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81050-2-1-0-6",
+      "surface": "갔는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81050-2-2-0-8",
+      "surface": "운반하겠는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "운반하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81050-2-3-1-6",
+      "surface": "읽는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "읽다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-1-0-0-6",
+      "surface": "아프던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아프다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-1-1-0-5",
+      "surface": "보내왔던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "보내다",
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-1-2-0-6",
+      "surface": "찾으시던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "찾다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-1-3-0-6",
+      "surface": "입었던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "입다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-1-4-1-6",
+      "surface": "떠났던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "떠나다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-1-5-1-5",
+      "surface": "춥던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "춥다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-2-0-0-5",
+      "surface": "잘하던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-2-1-0-8",
+      "surface": "먹던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-2-2-0-4",
+      "surface": "잘하던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-2-3-1-4",
+      "surface": "재미있던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "재미있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-2-4-1-6",
+      "surface": "흥미진진하던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "흥미진진하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-2-5-1-3",
+      "surface": "먹던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-source-81056-2-6-1-2",
+      "surface": "조용하던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "조용하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Direct unchanged primary example token. The exact intended morphological group is recorded separately from contextual sense choice and other possible alternatives."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-0",
+      "surface": "가는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-1",
+      "surface": "사는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-2",
+      "surface": "먹는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-3",
+      "surface": "먹은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-4",
+      "surface": "먹으신걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-5",
+      "surface": "좋으신걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-6",
+      "surface": "먹었는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-7",
+      "surface": "먹겠는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-8",
+      "surface": "좋았는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-9",
+      "surface": "좋으시는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-10",
+      "surface": "먹던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-11",
+      "surface": "먹었겠던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "겠",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-12",
+      "surface": "먹으시던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-13",
+      "surface": "먹을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-14",
+      "surface": "살걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-15",
+      "surface": "갈걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-16",
+      "surface": "좋으셨을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "었",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-17",
+      "surface": "먹었을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-18",
+      "surface": "고르는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-19",
+      "surface": "학생인걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-20",
+      "surface": "의산걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-21",
+      "surface": "학생일걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-22",
+      "surface": "의살걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-23",
+      "surface": "학생이었는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "었",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-24",
+      "surface": "학생이시던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-25",
+      "surface": "의사던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-composition-26",
+      "surface": "좋는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-ownership-0",
+      "surface": "먹고있는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-ownership-1",
+      "surface": "먹고싶었는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "었",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-ownership-2",
+      "surface": "먹어봤던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-ownership-4",
+      "surface": "먹은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-ownership-5",
+      "surface": "먹는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-ownership-6",
+      "surface": "학생다웠는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "었",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-ownership-7",
+      "surface": "학생다울걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-ownership-8",
+      "surface": "학생다운걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-0",
+      "surface": "살는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-1",
+      "surface": "좋은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-2",
+      "surface": "먹어은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-3",
+      "surface": "먹었은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-4",
+      "surface": "먹겠은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-5",
+      "surface": "먹더은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-6",
+      "surface": "먹더는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-7",
+      "surface": "먹더던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-8",
+      "surface": "먹겠을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-9",
+      "surface": "먹더을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-10",
+      "surface": "살을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-11",
+      "surface": "도웁던걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "돕다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-12",
+      "surface": "도우는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "돕다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-13",
+      "surface": "좋는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-14",
+      "surface": "먹은걸있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "은걸",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81040",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-15",
+      "surface": "먹는걸있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는걸",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-16",
+      "surface": "먹던걸있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "던걸",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81056",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-17",
+      "surface": "먹을걸있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "을걸",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-76475",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-18",
+      "surface": "먹고싶는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-boundary-19",
+      "surface": "학생이는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-derived-bare-adjective",
+      "surface": "학생답는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Source-backed structural hypothesis; agent-authored variants are not primary quotations or annotated sentences. Contextual meaning and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85849-1-0-0-3",
+      "surface": "좋은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85849",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85849-1-1-0-5",
+      "surface": "넓은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "넓다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85849",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85849-1-2-0-4",
+      "surface": "많은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85849",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85849-1-3-1-3",
+      "surface": "짧은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "짧다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85849",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85849-2-0-0-5",
+      "surface": "좁은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좁다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85849",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85849-2-1-0-4",
+      "surface": "작은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "작다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85849",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85849-2-2-0-7",
+      "surface": "적은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "적다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85849",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85849-2-3-1-5",
+      "surface": "많은걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85849",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85850-1-0-0-3",
+      "surface": "쓴걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "쓰다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85850",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85850-1-1-0-3",
+      "surface": "아닌걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85850",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85850-1-2-0-5",
+      "surface": "추운걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "춥다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85850",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85850-1-3-1-3",
+      "surface": "슬픈걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "슬프다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85850",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85850-2-0-0-3",
+      "surface": "먼걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "멀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85850",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85850-2-1-0-3",
+      "surface": "학생인걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85850",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85850-2-2-0-5",
+      "surface": "고픈걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고프다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85850",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-85850-2-3-1-5",
+      "surface": "아픈걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아프다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-85850",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-1-0-0-4",
+      "surface": "미인이시던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "미인",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-1-1-0-5",
+      "surface": "넓던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "넓다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-1-2-0-5",
+      "surface": "만들던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "만들다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-1-3-0-4",
+      "surface": "잘하던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-1-4-1-3",
+      "surface": "회사이던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "회사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-2-0-0-7",
+      "surface": "없던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-2-1-0-5",
+      "surface": "마시던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "마시다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-2-3-1-2",
+      "surface": "하던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-2-4-1-6",
+      "surface": "되던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "되다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86045-2-5-1-2",
+      "surface": "똘똘하던걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "똘똘하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "던걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86045",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86267-1-0-0-3",
+      "surface": "다닐걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "다니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86267",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86267-1-1-0-4",
+      "surface": "아실걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "알다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86267",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86267-1-2-0-5",
+      "surface": "올걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86267",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86267-1-3-0-4",
+      "surface": "보일걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "보이다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86267",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86267-1-4-1-3",
+      "surface": "올걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86267",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86369-1-0-0-4",
+      "surface": "오는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86369",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86369-1-1-0-4",
+      "surface": "맞겠는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "맞다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86369",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86369-1-2-0-7",
+      "surface": "남았는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "남다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86369",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86369-1-3-1-4",
+      "surface": "없는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86369",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86369-2-0-1-3",
+      "surface": "있는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86369",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86369-2-1-1-5",
+      "surface": "했는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86369",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86369-2-2-1-3",
+      "surface": "없는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86369",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86369-2-3-1-5",
+      "surface": "먹는걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86369",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86746-1-0-0-3",
+      "surface": "많을걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86746",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86746-1-1-0-3",
+      "surface": "시작했을걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "시작하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86746",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86746-1-2-0-5",
+      "surface": "잡을걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잡다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86746",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-polite-source-86746-1-3-0-7",
+      "surface": "늦을걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "늦다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-86746",
+          "reason": "Direct unchanged native polite example, represented by the separately licensed ending and polite particle. This does not choose contextual sense or reinterpret a bound noun."
+        }
+      ]
+    },
+    {
+      "id": "geol-nikl-333984-0",
+      "surface": "몸이신걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "몸",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "은걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-nikl-333984",
+          "reason": "Direct token in NIKL 333984, whose answer explicitly identifies these endings. Ordered morphology is a structural judgment; other readings and contextual sense remain separate."
+        }
+      ]
+    },
+    {
+      "id": "geol-nikl-333984-1",
+      "surface": "그럴걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그렇다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-nikl-333984",
+          "reason": "Direct token in NIKL 333984, whose answer explicitly identifies these endings. Ordered morphology is a structural judgment; other readings and contextual sense remain separate."
+        }
+      ]
+    },
+    {
+      "id": "geol-nikl-333984-2",
+      "surface": "필요할걸요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "필요하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "geol-nikl-333984",
+          "reason": "Direct token in NIKL 333984, whose answer explicitly identifies these endings. Ordered morphology is a structural judgment; other readings and contextual sense remain separate."
+        }
+      ]
+    }
   ]
 }

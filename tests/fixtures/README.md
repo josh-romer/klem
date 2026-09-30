@@ -1719,3 +1719,11 @@ resultative, question-class and contextual cases remain in the source review.
   both a missing final dictionary word and a successful final predicate. This is
   an engineering stress input, distinct from the linguistic case ledger. Exhausted
   failed suffix searches are memoized; successful prefix alternatives remain.
+
+- `krdict-geol.json` preserves 124 full attributed native entries for COV-017bf,
+  omitting only RelatedForm/non-English equivalents. `geol-sources.json` records
+  eleven export hashes, six ending/six polite expression identities, all 106
+  example groups and 105 direct token cases. Native 86045 끝난던걸요 is
+  preserved as an unjudged spelling observation without silently correcting it.
+  `kaist-geol.conllu` and `gsd-geol.conllu` preserve four complete original
+  training sentences, including the original GSD EC tag for 먹을걸요.

@@ -2,6 +2,12 @@
   "schema_version": 1,
   "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
   "sources": {
+    "geol-76460": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=76460&nation=eng",
+    "geol-76475": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=76475&nation=eng",
+    "geol-81040": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81040&nation=eng",
+    "geol-81045": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81045&nation=eng",
+    "geol-81050": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81050&nation=eng",
+    "geol-81056": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81056&nation=eng",
     "comparative-neuni-85729": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85729",
     "comparative-neuni-85731": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85731",
     "quoted-neuni-86068": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86068",
@@ -8804,6 +8810,274 @@
     {"id": "comparative-neuni-policy-8", "surface": "크느니보다는", "judgments": [{"id": "path", "lemmas": ["크다"], "lemma_kinds": ["predicate"], "morphemes": ["느니보다는"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "comparative-neuni-85731", "reason": "Optional per-entry verb/existential attachment evidence; lexical homonyms are checked independently and unreviewed auxiliary roles remain unknown."}]},
     {"id": "comparative-neuni-policy-9", "surface": "맛있느니보다는", "judgments": [{"id": "path", "lemmas": ["맛있다"], "lemma_kinds": ["predicate"], "morphemes": ["느니보다는"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "comparative-neuni-85731", "reason": "Optional per-entry verb/existential attachment evidence; lexical homonyms are checked independently and unreviewed auxiliary roles remain unknown."}]},
     {"id": "comparative-neuni-policy-10", "surface": "재미없느니보다는", "judgments": [{"id": "path", "lemmas": ["재미없다"], "lemma_kinds": ["predicate"], "morphemes": ["느니보다는"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "comparative-neuni-85731", "reason": "Optional per-entry verb/existential attachment evidence; lexical homonyms are checked independently and unreviewed auxiliary roles remain unknown."}]},
-    {"id": "comparative-neuni-policy-11", "surface": "먹느니보다는", "judgments": [{"id": "path", "lemmas": ["먹다"], "lemma_kinds": ["predicate"], "morphemes": ["느니보다는"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "comparative-neuni-85731", "reason": "Optional per-entry verb/existential attachment evidence; lexical homonyms are checked independently and unreviewed auxiliary roles remain unknown."}]}
+    {"id": "comparative-neuni-policy-11", "surface": "먹느니보다는", "judgments": [{"id": "path", "lemmas": ["먹다"], "lemma_kinds": ["predicate"], "morphemes": ["느니보다는"], "morpheme_kinds": ["ending"], "verdict": "required", "source": "comparative-neuni-85731", "reason": "Optional per-entry verb/existential attachment evidence; lexical homonyms are checked independently and unreviewed auxiliary roles remain unknown."}]},
+    {
+      "id": "geol-policy-0",
+      "surface": "좋는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-1",
+      "surface": "아프는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아프다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-2",
+      "surface": "조용하는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "조용하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-3",
+      "surface": "고르는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-4",
+      "surface": "재미있는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "재미있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-5",
+      "surface": "없는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-6",
+      "surface": "계시는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-7",
+      "surface": "좋았는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-8",
+      "surface": "좋으시는걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-9",
+      "surface": "좋은걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    },
+    {
+      "id": "geol-policy-10",
+      "surface": "좋을걸",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "geol-81050",
+          "reason": "Optional entry-level bare verb/existential license; incompatible adjective homonyms do not invalidate compatible verbal homonyms or prefinal-owned readings."
+        }
+      ]
+    }
   ]
 }

@@ -526,3 +526,14 @@ possible auxiliary groups. Extra partitions and unknown roles stay visible as
 hypotheses. [The evaluation](spacing-evaluation.json) records every affected
 occurrence and explicit limits rather than certifying a sentence from dictionary
 membership or creating a headword such as 결혼을하다.
+
+COV-017bf adds `bare_geol_verb` for immediate bare 는걸 owners. The exact
+81050 note licenses verbs, 있다/없다/계시다 and adjective compounds ending
+있다/없다, or licensed prefinal markers. Known ordinary adjective entries
+conflict only in the bare position; verbal homonyms, unknown lexical classes
+and adjective/copula paths after 시/었/겠 remain. The raw hypothesis is kept
+when the engine has no represented owner class; dictionary headword filtering
+retains it and compatible filtering excludes the known conflict. Guess/regret
+을걸 does not impose a verb-only restriction because its guess sense admits
+adjectives/copulas. [Individual evidence](geol-evaluation.json) keeps dictionary
+conflicts separate from raw structural exclusions and unjudged alternatives.

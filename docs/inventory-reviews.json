@@ -28524,6 +28524,718 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:76460",
+      "source_sha256": "790140d5e8dfa5562ef39606161b080e44da6f4d1a079f76a2017d1823c45912",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bf"
+      ],
+      "scope": "Exact source-backed -ㄹ걸 terminal ending, its canonical allomorph, immediate owner and source-listed prefinal slots. Full native senses/example groups retained; base ending plus separate polite 요 representation uses independently preserved expression entries. Guess/regret and realization senses are not selected from morphology.",
+      "remaining": "Independent Korean review and contextual sense choice remain pending. Wider colloquial contractions, spelling/spacing variants and prefinal/follower licenses outside this batch are not certified. Native 끝난던걸요 remains explicitly unjudged and unresolved; bound noun 거/것 parsing is separate work.",
+      "evidence": [
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_endings_preserve_allomorphs_prefinal_owners_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_native_sources_preserve_every_group_and_unresolved_spelling"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_cli_and_ordered_exports_match_dictionary_library_results"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "geol_recovers_original_annotated_endings_without_relabeling_bound_nouns"
+        },
+        {
+          "path": "docs/geol-source-audit.json"
+        },
+        {
+          "path": "docs/geol-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "geol-source-76460-1-0-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-1-1-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-1-2-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-1-3-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-1-4-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-1-5-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-1-6-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-2-0-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-2-1-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-2-2-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-2-3-0-11",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-2-4-0-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76460-2-5-1-6",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76475",
+      "source_sha256": "1930c653a2245a972c50b927002284291b87dee6ad2e92639c5cf22cb9b6c024",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bf"
+      ],
+      "scope": "Exact source-backed -을걸 terminal ending, its canonical allomorph, immediate owner and source-listed prefinal slots. Full native senses/example groups retained; base ending plus separate polite 요 representation uses independently preserved expression entries. Guess/regret and realization senses are not selected from morphology.",
+      "remaining": "Independent Korean review and contextual sense choice remain pending. Wider colloquial contractions, spelling/spacing variants and prefinal/follower licenses outside this batch are not certified. Native 끝난던걸요 remains explicitly unjudged and unresolved; bound noun 거/것 parsing is separate work.",
+      "evidence": [
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_endings_preserve_allomorphs_prefinal_owners_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_native_sources_preserve_every_group_and_unresolved_spelling"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_cli_and_ordered_exports_match_dictionary_library_results"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "geol_recovers_original_annotated_endings_without_relabeling_bound_nouns"
+        },
+        {
+          "path": "docs/geol-source-audit.json"
+        },
+        {
+          "path": "docs/geol-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "geol-source-76475-1-0-0-2",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-1-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-1-2-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-1-3-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-1-4-0-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-1-5-0-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-1-6-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-2-0-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-2-1-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-2-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-2-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-76475-2-4-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-13",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-14",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-15",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-16",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-17",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-21",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-22",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-ownership-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-9",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-10",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-17",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81040",
+      "source_sha256": "1f06eca266ad24dcec0d0b4f6fe8e1d72b31575950ef54a1d22f2f68c0301763",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bf"
+      ],
+      "scope": "Exact source-backed -은걸 terminal ending, its canonical allomorph, immediate owner and source-listed prefinal slots. Full native senses/example groups retained; base ending plus separate polite 요 representation uses independently preserved expression entries. Guess/regret and realization senses are not selected from morphology.",
+      "remaining": "Independent Korean review and contextual sense choice remain pending. Wider colloquial contractions, spelling/spacing variants and prefinal/follower licenses outside this batch are not certified. Native 끝난던걸요 remains explicitly unjudged and unresolved; bound noun 거/것 parsing is separate work.",
+      "evidence": [
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_endings_preserve_allomorphs_prefinal_owners_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_native_sources_preserve_every_group_and_unresolved_spelling"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_cli_and_ordered_exports_match_dictionary_library_results"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "geol_recovers_original_annotated_endings_without_relabeling_bound_nouns"
+        },
+        {
+          "path": "docs/geol-source-audit.json"
+        },
+        {
+          "path": "docs/geol-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "geol-source-81040-1-0-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81040-1-1-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81040-1-2-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81040-2-0-0-10",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81040-2-1-0-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81040-2-2-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81040-2-3-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-19",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-20",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-ownership-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-ownership-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-13",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-14",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81045",
+      "source_sha256": "607405021a3350995071e56559b2d2f7175d3fb2369878b63e850195dbbe3c68",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bf"
+      ],
+      "scope": "Exact source-backed -ㄴ걸 terminal ending, its canonical allomorph, immediate owner and source-listed prefinal slots. Full native senses/example groups retained; base ending plus separate polite 요 representation uses independently preserved expression entries. Guess/regret and realization senses are not selected from morphology.",
+      "remaining": "Independent Korean review and contextual sense choice remain pending. Wider colloquial contractions, spelling/spacing variants and prefinal/follower licenses outside this batch are not certified. Native 끝난던걸요 remains explicitly unjudged and unresolved; bound noun 거/것 parsing is separate work.",
+      "evidence": [
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_endings_preserve_allomorphs_prefinal_owners_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_native_sources_preserve_every_group_and_unresolved_spelling"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_cli_and_ordered_exports_match_dictionary_library_results"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "geol_recovers_original_annotated_endings_without_relabeling_bound_nouns"
+        },
+        {
+          "path": "docs/geol-source-audit.json"
+        },
+        {
+          "path": "docs/geol-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "geol-source-81045-1-0-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81045-1-1-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81045-1-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81045-1-3-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81045-2-0-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81045-2-1-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81045-2-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81045-2-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81045-2-4-1-3",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81050",
+      "source_sha256": "7d2cbd2a4e1a01f33a63d998f87d446063a96bcae4677fcb7f0c393e1c9dc68f",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bf"
+      ],
+      "scope": "Exact source-backed -는걸 terminal ending, its canonical allomorph, immediate owner and source-listed prefinal slots. Full native senses/example groups retained; base ending plus separate polite 요 representation uses independently preserved expression entries. Guess/regret and realization senses are not selected from morphology.",
+      "remaining": "Independent Korean review and contextual sense choice remain pending. Wider colloquial contractions, spelling/spacing variants and prefinal/follower licenses outside this batch are not certified. Native 끝난던걸요 remains explicitly unjudged and unresolved; bound noun 거/것 parsing is separate work.",
+      "evidence": [
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_endings_preserve_allomorphs_prefinal_owners_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_native_sources_preserve_every_group_and_unresolved_spelling"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_cli_and_ordered_exports_match_dictionary_library_results"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "geol_recovers_original_annotated_endings_without_relabeling_bound_nouns"
+        },
+        {
+          "path": "docs/geol-source-audit.json"
+        },
+        {
+          "path": "docs/geol-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "geol-source-81050-1-0-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81050-1-1-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81050-1-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81050-1-3-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81050-2-0-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81050-2-1-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81050-2-2-0-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81050-2-3-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-0",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-1",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-2",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-9",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-18",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-23",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-26",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-ownership-0",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-ownership-1",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-ownership-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-ownership-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-12",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-15",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-18",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-19",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-derived-bare-adjective",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81056",
+      "source_sha256": "f82e2155a36a011953beacd119bbf38f77bcb9de25472fa5bd1bfdf4ddf6b4f8",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bf"
+      ],
+      "scope": "Exact source-backed -던걸 terminal ending, its canonical allomorph, immediate owner and source-listed prefinal slots. Full native senses/example groups retained; base ending plus separate polite 요 representation uses independently preserved expression entries. Guess/regret and realization senses are not selected from morphology.",
+      "remaining": "Independent Korean review and contextual sense choice remain pending. Wider colloquial contractions, spelling/spacing variants and prefinal/follower licenses outside this batch are not certified. Native 끝난던걸요 remains explicitly unjudged and unresolved; bound noun 거/것 parsing is separate work.",
+      "evidence": [
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_endings_preserve_allomorphs_prefinal_owners_and_lexical_alternatives"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_native_sources_preserve_every_group_and_unresolved_spelling"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_dictionary_checks_bare_classes_and_preserves_homonyms_and_prefinals"
+        },
+        {
+          "path": "tests/geol.rs",
+          "test": "geol_cli_and_ordered_exports_match_dictionary_library_results"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "geol_recovers_original_annotated_endings_without_relabeling_bound_nouns"
+        },
+        {
+          "path": "docs/geol-source-audit.json"
+        },
+        {
+          "path": "docs/geol-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "geol-source-81056-1-0-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-1-1-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-1-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-1-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-1-4-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-1-5-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-2-0-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-2-1-0-8",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-2-2-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-2-3-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-2-4-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-2-5-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-source-81056-2-6-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-10",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-11",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-12",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-24",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-composition-25",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-ownership-2",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-7",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-11",
+          "judgment": "path"
+        },
+        {
+          "case": "geol-boundary-16",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

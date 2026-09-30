@@ -3591,3 +3591,24 @@ correctness of every proposed partition. See [the audit](spacing-source-audit.js
 The default bounds (64 NFC characters, 256 probes, 16 alternatives) report
 truncation. `complete` is scoped to this template/dictionary. General corrections,
 dictionary-unknown words and contextual sentence grammar are outside this template.
+
+## Realization, retrospective and guess -걸 endings (COV-017bf)
+
+Four separate terminal bundles normalize -은걸/-ㄴ걸 to 은걸, -는걸 to
+는걸, -던걸 to 던걸 and -을걸/-ㄹ걸 to 을걸. Existing ㄴ/ㄹ allomorphs,
+irregular spelling, copulas, auxiliaries and nominal 답다 derivations compose.
+The guess bundle retains lexical ㄹ, so 살걸 keeps both 사다 and 살다.
+Source-listed prefinal slot families are 은걸 after 시; 는걸
+and 던걸 after 시/past/modal; 을걸 after 시/past. The shared honorific
+category also retains existing 으옵시/사옵시/자옵시 compound hypotheses.
+Those wider combinations remain unjudged under COV-017az; passing lexical
+dictionary checks does not certify them from the six terminal-ending entries. Bare 는걸
+requires the represented verb/existential owner; optional dictionary assessment
+checks ordinary adjective entries independently. After licensed prefinals,
+adjective/copula paths remain possible. Terminal guess/regret senses cannot be
+selected from the suffix alone; the adjective guess reading must survive.
+Six complete polite expression entries license a separate outer 요 particle.
+No general particle follower or auxiliary connector is added. Native source
+끝난던걸요 remains literally preserved and unjudged; it does not certify an
+adnominal+던걸 sequence or lexical 끝난다. See the
+[source audit](geol-source-audit.json) and [evaluation](geol-evaluation.json).

@@ -878,6 +878,23 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // KRDict 81040/81045, 81050, 81056 and 76460/76475 keep
+                // different slots. The bare 은걸 bundle permits honorification;
+                // 는걸/던걸 additionally permit past/modal, while 을걸 permits
+                // past but not a second modal or retrospective marker.
+                if (ending.form == "은걸" && p.morphs.iter().any(|m| !honorific_prefinal(&m.form)))
+                    || (matches!(ending.form, "는걸" | "던걸")
+                        && p.morphs.iter().any(|m| {
+                            !honorific_prefinal(&m.form)
+                                && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
+                        }))
+                    || (ending.form == "을걸"
+                        && p.morphs
+                            .iter()
+                            .any(|m| !honorific_prefinal(&m.form) && m.form != "었"))
+                {
+                    continue;
+                }
                 // Short quotation and change/conditional homonyms keep their
                 // own licenses. Plain 단 also abbreviates 다가는, so it admits
                 // bare verbs, including represented auxiliaries.
@@ -1244,6 +1261,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.rules.push("ending".into());
                 if ending.form == "으리다" {
                     p.rules.push("ending.literary_ri".into());
+                }
+                if matches!(ending.form, "은걸" | "는걸" | "던걸" | "을걸") {
+                    p.rules.push("ending.geol".into());
                 }
                 if quoted_neuni_ending(ending.form) {
                     p.rules.push("ending.quoted_neuni".into());
@@ -1846,7 +1866,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             // These class checks belong to the immediate bare owner.
             // A prefinal/other auxiliary establishes a distinct boundary.
             if bare
-                && neuni_verbal_ending(&m.form)
+                && (neuni_verbal_ending(&m.form) || m.form == "는걸")
                 && matches!(
                     class,
                     Some(PredicateClass::Adjective | PredicateClass::Copula)
@@ -2018,10 +2038,9 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
 // Bounded adjective attachment inventory. The known suffix is ㅂ-irregular;
 // arbitrary lexical predicates still retain the engine's regular hypotheses.
 fn dap_suffix_allowed(p: &Predicate) -> bool {
-    if p.morphs
-        .first()
-        .is_some_and(|m| neuni_verbal_ending(&m.form) || matches!(m.form.as_str(), "음세" | "는바"))
-    {
+    if p.morphs.first().is_some_and(|m| {
+        neuni_verbal_ending(&m.form) || matches!(m.form.as_str(), "음세" | "는바" | "는걸")
+    }) {
         return false;
     }
     if p.morphs.first().is_some_and(|m| {
@@ -2128,6 +2147,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "으리라고"
                 | "으리까"
                 | "을"
+                | "을걸"
                 | "을까"
                 | "을까요"
                 | "을지"
@@ -2320,7 +2340,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     if p.morphs.first().is_some_and(|m| {
         literary_na_ending(&m.form)
             || neuni_verbal_ending(&m.form)
-            || matches!(m.form.as_str(), "음세" | "는바")
+            || matches!(m.form.as_str(), "음세" | "는바" | "는걸")
     }) {
         return;
     }
@@ -3454,6 +3474,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 || matches!(
                     ending,
                     "군" | "구나"
+                        | "은걸"
+                        | "는걸"
+                        | "던걸"
+                        | "을걸"
                         | "으려나"
                         | "네"
                         | "나"

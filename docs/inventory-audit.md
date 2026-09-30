@@ -22,9 +22,9 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **332 scoped
+The [manual ledger](inventory-reviews.json) currently contains **361 scoped
 reviews**, **one observed gap with unresolved acceptability** (마다), and
-**382 entries
+**353 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
@@ -733,3 +733,25 @@ No morphology/catalog review totals changed. All 10,514 raw comparisons, four
 frozen reports and both default novel streams remain unchanged. Every opt-in
 novel hypothesis is retained with an unjudged status and reconstructable original
 span/context in [the individual observation record](spacing-novel-observations.json).
+
+COV-017bf reviews six native ending entries (81040/81045/81050/81056/76460/76475)
+and six polite expressions with separate canonical 요 composition. Full native
+entries preserve all 106 original groups and 105 direct token targets; the
+remaining malformed 끝난던걸요 group is an explicit unjudged observation.
+The catalog has 459 canonical forms / 642 source identities and the native
+label fixture has 688 entries. The [source audit](geol-source-audit.json) and
+[evaluation](geol-evaluation.json) preserve all new raw paths, four exact
+annotated training tokens and eight changed novel occurrences per filter.
+Independent Korean review and full contextual/sense coverage remain pending.
+
+Six scoped COV-017bf ending dispositions bring the queue to 361 scoped / 353
+unreviewed / one gap across 715 entries, with 411 catalog-linked and 399
+judgment-cited entries. Polite expressions retain their native 품사 없음
+identities outside this queue. This is scoped evidence, not full-entry or
+independent linguistic certification.
+
+The completed COV-017bf batch preserves every prior raw candidate, all four
+frozen reports and all optional novel spacing hypotheses. Source-spelling
+uncertainty is retained explicitly, and all ten new novel paths at eight
+occurrences per filter remain unjudged. Full runtime/build checks and the
+refreshed Nix preview pass; broader parent checklist items remain open.

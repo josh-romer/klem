@@ -35,6 +35,7 @@ pub enum AttachmentRule {
     VolitionalPromiseVerb,
     BareBackgroundVerb,
     BareNeuniVerb,
+    BareGeolVerb,
     BareNimanAdjective,
     HabitualConditionVerb,
     BareCopularEnding,
@@ -540,6 +541,14 @@ impl Annotation {
                             && lemma.text != "계시다"
                         {
                             Some(AttachmentRule::BareBackgroundVerb)
+                        } else if bare
+                            && form == "는걸"
+                            && adjective
+                            && !lemma.text.ends_with("있다")
+                            && !lemma.text.ends_with("없다")
+                            && lemma.text != "계시다"
+                        {
+                            Some(AttachmentRule::BareGeolVerb)
                         } else if bare
                             && crate::engine::neuni_verbal_ending(form)
                             && adjective

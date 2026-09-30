@@ -444,6 +444,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !soseoIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...soseoEntries);
 
+  const geolFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-geol.json"),"utf8"));
+  const geolEntries = geolFixture.LexicalResource.Lexicon.LexicalEntry;
+  const geolIds = new Set(geolEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !geolIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...geolEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -1382,6 +1388,49 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-comparative-neuni-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-comparative-neuni-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const geolCases=recipientLedger.cases.filter(c=>c.id.startsWith("geol-"));
+  const geolPolicies=connectiveLedger.cases.filter(c=>c.id.startsWith("geol-"));
+  assert.equal(geolCases.length,164);assert.equal(geolPolicies.length,11);
+  for(const[cases,policy]of[[geolCases,false],[geolPolicies,true]]){
+    for(const c of cases){
+      const response=await post("analyze",{text:c.surface});assert.equal(response.status,200,c.id);
+      const token=(await response.json()).records[0];
+      const {dictionary,...analysis}=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      assert.deepEqual(token.analysis,analysis,c.id);assert.deepEqual(token.dictionary,dictionary,c.id);
+      for(const j of c.judgments){
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if(policy)for(const a of found){
+          const index=token.analysis.analyses.indexOf(a);
+          assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+        }
+      }
+    }
+  }
+  const geolText="좋은걸 가는걸 먹는걸 학생인걸 좋으시는걸 먹던걸 먹을걸 살걸 먹는걸요 학생다울걸 먹어보는걸";
+  const geolData=await(await post("analyze",{text:geolText})).json();
+  for(const[form,ids]of[["은걸",["krdict:81040","krdict:81045"]],["는걸",["krdict:81050"]],["던걸",["krdict:81056"]],["을걸",["krdict:76460","krdict:76475"]]]){
+    assert.deepEqual(geolData.grammar["-"+form].map(e=>e.id).sort(),ids);
+    assert.ok(geolData.grammar["-"+form].every(e=>e.pos==="어미"));
+  }
+  await submit(page,geolText);await waitHeading(page,"좋은걸");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms,label]of[[0,["좋","은걸"],"Realization / explanation"],[1,["가","는걸"],"Realization / explanation"],[2,["먹","는걸"],"Realization / explanation"],[3,["학생","이","은걸"],"Realization / explanation"],[4,["좋","시","는걸"],"Realization / explanation"],[5,["먹","던걸"],"Recalled realization / explanation"],[6,["먹","을걸"],"Guess / regret"],[7,["살","을걸"],"Guess / regret"],[8,["먹","는걸","요"],"Realization / explanation"],[9,["학생","답","을걸"],"Guess / regret"],[10,["먹","어","보","는걸"],"Realization / explanation"]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes(label));
+  }
+  const geolDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const geolExport=JSON.parse(await readFile(await(await geolDownload).path(),"utf8"));
+  const geolExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:geolText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(geolExport.records,geolExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-geol-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-geol-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const spacingLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/spacing-validity.json"),"utf8"));

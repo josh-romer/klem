@@ -3,6 +3,34 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn geol_recovers_original_annotated_endings_without_relabeling_bound_nouns() {
+    for (kind, input, targets) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-geol.conllu").as_slice(),
+            vec![
+                ("id:MH2_0042-s138/6", "둘걸", vec!["두다"]),
+                ("id:MH2_0148-s65/6", "특기인걸요", vec!["특기", "이다"]),
+                ("id:MH2_0148-s263/9", "할걸", vec!["하다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-geol.conllu").as_slice(),
+            vec![("id:train-s361/5", "먹을걸요", vec!["먹다"])],
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "geol").unwrap();
+        for (id, surface, heads) in targets {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, heads);
+            assert!(case.matched, "{id}: {case:?}");
+        }
+    }
+}
+
+#[test]
 fn quoted_neuni_recovers_the_unchanged_kaist_training_tokens() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-quoted-neuni.conllu").as_slice(),

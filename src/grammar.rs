@@ -624,6 +624,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "더군",
             "던",
             "는바",
+            "는걸",
+            "던걸",
             "던바",
             "던데",
             "던데요",
@@ -736,6 +738,9 @@ pub(crate) fn endings() -> &'static [Ending] {
             // 리까 lists 이다 attachment; omitted 이 keeps the existing
             // vowel-final nominal condition and never inflects the nominal.
             ("리까", "으리까", 0),
+            ("걸", "은걸", 4),
+            ("걸", "을걸", 8),
+            ("던걸", "던걸", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -883,6 +888,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("은데", "데", "은데", 4),
             // KRDict 87110/87112: background connective, not bound noun 바.
             ("은바", "바", "은바", 4),
+            // KRDict 81040/81045: realization/explanation, distinct from 것 + 를.
+            ("은걸", "걸", "은걸", 4),
             ("은지", "지", "은지", 4),
             ("은가", "가", "은가", 4),
             ("은가요", "가요", "은가요", 4),
@@ -890,6 +897,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("은데다가", "데다가", "은데다가", 4),
             ("은들", "들", "은들", 4),
             ("을", "", "을", 8),
+            // KRDict 76460/76475: conjecture/regret, preserving stem-final ㄹ.
+            ("을걸", "걸", "을걸", 8),
             ("을까", "까", "을까", 8),
             ("을까요", "까요", "을까요", 8),
             ("을게", "게", "을게", 8),
@@ -1328,6 +1337,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.recipient" => {
             "This recipient reading requires a contextually appropriate referent (typically a person or animate/personified entity); lexical and contextual eligibility are not inferred."
+        }
+        "ending.geol" => {
+            "Recover realization/explanation 은걸/는걸, retrospective 던걸 and conjecture/regret 을걸 as distinct source-listed ending bundles. Attachment follows the immediate predicate owner; dictionary membership does not choose the contextual sense or a bound-noun reading."
         }
         "ending.quoted_neuni" => {
             "Recover source-reviewed listings of quoted statements, questions, commands, proposals and retrospective reports as distinct bundles. Preserve copular/command homonyms and immediate owners; contextual interpretation and unreviewed polite prefinals are not inferred."

@@ -1727,3 +1727,12 @@ resultative, question-class and contextual cases remain in the source review.
   preserved as an unjudged spelling observation without silently correcting it.
   `kaist-geol.conllu` and `gsd-geol.conllu` preserve four complete original
   training sentences, including the original GSD EC tag for 먹을걸요.
+
+- `krdict-exclamation.json` preserves 175 full attributed native entries for
+  COV-017bg, omitting only RelatedForm/non-English equivalents.
+  `exclamation-sources.json` records export hashes, twenty ending/eight polite
+  identities, all 127 groups and their 127 unchanged direct token cases. Four
+  zero-example arrow entries preserve original source identity and variant
+  provenance, including native 92511 로구만. The 더구나 note/example
+  contradiction stays explicit. `kaist-exclamation.conllu` preserves six
+  complete original training sentences and unchanged morphology/tags.

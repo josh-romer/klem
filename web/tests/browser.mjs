@@ -449,6 +449,11 @@ try {
   const geolIds = new Set(geolEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !geolIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...geolEntries);
+  const exclamationFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-exclamation.json"),"utf8"));
+  const exclamationEntries = exclamationFixture.LexicalResource.Lexicon.LexicalEntry;
+  const exclamationIds = new Set(exclamationEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !exclamationIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...exclamationEntries);
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -1431,6 +1436,56 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-geol-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-geol-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const exclamationCases=recipientLedger.cases.filter(c=>c.id.startsWith("exclamation-"));
+  const exclamationPolicies=connectiveLedger.cases.filter(c=>c.id.startsWith("exclamation-"));
+  assert.equal(exclamationCases.length,276);assert.equal(exclamationPolicies.length,19);
+  for(const[cases,policy]of[[exclamationCases,false],[exclamationPolicies,true]]){
+    for(const c of cases){
+      const response=await post("analyze",{text:c.surface});assert.equal(response.status,200,c.id);
+      const token=(await response.json()).records[0];
+      const {dictionary,...analysis}=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      assert.deepEqual(token.analysis,analysis,c.id);assert.deepEqual(token.dictionary,dictionary,c.id);
+      for(const j of c.judgments){
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if(policy)for(const a of found){
+          const index=token.analysis.analyses.indexOf(a);
+          assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+        }
+      }
+    }
+  }
+  const exclamationText="먹는구나 좋구려 먹구려 좋구먼 먹는구려 먹는구먼 먹는군 먹는군요 먹더구나 먹더구려 먹더구먼 학생이로구나 의사로구려 의사로구먼 의사로군 먹는구먼요 좋구만 의사로구만 학교구나 먹고있구먼 서있구나 먹어보는구나";
+  const exclamationData=await(await post("analyze",{text:exclamationText})).json();
+  for(const form of ["구려","구먼","는구나","는구려","는구먼","는군","는군요","더구나","더구려","더구먼","로구나","로구려","로구먼","로군"]){
+    const label=grammarLabels["-"+form];
+    assert.deepEqual(exclamationData.grammar["-"+form].map(e=>e.id).sort(),label.sources.map(s=>`krdict:${s.id}`).sort());
+    for(const source of label.sources){
+      const entry=exclamationData.grammar["-"+form].find(e=>e.id===`krdict:${source.id}`);
+      assert.equal(entry.headword,source.headword);assert.equal(entry.pos,source.pos);
+    }
+  }
+  await submit(page,exclamationText);await waitHeading(page,"먹는구나");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms,label]of[[0, ["먹", "는구나"], "Action realization / exclamation"], [1, ["좋", "구려"], "Realization / recommendation"], [2, ["먹", "구려"], "Realization / recommendation"], [3, ["좋", "구먼"], "Realization / exclamation"], [4, ["먹", "는구려"], "Action realization / exclamation"], [5, ["먹", "는구먼"], "Action realization / exclamation"], [6, ["먹", "는군"], "Action realization / exclamation"], [7, ["먹", "는군요"], "Polite action exclamation"], [8, ["먹", "더구나"], "Recalled realization / exclamation"], [9, ["먹", "더구려"], "Recalled realization / exclamation"], [10, ["먹", "더구먼"], "Recalled realization / exclamation"], [11, ["학생", "이", "로구나"], "Copular realization / exclamation"], [12, ["의사", "이", "로구려"], "Copular realization / exclamation"], [13, ["의사", "이", "로구먼"], "Copular realization / exclamation"], [14, ["의사", "이", "로군"], "Copular realization / exclamation"], [15, ["먹", "는구먼", "요"], "Action realization / exclamation"], [16, ["좋", "구먼"], "Realization / exclamation"], [17, ["의사", "이", "로구먼"], "Copular realization / exclamation"], [18, ["학교", "이", "구나"], "Realization / exclamation"], [19, ["먹", "고", "있", "구먼"], "Realization / exclamation"], [20, ["서", "어", "있", "구나"], "Realization / exclamation"], [21, ["먹", "어", "보", "는구나"], "Action realization / exclamation"]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes(label));
+  }
+  await page.locator(".breakdown-word").nth(17).locator(".breakdown-part").nth(2).click();
+  await page.locator(".entry-choices button").filter({hasText:"로구만"}).click();
+  await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo=92511"]'));
+  const exclamationDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const exclamationExport=JSON.parse(await readFile(await(await exclamationDownload).path(),"utf8"));
+  const exclamationExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:exclamationText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(exclamationExport.records,exclamationExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-exclamation-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-exclamation-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const spacingLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/spacing-validity.json"),"utf8"));

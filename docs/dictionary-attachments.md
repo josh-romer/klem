@@ -537,3 +537,16 @@ retains it and compatible filtering excludes the known conflict. Guess/regret
 을걸 does not impose a verb-only restriction because its guess sense admits
 adjectives/copulas. [Individual evidence](geol-evaluation.json) keeps dictionary
 conflicts separate from raw structural exclusions and unjudged alternatives.
+
+COV-017bg adds `bare_exclamation_verb` and `bare_exclamation_adjective` for
+the immediate bare owner of source-reviewed exclamation endings. Lexical
+homonyms are checked independently; 고르는군 keeps verbal 고르다 while
+고르군 keeps adjectival 고르다. Separately written known auxiliary classes
+retain this narrow inflectional check despite unknown sentence context.
+-구려 has both adjective exclamation and verbal recommendation senses;
+-더구나's conflicting note/example leaves bare verbs unknown. Lexical 있다
+and stative auxiliary 있다 have separate boundary evidence. Unlisted polite
+prefinals remain unknown. These optional checks preserve raw hypotheses and
+headword-only filtering. [Evidence](exclamation-evaluation.json) records every
+changed novel occurrence, including two excluded bare 누다+구나 readings of
+누구나, whose whole-word reading remains.

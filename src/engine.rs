@@ -336,6 +336,18 @@ pub(crate) fn honorific_prefinal(form: &str) -> bool {
     matches!(form, "시" | "으옵시" | "사옵시" | "자옵시")
 }
 
+pub(crate) fn present_exclamation(form: &str) -> bool {
+    matches!(form, "는구나" | "는구려" | "는구먼" | "는군" | "는군요")
+}
+pub(crate) fn copular_exclamation(form: &str) -> bool {
+    matches!(form, "로구나" | "로구려" | "로구먼" | "로군")
+}
+fn added_exclamation(form: &str) -> bool {
+    present_exclamation(form)
+        || copular_exclamation(form)
+        || matches!(form, "구려" | "구먼" | "더구나" | "더구려" | "더구먼")
+}
+
 pub(crate) fn literary_na_ending(form: &str) -> bool {
     // Only these two source-reviewed finals share this attachment class.
     matches!(form, "나이다" | "나이까")
@@ -895,6 +907,29 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                if (present_exclamation(ending.form) || copular_exclamation(ending.form))
+                    && p.morphs.iter().any(|m| !honorific_prefinal(&m.form))
+                {
+                    continue;
+                }
+                if matches!(
+                    ending.form,
+                    "구려" | "구먼" | "더구나" | "더구려" | "더구먼"
+                ) && p.morphs.iter().any(|m| {
+                    !honorific_prefinal(&m.form)
+                        && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
+                }) {
+                    continue;
+                }
+                // Bare 로 forms list 이다/아니다. A listed honorific starts
+                // a different local boundary; unknown lexical homonyms survive.
+                if copular_exclamation(ending.form)
+                    && p.morphs.is_empty()
+                    && !p.stem.ends_with('이')
+                    && p.stem != "아니"
+                {
+                    continue;
+                }
                 // Short quotation and change/conditional homonyms keep their
                 // own licenses. Plain 단 also abbreviates 다가는, so it admits
                 // bare verbs, including represented auxiliaries.
@@ -1261,6 +1296,15 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.rules.push("ending".into());
                 if ending.form == "으리다" {
                     p.rules.push("ending.literary_ri".into());
+                }
+                if added_exclamation(ending.form)
+                    || (matches!(ending.form, "구나" | "군" | "군요")
+                        && matches!(ending.boundary, Boundary::OmittedCopula(_)))
+                {
+                    p.rules.push("ending.exclamation".into());
+                }
+                if ending.suffix.ends_with("구만") {
+                    p.rules.push("ending.exclamation_variant".into());
                 }
                 if matches!(ending.form, "은걸" | "는걸" | "던걸" | "을걸") {
                     p.rules.push("ending.geol".into());
@@ -1877,6 +1921,25 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             {
                 return false;
             }
+            if bare
+                && present_exclamation(&m.form)
+                && (matches!(
+                    class,
+                    Some(PredicateClass::Adjective | PredicateClass::Copula)
+                ) || bare_stative_iss)
+            {
+                // NIKL 307876: auxiliary 있다 inflects adjectivally here;
+                // do not borrow the lexical verb homonym's present paradigm.
+                return false;
+            }
+            if bare
+                && m.form == "구먼"
+                && matches!(class, Some(PredicateClass::Verb))
+                && !bare_stative_iss
+                && !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+            {
+                return false;
+            }
             if bare && m.form == "니만" && matches!(class, Some(PredicateClass::Verb)) {
                 return false;
             }
@@ -2039,7 +2102,10 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
 // arbitrary lexical predicates still retain the engine's regular hypotheses.
 fn dap_suffix_allowed(p: &Predicate) -> bool {
     if p.morphs.first().is_some_and(|m| {
-        neuni_verbal_ending(&m.form) || matches!(m.form.as_str(), "음세" | "는바" | "는걸")
+        neuni_verbal_ending(&m.form)
+            || present_exclamation(&m.form)
+            || copular_exclamation(&m.form)
+            || matches!(m.form.as_str(), "음세" | "는바" | "는걸")
     }) {
         return false;
     }
@@ -2226,6 +2292,20 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "군"
             | "군요"
             | "구나"
+            | "구려"
+            | "구먼"
+            | "더구나"
+            | "더구려"
+            | "더구먼"
+            | "로구나"
+            | "로구려"
+            | "로구먼"
+            | "로군"
+            | "는구나"
+            | "는구려"
+            | "는구먼"
+            | "는군"
+            | "는군요"
             | "네"
             | "네요"
             | "나"
@@ -2340,6 +2420,7 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     if p.morphs.first().is_some_and(|m| {
         literary_na_ending(&m.form)
             || neuni_verbal_ending(&m.form)
+            || present_exclamation(&m.form)
             || matches!(m.form.as_str(), "음세" | "는바" | "는걸")
     }) {
         return;
@@ -3474,6 +3555,12 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 || matches!(
                     ending,
                     "군" | "구나"
+                        | "구먼"
+                        | "는구먼"
+                        | "는군"
+                        | "더구먼"
+                        | "로구먼"
+                        | "로군"
                         | "은걸"
                         | "는걸"
                         | "던걸"

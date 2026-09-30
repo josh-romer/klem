@@ -22,9 +22,9 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **361 scoped
+The [manual ledger](inventory-reviews.json) currently contains **380 scoped
 reviews**, **one observed gap with unresolved acceptability** (마다), and
-**353 entries
+**334 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
@@ -755,3 +755,25 @@ frozen reports and all optional novel spacing hypotheses. Source-spelling
 uncertainty is retained explicitly, and all ten new novel paths at eight
 occurrences per filter remain unjudged. Full runtime/build checks and the
 refreshed Nix preview pass; broader parent checklist items remain open.
+
+COV-017bg audits twenty native ending entries (including four zero-example
+arrow redirects) and eight polite expressions. The full fixture contains
+175 entries and preserves all 127 original groups/direct token targets.
+Native 92511 retains exact headword 로구만; canonical 구먼 normalization is
+tolerant rather than normative. The 더구나 note/example contradiction and
+lexical-versus-auxiliary 있다 distinctions are recorded in the
+[source audit](exclamation-source-audit.json). Six original training tokens
+gain lemma recovery, while full dev/test case rows and recall are unchanged.
+Broader polite, quoted-contraction and contextual-sense work remains open.
+
+Nineteen new scoped COV-017bg dispositions and the extended 81572 review bring
+the queue to 380 scoped / 334 unreviewed / one gap across 715 entries, with
+428 catalog-linked and 418 judgment-cited identities. The catalog has
+473 canonical forms / 660 source IDs and the native label fixture has 706
+entries. Optional novel spacing alternatives change at three occurrences
+(5,555 to 5,556 total); their contexts and unjudged readings remain visible.
+
+The COV-017bg runtime/build gates and refreshed packaged preview pass. The
+next explicit gap is quoted declarative exclamation contractions (COV-017bh);
+base ending coverage does not imply that their quoted bundles are generated.
+The full inventory audit and independent Korean-language review remain open.

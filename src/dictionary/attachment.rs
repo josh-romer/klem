@@ -36,6 +36,8 @@ pub enum AttachmentRule {
     BareBackgroundVerb,
     BareNeuniVerb,
     BareGeolVerb,
+    BareExclamationVerb,
+    BareExclamationAdjective,
     BareNimanAdjective,
     HabitualConditionVerb,
     BareCopularEnding,
@@ -153,6 +155,10 @@ fn bare_copular_ending(form: &str) -> bool {
             | "라느니"
             | "라거나"
             | "란"
+            | "로구나"
+            | "로구려"
+            | "로구먼"
+            | "로군"
     )
 }
 
@@ -541,6 +547,17 @@ impl Annotation {
                             && lemma.text != "계시다"
                         {
                             Some(AttachmentRule::BareBackgroundVerb)
+                        } else if bare && crate::engine::present_exclamation(form) && adjective {
+                            Some(AttachmentRule::BareExclamationVerb)
+                        } else if bare && matches!(form, "구나" | "군" | "군요" | "구먼") && verb {
+                            // Lexical 있다 has verb/adjective homonyms. Its
+                            // existential distribution needs the particular use.
+                            if matches!(lemma.text.as_str(), "있다" | "계시다") {
+                                status = Compatibility::Unknown;
+                                None
+                            } else {
+                                Some(AttachmentRule::BareExclamationAdjective)
+                            }
                         } else if bare
                             && form == "는걸"
                             && adjective
@@ -643,6 +660,53 @@ impl Annotation {
                         && ending.is_some_and(|i| unreviewed_neuni_prefinals(analysis, morphs, i))
                     {
                         status = Compatibility::Unknown;
+                    }
+                    // A separately written auxiliary has unknown context,
+                    // but its known lexical class still constrains this bare
+                    // exclamation boundary. Do not let that context uncertainty
+                    // override the entry's reviewed inflectional conflict.
+                    if lemma.kind == LemmaKind::Predicate
+                        && status == Compatibility::Unknown
+                        && bare
+                        && let Some(i) = ending
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let pos = matched.entry.pos.as_str();
+                        let rule = if crate::engine::present_exclamation(form)
+                            && (pos == "보조 형용사" || (pos == "보조 동사" && lemma.text == "있다"))
+                        {
+                            Some(AttachmentRule::BareExclamationVerb)
+                        } else if matches!(form, "구나" | "군" | "군요" | "구먼")
+                            && pos == "보조 동사"
+                            && !matches!(lemma.text.as_str(), "있다" | "계시다" | "않다" | "아니하다" | "못하다")
+                        {
+                            Some(AttachmentRule::BareExclamationAdjective)
+                        } else { None };
+                        if let Some(rule) = rule {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict { rule, morpheme_index: Some(i) });
+                        }
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let listed: Option<&[&str]> = if crate::engine::present_exclamation(form)
+                            || crate::engine::copular_exclamation(form) {
+                            Some(&["시"])
+                        } else if matches!(form, "구나" | "군" | "군요" | "구려" | "구먼"
+                            | "더구나" | "더구려" | "더구먼" | "더군" | "더군요") {
+                            Some(&["시", "었", "겠"])
+                        } else { None };
+                        if listed.is_some_and(|ls| morphs.iter().any(|c|
+                            matches!(c, Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !ls.contains(&analysis.morphemes[*j].form.as_str()))))
+                            || (bare && form == "더구나" && matched.entry.pos == "동사")
+                        {
+                            // The full 더구나 entry directly illustrates
+                            // 잘되더구나 despite omitting verbs in its note.
+                            // Keep generic verb readings without claiming a
+                            // universal exclusion or a settled distribution.
+                            status = Compatibility::Unknown;
+                        }
                     }
                     if matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Auxiliary)
                         && let Some(Component::Morpheme(i)) = morphs.first()

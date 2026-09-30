@@ -3,6 +3,29 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn exclamation_recovers_original_annotated_bundles_without_relabeling_examples() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-exclamation.conllu").as_slice(),
+        Corpus::Kaist,
+        "exclamation",
+    )
+    .unwrap();
+    for (id, surface, heads) in [
+        ("id:M2TA_087-s65/4", "오는구나", vec!["오다"]),
+        ("id:M2TA_088-s10/10", "났구려", vec!["나다"]),
+        ("id:MH2_0042-s271/9", "하시는군요", vec!["하다"]),
+        ("id:MH2_0083-s6/6", "있더구먼", vec!["있다"]),
+        ("id:MH2_0091-s314/16", "전진하는구나", vec!["전진하다"]),
+        ("id:MH2_0148-s134/5", "걱정되는군", vec!["걱정되다"]),
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, surface);
+        assert_eq!(case.expected, heads);
+        assert!(case.matched, "{id}: {case:?}");
+    }
+}
+
+#[test]
 fn geol_recovers_original_annotated_endings_without_relabeling_bound_nouns() {
     for (kind, input, targets) in [
         (

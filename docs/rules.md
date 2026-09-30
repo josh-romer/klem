@@ -3612,3 +3612,22 @@ No general particle follower or auxiliary connector is added. Native source
 끝난던걸요 remains literally preserved and unjudged; it does not certify an
 adnominal+던걸 sequence or lexical 끝난다. See the
 [source audit](geol-source-audit.json) and [evaluation](geol-evaluation.json).
+
+## Exclamation ending families (COV-017bg)
+
+Base, present-action, retrospective and copular exclamations retain separate
+canonical forms and source entries. The -구려 recommendation/order sense
+permits verbs; it must not inherit the adjective-only exclamation restriction.
+The -더구나 entry directly illustrates verbal 잘되더구나 despite omitting
+verbs in its attachment note. Its bare verbal dictionary assessment remains
+unknown, with no blanket exclusion or lexical whitelist. Bare -는구나/-는군
+and their siblings check lexical verb/adjective homonyms independently.
+Auxiliary 있다 is adjectival here and cannot borrow lexical 있다's verbal
+paradigm. Source-listed 시 creates a separate local boundary; broader polite
+prefinals remain unjudged rather than source-certified. Four native arrows
+-구만/-는구만/-더구만/로구만 normalize to their 구먼 counterpart with
+`ending.exclamation_variant` provenance. Original input remains visible;
+normalization does not certify nonstandard spelling. Eight polite expressions
+preserve bundled 군요/는군요/더군요 and source-licensed separate 요 paths.
+See the [complete source audit](exclamation-source-audit.json) and
+[individual comparison](exclamation-evaluation.json).

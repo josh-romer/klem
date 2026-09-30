@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bf/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bg/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 361 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bf/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 353 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 380 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 334 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -221,7 +221,7 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bf implemented; COV-017aw/az remain open.**
+  COV-017ax–ay/017ba–bg implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1334,6 +1334,50 @@ review remains open under the completion review below.
   wider colloquial variants/attachment licenses and independent Korean review
   remain open under COV-017/COV-013/COV-020.
 
+- [x] **COV-017bg — Exclamation endings and native redirects.**
+  Distinct base 구나/군/구먼/구려, present 는구나/는군/는구먼/는구려,
+  retrospective 더구나/더군/더구먼/더구려 and copular 로 counterparts retain
+  their bundles, owner classes, listed prefinals and source-specific senses.
+  구려 keeps its verbal recommendation sense. Bare verbal 더구나 remains
+  unknown because its full note and direct 잘되더구나 example disagree.
+  Four native 구만 arrows normalize with explicit variant provenance, preserving
+  nonstandard input without normative certification; 92511 retains native
+  headword 로구만. Eight polite expressions preserve existing bundles and
+  licensed separate 요. Auxiliary 있다 is checked separately from lexical
+  verb/adjective homonyms. Evidence: 276 raw cases (213 required / 63 forbidden),
+  nineteen policy cases (ten required / nine forbidden), 175 full native entries,
+  all 127 original groups/direct tokens and four NIKL tokens. The
+  [four family tests](../tests/exclamation.rs),
+  [six unchanged training targets](../tests/corpus.rs),
+  [source audit](exclamation-source-audit.json) and
+  [individual evaluation](exclamation-evaluation.json) preserve the evidence.
+  All prior raw paths survive across 11,181 inputs; 1,480 additions remain
+  unjudged. Frozen dev/test recall and individual cases are unchanged; mean
+  candidate counts increase. Novel compatible filtering removes two reviewed
+  누다+구나 lexical conflicts at 누구나, preserving whole-word readings.
+  Rust/stress, lint/format, corpus, frontend/browser and x86_64 Linux Nix
+  gates pass. The updated packaged preview has API/CLI/export/asset parity.
+  Three optional novel spacing sidecars change (5,555 to 5,556 alternatives),
+  with their original context and unjudged status retained.
+  Quoted contractions, contextual
+  sense/register, broader polite/follower licenses and independent review
+  remain open under COV-017/COV-013/COV-020.
+
+- [ ] **COV-017bh — Quoted declarative exclamation contractions.**
+  **Missing in the audited examples:** 먹는다는구나 → 먹다, 간다는군 →
+  가다, 예쁘다는구나 → 예쁘다 and 먹는다더군 → 먹다. Native sources
+  distinguish contracted -다고 하는구나/-다고 하는군/-다고 하더군 and
+  polite -다고 하더군요, including ㄴ다/는다/다 attachment classes;
+  -더라는구나/-더라는군 quote another speaker's retrospective experience.
+  Audit complete entries 82235/82245/81980/81987, 82236/82247/81983/81989,
+  82240/82249/81985/81990 and 86360/89639. Preserve bundles, exact source
+  identities, vowel/ㄹ/consonant allomorphs, immediate owner classes, licensed
+  prefinals and full original examples. Add required/forbidden and per-homonym
+  dictionary cases, annotated/candidate change tracking, browser and Nix
+  verification. Question/command/proposal quote families remain separate
+  inventory work under COV-017/COV-013; a base exclamation fix does not cover
+  these contractions automatically.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -2442,7 +2486,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 459 currently emitted canonical grammar forms.** The initial catalog
+  for all 473 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

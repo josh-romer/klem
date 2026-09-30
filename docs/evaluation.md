@@ -3343,3 +3343,27 @@ do not establish statistical equivalence. Rust/stress, pinned corpus,
 lint/format, browser/frontend, inventory tooling and three x86_64 Linux Nix
 checks pass. The refreshed packaged preview and final production assets have
 complete-dictionary HTTP/CLI/export parity and inspected desktop/mobile views.
+
+COV-017bg retains [every candidate change](exclamation-evaluation.json) and
+[complete source/annotated evidence](exclamation-source-audit.json). All
+11,181 NFC/NFD ledger/spacing/optimization/stress inputs retain prior raw paths;
+1,796 additions comprise 310 required, six optional dictionary conflicts and
+1,480 unjudged paths. Six unchanged KAIST training tokens now recover their
+annotated lemmas: 오는구나, 났구려, 하시는군요, 있더구먼, 전진하는구나
+and 걱정되는군. Frozen dev/test recall and individual case rows are unchanged;
+mean candidates increase. No baseline is regenerated. Both novel filters
+preserve all 179,112 records and byte spans; each changed reading is recorded
+with original context and dictionary assessments. Native redirects preserve
+nonstandard spelling provenance, and the 더구나 source contradiction remains
+explicitly unresolved. Independent Korean-language review remains pending.
+
+COV-017bg passes the full Rust/stress, lint/format, pinned corpus, browser,
+frontend and three x86_64 Linux Nix checks. Packaged and preview HTTP/CLI
+results and production assets match, and all 22 selected breakdowns retain
+filtered JSON export parity. Optional novel spacing suggestions change at
+three occurrences; their original sidecars/contexts stay in the audit and
+remain unjudged. Debug/release novel output hashes match under both filters.
+
+Three interleaved release samples for --dict-only have before/after median times 1.564/1.564s and observed peak RSS 29.0/29.7 MiB. These measurements include startup, dictionary access and JSONL serialization; they do not establish statistical equivalence.
+
+Three interleaved release samples for --dict-compatible have before/after median times 1.549/1.544s and observed peak RSS 29.4/29.2 MiB. These measurements include startup, dictionary access and JSONL serialization; they do not establish statistical equivalence.

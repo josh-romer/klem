@@ -578,6 +578,20 @@ pub(crate) fn endings() -> &'static [Ending] {
             "고자",
             "건대",
             "구나",
+            "구려",
+            "구먼",
+            "는구나",
+            "는구려",
+            "는구먼",
+            "는군",
+            "는군요",
+            "더구나",
+            "더구려",
+            "더구먼",
+            "로구나",
+            "로구려",
+            "로구먼",
+            "로군",
             "군",
             "군요",
             "는가",
@@ -675,6 +689,21 @@ pub(crate) fn endings() -> &'static [Ending] {
                 connector: matches!(suffix, "고" | "지" | "게"),
             });
         }
+        // Native arrow entries redirect these input spellings to 구먼.
+        // This is tolerant reading support, not a claim of normative spelling.
+        for (suffix, form) in [
+            ("구만", "구먼"),
+            ("는구만", "는구먼"),
+            ("더구만", "더구먼"),
+            ("로구만", "로구먼"),
+        ] {
+            out.push(Ending {
+                suffix,
+                form,
+                boundary: Literal,
+                connector: false,
+            });
+        }
         // Reviewed omitted-copula families. Do not apply predicate irregular
         // recovery to the nominal or restore 이 before arbitrary endings.
         for (suffix, form, attached) in [
@@ -741,6 +770,21 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("걸", "은걸", 4),
             ("걸", "을걸", 8),
             ("던걸", "던걸", 0),
+            ("구나", "구나", 0),
+            ("군", "군", 0),
+            ("군요", "군요", 0),
+            ("구려", "구려", 0),
+            ("구먼", "구먼", 0),
+            ("구만", "구먼", 0),
+            ("더구나", "더구나", 0),
+            ("더구려", "더구려", 0),
+            ("더구먼", "더구먼", 0),
+            ("더구만", "더구먼", 0),
+            ("로구나", "로구나", 0),
+            ("로구려", "로구려", 0),
+            ("로구먼", "로구먼", 0),
+            ("로군", "로군", 0),
+            ("로구만", "로구먼", 0),
         ] {
             out.push(Ending {
                 suffix,
@@ -1337,6 +1381,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.recipient" => {
             "This recipient reading requires a contextually appropriate referent (typically a person or animate/personified entity); lexical and contextual eligibility are not inferred."
+        }
+        "ending.exclamation" => {
+            "Recover distinct present, retrospective and copular exclamation bundles. 구려 also has a recommendation sense; morphology does not choose the contextual meaning."
+        }
+        "ending.exclamation_variant" => {
+            "The input 구만/는구만/더구만/로구만 spelling is retained while its grammatical component follows the KRDict redirect to 구먼. This tolerant reading is not normative spelling certification."
         }
         "ending.geol" => {
             "Recover realization/explanation 은걸/는걸, retrospective 던걸 and conjecture/regret 을걸 as distinct source-listed ending bundles. Attachment follows the immediate predicate owner; dictionary membership does not choose the contextual sense or a bound-noun reading."

@@ -4222,9 +4222,10 @@
       "status": "scoped",
       "checklist": [
         "COV-020g",
-        "COV-017r"
+        "COV-017r",
+        "COV-017bg"
       ],
-      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved. COV-017r additionally reviews the following-ending licenses of recovered retrospective 더, including literal bundle boundaries.",
+      "scope": "Copula attachment and vowel-final omission; prefinal order, literal bundle alternatives and existing full forms preserved. COV-017r additionally reviews the following-ending licenses of recovered retrospective 더, including literal bundle boundaries. COV-017bg: Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
       "remaining": "Contextual senses, broader lexical classes, mood, and all auxiliary/prefinal combinations are not certified.",
       "evidence": [
         {
@@ -4268,6 +4269,18 @@
         },
         {
           "path": "docs/retrospective-license-evaluation.json"
+        },
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
         }
       ],
       "judgments": [
@@ -4277,6 +4290,54 @@
         },
         {
           "case": "retrospective-license-ending-29-81572",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81572-1-1-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81572-1-2-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81572-1-3-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81572-1-4-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81572-2-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81572-2-2-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81572-2-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81572-2-4-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋-더군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋으시-더군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹었-더군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹겠-더군",
           "judgment": "path"
         }
       ]
@@ -29233,6 +29294,1380 @@
         },
         {
           "case": "geol-boundary-16",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73807",
+      "source_sha256": "e9c193005b5681eaf54516950aa143db845e8c4c6850fc674a01c1a83a2751d0",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-73807-1-1-0-2",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73807-1-2-0-2",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73807-1-3-0-2",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73807-1-4-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73807-1-5-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73807-1-6-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73807-1-7-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋-구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋으시-구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹었-구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹겠-구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-8",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73809",
+      "source_sha256": "1e5e7c8f0d2ab7911704a2567d0ca69ba3620f67f89f1e4526bce9aaba03ab1e",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-73809-1-1-0-2",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73809-1-2-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73809-1-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73809-1-4-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73809-1-5-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73809-2-1-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73809-2-2-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73809-2-3-0-8",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73809-2-4-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋-구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋으시-구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹었-구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹겠-구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-구려",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85029",
+      "source_sha256": "1f5caaadd5121747ae89843e5896c34a7b9e673bff121613fb1bd30500d8c8dc",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Exact native arrow identity preserved; tolerant input normalizes to the listed 구먼 counterpart with explicit variant provenance. Zero source examples are honestly retained; agent-composed case is not normative spelling certification.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-redirect-85029",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73886",
+      "source_sha256": "161ae64090ad752a06e667489d2830459133ff9e1bc2e9e4cee7df9deea66398",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-73886-1-1-0-2",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73886-1-2-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73886-1-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73886-1-4-0-11",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73886-1-5-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋-구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋으시-구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹었-구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹겠-구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-2",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-9",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-구먼",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73887",
+      "source_sha256": "da4c0f5601b31b649f2f570e34176f1ec255716cfc3e434775464868921eb6d1",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-73887-1-1-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-1-2-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-1-3-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-1-4-0-9",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-1-5-0-10",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-1-6-1-8",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-2-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-2-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-2-3-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-2-4-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-2-5-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-73887-2-6-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋-군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋으시-군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹었-군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹겠-군",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79273",
+      "source_sha256": "e3d3fc40a563b8d2549d99371e65f8a6acca4364af3a9f6adc047aa53585f53d",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-79273-1-1-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79273-1-2-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79273-1-3-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79273-1-4-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹다-먹-는구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-사다-사-는구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-살다-사-는구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹다-먹으시-는구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-0",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-0",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-1",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-2",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-31",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-32",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-33",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-34",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-47",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-는구나",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79406",
+      "source_sha256": "c88f390111ae26602637ff3ed341a0442a1bdde2050e47322522c47dde675a12",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-79406-1-1-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79406-1-2-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79406-1-3-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79406-1-4-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹다-먹-는구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-사다-사-는구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-살다-사-는구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹다-먹으시-는구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-35",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-36",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-37",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-38",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-는구려",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85780",
+      "source_sha256": "eca1e12dc22b556c0991a6741121f28ec459e53cc16bbe215184555aa61a3bbc",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Exact native arrow identity preserved; tolerant input normalizes to the listed 구먼 counterpart with explicit variant provenance. Zero source examples are honestly retained; agent-composed case is not normative spelling certification.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-redirect-85780",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:83733",
+      "source_sha256": "e7c3e3a2db537a9b1163adf042a267808f00e4363912ad66b5c8bb3f8d1d442d",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-83733-1-1-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83733-1-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83733-1-3-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83733-1-4-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹다-먹-는구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-사다-사-는구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-살다-사-는구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹다-먹으시-는구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-8",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-9",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-10",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-11",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-39",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-40",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-41",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-42",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-는구먼",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81573",
+      "source_sha256": "736d844015887df4f1673577bc3ce13fc01688ccb943b00a53eca50fed53ea01",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-81573-1-1-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81573-1-2-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81573-1-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81573-1-4-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81573-2-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81573-2-2-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81573-2-3-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81573-2-4-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹다-먹-는군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-사다-사-는군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-살다-사-는군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹다-먹으시-는군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-1",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-12",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-13",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-14",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-15",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-43",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-44",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-45",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-46",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-48",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-는군",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:76568",
+      "source_sha256": "08e68379a2511c3bfbbec64451bf53c066ab09d20cb088a5cffe5f3da62c53f4",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen. Source directly illustrates verbal 잘되더구나 despite narrower attachment note; bare verbs remain unknown, without blanket exclusion or whitelist.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-76568-1-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-76568-1-2-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-76568-1-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-76568-1-4-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-76568-1-5-0-8",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-76568-1-6-0-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋-더구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋으시-더구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹었-더구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹겠-더구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-ownership-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-20",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-더구나",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79408",
+      "source_sha256": "649312899ff7f1dc806f7132918fd983211f171dff867b9289d147a862edb171",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-79408-1-1-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79408-1-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79408-1-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79408-1-4-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋-더구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋으시-더구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹었-더구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹겠-더구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-21",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-49",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-더구려",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:85759",
+      "source_sha256": "9ab11e35dcbcb1288a27b250e196014276106a170224c1e8f5804de0048b6fa1",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Exact native arrow identity preserved; tolerant input normalizes to the listed 구먼 counterpart with explicit variant provenance. Zero source examples are honestly retained; agent-composed case is not normative spelling certification.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-redirect-85759",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:83735",
+      "source_sha256": "4da406e24e7958f74772f97c7be4397eb00fd6851a13c6ea8080caf5244dafd6",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-83735-1-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83735-1-2-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83735-1-3-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83735-1-4-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋-더구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-좋으시-더구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹었-더구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-먹겠-더구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-22",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-더구먼",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79271",
+      "source_sha256": "2d0898980535c2cdc59af69384959c36b13759ff5e0c854b76eebec2bf3c6af7",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-79271-1-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79271-1-2-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79271-1-3-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79271-1-4-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-학생이-로구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-의사-로구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-아니-로구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-학생이시-로구나",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-23",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-24",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-로구나",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:79405",
+      "source_sha256": "dc2c64e4c05bccedd0c27a277e9572f76aa797d5cd5731008515801d525d5b62",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-79405-1-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79405-1-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79405-1-3-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-79405-1-4-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-학생이-로구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-의사-로구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-아니-로구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-학생이시-로구려",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-25",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-26",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-로구려",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:83734",
+      "source_sha256": "47639de80e0168e7aff33829951d3436803799761da79f5fba09414cf8990707",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-83734-1-1-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83734-1-2-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83734-1-3-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-83734-1-4-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-학생이-로구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-의사-로구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-아니-로구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-학생이시-로구먼",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-27",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-28",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-로구먼",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:81575",
+      "source_sha256": "91096ac38ff3e79ce2169da3aa6415a1444ec8336b0eec08810f7771f008827d",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Distinct exclamation bundle and reviewed immediate class/prefinal boundary, with full native groups/direct token regressions. No contextual sense/register chosen.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-source-81575-1-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81575-1-2-0-5",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81575-1-3-0-7",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81575-1-4-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81575-2-1-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81575-2-2-0-4",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81575-2-3-0-6",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-source-81575-2-4-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-학생이-로군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-의사-로군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-아니-로군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-composition-학생이시-로군",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-29",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-boundary-30",
+          "judgment": "path"
+        },
+        {
+          "case": "exclamation-connector-로군",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:92511",
+      "source_sha256": "e8b41c3b255c553489e09aef82d1f7a3d7357836ae82ca56433c7ee5b3c42825",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bg"
+      ],
+      "scope": "Exact native arrow identity preserved; tolerant input normalizes to the listed 구먼 counterpart with explicit variant provenance. Zero source examples are honestly retained; agent-composed case is not normative spelling certification.",
+      "remaining": "Independent Korean-language review, contextual sense/register, quoted contractions, broader polite prefinal/follower licenses and full paradigm coverage remain open. This scoped disposition is not full-entry certification.",
+      "evidence": [
+        {
+          "path": "tests/exclamation.rs"
+        },
+        {
+          "path": "tests/fixtures/exclamation-sources.json"
+        },
+        {
+          "path": "docs/exclamation-source-audit.json"
+        },
+        {
+          "path": "docs/exclamation-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "exclamation-redirect-92511",
           "judgment": "path"
         }
       ]

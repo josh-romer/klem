@@ -2,6 +2,36 @@
   "schema_version": 1,
   "review_status": "Agent-authored, source-backed judgments; independent Korean-language review pending. Not a precision benchmark.",
   "sources": {
+    "exclamation-73807": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=73807&nation=eng",
+    "exclamation-73809": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=73809&nation=eng",
+    "exclamation-73886": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=73886&nation=eng",
+    "exclamation-73887": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=73887&nation=eng",
+    "exclamation-76568": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=76568&nation=eng",
+    "exclamation-79271": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=79271&nation=eng",
+    "exclamation-79273": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=79273&nation=eng",
+    "exclamation-79405": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=79405&nation=eng",
+    "exclamation-79406": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=79406&nation=eng",
+    "exclamation-79408": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=79408&nation=eng",
+    "exclamation-81572": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81572&nation=eng",
+    "exclamation-81573": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81573&nation=eng",
+    "exclamation-81575": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81575&nation=eng",
+    "exclamation-83733": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=83733&nation=eng",
+    "exclamation-83734": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=83734&nation=eng",
+    "exclamation-83735": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=83735&nation=eng",
+    "exclamation-84367": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=84367&nation=eng",
+    "exclamation-84371": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=84371&nation=eng",
+    "exclamation-85029": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=85029&nation=eng",
+    "exclamation-85759": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=85759&nation=eng",
+    "exclamation-85780": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=85780&nation=eng",
+    "exclamation-86169": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86169&nation=eng",
+    "exclamation-86281": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86281&nation=eng",
+    "exclamation-88948": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=88948&nation=eng",
+    "exclamation-89689": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89689&nation=eng",
+    "exclamation-89690": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89690&nation=eng",
+    "exclamation-89691": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89691&nation=eng",
+    "exclamation-92511": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=92511&nation=eng",
+    "exclamation-nikl-307876": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?qna_seq=307876",
+    "exclamation-nikl-333765": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?qna_seq=333765",
     "geol-76460": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=76460&nation=eng",
     "geol-76475": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=76475&nation=eng",
     "geol-81040": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81040&nation=eng",
@@ -13828,6 +13858,7090 @@
           "verdict": "required",
           "source": "geol-nikl-333984",
           "reason": "Direct token in NIKL 333984, whose answer explicitly identifies these endings. Ordered morphology is a structural judgment; other readings and contextual sense remain separate."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73807-1-1-0-2",
+      "surface": "좋구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73807-1-2-0-2",
+      "surface": "빠르구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "빠르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73807-1-3-0-2",
+      "surface": "대학생이구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "대학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73807-1-4-0-3",
+      "surface": "물들었구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "물들다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73807-1-5-0-5",
+      "surface": "싶구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73807-1-6-0-7",
+      "surface": "컸구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73807-1-7-0-5",
+      "surface": "죽었구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "죽다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-1-1-0-2",
+      "surface": "처자이구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "처자",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-1-2-0-3",
+      "surface": "피었구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "피다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-1-3-0-6",
+      "surface": "변했구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "변하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-1-4-0-5",
+      "surface": "딱하시구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "딱하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-1-5-0-3",
+      "surface": "늙었구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "늙다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-2-1-0-5",
+      "surface": "들이구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "들이다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-2-2-0-5",
+      "surface": "돌아오구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "돌아오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-2-3-0-8",
+      "surface": "보시구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73809-2-4-0-6",
+      "surface": "보구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73886-1-1-0-2",
+      "surface": "좋구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73886-1-2-0-5",
+      "surface": "사람이구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사람",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73886-1-3-0-6",
+      "surface": "걱정이구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "걱정",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73886-1-4-0-11",
+      "surface": "격이구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "격",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73886-1-5-1-3",
+      "surface": "되었구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "되다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-1-1-0-3",
+      "surface": "화창하군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "화창하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-1-2-0-5",
+      "surface": "쑥스럽군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "쑥스럽다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-1-3-0-5",
+      "surface": "출세하겠군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "출세하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-1-4-0-9",
+      "surface": "그만두겠군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그만두다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-1-5-0-10",
+      "surface": "모양이군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "모양",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-1-6-1-8",
+      "surface": "모양이군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "모양",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-2-1-0-4",
+      "surface": "걸리겠군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "걸리다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-2-2-0-6",
+      "surface": "고맙군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고맙다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-2-3-0-4",
+      "surface": "모르겠군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "모르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-2-4-0-7",
+      "surface": "상했군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "상하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-2-5-0-7",
+      "surface": "다르군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "다르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-73887-2-6-0-3",
+      "surface": "졌군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "지다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-76568-1-1-0-4",
+      "surface": "하시더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-76568-1-2-0-3",
+      "surface": "많더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-76568-1-3-0-6",
+      "surface": "참하더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "참하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-76568-1-4-0-7",
+      "surface": "잘되더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘되다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-76568-1-5-0-8",
+      "surface": "심했겠더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "심하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "겠",
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-76568-1-6-0-3",
+      "surface": "재미있더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "재미있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79271-1-1-0-4",
+      "surface": "봄이로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "봄",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79271",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79271-1-2-0-4",
+      "surface": "아니로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79271",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79271-1-3-0-4",
+      "surface": "동갑이로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "동갑",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79271",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79271-1-4-0-5",
+      "surface": "학생이로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79271",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79273-1-1-0-3",
+      "surface": "자라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "자라다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79273-1-2-0-5",
+      "surface": "보는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79273-1-3-0-5",
+      "surface": "지나가는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "지나가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79273-1-4-0-6",
+      "surface": "듣는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "듣다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79405-1-1-0-4",
+      "surface": "아니로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79405",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79405-1-2-0-6",
+      "surface": "최고로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "최고",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79405",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79405-1-3-0-7",
+      "surface": "모양이로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "모양",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79405",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79405-1-4-0-6",
+      "surface": "일이로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "일",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79405",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79406-1-1-0-3",
+      "surface": "가는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79406",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79406-1-2-0-5",
+      "surface": "만나는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "만나다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79406",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79406-1-3-0-5",
+      "surface": "기다리시는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "기다리다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79406",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79406-1-4-1-4",
+      "surface": "오는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79406",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79408-1-1-0-5",
+      "surface": "늙었더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "늙다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79408",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79408-1-2-0-6",
+      "surface": "들더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "들다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79408",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79408-1-3-0-6",
+      "surface": "어울리더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "어울리다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79408",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-79408-1-4-0-7",
+      "surface": "많았더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79408",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81572-1-1-0-5",
+      "surface": "재미있겠더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "재미있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81572-1-2-0-7",
+      "surface": "자랐더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "자라다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81572-1-3-0-7",
+      "surface": "오더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81572-1-4-0-7",
+      "surface": "같더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "같다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81572-2-1-0-4",
+      "surface": "예쁘더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "예쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81572-2-2-0-4",
+      "surface": "합격했더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "합격하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81572-2-3-0-6",
+      "surface": "많더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81572-2-4-0-5",
+      "surface": "비싸더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "비싸다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81573-1-1-0-3",
+      "surface": "가는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81573-1-2-0-4",
+      "surface": "사는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81573-1-3-0-6",
+      "surface": "노는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "놀다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81573-1-4-0-7",
+      "surface": "되는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "되다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81573-2-1-0-4",
+      "surface": "추는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "추다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81573-2-2-0-4",
+      "surface": "내리는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내리다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81573-2-3-0-5",
+      "surface": "들리는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "들리다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81573-2-4-1-4",
+      "surface": "나는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "나다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81575-1-1-0-4",
+      "surface": "아니로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81575-1-2-0-5",
+      "surface": "남자로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "남자",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81575-1-3-0-7",
+      "surface": "일이로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "일",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81575-1-4-1-6",
+      "surface": "아니로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81575-2-1-0-4",
+      "surface": "사람이로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사람",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81575-2-2-0-4",
+      "surface": "아니로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81575-2-3-0-6",
+      "surface": "봄이로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "봄",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-81575-2-4-1-3",
+      "surface": "생각이로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "생각",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83733-1-1-0-5",
+      "surface": "가는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83733",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83733-1-2-0-6",
+      "surface": "걷는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "걷다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83733",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83733-1-3-0-5",
+      "surface": "다녀오시는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "다녀오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83733",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83733-1-4-0-5",
+      "surface": "오는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83733",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83734-1-1-0-6",
+      "surface": "아들이로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아들",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83734",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83734-1-2-0-6",
+      "surface": "문제로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "문제",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83734",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83734-1-3-0-7",
+      "surface": "사실이로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사실",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83734",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83734-1-4-1-6",
+      "surface": "학생이로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83734",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83735-1-1-0-4",
+      "surface": "싫더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "싫다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83735",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83735-1-2-0-5",
+      "surface": "둘이더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "둘",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83735",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83735-1-3-0-7",
+      "surface": "오셨더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "었",
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83735",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-83735-1-4-1-5",
+      "surface": "춥더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "춥다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83735",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-84367-1-1-0-6",
+      "surface": "예쁘군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "예쁘다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84367",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-84367-1-2-0-5",
+      "surface": "있었군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84367",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-84367-1-3-0-6",
+      "surface": "빠르군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "빠르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84367",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-84367-1-4-1-6",
+      "surface": "통통했군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "통통하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84367",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-84371-1-1-0-2",
+      "surface": "내리는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내리다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84371",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-84371-1-2-0-3",
+      "surface": "짓는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "짓다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84371",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-84371-1-3-0-5",
+      "surface": "먹는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84371",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-84371-1-4-1-4",
+      "surface": "가는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84371",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-86169-1-1-0-5",
+      "surface": "사람이구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사람",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-86169",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-86169-1-2-0-5",
+      "surface": "맛있구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "맛있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-86169",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-86169-1-3-0-3",
+      "surface": "모르겠구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "모르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-86169",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-86169-1-4-1-3",
+      "surface": "좋구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-86169",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-86281-1-1-0-4",
+      "surface": "미인이시더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "미인",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-86281",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-86281-1-2-0-4",
+      "surface": "변했더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "변하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-86281",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-86281-1-3-0-6",
+      "surface": "많더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "많다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-86281",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-86281-1-4-0-5",
+      "surface": "맛있더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "맛있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-86281",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-88948-1-1-0-2",
+      "surface": "아니로군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-88948",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-88948-1-2-0-4",
+      "surface": "가을이로군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가을",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-88948",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-88948-1-3-0-6",
+      "surface": "그림이로군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그림",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-88948",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-88948-1-4-0-4",
+      "surface": "강아지로군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "강아지",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-88948",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89689-1-1-0-4",
+      "surface": "먹는구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89689",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89689-1-2-0-5",
+      "surface": "어울리는구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "어울리다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89689",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89689-1-3-0-4",
+      "surface": "잘해주시는구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "잘하다",
+            "주다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "는구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89689",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89689-1-4-0-6",
+      "surface": "나오는구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "나오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89689",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89690-1-1-0-5",
+      "surface": "다녀왔더구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "다녀오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89690",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89690-1-2-0-5",
+      "surface": "했더구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89690",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89690-1-3-0-8",
+      "surface": "크시더구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "더구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89690",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89690-1-4-0-7",
+      "surface": "추더구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "추다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89690",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89691-1-1-0-3",
+      "surface": "아니로구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89691",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89691-1-2-0-5",
+      "surface": "따님이로구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "따님",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89691",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89691-1-3-0-9",
+      "surface": "사실이로구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사실",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89691",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-source-89691-1-4-1-1",
+      "surface": "어르신이로구먼요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "어르신",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "exclamation-89691",
+          "reason": "Direct unchanged native example token. Intended ordered morphology is judged separately from contextual sense and all competing candidates."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋-구나",
+      "surface": "좋구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋으시-구나",
+      "surface": "좋으시구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹었-구나",
+      "surface": "먹었구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹겠-구나",
+      "surface": "먹겠구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋-군",
+      "surface": "좋군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋으시-군",
+      "surface": "좋으시군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹었-군",
+      "surface": "먹었군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹겠-군",
+      "surface": "먹겠군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73887",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋-구려",
+      "surface": "좋구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋으시-구려",
+      "surface": "좋으시구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹었-구려",
+      "surface": "먹었구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹겠-구려",
+      "surface": "먹겠구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋-구먼",
+      "surface": "좋구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋으시-구먼",
+      "surface": "좋으시구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹었-구먼",
+      "surface": "먹었구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹겠-구먼",
+      "surface": "먹겠구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋-더구나",
+      "surface": "좋더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋으시-더구나",
+      "surface": "좋으시더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹었-더구나",
+      "surface": "먹었더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹겠-더구나",
+      "surface": "먹겠더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋-더구려",
+      "surface": "좋더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79408",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋으시-더구려",
+      "surface": "좋으시더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79408",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹었-더구려",
+      "surface": "먹었더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79408",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹겠-더구려",
+      "surface": "먹겠더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79408",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋-더구먼",
+      "surface": "좋더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83735",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋으시-더구먼",
+      "surface": "좋으시더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83735",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹었-더구먼",
+      "surface": "먹었더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83735",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹겠-더구먼",
+      "surface": "먹겠더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83735",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋-더군",
+      "surface": "좋더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-좋으시-더군",
+      "surface": "좋으시더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹었-더군",
+      "surface": "먹었더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹겠-더군",
+      "surface": "먹겠더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81572",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹-는구나",
+      "surface": "먹는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-사다-사-는구나",
+      "surface": "사는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-살다-사-는구나",
+      "surface": "사는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹으시-는구나",
+      "surface": "먹으시는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹-는구려",
+      "surface": "먹는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-사다-사-는구려",
+      "surface": "사는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-살다-사-는구려",
+      "surface": "사는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹으시-는구려",
+      "surface": "먹으시는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹-는구먼",
+      "surface": "먹는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-사다-사-는구먼",
+      "surface": "사는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-살다-사-는구먼",
+      "surface": "사는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹으시-는구먼",
+      "surface": "먹으시는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹-는군",
+      "surface": "먹는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-사다-사-는군",
+      "surface": "사는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-살다-사-는군",
+      "surface": "사는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹으시-는군",
+      "surface": "먹으시는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹-는군요",
+      "surface": "먹는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84371",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-사다-사-는군요",
+      "surface": "사는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84371",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-살다-사-는군요",
+      "surface": "사는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84371",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-먹다-먹으시-는군요",
+      "surface": "먹으시는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-84371",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-학생이-로구나",
+      "surface": "학생이로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79271",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-의사-로구나",
+      "surface": "의사로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79271",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-아니-로구나",
+      "surface": "아니로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79271",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-학생이시-로구나",
+      "surface": "학생이시로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79271",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-학생이-로구려",
+      "surface": "학생이로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79405",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-의사-로구려",
+      "surface": "의사로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79405",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-아니-로구려",
+      "surface": "아니로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79405",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-학생이시-로구려",
+      "surface": "학생이시로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79405",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-학생이-로구먼",
+      "surface": "학생이로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83734",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-의사-로구먼",
+      "surface": "의사로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83734",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-아니-로구먼",
+      "surface": "아니로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83734",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-학생이시-로구먼",
+      "surface": "학생이시로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-83734",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-학생이-로군",
+      "surface": "학생이로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-의사-로군",
+      "surface": "의사로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-아니-로군",
+      "surface": "아니로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-composition-학생이시-로군",
+      "surface": "학생이시로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81575",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-redirect-85029",
+      "surface": "좋구만",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-85029",
+          "reason": "Agent-authored tolerant input using the exact native arrow redirect. Canonical grammar follows 구먼; original surface and variant provenance are retained, not certified normative."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-redirect-85780",
+      "surface": "먹는구만",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-85780",
+          "reason": "Agent-authored tolerant input using the exact native arrow redirect. Canonical grammar follows 구먼; original surface and variant provenance are retained, not certified normative."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-redirect-85759",
+      "surface": "먹더구만",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-85759",
+          "reason": "Agent-authored tolerant input using the exact native arrow redirect. Canonical grammar follows 구먼; original surface and variant provenance are retained, not certified normative."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-redirect-92511",
+      "surface": "의사로구만",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "의사",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-92511",
+          "reason": "Agent-authored tolerant input using the exact native arrow redirect. Canonical grammar follows 구먼; original surface and variant provenance are retained, not certified normative."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-0",
+      "surface": "먹어보는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-1",
+      "surface": "좋아지는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다",
+            "지다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-2",
+      "surface": "먹고싶구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-3",
+      "surface": "먹고있구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-4",
+      "surface": "서있구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-5",
+      "surface": "학생답구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "구려"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73809",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-6",
+      "surface": "학생답더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-76568",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-7",
+      "surface": "학생다우시는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "시",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-8",
+      "surface": "학교구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학교",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73807",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-ownership-9",
+      "surface": "학교구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학교",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-73886",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-0",
+      "surface": "먹었는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-1",
+      "surface": "먹겠는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-2",
+      "surface": "먹더는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-3",
+      "surface": "살는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-4",
+      "surface": "먹었는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-5",
+      "surface": "먹겠는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-6",
+      "surface": "먹더는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-7",
+      "surface": "살는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-8",
+      "surface": "먹었는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-9",
+      "surface": "먹겠는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-10",
+      "surface": "먹더는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-11",
+      "surface": "살는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-12",
+      "surface": "먹었는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-13",
+      "surface": "먹겠는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-14",
+      "surface": "먹더는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-15",
+      "surface": "살는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-16",
+      "surface": "먹었는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-84371",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-17",
+      "surface": "먹겠는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-84371",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-18",
+      "surface": "먹더는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-84371",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-19",
+      "surface": "살는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-84371",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-20",
+      "surface": "먹더더구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "더구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-76568",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-21",
+      "surface": "먹더더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79408",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-22",
+      "surface": "먹더더구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "더구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83735",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-23",
+      "surface": "학생이었로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "었",
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79271",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-24",
+      "surface": "먹로구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79271",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-25",
+      "surface": "학생이었로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "었",
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79405",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-26",
+      "surface": "먹로구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79405",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-27",
+      "surface": "학생이었로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "었",
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83734",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-28",
+      "surface": "먹로구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83734",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-29",
+      "surface": "학생이었로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "었",
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81575",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-30",
+      "surface": "먹로군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "로군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81575",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-31",
+      "surface": "학생이는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-32",
+      "surface": "학생답는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-33",
+      "surface": "먹고싶는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-34",
+      "surface": "서있는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-35",
+      "surface": "학생이는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-36",
+      "surface": "학생답는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-37",
+      "surface": "먹고싶는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-38",
+      "surface": "서있는구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는구려"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-39",
+      "surface": "학생이는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-40",
+      "surface": "학생답는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-41",
+      "surface": "먹고싶는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-42",
+      "surface": "서있는구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는구먼"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-43",
+      "surface": "학생이는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-44",
+      "surface": "학생답는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-45",
+      "surface": "먹고싶는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-46",
+      "surface": "서있는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-47",
+      "surface": "살는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-48",
+      "surface": "도우는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "돕다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-boundary-49",
+      "surface": "도웁더구려",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "돕다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더구려"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79408",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-구려",
+      "surface": "먹구려있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "구려",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-73809",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-구먼",
+      "surface": "먹구먼있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "구먼",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-73886",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-는구나",
+      "surface": "먹는구나있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는구나",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79273",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-는구려",
+      "surface": "먹는구려있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는구려",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79406",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-는구먼",
+      "surface": "먹는구먼있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는구먼",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83733",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-는군",
+      "surface": "먹는군있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는군",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81573",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-더구나",
+      "surface": "먹더구나있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "더구나",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-76568",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-더구려",
+      "surface": "먹더구려있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "더구려",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79408",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-더구먼",
+      "surface": "먹더구먼있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "더구먼",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83735",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-로구나",
+      "surface": "먹로구나있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "로구나",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79271",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-로구려",
+      "surface": "먹로구려있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "로구려",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-79405",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-로구먼",
+      "surface": "먹로구먼있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "로구먼",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-83734",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-connector-로군",
+      "surface": "먹로군있다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "로군",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "exclamation-81575",
+          "reason": "Agent-authored source-backed composition/boundary case, not an additional quotation. Contextual sense and independent Korean review remain unresolved."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-nikl-333765-0",
+      "surface": "나갔구만",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-nikl-333765",
+          "reason": "Direct answer spelling pair; the 구만 input has only a tolerant canonical reading, explicitly not normative certification."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-nikl-333765-1",
+      "surface": "나갔구먼",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구먼"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-nikl-333765",
+          "reason": "Direct answer spelling pair; the 구만 input has only a tolerant canonical reading, explicitly not normative certification."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-nikl-333765-2",
+      "surface": "나갔군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "나가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-nikl-333765",
+          "reason": "Direct answer spelling pair; the 구만 input has only a tolerant canonical reading, explicitly not normative certification."
+        }
+      ]
+    },
+    {
+      "id": "exclamation-nikl-307876-token",
+      "surface": "있구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "exclamation-nikl-307876",
+          "reason": "Unchanged word token from the complete NIKL explanation. The lexical lemma stays distinct from its context-dependent auxiliary role."
         }
       ]
     }

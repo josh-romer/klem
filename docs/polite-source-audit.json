@@ -97,25 +97,33 @@
       "title": "‘-사옵-’ 계열 선어말어미의 공시적 처리 방안",
       "date": "2010",
       "review_status": "abstract only",
-      "review": "Abstract read; full paper not obtained. Do not claim that the detailed defective-paradigm restrictions have been reviewed."
+      "review": "Abstract read; full paper not obtained. Do not claim that the detailed defective-paradigm restrictions have been reviewed. The Korea University repository original link redirected to the same KCI metadata; its public publisher link returned an error page. Full text is still unavailable through these links."
     },
     {
       "id": "open-saop",
       "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=185238",
       "title": "우리말샘 -사옵-",
-      "review": "Read notes and direct 믿사옵고 example. Consonant stems or past/modal markers precede it; consonant-initial endings follow. Relation to basic 옵 and immediate ㄹ spelling still needs targeted audit."
+      "review": "Read complete notes and direct 믿사옵고 example. Closed stems or past/modal markers precede it, and consonant-initial endings follow. Reviewed together with 사오 and the author paradigm table; retained ㄹ is independently attested in the original EBS PDF."
     },
     {
       "id": "open-sao",
       "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=188130",
       "title": "우리말샘 -사오-",
-      "review": "Read notes and direct 믿사오니 example. Consonant stems or past/modal markers precede it; ㄴ/ㄹ/ㅁ or vowels follow. Keep its own canonical paradigm rather than merging all polite forms."
+      "review": "Read complete notes and direct 믿사오니 example. Closed stems or past/modal markers precede it; vowels or ㄴ/ㄹ/ㅁ follow. The canonical 사옵 label cites this actual external entry without fabricating a KRDict ID."
     },
     {
       "id": "open-sap",
       "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=189947",
       "title": "우리말샘 -삽-",
-      "review": "Read notes and direct 먹삽고 / 믿었삽더니 examples. Consonant stems or past/modal markers precede it; consonant-initial endings follow. Preserve its defective paradigm separately."
+      "review": "Read complete notes and both direct examples, 먹삽고 and 믿었삽더니. Separate consonant-stem / consonant-following paradigm, kept distinct from 사오/사옵 and basic 으옵."
+    },
+    {
+      "id": "ebs-saop-rieul",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070315/kor_mun.pdf",
+      "title": "EBS · 2007-03-15 전국연합학력평가 언어 영역",
+      "locator": "PDF index 6 / printed page 7, boxed letter, right column, last sentence",
+      "review": "Viewed original raster PDF, not a search snippet/OCR. 알사옵니다 retains ㄹ before 사옵. Only this short relevant token is preserved in the source fixture.",
+      "pdf_sha256": "696710f843bf27ee04b31bcb38fc87ca060f61d777e192489eae11727aa2356f"
     }
   ],
   "remaining": [
@@ -132,13 +140,13 @@
         "사옵",
         "사오"
       ],
-      "work": "Implement distinct consonant-stem paradigm, contractions and licensed combinations after full source review; distinguish direct attestations from inferred matrices."
+      "work": "Additional source-listed following endings and conjectural combinations require their own licenses. The distinct consonant-stem paradigm, contraction and tested tense/modal/auxiliary/derivation paths are implemented; independent Korean review remains pending."
     },
     {
       "forms": [
         "삽"
       ],
-      "work": "Implement separately from 사옵/사오, preserving its defective following-ending paradigm; do not normalize it into the basic polite form."
+      "work": "The separate consonant-only paradigm is implemented for reviewed endings. Do not infer formal ㅂ니다 sharing or a vowel allomorph without a verified source; additional combinations and independent review remain pending."
     },
     {
       "forms": [
@@ -215,5 +223,30 @@
     "explicit_prefinal_hits": 0,
     "caveat": "Zero exact EP hits does not prove that the corpora have no polite usage. Broad surface scans include lexical 오다 and final 오; those are not new polite-prefinal gold cases."
   },
-  "label_representation": "Canonical 으리다 has no KRDict source ID. The browser links an agent-authored teaching label to the primary NIKL article. The API grammar entry list stays empty; no fabricated dictionary entry or related-entry identity is introduced."
+  "label_representation": "Canonical 으리다 has no KRDict source ID. The browser links an agent-authored teaching label to the primary NIKL article. The API grammar entry list stays empty; no fabricated dictionary entry or related-entry identity is introduced.",
+  "implemented_humble": {
+    "canonical_prefinals": [
+      "사옵",
+      "삽"
+    ],
+    "surface_allomorphs": {
+      "사옵": [
+        "사오",
+        "사옵"
+      ],
+      "삽": [
+        "삽"
+      ]
+    },
+    "preceding_boundary": "Closed stems, including retained ㄹ, or earlier past/modal markers; consonant-initial attachment creates no vowel-irregular spelling requirement.",
+    "following_boundary": "사오 before vowels/mediating vowels or ㄴ/ㄹ/ㅁ; 사옵 otherwise. Separate 삽 only before consonant-initial endings, without a vowel allomorph.",
+    "order": "Earlier honorific/past/modal → humble polite position → retrospective. Distinct paradigms cannot fill the same position twice.",
+    "source_fixture": "tests/fixtures/humble-sources.json",
+    "ledger_cases": 130,
+    "required": 96,
+    "forbidden": 34,
+    "primary_examples": 5,
+    "full_native_lexical_entries": 30,
+    "interpretation": "Direct attestations and inferred structural cases remain distinguished. No contextual precision or exhaustive following-ending claim."
+  }
 }

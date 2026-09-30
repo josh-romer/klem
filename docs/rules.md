@@ -22,6 +22,7 @@ lookup table. `src/grammar.rs` holds endings and spelling transformations;
 | ㄹ deletion | 사는, 삽니다, 사세요, 사니까, 사느냐 |
 | Prefinal order | honorific → past (up to twice) → 겠 → polite → 더 → terminal; ending-specific licenses apply |
 | Literary polite prefinal | 읽으옵고, 하시오니, 먹었으옵고; canonical 으옵 |
+| Literary humble prefinals | 믿사옵고, 알사옵니다; canonical 사옵. 먹삽고; distinct 삽 |
 | Literary formal final bundle | 드리오리다, 떠나오리다, 먹으오리다; canonical 으리다 |
 | Ending allomorphs | 먹으리라 / 가리라; interrogative 먹니 / connective 먹으니 |
 | Copulas | 학생입니다, 학생이었다, 의사였다, 의사예요, 학생이에요 |
@@ -49,9 +50,16 @@ local spelling-class hypotheses retained. Vowel or mediating-vowel endings and
 this check, yielding 하 + 으옵 + 습니다 for 하옵니다. Honorific 시 remains a
 separate preceding component. 리다/으리다 is a final bundle, not 으리 + 다;
 the three native 오리다 examples expose the preceding polite component.
-The [source audit](polite-source-audit.json) retains the remaining 옵시 and
-사옵/사오/삽 work under COV-017az. These rules do not choose contextual intent
-or speech register.
+The distinct humble 사오/사옵 paradigm attaches to consonant stems, including
+retained ㄹ: `알사옵니다 → 알다 + 사옵 + 습니다`. Vowels/mediating vowels and
+ㄴ/ㄹ/ㅁ select 사오, with 사와 from 사오 + 아; other consonants select 사옵.
+The separate 삽 paradigm has no vowel allomorph and precedes consonant-initial
+endings: `믿었삽더니 → 믿다 + 었 + 삽 + 더니`. The immediate consonant
+boundary does not create vowel-irregular spelling requirements. Earlier
+honorific/past/modal components and auxiliary/답다 owners stay separate; the
+polite slot cannot repeat. Additional source-listed final forms, bundled 옵시
+and modern 자옵 restrictions remain open in the [source audit](polite-source-audit.json).
+These rules do not choose contextual intent or speech register.
 
 Lexical membership in an irregular class remains a hypothesis. For example,
 `들어` admits `들다` and `듣다`. Some generated stems may not exist in dictionaries.

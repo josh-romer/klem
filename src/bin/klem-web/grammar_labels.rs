@@ -166,5 +166,13 @@ mod tests {
                 .unwrap()
                 .is_empty()
         );
+        for key in ["-사옵-", "-삽-"] {
+            assert!(catalog()[key].sources.is_empty());
+            assert!(
+                lookup(&mut session, MorphemeKind::Prefinal, key)
+                    .unwrap()
+                    .is_empty()
+            );
+        }
     }
 }

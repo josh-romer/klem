@@ -1044,10 +1044,16 @@ review remains open under the completion review below.
   Evidence: 133 stable `polite-*` cases (93 required, 40 forbidden), ten direct
   native tokens, 48 full native fixture entries, [tests](../tests/polite.rs),
   [source audit](polite-source-audit.json), and the individually reviewed
-  [snapshot additions](polite-snapshot-changes.json). General 옵시/으옵시,
-  사옵/사오/삽, their licensed combinations and newly identified modern 자옵
-  lexical restrictions remain open. Validation progress is recorded in the
-  [evaluation](polite-evaluation.json); this row remains incomplete.
+  [snapshot additions](polite-snapshot-changes.json). The distinct consonant-stem
+  사오/사옵 and consonant-only 삽 paradigms now preserve ㄹ, reviewed tense/modal
+  order, contractions and auxiliary/답다 ownership. Five primary-source tokens
+  and 130 stable `humble-*` cases (96 required, 34 forbidden) are tracked in
+  [tests](../tests/humble.rs) and the [source fixture](../tests/fixtures/humble-sources.json).
+  Their teaching labels link actual external entries without invented KRDict IDs.
+  General 옵시/으옵시/사옵시, modern 자옵 lexical restrictions, additional
+  source-listed following endings and their licensed combinations remain open.
+  See [basic evaluation](polite-evaluation.json) and
+  [humble evaluation](humble-evaluation.json); this row remains incomplete.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -2115,7 +2121,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 425 currently emitted canonical grammar forms.** The initial catalog
+  for all 427 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

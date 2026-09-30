@@ -643,7 +643,18 @@ gain in a proper-name context is preserved as an annotation disagreement, not
 a correctness claim. The compatible-filter novel gains 336 hypotheses across
 204 records with no removals; these passage additions remain unjudged. The
 current queue has **332 scoped, 382 unreviewed and one observed gap**, with
-384 catalog-linked and 372 cited entries. General 옵시/으옵시/사옵시 and
-사옵/사오/삽, modern 자옵 lexical restrictions, broader ending licenses and
+384 catalog-linked and 372 cited entries. The distinct 사오/사옵 and 삽 paradigms
+now have 130 further structural judgments and five primary examples; their
+source links are external references because the primary entries are absent
+from the pinned KRDict. See [humble evaluation](humble-evaluation.json).
+Across 9,115 probes, this batch adds 231 candidates and removes none; 139
+additions remain unjudged. Four frozen corpus partitions retain identical gold
+recovery and case reports, with seven added, unjudged hypotheses individually
+recorded. The 179,112-record novel adds four hypotheses at one token under each
+dictionary filter, with no removals. Release medians are approximately 1.6 seconds
+and peak memory stays below 30 MiB in the recorded samples. Rust, browser/native
+dictionary and x86_64-linux Nix checks pass; these checks do not establish
+contextual precision or completion of the broader row.
+General 옵시/으옵시/사옵시, modern 자옵 lexical restrictions, broader ending licenses and
 independent Korean-language review remain open under the original COV-017az
 scope. See the [primary-source audit](polite-source-audit.json).

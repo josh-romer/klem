@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "review_status": "Agent-authored structural inferences from primary sources; independent Korean-language review pending.",
+  "attribution": "KRDict lexical fixtures: National Institute of Korean Language, CC BY-SA 2.0 KR; complete primary entries, English equivalents only. External grammar sources are references, not fabricated KRDict entries.",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "entry_ids": [
+    15722,
+    15983,
+    17186,
+    17203,
+    27500,
+    28764,
+    31670,
+    45157,
+    46165,
+    50557,
+    58272,
+    62657,
+    62888,
+    62899,
+    64511,
+    66585,
+    68752,
+    69471,
+    69478,
+    69579,
+    71581,
+    71583,
+    73277,
+    74104,
+    77243,
+    77245,
+    79033,
+    82136,
+    89445,
+    89917
+  ],
+  "primary_examples": [
+    {
+      "case_id": "humble-source-saop",
+      "surface": "믿사옵고",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=185238"
+    },
+    {
+      "case_id": "humble-source-sao",
+      "surface": "믿사오니",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=188130"
+    },
+    {
+      "case_id": "humble-source-sap",
+      "surface": "먹삽고",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=189947"
+    },
+    {
+      "case_id": "humble-source-sap-past",
+      "surface": "믿었삽더니",
+      "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=189947"
+    },
+    {
+      "case_id": "humble-source-rieul",
+      "surface": "알사옵니다",
+      "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070315/kor_mun.pdf"
+    }
+  ],
+  "rieul_evidence": {
+    "url": "https://wdown.ebsi.co.kr/W61001/01exam/20070315/kor_mun.pdf",
+    "pdf_sha256": "696710f843bf27ee04b31bcb38fc87ca060f61d777e192489eae11727aa2356f",
+    "locator": "PDF index 6 / printed page 7, letter in the right column, 마지막 문장",
+    "surface": "알사옵니다",
+    "review": "Viewed original raster PDF. The token retains ㄹ before 사옵; it is not inferred from a search snippet or OCR."
+  },
+  "required": 96,
+  "forbidden": 34,
+  "remaining": "COV-017az: bundled 옵시/으옵시/사옵시, modern 자옵 lexical restrictions, additional source-listed endings and independent Korean review; no claim of exhaustive combinations."
+}

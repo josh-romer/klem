@@ -237,6 +237,10 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
 pub(crate) enum Boundary {
     Literal,
     Consonant,
+    // Literary 사오/사옵 and 삽 attach to closed stems, including retained
+    // ㄹ. Unlike the ordinary consonant/ㅅ boundaries, they neither require
+    // 으 nor delete ㄹ (e.g. the source-attested 알사옵니다).
+    ClosedStem,
     EuFull,
     EuZero,
     Attached(u32),
@@ -375,6 +379,11 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
         }
         Boundary::Consonant => {
             if coda(base).is_some_and(|t| t != 0 && t != 8) {
+                push(&mut out, base.into(), "boundary.consonant");
+            }
+        }
+        Boundary::ClosedStem => {
+            if coda(base).is_some_and(|t| t != 0) {
                 push(&mut out, base.into(), "boundary.consonant");
             }
         }
@@ -1360,6 +1369,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "prefinal.polite" => {
             "Recover polite (으)오/(으)옵 before its licensed following boundary, after honorific/past/modal markers; contextual politeness is not selected."
         }
+        "prefinal.humble_saop" => {
+            "Recover literary humble 사오/사옵 after a consonant stem or past/modal marker, retaining ㄹ and selecting the allomorph from the following ending."
+        }
+        "prefinal.humble_sap" => {
+            "Recover the separate literary humble 삽 paradigm after a consonant stem or past/modal marker, before a consonant-initial ending. No vowel allomorph is inferred."
+        }
         "prefinal.obligation" => {
             "Recover the intention or necessity expression -아/어/여야겠- as one prefinal-position bundle, without inserting an implicit 하다."
         }
@@ -1549,7 +1564,17 @@ mod label_tests {
         for form in ["에요", "야"] {
             forms.insert(format!("-{form}"), Ending);
         }
-        for form in ["시", "었", "겠", "더", "으리", "어야겠", "으옵"] {
+        for form in [
+            "시",
+            "었",
+            "겠",
+            "더",
+            "으리",
+            "어야겠",
+            "으옵",
+            "사옵",
+            "삽",
+        ] {
             forms.insert(format!("-{form}-"), Prefinal);
         }
         for form in ["님", "들", "적", "답다", "이", "히", "쯤"] {

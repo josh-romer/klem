@@ -292,27 +292,49 @@ fn append_predicate_morphs(a: &mut Analysis, p: &Predicate) {
 
 // The polite allomorph depends on the following boundary as well as the stem.
 // ㄴ/ㄹ/ㅁ and vowel/mediating-vowel endings take 오; other consonants take 옵.
-fn polite_open_boundary(suffix: &str, boundary: Boundary) -> bool {
-    matches!(
+#[derive(Clone, Copy, Hash, PartialEq, Eq)]
+struct PrefinalFollowing {
+    polite_open: bool,
+    consonant: bool,
+}
+
+impl PrefinalFollowing {
+    const OPEN: Self = Self {
+        polite_open: true,
+        consonant: false,
+    };
+    const CONSONANT: Self = Self {
+        polite_open: false,
+        consonant: true,
+    };
+}
+
+fn prefinal_following(suffix: &str, boundary: Boundary) -> PrefinalFollowing {
+    let vowel_boundary = matches!(
         boundary,
         Boundary::Aeo | Boundary::EuFull | Boundary::EuZero | Boundary::Attached(_)
-    ) || suffix
+    );
+    let initial = suffix
         .chars()
         .next()
         .and_then(crate::hangul::split)
-        .is_some_and(|(initial, _, _)| matches!(initial, 2 | 5 | 6 | 11))
+        .map(|(initial, _, _)| initial);
+    PrefinalFollowing {
+        polite_open: vowel_boundary || initial.is_some_and(|i| matches!(i, 2 | 5 | 6 | 11)),
+        consonant: !vowel_boundary && initial.is_some_and(|i| i != 11),
+    }
 }
 
-type PrefinalMemo = HashMap<(String, u8, u8, bool), Vec<Predicate>>;
+type PrefinalMemo = HashMap<(String, u8, u8, PrefinalFollowing), Vec<Predicate>>;
 
 fn prefinals(
     stem: &str,
     stage: u8,
     pasts: u8,
-    polite_open: bool,
+    following: PrefinalFollowing,
     memo: &mut PrefinalMemo,
 ) -> Vec<Predicate> {
-    let key = (stem.to_owned(), stage, pasts, polite_open);
+    let key = (stem.to_owned(), stage, pasts, following);
     if let Some(result) = memo.get(&key) {
         return result.clone();
     }
@@ -337,7 +359,7 @@ fn prefinals(
         }
     }
     if stage >= 4 {
-        let variants = if polite_open {
+        let variants = if following.polite_open {
             [("으오", Boundary::EuFull), ("오", Boundary::EuZero)]
         } else {
             [("으옵", Boundary::EuFull), ("옵", Boundary::EuZero)]
@@ -345,6 +367,21 @@ fn prefinals(
         for (suffix, boundary) in variants {
             for r in grammar::recover(stem, suffix, boundary) {
                 choices.push((r, 3, pasts, "으옵", "prefinal.polite"));
+            }
+        }
+        // These are distinct modern literary paradigms, not additional
+        // allomorphs of 으옵. Their preceding consonant is kept, including ㄹ.
+        let suffix = if following.polite_open {
+            "사오"
+        } else {
+            "사옵"
+        };
+        for r in grammar::recover(stem, suffix, Boundary::ClosedStem) {
+            choices.push((r, 3, pasts, "사옵", "prefinal.humble_saop"));
+        }
+        if following.consonant {
+            for r in grammar::recover(stem, "삽", Boundary::ClosedStem) {
+                choices.push((r, 3, pasts, "삽", "prefinal.humble_sap"));
             }
         }
     }
@@ -385,8 +422,12 @@ fn prefinals(
         }
     }
     for (r, next, count, form, rule) in choices {
-        let open = matches!(form, "었" | "어야겠");
-        for mut p in prefinals(&r.stem, next, count, open, memo) {
+        let following = if matches!(form, "었" | "어야겠") {
+            PrefinalFollowing::OPEN
+        } else {
+            PrefinalFollowing::CONSONANT
+        };
+        for mut p in prefinals(&r.stem, next, count, following, memo) {
             if r.rules.iter().any(|r| r == "copula.omitted_ending") {
                 p.copula_only = true;
                 p.rules.push(
@@ -504,7 +545,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
         _ => None,
     };
     if let Some(form) = short_mal {
-        let mut p = prefinals("말", 0, 0, false, &mut memo).remove(0);
+        let mut p = prefinals("말", 0, 0, PrefinalFollowing::CONSONANT, &mut memo).remove(0);
         p.morphs.push(morph(form, MorphemeKind::Ending));
         p.rules.extend(["ending".into(), "irregular.mal".into()]);
         out.push(p);
@@ -515,7 +556,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 &r.stem,
                 5,
                 0,
-                polite_open_boundary(ending.suffix, ending.boundary),
+                prefinal_following(ending.suffix, ending.boundary),
                 &mut memo,
             ) {
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
@@ -1157,7 +1198,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
             for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
                 for r in grammar::recover(base, suffix, boundary) {
                     // Honorific/past/modal may precede conjectural (으)리, not 더.
-                    for mut p in prefinals(&r.stem, 3, 0, true, &mut memo) {
+                    for mut p in prefinals(&r.stem, 3, 0, PrefinalFollowing::OPEN, &mut memo) {
                         record_spelling(&mut p, &r, matches!(boundary, Boundary::EuFull));
                         p.morphs.push(morph("으리", MorphemeKind::Prefinal));
                         p.morphs.push(morph(ending, MorphemeKind::Ending));
@@ -1744,6 +1785,8 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
     matches!(
         first,
         "겠" | "더"
+            | "사옵"
+            | "삽"
             | "다"
             | "다가"
             | "단"

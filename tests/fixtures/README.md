@@ -1523,6 +1523,18 @@ label links NIKL's 1998 source article without fabricating a dictionary ID.
 The 도와주었다 snapshot gains exactly three raw polite hypotheses; its original
 full hash and historical spelling projections remain executable regressions.
 
+`humble-sources.json` tracks five direct primary tokens for the distinct
+사오/사옵 and 삽 paradigms, including retained ㄹ in `알사옵니다`, verified
+visually in the original EBS PDF. The 130 `humble-*` cases require 96 exact
+paths and forbid 34; inferred matrices remain separate from source examples.
+`krdict-humble.json` preserves 30 complete primary lexical entries with English
+equivalents, all senses/forms/notes/example groups and the KRDict CC BY-SA 2.0 KR
+attribution. Grammar labels cite actual 우리말샘 pages without manufacturing
+KRDict IDs. These regressions test raw recovery, both dictionary policies,
+NFD, spelling/auxiliary/derivation ownership, browser references and exports;
+unjudged additions and remaining licenses stay visible in
+`docs/humble-evaluation.json` and COV-017az.
+
 `gsd-polite-annotation-conflict.conllu` copies the complete, unchanged frozen
 GSD test sentence `test-s188` under its existing corpus attribution/license
 above. Its 내쉬와 row has original `VV+EC+VX+EC` tags in a proper-name-looking

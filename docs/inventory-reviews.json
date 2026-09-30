@@ -25776,7 +25776,7 @@
       "checklist": [
         "COV-017aw"
       ],
-      "scope": "Separate final rhetorical licenses from verbal intention/change. Existing finite auxiliary restrictions and derived rhetorical paths have stable raw judgments. Adjective intention auxiliary entries now remain explicitly unknown through local negative/답다 ownership, supported by the retrieved NIKL answer and separate OpenDict final homonyms.",
+      "scope": "Separate final rhetorical licenses from verbal intention/change. Existing finite auxiliary restrictions and derived rhetorical paths have stable raw judgments. Adjective intention auxiliary entries now remain explicitly unknown through local negative/답다 ownership, supported by the retrieved NIKL answer and separate OpenDict final homonyms. Retained copula and immediate prefinal full expansions now have explicit per-entry unknown assessments. Relational -적 finite candidates and split 어 + 요 share the reviewed local ownership constraints; their generalized contextual validity is not certified.",
       "remaining": "Broader standalone prefinal attachment and source-conflicted expanded expressions remain open. State-making requires lexical/contextual evidence; this disposition does not certify all senses or full attachment space.",
       "evidence": [
         {
@@ -25798,6 +25798,23 @@
         },
         {
           "path": "docs/ryeogo-licenses-evaluation.json"
+        },
+        {
+          "path": "tests/ryeogo_expansions.rs",
+          "test": "expanded_intention_assessments_keep_tense_with_its_owner"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "copular_intention_preserves_the_original_kaist_training_counterexample"
+        },
+        {
+          "path": "tests/fixtures/ryeogo-expansion-assessments.json"
+        },
+        {
+          "path": "docs/ryeogo-expansion-source-audit.json"
+        },
+        {
+          "path": "docs/ryeogo-expansions-evaluation.json"
         }
       ],
       "judgments": [
@@ -25814,7 +25831,7 @@
       "checklist": [
         "COV-017aw"
       ],
-      "scope": "Separate final rhetorical licenses from verbal intention/change. Existing finite auxiliary restrictions and derived rhetorical paths have stable raw judgments. Adjective intention auxiliary entries now remain explicitly unknown through local negative/답다 ownership, supported by the retrieved NIKL answer and separate OpenDict final homonyms.",
+      "scope": "Separate final rhetorical licenses from verbal intention/change. Existing finite auxiliary restrictions and derived rhetorical paths have stable raw judgments. Adjective intention auxiliary entries now remain explicitly unknown through local negative/답다 ownership, supported by the retrieved NIKL answer and separate OpenDict final homonyms. Retained copula and immediate prefinal full expansions now have explicit per-entry unknown assessments. Relational -적 finite candidates and split 어 + 요 share the reviewed local ownership constraints; their generalized contextual validity is not certified.",
       "remaining": "Broader standalone prefinal attachment and source-conflicted expanded expressions remain open. State-making requires lexical/contextual evidence; this disposition does not certify all senses or full attachment space.",
       "evidence": [
         {
@@ -25836,6 +25853,23 @@
         },
         {
           "path": "docs/ryeogo-licenses-evaluation.json"
+        },
+        {
+          "path": "tests/ryeogo_expansions.rs",
+          "test": "expanded_intention_assessments_keep_tense_with_its_owner"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "copular_intention_preserves_the_original_kaist_training_counterexample"
+        },
+        {
+          "path": "tests/fixtures/ryeogo-expansion-assessments.json"
+        },
+        {
+          "path": "docs/ryeogo-expansion-source-audit.json"
+        },
+        {
+          "path": "docs/ryeogo-expansions-evaluation.json"
         }
       ],
       "judgments": [

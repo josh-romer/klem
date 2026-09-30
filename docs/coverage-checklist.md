@@ -1007,6 +1007,25 @@ review remains open under the completion review below.
   exclusions. All four complete frozen corpus reports and both filtered novel
   outputs are byte-identical. Rust/stress, browser and x86_64 Linux Nix
   package/flake checks pass.
+  The [full-expansion follow-up](ryeogo-expansions-evaluation.json) now recovers
+  finite relational `인간적이려고한다`, retaining both whole-word and `-적`
+  suffix readings as possible state-making hypotheses with unknown dictionary
+  attachment. Existing copula/tense constraints on ordinary finite intention
+  remain, and split `어 + 요` now obeys the same reviewed boundary as `어요`.
+  Thirty stable raw cases (21 required / 9 forbidden) and 57 entry cases
+  (119 judgments) cover ownership, homonyms, negatives and both polite paths.
+  Retained copula/prefinal full expansions have explicit per-entry uncertainty;
+  earlier and right-hand tense remain separate. The original KAIST sentence is
+  now an offline regression (all eight converted tokens still match).
+  A published linguist's independent usage corroborates the copular token,
+  without certifying all generalized relational readings. Two new paths remain
+  unjudged; standalone prefinal and contextual licenses remain open.
+  Full Rust/stress and browser checks pass; x86_64 Linux CLI/web packages
+  build and pass the complete-dictionary HTTP/CLI checks; flake checks pass.
+  Three interleaved
+  release runs process the 179,112-record novel in median 1.55 s (headword)
+  and 1.52 s (compatible), with peak RSS below 30 MiB; this small sample
+  does not establish statistical equivalence. The local preview is refreshed.
   This item remains open.
 
 - [x] **COV-017ax — Remaining shortened intention expressions.**

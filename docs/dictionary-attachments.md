@@ -475,3 +475,13 @@ Both filters retain unknown readings; raw candidates are unchanged. The separate
 and 66 judgments, including final homonyms, ownership boundaries and provider
 uncertainty. This does not resolve source-conflicted full expansions or
 standalone prefinal licenses. See [the evaluation](ryeogo-licenses-evaluation.json).
+
+The [full-expansion extension](ryeogo-expansions-evaluation.json) also marks
+retained copular intention entries and immediate non-honorific intention prefinal
+attachments unknown. Related shortened-expression notes conflict with blanket
+full-expansion exclusions. The lexical nominal keeps its role assessment; a
+copular license belongs to its own entry. An earlier tense marker does not
+constrain a later auxiliary's connector. Final rhetorical forms are independent.
+Known class/role/spelling conflicts still take precedence. Relational -적
+state-making hypotheses can now reach finite 하다/들다 without being asserted
+contextually correct; both filters retain the unknown readings.

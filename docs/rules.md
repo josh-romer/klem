@@ -3312,6 +3312,23 @@ reject all adjectives, or prune the preserved full-expression conflicts.
 [Forty-five cases](../tests/fixtures/ryeogo-license-assessments.json) track
 66 per-entry judgments; unknown is separate from raw forbidden judgments.
 
+The [full-expansion follow-up](ryeogo-expansion-source-audit.json) preserves
+possible bare relational -적 nominal state-making readings before the reviewed
+finite 하다/들다 forms. 인간적이려고한다 retains 인간적 + 이다 + 하다 and
+인간 + 적 + 이다 + 하다; both dictionary filters keep the unknown copular
+attachment. Existing negative inheritance follows that immediate class. A plural,
+particle or later component does not lend its relational flag to a different
+copula. Non-honorific prefinal restrictions on the intention owner remain.
+
+Canonical 어요 and split 어 + polite particle 요 now share the reviewed finite
+intention boundary. Because outer 요 is appended after predicate expansion, the
+split path is checked when the complete analysis is available. Retained full
+expansions with unresolved copula or non-honorific prefinal licenses become
+unknown per entry. Tense uncertainty applies only to the immediate connector
+owner: 먹었지않으려고하더라 does not lend earlier past to 않다, while
+먹지않았으려고하더라 records uncertainty at 않다. Final rhetorical readings
+and right-hand tense keep their independent licenses.
+
 ## Shortened intention expressions and assumption -(으)려니 (COV-017ax)
 
 The analyzer preserves `으려니`, `으려니까`, `으려더라`, `으려던`,

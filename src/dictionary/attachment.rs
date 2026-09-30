@@ -364,6 +364,15 @@ impl Annotation {
                     if analysis.morphemes[*i].kind == MorphemeKind::Suffix
                     && analysis.morphemes[*i].form == "답다")
             });
+            // Tense evidence belongs to the connector's immediate owner,
+            // never to an earlier lexical head through a negative auxiliary.
+            let intention_prefinal = intention_connector.is_some()
+                && intention_connector == ending
+                && morphs.iter().any(|c| {
+                    matches!(c, Component::Morpheme(i)
+                        if analysis.morphemes[*i].kind == MorphemeKind::Prefinal
+                        && !crate::engine::honorific_prefinal(&analysis.morphemes[*i].form))
+                });
             let entries: Vec<_> = self
                 .lemmas
                 .iter()
@@ -599,6 +608,12 @@ impl Annotation {
                     if status == Compatibility::Compatible
                         && intention_connector.is_some()
                         && (derived_adjective
+                            || lemma.kind == LemmaKind::Copula
+                            || (intention_prefinal
+                                && matches!(
+                                    matched.entry.pos.as_str(),
+                                    "동사" | "형용사" | "보조 동사" | "보조 형용사"
+                                ))
                             || (lemma.kind == LemmaKind::Predicate
                                 && matched.entry.pos == "형용사")
                             || (lemma.kind == LemmaKind::Auxiliary
@@ -607,8 +622,11 @@ impl Annotation {
                     {
                         // The connective/auxiliary entries specify verbs, but
                         // NIKL Q&A 335000 leaves adjective state-making uses
-                        // unresolved. Preserve that uncertainty per entry,
-                        // including inherited negatives and explicit 답다.
+                        // unresolved. Shortened-expression notes also conflict
+                        // with tense/copula exclusions on their full expansions.
+                        // Preserve uncertainty per entry, including inherited
+                        // negatives and explicit 답다. Prefinals constrain
+                        // only the immediate connector owner.
                         // Known role, ending and spelling conflicts above
                         // take precedence; no contextual sense is selected.
                         status = Compatibility::Unknown;

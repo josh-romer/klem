@@ -1968,7 +1968,8 @@
     "derived_adjective": "Known ㅂ-irregular 답다 now permits the long final rhetorical ending.",
     "finite_auxiliary": "For canonical 으려고 followed by auxiliary 하다/들다 whose own ending is 는다, 다, 어요 or 습니다: exclude non-honorific prefinals on the immediately preceding owner and represented copula class. Right-hand tense and earlier owners remain available.",
     "not_inferred": "No blanket adjective rejection, no global modal/retrospective restriction on standalone 으려고, and no new pruning for source-conflicted shortened-expression expansions. Their audit remains open.",
-    "adjective_intention_uncertainty": "Per-entry unknown for known adjectives before represented 으려고 + auxiliary 하다/들다, through reviewed 지 negatives; explicit 답다 and represented adjective auxiliaries preserve local ownership. No raw pruning; see tests/ryeogo_licenses.rs."
+    "adjective_intention_uncertainty": "Per-entry unknown for known adjectives before represented 으려고 + auxiliary 하다/들다, through reviewed 지 negatives; explicit 답다 and represented adjective auxiliaries preserve local ownership. No raw pruning; see tests/ryeogo_licenses.rs.",
+    "full_expansion_uncertainty": "Retained copulas and immediately owning non-honorific prefinals before intention auxiliaries are explicitly unknown per entry. Finite relational -적 state-making hypotheses preserve the source counterexample pattern, with no contextual certainty; split 어 + 요 shares canonical 어요 constraints."
   },
   "related_expression_gap_probes": [
     {
@@ -2058,5 +2059,6 @@
       "existing_relevant_analyses": []
     }
   ],
-  "follow_up": "docs/ryeogo-license-source-audit.json"
+  "follow_up": "docs/ryeogo-license-source-audit.json",
+  "full_expansion_follow_up": "docs/ryeogo-expansion-source-audit.json"
 }

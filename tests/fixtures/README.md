@@ -1620,3 +1620,23 @@ complete baseline outputs for unrelated polite followers and lexical
 contractions; these are preservation controls, not new gold. See
 `tests/polite_copulas.rs` and `docs/polite-copula-evaluation.json` for CLI/filter
 parity, NFD, component order, local spelling ownership and individual changes.
+
+### Full intention expansions and relational copulas (COV-017aw)
+
+`krdict-ryeogo-expansions.json` retains eight complete entries from the pinned
+September 2026 KRDict LMF export, with all forms, notes, senses, examples and
+English equivalents. RelatedForm and non-English equivalents are omitted.
+`ryeogo-expansion-sources.json` records their original export hashes and IDs;
+existing complete `krdict-ryeogo-licenses.json` fixtures supply the other heads.
+KRDict attribution/license: National Institute of Korean Language, CC BY-SA 2.0 KR.
+
+`ryeogo-expansion-assessments.json` has 57 stable cases and 119 per-entry
+judgments, separately from the 30 new raw validity cases. Unknown is retained;
+it is not a forbidden verdict. `kaist-ryeogo-copulas.conllu` preserves the
+complete original UD Korean Kaist training sentence `MH2_0014-s388`, including
+its copular connective annotation of 인간적이려고. Its bytes/columns are
+unchanged; all eight converted tokens matched before and after. The fused finite
+variants are structural continuations, not new annotated gold. See the
+[source audit](../../docs/ryeogo-expansion-source-audit.json) and
+[evaluation](../../docs/ryeogo-expansions-evaluation.json) for the separate
+linguist's usage, ownership constraints and unresolved licenses.

@@ -332,7 +332,7 @@ fn prefinal_following(suffix: &str, boundary: Boundary) -> PrefinalFollowing {
 
 type PrefinalMemo = HashMap<(String, u8, u8, PrefinalFollowing, bool), Vec<Predicate>>;
 
-fn honorific_prefinal(form: &str) -> bool {
+pub(crate) fn honorific_prefinal(form: &str) -> bool {
     matches!(form, "시" | "으옵시" | "사옵시" | "자옵시")
 }
 
@@ -1540,7 +1540,7 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
                 .map(|s| lemma(format!("{s}다"), LemmaKind::Auxiliary)),
         );
     }
-    out.retain(auxiliary_inflections_allowed);
+    out.retain_mut(auxiliary_inflections_allowed);
     out
 }
 
@@ -1597,11 +1597,19 @@ fn finite_intention_auxiliary(stem: &str, morphs: &[Morpheme]) -> bool {
     matches!(stem, "하" | "들")
         && morphs
             .iter()
-            .find(|m| m.kind == MorphemeKind::Ending)
-            .is_some_and(|m| matches!(m.form.as_str(), "는다" | "다" | "어요" | "습니다"))
+            .position(|m| m.kind == MorphemeKind::Ending)
+            .is_some_and(|i| {
+                matches!(morphs[i].form.as_str(), "는다" | "다" | "어요" | "습니다")
+                    // The same informal polite surface also has a separate
+                    // 어 + particle 요 path. It must obey the same boundary.
+                    || (morphs[i].form == "어"
+                        && morphs.get(i + 1).is_some_and(|m| {
+                            m.kind == MorphemeKind::Particle && m.form == "요"
+                        }))
+            })
 }
 
-fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
+fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
     if !a.lemmas.iter().any(|l| l.kind == LemmaKind::Auxiliary) {
         return true;
     }
@@ -1609,7 +1617,20 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
     let mut previous = None;
     let mut connector = None;
     let mut previous_report_stative = false;
+    let mut previous_relational_nominal = false;
+    let mut previous_relational_copula = false;
+    let mut previous_non_honorific_prefinal = false;
     for lemma in &a.lemmas {
+        if lemma.kind == LemmaKind::Auxiliary
+            && connector == Some("으려고")
+            && previous_non_honorific_prefinal
+            && finite_intention_auxiliary(
+                lemma.text.strip_suffix('다').unwrap_or(&lemma.text),
+                &a.morphemes[cursor..],
+            )
+        {
+            return false;
+        }
         // The copular rhetorical ending (학생이려고?) is not the intention
         // connector in 학생이려고 한다. The class belongs to the left owner.
         if lemma.kind == LemmaKind::Auxiliary
@@ -1620,7 +1641,14 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
                 &a.morphemes[cursor..],
             )
         {
-            return false;
+            // KAIST attests 인간적이려고 하는. The existing relational
+            // -적 analysis supplies a possible state-making nominal reading,
+            // including the unsplit lexical alternative. Preserve this local
+            // hypothesis; dictionary assessment leaves its license unknown.
+            if !previous_relational_copula {
+                return false;
+            }
+            a.rules.push("copula.intention_relational".into());
         }
         // Continuative/resultative 있다 and honorific 계시다 select verbs.
         // Check the immediately preceding represented role, including classes
@@ -1663,6 +1691,11 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
         } else {
             None
         };
+        let relational_copula = matches!(class, Some(PredicateClass::Copula))
+            && ((lemma.kind == LemmaKind::Copula && previous_relational_nominal)
+                || (lemma.kind == LemmaKind::Auxiliary && previous_relational_copula));
+        let mut relational_nominal = lemma.kind == LemmaKind::Nominal
+            && lemma.text.strip_suffix('적').is_some_and(|s| !s.is_empty());
         // Auxiliary 있다/계시다 have stative plain-다 report readings despite
         // their verbal POS. Negative auxiliaries retain this possibility.
         let report_stative = lemma.kind == LemmaKind::Auxiliary
@@ -1674,6 +1707,7 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             .get(cursor)
             .filter(|m| m.kind == MorphemeKind::Suffix)
         {
+            relational_nominal = lemma.kind == LemmaKind::Nominal && m.form == "적";
             if m.form == "답다" {
                 class = Some(PredicateClass::Adjective);
                 inflected = true;
@@ -1689,11 +1723,13 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
         // not 는다. Do not inherit this restriction through negative auxiliaries
         // or apply it to honorific 계시다, which also permits 계신다.
         let bare_stative_iss = bare && lemma.kind == LemmaKind::Auxiliary && lemma.text == "있다";
+        let mut non_honorific_prefinal = false;
         while inflected
             && a.morphemes
                 .get(cursor)
                 .is_some_and(|m| m.kind == MorphemeKind::Prefinal)
         {
+            non_honorific_prefinal |= !honorific_prefinal(&a.morphemes[cursor].form);
             cursor += 1;
         }
         connector = None;
@@ -1856,10 +1892,14 @@ fn auxiliary_inflections_allowed(a: &Analysis) -> bool {
             .get(cursor)
             .is_some_and(|m| m.kind == MorphemeKind::Particle)
         {
+            relational_nominal = false;
             cursor += 1;
         }
         previous = class;
         previous_report_stative = report_stative;
+        previous_relational_nominal = relational_nominal;
+        previous_relational_copula = relational_copula;
+        previous_non_honorific_prefinal = non_honorific_prefinal;
     }
     true
 }
@@ -3626,6 +3666,21 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
         });
         nominals(&normalized, 7, false, &[], &mut out);
     }
+    // Outer polite 요 is appended after predicate expansion. Recheck only
+    // its split 어 + 요 intention paths now that the complete owner group is
+    // available; canonical 어요 and the split representation share a license.
+    out.retain_mut(|a| {
+        !a.morphemes
+            .iter()
+            .any(|m| m.kind == MorphemeKind::Ending && m.form == "으려고")
+            || !a.morphemes.windows(2).any(|pair| {
+                pair[0].kind == MorphemeKind::Ending
+                    && pair[0].form == "어"
+                    && pair[1].kind == MorphemeKind::Particle
+                    && pair[1].form == "요"
+            })
+            || auxiliary_inflections_allowed(a)
+    });
     // Semantic duplicates share rule names, but spelling paths remain
     // alternatives. A derivation with no spelling obligation subsumes others.
     type Key = (Vec<Lemma>, Vec<Morpheme>, bool);

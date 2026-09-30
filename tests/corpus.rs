@@ -3,6 +3,22 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn copular_intention_preserves_the_original_kaist_training_counterexample() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-ryeogo-copulas.conllu").as_slice(),
+        Corpus::Kaist,
+        "ryeogo-copulas",
+    )
+    .unwrap();
+    let case = &report.cases["id:MH2_0014-s388/8"];
+    assert_eq!(case.surface, "인간적이려고");
+    assert_eq!(case.expected, ["인간적", "이다"]);
+    assert!(case.matched);
+    assert_eq!(report.cases.len(), 8);
+    assert!(report.cases.values().all(|c| c.matched));
+}
+
+#[test]
 fn question_copulas_recover_two_new_cases_and_preserve_explicit_copulas() {
     for (corpus, input, cases) in [
         (

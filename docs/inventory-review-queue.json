@@ -16,6 +16,7 @@
     "docs/auxiliary-dictionary-evaluation.json": "3a23057927a41215e802791e6ab603987cc27f667a1f284a79c4906730b7b408",
     "docs/auxiliary-inventory.json": "16b7ac8ed9a8cb7f0b6cd9ef1251f1b4097a2abb02b36f4c3ad88b7e0e3c0cb9",
     "docs/auxiliary-left-hada-evaluation.json": "32e0ed2e567107f72ea96f488eb7969a9bd8f0ae82fd897807d2da4ecc52c29a",
+    "docs/background-ba-evaluation.json": "d6b9a05227c80727d43b5d0c2e046c4df8cbf054d33c71e86c6c5c57f3921b79",
     "docs/causal-evaluation.json": "320cffc1ef546ffd7d1c87676f9ffd6d23806266f28dbc5673751084644410cd",
     "docs/chigo-evaluation.json": "c7f2927950286ae43279d140c887d5e9d016f0372064cd0ca10a0e8b97b8130d",
     "docs/comparison-case-evaluation.json": "94f56ff6b757d0d2cf61204bb03213e2057428f6f4d0c128c3eef133e23651b2",
@@ -27,14 +28,14 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "e57eb2ff595d49f33aaef76771e7ed4d1ece81c1b9b5164f1742b15ddca0ea78",
+    "docs/coverage-checklist.md": "cdc64a8078448e3026fa8a300179d01cbfe18cfc7e8bcf6f43e7607d5f58c506",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
     "docs/danikka-evaluation.json": "a96097a93cd994b8f1b4dde8a91803e08f1a93300956547f2283e60ccf9999e4",
     "docs/desire-topic-evaluation.json": "05fda5f3a2ef1a74670f3e4e04b348ae0e6df33b3a9f07d0eb10a748b8d8fd64",
     "docs/destination-particle-evaluation.json": "4688391fea10bbdf7dc01303e0ad7b2c70d72b33788ffc6c620f62640091884c",
     "docs/dictionary-attachment-evaluation.json": "2bfecedcd0c78bac44f9bf48ae7837699c880b70d33538ab226fce1faed204b1",
-    "docs/dictionary-attachments.md": "b252b3271bd2ec4c77b6cfa102fce2e6e9627a46d7a90a190dbb4cf0f9f7a2da",
+    "docs/dictionary-attachments.md": "417984b1ff3652bdfddd158002e2f7dba183058055d32a6f39f22c0c007f122f",
     "docs/doe-evaluation.json": "e59e50e002254721f521fd28d4ff90ca3b37abdc0915d5119b29b6e633743853",
     "docs/enumerative-da-evaluation.json": "de4837cbc688d068108b539a750640e9378b47dbb6775ef84da7a4865d7c6a6a",
     "docs/enumerative-particle-evaluation.json": "eb40246ab818383c0ceab8e413880db539430ab60f8814736bed6fd5c037f90c",
@@ -46,8 +47,8 @@
     "docs/hieut-compatibility-evaluation.json": "43dc0adf65291282668771380f247ff34af9d0e84fd21625f36136ab87ee5d92",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "46d8fe73d503b81be84ac732603db210da72fbdd6a7d2a5273529cd48bf21f22",
-    "docs/inventory-reviews.json": "bc36bfb6b06f0565666db22c4cdd94875ca155b102b2a621cdfbf80907c4039f",
+    "docs/inventory-audit.md": "ef630dea9bffb8a2872197fff3c5be00e2c4c0d1430a05314596035ea7a10733",
+    "docs/inventory-reviews.json": "82114d2405d78d7ba672b813b30855f9d2ec199df796aee2fd1b3b06627f5e54",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -107,6 +108,7 @@
     "tests/adverb_focus.rs": "e751644d2f97a5e9c0eec3791ebeee7f5aed4be3c646065de954eeb99284a0d9",
     "tests/auxiliary_dictionary.rs": "3aeff2fc8693c99c0ff7ed86aba239b7372e318d7e4e87b1ef22105dc1b99dcb",
     "tests/auxiliary_left_class.rs": "d07f841d365dce77896560a0405eb2065d80c40068aef5b4f0d7e9769b3a0ba7",
+    "tests/background_ba.rs": "0ee2a3aa9c0a254ed3ad57ff909c81eea5b5a7ad39b500f8cc9fbbe6a5a13a35",
     "tests/causal_endings.rs": "964e4395b3d78414696e92657e9320bd958245bf468d8afa256a2db3537c27bf",
     "tests/chigo_particles.rs": "116a92c14a3ad8cc5880be4f7d9052d9b6d85bdc5156114cc3c715b867832238",
     "tests/comparative_endings.rs": "d70989cad86c349d2c2923772f8616d3d347208aebfc7e62c0c8684ca906d573",
@@ -126,7 +128,7 @@
     "tests/desire_topic.rs": "a4c03c51c07ddcf71c8e839b54f359677ba0a8c88b057ccd3ac086de821cc84d",
     "tests/destination_particles.rs": "9253fd8d3382beb4ba6dc24b8e7a7a07afbd3ccc8236d9dda188f69c7b1fb3cd",
     "tests/dictionary.rs": "c604d5ae616f24d50dc5d3c8829103e41e57da810b34b19aa7265c67c2ea6f50",
-    "tests/dictionary_attachments.rs": "04e347371a00dce179cecd45e6a55ccbf0e7fe99842b049011207a6c6859a496",
+    "tests/dictionary_attachments.rs": "71a519746fc0cfe7c09a2974ce40a9a569ea53738783ef75e85ea523341a002f",
     "tests/doe_endings.rs": "f9da534bcfbbf4ad3c543afa015f541ad4ebebeacf1fb206046e40c68741132f",
     "tests/enumerative_da.rs": "6794202c79c0291bd9378ded9015099637c71b8ea151cd4c9c0bba52d64fbca5",
     "tests/enumerative_particles.rs": "e9e76badf02f248797c50cf45757d246f24009a0b085eb72001e91db77e0869c",
@@ -135,7 +137,8 @@
     "tests/extent_particles.rs": "8bebe37caffc46f8214cd7a7006d877c13f5e386f1abd9c81b39be05e4769b05",
     "tests/eya.rs": "75f750a84f9169c40d6471880e9cf972e4f5104acec55d100ffbd00f0fddfdfd",
     "tests/fixtures/auxiliary-dictionary.json": "7a858ec78be92ae8867c4e65fb5b607a896a06e4843b0d3156a1a7acf4bb8ade",
-    "tests/fixtures/dictionary-attachments.json": "68a230ea4698604179cc2596a45b4d23fe7cdda5be8cce4e16ce82f61793f178",
+    "tests/fixtures/ba-sources.json": "a28e3718ee58b224b039a7e326a298557ea96ffcd233fa23ee663f3a29bf263a",
+    "tests/fixtures/dictionary-attachments.json": "51dbd6e3f5c965817701557e8879994a57b131f34a505bea2ae417ec8aac8c77",
     "tests/fixtures/eumse-sources.json": "052eb9d9b5e984214a4797954cfd835eaf2028a7505f46a989b5cbfa356ddf31",
     "tests/fixtures/existential-paradigm-sources.json": "b655c111e497a75ab652a47d96fcdb5b2552c1fba615216be38e1b07b68f086b",
     "tests/fixtures/jaop-sources.json": "ec3a5b9e970cf6a05ac7fb82fc2f85b680e8a777217014b46ad473cef3c51bf6",
@@ -156,7 +159,7 @@
     "tests/fixtures/ryeogo-license-assessments.json": "64d0295fc1651bced66b391b6b87d104be168d641448743ddd2e1d2e768b812a",
     "tests/fixtures/ryeogo-license-sources.json": "bb803af39a4cc2b8aa60c030194b16345c99cf6f39d4118ba35a8c9f55692a6a",
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
-    "tests/fixtures/validity.json": "4e2ee0910efcf7202e1a2dce01cfa07a490698e4c82cba2245b7871b4cfff9ce",
+    "tests/fixtures/validity.json": "37a3c2b009dc5392c238fd798d91d91c3d0559856128ea942230843f9b8f00c8",
     "tests/hieut_compatibility.rs": "f557736f7275cbdb7e73217b9a760e9054e99ca29c6d1a9c747ea35ad807d4e6",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
     "tests/intention_connectives.rs": "68e1d04adcbaa3c943f4c3a3e817bd0d020aab72291d221e5e473d7af301aa2e",
@@ -205,8 +208,8 @@
     "tests/stative_reports.rs": "2919ff255637360e7aebb68366589d32f82f404e212195410b49828125fe2822",
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
-    "web/src/grammar-labels.json": "a2a4f92e4b68ce81683caa476a6da2cd2a7ac174cb9449b80d9d221c9038dd4c",
-    "web/tests/browser.mjs": "645fcce47186d2d2f32d94bafab72f3efaa0296749122e5cf3a1499662936dc0"
+    "web/src/grammar-labels.json": "ac3f4d20a9f00153e931ce1f56972dc5b4d22c7f30416512cbf8ea13724d124d",
+    "web/tests/browser.mjs": "802920c8eb90a15ff6523314f1ad15b5dc4ca5096765692242ecdf87387b4db6"
   },
   "counts": {
     "entries": 715,
@@ -217,12 +220,12 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 336,
-      "unreviewed": 378,
+      "scoped": 340,
+      "unreviewed": 374,
       "gap": 1
     },
-    "with_catalog_links": 386,
-    "with_judgment_citations": 375
+    "with_catalog_links": 390,
+    "with_judgment_citations": 379
   },
   "entries": [
     {
@@ -13904,11 +13907,314 @@
         ]
       },
       "source_sha256": "eb423b527b3bd1b6e954d04d8cba0e83f85f15e8dbbe85a7e5d1d43d3428d1a6",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-은바",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "ba-boundary-positive-간바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-논바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-누운바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-도운바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-산바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-안바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-예쁜바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-온바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-파란바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-honorific-가신바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-honorific-계신바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-honorific-먹으신바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-먹고싶은바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-먹어본바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-좋지않은바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-학생다운바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-학생인바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-2-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-2-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-2-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-2-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87110-2-5",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-unlicensed-prefinal-먹겠은바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-unlicensed-prefinal-먹던바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-unlicensed-prefinal-먹었은바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:87110",
+        "source_sha256": "eb423b527b3bd1b6e954d04d8cba0e83f85f15e8dbbe85a7e5d1d43d3428d1a6",
+        "status": "scoped",
+        "checklist": [
+          "COV-017bb"
+        ],
+        "scope": "All senses and complete native example groups reviewed for background connective bundles 은바/는바/던바, local attached/literal spelling, source-listed prefinals, represented class/owner boundaries and per-entry bare 는바 filtering. Bound noun 바 and its separately spaced modifiers remain distinct.",
+        "remaining": "Contextual background/sense and negative inheritance, wider polite/historical prefinal paradigms, omitted-copula variants, bound-noun composition and independent Korean-language review remain open. A scoped disposition does not certify every generated path.",
+        "evidence": [
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_preserves_local_boundaries_prefinals_and_component_owners"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_sources_preserve_all_senses_and_complete_example_groups"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_dictionary_filters_preserve_source_paths_and_cli_parity"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_checks_each_bare_entry_and_preserves_verb_homonyms"
+          },
+          {
+            "path": "tests/fixtures/ba-sources.json"
+          },
+          {
+            "path": "docs/background-ba-evaluation.json"
+          },
+          {
+            "path": "web/tests/browser.mjs"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "ba-source-87110-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87110-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87110-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87110-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87110-2-1",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87110-2-2",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87110-2-3",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87110-2-4",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87110-2-5",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-간바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-온바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-산바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-안바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-논바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-도운바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-누운바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-파란바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-예쁜바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-honorific-먹으신바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-honorific-가신바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-honorific-계신바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-학생인바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-학생다운바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-먹어본바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-먹고싶은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-좋지않은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-unlicensed-prefinal-먹었은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-unlicensed-prefinal-먹겠은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-unlicensed-prefinal-먹던바",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -28168,11 +28474,368 @@
         ]
       },
       "source_sha256": "02bc5cc8847275aa0dc4ef93647d07d88a8a2795c1da565d451b1439e29470f8",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-는바",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "ba-boundary-negative-살는바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-boundary-negative-알는바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-owner-먹고싶었는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-먹고있는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-먹지않는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-살아계시는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-좋아지는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-학생다웠는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-학생이었는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-prefinal-먹겠는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-prefinal-먹었는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-prefinal-먹으셨는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-prefinal-먹으시겠는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-prefinal-좋겠는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-prefinal-좋았는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-prefinal-좋으시는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-present-가는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-present-계시는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-present-맛없는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-present-먹는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-present-사는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-present-아는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-present-있는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-present-재미있는바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-role-negative-먹고싶는바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-role-negative-먹는바다",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-role-negative-학생답는바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-role-negative-학생답지않는바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-role-negative-학생이는바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-source-87111-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87111-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87111-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87111-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-unlicensed-prefinal-먹더는바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-unlicensed-prefinal-먹옵는바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:87111",
+        "source_sha256": "02bc5cc8847275aa0dc4ef93647d07d88a8a2795c1da565d451b1439e29470f8",
+        "status": "scoped",
+        "checklist": [
+          "COV-017bb"
+        ],
+        "scope": "All senses and complete native example groups reviewed for background connective bundles 은바/는바/던바, local attached/literal spelling, source-listed prefinals, represented class/owner boundaries and per-entry bare 는바 filtering. Bound noun 바 and its separately spaced modifiers remain distinct.",
+        "remaining": "Contextual background/sense and negative inheritance, wider polite/historical prefinal paradigms, omitted-copula variants, bound-noun composition and independent Korean-language review remain open. A scoped disposition does not certify every generated path.",
+        "evidence": [
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_preserves_local_boundaries_prefinals_and_component_owners"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_sources_preserve_all_senses_and_complete_example_groups"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_dictionary_filters_preserve_source_paths_and_cli_parity"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_checks_each_bare_entry_and_preserves_verb_homonyms"
+          },
+          {
+            "path": "tests/fixtures/ba-sources.json"
+          },
+          {
+            "path": "docs/background-ba-evaluation.json"
+          },
+          {
+            "path": "web/tests/browser.mjs"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "ba-source-87111-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87111-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87111-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87111-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-present-가는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-present-먹는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-present-사는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-present-아는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-present-있는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-present-계시는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-present-재미있는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-present-맛없는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-prefinal-좋으시는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-prefinal-먹었는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-prefinal-좋았는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-prefinal-먹겠는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-prefinal-좋겠는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-prefinal-먹으셨는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-prefinal-먹으시겠는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-학생이었는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-학생다웠는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-먹고있는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-살아계시는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-좋아지는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-먹고싶었는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-먹지않는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-negative-살는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-negative-알는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-unlicensed-prefinal-먹더는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-unlicensed-prefinal-먹옵는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-role-negative-학생이는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-role-negative-학생답는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-role-negative-먹고싶는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-role-negative-학생답지않는바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-role-negative-먹는바다",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -36991,11 +37654,206 @@
         ]
       },
       "source_sha256": "5de122a1efda01cc006383b148a15c84696b8024c99b958c5b316506d45d6858",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-던바",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "ba-owner-좋지않았던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-학생이겠던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-owner-학생이던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-retrospective-가던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-retrospective-먹으셨던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-retrospective-먹으시던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-retrospective-살던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-retrospective-좋겠던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-retrospective-좋던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-retrospective-좋았던바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-role-negative-먹던바고",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-source-87113-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87113-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87113-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87113-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-unlicensed-prefinal-먹더던바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-unlicensed-prefinal-먹옵던바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:87113",
+        "source_sha256": "5de122a1efda01cc006383b148a15c84696b8024c99b958c5b316506d45d6858",
+        "status": "scoped",
+        "checklist": [
+          "COV-017bb"
+        ],
+        "scope": "All senses and complete native example groups reviewed for background connective bundles 은바/는바/던바, local attached/literal spelling, source-listed prefinals, represented class/owner boundaries and per-entry bare 는바 filtering. Bound noun 바 and its separately spaced modifiers remain distinct.",
+        "remaining": "Contextual background/sense and negative inheritance, wider polite/historical prefinal paradigms, omitted-copula variants, bound-noun composition and independent Korean-language review remain open. A scoped disposition does not certify every generated path.",
+        "evidence": [
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_preserves_local_boundaries_prefinals_and_component_owners"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_sources_preserve_all_senses_and_complete_example_groups"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_dictionary_filters_preserve_source_paths_and_cli_parity"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_checks_each_bare_entry_and_preserves_verb_homonyms"
+          },
+          {
+            "path": "tests/fixtures/ba-sources.json"
+          },
+          {
+            "path": "docs/background-ba-evaluation.json"
+          },
+          {
+            "path": "web/tests/browser.mjs"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "ba-source-87113-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87113-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87113-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87113-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-retrospective-가던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-retrospective-살던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-retrospective-좋던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-retrospective-먹으시던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-retrospective-좋았던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-retrospective-좋겠던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-retrospective-먹으셨던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-학생이던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-학생이겠던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-owner-좋지않았던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-unlicensed-prefinal-먹더던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-unlicensed-prefinal-먹옵던바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-role-negative-먹던바고",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {
@@ -57555,11 +58413,188 @@
         ]
       },
       "source_sha256": "1f90077341a2a63e8225e51656bd5de10685dab9a2ceed8419503a1ce4823592",
-      "catalog": [],
-      "cited_judgments": [],
+      "catalog": [
+        {
+          "form": "-은바",
+          "kind": "ending"
+        }
+      ],
+      "cited_judgments": [
+        {
+          "case": "ba-boundary-negative-가은바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-boundary-negative-갠바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-boundary-negative-먹바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-boundary-negative-살은바",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-boundary-positive-먹은바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-부은바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-boundary-positive-지은바",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-role-negative-먹은바를",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "ba-source-87112-1-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87112-1-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87112-1-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87112-1-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87112-2-1",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87112-2-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "ba-source-87112-2-3",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:87112",
+        "source_sha256": "1f90077341a2a63e8225e51656bd5de10685dab9a2ceed8419503a1ce4823592",
+        "status": "scoped",
+        "checklist": [
+          "COV-017bb"
+        ],
+        "scope": "All senses and complete native example groups reviewed for background connective bundles 은바/는바/던바, local attached/literal spelling, source-listed prefinals, represented class/owner boundaries and per-entry bare 는바 filtering. Bound noun 바 and its separately spaced modifiers remain distinct.",
+        "remaining": "Contextual background/sense and negative inheritance, wider polite/historical prefinal paradigms, omitted-copula variants, bound-noun composition and independent Korean-language review remain open. A scoped disposition does not certify every generated path.",
+        "evidence": [
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_preserves_local_boundaries_prefinals_and_component_owners"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_sources_preserve_all_senses_and_complete_example_groups"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_dictionary_filters_preserve_source_paths_and_cli_parity"
+          },
+          {
+            "path": "tests/background_ba.rs",
+            "test": "background_ba_checks_each_bare_entry_and_preserves_verb_homonyms"
+          },
+          {
+            "path": "tests/fixtures/ba-sources.json"
+          },
+          {
+            "path": "docs/background-ba-evaluation.json"
+          },
+          {
+            "path": "web/tests/browser.mjs"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "ba-source-87112-1-1",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87112-1-2",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87112-1-3",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87112-1-4",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87112-2-1",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87112-2-2",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-source-87112-2-3",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-지은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-부은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-positive-먹은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-negative-가은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-negative-살은바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-negative-먹바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-boundary-negative-갠바",
+            "judgment": "path"
+          },
+          {
+            "case": "ba-role-negative-먹은바를",
+            "judgment": "path"
+          }
+        ]
       }
     },
     {

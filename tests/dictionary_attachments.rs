@@ -41,6 +41,7 @@ impl Fixture {
             "krdict-naikka.json",
             "krdict-rikka.json",
             "krdict-eumse.json",
+            "krdict-ba.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -61,6 +62,7 @@ impl Fixture {
                         | "krdict-naikka.json"
                         | "krdict-rikka.json"
                         | "krdict-eumse.json"
+                        | "krdict-ba.json"
                 ) {
                     // Full native entries supply written forms absent from older
                     // POS-only fixtures; do not borrow evidence by headword.
@@ -138,7 +140,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (1673, 1570)
+        (1681, 1575)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

@@ -709,6 +709,17 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         continue;
                     }
                 }
+                // KRDict 87110–87113 list distinct local prefinal licenses:
+                // 은바 takes honorific 시; 는바/던바 also take past/modal.
+                // Do not borrow the retrospective bundle's license for 더.
+                if matches!(ending.form, "은바" | "는바" | "던바")
+                    && p.morphs.iter().any(|m| {
+                        m.form != "시"
+                            && (ending.form == "은바" || !matches!(m.form.as_str(), "었" | "겠"))
+                    })
+                {
+                    continue;
+                }
                 // Retrospective 더 has its own following-ending licenses.
                 // These source-reviewed families do not take it, including
                 // bundles that already contain a retrospective component.
@@ -1196,6 +1207,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 p.rules.push("ending".into());
                 if ending.form == "으리다" {
                     p.rules.push("ending.literary_ri".into());
+                }
+                if matches!(ending.form, "은바" | "는바" | "던바") {
+                    p.rules.push("ending.background_ba".into());
                 }
                 if ending.form == "음세" {
                     p.rules.push("ending.volitional_promise".into());
@@ -1781,6 +1795,19 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             {
                 return false;
             }
+            // The existential exception belongs to this ending's owner.
+            if bare
+                && m.form == "는바"
+                && matches!(
+                    class,
+                    Some(PredicateClass::Adjective | PredicateClass::Copula)
+                )
+                && !lemma.text.ends_with("있다")
+                && !lemma.text.ends_with("없다")
+                && lemma.text != "계시다"
+            {
+                return false;
+            }
             if bare_stative_iss && present_declarative(&m.form) {
                 return false;
             }
@@ -1922,7 +1949,10 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
 // Bounded adjective attachment inventory. The known suffix is ㅂ-irregular;
 // arbitrary lexical predicates still retain the engine's regular hypotheses.
 fn dap_suffix_allowed(p: &Predicate) -> bool {
-    if p.morphs.first().is_some_and(|m| m.form == "음세") {
+    if p.morphs
+        .first()
+        .is_some_and(|m| matches!(m.form.as_str(), "음세" | "는바"))
+    {
         return false;
     }
     if p.morphs.first().is_some_and(|m| {
@@ -2206,12 +2236,13 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
 }
 
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
-    // Bare 음세 selects verbs; 나이다/나이까 is verbal/existential.
+    // Bare 음세 selects verbs; 는바 excludes a bare copula.
+    // 나이다/나이까 is verbal/existential.
     // Direct copula examples for the latter instead
     // include a polite prefinal (e.g. 소원이옵나이다); retain those paths.
     if p.morphs
         .first()
-        .is_some_and(|m| literary_na_ending(&m.form) || m.form == "음세")
+        .is_some_and(|m| literary_na_ending(&m.form) || matches!(m.form.as_str(), "음세" | "는바"))
     {
         return;
     }

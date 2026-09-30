@@ -3130,3 +3130,50 @@ packages and the packaged Rust suite pass on x86_64 Linux. The refreshed
 8081 preview passes exact HTTP/CLI checks against the complete dictionary,
 source identity checks and prior plural/humble/question controls; its served
 JavaScript is byte-identical to the browser-tested local bundle.
+
+## Background connectives (COV-017bb)
+
+The [source and individual review](background-ba-evaluation.json) adds canonical
+은바/는바/던바 from four primary grammar entries, preserving all senses and 24
+complete native example groups in 84 complete attributed lexical entries.
+Twenty-two example tokens are directly attested; two joined auxiliary inputs
+are explicitly tolerant structural inferences. NIKL's complete contextual
+answer separately supports joined 확인한바. The report records two corrected
+draft assumptions concerning an unknown lexical negative class and the missing
+unsplit dictionary head 정해지다. They do not become false blanket judgments.
+
+The 98 new raw cases contain 78 required and 20 forbidden paths; 13 separate
+policy cases contain eight required and five forbidden paths. Global ledgers
+now hold 5,294 required / 2,625 forbidden raw judgments and 1,681 / 1,575
+policy judgments. All 546 added candidates across 103 of 10,109 surfaces retain
+full analyses and provenance: 78 match required judgments, five have known
+optional dictionary conflicts, and 463 remain unjudged. Nothing is removed.
+
+The six pinned corpus files have 64 ending-shaped tokens, all lexical 이른바.
+There is no annotated target ending, so no new gold-ending recall gain is
+claimed. All per-token match/recovery records in the four full development/test
+reports are unchanged. Development reports are byte-identical; the test
+summaries have slightly higher mean ambiguity for lexical 이른바. Its three
+new raw paths are retained individually and remain unjudged. The pinned full
+corpus regression gate passes without rewriting any baseline.
+
+Both dictionary filters retain all 179,112 novel records/spans and all previous
+analyses. Two lexical 이른바 occurrences each gain an unjudged 이르다 + 은바
+reading; the adverb identity remains. Debug and Nix release JSONL hashes are
+identical. Three interleaved release runs per version/filter measured headword
+medians of 1.528 seconds before / 1.523 after and compatible medians of 1.514 /
+1.527 seconds, with peak child RSS around 30 MiB. These small samples are
+descriptive and do not establish statistical performance equivalence.
+
+Rust/stress, Clippy/format, pinned corpus, frontend build, full browser and Nix
+CLI/web package and flake checks pass on x86_64 Linux. The packaged complete-dictionary
+HTTP checks cover all new raw/policy cases, both filters, four source IDs and
+prior preview controls. Desktop/mobile screenshots were inspected; selected
+copula/auxiliary components, labels and compatible export are verified. The
+refreshed 8081 preview serves JavaScript identical to the browser-tested bundle.
+The catalog now has 439 canonical forms / 616 source IDs / 662 grammar fixture
+entries; the inventory has 340 scoped / 374 unreviewed / one unresolved gap,
+with 390 catalog-linked and 379 judgment-cited entries. These are coverage
+counts, not a linguistic precision estimate. Bound noun 바 composition,
+omitted-copula variants, wider polite/historical prefinals, negative inheritance,
+contextual sense selection and independent Korean-language review remain open.

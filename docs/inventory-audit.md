@@ -667,3 +667,12 @@ and 375 judgment-cited entries. These counts describe dispositions and links,
 not a precision estimate. Prefinal combinations remain explicitly unknown;
 see [the individual review](eumse-evaluation.json). COV-018l's public-source
 retrieval recheck still leaves 마다 + 에 unresolved.
+
+The COV-017bb background-connective audit reviews KRDict 87110–87113 against
+all senses and 24 complete native example groups, plus exact boundary/prefinal/
+owner regressions and optional per-entry class filtering. All six pinned corpus
+files contain only lexical 이른바 among ending-shaped hits; no annotated ending
+target is claimed. The queue now has 340 scoped, 374 unreviewed and one gap
+across 715 entries, with 390 catalog-linked and 379 judgment-cited entries.
+Bound noun composition, wider paradigms, negative inheritance and independent
+Korean/contextual review remain unresolved. See [individual evidence](background-ba-evaluation.json).

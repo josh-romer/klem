@@ -3458,3 +3458,34 @@ review queue. No blanket required/forbidden prefinal paradigm is inferred from
 the bare native examples. Wider final followers and negative-class inheritance
 also need review. See the [complete sources](../tests/fixtures/eumse-sources.json),
 [boundary/role tests](../tests/eumse.rs) and [individual evaluation](eumse-evaluation.json).
+
+## Background connectives -ㄴ바/-은바/-는바/-던바 (COV-017bb)
+
+KRDict [-ㄴ바](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87110),
+[-은바](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87112),
+[-는바](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87111) and
+[-던바](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=87113)
+list literary connectives presenting a background or ground for the next clause.
+The first pair normalize to 은바, with attached ㄴ and ㄹ deletion or full 은바
+and existing local irregular boundaries. Literal 는바 deletes ㄹ; literal 던바
+retains it. The retrospective 던바 remains a bundle, not 더 plus 은바.
+
+은바 lists bare predicates/copula and 시. 는바 lists verbs, 있다/없다/계시다
+and adjectives ending in 있다/없다, plus 시/었/겠. 던바 lists predicates/copula
+and 시/었/겠. Their licensed prefinals stay with the immediate component owner;
+known adjectives/copulas do not inherit bare 는바 from an earlier verbal component.
+Unknown lexical classes survive as raw hypotheses. The optional dictionary policy
+checks each bare lexical entry, retaining valid verb homonyms and source-listed
+existential exceptions; it does not choose contextual senses.
+
+[NIKL consultation 325710](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&pageIndex=1&qna_seq=325710)
+selects joined 확인한바 for the supplied report context. Its 정해진바 example
+supports a represented 정하다 + 어 + 지다 + 은바 inference; the unsplit
+정해지다 hypothesis remains raw without a KRDict headword. Complete dictionary
+examples preserve their original spacing; two fused auxiliary inputs are explicit
+tolerant inferences. Bound noun 바 has a separate grammatical role and does not
+license particles/copulas on these ending bundles. No omitted-copula recovery is
+added without direct evidence. Wider polite/historical paradigms, bound-noun
+composition, negative inheritance and independent Korean review remain open.
+See [sources](../tests/fixtures/ba-sources.json), [regressions](../tests/background_ba.rs)
+and [individual evaluation](background-ba-evaluation.json).

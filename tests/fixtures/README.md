@@ -1668,3 +1668,12 @@ resultative, question-class and contextual cases remain in the source review.
   MH2_0149-s26, including the original 주+ㅁ세 annotation. The novel occurrence
   맡음세 is unannotated literary evidence; its segmentation is source-backed
   inference. These are agent-authored judgments, not independent Korean review.
+
+- `krdict-ba.json` preserves 84 complete attributed native entries for COV-017bb
+  background connectives, auxiliaries, homonyms and written conjugations. Only
+  RelatedForm and non-English equivalents are omitted. `ba-sources.json` records
+  original export hashes, all 24 complete grammar-entry example groups (22 direct
+  tokens, two explicitly joined auxiliary inputs), raw/policy judgments and all
+  six pinned corpus discovery records. Corpus hits are lexical 이른바; there is
+  no annotated ending target. The NIKL contextual spelling answer is separately
+  attributed; segmentation judgments are agent-authored, not independent review.

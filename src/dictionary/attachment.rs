@@ -33,6 +33,7 @@ pub enum AttachmentRule {
     BareLiteraryDeclarative,
     BareLiteraryQuestion,
     VolitionalPromiseVerb,
+    BareBackgroundVerb,
     HabitualConditionVerb,
     BareCopularEnding,
     BareAdjectivalReport,
@@ -497,6 +498,14 @@ impl Annotation {
                             // adjectives. This finite policy does not infer
                             // restrictions for other question families.
                             Some(AttachmentRule::BareVerbalQuestion)
+                        } else if bare
+                            && form == "는바"
+                            && adjective
+                            && !lemma.text.ends_with("있다")
+                            && !lemma.text.ends_with("없다")
+                            && lemma.text != "계시다"
+                        {
+                            Some(AttachmentRule::BareBackgroundVerb)
                         } else if bare && form == "음세" && adjective {
                             Some(AttachmentRule::VolitionalPromiseVerb)
                         } else if crate::engine::present_declarative(form) && adjective {

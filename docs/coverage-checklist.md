@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bb/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 336 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 378 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 340 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bb/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 374 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -221,7 +221,7 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba implemented; COV-017aw/az remain open.**
+  COV-017ax–ay/017ba–bb implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1211,6 +1211,34 @@ review remains open under the completion review below.
   packaged preview on 8081 is refreshed and verified. Prefinal
   paradigms, negative inheritance, following particles/endings and independent
   Korean-language/contextual review remain open under COV-017/COV-013.
+
+- [x] **COV-017bb — Background connectives -ㄴ바/-은바/-는바/-던바.**
+  All senses and 24 complete native example groups from KRDict 87110–87113
+  support three canonical ending bundles 은바/는바/던바. 은바 uses attached
+  ㄴ with ㄹ deletion or a full vowel boundary; literal 는바 deletes ㄹ and
+  던바 retains it. 은바 accepts listed 시; 는바/던바 accept listed 시/었/겠.
+  Represented copula and adjective owners retain 은바/던바; bare 는바 selects
+  verbs or listed existential exceptions. Optional per-entry dictionary policy
+  identifies bare adjective conflicts while preserving verbal homonyms and
+  있다/없다/계시다 exceptions. Unknown lexical classes remain hypotheses.
+  Evidence: 98 stable `ba-*` raw cases (78 required / 20 forbidden), 13 policy
+  cases (8 required / 5 forbidden), 84 complete attributed native entries,
+  [four regression tests](../tests/background_ba.rs), CLI/library NFC/NFD and
+  filter parity, and browser choices/source labels/export. NIKL consultation
+  325710 explicitly approves 확인한바 in the supplied report context. The
+  [individual comparison](background-ba-evaluation.json) retains all 546 added
+  paths across 103 of 10,109 surfaces with no removals; 463 remain unjudged.
+  Discovery in all six pinned corpus files finds only lexical 이른바, with no
+  annotated target ending. All frozen per-token grouped matches remain; only
+  ambiguity means in the two test summaries change on lexical 이른바. Both
+  filters compare all 179,112 novel records, retaining the lexical adverb and
+  adding one unjudged 이르다 + 은바 path at each of two occurrences, with no
+  removals. Rust/stress, pinned corpus, lint/format, frontend/browser and packaged
+  Nix/flake checks pass on x86_64 Linux; the refreshed 8081 preview matches the tested
+  bundle and complete-dictionary CLI output. Bound noun 바, omitted-copula variants, wider polite/
+  historical combinations, negative inheritance and independent Korean-language/
+  contextual review remain open under COV-017/COV-013; this batch does not
+  certify them or introduce nominal-case attachment to these connectives.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
@@ -2294,7 +2322,7 @@ review remains open under the completion review below.
   and named-entity recognition are not inferred by these conditional hypotheses.
   Broader copula attachment constraints remain COV-020.
 - [x] **COV-015 — Grammar-label and presentation coverage.** **Implemented
-  for all 435 currently emitted canonical grammar forms.** The initial catalog
+  for all 439 currently emitted canonical grammar forms.** The initial catalog
   adds 140 missing labels with source IDs, headwords, and grammatical kinds.
   Reviewed expression entries and bundled/component mappings resolve without
   a general unclassified-POS fallback. Hover notes distinguish bundles,

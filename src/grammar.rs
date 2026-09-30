@@ -612,6 +612,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "더군요",
             "더군",
             "던",
+            "는바",
+            "던바",
             "던데",
             "던데요",
             "던가",
@@ -854,6 +856,8 @@ pub(crate) fn endings() -> &'static [Ending] {
         for (full, short, form, t) in [
             ("은", "", "은", 4),
             ("은데", "데", "은데", 4),
+            // KRDict 87110/87112: background connective, not bound noun 바.
+            ("은바", "바", "은바", 4),
             ("은지", "지", "은지", 4),
             ("은가", "가", "은가", 4),
             ("은가요", "가요", "은가요", 4),
@@ -1296,6 +1300,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.recipient" => {
             "This recipient reading requires a contextually appropriate referent (typically a person or animate/personified entity); lexical and contextual eligibility are not inferred."
+        }
+        "ending.background_ba" => {
+            "Recover literary background connectives -ㄴ바/-은바, -는바 and -던바. Preserve the ending bundle separately from adnominal plus bound noun 바; contextual background and sense are not inferred."
         }
         "ending.volitional_promise" => {
             "Recover promise final -ㅁ세/-음세 as canonical 음세; ㄹ is retained before attached ㅁ. Speaker and contextual suitability are not inferred."

@@ -1,0 +1,440 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019h",
+  "baseline_commit": "c524468",
+  "status": "Partial evidence audit; existing generation is unchanged. Native honorific/question and elapsed-time progressive past paths now have individual source-backed regressions. Further existential question/resultative/contextual judgments remain open.",
+  "native_source": "tests/fixtures/existential-paradigm-sources.json",
+  "native_integrity": {
+    "complete_native_entries": 24,
+    "source_hashes_verified": true,
+    "all_fields_notes_forms_senses_and_examples_preserved": true,
+    "entry_ids": [
+      14950,
+      15983,
+      17749,
+      28943,
+      36563,
+      45609,
+      58272,
+      61190,
+      61346,
+      62595,
+      64728,
+      67860,
+      68796,
+      68797,
+      69579,
+      71463,
+      72239,
+      76231,
+      76235,
+      80329,
+      80344,
+      80638,
+      86921,
+      92542
+    ]
+  },
+  "judgments": {
+    "prefix": "existential-paradigm-",
+    "required": 17,
+    "forbidden": 4,
+    "total": 21
+  },
+  "raw_comparison": {
+    "baseline_commit": "c524468",
+    "baseline_binary": "/nix/store/4hv2gi5x68b3kxpvk52m1379pppx4zr4-klem-0.1.0/bin/klem",
+    "baseline_binary_sha256": "3d139c607198964007b6538913603da772425f869a3c2caa561a9e9ed5a5ae34",
+    "after_binary_sha256": "a2017754ebe1ab77d4f8c5072f27eab0b5a2a9f98216e6a4c8b19a1462e2bd99",
+    "distinct_surfaces": 9944,
+    "changed_surfaces": 0,
+    "changes": [],
+    "runtime_source_diff_empty": true
+  },
+  "corpus": [
+    {
+      "corpus": "kaist",
+      "input": "tests/fixtures/kaist-existential-paradigms.conllu",
+      "sha256": "e515bfc57b3cb1b75a5bc9ea31f3621ae745a2cd5dfbd57937940eff40b71914",
+      "original_source": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+      "original_source_sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "original_sentences_unchanged": true,
+      "summary": {
+        "schema_version": 2,
+        "input_sha256": "e515bfc57b3cb1b75a5bc9ea31f3621ae745a2cd5dfbd57937940eff40b71914",
+        "corpus": "kaist",
+        "input": "tests/fixtures/kaist-existential-paradigms.conllu",
+        "rows": 19,
+        "excluded_rows": 4,
+        "malformed_rows": 0,
+        "converted_rows": 15,
+        "unsupported": {},
+        "grouped_matches": 15,
+        "gold_lemmas": 15,
+        "recovered_gold_lemmas": 15,
+        "transformed_rows": 11,
+        "transformed_matches": 11,
+        "adapter_coverage": 1.0,
+        "grouped_lemma_recall": 1.0,
+        "lemma_recall": 1.0,
+        "transformed_grouped_recall": 1.0,
+        "mean_candidates": 6.2,
+        "p95_candidates": 12,
+        "max_candidates": 12,
+        "common_misses": []
+      }
+    },
+    {
+      "corpus": "gsd",
+      "input": "tests/fixtures/gsd-existential-paradigms.conllu",
+      "sha256": "89ee68d68bd54db9fd80cf0dbf29d3c1cf94a9d3e9419dc3772f90f612ea03ee",
+      "original_source": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+      "original_source_sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+      "original_sentences_unchanged": true,
+      "summary": {
+        "schema_version": 2,
+        "input_sha256": "89ee68d68bd54db9fd80cf0dbf29d3c1cf94a9d3e9419dc3772f90f612ea03ee",
+        "corpus": "gsd",
+        "input": "tests/fixtures/gsd-existential-paradigms.conllu",
+        "rows": 20,
+        "excluded_rows": 2,
+        "malformed_rows": 0,
+        "converted_rows": 18,
+        "unsupported": {},
+        "grouped_matches": 18,
+        "gold_lemmas": 18,
+        "recovered_gold_lemmas": 18,
+        "transformed_rows": 11,
+        "transformed_matches": 11,
+        "adapter_coverage": 1.0,
+        "grouped_lemma_recall": 1.0,
+        "lemma_recall": 1.0,
+        "transformed_grouped_recall": 1.0,
+        "mean_candidates": 6.555555555555555,
+        "p95_candidates": 12,
+        "max_candidates": 12,
+        "common_misses": []
+      }
+    }
+  ],
+  "primary_reviews": [
+    {
+      "url": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8281",
+      "published": "2020-01-16",
+      "html_sha256": "9e602c3f94f1a419e6c05a666f60fd6d072c767761b240c82bc291d5af189a07",
+      "direct_surface": "지켜보고 있은 지",
+      "review": "The full NIKL answer approves this progressive construction before elapsed-time 지, distinguishing it from present 있는. This defeats a blanket auxiliary past-adnominal exclusion; it does not license every temporal context or resultative reading."
+    }
+  ],
+  "prior_reviews": "docs/present-license-evaluation.json",
+  "resolutions": [
+    {
+      "prior": "present-license-existential-adnominal-question",
+      "surface": "먹고있은",
+      "verdict": "required possible elapsed-time progressive reading",
+      "cases": [
+        "existential-paradigm-18-지켜보고있은",
+        "existential-paradigm-19-먹고있은"
+      ],
+      "reason": "Direct NIKL approval of progressive 지켜보고 있은 지 defeats an auxiliary-wide past-adnominal ban. The second path is a structural continuation; elapsed-time suitability needs context."
+    },
+    {
+      "prior": "present-license-existential-adnominal-question",
+      "surface": "먹고계시으냐며",
+      "verdict": "forbidden exact represented vowel-final owner/allomorph",
+      "cases": [
+        "existential-paradigm-20-먹고계시으냐며"
+      ],
+      "reason": "The full -으냐며 entry explicitly requires a consonant-final owner. This spelling boundary does not decide broader existential question class."
+    },
+    {
+      "prior": "present-license-existential-honorific",
+      "surface": "밟고있으신데요",
+      "verdict": "required source-backed morphological hypothesis",
+      "cases": [
+        "existential-paradigm-00-밟고있으신데요"
+      ],
+      "reason": "Native 왼발 example directly combines progressive auxiliary 있다 with 시. Fused input is inferred; broader direct/indirect honorification is not decided from this example."
+    }
+  ],
+  "unjudged_followups": [
+    {
+      "surface": "먹고있으신다",
+      "lemmas": [
+        "먹다",
+        "있다"
+      ],
+      "morphemes": [
+        "고",
+        "시",
+        "는다"
+      ],
+      "status": "unjudged-context",
+      "represented_path_present": true,
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.attached",
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고있으신다네",
+      "lemmas": [
+        "먹다",
+        "있다"
+      ],
+      "morphemes": [
+        "고",
+        "시",
+        "는다네"
+      ],
+      "status": "unjudged-context",
+      "represented_path_present": true,
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "먹다",
+              "kind": "predicate"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "고",
+              "kind": "ending"
+            },
+            {
+              "form": "시",
+              "kind": "prefinal"
+            },
+            {
+              "form": "는다네",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.attached",
+            "boundary.eu",
+            "boundary.regular",
+            "ending",
+            "ending.reporting_ne",
+            "prefinal.honorific"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "앉아있은",
+      "lemmas": [
+        "앉다",
+        "있다"
+      ],
+      "morphemes": [
+        "어",
+        "은"
+      ],
+      "status": "unjudged-resultative-temporal",
+      "represented_path_present": true,
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "앉다",
+              "kind": "predicate"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "boundary.regular",
+            "ending"
+          ],
+          "unchanged": false
+        }
+      ]
+    },
+    {
+      "surface": "먹고있으냐며",
+      "lemmas": [
+        "먹다",
+        "있다"
+      ],
+      "morphemes": [
+        "고",
+        "으냐며"
+      ],
+      "status": "unjudged-question-class",
+      "represented_path_present": false,
+      "analyses": []
+    },
+    {
+      "surface": "눌러있은",
+      "lemmas": [
+        "누르다",
+        "있다"
+      ],
+      "morphemes": [
+        "어",
+        "은"
+      ],
+      "status": "unjudged-auxiliary-versus-lexical-role",
+      "represented_path_present": true,
+      "analyses": [
+        {
+          "lemmas": [
+            {
+              "text": "누르다",
+              "kind": "predicate"
+            },
+            {
+              "text": "있다",
+              "kind": "auxiliary"
+            }
+          ],
+          "morphemes": [
+            {
+              "form": "어",
+              "kind": "ending"
+            },
+            {
+              "form": "은",
+              "kind": "ending"
+            }
+          ],
+          "rules": [
+            "auxiliary",
+            "boundary.eu",
+            "ending",
+            "irregular.reu"
+          ],
+          "unchanged": false,
+          "spelling_paths": [
+            [
+              {
+                "morpheme_index": 0,
+                "class": "reu_doubling"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "rust": "Passed full offline feature-web Rust/stress suite and final focused 21-case tests; the final Nix package reran and passed the complete suite, including all added cases.",
+    "clippy": "Passed all targets with warnings denied before the final data-only additions; format and diff checks passed.",
+    "browser": "Passed final complete 21-case HTTP/browser suite, both filters, exact HTTP/CLI annotation parity, ordered display/export and inspected desktop/mobile screenshots.",
+    "nix": "Passed x86_64-linux default and web builds, the final complete packaged Rust suite, and flake checks including all nine inventory tests and offline queue verification. Other declared platforms were not executed.",
+    "packaged_runtime": {
+      "cases": 21,
+      "required": 17,
+      "forbidden": 4,
+      "full_dictionary": "data/dictionaries/krdict/krdict.db",
+      "http_cli_exact_parity": true,
+      "both_filters_passed": true,
+      "preview": "http://127.0.0.1:8081",
+      "cli_sha256": "3d139c607198964007b6538913603da772425f869a3c2caa561a9e9ed5a5ae34",
+      "web_sha256": "8824410538db6376992a2d39c87d52236288e273f2c1e56f3f063d361f161ae5",
+      "release_executables_byte_identical_to_previous_package": true,
+      "preview_refresh_needed": false
+    },
+    "inventory": "Corrected source-entry references after the verifier rejected cross-entry citations; regenerated and verified the complete queue. Totals remain 715 entries: 334 scoped, 380 unreviewed and one observed gap, with 373 entries carrying judgment citations."
+  },
+  "limitations": [
+    "Complete native fixtures preserve provider data; role compatibility is the finite dictionary policy, not contextual grammatical acceptability.",
+    "Four unchanged complete training sentences recover all 15 KAIST and 18 GSD converted tokens; their target annotations are lexical, not auxiliary past gold.",
+    "Runtime inputs are unchanged; the 9,944-surface before/after comparison is byte-identical. No new performance claim, novel precision estimate or corpus recall improvement.",
+    "The older naturalness/honorification consultation remains in the prior audit; its live URL returned HTTP 404 during this follow-up and was not represented as a newly fetched full answer.",
+    "Independent Korean review and remaining question/resultative/temporal senses stay open."
+  ],
+  "frozen_corpora": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "baseline_check_passed": true,
+      "byte_identical_to_previous_committed_evaluation": true,
+      "sha256": "8d9f49a6b97b605fbb3525c55105b642343d2c2ea52e6e91d83a05bc2526a056",
+      "grouped_matches": 22133,
+      "converted_rows": 22220
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "baseline_check_passed": true,
+      "byte_identical_to_previous_committed_evaluation": true,
+      "sha256": "aa73f41430d01f5b61ce378de70a77b7f6d33252206206e961dfbaff96399158",
+      "grouped_matches": 24391,
+      "converted_rows": 24490
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "baseline_check_passed": true,
+      "byte_identical_to_previous_committed_evaluation": true,
+      "sha256": "9d46c652f832173428a3556e9850a60ddca07c6ea6d07f481bf9b6ad196be498",
+      "grouped_matches": 9848,
+      "converted_rows": 9989
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "baseline_check_passed": true,
+      "byte_identical_to_previous_committed_evaluation": true,
+      "sha256": "d9e52fa182b79ad00b3324a007ad2b8fdf296281d5c6babe9d1c0dfeabca7c86",
+      "grouped_matches": 9737,
+      "converted_rows": 9871
+    }
+  ]
+}

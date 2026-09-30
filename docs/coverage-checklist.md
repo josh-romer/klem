@@ -1671,6 +1671,22 @@ review remains open under the completion review below.
   honorific or past-adnominal reading. Keep lexical 있다 and auxiliary 있다/계시다
   senses distinct. COV-019i resolves the missing internal-particle path
   먹고는있다네 without settling these existential paradigms.
+  The [native-paradigm review](existential-paradigm-review.json) now records
+  direct auxiliary honorification in `밟고 있으신데요`, honorific `계신가`
+  questions, and NIKL’s explicit approval of progressive `지켜보고 있은 지`
+  for elapsed time. Twenty-one stable `existential-paradigm-*` cases (17
+  required / 4 forbidden), 24 complete native entries and four unchanged
+  training sentences protect these paths and their owner/allomorph boundaries.
+  `먹고있은` now retains a source-backed possible past reading; the exact
+  vowel-final `계시 + 으냐며` boundary is forbidden. These judgments do not
+  settle `앉아있은`, consonant existential `으냐며`, contextual honorification
+  or auxiliary-versus-lexical sense choice. All 15 KAIST and 18 GSD converted
+  fixture tokens match; the target annotations are lexical. Runtime rules are
+  unchanged, with zero changes across 9,944 comparison surfaces. This item
+  remains open for those explicitly recorded judgments.
+  Rust/stress, Clippy, final browser/display/export, complete-dictionary
+  HTTP/CLI checks and x86_64 Linux Nix package/flake checks pass. The release
+  executables are byte-identical to the preceding packages.
 
 - [x] **COV-019i — Contrastive particles before continuative auxiliaries.**
   Added 고 + 는 and 어 + 는 before 있다/계시다, including existing 곤

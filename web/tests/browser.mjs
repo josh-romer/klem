@@ -294,6 +294,7 @@ try {
   const eya = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-eya.json"), "utf8"));
   const vocative = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-vocative.json"), "utf8"));
   const polite = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite.json"), "utf8"));
+  const existentialParadigms = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-existential-paradigms.json"),"utf8"));
   const ryeogoExpansions = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-ryeogo-expansions.json"),"utf8"));
   const ryeogoLicenses = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-ryeogo-licenses.json"), "utf8"));
   const politeCopula = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-polite-copula.json"), "utf8"));
@@ -345,6 +346,7 @@ try {
       ...politeCopula.LexicalResource.Lexicon.LexicalEntry,
       ...ryeogoLicenses.LexicalResource.Lexicon.LexicalEntry,
       ...ryeogoExpansions.LexicalResource.Lexicon.LexicalEntry,
+      ...existentialParadigms.LexicalResource.Lexicon.LexicalEntry,
       ...humble.LexicalResource.Lexicon.LexicalEntry,
       ...shortRecipient.LexicalResource.Lexicon.LexicalEntry,
       ...auxiliaryClasses.LexicalResource.Lexicon.LexicalEntry,
@@ -1189,6 +1191,32 @@ try {
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-ryeogo-licenses-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const existentialCases = recipientLedger.cases.filter(c => c.id.startsWith("existential-paradigm-"));
+  assert.equal(existentialCases.length,21);
+  for (const c of existentialCases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    const cli=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+    const {dictionary,...analysis}=cli;
+    assert.deepEqual(token.analysis,analysis);assert.deepEqual(token.dictionary,dictionary);
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a=>danikkaPath(a,j)),j.verdict==="required",c.id);
+  }
+  const existentialText="밟고있으신데요 구상하고계신가요 살아계신가";
+  await submit(page,existentialText);await waitHeading(page,"밟고있으신데요");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [i,forms]of [[0,["밟","고","있","시","은데","요"]],[1,["구상하","고","계시","은가요"]],[2,["살","어","계시","은가"]]]) {
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+  }
+  const existentialDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const existentialExport=JSON.parse(await readFile(await(await existentialDownload).path(),"utf8"));
+  const existentialExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:existentialText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(existentialExport.records,existentialExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-existential-paradigms-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-existential-paradigms-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const expandedRaw = recipientLedger.cases.filter(c => c.id.startsWith("intention-expanded-raw-"));

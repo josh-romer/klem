@@ -2561,9 +2561,10 @@
       "checklist": [
         "COV-019f",
         "COV-019g",
-        "COV-019i"
+        "COV-019i",
+        "COV-019h"
       ],
-      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks.",
+      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks. COV-019h now preserves source-attested auxiliary honorification and honorific questions, plus a possible progressive bare past adnominal before elapsed-time 지. Fused spellings are structural continuations and do not establish contextual sense selection.",
       "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open. COV-019h tracks the remaining prefinal and existential question/adnominal paradigms.",
       "evidence": [
         {
@@ -2602,6 +2603,24 @@
         },
         {
           "path": "docs/continuative-topic-evaluation.json"
+        },
+        {
+          "path": "tests/existential_paradigms.rs",
+          "test": "native_existential_paths_preserve_owner_boundaries_and_allomorphs"
+        },
+        {
+          "path": "tests/existential_paradigms.rs",
+          "test": "native_existential_dictionary_roles_and_cli_parity_survive_both_filters"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "existential_lexical_gold_stays_distinct_from_auxiliary_inference"
+        },
+        {
+          "path": "docs/existential-paradigm-review.json"
+        },
+        {
+          "path": "tests/fixtures/existential-paradigm-sources.json"
         }
       ],
       "judgments": [
@@ -3188,6 +3207,22 @@
         {
           "case": "continuative-topic-inherited-bare-present",
           "judgment": "path"
+        },
+        {
+          "case": "existential-paradigm-07-먹고있었던",
+          "judgment": "path"
+        },
+        {
+          "case": "existential-paradigm-10-먹었고있는",
+          "judgment": "path"
+        },
+        {
+          "case": "existential-paradigm-13-앉아있는",
+          "judgment": "path"
+        },
+        {
+          "case": "existential-paradigm-14-먹고있는",
+          "judgment": "path"
         }
       ]
     },
@@ -3198,9 +3233,10 @@
       "checklist": [
         "COV-019f",
         "COV-019g",
-        "COV-019i"
+        "COV-019i",
+        "COV-019h"
       ],
-      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks.",
+      "scope": "Both 어 and 고 select a verb at the immediately preceding represented role. Reject known adjectives, inherited negative adjective classes, explicit 답다 and copulas; preserve known verb paths, class changes through 하다, and unknown lexical heads. Specific expression notes supplement the auxiliary entry. Preserve stative plain-다 readings across the reviewed reporting families, including inherited negatives; distinguish bare auxiliary 있다 declaratives from lexical 있다 and 계시다 paradigms. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks. COV-019h now preserves source-attested auxiliary honorification and honorific questions, plus a possible progressive bare past adnominal before elapsed-time 지. Fused spellings are structural continuations and do not establish contextual sense selection.",
       "remaining": "Transitivity, lexical subsets, aspectual/contextual suitability, further prefinal/particle constraints and independent review remain open. COV-019h tracks the remaining prefinal and existential question/adnominal paradigms.",
       "evidence": [
         {
@@ -3239,6 +3275,24 @@
         },
         {
           "path": "docs/continuative-topic-evaluation.json"
+        },
+        {
+          "path": "tests/existential_paradigms.rs",
+          "test": "native_existential_paths_preserve_owner_boundaries_and_allomorphs"
+        },
+        {
+          "path": "tests/existential_paradigms.rs",
+          "test": "native_existential_dictionary_roles_and_cli_parity_survive_both_filters"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "existential_lexical_gold_stays_distinct_from_auxiliary_inference"
+        },
+        {
+          "path": "docs/existential-paradigm-review.json"
+        },
+        {
+          "path": "tests/fixtures/existential-paradigm-sources.json"
         }
       ],
       "judgments": [
@@ -3388,6 +3442,14 @@
         },
         {
           "case": "continuative-topic-omitted-copula",
+          "judgment": "path"
+        },
+        {
+          "case": "existential-paradigm-03-보고계셨다",
+          "judgment": "path"
+        },
+        {
+          "case": "existential-paradigm-09-앉아계셨던",
           "judgment": "path"
         }
       ]

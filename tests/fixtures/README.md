@@ -1640,3 +1640,19 @@ variants are structural continuations, not new annotated gold. See the
 [source audit](../../docs/ryeogo-expansion-source-audit.json) and
 [evaluation](../../docs/ryeogo-expansions-evaluation.json) for the separate
 linguist's usage, ownership constraints and unresolved licenses.
+
+
+`krdict-existential-paradigms.json` preserves 24 complete native Korean Basic
+Dictionary entries (NIKL, September 2026 pinned LMF exports; CC BY-SA 2.0 KR).
+Every native field, form, note, sense and example is retained; RelatedForm and
+non-English equivalents are omitted. `existential-paradigm-sources.json`
+records original export hashes and direct examples separately from inferred
+joined spellings. The NIKL elapsed-time consultation is paraphrased and linked;
+its entire HTML is not redistributed. See `docs/existential-paradigm-review.json`.
+
+`kaist-existential-paradigms.conllu` and `gsd-existential-paradigms.conllu` copy
+four complete, unchanged training sentences from the pinned UD Korean KAIST
+and GSD exports, retaining their original licenses and attribution above.
+The target lexical tokens are 있은, 있으신 and 계신가; they do not supply
+auxiliary past-adnominal gold. All 33 converted tokens match. Unresolved
+resultative, question-class and contextual cases remain in the source review.

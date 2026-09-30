@@ -1,0 +1,666 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-019h",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary, September 2026 pinned LMF exports. Complete entries and English equivalents; RelatedForm and other-language equivalents omitted.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "entry_ids": [
+    14950,
+    15983,
+    17749,
+    28943,
+    36563,
+    45609,
+    58272,
+    61190,
+    61346,
+    62595,
+    64728,
+    67860,
+    68796,
+    68797,
+    69579,
+    71463,
+    72239,
+    76231,
+    76235,
+    80329,
+    80344,
+    80638,
+    86921,
+    92542
+  ],
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "direct_construction_entries": [
+    67860,
+    14950,
+    80638,
+    61346,
+    92542
+  ],
+  "raw_cases": [
+    {
+      "id": "existential-paradigm-00-밟고있으신데요",
+      "surface": "밟고있으신데요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밟다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "시",
+            "은데",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-67860",
+          "reason": "Joined structural continuation of the complete native 밟고 있으신데요 example; source spacing is preserved in the fixture."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-01-구상하고계신가요",
+      "surface": "구상하고계신가요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "구상하다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "은가요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-14950",
+          "reason": "Joined structural continuation of the complete native 구상하고 계신가요 example."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-02-살아계신가",
+      "surface": "살아계신가",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "은가"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-80638",
+          "reason": "Joined structural continuation of native 살아 계신가; a bare verb POS does not eliminate the honorific question."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-03-보고계셨다",
+      "surface": "보고계셨다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "보다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-61346",
+          "reason": "Joined structural continuation of native 보고 계셨다; the past prefinal belongs to the auxiliary."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-04-살고있느냐니",
+      "surface": "살고있느냐니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "느냐니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-92542",
+          "reason": "Joined structural continuation of native 살고 있느냐니, preserving the full reported question."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-05-있으신",
+      "surface": "있으신",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "은"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-gsd",
+          "reason": "Unchanged GSD train-s4069 token 5 explicitly annotates 있+으시+ㄴ; this is lexical, not auxiliary gold."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-06-있은",
+      "surface": "있은",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-gsd",
+          "reason": "Unchanged GSD train-s3670 token 4 annotates lexical past 있+은; present auxiliary restrictions must not erase it."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-07-먹고있었던",
+      "surface": "먹고있었던",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "었",
+            "던"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-62595",
+          "reason": "Morphological ownership inference from the native auxiliary and past examples; not an attested fused corpus token."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-08-먹고있겠느냐",
+      "surface": "먹고있겠느냐",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "겠",
+            "느냐"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-76231",
+          "reason": "The question entry explicitly permits 겠; the modal belongs to the immediately following auxiliary owner."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-09-앉아계셨던",
+      "surface": "앉아계셨던",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "앉다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "던"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-61346",
+          "reason": "Morphological continuation of the native auxiliary state sense and past forms, retaining local tense ownership."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-10-먹었고있는",
+      "surface": "먹었고있는",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "었",
+            "고",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-62595",
+          "reason": "Earlier lexical past does not replace the following auxiliary present adnominal; morphological inference."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-11-먹고계시느냐",
+      "surface": "먹고계시느냐",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "느냐"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-76231",
+          "reason": "The question entry explicitly lists 계시다; joined auxiliary continuation is inferred."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-12-먹고계신가",
+      "surface": "먹고계신가",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "은가"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-14950",
+          "reason": "Morphological continuation of directly attested honorific auxiliary 은가 question, without selecting a contextual sense."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-13-앉아있는",
+      "surface": "앉아있는",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "앉다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-62595",
+          "reason": "Native resultative auxiliary pattern and listed 있는 inflection; joined lexical selection remains contextual."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-14-먹고있는",
+      "surface": "먹고있는",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-62595",
+          "reason": "Native progressive auxiliary pattern and listed 있는 inflection; fused spacing is an input hypothesis."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-15-먹고계시으냐",
+      "surface": "먹고계시으냐",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "으냐"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "existential-paradigm-76235",
+          "reason": "The vowel-final represented 계시 owner cannot take the consonant-only 으냐 allomorph."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-16-먹고계시은",
+      "surface": "먹고계시은",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "existential-paradigm-80344",
+          "reason": "The vowel-final represented 계시 owner cannot take the consonant-only 은 allomorph."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-17-먹고있시다",
+      "surface": "먹고있시다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "시",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "existential-paradigm-80329",
+          "reason": "The consonant-final represented 있 owner needs the 으시 surface; this does not reject unknown lexical stems."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-18-지켜보고있은",
+      "surface": "지켜보고있은",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "지켜보다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-elapsed",
+          "reason": "Joined structural continuation of NIKL’s directly approved 지켜보고 있은 지 elapsed-time construction. The 원문 spacing and elapsed-time context remain in the source review."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-19-먹고있은",
+      "surface": "먹고있은",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "existential-paradigm-elapsed",
+          "reason": "Morphological continuation of the directly approved progressive 고 있다 + 은 elapsed-time construction; this preserves a possible past reading, not a present-adnominal or context-free acceptability claim."
+        }
+      ]
+    },
+    {
+      "id": "existential-paradigm-20-먹고계시으냐며",
+      "surface": "먹고계시으냐며",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "계시다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "으냐며"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "existential-paradigm-86921",
+          "reason": "Resolve this prior unjudged spelling boundary only: KRDict 86921 requires a consonant-final owner; represented 계시 is vowel-final. Unknown lexical alternatives and valid 계시 questions remain separate."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Joined spelling is inferred from the original spaced native examples.",
+    "Lexical corpus annotations do not certify auxiliary past adnominals.",
+    "No blanket auxiliary honorific ban or new existential question class judgment.",
+    "Other bare auxiliary adnominal and consonant-question paths remain unjudged."
+  ],
+  "external_reviews": [
+    {
+      "url": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8281",
+      "published": "2020-01-16",
+      "html_sha256": "9e602c3f94f1a419e6c05a666f60fd6d072c767761b240c82bc291d5af189a07",
+      "direct_surface": "지켜보고 있은 지",
+      "review": "The full NIKL answer approves this progressive construction before elapsed-time 지, distinguishing it from present 있는. This defeats a blanket auxiliary past-adnominal exclusion; it does not license every temporal context or resultative reading."
+    }
+  ]
+}

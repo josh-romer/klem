@@ -3,6 +3,36 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn existential_lexical_gold_stays_distinct_from_auxiliary_inference() {
+    for (corpus, input, cases) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-existential-paradigms.conllu").as_slice(),
+            vec![
+                ("id:MH2_0031-s1/4", "있은", "있다"),
+                ("id:MH2_0083-s114/4", "계신가", "계시다"),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-existential-paradigms.conllu").as_slice(),
+            vec![
+                ("id:train-s3670/4", "있은", "있다"),
+                ("id:train-s4069/5", "있으신", "있다"),
+            ],
+        ),
+    ] {
+        let report = corpus::evaluate(input, corpus, "existential-paradigms").unwrap();
+        for (id, surface, lemma) in cases {
+            let case = &report.cases[id];
+            assert_eq!(case.surface, surface);
+            assert_eq!(case.expected, [lemma]);
+            assert!(case.matched, "{id}");
+        }
+    }
+}
+
+#[test]
 fn copular_intention_preserves_the_original_kaist_training_counterexample() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-ryeogo-copulas.conllu").as_slice(),

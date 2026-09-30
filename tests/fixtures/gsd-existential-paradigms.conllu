@@ -1,0 +1,28 @@
+# sent_id = train-s3670
+# text = 러시아는 일본과의 전투가 있은 지 8일 후 전쟁을 선포하였다.
+# translit = .reo.si.a.neun .il.bon.gwa.yi .jeon.tu.ga .iss.eun .ji 8.il .hu .jeon.jaeng.eul .seon.po.ha.yeoss.da.
+1	러시아는	러시아+는	NOUN	NNP+JX	_	9	nsubj	_	Translit=.reo.si.a.neun|LTranslit=.reo.si.a+.neun
+2	일본과의	일본+과+의	ADV	NNP+JKB+JKG	_	4	advmod	_	Translit=.il.bon.gwa.yi|LTranslit=.il.bon+.gwa+.yi
+3	전투가	전투+가	NOUN	NNG+JKS	_	4	nsubj	_	Translit=.jeon.tu.ga|LTranslit=.jeon.tu+.ga
+4	있은	있+은	VERB	VV+ETM	_	6	advcl	_	Translit=.iss.eun|LTranslit=.iss+.eun
+5	지	지	NOUN	NNB	_	4	obl	_	OrigDeprel=mark|Translit=.ji|LTranslit=.ji
+6	8일	8+일	NOUN	SN+NNB	_	9	nmod	_	Translit=8.il|LTranslit=8+.il
+7	후	후	ADP	NNG	_	6	case	_	Translit=.hu|LTranslit=.hu
+8	전쟁을	전쟁+을	NOUN	NNG+JKO	_	9	obj	_	Translit=.jeon.jaeng.eul|LTranslit=.jeon.jaeng+.eul
+9	선포하였다	선포+하+았+다	VERB	NNG+XSV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.seon.po.ha.yeoss.da|LTranslit=.seon.po+.ha+.ass+.da
+10	.	.	PUNCT	SF	_	9	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s4069
+# text = 저 뿐만 아니라 생각 있으신 분들은 꼭 가보시기 바랍니다.
+# translit = .jeo .bbun.man .a.ni.ra .saeng.gag .iss.eu.sin .bun.deul.eun .ggog .ga.bo.si.gi .ba.rab.ni.da.
+1	저	저	PRON	MM	_	8	advcl	_	Translit=.jeo|LTranslit=.jeo
+2	뿐만	뿐+만	NOUN	NNB+JX	_	1	flat	_	Translit=.bbun.man|LTranslit=.bbun+.man
+3	아니라	아니+라	VERB	VCN+EC	_	1	fixed	_	Translit=.a.ni.ra|LTranslit=.a.ni+.ra
+4	생각	생각	NOUN	NNG	_	5	nsubj	_	Translit=.saeng.gag|LTranslit=.saeng.gag
+5	있으신	있+으시+ㄴ	VERB	VV+EP+ETM	_	6	acl:relcl	_	Translit=.iss.eu.sin|LTranslit=.iss+.eu.si+ㄴ
+6	분들은	분+들+은	NOUN	NNB+XSN+JX	_	8	nsubj	_	Translit=.bun.deul.eun|LTranslit=.bun+.deul+.eun
+7	꼭	꼭	ADV	MAG	_	8	advmod	_	Translit=.ggog|LTranslit=.ggog
+8	가보시기	가보+시기	NOUN	NNG+NNG	_	9	obj	_	Translit=.ga.bo.si.gi|LTranslit=.ga.bo+.si.gi
+9	바랍니다	바라+ㅂ니다	VERB	VV+EF	_	0	root	_	SpaceAfter=No|Translit=.ba.rab.ni.da|LTranslit=.ba.ra+ㅂ.ni.da
+10	.	.	PUNCT	SF	_	9	punct	_	Translit=.|LTranslit=.
+

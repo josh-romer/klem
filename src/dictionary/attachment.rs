@@ -22,6 +22,9 @@ pub enum DictionaryFilter {
 #[serde(rename_all = "snake_case")]
 pub enum AttachmentRule {
     LexicalRole,
+    /// Recorded origin or individually reviewed lexical identity conflicts
+    /// with the independently sourced bound root.
+    DerivationalRoot,
     PresentDeclarativeVerb,
     BareAdjectivalQuestion,
     NegativeCopulaCommand,
@@ -458,6 +461,28 @@ impl Annotation {
                     if status == Compatibility::Incompatible {
                         conflicts.push(AttachmentConflict {
                             rule: AttachmentRule::LexicalRole,
+                            morpheme_index: None,
+                        });
+                    }
+                    if *index == 1
+                        && analysis.rules.iter().any(|r| r == "derivation.nominal.root_compound")
+                        && let Some(&(_, _, _, expected)) = crate::grammar::NOUN_I_ROOT_COMPOUNDS
+                            .iter().find(|&&(_, left, root, _)| {
+                                analysis.lemmas[0].text == left && lemma.text == root
+                            })
+                        && (matched.origins.as_ref().is_some_and(|origins|
+                            !origins.is_empty() && !origins.iter().any(|origin| origin == expected))
+                            // The native 선 matchmaking entry has no recorded
+                            // origin. Its independently reviewed full senses
+                            // identify marriage introductions and debuts, not the fan root.
+                            // No conclusion is drawn from origin absence alone.
+                            || (matched.entry.id == "krdict:63243"
+                                && matched.entry.headword == "선"
+                                && matched.entry.pos == "명사"))
+                    {
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::DerivationalRoot,
                             morpheme_index: None,
                         });
                     }

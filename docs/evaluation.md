@@ -3687,3 +3687,32 @@ Every packaged API case, three browser exports and inspected desktop/mobile
 views pass. Finer repeated nominalization, 팔푼이 number/unit formation, historical
 relationships and independent review remain required in the original seven-form
 [review plan](noun-formation-review-plan.json). COV-022l stays open.
+
+## Sourced fan-root formation (partial COV-022l)
+
+The [source audit](noun-fan-source-audit.json) and [evaluation](noun-fan-evaluation.json)
+verify 허풍 + 선(扇) + 이 beside grouped/whole nouns. Nineteen complete native
+entries retain all noun-suffix senses/44 groups, five 선 homonyms, origins and
+both complete matchmaking/debut senses of originless 63243. Zero training
+matches produce no new corpus gold. Five tests/20 cases (17 required / 3
+forbidden) bring the ledger to 7,758 required / 3,218 forbidden. All 677 Rust
+tests, pinned corpus, lint/format, frontend/full browser, Nix, 120-case packaged
+API and local-preview checks pass. Across 13,628 NFC/NFD inputs raw/headword
+each add 36 paths (34 required / 2 unjudged); compatible outputs remain
+unchanged. Stable raw IDs/full analyses and filtered references retain every
+addition and disposition. No readings are removed or previous lookup assessments
+changed. Four full corpus reports match preceding committed hashes; all five
+179,112-record novel outputs are byte-identical, including spacing modes.
+Packaged/debug novel hashes agree. Three interleaved release runs give headword
+medians 1.62/1.62 seconds and compatible medians 1.58/1.62 seconds; after maximum
+RSS is 29,884/29,656 KiB. These are descriptive local observations, not a
+universal throughput or statistical equivalence claim.
+
+The actual new API root analysis against previous immutable UI assets exposed
+line and adverb-forming-suffix hints. Current assets show Fan (bound root), link
+the primary KBS explanation and use noun-suffix entry 88924. Ordered components,
+later copula ownership, three exact CLI exports and inspected desktop/mobile
+views pass. Four recorded other origins and independently reviewed lexical
+identity of 63243 conflict only for the finite root slot; all native entries
+remain. Missing/older origin evidence is otherwise unknown. Original COV-022l
+finer formation/history requirements and independent review remain open.

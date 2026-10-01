@@ -21,6 +21,7 @@ export interface EntrySummary {
 }
 export interface EntryMatch extends EntrySummary {
   pos_compatibility: string;
+  origins?: string[];
   reu?: { eu_deletion: string[]; rieul_doubling: string[]; reo: string[]; uncontracted: string[] };
   hieut?: { regular: string[]; irregular: string[] }; digeut?: { regular: string[]; irregular: string[] }; siot?: { regular: string[]; irregular: string[] }; bieup?: { regular: string[]; irregular: string[] };
 }

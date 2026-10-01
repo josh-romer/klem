@@ -164,6 +164,12 @@ pub(crate) const NOUN_I_PREFIX_FORMS: &[(&str, &str, &str, &str)] = &[
     ("얼간이", "얼", "간", "derivation.nominal.prefix_eol"),
 ];
 
+// KBS's primary formation explanation: 虛風 + 扇 + 이. 扇 is a bound
+// Chinese root here, not one of KRDict's unrelated standalone 선 headwords.
+// Preserve their origins as evidence without making a general Hanja splitter.
+pub(crate) const NOUN_I_ROOT_COMPOUNDS: &[(&str, &str, &str, &str)] =
+    &[("허풍선이", "허풍", "선", "扇")];
+
 // Individual source-conflict formations: an adnominal ending is part of the
 // listed noun base, not permission to attach a noun suffix to any inflection.
 // The whole pre-suffix base remains an independent source-listed hypothesis.
@@ -1585,6 +1591,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "derivation.nominal.prefix_eol" => {
             "Retain the finite 얼간이 reading as prefix 얼- plus nominal 간 plus noun-forming 이, alongside the independently attested 얼간 noun base and whole word. The prefix source explicitly lists 얼간; all 간 homonyms remain without choosing a contextual sense or historical meaning."
+        }
+        "derivation.nominal.root_compound" => {
+            "Retain the finite 허풍선이 formation as nominal 허풍 plus bound root 선 (扇, fan) before noun-forming 이, following the primary KBS explanation. Whole 허풍선 and 허풍선이 remain. The root makes no standalone POS claim; dictionary 선 homonyms with other recorded origins cannot supply the 扇 reading. This is not general Chinese-root splitting or an exclusive historical analysis."
         }
         "suffix.nominal.bagi" => {
             "Separate the source-listed 점박이 noun as 점 plus the dictionary suffix 박이, alongside the reviewed 점 + 박다 + 이 possibility and whole noun. Only this finite spelling licenses the suffix boundary; contextual senses and historical exclusivity are not selected."

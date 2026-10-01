@@ -670,3 +670,17 @@ For 까불이, the finite noun-suffix predicate lookup retains both 까불다 en
 COV-022k keeps prefix 왕- entries 72520/72521 separately from standalone 왕. All five 눈 and three 점 homonyms remain; lookup/POS compatibility does not select an eye, snow, hole, dot, point or unit sense. Prefix/base composition is a finite source-pattern hypothesis. The unmatched complete 왕눈 root stays raw and disappears under both dictionary filters; the detailed prefix/base reading, point compound and independent 박이 suffix alternative remain. Prefixes are grammar components before their lemma, not additional lexical king lemmas.
 
 The finite `derivation.nominal.bound_i` analysis of 못난이 explicitly assigns its second lemma 이 the bound-noun role, under NIKL's 2023 analysis. Known other nominal homonyms retain their lookup identity with a `lexical_role` conflict; the bound-noun entry remains compatible. The competing newer suffix analysis is separate. This scopes role compatibility without selecting a contextual meaning or extending the policy to arbitrary nominal sequences.
+
+### Finite Chinese root in 허풍선이 (partial COV-022l)
+
+The primary formation uses 허풍 + 선(扇) + 이. `EntryMatch.origins` is optional
+native per-entry evidence for this reviewed Root head; older annotations omit
+it and missing/empty values remain unknown. Cached payload accounting includes
+the retained origins; other headwords do not allocate an origin evidence vector.
+Known nonempty origins without exact 扇 conflict only at the validated second
+compound lemma. Native entry 63243 independently conflicts by its complete
+matchmaking and debut senses, without inventing an origin. All five entries
+remain in raw annotation/headword filtering. Compatibility filtering excludes
+these known `derivational_root` conflicts; ordinary 선 uses and later copulas
+remain independent. No within-entry contextual sense is selected. See
+[source evidence](noun-fan-source-audit.json) and [evaluation](noun-fan-evaluation.json); all finite gates pass. Original finer formation/history requirements and independent review remain open.

@@ -2919,6 +2919,25 @@ review remains open under the completion review below.
   historical follow-ups remain required; these grouped possibilities do not
   close COV-022l. See [formation source audit](noun-formation-source-audit.json)
   and [evaluation](noun-formation-evaluation.json).
+  **Finer 허풍/扇 formation verified:** primary KBS explanations license
+  nominal 허풍 + bound Root 선(扇) + 이 beside grouped and whole noun readings.
+  Five tests/20 stable cases (17 required / 3 forbidden), all 677 Rust tests,
+  full browser/Nix/API/preview/release gates pass. Nineteen complete native
+  entries preserve every 선 homonym, both matchmaking/debut senses of 63243,
+  all noun-suffix senses/44 groups and original origins. Four other recorded
+  origins and the individually reviewed lexical identity of 63243 conflict
+  only at the finite root slot; other absent/older origin evidence is unknown.
+  Headword filtering retains the path; compatible filtering excludes known
+  conflicts. Across 13,628 NFC/NFD inputs raw/headword each add 36 paths
+  (34 required / 2 unjudged); compatible outputs and prior readings remain
+  unchanged, with no removals. Four complete corpus reports and all five
+  179,112-record novel outputs are byte-identical; packaged/debug hashes agree.
+  Previous immutable UI assets displayed line/adverb-suffix hints for the new
+  path; actual current UI shows Fan (bound root), KBS source and noun suffix
+  88924. Three preview exports and inspected desktop/mobile layouts pass.
+  Original finer histories, other formations and independent review remain
+  open. See [source audit](noun-fan-source-audit.json) and
+  [evaluation](noun-fan-evaluation.json).
   All five original follow-ups remain open, with individual evidence review
   required. See [source audit](noun-adnominal-source-audit.json) and
   [evaluation](noun-adnominal-evaluation.json).

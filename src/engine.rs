@@ -151,6 +151,24 @@ fn listed_noun_derivations(word: &str) -> Vec<Analysis> {
         if let Some(prefix) = listed_noun_prefix(word) {
             out.push(prefix);
         }
+        if let Some(&(_, left, right, _)) = grammar::NOUN_I_ROOT_COMPOUNDS
+            .iter()
+            .find(|&&(surface, _, _, _)| surface == word)
+        {
+            out.push(Analysis {
+                lemmas: vec![
+                    lemma(left, LemmaKind::Nominal),
+                    lemma(right, LemmaKind::Root),
+                ],
+                morphemes: vec![morph("이", MorphemeKind::Suffix)],
+                rules: vec![
+                    "suffix.nominal.i".into(),
+                    "derivation.nominal.root_compound".into(),
+                ],
+                unchanged: false,
+                spelling_paths: Vec::new(),
+            });
+        }
         return out;
     }
     if let Some(&(_, left, kind, right)) = grammar::NOUN_I_COMPOUNDS

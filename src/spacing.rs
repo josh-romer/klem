@@ -90,11 +90,21 @@ fn nominal_case(a: &Analysis) -> bool {
     (((a.lemmas.len() == 1 && a.lemmas[0].kind == LemmaKind::Nominal)
         || (a.rules.iter().any(|r| r == "suffix.nominal.i")
             && a.lemmas.len()
-                == if a.rules.iter().any(|r| r == "derivation.nominal.compound") {
+                == if a.rules.iter().any(|r| {
+                    matches!(
+                        r.as_str(),
+                        "derivation.nominal.compound" | "derivation.nominal.root_compound"
+                    )
+                }) {
                     2
                 } else {
                     1
                 }))
+        && (!a
+            .rules
+            .iter()
+            .any(|r| r == "derivation.nominal.root_compound")
+            || a.breakdown().is_some())
         && a.morphemes[..a.morphemes.len() - tail.len()]
             .iter()
             .all(|m| {

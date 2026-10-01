@@ -557,6 +557,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!nounFormationIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounFormationEntries);
 
+  const nounFanFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-noun-fan.json"),"utf8"));
+  const nounFanEntries = nounFanFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounFanIds = new Set(nounFanEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!nounFanIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounFanEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5102,6 +5108,36 @@ try {
     if(flag)assert.ok(exported.records.filter(r=>r.analysis).every(r=>r.analysis.analyses.every(a=>a.lemmas.every(l=>!["얼간","허풍선","됨됨","쭉정"].includes(l.text)))));
   }
   await page.screenshot({path:resolve(tmpdir(),"klem-noun-formation-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-formation-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Explicit 扇 root evidence must not turn unrelated 선 dictionary meanings
+  // into a fan gloss; known origin/lexical conflicts belong to this slot only.
+  const nounFanCases=recipientLedger.cases.filter(c=>c.id.startsWith("noun-fan-"));assert.equal(nounFanCases.length,20);
+  for(const c of nounFanCases) {
+    const r=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments)assert.equal(r.analysis.analyses.some(a=>hieutMatches(a,j)&&j.required_rules.every(rule=>a.rules.includes(rule))),j.verdict==="required",c.id);
+    const i=r.analysis.analyses.findIndex(a=>a.rules.includes("derivation.nominal.root_compound"));
+    if(i>=0) {
+      const reading=r.dictionary.readings[i];assert.deepEqual(reading.lemmas.map(l=>l.lemma_index),r.analysis.analyses[i].lemmas.map((_,n)=>n));
+      assert.equal(reading.lemmas[1].entries.length,5);assert.ok(reading.lemmas[1].entries.every(e=>e.status==="incompatible"&&e.conflicts.some(c=>c.rule==="derivational_root"&&c.morpheme_index===null)));
+      const matches=r.dictionary.lemmas.find(l=>l.lemma.kind==="root"&&l.lemma.text==="선");assert.equal(matches.entries.length,5);assert.deepEqual(matches.entries.find(e=>e.id==="krdict:63243").origins,[]);assert.deepEqual(matches.entries.find(e=>e.id==="krdict:16246").origins,["線"]);
+    }
+  }
+  for(const flag of[null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="허풍선이들쯤에는 허풍선이들이었다";await submit(page,text);await waitHeading(page,"허풍선이들쯤에는");const raw=await(await post("analyze",{text})).json();const words=raw.records.filter(r=>r.analysis);
+    for(const[n,forms]of[[0,["허풍","선","이","들","쯤","에","는"]],[1,["허풍","선","이","들","이","었","다"]]]) {
+      const i=words[n].analysis.analyses.findIndex(a=>a.rules.includes("derivation.nominal.root_compound"));assert.ok(i>=0);const block=page.locator(".breakdown-word").nth(n);
+      if(flag!=="--dict-compatible") {
+        await block.getByRole("combobox").selectOption(String(i));assert.deepEqual(await block.locator(".part-form").allTextContents(),forms);assert.equal(await block.locator(".part-gloss").nth(1).innerText(),"Fan (bound root)");assert.equal(await block.locator(".breakdown-part").nth(1).isDisabled(),true);assert.equal(await block.locator('a[title="KBS: 허풍선이 formation"]').count(),1);
+        await block.getByRole("button",{name:"이 Noun-forming suffix",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));
+      } else assert.equal(await block.getByRole("combobox").locator('option[value="'+i+'"]').count(),0);
+    }
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();await submit(page,"허풍선이들쯤에는");await waitHeading(page,"허풍선이들쯤에는");
+  const fanRaw=await(await post("analyze",{text:"허풍선이들쯤에는"})).json();const fanIndex=fanRaw.records[0].analysis.analyses.findIndex(a=>a.rules.includes("derivation.nominal.root_compound"));await page.locator(".breakdown-word").first().getByRole("combobox").selectOption(String(fanIndex));
+  await page.screenshot({path:resolve(tmpdir(),"klem-noun-fan-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-fan-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

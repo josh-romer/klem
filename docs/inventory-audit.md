@@ -1057,3 +1057,18 @@ noun-case spacing prefix check was fixed with explicit provenance validation.
 The [original seven-form plan](noun-formation-review-plan.json) retains all finer
 follow-ups, repeated nominalization, 팔푼이 number/unit grouping and independent
 review. Verified grouped paths do not close those requirements.
+
+## Finite fan-root formation (2026-10-01)
+
+Partial COV-022l adds the source-listed 허풍 + 선(扇) + 이 path while preserving
+grouped/whole nouns, 19 complete entries, all three noun-suffix senses/44 groups,
+five root homonyms and both full originless-entry senses. Four other native
+origins and positively reviewed lexical identity of 63243 conflict only at
+the finite root slot; absent older metadata is otherwise unknown. All 677 Rust
+tests and browser/Nix/API/preview/release gates pass. The
+[evaluation](noun-fan-evaluation.json) retains 36 raw/headword additions,
+two explicitly unjudged per mode, zero compatible additions, unchanged prior
+readings, four byte-identical full corpus reports and five byte-identical novel
+modes. The actual immutable-UI regression verifies corrected fan-root and
+noun-suffix labels. Full original seven-form/finer requirements and independent
+review remain open; this source pattern does not close COV-022l.

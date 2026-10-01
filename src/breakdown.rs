@@ -26,10 +26,29 @@ impl Analysis {
         if self.lemmas.is_empty() {
             return None;
         }
-        let compound = self
+        let verbal_compound = self
             .rules
             .iter()
             .any(|r| r == "derivation.nominal.compound");
+        let root_compound = self
+            .rules
+            .iter()
+            .any(|r| r == "derivation.nominal.root_compound");
+        let compound = verbal_compound || root_compound;
+        if root_compound
+            && (verbal_compound
+                || !self.rules.iter().any(|r| r == "suffix.nominal.i")
+                || self.lemmas.len() < 2
+                || self.lemmas[0].kind != LemmaKind::Nominal
+                || self.lemmas[1].kind != LemmaKind::Root
+                || !crate::grammar::NOUN_I_ROOT_COMPOUNDS
+                    .iter()
+                    .any(|&(_, left, right, _)| {
+                        left == self.lemmas[0].text && right == self.lemmas[1].text
+                    }))
+        {
+            return None;
+        }
         let mut prefixes = crate::grammar::NOUN_I_PREFIX_FORMS
             .iter()
             .filter(|&&(_, _, _, rule)| self.rules.iter().any(|r| r == rule));
@@ -130,7 +149,7 @@ impl Analysis {
         {
             return None;
         }
-        if compound
+        if verbal_compound
             && (!self.rules.iter().any(|r| r == "suffix.nominal.i")
                 || self.lemmas.len() < 2
                 || !matches!(

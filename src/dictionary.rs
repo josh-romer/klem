@@ -379,6 +379,11 @@ pub struct EntryMatch {
     #[serde(flatten)]
     pub entry: EntrySummary,
     pub pos_compatibility: Compatibility,
+    /// Native origins for individually reviewed compound roots. Omitted when
+    /// not consulted or absent in older annotations; empty is inconclusive.
+    /// This is per-entry evidence, not a contextually selected sense.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub origins: Option<Vec<String>>,
     /// Per-entry spelling evidence; older annotations and uninformative entries
     /// omit it. Homonyms never borrow each other's written forms.
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -424,6 +429,7 @@ impl Annotation {
 struct CachedLookup {
     entries: Arc<Vec<EntrySummary>>,
     spelling: Vec<Option<CachedSpelling>>,
+    origins: Vec<Option<Vec<String>>>,
 }
 
 /// FIFO cache of headword summaries and scoped spelling evidence, including negative lookups. The byte budget
@@ -458,6 +464,14 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
         }
         let entries = Arc::new(self.dictionary.lookup(&key)?);
         let mut spelling = Vec::with_capacity(entries.len());
+        let consult_origin = crate::grammar::NOUN_I_ROOT_COMPOUNDS
+            .iter()
+            .any(|&(_, _, root, _)| root == key);
+        let mut origins = if consult_origin {
+            Vec::with_capacity(entries.len())
+        } else {
+            Vec::new()
+        };
         for summary in entries.iter() {
             let evidence = if (summary.headword.ends_with("르다")
                 || matches!(
@@ -479,11 +493,28 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                 None
             };
             spelling.push(evidence);
+            if consult_origin {
+                let origin = self
+                    .dictionary
+                    .entry(&summary.id)?
+                    .filter(|e| e.summary == *summary)
+                    .map(|e| e.origins);
+                origins.push(origin);
+            }
         }
         let size = 2 * (std::mem::size_of::<String>() + key.len())
             + std::mem::size_of::<(Arc<CachedLookup>, usize)>()
             + std::mem::size_of::<CachedLookup>()
             + spelling.capacity() * std::mem::size_of::<Option<CachedSpelling>>()
+            + origins.capacity() * std::mem::size_of::<Option<Vec<String>>>()
+            + origins
+                .iter()
+                .flatten()
+                .map(|values| {
+                    values.capacity() * std::mem::size_of::<String>()
+                        + values.iter().map(String::capacity).sum::<usize>()
+                })
+                .sum::<usize>()
             + spelling
                 .iter()
                 .flatten()
@@ -500,7 +531,11 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         + e.pos.len()
                 })
                 .sum::<usize>();
-        let entries = Arc::new(CachedLookup { entries, spelling });
+        let entries = Arc::new(CachedLookup {
+            entries,
+            spelling,
+            origins,
+        });
         if size <= self.budget {
             while self.bytes > self.budget - size {
                 if let Some(old) = self.order.pop_front()
@@ -528,9 +563,16 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                 .entries
                 .iter()
                 .zip(&matched.spelling)
-                .map(|(entry, evidence)| EntryMatch {
+                .enumerate()
+                .map(|(index, (entry, evidence))| EntryMatch {
                     pos_compatibility: pos_compatibility(lemma, entry),
                     entry: entry.clone(),
+                    origins: matched
+                        .origins
+                        .get(index)
+                        .filter(|_| lemma.kind == LemmaKind::Root)
+                        .cloned()
+                        .flatten(),
                     reu: evidence.as_ref().and_then(CachedSpelling::reu).cloned(),
                     hieut: evidence
                         .as_ref()

@@ -30671,6 +30671,106 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:68880",
+      "source_sha256": "cd4f0e4ee7ff45b4efb1a573ba6d05f7059208418e0fd2478388b88d0a829d03",
+      "status": "scoped",
+      "checklist": [
+        "COV-017g",
+        "COV-017bm"
+      ],
+      "scope": "Full one-sense native entry and all four original example groups reviewed. Exact source-token paths preserve canonical 읍시다, licensed allomorphs and lexical/auxiliary alternatives. The shared proposal policy marks known adjective entries and unresolved negative owners Unknown while preserving both filters; contextual adjective wishes are not forbidden solely from verb notes.",
+      "remaining": "Independent Korean review, contextual adjective wish subsets, social register and further follower/prefinal combinations remain open. NIKL 318597 illustrates general mood exceptions, not all formal proposal licenses; 시 + 읍시다 is retained without equating its register to the bare ending.",
+      "evidence": [
+        {
+          "path": "tests/proposal_review.rs",
+          "test": "proposal_all_native_groups_keep_exact_source_examples_and_identities"
+        },
+        {
+          "path": "tests/proposal_review.rs",
+          "test": "proposal_source_paths_preserve_boundaries_normalization_and_ambiguity"
+        },
+        {
+          "path": "tests/proposal_review.rs",
+          "test": "proposal_uncertainty_is_per_entry_and_immediate_owner"
+        },
+        {
+          "path": "tests/proposal_review.rs",
+          "test": "proposal_source_and_uncertain_paths_match_cli_library_and_ordered_exports"
+        },
+        {
+          "path": "docs/proposal-source-audit.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "proposal-audit-source-68880-1-1",
+          "judgment": "lexical"
+        },
+        {
+          "case": "proposal-audit-source-68880-1-2",
+          "judgment": "lexical"
+        },
+        {
+          "case": "proposal-audit-source-68880-1-3",
+          "judgment": "lexical"
+        },
+        {
+          "case": "proposal-audit-source-68880-1-4",
+          "judgment": "lexical"
+        }
+      ]
+    },
+    {
+      "id": "krdict:68883",
+      "source_sha256": "500353c74ddc1c8ea1e3b758931b85a37af497fa7780f09f0c11a36844ad728b",
+      "status": "scoped",
+      "checklist": [
+        "COV-017g",
+        "COV-017bm"
+      ],
+      "scope": "Full one-sense native entry and all four original example groups reviewed. Exact source-token paths preserve canonical 읍시다, licensed allomorphs and lexical/auxiliary alternatives. The shared proposal policy marks known adjective entries and unresolved negative owners Unknown while preserving both filters; contextual adjective wishes are not forbidden solely from verb notes.",
+      "remaining": "Independent Korean review, contextual adjective wish subsets, social register and further follower/prefinal combinations remain open. NIKL 318597 illustrates general mood exceptions, not all formal proposal licenses; 시 + 읍시다 is retained without equating its register to the bare ending.",
+      "evidence": [
+        {
+          "path": "tests/proposal_review.rs",
+          "test": "proposal_all_native_groups_keep_exact_source_examples_and_identities"
+        },
+        {
+          "path": "tests/proposal_review.rs",
+          "test": "proposal_source_paths_preserve_boundaries_normalization_and_ambiguity"
+        },
+        {
+          "path": "tests/proposal_review.rs",
+          "test": "proposal_uncertainty_is_per_entry_and_immediate_owner"
+        },
+        {
+          "path": "tests/proposal_review.rs",
+          "test": "proposal_source_and_uncertain_paths_match_cli_library_and_ordered_exports"
+        },
+        {
+          "path": "docs/proposal-source-audit.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "proposal-audit-source-68883-1-1",
+          "judgment": "lexical"
+        },
+        {
+          "case": "proposal-audit-source-68883-1-2",
+          "judgment": "lexical"
+        },
+        {
+          "case": "proposal-audit-source-68883-1-3",
+          "judgment": "lexical"
+        },
+        {
+          "case": "proposal-audit-source-68883-1-4",
+          "judgment": "lexical"
+        }
+      ]
     }
   ]
 }

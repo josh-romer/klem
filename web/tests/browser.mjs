@@ -487,6 +487,15 @@ try {
   const qfollowIds=new Set(qfollowEntries.map(e=>String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!qfollowIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...qfollowEntries);
+  const proposalFixture=JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-proposal-audit.json"),"utf8"));
+  const proposalEntries=proposalFixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>{
+    const fs=Array.isArray(e.feat)?e.feat:[e.feat];
+    return fs.some(f=>f.att==="lexicalUnit"&&["단어","문법‧표현"].includes(f.val));
+  });
+  const proposalIds=new Set(proposalEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!proposalIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...proposalEntries);
+
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -1805,6 +1814,41 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-qfollow-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-qfollow-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const proposalCases=connectiveLedger.cases.filter(c=>c.id.startsWith("proposal-audit-"));
+  assert.equal(proposalCases.length,16);
+  for(const c of proposalCases){
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    const {dictionary,...analysis}=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+    assert.deepEqual(token.analysis,analysis,c.id);assert.deepEqual(token.dictionary,dictionary,c.id);
+    for(const j of c.judgments){
+      const indices=token.analysis.analyses.flatMap((a,i)=>danikkaPath(a,j)?[i]:[]);assert.ok(indices.length,c.id);
+      assert.ok(indices.some(i=>token.dictionary.readings[i].status!=="incompatible"),c.id);
+    }
+  }
+  const proposalText="걸읍시다 찾읍시다 읽읍시다 앉읍시다 움직입시다 갑시다 도와줍시다 공부합시다 건강합시다 행복합시다 고릅시다 좋지않읍시다 먹지않읍시다 먹고싶읍시다";
+  const proposalData=await(await post("analyze",{text:proposalText})).json();
+  assert.deepEqual(proposalData.grammar["-읍시다"].map(e=>e.id).sort(),["krdict:68880","krdict:68883"]);
+  assert.deepEqual(proposalData.grammar["-읍시다"].map(e=>e.headword).sort(),["-ㅂ시다","-읍시다"].sort());
+  for(const [word,id]of[["건강합시다","krdict:17317"],["행복합시다","krdict:72481"],["고릅시다","krdict:25632"]]){
+    const token=proposalData.records.find(r=>r.surface===word),entry=token.dictionary.readings.flatMap(r=>r.lemmas).flatMap(l=>l.entries).find(e=>e.id===id);
+    assert.equal(entry.status,"unknown");assert.deepEqual(entry.conflicts,[]);
+  }
+  await submit(page,proposalText);await waitHeading(page,"걸읍시다");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms]of[[0,["걷","읍시다"]],[1,["찾","읍시다"]],[2,["읽","읍시다"]],[3,["앉","읍시다"]],[4,["움직이","읍시다"]],[5,["가","읍시다"]],[6,["돕","어","주","읍시다"]],[7,["공부하","읍시다"]],[8,["건강하","읍시다"]],[9,["행복하","읍시다"]],[10,["고르","읍시다"]],[11,["좋","지","않","읍시다"]],[12,["먹","지","않","읍시다"]],[13,["먹","고","싶","읍시다"]]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));await select.selectOption(value);
+    assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);assert.ok((await word.locator(".part-gloss").allTextContents()).includes("Let's (polite)"));
+  }
+  const proposalDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const proposalExport=JSON.parse(await readFile(await(await proposalDownload).path(),"utf8"));
+  const proposalExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:proposalText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);assert.deepEqual(proposalExport.records,proposalExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-proposal-audit-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-proposal-audit-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const spacingLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/spacing-validity.json"),"utf8"));

@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bm",
+  "before_revision": "c3eece7",
+  "scope": "Review both formal proposal entries, all eight native groups, vowel/non-rieul-consonant/rieul/digeut/bieup boundaries, lexical/auxiliary alternatives and per-entry uncertainty for lexical/adjective auxiliaries and unclassified negative owners. Existing raw and class restrictions remain; contextual wish subsets and independent Korean review remain open.",
+  "attribution": "National Institute of Korean Language Korean Basic Dictionary; pinned September 2026 full native entries with only RelatedForm and non-English equivalents omitted.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "native_fixture": "tests/fixtures/krdict-proposal-audit.json",
+  "native_entries": 73,
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "grammar_entries": [
+    {
+      "id": "krdict:68880",
+      "headword": "-읍시다",
+      "homonym": "0",
+      "pos": "어미",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68880",
+      "level": "없음",
+      "lexical_unit": "단어",
+      "origins": [],
+      "notes": [
+        "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+      ],
+      "forms": [],
+      "senses": [
+        {
+          "id": "1",
+          "definition": "(예사 높임으로) 어떤 동작을 함께 하자는 뜻을 나타내는 종결 어미.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "(Тохирох үг хэллэг байхгүй байна)",
+              "definition": "(ерийн хүндэтгэх үг хэллэг) ямар нэгэн үйлдлийг хамтран хийцгээе хэмээх утгыг илэрхийлдэг төгсгөх нөхцөл."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "ـوُبْسيدا",
+              "definition": "(صيغة عاديّة التبجيل)لاحقة ختامية  تدلّ على اقتراح المتكلم على المستمع القيام بفعلٍ ما سويًا"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "(轻尊)终结语尾。表示让别人一起做某个动作。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "(chúng ta) hãy",
+              "definition": "(cách nói kính trọng thông thường) Vĩ tố kết thúc câu thể hiện nghĩa đề nghị cùng thực hiện hành động nào đó."
+            },
+            {
+              "language": "타이어",
+              "lemma": "...กันเถอะ, ...เถอะ",
+              "definition": "(ใช้ในการยกย่องธรรมดาและเป็นทางการ)วิภัตติปัจจัยลงท้ายประโยคที่ใช้แสดงความหมายว่ามาทำอากัปกริยาใดๆด้วยกันเถอะ"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "mari, ayo",
+              "definition": "(dalam bentuk sopan) akhiran penutup untuk menandai ajakan"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "(неформально-вежливый стиль) Финитное окончание со значением приглашения к совместному действию."
+            },
+            {
+              "language": "영어",
+              "lemma": "-eupsida",
+              "definition": "(formal, moderately addressee-raising) A sentence-final ending used to express an intention of doing a certain action together."
+            },
+            {
+              "language": "일본어",
+              "lemma": "ましょう",
+              "definition": "(中称) ある行動を一緒にしようという意を表す「終結語尾」。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "(forme honorifique modérée) Terminaison finale indiquant une proposition du locuteur de faire quelque chose avec lui."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "(No hay expresión equivalente)",
+              "definition": "(TRATAMIENTO HONORÍFICO ORDINARIO) Desinencia de terminación que se usa cuando alguien propone a otro hacer juntos cierta acción."
+            }
+          ],
+          "examples": [
+            [
+              "모두 좀 빨리 걸읍시다."
+            ],
+            [
+              "우리의 권리를 찾읍시다."
+            ],
+            [
+              "우리 올해는 책을 좀 읽읍시다."
+            ],
+            [
+              "좀 쉬다 갈까요?",
+              "네, 여기 잠깐 앉읍시다."
+            ]
+          ],
+          "notes": [],
+          "patterns": []
+        }
+      ]
+    },
+    {
+      "id": "krdict:68883",
+      "headword": "-ㅂ시다",
+      "homonym": "0",
+      "pos": "어미",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68883",
+      "level": "없음",
+      "lexical_unit": "단어",
+      "origins": [],
+      "notes": [
+        "받침이 없거나 ‘ㄹ’ 받침인 동사 뒤에 붙여 쓴다."
+      ],
+      "forms": [],
+      "senses": [
+        {
+          "id": "1",
+          "definition": "(예사 높임으로) 어떤 동작을 함께 하자는 뜻을 나타내는 종결 어미.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "(Тохирох үг хэллэг байхгүй байна)",
+              "definition": "(ерийн хүндэтгэх үг хэллэг) ямар нэгэн үйлдлийг хамтдаа хийцгээе хэмээх утгыг илэрхийлдэг төгсгөх нөхцөл."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "ـبْشيدا ، فلنقوم بـ ، هيّا نقوم بـ",
+              "definition": "(صيغة عاديّة التبجيل) لاحقة ختامية تدلّ على اقتراح المشاركة في القيام بفعل ما"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "(轻尊)终结语尾。表示让别人一起做某个动作。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "chúng ta hãy",
+              "definition": "(cách nói kính trọng thông thường) Vĩ tố kết thúc câu thể hiện nghĩa đề nghị cùng thực hiện hành động nào đó."
+            },
+            {
+              "language": "타이어",
+              "lemma": "...กันเถอะ, ...เถอะ",
+              "definition": "(ใช้ในการยกย่องธรรมดาและเป็นทางการ)วิภัตติปัจจัยลงท้ายประโยคที่แสดงความหมายชักชวนให้ทำการกระทำบางอย่างด้วยกัน"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "mari, ayo",
+              "definition": "(dalam bentuk sopan) akhiran penutup untuk menandai ajakan"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "(неформально-вежливый стиль) Финитное окончание со значением приглашения к совместному действию."
+            },
+            {
+              "language": "영어",
+              "lemma": "-psida",
+              "definition": "(formal, moderately addressee-raising) A sentence-final ending used to express an intention of doing a certain action together."
+            },
+            {
+              "language": "일본어",
+              "lemma": "ましょう",
+              "definition": "(中称) ある行動を一緒にしようという意を表す「終結語尾」。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "(forme honorifique modérée) Terminaison finale indiquant la volonté de faire ensemble une action."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "(No hay expresión equivalente)",
+              "definition": "(TRATAMIENTO HONORÍFICO ORDINARIO) Desinencia de terminación que se usa cuando se propone hacer juntos cierta acción."
+            }
+          ],
+          "examples": [
+            [
+              "서둘러 움직입시다."
+            ],
+            [
+              "늦었으니 빨리 갑시다."
+            ],
+            [
+              "어려운 이웃을 도와줍시다."
+            ],
+            [
+              "우리 같이 시험공부 하는 거 어때요?",
+              "네, 좋아요. 같이 공부합시다."
+            ]
+          ],
+          "notes": [],
+          "patterns": []
+        }
+      ]
+    }
+  ],
+  "source_groups": [
+    {
+      "entry_id": "krdict:68880",
+      "sense_id": "1",
+      "example_group": 1,
+      "examples": [
+        "모두 좀 빨리 걸읍시다."
+      ],
+      "turn": 0,
+      "token": 3,
+      "surface": "걸읍시다",
+      "case_id": "proposal-audit-source-68880-1-1",
+      "policy_case_id": "proposal-audit-source-68880-1-1-policy",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "모두 좀 빨리 걸읍시다."
+          }
+        ]
+      }
+    },
+    {
+      "entry_id": "krdict:68880",
+      "sense_id": "1",
+      "example_group": 2,
+      "examples": [
+        "우리의 권리를 찾읍시다."
+      ],
+      "turn": 0,
+      "token": 2,
+      "surface": "찾읍시다",
+      "case_id": "proposal-audit-source-68880-1-2",
+      "policy_case_id": "proposal-audit-source-68880-1-2-policy",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "우리의 권리를 찾읍시다."
+          }
+        ]
+      }
+    },
+    {
+      "entry_id": "krdict:68880",
+      "sense_id": "1",
+      "example_group": 3,
+      "examples": [
+        "우리 올해는 책을 좀 읽읍시다."
+      ],
+      "turn": 0,
+      "token": 4,
+      "surface": "읽읍시다",
+      "case_id": "proposal-audit-source-68880-1-3",
+      "policy_case_id": "proposal-audit-source-68880-1-3-policy",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "우리 올해는 책을 좀 읽읍시다."
+          }
+        ]
+      }
+    },
+    {
+      "entry_id": "krdict:68880",
+      "sense_id": "1",
+      "example_group": 4,
+      "examples": [
+        "좀 쉬다 갈까요?",
+        "네, 여기 잠깐 앉읍시다."
+      ],
+      "turn": 1,
+      "token": 3,
+      "surface": "앉읍시다",
+      "case_id": "proposal-audit-source-68880-1-4",
+      "policy_case_id": "proposal-audit-source-68880-1-4-policy",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "좀 쉬다 갈까요?"
+          },
+          {
+            "att": "example",
+            "val": "네, 여기 잠깐 앉읍시다."
+          }
+        ]
+      }
+    },
+    {
+      "entry_id": "krdict:68883",
+      "sense_id": "1",
+      "example_group": 1,
+      "examples": [
+        "서둘러 움직입시다."
+      ],
+      "turn": 0,
+      "token": 1,
+      "surface": "움직입시다",
+      "case_id": "proposal-audit-source-68883-1-1",
+      "policy_case_id": "proposal-audit-source-68883-1-1-policy",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "서둘러 움직입시다."
+          }
+        ]
+      }
+    },
+    {
+      "entry_id": "krdict:68883",
+      "sense_id": "1",
+      "example_group": 2,
+      "examples": [
+        "늦었으니 빨리 갑시다."
+      ],
+      "turn": 0,
+      "token": 2,
+      "surface": "갑시다",
+      "case_id": "proposal-audit-source-68883-1-2",
+      "policy_case_id": "proposal-audit-source-68883-1-2-policy",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "늦었으니 빨리 갑시다."
+          }
+        ]
+      }
+    },
+    {
+      "entry_id": "krdict:68883",
+      "sense_id": "1",
+      "example_group": 3,
+      "examples": [
+        "어려운 이웃을 도와줍시다."
+      ],
+      "turn": 0,
+      "token": 2,
+      "surface": "도와줍시다",
+      "case_id": "proposal-audit-source-68883-1-3",
+      "policy_case_id": "proposal-audit-source-68883-1-3-policy",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "어려운 이웃을 도와줍시다."
+          }
+        ]
+      }
+    },
+    {
+      "entry_id": "krdict:68883",
+      "sense_id": "1",
+      "example_group": 4,
+      "examples": [
+        "우리 같이 시험공부 하는 거 어때요?",
+        "네, 좋아요. 같이 공부합시다."
+      ],
+      "turn": 1,
+      "token": 3,
+      "surface": "공부합시다",
+      "case_id": "proposal-audit-source-68883-1-4",
+      "policy_case_id": "proposal-audit-source-68883-1-4-policy",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "우리 같이 시험공부 하는 거 어때요?"
+          },
+          {
+            "att": "example",
+            "val": "네, 좋아요. 같이 공부합시다."
+          }
+        ]
+      }
+    }
+  ],
+  "raw_cases": 8,
+  "raw_judgments": 9,
+  "policy_cases": 16,
+  "policy_judgments": 16,
+  "primary_review": [
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=318597",
+      "access": "Complete question and answer read",
+      "claim": "General adjective command/proposal incompatibility has contextual wish exceptions. Transfer to formal proposal uncertainty is an inference, not directly illustrated formal-ending gold."
+    },
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=305795",
+      "access": "Complete question and answer read",
+      "claim": "갑시다 and 가십시다 receive distinct dictionary register descriptions; retain existing 시 analysis without equating register or inventing a new grammar identity."
+    }
+  ],
+  "current_krdict_access": "Both current grammar pages failed retrieval; complete pinned native entries and groups read instead.",
+  "unjudged_controls": [
+    "갔어봅시다",
+    "먹읍시다요",
+    "먹읍시다들",
+    "학생입시다"
+  ],
+  "independent_review": "Pending; retention judgments and Unknown are not linguistic precision.",
+  "evaluation": "docs/proposal-evaluation.json"
+}

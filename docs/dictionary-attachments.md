@@ -616,3 +616,9 @@ owner checks. Source-attested declarative followers do not override class or
 spelling conflicts. Inferred experience 더라는군 + 요 remains Unknown and
 survives both dictionary filters. No inference settles quoted 구나 + 요 or
 contextual register; see [the audit](quote-followers-source-audit.json).
+
+COV-017bm keeps existing formal `읍시다` proposal hypotheses with known
+adjective entries or unclassified negative owners as Unknown. Verb homonyms
+remain compatible; prior spelling and role conflicts still win. Both dictionary
+filters retain these uncertainties. Contextual wishes and register are not
+certified by a headword match; see [the review](proposal-evaluation.json).

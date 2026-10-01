@@ -1,0 +1,1131 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bm",
+  "before_revision": "c3eece7",
+  "status": "Implemented for the reviewed formal proposal source/allomorph and per-entry uncertainty scope. Contextual adjective wish subsets, further paradigms, parent inventories and independent Korean review remain open.",
+  "sources": {
+    "audit": "docs/proposal-source-audit.json",
+    "manifest": "tests/fixtures/proposal-audit-sources.json",
+    "native_fixture": "tests/fixtures/krdict-proposal-audit.json",
+    "native_entries": 73,
+    "complete_grammar_entries": 2,
+    "complete_example_groups": 8,
+    "only_documented_omissions": true
+  },
+  "judgments": {
+    "raw_cases": 8,
+    "raw_required": 9,
+    "raw_forbidden": 0,
+    "existing_boundary_required": 6,
+    "existing_boundary_forbidden": 5,
+    "dictionary_cases": 16,
+    "dictionary_required": 16,
+    "dictionary_forbidden": 0,
+    "interpretation": "New raw judgments are native-example candidates. Dictionary retention of uncertain adjective/negative readings does not certify grammaticality. Existing boundary negatives remain unchanged."
+  },
+  "raw_candidate_comparison": {
+    "before_revision": "c3eece72608d6da59bae0a7fd6345edee1fc19ac",
+    "before_binary_sha256": "7afd7610337bdebb5646427dad4867cac45bfd3851caa4c02cc506044f68e55f",
+    "after_binary_sha256": "219829de3fc97d24dd4c1361b1176db6ce6b0e76f9331d1f0543f6fe17c1eece",
+    "distinct_surfaces": 11883,
+    "changed_surfaces": 0,
+    "added_candidates": 0,
+    "removed_candidates": 0,
+    "byte_identical": true
+  },
+  "dictionary_comparison": {
+    "records": 23766,
+    "changed_records": 7,
+    "changed_paths": 8,
+    "changed_entries": 11,
+    "candidate_paths_unchanged": true,
+    "only_compatible_to_unknown": true,
+    "changes": [
+      {
+        "surface": "건강합시다",
+        "span": {
+          "start": 10373,
+          "end": 10388
+        },
+        "paths": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "건강하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "읍시다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            "entry_changes": [
+              {
+                "lemma_index": 0,
+                "entry_id": "krdict:17317",
+                "before": "compatible",
+                "after": "unknown"
+              }
+            ],
+            "contextual_correctness": "unjudged"
+          }
+        ]
+      },
+      {
+        "surface": "고릅시다",
+        "span": {
+          "start": 13353,
+          "end": 13365
+        },
+        "paths": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "고르다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "읍시다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            "entry_changes": [
+              {
+                "lemma_index": 0,
+                "entry_id": "krdict:25632",
+                "before": "compatible",
+                "after": "unknown"
+              }
+            ],
+            "contextual_correctness": "unjudged"
+          }
+        ]
+      },
+      {
+        "surface": "먹고싶읍시다",
+        "span": {
+          "start": 56270,
+          "end": 56288
+        },
+        "paths": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "싶다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "고",
+                  "kind": "ending"
+                },
+                {
+                  "form": "읍시다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            "entry_changes": [
+              {
+                "lemma_index": 1,
+                "entry_id": "krdict:62657",
+                "before": "compatible",
+                "after": "unknown"
+              }
+            ],
+            "contextual_correctness": "unjudged"
+          }
+        ]
+      },
+      {
+        "surface": "먹지않읍시다",
+        "span": {
+          "start": 98201,
+          "end": 98219
+        },
+        "paths": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "않다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "지",
+                  "kind": "ending"
+                },
+                {
+                  "form": "읍시다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            "entry_changes": [
+              {
+                "lemma_index": 1,
+                "entry_id": "krdict:71581",
+                "before": "compatible",
+                "after": "unknown"
+              },
+              {
+                "lemma_index": 1,
+                "entry_id": "krdict:71583",
+                "before": "compatible",
+                "after": "unknown"
+              }
+            ],
+            "contextual_correctness": "unjudged"
+          },
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "먹하다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "않다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "지",
+                  "kind": "ending"
+                },
+                {
+                  "form": "읍시다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "deletion.ha",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            "entry_changes": [
+              {
+                "lemma_index": 1,
+                "entry_id": "krdict:71581",
+                "before": "compatible",
+                "after": "unknown"
+              },
+              {
+                "lemma_index": 1,
+                "entry_id": "krdict:71583",
+                "before": "compatible",
+                "after": "unknown"
+              }
+            ],
+            "contextual_correctness": "unjudged"
+          }
+        ]
+      },
+      {
+        "surface": "좋읍시다",
+        "span": {
+          "start": 151475,
+          "end": 151487
+        },
+        "paths": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "좋다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "읍시다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_regular"
+                  }
+                ]
+              ]
+            },
+            "entry_changes": [
+              {
+                "lemma_index": 0,
+                "entry_id": "krdict:79033",
+                "before": "compatible",
+                "after": "unknown"
+              }
+            ],
+            "contextual_correctness": "unjudged"
+          }
+        ]
+      },
+      {
+        "surface": "좋지않읍시다",
+        "span": {
+          "start": 151828,
+          "end": 151846
+        },
+        "paths": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "좋다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "않다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "지",
+                  "kind": "ending"
+                },
+                {
+                  "form": "읍시다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            "entry_changes": [
+              {
+                "lemma_index": 1,
+                "entry_id": "krdict:71581",
+                "before": "compatible",
+                "after": "unknown"
+              },
+              {
+                "lemma_index": 1,
+                "entry_id": "krdict:71583",
+                "before": "compatible",
+                "after": "unknown"
+              }
+            ],
+            "contextual_correctness": "unjudged"
+          }
+        ]
+      },
+      {
+        "surface": "행복합시다",
+        "span": {
+          "start": 186641,
+          "end": 186656
+        },
+        "paths": [
+          {
+            "analysis": {
+              "lemmas": [
+                {
+                  "text": "행복하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "읍시다",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            "entry_changes": [
+              {
+                "lemma_index": 0,
+                "entry_id": "krdict:72481",
+                "before": "compatible",
+                "after": "unknown"
+              }
+            ],
+            "contextual_correctness": "unjudged"
+          }
+        ]
+      }
+    ]
+  },
+  "novel": {
+    "debug": [
+      {
+        "policy": "--dict-only",
+        "records": 179112,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "before_binary": "/tmp/klem-before-proposal-audit",
+        "after_binary": "/tmp/klem-cargo-target-1000/debug/klem",
+        "before_binary_sha256": "7afd7610337bdebb5646427dad4867cac45bfd3851caa4c02cc506044f68e55f",
+        "after_binary_sha256": "219829de3fc97d24dd4c1361b1176db6ce6b0e76f9331d1f0543f6fe17c1eece",
+        "before_jsonl_sha256": "6c4eb16ada19f8971e9cdf74bd6b9d3223c2ad0ef590d93af96741fa38ccee81",
+        "after_jsonl_sha256": "93971924e9bd41c778258758f734e86b390110bc1b9c0445d3bac23e425a3508",
+        "changed_records": 2,
+        "added_candidates": 0,
+        "removed_candidates": 0,
+        "changes": [
+          {
+            "surface": "됩시다",
+            "span": {
+              "start": 196122,
+              "end": 196131
+            },
+            "context": "채가 일찍 월화에게 안기며, “형님! 형님과 저와 솔이와 세 사람이 친구가 됩시다” 한 일이 있었다. 그러고 나도 반드시 월화 형님과 같이 솔이가 되리라 하",
+            "paths": [
+              {
+                "analysis": {
+                  "lemmas": [
+                    {
+                      "text": "되다",
+                      "kind": "predicate"
+                    }
+                  ],
+                  "morphemes": [
+                    {
+                      "form": "읍시다",
+                      "kind": "ending"
+                    }
+                  ],
+                  "rules": [
+                    "boundary.attached",
+                    "ending"
+                  ],
+                  "unchanged": false
+                },
+                "entry_changes": [
+                  {
+                    "lemma_index": 0,
+                    "entry_id": "krdict:48214",
+                    "before": "compatible",
+                    "after": "unknown"
+                  }
+                ],
+                "contextual_correctness": "unjudged"
+              }
+            ],
+            "id": "mujeong-proposal-196122-196131",
+            "review": "Only the adjective homonym assessment changes to Unknown. The prose uses becoming friends; compatible verb homonyms remain. No contextual sense judgment is assigned to the adjective alternative."
+          },
+          {
+            "surface": "되십시다",
+            "span": {
+              "start": 435107,
+              "end": 435119
+            },
+            "context": "��이가 자기보다 두어 살 아래 되는 소년을 붙들고,\n\n“여보, 나하고 동무가 되십시다. 너, 나 하고 지내입시다” 하였다. 그 소년은 농담인 줄 알고, “녜” 하면",
+            "paths": [
+              {
+                "analysis": {
+                  "lemmas": [
+                    {
+                      "text": "되다",
+                      "kind": "predicate"
+                    }
+                  ],
+                  "morphemes": [
+                    {
+                      "form": "시",
+                      "kind": "prefinal"
+                    },
+                    {
+                      "form": "읍시다",
+                      "kind": "ending"
+                    }
+                  ],
+                  "rules": [
+                    "boundary.attached",
+                    "boundary.eu",
+                    "ending",
+                    "prefinal.honorific"
+                  ],
+                  "unchanged": false
+                },
+                "entry_changes": [
+                  {
+                    "lemma_index": 0,
+                    "entry_id": "krdict:48214",
+                    "before": "compatible",
+                    "after": "unknown"
+                  }
+                ],
+                "contextual_correctness": "unjudged"
+              }
+            ],
+            "id": "mujeong-proposal-435107-435119",
+            "review": "Only the adjective homonym assessment changes to Unknown. The prose uses becoming friends; compatible verb homonyms remain. No contextual sense judgment is assigned to the adjective alternative."
+          }
+        ]
+      },
+      {
+        "policy": "--dict-compatible",
+        "records": 179112,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "before_binary": "/tmp/klem-before-proposal-audit",
+        "after_binary": "/tmp/klem-cargo-target-1000/debug/klem",
+        "before_binary_sha256": "7afd7610337bdebb5646427dad4867cac45bfd3851caa4c02cc506044f68e55f",
+        "after_binary_sha256": "219829de3fc97d24dd4c1361b1176db6ce6b0e76f9331d1f0543f6fe17c1eece",
+        "before_jsonl_sha256": "4b31fe1a8d0ad6d8bc3b491dd5c3a683dfae683f6085a5d092f84aacb82052f9",
+        "after_jsonl_sha256": "4cb1996954f91a7a4667614b846d160b4d20578ee41cbb3641a93483d987a526",
+        "changed_records": 2,
+        "added_candidates": 0,
+        "removed_candidates": 0,
+        "changes": [
+          {
+            "surface": "됩시다",
+            "span": {
+              "start": 196122,
+              "end": 196131
+            },
+            "context": "채가 일찍 월화에게 안기며, “형님! 형님과 저와 솔이와 세 사람이 친구가 됩시다” 한 일이 있었다. 그러고 나도 반드시 월화 형님과 같이 솔이가 되리라 하",
+            "paths": [
+              {
+                "analysis": {
+                  "lemmas": [
+                    {
+                      "text": "되다",
+                      "kind": "predicate"
+                    }
+                  ],
+                  "morphemes": [
+                    {
+                      "form": "읍시다",
+                      "kind": "ending"
+                    }
+                  ],
+                  "rules": [
+                    "boundary.attached",
+                    "ending"
+                  ],
+                  "unchanged": false
+                },
+                "entry_changes": [
+                  {
+                    "lemma_index": 0,
+                    "entry_id": "krdict:48214",
+                    "before": "compatible",
+                    "after": "unknown"
+                  }
+                ],
+                "contextual_correctness": "unjudged"
+              }
+            ],
+            "id": "mujeong-proposal-196122-196131",
+            "review": "Only the adjective homonym assessment changes to Unknown. The prose uses becoming friends; compatible verb homonyms remain. No contextual sense judgment is assigned to the adjective alternative."
+          },
+          {
+            "surface": "되십시다",
+            "span": {
+              "start": 435107,
+              "end": 435119
+            },
+            "context": "��이가 자기보다 두어 살 아래 되는 소년을 붙들고,\n\n“여보, 나하고 동무가 되십시다. 너, 나 하고 지내입시다” 하였다. 그 소년은 농담인 줄 알고, “녜” 하면",
+            "paths": [
+              {
+                "analysis": {
+                  "lemmas": [
+                    {
+                      "text": "되다",
+                      "kind": "predicate"
+                    }
+                  ],
+                  "morphemes": [
+                    {
+                      "form": "시",
+                      "kind": "prefinal"
+                    },
+                    {
+                      "form": "읍시다",
+                      "kind": "ending"
+                    }
+                  ],
+                  "rules": [
+                    "boundary.attached",
+                    "boundary.eu",
+                    "ending",
+                    "prefinal.honorific"
+                  ],
+                  "unchanged": false
+                },
+                "entry_changes": [
+                  {
+                    "lemma_index": 0,
+                    "entry_id": "krdict:48214",
+                    "before": "compatible",
+                    "after": "unknown"
+                  }
+                ],
+                "contextual_correctness": "unjudged"
+              }
+            ],
+            "id": "mujeong-proposal-435107-435119",
+            "review": "Only the adjective homonym assessment changes to Unknown. The prose uses becoming friends; compatible verb homonyms remain. No contextual sense judgment is assigned to the adjective alternative."
+          }
+        ]
+      }
+    ],
+    "release": [
+      {
+        "policy": "--dict-only",
+        "records": 179112,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "before_binary": "/tmp/klem-release-before-proposal-audit",
+        "after_binary": "/nix/store/a4gq2pm7srcl03ilhlgykx77szgp3c4a-klem-0.1.0/bin/klem",
+        "before_binary_sha256": "9b1057632ed56a097916ee12b247bee3631b7ddad6c0f626a9f03fe48e96743a",
+        "after_binary_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+        "before_jsonl_sha256": "6c4eb16ada19f8971e9cdf74bd6b9d3223c2ad0ef590d93af96741fa38ccee81",
+        "after_jsonl_sha256": "93971924e9bd41c778258758f734e86b390110bc1b9c0445d3bac23e425a3508",
+        "changed_records": 2,
+        "added_candidates": 0,
+        "removed_candidates": 0,
+        "changes": [
+          {
+            "surface": "됩시다",
+            "span": {
+              "start": 196122,
+              "end": 196131
+            },
+            "context": "채가 일찍 월화에게 안기며, “형님! 형님과 저와 솔이와 세 사람이 친구가 됩시다” 한 일이 있었다. 그러고 나도 반드시 월화 형님과 같이 솔이가 되리라 하",
+            "paths": [
+              {
+                "analysis": {
+                  "lemmas": [
+                    {
+                      "text": "되다",
+                      "kind": "predicate"
+                    }
+                  ],
+                  "morphemes": [
+                    {
+                      "form": "읍시다",
+                      "kind": "ending"
+                    }
+                  ],
+                  "rules": [
+                    "boundary.attached",
+                    "ending"
+                  ],
+                  "unchanged": false
+                },
+                "entry_changes": [
+                  {
+                    "lemma_index": 0,
+                    "entry_id": "krdict:48214",
+                    "before": "compatible",
+                    "after": "unknown"
+                  }
+                ],
+                "contextual_correctness": "unjudged"
+              }
+            ],
+            "id": "mujeong-proposal-196122-196131",
+            "review": "Only the adjective homonym assessment changes to Unknown. The prose uses becoming friends; compatible verb homonyms remain. No contextual sense judgment is assigned to the adjective alternative."
+          },
+          {
+            "surface": "되십시다",
+            "span": {
+              "start": 435107,
+              "end": 435119
+            },
+            "context": "��이가 자기보다 두어 살 아래 되는 소년을 붙들고,\n\n“여보, 나하고 동무가 되십시다. 너, 나 하고 지내입시다” 하였다. 그 소년은 농담인 줄 알고, “녜” 하면",
+            "paths": [
+              {
+                "analysis": {
+                  "lemmas": [
+                    {
+                      "text": "되다",
+                      "kind": "predicate"
+                    }
+                  ],
+                  "morphemes": [
+                    {
+                      "form": "시",
+                      "kind": "prefinal"
+                    },
+                    {
+                      "form": "읍시다",
+                      "kind": "ending"
+                    }
+                  ],
+                  "rules": [
+                    "boundary.attached",
+                    "boundary.eu",
+                    "ending",
+                    "prefinal.honorific"
+                  ],
+                  "unchanged": false
+                },
+                "entry_changes": [
+                  {
+                    "lemma_index": 0,
+                    "entry_id": "krdict:48214",
+                    "before": "compatible",
+                    "after": "unknown"
+                  }
+                ],
+                "contextual_correctness": "unjudged"
+              }
+            ],
+            "id": "mujeong-proposal-435107-435119",
+            "review": "Only the adjective homonym assessment changes to Unknown. The prose uses becoming friends; compatible verb homonyms remain. No contextual sense judgment is assigned to the adjective alternative."
+          }
+        ]
+      },
+      {
+        "policy": "--dict-compatible",
+        "records": 179112,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "before_binary": "/tmp/klem-release-before-proposal-audit",
+        "after_binary": "/nix/store/a4gq2pm7srcl03ilhlgykx77szgp3c4a-klem-0.1.0/bin/klem",
+        "before_binary_sha256": "9b1057632ed56a097916ee12b247bee3631b7ddad6c0f626a9f03fe48e96743a",
+        "after_binary_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+        "before_jsonl_sha256": "4b31fe1a8d0ad6d8bc3b491dd5c3a683dfae683f6085a5d092f84aacb82052f9",
+        "after_jsonl_sha256": "4cb1996954f91a7a4667614b846d160b4d20578ee41cbb3641a93483d987a526",
+        "changed_records": 2,
+        "added_candidates": 0,
+        "removed_candidates": 0,
+        "changes": [
+          {
+            "surface": "됩시다",
+            "span": {
+              "start": 196122,
+              "end": 196131
+            },
+            "context": "채가 일찍 월화에게 안기며, “형님! 형님과 저와 솔이와 세 사람이 친구가 됩시다” 한 일이 있었다. 그러고 나도 반드시 월화 형님과 같이 솔이가 되리라 하",
+            "paths": [
+              {
+                "analysis": {
+                  "lemmas": [
+                    {
+                      "text": "되다",
+                      "kind": "predicate"
+                    }
+                  ],
+                  "morphemes": [
+                    {
+                      "form": "읍시다",
+                      "kind": "ending"
+                    }
+                  ],
+                  "rules": [
+                    "boundary.attached",
+                    "ending"
+                  ],
+                  "unchanged": false
+                },
+                "entry_changes": [
+                  {
+                    "lemma_index": 0,
+                    "entry_id": "krdict:48214",
+                    "before": "compatible",
+                    "after": "unknown"
+                  }
+                ],
+                "contextual_correctness": "unjudged"
+              }
+            ],
+            "id": "mujeong-proposal-196122-196131",
+            "review": "Only the adjective homonym assessment changes to Unknown. The prose uses becoming friends; compatible verb homonyms remain. No contextual sense judgment is assigned to the adjective alternative."
+          },
+          {
+            "surface": "되십시다",
+            "span": {
+              "start": 435107,
+              "end": 435119
+            },
+            "context": "��이가 자기보다 두어 살 아래 되는 소년을 붙들고,\n\n“여보, 나하고 동무가 되십시다. 너, 나 하고 지내입시다” 하였다. 그 소년은 농담인 줄 알고, “녜” 하면",
+            "paths": [
+              {
+                "analysis": {
+                  "lemmas": [
+                    {
+                      "text": "되다",
+                      "kind": "predicate"
+                    }
+                  ],
+                  "morphemes": [
+                    {
+                      "form": "시",
+                      "kind": "prefinal"
+                    },
+                    {
+                      "form": "읍시다",
+                      "kind": "ending"
+                    }
+                  ],
+                  "rules": [
+                    "boundary.attached",
+                    "boundary.eu",
+                    "ending",
+                    "prefinal.honorific"
+                  ],
+                  "unchanged": false
+                },
+                "entry_changes": [
+                  {
+                    "lemma_index": 0,
+                    "entry_id": "krdict:48214",
+                    "before": "compatible",
+                    "after": "unknown"
+                  }
+                ],
+                "contextual_correctness": "unjudged"
+              }
+            ],
+            "id": "mujeong-proposal-435107-435119",
+            "review": "Only the adjective homonym assessment changes to Unknown. The prose uses becoming friends; compatible verb homonyms remain. No contextual sense judgment is assigned to the adjective alternative."
+          }
+        ]
+      }
+    ],
+    "debug_release_output_parity": true,
+    "changed_adjective_entry": {
+      "id": "krdict:48214",
+      "headword": "되다",
+      "homonym": "2",
+      "pos": "형용사",
+      "definitions": [
+        "밥이나 반죽 등이 물기가 적어 부드럽지 못하다.",
+        "줄이 늘어지지 않고 팽팽하다.",
+        "일이 힘들어 감당하기 어렵다.",
+        "매우 심하거나 모질다."
+      ],
+      "source_url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=48214"
+    },
+    "candidate_paths_unchanged": true,
+    "interpretation": "Two source-span-identified records have only an adjective-homonym assessment change; contextual adjective alternatives remain unjudged. No new candidate or removed candidate, and verb homonyms remain compatible."
+  },
+  "baselines": [
+    {
+      "path": "data/baselines/kaist-dev.jsonl",
+      "sha256": "942e84f3d7f1905341fe2585e588563edb947feae96b5dfc1872ef915290b42c",
+      "byte_identical_to_before_revision": true
+    },
+    {
+      "path": "data/baselines/kaist-test.jsonl",
+      "sha256": "fdd557c80a41a24274c43a82f8c1868b2992d00286dbf48dd877df57b8a81222",
+      "byte_identical_to_before_revision": true
+    },
+    {
+      "path": "data/baselines/gsd-dev.jsonl",
+      "sha256": "c32e071e6823b4a1e69935933b568daa54e8c2dcfa5dea8b2da9eabe1a51d9b8",
+      "byte_identical_to_before_revision": true
+    },
+    {
+      "path": "data/baselines/gsd-test.jsonl",
+      "sha256": "76d656c99f08b14feb9d31a6d41ef83ff568570445c0402873e98d7cd2dfa422",
+      "byte_identical_to_before_revision": true
+    }
+  ],
+  "inventory": {
+    "entries": 715,
+    "scoped": 382,
+    "unreviewed": 332,
+    "gap": 1,
+    "catalog_linked": 429,
+    "judgment_cited": 418,
+    "canonical_forms": 510,
+    "catalog_source_ids": 702,
+    "native_label_fixture_entries": 747
+  },
+  "release_performance": {
+    "input": "data/books/mujeong.txt",
+    "before_binary": "/tmp/klem-release-before-proposal-audit",
+    "after_binary": "/nix/store/a4gq2pm7srcl03ilhlgykx77szgp3c4a-klem-0.1.0/bin/klem",
+    "method": "Three interleaved release CLI runs per version/filter, including startup, dictionary access and JSONL serialization; stdout discarded. Linux per-child peak RSS. Measurements do not establish statistical equivalence.",
+    "results": {
+      "--dict-only": {
+        "before": {
+          "samples": [
+            {
+              "seconds": 1.866358024009969,
+              "max_rss_kib": 29040
+            },
+            {
+              "seconds": 1.6820560629712418,
+              "max_rss_kib": 29840
+            },
+            {
+              "seconds": 1.671580062014982,
+              "max_rss_kib": 29016
+            }
+          ],
+          "median_seconds": 1.6820560629712418,
+          "peak_rss_kib": 29840
+        },
+        "after": {
+          "samples": [
+            {
+              "seconds": 1.7232638300047256,
+              "max_rss_kib": 30308
+            },
+            {
+              "seconds": 1.694878411013633,
+              "max_rss_kib": 30020
+            },
+            {
+              "seconds": 1.6986208590096794,
+              "max_rss_kib": 29892
+            }
+          ],
+          "median_seconds": 1.6986208590096794,
+          "peak_rss_kib": 30308
+        }
+      },
+      "--dict-compatible": {
+        "before": {
+          "samples": [
+            {
+              "seconds": 1.70050940499641,
+              "max_rss_kib": 29160
+            },
+            {
+              "seconds": 1.6526475359569304,
+              "max_rss_kib": 29592
+            },
+            {
+              "seconds": 1.6896453140070662,
+              "max_rss_kib": 29856
+            }
+          ],
+          "median_seconds": 1.6896453140070662,
+          "peak_rss_kib": 29856
+        },
+        "after": {
+          "samples": [
+            {
+              "seconds": 1.6665467929560691,
+              "max_rss_kib": 29804
+            },
+            {
+              "seconds": 1.6603855789871886,
+              "max_rss_kib": 29616
+            },
+            {
+              "seconds": 1.663684411032591,
+              "max_rss_kib": 30192
+            }
+          ],
+          "median_seconds": 1.663684411032591,
+          "peak_rss_kib": 30192
+        }
+      }
+    }
+  },
+  "nix_outputs": {
+    "cli": "/nix/store/xar924yvfjhg8vcw4iwhj4xim5r60ngb-klem-0.1.0/bin/klem",
+    "cli_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+    "web_wrapper": "/nix/store/r9zbxi9msycngpvc1lxczclv9xnw15vk-klem-web/bin/klem-web",
+    "assets": "/nix/store/5dmg75z1wbgzkbbhrvjzp3adjc75gka6-klem-web-assets-0.1.0/share/klem-web",
+    "production_js": "/nix/store/5dmg75z1wbgzkbbhrvjzp3adjc75gka6-klem-web-assets-0.1.0/share/klem-web/assets/index-CV8_PQqf.js",
+    "production_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf",
+    "local_asset_parity": true
+  },
+  "runtime_checks": {
+    "packaged": {
+      "url": "http://127.0.0.1:36351",
+      "binary": "/nix/store/xar924yvfjhg8vcw4iwhj4xim5r60ngb-klem-0.1.0/bin/klem",
+      "binary_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+      "served_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf",
+      "raw_cases": 8,
+      "policy_cases": 16,
+      "both_filters_passed": true,
+      "http_cli_exact_parity": true,
+      "grammar_source_ids": [
+        68880,
+        68883
+      ],
+      "per_entry_unknown_checked": true,
+      "local_assets_exact": true,
+      "server_wrapper": "/nix/store/r9zbxi9msycngpvc1lxczclv9xnw15vk-klem-web/bin/klem-web"
+    },
+    "packaged_browser": {
+      "url": "http://127.0.0.1:36351",
+      "selected_paths": 14,
+      "compatible_export_cli_parity": true,
+      "mobile_width": true,
+      "served_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf"
+    },
+    "preview": {
+      "url": "http://127.0.0.1:8081",
+      "binary": "/nix/store/xar924yvfjhg8vcw4iwhj4xim5r60ngb-klem-0.1.0/bin/klem",
+      "binary_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+      "served_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf",
+      "raw_cases": 8,
+      "policy_cases": 16,
+      "both_filters_passed": true,
+      "http_cli_exact_parity": true,
+      "grammar_source_ids": [
+        68880,
+        68883
+      ],
+      "per_entry_unknown_checked": true,
+      "local_assets_exact": true
+    },
+    "preview_refresh": {
+      "old_identity": {
+        "pid": 3524519,
+        "exe": "/nix/store/fikg9w92nqmz6nwx0gyl68g5hrb0z779-klem-0.1.0/bin/klem-web",
+        "args": [
+          "/nix/store/fikg9w92nqmz6nwx0gyl68g5hrb0z779-klem-0.1.0/bin/klem-web",
+          "--assets",
+          "/nix/store/8y4jpsipr9rnh17zavcf15717hpxqa38-klem-web-assets-0.1.0/share/klem-web",
+          "--port",
+          "8081",
+          "--dictionary",
+          "data/dictionaries/krdict/krdict.db"
+        ],
+        "cwd": "/home/josh/projects/klem",
+        "uid": 1000,
+        "start_time_ticks": "33818527"
+      },
+      "old_identity_verified": true,
+      "old_exited": true,
+      "new_package": "/nix/store/vc8ddqcsf2hag0s966hqzwhy7r5vmrbd-klem-web"
+    },
+    "final_preview_refresh": {
+      "old_identity": {
+        "pid": 3702598,
+        "exe": "/nix/store/a4gq2pm7srcl03ilhlgykx77szgp3c4a-klem-0.1.0/bin/klem-web",
+        "args": [
+          "/nix/store/a4gq2pm7srcl03ilhlgykx77szgp3c4a-klem-0.1.0/bin/klem-web",
+          "--assets",
+          "/nix/store/5dmg75z1wbgzkbbhrvjzp3adjc75gka6-klem-web-assets-0.1.0/share/klem-web",
+          "--port",
+          "8081",
+          "--dictionary",
+          "data/dictionaries/krdict/krdict.db"
+        ],
+        "cwd": "/home/josh/projects/klem",
+        "uid": 1000,
+        "start_time_ticks": "33979385"
+      },
+      "old_identity_verified": true,
+      "old_exited": true,
+      "new_package": "/nix/store/r9zbxi9msycngpvc1lxczclv9xnw15vk-klem-web"
+    },
+    "preview_identity": {
+      "pid": 3771844,
+      "exe": "/nix/store/xar924yvfjhg8vcw4iwhj4xim5r60ngb-klem-0.1.0/bin/klem-web",
+      "args": [
+        "/nix/store/xar924yvfjhg8vcw4iwhj4xim5r60ngb-klem-0.1.0/bin/klem-web",
+        "--assets",
+        "/nix/store/5dmg75z1wbgzkbbhrvjzp3adjc75gka6-klem-web-assets-0.1.0/share/klem-web",
+        "--port",
+        "8081",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "cwd": "/home/josh/projects/klem",
+      "uid": 1000,
+      "start_time_ticks": "34033094"
+    }
+  },
+  "validation": {
+    "rust": "passed: 616 tests including stress",
+    "pinned_corpus": "passed: full pinned corpus regression; four frozen baselines byte-identical to c3eece7; raw regression comparisons unchanged",
+    "clippy": "passed: all targets with -D warnings",
+    "format": "passed",
+    "frontend": "passed: TypeScript and production build",
+    "inventory": "passed: 9 tests and refreshed queue verification",
+    "browser": "passed: full suite, 14 selected formal-proposal paths, eight native groups, both-allomorph IDs, per-entry Unknown, CLI-compatible export, mobile and dictionary-free behavior; desktop/mobile screenshots inspected",
+    "nix": "passed: CLI/web builds and all three x86_64-linux flake checks. Other architectures not executed.",
+    "packaged": "passed: full-dictionary API/CLI/both-filter parity, exact source IDs/headwords/POS, 14 selected browser paths, export and production asset parity; desktop/mobile screenshots inspected",
+    "preview": "passed: refreshed Nix package on 8081, 8 raw/16 dictionary cases, both filters and asset parity"
+  },
+  "limitations": [
+    "The two source identities and all native groups are reviewed; lexical adjective wish subsets and social register still need independent Korean review.",
+    "The inference from general command/proposal guidance to formal 읍시다 preserves Unknown rather than treating all adjective combinations as forbidden or grammatically certified.",
+    "Further prefinal/follower paradigms and broader inventories remain open.",
+    "Performance samples describe this machine; they do not establish statistical equivalence."
+  ],
+  "verification_logs": {
+    "rust": "/tmp/klem-proposal-audit-all-tests-2.log",
+    "pinned": "/tmp/klem-proposal-audit-pinned.log",
+    "clippy": "/tmp/klem-proposal-audit-clippy.log",
+    "format": "/tmp/klem-proposal-audit-fmt-check.log",
+    "frontend": "/tmp/klem-proposal-audit-frontend.log",
+    "browser": "/tmp/klem-proposal-audit-browser.log",
+    "comparison": "/tmp/klem-proposal-audit-verify-2.log",
+    "novel": "/tmp/klem-proposal-audit-novel-2.log",
+    "release_novel": "/tmp/klem-proposal-audit-release-novel.log",
+    "nix": "/tmp/klem-proposal-audit-nix.log",
+    "flake_check": "/tmp/klem-proposal-audit-flake-check.log",
+    "packaged": "/tmp/klem-proposal-audit-packaged-2.log",
+    "preview": "/tmp/klem-proposal-audit-preview-smoke.log",
+    "performance": "/tmp/klem-proposal-audit-performance.log",
+    "final_nix": "/tmp/klem-proposal-audit-final-nix.log",
+    "final_flake_check": "/tmp/klem-proposal-audit-final-flake-check.log",
+    "final_packaged": "/tmp/klem-proposal-audit-packaged-final.log",
+    "final_preview": "/tmp/klem-proposal-audit-final-preview-smoke.log",
+    "final_targeted": "/tmp/klem-proposal-audit-targeted-final.log"
+  },
+  "final_snapshot_note": "Removed draft status from the source manifest. Final Nix release tests and all three flake checks passed; CLI and frontend bytes match the packages used for comparisons/performance. Final package paths, runtime and preview reverified."
+}

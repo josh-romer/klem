@@ -3750,3 +3750,11 @@ bundled 군요 entry. [The source audit](quote-followers-source-audit.json) and
 [fixture manifest](../tests/fixtures/quote-followers-sources.json) distinguish
 17 unchanged direct example groups from inferred compositions and unjudged
 quoted 구나 followers. Register and independent Korean review remain open.
+
+Formal proposal review (COV-017bm) preserves canonical `읍시다` and all
+existing allomorph/spelling recovery paths. Its display sources include both
+native `-ㅂ시다` (68883) and `-읍시다` (68880). Dictionary assessment marks
+lexical/adjective auxiliary and unresolved negative-owner proposal entries
+Unknown: broad POS does not decide contextual adjective wishes. Known verb
+homonyms and existing conflicts retain their separate assessments. See the
+[source review](proposal-source-audit.json) and [evaluation](proposal-evaluation.json).

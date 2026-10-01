@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bl/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 380 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 334 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 382 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 332 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -221,7 +221,7 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bl implemented; COV-017aw/az remain open.**
+  COV-017ax–ay/017ba–bm implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1481,6 +1481,26 @@ review remains open under the completion review below.
   including packaged API/CLI/export/asset parity and refreshed preview.
   General polite prefinals, wider followers, existential paradigms, parent
   inventories and independent Korean review remain open.
+
+- [x] **COV-017bm — Formal proposal source and class review.** Both native
+  -ㅂ시다/-읍시다 entries and all eight original example groups have source
+  regressions, preserving consonant, vowel, ㄹ/ㄷ/ㅂ boundaries and lexical /
+  auxiliary alternatives. Their verb notes do not settle contextual adjective
+  wishes: NIKL [318597](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=318597)
+  describes exceptions. Known adjective entries, adjective auxiliaries and
+  unclassified negative owners retain Unknown; compatible verb homonyms and
+  existing conflicts remain distinct. The canonical label links both native
+  allomorph identities with their actual headwords/POS. [Four tests](../tests/proposal_review.rs),
+  8 raw cases / 9 source judgments, 16 dictionary-retention cases, 73 complete
+  attributed entries and [the source audit](proposal-source-audit.json) record
+  the scope. [The evaluation](proposal-evaluation.json) verifies 11,883
+  byte-identical raw outputs. Seven regression inputs change only per-entry
+  assessments; two novel spans change the adjective 되다 homonym to Unknown
+  without adding/removing candidates or rejecting the compatible verb.
+  Full Rust/stress, pinned corpus, lint/format, frontend, browser and x86_64 Linux
+  Nix checks pass, including packaged API/CLI/export/assets and preview.
+  Both inventory entries have scoped dispositions. Contextual wish subsets,
+  social register, further paradigms and independent Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

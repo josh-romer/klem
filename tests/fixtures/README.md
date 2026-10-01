@@ -1806,3 +1806,10 @@ attributed under CC BY-SA 2.0 KR. `quote-followers-sources.json` preserves all
 17 directly found example groups and their stable candidate/policy case IDs;
 67 raw and 33 policy cases separate source tokens, inferred experience
 followers, owner conflicts and unjudged quoted 구나 observations.
+
+`krdict-proposal-audit.json` retains complete pinned native entries for both
+formal proposal endings and tested lexical/auxiliary homonyms (CC BY-SA 2.0 KR;
+National Institute of Korean Language). Only RelatedForm and non-English
+equivalents are omitted; source groups and export hashes are in
+[the source audit](../../docs/proposal-source-audit.json). Candidate retention
+and Unknown assessments do not certify contextual adjective wishes.

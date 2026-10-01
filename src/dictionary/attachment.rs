@@ -822,6 +822,22 @@ impl Annotation {
                         // COV-019h; do not settle them from a borrowed POS.
                         status = Compatibility::Unknown;
                     }
+                    if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "읍시다")
+                        && (matches!(matched.entry.pos.as_str(), "형용사" | "보조 형용사")
+                            || derived_adjective
+                            || matches!(class, Some(PredicateClass::Adjective))
+                            || (lemma.kind == LemmaKind::Auxiliary
+                                && class.is_none()
+                                && matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")))
+                    {
+                        // The formal proposal entries specify verbs. NIKL
+                        // 318597 describes contextual adjective wishes, so a
+                        // POS label cannot justify pruning those hypotheses.
+                        // Unclassified negatives do not borrow lexical POS
+                        // from a preceding homonym. Existing conflicts win.
+                        status = Compatibility::Unknown;
+                    }
                     if status == Compatibility::Compatible && let Some(i) = ending
                         && crate::engine::quoted_proposal_exclamation(&analysis.morphemes[i].form)
                         && (matches!(matched.entry.pos.as_str(), "형용사" | "보조 형용사")

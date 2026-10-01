@@ -103,6 +103,9 @@ pub(crate) const NOUN_I_FORMS: &[(&str, &str)] = &[
     ("벌이", "벌다"),
     // KRDict sense 2; NIKL's morphology review lists 떠돌이 as V-이.
     ("떠돌이", "떠돌다"),
+    // KRDict sense 3 lists 까불이; retain its native class note and both
+    // 까불다 verb homonyms. The lookup relationship is a finite hypothesis.
+    ("까불이", "까불다"),
 ];
 
 // KRDict 88924 sense 3; selected noun-to-noun formations under Article 20.

@@ -3548,3 +3548,32 @@ and three browser exports; visually inspected desktop/mobile views retain root/
 related menu identities, noun ownership and missing-head filter uncertainty.
 Ten native forms, finer histories, contextual related senses and independent
 Korean review remain open alongside the broader morphology inventory.
+
+## Native 까불이 predicate noun relationship (COV-022j)
+
+The [source audit](noun-predicate-source-audit.json) preserves one native
+sense-3 suffix example, both 까불다 verbs and the whole 까불이 noun. Its
+original class note remains; finite predicate lookup is a source-pattern
+relationship inference, not contextual homonym selection. Four tests/twenty
+stable cases add 17 required / 3 forbidden judgments, reaching 7,503 required /
+3,173 forbidden. Fifteen complete entries retain all suffix senses/44 groups.
+Exhaustive KAIST/GSD training searches find no target; no gold is invented.
+
+The [individual comparison](noun-predicate-evaluation.json) covers 13,308
+NFC/NFD inputs. Every mode adds 36 paths at 34 surfaces: 34 match required
+judgments and two plural-들 particle alternatives remain unjudged. Every old
+candidate/lookup reading remains. Both filters retain both verb homonyms and
+the whole known noun. Full raw analyses, stable IDs/dispositions and verified
+filtered ID references are recorded without making sense certification claims.
+All four full frozen corpus reports and all five 179,112-record novel outputs,
+including spacing sidecars, are byte-identical. No baseline changes and all
+packaged/debug novel hashes match. Three interleaved local release samples give
+--dict-only medians 1.60/1.58 seconds, after peak child RSS 30,412 KiB; --dict-compatible medians 1.59/1.59 seconds, after peak child RSS 30,604 KiB. These descriptive observations include startup, lookup and JSONL
+serialization and do not establish statistical equivalence.
+
+All 657 Rust tests, pinned corpus, lint/format, frontend/full browser and Nix
+builds/three Linux checks pass. Packaged/refreshed-preview API and all three
+browser exports agree; inspected desktop/mobile views preserve ordered noun/
+copula ownership. Browser checks use original raw indices when selecting
+filtered readings, following the UI contract. Nine native forms, contextual
+homonym selection, independent Korean review and wider morphology remain open.

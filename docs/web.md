@@ -353,3 +353,5 @@ lexical readings and filtered JSON component identities remain available.
 Sound/manner noun breakdowns use adverb or root base roles before the noun suffix, then plural/approximation/particles or a separate copula. 뺑뺑 has a Root label and retains its source-listed path in raw mode; dictionary filters remove the unmatched root and keep the whole noun. Base glosses remain dictionary hints, particularly for homonymous 깡깡/덜렁/짝짝; the noun/adverb suffix sources stay distinct.
 
 Root/related-predicate noun readings display the same root form before -이 while exporting distinct canonical lemmas. Related 하다/거리다 menu choices name their dictionary form, and root choices are labelled separately. Stripping a related predicate tail is display-only; no 하/거리 component is inserted, and later copulas retain their own stem/prefinals/ending. Missing related heads and roots follow the existing dictionary filters.
+
+까불이 displays 까불 + 이 and keeps both 까불다 homonyms plus the whole noun. The noun-forming suffix links to 88924; outer plural/approximation/case and later copulas remain ordered. Raw and both filtered exports preserve canonical lemma and dictionary identities.

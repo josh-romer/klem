@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d/022f–i batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d/022f–j batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -2608,7 +2608,8 @@ review remains open under the completion review below.
   predicate-base noun formations; COV-022f adds all six native sense-2 forms
   with ordered compound bases and finite normalization; COV-022g adds four
   nominal-base formations, COV-022h adds nine sound/manner forms, and
-  COV-022i adds seven roots with six related-predicate alternatives.**
+  COV-022i adds seven roots with six related-predicate alternatives, and
+  COV-022j adds the finite 까불이 predicate relationship.**
   Remaining: other lexical
   classes, other opaque roots beyond the finite COV-022c forms, subdivision of nonlexical
   repeated bases, suffix/auxiliary interactions, and other nominal -이 senses/classes. Keep lexical readings and causative/noun homonyms; historical
@@ -2705,8 +2706,8 @@ review remains open under the completion review below.
   in that historical snapshot; existing lexical candidates remain in the report.
   COV-022f subsequently covers the six sense-2 forms; COV-022g covers four
   sense-3 nominal forms, COV-022h covers nine sound/manner forms, and COV-022i
-  covers seven roots with six related-predicate alternatives. Ten native sense-3
-  forms remain open. The discovery artifact is preserved as
+  covers seven roots with six related-predicate alternatives. COV-022j covers
+  까불이; nine native sense-3 forms remain open. The discovery artifact is preserved as
   historical evidence. Fourteen
   prefix occurrences across six pinned corpus partitions retain complete
   sentence bodies and original rows. All are in KAIST training data: nine
@@ -2824,11 +2825,27 @@ review remains open under the completion review below.
   and [evaluation](noun-root-evaluation.json). Finer histories, contextual
   related-head senses and independent Korean review remain open.
 
-- [ ] **COV-022j — Native 까불이 predicate relationship.** Review and implement
+- [x] **COV-022j — Native 까불이 predicate relationship.** Implemented
   the source-listed 까불이 base while preserving both 까불다 homonyms and the
   original sense-3 source classification. A verb headword does not prove the
   derived person sense; dictionary membership and source-pattern inferences
   must remain distinguishable from primary segmentation evidence.
+  까불다 + noun-forming 이 retains both native verb homonyms and the whole
+  noun. Four tests/twenty stable cases (17 required / 3 forbidden) cover Unicode,
+  ordered outer morphology, filters/CLI exports and spacing roles. Fifteen
+  complete entries preserve all suffix senses/44 groups and the original
+  sense-3 classification; neither training corpus has a matching annotation.
+  All 657 Rust tests, pinned corpus, lint/format, full browser, Nix CLI/web
+  builds and three Linux checks pass. Across 13,308 inputs each mode adds 36
+  paths at 34 surfaces, retaining every old analysis/lookup: 34 match required
+  cases and two plural-들 particle alternatives remain unjudged. Full corpus
+  and all five 179,112-record novel outputs are byte-identical; no baselines
+  change. Packaged/refreshed-preview HTTP/CLI and all three browser exports
+  agree; inspected desktop/mobile views preserve ordered noun/copula ownership.
+  Release/debug novel hashes match and three interleaved local timing samples
+  are recorded in the [evaluation](noun-predicate-evaluation.json). See also
+  [source audit](noun-predicate-source-audit.json). Contextual homonym selection,
+  finer history and independent Korean-language review remain open.
 
 - [ ] **COV-022k — Native nominal -이 internal compounds.** Review and implement
   왕눈이 and 점박이. Primary Article 19 links 점박이 to 박다; review the
@@ -2847,11 +2864,11 @@ review remains open under the completion review below.
   provenance; neither date nor a missing head settles them automatically.
 
   COV-022g–l partition every original native sense-3 example exactly once;
-  the three open batches COV-022j–l retain the other ten forms. The
+  the two open batches COV-022k–l retain the other nine forms. The
   [read-only review tool](../tools/review_nominal_i_bases.py) verifies
   source/plan identity and retains ninety current CLI/filter snapshots plus
   full dictionary sense/role observations. The historical ninety-probe discovery snapshot assigns no required judgment
-  or runtime path; subsequent COV-022g/h/i implementations have separate evidence.
+  or runtime path; subsequent COV-022g/h/i/j implementations have separate evidence.
   All existing corpus annotations and
   frozen baselines remain unchanged; other compound leads and wider COV-022
   derivations remain open beyond these thirty forms.

@@ -991,3 +991,18 @@ the unmatched plant compound without changing its raw gold. Ten native forms
 COV-022j–l and wider derivation/independent review remain open. Noun/suffix
 forms remain outside the 715-entry ending/particle/auxiliary queue's POS scope;
 that queue remains 386 scoped / 328 unreviewed / one gap.
+
+## Native 까불이 predicate noun relationship (2026-10-01)
+
+COV-022j implements finite 까불다 + noun-forming 이 without selecting either
+verb homonym's contextual meaning. The [source audit](noun-predicate-source-audit.json)
+retains fifteen complete entries and all suffix senses/44 groups, preserving
+까불이 under original sense 3. Four tests/twenty cases cover 17 required and
+three forbidden paths; no pinned training target or invented gold. All 657
+Rust tests, Nix/browser/HTTP/preview/release gates pass. The
+[comparison](noun-predicate-evaluation.json) preserves every prior candidate
+across 13,308 inputs and retains two unjudged additions per mode. Full corpus
+and five novel outputs remain unchanged. Nine forms COV-022k–l and wider
+morphology/independent review remain open. Noun/suffix examples remain outside
+the ending/particle/auxiliary POS scope; that queue stays 715 entries, with
+386 scoped / 328 unreviewed / one gap.

@@ -533,6 +533,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounRootIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounRootEntries);
 
+  const nounPredicateFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-noun-predicate.json"), "utf8"));
+  const nounPredicateEntries = nounPredicateFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounPredicateIds = new Set(nounPredicateEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounPredicateIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounPredicateEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -4988,6 +4994,31 @@ try {
     const words=exported.records.filter(r=>r.analysis);assert.ok(words[0].analysis.analyses.some(a=>a.rules.includes("derivation.nominal.related_root")));
     assert.ok(words.every(r=>r.analysis.analyses.every(a=>a.lemmas.every(l=>l.kind!=="root"&&l.text!=="합죽거리다"))));
   }
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  // 까불이 preserves both 까불다 homonyms and its original sense-3 noun
+  // suffix classification. A lookup match does not choose the person's sense.
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check();
+    else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check();
+    else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="까불이 까불이들쯤에는 까불이들이었다";
+    await submit(page,text);await waitHeading(page,"까불이");
+    const raw=await (await post("analyze",{text})).json();
+    const expected=execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+    const words=expected.filter(r=>r.analysis);
+    for (const [i,forms] of [[0,["까불","이"]],[1,["까불","이","들","쯤","에","는"]],[2,["까불","이","들","이","었","다"]]]) {
+      const record=words[i];const rawRecord=raw.records.filter(r=>r.analysis)[i];const choice=rawRecord.analysis.analyses.findIndex(a=>a.rules.includes("suffix.nominal.i")&&a.lemmas[0].text==="까불다");assert.ok(choice>=0);
+      const block=page.locator(".breakdown-word").nth(i);await block.getByRole("combobox").selectOption(String(choice));assert.deepEqual(await block.locator(".part-form").allTextContents(),forms);
+      const match=record.dictionary.lemmas.find(l=>l.lemma.text==="까불다");assert.deepEqual(new Set(match.entries.map(e=>e.id)),new Set(["krdict:38390","krdict:42138"]));
+    }
+    assert.ok(words[0].analysis.analyses.some(a=>a.unchanged&&a.lemmas[0].text==="까불이"));
+    await page.locator(".breakdown-word").first().getByRole("button",{name:"이 Noun-forming suffix",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,expected);
+    assert.ok(raw.records.filter(r=>r.analysis).every(r=>r.analysis.analyses.some(a=>a.rules.includes("suffix.nominal.i"))));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-noun-predicate-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-predicate-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while

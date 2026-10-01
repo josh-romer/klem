@@ -272,3 +272,5 @@ for direct examples and unresolved quoted 구나/register coverage.
 Finite sound/manner noun formations include 꿀꿀 + 이 and 오뚝 + 이. Source-listed 뺑뺑 + 이 uses a derivational root without a standalone POS claim; dictionary-only filters remove that path when the root has no dictionary match.
 
 Noun-forming roots such as 홀쭉 + 이 retain a separate related-predicate lookup 홀쭉하다. Both choices display 홀쭉 + 이 while preserving their canonical identities in exports. Missing roots or related heads remain visible in raw mode and follow the dictionary filters.
+
+까불이 can be read as 까불 + noun-forming 이, linked to 까불다. Both verb homonyms and the whole-noun reading remain selectable; a dictionary match does not choose the intended sense.

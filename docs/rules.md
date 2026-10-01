@@ -3777,3 +3777,27 @@ contextual sense. 조금이나마 keeps both copula/ending and nominal/adverbial
 particle hypotheses; lexical adjective/verb homonyms remain distinct. Existing
 class, allomorph, prefinal and auxiliary boundaries are unchanged. Further
 licenses and independent Korean-language review remain open.
+
+### Finite opaque adverb roots (COV-022c)
+
+The engine emits 천천/분연 + 히 with `LemmaKind::Root`, retaining the whole
+천천히/분연히 lexical alternatives. The finite source-backed table does not
+strip suffixes from arbitrary words or classify the roots as independent nouns,
+adverbs or predicates. Modern 히 spelling does not license historical 이
+recovery. Existing reviewed adverb-compatible particles follow the derived
+adverb; ordinary noun-case and unreviewed auxiliary attachments are not added.
+
+A separate 천천하다 + 히 candidate uses the independently attested adjective
+as a possible lookup lemma. This relationship is an inference from the suffix
+and predicate sources, not a dictionary headword or contextual sense decision.
+Its display is 천천 + 히, with no inserted 하 component. No independently
+reviewed related predicate is recorded for either 분연히 homonym. Both original
+lexical homonyms remain available. The [source audit](opaque-adverb-source-audit.json)
+retains full native groups, source hashes, inferred relationships and exclusions.
+
+`Root` serializes as `root`. Ordered breakdown requires a represented adverbial
+suffix after this role; it does not turn a bare root into a free word. Dictionary
+POS assessment is Unknown for this role because standalone POS labels do not
+establish the root relationship. Missing headwords are still missing, and both
+dictionary filters require headword matches. Other roots, lexical classes,
+suffix/auxiliary interactions and independent Korean review remain open.

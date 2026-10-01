@@ -85,7 +85,7 @@ export function parts(
         form: adverbRoot ? lemma.text.replace(/하다$/, "") : stem ? lemma.text.replace(/다$/, "") : lemma.text,
         label:
           (entry && result.glosses[entry.id]) ||
-          (entry ? "No English gloss" : "No dictionary gloss"),
+          (entry ? "No English gloss" : lemma.kind === "root" ? "Root" : "No dictionary gloss"),
         grammar: false,
         entry: entry?.id,
         hint: `${lemma.text} · ${lemma.kind}. Dictionary hint only; click for all senses.`,

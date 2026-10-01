@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–c batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -2603,8 +2603,9 @@ review remains open under the completion review below.
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds
   source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb
-  and repeated nominal bases plus shortened 익히/특히.** Remaining: other lexical
-  classes, opaque roots (including 천천히/분연히), subdivision of nonlexical
+  and repeated nominal bases plus shortened 익히/특히; COV-022c adds the finite
+  opaque 천천/분연 roots.** Remaining: other lexical
+  classes, other opaque roots beyond the finite COV-022c forms, subdivision of nonlexical
   repeated bases, suffix/auxiliary interactions, and nominal -이. Keep lexical readings and causative/noun homonyms; historical
   달리/빨리 do not license a general 르 inflection rule.
 - [x] **COV-022a — Source-listed predicate adverbs.** Six explicit ㅂ-stem
@@ -2635,6 +2636,36 @@ review remains open under the completion review below.
   unjudged alternatives. [Evaluation](adverb-root-evaluation.json) records all
   additions for 55 surfaces, unchanged development recall, and all thirty
   unchanged stress fingerprints. See [scope](rules.md#adverb-and-repeated-nominal-bases-shortened-adverbs-cov-022b).
+
+- [x] **COV-022c — Finite opaque adverb roots.** **Implementation verified by
+  627 Rust tests, full pinned corpus checks, broader candidate and novel
+  comparisons, browser/HTTP checks, and Nix CLI/web builds and flake checks.**
+  천천히 and both 분연히 homonyms now retain 천천/분연 + 히 paths with the
+  explicit `Root` role. This role asserts a derivational base without asserting
+  a standalone noun, adverb or predicate POS. Existing adverb-compatible particle
+  chains compose after the suffix; source-listed modern spelling is preserved.
+  A separate 천천하다 + 히 lookup hypothesis is inferred from KRDict's suffix
+  example and NIKL's independently attested contemporary 천천하다. Missing
+  dictionary heads remain missing, and both filters retain whole lexical adverbs
+  while removing these unmatched bases. No related 분연하다 is invented.
+  Sources: KRDict [-히](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88504),
+  [천천히](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=26902),
+  [분연히¹](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=60522),
+  [분연히²](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=60708),
+  and NIKL [304542](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=304542)/
+  [324669](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=324669).
+  [Four tests](../tests/opaque_adverbs.rs), 63 stable `opaque-*` cases (61 required /
+  2 forbidden), 84 complete native groups with 40 target occurrences, and two
+  unchanged annotated training sentences protect roles, source spelling, Unicode,
+  lexical alternatives, dictionary uncertainty, ordered CLI word/text exports and
+  the new JSON role. Native examples do not choose contextual senses, and the
+  annotated gold remains lexical. Across 12,060 probes no candidate is removed;
+  42 additions have required-path judgments and 114 remain unjudged. Both novel
+  dictionary filters, including spacing suggestions, remain byte-identical. See
+  [the source review](opaque-adverb-source-audit.json) and
+  [evaluation](opaque-adverb-evaluation.json).
+  Other opaque roots, class subdivision, suffix/auxiliary interactions, nominal
+  -이 and independent Korean-language review remain in COV-022/completion review.
 
 ### P3: dictionary and representation boundaries
 

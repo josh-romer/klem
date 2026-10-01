@@ -497,6 +497,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...proposalEntries);
 
 
+  const opaqueFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-opaque-adverbs.json"), "utf8"));
+  const opaqueEntries = opaqueFixture.LexicalResource.Lexicon.LexicalEntry;
+  const opaqueIds = new Set(opaqueEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !opaqueIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...opaqueEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -4760,6 +4766,52 @@ try {
     assert.ok(!candidates.some(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(forbidden)), word);
     assert.ok(candidates.some(a => a.unchanged), `${word}: preserve the original word`);
   }
+  // Root and related-predicate readings can render the same text while
+  // retaining distinct roles, lookup evidence and exported identities.
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();
+  await page.getByLabel("Dictionary matches only").uncheck();
+  const opaqueText = "천천히 분연히";
+  await submit(page, opaqueText); await waitHeading(page, "천천히");
+  const opaqueRaw = await (await post("analyze", {text: opaqueText})).json();
+  const opaqueWords = opaqueRaw.records.filter(t => t.kind === "word");
+  const opaqueRootIndices = [];
+  for (const [i, token] of opaqueWords.entries()) {
+    const block = page.locator(".breakdown-word").nth(i);
+    assert.deepEqual(await block.locator(".part-form").allTextContents(), [token.surface]);
+    const root = token.analysis.analyses.findIndex(a => a.lemmas[0].kind === "root");
+    assert.ok(root >= 0); opaqueRootIndices.push(root);
+    await block.getByRole("combobox").selectOption(String(root));
+    assert.deepEqual(await block.locator(".part-form").allTextContents(), [i === 0 ? "천천" : "분연", "히"]);
+    assert.equal(await block.locator(".part-gloss").first().innerText(), "Root");
+    assert.equal(await block.locator(".breakdown-part").first().isDisabled(), true);
+    assert.ok(await page.locator(".candidate .role").filter({hasText: /^Root$/}).count());
+  }
+  const relatedOpaque = opaqueWords[0].analysis.analyses.findIndex(a => a.lemmas[0].text === "천천하다");
+  assert.ok(relatedOpaque >= 0);
+  await page.locator(".breakdown-word").nth(0).getByRole("combobox").selectOption(String(relatedOpaque));
+  assert.deepEqual(await page.locator(".breakdown-word").nth(0).locator(".part-form").allTextContents(), ["천천", "히"]);
+  await page.locator(".breakdown-word").nth(0).getByRole("combobox").selectOption(String(opaqueRootIndices[0]));
+  const opaqueDownload = page.waitForEvent("download"); await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const opaqueExport = JSON.parse(await readFile(await (await opaqueDownload).path(), "utf8"));
+  const opaqueExpected = execFileSync(cliBin, ["text", "-", "--dictionary", database], {input:opaqueText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(opaqueExport.records, opaqueExpected);
+  assert.ok(opaqueExport.records[0].analysis.analyses.some(a => a.lemmas[0].kind === "root"));
+  await page.screenshot({path:resolve(tmpdir(),"klem-opaque-adverb-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844}); assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth), true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-opaque-adverb-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.locator(".breakdown-word").nth(1).getByRole("button", {name:"히 Adverb-forming suffix",exact:true}).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88504"));
+  assert.deepEqual(new Set(opaqueWords[1].dictionary.lemmas.find(l => l.lemma.text === "분연히").entries.map(e => e.id)), new Set(["krdict:60522", "krdict:60708"]));
+  await page.getByLabel("Dictionary matches only").check();
+  for (const [i, root] of opaqueRootIndices.entries()) assert.equal(await page.locator(".breakdown-word").nth(i).locator(`option[value="${root}"]`).count(), 0);
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  const opaqueFilteredDownload = page.waitForEvent("download"); await page.getByRole("button", {name:"Export JSON",exact:true}).click();
+  const opaqueFiltered = JSON.parse(await readFile(await (await opaqueFilteredDownload).path(), "utf8"));
+  assert.deepEqual(opaqueFiltered.records, execFileSync(cliBin, ["text","-","--dictionary",database,"--dict-compatible"], {input:opaqueText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  await page.getByLabel("Dictionary matches only").uncheck();
+
   for (const [word, expected, form, id] of [
     ["더욱이", ["더욱", "이"], "이", 88927],
     ["곰곰이", ["곰곰", "이"], "이", 88927],

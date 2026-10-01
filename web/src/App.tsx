@@ -39,6 +39,7 @@ const label = (kind: string) =>
     copula: "Copula",
     unclassified: "Unclassified",
     adverbial: "Adverb",
+    root: "Root",
   })[kind] ?? kind;
 
 function Arrow() {

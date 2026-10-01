@@ -76,10 +76,15 @@ impl Analysis {
                     .strip_suffix('다')
                     .filter(|stem| !stem.is_empty())?;
             }
-            let adverbial = matches!(lemma.kind, LemmaKind::Predicate | LemmaKind::Adverbial)
-                && self.morphemes.get(cursor).is_some_and(|m| {
-                    m.kind == MorphemeKind::Suffix && matches!(m.form.as_str(), "이" | "히")
-                });
+            let adverbial = matches!(
+                lemma.kind,
+                LemmaKind::Predicate | LemmaKind::Adverbial | LemmaKind::Root
+            ) && self.morphemes.get(cursor).is_some_and(|m| {
+                m.kind == MorphemeKind::Suffix && matches!(m.form.as_str(), "이" | "히")
+            });
+            if lemma.kind == LemmaKind::Root && !adverbial {
+                return None;
+            }
             if adverbial {
                 parts.push(Component::Morpheme(cursor));
                 cursor += 1;

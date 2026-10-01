@@ -320,3 +320,13 @@ bounds are explicit. Export includes every returned hypothesis and each word's
 alternatives, alongside the filtered parent records. Known conflicts are excluded
 within suggestions; unknown roles remain. The API adds grammar/gloss/source
 metadata for those independent words, without inventing a sentence parse.
+
+COV-022c adds selectable 천천 + 히 and 분연 + 히 breakdowns with the `Root`
+role, retaining whole lexical adverbs as the initial dictionary-backed readings.
+The unmatched root component displays “Root”; the suffix opens adverb-forming
+entry 88504. Both 분연히 dictionary homonyms remain separate. Selecting the
+related 천천하다 hypothesis displays the same component text but preserves a
+different lemma and role in the API/export. Neither option inserts 하 into the
+surface. Dictionary-only filters remove unmatched bases; exported candidates
+and ordered component identities match the CLI. Other opaque roots and choosing
+a contextual sense remain outside this finite review.

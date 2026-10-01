@@ -102,6 +102,39 @@ fn nominal_bases(word: &str) -> Vec<Analysis> {
 // Source-listed predicate adverbs, separate from inflection and auxiliaries.
 // Attachment is lexical: do not strip 이/히 from every noun/verb or infer a
 // general 르 rule from the historical 달리/빨리 forms.
+fn adverb_derivations(word: &str) -> Vec<Analysis> {
+    let mut out: Vec<_> = adverb_derivation(word).into_iter().collect();
+    for &(root, suffix, related) in grammar::OPAQUE_ADVERB_ROOTS {
+        if word.strip_suffix(suffix) != Some(root) {
+            continue;
+        }
+        out.push(Analysis {
+            lemmas: vec![lemma(root, LemmaKind::Root)],
+            morphemes: vec![morph(suffix, MorphemeKind::Suffix)],
+            rules: vec![
+                "derivation.adverbial.opaque".into(),
+                "suffix.adverbial.hi".into(),
+            ],
+            unchanged: false,
+            spelling_paths: Vec::new(),
+        });
+        if let Some(head) = related {
+            out.push(Analysis {
+                lemmas: vec![lemma(head, LemmaKind::Predicate)],
+                morphemes: vec![morph(suffix, MorphemeKind::Suffix)],
+                rules: vec![
+                    "derivation.adverbial.related_opaque".into(),
+                    "derivation.adverbial.hada".into(),
+                    "suffix.adverbial.hi".into(),
+                ],
+                unchanged: false,
+                spelling_paths: Vec::new(),
+            });
+        }
+    }
+    out
+}
+
 fn adverb_derivation(word: &str) -> Option<Analysis> {
     for (root, suffix, kind, rule) in grammar::ADVERB_ADVERB_ROOTS
         .iter()
@@ -3121,15 +3154,15 @@ fn nominals(
             && adverbial_particle_chain(suffixes);
         // Only reviewed adverb-compatible particles. Subject/object marking
         // must not mistake this adverbial path for a nominalization.
-        if (adverbial_particle_chain(&morphs) || emphatic_case)
-            && let Some(mut a) = adverb_derivation(base)
-        {
-            a.morphemes.extend(morphs.clone());
-            a.rules.push("particle".into());
-            if emphatic_case {
-                a.rules.push("particle.adverbial_case".into());
+        if adverbial_particle_chain(&morphs) || emphatic_case {
+            for mut a in adverb_derivations(base) {
+                a.morphemes.extend(morphs.clone());
+                a.rules.push("particle".into());
+                if emphatic_case {
+                    a.rules.push("particle.adverbial_case".into());
+                }
+                out.push(a);
             }
-            out.push(a);
         }
         let enumerative_da = particle.class == 4 && matches!(particle.form, "다" | "이다");
         let emphatic_adverbial = !enumerative_da && matches!(particle.form, "다" | "다가");
@@ -4075,7 +4108,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
                 spelling_paths: Vec::new(),
             });
         }
-        out.extend(adverb_derivation(&normalized));
+        out.extend(adverb_derivations(&normalized));
         out.extend(nominal_derivations(&normalized));
         for (suffix, vowel_only) in [
             ("이에요", false),

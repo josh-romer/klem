@@ -204,6 +204,12 @@ receive a whole-token span rather than invented character alignments.
 Joined auxiliary recognition also tolerates some nonstandard spacing, such as
 `먹어야한다` → `먹다` + `하다`; it does not validate spelling or spacing.
 
+The finite opaque-adverb rules can return `LemmaKind::Root` (`"root"` in JSON)
+for 천천/분연 before the adverb-forming suffix 히. This role represents a
+derivational base without claiming a standalone lexical POS or dictionary
+entry; whole lexical adverbs remain available. Consumers matching `LemmaKind`
+exhaustively should handle `Root`. See [the scoped rules](docs/rules.md#finite-opaque-adverb-roots-cov-022c).
+
 ## Validation and performance
 
 ```sh

@@ -177,11 +177,12 @@ pub enum Compatibility {
 }
 
 /// Conservative mapping from dictionary POS to klem's broad grammatical roles.
-/// Unclassified candidates make no POS claim. Copulas require a headword check
+/// Unclassified candidates and derivational roots make no standalone POS claim.
+/// Copulas require a headword check
 /// because 이다 is labelled 조사 in KRDict and 아니다 is labelled 형용사.
 pub fn pos_compatibility(lemma: &Lemma, entry: &EntrySummary) -> Compatibility {
     use Compatibility::*;
-    if lemma.kind == LemmaKind::Unclassified {
+    if matches!(lemma.kind, LemmaKind::Unclassified | LemmaKind::Root) {
         return Unknown;
     }
     let pos = entry.pos.as_str();
@@ -213,7 +214,7 @@ pub fn pos_compatibility(lemma: &Lemma, entry: &EntrySummary) -> Compatibility {
             (entry.headword.as_str(), pos),
             ("이다", "조사") | ("아니다", "형용사")
         ),
-        LemmaKind::Unclassified => unreachable!(),
+        LemmaKind::Unclassified | LemmaKind::Root => unreachable!(),
     };
     if accepted { Compatible } else { Incompatible }
 }

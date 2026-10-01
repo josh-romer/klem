@@ -1830,3 +1830,12 @@ RelatedForm and non-English equivalents are omitted; Sense is normalized to an
 array. National Institute of Korean Language; CC BY-SA 2.0 KR. Source export
 hashes and unresolved scope are retained in the manifest and
 [review](../../docs/native-conditionals-source-audit.json).
+
+`krdict-opaque-adverbs.json` retains all native entries/senses/groups for 천천히,
+both 분연히 homonyms and the adverb-forming -히 suffix. Only RelatedForm and
+non-English equivalents are omitted; Sense is normalized to an array. National
+Institute of Korean Language; CC BY-SA 2.0 KR. `opaque-adverb-sources.json`
+records export hashes, full source groups and 40 unchanged target occurrences.
+`kaist-opaque-adverbs.conllu` and `gsd-opaque-adverbs.conllu` preserve complete
+UD 2.15 training sentences and lexical adverb gold without relabeling it as a
+root analysis. See [the scoped review](../../docs/opaque-adverb-source-audit.json).

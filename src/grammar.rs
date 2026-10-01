@@ -84,6 +84,12 @@ pub(crate) const ADVERB_NOMINAL_ROOTS: &[&str] = &[
     "점점", "줄줄", "짬짬", "첩첩", "층층", "켜켜", "칸칸", "틈틈", "푼푼",
 ];
 
+// Finite opaque roots listed under KRDict -히 (88504). The optional related
+// adjective is independently attested; it is a lookup hypothesis, not an
+// inserted 하 segment. See docs/opaque-adverb-source-audit.json.
+pub(crate) const OPAQUE_ADVERB_ROOTS: &[(&str, &str, Option<&str>)] =
+    &[("천천", "히", Some("천천하다")), ("분연", "히", None)];
+
 #[derive(Debug, Clone)]
 pub(crate) struct Recovery {
     pub stem: String,
@@ -1641,6 +1647,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "derivation.adverbial.shortened" => {
             "Recover 익숙히/특별히 behind shortened 익히/특히, using 익숙하다/특별하다 as lookup lemmas; retain the whole-word reading."
+        }
+        "derivation.adverbial.opaque" => {
+            "Separate a reviewed opaque root and its adverb-forming suffix. The root role does not assert a standalone noun, adverb or predicate dictionary entry."
+        }
+        "derivation.adverbial.related_opaque" => {
+            "Use an independently attested related adjective as a possible lookup lemma for a reviewed opaque adverb root. This relationship is inferred from root/suffix evidence; dictionary headword availability is separate."
         }
         "ending.confirmation" => "Recognize the confirming or correcting expression -잖아/-잖아요.",
         "ending.reporting_reason" => {

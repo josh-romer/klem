@@ -622,3 +622,16 @@ adjective entries or unclassified negative owners as Unknown. Verb homonyms
 remain compatible; prior spelling and role conflicts still win. Both dictionary
 filters retain these uncertainties. Contextual wishes and register are not
 certified by a headword match; see [the review](proposal-evaluation.json).
+
+## Opaque derivational roots (COV-022c)
+
+The new `Root` role represents a reviewed derivational base, not a standalone
+lexical POS. POS assessment is Unknown even if a provider has a homonymous
+headword; lexical presence does not certify the root/suffix relationship. The
+current KRDict snapshot has no 천천, 분연 or 천천하다 entries. Consequently
+`--dict-only` and `--dict-compatible` remove the new unmatched root/related-
+predicate paths while preserving the whole 천천히 and both 분연히 homonyms.
+The raw API retains all hypotheses. The [tests](../tests/opaque_adverbs.rs) cover
+missing heads, homonym identity, conservative role assessment and CLI/library
+word/text parity. [Source evidence](opaque-adverb-source-audit.json) distinguishes
+the root paths from the separately inferred 천천하다 lookup relationship.

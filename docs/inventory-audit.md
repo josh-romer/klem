@@ -808,3 +808,28 @@ parity, Nix CLI/web builds and packaged API/asset checks. The refreshed preview
 uses the verified package. The queue has 386 scoped dispositions, 328 unreviewed entries and one
 unresolved gap. Contextual senses, wider attachments and independent Korean
 review remain open.
+
+## Finite opaque adverb roots (2026-10-01)
+
+COV-022c adds 천천/분연 + 히 with the explicit `Root` role, plus a separately
+inferred 천천하다 lookup alternative. Four full native entries retain five
+senses and 84 original groups; 40 target occurrences and two complete training
+sentences preserve source spelling and whole lexical adverbs. Both 분연히
+homonyms remain. Missing dictionary heads remain unknown.
+
+The [source audit](opaque-adverb-source-audit.json) and
+[evaluation](opaque-adverb-evaluation.json) record 61 new required judgments,
+two forbidden modern-spelling paths, no removed candidates across 12,060
+probes, and 114 unjudged additions. All frozen corpus outcomes and filtered
+novel output (with and without spacing suggestions) remain unchanged. Two
+raw novel occurrences gain four unmatched derivational alternatives, whose
+contextual senses remain unjudged.
+
+These adverb and suffix entries lie outside the 715-entry ending, particle and
+auxiliary queue. Its dispositions remain 386 scoped / 328 unreviewed / one
+gap, with 429 catalog-linked and 418 judgment-cited entries. Wider COV-022
+classes and independent Korean-language review remain open. Nix CLI/web
+builds, flake checks and the refreshed packaged preview pass; both filters and
+all three browser export modes match the CLI. The release novel check retains
+179,112 records, with approximately 1.6-second median runs per filter on this
+host. These observations do not certify every generated analysis.

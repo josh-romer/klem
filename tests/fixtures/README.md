@@ -1783,3 +1783,16 @@ resultative, question-class and contextual cases remain in the source review.
   Native polite bundled/split paths remain separate; an unlisted 구나 follower
   is an unjudged observation, not forbidden gold. NIKL source transfers are
   explicitly marked as inference. Independent Korean review remains pending.
+
+- `krdict-conditional-question.json` preserves 68 full attributed September
+  2026 native entries for COV-017bl, including the three primary expression
+  identities and native 요. Only RelatedForm/non-English equivalents are
+  omitted. `conditional-question-sources.json` records hashes and all 17
+  original groups/direct tokens. Its 126 raw cases (107 required/19 forbidden)
+  and 46 optional dictionary cases (40 required/6 forbidden) use `cqcond-`
+  IDs. Spoken and Eu class/allomorph boundaries, copulas, local prefinals,
+  derived/auxiliary owners and homonyms remain distinct. Unresolved honorific,
+  negative/existential and inferred polite paths remain Unknown. Unlisted
+  followers are unjudged, and five older question-report controls are recorded.
+  Draft fixture corrections preserve source spelling and are separately
+  attributed; independent Korean review remains pending.

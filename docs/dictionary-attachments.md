@@ -599,3 +599,14 @@ Unlisted local prefinals and inferred 자는군 + 요 also stay Unknown. Explici
 auxiliary chain remain independent. Native 자더군요 and split 자더군 + 요
 retain distinct paths. No new provider restriction or compatibility enum is
 introduced. See the [source audit](proposal-exclamation-source-audit.json).
+
+COV-017bl adds three conditional question bundles to finite question-owner
+checks. General 냐면 keeps verb/adjective homonyms compatible; verbal
+느냐면 excludes ordinary bare adjective entries, and adjective 으냐면
+excludes ordinary bare verb entries. Existential exceptions, standalone
+auxiliary context and unknown provider classes remain distinct. Known local
+adjective derivations and auxiliary owners keep an honorific-only verbal
+extension Unknown. Negative and existential Eu auxiliaries also stay Unknown;
+a generic verbal class does not prove every inflection is excluded. Three
+inferred polite followers remain Unknown, and no universal follower license
+is inserted. See the [source audit](conditional-question-source-audit.json).

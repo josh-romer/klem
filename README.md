@@ -95,6 +95,11 @@ verb, adjective wishes, auxiliary readings and bundled/split polite alternatives
 See the [source audit](docs/proposal-exclamation-source-audit.json) for the four
 reviewed identities and the limits of their dictionary attachment checks.
 
+Conditional question reports such as 먹냐면, 먹느냐면 and 좋으냐면 keep
+spoken and adjective allomorphs, copulas and prefinal owners distinct. See the
+[source audit](docs/conditional-question-source-audit.json) for their three
+native identities and the unresolved auxiliary or follower readings.
+
 ## Missing-space suggestions
 
 With a dictionary, `--suggest-spacing` adds explicit alternatives for nominal

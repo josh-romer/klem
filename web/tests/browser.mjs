@@ -474,6 +474,11 @@ try {
   const pqexIds=new Set(pqexEntries.map(e=>String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!pqexIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...pqexEntries);
+  const cqcondFixture=JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-conditional-question.json"),"utf8"));
+  const cqcondEntries=cqcondFixture.LexicalResource.Lexicon.LexicalEntry;
+  const cqcondIds=new Set(cqcondEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!cqcondIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...cqcondEntries);
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -1694,6 +1699,53 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-pqex-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-pqex-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const cqcondCases=recipientLedger.cases.filter(c=>c.id.startsWith("cqcond-"));
+  const cqcondPolicies=connectiveLedger.cases.filter(c=>c.id.startsWith("cqcond-"));
+  assert.equal(cqcondCases.length,126);assert.equal(cqcondPolicies.length,46);
+  for(const[cases,policy]of[[cqcondCases,false],[cqcondPolicies,true]]){
+    for(const c of cases){
+      const response=await post("analyze",{text:c.surface});assert.equal(response.status,200,c.id);
+      const token=(await response.json()).records[0];
+      const {dictionary,...analysis}=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      assert.deepEqual(token.analysis,analysis,c.id);assert.deepEqual(token.dictionary,dictionary,c.id);
+      for(const j of c.judgments){
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if(policy)for(const a of found){
+          const index=token.analysis.analyses.indexOf(a);
+          assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+        }
+      }
+    }
+  }
+  const cqcondText="먹냐면 먹느냐면 좋냐면 좋으냐면 사냐면 사냐면 사느냐면 기냐면 추우냐면 고르냐면 고르냐면 학생이냐면 의사냐면 먹었냐면 먹었느냐면 좋으시느냐면 학생이시느냐면 학생다우냐면 먹어봤느냐면 먹고싶으냐면 먹고있으냐면 먹지않으냐면 먹으옵시냐면 먹냐면요 먹느냐면요 좋으냐면요 학생다우시느냐면 먹고싶으시느냐면";
+  const cqcondData=await(await post("analyze",{text:cqcondText})).json();
+  for(const form of ["냐면", "느냐면", "으냐면"]){
+    const label=grammarLabels["-"+form];
+    assert.deepEqual(cqcondData.grammar["-"+form].map(e=>e.id).sort(),label.sources.map(s=>`krdict:${s.id}`).sort());
+    for(const source of label.sources){
+      const entry=cqcondData.grammar["-"+form].find(e=>e.id===`krdict:${source.id}`);
+      assert.equal(entry.headword,source.headword);assert.equal(entry.pos,source.pos);
+    }
+  }
+  await submit(page,cqcondText);await waitHeading(page,"먹냐면");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms,label]of[[0, ["먹", "냐면"], "Conditional question report"], [1, ["먹", "느냐면"], "Conditional question report"], [2, ["좋", "냐면"], "Conditional question report"], [3, ["좋", "으냐면"], "Conditional question report"], [4, ["사", "냐면"], "Conditional question report"], [5, ["살", "냐면"], "Conditional question report"], [6, ["살", "느냐면"], "Conditional question report"], [7, ["길", "으냐면"], "Conditional question report"], [8, ["춥", "으냐면"], "Conditional question report"], [9, ["고르", "냐면"], "Conditional question report"], [10, ["고르", "으냐면"], "Conditional question report"], [11, ["학생", "이", "냐면"], "Conditional question report"], [12, ["의사", "이", "냐면"], "Conditional question report"], [13, ["먹", "었", "냐면"], "Conditional question report"], [14, ["먹", "었", "느냐면"], "Conditional question report"], [15, ["좋", "시", "느냐면"], "Conditional question report"], [16, ["학생", "이", "시", "느냐면"], "Conditional question report"], [17, ["학생", "답", "으냐면"], "Conditional question report"], [18, ["먹", "어", "보", "었", "느냐면"], "Conditional question report"], [19, ["먹", "고", "싶", "으냐면"], "Conditional question report"], [20, ["먹", "고", "있", "으냐면"], "Conditional question report"], [21, ["먹", "지", "않", "으냐면"], "Conditional question report"], [22, ["먹", "으옵시", "냐면"], "Conditional question report"], [23, ["먹", "냐면", "요"], "Conditional question report"], [24, ["먹", "느냐면", "요"], "Conditional question report"], [25, ["좋", "으냐면", "요"], "Conditional question report"], [26, ["학생", "답", "시", "느냐면"], "Conditional question report"], [27, ["먹", "고", "싶", "시", "느냐면"], "Conditional question report"]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes(label));
+  }
+  const cqcondDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const cqcondExport=JSON.parse(await readFile(await(await cqcondDownload).path(),"utf8"));
+  const cqcondExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:cqcondText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(cqcondExport.records,cqcondExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-cqcond-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-cqcond-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const spacingLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/spacing-validity.json"),"utf8"));

@@ -399,6 +399,18 @@ pub(crate) fn quoted_question_exclamation(form: &str) -> bool {
         )
 }
 
+// Finite source-reviewed question report families share owner/class checks.
+// Keep their distinct provenance and follower inventories separate.
+pub(crate) fn quoted_conditional_question(form: &str) -> bool {
+    matches!(form, "냐면" | "느냐면" | "으냐면")
+}
+pub(crate) fn verbal_quoted_question(form: &str) -> bool {
+    verbal_quoted_question_exclamation(form) || form == "느냐면"
+}
+pub(crate) fn quoted_question_report(form: &str) -> bool {
+    quoted_question_exclamation(form) || quoted_conditional_question(form)
+}
+
 pub(crate) fn literary_na_ending(form: &str) -> bool {
     // Only these two source-reviewed finals share this attachment class.
     matches!(form, "나이다" | "나이까")
@@ -663,6 +675,7 @@ pub(crate) fn adjectival_question(form: &str) -> bool {
             | "으냐지만"
             | "으냐니까"
             | "으냐느니"
+            | "으냐면"
             | "으냐는구나"
             | "으냐는군"
             | "으냐더군"
@@ -1004,7 +1017,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
-                if quoted_question_exclamation(ending.form)
+                if quoted_question_report(ending.form)
                     && p.morphs.iter().any(|m| {
                         !honorific_prefinal(&m.form)
                             && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
@@ -1397,6 +1410,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if quoted_proposal_exclamation(ending.form) {
                     p.rules.push("ending.quoted_proposal_exclamation".into());
+                }
+                if quoted_conditional_question(ending.form) {
+                    p.rules.push("ending.quoted_conditional_question".into());
                 }
                 if quoted_question_exclamation(ending.form) {
                     p.rules.push("ending.quoted_question_exclamation".into());
@@ -2019,7 +2035,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                 return false;
             }
             if bare
-                && verbal_quoted_question_exclamation(&m.form)
+                && verbal_quoted_question(&m.form)
                 && matches!(
                     class,
                     Some(PredicateClass::Adjective | PredicateClass::Copula)
@@ -2192,7 +2208,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
                     // Do not infer the converse: 계신가 and existential
                     // negation require a separate honorific/existential audit.
                     Some(PredicateClass::Verb) => {
-                        adjectival_question(&m.form)
+                        (adjectival_question(&m.form) && !(m.form == "으냐면" && report_stative))
                             || (!report_stative
                                 && matches!(
                                     m.form.as_str(),
@@ -2245,7 +2261,7 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
 fn dap_suffix_allowed(p: &Predicate) -> bool {
     if p.morphs
         .first()
-        .is_some_and(|m| verbal_quoted_question_exclamation(&m.form))
+        .is_some_and(|m| verbal_quoted_question(&m.form))
     {
         return false;
     }
@@ -2398,6 +2414,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
                 | "다니"
                 | "다느니"
                 | "냐느니"
+                | "냐면"
                 | "더라느니"
                 | "다면"
                 | "답니다"
@@ -2660,10 +2677,10 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     // Bare 이다 takes quoted -냐는; -느냐는 may follow its licensed
     // prefinals, but does not attach directly to the copula.
     if p.morphs.first().is_some_and(|m| {
-        verbal_quoted_question_exclamation(&m.form)
+        verbal_quoted_question(&m.form)
             || matches!(
                 m.form.as_str(),
-                "으냐는구나" | "으냐는군" | "으냐더군" | "으냐더군요"
+                "으냐는구나" | "으냐는군" | "으냐더군" | "으냐더군요" | "으냐면"
             )
     }) {
         return;
@@ -3732,6 +3749,7 @@ fn before_particle(ending: &str, particle: &str) -> bool {
             activity_reason(ending)
                 || short_report(ending)
                 || reporting_go(ending)
+                || quoted_conditional_question(ending)
                 || reporting_myeo(ending)
                 || reporting_ni(ending)
                 || matches!(

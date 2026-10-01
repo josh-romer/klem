@@ -622,6 +622,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "는데다가",
             "느냐",
             "느냐고",
+            "냐면",
+            "느냐면",
             "느니라",
             "느니",
             "느니만",
@@ -924,6 +926,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으옵소서", "옵소서", "으옵소서"),
             ("으냐", "냐", "으냐"),
             ("으냐고", "냐고", "으냐고"),
+            ("으냐면", "냐면", "으냐면"),
             ("으냐지만", "냐지만", "으냐지만"),
             ("으냐니까", "냐니까", "으냐니까"),
             ("으냔다", "냔다", "으냔다"),
@@ -1130,6 +1133,7 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라는군",
             "라더군",
             "라더군요",
+            "냐면",
         ] {
             for boundary in [Copular, ZeroCopula] {
                 out.push(Ending {
@@ -1434,6 +1438,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.quoted_proposal_exclamation" => {
             "Recover a source-listed contracted proposal report as an ending bundle. Prefinals belong to the immediate proposal owner; adjective wishes, contextual register and inferred polite followers are not automatically certified, and no implicit reporting predicate is inserted."
+        }
+        "ending.quoted_conditional_question" => {
+            "Recover a source-listed contracted conditional question report as an ending bundle. General spoken 냐, verbal/existential 느냐 and adjectival 으냐 keep distinct immediate owners and allomorphs; no implicit reporting predicate, contextual sense or universal follower license is inserted."
         }
         "ending.quoted_question_exclamation" => {
             "Recover a source-listed contracted question report as one ending bundle. General spoken 냐, verbal/existential 느냐 and adjectival 으냐 retain distinct attachment paths; the implicit reporting predicate and contextual register are not inferred."

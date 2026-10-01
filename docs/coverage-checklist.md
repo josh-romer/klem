@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bk/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bl/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -221,8 +221,7 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bk implemented; COV-017aw/az and the inventoried
-  COV-017bl remain open.**
+  COV-017ax–ay/017ba–bl implemented; COV-017aw/az remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1461,15 +1460,27 @@ review remains open under the completion review below.
   Conditional-question reports, parent inventories and independent review stay
   open below.
 
-- [ ] **COV-017bl — Conditional reported questions -(으/느)냐면.**
-  **Confirmed missing:** 먹냐면 → 먹다. Audit full 80177/83769/80180
-  entries for 냐면/느냐면/으냐면, preserving class/allomorph alternatives,
-  licensed prefinals, copulas and source spelling. The
-  [NIKL answer on 냐면 and 냬요](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=311818&searchCondition=&searchKeyword=)
-  explicitly permits both 먹냐면 and 먹느냐면. General spoken 냐 must
-  remain distinct from the consonant adjective 으냐 family. Re-probe existing
-  냐고/냬요 controls, add stable source-backed candidate and dictionary cases,
-  and verify ordered browser output, corpus/novel changes and Nix packages.
+- [x] **COV-017bl — Conditional reported questions -(으/느)냐면.**
+  **Implemented for three reviewed native expression identities.** Native
+  IDs 80177/83769/80180 preserve 냐면/느냐면/으냐면, all 17 original example
+  groups/direct tokens and distinct general/verbal/Eu owner and prefinal
+  licenses. The [NIKL answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=311818)
+  directly supports both 먹냐면 and 먹느냐면. Copulas, lexical alternatives,
+  ㄹ/ㅂ/ㅎ boundaries and derived/auxiliary owners stay separate. Unresolved
+  honorific-only nonverbal, negative/existential and inferred polite paths stay
+  Unknown; no implicit reporting predicate or universal follower license is
+  inserted. [Four family tests](../tests/conditional_question.rs), 126 raw and
+  46 dictionary cases and the [source audit](conditional-question-source-audit.json)
+  preserve the bounded scope and five byte-identical older 냐고/냬요 controls.
+  The [individual comparison](conditional-question-evaluation.json) covers
+  11,903 inputs, 1,774 added paths and zero removals; 1,572 additions remain
+  unjudged. Four corpus reports, novel filter outputs and spacing sidecars are
+  unchanged. Six target scans including 요/도 probes are empty; no annotated
+  gold is fabricated. Three labels retain actual source POS 품사 없음.
+  Rust/stress, lint/format, corpus, browser and x86_64 Linux Nix checks pass,
+  including packaged API/CLI/export/asset parity and refreshed preview.
+  General polite prefinals, wider followers, existential paradigms, parent
+  inventories and independent Korean review remain open.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

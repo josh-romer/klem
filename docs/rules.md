@@ -3716,3 +3716,24 @@ register. 자더군요 preserves both its bundled and 자더군 + 요 paths;
 unjudged under COV-018aa. No implicit reporting 하다 is inserted. All 17
 original example groups and direct tokens are preserved in the
 [source audit](proposal-exclamation-source-audit.json).
+
+## Conditional question reports (COV-017bl)
+
+General spoken 냐면, verbal/existential 느냐면 and adjective 으냐면 preserve
+three distinct native identities and `ending.quoted_conditional_question`
+provenance. NIKL 311818 explicitly accepts both 먹냐면 and 먹느냐면;
+consonant adjective 좋으냐면 keeps its separate Eu boundary. Literal and Eu
+allomorphs preserve lexical alternatives and the ㄹ/ㅂ/ㅎ restoration boundary.
+Listed local 시/었/겠 combinations, copulas, omission and auxiliary chains
+remain independent. The adjective Eu family does not borrow the general
+question's prefinal license. No implicit reporting predicate or contextual
+sense is inserted, including the explanatory second sense of 으냐면.
+
+Nonverbal honorific-only verbal questions, unlisted prefinals and negative or
+existential Eu auxiliary paradigms remain Unknown. Derived 답다 and known
+auxiliary adjective owners cannot borrow an earlier dictionary entry to
+certify the honorific extension. Three inferred ending + 요 paths remain
+Unknown from native 요 sense 2; unlisted followers are unjudged observations,
+not forbidden gold from absence. The [source audit](conditional-question-source-audit.json)
+preserves all 17 unchanged groups/direct tokens and five older 냐고/냬요
+controls. Independent Korean review remains pending.

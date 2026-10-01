@@ -532,7 +532,7 @@ impl Annotation {
                             })
                         } else if bare
                             && (matches!(form, "느냐지만" | "느냐니까" | "느냬" | "느냐느니")
-                                || crate::engine::verbal_quoted_question_exclamation(form))
+                                || crate::engine::verbal_quoted_question(form))
                             && adjective
                             && !lemma.text.ends_with("있다")
                             && !lemma.text.ends_with("없다")
@@ -736,14 +736,14 @@ impl Annotation {
                     if lemma.kind == LemmaKind::Predicate
                         && status == Compatibility::Unknown && bare
                         && let Some(i) = ending
-                        && crate::engine::quoted_question_exclamation(&analysis.morphemes[i].form)
+                        && crate::engine::quoted_question_report(&analysis.morphemes[i].form)
                     {
                         let form = analysis.morphemes[i].form.as_str();
                         let pos = matched.entry.pos.as_str();
                         let existential_or_negative = lemma.text.ends_with("있다")
                             || lemma.text.ends_with("없다")
                             || matches!(lemma.text.as_str(), "계시다" | "않다" | "아니하다" | "못하다");
-                        let rule = if crate::engine::verbal_quoted_question_exclamation(form)
+                        let rule = if crate::engine::verbal_quoted_question(form)
                             && pos == "보조 형용사" && !existential_or_negative
                         { Some(AttachmentRule::BareVerbalQuestion) }
                         else if crate::engine::adjectival_question(form)
@@ -757,7 +757,7 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible
                         && let Some(i) = ending
-                        && crate::engine::quoted_question_exclamation(&analysis.morphemes[i].form)
+                        && crate::engine::quoted_question_report(&analysis.morphemes[i].form)
                         && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
                             if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
                                 && !matches!(analysis.morphemes[*j].form.as_str(), "시" | "었" | "겠")))
@@ -768,8 +768,8 @@ impl Annotation {
                         && lemma.kind == LemmaKind::Auxiliary && bare && class.is_none()
                         && matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
                         && ending.is_some_and(|i|
-                            crate::engine::verbal_quoted_question_exclamation(&analysis.morphemes[i].form)
-                            || (crate::engine::quoted_question_exclamation(&analysis.morphemes[i].form)
+                            crate::engine::verbal_quoted_question(&analysis.morphemes[i].form)
+                            || (crate::engine::quoted_question_report(&analysis.morphemes[i].form)
                                 && crate::engine::adjectival_question(&analysis.morphemes[i].form)))
                     {
                         // Negation inherits the preceding predicate's class.
@@ -779,10 +779,12 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible
                         && let Some(i) = ending
-                        && crate::engine::verbal_quoted_question_exclamation(&analysis.morphemes[i].form)
+                        && crate::engine::verbal_quoted_question(&analysis.morphemes[i].form)
                         && ((matched.entry.pos == "형용사"
                             && !lemma.text.ends_with("있다") && !lemma.text.ends_with("없다"))
-                            || lemma.kind == LemmaKind::Copula)
+                            || lemma.kind == LemmaKind::Copula
+                            || (crate::engine::quoted_conditional_question(&analysis.morphemes[i].form)
+                                && (derived_adjective || matches!(class, Some(PredicateClass::Adjective)))))
                         && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
                             if analysis.morphemes[*j].kind == MorphemeKind::Prefinal))
                         && morphs.iter().all(|c| !matches!(c, Component::Morpheme(j)
@@ -793,6 +795,21 @@ impl Annotation {
                         // this nonverbal owner's honorific-only extension.
                         // Preserve it as unknown; past/modal examples provide
                         // distinct evidence and are not excluded here.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && crate::engine::quoted_conditional_question(&analysis.morphemes[i].form)
+                        && ((analysis.morphemes.get(i + 1).is_some_and(|m|
+                            m.kind == MorphemeKind::Particle && m.form == "요"))
+                            || (lemma.kind == LemmaKind::Auxiliary && bare
+                                && (matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+                                    || (analysis.morphemes[i].form == "으냐면"
+                                        && matches!(lemma.text.as_str(), "있다" | "계시다")))))
+                    {
+                        // Native 요 sense 2 permits connective followers, but
+                        // these quoted contractions have no directly reviewed
+                        // polite example. Negative-owner paradigms remain
+                        // COV-019h; do not settle them from a borrowed POS.
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible && let Some(i) = ending

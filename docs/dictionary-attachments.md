@@ -610,3 +610,9 @@ extension Unknown. Negative and existential Eu auxiliaries also stay Unknown;
 a generic verbal class does not prove every inflection is excluded. Three
 inferred polite followers remain Unknown, and no universal follower license
 is inserted. See the [source audit](conditional-question-source-audit.json).
+
+COV-018aa preserves declarative quoted 군 + 요 under the existing homonym and
+owner checks. Source-attested declarative followers do not override class or
+spelling conflicts. Inferred experience 더라는군 + 요 remains Unknown and
+survives both dictionary filters. No inference settles quoted 구나 + 요 or
+contextual register; see [the audit](quote-followers-source-audit.json).

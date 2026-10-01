@@ -1857,6 +1857,22 @@ review remains open under the completion review below.
   quoted 구나 followers, full native examples and distinct ending/particle
   alternatives. Record unsupported exclusions as unjudged observations;
   absence from a source inventory alone cannot supply forbidden gold.
+  **Partial implementation verified:** a full pinned dictionary
+  example scan finds 17 original declarative 군 + 요 groups, including
+  갔다는군요/한다는군요/온다는군요. These paths now preserve separate
+  quote endings and the polite particle. Experience 더라는군 + 요 transfers
+  through the explicit expansion as Unknown; quoted 구나 followers remain
+  unjudged. [Four family tests](../tests/quote_followers.rs), 67 raw cases
+  (55 required / 12 forbidden), 33 dictionary cases (30 required / 3 forbidden)
+  and the [source audit](quote-followers-source-audit.json) retain the full
+  native groups, idiom identities, homonyms and existing owner restrictions.
+  The [individual comparison](quote-followers-evaluation.json) covers 11,929
+  inputs, 519 added paths and zero removals; 410 additions remain unjudged.
+  Four corpus reports, both novel filter outputs and optional spacing sidecars
+  are unchanged. Rust/stress, lint/format, browser and x86_64 Linux Nix checks
+  pass, including packaged API/CLI/export/asset parity and refreshed preview.
+  This item stays open for quoted 구나, contextual register and independent
+  Korean review.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

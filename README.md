@@ -247,3 +247,8 @@ Code is MIT OR Apache-2.0. Korean Basic Dictionary extracts retain separate
 CC BY-SA 2.0 KR attribution. Corpus excerpts and corpus-derived evaluation records
 retain separate CC BY-SA 4.0 attribution: see [fixture notices](tests/fixtures/README.md)
 and [data notices](data/README.md).
+
+Quoted declarative reports also preserve a separate polite 요 particle, as in
+갔다는군요 and 온다는군요. Experience-report polite followers remain possible
+with Unknown attachment. See [the source audit](docs/quote-followers-source-audit.json)
+for direct examples and unresolved quoted 구나/register coverage.

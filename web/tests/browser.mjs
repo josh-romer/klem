@@ -479,6 +479,14 @@ try {
   const cqcondIds=new Set(cqcondEntries.map(e=>String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!cqcondIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...cqcondEntries);
+  const qfollowFixture=JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-quote-followers.json"),"utf8"));
+  const qfollowEntries=qfollowFixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>{
+    const fs=Array.isArray(e.feat)?e.feat:[e.feat];
+    return fs.some(f=>f.att==="lexicalUnit"&&["단어","문법‧표현"].includes(f.val));
+  });
+  const qfollowIds=new Set(qfollowEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!qfollowIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...qfollowEntries);
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -1746,6 +1754,57 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-cqcond-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-cqcond-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const qfollowCases=recipientLedger.cases.filter(c=>c.id.startsWith("qfollow-"));
+  const qfollowPolicies=connectiveLedger.cases.filter(c=>c.id.startsWith("qfollow-"));
+  assert.equal(qfollowCases.length,67);assert.equal(qfollowPolicies.length,33);
+  for(const[cases,policy]of[[qfollowCases,false],[qfollowPolicies,true]]){
+    for(const c of cases){
+      const response=await post("analyze",{text:c.surface});assert.equal(response.status,200,c.id);
+      const token=(await response.json()).records[0];
+      const {dictionary,...analysis}=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      assert.deepEqual(token.analysis,analysis,c.id);assert.deepEqual(token.dictionary,dictionary,c.id);
+      for(const j of c.judgments){
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if(policy)for(const a of found){
+          const index=token.analysis.analyses.indexOf(a);
+          assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+        }
+      }
+    }
+  }
+  const qfollowText="갔다는군요 한다는군요 온다는군요 먹는다는군요 좋다는군요 산다는군요 산다는군요 학생이었다는군요 먹어봤다는군요 먹고있다는군요 학생답다는군요 먹더라는군요 학생이더라는군요 고른다는군요 고르다는군요";
+  const qfollowData=await(await post("analyze",{text:qfollowText})).json();
+  for(const form of ["는다는군", "다는군", "더라는군"]){
+    const label=grammarLabels["-"+form];
+    assert.deepEqual(qfollowData.grammar["-"+form].map(e=>e.id).sort(),label.sources.map(s=>`krdict:${s.id}`).sort());
+    for(const source of label.sources){
+      const entry=qfollowData.grammar["-"+form].find(e=>e.id===`krdict:${source.id}`);
+      assert.equal(entry.headword,source.headword);assert.equal(entry.pos,source.pos);
+    }
+  }
+  for(const token of qfollowData.records.filter(t=>t.surface.includes("더라는군요"))){
+    const idx=token.analysis.analyses.findIndex(a=>a.morphemes.some(m=>m.form==="더라는군")&&a.morphemes.at(-1)?.form==="요");
+    assert.ok(idx>=0);assert.equal(token.dictionary.readings[idx].status,"unknown");
+  }
+  await submit(page,qfollowText);await waitHeading(page,"갔다는군요");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms,label]of[[0, ["가", "었", "다는군", "요"], "Reported realization / exclamation"], [1, ["하", "는다는군", "요"], "Reported realization / exclamation"], [2, ["오", "는다는군", "요"], "Reported realization / exclamation"], [3, ["먹", "는다는군", "요"], "Reported realization / exclamation"], [4, ["좋", "다는군", "요"], "Reported realization / exclamation"], [5, ["사", "는다는군", "요"], "Reported realization / exclamation"], [6, ["살", "는다는군", "요"], "Reported realization / exclamation"], [7, ["학생", "이", "었", "다는군", "요"], "Reported realization / exclamation"], [8, ["먹", "어", "보", "었", "다는군", "요"], "Reported realization / exclamation"], [9, ["먹", "고", "있", "다는군", "요"], "Reported realization / exclamation"], [10, ["학생", "답", "다는군", "요"], "Reported realization / exclamation"], [11, ["먹", "더라는군", "요"], "Reported experience / exclamation"], [12, ["학생", "이", "더라는군", "요"], "Reported experience / exclamation"], [13, ["고르", "는다는군", "요"], "Reported realization / exclamation"], [14, ["고르", "다는군", "요"], "Reported realization / exclamation"]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes(label));
+  }
+  const qfollowDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const qfollowExport=JSON.parse(await readFile(await(await qfollowDownload).path(),"utf8"));
+  const qfollowExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:qfollowText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(qfollowExport.records,qfollowExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-qfollow-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-qfollow-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const spacingLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/spacing-validity.json"),"utf8"));

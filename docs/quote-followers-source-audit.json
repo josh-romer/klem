@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-018aa",
+  "status": "Partial implementation verified: declarative quote 군 + 요 and separately inferred experience followers. Quoted 구나, contextual register and independent Korean review remain open.",
+  "before_revision": "bea0a62",
+  "manifest": "tests/fixtures/quote-followers-sources.json",
+  "attribution": "National Institute of Korean Language Korean Basic Dictionary, pinned September 2026 complete native entries; only RelatedForm and non-English equivalents omitted.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "sources": [
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=330060",
+      "review": "Full current answer read; terminal 요 is a polite particle, with doing + 군 given directly."
+    },
+    {
+      "url": "https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=grammar.pdf",
+      "title": "NIKL 2014-01-49, 한국어교육 문법·표현 내용 개발 연구(3단계)",
+      "review": "Full relevant 요 and 는구나 sections read: printed pp.54–57 and 302–306, PDF indices 67–70 and 315–319. The report teaches polite 요 after shortened 군 and differentiates discourse/register. No explicit quoted 구나+요 judgment is supplied."
+    },
+    {
+      "url": "https://www.dbpia.co.kr/journal/detail?nodeId=T17083053",
+      "title": "Song Yubin (2024), 현대 한국어 감탄형 종결어미 -어라 연구",
+      "review": "Full author abstract read; it distinguishes shortening 구나 to 군 before 요. Full thesis unavailable in this review; this does not independently settle quoted contractions."
+    }
+  ],
+  "web_review": "Current KRDict 75994/86116 pages inaccessible. Relevant pinned entry notes and all 17 unchanged direct groups inspected; full native source records retained, including incidental lexical-unit siblings without a separate linguistic disposition. No complete current KRDict review claimed.",
+  "primary_entry_ids": [
+    82245,
+    82247,
+    82249,
+    89639
+  ],
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "new_native_entries": 96,
+  "reused_native_entries": 110,
+  "complete_direct_groups": 17,
+  "direct_targets": 17,
+  "scope": "Direct declarative quote 군 + 요 and separately inferred experience quote 더라는군 + 요. Existing owner, prefinal, spelling and homonym checks apply unchanged; experience followers remain Unknown. No new bundled 군요 ending or invented grammar entry. Quoted 구나 followers, register and independent review remain open.",
+  "unjudged_follower_observations": [
+    {
+      "surface": "먹는다는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    },
+    {
+      "surface": "좋다는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    },
+    {
+      "surface": "먹더라는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    },
+    {
+      "surface": "학생이라는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    },
+    {
+      "surface": "먹으라는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    },
+    {
+      "surface": "먹냐는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    },
+    {
+      "surface": "먹느냐는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    },
+    {
+      "surface": "좋으냐는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    },
+    {
+      "surface": "먹자는구나요",
+      "status": "unjudged",
+      "reason": "No direct source example found; native register notes and primary report use shortened 군 before 요. No forbidden gold inferred from absence."
+    }
+  ],
+  "baseline_controls": [
+    {
+      "surface": "먹냐는군요",
+      "lemmas": [
+        "먹다"
+      ],
+      "morphemes": [
+        "냐는군",
+        "요"
+      ]
+    },
+    {
+      "surface": "먹자는군요",
+      "lemmas": [
+        "먹다"
+      ],
+      "morphemes": [
+        "자는군",
+        "요"
+      ]
+    },
+    {
+      "surface": "먹으라는군요",
+      "lemmas": [
+        "먹다"
+      ],
+      "morphemes": [
+        "으라는군",
+        "요"
+      ]
+    },
+    {
+      "surface": "학생이라는군요",
+      "lemmas": [
+        "학생",
+        "이다"
+      ],
+      "morphemes": [
+        "라는군",
+        "요"
+      ]
+    },
+    {
+      "surface": "먹냐면요",
+      "lemmas": [
+        "먹다"
+      ],
+      "morphemes": [
+        "냐면",
+        "요"
+      ]
+    },
+    {
+      "surface": "좋구나요",
+      "lemmas": [
+        "좋다"
+      ],
+      "morphemes": [
+        "구나",
+        "요"
+      ]
+    }
+  ],
+  "native_discovery": {
+    "database": "data/dictionaries/krdict/krdict.db",
+    "rows": 56555,
+    "patterns": [
+      "다는군요",
+      "더라는군요",
+      "다는구나요",
+      "라는구나요",
+      "냐는구나요",
+      "자는구나요",
+      "구나요"
+    ],
+    "observed_groups": 17,
+    "groups": [
+      {
+        "entry_id": "krdict:82280",
+        "headword": "파렴치하다",
+        "pos": "형용사",
+        "sense_id": "1",
+        "example_group": 9,
+        "examples": [
+          "이번 폭우로 온 나라가 난리인데 이 와중에 국회의원들이 해외로 여행을 갔다는군요.",
+          "국민의 세금으로 월급을 받는 국회의원들이 파렴치하기 짝이 없네요."
+        ]
+      },
+      {
+        "entry_id": "krdict:82841:b03d96045f1a4314d3c1f37e43b7d09acca42cec451093d1d03cbf2b2da9add9",
+        "headword": "팔소매를 걷다",
+        "pos": "",
+        "sense_id": "1",
+        "example_group": 1,
+        "examples": [
+          "유명한 정치인에 대한 괴소문이 꼬리에 꼬리를 물고 돌고 있대요.",
+          "저도 들었어요. 그래서 경찰이 팔소매를 걷어 수사를 하고 있다는군요."
+        ]
+      },
+      {
+        "entry_id": "krdict:84871",
+        "headword": "폭발",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 12,
+        "examples": [
+          "과학 수업 중에 폭발 사고가 났다는군요. ",
+          "어머, 다친 학생은 없대요?"
+        ]
+      },
+      {
+        "entry_id": "krdict:25843",
+        "headword": "가정의례",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 8,
+        "examples": [
+          "요즘은 사람들이 돌잔치에 필요 이상으로 많은 돈을 쓰고 있다는군요.",
+          "맞아요. 가정의례가 지닌 본질을 잃어 가는 것 같아요."
+        ]
+      },
+      {
+        "entry_id": "krdict:14595",
+        "headword": "각색",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 10,
+        "examples": [
+          "요즘 각색 드라마가 인기를 끌고 있다는군요.",
+          "원작 소설의 인기가 그대로 드라마로 반영되기 때문이겠죠."
+        ]
+      },
+      {
+        "entry_id": "krdict:15099",
+        "headword": "간통하다",
+        "pos": "동사",
+        "sense_id": "1",
+        "example_group": 9,
+        "examples": [
+          "옆집 아저씨가 오랫동안 아내 몰래 간통했다는군요.",
+          "보기에는 그렇게 안 보였는데요. "
+        ]
+      },
+      {
+        "entry_id": "krdict:20980",
+        "headword": "강변",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 9,
+        "examples": [
+          "뇌물을 받은 공무원이 모르고 받았다고 발뺌을 한다는군요.",
+          "그런 한심한 강변이나 늘어놓다니."
+        ]
+      },
+      {
+        "entry_id": "krdict:31510",
+        "headword": "걸출하다",
+        "pos": "형용사",
+        "sense_id": "1",
+        "example_group": 11,
+        "examples": [
+          "오 씨네 아들이 이번에 국회 의원이 됐다는군요.",
+          "드디어 우리 동네에서도 걸출한 인물이 한 명 나오는구먼."
+        ]
+      },
+      {
+        "entry_id": "krdict:30382",
+        "headword": "결합",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 10,
+        "examples": [
+          "그 두 회사가 하나의 회사로 합쳐졌다면서요?",
+          "네, 더 효율적인 경영을 하기 위해서 결합을 했다는군요."
+        ]
+      },
+      {
+        "entry_id": "krdict:17758",
+        "headword": "계약 기간",
+        "pos": "품사 없음",
+        "sense_id": "1",
+        "example_group": 8,
+        "examples": [
+          "팀이 우승해서 감독님이 재계약하신대요.",
+          "어제 이야기를 들어보니 계약 기간 5년 동안 20억을 받기로 하셨다는군요."
+        ]
+      },
+      {
+        "entry_id": "krdict:61467",
+        "headword": "살인범",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 10,
+        "examples": [
+          "경찰이 드디어 연쇄 살인 사건을 해결했다는군요.",
+          "네. 어제 뉴스를 보니까 살인범이 드디어 잡혔더라고요."
+        ]
+      },
+      {
+        "entry_id": "krdict:66017",
+        "headword": "심문",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 12,
+        "examples": [
+          "이번 사건의 증인 심문에서 범인을 밝힐 수 있는 증언이 나왔다는군요.",
+          "참 반가운 소식이네요. 곧 유죄가 인정되겠어요."
+        ]
+      },
+      {
+        "entry_id": "krdict:62392",
+        "headword": "자연",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 11,
+        "examples": [
+          "일본에서 큰 지진이 나서 많은 사람들이 다치고 죽었다는군요.",
+          "그러게요, 거대한 자연의 힘 앞에서는 인간은 한없이 작은 존재인 것 같아요."
+        ]
+      },
+      {
+        "entry_id": "krdict:81714",
+        "headword": "장착되다",
+        "pos": "동사",
+        "sense_id": "1",
+        "example_group": 8,
+        "examples": [
+          "소식 들었어요? 김 대리가 운전 중에 교통사고가 나서 지금 병원에 있대요.",
+          "네, 다행히도 차에 장착된 에어백 덕에 중상을 면했다는군요."
+        ]
+      },
+      {
+        "entry_id": "krdict:74266",
+        "headword": "재심하다",
+        "pos": "동사",
+        "sense_id": "2",
+        "example_group": 8,
+        "examples": [
+          "축하합니다. 법원에서 지난 판결의 잘못을 인정하고 재심하기로 결정했다는군요.",
+          "정말이에요? 정말 다행이에요. 꼭 누명을 벗고 싶어요."
+        ]
+      },
+      {
+        "entry_id": "krdict:75408",
+        "headword": "조의금",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 9,
+        "examples": [
+          "부장님 아버님께서 돌아가셨다는군요. ",
+          "저런, 일단 조의금은 각자 내는 것으로 하는 것이 좋겠죠?"
+        ]
+      },
+      {
+        "entry_id": "krdict:75994",
+        "headword": "조카며느리",
+        "pos": "명사",
+        "sense_id": "1",
+        "example_group": 8,
+        "examples": [
+          "설 다음 날에 조카가 결혼할 아가씨를 데리고 온다는군요.",
+          "당신에게도 조카며느리가 생기는구려."
+        ]
+      }
+    ],
+    "interpretation": "Every matching original group retained. All 17 targets end in declarative 다는군요. Missing experience or full 구나 matches are observations, not forbidden gold."
+  },
+  "uncertainty": "New experience-report 요 paths remain Unknown. Existing question/proposal inferred follower assessments and nonquoted 구나 behavior are preserved by baseline comparisons. No new universal follower rule, implicit reporting predicate, contextual sense or invented grammar identity.",
+  "draft_corrections": [
+    "Native feat and SenseExample can be single objects. Test fixture readers now retain and handle those objects rather than modifying source spelling or dropping idiom provenance.",
+    "Historical ledger formatting restored with parsed equality; stale fixture hashes regenerated in the review queue before successful final Nix verification."
+  ],
+  "independent_review": "Pending; tests are candidate/entry retention evidence, not linguistic precision.",
+  "source_integrity": {
+    "entries": 96,
+    "source_exports": 11,
+    "all_source_hashes_match": true,
+    "only_documented_omissions": true,
+    "fixture_sha256": "2fb23175296383085ff1227f7ff9127a3388c8bd00ba52bf165e77c4a212ac43"
+  },
+  "corpus_discovery": {
+    "files": 6,
+    "observations": 0,
+    "scope": "Exact literal polite declarative/experience and explicitly recorded quoted 구나 suffixes, plus exact annotated ending forms. No fabricated morphology or absence-derived forbidden gold."
+  },
+  "evaluation": "docs/quote-followers-evaluation.json"
+}

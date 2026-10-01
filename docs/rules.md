@@ -3737,3 +3737,16 @@ Unknown from native 요 sense 2; unlisted followers are unjudged observations,
 not forbidden gold from absence. The [source audit](conditional-question-source-audit.json)
 preserves all 17 unchanged groups/direct tokens and five older 냐고/냬요
 controls. Independent Korean review remains pending.
+
+## Polite followers of quoted reports (COV-018aa)
+
+Declarative 는다는군/다는군 now admit a separate 요 particle, preserving
+native examples such as 한다는군요 and 갔다는군요. Existing present boundaries,
+prefinal owners, derived 답다, auxiliary groups and whole-word alternatives
+apply before this follower. The experience bundle 더라는군 also admits an
+explicitly inferred 요 path with Unknown dictionary compatibility. The three
+existing grammar identities and particle 요 are used without adding an invented
+bundled 군요 entry. [The source audit](quote-followers-source-audit.json) and
+[fixture manifest](../tests/fixtures/quote-followers-sources.json) distinguish
+17 unchanged direct example groups from inferred compositions and unjudged
+quoted 구나 followers. Register and independent Korean review remain open.

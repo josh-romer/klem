@@ -1796,3 +1796,13 @@ resultative, question-class and contextual cases remain in the source review.
   followers are unjudged, and five older question-report controls are recorded.
   Draft fixture corrections preserve source spelling and are separately
   attributed; independent Korean review remains pending.
+
+`krdict-quote-followers.json` retains 96 complete additional native LMF entries
+for COV-018aa, including original idiom identities and their object-shaped
+feature/example fields. It combines with the existing complete
+`krdict-quoted-exclamation.json` fixture without duplicate entry identities.
+Only RelatedForm and non-English equivalents are omitted. NIKL KRDict text is
+attributed under CC BY-SA 2.0 KR. `quote-followers-sources.json` preserves all
+17 directly found example groups and their stable candidate/policy case IDs;
+67 raw and 33 policy cases separate source tokens, inferred experience
+followers, owner conflicts and unjudged quoted 구나 observations.

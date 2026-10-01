@@ -3760,6 +3760,11 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                 || matches!(
                     ending,
                     "군" | "구나"
+                        // Direct native declarative reports, plus the explicit
+                        // experience-report inference reviewed in COV-018aa.
+                        | "는다는군"
+                        | "다는군"
+                        | "더라는군"
                         | "구먼"
                         | "는구먼"
                         | "는군"

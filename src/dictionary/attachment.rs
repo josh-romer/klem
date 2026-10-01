@@ -733,6 +733,16 @@ impl Annotation {
                             || honorific_verb_report
                         { status = Compatibility::Unknown; }
                     }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && analysis.morphemes[i].form == "더라는군"
+                        && analysis.morphemes.get(i + 1).is_some_and(|m|
+                            m.kind == MorphemeKind::Particle && m.form == "요")
+                    {
+                        // NIKL's terminal 군 + 요 transfers through the native
+                        // experience-report expansion. No direct quoted example
+                        // was found; do not certify that contextual license.
+                        status = Compatibility::Unknown;
+                    }
                     if lemma.kind == LemmaKind::Predicate
                         && status == Compatibility::Unknown && bare
                         && let Some(i) = ending

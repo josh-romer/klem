@@ -30885,6 +30885,182 @@
           "judgment": "literal-path"
         }
       ]
+    },
+    {
+      "id": "krdict:80164",
+      "source_sha256": "2b93066fb8be147e4ef1f68b3c3046650d39d983e41f355f8b853a9483ba316c",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-017i"
+      ],
+      "scope": "All source definitions, attachment notes and original native groups reviewed: 4 target occurrences preserve exact lexical bases, roles and canonical ending order. The vowel/ㄹ or consonant allomorph and source-listed predicate/copula/prefinal scope remain distinct from the (이)나마 particle. Native 조금이나마 retains its separate nominal/adverbial particle alternatives; adjective/verb homonyms stay distinct.",
+      "remaining": "Unknown lexical classes, contextual intention/quotation senses, outer attachments and independent Korean-language review remain open. Native target retention does not certify all candidates or every lexical sense.",
+      "evidence": [
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_preserve_all_source_groups_and_exact_turn_tokens"
+        },
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_preserve_normalization_lexical_homonyms_and_particle_alternatives"
+        },
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_dictionary_and_cli_exports_keep_roles_source_ids_and_order"
+        },
+        {
+          "path": "tests/emphatic_particles.rs",
+          "test": "concessive_ending_keeps_its_own_boundaries_prefinals_and_copular_alternative"
+        },
+        {
+          "path": "docs/native-conditionals-source-audit.json"
+        },
+        {
+          "path": "tests/fixtures/native-conditionals-sources.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-native-conditionals.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "native-conditionals-80164-s1-g1-t0-w1",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80164-s1-g2-t0-w0",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80164-s1-g3-t0-w0",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80164-s1-g4-t1-w1",
+          "judgment": "source-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80167",
+      "source_sha256": "1bc4d5e7a7d84d75906ece373dd0cd983a04e33e83de44e08660d999c10faffb",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-017i"
+      ],
+      "scope": "All source definitions, attachment notes and original native groups reviewed: 6 target occurrences preserve exact lexical bases, roles and canonical ending order. The vowel/ㄹ or consonant allomorph and source-listed predicate/copula/prefinal scope remain distinct from the (이)나마 particle. Native 조금이나마 retains its separate nominal/adverbial particle alternatives; adjective/verb homonyms stay distinct.",
+      "remaining": "Unknown lexical classes, contextual intention/quotation senses, outer attachments and independent Korean-language review remain open. Native target retention does not certify all candidates or every lexical sense.",
+      "evidence": [
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_preserve_all_source_groups_and_exact_turn_tokens"
+        },
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_preserve_normalization_lexical_homonyms_and_particle_alternatives"
+        },
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_dictionary_and_cli_exports_keep_roles_source_ids_and_order"
+        },
+        {
+          "path": "tests/emphatic_particles.rs",
+          "test": "concessive_ending_keeps_its_own_boundaries_prefinals_and_copular_alternative"
+        },
+        {
+          "path": "docs/native-conditionals-source-audit.json"
+        },
+        {
+          "path": "tests/fixtures/native-conditionals-sources.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-native-conditionals.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "native-conditionals-80167-s1-g1-t0-w0",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80167-s1-g2-t0-w0",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80167-s1-g3-t0-w0",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80167-s1-g4-t0-w1",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80167-s1-g5-t1-w3",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80167-s1-g6-t0-w0",
+          "judgment": "source-path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:80338",
+      "source_sha256": "735786963a95a0b6f02118d5cf43f4267ec359f3594eb9f6f0cdb204468ee564",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-017h"
+      ],
+      "scope": "All source definitions, attachment notes and original native groups reviewed: 4 target occurrences preserve exact lexical bases, roles and canonical ending order. Verb-only intention 자면 retains the literal consonant boundary; existing known adjective/copula and prefinal restrictions remain unchanged.",
+      "remaining": "Unknown lexical classes, contextual intention/quotation senses, outer attachments and independent Korean-language review remain open. Native target retention does not certify all candidates or every lexical sense.",
+      "evidence": [
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_preserve_all_source_groups_and_exact_turn_tokens"
+        },
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_preserve_normalization_lexical_homonyms_and_particle_alternatives"
+        },
+        {
+          "path": "tests/native_conditionals.rs",
+          "test": "native_conditionals_dictionary_and_cli_exports_keep_roles_source_ids_and_order"
+        },
+        {
+          "path": "tests/intention_endings.rs",
+          "test": "ending_licenses_do_not_relax_allomorphs_classes_or_auxiliary_connectors"
+        },
+        {
+          "path": "docs/native-conditionals-source-audit.json"
+        },
+        {
+          "path": "tests/fixtures/native-conditionals-sources.json"
+        },
+        {
+          "path": "tests/fixtures/krdict-native-conditionals.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "native-conditionals-80338-s1-g1-t0-w2",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80338-s1-g2-t0-w2",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80338-s1-g3-t0-w2",
+          "judgment": "source-path"
+        },
+        {
+          "case": "native-conditionals-80338-s1-g4-t1-w1",
+          "judgment": "source-path"
+        }
+      ]
     }
   ]
 }

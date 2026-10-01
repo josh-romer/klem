@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 383 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 331 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 386 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 328 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -347,7 +347,11 @@ review remains open under the completion review below.
   fifteen `intention-*` ledger cases, eleven full annotated source sentences,
   dictionary/CLI parity, and six browser/source-link regressions. See
   [scope and sources](rules.md#intention-expectation-and-concession-cov-017h)
-  and [development comparison](intention-ending-evaluation.json).
+  and [development comparison](intention-ending-evaluation.json). The
+  [complete native source review](native-conditionals-source-audit.json) adds four
+  stable -자면 target cases across all original groups of entry 80338. Existing
+  literal, class and prefinal boundary exclusions remain unchanged; contextual
+  senses and broader lexical licenses remain open.
 - [x] **COV-017i — Concessive -(으)나마 ending.** Canonical 으나마 is
   separate from the nominal/adverbial (이)나마 particle. 작으나마, 약소하나마,
   and 먹지못하나마 retain their predicate/auxiliary groups; 조금이나마 retains
@@ -356,7 +360,15 @@ review remains open under the completion review below.
   retrospective 더 and new auxiliary links are not licensed. These are
   source-backed synthetic cases, not additional corpus gains. Evidence and
   sources are shared with COV-018c below. Broader omitted-copula and outer-particle
-  licenses remain COV-018/020.
+  licenses remain COV-018/020. The same
+  [native review](native-conditionals-source-audit.json) preserves all ten groups
+  of entries 80167/80164, adding ten exact ending-path cases, full dialogue turns
+  and separate 조금이나마 particle alternatives. [Three tests](../tests/native_conditionals.rs)
+  cover all 14 native occurrences across these ending families, Unicode, source
+  identity, dictionary filters and ordered CLI word/text exports. Source integrity, 623 Rust tests, full pinned corpus, lint/format and preview
+  API parity pass; see the [evaluation](native-conditionals-evaluation.json).
+  Nix CLI/web builds, all three x86_64 Linux flake checks and packaged API/CLI
+  parity pass; the preview is refreshed. No additional generation license is inferred.
 - [x] **COV-017j — Short quoted facts and commands -란/-(으)란.**
   학생이란 preserves 학생 + 이다 + 란 alongside the separate particle reading.
   Explicit and vowel-final omitted copulas, 아니다, honorific copulas and

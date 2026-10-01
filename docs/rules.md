@@ -3767,3 +3767,13 @@ and 들다/듣다 alternatives remain; sense provenance does not choose an inten
 sentence reading. See the [source audit](daga-native-source-audit.json) and
 [four native-source tests](../tests/daga_source.rs). Further followers, joined
 auxiliary uses and independent Korean review remain open.
+
+### Native intention/concession source review (COV-017h/i)
+
+The [full source review](native-conditionals-source-audit.json) preserves every
+original group of -자면 and -나마/-으나마, with 14 stable native target cases.
+These cases require an existing possible ending path without choosing a
+contextual sense. 조금이나마 keeps both copula/ending and nominal/adverbial
+particle hypotheses; lexical adjective/verb homonyms remain distinct. Existing
+class, allomorph, prefinal and auxiliary boundaries are unchanged. Further
+licenses and independent Korean-language review remain open.

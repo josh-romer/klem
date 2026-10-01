@@ -1,0 +1,617 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-013",
+    "COV-017h",
+    "COV-017i"
+  ],
+  "before_revision": "a0cc63e28e14a54290236d31165e9272c146252c",
+  "native_fixture": "tests/fixtures/krdict-native-conditionals.json",
+  "native_fixture_sha256": "5a082e1755df2e970bae98c65105fa8cbeb27ab408d1654574e03e2444cd9f90",
+  "attribution": "National Institute of Korean Language Korean Basic Dictionary, pinned September 2026 native export. Only RelatedForm and non-English equivalents omitted; Sense normalized to an array.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "native_entries": 35,
+  "primary_entries": [
+    "80164",
+    "80167",
+    "80338"
+  ],
+  "source_groups": [
+    {
+      "entry_id": "krdict:80167",
+      "sense_id": "1",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "조금이나마 위로가 되길 바란다."
+          }
+        ]
+      },
+      "examples": [
+        "조금이나마 위로가 되길 바란다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "조금이나마",
+          "lemmas": [
+            "조금",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80167-s1-g1-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80167",
+      "sense_id": "1",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "약소하나마 작은 선물을 준비했다."
+          }
+        ]
+      },
+      "examples": [
+        "약소하나마 작은 선물을 준비했다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "약소하나마",
+          "lemmas": [
+            "약소하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80167-s1-g2-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80167",
+      "sense_id": "1",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "미력하나마 작은 도움이라도 되었으면 좋겠다."
+          }
+        ]
+      },
+      "examples": [
+        "미력하나마 작은 도움이라도 되었으면 좋겠다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "미력하나마",
+          "lemmas": [
+            "미력하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80167-s1-g3-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80167",
+      "sense_id": "1",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "도와주지는 못하나마 항상 응원하겠다."
+          }
+        ]
+      },
+      "examples": [
+        "도와주지는 못하나마 항상 응원하겠다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 1,
+          "surface": "못하나마",
+          "lemmas": [
+            "못하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80167-s1-g4-t0-w1"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80167",
+      "sense_id": "1",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "그럼 차기 회장님의 당선 소감을 들어 보겠습니다."
+          },
+          {
+            "att": "example",
+            "val": "뽑아 주셔서 감사합니다. 부족하나마 항상 최선을 다하겠습니다."
+          }
+        ]
+      },
+      "examples": [
+        "그럼 차기 회장님의 당선 소감을 들어 보겠습니다.",
+        "뽑아 주셔서 감사합니다. 부족하나마 항상 최선을 다하겠습니다."
+      ],
+      "targets": [
+        {
+          "turn": 1,
+          "token": 3,
+          "surface": "부족하나마",
+          "lemmas": [
+            "부족하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80167-s1-g5-t1-w3"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80167",
+      "sense_id": "1",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "조촐하나마 정성껏 차렸으니 맛있게 드세요."
+          },
+          {
+            "att": "example",
+            "val": "감사합니다. 맛있게 먹겠습니다. "
+          }
+        ]
+      },
+      "examples": [
+        "조촐하나마 정성껏 차렸으니 맛있게 드세요.",
+        "감사합니다. 맛있게 먹겠습니다. "
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "조촐하나마",
+          "lemmas": [
+            "조촐하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80167-s1-g6-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80164",
+      "sense_id": "1",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "매일 짧으나마 일기를 쓰면 문장력이 향상된다. "
+          }
+        ]
+      },
+      "examples": [
+        "매일 짧으나마 일기를 쓰면 문장력이 향상된다. "
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 1,
+          "surface": "짧으나마",
+          "lemmas": [
+            "짧다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80164-s1-g1-t0-w1"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80164",
+      "sense_id": "1",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "늦으나마 새해 인사 올립니다. 새해 복 많이 받으세요."
+          }
+        ]
+      },
+      "examples": [
+        "늦으나마 새해 인사 올립니다. 새해 복 많이 받으세요."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "늦으나마",
+          "lemmas": [
+            "늦다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80164-s1-g2-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80164",
+      "sense_id": "1",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "작으나마 제 성의가 정말로 도움이 되었으면 하는 바람입니다."
+          }
+        ]
+      },
+      "examples": [
+        "작으나마 제 성의가 정말로 도움이 되었으면 하는 바람입니다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "작으나마",
+          "lemmas": [
+            "작다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80164-s1-g3-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80164",
+      "sense_id": "1",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "재난 피해 지역 돕기 성금을 모금하고 있습니다. "
+          },
+          {
+            "att": "example",
+            "val": "그래요? 적으나마 저도 동참하지요."
+          }
+        ]
+      },
+      "examples": [
+        "재난 피해 지역 돕기 성금을 모금하고 있습니다. ",
+        "그래요? 적으나마 저도 동참하지요."
+      ],
+      "targets": [
+        {
+          "turn": 1,
+          "token": 1,
+          "surface": "적으나마",
+          "lemmas": [
+            "적다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으나마"
+          ],
+          "case_id": "native-conditionals-80164-s1-g4-t1-w1"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80338",
+      "sense_id": "1",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "연습을 더 하자면 더 할 수도 있어."
+          }
+        ]
+      },
+      "examples": [
+        "연습을 더 하자면 더 할 수도 있어."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "하자면",
+          "lemmas": [
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자면"
+          ],
+          "case_id": "native-conditionals-80338-s1-g1-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80338",
+      "sense_id": "1",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "오늘 일을 끝내자면 부지런히 해야겠다."
+          }
+        ]
+      },
+      "examples": [
+        "오늘 일을 끝내자면 부지런히 해야겠다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "끝내자면",
+          "lemmas": [
+            "끝내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자면"
+          ],
+          "case_id": "native-conditionals-80338-s1-g2-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80338",
+      "sense_id": "1",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "원하는 악기를 사자면 이 돈으로는 부족해요."
+          }
+        ]
+      },
+      "examples": [
+        "원하는 악기를 사자면 이 돈으로는 부족해요."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "사자면",
+          "lemmas": [
+            "사다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자면"
+          ],
+          "case_id": "native-conditionals-80338-s1-g3-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:80338",
+      "sense_id": "1",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "요즘 공부에 열심이구나?"
+          },
+          {
+            "att": "example",
+            "val": "시험에 합격하자면 이렇게 공부하는 것도 모자라요."
+          }
+        ]
+      },
+      "examples": [
+        "요즘 공부에 열심이구나?",
+        "시험에 합격하자면 이렇게 공부하는 것도 모자라요."
+      ],
+      "targets": [
+        {
+          "turn": 1,
+          "token": 1,
+          "surface": "합격하자면",
+          "lemmas": [
+            "합격하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자면"
+          ],
+          "case_id": "native-conditionals-80338-s1-g4-t1-w1"
+        }
+      ]
+    }
+  ],
+  "source_group_count": 14,
+  "target_occurrences": 14,
+  "scope": "All definitions, attachment notes and original example groups of verb intention -자면 and concessive -나마/-으나마. Preserve nominal copula and particle alternatives for 조금이나마, and adjective/verb lexical homonyms. Existing prefinal/allomorph boundaries remain separately tested.",
+  "remaining": [
+    "Unknown lexical classes, contextual senses, further attachment combinations and independent Korean-language review remain open.",
+    "The verb-only 자면 source does not by itself settle every coercive or quoted-context hypothesis; existing scoped boundaries are unchanged."
+  ],
+  "status": "Complete native source entries and 14 original target occurrences verified for the existing COV-017h/i scope; additional attachment licenses, contextual senses, parent inventories and independent Korean-language review remain open.",
+  "evaluation": "docs/native-conditionals-evaluation.json",
+  "source_integrity": {
+    "native_entries": 35,
+    "primary_entries": 3,
+    "complete_source_groups": 14,
+    "target_occurrences": 14,
+    "all_export_hashes_match": true,
+    "only_documented_omissions": true,
+    "original_ledger_prefix_unchanged": true,
+    "debug_binary_sha256": "219829de3fc97d24dd4c1361b1176db6ce6b0e76f9331d1f0543f6fe17c1eece",
+    "debug_binary_identical": true,
+    "frozen_baselines": [
+      {
+        "path": "data/baselines/kaist-dev.jsonl",
+        "sha256": "942e84f3d7f1905341fe2585e588563edb947feae96b5dfc1872ef915290b42c",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/kaist-test.jsonl",
+        "sha256": "fdd557c80a41a24274c43a82f8c1868b2992d00286dbf48dd877df57b8a81222",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-dev.jsonl",
+        "sha256": "c32e071e6823b4a1e69935933b568daa54e8c2dcfa5dea8b2da9eabe1a51d9b8",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-test.jsonl",
+        "sha256": "76d656c99f08b14feb9d31a6d41ef83ff568570445c0402873e98d7cd2dfa422",
+        "unchanged": true
+      }
+    ]
+  }
+}

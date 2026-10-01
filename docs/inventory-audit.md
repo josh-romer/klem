@@ -22,9 +22,9 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **383 scoped
+The [manual ledger](inventory-reviews.json) currently contains **386 scoped
 reviews**, **one observed gap with unresolved acceptability** (마다), and
-**331 entries
+**328 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
@@ -792,3 +792,19 @@ CLI/web verification. Application binaries and production frontend bytes are
 unchanged. The queue now has 383 scoped dispositions, 331 unreviewed entries
 and one unresolved gap. Broader attachments and independent Korean review
 remain open.
+
+## Native intention/concession source regressions (2026-10-01)
+
+All original groups of -자면 (80338) and -나마/-으나마 (80167/80164) now
+have stable target cases, attributed full native fixtures, and scoped inventory
+dispositions. The [source audit](native-conditionals-source-audit.json) retains
+14 groups and 14 target occurrences; [three tests](../tests/native_conditionals.rs)
+protect source turns, roles, normalization, lexical homonyms, both dictionary
+filters and ordered CLI word/text exports. 조금이나마 preserves copular ending
+and nominal/adverbial particle alternatives without choosing the intended sense.
+The [evaluation](native-conditionals-evaluation.json) records the unchanged
+application binary, 623 Rust tests, full pinned corpus checks and preview API
+parity, Nix CLI/web builds and packaged API/asset checks. The refreshed preview
+uses the verified package. The queue has 386 scoped dispositions, 328 unreviewed entries and one
+unresolved gap. Contextual senses, wider attachments and independent Korean
+review remain open.

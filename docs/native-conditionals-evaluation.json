@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-013",
+    "COV-017h",
+    "COV-017i"
+  ],
+  "before_revision": "a0cc63e28e14a54290236d31165e9272c146252c",
+  "status": "Complete native source entries and 14 original target occurrences verified for the existing COV-017h/i scope; additional attachment licenses, contextual senses, parent inventories and independent Korean-language review remain open.",
+  "sources": {
+    "audit": "docs/native-conditionals-source-audit.json",
+    "manifest": "tests/fixtures/native-conditionals-sources.json",
+    "native_fixture": "tests/fixtures/krdict-native-conditionals.json",
+    "native_entries": 35,
+    "complete_grammar_entries": 3,
+    "complete_source_groups": 14,
+    "target_occurrences": 14
+  },
+  "judgments": {
+    "new_required": 14,
+    "new_forbidden": 0,
+    "total_required": 6742,
+    "total_forbidden": 3048,
+    "interpretation": "Source-listed ending paths remain possible. Particle alternatives, lexical homonyms and unjudged candidates retain their separate hypotheses; no contextual sense choice is certified."
+  },
+  "source_integrity": {
+    "native_entries": 35,
+    "primary_entries": 3,
+    "complete_source_groups": 14,
+    "target_occurrences": 14,
+    "all_export_hashes_match": true,
+    "only_documented_omissions": true,
+    "original_ledger_prefix_unchanged": true,
+    "debug_binary_sha256": "219829de3fc97d24dd4c1361b1176db6ce6b0e76f9331d1f0543f6fe17c1eece",
+    "debug_binary_identical": true,
+    "frozen_baselines": [
+      {
+        "path": "data/baselines/kaist-dev.jsonl",
+        "sha256": "942e84f3d7f1905341fe2585e588563edb947feae96b5dfc1872ef915290b42c",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/kaist-test.jsonl",
+        "sha256": "fdd557c80a41a24274c43a82f8c1868b2992d00286dbf48dd877df57b8a81222",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-dev.jsonl",
+        "sha256": "c32e071e6823b4a1e69935933b568daa54e8c2dcfa5dea8b2da9eabe1a51d9b8",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-test.jsonl",
+        "sha256": "76d656c99f08b14feb9d31a6d41ef83ff568570445c0402873e98d7cd2dfa422",
+        "unchanged": true
+      }
+    ]
+  },
+  "behavior": {
+    "debug_binary_sha256": "219829de3fc97d24dd4c1361b1176db6ce6b0e76f9331d1f0543f6fe17c1eece",
+    "debug_binary_identical": true,
+    "runtime_sources_changed": false,
+    "raw_and_dictionary_generation_unchanged": true,
+    "frozen_baselines": [
+      {
+        "path": "data/baselines/kaist-dev.jsonl",
+        "sha256": "942e84f3d7f1905341fe2585e588563edb947feae96b5dfc1872ef915290b42c",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/kaist-test.jsonl",
+        "sha256": "fdd557c80a41a24274c43a82f8c1868b2992d00286dbf48dd877df57b8a81222",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-dev.jsonl",
+        "sha256": "c32e071e6823b4a1e69935933b568daa54e8c2dcfa5dea8b2da9eabe1a51d9b8",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-test.jsonl",
+        "sha256": "76d656c99f08b14feb9d31a6d41ef83ff568570445c0402873e98d7cd2dfa422",
+        "unchanged": true
+      }
+    ],
+    "release_binary_identical": true,
+    "release_binary_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+    "server_identical": true,
+    "server_sha256": "7c57bb29cbfe1a65a2471a5e92499485fe26403e84428db2b1ce1e626e8ac82a",
+    "frontend_identical": true,
+    "production_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf"
+  },
+  "inventory": {
+    "entries": 715,
+    "scoped": 386,
+    "unreviewed": 328,
+    "gap": 1
+  },
+  "runtime_checks": {
+    "preview": {
+      "url": "http://127.0.0.1:8081",
+      "cli": "/nix/store/10vb0db53dwvld7jca4x5yvbrwclba0b-klem-0.1.0/bin/klem",
+      "cli_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+      "source_occurrences": 14,
+      "both_filters_passed": true,
+      "http_cli_exact_parity": true,
+      "grammar_entries": [
+        "krdict:80338",
+        "krdict:80164",
+        "krdict:80167"
+      ],
+      "complete_senses": 3,
+      "served_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf",
+      "local_asset_parity": true
+    },
+    "packaged": {
+      "url": "http://127.0.0.1:42129",
+      "cli": "/nix/store/10vb0db53dwvld7jca4x5yvbrwclba0b-klem-0.1.0/bin/klem",
+      "cli_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+      "source_occurrences": 14,
+      "both_filters_passed": true,
+      "http_cli_exact_parity": true,
+      "grammar_entries": [
+        "krdict:80338",
+        "krdict:80164",
+        "krdict:80167"
+      ],
+      "complete_senses": 3,
+      "served_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf",
+      "local_asset_parity": true
+    },
+    "preview_refresh": {
+      "old_identity": {
+        "pid": 3771844,
+        "exe": "/nix/store/xar924yvfjhg8vcw4iwhj4xim5r60ngb-klem-0.1.0/bin/klem-web",
+        "args": [
+          "/nix/store/xar924yvfjhg8vcw4iwhj4xim5r60ngb-klem-0.1.0/bin/klem-web",
+          "--assets",
+          "/nix/store/5dmg75z1wbgzkbbhrvjzp3adjc75gka6-klem-web-assets-0.1.0/share/klem-web",
+          "--port",
+          "8081",
+          "--dictionary",
+          "data/dictionaries/krdict/krdict.db"
+        ],
+        "cwd": "/home/josh/projects/klem",
+        "uid": 1000,
+        "start_time_ticks": "34033094"
+      },
+      "old_identity_verified": true,
+      "old_exited": true,
+      "new_package": "/nix/store/j214p6nqym7wxvyhhx030pwp0ffqywb9-klem-web",
+      "server_sha256": "7c57bb29cbfe1a65a2471a5e92499485fe26403e84428db2b1ce1e626e8ac82a"
+    },
+    "preview_identity": {
+      "pid": 4009498,
+      "exe": "/nix/store/10vb0db53dwvld7jca4x5yvbrwclba0b-klem-0.1.0/bin/klem-web",
+      "args": [
+        "/nix/store/10vb0db53dwvld7jca4x5yvbrwclba0b-klem-0.1.0/bin/klem-web",
+        "--assets",
+        "/nix/store/5dmg75z1wbgzkbbhrvjzp3adjc75gka6-klem-web-assets-0.1.0/share/klem-web",
+        "--port",
+        "8081",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "cwd": "/home/josh/projects/klem",
+      "uid": 1000,
+      "start_time_ticks": "34259723"
+    },
+    "daga_previous_batch": {
+      "url": "http://127.0.0.1:8081",
+      "cli": "/nix/store/10vb0db53dwvld7jca4x5yvbrwclba0b-klem-0.1.0/bin/klem",
+      "cli_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+      "source_occurrences": 19,
+      "both_filters_passed": true,
+      "http_cli_exact_parity": true,
+      "grammar_entry": "krdict:85740",
+      "grammar_senses": 4,
+      "served_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf",
+      "local_asset_parity": true
+    }
+  },
+  "validation": {
+    "rust": "passed: 623 tests including stress",
+    "targeted": "passed: 7 native/global validity tests",
+    "pinned_corpus": "passed: full pinned corpus regressions and four unchanged frozen baselines",
+    "clippy": "passed: all targets, -D warnings",
+    "format": "passed",
+    "inventory": "passed: 9 tests and regenerated queue verification",
+    "cli_library_exports": "passed: all 14 source occurrences, unfiltered and both dictionary filters, word/text equality and ordered components",
+    "browser": "All 14 preview API/CLI comparisons, grammar IDs and complete entry panes verified. Existing full browser evidence in proposal-evaluation.json applies to identical application/frontend bytes; no UI behavior changes.",
+    "nix": "passed: CLI/web build, 623 release tests and all three x86_64-linux flake checks; other architectures not run"
+  },
+  "remaining": [
+    "Unknown lexical classes, contextual senses, further attachment combinations and independent Korean-language review remain open.",
+    "The verb-only 자면 source does not by itself settle every coercive or quoted-context hypothesis; existing scoped boundaries are unchanged."
+  ],
+  "nix_outputs": {
+    "cli": "/nix/store/10vb0db53dwvld7jca4x5yvbrwclba0b-klem-0.1.0/bin/klem",
+    "cli_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+    "server": "/nix/store/10vb0db53dwvld7jca4x5yvbrwclba0b-klem-0.1.0/bin/klem-web",
+    "server_sha256": "7c57bb29cbfe1a65a2471a5e92499485fe26403e84428db2b1ce1e626e8ac82a",
+    "web_wrapper": "/nix/store/j214p6nqym7wxvyhhx030pwp0ffqywb9-klem-web/bin/klem-web",
+    "assets": "/nix/store/5dmg75z1wbgzkbbhrvjzp3adjc75gka6-klem-web-assets-0.1.0/share/klem-web",
+    "production_js": "/nix/store/5dmg75z1wbgzkbbhrvjzp3adjc75gka6-klem-web-assets-0.1.0/share/klem-web/assets/index-CV8_PQqf.js",
+    "production_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf",
+    "release_cli_identical": true,
+    "server_identical": true,
+    "production_js_identical": true,
+    "packaged_runtime": {
+      "url": "http://127.0.0.1:42129",
+      "cli": "/nix/store/10vb0db53dwvld7jca4x5yvbrwclba0b-klem-0.1.0/bin/klem",
+      "cli_sha256": "5f6ca949a540a2a6a1055d4b23e1b6db70183a2883bfd8a85a0d1e49a8383979",
+      "source_occurrences": 14,
+      "both_filters_passed": true,
+      "http_cli_exact_parity": true,
+      "grammar_entries": [
+        "krdict:80338",
+        "krdict:80164",
+        "krdict:80167"
+      ],
+      "complete_senses": 3,
+      "served_js_sha256": "2ad7a2b06dcaff7f3ad337d79fe6f02e895784a66f3a15b3ee443a55771ffeaf",
+      "local_asset_parity": true
+    },
+    "preview_refresh": "Exact previous process identity and binary hash verified before replacement. result-web and preview 8081 now use the tested package; all 14 native conditional/concessive and 19 daga source occurrences reverified against the release CLI."
+  }
+}

@@ -1821,3 +1821,12 @@ homonyms, with only RelatedForm and non-English equivalents omitted. National
 Institute of Korean Language; CC BY-SA 2.0 KR. Export hashes and scope are in
 [the source audit](../../docs/daga-native-source-audit.json). These cases preserve
 candidate paths without selecting a contextual sense.
+
+`native-conditionals-sources.json` links 14 stable target occurrences to every
+original example group of -자면 and -나마/-으나마.
+`krdict-native-conditionals.json` preserves the full pinned native grammar and
+lexical records, including homonyms and incidental lexical-unit siblings. Only
+RelatedForm and non-English equivalents are omitted; Sense is normalized to an
+array. National Institute of Korean Language; CC BY-SA 2.0 KR. Source export
+hashes and unresolved scope are retained in the manifest and
+[review](../../docs/native-conditionals-source-audit.json).

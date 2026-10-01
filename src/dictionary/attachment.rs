@@ -159,7 +159,7 @@ fn bare_copular_ending(form: &str) -> bool {
             | "로구려"
             | "로구먼"
             | "로군"
-    )
+    ) || crate::engine::quoted_copular_exclamation(form)
 }
 
 // Return the connector whose expressive 하다 use depends on this lexical
@@ -633,7 +633,8 @@ impl Annotation {
                             }
                         } else if adjective
                             && lemma.text == "아니다"
-                            && matches!(form, "으라니" | "으라느니")
+                            && (matches!(form, "으라니" | "으라느니")
+                                || crate::engine::quoted_command_exclamation(form))
                         {
                             // Preserve factual 라니. Do not generalize this to
                             // all adjective commands/proposals: wishes exist.
@@ -793,6 +794,31 @@ impl Annotation {
                         // Preserve it as unknown; past/modal examples provide
                         // distinct evidence and are not excluded here.
                         status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
+                        && crate::engine::quoted_ra_exclamation(&analysis.morphemes[i].form)
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let is_command = crate::engine::quoted_command_exclamation(form);
+                        let listed: &[&str] = if is_command { &["시"] } else { &["시", "더", "으리"] };
+                        if morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                            if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
+                                && !listed.contains(&analysis.morphemes[*j].form.as_str())))
+                            || (is_command && (matches!(matched.entry.pos.as_str(), "형용사" | "보조 형용사")
+                                || derived_adjective || matches!(class, Some(PredicateClass::Adjective))))
+                            || (!is_command && !bare && lemma.kind != LemmaKind::Copula
+                                && (matches!(matched.entry.pos.as_str(), "동사" | "형용사" | "보조 동사" | "보조 형용사")
+                                    || derived_adjective || matches!(class, Some(PredicateClass::Verb | PredicateClass::Adjective)))
+                                && lemma.text != "아니다")
+                            || (matches!(form, "라는군" | "으라는군")
+                                && analysis.morphemes.get(i + 1).is_some_and(|m|
+                                    m.kind == MorphemeKind::Particle && m.form == "요"))
+                        {
+                            // Honorific/copular extensions, adjective wishes
+                            // and inferred quoted 군 + 요 remain candidates,
+                            // without automatic grammaticality certification.
+                            status = Compatibility::Unknown;
+                        }
                     }
                     if status == Compatibility::Compatible
                         && let Some(i) = ending

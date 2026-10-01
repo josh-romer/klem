@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bi/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bj/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -221,8 +221,8 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bi implemented; COV-017aw/az and the inventoried
-  COV-017bj–bl remain open.**
+  COV-017ax–ay/017ba–bj implemented; COV-017aw/az and the inventoried
+  COV-017bk–bl remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1411,16 +1411,31 @@ review remains open under the completion review below.
   checks pass, including packaged API/CLI/export/asset parity and refreshed
   preview. Other question/quote families and independent review stay open.
 
-- [ ] **COV-017bj — Quoted copular reports and command exclamations.**
-  **Confirmed missing:** 가라더군 → 가다 and 학생이라더군 → 학생 + 이다.
-  Audit 82241/82251/82011/82009 and 86596/86597/89657/90134.
-  Four 라 report forms have separate factual copular and imperative senses;
-  preserve both, consonant/vowel/ㄹ command allomorphs, 아니다, owner-local
-  prefinals, copula omission and full original examples. Literal overlap must
-  not borrow the copula entry’s class for a lexical verb. Keep polite bundles
-  and reviewed split alternatives without implying 하다, connectors or
-  unrestricted follower licenses. Add per-homonym and boundary cases and run
-  the same candidate, corpus, browser, novel and Nix gates.
+- [x] **COV-017bj — Quoted copular reports and command exclamations.**
+  **Implemented for eight reviewed native expression identities.**
+  학생이라더군 and 가라더군 now preserve factual copular and reported
+  command readings with distinct 라/으라 bundles. Consonant/vowel/ㄹ and
+  written irregular command allomorphs, 아니다, copula omission and local
+  honorific/conjectural slots compose. Four original 라 entries have both
+  factual and imperative senses; each command label preserves both the 라
+  and 으라 identities without borrowing bare copular attachment for a
+  lexical verb. Restricted 달다 request reports, bundled/split polite forms
+  and two inferred Unknown 군 + 요 followers retain separate owner paths.
+  Ordinary/derived adjective wishes and noncopular factual prefinal extensions
+  remain Unknown; broader followers remain COV-018aa. No implicit reporting
+  하다 or contextual sense is inserted. [Four family tests](../tests/copular_command_exclamation.rs),
+  212 raw and 57 dictionary-policy cases and the
+  [full source audit](copular-command-exclamation-source-audit.json) preserve
+  all 53 original groups and unchanged direct targets. The
+  [individual comparison](copular-command-exclamation-evaluation.json) covers
+  11,701 inputs, 2,510 added paths and zero removals; 2,180 additions remain
+  unjudged. Four frozen corpus reports, novel filter outputs and spacing
+  sidecars are unchanged. No target exists in the six pinned corpus files,
+  so no annotated gold is fabricated. Eight labels retain actual source POS
+  품사 없음. Rust/stress, lint/format, corpus, browser and x86_64 Linux Nix
+  checks pass, including packaged API/CLI/export/asset parity and refreshed
+  preview. Proposal/conditional-question reports and independent review stay
+  open below.
 
 - [ ] **COV-017bk — Quoted proposal exclamations and recalled proposals.**
   **Confirmed missing:** 먹자는구나 → 먹다. Audit full entries

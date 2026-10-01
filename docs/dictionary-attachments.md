@@ -576,3 +576,16 @@ predecessor stays Unknown instead of borrowing a preceding dictionary entry’s
 POS. No new compatibility enum or provider restriction is introduced.
 [Source and case evidence](question-exclamation-evaluation.json) distinguishes
 raw hypotheses, optional filtering judgments and contextual validity.
+
+COV-017bj adds eight copular/command exclamation bundles to the finite owner
+policy. Bare factual 라 readings use `bare_copular_ending`; lexical 쌓이다
+cannot borrow the copular sense, while its command allomorph survives. The
+negative 아니다 boundary uses `negative_copula_command`, retaining factual
+아니라더군 alongside the distinct command hypothesis. 고르다’s two verbal
+homonyms stay compatible with command reports; its adjectival homonym stays
+Unknown for a possible wish. Derived 답다 wishes, auxiliary adjective wishes,
+noncopular factual prefinal extensions and unlisted polite prefinals also remain
+Unknown. Listed copular 시/더/으리 remain independent of a nominal head’s POS.
+Two inferred 군 + 요 paths are retained as Unknown; dictionary absence does
+not supply forbidden gold for 구나 followers. No new provider restriction or
+compatibility enum is introduced. See [source and case evidence](copular-command-exclamation-evaluation.json).

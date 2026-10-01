@@ -2,6 +2,15 @@
   "schema_version": 1,
   "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
   "sources": {
+    "cqex-82241": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82241&nation=eng",
+    "cqex-82251": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82251&nation=eng",
+    "cqex-82011": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82011&nation=eng",
+    "cqex-82009": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82009&nation=eng",
+    "cqex-86596": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86596&nation=eng",
+    "cqex-86597": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86597&nation=eng",
+    "cqex-89657": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89657&nation=eng",
+    "cqex-90134": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=90134&nation=eng",
+    "cqex-nikl-330060": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=330060",
     "qqex-nikl-330060": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=330060",
     "qqex-88945": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=88945&nation=eng",
     "qqex-88946": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=88946&nation=eng",
@@ -11813,6 +11822,1500 @@
           "verdict": "required",
           "source": "qqex-nikl-330060",
           "reason": "Inferred candidate from the quoted 하는군 contraction and NIKL 330060 terminal ending + polite particle example 하는군요. This is not a direct quoted-question source example or positive grammatical-validity gold; the optional dictionary assessment remains Unknown."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-negative-command-으라는구나",
+      "surface": "아니라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "cqex-86596",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으시-라는구나",
+      "surface": "먹으시라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "라는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82241",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으시-으라는구나",
+      "surface": "먹으시라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "으라는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86596",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으옵시-라는구나",
+      "surface": "먹으옵시라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으옵시",
+            "라는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82241",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으옵시-으라는구나",
+      "surface": "먹으옵시라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으옵시",
+            "으라는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86596",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-bare-overlap-라는구나",
+      "surface": "쌓이라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "쌓이다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "cqex-82241",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-wish-행복하-으라는구나",
+      "surface": "행복하라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86596",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-wish-있으-으라는구나",
+      "surface": "있으라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86596",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-derived-wish-으라는구나",
+      "surface": "학생다우라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "으라는구나"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86596",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-auxiliary-honorific-라는구나",
+      "surface": "먹어보시라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "라는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82241",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-auxiliary-honorific-으라는구나",
+      "surface": "먹어보시라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "으라는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86596",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-copula-라는구나",
+      "surface": "학생이시라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "라는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82241",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-negative-factual-라는구나",
+      "surface": "아니라는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82241",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-negative-command-으라는군",
+      "surface": "아니라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "cqex-86597",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으시-라는군",
+      "surface": "먹으시라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "라는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82251",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으시-으라는군",
+      "surface": "먹으시라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "으라는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86597",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으옵시-라는군",
+      "surface": "먹으옵시라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으옵시",
+            "라는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82251",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으옵시-으라는군",
+      "surface": "먹으옵시라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으옵시",
+            "으라는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86597",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-bare-overlap-라는군",
+      "surface": "쌓이라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "쌓이다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "cqex-82251",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-wish-행복하-으라는군",
+      "surface": "행복하라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86597",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-wish-있으-으라는군",
+      "surface": "있으라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86597",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-derived-wish-으라는군",
+      "surface": "학생다우라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "으라는군"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86597",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-auxiliary-honorific-라는군",
+      "surface": "먹어보시라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "라는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82251",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-auxiliary-honorific-으라는군",
+      "surface": "먹어보시라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "으라는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-86597",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-copula-라는군",
+      "surface": "학생이시라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "라는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82251",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-negative-factual-라는군",
+      "surface": "아니라는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82251",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-negative-command-으라더군",
+      "surface": "아니라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "cqex-89657",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으시-라더군",
+      "surface": "먹으시라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "라더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82011",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으시-으라더군",
+      "surface": "먹으시라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "으라더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-89657",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으옵시-라더군",
+      "surface": "먹으옵시라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으옵시",
+            "라더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82011",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으옵시-으라더군",
+      "surface": "먹으옵시라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으옵시",
+            "으라더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-89657",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-bare-overlap-라더군",
+      "surface": "쌓이라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "쌓이다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "cqex-82011",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-wish-행복하-으라더군",
+      "surface": "행복하라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-89657",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-wish-있으-으라더군",
+      "surface": "있으라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-89657",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-derived-wish-으라더군",
+      "surface": "학생다우라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "으라더군"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-89657",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-auxiliary-honorific-라더군",
+      "surface": "먹어보시라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "라더군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82011",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-auxiliary-honorific-으라더군",
+      "surface": "먹어보시라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "으라더군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-89657",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-copula-라더군",
+      "surface": "학생이시라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "라더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82011",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-negative-factual-라더군",
+      "surface": "아니라더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82011",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-negative-command-으라더군요",
+      "surface": "아니라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "cqex-90134",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으시-라더군요",
+      "surface": "먹으시라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "라더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82009",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으시-으라더군요",
+      "surface": "먹으시라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "으라더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-90134",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으옵시-라더군요",
+      "surface": "먹으옵시라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으옵시",
+            "라더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82009",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-prefinal-먹으옵시-으라더군요",
+      "surface": "먹으옵시라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으옵시",
+            "으라더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-90134",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-bare-overlap-라더군요",
+      "surface": "쌓이라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "쌓이다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "cqex-82009",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-wish-행복하-으라더군요",
+      "surface": "행복하라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-90134",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-wish-있으-으라더군요",
+      "surface": "있으라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-90134",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-derived-wish-으라더군요",
+      "surface": "학생다우라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "으라더군요"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-90134",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-auxiliary-honorific-라더군요",
+      "surface": "먹어보시라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "라더군요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82009",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-auxiliary-honorific-으라더군요",
+      "surface": "먹어보시라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "시",
+            "으라더군요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-90134",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-copula-라더군요",
+      "surface": "학생이시라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "시",
+            "라더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82009",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-negative-factual-라더군요",
+      "surface": "아니라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "라더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-82009",
+          "reason": "Optional per-entry filtering judgment. Required retention may remain Unknown, and is not positive grammatical-validity gold."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-inferred-polite-라는군",
+      "surface": "학생이라는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "라는군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "cqex-nikl-330060",
+          "reason": "Explicit inferred candidate from the source contraction to 하는군 and NIKL 330060 terminal ending + polite particle. No direct quoted-context example or positive validity gold is claimed; optional compatibility remains Unknown."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-inferred-polite-으라는군",
+      "surface": "먹으라는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라는군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "cqex-nikl-330060",
+          "reason": "Explicit inferred candidate from the source contraction to 하는군 and NIKL 330060 terminal ending + polite particle. No direct quoted-context example or positive validity gold is claimed; optional compatibility remains Unknown."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-request-polite-어-으라더군요",
+      "surface": "사달라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사다",
+            "달다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "으라더군요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "cqex-90134",
+          "reason": "Reviewed request-ending composition; additional quoted 군 + 요 is explicitly inferred and remains Unknown. This retention test does not certify contextual validity or add an implicit reporting predicate."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-request-polite-어-으라더군-요",
+      "surface": "사달라더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사다",
+            "달다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "으라더군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "cqex-89657",
+          "reason": "Reviewed request-ending composition; additional quoted 군 + 요 is explicitly inferred and remains Unknown. This retention test does not certify contextual validity or add an implicit reporting predicate."
+        }
+      ]
+    },
+    {
+      "id": "cqex-policy-request-polite-어-으라는군-요",
+      "surface": "사달라는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사다",
+            "달다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "으라는군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "cqex-nikl-330060",
+          "reason": "Reviewed request-ending composition; additional quoted 군 + 요 is explicitly inferred and remains Unknown. This retention test does not certify contextual validity or add an implicit reporting predicate."
         }
       ]
     }

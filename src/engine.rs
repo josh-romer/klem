@@ -367,6 +367,16 @@ pub(crate) fn plain_quoted_exclamation(form: &str) -> bool {
     matches!(form, "다는구나" | "다는군" | "다더군" | "다더군요")
 }
 
+pub(crate) fn quoted_command_exclamation(form: &str) -> bool {
+    matches!(form, "으라는구나" | "으라는군" | "으라더군" | "으라더군요")
+}
+pub(crate) fn quoted_copular_exclamation(form: &str) -> bool {
+    matches!(form, "라는구나" | "라는군" | "라더군" | "라더군요")
+}
+pub(crate) fn quoted_ra_exclamation(form: &str) -> bool {
+    quoted_command_exclamation(form) || quoted_copular_exclamation(form)
+}
+
 pub(crate) fn verbal_quoted_question_exclamation(form: &str) -> bool {
     matches!(form, "느냐는구나" | "느냐는군" | "느냐더군" | "느냐더군요")
 }
@@ -975,6 +985,11 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                if quoted_command_exclamation(ending.form)
+                    && p.morphs.iter().any(|m| !honorific_prefinal(&m.form))
+                {
+                    continue;
+                }
                 if quoted_question_exclamation(ending.form)
                     && p.morphs.iter().any(|m| {
                         !honorific_prefinal(&m.form)
@@ -1290,30 +1305,31 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 // Preserve their split components despite the shorter entry's
                 // narrower attachment note, as with bundled 더라네 below.
                 let factual_ra = matches!(ending.boundary, Boundary::Literal)
-                    && matches!(
-                        ending.form,
-                        "라" | "라도"
-                            | "라야"
-                            | "라야만"
-                            | "라서"
-                            | "라고"
-                            | "라는"
-                            | "라면"
-                            | "랍니다"
-                            | "란다"
-                            | "래"
-                            | "라지"
-                            | "라죠"
-                            | "라지만"
-                            | "라니까"
-                            | "라든가"
-                            | "라네"
-                            | "라는데"
-                            | "라며"
-                            | "라면서"
-                            | "라니"
-                            | "라느니"
-                    );
+                    && (quoted_copular_exclamation(ending.form)
+                        || matches!(
+                            ending.form,
+                            "라" | "라도"
+                                | "라야"
+                                | "라야만"
+                                | "라서"
+                                | "라고"
+                                | "라는"
+                                | "라면"
+                                | "랍니다"
+                                | "란다"
+                                | "래"
+                                | "라지"
+                                | "라죠"
+                                | "라지만"
+                                | "라니까"
+                                | "라든가"
+                                | "라네"
+                                | "라는데"
+                                | "라며"
+                                | "라면서"
+                                | "라니"
+                                | "라느니"
+                        ));
                 if factual_ra
                     && !p.morphs.last().is_some_and(|m| {
                         honorific_prefinal(&m.form)
@@ -1361,6 +1377,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if quoted_exclamation(ending.form) {
                     p.rules.push("ending.quoted_exclamation".into());
+                }
+                if quoted_ra_exclamation(ending.form) {
+                    p.rules.push("ending.quoted_ra_exclamation".into());
                 }
                 if quoted_question_exclamation(ending.form) {
                     p.rules.push("ending.quoted_question_exclamation".into());
@@ -1567,6 +1586,10 @@ fn predicates(word: &str) -> Vec<Predicate> {
         "라면서",
         "라니",
         "라느니",
+        "라는구나",
+        "라는군",
+        "라더군",
+        "라더군요",
     ] {
         if let Some(base) = word.strip_suffix(ending) {
             for (suffix, boundary) in [("으리", Boundary::EuFull), ("리", Boundary::EuZero)] {
@@ -1625,6 +1648,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                         }
                         if reporting_myeo(ending) {
                             p.rules.push("ending.reporting_myeo".into());
+                        }
+                        if quoted_ra_exclamation(ending) {
+                            p.rules.push("ending.quoted_ra_exclamation".into());
                         }
                         p.dap_suffix = dap_suffix_allowed(&p);
                         out.push(p);
@@ -1967,6 +1993,16 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             // class check to this owner, never to an earlier lexical head.
             // Prefinal combinations need a separate distribution review.
             if bare
+                && quoted_copular_exclamation(&m.form)
+                && matches!(
+                    class,
+                    Some(PredicateClass::Verb | PredicateClass::Adjective)
+                )
+                && lemma.text != "아니다"
+            {
+                return false;
+            }
+            if bare
                 && verbal_quoted_question_exclamation(&m.form)
                 && matches!(
                     class,
@@ -2262,6 +2298,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
     let vowel = first.starts_with('어')
         || first.starts_with('은')
         || adjectival_question(first)
+        || quoted_command_exclamation(first)
         || matches!(
             first,
             "었" | "시"
@@ -2517,6 +2554,13 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
 }
 
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
+    if p.morphs
+        .iter()
+        .any(|m| m.kind == MorphemeKind::Ending && quoted_command_exclamation(&m.form))
+    {
+        return;
+    }
+
     // Bare 음세 selects verbs; 는바 excludes a bare copula.
     // 나이다/나이까 is verbal/existential.
     // Direct copula examples for the latter instead
@@ -3448,6 +3492,10 @@ fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
                 | "으라니"
                 | "으라느니"
                 | "으라거나"
+                | "으라는구나"
+                | "으라는군"
+                | "으라더군"
+                | "으라더군요"
                 | "오"]
         ),
         "보" if matches!(connector, "다" | "다가" | "으려다" | "으려다가") => {
@@ -3680,6 +3728,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                         | "더구먼"
                         | "다더군"
                         | "는다더군"
+                        | "라더군"
+                        | "으라더군"
+                        | "라는군"
+                        | "으라는군"
                         | "냐더군"
                         | "느냐더군"
                         | "으냐더군"

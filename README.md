@@ -84,6 +84,12 @@ unresolved attachment licenses stay unknown under compatibility filtering.
 The [source audit](docs/question-exclamation-source-audit.json) and
 [coverage tracker](docs/coverage-checklist.md) describe the reviewed scope.
 
+
+Quoted copular reports and commands such as 학생이라더군 and 먹으라더군
+retain separate factual/command morphology, homonyms and polite alternatives.
+See the [source audit](docs/copular-command-exclamation-source-audit.json)
+for reviewed attachment conditions and unresolved wishes or polite followers.
+
 ## Missing-space suggestions
 
 With a dictionary, `--suggest-spacing` adds explicit alternatives for nominal

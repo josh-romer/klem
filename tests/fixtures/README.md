@@ -1759,3 +1759,16 @@ resultative, question-class and contextual cases remain in the source review.
   KAIST/GSD files, so no annotated target fixture is fabricated. Homonyms,
   owner-local prefinals, negative inheritance, copula omission, derived 답다
   and exact source POS 품사 없음 remain separate in the audit and tests.
+
+- `krdict-copular-command-exclamation.json` preserves 98 full attributed native
+  entries for COV-017bj, omitting only RelatedForm/non-English equivalents.
+  `copular-command-exclamation-sources.json` records export hashes, eight
+  expression identities and all 53 original example groups/unchanged direct
+  tokens. Its 212 raw and 57 optional dictionary cases use `cqex-` IDs.
+  Factual/copular and imperative senses retain separate canonical endings;
+  command labels retain both original 라 and 으라 source identities. Wishes,
+  noncopular factual prefinal extensions and inferred polite followers are
+  explicit Unknown hypotheses; unlisted 구나 followers have no forbidden gold.
+  No target is present in the six pinned KAIST/GSD files, so no annotated
+  morphology is fabricated. Copulas, homonyms, request auxiliaries, derived
+  답다 and exact source POS 품사 없음 stay separate in the source/case audit.

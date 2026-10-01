@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bj",
+  "before_revision": "92812ad",
+  "reviewed_at": "2026-09-30",
+  "manifest": "tests/fixtures/copular-command-exclamation-sources.json",
+  "source_integrity": {
+    "entries": 98,
+    "source_exports": 11,
+    "all_source_hashes_match": true,
+    "only_documented_omissions": true,
+    "fixture_sha256": "f2e2fa6ba99fd4b34be9058855cf354770cb320280ab4a38d245225f34d9ca89"
+  },
+  "primary_entry_ids": [
+    82241,
+    82251,
+    82011,
+    82009,
+    86596,
+    86597,
+    89657,
+    90134
+  ],
+  "complete_example_groups": 53,
+  "direct_primary_tokens": 53,
+  "unjudged_primary_observations": [],
+  "unjudged_follower_observations": [
+    {
+      "surface": "학생이라는구나요",
+      "lemmas": [
+        "학생",
+        "이다"
+      ],
+      "morphemes": [
+        "라는구나",
+        "요"
+      ],
+      "status": "unjudged",
+      "reason": "An unlisted quoted 구나 follower is not forbidden solely from dictionary absence. Broader source/register review remains COV-018aa."
+    },
+    {
+      "surface": "먹으라는구나요",
+      "lemmas": [
+        "먹다"
+      ],
+      "morphemes": [
+        "으라는구나",
+        "요"
+      ],
+      "status": "unjudged",
+      "reason": "An unlisted quoted 구나 follower is not forbidden solely from dictionary absence. Broader source/register review remains COV-018aa."
+    }
+  ],
+  "web_review": "Complete current 82009 page read, preserving both factual and command senses. Current 82241/86596 pages inaccessible; all eight pinned native entries/all 53 original groups read. No complete current review claimed for unavailable pages.",
+  "sources": [
+    {
+      "id": 82241,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82241&nation=eng"
+    },
+    {
+      "id": 82251,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82251&nation=eng"
+    },
+    {
+      "id": 82011,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82011&nation=eng"
+    },
+    {
+      "id": 82009,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82009&nation=eng"
+    },
+    {
+      "id": 86596,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86596&nation=eng"
+    },
+    {
+      "id": 86597,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86597&nation=eng"
+    },
+    {
+      "id": 89657,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89657&nation=eng"
+    },
+    {
+      "id": 90134,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=90134&nation=eng"
+    },
+    {
+      "id": 330060,
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=330060",
+      "interpretation": "Terminal 하는군 + 요 supports explicitly inferred quoted 군 followers. These are not direct quoted source examples and optional compatibility remains Unknown."
+    }
+  ],
+  "distribution": {
+    "factual": "Four 라 report identities preserve copular/factual readings, bare 이다/아니다, zero copula, listed 시/더/으리 and conjectural recovery. Overlapping lexical 이다/쌓이다 cannot borrow the copular sense to certify bare factual attachment.",
+    "command": "Four canonical 으라 report bundles preserve consonant/vowel/ㄹ and written irregular allomorphs. Honorifics compose without past/modal/retrospective command slots; no nominal copula command path is inserted.",
+    "uncertainty": "Ordinary adjective wishes, derived 답다 wishes, noncopular factual prefinal extensions and unlisted polite honorifics remain Unknown rather than certified or universally forbidden. Known bare copular conflicts and negative-copula command boundaries remain independently incompatible.",
+    "request_auxiliary": "달라/다오 request restriction adds only four new command report endings, preserving both bundled polite and reviewed split paths without opening ordinary tense, honorific or factual slots.",
+    "polite": "Two native polite identities preserve bundle/split 요 alternatives. 라는군/으라는군 + 요 are explicit inference from the 하는군 contraction and NIKL 330060 terminal-particle evidence, with Unknown compatibility. Unlisted quoted 구나 followers remain unjudged under COV-018aa."
+  },
+  "representation": "Eight bundles have ending.quoted_ra_exclamation provenance. Canonical factual 라 and command 으라 retain distinct identities/roles; command labels preserve both original 라 and 으라 source entries. No implicit reporting predicate or contextual sense is inserted. Native POS 품사 없음 remains visible.",
+  "corpus_discovery": {
+    "files": 6,
+    "matching_observations": 0,
+    "scope": "Longest literal suffix including inferred/unjudged polite followers, and exact annotated ending scan. No annotated target is fabricated."
+  },
+  "independent_review": "Pending; source-backed candidate and finite filtering judgments are not full grammatical or contextual certification.",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary pinned September 2026 native LMF exports. RelatedForm/non-English equivalents omitted.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_notes": [
+    {
+      "entry_id": 82009,
+      "headword": "-라더군요",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘이다’, ‘아니다’ 또는 ‘-으시-’, ‘-더-’, ‘-으리-’ 뒤에 붙여 쓴다. ‘-라고 하더군요’가 줄어든 말이다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 사실을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        },
+        {
+          "id": "2",
+          "features": {
+            "annotation": "받침이 없거나 'ㄹ' 받침인 동사 뒤에 붙여 쓴다.",
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 명령이나 요청의 내용을 듣는 사람에게 전달할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82011,
+      "headword": "-라더군",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "'-라고 하더군'이 줄어든 말이다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘이다’, ‘아니다’ 또는 ‘-으시-’, ‘-더-’, ‘-으리-’ 뒤에 붙여 쓴다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 사실을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        },
+        {
+          "id": "2",
+          "features": {
+            "annotation": "받침이 없거나 'ㄹ' 받침인 동사 뒤에 붙여 쓴다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 명령의 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82241,
+      "headword": "-라는구나",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": " ‘-라고 하는구나’가 줄어든 말이다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘이다’, ‘아니다’ 또는 ‘-으시-’, ‘-더-’, ‘-으리-’ 뒤에 붙여 쓴다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 사실을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        },
+        {
+          "id": "2",
+          "features": {
+            "annotation": "받침이 없거나 ‘ㄹ’ 받침인 동사 또는 ‘-으시-’ 뒤에 붙여 쓴다.",
+            "definition": "(아주낮춤으로) 다른 사람의 명령을 듣는 사람에게 전함을 나타내는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82251,
+      "headword": "-라는군",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": " ‘-라고 하는군’이 줄어든 말이다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘이다’, ‘아니다’ 또는 ‘-으시-’, ‘-더-’, ‘-으리-’ 뒤에 붙여 쓴다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 사실을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        },
+        {
+          "id": "2",
+          "features": {
+            "annotation": "받침이 없거나 'ㄹ' 받침인 동사 뒤에 붙여 쓴다.",
+            "definition": "(아주낮춤으로) 다른 사람의 명령이나 부탁을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 86596,
+      "headword": "-으라는구나",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "&apos;ㄹ&apos;을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-으라고 하는구나'가 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람의 명령을 듣는 사람에게 전함을 나타내는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 86597,
+      "headword": "-으라는군",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "&apos;ㄹ&apos;을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-으라고 하는군'이 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람의 명령이나 부탁을 상대방에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89657,
+      "headword": "-으라더군",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "&apos;ㄹ&apos;을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-으라고 하더군'이 줄어든 말이다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 명령의 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 90134,
+      "headword": "-으라더군요",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "'ㄹ'을 제외한 받침 있는 동사 뒤에 붙여 쓴다. "
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-으라고 하더군요'가 줄어든 말이다.",
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 명령이나 요청의 내용을 듣는 사람에게 전달할 때 쓰는 표현."
+          }
+        }
+      ]
+    }
+  ]
+}

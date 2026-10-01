@@ -592,6 +592,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             "느냐는군",
             "느냐더군",
             "느냐더군요",
+            "라는구나",
+            "라는군",
+            "라더군",
+            "라더군요",
             "구려",
             "구먼",
             "는구나",
@@ -903,6 +907,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으라면서", "라면서", "으라면서"),
             ("으라니", "라니", "으라니"),
             ("으라느니", "라느니", "으라느니"),
+            ("으라는구나", "라는구나", "으라는구나"),
+            ("으라는군", "라는군", "으라는군"),
+            ("으라더군", "라더군", "으라더군"),
+            ("으라더군요", "라더군요", "으라더군요"),
             ("으라거나", "라거나", "으라거나"),
             ("으세요", "세요", "으세요"),
             ("으십시오", "십시오", "으십시오"),
@@ -1114,6 +1122,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             "라면서",
             "라니",
             "라느니",
+            "라는구나",
+            "라는군",
+            "라더군",
+            "라더군요",
         ] {
             for boundary in [Copular, ZeroCopula] {
                 out.push(Ending {
@@ -1412,6 +1424,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.quoted_exclamation" => {
             "Recover a source-listed contracted report with exclamation or recalled reporting as one ending bundle. The implicit reporting predicate is not inserted, and another speaker's experience remains distinct from the current speaker's own retrospective ending."
+        }
+        "ending.quoted_ra_exclamation" => {
+            "Recover a source-listed contracted copular report or reported command as an ending bundle. Factual 라 and command 으라 preserve distinct owners and allomorphs; no implicit reporting predicate or contextual sense is inserted."
         }
         "ending.quoted_question_exclamation" => {
             "Recover a source-listed contracted question report as one ending bundle. General spoken 냐, verbal/existential 느냐 and adjectival 으냐 retain distinct attachment paths; the implicit reporting predicate and contextual register are not inferred."

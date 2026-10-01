@@ -464,6 +464,11 @@ try {
   const qqexIds = new Set(qqexEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !qqexIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...qqexEntries);
+  const cqexFixture=JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-copular-command-exclamation.json"),"utf8"));
+  const cqexEntries=cqexFixture.LexicalResource.Lexicon.LexicalEntry;
+  const cqexIds=new Set(cqexEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!cqexIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...cqexEntries);
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -1590,6 +1595,53 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-qqex-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-qqex-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const cqexCases=recipientLedger.cases.filter(c=>c.id.startsWith("cqex-"));
+  const cqexPolicies=connectiveLedger.cases.filter(c=>c.id.startsWith("cqex-"));
+  assert.equal(cqexCases.length,212);assert.equal(cqexPolicies.length,57);
+  for(const[cases,policy]of[[cqexCases,false],[cqexPolicies,true]]){
+    for(const c of cases){
+      const response=await post("analyze",{text:c.surface});assert.equal(response.status,200,c.id);
+      const token=(await response.json()).records[0];
+      const {dictionary,...analysis}=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      assert.deepEqual(token.analysis,analysis,c.id);assert.deepEqual(token.dictionary,dictionary,c.id);
+      for(const j of c.judgments){
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if(policy)for(const a of found){
+          const index=token.analysis.analyses.indexOf(a);
+          assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+        }
+      }
+    }
+  }
+  const cqexText="학생이라는구나 의사라는구나 아니라는구나 먹으라는구나 가라는구나 살라는구나 학생이라는군 먹으라는군 학생이라더군 먹으라더군 학생이라더군요 먹으라더군요 학생이시라더군 학생이더라더군 학생이리라더군 먹으시라더군 먹으시라더군 먹으옵시라더군 학생다우라더군 쌓이라더군 고르라는군 사달라는군 사달라더군요 사달라더군요 학생이라더군요 먹으라더군요 학생이라는군요 먹으라는군요 사달라는군요 먹어보시라더군 먹었어보라더군 먹고있으라더군";
+  const cqexData=await(await post("analyze",{text:cqexText})).json();
+  for(const form of ["라는구나", "라는군", "라더군", "라더군요", "으라는구나", "으라는군", "으라더군", "으라더군요"]){
+    const label=grammarLabels["-"+form];
+    assert.deepEqual(cqexData.grammar["-"+form].map(e=>e.id).sort(),label.sources.map(s=>`krdict:${s.id}`).sort());
+    for(const source of label.sources){
+      const entry=cqexData.grammar["-"+form].find(e=>e.id===`krdict:${source.id}`);
+      assert.equal(entry.headword,source.headword);assert.equal(entry.pos,source.pos);
+    }
+  }
+  await submit(page,cqexText);await waitHeading(page,"학생이라는구나");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms,label]of[[0, ["학생", "이", "라는구나"], "Copular report / exclamation"], [1, ["의사", "이", "라는구나"], "Copular report / exclamation"], [2, ["아니", "라는구나"], "Copular report / exclamation"], [3, ["먹", "으라는구나"], "Reported command / exclamation"], [4, ["가", "으라는구나"], "Reported command / exclamation"], [5, ["살", "으라는구나"], "Reported command / exclamation"], [6, ["학생", "이", "라는군"], "Copular report / exclamation"], [7, ["먹", "으라는군"], "Reported command / exclamation"], [8, ["학생", "이", "라더군"], "Copular report / exclamation"], [9, ["먹", "으라더군"], "Reported command / exclamation"], [10, ["학생", "이", "라더군요"], "Polite copular report"], [11, ["먹", "으라더군요"], "Polite reported command"], [12, ["학생", "이", "시", "라더군"], "Copular report / exclamation"], [13, ["학생", "이", "더", "라더군"], "Copular report / exclamation"], [14, ["학생", "이", "으리", "라더군"], "Copular report / exclamation"], [15, ["먹", "시", "라더군"], "Copular report / exclamation"], [16, ["먹", "시", "으라더군"], "Reported command / exclamation"], [17, ["먹", "으옵시", "으라더군"], "Reported command / exclamation"], [18, ["학생", "답", "으라더군"], "Reported command / exclamation"], [19, ["쌓이", "으라더군"], "Reported command / exclamation"], [20, ["고르", "으라는군"], "Reported command / exclamation"], [21, ["사", "어", "달", "으라는군"], "Reported command / exclamation"], [22, ["사", "어", "달", "으라더군요"], "Polite reported command"], [23, ["사", "어", "달", "으라더군", "요"], "Reported command / exclamation"], [24, ["학생", "이", "라더군", "요"], "Copular report / exclamation"], [25, ["먹", "으라더군", "요"], "Reported command / exclamation"], [26, ["학생", "이", "라는군", "요"], "Copular report / exclamation"], [27, ["먹", "으라는군", "요"], "Reported command / exclamation"], [28, ["사", "어", "달", "으라는군", "요"], "Reported command / exclamation"], [29, ["먹", "어", "보", "시", "라더군"], "Copular report / exclamation"], [30, ["먹", "었", "어", "보", "으라더군"], "Reported command / exclamation"], [31, ["먹", "고", "있", "으라더군"], "Reported command / exclamation"]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes(label));
+  }
+  const cqexDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const cqexExport=JSON.parse(await readFile(await(await cqexDownload).path(),"utf8"));
+  const cqexExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:cqexText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(cqexExport.records,cqexExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-cqex-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-cqex-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const spacingLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/spacing-validity.json"),"utf8"));

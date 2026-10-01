@@ -3673,3 +3673,26 @@ inherit represented predecessor class; unknown lexical heads cannot borrow a
 homonym’s class. Full source groups, exact identities and individual candidate
 changes appear in the [source audit](question-exclamation-source-audit.json)
 and [evaluation](question-exclamation-evaluation.json).
+
+## Quoted copular and command exclamations (COV-017bj)
+
+Four factual 라 report bundles and four command 으라 bundles preserve
+는구나/는군/더군/더군요 endings with distinct local owners. Commands retain
+Eu consonant/vowel/ㄹ and irregular spellings, with honorific slots. Factual
+reports preserve copulas, 아니다, zero copula and listed 시/더/으리, including
+conjectural recovery. A lexical verb ending in 이 cannot borrow a copular
+entry’s bare attachment license; negative 아니다 command hypotheses stay
+separate from its factual reports under optional compatibility checks.
+
+`ending.quoted_ra_exclamation` explains each bundle without inserting implicit
+reporting 하다 or choosing a contextual sense. Source 라 identities have both
+copular and command senses; command labels link their original 라 and 으라
+entries. The request auxiliary 달다 admits the new command reports through
+its restricted 달라/다오 paradigm, preserving tense/honorific boundaries.
+Ordinary/derived adjective wishes and noncopular factual prefinal readings
+retain Unknown rather than automatic grammatical certification. Two native
+polite bundles preserve split 요 alternatives. Two inferred 군 + 요 forms
+stay Unknown, while unlisted 구나 followers remain unjudged under COV-018aa.
+The [source audit](copular-command-exclamation-source-audit.json) and
+[individual comparison](copular-command-exclamation-evaluation.json) preserve
+all 53 original example groups and direct tokens with exact spelling.

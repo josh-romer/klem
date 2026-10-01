@@ -3577,3 +3577,42 @@ browser exports agree; inspected desktop/mobile views preserve ordered noun/
 copula ownership. Browser checks use original raw indices when selecting
 filtered readings, following the UI contract. Nine native forms, contextual
 homonym selection, independent Korean review and wider morphology remain open.
+
+## Native internal noun boundaries (COV-022k)
+
+The [source audit](noun-internal-source-audit.json) preserves two native -이
+examples and four structural alternatives: 왕눈 Root + 이, 왕 Prefix + 눈
+Nominal + 이, 점 Nominal + 박다 Predicate + 이, and 점 + 박이. Twenty-seven
+complete entries retain three noun-suffix senses/44 groups, five eyes homonyms,
+three point entries and both prefix families. Source-pattern possibilities do
+not select contextual senses. Historical Article 19 relates 점박이 to 박다;
+the independent 박이 entry supplies a competing treatment. Current source
+retrieval failures are recorded without claiming a fresh primary consultation.
+Five tests/eighty stable cases add 68 required / 12 forbidden judgments,
+reaching 7,571 required / 3,185 forbidden. No matching training token or
+invented gold exists. Serialized `prefix` adds directional grammar-headword
+lookup and ordered ownership; no new analysis field or general stripping rule.
+
+The [individual comparison](noun-internal-evaluation.json) covers 13,388
+NFC/NFD inputs: raw adds 144 paths (136 required / 8 unjudged), each filter
+108 (102 required / 6 unjudged), at 68 surfaces. Every previous candidate and
+lookup reading remains. Missing 왕눈 Root paths are excluded under both
+filters; detailed prefix/compound/박이 paths retain all matching homonyms.
+Full raw analyses, stable IDs/dispositions and verified filter references are
+recorded. Every full frozen corpus report and all five 179,112-record novel
+outputs, including spacing sidecars, are byte-identical. Packaged/debug novel
+hashes agree; baselines stay frozen. Three interleaved release samples give
+--dict-only medians 1.60/1.61 seconds, after peak child RSS 30,388 KiB; --dict-compatible medians 1.59/1.59 seconds, after peak child RSS 30,356 KiB. These descriptive measurements include startup, lookup and JSONL
+serialization and do not establish statistical equivalence.
+
+A valid leading prefix originally caused the dictionary assessment traversal
+to skip every lexical slot. The fix skips validated leading prefixes and then
+assesses all noun/predicate/copula components. Regression evidence retains
+identical analyses with empty prior slots and complete fixed assessments.
+All eighty API cases and meaningful library/filter tests check slot completeness.
+All 662 Rust tests, pinned corpus, lint/format, frontend/full browser and Nix
+builds/three Linux checks pass. Packaged/refreshed-preview CLI/API and all
+three browser exports agree; four desktop/mobile screenshots were inspected.
+The default 눈 hint may show snow because all homonyms remain; contextual
+selection is outside this finite batch. Seven native forms, wider morphology
+and independent Korean review remain open.

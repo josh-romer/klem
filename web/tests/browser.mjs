@@ -539,6 +539,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounPredicateIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounPredicateEntries);
 
+  const nounInternalFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-noun-internal.json"),"utf8"));
+  const nounInternalEntries = nounInternalFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounInternalIds = new Set(nounInternalEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!nounInternalIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounInternalEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5020,6 +5026,22 @@ try {
   }
   await page.screenshot({path:resolve(tmpdir(),"klem-noun-predicate-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-predicate-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
+
+  // A prefix precedes its noun base; 박이 has a separate suffix boundary.
+  for(const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="왕눈이들쯤에는 점박이들이었다";await submit(page,text);await waitHeading(page,"왕눈이들쯤에는");const raw=await(await post("analyze",{text})).json();const words=raw.records.filter(r=>r.analysis);
+    assert.deepEqual(new Set(raw.grammar["왕-"].map(e=>e.id)),new Set(["krdict:72520","krdict:72521"]));assert.ok(raw.grammar["-박이"].some(e=>e.id==="krdict:92109"));
+    const prefix=words[0].analysis.analyses.findIndex(a=>a.rules.includes("derivation.nominal.prefix_wang"));assert.ok(prefix>=0);const block=page.locator(".breakdown-word").first();await block.getByRole("combobox").selectOption(String(prefix));assert.deepEqual(await block.locator(".part-form").allTextContents(),["왕","눈","이","들","쯤","에","는"]);
+    assert.equal(words[0].dictionary.lemmas.find(m=>m.lemma.text==="눈").entries.length,5);assert.deepEqual(words[0].dictionary.readings[prefix].lemmas.map(l=>l.lemma_index),[0]);assert.equal(words[0].dictionary.readings[prefix].lemmas[0].entries.length,5);assert.ok(words[0].analysis.analyses.every(a=>a.lemmas.every(l=>l.text!=="왕")));
+    await block.getByRole("button",{name:"왕 Size / emphasis / generation",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=72520"));
+    const dot=page.locator(".breakdown-word").nth(1);for(const[rule,forms]of[["derivation.nominal.compound",["점","박","이","들","이","었","다"]],["suffix.nominal.bagi",["점","박이","들","이","었","다"]]]){const i=words[1].analysis.analyses.findIndex(a=>a.rules.includes(rule));assert.ok(i>=0);await dot.getByRole("combobox").selectOption(String(i));assert.deepEqual(await dot.locator(".part-form").allTextContents(),forms);}
+    await dot.getByRole("button",{name:"박이 Having something embedded / fixed",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=92109"));
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+    if(flag)assert.ok(exported.records.filter(r=>r.analysis).every(r=>r.analysis.analyses.every(a=>a.lemmas.every(l=>l.text!=="왕눈"))));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-noun-internal-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-internal-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

@@ -362,6 +362,15 @@ impl Annotation {
         };
         let mut lemmas = Vec::with_capacity(analysis.lemmas.len());
         let mut components = order.as_slice();
+        // Prefixes precede the first lemma in reading order and own no lexical
+        // slot. Continue at the base so its entries and later copulas are still
+        // assessed independently. `breakdown` already validated the prefix shape.
+        while components.first().is_some_and(|c| {
+            matches!(c, Component::Morpheme(i)
+                if analysis.morphemes[*i].kind == MorphemeKind::Prefix)
+        }) {
+            components = &components[1..];
+        }
         let mut previous_class = None;
         let mut connector: Option<usize> = None;
         while let Some((Component::Lemma(index), rest)) = components.split_first() {

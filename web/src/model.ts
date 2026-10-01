@@ -70,7 +70,7 @@ export interface Result {
 }
 export type Component = { lemma: number } | { morpheme: number };
 export const grammarHeadword = (m: { form: string; kind: string }) =>
-  m.kind === "particle"
+  m.kind === "prefix" ? `${m.form}-` : m.kind === "particle"
     ? m.form
     : `-${m.form}${m.kind === "prefinal" ? "-" : ""}`;
 export interface Status {

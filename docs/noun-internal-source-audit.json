@@ -1,0 +1,1686 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-022e",
+    "COV-022k"
+  ],
+  "before_revision": "6fe9212ec7fde9b376bd407c6cb163216c9642bc",
+  "native_fixture": "tests/fixtures/krdict-noun-internal.json",
+  "native_fixture_sha256": "01065313652d97faee9a583152629dcb88acc5f17baae281ccf9160d0371d81a",
+  "native_entries": 27,
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "attribution": "National Institute of Korean Language Korean Basic Dictionary; pinned September 2026 export. Only RelatedForm and non-English equivalents omitted; Sense normalized to an array.",
+  "forms": [
+    {
+      "surface": "왕눈이",
+      "tag": "wang-root",
+      "lemmas": [
+        "왕눈"
+      ],
+      "lemma_kinds": [
+        "root"
+      ],
+      "morphemes": [
+        "이"
+      ],
+      "morpheme_kinds": [
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.i"
+      ]
+    },
+    {
+      "surface": "왕눈이",
+      "tag": "wang-prefix",
+      "lemmas": [
+        "눈"
+      ],
+      "lemma_kinds": [
+        "nominal"
+      ],
+      "morphemes": [
+        "왕",
+        "이"
+      ],
+      "morpheme_kinds": [
+        "prefix",
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.i",
+        "derivation.nominal.prefix_wang"
+      ]
+    },
+    {
+      "surface": "점박이",
+      "tag": "jeom-compound",
+      "lemmas": [
+        "점",
+        "박다"
+      ],
+      "lemma_kinds": [
+        "nominal",
+        "predicate"
+      ],
+      "morphemes": [
+        "이"
+      ],
+      "morpheme_kinds": [
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.i",
+        "derivation.nominal.compound"
+      ]
+    },
+    {
+      "surface": "점박이",
+      "tag": "jeom-bagi",
+      "lemmas": [
+        "점"
+      ],
+      "lemma_kinds": [
+        "nominal"
+      ],
+      "morphemes": [
+        "박이"
+      ],
+      "morpheme_kinds": [
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.bagi"
+      ]
+    }
+  ],
+  "source_groups": [
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "굽이"
+          }
+        ]
+      },
+      "examples": [
+        "굽이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깊이"
+          }
+        ]
+      },
+      "examples": [
+        "깊이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "넓이"
+          }
+        ]
+      },
+      "examples": [
+        "넓이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "길이"
+          }
+        ]
+      },
+      "examples": [
+        "길이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "놀이"
+          }
+        ]
+      },
+      "examples": [
+        "놀이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "높이"
+          }
+        ]
+      },
+      "examples": [
+        "높이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 7,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "먹이"
+          }
+        ]
+      },
+      "examples": [
+        "먹이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 8,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "벌이"
+          }
+        ]
+      },
+      "examples": [
+        "벌이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "길잡이"
+          }
+        ]
+      },
+      "examples": [
+        "길잡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "떠돌이"
+          }
+        ]
+      },
+      "examples": [
+        "떠돌이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "목걸이"
+          }
+        ]
+      },
+      "examples": [
+        "목걸이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "미닫이"
+          }
+        ]
+      },
+      "examples": [
+        "미닫이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "옷걸이"
+          }
+        ]
+      },
+      "examples": [
+        "옷걸이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "젖먹이"
+          }
+        ]
+      },
+      "examples": [
+        "젖먹이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "까막눈이"
+          }
+        ]
+      },
+      "examples": [
+        "까막눈이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "까불이"
+          }
+        ]
+      },
+      "examples": [
+        "까불이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깜빡이"
+          }
+        ]
+      },
+      "examples": [
+        "깜빡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깡깡이"
+          }
+        ]
+      },
+      "examples": [
+        "깡깡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깽깽이"
+          }
+        ]
+      },
+      "examples": [
+        "깽깽이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "꿀꿀이"
+          }
+        ]
+      },
+      "examples": [
+        "꿀꿀이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 7,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "끈끈이"
+          }
+        ]
+      },
+      "examples": [
+        "끈끈이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 8,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "노랑이"
+          }
+        ]
+      },
+      "examples": [
+        "노랑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 9,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "누렁이"
+          }
+        ]
+      },
+      "examples": [
+        "누렁이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 10,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "덜렁이"
+          }
+        ]
+      },
+      "examples": [
+        "덜렁이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 11,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "동강이"
+          }
+        ]
+      },
+      "examples": [
+        "동강이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 12,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "됨됨이"
+          }
+        ]
+      },
+      "examples": [
+        "됨됨이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 13,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "딸랑이"
+          }
+        ]
+      },
+      "examples": [
+        "딸랑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 14,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "뚱뚱이"
+          }
+        ]
+      },
+      "examples": [
+        "뚱뚱이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 15,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "못난이"
+          }
+        ]
+      },
+      "examples": [
+        "못난이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 16,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "멍청이"
+          }
+        ]
+      },
+      "examples": [
+        "멍청이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 17,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "미치광이"
+          }
+        ]
+      },
+      "examples": [
+        "미치광이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 18,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "바둑이"
+          }
+        ]
+      },
+      "examples": [
+        "바둑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 19,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "뺑뺑이"
+          }
+        ]
+      },
+      "examples": [
+        "뺑뺑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 20,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "얼간이"
+          }
+        ]
+      },
+      "examples": [
+        "얼간이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 21,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "오뚝이"
+          }
+        ]
+      },
+      "examples": [
+        "오뚝이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 22,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "왕눈이"
+          }
+        ]
+      },
+      "examples": [
+        "왕눈이"
+      ],
+      "targets": [
+        {
+          "surface": "왕눈이",
+          "tag": "wang-root",
+          "lemmas": [
+            "왕눈"
+          ],
+          "lemma_kinds": [
+            "root"
+          ],
+          "morphemes": [
+            "이"
+          ],
+          "morpheme_kinds": [
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.i"
+          ],
+          "case_id": "noun-internal-native-88924-s3-g22-wang-root"
+        },
+        {
+          "surface": "왕눈이",
+          "tag": "wang-prefix",
+          "lemmas": [
+            "눈"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "왕",
+            "이"
+          ],
+          "morpheme_kinds": [
+            "prefix",
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.i",
+            "derivation.nominal.prefix_wang"
+          ],
+          "case_id": "noun-internal-native-88924-s3-g22-wang-prefix"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 23,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "점박이"
+          }
+        ]
+      },
+      "examples": [
+        "점박이"
+      ],
+      "targets": [
+        {
+          "surface": "점박이",
+          "tag": "jeom-compound",
+          "lemmas": [
+            "점",
+            "박다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "이"
+          ],
+          "morpheme_kinds": [
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.i",
+            "derivation.nominal.compound"
+          ],
+          "case_id": "noun-internal-native-88924-s3-g23-jeom-compound"
+        },
+        {
+          "surface": "점박이",
+          "tag": "jeom-bagi",
+          "lemmas": [
+            "점"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "박이"
+          ],
+          "morpheme_kinds": [
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.bagi"
+          ],
+          "case_id": "noun-internal-native-88924-s3-g23-jeom-bagi"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 24,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "짝짝이"
+          }
+        ]
+      },
+      "examples": [
+        "짝짝이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 25,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "쭉정이"
+          }
+        ]
+      },
+      "examples": [
+        "쭉정이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 26,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "팔푼이"
+          }
+        ]
+      },
+      "examples": [
+        "팔푼이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 27,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "합죽이"
+          }
+        ]
+      },
+      "examples": [
+        "합죽이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 28,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "허풍선이"
+          }
+        ]
+      },
+      "examples": [
+        "허풍선이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 29,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "홀쭉이"
+          }
+        ]
+      },
+      "examples": [
+        "홀쭉이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 30,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "흰둥이"
+          }
+        ]
+      },
+      "examples": [
+        "흰둥이"
+      ],
+      "targets": []
+    }
+  ],
+  "source_group_count": 44,
+  "native_target_occurrences": 2,
+  "native_path_judgments": 4,
+  "primary_consultations": [
+    {
+      "id": "noun-internal-krdict",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88924",
+      "finding": "Sense 3 positively lists both words. Whole 왕눈 base and detailed 왕- + 눈 boundary are source-pattern hypotheses, not standalone king meaning or contextual sense selection.",
+      "retrieval": "Complete pinned suffix entry and prefix/whole/base entries retained. Prior live suffix retrieval recorded in preceding source audits."
+    },
+    {
+      "id": "noun-internal-bagi",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=92109",
+      "finding": "Complete pinned suffix 박이 sense 1 explicitly lists 점박이; both suffix senses and every example group remain.",
+      "retrieval": "Pinned complete native entry; direct live page unavailable this turn."
+    },
+    {
+      "id": "noun-internal-norms",
+      "url": "https://www.korean.go.kr/common/download.do?c_file_name=0528a905-2eb3-4c5a-978c-f424dd6a6c47_0.pdf&file_path=reportData&o_file_name=%ED%95%9C%EA%B8%80%EB%A7%9E%EC%B6%A4%EB%B2%95+%ED%91%9C%EC%A4%80%EC%96%B4%EA%B7%9C%EC%A0%95+%ED%95%B4%EC%84%A4.pdf",
+      "retrieved": "2026-10-01",
+      "retrieval": "Historical complete primary PDF retrieval recorded in preserved plan, Article 19/page index 59. Current HTML returned 403 and PDF retry timed out; no successful fresh retrieval claimed.",
+      "locators": [
+        "Article 19, PDF page index 59",
+        "Article 20, PDF page indices 62–63",
+        "Standard-language Article 8, PDF page index 163"
+      ],
+      "finding": "Article 19 explicitly relates 점박이 to 박다. Internal 점 + 박다 + 이 is retained beside the independent 박이 suffix treatment."
+    }
+  ],
+  "corpus_training_search": [
+    {
+      "path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+      "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "matching_tokens": 0,
+      "observations": [],
+      "scan": "Every annotated surface searched for both finite noun spellings as substrings; no target and no invented gold."
+    },
+    {
+      "path": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+      "sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+      "matching_tokens": 0,
+      "observations": [],
+      "scan": "Every annotated surface searched for both finite noun spellings as substrings; no target and no invented gold."
+    }
+  ],
+  "representation": {
+    "prefix_kind": "prefix",
+    "prefix_form": "왕",
+    "prefix_lookup": "왕-",
+    "prefix_rule": "derivation.nominal.prefix_wang",
+    "suffix_alternative": "suffix.nominal.bagi",
+    "whole_base": "왕눈",
+    "base_kind": "root",
+    "compound": [
+      "점",
+      "박다"
+    ],
+    "new_analysis_field": false,
+    "finite_only": true
+  },
+  "remaining": [
+    "Contextual senses, prefix/root histories and independent Korean review remain open.",
+    "Seven native COV-022l examples and wider COV-022 remain open."
+  ],
+  "status": "Finite 왕눈이/점박이 internal readings implemented and verified: 662 Rust tests, eighty cases, candidate comparison, full unchanged corpus/novel, browser, lint/format, Nix builds/checks, packaged/runtime/preview and release gates pass. Contextual homonym selection, independent Korean review, seven native examples and wider COV-022 remain open.",
+  "tracking": {
+    "cases": 80,
+    "required": 68,
+    "forbidden": 12,
+    "case_prefix": "noun-internal-"
+  },
+  "source_integrity": {
+    "native_entries": 27,
+    "source_group_count": 44,
+    "native_target_occurrences": 2,
+    "native_path_judgments": 4,
+    "prefix_homonyms": 2,
+    "eye_homonyms": 5,
+    "point_homonyms": 3,
+    "native_sense_class_note_preserved": true,
+    "all_export_hashes_match": true,
+    "only_documented_omissions": true,
+    "training_search_verified": true,
+    "matching_training_tokens": 0,
+    "internal_suffix_gold": 0,
+    "original_ledger_prefix_bytes_preserved": true,
+    "original_ledger_prefix_parsed_unchanged": true,
+    "frozen_baselines": [
+      {
+        "path": "data/baselines/kaist-dev.jsonl",
+        "sha256": "942e84f3d7f1905341fe2585e588563edb947feae96b5dfc1872ef915290b42c",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/kaist-test.jsonl",
+        "sha256": "fdd557c80a41a24274c43a82f8c1868b2992d00286dbf48dd877df57b8a81222",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-dev.jsonl",
+        "sha256": "c32e071e6823b4a1e69935933b568daa54e8c2dcfa5dea8b2da9eabe1a51d9b8",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-test.jsonl",
+        "sha256": "76d656c99f08b14feb9d31a6d41ef83ff568570445c0402873e98d7cd2dfa422",
+        "unchanged": true
+      }
+    ],
+    "historical_grammar_catalog_values_preserved": true,
+    "historical_grammar_fixture_parsed_prefix_preserved": true
+  },
+  "evaluation": "docs/noun-internal-evaluation.json",
+  "historical_review": {
+    "path": "docs/nominal-i-base-review.json",
+    "sha256": "20b8caa268549eb4db82974b8b64ca29e0089936e85e66d3eb28452bae428305",
+    "preserved": true
+  },
+  "base_role_observations": [
+    {
+      "surface": "왕눈이",
+      "head_probes": [
+        {
+          "spelling": "왕눈이",
+          "heads": [
+            {
+              "id": "krdict:67915",
+              "headword": "왕눈이",
+              "pos": "명사",
+              "data_sha256": "964eb8063841dfce0c98d7e0d806048832aa41f84d169bd27348cd6edaab17c4",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "(놀리는 말로) 눈이 큰 사람.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "왕눈",
+          "heads": []
+        },
+        {
+          "spelling": "왕눈다",
+          "heads": []
+        },
+        {
+          "spelling": "왕",
+          "heads": [
+            {
+              "id": "krdict:66307",
+              "headword": "왕",
+              "pos": "명사",
+              "data_sha256": "69b69d06f34a42aba1c93ee1c325485b7684b0b88566b855e0f2659fbd787a00",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "왕위가 이어지는 나라에서 나라를 다스리는 사람.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "(비유적으로) 일정한 분야나 범위 안에서 힘이나 가치 등이 가장 뛰어난 존재.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "눈",
+          "heads": [
+            {
+              "id": "krdict:20198",
+              "headword": "눈",
+              "pos": "명사",
+              "data_sha256": "c1a883ff1becb0d06601eb1ea16121039b667036aa5d61a25bea3f1d4d077fd4",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "공기 중에 있는 물기가 얼어서 땅으로 떨어지는 하얀 솜과 같은 작은 얼음 조각.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:24508",
+              "headword": "눈",
+              "pos": "명사",
+              "data_sha256": "2bfc9251a03b7d9b2193a9c72fa6f6afb7bf12f951ec4dfeb8df2902c80246af",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "자, 저울, 온도계 등에 수나 양을 표시하려고 그어 놓은 금.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:41542",
+              "headword": "눈",
+              "pos": "명사",
+              "data_sha256": "48e16c7a92b3b3d0a8a685f6906474e9e68632b438ccbe16415548f3e2507393",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "그물의 줄 사이에 있는 구멍.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "바둑판에서 가로줄과 세로줄이 만나는 점.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:41543",
+              "headword": "눈",
+              "pos": "명사",
+              "data_sha256": "60ae76dfbd34873d2067b90a588726f81a24c8a744ae78f9e6af46a08dffc1d0",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "식물의 가지나 줄기에서 새로 돋아나는 꽃이나 잎 등의 싹.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:72704",
+              "headword": "눈",
+              "pos": "명사",
+              "data_sha256": "99ca03970c1d56e392aebc4c1d7bb812c2ad787403bb9a2d12f196c48f5a92ff",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "사람이나 동물의 얼굴에 있으며 빛의 자극을 받아 물체를 볼 수 있는 감각 기관.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "사물의 존재나 형태를 구별하여 알 수 있는 눈의 능력.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "사물을 보고 판단하는 힘.",
+                  "notes": []
+                },
+                {
+                  "id": "4",
+                  "definition": "무엇을 보는 표정이나 태도.",
+                  "notes": [
+                    "'눈으로'로 쓴다."
+                  ]
+                },
+                {
+                  "id": "5",
+                  "definition": "사람들의 눈이 가는 길이나 방향.",
+                  "notes": []
+                },
+                {
+                  "id": "6",
+                  "definition": "태풍에서 중심을 이루는 부분.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "왕-",
+          "heads": [
+            {
+              "id": "krdict:72520",
+              "headword": "왕-",
+              "pos": "접사",
+              "data_sha256": "ac471be078c292846d032da18bebf195c729609bef2f4c349ff5d9f3c31a8652",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "'보다 큰 종류'의 뜻을 더하는 접두사.",
+                  "notes": [
+                    "동식물을 나타내는 일부 명사 앞에 붙는다."
+                  ]
+                },
+                {
+                  "id": "2",
+                  "definition": "'매우 큰' 또는 '매우 굵은'의 뜻을 더하는 접두사.",
+                  "notes": [
+                    "일부 명사 앞에 붙는다."
+                  ]
+                },
+                {
+                  "id": "3",
+                  "definition": "'매우 심한'의 뜻을 더하는 접두사.",
+                  "notes": [
+                    "일부 명사 앞에 붙는다."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "krdict:72521",
+              "headword": "왕-",
+              "pos": "접사",
+              "data_sha256": "cf7e081acb46e75220230f225f642034cd1b34f3f8b961b0bbbe58de48a564f5",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "'할아버지뻘 되는'의 뜻을 더하는 접두사.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "review_note": "Review prefixed noun/base grouping; standalone 왕 is not evidence that 왕눈이 means king plus eye.",
+      "judgment_scope": "Required structural possibilities, not independently certified contextual senses or exclusive historical analyses."
+    },
+    {
+      "surface": "점박이",
+      "head_probes": [
+        {
+          "spelling": "점박이",
+          "heads": [
+            {
+              "id": "krdict:91548",
+              "headword": "점박이",
+              "pos": "명사",
+              "data_sha256": "ff41f2cd9f45f69a634925bba325e807a1aa0f0f1a813500787222a399cebce2",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "얼굴이나 몸에 점이나 점 무늬가 많이 또는 크게 나 있는 사람이나 짐승.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "점박",
+          "heads": []
+        },
+        {
+          "spelling": "점박다",
+          "heads": []
+        },
+        {
+          "spelling": "점",
+          "heads": [
+            {
+              "id": "krdict:62380",
+              "headword": "점",
+              "pos": "명사",
+              "data_sha256": "34334cd89d2c279f50f042579dcee8474c3fedacab22c5d6224de5803109d0cd",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "작고 둥글게 찍은 표시.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "사람의 피부나 동물의 털 등에 있는, 색깔이 다른 작고 둥근 얼룩.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "숫자를 적을 때 일 이상의 숫자와 그보다 작은 숫자를 구별하기 위하여 찍는 부호.",
+                  "notes": []
+                },
+                {
+                  "id": "4",
+                  "definition": "마침표, 쉼표 등과 같은 문장 부호.",
+                  "notes": []
+                },
+                {
+                  "id": "5",
+                  "definition": "여러 가지 가운데 특정한 어떤 부분.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:62381",
+              "headword": "점",
+              "pos": "의존 명사",
+              "data_sha256": "95698e92a1b236389540d0620551889c90f39267e7289ed5f6eaaf15dc1ce305",
+              "senses": [
+                {
+                  "id": "2",
+                  "definition": "성적이나 점수를 나타내는 단위.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "그림, 도자기 등의 작품을 세는 단위.",
+                  "notes": []
+                },
+                {
+                  "id": "4",
+                  "definition": "아주 적은 양을 나타내는 말.",
+                  "notes": [
+                    "주로 ‘~ 한 점 없다’로 쓴다."
+                  ]
+                },
+                {
+                  "id": "5",
+                  "definition": "잘라낸 고기의 조각을 세는 단위.",
+                  "notes": []
+                },
+                {
+                  "id": "6",
+                  "definition": "떨어지는 물방울을 세는 단위.",
+                  "notes": []
+                },
+                {
+                  "id": "7",
+                  "definition": "바둑에서, 바둑판에 놓은 돌이나 상대에게 따낸 돌을 세는 단위.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:77952",
+              "headword": "점",
+              "pos": "명사",
+              "data_sha256": "fbf7189f6210b905fa884506b661f8e7543f04ad2cfe40c98041b0d208d1caea",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "비과학적인 방법으로 과거의 일을 알아맞히거나 현재나 미래의 운 등을 미리 판단하는 일.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "박다",
+          "heads": [
+            {
+              "id": "krdict:15823",
+              "headword": "박다",
+              "pos": "동사",
+              "data_sha256": "830c499527b58b2b6e495ea60926b61484f7ce5f8102a2959772297c618c904b",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "두들겨 치거나 돌려서 꽂히게 하다.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "바탕이 되는 물건에 작은 물건을 붙이거나 끼워 넣다.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "속이나 가운데에 밀어 넣다.",
+                  "notes": []
+                },
+                {
+                  "id": "4",
+                  "definition": "음식에 소를 넣다.",
+                  "notes": []
+                },
+                {
+                  "id": "5",
+                  "definition": "틀이나 판에 넣어 눌러 모양을 만들다.",
+                  "notes": []
+                },
+                {
+                  "id": "6",
+                  "definition": "자기 쪽 사람을 은밀히 넣어 두다.",
+                  "notes": []
+                },
+                {
+                  "id": "7",
+                  "definition": "한곳을 뚫어지게 바라보다.",
+                  "notes": [
+                    "주로 '눈길을 박다', '눈을 박다'로 쓴다."
+                  ]
+                },
+                {
+                  "id": "8",
+                  "definition": "머리나 얼굴 등을 깊이 숙이거나 눌러서 대다.",
+                  "notes": []
+                },
+                {
+                  "id": "9",
+                  "definition": "몸의 한 부분을 어디에 부딪치다.",
+                  "notes": []
+                },
+                {
+                  "id": "10",
+                  "definition": "식물이 뿌리를 내리다.",
+                  "notes": []
+                },
+                {
+                  "id": "11",
+                  "definition": "인쇄물 등에 글자나 그림을 집어넣다.",
+                  "notes": []
+                },
+                {
+                  "id": "12",
+                  "definition": "인쇄물이나 사진을 찍다.",
+                  "notes": []
+                },
+                {
+                  "id": "13",
+                  "definition": "실로 촘촘히 꿰매다.",
+                  "notes": []
+                },
+                {
+                  "id": "14",
+                  "definition": "정확히 알아듣게 말하거나 글씨를 알아보게 쓰다.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "-박이",
+          "heads": [
+            {
+              "id": "krdict:92109",
+              "headword": "-박이",
+              "pos": "접사",
+              "data_sha256": "104379faae084c6c18220a9eb2974861164849319384146faa4905904764d32c",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "무엇이 박혀 있는 사람이나 '짐승' 또는 '물건'의 뜻을 더하는 접미사.",
+                  "notes": [
+                    "일부 명사 뒤에 붙는다."
+                  ]
+                },
+                {
+                  "id": "2",
+                  "definition": "'무엇이 박혀 있는 곳이라는 뜻을 더하거나 또는 한곳에 일정하게 고정되어 있다'의 뜻을 더하는 접미사.",
+                  "notes": [
+                    "일부 명사 또는 동사 어간 뒤에 붙는다."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "review_note": "Primary norms link the formation with 박다. Review 점 + 박다 + 이 versus 박이 suffix treatments with explicit component ownership.",
+      "judgment_scope": "Required structural possibilities, not independently certified contextual senses or exclusive historical analyses."
+    }
+  ]
+}

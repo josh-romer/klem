@@ -91,7 +91,13 @@ fn nominal_case(a: &Analysis) -> bool {
                 }))
         && a.morphemes[..a.morphemes.len() - tail.len()]
             .iter()
-            .all(|m| m.kind == MorphemeKind::Suffix && m.form != "답다"))
+            .all(|m| {
+                (m.kind == MorphemeKind::Suffix && m.form != "답다")
+                    || (m.kind == MorphemeKind::Prefix
+                        && a.rules
+                            .iter()
+                            .any(|r| r == "derivation.nominal.prefix_wang"))
+            }))
         || a.morphemes
             .len()
             .checked_sub(tail.len() + 1)

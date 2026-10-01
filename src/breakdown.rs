@@ -30,6 +30,38 @@ impl Analysis {
             .rules
             .iter()
             .any(|r| r == "derivation.nominal.compound");
+        let prefixed = self
+            .rules
+            .iter()
+            .any(|r| r == "derivation.nominal.prefix_wang");
+        let bagi = self.rules.iter().any(|r| r == "suffix.nominal.bagi");
+        if prefixed
+            && (compound
+                || bagi
+                || !self.rules.iter().any(|r| r == "suffix.nominal.i")
+                || self.lemmas[0].text != "눈"
+                || self.lemmas[0].kind != LemmaKind::Nominal
+                || !self
+                    .morphemes
+                    .first()
+                    .is_some_and(|m| m.kind == MorphemeKind::Prefix && m.form == "왕"))
+        {
+            return None;
+        }
+        if self
+            .morphemes
+            .iter()
+            .filter(|m| m.kind == MorphemeKind::Prefix)
+            .count()
+            != usize::from(prefixed)
+            || (bagi
+                && (compound
+                    || self.rules.iter().any(|r| r == "suffix.nominal.i")
+                    || self.lemmas[0].text != "점"
+                    || self.lemmas[0].kind != LemmaKind::Nominal))
+        {
+            return None;
+        }
         if self
             .rules
             .iter()
@@ -56,6 +88,10 @@ impl Analysis {
         }
         let mut parts = Vec::with_capacity(self.lemmas.len() + self.morphemes.len());
         let mut cursor = 0;
+        if prefixed {
+            parts.push(Component::Morpheme(0));
+            cursor = 1;
+        }
         for (index, lemma) in self.lemmas.iter().enumerate() {
             parts.push(Component::Lemma(index));
             let predicate = matches!(
@@ -80,8 +116,9 @@ impl Analysis {
                         | LemmaKind::Root
                 )
                 && self.rules.iter().any(|r| r == "suffix.nominal.i");
+            let noun_suffix = noun_i || (bagi && index == 0);
             let mut derived_predicate = false;
-            if lemma.kind == LemmaKind::Nominal && !noun_i {
+            if lemma.kind == LemmaKind::Nominal && !noun_suffix {
                 let start = cursor;
                 while self
                     .morphemes
@@ -123,9 +160,11 @@ impl Analysis {
                     .strip_suffix('다')
                     .filter(|stem| !stem.is_empty())?;
             }
-            if noun_i {
+            if noun_suffix {
                 let first = self.morphemes.get(cursor)?;
-                if first.kind != MorphemeKind::Suffix || first.form != "이" {
+                if first.kind != MorphemeKind::Suffix
+                    || first.form != if noun_i { "이" } else { "박이" }
+                {
                     return None;
                 }
                 parts.push(Component::Morpheme(cursor));
@@ -141,7 +180,7 @@ impl Analysis {
                     }
                 }
             }
-            let adverbial = !noun_i
+            let adverbial = !noun_suffix
                 && matches!(
                     lemma.kind,
                     LemmaKind::Predicate | LemmaKind::Adverbial | LemmaKind::Root
@@ -155,7 +194,7 @@ impl Analysis {
             if adverbial {
                 parts.push(Component::Morpheme(cursor));
                 cursor += 1;
-            } else if !noun_i && (predicate || derived_predicate) {
+            } else if !noun_suffix && (predicate || derived_predicate) {
                 while self
                     .morphemes
                     .get(cursor)

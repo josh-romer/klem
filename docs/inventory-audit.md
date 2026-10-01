@@ -1006,3 +1006,20 @@ and five novel outputs remain unchanged. Nine forms COV-022k–l and wider
 morphology/independent review remain open. Noun/suffix examples remain outside
 the ending/particle/auxiliary POS scope; that queue stays 715 entries, with
 386 scoped / 328 unreviewed / one gap.
+
+## Native internal noun boundaries (2026-10-01)
+
+COV-022k adds four finite 왕눈이/점박이 structural alternatives with explicit
+prefix, shared compound and independent 박이 suffix ownership. The
+[source audit](noun-internal-source-audit.json) retains 27 complete entries,
+all noun-suffix senses/44 groups and every matching prefix/eye/point homonym.
+Five tests/eighty cases cover 68 required and twelve forbidden paths; no
+training target or invented gold. All 662 Rust tests and Nix/browser/API/
+preview/release gates pass. The [comparison](noun-internal-evaluation.json)
+preserves all prior candidates across 13,388 inputs and records eight raw /
+six per-filter unjudged additions. All four full corpus reports and five novel
+outputs remain unchanged. Prefix dictionary assessment now verifies every
+lexical slot, including later copulas. Seven forms COV-022l, histories,
+contextual senses and wider morphology/independent review remain open.
+These noun/prefix/suffix forms remain outside the ending/particle/auxiliary
+queue's POS scope: 715 entries, 386 scoped / 328 unreviewed / one gap.

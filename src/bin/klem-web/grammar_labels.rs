@@ -42,7 +42,7 @@ pub(super) fn entry_matches(kind: MorphemeKind, headword: &str, entry: &EntrySum
     }
     let pos = match kind {
         MorphemeKind::Particle => "조사",
-        MorphemeKind::Suffix => "접사",
+        MorphemeKind::Suffix | MorphemeKind::Prefix => "접사",
         _ => "어미",
     };
     (entry.headword == headword && entry.pos == pos)
@@ -123,6 +123,7 @@ mod tests {
                         MorphemeKind::Particle,
                         MorphemeKind::Ending,
                         MorphemeKind::Suffix,
+                        MorphemeKind::Prefix,
                         MorphemeKind::Prefinal,
                     ] {
                         if kind != label.kind {

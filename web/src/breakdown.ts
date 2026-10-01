@@ -153,6 +153,7 @@ export function parts(
           ending: "Ending",
           prefinal: "Prefinal ending",
           suffix: "Suffix",
+          prefix: "Prefix",
         }[m.kind] ??
         m.kind,
       grammar: true,

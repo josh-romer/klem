@@ -355,3 +355,5 @@ Sound/manner noun breakdowns use adverb or root base roles before the noun suffi
 Root/related-predicate noun readings display the same root form before -이 while exporting distinct canonical lemmas. Related 하다/거리다 menu choices name their dictionary form, and root choices are labelled separately. Stripping a related predicate tail is display-only; no 하/거리 component is inserted, and later copulas retain their own stem/prefinals/ending. Missing related heads and roots follow the existing dictionary filters.
 
 까불이 displays 까불 + 이 and keeps both 까불다 homonyms plus the whole noun. The noun-forming suffix links to 88924; outer plural/approximation/case and later copulas remain ordered. Raw and both filtered exports preserve canonical lemma and dictionary identities.
+
+The viewer orders 왕눈이 as either 왕눈 + 이 or 왕 + 눈 + 이, with the first 왕 carrying kind `prefix` and linking to 왕-. 점박이 offers 점 + 박 + 이 and 점 + 박이 with independent noun/suffix sources. Prefix and suffix homonyms remain dictionary alternatives; canonical analyses and ordered exports preserve component identities.

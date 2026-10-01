@@ -59,6 +59,9 @@ pub enum MorphemeKind {
     /// suffixes use their dictionary form (e.g. 답다) and precede inflection.
     /// Adverb-forming 이 follows a predicate lemma directly, without an ending.
     Suffix,
+    /// A derivational prefix before its base. The form omits the dictionary's
+    /// trailing hyphen (e.g. 왕); ordered breakdown places it before the lemma.
+    Prefix,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]

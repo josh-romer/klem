@@ -145,12 +145,17 @@ pub(crate) const NOUN_I_ROOTS: &[(&str, &str, &[&str])] = &[
     ("미치광이", "미치광", &[]),
     ("합죽이", "합죽", &["합죽하다", "합죽거리다"]),
     ("홀쭉이", "홀쭉", &["홀쭉하다"]),
+    // Positive sense-3 example supports the whole base; the separate prefix
+    // path retains 왕- without substituting standalone 왕 'king'.
+    ("왕눈이", "왕눈", &[]),
 ];
 
 // Selected compound bases before noun-forming -이, not arbitrary segmentation.
 // The two lemmas form one base; neither takes an inflectional ending here.
 // NIKL 320611 confirms 밀다 + 닫다; Article 28 accounts for lost ㄹ.
 pub(crate) const NOUN_I_COMPOUNDS: &[(&str, &str, LemmaKind, &str)] = &[
+    // Article 19 names 박다; KRDict -박이 supplies a separate suffix reading.
+    ("점박이", "점", LemmaKind::Nominal, "박다"),
     ("길잡이", "길", LemmaKind::Nominal, "잡다"),
     ("목걸이", "목", LemmaKind::Nominal, "걸다"),
     ("옷걸이", "옷", LemmaKind::Nominal, "걸다"),
@@ -1553,6 +1558,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "suffix.nominal.i" => {
             "Separate a source-listed base and noun-forming 이. Preserve lexical nouns and adverbial homonyms; this finite rule does not strip 이 from arbitrary words or attach through prefinals."
         }
+        "derivation.nominal.prefix_wang" => {
+            "Separate the finite 왕눈이 prefix 왕- and nominal 눈 before noun-forming 이. Preserve the complete 왕눈 base and whole noun. Prefix homonyms remain lookup alternatives; no standalone 왕 king meaning or productive arbitrary prefix stripping is inferred."
+        }
+        "suffix.nominal.bagi" => {
+            "Separate the source-listed 점박이 noun as 점 plus the dictionary suffix 박이, alongside the reviewed 점 + 박다 + 이 possibility and whole noun. Only this finite spelling licenses the suffix boundary; contextual senses and historical exclusivity are not selected."
+        }
         "derivation.nominal.related_root" => {
             "Link a finite noun-forming root to a reviewed related predicate as a separate lookup hypothesis. The related 하다/거리다 form does not insert a surface segment or license productive restoration, inflection or contextual sense selection."
         }
@@ -1878,9 +1889,10 @@ mod label_tests {
         ] {
             forms.insert(format!("-{form}-"), Prefinal);
         }
-        for form in ["님", "들", "적", "답다", "이", "히", "쯤"] {
+        for form in ["님", "들", "적", "답다", "이", "히", "쯤", "박이"] {
             forms.insert(format!("-{form}"), Suffix);
         }
+        forms.insert("왕-".to_owned(), Prefix);
         let labels: BTreeMap<String, serde_json::Value> =
             serde_json::from_str(include_str!("../web/src/grammar-labels.json")).unwrap();
         assert_eq!(

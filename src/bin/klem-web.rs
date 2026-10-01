@@ -105,6 +105,7 @@ impl RenderMetadata {
                         MorphemeKind::Particle => m.form.clone(),
                         MorphemeKind::Ending | MorphemeKind::Suffix => format!("-{}", m.form),
                         MorphemeKind::Prefinal => format!("-{}-", m.form),
+                        MorphemeKind::Prefix => format!("{}-", m.form),
                     };
                     if !self.grammar.contains_key(&headword) {
                         self.grammar.insert(
@@ -462,6 +463,7 @@ mod tests {
             ));
             for kind in [
                 MorphemeKind::Suffix,
+                MorphemeKind::Prefix,
                 MorphemeKind::Particle,
                 MorphemeKind::Prefinal,
             ] {

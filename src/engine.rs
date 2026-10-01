@@ -377,6 +377,10 @@ pub(crate) fn quoted_ra_exclamation(form: &str) -> bool {
     quoted_command_exclamation(form) || quoted_copular_exclamation(form)
 }
 
+pub(crate) fn quoted_proposal_exclamation(form: &str) -> bool {
+    matches!(form, "자는구나" | "자는군" | "자더군" | "자더군요")
+}
+
 pub(crate) fn verbal_quoted_question_exclamation(form: &str) -> bool {
     matches!(form, "느냐는구나" | "느냐는군" | "느냐더군" | "느냐더군요")
 }
@@ -985,6 +989,16 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 {
                     continue;
                 }
+                // KRDict's contractions preserve the embedded proposal owner.
+                // NIKL 308936 excludes 시 + 자; its grammar report (pp. 355–356)
+                // excludes past/modal + 자. Unsettled prefinals stay hypotheses.
+                if quoted_proposal_exclamation(ending.form)
+                    && p.morphs
+                        .iter()
+                        .any(|m| matches!(m.form.as_str(), "시" | "었" | "겠" | "어야겠"))
+                {
+                    continue;
+                }
                 if quoted_command_exclamation(ending.form)
                     && p.morphs.iter().any(|m| !honorific_prefinal(&m.form))
                 {
@@ -1380,6 +1394,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if quoted_ra_exclamation(ending.form) {
                     p.rules.push("ending.quoted_ra_exclamation".into());
+                }
+                if quoted_proposal_exclamation(ending.form) {
+                    p.rules.push("ending.quoted_proposal_exclamation".into());
                 }
                 if quoted_question_exclamation(ending.form) {
                     p.rules.push("ending.quoted_question_exclamation".into());
@@ -1989,9 +2006,8 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             {
                 return false;
             }
-            // KRDict 78483/78496 list verb attachment. Apply the bare
-            // class check to this owner, never to an earlier lexical head.
-            // Prefinal combinations need a separate distribution review.
+            // A factual copular report cannot borrow the ending's command
+            // sense for a known bare lexical owner ending in 이.
             if bare
                 && quoted_copular_exclamation(&m.form)
                 && matches!(
@@ -2017,6 +2033,9 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             {
                 return false;
             }
+            // KRDict 78483/78496 list verb attachment. Apply the bare
+            // class check to this owner, never to an earlier lexical head.
+            // Prefinal combinations need a separate distribution review.
             if bare
                 && m.form == "음세"
                 && matches!(
@@ -2361,137 +2380,138 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
     if vowel {
         return p.rules.iter().any(|r| r == "irregular.bieup");
     }
-    matches!(
-        first,
-        "겠" | "더"
-            | "사옵"
-            | "사옵시"
-            | "삽"
-            | "다"
-            | "다가"
-            | "단"
-            | "다간"
-            | "다가는"
-            | "냔"
-            | "다고"
-            | "다는"
-            | "다니"
-            | "다느니"
-            | "냐느니"
-            | "더라느니"
-            | "다면"
-            | "답니다"
-            | "단다"
-            | "다지"
-            | "다죠"
-            | "다지만"
-            | "다니까"
-            | "냐지만"
-            | "냐니까"
-            | "더라지만"
-            | "더라니까"
-            | "냔다"
-            | "더란다"
-            | "대"
-            | "냬"
-            | "더래"
-            | "다며"
-            | "다면서"
-            | "더라며"
-            | "더라면서"
-            | "더라니"
-            | "냐니"
-            | "냐며"
-            | "냐면서"
-            | "다는구나"
-            | "냐는구나"
-            | "냐는군"
-            | "냐더군"
-            | "냐더군요"
-            | "다는군"
-            | "다더군"
-            | "다더군요"
-            | "더라는구나"
-            | "더라는군"
-            | "다네"
-            | "다는데"
-            | "으되"
-            | "더라네"
-            | "더라는데"
-            | "다거나"
-            | "다든가"
-            | "고"
-            | "고요"
-            | "지"
-            | "지요"
-            | "죠"
-            | "게"
-            | "게요"
-            | "지만"
-            | "지마는"
-            | "지만요"
-            | "군"
-            | "군요"
-            | "구나"
-            | "구려"
-            | "구먼"
-            | "더구나"
-            | "더구려"
-            | "더구먼"
-            | "로구나"
-            | "로구려"
-            | "로구먼"
-            | "로군"
-            | "는구나"
-            | "는구려"
-            | "는구먼"
-            | "는군"
-            | "는군요"
-            | "네"
-            | "네요"
-            | "나"
-            | "나요"
-            | "냐"
-            | "냐고"
-            | "냐는"
-            | "니"
-            | "기"
-            | "기에"
-            | "길래"
-            | "기로"
-            | "기가"
-            | "기는"
-            | "기도"
-            | "기만"
-            | "기를"
-            | "기보다"
-            | "던"
-            | "던데"
-            | "던데요"
-            | "던가"
-            | "던지"
-            | "더라"
-            | "더라고"
-            | "더라는"
-            | "더니"
-            | "더군"
-            | "더군요"
-            | "더라도"
-            | "거든"
-            | "거든요"
-            | "거나"
-            | "건"
-            | "거니"
-            | "거니와"
-            | "든"
-            | "든지"
-            | "든가"
-            | "도록"
-            | "습니다"
-            | "습니까"
-            | "소"
-            | "오"
-    )
+    quoted_proposal_exclamation(first)
+        || matches!(
+            first,
+            "겠" | "더"
+                | "사옵"
+                | "사옵시"
+                | "삽"
+                | "다"
+                | "다가"
+                | "단"
+                | "다간"
+                | "다가는"
+                | "냔"
+                | "다고"
+                | "다는"
+                | "다니"
+                | "다느니"
+                | "냐느니"
+                | "더라느니"
+                | "다면"
+                | "답니다"
+                | "단다"
+                | "다지"
+                | "다죠"
+                | "다지만"
+                | "다니까"
+                | "냐지만"
+                | "냐니까"
+                | "더라지만"
+                | "더라니까"
+                | "냔다"
+                | "더란다"
+                | "대"
+                | "냬"
+                | "더래"
+                | "다며"
+                | "다면서"
+                | "더라며"
+                | "더라면서"
+                | "더라니"
+                | "냐니"
+                | "냐며"
+                | "냐면서"
+                | "다는구나"
+                | "냐는구나"
+                | "냐는군"
+                | "냐더군"
+                | "냐더군요"
+                | "다는군"
+                | "다더군"
+                | "다더군요"
+                | "더라는구나"
+                | "더라는군"
+                | "다네"
+                | "다는데"
+                | "으되"
+                | "더라네"
+                | "더라는데"
+                | "다거나"
+                | "다든가"
+                | "고"
+                | "고요"
+                | "지"
+                | "지요"
+                | "죠"
+                | "게"
+                | "게요"
+                | "지만"
+                | "지마는"
+                | "지만요"
+                | "군"
+                | "군요"
+                | "구나"
+                | "구려"
+                | "구먼"
+                | "더구나"
+                | "더구려"
+                | "더구먼"
+                | "로구나"
+                | "로구려"
+                | "로구먼"
+                | "로군"
+                | "는구나"
+                | "는구려"
+                | "는구먼"
+                | "는군"
+                | "는군요"
+                | "네"
+                | "네요"
+                | "나"
+                | "나요"
+                | "냐"
+                | "냐고"
+                | "냐는"
+                | "니"
+                | "기"
+                | "기에"
+                | "길래"
+                | "기로"
+                | "기가"
+                | "기는"
+                | "기도"
+                | "기만"
+                | "기를"
+                | "기보다"
+                | "던"
+                | "던데"
+                | "던데요"
+                | "던가"
+                | "던지"
+                | "더라"
+                | "더라고"
+                | "더라는"
+                | "더니"
+                | "더군"
+                | "더군요"
+                | "더라도"
+                | "거든"
+                | "거든요"
+                | "거나"
+                | "건"
+                | "거니"
+                | "거니와"
+                | "든"
+                | "든지"
+                | "든가"
+                | "도록"
+                | "습니다"
+                | "습니까"
+                | "소"
+                | "오"
+        )
 }
 
 fn copula_bases(word: &str) -> Vec<Analysis> {
@@ -2554,10 +2574,10 @@ fn copula_bases(word: &str) -> Vec<Analysis> {
 }
 
 fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
-    if p.morphs
-        .iter()
-        .any(|m| m.kind == MorphemeKind::Ending && quoted_command_exclamation(&m.form))
-    {
+    if p.morphs.iter().any(|m| {
+        m.kind == MorphemeKind::Ending
+            && (quoted_command_exclamation(&m.form) || quoted_proposal_exclamation(&m.form))
+    }) {
         return;
     }
 
@@ -3732,6 +3752,10 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                         | "으라더군"
                         | "라는군"
                         | "으라는군"
+                        | "자더군"
+                        // Inferred from 자고 하는군 plus NIKL 330060;
+                        // optional compatibility keeps this follower Unknown.
+                        | "자는군"
                         | "냐더군"
                         | "느냐더군"
                         | "으냐더군"

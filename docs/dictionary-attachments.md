@@ -589,3 +589,13 @@ Unknown. Listed copular 시/더/으리 remain independent of a nominal head’s 
 Two inferred 군 + 요 paths are retained as Unknown; dictionary absence does
 not supply forbidden gold for 구나 followers. No new provider restriction or
 compatibility enum is introduced. See [source and case evidence](copular-command-exclamation-evaluation.json).
+
+COV-017bk adds four quoted proposal bundles with immediate-owner boundaries.
+Bare lexical verbs retain compatible entries. Ordinary/derived adjective
+wishes, existential auxiliary readings and unclassified negative owners stay
+Unknown; an earlier compatible homonym does not certify a later unknown class.
+Unlisted local prefinals and inferred 자는군 + 요 also stay Unknown. Explicit
+자 prefinal exclusions apply to this owner, while earlier prefinals in an
+auxiliary chain remain independent. Native 자더군요 and split 자더군 + 요
+retain distinct paths. No new provider restriction or compatibility enum is
+introduced. See the [source audit](proposal-exclamation-source-audit.json).

@@ -541,6 +541,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             "냐느니",
             "느냐느니",
             "자느니",
+            "자는구나",
+            "자는군",
+            "자더군",
+            "자더군요",
             "더라느니",
             "냐지만",
             "냐니까",
@@ -1427,6 +1431,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.quoted_ra_exclamation" => {
             "Recover a source-listed contracted copular report or reported command as an ending bundle. Factual 라 and command 으라 preserve distinct owners and allomorphs; no implicit reporting predicate or contextual sense is inserted."
+        }
+        "ending.quoted_proposal_exclamation" => {
+            "Recover a source-listed contracted proposal report as an ending bundle. Prefinals belong to the immediate proposal owner; adjective wishes, contextual register and inferred polite followers are not automatically certified, and no implicit reporting predicate is inserted."
         }
         "ending.quoted_question_exclamation" => {
             "Recover a source-listed contracted question report as one ending bundle. General spoken 냐, verbal/existential 느냐 and adjectival 으냐 retain distinct attachment paths; the implicit reporting predicate and contextual register are not inferred."

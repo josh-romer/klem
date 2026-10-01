@@ -2,6 +2,15 @@
   "schema_version": 1,
   "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
   "sources": {
+    "pqex-86752": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86752&nation=eng",
+    "pqex-86753": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86753&nation=eng",
+    "pqex-89658": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89658&nation=eng",
+    "pqex-89823": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89823&nation=eng",
+    "pqex-nikl-308936": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=308936",
+    "pqex-nikl-306613": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=306613",
+    "pqex-nikl-318597": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=318597",
+    "pqex-nikl-330060": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=330060",
+    "pqex-nikl-grammar-report": "https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=grammar.pdf",
     "cqex-82241": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82241&nation=eng",
     "cqex-82251": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82251&nation=eng",
     "cqex-82011": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82011&nation=eng",
@@ -13316,6 +13325,1522 @@
           "verdict": "required",
           "source": "cqex-nikl-330060",
           "reason": "Reviewed request-ending composition; additional quoted 군 + 요 is explicitly inferred and remains Unknown. This retention test does not certify contextual validity or add an implicit reporting predicate."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-unlisted-prefinal-자는구나",
+      "surface": "먹더자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-행복하-자는구나",
+      "surface": "행복하자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-좋-자는구나",
+      "surface": "좋자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-있-자는구나",
+      "surface": "있자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-없-자는구나",
+      "surface": "없자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-아니-자는구나",
+      "surface": "아니자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-derived-wish-자는구나",
+      "surface": "학생답자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹고있-자는구나",
+      "surface": "먹고있자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹고싶-자는구나",
+      "surface": "먹고싶자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹지않-자는구나",
+      "surface": "먹지않자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-행복하지않-자는구나",
+      "surface": "행복하지않자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-lexical-verb-policy-자는구나",
+      "surface": "먹자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-unknown-homonym-policy-자는구나",
+      "surface": "고르자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-unlisted-prefinal-자는군",
+      "surface": "먹더자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-행복하-자는군",
+      "surface": "행복하자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-좋-자는군",
+      "surface": "좋자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-있-자는군",
+      "surface": "있자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-없-자는군",
+      "surface": "없자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-아니-자는군",
+      "surface": "아니자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-derived-wish-자는군",
+      "surface": "학생답자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹고있-자는군",
+      "surface": "먹고있자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹고싶-자는군",
+      "surface": "먹고싶자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹지않-자는군",
+      "surface": "먹지않자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-행복하지않-자는군",
+      "surface": "행복하지않자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-lexical-verb-policy-자는군",
+      "surface": "먹자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-unknown-homonym-policy-자는군",
+      "surface": "고르자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-unlisted-prefinal-자더군",
+      "surface": "먹더자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-행복하-자더군",
+      "surface": "행복하자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-좋-자더군",
+      "surface": "좋자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-있-자더군",
+      "surface": "있자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-없-자더군",
+      "surface": "없자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-아니-자더군",
+      "surface": "아니자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-derived-wish-자더군",
+      "surface": "학생답자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹고있-자더군",
+      "surface": "먹고있자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹고싶-자더군",
+      "surface": "먹고싶자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹지않-자더군",
+      "surface": "먹지않자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-행복하지않-자더군",
+      "surface": "행복하지않자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-lexical-verb-policy-자더군",
+      "surface": "먹자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-unknown-homonym-policy-자더군",
+      "surface": "고르자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-unlisted-prefinal-자더군요",
+      "surface": "먹더자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "더",
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-행복하-자더군요",
+      "surface": "행복하자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-좋-자더군요",
+      "surface": "좋자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-있-자더군요",
+      "surface": "있자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-없-자더군요",
+      "surface": "없자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-wish-아니-자더군요",
+      "surface": "아니자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "아니다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-derived-wish-자더군요",
+      "surface": "학생답자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "답다",
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹고있-자더군요",
+      "surface": "먹고있자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹고싶-자더군요",
+      "surface": "먹고싶자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-먹지않-자더군요",
+      "surface": "먹지않자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-auxiliary-class-행복하지않-자더군요",
+      "surface": "행복하지않자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "행복하다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-lexical-verb-policy-자더군요",
+      "surface": "먹자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-unknown-homonym-policy-자더군요",
+      "surface": "고르자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-polite-자더군요",
+      "surface": "먹자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-polite-자더군-요",
+      "surface": "먹자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자더군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "Source-backed candidate composition or structural boundary authored by the implementer, not an independent Korean validity review. Required retention can remain Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-inferred-polite",
+      "surface": "먹자는군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는군",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "required",
+          "source": "pqex-nikl-330060",
+          "reason": "Explicitly inferred retention from 자고 하는군 and NIKL 330060 terminal 하는군 + 요. No directly quoted proposal example is supplied; optional compatibility stays Unknown."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-unclassified-negative-자는구나",
+      "surface": "고르지않자는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86752",
+          "reason": "An earlier verb/adjective homonym leaves the negative auxiliary class unclassified. The proposal survives as Unknown without borrowing a compatible earlier dictionary entry to certify its immediate owner."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-unclassified-negative-자는군",
+      "surface": "고르지않자는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자는군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-86753",
+          "reason": "An earlier verb/adjective homonym leaves the negative auxiliary class unclassified. The proposal survives as Unknown without borrowing a compatible earlier dictionary entry to certify its immediate owner."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-unclassified-negative-자더군",
+      "surface": "고르지않자더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자더군"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89658",
+          "reason": "An earlier verb/adjective homonym leaves the negative auxiliary class unclassified. The proposal survives as Unknown without borrowing a compatible earlier dictionary entry to certify its immediate owner."
+        }
+      ]
+    },
+    {
+      "id": "pqex-policy-unclassified-negative-자더군요",
+      "surface": "고르지않자더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "자더군요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "pqex-89823",
+          "reason": "An earlier verb/adjective homonym leaves the negative auxiliary class unclassified. The proposal survives as Unknown without borrowing a compatible earlier dictionary entry to certify its immediate owner."
         }
       ]
     }

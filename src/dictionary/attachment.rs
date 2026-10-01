@@ -796,6 +796,25 @@ impl Annotation {
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible && let Some(i) = ending
+                        && crate::engine::quoted_proposal_exclamation(&analysis.morphemes[i].form)
+                        && (matches!(matched.entry.pos.as_str(), "형용사" | "보조 형용사")
+                            || derived_adjective
+                            || matches!(class, Some(PredicateClass::Adjective))
+                            || (lemma.kind == LemmaKind::Auxiliary
+                                && (class.is_none() || matches!(lemma.text.as_str(), "있다" | "계시다")))
+                            || morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
+                                if analysis.morphemes[*j].kind == MorphemeKind::Prefinal))
+                            || (analysis.morphemes[i].form == "자는군"
+                                && analysis.morphemes.get(i + 1).is_some_and(|m|
+                                    m.kind == MorphemeKind::Particle && m.form == "요")))
+                    {
+                        // NIKL allows contextual adjective wishes, but the four
+                        // quoted entries do not certify those readings. Keep
+                        // existential/negative auxiliary owners, unlisted
+                        // prefinals and inferred 군 + 요 independently Unknown.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible && let Some(i) = ending
                         && crate::engine::quoted_ra_exclamation(&analysis.morphemes[i].form)
                     {
                         let form = analysis.morphemes[i].form.as_str();

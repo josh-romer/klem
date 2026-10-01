@@ -469,6 +469,11 @@ try {
   const cqexIds=new Set(cqexEntries.map(e=>String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!cqexIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...cqexEntries);
+  const pqexFixture=JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-proposal-exclamation.json"),"utf8"));
+  const pqexEntries=pqexFixture.LexicalResource.Lexicon.LexicalEntry;
+  const pqexIds=new Set(pqexEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry=fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!pqexIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...pqexEntries);
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -1642,6 +1647,53 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-cqex-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-cqex-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  const pqexCases=recipientLedger.cases.filter(c=>c.id.startsWith("pqex-"));
+  const pqexPolicies=connectiveLedger.cases.filter(c=>c.id.startsWith("pqex-"));
+  assert.equal(pqexCases.length,173);assert.equal(pqexPolicies.length,59);
+  for(const[cases,policy]of[[pqexCases,false],[pqexPolicies,true]]){
+    for(const c of cases){
+      const response=await post("analyze",{text:c.surface});assert.equal(response.status,200,c.id);
+      const token=(await response.json()).records[0];
+      const {dictionary,...analysis}=JSON.parse(execFileSync(cliBin,["word",c.surface,"--dictionary",database],{encoding:"utf8"}));
+      assert.deepEqual(token.analysis,analysis,c.id);assert.deepEqual(token.dictionary,dictionary,c.id);
+      for(const j of c.judgments){
+        const found=token.analysis.analyses.filter(a=>danikkaPath(a,j));
+        assert.equal(found.length>0,policy||j.verdict==="required",c.id);
+        if(policy)for(const a of found){
+          const index=token.analysis.analyses.indexOf(a);
+          assert.equal(token.dictionary.readings[index].status==="incompatible",j.verdict==="forbidden",c.id);
+        }
+      }
+    }
+  }
+  const pqexText="먹자는구나 살자는군 듣자는군 돕자는군 고르자는군 행복하자는군 아니자더군 학생답자는군 먹더자더군 먹자더군요 먹자더군요 먹자는군요 먹어보자는군 먹었어보자는군 먹으셔보자는군 먹고있자는군 먹고싶자는군 행복하지않자는군 고르지않자는군";
+  const pqexData=await(await post("analyze",{text:pqexText})).json();
+  for(const form of ["자는구나", "자는군", "자더군", "자더군요"]){
+    const label=grammarLabels["-"+form];
+    assert.deepEqual(pqexData.grammar["-"+form].map(e=>e.id).sort(),label.sources.map(s=>`krdict:${s.id}`).sort());
+    for(const source of label.sources){
+      const entry=pqexData.grammar["-"+form].find(e=>e.id===`krdict:${source.id}`);
+      assert.equal(entry.headword,source.headword);assert.equal(entry.pos,source.pos);
+    }
+  }
+  await submit(page,pqexText);await waitHeading(page,"먹자는구나");
+  await page.getByLabel("Dictionary matches only").check();await page.getByLabel("Exclude known grammar conflicts").check();
+  for(const[i,forms,label]of[[0, ["먹", "자는구나"], "Reported proposal / exclamation"], [1, ["살", "자는군"], "Reported proposal / exclamation"], [2, ["듣", "자는군"], "Reported proposal / exclamation"], [3, ["돕", "자는군"], "Reported proposal / exclamation"], [4, ["고르", "자는군"], "Reported proposal / exclamation"], [5, ["행복하", "자는군"], "Reported proposal / exclamation"], [6, ["아니", "자더군"], "Reported proposal / exclamation"], [7, ["학생", "답", "자는군"], "Reported proposal / exclamation"], [8, ["먹", "더", "자더군"], "Reported proposal / exclamation"], [9, ["먹", "자더군요"], "Polite reported proposal"], [10, ["먹", "자더군", "요"], "Reported proposal / exclamation"], [11, ["먹", "자는군", "요"], "Reported proposal / exclamation"], [12, ["먹", "어", "보", "자는군"], "Reported proposal / exclamation"], [13, ["먹", "었", "어", "보", "자는군"], "Reported proposal / exclamation"], [14, ["먹", "시", "어", "보", "자는군"], "Reported proposal / exclamation"], [15, ["먹", "고", "있", "자는군"], "Reported proposal / exclamation"], [16, ["먹", "고", "싶", "자는군"], "Reported proposal / exclamation"], [17, ["행복하", "지", "않", "자는군"], "Reported proposal / exclamation"], [18, ["고르", "지", "않", "자는군"], "Reported proposal / exclamation"]]){
+    const word=page.locator(".breakdown-word").nth(i),select=word.locator("select");
+    const value=await select.locator("option").evaluateAll((os,fs)=>os.find(o=>o.textContent.replace(/^\d+\. /,"")===fs.join(" + "))?.value,forms);
+    assert.ok(value,JSON.stringify({i,forms,options:await select.locator("option").allTextContents()}));
+    await select.selectOption(value);assert.deepEqual(await word.locator(".part-form").allTextContents(),forms);
+    assert.ok((await word.locator(".part-gloss").allTextContents()).includes(label));
+  }
+  const pqexDownload=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+  const pqexExport=JSON.parse(await readFile(await(await pqexDownload).path(),"utf8"));
+  const pqexExpected=execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:pqexText,encoding:"utf8"}).trim().split("\n").map(JSON.parse);
+  assert.deepEqual(pqexExport.records,pqexExpected);
+  await page.screenshot({path:resolve(tmpdir(),"klem-pqex-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-pqex-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Dictionary matches only").uncheck();
 
   const spacingLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/spacing-validity.json"),"utf8"));

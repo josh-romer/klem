@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bj/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bk/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -221,8 +221,8 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bj implemented; COV-017aw/az and the inventoried
-  COV-017bk–bl remain open.**
+  COV-017ax–ay/017ba–bk implemented; COV-017aw/az and the inventoried
+  COV-017bl remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1437,15 +1437,29 @@ review remains open under the completion review below.
   preview. Proposal/conditional-question reports and independent review stay
   open below.
 
-- [ ] **COV-017bk — Quoted proposal exclamations and recalled proposals.**
-  **Confirmed missing:** 먹자는구나 → 먹다. Audit full entries
-  86752/86753/89658/89823 for 자는구나/자는군/자더군/자더군요.
-  Preserve original examples, immediate proposal owner, lexical alternatives,
-  listed attachment boundaries and polite bundle/split paths. Do not infer
-  universal prefinal or follower licenses from the final syllables. Review
-  adjective wishes and existential auxiliaries separately from verb POS;
-  unknown contextual or source evidence must not be certified automatically.
-  Add required/forbidden, dictionary and display/export cases with full gates.
+- [x] **COV-017bk — Quoted proposal exclamations and recalled proposals.**
+  **Implemented for four reviewed native expression identities.**
+  먹자는구나 and 살자더군 preserve 자는구나/자는군/자더군/자더군요,
+  immediate proposal owners, consonant-initial stem boundaries and lexical
+  alternatives. Explicit NIKL 시/past/modal exclusions transfer to the embedded
+  proposal as marked inference; earlier auxiliary-chain prefinals remain local.
+  Adjective/derived wishes, existential and unclassified negative auxiliary
+  owners, unlisted prefinals and inferred 군 + 요 remain Unknown. Native
+  polite bundled/split paths stay separate; unlisted 구나 followers remain
+  unjudged under COV-018aa. No implicit reporting 하다 or contextual sense
+  is inserted. [Four family tests](../tests/proposal_exclamation.rs), 173 raw
+  and 59 dictionary-policy cases and the
+  [source audit](proposal-exclamation-source-audit.json) preserve all 17 original
+  example groups/direct tokens. The
+  [individual comparison](proposal-exclamation-evaluation.json) covers 11,841
+  inputs, 632 added paths and zero removals; 422 additions remain unjudged.
+  Four frozen corpus reports, novel filter output and spacing sidecars are
+  unchanged. No target exists in the six pinned corpus files, so no annotated
+  gold is fabricated. Four labels retain actual source POS 품사 없음.
+  Rust/stress, lint/format, corpus, browser and x86_64 Linux Nix checks pass,
+  including packaged API/CLI/export/asset parity and refreshed preview.
+  Conditional-question reports, parent inventories and independent review stay
+  open below.
 
 - [ ] **COV-017bl — Conditional reported questions -(으/느)냐면.**
   **Confirmed missing:** 먹냐면 → 먹다. Audit full 80177/83769/80180

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bk",
+  "before_revision": "255a8f1",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary pinned September 2026 native LMF exports. RelatedForm/non-English equivalents omitted.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "primary_entry_ids": [
+    86752,
+    86753,
+    89658,
+    89823
+  ],
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "primary_web_review": "Current 86752/89823 pages inaccessible. All four full pinned native entries and all 17 unchanged original groups read; no complete current-page review is claimed.",
+  "nikl_sources": [
+    {
+      "id": 308936,
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=308936",
+      "interpretation": "Fully read: excludes 시 + 자; transfer to these explicit proposal contractions is an inference."
+    },
+    {
+      "id": 306613,
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=306613",
+      "interpretation": "Fully read: adjective wishes admit differing interpretations. Quoted extensions stay Unknown."
+    },
+    {
+      "id": 318597,
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=318597",
+      "interpretation": "Fully read: some adjective wishes occur; no universal adjective proposal license."
+    },
+    {
+      "id": 330060,
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=330060",
+      "interpretation": "Fully read in the preceding family review: 하는군 plus polite 요. Transfer to 자는군 + 요 is an inference and stays Unknown."
+    }
+  ],
+  "primary_report": {
+    "url": "https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=grammar.pdf",
+    "pdf_sha256": "f6558a802b61115ead3ed20af9ecd7cf7b56f94e4c5a3342bf67f40bf0811268",
+    "printed_pages": [
+      353,
+      354,
+      355,
+      356
+    ],
+    "review": "Complete -자3 section read, including attachment, past/modal exclusion, existential example and adjective extension. Its categorical constraints do not override the later explicit adjective extension or contextual uncertainty. Transfer to contracted proposal reports is an inference; no subject or contextual sense is inferred."
+  },
+  "scope": "Four exact proposal bundles, consonant-initial stem boundaries, source-backed immediate-owner 시/past/modal exclusions, original examples and lexical alternatives. Earlier auxiliary-chain prefinals stay separate. Adjective/derived/existential/negative wishes, unlisted prefinals and inferred 군 + 요 remain Unknown. No implicit reporting predicate, blanket POS exclusion or universal follower license.",
+  "unjudged_primary_observations": [],
+  "unjudged_follower_observations": [
+    {
+      "surface": "먹자는구나요",
+      "lemmas": [
+        "먹다"
+      ],
+      "morphemes": [
+        "자는구나",
+        "요"
+      ],
+      "status": "unjudged",
+      "reason": "Unlisted follower remains under COV-018aa; absence is not forbidden gold."
+    }
+  ],
+  "manifest": "tests/fixtures/proposal-exclamation-sources.json",
+  "complete_example_groups": 17,
+  "direct_primary_tokens": 17,
+  "native_entries": 60,
+  "independent_review": "Pending; finite retention and source transfers are not full contextual or grammatical certification.",
+  "source_integrity": {
+    "entries": 60,
+    "source_exports": 10,
+    "all_source_hashes_match": true,
+    "only_documented_omissions": true,
+    "fixture_sha256": "89b3ac01b4f892dc49e16c8ccb68dc51e97cc5c66139c5d49bc567776ab85123"
+  },
+  "corpus_discovery": {
+    "files": 6,
+    "observations": 0,
+    "scope": "Literal suffix including inferred/unjudged followers and exact annotated-ending scan; no annotated morphology is fabricated."
+  }
+}

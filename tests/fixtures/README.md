@@ -1772,3 +1772,14 @@ resultative, question-class and contextual cases remain in the source review.
   No target is present in the six pinned KAIST/GSD files, so no annotated
   morphology is fabricated. Copulas, homonyms, request auxiliaries, derived
   답다 and exact source POS 품사 없음 stay separate in the source/case audit.
+
+- `krdict-proposal-exclamation.json` preserves 60 full attributed September
+  2026 native entries for COV-017bk, omitting only RelatedForm/non-English
+  equivalents. `proposal-exclamation-sources.json` records export hashes, four
+  expression identities and all 17 original example groups/direct tokens.
+  Its 173 raw cases (116 required/57 forbidden) and 59 optional dictionary
+  retention cases use `pqex-` IDs. Contextual wishes, existential and unknown
+  auxiliary owners, unlisted prefinals and inferred 군 + 요 remain Unknown.
+  Native polite bundled/split paths remain separate; an unlisted 구나 follower
+  is an unjudged observation, not forbidden gold. NIKL source transfers are
+  explicitly marked as inference. Independent Korean review remains pending.

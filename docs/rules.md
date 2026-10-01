@@ -3696,3 +3696,23 @@ stay Unknown, while unlisted 구나 followers remain unjudged under COV-018aa.
 The [source audit](copular-command-exclamation-source-audit.json) and
 [individual comparison](copular-command-exclamation-evaluation.json) preserve
 all 53 original example groups and direct tokens with exact spelling.
+
+## Quoted proposal exclamations (COV-017bk)
+
+The four literal bundles 자는구나, 자는군, 자더군 and 자더군요 retain
+`ending.quoted_proposal_exclamation` provenance and the original dictionary
+identity/POS. They compose with consonant or vowel stems without borrowing
+vowel-boundary irregular restoration. The embedded proposal's immediate owner
+excludes 시, past and modal prefinals; an earlier owner in an auxiliary chain
+keeps its own prefinals. This transfers NIKL's explicit 자 restrictions to the
+dictionary's contracted reports, rather than treating the final 군 as a new
+license for the preceding verb.
+
+Adjective and derived 답다 wishes, existential and unclassified negative
+auxiliary readings, and unlisted prefinals survive as Unknown under optional
+dictionary filtering. The source does not determine contextual wishes or
+register. 자더군요 preserves both its bundled and 자더군 + 요 paths;
+자는군 + 요 is an explicit Unknown inference. Unlisted 구나 followers stay
+unjudged under COV-018aa. No implicit reporting 하다 is inserted. All 17
+original example groups and direct tokens are preserved in the
+[source audit](proposal-exclamation-source-audit.json).

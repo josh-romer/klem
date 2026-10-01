@@ -90,6 +90,11 @@ retain separate factual/command morphology, homonyms and polite alternatives.
 See the [source audit](docs/copular-command-exclamation-source-audit.json)
 for reviewed attachment conditions and unresolved wishes or polite followers.
 
+Quoted proposals such as 먹자는구나 and 살자더군 preserve their immediate
+verb, adjective wishes, auxiliary readings and bundled/split polite alternatives.
+See the [source audit](docs/proposal-exclamation-source-audit.json) for the four
+reviewed identities and the limits of their dictionary attachment checks.
+
 ## Missing-space suggestions
 
 With a dictionary, `--suggest-spacing` adds explicit alternatives for nominal

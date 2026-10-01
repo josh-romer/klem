@@ -2,6 +2,20 @@
   "schema_version": 1,
   "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
   "sources": {
+    "qex-81980": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81980&nation=eng",
+    "qex-81983": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81983&nation=eng",
+    "qex-81985": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81985&nation=eng",
+    "qex-81987": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81987&nation=eng",
+    "qex-81989": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81989&nation=eng",
+    "qex-81990": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81990&nation=eng",
+    "qex-82235": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82235&nation=eng",
+    "qex-82236": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82236&nation=eng",
+    "qex-82240": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82240&nation=eng",
+    "qex-82245": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82245&nation=eng",
+    "qex-82247": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82247&nation=eng",
+    "qex-82249": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82249&nation=eng",
+    "qex-86360": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86360&nation=eng",
+    "qex-89639": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89639&nation=eng",
     "exclamation-73807": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=73807&nation=eng",
     "exclamation-73809": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=73809&nation=eng",
     "exclamation-73886": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=73886&nation=eng",
@@ -9562,6 +9576,900 @@
           "verdict": "required",
           "source": "exclamation-73807",
           "reason": "Optional immediate-owner dictionary policy; each lexical homonym is checked separately, and unknown source distribution is retained."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-먹-는다는구나",
+      "surface": "먹는다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82236",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-좋-는다는구나",
+      "surface": "좋는다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-82236",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-없-는다는구나",
+      "surface": "없는다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-82236",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-고르-는다는구나",
+      "surface": "고른다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82236",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-먹-는다는군",
+      "surface": "먹는다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82247",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-좋-는다는군",
+      "surface": "좋는다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-82247",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-없-는다는군",
+      "surface": "없는다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-82247",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-고르-는다는군",
+      "surface": "고른다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82247",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-먹-는다더군",
+      "surface": "먹는다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81983",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-좋-는다더군",
+      "surface": "좋는다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-81983",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-없-는다더군",
+      "surface": "없는다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-81983",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-고르-는다더군",
+      "surface": "고른다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81983",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-먹-는다더군요",
+      "surface": "먹는다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81989",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-좋-는다더군요",
+      "surface": "좋는다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-81989",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-없-는다더군요",
+      "surface": "없는다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-81989",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-고르-는다더군요",
+      "surface": "고른다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81989",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-좋-다는구나",
+      "surface": "좋다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82240",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-먹-다는구나",
+      "surface": "먹다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-82240",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-고르-다는구나",
+      "surface": "고르다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82240",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-있-다는구나",
+      "surface": "있다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82240",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-좋-다는군",
+      "surface": "좋다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82249",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-먹-다는군",
+      "surface": "먹다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-82249",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-고르-다는군",
+      "surface": "고르다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82249",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-있-다는군",
+      "surface": "있다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82249",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-좋-다더군",
+      "surface": "좋다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81985",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-먹-다더군",
+      "surface": "먹다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-81985",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-고르-다더군",
+      "surface": "고르다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81985",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-있-다더군",
+      "surface": "있다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81985",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-좋-다더군요",
+      "surface": "좋다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81990",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-먹-다더군요",
+      "surface": "먹다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-81990",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-고르-다더군요",
+      "surface": "고르다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "고르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81990",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-있-다더군요",
+      "surface": "있다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다더군요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81990",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-special-좋으신다는구나",
+      "surface": "좋으신다는구나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "는다는구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-82236",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-special-있는다는군",
+      "surface": "있는다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다는군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82247",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-special-맛있는다더군",
+      "surface": "맛있는다더군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "맛있다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다더군"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "qex-81983",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-special-먹으시다는군",
+      "surface": "먹으시다는군",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "다는군"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-82249",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
+        }
+      ]
+    },
+    {
+      "id": "qex-policy-special-먹었다더군요",
+      "surface": "먹었다더군요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다더군요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "qex-81990",
+          "reason": "Optional per-entry immediate-owner policy; unknown lexical/contextual evidence is not a negative judgment."
         }
       ]
     }

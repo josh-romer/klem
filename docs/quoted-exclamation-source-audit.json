@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bh",
+  "reviewed_at": "2026-09-30",
+  "before_revision": "5f755ff",
+  "manifest": "tests/fixtures/quoted-exclamation-sources.json",
+  "source_integrity": {
+    "entries": 110,
+    "source_exports": 11,
+    "all_source_hashes_match": true,
+    "only_documented_omissions": true,
+    "fixture_sha256": "e7a5dfd90e7fa87185f1ed4014576705dad9a2103f81b3386cba577e819cece2"
+  },
+  "primary_entry_ids": [
+    82235,
+    82245,
+    81980,
+    81987,
+    82236,
+    82247,
+    81983,
+    81989,
+    82240,
+    82249,
+    81985,
+    81990,
+    86360,
+    89639
+  ],
+  "complete_example_groups": 56,
+  "direct_primary_tokens": 55,
+  "unjudged_primary_observations": [
+    {
+      "entry_id": 81980,
+      "sense_id": "1",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "지수는 내일 홍콩으로 여행간다더군."
+          }
+        ]
+      },
+      "turn": 0,
+      "token": 3,
+      "surface": "여행간다더군",
+      "status": "unjudged",
+      "reason": "Joined nominal 여행 + 가다 in the native spelling. Arbitrary noun/verb segmentation and lexical 여행가다 are not certified or silently rewritten."
+    }
+  ],
+  "web_review": "Complete current 81985 page read. Attempted current 82235/81980/82236/86360/89639 pages inaccessible; full pinned native entries/all 56 original groups read. No full current review claimed for unavailable pages.",
+  "sources": [
+    {
+      "id": 82235,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82235&nation=eng"
+    },
+    {
+      "id": 82245,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82245&nation=eng"
+    },
+    {
+      "id": 81980,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81980&nation=eng"
+    },
+    {
+      "id": 81987,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81987&nation=eng"
+    },
+    {
+      "id": 82236,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82236&nation=eng"
+    },
+    {
+      "id": 82247,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82247&nation=eng"
+    },
+    {
+      "id": 81983,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81983&nation=eng"
+    },
+    {
+      "id": 81989,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81989&nation=eng"
+    },
+    {
+      "id": 82240,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82240&nation=eng"
+    },
+    {
+      "id": 82249,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=82249&nation=eng"
+    },
+    {
+      "id": 81985,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81985&nation=eng"
+    },
+    {
+      "id": 81990,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=81990&nation=eng"
+    },
+    {
+      "id": 86360,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=86360&nation=eng"
+    },
+    {
+      "id": 89639,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89639&nation=eng"
+    }
+  ],
+  "distribution": {
+    "present": "Vowel/ㄹ attached ㄴ and consonant 는; verb-only owner even after 시. No past/modal/더 prefinal before these present bundles.",
+    "plain": "Bare adjective report, or listed 시/었/겠 prefinals. Ordinary bare verbs conflict. Verb + honorific-only 시 remains unknown rather than certified from the adjective note. Bare copulas use separately inventoried 라 quote families; past/modal copulas survive.",
+    "experience": "Separate 더라는 bundles quote another speaker’s experience, including copulas and vowel-final copula omission; no additional 더 prefinal.",
+    "polite": "Three source-reviewed 다더군요/ㄴ다더군요/는다더군요 identities preserve bundled endings and base + 요. No blanket additional 요 follower."
+  },
+  "representation": "Ten bundles with explicit ending.quoted_exclamation provenance; no implicit reporting 하다 lemma, no auxiliary connector license, source POS 품사 없음 preserved.",
+  "corpus_discovery": {
+    "files": 6,
+    "matching_observations": 0,
+    "scope": "Pinned KAIST/GSD train/dev/test: longest literal suffix, attached ㄴ allomorph and exact annotated ending scan. No annotated target test fabricated."
+  },
+  "independent_review": "Pending; this is an agent-authored scoped audit, not full linguistic certification.",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary pinned September 2026 native LMF exports. RelatedForm/non-English equivalents omitted.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_notes": [
+    {
+      "entry_id": 81980,
+      "headword": "-ㄴ다더군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "받침이 없거나 ‘ㄹ’ 받침인 동사 또는 ‘-으시-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-ㄴ다고 하더군’이 줄어든 말이다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 사실을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 81983,
+      "headword": "-는다더군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-는다고 하더군’이 줄어든 말이다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 사실을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 81985,
+      "headword": "-다더군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-다고 하더군’이 줄어든 말이다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 사실을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 81987,
+      "headword": "-ㄴ다더군요",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "받침이 없거나 ‘ㄹ’ 받침인 동사 또는 ‘-으시-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-ㄴ다고 하더군요’가 줄어든 말이다.",
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 사실을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 81989,
+      "headword": "-는다더군요",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다. "
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-는다고 하더군요’가 줄어든 말이다.",
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 사실을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 81990,
+      "headword": "-다더군요",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다. "
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-다고 하더군요’가 줄어든 말이다.",
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 사실을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82235,
+      "headword": "-ㄴ다는구나",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "받침이 없거나 ‘ㄹ’ 받침인 동사 또는 ‘-으시-’ 뒤에 붙여 쓴다. "
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-ㄴ다고 하는구나’가 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 사실을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82236,
+      "headword": "-는다는구나",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다. "
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-는다고 하는구나’가 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 사실을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82240,
+      "headword": "-다는구나",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다. "
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-다고 하는구나’가 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 사실을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82245,
+      "headword": "-ㄴ다는군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "받침이 없거나 ‘ㄹ’ 받침인 동사 또는 ‘-으시-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-ㄴ다고 하는군’이 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 사실을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82247,
+      "headword": "-는다는군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘ㄹ’을 제외한 받침 있는 동사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-는다고 하는군’이 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 사실을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 82249,
+      "headword": "-다는군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "‘-다고 하는군’이 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 사실을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 86360,
+      "headword": "-더라는구나",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘이다’, 동사나 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-더라고 하는구나'가 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람이 직접 겪은 일을 듣고 그 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89639,
+      "headword": "-더라는군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘이다’, 동사와 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-더라고 하는군'이 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 들어서 새롭게 알게 된 다른 사람의 경험을 상대방에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1736,3 +1736,14 @@ resultative, question-class and contextual cases remain in the source review.
   provenance, including native 92511 로구만. The 더구나 note/example
   contradiction stays explicit. `kaist-exclamation.conllu` preserves six
   complete original training sentences and unchanged morphology/tags.
+
+- `krdict-quoted-exclamation.json` preserves 110 full attributed native
+  entries for COV-017bh, omitting only RelatedForm/non-English equivalents.
+  `quoted-exclamation-sources.json` records eleven export hashes, fourteen
+  expression identities, all 56 original example groups and 55 unchanged
+  direct token cases. Native 81980 여행간다더군 remains literally preserved
+  as an unjudged joined-spelling observation. The 175 raw and 37 optional
+  dictionary cases use the `qex-` prefix and keep owner classes, allomorphs,
+  bundled/split polite paths and homonym judgments separate. These endings
+  have no occurrences in the six pinned KAIST/GSD files; no annotated corpus
+  target is fabricated. The source/evaluation reports retain this evidence gap.

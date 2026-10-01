@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bg/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bh/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -221,7 +221,8 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bg implemented; COV-017aw/az remain open.**
+  COV-017ax–ay/017ba–bh implemented; COV-017aw/az and the inventoried
+  COV-017bi–bl remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1363,20 +1364,72 @@ review remains open under the completion review below.
   sense/register, broader polite/follower licenses and independent review
   remain open under COV-017/COV-013/COV-020.
 
-- [ ] **COV-017bh — Quoted declarative exclamation contractions.**
-  **Missing in the audited examples:** 먹는다는구나 → 먹다, 간다는군 →
-  가다, 예쁘다는구나 → 예쁘다 and 먹는다더군 → 먹다. Native sources
-  distinguish contracted -다고 하는구나/-다고 하는군/-다고 하더군 and
-  polite -다고 하더군요, including ㄴ다/는다/다 attachment classes;
-  -더라는구나/-더라는군 quote another speaker's retrospective experience.
-  Audit complete entries 82235/82245/81980/81987, 82236/82247/81983/81989,
-  82240/82249/81985/81990 and 86360/89639. Preserve bundles, exact source
-  identities, vowel/ㄹ/consonant allomorphs, immediate owner classes, licensed
-  prefinals and full original examples. Add required/forbidden and per-homonym
-  dictionary cases, annotated/candidate change tracking, browser and Nix
-  verification. Question/command/proposal quote families remain separate
-  inventory work under COV-017/COV-013; a base exclamation fix does not cover
-  these contractions automatically.
+- [x] **COV-017bh — Quoted declarative exclamation contractions.**
+  **Implemented for fourteen reviewed native expression identities.**
+  먹는다는구나/간다는군/예쁘다는구나/먹는다더군 recover their
+  predicates with distinct report bundles. Present ㄴ/는 allomorphs, local
+  owner classes, listed prefinals, past/modal copulas and other-speaker
+  더라는구나/더라는군 experience reports compose. Three polite forms
+  preserve bundled and base + 요 alternatives without inserting implicit 하다.
+  [Four family tests](../tests/quoted_exclamation.rs), 175 `qex-` raw and
+  37 dictionary-policy cases, [full source audit](quoted-exclamation-source-audit.json)
+  and [individual comparison](quoted-exclamation-evaluation.json) preserve
+  all 56 groups, 55 unchanged direct targets and the unresolved native
+  여행간다더군 joined spelling. Per-entry homonyms and uncertain verbal
+  honorific/polite boundaries stay separate; Unknown retention is not
+  grammatical-validity gold. Ten teaching labels retain actual 품사 없음
+  source identities. Across 11,275 inputs, 1,563 paths are added and none
+  removed; 1,309 additions remain unjudged. All four frozen dev/test reports,
+  novel filter outputs and optional spacing sidecars are unchanged. The six
+  pinned corpus files contain no targets for this family; no annotated gold
+  is fabricated. Rust/stress, lint/format, corpus, browser and x86_64 Linux
+  Nix gates pass, including packaged API/CLI/export/asset parity and refreshed
+  preview. Other quote families and independent review remain open below.
+
+- [ ] **COV-017bi — Quoted question exclamations and recalled questions.**
+  **Confirmed missing:** 먹느냐는구나 → 먹다 and 좋으냐는군 → 좋다.
+  Audit twelve native expressions: 냐/느냐/으냐 with 는구나/는군/더군/더군요
+  (88945–88947, 89636–89638, 89659–89661, 89824–89826).
+  Preserve full original groups, general spoken 냐 versus adjective 으냐,
+  verb/existential 느냐, licensed prefinals, copula omission, homonyms and
+  bundled/split polite paths. Native 88945 illustrates 하냐는구나/타냐는구나
+  and 89824 illustrates 걸리냐더군요 despite narrower attachment notes.
+  [NIKL’s question-quotation guidance](https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5876&mn_id=217&pageIndex=215)
+  permits general spoken 냐고 across predicate classes; do not introduce a
+  blanket bare-verb exclusion from those narrower notes. Contextual register
+  and implicit reporting predicates remain separate. Require source-backed
+  candidate/dictionary cases and corpus/browser/Nix comparison gates.
+
+- [ ] **COV-017bj — Quoted copular reports and command exclamations.**
+  **Confirmed missing:** 가라더군 → 가다 and 학생이라더군 → 학생 + 이다.
+  Audit 82241/82251/82011/82009 and 86596/86597/89657/90134.
+  Four 라 report forms have separate factual copular and imperative senses;
+  preserve both, consonant/vowel/ㄹ command allomorphs, 아니다, owner-local
+  prefinals, copula omission and full original examples. Literal overlap must
+  not borrow the copula entry’s class for a lexical verb. Keep polite bundles
+  and reviewed split alternatives without implying 하다, connectors or
+  unrestricted follower licenses. Add per-homonym and boundary cases and run
+  the same candidate, corpus, browser, novel and Nix gates.
+
+- [ ] **COV-017bk — Quoted proposal exclamations and recalled proposals.**
+  **Confirmed missing:** 먹자는구나 → 먹다. Audit full entries
+  86752/86753/89658/89823 for 자는구나/자는군/자더군/자더군요.
+  Preserve original examples, immediate proposal owner, lexical alternatives,
+  listed attachment boundaries and polite bundle/split paths. Do not infer
+  universal prefinal or follower licenses from the final syllables. Review
+  adjective wishes and existential auxiliaries separately from verb POS;
+  unknown contextual or source evidence must not be certified automatically.
+  Add required/forbidden, dictionary and display/export cases with full gates.
+
+- [ ] **COV-017bl — Conditional reported questions -(으/느)냐면.**
+  **Confirmed missing:** 먹냐면 → 먹다. Audit full 80177/83769/80180
+  entries for 냐면/느냐면/으냐면, preserving class/allomorph alternatives,
+  licensed prefinals, copulas and source spelling. The
+  [NIKL answer on 냐면 and 냬요](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=311818&searchCondition=&searchKeyword=)
+  explicitly permits both 먹냐면 and 먹느냐면. General spoken 냐 must
+  remain distinct from the consonant adjective 으냐 family. Re-probe existing
+  냐고/냬요 controls, add stable source-backed candidate and dictionary cases,
+  and verify ordered browser output, corpus/novel changes and Nix packages.
 
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,

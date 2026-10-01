@@ -578,6 +578,12 @@ pub(crate) fn endings() -> &'static [Ending] {
             "고자",
             "건대",
             "구나",
+            "다는구나",
+            "다는군",
+            "다더군",
+            "다더군요",
+            "더라는구나",
+            "더라는군",
             "구려",
             "구먼",
             "는구나",
@@ -777,6 +783,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("구먼", "구먼", 0),
             ("구만", "구먼", 0),
             ("더구나", "더구나", 0),
+            ("더라는구나", "더라는구나", 0),
+            ("더라는군", "더라는군", 0),
             ("더구려", "더구려", 0),
             ("더구먼", "더구먼", 0),
             ("더구만", "더구먼", 0),
@@ -994,6 +1002,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("는다면서", "다면서", "는다면서", 4),
             ("는다니", "다니", "는다니", 4),
             ("는다느니", "다느니", "는다느니", 4),
+            ("는다는구나", "다는구나", "는다는구나", 4),
+            ("는다는군", "다는군", "는다는군", 4),
+            ("는다더군", "다더군", "는다더군", 4),
+            ("는다더군요", "다더군요", "는다더군요", 4),
             ("는단", "단", "는단", 4),
             ("는단다", "단다", "는단다", 4),
             ("는대", "대", "는대", 4),
@@ -1381,6 +1393,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle.recipient" => {
             "This recipient reading requires a contextually appropriate referent (typically a person or animate/personified entity); lexical and contextual eligibility are not inferred."
+        }
+        "ending.quoted_exclamation" => {
+            "Recover a source-listed contracted report with exclamation or recalled reporting as one ending bundle. The implicit reporting predicate is not inserted, and another speaker's experience remains distinct from the current speaker's own retrospective ending."
         }
         "ending.exclamation" => {
             "Recover distinct present, retrospective and copular exclamation bundles. 구려 also has a recommendation sense; morphology does not choose the contextual meaning."

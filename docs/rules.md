@@ -3631,3 +3631,25 @@ normalization does not certify nonstandard spelling. Eight polite expressions
 preserve bundled 군요/는군요/더군요 and source-licensed separate 요 paths.
 See the [complete source audit](exclamation-source-audit.json) and
 [individual comparison](exclamation-evaluation.json).
+
+## Quoted declarative exclamations (COV-017bh)
+
+Contracted report endings preserve ten distinct bundles: 는다는구나,
+는다는군, 는다더군, 는다더군요, 다는구나, 다는군, 다더군,
+다더군요, 더라는구나 and 더라는군. The first four recover attached
+ㄴ after vowel/ㄹ verbs and 는 after consonant verbs, including a local 시
+prefinal. Plain 다 reports distinguish bare adjectives from past/modal
+predicates. The 더라는 forms report another person's experience and admit
+copulas, including vowel-final omission. No implicit reporting 하다 is
+inserted into the lemma list. Only the three source-reviewed polite forms
+also admit the separate 요 particle; other followers are not inferred.
+
+The source's 시 note does not certify a bare-present verbal 다 report:
+먹으시다는군 remains a raw hypothesis with unknown dictionary compatibility,
+while 좋으시다는군 has adjective attachment evidence. Homonyms keep their
+own entry assessments. Broader polite prefinals remain unknown. Original
+여행간다더군 is retained as an unjudged joined-spelling observation;
+neither a lexical 여행가다 nor corrected source spacing is certified.
+All fourteen native entries retain their actual 품사 없음 labels.
+See the [source audit](quoted-exclamation-source-audit.json) and
+[candidate comparison](quoted-exclamation-evaluation.json).

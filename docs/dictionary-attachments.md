@@ -550,3 +550,17 @@ prefinals remain unknown. These optional checks preserve raw hypotheses and
 headword-only filtering. [Evidence](exclamation-evaluation.json) records every
 changed novel occurrence, including two excluded bare 누다+구나 readings of
 누구나, whose whole-word reading remains.
+
+COV-017bh extends `present_declarative_verb` and `bare_adjectival_report`
+to the source-reviewed quoted declarative exclamations. 고른다는군 retains
+the verbal 고르다 entries while 고르다는군 retains the adjective entry.
+These checks apply to the immediate owner, preserving independent auxiliary,
+derivational and copular components. Lexical 있다/없다/계시다 distribution
+and separately written auxiliary context retain explicit unknowns. A plain
+다 report after only honorific 시 on a verbal owner also remains unknown:
+listing 시 in an adjective attachment note is insufficient to certify that
+extension. Listed past/modal reports have separate evidence. Unlisted polite
+prefinals remain unknown without a fabricated conflict. The three reviewed
+polite bundles retain their separate 요 alternatives. Raw and headword-only
+paths remain available; these optional checks do not select contextual senses.
+See [source and individual-case evidence](quoted-exclamation-evaluation.json).

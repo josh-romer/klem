@@ -3419,3 +3419,38 @@ adverb menus select distinct 88924/88927 source entries; plural/copula and
 approximation components remain ordered, all three JSON export modes match the
 CLI, and final desktop/mobile views are inspected. Other noun-suffix senses,
 compound/root classes and independent Korean-language review remain open.
+
+## Native compound noun-forming -이 (COV-022f)
+
+The [source audit](noun-compound-source-audit.json) preserves thirty full native
+entries, all three suffix senses/44 groups and all six sense-2 examples. Six
+complete unchanged KAIST training sentences retain lexical gold, including
+copular VERB tags. Five tests and 126 stable cases add 108 required structural
+paths and eighteen exclusions, reaching 7,038 required / 3,092 forbidden
+judgments. Compound bases retain ordered nominal/predicate lookup roles;
+미닫이 restores 밀다 with a finite normalization marker. This flat grouping
+does not choose a unique derivation tree or certify contextual dictionary senses.
+
+The [individual comparison](noun-compound-evaluation.json) covers 12,457
+NFC/NFD inputs in raw, headword and compatible modes. Each adds 221 paths at
+207 inputs without removals: 204 match required judgments and seventeen remain
+unjudged. Full raw analyses and stable IDs are retained, with verified identical
+filter-specific references. All four frozen corpus reports, including every
+individual case row and recall, are byte-identical; no baseline is regenerated.
+
+All five Mujeong modes retain 179,112 records/spans and existing dictionary
+readings, adding one 젖먹이 candidate without removals. Its original context,
+byte offsets, full analysis and dictionary assessments remain in the audit;
+contextual senses remain unjudged. Every spacing sidecar is unchanged. Packaged
+release and final debug output hashes match. Three interleaved local release
+runs per version/filter give median times of 1.57 before / 1.58 seconds after
+for both filters, with observed peak child RSS below 30 MiB. These samples
+include startup, dictionary access and JSONL output and are descriptive only.
+
+All 637 Rust tests, full pinned corpus, lint/format, frontend/browser, inventory
+tooling and three x86_64 Linux Nix checks pass. Packaged and refreshed preview
+HTTP/CLI outputs agree on all 126 cases under both filters. The browser retains
+compound ordering, noun-suffix source selection, 미닫이 normalization and all
+three export modes; final desktop/mobile views are inspected with no horizontal
+overflow. All thirty sense-3 forms, other compound leads, further suffix/auxiliary
+interactions and independent Korean-language review remain open.

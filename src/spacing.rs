@@ -81,9 +81,14 @@ fn nominal_case(a: &Analysis) -> bool {
     }
     // Nominal roots/derivations or explicit nominalizations, never an arbitrary
     // connective followed by a particle. Each word is checked independently.
-    (a.lemmas.len() == 1
-        && (a.lemmas[0].kind == LemmaKind::Nominal
-            || a.rules.iter().any(|r| r == "suffix.nominal.i"))
+    (((a.lemmas.len() == 1 && a.lemmas[0].kind == LemmaKind::Nominal)
+        || (a.rules.iter().any(|r| r == "suffix.nominal.i")
+            && a.lemmas.len()
+                == if a.rules.iter().any(|r| r == "derivation.nominal.compound") {
+                    2
+                } else {
+                    1
+                }))
         && a.morphemes[..a.morphemes.len() - tail.len()]
             .iter()
             .all(|m| m.kind == MorphemeKind::Suffix && m.form != "답다"))

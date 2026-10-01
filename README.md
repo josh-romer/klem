@@ -214,6 +214,10 @@ Noun/adverb `이` suffix alternatives can share lemma and morpheme fields while
 retaining distinct `rules`. Keep that provenance when displaying or deduplicating
 analyses. The finite noun-forming extension uses predicate lemmas such as
 `높다` before `Suffix("이")`, preserving whole lexical nouns and adverbs.
+For selected compound nouns such as `미닫이`, `derivation.nominal.compound`
+marks the first two lookup lemmas (`밀다`, `닫다`) as one base before the suffix.
+Use `Analysis::breakdown()` for ordered components and retain normalization
+provenance; these paths do not license arbitrary compound segmentation.
 
 ## Validation and performance
 

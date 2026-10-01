@@ -337,3 +337,9 @@ API indices and rule evidence; whole lexical words remain the compact initial
 readings. A noun suffix can precede ordinary noun particles, 들/쯤 or a copula,
 with component order and canonical lemmas preserved in exported JSON. Neither
 suffix source chooses the sentence's intended sense.
+
+Compound noun-forming paths (COV-022f) show both base components before the
+shared -이 suffix and select its 88924 source from provenance. The normalized
+미닫이 view shows 밀 + 닫 + 이 while retaining the original token. Outer
+plural, approximation, particles and copulas follow the completed noun group;
+filtered exports retain the original analysis/component identities.

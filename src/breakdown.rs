@@ -17,12 +17,28 @@ impl Analysis {
     /// copula), with its prefinals before it and nominalization particles after
     /// it. Nominals consume licensed suffixes, then particles. A final 답다
     /// suffix consumes its own prefinals and ending. This also handles nominalizations
-    /// nested inside copulas. A predicate base followed directly by suffix 이/히
-    /// is an adverbial derivation and has no inflectional ending.
+    /// nested inside copulas. Reviewed noun/adverb bases before suffix 이/히
+    /// have no inflectional ending. `derivation.nominal.compound` marks the first
+    /// two lemmas as one noun-forming base; the suffix follows both components.
     /// No source offsets or contextual interpretation are
     /// implied. Returns `None` for externally constructed, unsupported shapes.
     pub fn breakdown(&self) -> Option<Vec<Component>> {
         if self.lemmas.is_empty() {
+            return None;
+        }
+        let compound = self
+            .rules
+            .iter()
+            .any(|r| r == "derivation.nominal.compound");
+        if compound
+            && (!self.rules.iter().any(|r| r == "suffix.nominal.i")
+                || self.lemmas.len() < 2
+                || !matches!(
+                    self.lemmas[0].kind,
+                    LemmaKind::Nominal | LemmaKind::Predicate
+                )
+                || self.lemmas[1].kind != LemmaKind::Predicate)
+        {
             return None;
         }
         let mut parts = Vec::with_capacity(self.lemmas.len() + self.morphemes.len());
@@ -33,6 +49,15 @@ impl Analysis {
                 lemma.kind,
                 LemmaKind::Predicate | LemmaKind::Auxiliary | LemmaKind::Copula
             );
+            if compound && index == 0 {
+                if predicate {
+                    lemma
+                        .text
+                        .strip_suffix('다')
+                        .filter(|stem| !stem.is_empty())?;
+                }
+                continue;
+            }
             let mut derived_predicate = false;
             if lemma.kind == LemmaKind::Nominal {
                 let start = cursor;
@@ -76,7 +101,7 @@ impl Analysis {
                     .strip_suffix('다')
                     .filter(|stem| !stem.is_empty())?;
             }
-            let noun_i = index == 0
+            let noun_i = index == usize::from(compound)
                 && lemma.kind == LemmaKind::Predicate
                 && self.rules.iter().any(|r| r == "suffix.nominal.i");
             if noun_i {

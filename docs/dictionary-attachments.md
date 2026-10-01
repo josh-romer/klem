@@ -644,3 +644,12 @@ A following copula owns its own ending and dictionary assessment. Native
 fixtures retain all headword homonyms and full senses. Identical component
 strings may have distinct noun/adverb provenance and must remain distinct in
 export. Browser sources select suffix 88924/88927 from that provenance.
+
+COV-022f uses the same noun-suffix provenance for six native sense-2 forms.
+The first two lookup lemmas of compound paths preserve individual nominal/
+predicate POS assessments; a shared boundary places noun-forming 이 after both.
+This does not select the intended sense of 길, 걸다 or 먹다, and whole nouns
+remain alternatives. 미닫이 restores the source-listed 밀다 lookup stem with
+explicit finite normalization. A later copula retains its own ownership. The
+[review](noun-compound-source-audit.json) distinguishes explicit primary
+segmentations from source-pattern inferences and keeps other compound leads open.

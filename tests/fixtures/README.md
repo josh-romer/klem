@@ -1850,3 +1850,20 @@ Dictionary, CC BY-SA 2.0 KR; the license link and adaptation policy above apply.
 `kaist-nominal-i.conllu`/`gsd-nominal-i.conllu` preserve three complete UD 2.15
 training sentences with four lexical noun targets. Corpus gold is unchanged;
 the new predicate-base noun derivation is separate source-authored evidence.
+
+`krdict-noun-compound.json` preserves thirty complete parent/headword entries
+from the same pinned September 2026 KRDict export, including all six sense-2
+noun forms, their lookup bases, headword homonyms, noun suffix and copula.
+Only RelatedForm and non-English equivalents are omitted; Sense is normalized
+to an array. Native suffix 88924 retains all three senses and 44 original
+example groups. [The manifest](noun-compound-sources.json) records every export
+hash, fixture hash, target and primary consultation, with CC BY-SA 2.0 KR
+license and NIKL attribution. It distinguishes explicit analyses from inferred
+base relationships rather than claiming contextual sense verification.
+
+`kaist-noun-compound.conllu` contains six complete, unchanged training sentences
+from the previously attributed/licensed pinned KAIST release. Their lexical
+noun and copular annotations are retained; they are not gold for the newly
+added internal noun derivations. Stable source/case IDs link exact rows to
+the manifest and judgment ledger. Thirty sense-3 forms remain in the discovery
+audit and are not promoted to required suffix decompositions here.

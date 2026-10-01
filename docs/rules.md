@@ -3839,3 +3839,34 @@ case-marked nominal segment. They do not count bare noun 먹이 as the predicate
 segment of the bounded template. This preserves 먹이를 먹는다 without inventing
 먹이를 먹이 from the noun suffix; each segment keeps its own provenance,
 dictionary assessment and ordered component identities.
+
+### Compound bases before noun-forming -이 (COV-022f)
+
+The finite extension covers all six KRDict 88924 sense-2 examples: 길잡이
+→ 길 + 잡다, 목걸이 → 목 + 걸다, 옷걸이 → 옷 + 걸다, 젖먹이
+→ 젖 + 먹다, 미닫이 → 밀다 + 닫다, and 떠돌이 → 떠돌다. Each
+lookup group precedes noun-forming `Suffix("이")`. NIKL's analyses clarify the
+compound stems and the Article 28 spelling loss in 미닫이; no 미닫다 head
+is invented. The single 떠돌다 lookup preserves the verb's existing stem.
+
+`derivation.nominal.compound` explicitly marks the first two lookup lemmas
+as the reviewed noun-forming base boundary. Ordered breakdown consumes both
+before the suffix, with no invented inflectional ending between them. The
+flat representation does not choose a unique theoretical derivation tree.
+`derivation.nominal.compound_l_loss` records the finite 밀다 lookup restoration
+in 미닫이 separately from productive conjugation. Normalized reading tools
+show 밀 + 닫 + 이 and retain the original surface and byte span.
+
+Nominal particles, one plural suffix and approximation (including 들 + 쯤)
+follow the completed noun, as does a separately owned copula and its endings.
+The source-listed vowel-final noun selects its particle allomorph; an internal
+predicate coda cannot license object 을. The bounded spacing template accepts
+the compound's case-marked noun group and excludes its bare noun path from
+the predicate segment. Whole lexical and homonymous candidates remain.
+
+Thirty sense-3 examples and other source-listed compounds remain individually
+tracked under COV-022e. This extension does not add arbitrary compound
+segmentation, related roots or prefinals inside a noun-forming base. Predicate
+POS/headword membership does not choose the intended dictionary sense. Full
+source evidence and the distinction between direct analyses and inferred
+patterns are retained in [the manifest](../tests/fixtures/noun-compound-sources.json).

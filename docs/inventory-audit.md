@@ -866,8 +866,9 @@ COV-022e expands the remaining COV-022 work into 36 individually identified
 native examples: six sense-2 compound formations and thirty sense-3
 noun/root/sound-or-manner bases. The [report](nominal-i-remaining-audit.json)
 retains full original example groups, exact dictionary head/POS probes, and
-all 108 bare-word CLI outputs under raw and both filter modes. None currently
-contains `suffix.nominal.i`. This describes a derivational coverage gap, not
+all 108 bare-word CLI outputs under raw and both filter modes. None contains
+`suffix.nominal.i` in that historical snapshot; COV-022f subsequently implements
+the six sense-2 forms while all thirty sense-3 forms remain review work. This describes a derivational coverage gap, not
 a missing whole-word lookup or a certification of proposed segmentations.
 
 The six-file literal-prefix scan finds fourteen rows in fourteen complete
@@ -889,3 +890,22 @@ python3 tools/audit_nominal_i.py --cli /path/to/built/klem \
 The CLI and pinned dictionary/corpus hashes must match the report for historical
 reproduction. The 715-entry ending/particle/auxiliary review queue is unchanged;
 these noun and suffix entries lie outside its POS scope.
+
+## Native compound noun-forming -이 implementation (2026-10-01)
+
+COV-022f implements all six sense-2 examples from the COV-022e discovery
+snapshot: 길잡이, 떠돌이, 목걸이, 미닫이, 옷걸이 and 젖먹이. The
+[source review](noun-compound-source-audit.json) records ordered base boundaries,
+finite 미닫이 normalization, thirty complete dictionary entries and six unchanged
+training targets. Five tests and 126 cases preserve native source groups, base
+roles, homonyms, particle/copula ownership, Unicode and exact dictionary exports.
+Primary explicit analyses and pattern/headword inferences remain distinguished.
+
+The [evaluation](noun-compound-evaluation.json) retains every addition across
+12,457 raw/both-filter inputs: 221 per mode, 204 required and seventeen unjudged,
+without removals. Full frozen corpus reports are unchanged. The novel gains one
+젖먹이 candidate across five modes, with no spacing changes; its contextual
+senses remain unjudged. Full Rust/Nix/browser and refreshed preview checks pass.
+These entries are outside the 715-entry ending/particle/auxiliary queue, whose
+counts remain 386 scoped / 328 unreviewed / one gap. All thirty native sense-3
+forms, other positive compounds and independent Korean review remain open.

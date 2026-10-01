@@ -1,4 +1,5 @@
 //! Explicit morphotactics and reverse spelling rules. No statistical weights.
+use crate::LemmaKind;
 use crate::hangul::*;
 use std::{collections::HashMap, sync::OnceLock};
 
@@ -100,6 +101,19 @@ pub(crate) const NOUN_I_FORMS: &[(&str, &str)] = &[
     ("높이", "높다"),
     ("먹이", "먹다"),
     ("벌이", "벌다"),
+    // KRDict sense 2; NIKL's morphology review lists 떠돌이 as V-이.
+    ("떠돌이", "떠돌다"),
+];
+
+// Selected compound bases before noun-forming -이, not arbitrary segmentation.
+// The two lemmas form one base; neither takes an inflectional ending here.
+// NIKL 320611 confirms 밀다 + 닫다; Article 28 accounts for lost ㄹ.
+pub(crate) const NOUN_I_COMPOUNDS: &[(&str, &str, LemmaKind, &str)] = &[
+    ("길잡이", "길", LemmaKind::Nominal, "잡다"),
+    ("목걸이", "목", LemmaKind::Nominal, "걸다"),
+    ("옷걸이", "옷", LemmaKind::Nominal, "걸다"),
+    ("젖먹이", "젖", LemmaKind::Nominal, "먹다"),
+    ("미닫이", "밀다", LemmaKind::Predicate, "닫다"),
 ];
 
 #[derive(Debug, Clone)]
@@ -1495,7 +1509,13 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "identity" => "Unchanged vocabulary hypothesis; no dictionary verification.",
         "suffix.nominal.i" => {
-            "Separate a source-listed predicate stem and noun-forming 이. Preserve lexical nouns and adverbial homonyms; this finite rule does not strip 이 from arbitrary words or attach through prefinals."
+            "Separate a source-listed base and noun-forming 이. Preserve lexical nouns and adverbial homonyms; this finite rule does not strip 이 from arbitrary words or attach through prefinals."
+        }
+        "derivation.nominal.compound" => {
+            "The first two lookup lemmas form one reviewed compound base before noun-forming 이. Neither component has an inflectional ending; following particles and copulas belong to the derived noun."
+        }
+        "derivation.nominal.compound_l_loss" => {
+            "Retain the source-listed 미닫이 compound as 밀다 + 닫다 + noun-forming 이, restoring ㄹ to the first lookup stem under Article 28. This is not productive inflectional ㄹ deletion."
         }
         "suffix.adverbial.i" => {
             "Recover a scoped adjective base before adverb-forming -이; retain whole-word readings."

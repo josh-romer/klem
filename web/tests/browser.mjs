@@ -509,6 +509,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nominalIIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nominalIEntries);
 
+  const nounCompoundFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-noun-compound.json"), "utf8"));
+  const nounCompoundEntries = nounCompoundFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounCompoundIds = new Set(nounCompoundEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounCompoundIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounCompoundEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -4808,6 +4814,37 @@ try {
     const waitDownload = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
     const exported = JSON.parse(await readFile(await(await waitDownload).path(),"utf8"));
     assert.deepEqual(exported.records, execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:word,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Compound base components precede the shared noun suffix, never an invented ending.
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [word, expected] of [
+    ["길잡이", ["길", "잡", "이"]], ["떠돌이", ["떠돌", "이"]],
+    ["목걸이를", ["목", "걸", "이", "를"]], ["미닫이", ["밀", "닫", "이"]],
+    ["옷걸이들이었다", ["옷", "걸", "이", "들", "이", "었", "다"]],
+    ["젖먹이쯤에는", ["젖", "먹", "이", "쯤", "에", "는"]],
+  ]) {
+    await submit(page, word); await waitHeading(page, word);
+    const data = await (await post("analyze", {text:word})).json();
+    const noun = data.records[0].analysis.analyses.findIndex(a => a.rules.includes("suffix.nominal.i"));
+    assert.ok(noun >= 0, word);
+    const block = page.locator(".breakdown-word").first();
+    await block.getByRole("combobox").selectOption(String(noun));
+    assert.deepEqual(await block.locator(".part-form").allTextContents(), expected);
+    assert.match(await block.locator(`option[value="${noun}"]`).innerText(), /noun-forming/);
+    await block.getByRole("button", {name:"이 Noun-forming suffix", exact:true}).click();
+    await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));
+    if (word === "미닫이") {
+      assert.match(await block.innerText(), /Expanded \/ normalized/);
+      await page.screenshot({path:resolve(tmpdir(),"klem-noun-compound-desktop.png"),fullPage:true});
+      await page.setViewportSize({width:390,height:844}); assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+      await page.screenshot({path:resolve(tmpdir(),"klem-noun-compound-mobile.png"),fullPage:true}); await page.setViewportSize({width:1440,height:1100});
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await(await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:word,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
   }
   await page.getByLabel("Dictionary matches only").uncheck();
 

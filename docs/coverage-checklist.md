@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d/022f batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -2605,7 +2605,8 @@ review remains open under the completion review below.
   source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb
   and repeated nominal bases plus shortened 익히/특히; COV-022c adds the finite
   opaque 천천/분연 roots; COV-022d adds the eight source-listed
-  predicate-base noun formations.** Remaining: other lexical
+  predicate-base noun formations; COV-022f adds all six native sense-2 forms
+  with ordered compound bases and finite normalization.** Remaining: other lexical
   classes, other opaque roots beyond the finite COV-022c forms, subdivision of nonlexical
   repeated bases, suffix/auxiliary interactions, and other nominal -이 senses/classes. Keep lexical readings and causative/noun homonyms; historical
   달리/빨리 do not license a general 르 inflection rule.
@@ -2697,21 +2698,48 @@ review remains open under the completion review below.
   The [discovery audit](nominal-i-remaining-audit.json) records every remaining
   native group of KRDict 88924: six sense-2 compound forms and thirty sense-3
   noun/root/sound-or-manner forms, each with a stable observation ID. All 108
-  bare-word CLI probes (raw/headword/compatible) currently lack the new
-  noun-forming rule; existing lexical candidates remain in the report. Fourteen
+  bare-word CLI probes (raw/headword/compatible) lack the noun-forming rule
+  in that historical snapshot; existing lexical candidates remain in the report.
+  COV-022f subsequently covers the six sense-2 forms; thirty sense-3 forms
+  remain open. The discovery artifact is preserved as historical evidence. Fourteen
   prefix occurrences across six pinned corpus partitions retain complete
   sentence bodies and original rows. All are in KAIST training data: nine
   annotate the whole native noun, four retain longer 미치광이풀 compounds,
   and one annotates 까막눈 + 이 + 다. These distinct observations do not
   license a new noun-suffix segmentation.
-  Review selected nominal-plus-predicate combinations such as 길잡이/목걸이/
-  옷걸이/젖먹이, the explicit unresolved 떠돌이/미닫이 class examples, and
-  each sense-3 base class before adding required paths. Preserve lexical/adverb/
+  Continue reviewing every sense-3 base class, competing bound-noun/suffix
+  analyses and other positive compound leads such as 고기잡이/귀걸이 before
+  adding required paths. The six native sense-2 class/boundary cases now have
+  finite COV-022f implementations. Preserve lexical/adverb/
   causative homonyms and add an explicit compound boundary if needed for ordered
   display and outer particles/copulas. Missing dictionary bases do not establish
   Root status, and dictionary POS does not certify derivational relationships.
   The [read-only audit tool](../tools/audit_nominal_i.py) records pinned source,
   dictionary, CLI and corpus hashes without changing gold or baselines.
+
+- [x] **COV-022f — Native compound bases before noun-forming -이.**
+  Implemented and verified for all six sense-2 examples: 길잡이, 떠돌이,
+  목걸이, 미닫이, 옷걸이 and 젖먹이. Source-backed lookup groups preserve
+  nominal/predicate roles, a shared noun-suffix boundary, outer particles/plural/
+  approximation and separately owned copulas. 미닫이 retains 밀다 + 닫다
+  without inventing 미닫다 or a productive conjugational ㄹ-loss rule.
+  [Five tests](../tests/noun_compound.rs), 126 stable cases (108 required /
+  18 forbidden), thirty full native entries, all 44 suffix groups and six
+  unchanged lexical training targets pass targeted Rust/CLI/dictionary checks.
+  The [source manifest](../tests/fixtures/noun-compound-sources.json) distinguishes
+  direct primary analyses from source-pattern inferences. All 637 Rust tests,
+  pinned corpus, lint/format, browser/frontend, Nix CLI/web builds and three
+  x86_64 Linux flake checks pass. Raw and both filter comparisons retain all
+  prior candidates at 12,457 inputs, adding 221 paths each: 204 match required
+  structural judgments and 17 remain unjudged. All four full frozen corpus
+  reports are byte-identical; no baseline is regenerated. The 179,112-record
+  novel adds one 젖먹이 path in all five modes without removals or spacing
+  changes; its contextual senses remain unjudged. Packaged/preview CLI/API/
+  browser exports and final desktop/mobile views pass; debug/release novel
+  hashes match. Three interleaved release samples per version/filter have
+  after medians of 1.58 seconds. See [source audit](noun-compound-source-audit.json)
+  and [evaluation](noun-compound-evaluation.json). COV-022e remains open for
+  all thirty sense-3 forms, other compound leads and independent Korean review.
 
 ### P3: dictionary and representation boundaries
 

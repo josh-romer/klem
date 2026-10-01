@@ -58,8 +58,11 @@ impl Analysis {
                 }
                 continue;
             }
+            let noun_i = index == usize::from(compound)
+                && matches!(lemma.kind, LemmaKind::Nominal | LemmaKind::Predicate)
+                && self.rules.iter().any(|r| r == "suffix.nominal.i");
             let mut derived_predicate = false;
-            if lemma.kind == LemmaKind::Nominal {
+            if lemma.kind == LemmaKind::Nominal && !noun_i {
                 let start = cursor;
                 while self
                     .morphemes
@@ -101,9 +104,6 @@ impl Analysis {
                     .strip_suffix('다')
                     .filter(|stem| !stem.is_empty())?;
             }
-            let noun_i = index == usize::from(compound)
-                && lemma.kind == LemmaKind::Predicate
-                && self.rules.iter().any(|r| r == "suffix.nominal.i");
             if noun_i {
                 let first = self.morphemes.get(cursor)?;
                 if first.kind != MorphemeKind::Suffix || first.form != "이" {

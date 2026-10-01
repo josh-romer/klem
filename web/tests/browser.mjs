@@ -515,6 +515,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounCompoundIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounCompoundEntries);
 
+  const nounBaseFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-noun-base.json"), "utf8"));
+  const nounBaseEntries = nounBaseFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounBaseIds = new Set(nounBaseEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounBaseIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounBaseEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -4841,6 +4847,36 @@ try {
       await page.screenshot({path:resolve(tmpdir(),"klem-noun-compound-desktop.png"),fullPage:true});
       await page.setViewportSize({width:390,height:844}); assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
       await page.screenshot({path:resolve(tmpdir(),"klem-noun-compound-mobile.png"),fullPage:true}); await page.setViewportSize({width:1440,height:1100});
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await(await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:word,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Nominal noun bases own suffix/plural/approximation before a later copula.
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [word, base, expected] of [
+    ["까막눈이", "까막눈", ["까막눈", "이"]],
+    ["노랑이들쯤에는", "노랑", ["노랑", "이", "들", "쯤", "에", "는"]],
+    ["동강이들이었다", "동강", ["동강", "이", "들", "이", "었", "다"]],
+    ["바둑이예요", "바둑", ["바둑", "이", "이", "에요"]],
+  ]) {
+    await submit(page, word); await waitHeading(page, word);
+    const data = await (await post("analyze", {text:word})).json();
+    const noun = data.records[0].analysis.analyses.findIndex(a => a.rules.includes("suffix.nominal.i") && a.lemmas[0].text === base && a.lemmas[0].kind === "nominal");
+    assert.ok(noun >= 0, word);
+    const block = page.locator(".breakdown-word").first();
+    await block.getByRole("combobox").selectOption(String(noun));
+    assert.deepEqual(await block.locator(".part-form").allTextContents(), expected);
+    assert.match(await block.locator(`option[value="${noun}"]`).innerText(), /noun-forming/);
+    await block.getByRole("button", {name:"이 Noun-forming suffix", exact:true}).click();
+    await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));
+    if (word === "동강이들이었다") {
+      await page.screenshot({path:resolve(tmpdir(),"klem-noun-base-desktop.png"),fullPage:true});
+      await page.setViewportSize({width:390,height:844}); assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+      await page.screenshot({path:resolve(tmpdir(),"klem-noun-base-mobile.png"),fullPage:true}); await page.setViewportSize({width:1440,height:1100});
     }
     const wait = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
     const exported = JSON.parse(await readFile(await(await wait).path(),"utf8"));

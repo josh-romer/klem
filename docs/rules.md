@@ -3870,3 +3870,30 @@ segmentation, related roots or prefinals inside a noun-forming base. Predicate
 POS/headword membership does not choose the intended dictionary sense. Full
 source evidence and the distinction between direct analyses and inferred
 patterns are retained in [the manifest](../tests/fixtures/noun-compound-sources.json).
+
+### Nominal bases before noun-forming -이 (COV-022g)
+
+Four finite native sense-3 forms preserve nominal lookup roles: 까막눈이
+→ 까막눈 + 이, 노랑이 → 노랑 + 이, 동강이 → 동강 + 이 and
+바둑이 → 바둑 + 이. KRDict 88924 supplies every native example; Article 20
+and NIKL 324882 explicitly support noun-to-noun suffixation, including 바둑이.
+Other base relationships remain source-pattern/headword inferences. A nominal
+lookup does not certify the historical spotted-pattern sense of 바둑 or the
+sentence's intended meaning; whole lexical nouns and base homonyms remain.
+
+`suffix.nominal.i` owns the first suffix after the nominal lemma before one
+plural 들, approximation 쯤 (including 들 + 쯤) and ordinary particles. A
+later copula owns its own stem, prefinals and ending. Ordered breakdown uses
+the explicit noun-suffix provenance for this boundary instead of treating the
+entire suffix chain as an ordinary nominal attachment. External unsupported
+prefinals or repeated suffixes return no invented ordering. This does not add
+arbitrary noun stripping, honorific/tense insertion inside the base, or other
+unreviewed derivational attachments.
+
+The complete KAIST training sentence MH2_0286-s142 retains original
+까막눈 + 이 + 다 as 까막눈 plus a copula and ending, independently of the
+new derived noun alternative. It is not noun-suffix segmentation gold. The
+[manifest](../tests/fixtures/noun-base-sources.json) retains all three suffix
+senses/44 groups, four targets and 21 complete headword entries. Finer
+sound/manner and historical base relationships remain explicit review work;
+the finite nominal paths do not forbid such alternatives.

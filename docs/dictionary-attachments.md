@@ -653,3 +653,10 @@ remain alternatives. 미닫이 restores the source-listed 밀다 lookup stem wit
 explicit finite normalization. A later copula retains its own ownership. The
 [review](noun-compound-source-audit.json) distinguishes explicit primary
 segmentations from source-pattern inferences and keeps other compound leads open.
+
+COV-022g nominal-base noun paths retain each base's nominal POS assessment,
+whole-word alternatives and separate copula ownership. Shared base spelling
+such as 동강 keeps nominal/adverb homonyms without choosing a contextual sense.
+The 바둑 game headword is not proof of a historical spotted-animal meaning.
+Both filters retain source-supported matched paths; a dictionary entry does not
+certify the derivational relationship. See [the review](noun-base-source-audit.json).

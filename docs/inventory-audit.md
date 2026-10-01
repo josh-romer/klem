@@ -917,7 +917,8 @@ The [all-thirty report](nominal-i-base-review.json) and
 sense-3 item into COV-022g–l: four nominal bases, nine sound/manner leads, seven
 related-predicate/root leads, one predicate lead, two compound leads and seven
 formation/source-conflict cases. These are work queues, not certified classes.
-Ninety current raw/both-filter CLI snapshots still lack the noun-suffix paths;
+Ninety raw/both-filter CLI snapshots at the recorded pre-COV-022g revision lack
+the noun-suffix paths;
 whole-word and existing hypotheses remain intact. The report keeps native groups,
 all headword/POS probes, sense definitions/notes and exact stored-entry hashes.
 
@@ -940,3 +941,18 @@ python3 tools/review_nominal_i_bases.py --cli /path/to/built/klem \
 The original COV-022e snapshot and complete corpus bodies remain unchanged;
 whole-noun, longer-compound and copular observations remain separate evidence.
 The ending/particle/auxiliary review queue remains outside this noun-suffix scope.
+
+## Native nominal-base noun implementation (2026-10-01)
+
+COV-022g implements finite 까막눈이/노랑이/동강이/바둑이 nominal paths with
+explicit suffix and outer plural/approximation/copula ownership. The
+[source review](noun-base-source-audit.json) preserves 21 full native entries,
+all suffix senses/44 groups and original 까막눈 + 이 + 다 corpus gold as an
+independent copula path. Five tests/81 cases add 69 required and twelve forbidden
+judgments; source-pattern inferences and historical/contextual sense uncertainty
+remain explicit. The [comparison](noun-base-evaluation.json) preserves every
+prior candidate across 12,622 inputs, adding 149 per mode, thirteen unjudged.
+Full frozen corpus and all five novel outputs remain byte-identical. All 642
+Rust tests, Nix/browser/HTTP and refreshed preview checks pass. The historical
+all-thirty review remains intact; COV-022h–l retains the other twenty-six forms.
+The ending/particle/auxiliary queue remains 386 scoped / 328 unreviewed / one gap.

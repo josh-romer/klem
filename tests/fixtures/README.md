@@ -1867,3 +1867,19 @@ noun and copular annotations are retained; they are not gold for the newly
 added internal noun derivations. Stable source/case IDs link exact rows to
 the manifest and judgment ledger. Thirty sense-3 forms remain in the discovery
 audit and are not promoted to required suffix decompositions here.
+
+`krdict-noun-base.json` retains 21 complete pinned native entries for COV-022g,
+including all four nominal-base examples, all headword homonyms, three noun-
+suffix senses and 44 original example groups. Only RelatedForm/non-English
+equivalents are omitted and Sense is normalized to an array, as documented in
+`noun-base-sources.json`. The source is the National Institute of Korean
+Language Korean Basic Dictionary, September 2026 export, CC BY-SA 2.0 KR:
+https://creativecommons.org/licenses/by-sa/2.0/kr/. The manifest distinguishes
+primary noun-to-noun evidence from source-pattern/headword inferences; current
+base headwords do not select historical or contextual senses.
+
+`kaist-noun-base.conllu` contains one complete unchanged UD Korean KAIST r2.15
+training sentence. Original 까막눈 + 이 + 다 is retained as a nominal plus
+copula, not new suffix segmentation gold. Attribution: UD Korean KAIST treebank
+contributors and KAIST corpus, https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15
+(CC BY-SA 4.0). Original token rows, UPOS and sentence bodies are unchanged.

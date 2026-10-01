@@ -3454,3 +3454,32 @@ compound ordering, noun-suffix source selection, 미닫이 normalization and all
 three export modes; final desktop/mobile views are inspected with no horizontal
 overflow. All thirty sense-3 forms, other compound leads, further suffix/auxiliary
 interactions and independent Korean-language review remain open.
+
+## Native nominal bases before -이 (COV-022g)
+
+The [source audit](noun-base-source-audit.json) preserves four native nominal
+formations, 21 complete entries, all three suffix senses/44 groups and one
+unchanged KAIST copular sentence. Five tests and 81 stable cases add 69 required
+structural paths and twelve exclusions, reaching 7,107 required / 3,104 forbidden
+judgments. Nominal base ownership now consumes the noun suffix before plural,
+approximation, particles or a separately owned copula. Original 까막눈 + 이
++ 다 remains separate gold; it does not certify the new suffix alternative.
+
+The [individual comparison](noun-base-evaluation.json) covers 12,622 NFC/NFD
+inputs under raw and both filters. Each adds 149 paths at 139 inputs without
+removals: 136 match required judgments and thirteen remain unjudged. Stable raw
+analyses/IDs and verified identical filter references preserve every addition.
+All four full frozen corpus reports and all five 179,112-record Mujeong outputs,
+including spacing sidecars, are byte-identical. No baseline is regenerated.
+Packaged/debug novel hashes match. Three interleaved local release samples per
+version/filter give headword medians 1.68/1.68 seconds and compatible medians
+1.65/1.64 seconds, with observed child RSS below 30 MiB. These startup/lookup/
+serialization measurements are descriptive only.
+
+All 642 Rust tests, pinned corpus, lint/format, full browser and three x86_64
+Linux Nix checks pass. Production frontend bytes remain unchanged. Packaged and
+refreshed-preview HTTP/CLI outputs agree on all 81 cases under both filters.
+Nominal roles, suffix source, plural/approximation/copula ordering and three
+browser exports pass; final desktop/mobile views are inspected. Base senses,
+finer sound/manner or historical relationships, the other twenty-six native
+examples and independent Korean-language review remain open.

@@ -105,6 +105,15 @@ pub(crate) const NOUN_I_FORMS: &[(&str, &str)] = &[
     ("떠돌이", "떠돌다"),
 ];
 
+// KRDict 88924 sense 3; selected noun-to-noun formations under Article 20.
+// A nominal lookup does not select a contextual or historical base sense.
+pub(crate) const NOUN_I_NOMINAL_FORMS: &[(&str, &str)] = &[
+    ("까막눈이", "까막눈"),
+    ("노랑이", "노랑"),
+    ("동강이", "동강"),
+    ("바둑이", "바둑"),
+];
+
 // Selected compound bases before noun-forming -이, not arbitrary segmentation.
 // The two lemmas form one base; neither takes an inflectional ending here.
 // NIKL 320611 confirms 밀다 + 닫다; Article 28 accounts for lost ㄹ.

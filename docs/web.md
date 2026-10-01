@@ -343,3 +343,9 @@ shared -이 suffix and select its 88924 source from provenance. The normalized
 미닫이 view shows 밀 + 닫 + 이 while retaining the original token. Outer
 plural, approximation, particles and copulas follow the completed noun group;
 filtered exports retain the original analysis/component identities.
+
+Nominal-base noun paths (COV-022g) preserve the complete base spelling and its
+nominal role before noun-forming 이, then plural/approximation/particles or a
+separately owned copula. Noun-source selection and menu qualifiers still use
+rule provenance; a homonymous particle 이 or copula keeps its own role. Whole
+lexical readings and filtered JSON component identities remain available.

@@ -218,6 +218,8 @@ For selected compound nouns such as `미닫이`, `derivation.nominal.compound`
 marks the first two lookup lemmas (`밀다`, `닫다`) as one base before the suffix.
 Use `Analysis::breakdown()` for ordered components and retain normalization
 provenance; these paths do not license arbitrary compound segmentation.
+Selected nominal bases such as `까막눈이` → `까막눈` + suffix `이` retain
+the nominal role before plural/approximation, particles, or a later copula.
 
 ## Validation and performance
 

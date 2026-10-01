@@ -2741,6 +2741,61 @@ review remains open under the completion review below.
   and [evaluation](noun-compound-evaluation.json). COV-022e remains open for
   all thirty sense-3 forms, other compound leads and independent Korean review.
 
+
+- [ ] **COV-022g — Native nominal bases before noun-forming -이.** Review and
+  implement 까막눈이, 노랑이, 동강이 and 바둑이 with explicit nominal roles,
+  whole-word alternatives and ordered outer particles/copulas. Primary Article
+  20 and NIKL 324882 support noun-to-noun suffixation, including 바둑이; the
+  current board-game headword does not certify the spotted-animal base sense.
+  동강 noun/adverb homonyms and the 까막눈 corpus copula remain separate.
+  See the [all-thirty review](nominal-i-base-review.json) and
+  [reproducible plan](nominal-i-base-review-plan.json).
+
+- [ ] **COV-022h — Native sound and manner noun bases.** Review and implement
+  깜빡이, 깡깡이, 깽깽이, 꿀꿀이, 덜렁이, 딸랑이, 뺑뺑이, 오뚝이
+  and 짝짝이. Attested adverb spelling/POS alone does not certify the individual
+  derivation or its sense; missing 뺑뺑 does not establish Root status. Preserve
+  sound/manner and whole-noun alternatives, homonyms, noun/adverb suffix identity,
+  outer morphology, normalized spelling and filter/export uncertainty.
+
+- [ ] **COV-022i — Native related-predicate and root noun bases.** Review and
+  implement 끈끈이, 누렁이, 뚱뚱이, 멍청이, 미치광이, 합죽이 and 홀쭉이.
+  Distinguish an explicit derivational root from a related predicate lookup and
+  from a missing dictionary head. Primary NIKL 333918 supports 미치광 + 이
+  through historical analysis; finer 미치다/狂 grouping needs an explicit
+  representation decision. No productive 누렇다 restoration or invented
+  누렁하다 is licensed by missing heads.
+
+- [ ] **COV-022j — Native 까불이 predicate relationship.** Review and implement
+  the source-listed 까불이 base while preserving both 까불다 homonyms and the
+  original sense-3 source classification. A verb headword does not prove the
+  derived person sense; dictionary membership and source-pattern inferences
+  must remain distinguishable from primary segmentation evidence.
+
+- [ ] **COV-022k — Native nominal -이 internal compounds.** Review and implement
+  왕눈이 and 점박이. Primary Article 19 links 점박이 to 박다; review the
+  full 점/base/suffix boundaries and competing 박이 treatments. Review 왕눈
+  as a prefixed/compound base without inventing a king sense from standalone
+  왕. Preserve whole nouns and ordered shared base ownership.
+
+- [ ] **COV-022l — Native formation and source-conflict cases.** Review and
+  implement all seven remaining items: 됨됨이, 못난이, 얼간이, 쭉정이,
+  팔푼이, 허풍선이 and 흰둥이. Repeated nominalization, opaque bases,
+  number/unit grouping and historical relationships require individual evidence.
+  NIKL's 2023 bound-noun analysis and September 2026 suffix analysis of 못난이
+  both remain recorded; the newer answer acknowledges competing analyses.
+  Official norms identify 흰둥이 with -둥이, differing from simple last-이
+  stripping. These conflicts require explicit alternative ownership and source
+  provenance; neither date nor a missing head settles them automatically.
+
+  The six open batches COV-022g–l partition every native sense-3 example exactly
+  once. The [read-only review tool](../tools/review_nominal_i_bases.py) verifies
+  source/plan identity and retains ninety current CLI/filter snapshots plus
+  full dictionary sense/role observations. No required judgment or runtime path
+  is assigned by this discovery work. All existing corpus annotations and
+  frozen baselines remain unchanged; other compound leads and wider COV-022
+  derivations remain open beyond these thirty forms.
+
 ### P3: dictionary and representation boundaries
 
 - [x] **COV-014 — Names, unknown words, numbers, and foreign letters.**

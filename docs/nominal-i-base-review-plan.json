@@ -1,0 +1,693 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-022",
+    "COV-022e"
+  ],
+  "historical_discovery": "docs/nominal-i-remaining-audit.json",
+  "historical_discovery_sha256": "67e51e7853c83b6214f0ec4dd891c64e45666c7a52aed417732257e538a30b75",
+  "scope": "Every thirty native sense-3 example is retained. Review classes are implementation work queues, not certified morphological classes or acceptance judgments. No remaining example is deferred or dropped.",
+  "primary_consultations": [
+    {
+      "id": "nominal-base-norms",
+      "url": "https://www.korean.go.kr/common/download.do?c_file_name=0528a905-2eb3-4c5a-978c-f424dd6a6c47_0.pdf&file_path=reportData&o_file_name=%ED%95%9C%EA%B8%80%EB%A7%9E%EC%B6%A4%EB%B2%95+%ED%91%9C%EC%A4%80%EC%96%B4%EA%B7%9C%EC%A0%95+%ED%95%B4%EC%84%A4.pdf",
+      "retrieved": "2026-10-01",
+      "retrieval": "Primary PDF text retrieved; screenshots failed. Direct norms HTML endpoints returned 403.",
+      "locators": [
+        "Article 19, PDF page index 59",
+        "Article 20, PDF page indices 62–63",
+        "Standard-language Article 8, PDF page index 163"
+      ],
+      "finding": "Article 19 lists 점박이 with 박다. Article 20 describes noun-to-noun 이 and lists 바둑이. Standard-language Article 8 identifies 흰둥이 with 둥이, creating a boundary conflict with the KRDict 이 example. These references do not classify all other bases."
+    },
+    {
+      "id": "nominal-base-badugi",
+      "url": "https://m.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=324882",
+      "answer_date": "2025-12-10",
+      "retrieved": "2026-10-01",
+      "retrieval": "Complete primary answer retrieved.",
+      "finding": "The answer explicitly treats 바둑이 이 as a suffix; suffixation need not change the base word class."
+    },
+    {
+      "id": "nominal-base-motnan-old",
+      "url": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=277100&searchCondition=&searchKeyword=",
+      "answer_date": "2023-07-26",
+      "retrieved": "2026-10-01",
+      "retrieval": "Complete primary answer retrieved at parameterized URL; earlier direct URL and COV-022f capture failed.",
+      "finding": "The answer analyzes 못난이 using 못나다, adnominal ㄴ and bound noun 이. It conflicts with the suffix example and the newer primary answer."
+    },
+    {
+      "id": "nominal-base-motnan-new",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=335977",
+      "answer_date": "2026-09-19",
+      "retrieved": "2026-10-01",
+      "retrieval": "Complete primary answer retrieved.",
+      "finding": "The answer distinguishes 젊은이 as a lexicalized bound-noun formation and 못난이 as suffixal. It says surface form alone cannot settle the category and acknowledges competing analyses. Both older and newer answers remain evidence, without silently resolving the disagreement by date."
+    },
+    {
+      "id": "nominal-base-michigwang",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=333918&searchCondition=&searchKeyword=",
+      "answer_date": "2026-07-18",
+      "retrieved": "2026-10-01",
+      "retrieval": "Complete primary answer retrieved at parameterized URL after the indexed-question URL failed.",
+      "finding": "The answer, citing dictionary historical information, analyzes 미치광 plus 이 and describes 미치광 as the 미치다 stem plus 狂. It acknowledges differing formation analyses; this supports a base-boundary lead, not a standalone nominal POS or a productive historical rule."
+    }
+  ],
+  "forms": [
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g1",
+      "surface": "까막눈이",
+      "review_class": "nominal_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Noun-base source-pattern hypothesis. Preserve the observed 까막눈 + 이 + 다 corpus copula; it is not suffix gold.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g2",
+      "surface": "까불이",
+      "review_class": "predicate_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "The source example is under sense 3 although 까불다 is attested. Retain verb homonyms and source-sense provenance without rewriting the native class note.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g3",
+      "surface": "깜빡이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g4",
+      "surface": "깡깡이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "The listed base heads describe thin/hard manners, while the whole noun has no pinned head. Do not certify a sound sense from homonymous POS membership.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g5",
+      "surface": "깽깽이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g6",
+      "surface": "꿀꿀이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g7",
+      "surface": "끈끈이",
+      "review_class": "related_predicate_or_root",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "끈끈하다"
+      ],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g8",
+      "surface": "노랑이",
+      "review_class": "nominal_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Noun-base source-pattern hypothesis. Color and disparaging person senses do not select a contextual base sense.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g9",
+      "surface": "누렁이",
+      "review_class": "related_predicate_or_root",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "누렁하다",
+        "누렇다"
+      ],
+      "review_note": "No 누렁 or 누렁하다 head exists in the pinned data; 누렇다 is a separate relationship probe, not a licensed inflectional restoration.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g10",
+      "surface": "덜렁이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Sound/manner homonyms and person meaning need distinct sense evidence; POS membership is not contextual matching.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g11",
+      "surface": "동강이",
+      "review_class": "nominal_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Nominal and adverb 동강 homonyms need independent role-aware hypotheses; noun membership alone does not invalidate the sound/manner alternative.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g12",
+      "surface": "됨됨이",
+      "review_class": "formation_or_source_conflict",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "되다"
+      ],
+      "review_note": "The repeated nominalized stem hypothesis needs primary formation evidence and an ordered representation; do not assign Root merely because 됨됨 is missing.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g13",
+      "surface": "딸랑이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g14",
+      "surface": "뚱뚱이",
+      "review_class": "related_predicate_or_root",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "뚱뚱하다"
+      ],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g15",
+      "surface": "못난이",
+      "review_class": "formation_or_source_conflict",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3",
+        "nominal-base-motnan-old",
+        "nominal-base-motnan-new"
+      ],
+      "additional_head_probes": [
+        "못나다",
+        "이"
+      ],
+      "review_note": "Retain older bound-noun and newer suffix analyses as a source conflict. Decide adnominal boundary and ownership explicitly before required judgments.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g16",
+      "surface": "멍청이",
+      "review_class": "related_predicate_or_root",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "멍청하다"
+      ],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g17",
+      "surface": "미치광이",
+      "review_class": "related_predicate_or_root",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3",
+        "nominal-base-michigwang"
+      ],
+      "additional_head_probes": [
+        "미치다",
+        "광"
+      ],
+      "review_note": "Primary historical segmentation supports 미치광 + 이; Root versus internal stem/Hanja grouping needs an explicit representation decision. Longer 미치광이풀 corpus nouns are not direct suffix targets.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g18",
+      "surface": "바둑이",
+      "review_class": "nominal_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3",
+        "nominal-base-norms",
+        "nominal-base-badugi"
+      ],
+      "additional_head_probes": [
+        "바둑하다"
+      ],
+      "review_note": "Primary noun-to-noun suffix evidence exists, but the current base head is the board game. Keep the historical/spotted-pattern relationship and dictionary sense uncertainty separate.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g19",
+      "surface": "뺑뺑이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "No bare base head exists in the pinned dictionary. Missing data does not establish Root status or a related predicate.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g20",
+      "surface": "얼간이",
+      "review_class": "formation_or_source_conflict",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "얼간하다"
+      ],
+      "review_note": "Opaque/historical formation needs evidence. Missing 얼간/얼간하다 is not proof of Root or a fabricated lookup predicate.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g21",
+      "surface": "오뚝이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3",
+        "nominal-base-norms"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Preserve the noun/adverb distinction and modern vowel spelling; the norms mention both word classes.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g22",
+      "surface": "왕눈이",
+      "review_class": "internal_compound",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "왕눈",
+        "왕",
+        "눈",
+        "왕-"
+      ],
+      "review_note": "Review prefixed noun/base grouping; standalone 왕 is not evidence that 왕눈이 means king plus eye.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g23",
+      "surface": "점박이",
+      "review_class": "internal_compound",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3",
+        "nominal-base-norms"
+      ],
+      "additional_head_probes": [
+        "점",
+        "박다",
+        "-박이"
+      ],
+      "review_note": "Primary norms link the formation with 박다. Review 점 + 박다 + 이 versus 박이 suffix treatments with explicit component ownership.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g24",
+      "surface": "짝짝이",
+      "review_class": "sound_or_manner_base",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Several sound/manner homonyms exist; the unmatched-pair noun sense is not certified by a shared spelling.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g25",
+      "surface": "쭉정이",
+      "review_class": "formation_or_source_conflict",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [],
+      "review_note": "Opaque source-listed formation needs base evidence. No arbitrary last-character stripping or invented predicate.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g26",
+      "surface": "팔푼이",
+      "review_class": "formation_or_source_conflict",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "팔푼",
+        "팔",
+        "푼"
+      ],
+      "review_note": "Review number/unit base grouping versus opaque lexical formation; visible 팔/푼 heads do not prove the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g27",
+      "surface": "합죽이",
+      "review_class": "related_predicate_or_root",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "합죽하다"
+      ],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g28",
+      "surface": "허풍선이",
+      "review_class": "formation_or_source_conflict",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "허풍선",
+        "허풍"
+      ],
+      "review_note": "Review the 허풍선 boundary and history before linking 허풍. No 선 element or lookup lemma is invented.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g29",
+      "surface": "홀쭉이",
+      "review_class": "related_predicate_or_root",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3"
+      ],
+      "additional_head_probes": [
+        "홀쭉하다"
+      ],
+      "review_note": "Review source-listed base function and homonyms; spelling/POS overlap alone does not certify the derivation.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g30",
+      "surface": "흰둥이",
+      "review_class": "formation_or_source_conflict",
+      "status": "open; no required or forbidden candidate judgment assigned",
+      "primary_basis": [
+        "krdict:88924-s3",
+        "nominal-base-norms"
+      ],
+      "additional_head_probes": [
+        "흰",
+        "희다",
+        "-둥이"
+      ],
+      "review_note": "Primary 둥이 suffix evidence conflicts with simple 흰둥 + 이 stripping. Review 희다 + adnominal ㄴ + 둥이 and the source-listed alternative separately.",
+      "required_followup": [
+        "Confirm individual segmentation and base role, including all supported alternatives.",
+        "Preserve complete native entry/homonyms/source groups and unchanged corpus gold.",
+        "Add stable positive/boundary cases, Unicode, ordered breakdown and dictionary/CLI/browser export checks.",
+        "Audit raw/both-filter candidate changes, frozen corpus, novel/spacing, performance and Nix packaging."
+      ]
+    }
+  ],
+  "planned_batches": [
+    {
+      "forms": [
+        "까막눈이",
+        "노랑이",
+        "동강이",
+        "바둑이"
+      ],
+      "review_class": "nominal_base",
+      "status": "implementation and individual evidence review pending"
+    },
+    {
+      "forms": [
+        "깜빡이",
+        "깡깡이",
+        "깽깽이",
+        "꿀꿀이",
+        "덜렁이",
+        "딸랑이",
+        "뺑뺑이",
+        "오뚝이",
+        "짝짝이"
+      ],
+      "review_class": "sound_or_manner_base",
+      "status": "implementation and individual evidence review pending"
+    },
+    {
+      "forms": [
+        "끈끈이",
+        "누렁이",
+        "뚱뚱이",
+        "멍청이",
+        "미치광이",
+        "합죽이",
+        "홀쭉이"
+      ],
+      "review_class": "related_predicate_or_root",
+      "status": "implementation and individual evidence review pending"
+    },
+    {
+      "forms": [
+        "까불이"
+      ],
+      "review_class": "predicate_base",
+      "status": "implementation and individual evidence review pending"
+    },
+    {
+      "forms": [
+        "왕눈이",
+        "점박이"
+      ],
+      "review_class": "internal_compound",
+      "status": "implementation and individual evidence review pending"
+    },
+    {
+      "forms": [
+        "됨됨이",
+        "못난이",
+        "얼간이",
+        "쭉정이",
+        "팔푼이",
+        "허풍선이",
+        "흰둥이"
+      ],
+      "review_class": "formation_or_source_conflict",
+      "status": "implementation and individual evidence review pending"
+    }
+  ],
+  "representation_policy": "Use explicit nominal/adverb/predicate roles only for source-supported relationships. Root requires derivational-base evidence, not missing heads. Preserve competing suffix/bound-noun/historical hypotheses; do not generalize ending spelling rules to derivation.",
+  "runtime_change": false,
+  "baseline_change": false,
+  "ledger_change": false
+}

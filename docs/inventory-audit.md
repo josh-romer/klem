@@ -909,3 +909,34 @@ senses remain unjudged. Full Rust/Nix/browser and refreshed preview checks pass.
 These entries are outside the 715-entry ending/particle/auxiliary queue, whose
 counts remain 386 scoped / 328 unreviewed / one gap. All thirty native sense-3
 forms, other positive compounds and independent Korean review remain open.
+
+## Native sense-3 implementation review (2026-10-01)
+
+The [all-thirty report](nominal-i-base-review.json) and
+[explicit plan](nominal-i-base-review-plan.json) partition every remaining native
+sense-3 item into COV-022g–l: four nominal bases, nine sound/manner leads, seven
+related-predicate/root leads, one predicate lead, two compound leads and seven
+formation/source-conflict cases. These are work queues, not certified classes.
+Ninety current raw/both-filter CLI snapshots still lack the noun-suffix paths;
+whole-word and existing hypotheses remain intact. The report keeps native groups,
+all headword/POS probes, sense definitions/notes and exact stored-entry hashes.
+
+Complete primary answers now confirm the earlier 못난이 bound-noun lead and
+show a newer suffix analysis; both are retained with answer dates and retrieval
+limits. The newer answer explicitly allows competing analyses. The official
+norms place 흰둥이 with -둥이 and connect 점박이 with 박다. Primary 바둑이
+and 미치광이 answers clarify further boundaries while leaving sense/role and
+historical representation decisions explicit. The user questions on those pages
+are not treated as authoritative answers. No missing head is promoted to Root,
+no new candidate judgment is assigned, and no runtime or frozen baseline changes.
+
+Reproduce with the recorded CLI hash, revision and pinned local dictionary:
+
+```sh
+python3 tools/review_nominal_i_bases.py --cli /path/to/built/klem \
+  --revision 76f7fb1 > /tmp/nominal-i-base-review.json
+```
+
+The original COV-022e snapshot and complete corpus bodies remain unchanged;
+whole-noun, longer-compound and copular observations remain separate evidence.
+The ending/particle/auxiliary review queue remains outside this noun-suffix scope.

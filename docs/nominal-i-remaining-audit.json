@@ -10669,7 +10669,9 @@
                 "root",
                 "_",
                 "SpaceAfter=No|Translit=.doem.doem.i.i.da|LTranslit=.doem.doem.i+.i+.da"
-              ]
+              ],
+              "first_annotated_lemma": "됨됨이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10692,7 +10694,9 @@
                 "obj",
                 "_",
                 "Translit=.mi.dad.i.reul|LTranslit=.mi.dad.i+.reul"
-              ]
+              ],
+              "first_annotated_lemma": "미닫이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10715,7 +10719,9 @@
                 "root",
                 "_",
                 "SpaceAfter=No|Translit=.gil.jab.i.da|LTranslit=.gil.jab.i+.i+.da"
-              ]
+              ],
+              "first_annotated_lemma": "길잡이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10738,7 +10744,9 @@
                 "nsubj",
                 "_",
                 "Translit=.gil.jab.i.ga|LTranslit=.gil.jab.i+.ga"
-              ]
+              ],
+              "first_annotated_lemma": "길잡이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10761,7 +10769,9 @@
                 "dislocated",
                 "_",
                 "Translit=.doem.doem.i.neun|LTranslit=.doem.doem.i+.neun"
-              ]
+              ],
+              "first_annotated_lemma": "됨됨이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10784,7 +10794,9 @@
                 "advcl",
                 "_",
                 "Translit=.mi.chi.gwang.i.pul.ro|LTranslit=.mi.chi.gwang.i.pul+.ro"
-              ]
+              ],
+              "first_annotated_lemma": "미치광이풀",
+              "annotation_category": "longer_annotated_base"
             }
           ]
         },
@@ -10807,7 +10819,9 @@
                 "obj",
                 "_",
                 "Translit=.mi.chi.gwang.i.pul.eul|LTranslit=.mi.chi.gwang.i.pul+.eul"
-              ]
+              ],
+              "first_annotated_lemma": "미치광이풀",
+              "annotation_category": "longer_annotated_base"
             }
           ]
         },
@@ -10830,7 +10844,9 @@
                 "compound",
                 "_",
                 "Translit=.mi.chi.gwang.i.pul|LTranslit=.mi.chi.gwang.i.pul"
-              ]
+              ],
+              "first_annotated_lemma": "미치광이풀",
+              "annotation_category": "longer_annotated_base"
             }
           ]
         },
@@ -10853,7 +10869,9 @@
                 "compound",
                 "_",
                 "Translit=.mi.chi.gwang.i|LTranslit=.mi.chi.gwang.i"
-              ]
+              ],
+              "first_annotated_lemma": "미치광이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10876,7 +10894,9 @@
                 "compound",
                 "_",
                 "Translit=.mi.chi.gwang.i.pul|LTranslit=.mi.chi.gwang.i.pul"
-              ]
+              ],
+              "first_annotated_lemma": "미치광이풀",
+              "annotation_category": "longer_annotated_base"
             }
           ]
         },
@@ -10899,7 +10919,9 @@
                 "obj",
                 "_",
                 "Translit=.mog.geol.i.reul|LTranslit=.mog.geol.i+.reul"
-              ]
+              ],
+              "first_annotated_lemma": "목걸이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10922,7 +10944,9 @@
                 "nsubj",
                 "_",
                 "Translit=.gil.jab.i.ga|LTranslit=.gil.jab.i+.ga"
-              ]
+              ],
+              "first_annotated_lemma": "길잡이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10945,7 +10969,9 @@
                 "dislocated",
                 "_",
                 "Translit=.ddeo.dol.i.neun|LTranslit=.ddeo.dol.i+.neun"
-              ]
+              ],
+              "first_annotated_lemma": "떠돌이",
+              "annotation_category": "annotation_base_matches_native_form"
             }
           ]
         },
@@ -10968,7 +10994,9 @@
                 "root",
                 "_",
                 "SpaceAfter=No|Translit=.gga.mag.nun.i.da|LTranslit=.gga.mag.nun+.i+.da"
-              ]
+              ],
+              "first_annotated_lemma": "까막눈",
+              "annotation_category": "different_annotated_base"
             }
           ]
         }
@@ -11025,6 +11053,11 @@
       "id": "base-classes",
       "status": "class and representation review pending",
       "finding": "Sense 3 lists selected nouns, roots and sound/manner words as bases. Raw suffix removal and POS lookups do not distinguish all of these classes or prove a related predicate. Every example keeps its own discovery ID."
+    },
+    {
+      "id": "corpus-ambiguity",
+      "status": "observations retain original segmentation",
+      "finding": "Literal prefix hits distinguish an annotated base matching a native form, a longer lexical base, and different annotated segmentation. The pinned scan includes 미치광이풀 compounds and 까막눈 + 이 + 다. Neither supplies gold for the listed noun-forming suffix hypothesis."
     }
   ],
   "summary": {
@@ -11039,7 +11072,12 @@
     },
     "corpus_files": 6,
     "matching_sentences": 14,
-    "matching_rows": 14
+    "matching_rows": 14,
+    "annotation_categories": {
+      "annotation_base_matches_native_form": 9,
+      "longer_annotated_base": 4,
+      "different_annotated_base": 1
+    }
   },
   "annotation_policy": "Complete matching corpus sentence bodies and original rows are retained unchanged. Literal prefix hits may be longer lexical compounds or annotation differences; they are observations, not gold for suffix segmentation. No frozen baseline or candidate judgment ledger is modified."
 }

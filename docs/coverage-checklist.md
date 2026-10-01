@@ -2700,8 +2700,10 @@ review remains open under the completion review below.
   bare-word CLI probes (raw/headword/compatible) currently lack the new
   noun-forming rule; existing lexical candidates remain in the report. Fourteen
   prefix occurrences across six pinned corpus partitions retain complete
-  sentence bodies and original rows. All are in KAIST training data and retain
-  whole lexical noun gold; they do not license a new derivational segmentation.
+  sentence bodies and original rows. All are in KAIST training data: nine
+  annotate the whole native noun, four retain longer 미치광이풀 compounds,
+  and one annotates 까막눈 + 이 + 다. These distinct observations do not
+  license a new noun-suffix segmentation.
   Review selected nominal-plus-predicate combinations such as 길잡이/목걸이/
   옷걸이/젖먹이, the explicit unresolved 떠돌이/미닫이 class examples, and
   each sense-3 base class before adding required paths. Preserve lexical/adverb/

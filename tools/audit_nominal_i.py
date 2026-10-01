@@ -45,7 +45,16 @@ def scan_corpora(forms):
                         continue
                     found = [form for form in forms if columns[1].startswith(form)]
                     if found:
-                        matched.append(dict(forms=found, row=columns))
+                        base = columns[2].split('+')[0]
+                        if base in found:
+                            category = 'annotation_base_matches_native_form'
+                        elif any(base.startswith(form) for form in found):
+                            category = 'longer_annotated_base'
+                        else:
+                            category = 'different_annotated_base'
+                        matched.append(dict(forms=found, row=columns,
+                                            first_annotated_lemma=base,
+                                            annotation_category=category))
                 if matched:
                     sent_id = next((line.removeprefix('# sent_id = ')
                                     for line in sentence.splitlines()
@@ -156,7 +165,12 @@ def audit(cli, dictionary, revision):
                  finding='Sense 3 lists selected nouns, roots and sound/manner words as '
                  'bases. Raw suffix removal and POS lookups do not distinguish all of '
                  'these classes or prove a related predicate. Every example keeps its '
-                 'own discovery ID.')],
+                 'own discovery ID.'),
+            dict(id='corpus-ambiguity', status='observations retain original segmentation',
+                 finding='Literal prefix hits distinguish an annotated base matching a '
+                 'native form, a longer lexical base, and different annotated segmentation. '
+                 'The pinned scan includes 미치광이풀 compounds and 까막눈 + 이 + 다. '
+                 'Neither supplies gold for the listed noun-forming suffix hypothesis.')],
         summary=dict(
             native_forms=len(forms), sense_2_forms=sum(row['sense_id'] == '2' for row in rows),
             sense_3_forms=sum(row['sense_id'] == '3' for row in rows),
@@ -167,7 +181,12 @@ def audit(cli, dictionary, revision):
                                   for mode in ('raw', 'dict-only', 'dict-compatible')},
             corpus_files=len(corpora),
             matching_sentences=sum(corpus['matching_sentences'] for corpus in corpora),
-            matching_rows=sum(corpus['matching_rows'] for corpus in corpora)),
+            matching_rows=sum(corpus['matching_rows'] for corpus in corpora),
+            annotation_categories={category: sum(
+                match['annotation_category'] == category
+                for corpus in corpora for hit in corpus['hits'] for match in hit['matches'])
+                for category in ('annotation_base_matches_native_form',
+                                 'longer_annotated_base', 'different_annotated_base')}),
         annotation_policy='Complete matching corpus sentence bodies and original rows '
         'are retained unchanged. Literal prefix hits may be longer lexical compounds or '
         'annotation differences; they are observations, not gold for suffix segmentation. '

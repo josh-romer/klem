@@ -871,8 +871,10 @@ contains `suffix.nominal.i`. This describes a derivational coverage gap, not
 a missing whole-word lookup or a certification of proposed segmentations.
 
 The six-file literal-prefix scan finds fourteen rows in fourteen complete
-KAIST training sentences and none in the other five partitions. Original
-lexical gold remains unchanged. `떠돌이` and `미닫이` are explicit unresolved
+KAIST training sentences and none in the other five partitions. Nine rows
+annotate the whole native noun, four keep longer 미치광이풀 compounds, and
+one keeps 까막눈 + 이 + 다. The audit records these classes separately;
+all original gold remains unchanged. `떠돌이` and `미닫이` are explicit unresolved
 class/boundary examples under the compound sense's general attachment note;
 missing base heads and guessed related predicates are not promoted to gold.
 No source candidate judgment, frozen baseline or runtime path changes.

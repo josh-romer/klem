@@ -174,10 +174,12 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 386 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 328 entries have no disposition in this
-  ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
-  acceptability; COV-017ah resolves the two question-ending gaps. Neither
+  The [manual review ledger](inventory-reviews.json) records 387 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 328 entries have no disposition in this
+  ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
+  implementation and scoped disposition, verified with full finite gates.
+  Original COV-018l semantic/register review remains
+  open. COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
   evidence drift checks run offline and in `nix flake check`. See the
   [review workflow](inventory-audit.md#persistent-entry-review-queue).
@@ -1678,18 +1680,38 @@ review remains open under the completion review below.
   annotated sentence preserves the KAIST 역사까지를 gain; another records the
   separate unjudged COV-018l observation. All prior analyses remain; two existing
   contracted paths gain provenance only. Other case chains remain open.
-- [ ] **COV-018l — Resolve 마다 + 에 distribution.** The complete KAIST
-  `MH2_0159-s285/15` observation 편마다에도 is retained in
-  [the fixture](../tests/fixtures/kaist-range-case.conllu). Its expected
-  편 + 마다 + 에 + 도 path is not generated. KRDict 마다 specifies noun
-  attachment but does not settle following case marking. The primary paper's
-  abstract links distribution to semantic restrictions; the full distribution
-  evidence and Korean review are still needed. This observed gap is neither
-  a required nor forbidden candidate judgment. A [six-file discovery audit](mada-distribution-audit.json)
-  finds only that original occurrence across pinned train/dev/test partitions,
-  records current filter behavior, and tracks primary full-text retrieval and
-  regional-distribution leads. See the named followup and bibliography in
-  [the review](range-case-evaluation.json).
+- [ ] **COV-018l — Resolve 마다 + 에 distribution.** **Partial modern
+  structural implementation verified.** The original complete KAIST
+  `MH2_0159-s285/15` 편마다에도 observation and its unchanged
+  편 + 마다 + 에 + 도 gold remain in
+  [the fixture](../tests/fixtures/kaist-range-case.conllu). A newly retrieved
+  primary paper, Lee (2025), ‘마다’의 文法史, printed p.70 explicitly describes
+  modern 마다 preceding adverbial case particles. That statement, with the
+  original observation, licenses the recovered nominal + 마다 + 에 path.
+  The public PDF and rendered page were retrieved and inspected; historical
+  examples are not used as modern gold. Nominal left attachment and existing
+  outer particle/plural/honorific/nominalization/copula ownership remain.
+  Four tests/20 stable cases (13 required / 7 forbidden), all 681 Rust tests,
+  full browser/Nix/API/preview/release gates pass. Fifty-seven complete native
+  entries preserve both 마다 senses/all twenty groups and every selected
+  lexical homonym; no source annotation or frozen baseline was rewritten.
+  The former inventory gap now has a scoped disposition; its original text is
+  preserved in [the modern source audit](mada-case-source-audit.json).
+  Across 13,668 NFC/NFD inputs raw adds 54 paths (26 required / 28 unjudged),
+  headword filtering 30 (24 / 6) and compatible filtering 26 (24 / 2).
+  No candidates or earlier dictionary assessments are removed. Every corpus
+  recovery remains; only original 편마다에도 changes from missed to recovered.
+  The other three full corpus reports and all five 179,112-record novel modes
+  are byte-identical. Packaged/debug novel hashes agree; local timing/RSS samples
+  are recorded. All three browser exports, native source selection and inspected
+  desktop/mobile ownership views pass. [Evaluation](mada-case-evaluation.json)
+  retains full addition IDs/analyses/dispositions and the exact corpus change.
+  Original lexical/semantic distribution and regional/register questions,
+  full 2007 distribution/2018 regional discussions and independent Korean review
+  remain required. This structural edge does not resolve them or certify arbitrary
+  following cases/contextual senses. The earlier
+  [six-file discovery audit](mada-distribution-audit.json) and
+  [bibliography](range-case-evaluation.json) remain as historical evidence.
 
 - [x] **COV-018m — Comparison and extent particles.** Noun-attached 토록
   and 마냥, noun/particle 만치, and explicit 어서 + 만치/만큼 now compose

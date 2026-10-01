@@ -3716,3 +3716,32 @@ views pass. Four recorded other origins and independently reviewed lexical
 identity of 63243 conflict only for the finite root slot; all native entries
 remain. Missing/older origin evidence is otherwise unknown. Original COV-022l
 finer formation/history requirements and independent review remain open.
+
+## Modern 마다 following-case recovery (partial COV-018l)
+
+The [source audit](mada-case-source-audit.json) and [evaluation](mada-case-evaluation.json)
+record directly applicable Lee (2025) p.70 modern distribution evidence, separate
+from historical examples and earlier unretrieved discussions. The unchanged
+KAIST 편마다에도 observation now recovers 편 + 마다 + 에 + 도. Fifty-seven
+complete native entries preserve both 마다 senses/all twenty source groups and
+all selected homonyms. Four tests/20 cases (13 required / 7 forbidden) bring the
+ledger to 7,771 required / 3,225 forbidden. All 681 Rust tests, pinned corpus,
+lint/format, full browser, Nix, 140-case packaged API and preview gates pass.
+Across 13,668 NFC/NFD inputs raw/headword/compatible add 54/30/26 paths, with
+28/6/2 explicitly unjudged additions. Stable full raw IDs and filtered references
+retain every analysis/disposition. No candidate or prior lookup assessment is
+removed. All earlier corpus recovery sets remain; only MH2_0159-s285/15 improves
+from missed to recovered. Other three full reports and all five 179,112-record
+novel outputs are byte-identical; packaged/debug hashes agree. Three interleaved
+local release runs give headword medians 1.62/1.63 seconds and compatible medians
+1.60/1.61 seconds; after maximum RSS is 29,100/29,996 KiB. These are descriptive
+local observations, not statistical equivalence or universal throughput.
+
+Ordered nominal/honorific/plural/copula parts, native grammar entries, all three
+exact CLI browser exports and inspected desktop/mobile views pass. Lexical
+teaching/instruction for 교수 remains a visible dictionary homonym hint, not a
+contextual translation. Original lexical/semantic distribution, regional/register
+questions, earlier full discussions and independent Korean review remain open.
+The original inventory gap text is preserved before its new scoped disposition;
+the inventory now has 387 scoped/328 unreviewed/zero gap entries, without
+complete-entry or linguistic precision certification. COV-018l stays open.

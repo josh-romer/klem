@@ -1,0 +1,5266 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-013",
+    "COV-018l"
+  ],
+  "scope": "Modern nominal 마다 + 에 recovery from directly applicable Lee (2025) p.70 distribution evidence plus unchanged KAIST observation. Original lexical/semantic distribution, regional/register questions, earlier full sources and independent Korean review remain required; COV-018l stays open.",
+  "before_revision": "ab176959b01df8c40791a7591007b33316b133e9",
+  "baseline_binaries": {
+    "debug": {
+      "path": "/tmp/klem-mada-case-before-debug",
+      "sha256": "b69d3ce8539aaa4d756e2f173341758b7a3eae5451c2f6a935e421dbfab67060"
+    },
+    "release": {
+      "path": "/tmp/klem-mada-case-before-release",
+      "sha256": "f89d79912277ac35613ca0a7d6dfb2d1d54845cd67f3e1493488ffec0b27405b"
+    },
+    "evaluator": {
+      "path": "/tmp/klem-mada-case-before-evaluator",
+      "sha256": "53a5213fa3f9631f12d11b513024f0b770938490dee15ae2a7a148046fb33ab7"
+    }
+  },
+  "status": "Modern nominal 마다 + 에 structural path verified: 681 Rust tests, original corpus gap recovered with all earlier recoveries retained, full candidate/novel comparisons, browser, lint/format, Nix packages/checks, 140-case packaged API, preview and release gates pass. COV-018l remains open for original semantic/register distribution and independent Korean review.",
+  "sources": {
+    "manifest": "tests/fixtures/mada-case-sources.json",
+    "audit": "docs/mada-case-source-audit.json",
+    "earlier_discovery": "docs/mada-distribution-audit.json",
+    "native_entries": 57,
+    "mada_senses": 2,
+    "mada_native_groups": 20,
+    "primary_consultation": {
+      "author": "Lee, Kang-hyuk / 이강혁",
+      "title": "‘마다’의 文法史",
+      "year": 2025,
+      "journal": "어문연구(語文硏究)",
+      "volume": 53,
+      "issue": 4,
+      "pages": "69–102",
+      "doi": "10.15822/skllr.2025.53.4.69",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003281236",
+      "download": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiOrteServHistIFrame.kci?sereArticleSearchBean.artiId=ART003281236&sereArticleSearchBean.orteFileId=KCI_FI003281236",
+      "retrieval": "Public advertised KCI download, HTTPS 200 application/pdf, retrieved 2026-10-01. Printed p.70 (PDF page 2) text and rendered image inspected.",
+      "pdf_sha256": "45333ce81286d92a8e9daf13ac3b198f0a18ef8cf54dab436dc00f9e8387a5a1",
+      "pdf_bytes": 1863030,
+      "consulted_pages": [
+        70
+      ],
+      "finding": "The introductory modern-Korean distribution statement explicitly distinguishes 마다 from 은/는/도: it can co-occur with subject/object/genitive particles and precede adverbial case particles. 사람마다의 is an original modern example. This is directly applicable modern distribution evidence, separately from the later historical analysis.",
+      "limits": "Only 마다 + 에 structural recovery is implemented for COV-018l. No contextual distributive-sense selection, unrestricted particle order, arbitrary historical/region forms or all adverbial-case followers are inferred. The earlier Yoo 2007 full distribution and 2018 regional comparison remain unreviewed; this new modern claim does not pretend to retrieve them."
+    },
+    "original_corpus_fixture": "tests/fixtures/kaist-range-case.conllu",
+    "six_file_observation": {
+      "substring": "마다에",
+      "matching_rows": 1,
+      "files": [
+        {
+          "path": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+          "sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+          "hits": []
+        },
+        {
+          "path": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+          "sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+          "hits": []
+        },
+        {
+          "path": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+          "sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+          "hits": []
+        },
+        {
+          "path": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+          "sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+          "hits": [
+            {
+              "sent_id": "MH2_0159-s285",
+              "rows": [
+                [
+                  "15",
+                  "편마다에도",
+                  "편+마다+에+도",
+                  "ADV",
+                  "ncn+jxc+jca+jxc",
+                  "_",
+                  "17",
+                  "advcl",
+                  "_",
+                  "Translit=.pyeon.ma.da.e.do|LTranslit=.pyeon+.ma.da+.e+.do"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "path": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+          "sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+          "hits": []
+        },
+        {
+          "path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+          "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+          "hits": []
+        }
+      ],
+      "existing_fixture": "tests/fixtures/kaist-range-case.conllu",
+      "existing_observation_test": "range_case_particles_recover_annotated_history",
+      "source_annotation_policy": "Retain MH2_0159-s285/15 unchanged. Its ADV ncn+jxc+jca+jxc segmentation is evidence of an annotated occurrence, not independent acceptability validation."
+    }
+  },
+  "judgments": {
+    "cases": 20,
+    "required": 13,
+    "forbidden": 7,
+    "case_prefix": "mada-case-"
+  },
+  "source_integrity": {
+    "native_entries": 57,
+    "complete_native_entry_parity": true,
+    "documented_omissions_only": true,
+    "all_export_hashes_match": true,
+    "mada_senses": 2,
+    "mada_groups": 20,
+    "original_corpus_fixture_and_six_source_files_unchanged": true,
+    "original_ledger_case_bytes_and_parsed_prefix_unchanged": true,
+    "frozen_baselines": [
+      {
+        "path": "data/baselines/kaist-dev.jsonl",
+        "sha256": "942e84f3d7f1905341fe2585e588563edb947feae96b5dfc1872ef915290b42c",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/kaist-test.jsonl",
+        "sha256": "fdd557c80a41a24274c43a82f8c1868b2992d00286dbf48dd877df57b8a81222",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-dev.jsonl",
+        "sha256": "c32e071e6823b4a1e69935933b568daa54e8c2dcfa5dea8b2da9eabe1a51d9b8",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-test.jsonl",
+        "sha256": "76d656c99f08b14feb9d31a6d41ef83ff568570445c0402873e98d7cd2dfa422",
+        "unchanged": true
+      }
+    ],
+    "primary_pdf_hash_verified": true,
+    "printed_page70_text_and_image_reviewed": true
+  },
+  "candidate_comparisons": [
+    {
+      "filter": "raw",
+      "before_revision": "ab176959b01df8c40791a7591007b33316b133e9",
+      "before_binary_sha256": "b69d3ce8539aaa4d756e2f173341758b7a3eae5451c2f6a935e421dbfab67060",
+      "after_binary_sha256": "1bc3d196e3c7d11c61c456dced4bc9bba73383d65f6f3c2868af0c0fa04fb4c4",
+      "distinct_surfaces": 13668,
+      "records": 27336,
+      "changed_surfaces": 34,
+      "added_candidates": 54,
+      "required_additions": 26,
+      "unjudged_additions": 28,
+      "removed_candidates": 0,
+      "existing_dictionary_readings_unchanged": null,
+      "changes": [
+        {
+          "surface": "교수님들마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-2c101f51c8190fac512e",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "님",
+                    "kind": "suffix"
+                  },
+                  {
+                    "form": "들",
+                    "kind": "suffix"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case",
+                  "suffix.honorific",
+                  "suffix.plural"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-honorific-plural/path"
+              ]
+            },
+            {
+              "id": "mada-case-addition-87c79934b1e508da544a",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수님",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "들",
+                    "kind": "suffix"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case",
+                  "suffix.plural"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-31ab54581a9f4d105adf",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수님드",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "를",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.contraction.l",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-b7663cd41d8f4fe7a6ef",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수님드",
+                    "kind": "adverbial"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "를",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.contraction.l",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-c2b300ea0c791900ec2b",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수님들",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "먹고마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-00421737ac186ab70b39",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹고",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "먹기마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-46dc36eb024b999c902b",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹기",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-b96bf0f044c09b7ac4c0",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "기",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "ending",
+                  "nominalization",
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-nominalization/path"
+              ]
+            },
+            {
+              "id": "mada-case-addition-aa62dfe1bd03825e7868",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹하다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "기",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "deletion.ha",
+                  "ending",
+                  "nominalization",
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "먹다마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-83496b88e6ec52e0c703",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹다",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "아직마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-b87b9c7c0aba6a148ec3",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "아직",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "쥬쟈마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-7cdce2f43a306e181de2",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "쥬쟈",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-unknown-head/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "집마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-21a3fd782d3e2929fda4",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "집",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-home/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-1a916f497b16e7b29bc1",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편마다",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에",
+          "added": [
+            {
+              "id": "mada-case-addition-dd30b1dd6c520c8a25cd",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에는",
+          "added": [
+            {
+              "id": "mada-case-addition-36450116d22f5f7d3ea3",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "는",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에는/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-5a5d4b5af0a1b051a5a9",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에도/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에도였다",
+          "added": [
+            {
+              "id": "mada-case-addition-91e6549ba8023e202cea",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "다",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "copula",
+                  "ending",
+                  "particle",
+                  "particle.mada_case",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-copula/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에도요",
+          "added": [
+            {
+              "id": "mada-case-addition-98b94c2648cbbf38e2e1",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "요",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case",
+                  "particle.polite"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에도요/path"
+              ]
+            },
+            {
+              "id": "mada-case-addition-cb741905856cbd273de0",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "요",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "copula",
+                  "copula.omitted_ending",
+                  "ending",
+                  "ending.enumerative_yo",
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에만",
+          "added": [
+            {
+              "id": "mada-case-addition-42b86cb4eee8908f1e41",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "만",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에만/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에만은",
+          "added": [
+            {
+              "id": "mada-case-addition-ef7d3c2af4383d6b56a9",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "만",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "은",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에만은/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "학교마다에는",
+          "added": [
+            {
+              "id": "mada-case-addition-7963d09796e152191c01",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학교",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "는",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-school/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "학생들마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-4d68e7c3adca95432e91",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학생",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "들",
+                    "kind": "suffix"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case",
+                  "suffix.plural"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-plural/path"
+              ]
+            },
+            {
+              "id": "mada-case-addition-eac73e97e7f2b34b9a4f",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학생드",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "를",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.contraction.l",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-918c879435352d776562",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학생드",
+                    "kind": "adverbial"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "를",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.contraction.l",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-badbcef7e9a4fbc0752a",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학생들",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "교수님들마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-81aed8d61e66f3fd3b79",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "님",
+                    "kind": "suffix"
+                  },
+                  {
+                    "form": "들",
+                    "kind": "suffix"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case",
+                  "suffix.honorific",
+                  "suffix.plural"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-honorific-plural/path"
+              ]
+            },
+            {
+              "id": "mada-case-addition-a0a4bf3744fc287eae31",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수님",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "들",
+                    "kind": "suffix"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case",
+                  "suffix.plural"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-2f9c8b80ad0e0476350f",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수님드",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "를",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.contraction.l",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-093c5fef0f895adb68aa",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수님드",
+                    "kind": "adverbial"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "를",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.contraction.l",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-0870118c9b1bbc2c3c61",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "교수님들",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "먹고마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-79abd39c33e979fcf95f",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹고",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "먹기마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-64e9a4ad87836ded682a",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹기",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-db76d49528a324d626c7",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "기",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "ending",
+                  "nominalization",
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-nominalization/path"
+              ]
+            },
+            {
+              "id": "mada-case-addition-4c08fd4a9bbbba20c88e",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹하다",
+                    "kind": "predicate"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "기",
+                    "kind": "ending"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "deletion.ha",
+                  "ending",
+                  "nominalization",
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "먹다마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-59be0d85cac52a197455",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "먹다",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "아직마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-a3d6acc55c29ca895547",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "아직",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "쥬쟈마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-99591f29b5d892421caf",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "쥬쟈",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-unknown-head/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "집마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-c107f193e73f6fb1fa42",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "집",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-home/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-afde06292eba4059b42f",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편마다",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에",
+          "added": [
+            {
+              "id": "mada-case-addition-e0df555c5f4b87b9c1e0",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에는",
+          "added": [
+            {
+              "id": "mada-case-addition-2c51306370d18a259bc3",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "는",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에는/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-21c3a4ba63104a9a59d5",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에도/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에도였다",
+          "added": [
+            {
+              "id": "mada-case-addition-ffde26547e9fbc50d354",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "었",
+                    "kind": "prefinal"
+                  },
+                  {
+                    "form": "다",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "boundary.regular",
+                  "contraction.vowel",
+                  "copula",
+                  "ending",
+                  "particle",
+                  "particle.mada_case",
+                  "prefinal.past"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-copula/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에도요",
+          "added": [
+            {
+              "id": "mada-case-addition-f43c882977a9e6efe6e3",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "요",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case",
+                  "particle.polite"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에도요/path"
+              ]
+            },
+            {
+              "id": "mada-case-addition-3fb246074b258434993a",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  },
+                  {
+                    "text": "이다",
+                    "kind": "copula"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "요",
+                    "kind": "ending"
+                  }
+                ],
+                "rules": [
+                  "copula",
+                  "copula.omitted_ending",
+                  "ending",
+                  "ending.enumerative_yo",
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에만",
+          "added": [
+            {
+              "id": "mada-case-addition-35ba8caad05855e0a7c9",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "만",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에만/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "편마다에만은",
+          "added": [
+            {
+              "id": "mada-case-addition-d1f2b2db9425a82570c5",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "편",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "만",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "은",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-observed-에만은/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "학교마다에는",
+          "added": [
+            {
+              "id": "mada-case-addition-052e0e9480e848710133",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학교",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "는",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-school/path"
+              ]
+            }
+          ],
+          "removed": []
+        },
+        {
+          "surface": "학생들마다에도",
+          "added": [
+            {
+              "id": "mada-case-addition-c9aedd19bd846057bfff",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학생",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "들",
+                    "kind": "suffix"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case",
+                  "suffix.plural"
+                ],
+                "unchanged": false
+              },
+              "review": "required path",
+              "required_case_ids": [
+                "mada-case-plural/path"
+              ]
+            },
+            {
+              "id": "mada-case-addition-5b8331aff0375ffd60b8",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학생드",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "를",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.contraction.l",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-73685d14f173d2373097",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학생드",
+                    "kind": "adverbial"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "를",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.contraction.l",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            },
+            {
+              "id": "mada-case-addition-13f27c20cdf11917bc73",
+              "analysis": {
+                "lemmas": [
+                  {
+                    "text": "학생들",
+                    "kind": "nominal"
+                  }
+                ],
+                "morphemes": [
+                  {
+                    "form": "마다",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "에",
+                    "kind": "particle"
+                  },
+                  {
+                    "form": "도",
+                    "kind": "particle"
+                  }
+                ],
+                "rules": [
+                  "particle",
+                  "particle.mada_case"
+                ],
+                "unchanged": false
+              },
+              "review": "unjudged",
+              "required_case_ids": []
+            }
+          ],
+          "removed": []
+        }
+      ]
+    },
+    {
+      "filter": "dict-only",
+      "before_revision": "ab176959b01df8c40791a7591007b33316b133e9",
+      "before_binary_sha256": "b69d3ce8539aaa4d756e2f173341758b7a3eae5451c2f6a935e421dbfab67060",
+      "after_binary_sha256": "1bc3d196e3c7d11c61c456dced4bc9bba73383d65f6f3c2868af0c0fa04fb4c4",
+      "distinct_surfaces": 13668,
+      "records": 27336,
+      "changed_surfaces": 28,
+      "added_candidates": 30,
+      "required_additions": 24,
+      "unjudged_additions": 6,
+      "removed_candidates": 0,
+      "existing_dictionary_readings_unchanged": true,
+      "additions": [
+        {
+          "id": "mada-case-addition-50208d7dafd1a9520117",
+          "raw_evidence_id": "mada-case-addition-2c101f51c8190fac512e"
+        },
+        {
+          "id": "mada-case-addition-dfafef2fd99ecd2c9733",
+          "raw_evidence_id": "mada-case-addition-b96bf0f044c09b7ac4c0"
+        },
+        {
+          "id": "mada-case-addition-9f9eb8c59480a2e88347",
+          "raw_evidence_id": "mada-case-addition-83496b88e6ec52e0c703"
+        },
+        {
+          "id": "mada-case-addition-e2202f96d83642c815bc",
+          "raw_evidence_id": "mada-case-addition-b87b9c7c0aba6a148ec3"
+        },
+        {
+          "id": "mada-case-addition-330d04d33f79a1bdfaa0",
+          "raw_evidence_id": "mada-case-addition-21a3fd782d3e2929fda4"
+        },
+        {
+          "id": "mada-case-addition-5a544e229b865aeb8552",
+          "raw_evidence_id": "mada-case-addition-dd30b1dd6c520c8a25cd"
+        },
+        {
+          "id": "mada-case-addition-4f4cfa957b3b65840555",
+          "raw_evidence_id": "mada-case-addition-36450116d22f5f7d3ea3"
+        },
+        {
+          "id": "mada-case-addition-63b8bb089e9568c1cc59",
+          "raw_evidence_id": "mada-case-addition-5a5d4b5af0a1b051a5a9"
+        },
+        {
+          "id": "mada-case-addition-ef652506169a7a95a802",
+          "raw_evidence_id": "mada-case-addition-91e6549ba8023e202cea"
+        },
+        {
+          "id": "mada-case-addition-1408705cb46a22a844ef",
+          "raw_evidence_id": "mada-case-addition-98b94c2648cbbf38e2e1"
+        },
+        {
+          "id": "mada-case-addition-ca870f65037443f6225d",
+          "raw_evidence_id": "mada-case-addition-cb741905856cbd273de0"
+        },
+        {
+          "id": "mada-case-addition-d86f89a7e25a8d03df05",
+          "raw_evidence_id": "mada-case-addition-42b86cb4eee8908f1e41"
+        },
+        {
+          "id": "mada-case-addition-f032ac69cecbe6e9abac",
+          "raw_evidence_id": "mada-case-addition-ef7d3c2af4383d6b56a9"
+        },
+        {
+          "id": "mada-case-addition-274ea4149f08b5181f78",
+          "raw_evidence_id": "mada-case-addition-7963d09796e152191c01"
+        },
+        {
+          "id": "mada-case-addition-cf3e71c0c4c1268a46c1",
+          "raw_evidence_id": "mada-case-addition-4d68e7c3adca95432e91"
+        },
+        {
+          "id": "mada-case-addition-2769ec1c60e3e278104d",
+          "raw_evidence_id": "mada-case-addition-81aed8d61e66f3fd3b79"
+        },
+        {
+          "id": "mada-case-addition-8eee78caa27aab3bb4bb",
+          "raw_evidence_id": "mada-case-addition-db76d49528a324d626c7"
+        },
+        {
+          "id": "mada-case-addition-a7d87d9a5cc5f50224f1",
+          "raw_evidence_id": "mada-case-addition-59be0d85cac52a197455"
+        },
+        {
+          "id": "mada-case-addition-31bf7a5854746b033c6c",
+          "raw_evidence_id": "mada-case-addition-a3d6acc55c29ca895547"
+        },
+        {
+          "id": "mada-case-addition-164bf869244341dbfa31",
+          "raw_evidence_id": "mada-case-addition-c107f193e73f6fb1fa42"
+        },
+        {
+          "id": "mada-case-addition-b90b784ca15472ec2b89",
+          "raw_evidence_id": "mada-case-addition-e0df555c5f4b87b9c1e0"
+        },
+        {
+          "id": "mada-case-addition-739116ce49f31ebace4b",
+          "raw_evidence_id": "mada-case-addition-2c51306370d18a259bc3"
+        },
+        {
+          "id": "mada-case-addition-a11c0a8811c707220789",
+          "raw_evidence_id": "mada-case-addition-21c3a4ba63104a9a59d5"
+        },
+        {
+          "id": "mada-case-addition-c2439c387ead5e09ed7a",
+          "raw_evidence_id": "mada-case-addition-ffde26547e9fbc50d354"
+        },
+        {
+          "id": "mada-case-addition-ac0f11e3451189f1b792",
+          "raw_evidence_id": "mada-case-addition-f43c882977a9e6efe6e3"
+        },
+        {
+          "id": "mada-case-addition-fc38d0fdb43305f05de8",
+          "raw_evidence_id": "mada-case-addition-3fb246074b258434993a"
+        },
+        {
+          "id": "mada-case-addition-d4766f4c67cd092a936f",
+          "raw_evidence_id": "mada-case-addition-35ba8caad05855e0a7c9"
+        },
+        {
+          "id": "mada-case-addition-f98a74ce21f694fc6b0d",
+          "raw_evidence_id": "mada-case-addition-d1f2b2db9425a82570c5"
+        },
+        {
+          "id": "mada-case-addition-60a7a196e9eccd051810",
+          "raw_evidence_id": "mada-case-addition-052e0e9480e848710133"
+        },
+        {
+          "id": "mada-case-addition-59c1a6a439c2a9807d0c",
+          "raw_evidence_id": "mada-case-addition-c9aedd19bd846057bfff"
+        }
+      ],
+      "evidence_layout": "Each filtered ID refers to the verified identical full raw surface, analysis, disposition and case IDs. Existing per-entry role constraints apply independently; raw candidates and earlier lookup readings remain."
+    },
+    {
+      "filter": "dict-compatible",
+      "before_revision": "ab176959b01df8c40791a7591007b33316b133e9",
+      "before_binary_sha256": "b69d3ce8539aaa4d756e2f173341758b7a3eae5451c2f6a935e421dbfab67060",
+      "after_binary_sha256": "1bc3d196e3c7d11c61c456dced4bc9bba73383d65f6f3c2868af0c0fa04fb4c4",
+      "distinct_surfaces": 13668,
+      "records": 27336,
+      "changed_surfaces": 24,
+      "added_candidates": 26,
+      "required_additions": 24,
+      "unjudged_additions": 2,
+      "removed_candidates": 0,
+      "existing_dictionary_readings_unchanged": true,
+      "additions": [
+        {
+          "id": "mada-case-addition-0784b72b642117c688fc",
+          "raw_evidence_id": "mada-case-addition-2c101f51c8190fac512e"
+        },
+        {
+          "id": "mada-case-addition-f67142c74b53cd9bf139",
+          "raw_evidence_id": "mada-case-addition-b96bf0f044c09b7ac4c0"
+        },
+        {
+          "id": "mada-case-addition-bd870011fa1a7df96418",
+          "raw_evidence_id": "mada-case-addition-21a3fd782d3e2929fda4"
+        },
+        {
+          "id": "mada-case-addition-470bb191743eaf6f77fd",
+          "raw_evidence_id": "mada-case-addition-dd30b1dd6c520c8a25cd"
+        },
+        {
+          "id": "mada-case-addition-d43f6948e0ac8194edb9",
+          "raw_evidence_id": "mada-case-addition-36450116d22f5f7d3ea3"
+        },
+        {
+          "id": "mada-case-addition-dfdde295a9256f3982b7",
+          "raw_evidence_id": "mada-case-addition-5a5d4b5af0a1b051a5a9"
+        },
+        {
+          "id": "mada-case-addition-56ed1080e02b857345a1",
+          "raw_evidence_id": "mada-case-addition-91e6549ba8023e202cea"
+        },
+        {
+          "id": "mada-case-addition-99afe073563f312384ba",
+          "raw_evidence_id": "mada-case-addition-98b94c2648cbbf38e2e1"
+        },
+        {
+          "id": "mada-case-addition-8aeb7a16b13a960bbfe0",
+          "raw_evidence_id": "mada-case-addition-cb741905856cbd273de0"
+        },
+        {
+          "id": "mada-case-addition-bb56e99d85a6abc5a7d3",
+          "raw_evidence_id": "mada-case-addition-42b86cb4eee8908f1e41"
+        },
+        {
+          "id": "mada-case-addition-162874a4f7ef61f69264",
+          "raw_evidence_id": "mada-case-addition-ef7d3c2af4383d6b56a9"
+        },
+        {
+          "id": "mada-case-addition-0b3ffee15bb76c6110f6",
+          "raw_evidence_id": "mada-case-addition-7963d09796e152191c01"
+        },
+        {
+          "id": "mada-case-addition-3f64b8ed63da05f54e80",
+          "raw_evidence_id": "mada-case-addition-4d68e7c3adca95432e91"
+        },
+        {
+          "id": "mada-case-addition-152f0a18082b3cf40ce8",
+          "raw_evidence_id": "mada-case-addition-81aed8d61e66f3fd3b79"
+        },
+        {
+          "id": "mada-case-addition-5ab20e4b63844e02480f",
+          "raw_evidence_id": "mada-case-addition-db76d49528a324d626c7"
+        },
+        {
+          "id": "mada-case-addition-68979ad24f60151fcf4e",
+          "raw_evidence_id": "mada-case-addition-c107f193e73f6fb1fa42"
+        },
+        {
+          "id": "mada-case-addition-3e651b9a975a82f18f75",
+          "raw_evidence_id": "mada-case-addition-e0df555c5f4b87b9c1e0"
+        },
+        {
+          "id": "mada-case-addition-9bf5a25c2b6941180148",
+          "raw_evidence_id": "mada-case-addition-2c51306370d18a259bc3"
+        },
+        {
+          "id": "mada-case-addition-e1af36a0785c6ae8705a",
+          "raw_evidence_id": "mada-case-addition-21c3a4ba63104a9a59d5"
+        },
+        {
+          "id": "mada-case-addition-390e9a843a084f567d87",
+          "raw_evidence_id": "mada-case-addition-ffde26547e9fbc50d354"
+        },
+        {
+          "id": "mada-case-addition-56df4b0b8b23ab807bcf",
+          "raw_evidence_id": "mada-case-addition-f43c882977a9e6efe6e3"
+        },
+        {
+          "id": "mada-case-addition-8c7cc99b135840aad03b",
+          "raw_evidence_id": "mada-case-addition-3fb246074b258434993a"
+        },
+        {
+          "id": "mada-case-addition-a4c89c372ed206b018bc",
+          "raw_evidence_id": "mada-case-addition-35ba8caad05855e0a7c9"
+        },
+        {
+          "id": "mada-case-addition-56511662abfed08154f5",
+          "raw_evidence_id": "mada-case-addition-d1f2b2db9425a82570c5"
+        },
+        {
+          "id": "mada-case-addition-de174b5916749ec9a7a2",
+          "raw_evidence_id": "mada-case-addition-052e0e9480e848710133"
+        },
+        {
+          "id": "mada-case-addition-9b6d15d9bfdb3cc7d2aa",
+          "raw_evidence_id": "mada-case-addition-c9aedd19bd846057bfff"
+        }
+      ],
+      "evidence_layout": "Each filtered ID refers to the verified identical full raw surface, analysis, disposition and case IDs. Existing per-entry role constraints apply independently; raw candidates and earlier lookup readings remain."
+    }
+  ],
+  "full_corpus_comparison": [
+    {
+      "corpus": "kaist",
+      "partition": "dev",
+      "before": {
+        "schema_version": 2,
+        "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "corpus": "kaist",
+        "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+        "rows": 25278,
+        "excluded_rows": 2990,
+        "malformed_rows": 0,
+        "converted_rows": 22220,
+        "unsupported": {
+          "no_lexical_component": 67,
+          "orphan_nominal_suffix": 1
+        },
+        "grouped_matches": 22134,
+        "gold_lemmas": 23681,
+        "recovered_gold_lemmas": 23607,
+        "transformed_rows": 17169,
+        "transformed_matches": 17083,
+        "adapter_coverage": 0.9969490308686288,
+        "grouped_lemma_recall": 0.9961296129612961,
+        "lemma_recall": 0.9968751319623327,
+        "transformed_grouped_recall": 0.9949909721008795,
+        "mean_candidates": 6.120747074707471,
+        "p95_candidates": 13,
+        "max_candidates": 41,
+        "common_misses": [
+          {
+            "surface": "라",
+            "expected": [
+              "이다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "지적이고",
+            "expected": [
+              "지적"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "Willaiam_Collins는",
+            "expected": [
+              "Willaiam_Collins"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈아보자였다",
+            "expected": [
+              "갈다",
+              "보다",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갑작스런",
+            "expected": [
+              "갑작스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거추장스로운",
+            "expected": [
+              "거추장스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거치며출판산업도",
+            "expected": [
+              "거치다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "것이라기보다는",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고결하였을런지",
+            "expected": [
+              "고결하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고통스런",
+            "expected": [
+              "고통스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그다지커다란",
+            "expected": [
+              "그다지"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "근대라는",
+            "expected": [
+              "근대"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기계적이고",
+            "expected": [
+              "기계적"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "나서가",
+            "expected": [
+              "나다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "노래스런",
+            "expected": [
+              "노래스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "달아줘라는",
+            "expected": [
+              "달다",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "대로",
+            "expected": [
+              "데"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "대안인가라는",
+            "expected": [
+              "대안",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "독제체제가",
+            "expected": [
+              "독재체제"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "드의",
+            "expected": [
+              "등"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "등록케",
+            "expected": [
+              "등록하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "때문에,",
+            "expected": [
+              "때문에"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "라이프찌히에서",
+            "expected": [
+              "라이프치히"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "마당에출판의",
+            "expected": [
+              "마당"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "망해야지만",
+            "expected": [
+              "망하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "먹혀들",
+            "expected": [
+              "먹히다",
+              "들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "뭔가",
+            "expected": [
+              "무어",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "민주주의라는",
+            "expected": [
+              "민주주의"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "바뀌였다",
+            "expected": [
+              "바뀌다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "배타적이고",
+            "expected": [
+              "배타적"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "after": {
+        "schema_version": 2,
+        "input_sha256": "a1ce2dceee65683c2df3b0cce96c83d01e5ff67756060b998fe01d8bc8ca4faa",
+        "corpus": "kaist",
+        "input": "data/corpora/kaist/ko_kaist-ud-dev.conllu",
+        "rows": 25278,
+        "excluded_rows": 2990,
+        "malformed_rows": 0,
+        "converted_rows": 22220,
+        "unsupported": {
+          "no_lexical_component": 67,
+          "orphan_nominal_suffix": 1
+        },
+        "grouped_matches": 22135,
+        "gold_lemmas": 23681,
+        "recovered_gold_lemmas": 23608,
+        "transformed_rows": 17169,
+        "transformed_matches": 17084,
+        "adapter_coverage": 0.9969490308686288,
+        "grouped_lemma_recall": 0.9961746174617462,
+        "lemma_recall": 0.9969173599087876,
+        "transformed_grouped_recall": 0.9950492166113344,
+        "mean_candidates": 6.120792079207921,
+        "p95_candidates": 13,
+        "max_candidates": 41,
+        "common_misses": [
+          {
+            "surface": "라",
+            "expected": [
+              "이다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "지적이고",
+            "expected": [
+              "지적"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "Willaiam_Collins는",
+            "expected": [
+              "Willaiam_Collins"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈아보자였다",
+            "expected": [
+              "갈다",
+              "보다",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갑작스런",
+            "expected": [
+              "갑작스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거추장스로운",
+            "expected": [
+              "거추장스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거치며출판산업도",
+            "expected": [
+              "거치다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "것이라기보다는",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고결하였을런지",
+            "expected": [
+              "고결하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고통스런",
+            "expected": [
+              "고통스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그다지커다란",
+            "expected": [
+              "그다지"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "근대라는",
+            "expected": [
+              "근대"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기계적이고",
+            "expected": [
+              "기계적"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "나서가",
+            "expected": [
+              "나다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "노래스런",
+            "expected": [
+              "노래스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "달아줘라는",
+            "expected": [
+              "달다",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "대로",
+            "expected": [
+              "데"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "대안인가라는",
+            "expected": [
+              "대안",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "독제체제가",
+            "expected": [
+              "독재체제"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "드의",
+            "expected": [
+              "등"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "등록케",
+            "expected": [
+              "등록하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "때문에,",
+            "expected": [
+              "때문에"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "라이프찌히에서",
+            "expected": [
+              "라이프치히"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "마당에출판의",
+            "expected": [
+              "마당"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "망해야지만",
+            "expected": [
+              "망하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "먹혀들",
+            "expected": [
+              "먹히다",
+              "들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "뭔가",
+            "expected": [
+              "무어",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "민주주의라는",
+            "expected": [
+              "민주주의"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "바뀌였다",
+            "expected": [
+              "바뀌다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "배타적이고",
+            "expected": [
+              "배타적"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "case_records": 22220,
+      "case_changes": [
+        {
+          "id": "id:MH2_0159-s285/15",
+          "surface": "편마다에도",
+          "before": {
+            "id": "id:MH2_0159-s285/15",
+            "surface": "편마다에도",
+            "expected": [
+              "편"
+            ],
+            "matched": false,
+            "recovered": 0,
+            "recovered_sets": []
+          },
+          "after": {
+            "id": "id:MH2_0159-s285/15",
+            "surface": "편마다에도",
+            "expected": [
+              "편"
+            ],
+            "matched": true,
+            "recovered": 1,
+            "recovered_sets": [
+              [
+                0
+              ]
+            ]
+          }
+        }
+      ],
+      "changed_case_records": 1,
+      "removed_recovered_sets": 0,
+      "baseline_unchanged": true,
+      "before_report_sha256": "6d3c0941eec012be5291a3b080b9dcb4e25b727b47de28c29ab239e2902b84de",
+      "after_report_sha256": "20a1e28a02db9aabb3bf4c3916e34a90eadecb1f72b29592e00e5a69b6918313",
+      "before_evaluator_matches_prior_committed_full_report": true,
+      "full_reports_byte_identical": false
+    },
+    {
+      "corpus": "kaist",
+      "partition": "test",
+      "before": {
+        "schema_version": 2,
+        "input_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+        "corpus": "kaist",
+        "input": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+        "rows": 28366,
+        "excluded_rows": 3716,
+        "malformed_rows": 0,
+        "converted_rows": 24490,
+        "unsupported": {
+          "no_lexical_component": 150,
+          "orphan_derivational_suffix": 1,
+          "orphan_nominal_suffix": 4,
+          "unsupported_tag": 5
+        },
+        "grouped_matches": 24392,
+        "gold_lemmas": 26023,
+        "recovered_gold_lemmas": 25928,
+        "transformed_rows": 18215,
+        "transformed_matches": 18117,
+        "adapter_coverage": 0.9935091277890467,
+        "grouped_lemma_recall": 0.9959983666802776,
+        "lemma_recall": 0.9963493832379049,
+        "transformed_grouped_recall": 0.9946198188306341,
+        "mean_candidates": 5.914128215598203,
+        "p95_candidates": 13,
+        "max_candidates": 45,
+        "common_misses": [
+          {
+            "surface": "고풍스런",
+            "expected": [
+              "고풍스럽다"
+            ],
+            "count": 3
+          },
+          {
+            "surface": "그러는",
+            "expected": [
+              "그렇다"
+            ],
+            "count": 3
+          },
+          {
+            "surface": "있어서의",
+            "expected": [
+              "있다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "20.2로",
+            "expected": [
+              "20.2"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "22.5로",
+            "expected": [
+              "22.5"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "24.0가",
+            "expected": [
+              "24.0"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "24.4를",
+            "expected": [
+              "24.4"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "26.3로",
+            "expected": [
+              "26.3"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "40마리를",
+            "expected": [
+              "40여마리"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "가계든",
+            "expected": [
+              "가계",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "감소되어왔다",
+            "expected": [
+              "감소되다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "개방이라기보다는",
+            "expected": [
+              "개방",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "결론으로서가",
+            "expected": [
+              "결론"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고급스런",
+            "expected": [
+              "고급스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고학",
+            "expected": [
+              "과학"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "국내시장에서든",
+            "expected": [
+              "국내시장"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "군인인지라",
+            "expected": [
+              "군인",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그것으로서가",
+            "expected": [
+              "그것"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그래서인지",
+            "expected": [
+              "그러다",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그렇다더라도",
+            "expected": [
+              "그렇다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그밖의",
+            "expected": [
+              "그"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기후라서",
+            "expected": [
+              "기후"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내다볼",
+            "expected": [
+              "내다",
+              "보다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "덤벼든다",
+            "expected": [
+              "덤비어들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "되었는가라는",
+            "expected": [
+              "되다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "드러나며",
+            "expected": [
+              "들다",
+              "나다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "드러난다",
+            "expected": [
+              "들다",
+              "나다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "들으면서",
+            "expected": [
+              "들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "들은",
+            "expected": [
+              "들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "따라",
+            "expected": [
+              "따라오다"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "after": {
+        "schema_version": 2,
+        "input_sha256": "fd94dc89afb01d1f7f340a46d567e0f27ae6903a70d7b6f650b49f7427f83b97",
+        "corpus": "kaist",
+        "input": "data/corpora/kaist/ko_kaist-ud-test.conllu",
+        "rows": 28366,
+        "excluded_rows": 3716,
+        "malformed_rows": 0,
+        "converted_rows": 24490,
+        "unsupported": {
+          "no_lexical_component": 150,
+          "orphan_derivational_suffix": 1,
+          "orphan_nominal_suffix": 4,
+          "unsupported_tag": 5
+        },
+        "grouped_matches": 24392,
+        "gold_lemmas": 26023,
+        "recovered_gold_lemmas": 25928,
+        "transformed_rows": 18215,
+        "transformed_matches": 18117,
+        "adapter_coverage": 0.9935091277890467,
+        "grouped_lemma_recall": 0.9959983666802776,
+        "lemma_recall": 0.9963493832379049,
+        "transformed_grouped_recall": 0.9946198188306341,
+        "mean_candidates": 5.914128215598203,
+        "p95_candidates": 13,
+        "max_candidates": 45,
+        "common_misses": [
+          {
+            "surface": "고풍스런",
+            "expected": [
+              "고풍스럽다"
+            ],
+            "count": 3
+          },
+          {
+            "surface": "그러는",
+            "expected": [
+              "그렇다"
+            ],
+            "count": 3
+          },
+          {
+            "surface": "있어서의",
+            "expected": [
+              "있다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "20.2로",
+            "expected": [
+              "20.2"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "22.5로",
+            "expected": [
+              "22.5"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "24.0가",
+            "expected": [
+              "24.0"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "24.4를",
+            "expected": [
+              "24.4"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "26.3로",
+            "expected": [
+              "26.3"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "40마리를",
+            "expected": [
+              "40여마리"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "가계든",
+            "expected": [
+              "가계",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "감소되어왔다",
+            "expected": [
+              "감소되다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "개방이라기보다는",
+            "expected": [
+              "개방",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "결론으로서가",
+            "expected": [
+              "결론"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고급스런",
+            "expected": [
+              "고급스럽다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고학",
+            "expected": [
+              "과학"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "국내시장에서든",
+            "expected": [
+              "국내시장"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "군인인지라",
+            "expected": [
+              "군인",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그것으로서가",
+            "expected": [
+              "그것"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그래서인지",
+            "expected": [
+              "그러다",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그렇다더라도",
+            "expected": [
+              "그렇다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그밖의",
+            "expected": [
+              "그"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기후라서",
+            "expected": [
+              "기후"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내다볼",
+            "expected": [
+              "내다",
+              "보다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "덤벼든다",
+            "expected": [
+              "덤비어들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "되었는가라는",
+            "expected": [
+              "되다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "드러나며",
+            "expected": [
+              "들다",
+              "나다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "드러난다",
+            "expected": [
+              "들다",
+              "나다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "들으면서",
+            "expected": [
+              "들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "들은",
+            "expected": [
+              "들다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "따라",
+            "expected": [
+              "따라오다"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "case_records": 24490,
+      "case_changes": [],
+      "changed_case_records": 0,
+      "removed_recovered_sets": 0,
+      "baseline_unchanged": true,
+      "before_report_sha256": "c68df3acd250d2c8e44a20323f0daa69fcb927519810069ab7ef67778c8b0e12",
+      "after_report_sha256": "c68df3acd250d2c8e44a20323f0daa69fcb927519810069ab7ef67778c8b0e12",
+      "before_evaluator_matches_prior_committed_full_report": true,
+      "full_reports_byte_identical": true
+    },
+    {
+      "corpus": "gsd",
+      "partition": "dev",
+      "before": {
+        "schema_version": 2,
+        "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "corpus": "gsd",
+        "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+        "rows": 11958,
+        "excluded_rows": 1813,
+        "malformed_rows": 0,
+        "converted_rows": 9989,
+        "unsupported": {
+          "no_lexical_component": 148,
+          "orphan_derivational_suffix": 2,
+          "orphan_nominal_suffix": 5,
+          "unsegmented_predicate_nominal": 1
+        },
+        "grouped_matches": 9848,
+        "gold_lemmas": 10481,
+        "recovered_gold_lemmas": 10278,
+        "transformed_rows": 6470,
+        "transformed_matches": 6329,
+        "adapter_coverage": 0.9846229669788072,
+        "grouped_lemma_recall": 0.9858844729202122,
+        "lemma_recall": 0.9806316191203129,
+        "transformed_grouped_recall": 0.9782071097372489,
+        "mean_candidates": 5.590849934928421,
+        "p95_candidates": 12,
+        "max_candidates": 35,
+        "common_misses": [
+          {
+            "surface": "끝내줘요",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 3
+          },
+          {
+            "surface": "고양이과",
+            "expected": [
+              "고양이"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "데이",
+            "expected": [
+              "데"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "2.36m를",
+            "expected": [
+              "2.36m"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "3-1로",
+            "expected": [
+              "3-1"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "5-4로",
+            "expected": [
+              "5-4"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "가믈란",
+            "expected": [
+              "가믈"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "각광받고",
+            "expected": [
+              "각광",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "각광받으며",
+            "expected": [
+              "각광",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈천리의",
+            "expected": [
+              "가다",
+              "천리"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "감사드리고",
+            "expected": [
+              "감사",
+              "드리다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "강된장밥은",
+            "expected": [
+              "강되다",
+              "장밥"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "강추합니다",
+            "expected": [
+              "강",
+              "추하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거기",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "걸복건귀는",
+            "expected": [
+              "것",
+              "이다",
+              "복건귀"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "걸아가는",
+            "expected": [
+              "걸다",
+              "가다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고치구",
+            "expected": [
+              "고치다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "귀기울일만한",
+            "expected": [
+              "귀",
+              "기울이다",
+              "만하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그랬는데",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그레요",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그림같은",
+            "expected": [
+              "그림",
+              "같다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기증받게",
+            "expected": [
+              "기증",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기차타고",
+            "expected": [
+              "기차",
+              "타다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "깊으셔셔",
+            "expected": [
+              "깊다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "깨끗하구요",
+            "expected": [
+              "깨끗하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "끝내줍니다",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내다팔던",
+            "expected": [
+              "내다",
+              "팔다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내렸다는대",
+            "expected": [
+              "내리다",
+              "대"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "넘",
+            "expected": [
+              "넘다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "느꼇습니다",
+            "expected": [
+              "느다",
+              "꼇다"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "after": {
+        "schema_version": 2,
+        "input_sha256": "8f7c4e24bbf6db2b0df8007068eb2d56d5ad8a5539360589d0f15a8c17034566",
+        "corpus": "gsd",
+        "input": "data/corpora/gsd/ko_gsd-ud-dev.conllu",
+        "rows": 11958,
+        "excluded_rows": 1813,
+        "malformed_rows": 0,
+        "converted_rows": 9989,
+        "unsupported": {
+          "no_lexical_component": 148,
+          "orphan_derivational_suffix": 2,
+          "orphan_nominal_suffix": 5,
+          "unsegmented_predicate_nominal": 1
+        },
+        "grouped_matches": 9848,
+        "gold_lemmas": 10481,
+        "recovered_gold_lemmas": 10278,
+        "transformed_rows": 6470,
+        "transformed_matches": 6329,
+        "adapter_coverage": 0.9846229669788072,
+        "grouped_lemma_recall": 0.9858844729202122,
+        "lemma_recall": 0.9806316191203129,
+        "transformed_grouped_recall": 0.9782071097372489,
+        "mean_candidates": 5.590849934928421,
+        "p95_candidates": 12,
+        "max_candidates": 35,
+        "common_misses": [
+          {
+            "surface": "끝내줘요",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 3
+          },
+          {
+            "surface": "고양이과",
+            "expected": [
+              "고양이"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "데이",
+            "expected": [
+              "데"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "2.36m를",
+            "expected": [
+              "2.36m"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "3-1로",
+            "expected": [
+              "3-1"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "5-4로",
+            "expected": [
+              "5-4"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "가믈란",
+            "expected": [
+              "가믈"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "각광받고",
+            "expected": [
+              "각광",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "각광받으며",
+            "expected": [
+              "각광",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈천리의",
+            "expected": [
+              "가다",
+              "천리"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "감사드리고",
+            "expected": [
+              "감사",
+              "드리다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "강된장밥은",
+            "expected": [
+              "강되다",
+              "장밥"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "강추합니다",
+            "expected": [
+              "강",
+              "추하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거기",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "걸복건귀는",
+            "expected": [
+              "것",
+              "이다",
+              "복건귀"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "걸아가는",
+            "expected": [
+              "걸다",
+              "가다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고치구",
+            "expected": [
+              "고치다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "귀기울일만한",
+            "expected": [
+              "귀",
+              "기울이다",
+              "만하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그랬는데",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그레요",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그림같은",
+            "expected": [
+              "그림",
+              "같다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기증받게",
+            "expected": [
+              "기증",
+              "받다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기차타고",
+            "expected": [
+              "기차",
+              "타다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "깊으셔셔",
+            "expected": [
+              "깊다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "깨끗하구요",
+            "expected": [
+              "깨끗하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "끝내줍니다",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내다팔던",
+            "expected": [
+              "내다",
+              "팔다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "내렸다는대",
+            "expected": [
+              "내리다",
+              "대"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "넘",
+            "expected": [
+              "넘다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "느꼇습니다",
+            "expected": [
+              "느다",
+              "꼇다"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "case_records": 9989,
+      "case_changes": [],
+      "changed_case_records": 0,
+      "removed_recovered_sets": 0,
+      "baseline_unchanged": true,
+      "before_report_sha256": "bbc8d087b6172896a8f4d4e96894f77b3e72d5264f6fc9bc03b675af5f5a80dd",
+      "after_report_sha256": "bbc8d087b6172896a8f4d4e96894f77b3e72d5264f6fc9bc03b675af5f5a80dd",
+      "before_evaluator_matches_prior_committed_full_report": true,
+      "full_reports_byte_identical": true
+    },
+    {
+      "corpus": "gsd",
+      "partition": "test",
+      "before": {
+        "schema_version": 2,
+        "input_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+        "corpus": "gsd",
+        "input": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+        "rows": 11677,
+        "excluded_rows": 1643,
+        "malformed_rows": 0,
+        "converted_rows": 9871,
+        "unsupported": {
+          "no_lexical_component": 159,
+          "orphan_derivational_suffix": 1,
+          "orphan_nominal_suffix": 2,
+          "unsupported_tag": 1
+        },
+        "grouped_matches": 9737,
+        "gold_lemmas": 10367,
+        "recovered_gold_lemmas": 10174,
+        "transformed_rows": 6412,
+        "transformed_matches": 6278,
+        "adapter_coverage": 0.9837552322104843,
+        "grouped_lemma_recall": 0.9864248809644413,
+        "lemma_recall": 0.9813832352657471,
+        "transformed_grouped_recall": 0.9791016843418591,
+        "mean_candidates": 5.681187316381319,
+        "p95_candidates": 12,
+        "max_candidates": 53,
+        "common_misses": [
+          {
+            "surface": "구박받는",
+            "expected": [
+              "구박",
+              "받다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "드시러",
+            "expected": [
+              "들시다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "못하고",
+            "expected": [
+              "못",
+              "하다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "순두부찌게",
+            "expected": [
+              "순두부",
+              "찌다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "존나",
+            "expected": [
+              "존"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "키로야",
+            "expected": [
+              "하다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "1-0으로",
+            "expected": [
+              "1-0"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "1인분",
+            "expected": [
+              "1",
+              "이다",
+              "분"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "3-1로",
+            "expected": [
+              "3-1"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "39.4m가",
+            "expected": [
+              "39.4m"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "M&A는",
+            "expected": [
+              "M&A"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "가실라면",
+            "expected": [
+              "가실",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈은",
+            "expected": [
+              "갈다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거기",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고생했었든데",
+            "expected": [
+              "고생하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "괜찮더라구요",
+            "expected": [
+              "괜찮다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "구이",
+            "expected": [
+              "구"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "구입해야겠네요",
+            "expected": [
+              "구입하다",
+              "하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "구해주실려고",
+            "expected": [
+              "구하다",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "굴으",
+            "expected": [
+              "굴다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "균류을",
+            "expected": [
+              "균류"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그래도",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그래도",
+            "expected": [
+              "그리하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기대해봄직하다",
+            "expected": [
+              "기대하다",
+              "보다",
+              "하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기차타고",
+            "expected": [
+              "기차",
+              "타다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "김남길",
+            "expected": [
+              "김",
+              "남기다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "김여진은",
+            "expected": [
+              "김여지"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "꼬맹으도",
+            "expected": [
+              "꼬맹"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "끝내줍니다",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "난방식",
+            "expected": [
+              "나다",
+              "방식"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "after": {
+        "schema_version": 2,
+        "input_sha256": "3d1df99bda4800235e14bcfd915baf706eafa1a3935a75ffd32420a51e57f5aa",
+        "corpus": "gsd",
+        "input": "data/corpora/gsd/ko_gsd-ud-test.conllu",
+        "rows": 11677,
+        "excluded_rows": 1643,
+        "malformed_rows": 0,
+        "converted_rows": 9871,
+        "unsupported": {
+          "no_lexical_component": 159,
+          "orphan_derivational_suffix": 1,
+          "orphan_nominal_suffix": 2,
+          "unsupported_tag": 1
+        },
+        "grouped_matches": 9737,
+        "gold_lemmas": 10367,
+        "recovered_gold_lemmas": 10174,
+        "transformed_rows": 6412,
+        "transformed_matches": 6278,
+        "adapter_coverage": 0.9837552322104843,
+        "grouped_lemma_recall": 0.9864248809644413,
+        "lemma_recall": 0.9813832352657471,
+        "transformed_grouped_recall": 0.9791016843418591,
+        "mean_candidates": 5.681187316381319,
+        "p95_candidates": 12,
+        "max_candidates": 53,
+        "common_misses": [
+          {
+            "surface": "구박받는",
+            "expected": [
+              "구박",
+              "받다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "드시러",
+            "expected": [
+              "들시다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "못하고",
+            "expected": [
+              "못",
+              "하다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "순두부찌게",
+            "expected": [
+              "순두부",
+              "찌다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "존나",
+            "expected": [
+              "존"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "키로야",
+            "expected": [
+              "하다"
+            ],
+            "count": 2
+          },
+          {
+            "surface": "1-0으로",
+            "expected": [
+              "1-0"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "1인분",
+            "expected": [
+              "1",
+              "이다",
+              "분"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "3-1로",
+            "expected": [
+              "3-1"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "39.4m가",
+            "expected": [
+              "39.4m"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "M&A는",
+            "expected": [
+              "M&A"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "가실라면",
+            "expected": [
+              "가실",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "갈은",
+            "expected": [
+              "갈다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "거기",
+            "expected": [
+              "것",
+              "이다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "고생했었든데",
+            "expected": [
+              "고생하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "괜찮더라구요",
+            "expected": [
+              "괜찮다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "구이",
+            "expected": [
+              "구"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "구입해야겠네요",
+            "expected": [
+              "구입하다",
+              "하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "구해주실려고",
+            "expected": [
+              "구하다",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "굴으",
+            "expected": [
+              "굴다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "균류을",
+            "expected": [
+              "균류"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그래도",
+            "expected": [
+              "그러다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "그래도",
+            "expected": [
+              "그리하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기대해봄직하다",
+            "expected": [
+              "기대하다",
+              "보다",
+              "하다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "기차타고",
+            "expected": [
+              "기차",
+              "타다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "김남길",
+            "expected": [
+              "김",
+              "남기다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "김여진은",
+            "expected": [
+              "김여지"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "꼬맹으도",
+            "expected": [
+              "꼬맹"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "끝내줍니다",
+            "expected": [
+              "끝내",
+              "주다"
+            ],
+            "count": 1
+          },
+          {
+            "surface": "난방식",
+            "expected": [
+              "나다",
+              "방식"
+            ],
+            "count": 1
+          }
+        ]
+      },
+      "case_records": 9871,
+      "case_changes": [],
+      "changed_case_records": 0,
+      "removed_recovered_sets": 0,
+      "baseline_unchanged": true,
+      "before_report_sha256": "6b1c68b8e4699e00c5e18d4849e557c739b1859170129f0437b579240b67feb2",
+      "after_report_sha256": "6b1c68b8e4699e00c5e18d4849e557c739b1859170129f0437b579240b67feb2",
+      "before_evaluator_matches_prior_committed_full_report": true,
+      "full_reports_byte_identical": true
+    }
+  ],
+  "novel_comparison": {
+    "before_revision": "ab176959b01df8c40791a7591007b33316b133e9",
+    "before_binary_sha256": "b69d3ce8539aaa4d756e2f173341758b7a3eae5451c2f6a935e421dbfab67060",
+    "after_binary_sha256": "1bc3d196e3c7d11c61c456dced4bc9bba73383d65f6f3c2868af0c0fa04fb4c4",
+    "outputs": [
+      {
+        "filter": null,
+        "suggest_spacing": false,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0,
+        "existing_dictionary_readings_unchanged": true,
+        "spacing_boundaries_and_limits_unchanged": true,
+        "changed_spacing_segments": 0,
+        "before_jsonl_sha256": "e51bf40ddc943a034e4ef19dd90cae5d4ade222c96070b940718b97846a08695",
+        "after_jsonl_sha256": "e51bf40ddc943a034e4ef19dd90cae5d4ade222c96070b940718b97846a08695",
+        "changes": [],
+        "spacing_changes": [],
+        "full_outputs_byte_identical": true
+      },
+      {
+        "filter": "--dict-only",
+        "suggest_spacing": false,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0,
+        "existing_dictionary_readings_unchanged": true,
+        "spacing_boundaries_and_limits_unchanged": true,
+        "changed_spacing_segments": 0,
+        "before_jsonl_sha256": "c93e88bdf7c3fe95261eb2ac0e79244c0c6ee0885fd3f3cd2d55891c8cde790f",
+        "after_jsonl_sha256": "c93e88bdf7c3fe95261eb2ac0e79244c0c6ee0885fd3f3cd2d55891c8cde790f",
+        "changes": [],
+        "spacing_changes": [],
+        "full_outputs_byte_identical": true
+      },
+      {
+        "filter": "--dict-compatible",
+        "suggest_spacing": false,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0,
+        "existing_dictionary_readings_unchanged": true,
+        "spacing_boundaries_and_limits_unchanged": true,
+        "changed_spacing_segments": 0,
+        "before_jsonl_sha256": "c0d7afe755b1162681f5ff690eff34c5ef4aa6653062ab4642960330e780f741",
+        "after_jsonl_sha256": "c0d7afe755b1162681f5ff690eff34c5ef4aa6653062ab4642960330e780f741",
+        "changes": [],
+        "spacing_changes": [],
+        "full_outputs_byte_identical": true
+      },
+      {
+        "filter": "--dict-only",
+        "suggest_spacing": true,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0,
+        "existing_dictionary_readings_unchanged": true,
+        "spacing_boundaries_and_limits_unchanged": true,
+        "changed_spacing_segments": 0,
+        "before_jsonl_sha256": "02558d3c0c85b1b05fcbdc07afc4b1d6889eb0b4ae7ab53a6500cc2157e78a90",
+        "after_jsonl_sha256": "02558d3c0c85b1b05fcbdc07afc4b1d6889eb0b4ae7ab53a6500cc2157e78a90",
+        "changes": [],
+        "spacing_changes": [],
+        "full_outputs_byte_identical": true
+      },
+      {
+        "filter": "--dict-compatible",
+        "suggest_spacing": true,
+        "input": "data/books/mujeong.txt",
+        "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "records": 179112,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0,
+        "existing_dictionary_readings_unchanged": true,
+        "spacing_boundaries_and_limits_unchanged": true,
+        "changed_spacing_segments": 0,
+        "before_jsonl_sha256": "e100f9bc04def959c57dba2ebbaf1a67bbaa902ff198af214bcaad18dce94c20",
+        "after_jsonl_sha256": "e100f9bc04def959c57dba2ebbaf1a67bbaa902ff198af214bcaad18dce94c20",
+        "changes": [],
+        "spacing_changes": [],
+        "full_outputs_byte_identical": true
+      }
+    ]
+  },
+  "release_verification": {
+    "input": "data/books/mujeong.txt",
+    "input_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+    "before_cli_sha256": "f89d79912277ac35613ca0a7d6dfb2d1d54845cd67f3e1493488ffec0b27405b",
+    "after_cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+    "novel_outputs": [
+      {
+        "filter": null,
+        "suggest_spacing": false,
+        "records": 179112,
+        "jsonl_sha256": "e51bf40ddc943a034e4ef19dd90cae5d4ade222c96070b940718b97846a08695",
+        "debug_release_parity": true,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0
+      },
+      {
+        "filter": "--dict-only",
+        "suggest_spacing": false,
+        "records": 179112,
+        "jsonl_sha256": "c93e88bdf7c3fe95261eb2ac0e79244c0c6ee0885fd3f3cd2d55891c8cde790f",
+        "debug_release_parity": true,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0
+      },
+      {
+        "filter": "--dict-compatible",
+        "suggest_spacing": false,
+        "records": 179112,
+        "jsonl_sha256": "c0d7afe755b1162681f5ff690eff34c5ef4aa6653062ab4642960330e780f741",
+        "debug_release_parity": true,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0
+      },
+      {
+        "filter": "--dict-only",
+        "suggest_spacing": true,
+        "records": 179112,
+        "jsonl_sha256": "02558d3c0c85b1b05fcbdc07afc4b1d6889eb0b4ae7ab53a6500cc2157e78a90",
+        "debug_release_parity": true,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0
+      },
+      {
+        "filter": "--dict-compatible",
+        "suggest_spacing": true,
+        "records": 179112,
+        "jsonl_sha256": "e100f9bc04def959c57dba2ebbaf1a67bbaa902ff198af214bcaad18dce94c20",
+        "debug_release_parity": true,
+        "changed_main_records": 0,
+        "added_main_candidates": 0,
+        "removed_candidates": 0
+      }
+    ],
+    "performance": [
+      {
+        "filter": "--dict-only",
+        "samples": {
+          "before": [
+            {
+              "seconds": 1.75,
+              "max_rss_kib": 29096
+            },
+            {
+              "seconds": 1.62,
+              "max_rss_kib": 29072
+            },
+            {
+              "seconds": 1.59,
+              "max_rss_kib": 29488
+            }
+          ],
+          "after": [
+            {
+              "seconds": 1.64,
+              "max_rss_kib": 28764
+            },
+            {
+              "seconds": 1.63,
+              "max_rss_kib": 29068
+            },
+            {
+              "seconds": 1.61,
+              "max_rss_kib": 29100
+            }
+          ]
+        },
+        "median_seconds": {
+          "before": 1.62,
+          "after": 1.63
+        },
+        "max_rss_kib": {
+          "before": 29488,
+          "after": 29100
+        }
+      },
+      {
+        "filter": "--dict-compatible",
+        "samples": {
+          "before": [
+            {
+              "seconds": 1.61,
+              "max_rss_kib": 29092
+            },
+            {
+              "seconds": 1.6,
+              "max_rss_kib": 29820
+            },
+            {
+              "seconds": 1.6,
+              "max_rss_kib": 29800
+            }
+          ],
+          "after": [
+            {
+              "seconds": 1.61,
+              "max_rss_kib": 29632
+            },
+            {
+              "seconds": 1.61,
+              "max_rss_kib": 29996
+            },
+            {
+              "seconds": 1.67,
+              "max_rss_kib": 28936
+            }
+          ]
+        },
+        "median_seconds": {
+          "before": 1.6,
+          "after": 1.61
+        },
+        "max_rss_kib": {
+          "before": 29820,
+          "after": 29996
+        }
+      }
+    ],
+    "interpretation": "Three interleaved local runs per filter, using the same pinned novel/dictionary; descriptive timing and RSS observations, not a universal throughput guarantee."
+  },
+  "packaged_outputs": {
+    "cli": "/nix/store/c93lljg75r7smw2cdi9m0arfg239pa6a-klem-0.1.0/bin/klem",
+    "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+    "server": "/nix/store/c93lljg75r7smw2cdi9m0arfg239pa6a-klem-0.1.0/bin/klem-web",
+    "server_sha256": "ce0720afaa8f1e29078ab4c3c42c210edb82bb9c227eb37c35d2389109e9349d",
+    "web_wrapper": "/nix/store/c4q6zsjq0imglsv1i9p965sayls9dka1-klem-web/bin/klem-web",
+    "assets": "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web",
+    "production_js": "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web/assets/index-DU43SJBP.js",
+    "production_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+    "production_asset_local_parity": true,
+    "packaged_runtime": {
+      "url": "http://127.0.0.1:33489",
+      "cli": "/nix/store/c93lljg75r7smw2cdi9m0arfg239pa6a-klem-0.1.0/bin/klem",
+      "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+      "cases": 140,
+      "new_mada_cases": 20,
+      "required": 115,
+      "forbidden": 25,
+      "http_word_text_cli_parity": true,
+      "both_filters_exact_parity": true,
+      "root_homonyms": 5,
+      "known_other_origins": 4,
+      "complete_originless_matchmaking_and_debut_senses": true,
+      "all_source_origins_preserved": true,
+      "ordinary_words_do_not_gain_root_evidence": true,
+      "complete_lexical_assessment_slots": true,
+      "compound_root_ordered_components": true,
+      "spacing_keeps_whole_noun_without_conflicting_roots": true,
+      "complete_suffix_senses": {
+        "88924": 3,
+        "88927": 2
+      },
+      "noun_suffix_native_groups": 44,
+      "served_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+      "local_asset_parity": true,
+      "mada_native_senses": 2,
+      "mada_native_groups": 20,
+      "observed_mada_case_order_and_sources": true
+    }
+  },
+  "preview_runtime": {
+    "url": "http://127.0.0.1:8081",
+    "cli": "/nix/store/c93lljg75r7smw2cdi9m0arfg239pa6a-klem-0.1.0/bin/klem",
+    "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+    "cases": 140,
+    "new_mada_cases": 20,
+    "required": 115,
+    "forbidden": 25,
+    "http_word_text_cli_parity": true,
+    "both_filters_exact_parity": true,
+    "root_homonyms": 5,
+    "known_other_origins": 4,
+    "complete_originless_matchmaking_and_debut_senses": true,
+    "all_source_origins_preserved": true,
+    "ordinary_words_do_not_gain_root_evidence": true,
+    "complete_lexical_assessment_slots": true,
+    "compound_root_ordered_components": true,
+    "spacing_keeps_whole_noun_without_conflicting_roots": true,
+    "complete_suffix_senses": {
+      "88924": 3,
+      "88927": 2
+    },
+    "noun_suffix_native_groups": 44,
+    "served_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+    "local_asset_parity": true,
+    "mada_native_senses": 2,
+    "mada_native_groups": 20,
+    "observed_mada_case_order_and_sources": true
+  },
+  "preview_browser": {
+    "url": "http://127.0.0.1:8081",
+    "word_count": 3,
+    "observed_nominal_mada_case_order": true,
+    "honorific_plural_ownership": true,
+    "later_copula_ownership": true,
+    "native_mada_and_e_sources": true,
+    "all_three_export_modes_exact_cli_parity": true,
+    "mobile_no_overflow": true
+  },
+  "preview_identity": {
+    "pid": 2067388,
+    "exe": "/nix/store/c93lljg75r7smw2cdi9m0arfg239pa6a-klem-0.1.0/bin/klem-web",
+    "cwd": "/home/josh/projects/klem",
+    "uid": 1000,
+    "args": [
+      "/nix/store/c93lljg75r7smw2cdi9m0arfg239pa6a-klem-0.1.0/bin/klem-web",
+      "--assets",
+      "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web",
+      "--port",
+      "8081",
+      "--dictionary",
+      "data/dictionaries/krdict/krdict.db"
+    ],
+    "start_time_ticks": "37368510"
+  },
+  "preview_refresh": {
+    "old_identity": {
+      "pid": 1920628,
+      "exe": "/nix/store/ginajzldyda3xgvcphrg00qml563dfph-klem-0.1.0/bin/klem-web",
+      "cwd": "/home/josh/projects/klem",
+      "uid": 1000,
+      "args": [
+        "/nix/store/ginajzldyda3xgvcphrg00qml563dfph-klem-0.1.0/bin/klem-web",
+        "--assets",
+        "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web",
+        "--port",
+        "8081",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "start_time_ticks": "37191562"
+    },
+    "old_identity_verified": true,
+    "old_exited": true,
+    "new_package": "/nix/store/c4q6zsjq0imglsv1i9p965sayls9dka1-klem-web",
+    "server_sha256": "ce0720afaa8f1e29078ab4c3c42c210edb82bb9c227eb37c35d2389109e9349d"
+  },
+  "validation": {
+    "rust_tests": 681,
+    "targeted_mada_tests": 4,
+    "rust_gates": [
+      {
+        "gate": "all-tests",
+        "command": [
+          "cargo",
+          "test",
+          "--locked",
+          "--offline",
+          "--features",
+          "web"
+        ],
+        "exit_code": 0,
+        "log": "/tmp/klem-mada-case-all-tests.log"
+      },
+      {
+        "gate": "pinned",
+        "command": [
+          "cargo",
+          "test",
+          "--locked",
+          "--offline",
+          "--features",
+          "web",
+          "--test",
+          "corpus",
+          "pinned_full_corpus_regressions",
+          "--",
+          "--ignored"
+        ],
+        "exit_code": 0,
+        "log": "/tmp/klem-mada-case-pinned.log"
+      },
+      {
+        "gate": "clippy",
+        "command": [
+          "cargo",
+          "clippy",
+          "--locked",
+          "--offline",
+          "--features",
+          "web",
+          "--all-targets",
+          "--",
+          "-D",
+          "warnings"
+        ],
+        "exit_code": 0,
+        "log": "/tmp/klem-mada-case-clippy.log"
+      },
+      {
+        "gate": "fmt",
+        "command": [
+          "cargo",
+          "fmt",
+          "--all",
+          "--",
+          "--check"
+        ],
+        "exit_code": 0,
+        "log": "/tmp/klem-mada-case-fmt.log"
+      },
+      {
+        "gate": "evaluator",
+        "command": [
+          "cargo",
+          "build",
+          "--locked",
+          "--offline",
+          "--example",
+          "evaluate"
+        ],
+        "exit_code": 0,
+        "log": "/tmp/klem-mada-case-evaluator.log"
+      }
+    ],
+    "pinned_corpus": "passed; all frozen baselines retained, one original KAIST dev recovery improves, every earlier recovery/set preserved; other three reports byte-identical",
+    "clippy_warnings_denied": "passed",
+    "rustfmt": "passed",
+    "full_browser": "passed, including all twenty new cases, actual native grammar sources, noun/honorific/plural/copula ownership, all three export modes and mobile",
+    "frontend": "No production frontend or grammar-catalog changes; local/packaged/served immutable JS hashes remain identical to preceding committed assets.",
+    "rendering": "Full-browser desktop/mobile views inspected; observed nominal/case order, honorific/plural and later copula parts fit. Lexical glosses remain dictionary hints; teaching/instruction for 교수 is visible as an unresolved homonym hint rather than contextual translation.",
+    "nix": {
+      "builds": [
+        "klem",
+        "web"
+      ],
+      "flake_checks": 3,
+      "platform": "x86_64-linux",
+      "result": "passed",
+      "other_systems": "not executed"
+    },
+    "packaged_api": "All 140 cases raw/both filters, word/text HTTP/CLI parity, every lexical assessment slot, existing five fan homonyms/origins, complete noun suffix senses/44 groups, complete two 마다 senses/20 groups and native grammar-source identities pass.",
+    "preview": "Verified previous exact process identity/exit; new package serves 140-case API parity and all-three-mode browser order/source/export/mobile checks."
+  },
+  "public_contract": {
+    "new_analysis_field": false,
+    "new_lemma_kind": false,
+    "new_rule": "particle.mada_case",
+    "new_grammar_form": false
+  },
+  "inventory_review": {
+    "previous_gap": {
+      "id": "krdict:70331",
+      "source_sha256": "7c98e4ad1825c099b2f7b1dfba072f374b7b05e0288fe9ee0ea6bfe0238d14c0",
+      "status": "gap",
+      "checklist": [
+        "COV-018l"
+      ],
+      "scope": "Observed KAIST 편마다에도 → 편 + 마다 + 에 + 도 is currently unrecovered. The complete source sentence and grammar-source review are retained for investigation.",
+      "remaining": "Linguistic acceptability, lexical/semantic distribution and regional/register scope remain unresolved. A six-file train/dev/test search finds only the original KAIST occurrence. Full distribution and regional primary sources still need retrieval and Korean review before generalizing 마다 + 에; no required/forbidden judgment is assigned.",
+      "evidence": [
+        {
+          "path": "docs/range-case-evaluation.json"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "range_case_particles_recover_annotated_history"
+        },
+        {
+          "path": "tests/fixtures/kaist-range-case.conllu"
+        },
+        {
+          "path": "docs/mada-distribution-audit.json"
+        }
+      ],
+      "judgments": []
+    },
+    "current_status": "scoped",
+    "scoped_entries": 387,
+    "unreviewed_entries": 328,
+    "gap_entries": 0,
+    "precision_or_complete_entry_claim": false
+  },
+  "limitations": [
+    "Raw/headword/compatible additions retain 28/6/2 explicit unjudged dispositions and stable IDs. Source structural judgments do not certify contextual distributive senses, lexical semantics or global precision.",
+    "The directly applicable printed p.70 modern distribution statement is distinct from historical examples; it does not pretend to retrieve Yoo 2007 or the 2018 regional discussion. Those original finer requirements remain open.",
+    "Only the reviewed 마다 + 에 edge is added; existing noun attachment, particle order, repetition, allomorphs, nominalized owners and later copulas remain. Other following case families are not inferred automatically.",
+    "All original source/corpus annotations, prior ledger bytes/cases and frozen baselines remain. Novel equality does not substitute for fresh representative-passage review.",
+    "Dictionary glosses are homonym hints, not contextual translations. Independent Korean-language review remains required. Three interleaved local timing/RSS samples do not prove statistical equivalence or universal throughput."
+  ],
+  "final_documented_package": {
+    "outputs": {
+      "cli": "/nix/store/c01cm4g7wa9gm2zvz7g48ns2jpl2y3pb-klem-0.1.0/bin/klem",
+      "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+      "server": "/nix/store/c01cm4g7wa9gm2zvz7g48ns2jpl2y3pb-klem-0.1.0/bin/klem-web",
+      "server_sha256": "ce0720afaa8f1e29078ab4c3c42c210edb82bb9c227eb37c35d2389109e9349d",
+      "web_wrapper": "/nix/store/r88139qwci2dwpfmig3l8ryvv733qyjn-klem-web/bin/klem-web",
+      "production_js": "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web/assets/index-DU43SJBP.js",
+      "production_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+      "documented_source_build_tests": 681,
+      "final_cli_server_hashes_match_verified_package": true
+    },
+    "preview_identity": {
+      "pid": 2144698,
+      "exe": "/nix/store/c01cm4g7wa9gm2zvz7g48ns2jpl2y3pb-klem-0.1.0/bin/klem-web",
+      "cwd": "/home/josh/projects/klem",
+      "uid": 1000,
+      "args": [
+        "/nix/store/c01cm4g7wa9gm2zvz7g48ns2jpl2y3pb-klem-0.1.0/bin/klem-web",
+        "--assets",
+        "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web",
+        "--port",
+        "8081",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "start_time_ticks": "37444831"
+    },
+    "preview_refresh": {
+      "old_identity": {
+        "pid": 2067388,
+        "exe": "/nix/store/c93lljg75r7smw2cdi9m0arfg239pa6a-klem-0.1.0/bin/klem-web",
+        "cwd": "/home/josh/projects/klem",
+        "uid": 1000,
+        "args": [
+          "/nix/store/c93lljg75r7smw2cdi9m0arfg239pa6a-klem-0.1.0/bin/klem-web",
+          "--assets",
+          "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web",
+          "--port",
+          "8081",
+          "--dictionary",
+          "data/dictionaries/krdict/krdict.db"
+        ],
+        "start_time_ticks": "37368510"
+      },
+      "old_identity_verified": true,
+      "old_exited": true,
+      "new_package": "/nix/store/r88139qwci2dwpfmig3l8ryvv733qyjn-klem-web",
+      "server_sha256": "ce0720afaa8f1e29078ab4c3c42c210edb82bb9c227eb37c35d2389109e9349d"
+    },
+    "preview_runtime": {
+      "url": "http://127.0.0.1:8081",
+      "cli": "/nix/store/c01cm4g7wa9gm2zvz7g48ns2jpl2y3pb-klem-0.1.0/bin/klem",
+      "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+      "cases": 140,
+      "new_mada_cases": 20,
+      "required": 115,
+      "forbidden": 25,
+      "http_word_text_cli_parity": true,
+      "both_filters_exact_parity": true,
+      "root_homonyms": 5,
+      "known_other_origins": 4,
+      "complete_originless_matchmaking_and_debut_senses": true,
+      "all_source_origins_preserved": true,
+      "ordinary_words_do_not_gain_root_evidence": true,
+      "complete_lexical_assessment_slots": true,
+      "compound_root_ordered_components": true,
+      "spacing_keeps_whole_noun_without_conflicting_roots": true,
+      "complete_suffix_senses": {
+        "88924": 3,
+        "88927": 2
+      },
+      "noun_suffix_native_groups": 44,
+      "served_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+      "local_asset_parity": true,
+      "mada_native_senses": 2,
+      "mada_native_groups": 20,
+      "observed_mada_case_order_and_sources": true
+    },
+    "nix_build_tests": 681,
+    "nix_apps_help": true,
+    "verified_cli_server_and_asset_hashes_unchanged": true
+  }
+}

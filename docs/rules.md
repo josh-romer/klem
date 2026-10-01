@@ -3914,3 +3914,17 @@ Registered 못난이 and 흰둥이 retain their whole-base -이 hypotheses and w
 Five further COV-022l possibilities retain 됨됨/쭉정 Root boundaries from positive primary formation evidence, independently attested nominal 얼간/허풍선 bases, and finite prefix 얼- + 간 + 이. The absence of learner-dictionary heads does not assign a Root role. Only the detailed matched prefix reading survives both dictionary filters; whole nouns remain. Spacing accepts registered prefixes with validated ordered components, including the previous 왕- path. [Source audit](noun-formation-source-audit.json) retains complete sources and original training rows; [evaluation](noun-formation-evaluation.json) records all finite gates passing. Finer original formation follow-ups remain required.
 
 Finer finite 허풍선이 decomposition is verified as 허풍 Nominal + 선 Root + 이, following primary KBS descriptions of 扇 (fan). `derivation.nominal.root_compound` validates the exact two-base order; whole/grouped nouns remain. Optional per-entry origin evidence and `derivational_root` conflicts distinguish four other recorded origins and the individually reviewed native matchmaking/debut entry 63243. The latter has no origin but both complete senses positively identify a different lexical item; origin absence alone is never a rejection. No arbitrary Chinese splitting or standalone Root POS is inferred. Five tests/20 cases and all finite gates pass; [source audit](noun-fan-source-audit.json) and [evaluation](noun-fan-evaluation.json) record every added path. Original finer requirements and independent review remain open.
+
+### Modern 마다 + 에 (partial COV-018l)
+
+Lee (2025), ‘마다’의 文法史, printed p.70 explicitly describes modern 마다
+preceding adverbial case particles. `particle.mada_case` recovers the unchanged
+KAIST 편마다에도 segmentation, preserving nominal left attachment, existing
+outer focus/polite particles and later copula ownership. It licenses the
+reviewed 마다 + 에 edge; it does not reorder other particle families or infer
+contextual distributive senses/lexical suitability. Four tests/20 cases and all finite gates pass;
+[evaluation](mada-case-evaluation.json) retains every addition and the one
+original corpus recovery. Semantic/register distribution and independent
+Korean review remain open.
+[Source audit](mada-case-source-audit.json) retains the public PDF provenance,
+57 complete dictionary entries and all twenty original 마다 example groups.

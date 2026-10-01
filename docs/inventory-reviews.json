@@ -10707,12 +10707,12 @@
     {
       "id": "krdict:70331",
       "source_sha256": "7c98e4ad1825c099b2f7b1dfba072f374b7b05e0288fe9ee0ea6bfe0238d14c0",
-      "status": "gap",
+      "status": "scoped",
       "checklist": [
         "COV-018l"
       ],
-      "scope": "Observed KAIST 편마다에도 → 편 + 마다 + 에 + 도 is currently unrecovered. The complete source sentence and grammar-source review are retained for investigation.",
-      "remaining": "Linguistic acceptability, lexical/semantic distribution and regional/register scope remain unresolved. A six-file train/dev/test search finds only the original KAIST occurrence. Full distribution and regional primary sources still need retrieval and Korean review before generalizing 마다 + 에; no required/forbidden judgment is assigned.",
+      "scope": "Nominal 마다 + 에 structural recovery, preserving existing focus/polite/copula owners. Lee (2025), printed p.70 supplies directly applicable modern following-case evidence independently of historical examples; unchanged KAIST 편마다에도 now recovers 편 + 마다 + 에 + 도. KRDict 70331 noun attachment remains: an Adverbial 아직 + 마다 path is forbidden without rejecting nominal alternatives. Four tests/20 cases and full Rust/pinned/lint/format, candidate/corpus/novel, browser/Nix/API/preview/release gates pass; every prior recovery and dictionary reading remains.",
+      "remaining": "Contextual distributive-sense choice, lexical semantic suitability, regional/register differences, earlier 2007/2018 full discussions, other following case families and independent Korean review remain open. This scoped disposition does not certify all attachment contexts or close original COV-018l semantic/register review.",
       "evidence": [
         {
           "path": "docs/range-case-evaluation.json"
@@ -10726,9 +10726,31 @@
         },
         {
           "path": "docs/mada-distribution-audit.json"
+        },
+        {
+          "path": "docs/mada-case-source-audit.json"
+        },
+        {
+          "path": "tests/mada_case.rs",
+          "test": "mada_case_paths_preserve_boundaries_ambiguity_unicode_and_component_ownership"
+        },
+        {
+          "path": "tests/mada_case.rs",
+          "test": "mada_case_dictionary_and_cli_filters_preserve_all_lexical_slots_and_unknown_heads"
+        },
+        {
+          "path": "tests/fixtures/mada-case-sources.json"
+        },
+        {
+          "path": "docs/mada-case-evaluation.json"
         }
       ],
-      "judgments": []
+      "judgments": [
+        {
+          "case": "mada-case-adverb-class",
+          "judgment": "path"
+        }
+      ]
     },
     {
       "id": "krdict:86121",

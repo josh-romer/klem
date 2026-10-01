@@ -1516,6 +1516,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "particle.range_case" => {
             "Retain source-attested case marking after 까지 or 부터; the immediately preceding surface still determines the case allomorph."
         }
+        "particle.mada_case" => {
+            "Recover nominal 마다 + 에 using the independently sourced modern case-following license; preserve outer particle order without selecting a distributive sense or contextual semantic suitability."
+        }
         "particle.comparison_extent" => {
             "Recover comparison/extent particles 만치, 마냥 or 토록; contextual comparison and duration are not inferred."
         }

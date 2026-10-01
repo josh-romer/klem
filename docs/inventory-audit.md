@@ -22,8 +22,8 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **386 scoped
-reviews**, **one observed gap with unresolved acceptability** (마다), and
+The [manual ledger](inventory-reviews.json) currently contains **387 scoped
+reviews**, **zero gap dispositions**, and
 **328 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
@@ -1072,3 +1072,19 @@ readings, four byte-identical full corpus reports and five byte-identical novel
 modes. The actual immutable-UI regression verifies corrected fan-root and
 noun-suffix labels. Full original seven-form/finer requirements and independent
 review remain open; this source pattern does not close COV-022l.
+
+## Modern 마다 following-case scope (2026-10-01, partial COV-018l)
+
+The former 70331 gap receives a scoped disposition from directly applicable
+Lee (2025) p.70 modern distribution evidence, independently of historical
+examples. The unchanged KAIST 편마다에도 path now recovers; noun attachment,
+all twenty native groups and complete source entries remain. The exact
+native-source adverb-boundary judgment supplies the review-ledger citation;
+positive following-case judgments cite the independent research source.
+The previous gap disposition remains verbatim in the
+[source audit](mada-case-source-audit.json). Four tests/20 cases, all 681 Rust tests and full comparison/browser/Nix/API/
+preview/release gates pass. [Evaluation](mada-case-evaluation.json) retains
+54/30/26 additions with 28/6/2 unjudged dispositions and no prior reading
+changes; one original corpus recovery improves and every earlier recovery
+remains. Original semantic/register distribution and independent review remain. The queue now has 387 scoped, 328 unreviewed and zero gap entries,
+without implying completed linguistic review or complete-entry coverage.

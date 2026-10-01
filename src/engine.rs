@@ -3083,6 +3083,7 @@ fn particle_allowed(
             && (matches!(form, "까지" | "부터") || source_particle_prefix(form).is_some()))
         || (outer == Some("의") && matches!(class, 2 | 3) && form != "의")
         || outer.is_some_and(|outer| range_case_link(form, outer))
+        || outer.is_some_and(|outer| mada_case_link(form, outer))
         || outer.is_some_and(|outer| additive_particle_link(form, outer))
         || outer.is_some_and(|outer| comparison_case_link(form, outer))
 }
@@ -3115,6 +3116,13 @@ fn range_case_link(inner: &str, outer: &str) -> bool {
         (inner, outer),
         ("까지", "가" | "를" | "에" | "로") | ("부터", "가")
     )
+}
+
+// Lee (2025), printed p.70, explicitly places modern 마다 before adverbial
+// case particles. Recover the observed KAIST 마다+에 edge while preserving
+// the nominal left boundary and the surrounding ordinary particle stages.
+fn mada_case_link(inner: &str, outer: &str) -> bool {
+    inner == "마다" && outer == "에"
 }
 
 // A bundled source particle has two boundaries: 부터 governs what follows,
@@ -3522,6 +3530,12 @@ fn nominals(
                 .is_some_and(|m| range_case_link(particle.form, &m.form))
             {
                 a.rules.push("particle.range_case".into());
+            }
+            if suffixes
+                .first()
+                .is_some_and(|m| mada_case_link(particle.form, &m.form))
+            {
+                a.rules.push("particle.mada_case".into());
             }
             if let Some(rule) = particle.pronunciation {
                 a.rules.push(rule.into());

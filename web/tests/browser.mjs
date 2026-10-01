@@ -563,6 +563,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!nounFanIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounFanEntries);
 
+  const madaCaseFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-mada-case.json"),"utf8"));
+  const madaCaseEntries = madaCaseFixture.LexicalResource.Lexicon.LexicalEntry;
+  const madaCaseIds = new Set(madaCaseEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!madaCaseIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...madaCaseEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5138,6 +5144,25 @@ try {
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();await submit(page,"허풍선이들쯤에는");await waitHeading(page,"허풍선이들쯤에는");
   const fanRaw=await(await post("analyze",{text:"허풍선이들쯤에는"})).json();const fanIndex=fanRaw.records[0].analysis.analyses.findIndex(a=>a.rules.includes("derivation.nominal.root_compound"));await page.locator(".breakdown-word").first().getByRole("combobox").selectOption(String(fanIndex));
   await page.screenshot({path:resolve(tmpdir(),"klem-noun-fan-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-fan-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+
+  // Modern primary distribution evidence recovers the original KAIST
+  // nominal 마다 + 에 gap while keeping all outer owners and source entries.
+  const madaCaseCases=recipientLedger.cases.filter(c=>c.id.startsWith("mada-case-"));assert.equal(madaCaseCases.length,20);
+  for(const c of madaCaseCases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments)assert.equal(token.analysis.analyses.some(a=>hieutMatches(a,j)&&(!j.required_rules||j.required_rules.every(r=>a.rules.includes(r)))),j.verdict==="required",c.id);
+  }
+  for(const flag of[null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="편마다에도 교수님들마다에도 편마다에도였다";await submit(page,text);await waitHeading(page,"편마다에도");const raw=await(await post("analyze",{text})).json();const words=raw.records.filter(r=>r.analysis);
+    for(const[n,forms]of[[0,["편","마다","에","도"]],[1,["교수","님","들","마다","에","도"]],[2,["편","마다","에","도","이","었","다"]]]) {
+      const i=words[n].analysis.analyses.findIndex(a=>a.rules.includes("particle.mada_case")&&a.lemmas[0].kind==="nominal"&&a.lemmas[0].text===(n===1?"교수":"편"));assert.ok(i>=0);const b=page.locator(".breakdown-word").nth(n);await b.getByRole("combobox").selectOption(String(i));assert.deepEqual(await b.locator(".part-form").allTextContents(),forms);
+    }
+    const b=page.locator(".breakdown-word").first();await b.getByRole("button",{name:"마다 Every / each",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=70331"));
+    await b.getByRole("button",{name:"에 Place / time / destination",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=86572"));
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-mada-case-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-mada-case-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

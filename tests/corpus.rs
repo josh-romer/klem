@@ -1718,9 +1718,12 @@ fn range_case_particles_recover_annotated_history() {
     assert_eq!(case.surface, "역사까지를");
     assert_eq!(case.expected, ["역사"]);
     assert!(case.matched);
-    // The second complete sentence preserves the observed 마다 + 에 gap.
-    // Its disputed attachment is deliberately not a required/forbidden judgment.
-    assert_eq!(report.cases["id:MH2_0159-s285/15"].surface, "편마다에도");
+    // The original annotation remains; Lee (2025), printed p.70, now supplies
+    // independent modern distribution evidence for the following case edge.
+    let mada = &report.cases["id:MH2_0159-s285/15"];
+    assert_eq!(mada.surface, "편마다에도");
+    assert_eq!(mada.expected, ["편"]);
+    assert!(mada.matched);
 }
 
 #[test]

@@ -3897,3 +3897,5 @@ new derived noun alternative. It is not noun-suffix segmentation gold. The
 senses/44 groups, four targets and 21 complete headword entries. Finer
 sound/manner and historical base relationships remain explicit review work;
 the finite nominal paths do not forbid such alternatives.
+
+COV-022h adds nine finite source-listed sound/manner boundaries before noun-forming -이, with eight adverb lookup roles and root 뺑뺑. The noun rule licenses outer particles, one plural 들, approximation 쯤 and later copulas while preserving whole-word/adverb-suffix alternatives. Root status expresses the positive listed derivational boundary; it makes no standalone POS claim and is not inferred from dictionary absence. Pinned 깡깡/덜렁/짝짝 senses do not certify instrument/person/unmatched-pair histories. See [the source audit](noun-sound-source-audit.json); all finite verification gates pass; wider predicate/root alternatives and independent review remain open.

@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d/022f–g batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d/022f–h batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -2607,7 +2607,8 @@ review remains open under the completion review below.
   opaque 천천/분연 roots; COV-022d adds the eight source-listed
   predicate-base noun formations; COV-022f adds all six native sense-2 forms
   with ordered compound bases and finite normalization; COV-022g adds four
-  nominal-base formations.** Remaining: other lexical
+  nominal-base formations and COV-022h adds nine sound/manner forms.**
+  Remaining: other lexical
   classes, other opaque roots beyond the finite COV-022c forms, subdivision of nonlexical
   repeated bases, suffix/auxiliary interactions, and other nominal -이 senses/classes. Keep lexical readings and causative/noun homonyms; historical
   달리/빨리 do not license a general 르 inflection rule.
@@ -2702,7 +2703,9 @@ review remains open under the completion review below.
   bare-word CLI probes (raw/headword/compatible) lack the noun-forming rule
   in that historical snapshot; existing lexical candidates remain in the report.
   COV-022f subsequently covers the six sense-2 forms; COV-022g covers four
-  sense-3 nominal forms. Twenty-six native sense-3 forms remain open. The discovery artifact is preserved as historical evidence. Fourteen
+  sense-3 nominal forms and COV-022h covers nine sound/manner forms. Seventeen
+  native sense-3 forms remain open. The discovery artifact is preserved as
+  historical evidence. Fourteen
   prefix occurrences across six pinned corpus partitions retain complete
   sentence bodies and original rows. All are in KAIST training data: nine
   annotate the whole native noun, four retain longer 미치광이풀 compounds,
@@ -2766,12 +2769,29 @@ review remains open under the completion review below.
   [evaluation](noun-base-evaluation.json). Other base/sense relationships and
   independent Korean-language review remain open.
 
-- [ ] **COV-022h — Native sound and manner noun bases.** Review and implement
+- [x] **COV-022h — Native sound and manner noun bases.** Implemented for
   깜빡이, 깡깡이, 깽깽이, 꿀꿀이, 덜렁이, 딸랑이, 뺑뺑이, 오뚝이
   and 짝짝이. Attested adverb spelling/POS alone does not certify the individual
   derivation or its sense; missing 뺑뺑 does not establish Root status. Preserve
   sound/manner and whole-noun alternatives, homonyms, noun/adverb suffix identity,
   outer morphology, normalized spelling and filter/export uncertainty.
+  Nine finite source-listed boundaries emit eight adverb lookup roles and a
+  뺑뺑 derivational root; positive suffix examples supply its boundary without a
+  standalone POS claim. Five tests and 180 stable cases (153 required / 27
+  forbidden) preserve 32 complete entries, all suffix senses/44 groups, outer
+  plural/approximation/copula ownership, NFC/NFD, homonyms and missing-root
+  filter behavior. No matching annotated target occurs in either training corpus.
+  All 647 Rust tests, pinned corpus, lint/format, full browser and Nix CLI/web
+  builds/three Linux checks pass. Across 12,982 inputs every prior candidate
+  remains: raw adds 324 paths (306 required / 18 unjudged), both filters add 288
+  (272 required / 16 unjudged), removing only the new unmatched-root paths.
+  Full corpus and all five 179,112-record novel outputs are byte-identical;
+  no baseline changes. Packaged/refreshed-preview HTTP/CLI and three browser
+  exports agree; desktop/mobile views are inspected. Release/debug novel hashes
+  match; three local samples give after medians of 1.62 seconds for both filters.
+  See [source audit](noun-sound-source-audit.json) and
+  [evaluation](noun-sound-evaluation.json). Finer base senses, related-predicate/
+  root alternatives and independent Korean review remain open.
 
 - [ ] **COV-022i — Native related-predicate and root noun bases.** Review and
   implement 끈끈이, 누렁이, 뚱뚱이, 멍청이, 미치광이, 합죽이 and 홀쭉이.
@@ -2804,10 +2824,12 @@ review remains open under the completion review below.
   provenance; neither date nor a missing head settles them automatically.
 
   COV-022g–l partition every original native sense-3 example exactly once;
-  the five open batches COV-022h–l retain the other twenty-six forms. The [read-only review tool](../tools/review_nominal_i_bases.py) verifies
+  the four open batches COV-022i–l retain the other seventeen forms. The
+  [read-only review tool](../tools/review_nominal_i_bases.py) verifies
   source/plan identity and retains ninety current CLI/filter snapshots plus
   full dictionary sense/role observations. The historical ninety-probe discovery snapshot assigns no required judgment
-  or runtime path; the subsequent COV-022g implementation has separate evidence. All existing corpus annotations and
+  or runtime path; subsequent COV-022g/h implementations have separate evidence.
+  All existing corpus annotations and
   frozen baselines remain unchanged; other compound leads and wider COV-022
   derivations remain open beyond these thirty forms.
 

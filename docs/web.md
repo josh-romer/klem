@@ -349,3 +349,5 @@ nominal role before noun-forming 이, then plural/approximation/particles or a
 separately owned copula. Noun-source selection and menu qualifiers still use
 rule provenance; a homonymous particle 이 or copula keeps its own role. Whole
 lexical readings and filtered JSON component identities remain available.
+
+Sound/manner noun breakdowns use adverb or root base roles before the noun suffix, then plural/approximation/particles or a separate copula. 뺑뺑 has a Root label and retains its source-listed path in raw mode; dictionary filters remove the unmatched root and keep the whole noun. Base glosses remain dictionary hints, particularly for homonymous 깡깡/덜렁/짝짝; the noun/adverb suffix sources stay distinct.

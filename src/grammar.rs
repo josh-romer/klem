@@ -114,6 +114,21 @@ pub(crate) const NOUN_I_NOMINAL_FORMS: &[(&str, &str)] = &[
     ("바둑이", "바둑"),
 ];
 
+// KRDict 88924 sense 3: finite sound/manner formations. Adverb headwords
+// support lookup roles, not a contextual sense. The source-listed 뺑뺑 + 이
+// boundary supplies derivational-base evidence without a standalone POS claim.
+pub(crate) const NOUN_I_SOUND_FORMS: &[(&str, &str, LemmaKind)] = &[
+    ("깜빡이", "깜빡", LemmaKind::Adverbial),
+    ("깡깡이", "깡깡", LemmaKind::Adverbial),
+    ("깽깽이", "깽깽", LemmaKind::Adverbial),
+    ("꿀꿀이", "꿀꿀", LemmaKind::Adverbial),
+    ("덜렁이", "덜렁", LemmaKind::Adverbial),
+    ("딸랑이", "딸랑", LemmaKind::Adverbial),
+    ("뺑뺑이", "뺑뺑", LemmaKind::Root),
+    ("오뚝이", "오뚝", LemmaKind::Adverbial),
+    ("짝짝이", "짝짝", LemmaKind::Adverbial),
+];
+
 // Selected compound bases before noun-forming -이, not arbitrary segmentation.
 // The two lemmas form one base; neither takes an inflectional ending here.
 // NIKL 320611 confirms 밀다 + 닫다; Article 28 accounts for lost ㄹ.

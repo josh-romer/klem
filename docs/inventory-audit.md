@@ -956,3 +956,20 @@ Full frozen corpus and all five novel outputs remain byte-identical. All 642
 Rust tests, Nix/browser/HTTP and refreshed preview checks pass. The historical
 all-thirty review remains intact; COV-022h–l retains the other twenty-six forms.
 The ending/particle/auxiliary queue remains 386 scoped / 328 unreviewed / one gap.
+
+## Native sound/manner noun implementation (2026-10-01)
+
+COV-022h now implements all nine selected sound/manner boundaries with adverb
+lookup roles and a 뺑뺑 derivational root. The [source review](noun-sound-source-audit.json)
+retains 32 full entries and all suffix senses/44 groups; eight base roles are
+source-pattern/headword inferences with contextual sense uncertainty explicit.
+The positive suffix example supplies 뺑뺑's Root boundary without a standalone
+POS assertion; missing headword data is tested separately. Five tests/180 cases
+cover 153 required and 27 forbidden paths. No training annotation target is
+available and none is invented. All 647 Rust tests, Nix/browser/HTTP/preview and
+release gates pass. The [comparison](noun-sound-evaluation.json) preserves prior
+analyses across 12,982 inputs and retains eighteen raw unjudged additions.
+Full corpus/novel outputs remain unchanged. COV-022i–l retains seventeen native
+examples, and wider derivation/independent review remain open. These noun/suffix
+forms are outside the 715-entry ending/particle/auxiliary queue's POS scope;
+that queue remains 386 scoped / 328 unreviewed / one gap.

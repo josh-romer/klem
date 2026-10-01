@@ -3483,3 +3483,33 @@ Nominal roles, suffix source, plural/approximation/copula ordering and three
 browser exports pass; final desktop/mobile views are inspected. Base senses,
 finer sound/manner or historical relationships, the other twenty-six native
 examples and independent Korean-language review remain open.
+
+## Native sound/manner noun bases (COV-022h)
+
+The [source audit](noun-sound-source-audit.json) preserves nine positive native
+suffix examples, eight adverb lookup roles and a 뺑뺑 derivational root. Source-
+pattern role judgments do not certify contextual senses or exclusive classes.
+Five tests and 180 stable cases add 153 required / 27 forbidden judgments,
+reaching 7,260 required / 3,131 forbidden. The 32-entry native fixture preserves
+all suffix senses/44 groups and every available base/whole homonym. Exhaustive
+training-surface searches find no annotated target; no suffix gold is invented.
+
+The [individual comparison](noun-sound-evaluation.json) covers 12,982 NFC/NFD
+inputs under raw and both filters. Raw adds 324 paths at 306 surfaces, including
+306 required additions and eighteen unjudged. Each filter adds 288 paths at 272
+surfaces, including 272 required and sixteen unjudged. All prior analyses and
+lookup readings remain; only new unmatched 뺑뺑 root paths disappear under
+filters. Every full raw addition/ID/disposition and verified filter reference is
+retained. The unjudged plural-들 particle alternatives remain unjudged.
+
+All four full frozen corpus reports and all five 179,112-record novel outputs,
+including spacing sidecars, are byte-identical. Baselines remain frozen and
+packaged/debug novel hashes match. Three interleaved local release samples per
+filter give headword medians 1.63/1.62 seconds and compatible medians 1.59/1.62
+seconds; after peak child RSS is 30,344/30,568 KiB. These measurements include
+startup, lookup and serialization and do not establish statistical equivalence.
+All 647 Rust tests, pinned corpus, lint/format, full browser and Nix builds/three
+Linux checks pass. Packaged/refreshed-preview HTTP/CLI outputs agree on all 180
+cases and three browser exports; inspected desktop/mobile views preserve noun
+ownership and root-filter uncertainty. Seventeen native examples, finer base
+histories, related-predicate/root alternatives and independent review remain open.

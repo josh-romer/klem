@@ -521,6 +521,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounBaseIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounBaseEntries);
 
+  const nounSoundFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-noun-sound.json"), "utf8"));
+  const nounSoundEntries = nounSoundFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounSoundIds = new Set(nounSoundEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounSoundIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounSoundEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -4881,6 +4887,55 @@ try {
     const wait = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
     const exported = JSON.parse(await readFile(await(await wait).path(),"utf8"));
     assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:word,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Sound/manner base roles belong to the noun suffix; missing root lookup
+  // stays visible in raw results and disappears only under dictionary filters.
+  for (const [word, base, kind, expected] of [
+    ["깜빡이", "깜빡", "adverbial", ["깜빡", "이"]],
+    ["깡깡이", "깡깡", "adverbial", ["깡깡", "이"]],
+    ["깽깽이", "깽깽", "adverbial", ["깽깽", "이"]],
+    ["꿀꿀이들쯤에는", "꿀꿀", "adverbial", ["꿀꿀", "이", "들", "쯤", "에", "는"]],
+    ["덜렁이", "덜렁", "adverbial", ["덜렁", "이"]],
+    ["딸랑이들이었다", "딸랑", "adverbial", ["딸랑", "이", "들", "이", "었", "다"]],
+    ["뺑뺑이들이었다", "뺑뺑", "root", ["뺑뺑", "이", "들", "이", "었", "다"]],
+    ["오뚝이", "오뚝", "adverbial", ["오뚝", "이"]],
+    ["짝짝이예요", "짝짝", "adverbial", ["짝짝", "이", "이", "에요"]],
+  ]) {
+    if (kind === "root") await page.getByLabel("Dictionary matches only").uncheck();
+    else { await page.getByLabel("Dictionary matches only").check(); await page.getByLabel("Exclude known grammar conflicts").check(); }
+    await submit(page, word); await waitHeading(page, word);
+    const data = await (await post("analyze", {text:word})).json();
+    const noun = data.records[0].analysis.analyses.findIndex(a => a.rules.includes("suffix.nominal.i") && a.lemmas[0].text === base && a.lemmas[0].kind === kind);
+    assert.ok(noun >= 0, word);
+    const block = page.locator(".breakdown-word").first();
+    await block.getByRole("combobox").selectOption(String(noun));
+    assert.deepEqual(await block.locator(".part-form").allTextContents(), expected);
+    assert.match(await block.locator(`option[value="${noun}"]`).innerText(), /noun-forming/);
+    if (kind === "root") assert.match(await block.innerText(), /Root/);
+    await block.getByRole("button", {name:"이 Noun-forming suffix", exact:true}).click();
+    await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));
+    if (kind === "root") {
+      await page.screenshot({path:resolve(tmpdir(),"klem-noun-sound-desktop.png"),fullPage:true});
+      await page.setViewportSize({width:390,height:844}); assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+      await page.screenshot({path:resolve(tmpdir(),"klem-noun-sound-mobile.png"),fullPage:true}); await page.setViewportSize({width:1440,height:1100});
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await(await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(kind === "root" ? [] : ["--dict-compatible"])],{input:word,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  // The source-listed 뺑뺑 boundary is not a fabricated dictionary headword.
+  for (const flag of ["--dict-only", "--dict-compatible"]) {
+    await page.getByLabel("Dictionary matches only").check();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check();
+    else await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page, "뺑뺑이"); await waitHeading(page, "뺑뺑이");
+    const wait = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await(await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,flag],{input:"뺑뺑이",encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+    assert.ok(exported.records[0].analysis.analyses.every(a => !a.rules.includes("suffix.nominal.i")));
+    assert.ok(exported.records[0].analysis.analyses.some(a => a.unchanged));
   }
   await page.getByLabel("Dictionary matches only").uncheck();
 

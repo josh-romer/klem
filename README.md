@@ -269,3 +269,4 @@ Quoted declarative reports also preserve a separate polite 요 particle, as in
 갔다는군요 and 온다는군요. Experience-report polite followers remain possible
 with Unknown attachment. See [the source audit](docs/quote-followers-source-audit.json)
 for direct examples and unresolved quoted 구나/register coverage.
+Finite sound/manner noun formations include 꿀꿀 + 이 and 오뚝 + 이. Source-listed 뺑뺑 + 이 uses a derivational root without a standalone POS claim; dictionary-only filters remove that path when the root has no dictionary match.

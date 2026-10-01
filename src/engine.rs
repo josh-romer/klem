@@ -28,6 +28,18 @@ fn morph(form: impl Into<String>, kind: MorphemeKind) -> Morpheme {
 // Bounded suffix paths at the nominal boundary, before particles or a copula.
 // Whole-word hypotheses remain: a matching tail need not be a real suffix.
 fn noun_i_derivation(word: &str) -> Option<Analysis> {
+    if let Some(&(_, base, kind)) = grammar::NOUN_I_SOUND_FORMS
+        .iter()
+        .find(|&&(surface, _, _)| surface == word)
+    {
+        return Some(Analysis {
+            lemmas: vec![lemma(base, kind)],
+            morphemes: vec![morph("이", MorphemeKind::Suffix)],
+            rules: vec!["suffix.nominal.i".into()],
+            unchanged: false,
+            spelling_paths: Vec::new(),
+        });
+    }
     if let Some(&(_, base)) = grammar::NOUN_I_NOMINAL_FORMS
         .iter()
         .find(|&&(surface, _)| surface == word)

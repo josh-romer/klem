@@ -59,7 +59,13 @@ impl Analysis {
                 continue;
             }
             let noun_i = index == usize::from(compound)
-                && matches!(lemma.kind, LemmaKind::Nominal | LemmaKind::Predicate)
+                && matches!(
+                    lemma.kind,
+                    LemmaKind::Nominal
+                        | LemmaKind::Predicate
+                        | LemmaKind::Adverbial
+                        | LemmaKind::Root
+                )
                 && self.rules.iter().any(|r| r == "suffix.nominal.i");
             let mut derived_predicate = false;
             if lemma.kind == LemmaKind::Nominal && !noun_i {
@@ -130,7 +136,7 @@ impl Analysis {
                 && self.morphemes.get(cursor).is_some_and(|m| {
                     m.kind == MorphemeKind::Suffix && matches!(m.form.as_str(), "이" | "히")
                 });
-            if lemma.kind == LemmaKind::Root && !adverbial {
+            if lemma.kind == LemmaKind::Root && !adverbial && !noun_i {
                 return None;
             }
             if adverbial {

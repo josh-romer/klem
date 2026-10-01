@@ -1883,3 +1883,5 @@ training sentence. Original 까막눈 + 이 + 다 is retained as a nominal plus
 copula, not new suffix segmentation gold. Attribution: UD Korean KAIST treebank
 contributors and KAIST corpus, https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15
 (CC BY-SA 4.0). Original token rows, UPOS and sentence bodies are unchanged.
+
+`krdict-noun-sound.json` contains 32 complete native entries, including all three noun-suffix senses/44 example groups, nine selected formations, every available base/head homonym and outer morphology. `noun-sound-sources.json` records eleven export hashes, original source groups, source-pattern role inferences and complete training searches with zero matching annotated tokens. Only RelatedForm and non-English equivalents are omitted; Sense arrays are normalized. The 180 `noun-sound-*` cases add 153 required structural paths and 27 boundary exclusions without changing historical judgments. Missing 뺑뺑 lookup is tested explicitly; positive suffix-example evidence, not dictionary absence, supplies the root boundary. Attribution/license follow the recorded CC BY-SA 2.0 KR source.

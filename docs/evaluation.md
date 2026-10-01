@@ -3616,3 +3616,40 @@ three browser exports agree; four desktop/mobile screenshots were inspected.
 The default 눈 hint may show snow because all homonyms remain; contextual
 selection is outside this finite batch. Seven native forms, wider morphology
 and independent Korean review remain open.
+
+## Competing adnominal noun formations (partial COV-022l)
+
+The [source audit](noun-adnominal-source-audit.json) retains 28 complete native
+entries, all three noun-suffix senses/44 groups, nine 이 homonyms and the
+complete 둥이 source. Five alternatives for 못난이/흰둥이 preserve whole-base
+Root boundaries, predicate + ㄴ + suffix forms, and NIKL's independently
+sourced bound-noun interpretation of 못난이. Five tests/100 stable cases
+(85 required / 15 forbidden) bring the ledger to 7,656 required / 3,200 forbidden.
+The older and newer primary answers remain together. The suffix's nominal-base
+class note stays intact, despite separate finite 흰둥이 norms evidence.
+No corpus training target, internal-suffix gold or contextual sense is invented.
+
+The [individual comparison](noun-adnominal-evaluation.json) covers 13,468
+NFC/NFD inputs: raw adds 180 paths (170 required / 10 unjudged), each filter
+108 (102 required / 6 unjudged), at 68 surfaces. All previous candidates and
+lookup assessments remain. Full raw addition IDs/analyses/dispositions and
+verified filtered references are retained. All four frozen-corpus full reports
+are byte-identical; before-evaluator hashes match the preceding committed
+report. Five 179,112-record novel outputs add readings at two occurrences:
+six raw / four filtered additions, no removals or changed previous readings,
+and unchanged spacing segments/boundaries/limits. Full original contexts remain
+and contextual senses are unjudged. Packaged/debug novel hashes agree.
+Three interleaved local samples give headword medians 1.61/1.61 seconds and
+compatible medians 1.59/1.61 seconds; after maximum child RSS is 30,388/30,512
+KiB respectively. These descriptive observations include startup, lookup and
+serialization and do not establish statistical equivalence.
+
+All 667 Rust tests, pinned corpus, lint/format, frontend/full browser and Nix
+package/check gates pass. Every packaged/refreshed-preview API case and three
+browser exports agree. The UI selects noun-suffix source 88924 after the finite
+adnominal ㄴ and bound-noun source 71124 using reading-specific assessments.
+The new source-label regression fails against the original immutable packaged
+UI and passes after the correction. Desktop/mobile views were inspected.
+The [seven-form review plan](noun-formation-review-plan.json) retains all five
+other required formations and their primary evidence, finer-history questions
+and follow-ups. This verified subset does not close COV-022l or wider COV-022.

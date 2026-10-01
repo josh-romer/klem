@@ -35,6 +35,57 @@ impl Analysis {
             .iter()
             .any(|r| r == "derivation.nominal.prefix_wang");
         let bagi = self.rules.iter().any(|r| r == "suffix.nominal.bagi");
+        let adnominal = self
+            .rules
+            .iter()
+            .any(|r| r == "derivation.nominal.adnominal");
+        let bound_i = self.rules.iter().any(|r| r == "derivation.nominal.bound_i");
+        let dungi = self.rules.iter().any(|r| r == "suffix.nominal.dungi");
+        let noun_i_rule = self.rules.iter().any(|r| r == "suffix.nominal.i");
+        if dungi && !adnominal {
+            return None;
+        }
+        if adnominal || bound_i {
+            if compound
+                || prefixed
+                || bagi
+                || (adnominal && bound_i)
+                || self
+                    .rules
+                    .iter()
+                    .any(|r| r == "derivation.nominal.related_root")
+                || self.lemmas[0].kind != LemmaKind::Predicate
+                || !self
+                    .morphemes
+                    .first()
+                    .is_some_and(|m| m.kind == MorphemeKind::Ending && m.form == "ㄴ")
+            {
+                return None;
+            }
+            if adnominal {
+                let suffix = if dungi { "둥이" } else { "이" };
+                if noun_i_rule == dungi
+                    || !crate::grammar::NOUN_ADNOMINAL_FORMS
+                        .iter()
+                        .any(|&(_, head, _, form)| head == self.lemmas[0].text && form == suffix)
+                    || !self
+                        .morphemes
+                        .get(1)
+                        .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == suffix)
+                {
+                    return None;
+                }
+            } else if noun_i_rule
+                || dungi
+                || self.lemmas[0].text != "못나다"
+                || !self
+                    .lemmas
+                    .get(1)
+                    .is_some_and(|l| l.kind == LemmaKind::Nominal && l.text == "이")
+            {
+                return None;
+            }
+        }
         if prefixed
             && (compound
                 || bagi
@@ -98,6 +149,14 @@ impl Analysis {
                 lemma.kind,
                 LemmaKind::Predicate | LemmaKind::Auxiliary | LemmaKind::Copula
             );
+            if bound_i && index == 0 {
+                // The adnominal ending belongs to 못나다. Outer particles and
+                // suffixes belong to the following bound noun, even when no
+                // plural intervenes to distinguish their serialized positions.
+                parts.push(Component::Morpheme(cursor));
+                cursor += 1;
+                continue;
+            }
             if compound && index == 0 {
                 if predicate {
                     lemma
@@ -116,7 +175,7 @@ impl Analysis {
                         | LemmaKind::Root
                 )
                 && self.rules.iter().any(|r| r == "suffix.nominal.i");
-            let noun_suffix = noun_i || (bagi && index == 0);
+            let noun_suffix = noun_i || ((bagi || dungi) && index == 0);
             let mut derived_predicate = false;
             if lemma.kind == LemmaKind::Nominal && !noun_suffix {
                 let start = cursor;
@@ -161,9 +220,20 @@ impl Analysis {
                     .filter(|stem| !stem.is_empty())?;
             }
             if noun_suffix {
+                if adnominal {
+                    parts.push(Component::Morpheme(cursor));
+                    cursor += 1;
+                }
                 let first = self.morphemes.get(cursor)?;
                 if first.kind != MorphemeKind::Suffix
-                    || first.form != if noun_i { "이" } else { "박이" }
+                    || first.form
+                        != if noun_i {
+                            "이"
+                        } else if dungi {
+                            "둥이"
+                        } else {
+                            "박이"
+                        }
                 {
                     return None;
                 }

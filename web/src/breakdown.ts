@@ -114,9 +114,16 @@ export function parts(
       ((previousMorpheme?.kind === "particle" &&
         ["에", "에서", "서", "에게", "한테", "께", "로", "으로"].includes(previousMorpheme.form)) ||
        (previousLemma && ["여기", "거기", "저기", "어디", "이리", "그리", "저리"].includes(previousLemma.text)));
+    const beforePrevious = order[position - 2];
+    // The finite adnominal noun base ends in ㄴ rather than immediately in
+    // its lexical head. Keep the noun suffix's source separate from adverb -이.
+    const adnominalBase = a.rules.includes("derivation.nominal.adnominal") &&
+      previousMorpheme?.kind === "ending" && previousMorpheme.form === "ㄴ" &&
+      beforePrevious && "lemma" in beforePrevious && beforePrevious.lemma === 0;
     const nominalI = m.kind === "suffix" && m.form === "이" &&
-      a.rules.includes("suffix.nominal.i") && previous && "lemma" in previous &&
-      previous.lemma === (a.rules.includes("derivation.nominal.compound") ? 1 : 0);
+      a.rules.includes("suffix.nominal.i") &&
+      (adnominalBase || (previous && "lemma" in previous &&
+        previous.lemma === (a.rules.includes("derivation.nominal.compound") ? 1 : 0)));
     const adverbI = m.kind === "suffix" && m.form === "이" && a.rules.includes("suffix.adverbial.i");
     const label = nominalI || adverbI
       ? { ...grammarLabels[key], label: nominalI ? "Noun-forming suffix" : "Adverb-forming suffix",

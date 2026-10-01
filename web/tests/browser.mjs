@@ -545,6 +545,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!nounInternalIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounInternalEntries);
 
+  const nounAdnominalFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-noun-adnominal.json"),"utf8"));
+  const nounAdnominalEntries = nounAdnominalFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounAdnominalIds = new Set(nounAdnominalEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!nounAdnominalIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounAdnominalEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5042,6 +5048,29 @@ try {
     if(flag)assert.ok(exported.records.filter(r=>r.analysis).every(r=>r.analysis.analyses.every(a=>a.lemmas.every(l=>l.text!=="왕눈"))));
   }
   await page.screenshot({path:resolve(tmpdir(),"klem-noun-internal-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-internal-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Keep the conflicting bound-noun/suffix analyses distinct despite their
+  // identical rendered text; adnominal morphology stays inside the noun base.
+  const nounAdnominalCases = recipientLedger.cases.filter(c=>c.id.startsWith("noun-adnominal-"));assert.equal(nounAdnominalCases.length,100);
+  for(const c of nounAdnominalCases) {
+    const r=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    assert.ok(r.analysis.analyses.every((a,i)=>JSON.stringify(r.dictionary.readings[i].lemmas.map(l=>l.lemma_index))===JSON.stringify(a.lemmas.map((_,j)=>j))));
+    for(const j of c.judgments)assert.equal(r.analysis.analyses.some(a=>hieutMatches(a,j)&&j.required_rules.every(rule=>a.rules.includes(rule))),j.verdict==="required",c.id);
+  }
+  for(const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="못난이를 못난이들이었다 흰둥이들이었다";await submit(page,text);await waitHeading(page,"못난이를");const raw=await(await post("analyze",{text})).json();const words=raw.records.filter(r=>r.analysis);
+    for(const[i,rule,forms]of[[0,"derivation.nominal.bound_i",["못나","ㄴ","이","를"]],[1,"derivation.nominal.adnominal",["못나","ㄴ","이","들","이","었","다"]],[1,"derivation.nominal.bound_i",["못나","ㄴ","이","들","이","었","다"]],[2,"suffix.nominal.dungi",["희","ㄴ","둥이","들","이","었","다"]]]) {
+      const choice=words[i].analysis.analyses.findIndex(a=>a.rules.includes(rule));assert.ok(choice>=0);const block=page.locator(".breakdown-word").nth(i);await block.getByRole("combobox").selectOption(String(choice));assert.deepEqual(await block.locator(".part-form").allTextContents(),forms);
+      if(rule==="derivation.nominal.bound_i") {const reading=words[i].dictionary.readings[choice];assert.deepEqual(reading.lemmas.map(l=>l.lemma_index),[0,1,...(i===1?[2]:[])]);assert.deepEqual(reading.lemmas[1].entries.filter(e=>e.status==="compatible").map(e=>e.id),["krdict:71124"]);assert.equal(reading.lemmas[1].entries.length,9);await block.locator(".breakdown-part").nth(2).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=71124"));}
+      if(rule==="derivation.nominal.adnominal") {await block.getByRole("button",{name:"이 Noun-forming suffix",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));}
+    }
+    assert.ok(raw.grammar["-둥이"].some(e=>e.id==="krdict:72336"));await page.locator(".breakdown-word").nth(2).getByRole("button",{name:"둥이 Person with a characteristic",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=72336"));
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+    if(flag)assert.ok(exported.records.filter(r=>r.analysis).every(r=>r.analysis.analyses.every(a=>a.lemmas.every(l=>!["못난","흰둥"].includes(l.text)))));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-noun-adnominal-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-adnominal-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

@@ -150,6 +150,14 @@ pub(crate) const NOUN_I_ROOTS: &[(&str, &str, &[&str])] = &[
     ("왕눈이", "왕눈", &[]),
 ];
 
+// Individual source-conflict formations: an adnominal ending is part of the
+// listed noun base, not permission to attach a noun suffix to any inflection.
+// The whole pre-suffix base remains an independent source-listed hypothesis.
+pub(crate) const NOUN_ADNOMINAL_FORMS: &[(&str, &str, &str, &str)] = &[
+    ("못난이", "못나다", "못난", "이"),
+    ("흰둥이", "희다", "흰둥", "둥이"),
+];
+
 // Selected compound bases before noun-forming -이, not arbitrary segmentation.
 // The two lemmas form one base; neither takes an inflectional ending here.
 // NIKL 320611 confirms 밀다 + 닫다; Article 28 accounts for lost ㄹ.
@@ -1564,6 +1572,15 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "suffix.nominal.bagi" => {
             "Separate the source-listed 점박이 noun as 점 plus the dictionary suffix 박이, alongside the reviewed 점 + 박다 + 이 possibility and whole noun. Only this finite spelling licenses the suffix boundary; contextual senses and historical exclusivity are not selected."
         }
+        "derivation.nominal.adnominal" => {
+            "Retain the adnominal ㄴ inside the finite 못난이 or 흰둥이 noun formation, before its independently supported 이 or 둥이 suffix. This does not license noun suffixes after arbitrary inflections or prefinals."
+        }
+        "derivation.nominal.bound_i" => {
+            "Preserve NIKL's older 못나다 + adnominal ㄴ + bound noun 이 analysis of 못난이 alongside the newer suffix treatment. The bound noun owns outer suffixes and particles; neither answer date nor dictionary membership resolves the source conflict."
+        }
+        "suffix.nominal.dungi" => {
+            "Separate the finite 흰둥이 formation as 희다 + adnominal ㄴ + 둥이, following the standard-language suffix evidence. Preserve the competing source-listed whole 흰둥 + 이 boundary and lexical noun, without productive 둥이 stripping."
+        }
         "derivation.nominal.related_root" => {
             "Link a finite noun-forming root to a reviewed related predicate as a separate lookup hypothesis. The related 하다/거리다 form does not insert a surface segment or license productive restoration, inflection or contextual sense selection."
         }
@@ -1889,7 +1906,7 @@ mod label_tests {
         ] {
             forms.insert(format!("-{form}-"), Prefinal);
         }
-        for form in ["님", "들", "적", "답다", "이", "히", "쯤", "박이"] {
+        for form in ["님", "들", "적", "답다", "이", "히", "쯤", "박이", "둥이"] {
             forms.insert(format!("-{form}"), Suffix);
         }
         forms.insert("왕-".to_owned(), Prefix);

@@ -79,6 +79,12 @@ fn nominal_case(a: &Analysis) -> bool {
     if !tail.iter().any(|m| case_form(&m.form)) {
         return false;
     }
+    if ((a.rules.iter().any(|r| r == "derivation.nominal.adnominal") && a.lemmas.len() == 1)
+        || (a.rules.iter().any(|r| r == "derivation.nominal.bound_i") && a.lemmas.len() == 2))
+        && a.breakdown().is_some()
+    {
+        return true;
+    }
     // Nominal roots/derivations or explicit nominalizations, never an arbitrary
     // connective followed by a particle. Each word is checked independently.
     (((a.lemmas.len() == 1 && a.lemmas[0].kind == LemmaKind::Nominal)
@@ -156,10 +162,17 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                     // A predicate lookup lemma before a noun suffix is a
                     // nominal word, not a sentence predicate for this template.
                     Role::Predicate => {
-                        !a.rules.iter().any(|r| r == "suffix.nominal.i")
-                            && a.lemmas
-                                .first()
-                                .is_some_and(|l| l.kind == LemmaKind::Predicate)
+                        !a.rules.iter().any(|r| {
+                            matches!(
+                                r.as_str(),
+                                "suffix.nominal.i"
+                                    | "derivation.nominal.adnominal"
+                                    | "derivation.nominal.bound_i"
+                            )
+                        }) && a
+                            .lemmas
+                            .first()
+                            .is_some_and(|l| l.kind == LemmaKind::Predicate)
                     }
                 })
                 .cloned()

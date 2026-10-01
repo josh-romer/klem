@@ -276,3 +276,5 @@ Noun-forming roots such as 홀쭉 + 이 retain a separate related-predicate look
 까불이 can be read as 까불 + noun-forming 이, linked to 까불다. Both verb homonyms and the whole-noun reading remain selectable; a dictionary match does not choose the intended sense.
 
 왕눈이 retains 왕눈 + 이 and prefix 왕- + 눈 + 이 alternatives; prefixes serialize with kind `prefix` and display before their base. 점박이 retains 점 + 박다 + 이 alongside 점 + 박이 and the whole noun. Dictionary homonyms remain selectable without selecting a contextual sense.
+
+Finite noun formations also preserve competing 못나다 + ㄴ + suffix 이 / bound noun 이 readings of 못난이, and 희다 + ㄴ + 둥이 for 흰둥이. Their grouped bases and whole nouns remain; source conflicts are displayed as alternatives. COV-022l verification and five other formation cases remain in progress.

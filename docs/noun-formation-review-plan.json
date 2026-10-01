@@ -1,0 +1,927 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-022",
+    "COV-022e",
+    "COV-022l"
+  ],
+  "scope": "All seven original formation/source-conflict cases remain in this batch; implementing two does not redefine completion around them.",
+  "historical_review": {
+    "path": "docs/nominal-i-base-review.json",
+    "sha256": "20b8caa268549eb4db82974b8b64ca29e0089936e85e66d3eb28452bae428305",
+    "preserved": true
+  },
+  "sources": [
+    {
+      "id": "formation-motnan-old",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=277100&searchCondition=&searchKeyword=",
+      "retrieval": "Complete primary answer retrieved 2026-10-01.",
+      "finding": "The 2023 answer analyzes 못나다 + adnominal ㄴ + bound noun 이."
+    },
+    {
+      "id": "formation-motnan-new",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=335977",
+      "retrieval": "Complete primary answer retrieved 2026-10-01.",
+      "finding": "The September 2026 answer uses suffix 이 for 못난이 and acknowledges competing analyses; form alone cannot settle the category."
+    },
+    {
+      "id": "formation-pal-history",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=44&pageIndex=1&qna_seq=335702",
+      "retrieval": "Complete primary answer retrieved 2026-10-01.",
+      "finding": "The September 2026 answer reports no available historical information for 팔푼이 in the standard dictionaries. It does not establish number/unit segmentation."
+    },
+    {
+      "id": "formation-heopung-kbs",
+      "url": "https://world.kbs.co.kr/service/contents_view.htm?board_seq=229261&id=&lang=k&menu_cate=learnkorean",
+      "retrieval": "Complete original broadcaster language lesson retrieved 2026-10-01.",
+      "finding": "The lesson gives the noun 허풍선 as a hand bellows, then relates 허풍선이 to that existing noun with final 이. It also explains the Chinese-character fan component; no runtime 선 lemma is yet licensed."
+    },
+    {
+      "id": "formation-eolgan-norm-data",
+      "url": "https://www.korean.go.kr/common/download.do?c_file_name=493a7a8e-dfeb-4b62-9036-9c0c7a668d54_0.pdf&file_path=reportData&o_file_name=2013%EB%85%84+%EA%B0%9C%EB%B0%A9%ED%98%95+%ED%95%9C%EA%B5%AD%EC%96%B4+%EC%A7%80%EC%8B%9D+%EB%8C%80%EC%82%AC%EC%A0%84+%EA%B5%90%EC%9C%A1%EC%9A%A9+%EA%B7%9C%EB%B2%94+%EC%A0%95%EB%B3%B4%28%EC%82%AC%EC%A0%84%29+%EA%B5%AC%EC%B6%95.pdf",
+      "retrieval": "Complete primary PDF text retrieved 2026-10-01 via its indexed session URL. Screenshots not inspected.",
+      "locator": "PDF page index 889, row 6581 (얼간-이); page index 915, row 8529 (쭉정-이).",
+      "finding": "The primary norm-information database explicitly marks 얼간-이 and 쭉정-이 boundaries. It lists 얼간 among related heads but does not establish that missing pinned head's POS/meaning or a predicate. These are independent positive boundary leads."
+    },
+    {
+      "id": "formation-reduplication-paper",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001821326",
+      "retrieval": "Complete primary PDF retrieved from KCI through the public article page cookie/referrer flow on 2026-10-01; extracted text inspected. Initial direct endpoint attempts failed.",
+      "doi": "10.20988/lfp.2013.32..97",
+      "finding": "The paper explicitly lists 됨됨이 among nouns formed by adding 이 to a reduplicated root. This supports grouped 됨됨 + 이; it does not separately assign both ㅁ elements to endings or establish a finer 되다 lookup relationship.",
+      "download_url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiOrteServHistIFrame.kci?sereArticleSearchBean.artiId=ART001821326&sereArticleSearchBean.orteFileId=KCI_FI001821326",
+      "pdf_sha256": "2982190362000244fdd572b0f44041785d79e73daacfa222fd1221d7cc4c52fd",
+      "locator": "Printed pages 109–110, section 2.2(4), example 7ㄱ."
+    },
+    {
+      "id": "formation-pal-book",
+      "url": "https://presscbu.cbnu.ac.kr/?category=373&document_srl=8189197&listStyle=webzine&mid=categori&page=1",
+      "retrieval": "Primary university publisher description/table of contents retrieved 2026-10-01; full chapter not retrieved.",
+      "finding": "The etymology study has a chapter covering 팔푼이 and marks 八 in the table of contents. The table does not establish the unit component or full derivation; inspect the actual chapter before required number/unit judgments."
+    }
+  ],
+  "forms": [
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g12",
+      "surface": "됨됨이",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "됨됨이"
+          }
+        ]
+      },
+      "historical_observations": [
+        {
+          "spelling": "됨됨이",
+          "heads": [
+            {
+              "id": "krdict:48248",
+              "headword": "됨됨이",
+              "pos": "명사",
+              "data_sha256": "d22c92fef05ae3ca0f8e8f49b0998fe17d5ffba61a29d01979d685aaae069877",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "어떠한 사람의 행동과 성격, 인격, 성품.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "됨됨",
+          "heads": []
+        },
+        {
+          "spelling": "됨됨다",
+          "heads": []
+        },
+        {
+          "spelling": "되다",
+          "heads": [
+            {
+              "id": "krdict:48214",
+              "headword": "되다",
+              "pos": "형용사",
+              "data_sha256": "77a46ba7cbf755e798aab0aa335a1168bc576f96a58ec78c5cb5eb4beaa7665d",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "밥이나 반죽 등이 물기가 적어 부드럽지 못하다.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "줄이 늘어지지 않고 팽팽하다.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "일이 힘들어 감당하기 어렵다.",
+                  "notes": []
+                },
+                {
+                  "id": "4",
+                  "definition": "매우 심하거나 모질다.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:89858",
+              "headword": "되다",
+              "pos": "동사",
+              "data_sha256": "b50ed2b6dcb4f8a77f98e50103c19b86707531662e92a967eea5c2a7ef8feaba",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "새로운 신분이나 지위를 가지다.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "다른 것으로 바뀌거나 변하다.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "어떤 때나 시기, 상태에 이르다.",
+                  "notes": []
+                },
+                {
+                  "id": "4",
+                  "definition": "일정한 수량에 차거나 이르다.",
+                  "notes": []
+                },
+                {
+                  "id": "5",
+                  "definition": "어떤 대상의 수량, 요금 등이 얼마이거나 장소가 어디이다.",
+                  "notes": []
+                },
+                {
+                  "id": "6",
+                  "definition": "사람으로서의 성품과 덕을 갖추다.",
+                  "notes": []
+                },
+                {
+                  "id": "7",
+                  "definition": "어떠한 심리적인 상태에 있다.",
+                  "notes": []
+                },
+                {
+                  "id": "8",
+                  "definition": "어떤 사람과 어떤 관계를 맺고 있다.",
+                  "notes": [
+                    "'2와'가 없으면 1에 복수를 나타내는 말이 온다."
+                  ]
+                },
+                {
+                  "id": "9",
+                  "definition": "어떤 재료나 성분으로 이루어지다.",
+                  "notes": []
+                },
+                {
+                  "id": "10",
+                  "definition": "어떤 형태나 구조로 이루어지다.",
+                  "notes": []
+                },
+                {
+                  "id": "11",
+                  "definition": "문서나 서류에 어떤 사람이나 조직의 이름이 쓰이다.",
+                  "notes": []
+                },
+                {
+                  "id": "12",
+                  "definition": "어떤 사물이나 현상이 생겨나거나 만들어지다.",
+                  "notes": []
+                },
+                {
+                  "id": "13",
+                  "definition": "일이 잘 이루어지다.",
+                  "notes": []
+                },
+                {
+                  "id": "14",
+                  "definition": "식물 등이 잘 자라다.",
+                  "notes": []
+                },
+                {
+                  "id": "15",
+                  "definition": "어떤 사물이 제 기능을 다하거나 수명이 다하다.",
+                  "notes": []
+                },
+                {
+                  "id": "16",
+                  "definition": "어떤 상황이나 상태에 이르다.",
+                  "notes": []
+                },
+                {
+                  "id": "17",
+                  "definition": "운명으로 결정되거나 규칙, 절차 등으로 정해지다.",
+                  "notes": []
+                },
+                {
+                  "id": "18",
+                  "definition": "어떤 일이 이루어져야 하다.",
+                  "notes": []
+                },
+                {
+                  "id": "19",
+                  "definition": "괜찮거나 아무 문제가 없다.",
+                  "notes": []
+                },
+                {
+                  "id": "21",
+                  "definition": "어떤 일이 가능하거나 허락될 수 있음을 나타내는 말.",
+                  "notes": []
+                },
+                {
+                  "id": "22",
+                  "definition": "누구에게 어떤 일을 당하다.",
+                  "notes": [
+                    "주로 피동의 뜻을 갖는 명사와 함께 쓴다."
+                  ]
+                },
+                {
+                  "id": "23",
+                  "definition": "어떤 특별한 뜻을 가지는 상태에 놓이다.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "historical_review_note": "The repeated nominalized stem hypothesis needs primary formation evidence and an ordered representation; do not assign Root merely because 됨됨 is missing.",
+      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
+      "required_followup": "Primary reduplication paper now confirms the grouped reduplicated root plus 이. Implement that sourced possibility; independently review finer 되다 + nominalization twice before assigning its ordered components. The paper alone does not prove two nominalizing endings."
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g15",
+      "surface": "못난이",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "못난이"
+          }
+        ]
+      },
+      "historical_observations": [
+        {
+          "spelling": "못난이",
+          "heads": [
+            {
+              "id": "krdict:54772",
+              "headword": "못난이",
+              "pos": "명사",
+              "data_sha256": "ae5dfe215f93f9ae07287489678f928e2d28b1cb12820639cb052681c1aebf14",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "못생겼거나 어리석은 사람.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "못난",
+          "heads": []
+        },
+        {
+          "spelling": "못난다",
+          "heads": []
+        },
+        {
+          "spelling": "못나다",
+          "heads": [
+            {
+              "id": "krdict:54770",
+              "headword": "못나다",
+              "pos": "동사",
+              "data_sha256": "cd524f3a1a1d92aee72bd60184c9a23d4037f9220de0c7223ac15c5c16a11642",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "생김새가 잘나거나 예쁘지 않다.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "똑똑하지 못하거나 능력이 모자라다.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "이",
+          "heads": [
+            {
+              "id": "krdict:27527",
+              "headword": "이",
+              "pos": "대명사",
+              "data_sha256": "c584af29294b6bd3322a212f4c664815c3977ba1fdd84ec099ba5d3be81bfe02",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "말하는 사람에게 가까이 있거나 말하는 사람이 생각하고 있는 대상을 가리키는 말.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "바로 앞에서 이야기한 대상을 가리키는 말.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "‘이 사람’을 가리키는 말.",
+                  "notes": [
+                    "주로 '이들'로 쓴다."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "krdict:68819",
+              "headword": "이",
+              "pos": "명사",
+              "data_sha256": "c48463dd96ad179c1da3ad95e4fb4210f723f966ca3692db19a253a95a709c59",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "한글 자모 ‘ㅣ’의 이름.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:69529",
+              "headword": "이",
+              "pos": "명사",
+              "data_sha256": "0ee582d0291b7c25e95b88e60633ba1211726f855542192ec0ce2b902a957059",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "사람이나 동물의 입안에 있으며 무엇을 물거나 음식물을 씹는 일을 하는 기관.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "연장의 뾰족뾰족한 날.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "기구나 기계 등에 있는, 다른 기구나 기계 등과 맞붙일 수 있는 틈.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:71124",
+              "headword": "이",
+              "pos": "의존 명사",
+              "data_sha256": "f32db98fb6ae0941a7ae525e98d3fbee3bd506b4a1edb07b57fed40abeab16d1",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "‘사람’을 나타내는 말.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:71125",
+              "headword": "이",
+              "pos": "수사",
+              "data_sha256": "19f19937f4527c69e3c3a59377da3eba4b335efd1f536c39048d441fa6bf580e",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "일에 일을 더한 수.",
+                  "notes": [
+                    "숫자로는 '2'로 쓴다."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "krdict:71127",
+              "headword": "이",
+              "pos": "관형사",
+              "data_sha256": "809e336a05edf8e03c0771685ad9d531499317a48ac36fdce1aa606e0fea8705",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "둘의.",
+                  "notes": [
+                    "일부 단위를 나타내는 말 앞에 쓴다. "
+                  ]
+                },
+                {
+                  "id": "2",
+                  "definition": "두 번째의.",
+                  "notes": [
+                    "일부 단위를 나타내는 말 앞에 쓴다. "
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "krdict:71561",
+              "headword": "이",
+              "pos": "명사",
+              "data_sha256": "9fdafd1d53406b7086ce3cf8636edd4d3f743b7964777a70b0106d95dff3598a",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "몸의 길이는 1~4mm로 편평한 모양이며, 사람의 몸에 붙어 살면서 피를 빨아 먹는 곤충.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "몸의 길이는 약 2~4mm로 연한 회색을 띠며, 사람의 머리에서 피를 빨아 먹는 곤충.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:71687",
+              "headword": "이",
+              "pos": "관형사",
+              "data_sha256": "e52db50b1ba418ddcca1bd4a60ecd859294ad4ebfcef75242c799eb1b9db0608",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "말하는 사람에게 가까이 있거나 말하는 사람이 생각하고 있는 대상을 가리킬 때 쓰는 말.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "바로 앞에서 이야기한 대상을 가리킬 때 쓰는 말.",
+                  "notes": []
+                }
+              ]
+            },
+            {
+              "id": "krdict:86289",
+              "headword": "이",
+              "pos": "조사",
+              "data_sha256": "046d476a72b52c9e4eb131f9a879a352b040465ef0082ece1e5c61f063b7cce6",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "어떤 상태나 상황의 대상이나 동작의 주체를 나타내는 조사.",
+                  "notes": [
+                    "받침 있는 명사 뒤에 붙여 쓴다."
+                  ]
+                },
+                {
+                  "id": "2",
+                  "definition": "바뀌게 되는 대상이나 부정하는 대상임을 나타내는 조사.",
+                  "notes": [
+                    "받침 있는 명사 뒤에 붙여 쓴다. 주로 '되다', '아니다'와 함께 쓴다."
+                  ]
+                },
+                {
+                  "id": "3",
+                  "definition": "앞말을 강조하는 뜻을 나타내는 조사.",
+                  "notes": [
+                    "받침 있는 명사나 부사어 뒤에 붙여 쓴다."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "historical_review_note": "Retain older bound-noun and newer suffix analyses as a source conflict. Decide adnominal boundary and ownership explicitly before required judgments.",
+      "status": "Finite competing analyses and all verification gates pass; contextual senses, finer histories and independent review remain open.",
+      "required_followup": "Finish full candidate/corpus/novel/browser/Nix and packaged-preview gates for the implemented grouped Root, adnominal suffix and separate bound-noun alternatives. Preserve all 이 lookup heads while recording explicit bound-noun role conflicts only on that path.",
+      "evaluation": "docs/noun-adnominal-evaluation.json"
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g20",
+      "surface": "얼간이",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "얼간이"
+          }
+        ]
+      },
+      "historical_observations": [
+        {
+          "spelling": "얼간이",
+          "heads": [
+            {
+              "id": "krdict:27615",
+              "headword": "얼간이",
+              "pos": "명사",
+              "data_sha256": "09656c429f8ed5f7e0b5a533ce68b15f036d3e152774e974abc517262d5561f1",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "똑똑하지 못하고 멍청한 사람.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "얼간",
+          "heads": []
+        },
+        {
+          "spelling": "얼간다",
+          "heads": []
+        },
+        {
+          "spelling": "얼간하다",
+          "heads": []
+        }
+      ],
+      "historical_review_note": "Opaque/historical formation needs evidence. Missing 얼간/얼간하다 is not proof of Root or a fabricated lookup predicate.",
+      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
+      "required_followup": "Inspect primary dictionary 얼간 senses and any independent historical relation. The database hyphen boundary is positive evidence, but neither absence in KRDict nor folklore about salt/mental faculties establishes a predicate or finer decomposition."
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g25",
+      "surface": "쭉정이",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "쭉정이"
+          }
+        ]
+      },
+      "historical_observations": [
+        {
+          "spelling": "쭉정이",
+          "heads": [
+            {
+              "id": "krdict:78752",
+              "headword": "쭉정이",
+              "pos": "명사",
+              "data_sha256": "c520e64aa21e7f2723066550bbfb79e0449fd7a002020bdf1c9a71d9e80acb12",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "껍질만 있고 속에 알맹이가 들지 않은 곡식이나 과일 등의 열매.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "(비유적으로) 쓸모없게 되어서 자기가 해야 할 일을 제대로 하지 못하는 사람.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "쭉정",
+          "heads": []
+        },
+        {
+          "spelling": "쭉정다",
+          "heads": []
+        }
+      ],
+      "historical_review_note": "Opaque source-listed formation needs base evidence. No arbitrary last-character stripping or invented predicate.",
+      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
+      "required_followup": "The primary 2013 norm-information database explicitly marks 쭉정-이. Implement the supported grouped base alongside whole literal/metaphorical nouns; independently inspect any finer historical elements or predicate relationship before generating them."
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g26",
+      "surface": "팔푼이",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "팔푼이"
+          }
+        ]
+      },
+      "historical_observations": [
+        {
+          "spelling": "팔푼이",
+          "heads": [
+            {
+              "id": "krdict:82827",
+              "headword": "팔푼이",
+              "pos": "명사",
+              "data_sha256": "d988365fa052b001142cc0e07cffe691d131cb51c8e96804f497c04fcd1b6fb1",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "(낮잡아 이르는 말로) 생각이 어리석고 빈틈이 많은 사람.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "팔푼",
+          "heads": []
+        },
+        {
+          "spelling": "팔푼다",
+          "heads": []
+        },
+        {
+          "spelling": "팔",
+          "heads": [
+            {
+              "id": "krdict:31598",
+              "headword": "팔",
+              "pos": "수사",
+              "data_sha256": "bedb9c84a33edfbf77705d9584f77bc22d35b55cc56d694d3a0eb0b311a9375c",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "칠에 일을 더한 수.",
+                  "notes": [
+                    "숫자로는 '8'로 쓴다."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "krdict:31629",
+              "headword": "팔",
+              "pos": "관형사",
+              "data_sha256": "cb544cf6c739552060c0b56a6619ebecd3b1964705a923966cc505874beec70c",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "여덟의.",
+                  "notes": [
+                    "일부 단위를 나타내는 말 앞에 쓴다."
+                  ]
+                },
+                {
+                  "id": "2",
+                  "definition": "여덟 번째의.",
+                  "notes": [
+                    "일부 단위를 나타내는 말 앞에 쓴다."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "krdict:32794",
+              "headword": "팔",
+              "pos": "명사",
+              "data_sha256": "1ab6ad0ef1e0b22cacb241d1055d5184175a3b9eacfbc101dd3c8a7849a4e181",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "어깨에서 손목까지의 신체 부위.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "사람의 팔처럼 본체에서 길게 뻗어 나가 상하나 좌우로 움직이는 기계의 부분.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "푼",
+          "heads": [
+            {
+              "id": "krdict:83614",
+              "headword": "푼",
+              "pos": "의존 명사",
+              "data_sha256": "92e72708f321d43c14ff4ecafc6065931b811ab1ea69637cb71ce6917175285c",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "(옛날에) 엽전을 세던 단위.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "돈을 세는 단위.",
+                  "notes": [
+                    "액수가 적다고 여길 때 쓴다."
+                  ]
+                },
+                {
+                  "id": "3",
+                  "definition": "비율을 나타내는 단위.",
+                  "notes": [
+                    "1푼은 전체 수량의 100분의 1이고 1할의 10분의 1이다."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "historical_review_note": "Review number/unit base grouping versus opaque lexical formation; visible 팔/푼 heads do not prove the derivation.",
+      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
+      "required_followup": "Seek the primary etymology chapter and number/unit definitions. Preserve the NIKL absence-of-history finding; 八 in a table of contents and visible 팔/푼 heads cannot alone prove an eight-percent or eighty-percent meaning. Review nominal/determiner/unit roles and ownership separately."
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g28",
+      "surface": "허풍선이",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "허풍선이"
+          }
+        ]
+      },
+      "historical_observations": [
+        {
+          "spelling": "허풍선이",
+          "heads": [
+            {
+              "id": "krdict:87945",
+              "headword": "허풍선이",
+              "pos": "명사",
+              "data_sha256": "7f50790855016ccae2a686613e68cde222181665bb61a5249e1cf041fd8f2f38",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "허풍을 잘 떠는 사람.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "허풍선",
+          "heads": []
+        },
+        {
+          "spelling": "허풍선다",
+          "heads": []
+        },
+        {
+          "spelling": "허풍",
+          "heads": [
+            {
+              "id": "krdict:87944",
+              "headword": "허풍",
+              "pos": "명사",
+              "data_sha256": "5fd16b0082497ea9f2af3936cc37e3090be37b5b0cd5b0ef4002ba00cb1cb909",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "실제보다 지나치게 부풀려 믿기 어려운 말이나 행동.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "historical_review_note": "Review the 허풍선 boundary and history before linking 허풍. No 선 element or lookup lemma is invented.",
+      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
+      "required_followup": "The original broadcaster supports the independent nominal 허풍선 base, which is absent in pinned KRDict. Implement that sourced nominal possibility beside whole words without changing it into a Root just because lookup fails; independently review finer 허풍/扇 grouping before generation."
+    },
+    {
+      "discovery_id": "nominal-i-remaining-88924-s3-g30",
+      "surface": "흰둥이",
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "흰둥이"
+          }
+        ]
+      },
+      "historical_observations": [
+        {
+          "spelling": "흰둥이",
+          "heads": [
+            {
+              "id": "krdict:88220",
+              "headword": "흰둥이",
+              "pos": "명사",
+              "data_sha256": "3af42e411fcc02761ff8fe4200331275ef933960fa6991e457daedb8d7e0f4ad",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "피부색이 흰 사람.",
+                  "notes": []
+                },
+                {
+                  "id": "2",
+                  "definition": "(낮잡아 이르는 말로) 백인.",
+                  "notes": []
+                },
+                {
+                  "id": "3",
+                  "definition": "털이 흰색인 동물.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "흰둥",
+          "heads": []
+        },
+        {
+          "spelling": "흰둥다",
+          "heads": []
+        },
+        {
+          "spelling": "흰",
+          "heads": []
+        },
+        {
+          "spelling": "희다",
+          "heads": [
+            {
+              "id": "krdict:92491",
+              "headword": "희다",
+              "pos": "형용사",
+              "data_sha256": "2d1bb432a3f0e0177852890bcb7bc437d5a8b4dc6f2ce98b5adbde2b96aef9ff",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "눈이나 우유의 빛깔처럼 밝고 선명하다.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "spelling": "-둥이",
+          "heads": [
+            {
+              "id": "krdict:72336",
+              "headword": "-둥이",
+              "pos": "접사",
+              "data_sha256": "690f976fb8596bc778b413ec9ed2c4e991878fbb7be9147adac99450a1b627e9",
+              "senses": [
+                {
+                  "id": "1",
+                  "definition": "‘그러한 성질이 있거나 그와 관련이 있는 사람’의 뜻을 더하는 접미사.",
+                  "notes": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "historical_review_note": "Primary 둥이 suffix evidence conflicts with simple 흰둥 + 이 stripping. Review 희다 + adnominal ㄴ + 둥이 and the source-listed alternative separately.",
+      "status": "Finite competing analyses and all verification gates pass; contextual senses, finer histories and independent review remain open.",
+      "required_followup": "Finish full gates for grouped 흰둥 + 이 and 희다 + ㄴ + 둥이. Retain the independent suffix entry nominal-base note and historical standard-language Article 8 consultation without treating this finite exception as general adnominal suffix attachment.",
+      "evaluation": "docs/noun-adnominal-evaluation.json"
+    }
+  ],
+  "representation_policy": "Individual evidence must license roles, grouping and ordered ownership. Missing heads do not establish Root, source dates do not settle conflicts, and competing lexical/suffix/bound-noun readings remain.",
+  "verification_policy": "Stable positive/negative judgments, complete native sources, Unicode and ordered ownership, all filters/CLI/browser/API exports, individual before/after candidates, frozen full corpus reports, novel/spacing/release performance and Nix packaging remain required. Existing annotations/baselines stay frozen.",
+  "completion": false
+}

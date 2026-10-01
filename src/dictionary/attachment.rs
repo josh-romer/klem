@@ -430,6 +430,21 @@ impl Annotation {
                 .flat_map(|m| &m.entries)
                 .map(|matched| {
                     let mut status = matched.pos_compatibility;
+                    // This independently sourced analysis explicitly names a
+                    // bound noun, unlike the broad nominal role used by whole
+                    // words. Preserve every lookup entry but record the known
+                    // role conflict for other nominal homonyms (tooth, number,
+                    // pronoun, etc.); no within-entry sense is selected.
+                    if *index == 1
+                        && analysis
+                            .rules
+                            .iter()
+                            .any(|r| r == "derivation.nominal.bound_i")
+                        && status == Compatibility::Compatible
+                        && matched.entry.pos != "의존 명사"
+                    {
+                        status = Compatibility::Incompatible;
+                    }
                     // A token-initial predicate can be a separately written
                     // auxiliary (먹고 싶었다). Its preceding word/connector is
                     // outside this analysis; do not call that a POS conflict.

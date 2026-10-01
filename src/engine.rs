@@ -28,6 +28,59 @@ fn morph(form: impl Into<String>, kind: MorphemeKind) -> Morpheme {
 // Bounded suffix paths at the nominal boundary, before particles or a copula.
 // Whole-word hypotheses remain: a matching tail need not be a real suffix.
 fn listed_noun_derivations(word: &str) -> Vec<Analysis> {
+    if let Some(&(_, head, root, suffix)) = grammar::NOUN_ADNOMINAL_FORMS
+        .iter()
+        .find(|&&(surface, _, _, _)| surface == word)
+    {
+        let mut out = vec![
+            Analysis {
+                lemmas: vec![lemma(root, LemmaKind::Root)],
+                morphemes: vec![morph("이", MorphemeKind::Suffix)],
+                rules: vec!["suffix.nominal.i".into()],
+                unchanged: false,
+                spelling_paths: Vec::new(),
+            },
+            Analysis {
+                lemmas: vec![lemma(head, LemmaKind::Predicate)],
+                morphemes: vec![
+                    morph("ㄴ", MorphemeKind::Ending),
+                    morph(suffix, MorphemeKind::Suffix),
+                ],
+                rules: vec![
+                    "ending".into(),
+                    "boundary.regular".into(),
+                    "derivation.nominal.adnominal".into(),
+                    if suffix == "이" {
+                        "suffix.nominal.i"
+                    } else {
+                        "suffix.nominal.dungi"
+                    }
+                    .into(),
+                ],
+                unchanged: false,
+                spelling_paths: Vec::new(),
+            },
+        ];
+        if word == "못난이" {
+            // Preserve the older NIKL bound-noun analysis alongside its newer
+            // suffix treatment, without resolving the disagreement by date.
+            out.push(Analysis {
+                lemmas: vec![
+                    lemma(head, LemmaKind::Predicate),
+                    lemma("이", LemmaKind::Nominal),
+                ],
+                morphemes: vec![morph("ㄴ", MorphemeKind::Ending)],
+                rules: vec![
+                    "ending".into(),
+                    "boundary.regular".into(),
+                    "derivation.nominal.bound_i".into(),
+                ],
+                unchanged: false,
+                spelling_paths: Vec::new(),
+            });
+        }
+        return out;
+    }
     if let Some(&(_, root, related)) = grammar::NOUN_I_ROOTS
         .iter()
         .find(|&&(surface, _, _)| surface == word)

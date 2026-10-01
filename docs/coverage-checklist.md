@@ -2610,7 +2610,8 @@ review remains open under the completion review below.
   nominal-base formations, COV-022h adds nine sound/manner forms, and
   COV-022i adds seven roots with six related-predicate alternatives, and
   COV-022j adds the finite 까불이 predicate relationship; COV-022k adds
-  four internal readings for 왕눈이/점박이.**
+  four internal readings for 왕눈이/점박이; COV-022l verifies competing
+  adnominal/bound-noun formations for 못난이/흰둥이.**
   Remaining: other lexical
   classes, other opaque roots beyond the finite COV-022c forms, subdivision of nonlexical
   repeated bases, suffix/auxiliary interactions, and other nominal -이 senses/classes. Keep lexical readings and causative/noun homonyms; historical
@@ -2708,8 +2709,8 @@ review remains open under the completion review below.
   COV-022f subsequently covers the six sense-2 forms; COV-022g covers four
   sense-3 nominal forms, COV-022h covers nine sound/manner forms, and COV-022i
   covers seven roots with six related-predicate alternatives. COV-022j covers
-  까불이 and COV-022k covers 왕눈이/점박이; seven native sense-3 forms
-  remain open. The discovery artifact is preserved as
+  까불이 and COV-022k covers 왕눈이/점박이. COV-022l verifies 못난이/흰둥이;
+  five native sense-3 forms remain open. The discovery artifact is preserved as
   historical evidence. Fourteen
   prefix occurrences across six pinned corpus partitions retain complete
   sentence bodies and original rows. All are in KAIST training data: nine
@@ -2872,7 +2873,7 @@ review remains open under the completion review below.
   A real prefix dictionary-assessment bug was fixed and all lexical slots,
   including later copulas, are verified. See [source audit](noun-internal-source-audit.json)
   and [evaluation](noun-internal-evaluation.json). Contextual homonym selection,
-  prefix/root histories, independent review and seven COV-022l forms stay open.
+  prefix/root histories, independent review and the remaining COV-022l forms stay open.
 
 - [ ] **COV-022l — Native formation and source-conflict cases.** Review and
   implement all seven remaining items: 됨됨이, 못난이, 얼간이, 쭉정이,
@@ -2883,13 +2884,38 @@ review remains open under the completion review below.
   Official norms identify 흰둥이 with -둥이, differing from simple last-이
   stripping. These conflicts require explicit alternative ownership and source
   provenance; neither date nor a missing head settles them automatically.
+  **Partial, two forms verified:** 못난이 retains 못난 + 이, 못나다 + ㄴ +
+  suffix 이 and the independently sourced 못나다 + ㄴ + bound noun 이.
+  흰둥이 retains 흰둥 + 이 and 희다 + ㄴ + 둥이. Ending ownership, bound-noun
+  outer particles/copulas and dictionary role conflicts are explicit. Five tests/
+  100 stable cases (85 required / 15 forbidden) preserve 28 complete entries,
+  all suffix senses/44 groups and both NIKL answers. All 667 Rust tests,
+  pinned corpus, lint/format, full browser and Nix package/check gates pass.
+  Across 13,468 inputs raw adds 180 paths (170 required / 10 unjudged), each
+  filter 108 (102 required / 6 unjudged), with no removals or changed prior
+  lookup readings. Four full corpus reports remain byte-identical. The novel
+  adds six raw/four filtered paths at two occurrences; every prior reading,
+  spacing boundary and limit remains, and contextual senses stay unjudged.
+  Packaged/debug novel outputs agree; release timing/RSS samples are recorded.
+  Packaged/refreshed-preview API and all three browser exports pass. Noun
+  suffix after ㄴ uses source 88924; the bound noun uses compatible 71124;
+  둥이 uses 72336. No training target or new corpus gold is invented.
+  All five other formation items remain open, with individual evidence review
+  required. See [source audit](noun-adnominal-source-audit.json) and
+  [evaluation](noun-adnominal-evaluation.json).
+
+  The [individual formation review plan](noun-formation-review-plan.json)
+  retains all seven original cases, new primary-source findings and explicit
+  follow-ups without replacing the historical discovery or its observations.
+
 
   COV-022g–l partition every original native sense-3 example exactly once;
-  the open COV-022l batch retains the other seven forms. The
+  the open COV-022l batch retains its original seven forms, two verified and
+  five still requiring implementation. The
   [read-only review tool](../tools/review_nominal_i_bases.py) verifies
   source/plan identity and retains ninety current CLI/filter snapshots plus
   full dictionary sense/role observations. The historical ninety-probe discovery snapshot assigns no required judgment
-  or runtime path; subsequent COV-022g/h/i/j/k implementations have separate evidence.
+  or runtime path; subsequent COV-022g/h/i/j/k and partial l implementations have separate evidence.
   All existing corpus annotations and
   frozen baselines remain unchanged; other compound leads and wider COV-022
   derivations remain open beyond these thirty forms.

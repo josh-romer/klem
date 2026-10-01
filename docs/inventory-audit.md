@@ -1023,3 +1023,21 @@ lexical slot, including later copulas. Seven forms COV-022l, histories,
 contextual senses and wider morphology/independent review remain open.
 These noun/prefix/suffix forms remain outside the ending/particle/auxiliary
 queue's POS scope: 715 entries, 386 scoped / 328 unreviewed / one gap.
+
+## Competing adnominal noun formations (2026-10-01)
+
+Partial COV-022l verifies five structural alternatives for 못난이/흰둥이,
+with 28 complete entries, all noun-suffix senses/44 groups and nine 이 homonyms.
+The [source audit](noun-adnominal-source-audit.json) records both primary
+bound-noun/suffix answers; date and missing headwords do not resolve the conflict.
+Five tests/100 cases (85 required / 15 forbidden), all 667 Rust tests and Nix/
+browser/API/preview/release gates pass. The [comparison](noun-adnominal-evaluation.json)
+retains ten raw/six per-filter unjudged additions across 13,468 inputs, every
+previous candidate/reading, unchanged corpus reports and complete contexts for
+two changed novel occurrences. Only the explicitly bound-noun path marks
+known non-bound-noun 이 homonyms with lexical-role conflicts. Sources 88924,
+71124 and 72336 remain distinct in the browser. The original seven-form
+[review plan](noun-formation-review-plan.json) keeps the other five formations
+required, alongside finer histories, contextual senses and independent review.
+These noun/suffix entries remain outside the ending/particle/auxiliary queue's
+POS scope; no claim that this batch closes that inventory audit is made.

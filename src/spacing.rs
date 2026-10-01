@@ -100,9 +100,10 @@ fn nominal_case(a: &Analysis) -> bool {
             .all(|m| {
                 (m.kind == MorphemeKind::Suffix && m.form != "답다")
                     || (m.kind == MorphemeKind::Prefix
-                        && a.rules
+                        && crate::grammar::NOUN_I_PREFIX_FORMS
                             .iter()
-                            .any(|r| r == "derivation.nominal.prefix_wang"))
+                            .any(|&(_, _, _, rule)| a.rules.iter().any(|r| r == rule))
+                        && a.breakdown().is_some())
             }))
         || a.morphemes
             .len()

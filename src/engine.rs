@@ -27,6 +27,22 @@ fn morph(form: impl Into<String>, kind: MorphemeKind) -> Morpheme {
 
 // Bounded suffix paths at the nominal boundary, before particles or a copula.
 // Whole-word hypotheses remain: a matching tail need not be a real suffix.
+fn listed_noun_prefix(word: &str) -> Option<Analysis> {
+    let &(_, prefix, base, rule) = grammar::NOUN_I_PREFIX_FORMS
+        .iter()
+        .find(|&&(surface, _, _, _)| surface == word)?;
+    Some(Analysis {
+        lemmas: vec![lemma(base, LemmaKind::Nominal)],
+        morphemes: vec![
+            morph(prefix, MorphemeKind::Prefix),
+            morph("이", MorphemeKind::Suffix),
+        ],
+        rules: vec!["suffix.nominal.i".into(), rule.into()],
+        unchanged: false,
+        spelling_paths: Vec::new(),
+    })
+}
+
 fn listed_noun_derivations(word: &str) -> Vec<Analysis> {
     if let Some(&(_, head, root, suffix)) = grammar::NOUN_ADNOMINAL_FORMS
         .iter()
@@ -104,20 +120,8 @@ fn listed_noun_derivations(word: &str) -> Vec<Analysis> {
                 spelling_paths: Vec::new(),
             });
         }
-        if word == "왕눈이" {
-            out.push(Analysis {
-                lemmas: vec![lemma("눈", LemmaKind::Nominal)],
-                morphemes: vec![
-                    morph("왕", MorphemeKind::Prefix),
-                    morph("이", MorphemeKind::Suffix),
-                ],
-                rules: vec![
-                    "suffix.nominal.i".into(),
-                    "derivation.nominal.prefix_wang".into(),
-                ],
-                unchanged: false,
-                spelling_paths: Vec::new(),
-            });
+        if let Some(prefix) = listed_noun_prefix(word) {
+            out.push(prefix);
         }
         return out;
     }
@@ -137,13 +141,17 @@ fn listed_noun_derivations(word: &str) -> Vec<Analysis> {
         .iter()
         .find(|&&(surface, _)| surface == word)
     {
-        return vec![Analysis {
+        let mut out = vec![Analysis {
             lemmas: vec![lemma(base, LemmaKind::Nominal)],
             morphemes: vec![morph("이", MorphemeKind::Suffix)],
             rules: vec!["suffix.nominal.i".into()],
             unchanged: false,
             spelling_paths: Vec::new(),
         }];
+        if let Some(prefix) = listed_noun_prefix(word) {
+            out.push(prefix);
+        }
+        return out;
     }
     if let Some(&(_, left, kind, right)) = grammar::NOUN_I_COMPOUNDS
         .iter()

@@ -2611,7 +2611,8 @@ review remains open under the completion review below.
   COV-022i adds seven roots with six related-predicate alternatives, and
   COV-022j adds the finite 까불이 predicate relationship; COV-022k adds
   four internal readings for 왕눈이/점박이; COV-022l verifies competing
-  adnominal/bound-noun formations for 못난이/흰둥이.**
+  adnominal/bound-noun formations for 못난이/흰둥이 and five grouped/prefix
+  possibilities for 됨됨이/얼간이/쭉정이/허풍선이.**
   Remaining: other lexical
   classes, other opaque roots beyond the finite COV-022c forms, subdivision of nonlexical
   repeated bases, suffix/auxiliary interactions, and other nominal -이 senses/classes. Keep lexical readings and causative/noun homonyms; historical
@@ -2900,7 +2901,25 @@ review remains open under the completion review below.
   Packaged/refreshed-preview API and all three browser exports pass. Noun
   suffix after ㄴ uses source 88924; the bound noun uses compatible 71124;
   둥이 uses 72336. No training target or new corpus gold is invented.
-  All five other formation items remain open, with individual evidence review
+  **Further five paths verified:** grouped 됨됨 + 이, nominal 얼간 + 이,
+  prefix 얼- + 간 + 이, grouped 쭉정 + 이 and nominal 허풍선 + 이.
+  Five tests/100 additional cases (85 required / 15 forbidden), all 672 Rust
+  tests and full browser/Nix/API/preview/release gates pass. Twenty-two complete
+  native entries and two original KAIST training observations remain; those
+  observations annotate whole 됨됨이 nouns, without internal suffix gold.
+  A spacing check limited to 왕- now preserves registered, validated prefix
+  ownership. Raw 얼- retains both native entries, while grammar selects prefix
+  72496 and excludes conjugated-stem redirect 93133. All four 간 homonyms remain.
+  Across 13,628 inputs raw adds 180 paths (170 required / 10 unjudged), each
+  filter 36 (34 required / 2 unjudged), with no removals or changed prior lookup
+  readings. Four full corpus reports and all five 179,112-record novel modes
+  are byte-identical. Release/debug hashes agree; interleaved timing/RSS samples
+  are recorded. Three browser exports and desktop/mobile views pass.
+  Finer repeated nominalization, 팔푼이 number/unit grouping and the original
+  historical follow-ups remain required; these grouped possibilities do not
+  close COV-022l. See [formation source audit](noun-formation-source-audit.json)
+  and [evaluation](noun-formation-evaluation.json).
+  All five original follow-ups remain open, with individual evidence review
   required. See [source audit](noun-adnominal-source-audit.json) and
   [evaluation](noun-adnominal-evaluation.json).
 
@@ -2911,7 +2930,8 @@ review remains open under the completion review below.
 
   COV-022g–l partition every original native sense-3 example exactly once;
   the open COV-022l batch retains its original seven forms, two verified and
-  five still requiring implementation. The
+  four now have verified grouped possibilities; finer requirements and 팔푼이
+  remain open. The
   [read-only review tool](../tools/review_nominal_i_bases.py) verifies
   source/plan identity and retains ninety current CLI/filter snapshots plus
   full dictionary sense/role observations. The historical ninety-probe discovery snapshot assigns no required judgment

@@ -277,4 +277,7 @@ Noun-forming roots such as 홀쭉 + 이 retain a separate related-predicate look
 
 왕눈이 retains 왕눈 + 이 and prefix 왕- + 눈 + 이 alternatives; prefixes serialize with kind `prefix` and display before their base. 점박이 retains 점 + 박다 + 이 alongside 점 + 박이 and the whole noun. Dictionary homonyms remain selectable without selecting a contextual sense.
 
-Finite noun formations also preserve competing 못나다 + ㄴ + suffix 이 / bound noun 이 readings of 못난이, and 희다 + ㄴ + 둥이 for 흰둥이. Their grouped bases and whole nouns remain; source conflicts are displayed as alternatives. COV-022l verification and five other formation cases remain in progress.
+Finite noun formations also preserve competing 못나다 + ㄴ + suffix 이 / bound noun 이 readings of 못난이, and 희다 + ㄴ + 둥이 for 흰둥이. Their grouped bases and whole nouns remain; source conflicts are displayed as alternatives. Their finite verification passes; finer original COV-022l requirements remain open.
+
+
+Further finite COV-022l formations for 됨됨이/얼간이/쭉정이/허풍선이 are verified, including 얼- + 간 + 이. [Source evidence](docs/noun-formation-source-audit.json) retains independent noun/root roles. [Evaluation](docs/noun-formation-evaluation.json) records passing finite gates; finer original formation requirements remain open.

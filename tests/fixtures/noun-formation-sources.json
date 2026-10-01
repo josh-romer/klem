@@ -1,0 +1,1268 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-022e",
+    "COV-022l"
+  ],
+  "before_revision": "ba4e0e63c2ac73b668c91e2722c111abeb812cde",
+  "native_fixture": "tests/fixtures/krdict-noun-formation.json",
+  "native_fixture_sha256": "ae94d4dcf8ea6f4c6adcb2625ff5067f4a6a0bc719547d3a80dfb63d80b09a34",
+  "native_entries": 22,
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "attribution": "National Institute of Korean Language Korean Basic Dictionary; pinned September 2026 export. Only RelatedForm and non-English equivalents omitted; Sense normalized to an array.",
+  "forms": [
+    {
+      "surface": "됨됨이",
+      "base": "됨됨",
+      "tag": "doem-root",
+      "lemmas": [
+        "됨됨"
+      ],
+      "lemma_kinds": [
+        "root"
+      ],
+      "morphemes": [
+        "이"
+      ],
+      "morpheme_kinds": [
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.i"
+      ],
+      "source": "formation-reduplication-paper"
+    },
+    {
+      "surface": "얼간이",
+      "base": "얼간",
+      "tag": "eolgan-noun",
+      "lemmas": [
+        "얼간"
+      ],
+      "lemma_kinds": [
+        "nominal"
+      ],
+      "morphemes": [
+        "이"
+      ],
+      "morpheme_kinds": [
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.i"
+      ],
+      "source": "formation-eolgan-noun"
+    },
+    {
+      "surface": "쭉정이",
+      "base": "쭉정",
+      "tag": "jjukjeong-root",
+      "lemmas": [
+        "쭉정"
+      ],
+      "lemma_kinds": [
+        "root"
+      ],
+      "morphemes": [
+        "이"
+      ],
+      "morpheme_kinds": [
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.i"
+      ],
+      "source": "formation-eolgan-norm-data"
+    },
+    {
+      "surface": "허풍선이",
+      "base": "허풍선",
+      "tag": "heopung-noun",
+      "lemmas": [
+        "허풍선"
+      ],
+      "lemma_kinds": [
+        "nominal"
+      ],
+      "morphemes": [
+        "이"
+      ],
+      "morpheme_kinds": [
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.i"
+      ],
+      "source": "formation-heopung-kbs"
+    },
+    {
+      "surface": "얼간이",
+      "base": "간",
+      "tag": "eolgan-prefix",
+      "lemmas": [
+        "간"
+      ],
+      "lemma_kinds": [
+        "nominal"
+      ],
+      "morphemes": [
+        "얼",
+        "이"
+      ],
+      "morpheme_kinds": [
+        "prefix",
+        "suffix"
+      ],
+      "required_rules": [
+        "suffix.nominal.i",
+        "derivation.nominal.prefix_eol"
+      ],
+      "source": "formation-eol-prefix"
+    }
+  ],
+  "source_groups": [
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "굽이"
+          }
+        ]
+      },
+      "examples": [
+        "굽이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깊이"
+          }
+        ]
+      },
+      "examples": [
+        "깊이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "넓이"
+          }
+        ]
+      },
+      "examples": [
+        "넓이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "길이"
+          }
+        ]
+      },
+      "examples": [
+        "길이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "놀이"
+          }
+        ]
+      },
+      "examples": [
+        "놀이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "높이"
+          }
+        ]
+      },
+      "examples": [
+        "높이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 7,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "먹이"
+          }
+        ]
+      },
+      "examples": [
+        "먹이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 8,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "벌이"
+          }
+        ]
+      },
+      "examples": [
+        "벌이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "길잡이"
+          }
+        ]
+      },
+      "examples": [
+        "길잡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "떠돌이"
+          }
+        ]
+      },
+      "examples": [
+        "떠돌이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "목걸이"
+          }
+        ]
+      },
+      "examples": [
+        "목걸이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "미닫이"
+          }
+        ]
+      },
+      "examples": [
+        "미닫이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "옷걸이"
+          }
+        ]
+      },
+      "examples": [
+        "옷걸이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "젖먹이"
+          }
+        ]
+      },
+      "examples": [
+        "젖먹이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "까막눈이"
+          }
+        ]
+      },
+      "examples": [
+        "까막눈이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "까불이"
+          }
+        ]
+      },
+      "examples": [
+        "까불이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깜빡이"
+          }
+        ]
+      },
+      "examples": [
+        "깜빡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깡깡이"
+          }
+        ]
+      },
+      "examples": [
+        "깡깡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깽깽이"
+          }
+        ]
+      },
+      "examples": [
+        "깽깽이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "꿀꿀이"
+          }
+        ]
+      },
+      "examples": [
+        "꿀꿀이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 7,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "끈끈이"
+          }
+        ]
+      },
+      "examples": [
+        "끈끈이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 8,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "노랑이"
+          }
+        ]
+      },
+      "examples": [
+        "노랑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 9,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "누렁이"
+          }
+        ]
+      },
+      "examples": [
+        "누렁이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 10,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "덜렁이"
+          }
+        ]
+      },
+      "examples": [
+        "덜렁이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 11,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "동강이"
+          }
+        ]
+      },
+      "examples": [
+        "동강이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 12,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "됨됨이"
+          }
+        ]
+      },
+      "examples": [
+        "됨됨이"
+      ],
+      "targets": [
+        {
+          "surface": "됨됨이",
+          "base": "됨됨",
+          "tag": "doem-root",
+          "lemmas": [
+            "됨됨"
+          ],
+          "lemma_kinds": [
+            "root"
+          ],
+          "morphemes": [
+            "이"
+          ],
+          "morpheme_kinds": [
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.i"
+          ],
+          "source": "formation-reduplication-paper",
+          "case_id": "noun-formation-native-88924-s3-g12-doem-root"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 13,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "딸랑이"
+          }
+        ]
+      },
+      "examples": [
+        "딸랑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 14,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "뚱뚱이"
+          }
+        ]
+      },
+      "examples": [
+        "뚱뚱이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 15,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "못난이"
+          }
+        ]
+      },
+      "examples": [
+        "못난이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 16,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "멍청이"
+          }
+        ]
+      },
+      "examples": [
+        "멍청이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 17,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "미치광이"
+          }
+        ]
+      },
+      "examples": [
+        "미치광이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 18,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "바둑이"
+          }
+        ]
+      },
+      "examples": [
+        "바둑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 19,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "뺑뺑이"
+          }
+        ]
+      },
+      "examples": [
+        "뺑뺑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 20,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "얼간이"
+          }
+        ]
+      },
+      "examples": [
+        "얼간이"
+      ],
+      "targets": [
+        {
+          "surface": "얼간이",
+          "base": "얼간",
+          "tag": "eolgan-noun",
+          "lemmas": [
+            "얼간"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "이"
+          ],
+          "morpheme_kinds": [
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.i"
+          ],
+          "source": "formation-eolgan-noun",
+          "case_id": "noun-formation-native-88924-s3-g20-eolgan-noun"
+        },
+        {
+          "surface": "얼간이",
+          "base": "간",
+          "tag": "eolgan-prefix",
+          "lemmas": [
+            "간"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "얼",
+            "이"
+          ],
+          "morpheme_kinds": [
+            "prefix",
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.i",
+            "derivation.nominal.prefix_eol"
+          ],
+          "source": "formation-eol-prefix",
+          "case_id": "noun-formation-native-88924-s3-g20-eolgan-prefix"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 21,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "오뚝이"
+          }
+        ]
+      },
+      "examples": [
+        "오뚝이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 22,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "왕눈이"
+          }
+        ]
+      },
+      "examples": [
+        "왕눈이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 23,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "점박이"
+          }
+        ]
+      },
+      "examples": [
+        "점박이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 24,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "짝짝이"
+          }
+        ]
+      },
+      "examples": [
+        "짝짝이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 25,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "쭉정이"
+          }
+        ]
+      },
+      "examples": [
+        "쭉정이"
+      ],
+      "targets": [
+        {
+          "surface": "쭉정이",
+          "base": "쭉정",
+          "tag": "jjukjeong-root",
+          "lemmas": [
+            "쭉정"
+          ],
+          "lemma_kinds": [
+            "root"
+          ],
+          "morphemes": [
+            "이"
+          ],
+          "morpheme_kinds": [
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.i"
+          ],
+          "source": "formation-eolgan-norm-data",
+          "case_id": "noun-formation-native-88924-s3-g25-jjukjeong-root"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 26,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "팔푼이"
+          }
+        ]
+      },
+      "examples": [
+        "팔푼이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 27,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "합죽이"
+          }
+        ]
+      },
+      "examples": [
+        "합죽이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 28,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "허풍선이"
+          }
+        ]
+      },
+      "examples": [
+        "허풍선이"
+      ],
+      "targets": [
+        {
+          "surface": "허풍선이",
+          "base": "허풍선",
+          "tag": "heopung-noun",
+          "lemmas": [
+            "허풍선"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "이"
+          ],
+          "morpheme_kinds": [
+            "suffix"
+          ],
+          "required_rules": [
+            "suffix.nominal.i"
+          ],
+          "source": "formation-heopung-kbs",
+          "case_id": "noun-formation-native-88924-s3-g28-heopung-noun"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 29,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "홀쭉이"
+          }
+        ]
+      },
+      "examples": [
+        "홀쭉이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 30,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "흰둥이"
+          }
+        ]
+      },
+      "examples": [
+        "흰둥이"
+      ],
+      "targets": []
+    }
+  ],
+  "source_group_count": 44,
+  "native_target_occurrences": 4,
+  "native_path_judgments": 5,
+  "primary_consultations": [
+    {
+      "id": "formation-heopung-kbs",
+      "url": "https://world.kbs.co.kr/service/contents_view.htm?board_seq=229261&id=&lang=k&menu_cate=learnkorean",
+      "retrieval": "Complete original broadcaster language lesson retrieved 2026-10-01.",
+      "finding": "The lesson gives the noun 허풍선 as a hand bellows, then relates 허풍선이 to that existing noun with final 이. It also explains the Chinese-character fan component; no runtime 선 lemma is yet licensed."
+    },
+    {
+      "id": "formation-eolgan-norm-data",
+      "url": "https://www.korean.go.kr/common/download.do?c_file_name=493a7a8e-dfeb-4b62-9036-9c0c7a668d54_0.pdf&file_path=reportData&o_file_name=2013%EB%85%84+%EA%B0%9C%EB%B0%A9%ED%98%95+%ED%95%9C%EA%B5%AD%EC%96%B4+%EC%A7%80%EC%8B%9D+%EB%8C%80%EC%82%AC%EC%A0%84+%EA%B5%90%EC%9C%A1%EC%9A%A9+%EA%B7%9C%EB%B2%94+%EC%A0%95%EB%B3%B4%28%EC%82%AC%EC%A0%84%29+%EA%B5%AC%EC%B6%95.pdf",
+      "retrieval": "Complete primary PDF text retrieved 2026-10-01 via its indexed session URL. Screenshots not inspected.",
+      "locator": "PDF page index 889, row 6581 (얼간-이); page index 915, row 8529 (쭉정-이).",
+      "finding": "The primary norm-information database explicitly marks 얼간-이 and 쭉정-이 boundaries. It lists 얼간 among related heads but does not establish that missing pinned head's POS/meaning or a predicate. These are independent positive boundary leads."
+    },
+    {
+      "id": "formation-reduplication-paper",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001821326",
+      "retrieval": "Complete primary PDF retrieved from KCI through the public article page cookie/referrer flow on 2026-10-01; extracted text inspected. Initial direct endpoint attempts failed.",
+      "doi": "10.20988/lfp.2013.32..97",
+      "finding": "The paper explicitly lists 됨됨이 among nouns formed by adding 이 to a reduplicated root. This supports grouped 됨됨 + 이; it does not separately assign both ㅁ elements to endings or establish a finer 되다 lookup relationship.",
+      "download_url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiOrteServHistIFrame.kci?sereArticleSearchBean.artiId=ART001821326&sereArticleSearchBean.orteFileId=KCI_FI001821326",
+      "pdf_sha256": "2982190362000244fdd572b0f44041785d79e73daacfa222fd1221d7cc4c52fd",
+      "locator": "Printed pages 109–110, section 2.2(4), example 7ㄱ."
+    },
+    {
+      "id": "formation-eolgan-noun",
+      "url": "https://www.korean.go.kr/nkview/nklife/1992_1/1_8.html",
+      "retrieval": "Complete primary NIKL article consulted 2026-10-01.",
+      "locator": "Synonym group (9): 얼간 sense 3 and 얼간이, shortened 얼간.",
+      "finding": "The primary article records a noun/person use of 얼간 independently of the absent learner-dictionary headword. It does not resolve the earlier salt-related history or finer sense selection."
+    },
+    {
+      "id": "formation-eol-prefix",
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=72496",
+      "retrieval": "Complete pinned native prefix entry; fresh indexed text retrieved, direct live URL inaccessible.",
+      "finding": "Prefix 얼- sense 1 lists 얼간 under nominal-base attachment. Preserve all four 간 homonyms and the second POS-unspecified 얼- entry; the source licenses a finite prefix boundary without selecting a contextual 간 sense."
+    }
+  ],
+  "corpus_training_search": [
+    {
+      "path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+      "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "matching_tokens": 2,
+      "observations": [
+        {
+          "sent_id": "M2TA_083-s75",
+          "token_id": "6",
+          "surface": "됨됨이이다",
+          "lemma": "됨됨이+이+다",
+          "upos": "VERB",
+          "xpos": "ncn+jp+ef",
+          "original_row": "6\t됨됨이이다\t됨됨이+이+다\tVERB\tncn+jp+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.doem.doem.i.i.da|LTranslit=.doem.doem.i+.i+.da",
+          "sentence_body": "# sent_id = M2TA_083-s75\n# text = 그보다 더 중요한 것은 사람의 됨됨이이다.\n# translit = .geu.bo.da .deo .jung.yo.han .geos.eun .sa.ram.yi .doem.doem.i.i.da.\n1\t그보다\t그+보다\tADV\tnpp+jca\t_\t3\tadvcl\t_\tTranslit=.geu.bo.da|LTranslit=.geu+.bo.da\n2\t더\t더\tADV\tmag\t_\t3\tadvmod\t_\tTranslit=.deo|LTranslit=.deo\n3\t중요한\t중요+하+ㄴ\tVERB\tncps+xsm+etm\t_\t4\tamod\t_\tTranslit=.jung.yo.han|LTranslit=.jung.yo+.ha+ㄴ\n4\t것은\t것+은\tNOUN\tnbn+jxt\t_\t6\tdislocated\t_\tTranslit=.geos.eun|LTranslit=.geos+.eun\n5\t사람의\t사람+의\tNOUN\tncn+jcm\t_\t6\tnmod\t_\tTranslit=.sa.ram.yi|LTranslit=.sa.ram+.yi\n6\t됨됨이이다\t됨됨이+이+다\tVERB\tncn+jp+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.doem.doem.i.i.da|LTranslit=.doem.doem.i+.i+.da\n7\t.\t.\tPUNCT\tsf\t_\t6\tpunct\t_\tTranslit=.|LTranslit=."
+        },
+        {
+          "sent_id": "MH2_0042-s204",
+          "token_id": "8",
+          "surface": "됨됨이는",
+          "lemma": "됨됨이+는",
+          "upos": "NOUN",
+          "xpos": "ncn+jxt",
+          "original_row": "8\t됨됨이는\t됨됨이+는\tNOUN\tncn+jxt\t_\t11\tdislocated\t_\tTranslit=.doem.doem.i.neun|LTranslit=.doem.doem.i+.neun",
+          "sentence_body": "# sent_id = MH2_0042-s204\n# text = 앞으로 몇 년 간 재산을 운영시킬 사람의 됨됨이는 극히 중요한 문제였다.\n# translit = .ap.eu.ro .myeoch .nyeon .gan .jae.san.eul .un.yeong.si.kil .sa.ram.yi .doem.doem.i.neun .geug.hi .jung.yo.han .mun.je.yeoss.da.\n1\t앞으로\t앞+으로\tADV\tncn+jca\t_\t4\tadvcl\t_\tTranslit=.ap.eu.ro|LTranslit=.ap+.eu.ro\n2\t몇\t몇\tADJ\tmma\t_\t3\tamod\t_\tTranslit=.myeoch|LTranslit=.myeoch\n3\t년\t년\tNOUN\tnbu\t_\t4\tcompound\t_\tTranslit=.nyeon|LTranslit=.nyeon\n4\t간\t간\tNOUN\tnbn\t_\t6\tobl\t_\tTranslit=.gan|LTranslit=.gan\n5\t재산을\t재산+을\tNOUN\tncn+jco\t_\t6\tobj\t_\tTranslit=.jae.san.eul|LTranslit=.jae.san+.eul\n6\t운영시킬\t운영+시키+ㄹ\tVERB\tncpa+xsv+etm\t_\t7\tacl\t_\tTranslit=.un.yeong.si.kil|LTranslit=.un.yeong+.si.ki+ㄹ\n7\t사람의\t사람+의\tNOUN\tncn+jcm\t_\t8\tnmod\t_\tTranslit=.sa.ram.yi|LTranslit=.sa.ram+.yi\n8\t됨됨이는\t됨됨이+는\tNOUN\tncn+jxt\t_\t11\tdislocated\t_\tTranslit=.doem.doem.i.neun|LTranslit=.doem.doem.i+.neun\n9\t극히\t극히\tADV\tmag\t_\t10\tadvmod\t_\tTranslit=.geug.hi|LTranslit=.geug.hi\n10\t중요한\t중요+하+ㄴ\tVERB\tncps+xsm+etm\t_\t11\tamod\t_\tTranslit=.jung.yo.han|LTranslit=.jung.yo+.ha+ㄴ\n11\t문제였다\t문제+이+었+다\tVERB\tncn+jp+ep+ef\t_\t0\troot\t_\tSpaceAfter=No|Translit=.mun.je.yeoss.da|LTranslit=.mun.je+.i+.eoss+.da\n12\t.\t.\tPUNCT\tsf\t_\t11\tpunct\t_\tTranslit=.|LTranslit=."
+        }
+      ],
+      "scan": "Every annotated surface searched for each target noun as a substring; full original rows/sentence bodies preserved without treating whole-noun annotations as internal suffix gold."
+    },
+    {
+      "path": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+      "sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+      "matching_tokens": 0,
+      "observations": [],
+      "scan": "Every annotated surface searched for each target noun as a substring; full original rows/sentence bodies preserved without treating whole-noun annotations as internal suffix gold."
+    }
+  ],
+  "representation": {
+    "new_enum_variant": false,
+    "new_analysis_field": false,
+    "new_rule": "derivation.nominal.prefix_eol",
+    "finite_only": true
+  },
+  "remaining": [
+    "Full verification pending.",
+    "Finer repeated nominalization in 됨됨이, number/unit grouping in 팔푼이, finer historical/lexical elements and independent review remain required. The grouped possibilities do not replace these requirements."
+  ]
+}

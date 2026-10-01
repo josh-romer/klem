@@ -1041,3 +1041,19 @@ known non-bound-noun 이 homonyms with lexical-role conflicts. Sources 88924,
 required, alongside finer histories, contextual senses and independent review.
 These noun/suffix entries remain outside the ending/particle/auxiliary queue's
 POS scope; no claim that this batch closes that inventory audit is made.
+
+## Further noun formation paths (2026-10-01)
+
+Partial COV-022l verifies five primary-source paths for 됨됨이/얼간이/쭉정이/
+허풍선이, preserving 22 complete native entries, all noun-suffix senses/44 groups,
+100 stable cases and two original whole-noun KAIST annotations. The
+[source audit](noun-formation-source-audit.json) distinguishes raw 얼- prefix
+72496 from conjugated-stem redirect 93133; all four 간 base homonyms remain.
+All 672 Rust tests and browser/Nix/API/preview/release gates pass. The
+[comparison](noun-formation-evaluation.json) retains 180 raw/36 per-filter adds,
+ten raw/two per-filter unjudged dispositions, unchanged prior readings, four
+byte-identical corpus reports and five byte-identical novel modes. A real
+noun-case spacing prefix check was fixed with explicit provenance validation.
+The [original seven-form plan](noun-formation-review-plan.json) retains all finer
+follow-ups, repeated nominalization, 팔푼이 number/unit grouping and independent
+review. Verified grouped paths do not close those requirements.

@@ -58,6 +58,18 @@
       "url": "https://presscbu.cbnu.ac.kr/?category=373&document_srl=8189197&listStyle=webzine&mid=categori&page=1",
       "retrieval": "Primary university publisher description/table of contents retrieved 2026-10-01; full chapter not retrieved.",
       "finding": "The etymology study has a chapter covering 팔푼이 and marks 八 in the table of contents. The table does not establish the unit component or full derivation; inspect the actual chapter before required number/unit judgments."
+    },
+    {
+      "id": "formation-eolgan-noun",
+      "url": "https://www.korean.go.kr/nkview/nklife/1992_1/1_8.html",
+      "retrieval": "Complete primary article retrieved 2026-10-01.",
+      "finding": "The article records shortened nominal 얼간 beside 얼간이; this is independent positive noun evidence, not a missing-head POS inference."
+    },
+    {
+      "id": "formation-eol-prefix",
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=72496",
+      "retrieval": "Complete pinned entry consulted; indexed primary text retrieved, direct live URL inaccessible.",
+      "finding": "Prefix sense 1 lists 얼간 under nominal-base attachment; supports a finite 얼- + 간 + 이 possibility alongside grouped 얼간 + 이. All four 간 homonyms and both 얼- entries remain."
     }
   ],
   "forms": [
@@ -260,8 +272,11 @@
         }
       ],
       "historical_review_note": "The repeated nominalized stem hypothesis needs primary formation evidence and an ordered representation; do not assign Root merely because 됨됨 is missing.",
-      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
-      "required_followup": "Primary reduplication paper now confirms the grouped reduplicated root plus 이. Implement that sourced possibility; independently review finer 되다 + nominalization twice before assigning its ordered components. The paper alone does not prove two nominalizing endings."
+      "status": "Finite grouped/source-backed paths and all verification gates pass; original finer formation/historical follow-ups and independent review remain required.",
+      "required_followup": "Primary reduplication paper now confirms the grouped reduplicated root plus 이. Implement that sourced possibility; independently review finer 되다 + nominalization twice before assigning its ordered components. The paper alone does not prove two nominalizing endings.",
+      "source_audit": "docs/noun-formation-source-audit.json",
+      "evaluation": "docs/noun-formation-evaluation.json",
+      "followup_progress": "Supported grouped path implemented and verified. Original required_followup text is retained as the requirement record; finer elements and original historical questions are still open."
     },
     {
       "discovery_id": "nominal-i-remaining-88924-s3-g15",
@@ -563,8 +578,11 @@
         }
       ],
       "historical_review_note": "Opaque/historical formation needs evidence. Missing 얼간/얼간하다 is not proof of Root or a fabricated lookup predicate.",
-      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
-      "required_followup": "Inspect primary dictionary 얼간 senses and any independent historical relation. The database hyphen boundary is positive evidence, but neither absence in KRDict nor folklore about salt/mental faculties establishes a predicate or finer decomposition."
+      "status": "Finite grouped/source-backed paths and all verification gates pass; original finer formation/historical follow-ups and independent review remain required.",
+      "required_followup": "Inspect primary dictionary 얼간 senses and any independent historical relation. The database hyphen boundary is positive evidence, but neither absence in KRDict nor folklore about salt/mental faculties establishes a predicate or finer decomposition.",
+      "source_audit": "docs/noun-formation-source-audit.json",
+      "evaluation": "docs/noun-formation-evaluation.json",
+      "followup_progress": "Supported grouped path implemented and verified. Original required_followup text is retained as the requirement record; finer elements and original historical questions are still open."
     },
     {
       "discovery_id": "nominal-i-remaining-88924-s3-g25",
@@ -615,8 +633,11 @@
         }
       ],
       "historical_review_note": "Opaque source-listed formation needs base evidence. No arbitrary last-character stripping or invented predicate.",
-      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
-      "required_followup": "The primary 2013 norm-information database explicitly marks 쭉정-이. Implement the supported grouped base alongside whole literal/metaphorical nouns; independently inspect any finer historical elements or predicate relationship before generating them."
+      "status": "Finite grouped/source-backed paths and all verification gates pass; original finer formation/historical follow-ups and independent review remain required.",
+      "required_followup": "The primary 2013 norm-information database explicitly marks 쭉정-이. Implement the supported grouped base alongside whole literal/metaphorical nouns; independently inspect any finer historical elements or predicate relationship before generating them.",
+      "source_audit": "docs/noun-formation-source-audit.json",
+      "evaluation": "docs/noun-formation-evaluation.json",
+      "followup_progress": "Supported grouped path implemented and verified. Original required_followup text is retained as the requirement record; finer elements and original historical questions are still open."
     },
     {
       "discovery_id": "nominal-i-remaining-88924-s3-g26",
@@ -819,8 +840,11 @@
         }
       ],
       "historical_review_note": "Review the 허풍선 boundary and history before linking 허풍. No 선 element or lookup lemma is invented.",
-      "status": "Individual source/formation review and implementation pending; no new judgment assigned.",
-      "required_followup": "The original broadcaster supports the independent nominal 허풍선 base, which is absent in pinned KRDict. Implement that sourced nominal possibility beside whole words without changing it into a Root just because lookup fails; independently review finer 허풍/扇 grouping before generation."
+      "status": "Finite grouped/source-backed paths and all verification gates pass; original finer formation/historical follow-ups and independent review remain required.",
+      "required_followup": "The original broadcaster supports the independent nominal 허풍선 base, which is absent in pinned KRDict. Implement that sourced nominal possibility beside whole words without changing it into a Root just because lookup fails; independently review finer 허풍/扇 grouping before generation.",
+      "source_audit": "docs/noun-formation-source-audit.json",
+      "evaluation": "docs/noun-formation-evaluation.json",
+      "followup_progress": "Supported grouped path implemented and verified. Original required_followup text is retained as the requirement record; finer elements and original historical questions are still open."
     },
     {
       "discovery_id": "nominal-i-remaining-88924-s3-g30",
@@ -923,5 +947,22 @@
   ],
   "representation_policy": "Individual evidence must license roles, grouping and ordered ownership. Missing heads do not establish Root, source dates do not settle conflicts, and competing lexical/suffix/bound-noun readings remain.",
   "verification_policy": "Stable positive/negative judgments, complete native sources, Unicode and ordered ownership, all filters/CLI/browser/API exports, individual before/after candidates, frozen full corpus reports, novel/spacing/release performance and Nix packaging remain required. Existing annotations/baselines stay frozen.",
-  "completion": false
+  "completion": false,
+  "new_source_retrieval_limits": "Norm-information PDF text retrieved again; screenshot requests failed with cache misses. No fresh image inspection claimed.",
+  "prefix_lookup_role_policy": {
+    "headword": "얼-",
+    "all_lookup_ids": [
+      "krdict:72496",
+      "krdict:93133"
+    ],
+    "prefix_grammar_ids": [
+      "krdict:72496"
+    ],
+    "other_entry": {
+      "id": "krdict:93133",
+      "pos": "품사 없음",
+      "role": "Conjugated stem redirect to 얼다, not a second attested prefix."
+    },
+    "policy": "Full native entry and raw dictionary lookup remain available. Existing grammar lookup admits known affix POS; the stem redirect is excluded from prefix grammar, without promoting unspecified POS into a prefix."
+  }
 }

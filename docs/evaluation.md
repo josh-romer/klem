@@ -3653,3 +3653,37 @@ UI and passes after the correction. Desktop/mobile views were inspected.
 The [seven-form review plan](noun-formation-review-plan.json) retains all five
 other required formations and their primary evidence, finer-history questions
 and follow-ups. This verified subset does not close COV-022l or wider COV-022.
+
+## Further individual noun formations (partial COV-022l)
+
+The [source audit](noun-formation-source-audit.json) and [evaluation](noun-formation-evaluation.json)
+verify five primary-source paths for four original forms: grouped 됨됨/쭉정
+Roots + 이, independently attested 얼간/허풍선 nouns + 이, and 얼 Prefix + 간
+Nominal + 이. Twenty-two complete native entries preserve all three noun-suffix
+senses/44 groups. Two original KAIST training observations annotate whole
+됨됨이 nouns; original rows and sentence bodies remain without internal suffix gold.
+Five tests/100 stable cases (85 required / 15 forbidden) bring the ledger to
+7,741 required / 3,215 forbidden. All 672 Rust tests, pinned corpus, lint/format,
+frontend/full browser, Nix and packaged API/preview gates pass.
+
+Across 13,628 NFC/NFD inputs raw adds 180 paths (170 required / 10 unjudged);
+each filter adds 36 (34 required / 2 unjudged). Full raw evidence and verified
+filtered references retain every disposition and stable case ID. Nothing is
+removed and every prior dictionary assessment remains. Four complete corpus
+reports match the preceding committed hashes; all five 179,112-record novel
+outputs are byte-identical. Packaged/debug novel hashes agree. Three interleaved
+release runs give headword medians 1.60/1.62 seconds and compatible medians
+1.59/1.58 seconds; after maximum child RSS is 30,248/30,368 KiB. These local
+observations include startup, lookup and serialization and do not prove
+statistical equivalence or a universal throughput guarantee.
+
+The new spacing regression exposed a real prefix marker check limited to 왕-.
+Registered prefix ownership now preserves 얼- noun-case hypotheses and validates
+external provenance. Raw 얼- lookup retains prefix 72496 and conjugated-stem
+redirect 93133; the existing grammar role filter correctly excludes the latter.
+An initial browser test incorrectly expected both as prefixes; its expectation
+was corrected without promoting unspecified POS. All four 간 homonyms remain.
+Every packaged API case, three browser exports and inspected desktop/mobile
+views pass. Finer repeated nominalization, 팔푼이 number/unit formation, historical
+relationships and independent review remain required in the original seven-form
+[review plan](noun-formation-review-plan.json). COV-022l stays open.

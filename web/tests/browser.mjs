@@ -551,6 +551,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!nounAdnominalIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounAdnominalEntries);
 
+  const nounFormationFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-noun-formation.json"),"utf8"));
+  const nounFormationEntries = nounFormationFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounFormationIds = new Set(nounFormationEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!nounFormationIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounFormationEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5071,6 +5077,31 @@ try {
     if(flag)assert.ok(exported.records.filter(r=>r.analysis).every(r=>r.analysis.analyses.every(a=>a.lemmas.every(l=>!["못난","흰둥"].includes(l.text)))));
   }
   await page.screenshot({path:resolve(tmpdir(),"klem-noun-adnominal-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-adnominal-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Primary noun/reduplicated-root boundaries remain independent of lookup
+  // absence; a finite 얼- prefix owns the component before its nominal base.
+  const nounFormationCases=recipientLedger.cases.filter(c=>c.id.startsWith("noun-formation-"));assert.equal(nounFormationCases.length,100);
+  for(const c of nounFormationCases) {
+    const r=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    assert.ok(r.analysis.analyses.every((a,i)=>JSON.stringify(r.dictionary.readings[i].lemmas.map(l=>l.lemma_index))===JSON.stringify(a.lemmas.map((_,j)=>j))));
+    for(const j of c.judgments)assert.equal(r.analysis.analyses.some(a=>hieutMatches(a,j)&&j.required_rules.every(rule=>a.rules.includes(rule))),j.verdict==="required",c.id);
+  }
+  for(const flag of[null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="얼간이들쯤에는 쭉정이들이었다 허풍선이였다 됨됨이는";await submit(page,text);await waitHeading(page,"얼간이들쯤에는");const raw=await(await post("analyze",{text})).json();const words=raw.records.filter(r=>r.analysis);
+    const i=words[0].analysis.analyses.findIndex(a=>a.rules.includes("derivation.nominal.prefix_eol"));assert.ok(i>=0);const block=page.locator(".breakdown-word").first();await block.getByRole("combobox").selectOption(String(i));assert.deepEqual(await block.locator(".part-form").allTextContents(),["얼","간","이","들","쯤","에","는"]);assert.equal(words[0].dictionary.readings[i].lemmas[0].entries.length,4);assert.deepEqual(new Set(raw.grammar["얼-"].map(e=>e.id)),new Set(["krdict:72496"]));
+    await block.getByRole("button",{name:"얼 Partial / insufficient",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=72496"));
+    await block.getByRole("button",{name:"이 Noun-forming suffix",exact:true}).click();await page.waitForFunction(()=>document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));
+    if(!flag) {
+      for(const[n,base,kind,forms]of[[0,"얼간","nominal",["얼간","이","들","쯤","에","는"]],[1,"쭉정","root",["쭉정","이","들","이","었","다"]],[2,"허풍선","nominal",["허풍선","이","이","었","다"]],[3,"됨됨","root",["됨됨","이","는"]]]) {
+        const choice=words[n].analysis.analyses.findIndex(a=>a.rules.includes("suffix.nominal.i")&&a.lemmas[0].text===base&&a.lemmas[0].kind===kind);assert.ok(choice>=0);const b=page.locator(".breakdown-word").nth(n);await b.getByRole("combobox").selectOption(String(choice));assert.deepEqual(await b.locator(".part-form").allTextContents(),forms);
+      }
+    }
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+    if(flag)assert.ok(exported.records.filter(r=>r.analysis).every(r=>r.analysis.analyses.every(a=>a.lemmas.every(l=>!["얼간","허풍선","됨됨","쭉정"].includes(l.text)))));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-noun-formation-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-noun-formation-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

@@ -30,10 +30,14 @@ impl Analysis {
             .rules
             .iter()
             .any(|r| r == "derivation.nominal.compound");
-        let prefixed = self
-            .rules
+        let mut prefixes = crate::grammar::NOUN_I_PREFIX_FORMS
             .iter()
-            .any(|r| r == "derivation.nominal.prefix_wang");
+            .filter(|&&(_, _, _, rule)| self.rules.iter().any(|r| r == rule));
+        let prefix = prefixes.next();
+        if prefixes.next().is_some() {
+            return None;
+        }
+        let prefixed = prefix.is_some();
         let bagi = self.rules.iter().any(|r| r == "suffix.nominal.bagi");
         let adnominal = self
             .rules
@@ -86,16 +90,16 @@ impl Analysis {
                 return None;
             }
         }
-        if prefixed
+        if let Some(&(_, form, base, _)) = prefix
             && (compound
                 || bagi
                 || !self.rules.iter().any(|r| r == "suffix.nominal.i")
-                || self.lemmas[0].text != "눈"
+                || self.lemmas[0].text != base
                 || self.lemmas[0].kind != LemmaKind::Nominal
                 || !self
                     .morphemes
                     .first()
-                    .is_some_and(|m| m.kind == MorphemeKind::Prefix && m.form == "왕"))
+                    .is_some_and(|m| m.kind == MorphemeKind::Prefix && m.form == form))
         {
             return None;
         }

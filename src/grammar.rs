@@ -115,6 +115,10 @@ pub(crate) const NOUN_I_NOMINAL_FORMS: &[(&str, &str)] = &[
     ("노랑이", "노랑"),
     ("동강이", "동강"),
     ("바둑이", "바둑"),
+    // Independent primary sources identify these nominal bases even though
+    // they are absent from the pinned learner dictionary.
+    ("얼간이", "얼간"),
+    ("허풍선이", "허풍선"),
 ];
 
 // KRDict 88924 sense 3: finite sound/manner formations. Adverb headwords
@@ -148,6 +152,16 @@ pub(crate) const NOUN_I_ROOTS: &[(&str, &str, &[&str])] = &[
     // Positive sense-3 example supports the whole base; the separate prefix
     // path retains 왕- without substituting standalone 왕 'king'.
     ("왕눈이", "왕눈", &[]),
+    // Primary reduplication research and the norm-information database supply
+    // positive grouped boundaries; missing headwords do not assign this role.
+    ("됨됨이", "됨됨", &[]),
+    ("쭉정이", "쭉정", &[]),
+];
+
+// Individually reviewed prefix/base boundaries, never productive stripping.
+pub(crate) const NOUN_I_PREFIX_FORMS: &[(&str, &str, &str, &str)] = &[
+    ("왕눈이", "왕", "눈", "derivation.nominal.prefix_wang"),
+    ("얼간이", "얼", "간", "derivation.nominal.prefix_eol"),
 ];
 
 // Individual source-conflict formations: an adnominal ending is part of the
@@ -1569,6 +1583,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "derivation.nominal.prefix_wang" => {
             "Separate the finite 왕눈이 prefix 왕- and nominal 눈 before noun-forming 이. Preserve the complete 왕눈 base and whole noun. Prefix homonyms remain lookup alternatives; no standalone 왕 king meaning or productive arbitrary prefix stripping is inferred."
         }
+        "derivation.nominal.prefix_eol" => {
+            "Retain the finite 얼간이 reading as prefix 얼- plus nominal 간 plus noun-forming 이, alongside the independently attested 얼간 noun base and whole word. The prefix source explicitly lists 얼간; all 간 homonyms remain without choosing a contextual sense or historical meaning."
+        }
         "suffix.nominal.bagi" => {
             "Separate the source-listed 점박이 noun as 점 plus the dictionary suffix 박이, alongside the reviewed 점 + 박다 + 이 possibility and whole noun. Only this finite spelling licenses the suffix boundary; contextual senses and historical exclusivity are not selected."
         }
@@ -1910,6 +1927,7 @@ mod label_tests {
             forms.insert(format!("-{form}"), Suffix);
         }
         forms.insert("왕-".to_owned(), Prefix);
+        forms.insert("얼-".to_owned(), Prefix);
         let labels: BTreeMap<String, serde_json::Value> =
             serde_json::from_str(include_str!("../web/src/grammar-labels.json")).unwrap();
         assert_eq!(

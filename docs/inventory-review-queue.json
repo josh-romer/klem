@@ -28,7 +28,8 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "90c556693b7b9681ec7a79bdd691e6118fe7acd3d922c6225cf5207440d9f5a2",
+    "docs/coverage-checklist.md": "798f5e05689d2f4e0e4664ae6a840bd1cf27cba98257fc0b2b468bdb0a2a304c",
+    "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
     "docs/danikka-evaluation.json": "a96097a93cd994b8f1b4dde8a91803e08f1a93300956547f2283e60ccf9999e4",
@@ -51,8 +52,8 @@
     "docs/hieut-compatibility-evaluation.json": "43dc0adf65291282668771380f247ff34af9d0e84fd21625f36136ab87ee5d92",
     "docs/honorific-copula-evaluation.json": "565446cae973795a53f3c138514dff65e8d0e6c278eec1e3077e36f84bd7f403",
     "docs/intention-connectives-evaluation.json": "45a6ebf7007ac7d3749e5bf12c533b02d1d7c3903d29e5fa51dfe445eb602b6f",
-    "docs/inventory-audit.md": "ed77baf2d48f11b1d6241171f8b3363cf51fa10a0c52a6acf18761ad62961f79",
-    "docs/inventory-reviews.json": "3c253f32126713d588a158d5fbbbdb5a4674870025cf120ba4fb9f3389f36990",
+    "docs/inventory-audit.md": "d0c756da81173791bdb5e3a29121ef785d3b4b1873f6df311476261f6d8a2fa5",
+    "docs/inventory-reviews.json": "5a2167a64950ee6c6ddecccf2f6349d7ddf861c161a714cce7d7866875ebd324",
     "docs/jaop-draft-corrections.json": "4604d18e94d59fd8fec3c46d7af59d8de805516b47d111999e9583c6f5dc52f0",
     "docs/jaop-evaluation.json": "65e52162489a64c43bc942629baaed9dcc7892d3109e9d092bd0236430ae74fa",
     "docs/jimaneun-evaluation.json": "9dedb9a1820bba24a681d5ec9fc8b738d27628345f158e50d4f69c46531a1289",
@@ -131,6 +132,8 @@
     "tests/copula_yo.rs": "a0e5d4b57ea397abbc72bc58da541d70c9597c149e7ba6749a22d2e80bf124b7",
     "tests/core_case.rs": "556f5fa2df29d0285552bf3e83a5cfbc9610c84c33fb1ac6e1bc02d7c2e5fbcb",
     "tests/corpus.rs": "280e80cc207eecb4a2f59da9fd5cda1008ffb538a3c48cebfeffb57fc78098c7",
+    "tests/daga.rs": "7251d8b98515301f36bb97c3f16e35b2344a823e9efdb6eecf5570e21dc8840b",
+    "tests/daga_source.rs": "674fc3820034625550fd6f887fe72af9ac977fe66906c505e1e31a6abaf95691",
     "tests/daji.rs": "172b18762b2adaa5e59a0e0f592d7f1fad4ef48515a175d3f420e2bd391f658d",
     "tests/danda.rs": "7ac20e77584b520909734f32132a24af40c5cd626db0ad0f73f866149f31943a",
     "tests/danikka.rs": "83c656930be046c9933bf273098c3155a4b333338376e7d75c8cc1ec20e7043b",
@@ -172,7 +175,7 @@
     "tests/fixtures/ryeogo-license-assessments.json": "64d0295fc1651bced66b391b6b87d104be168d641448743ddd2e1d2e768b812a",
     "tests/fixtures/ryeogo-license-sources.json": "bb803af39a4cc2b8aa60c030194b16345c99cf6f39d4118ba35a8c9f55692a6a",
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
-    "tests/fixtures/validity.json": "f7d37940b4f5223876da3299d1942491694ec9b311f84dc40eebe7e45cf6a309",
+    "tests/fixtures/validity.json": "e8f4785dbaf59f5db0f045df3a735913dc964749483a774c158528da8c4582a6",
     "tests/geol.rs": "4615b2b5bbce7a8d749964b17b307eab383a1ae5e9c6d65f6c4be2ceacfd9cc7",
     "tests/hieut_compatibility.rs": "f557736f7275cbdb7e73217b9a760e9054e99ca29c6d1a9c747ea35ad807d4e6",
     "tests/honorific_copulas.rs": "4622fc750d8c1c07f10939fb7f0b12bd5416a47f78e0837d305ad004e0b8de3b",
@@ -237,8 +240,8 @@
       "조사": 157
     },
     "by_review": {
-      "scoped": 382,
-      "unreviewed": 332,
+      "scoped": 383,
+      "unreviewed": 331,
       "gap": 1
     },
     "with_catalog_links": 429,
@@ -34141,6 +34144,101 @@
           "verdict": "required"
         },
         {
+          "case": "daga-native-s1-g1-t0-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s1-g2-t0-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s1-g3-t0-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s1-g4-t1-w1",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s2-g1-t0-w3",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s2-g2-t0-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s2-g3-t0-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s2-g4-t1-w4",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s3-g1-t0-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s3-g1-t0-w3",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s3-g2-t0-w1",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s3-g2-t0-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s3-g3-t0-w4",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s3-g3-t0-w6",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s3-g4-t1-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s3-g4-t1-w3",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s4-g1-t0-w1",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s4-g2-t0-w1",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
+          "case": "daga-native-s4-g3-t0-w2",
+          "judgment": "literal-path",
+          "verdict": "required"
+        },
+        {
           "case": "daga-no-bieup",
           "judgment": "ending-path",
           "verdict": "forbidden"
@@ -34173,7 +34271,118 @@
       ],
       "inventory_evidence": [],
       "review": {
-        "status": "unreviewed"
+        "id": "krdict:85740",
+        "source_sha256": "4e1e1d2b1f987b8bdde68f606df78d7da1a53e46a8fdb755a896c17b68ac8537",
+        "status": "scoped",
+        "checklist": [
+          "COV-013",
+          "COV-017c"
+        ],
+        "scope": "All four definitions, the predicate/copula/honorific/past attachment note, sense notes and all 15 original example groups reviewed. Nineteen source occurrences preserve the ordered literal 다가 path, including alternating constructions, bare adjectives and past predicates. Existing COV-017c boundaries remain; lexical/transfer and 들다/듣다 alternatives survive both dictionary filters without contextual sense selection.",
+        "remaining": "Further outer particles, joined auxiliary uses and shortened 다 sense selection remain in COV-017/018/019. The source retention cases do not certify all candidates or every lexical sense. Independent Korean-language review remains pending.",
+        "evidence": [
+          {
+            "path": "tests/daga.rs",
+            "test": "daga_preserves_stems_past_honorifics_copulas_and_auxiliary_order"
+          },
+          {
+            "path": "tests/daga_source.rs",
+            "test": "daga_complete_native_groups_keep_every_target_and_source_turn"
+          },
+          {
+            "path": "tests/daga_source.rs",
+            "test": "daga_native_paths_preserve_normalization_boundaries_and_all_alternatives"
+          },
+          {
+            "path": "tests/daga_source.rs",
+            "test": "daga_native_dictionary_paths_keep_entry_identity_under_both_filters"
+          },
+          {
+            "path": "tests/daga_source.rs",
+            "test": "daga_native_word_and_text_exports_match_library_and_ordered_components"
+          },
+          {
+            "path": "docs/daga-native-source-audit.json"
+          }
+        ],
+        "judgments": [
+          {
+            "case": "daga-native-s1-g1-t0-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s1-g2-t0-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s1-g3-t0-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s1-g4-t1-w1",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s4-g1-t0-w1",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s4-g2-t0-w1",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s4-g3-t0-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s2-g1-t0-w3",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s2-g2-t0-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s2-g3-t0-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s2-g4-t1-w4",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s3-g1-t0-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s3-g1-t0-w3",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s3-g2-t0-w1",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s3-g2-t0-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s3-g3-t0-w4",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s3-g3-t0-w6",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s3-g4-t1-w2",
+            "judgment": "literal-path"
+          },
+          {
+            "case": "daga-native-s3-g4-t1-w3",
+            "judgment": "literal-path"
+          }
+        ]
       }
     },
     {

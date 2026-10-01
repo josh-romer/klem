@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-013/COV-017c",
+  "before_revision": "662cea9",
+  "grammar_fixture": "tests/fixtures/krdict-daga.json",
+  "lexical_fixture": "tests/fixtures/krdict-daga-native.json",
+  "attribution": "National Institute of Korean Language Korean Basic Dictionary, pinned September 2026 native entries. Only RelatedForm and non-English equivalents omitted; Sense normalized to an array without dropping content.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "grammar_fixture_sha256": "0a3d4242982b637c0cf2fd4d4f51eaa566a03576eeede7a6efe9de013cff4860",
+  "lexical_fixture_sha256": "504ceddf70a03209d6d212e3d8ea209ea1e24cf40efdec2c8e6ce308ba347632",
+  "lexical_entries": 79,
+  "source_groups": [
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "1",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "우리는 밥을 먹다가 차를 마셨다."
+          }
+        ]
+      },
+      "examples": [
+        "우리는 밥을 먹다가 차를 마셨다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "먹다가",
+          "lemmas": [
+            "먹다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s1-g1-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "1",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "유민이가 여행을 갔다가 돌아왔다."
+          }
+        ]
+      },
+      "examples": [
+        "유민이가 여행을 갔다가 돌아왔다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "갔다가",
+          "lemmas": [
+            "가다"
+          ],
+          "morphemes": [
+            "었",
+            "다가"
+          ],
+          "case_id": "daga-native-s1-g2-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "1",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "나는 일기를 쓰다가 생각에 잠겼다."
+          }
+        ]
+      },
+      "examples": [
+        "나는 일기를 쓰다가 생각에 잠겼다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "쓰다가",
+          "lemmas": [
+            "쓰다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s1-g3-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "1",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "승규야, 왜 책상 위에 엎드려서 자고 있어?"
+          },
+          {
+            "att": "example",
+            "val": "공부를 하다가 잠이 들어 버렸어요."
+          }
+        ]
+      },
+      "examples": [
+        "승규야, 왜 책상 위에 엎드려서 자고 있어?",
+        "공부를 하다가 잠이 들어 버렸어요."
+      ],
+      "targets": [
+        {
+          "turn": 1,
+          "token": 1,
+          "surface": "하다가",
+          "lemmas": [
+            "하다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s1-g4-t1-w1"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "4",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "잠을 자다가 무서운 꿈을 꾸었다."
+          }
+        ]
+      },
+      "examples": [
+        "잠을 자다가 무서운 꿈을 꾸었다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 1,
+          "surface": "자다가",
+          "lemmas": [
+            "자다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s4-g1-t0-w1"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "4",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "영화를 보다가 그 사람이 생각났다."
+          }
+        ]
+      },
+      "examples": [
+        "영화를 보다가 그 사람이 생각났다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 1,
+          "surface": "보다가",
+          "lemmas": [
+            "보다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s4-g2-t0-w1"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "4",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "기차를 타고 가다가 친구를 만났다."
+          }
+        ]
+      },
+      "examples": [
+        "기차를 타고 가다가 친구를 만났다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "가다가",
+          "lemmas": [
+            "가다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s4-g3-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "2",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "지수는 그의 말을 듣다가 화가 났다."
+          }
+        ]
+      },
+      "examples": [
+        "지수는 그의 말을 듣다가 화가 났다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 3,
+          "surface": "듣다가",
+          "lemmas": [
+            "듣다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s2-g1-t0-w3"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "2",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "그는 과식을 하다가 배탈이 나고 말았다."
+          }
+        ]
+      },
+      "examples": [
+        "그는 과식을 하다가 배탈이 나고 말았다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "하다가",
+          "lemmas": [
+            "하다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s2-g2-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "2",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "민준이는 멍하니 있다가 선생님 말씀을 못 들었다."
+          }
+        ]
+      },
+      "examples": [
+        "민준이는 멍하니 있다가 선생님 말씀을 못 들었다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "있다가",
+          "lemmas": [
+            "있다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s2-g3-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "2",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "유민아, 너 감기에 걸렸어?"
+          },
+          {
+            "att": "example",
+            "val": "응. 어제 창문을 열고 잤다가 감기에 걸렸지 뭐야."
+          }
+        ]
+      },
+      "examples": [
+        "유민아, 너 감기에 걸렸어?",
+        "응. 어제 창문을 열고 잤다가 감기에 걸렸지 뭐야."
+      ],
+      "targets": [
+        {
+          "turn": 1,
+          "token": 4,
+          "surface": "잤다가",
+          "lemmas": [
+            "자다"
+          ],
+          "morphemes": [
+            "었",
+            "다가"
+          ],
+          "case_id": "daga-native-s2-g4-t1-w4"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "3",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "그는 전화기를 들었다가 놓았다가 하며 초조해했다."
+          }
+        ]
+      },
+      "examples": [
+        "그는 전화기를 들었다가 놓았다가 하며 초조해했다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "들었다가",
+          "lemmas": [
+            "들다"
+          ],
+          "morphemes": [
+            "었",
+            "다가"
+          ],
+          "case_id": "daga-native-s3-g1-t0-w2"
+        },
+        {
+          "turn": 0,
+          "token": 3,
+          "surface": "놓았다가",
+          "lemmas": [
+            "놓다"
+          ],
+          "morphemes": [
+            "었",
+            "다가"
+          ],
+          "case_id": "daga-native-s3-g1-t0-w3"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "3",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "아이는 울었다가 웃었다가 하며 금방금방 기분이 바뀌었다."
+          }
+        ]
+      },
+      "examples": [
+        "아이는 울었다가 웃었다가 하며 금방금방 기분이 바뀌었다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 1,
+          "surface": "울었다가",
+          "lemmas": [
+            "울다"
+          ],
+          "morphemes": [
+            "었",
+            "다가"
+          ],
+          "case_id": "daga-native-s3-g2-t0-w1"
+        },
+        {
+          "turn": 0,
+          "token": 2,
+          "surface": "웃었다가",
+          "lemmas": [
+            "웃다"
+          ],
+          "morphemes": [
+            "었",
+            "다가"
+          ],
+          "case_id": "daga-native-s3-g2-t0-w2"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "3",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "문장"
+          },
+          {
+            "att": "example",
+            "val": "지수는 시험을 앞두고 손톱을 물어뜯다가 몸을 떨다가 하며 불안해했다."
+          }
+        ]
+      },
+      "examples": [
+        "지수는 시험을 앞두고 손톱을 물어뜯다가 몸을 떨다가 하며 불안해했다."
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 4,
+          "surface": "물어뜯다가",
+          "lemmas": [
+            "물어뜯다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s3-g3-t0-w4"
+        },
+        {
+          "turn": 0,
+          "token": 6,
+          "surface": "떨다가",
+          "lemmas": [
+            "떨다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s3-g3-t0-w6"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:85740",
+      "sense_id": "3",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "대화"
+          },
+          {
+            "att": "example",
+            "val": "요즘 일교차가 심하네요."
+          },
+          {
+            "att": "example",
+            "val": "네, 날씨가 덥다가 춥다가 하네요."
+          }
+        ]
+      },
+      "examples": [
+        "요즘 일교차가 심하네요.",
+        "네, 날씨가 덥다가 춥다가 하네요."
+      ],
+      "targets": [
+        {
+          "turn": 1,
+          "token": 2,
+          "surface": "덥다가",
+          "lemmas": [
+            "덥다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s3-g4-t1-w2"
+        },
+        {
+          "turn": 1,
+          "token": 3,
+          "surface": "춥다가",
+          "lemmas": [
+            "춥다"
+          ],
+          "morphemes": [
+            "다가"
+          ],
+          "case_id": "daga-native-s3-g4-t1-w3"
+        }
+      ]
+    }
+  ],
+  "source_group_count": 15,
+  "target_occurrences": 19,
+  "distinct_target_forms": 18,
+  "scope": "Full literal 다가 entry, four source senses and all original example groups. Existing honorific/past, copular, auxiliary and derivational boundaries remain separately tested under COV-017c. Literal 다가 and transfer 어다가 alternatives coexist. A source example does not choose the intended sense of a candidate.",
+  "remaining": [
+    "Further outer followers, joined auxiliary uses and shortened 다 sense selection remain COV-017/018/019 work.",
+    "Independent Korean review is pending. Neither source retention nor dictionary matching certifies all generated candidates."
+  ],
+  "status": "Full literal -다가 native entry reviewed and all 19 source occurrences verified for the stated COV-017c scope. Parent inventories, additional attachments and independent Korean review remain open.",
+  "source_entry_review": "All four Korean definitions, attachment note, sense notes, complete groups and source spelling inspected. Lexical entries preserve evidence for dictionary tests, including incidental siblings; no separate linguistic review of every lexical sense claimed.",
+  "source_integrity": {
+    "native_lexical_entries": 79,
+    "complete_grammar_senses": 4,
+    "complete_source_groups": 15,
+    "target_occurrences": 19,
+    "all_export_hashes_match": true,
+    "only_documented_omissions": true,
+    "original_ledger_prefix_unchanged": true,
+    "debug_binary_sha256": "219829de3fc97d24dd4c1361b1176db6ce6b0e76f9331d1f0543f6fe17c1eece",
+    "debug_binary_identical": true,
+    "rust_tests": 620,
+    "frozen_baselines": [
+      {
+        "path": "data/baselines/kaist-dev.jsonl",
+        "sha256": "942e84f3d7f1905341fe2585e588563edb947feae96b5dfc1872ef915290b42c",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/kaist-test.jsonl",
+        "sha256": "fdd557c80a41a24274c43a82f8c1868b2992d00286dbf48dd877df57b8a81222",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-dev.jsonl",
+        "sha256": "c32e071e6823b4a1e69935933b568daa54e8c2dcfa5dea8b2da9eabe1a51d9b8",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-test.jsonl",
+        "sha256": "76d656c99f08b14feb9d31a6d41ef83ff568570445c0402873e98d7cd2dfa422",
+        "unchanged": true
+      }
+    ]
+  },
+  "evaluation": "docs/daga-native-evaluation.json"
+}

@@ -1813,3 +1813,11 @@ National Institute of Korean Language). Only RelatedForm and non-English
 equivalents are omitted; source groups and export hashes are in
 [the source audit](../../docs/proposal-source-audit.json). Candidate retention
 and Unknown assessments do not certify contextual adjective wishes.
+
+`daga-native-sources.json` links 19 literal -다가 target occurrences to all 15
+original groups in the existing `krdict-daga.json`. `krdict-daga-native.json`
+retains complete pinned native lexical entries for the target heads and their
+homonyms, with only RelatedForm and non-English equivalents omitted. National
+Institute of Korean Language; CC BY-SA 2.0 KR. Export hashes and scope are in
+[the source audit](../../docs/daga-native-source-audit.json). These cases preserve
+candidate paths without selecting a contextual sense.

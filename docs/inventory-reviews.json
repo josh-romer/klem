@@ -30771,6 +30771,120 @@
           "judgment": "lexical"
         }
       ]
+    },
+    {
+      "id": "krdict:85740",
+      "source_sha256": "4e1e1d2b1f987b8bdde68f606df78d7da1a53e46a8fdb755a896c17b68ac8537",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-017c"
+      ],
+      "scope": "All four definitions, the predicate/copula/honorific/past attachment note, sense notes and all 15 original example groups reviewed. Nineteen source occurrences preserve the ordered literal 다가 path, including alternating constructions, bare adjectives and past predicates. Existing COV-017c boundaries remain; lexical/transfer and 들다/듣다 alternatives survive both dictionary filters without contextual sense selection.",
+      "remaining": "Further outer particles, joined auxiliary uses and shortened 다 sense selection remain in COV-017/018/019. The source retention cases do not certify all candidates or every lexical sense. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/daga.rs",
+          "test": "daga_preserves_stems_past_honorifics_copulas_and_auxiliary_order"
+        },
+        {
+          "path": "tests/daga_source.rs",
+          "test": "daga_complete_native_groups_keep_every_target_and_source_turn"
+        },
+        {
+          "path": "tests/daga_source.rs",
+          "test": "daga_native_paths_preserve_normalization_boundaries_and_all_alternatives"
+        },
+        {
+          "path": "tests/daga_source.rs",
+          "test": "daga_native_dictionary_paths_keep_entry_identity_under_both_filters"
+        },
+        {
+          "path": "tests/daga_source.rs",
+          "test": "daga_native_word_and_text_exports_match_library_and_ordered_components"
+        },
+        {
+          "path": "docs/daga-native-source-audit.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "daga-native-s1-g1-t0-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s1-g2-t0-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s1-g3-t0-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s1-g4-t1-w1",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s4-g1-t0-w1",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s4-g2-t0-w1",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s4-g3-t0-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s2-g1-t0-w3",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s2-g2-t0-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s2-g3-t0-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s2-g4-t1-w4",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s3-g1-t0-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s3-g1-t0-w3",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s3-g2-t0-w1",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s3-g2-t0-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s3-g3-t0-w4",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s3-g3-t0-w6",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s3-g4-t1-w2",
+          "judgment": "literal-path"
+        },
+        {
+          "case": "daga-native-s3-g4-t1-w3",
+          "judgment": "literal-path"
+        }
+      ]
     }
   ]
 }

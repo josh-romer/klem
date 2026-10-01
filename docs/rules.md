@@ -3758,3 +3758,12 @@ lexical/adjective auxiliary and unresolved negative-owner proposal entries
 Unknown: broad POS does not decide contextual adjective wishes. Known verb
 homonyms and existing conflicts retain their separate assessments. See the
 [source review](proposal-source-audit.json) and [evaluation](proposal-evaluation.json).
+
+The COV-013 source review for literal -다가 (85740) preserves all four senses
+and 15 original native groups, with 19 occurrence-level required path cases.
+The [source manifest](../tests/fixtures/daga-native-sources.json) links each
+source turn/token to its stable ledger case. Existing literal/transfer readings
+and 들다/듣다 alternatives remain; sense provenance does not choose an intended
+sentence reading. See the [source audit](daga-native-source-audit.json) and
+[four native-source tests](../tests/daga_source.rs). Further followers, joined
+auxiliary uses and independent Korean review remain open.

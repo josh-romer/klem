@@ -22,9 +22,9 @@ Language's Korean Basic Dictionary, September 2026 export, under
 The generated queue is an attributed selection of that data under the same
 license; the Python tooling retains the repository's code license.
 
-The [manual ledger](inventory-reviews.json) currently contains **380 scoped
+The [manual ledger](inventory-reviews.json) currently contains **383 scoped
 reviews**, **one observed gap with unresolved acceptability** (마다), and
-**334 entries
+**331 entries
 unreviewed in this ledger**. This does not imply
 that those entries are unimplemented. Each disposition records its supported
 scope, remaining limits, checklist item, named Rust tests, evaluation evidence
@@ -777,3 +777,18 @@ The COV-017bg runtime/build gates and refreshed packaged preview pass. The
 next explicit gap is quoted declarative exclamation contractions (COV-017bh);
 base ending coverage does not imply that their quoted bundles are generated.
 The full inventory audit and independent Korean-language review remain open.
+
+## Full literal -다가 source regressions (2026-10-01)
+
+The [native source audit](daga-native-source-audit.json) reviews all four senses
+and 15 original example groups of entry 85740. Nineteen stable target-occurrence
+judgments preserve literal -다가 paths, including alternating constructions,
+past predicates, and bare adjectives. Lexical/transfer and 들다/듣다 alternatives
+remain available; these cases do not select an intended contextual sense.
+The [evaluation](daga-native-evaluation.json) records source integrity, both
+dictionary filters, CLI/library word/text parity, ordered components, preview
+and packaged API checks, 620 Rust tests, full pinned corpus checks, and Nix
+CLI/web verification. Application binaries and production frontend bytes are
+unchanged. The queue now has 383 scoped dispositions, 331 unreviewed entries
+and one unresolved gap. Broader attachments and independent Korean review
+remain open.

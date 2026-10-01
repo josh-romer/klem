@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-09-30.
+Last reviewed: 2026-10-01.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 382 scoped
-  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 332 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 383 scoped
+  dispositions from COV-016/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–k/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 331 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. One entry (마다, COV-018l) retains an observed gap with unresolved
   acceptability; COV-017ah resolves the two question-ending gaps. Neither
   catalog links nor test citations automatically certify coverage. Source and
@@ -271,7 +271,18 @@ review remains open under the completion review below.
   annotation for 살겠다가, dictionary/CLI parity and browser alternative/link
   checks. See [scope](rules.md#literal-daga-cov-017c) and
   [the development comparison](daga-evaluation.json). Further outer particles,
-  joined auxiliary uses of 다가, and short-form 다 sense selection remain open.
+  joined auxiliary uses of 다가, and short-form 다 sense selection remain open. The
+  [full native source review](daga-native-source-audit.json) now adds 19 stable
+  target-occurrence cases across all four senses and 15 original groups,
+  retaining repeated -다가 constructions and adjective examples. [Four tests](../tests/daga_source.rs)
+  verify unchanged source turns, exact paths/kinds/order, ambiguity, dictionary
+  filters and CLI word/text exports. The inventory now records a scoped
+  disposition for 85740. Source integrity, 620 Rust tests, pinned corpus,
+  lint/format and preview API parity pass; see the
+  [evaluation](daga-native-evaluation.json). Nix CLI/web builds and all three
+  x86_64 Linux flake checks pass; packaged API/CLI and asset parity pass.
+  Parent inventories and independent Korean review remain open.
+
 - [x] **COV-017d — Bundled quoted questions -냐는/-느냐는.** Literal
   attachment supports 아니냐는, 했느냐는, ㄹ deletion in 사느냐는, and
   honorific/past/modal prefinals in order. Existing auxiliary chains compose;

@@ -2693,6 +2693,24 @@ review remains open under the completion review below.
   release samples per filter have after medians of 1.61/1.59 seconds on this host;
   timings are descriptive. See [evaluation](nominal-i-evaluation.json).
 
+- [ ] **COV-022e — Remaining native noun-forming -이 base classes.**
+  The [discovery audit](nominal-i-remaining-audit.json) records every remaining
+  native group of KRDict 88924: six sense-2 compound forms and thirty sense-3
+  noun/root/sound-or-manner forms, each with a stable observation ID. All 108
+  bare-word CLI probes (raw/headword/compatible) currently lack the new
+  noun-forming rule; existing lexical candidates remain in the report. Fourteen
+  prefix occurrences across six pinned corpus partitions retain complete
+  sentence bodies and original rows. All are in KAIST training data and retain
+  whole lexical noun gold; they do not license a new derivational segmentation.
+  Review selected nominal-plus-predicate combinations such as 길잡이/목걸이/
+  옷걸이/젖먹이, the explicit unresolved 떠돌이/미닫이 class examples, and
+  each sense-3 base class before adding required paths. Preserve lexical/adverb/
+  causative homonyms and add an explicit compound boundary if needed for ordered
+  display and outer particles/copulas. Missing dictionary bases do not establish
+  Root status, and dictionary POS does not certify derivational relationships.
+  The [read-only audit tool](../tools/audit_nominal_i.py) records pinned source,
+  dictionary, CLI and corpus hashes without changing gold or baselines.
+
 ### P3: dictionary and representation boundaries
 
 - [x] **COV-014 — Names, unknown words, numbers, and foreign letters.**

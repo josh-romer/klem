@@ -859,3 +859,31 @@ All new contextual novel paths remain unjudged. Packaged/debug output hashes
 match in all five modes. Three interleaved local release runs per filter give
 after medians of 1.61/1.59 seconds; these observations do not certify grammar
 coverage or universal throughput.
+
+## Remaining native noun-forming -이 discovery (2026-10-01)
+
+COV-022e expands the remaining COV-022 work into 36 individually identified
+native examples: six sense-2 compound formations and thirty sense-3
+noun/root/sound-or-manner bases. The [report](nominal-i-remaining-audit.json)
+retains full original example groups, exact dictionary head/POS probes, and
+all 108 bare-word CLI outputs under raw and both filter modes. None currently
+contains `suffix.nominal.i`. This describes a derivational coverage gap, not
+a missing whole-word lookup or a certification of proposed segmentations.
+
+The six-file literal-prefix scan finds fourteen rows in fourteen complete
+KAIST training sentences and none in the other five partitions. Original
+lexical gold remains unchanged. `떠돌이` and `미닫이` are explicit unresolved
+class/boundary examples under the compound sense's general attachment note;
+missing base heads and guessed related predicates are not promoted to gold.
+No source candidate judgment, frozen baseline or runtime path changes.
+
+Reproduce with the CLI path and source revision recorded in the report:
+
+```sh
+python3 tools/audit_nominal_i.py --cli /path/to/built/klem \
+  --revision a2f6c19f5ae3b6290134c01b01df0c58c4485933 > /tmp/nominal-i-remaining-audit.json
+```
+
+The CLI and pinned dictionary/corpus hashes must match the report for historical
+reproduction. The 715-entry ending/particle/auxiliary review queue is unchanged;
+these noun and suffix entries lie outside its POS scope.

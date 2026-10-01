@@ -564,3 +564,15 @@ prefinals remain unknown without a fabricated conflict. The three reviewed
 polite bundles retain their separate 요 alternatives. Raw and headword-only
 paths remain available; these optional checks do not select contextual senses.
 See [source and individual-case evidence](quoted-exclamation-evaluation.json).
+
+COV-017bi extends the existing bare verbal/adjectival question rules to twelve
+quoted-question expression bundles. General spoken 냐 remains a distinct
+candidate from adjective 으냐. Each 고르다/보다/있다 homonym keeps its own
+assessment. Unknown auxiliary-adjective readings survive independently of
+incompatible verbal homonyms. Nonverbal honorific-only 느냐, unlisted polite
+prefinals and inferred quoted 군 + 요 paths retain Unknown; structural class
+conflicts still take precedence. A negative owner with an unclassified lexical
+predecessor stays Unknown instead of borrowing a preceding dictionary entry’s
+POS. No new compatibility enum or provider restriction is introduced.
+[Source and case evidence](question-exclamation-evaluation.json) distinguishes
+raw hypotheses, optional filtering judgments and contextual validity.

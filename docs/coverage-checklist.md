@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bh/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bi/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–b batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -221,8 +221,8 @@ review remains open under the completion review below.
   dictionary/CLI parity and browser grammar-entry checks. All 30 existing
   fingerprints remain unchanged; no frozen corpus baseline was regenerated.
 - [ ] **COV-017 — Further ending families.** **Partial: COV-017a–av and
-  COV-017ax–ay/017ba–bh implemented; COV-017aw/az and the inventoried
-  COV-017bi–bl remain open.**
+  COV-017ax–ay/017ba–bi implemented; COV-017aw/az and the inventoried
+  COV-017bj–bl remain open.**
   Remaining: other quoted contractions and unreviewed inventory
   entries. Re-probe each path and check verb/adjective attachment, prefinals,
   and whole-word alternatives. Corpus signatures identify candidates for review,
@@ -1386,19 +1386,30 @@ review remains open under the completion review below.
   Nix gates pass, including packaged API/CLI/export/asset parity and refreshed
   preview. Other quote families and independent review remain open below.
 
-- [ ] **COV-017bi — Quoted question exclamations and recalled questions.**
-  **Confirmed missing:** 먹느냐는구나 → 먹다 and 좋으냐는군 → 좋다.
-  Audit twelve native expressions: 냐/느냐/으냐 with 는구나/는군/더군/더군요
-  (88945–88947, 89636–89638, 89659–89661, 89824–89826).
-  Preserve full original groups, general spoken 냐 versus adjective 으냐,
-  verb/existential 느냐, licensed prefinals, copula omission, homonyms and
-  bundled/split polite paths. Native 88945 illustrates 하냐는구나/타냐는구나
-  and 89824 illustrates 걸리냐더군요 despite narrower attachment notes.
-  [NIKL’s question-quotation guidance](https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5876&mn_id=217&pageIndex=215)
-  permits general spoken 냐고 across predicate classes; do not introduce a
-  blanket bare-verb exclusion from those narrower notes. Contextual register
-  and implicit reporting predicates remain separate. Require source-backed
-  candidate/dictionary cases and corpus/browser/Nix comparison gates.
+- [x] **COV-017bi — Quoted question exclamations and recalled questions.**
+  **Implemented for twelve reviewed native expression identities.**
+  먹느냐는구나/좋으냐는군 now recover their predicates; general spoken 냐,
+  verbal/existential 느냐 and adjective 으냐 stay distinct through
+  는구나/는군/더군/더군요 reports. Eu allomorphs, local owner classes,
+  listed prefinals, negative inheritance, derived 답다 and copula omission
+  compose. All 51 original groups and unchanged direct targets appear in
+  the [full source audit](question-exclamation-source-audit.json), with the
+  narrow-note/verbal-example disagreement and NIKL 5876 preserved.
+  [Four family tests](../tests/question_exclamation.rs), 251 raw and
+  55 optional dictionary cases distinguish per-entry homonyms, explicit
+  bundled/split polite paths and three inferred 군 + 요 candidates retained
+  as Unknown. Unlisted 구나 followers have no forbidden gold; broader
+  follower review stays COV-018aa. Honorific-only ordinary nonverbal 느냐,
+  broader polite prefinals and unclassified negative owners remain Unknown.
+  No implicit reporting 하다 or auxiliary connector is inserted.
+  The [individual comparison](question-exclamation-evaluation.json) covers
+  11,556 inputs, 3,776 added paths and zero removals; 3,399 additions stay
+  unjudged. Four frozen corpus reports, novel filter outputs and spacing
+  sidecars are unchanged. No target exists in the six pinned corpus files,
+  so no annotated gold is fabricated. Twelve labels keep actual source POS
+  품사 없음. Rust/stress, lint/format, corpus, browser and x86_64 Linux Nix
+  checks pass, including packaged API/CLI/export/asset parity and refreshed
+  preview. Other question/quote families and independent review stay open.
 
 - [ ] **COV-017bj — Quoted copular reports and command exclamations.**
   **Confirmed missing:** 가라더군 → 가다 and 학생이라더군 → 학생 + 이다.
@@ -1796,6 +1807,16 @@ review remains open under the completion review below.
   cases and [the source/candidate review](quoted-bakke-evaluation.json) record
   the boundaries. Independent review, contextual polarity and further reported
   paradigms remain open.
+
+- [ ] **COV-018aa — Review polite followers of quoted exclamations.**
+  The missing dictionary labels for quoted 군/구나 + 요 do not prove
+  invalidity. NIKL [330060](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=330060)
+  identifies 요 after 하는군 as a polite particle. COV-017bi keeps inferred
+  냐는군/느냐는군/으냐는군 + 요 hypotheses as Unknown rather than certifying
+  a quoted-context license or register. Review declarative quote followers,
+  quoted 구나 followers, full native examples and distinct ending/particle
+  alternatives. Record unsupported exclusions as unjudged observations;
+  absence from a source inventory alone cannot supply forbidden gold.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

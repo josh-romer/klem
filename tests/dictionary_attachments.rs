@@ -48,6 +48,7 @@ impl Fixture {
             "krdict-geol.json",
             "krdict-exclamation.json",
             "krdict-quoted-exclamation.json",
+            "krdict-question-exclamation.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -75,6 +76,7 @@ impl Fixture {
                         | "krdict-geol.json"
                         | "krdict-exclamation.json"
                         | "krdict-quoted-exclamation.json"
+                        | "krdict-question-exclamation.json"
                 ) {
                     // Full native entries supply written forms absent from older
                     // POS-only fixtures; do not borrow evidence by headword.
@@ -152,7 +154,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (1749, 1618)
+        (1795, 1627)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

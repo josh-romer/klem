@@ -77,6 +77,13 @@ unknown classes and valid homonyms. The browser exposes this under its dictionar
 filter. See the [scoped policy](docs/dictionary-attachments.md), including per-entry
 written ㅎ inflection checks. Raw/headword-only candidates remain available.
 
+
+Quoted-question reports such as 먹느냐는구나 and 좋으냐는군 preserve distinct
+question endings, dictionary homonyms and polite alternatives. Inferred or
+unresolved attachment licenses stay unknown under compatibility filtering.
+The [source audit](docs/question-exclamation-source-audit.json) and
+[coverage tracker](docs/coverage-checklist.md) describe the reviewed scope.
+
 ## Missing-space suggestions
 
 With a dictionary, `--suggest-spacing` adds explicit alternatives for nominal

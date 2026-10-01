@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-017bi",
+  "reviewed_at": "2026-09-30",
+  "before_revision": "1a654e4",
+  "manifest": "tests/fixtures/question-exclamation-sources.json",
+  "source_integrity": {
+    "entries": 89,
+    "source_exports": 11,
+    "all_source_hashes_match": true,
+    "only_documented_omissions": true,
+    "fixture_sha256": "2a30236b9650d139ea7c642e9b275c3a25a19372d725c516d8db6c94710672b2"
+  },
+  "primary_entry_ids": [
+    88945,
+    89636,
+    89660,
+    89824,
+    88946,
+    89637,
+    89659,
+    89825,
+    88947,
+    89638,
+    89661,
+    89826
+  ],
+  "complete_example_groups": 51,
+  "direct_primary_tokens": 51,
+  "unjudged_primary_observations": [],
+  "unjudged_follower_observations": [
+    {
+      "surface": "먹냐는구나요",
+      "lemmas": [
+        "먹다"
+      ],
+      "morphemes": [
+        "냐는구나",
+        "요"
+      ],
+      "status": "unjudged",
+      "reason": "Absence from the quoted-expression dictionary inventory does not establish invalidity. No forbidden judgment is assigned. Broader quoted-구나 + 요 follower review remains COV-018aa."
+    },
+    {
+      "surface": "먹느냐는구나요",
+      "lemmas": [
+        "먹다"
+      ],
+      "morphemes": [
+        "느냐는구나",
+        "요"
+      ],
+      "status": "unjudged",
+      "reason": "Absence from the quoted-expression dictionary inventory does not establish invalidity. No forbidden judgment is assigned. Broader quoted-구나 + 요 follower review remains COV-018aa."
+    }
+  ],
+  "inferred_polite_followers": [
+    {
+      "form": "냐는군",
+      "particle": "요",
+      "compatibility": "unknown",
+      "source": "qqex-nikl-330060",
+      "inference": "Inferred candidate from the quoted 하는군 contraction and NIKL 330060 terminal ending + polite particle example 하는군요. This is not a direct quoted-question source example or positive grammatical-validity gold; the optional dictionary assessment remains Unknown."
+    },
+    {
+      "form": "느냐는군",
+      "particle": "요",
+      "compatibility": "unknown",
+      "source": "qqex-nikl-330060",
+      "inference": "Inferred candidate from the quoted 하는군 contraction and NIKL 330060 terminal ending + polite particle example 하는군요. This is not a direct quoted-question source example or positive grammatical-validity gold; the optional dictionary assessment remains Unknown."
+    },
+    {
+      "form": "으냐는군",
+      "particle": "요",
+      "compatibility": "unknown",
+      "source": "qqex-nikl-330060",
+      "inference": "Inferred candidate from the quoted 하는군 contraction and NIKL 330060 terminal ending + polite particle example 하는군요. This is not a direct quoted-question source example or positive grammatical-validity gold; the optional dictionary assessment remains Unknown."
+    }
+  ],
+  "web_review": "Complete NIKL FAQ 5876 and Q&A 311818 read in the preceding inventory audit; complete Q&A 330060 read for the inferred polite follower. Only the 333115 answer was returned in search, so no complete current-page review is claimed for it. All twelve pinned native entries/all 51 original groups read. Current individual KRDict pages have not been fully rechecked online.",
+  "sources": [
+    {
+      "id": 88945,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=88945&nation=eng"
+    },
+    {
+      "id": 89636,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89636&nation=eng"
+    },
+    {
+      "id": 89660,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89660&nation=eng"
+    },
+    {
+      "id": 89824,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89824&nation=eng"
+    },
+    {
+      "id": 88946,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=88946&nation=eng"
+    },
+    {
+      "id": 89637,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89637&nation=eng"
+    },
+    {
+      "id": 89659,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89659&nation=eng"
+    },
+    {
+      "id": 89825,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89825&nation=eng"
+    },
+    {
+      "id": 88947,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=88947&nation=eng"
+    },
+    {
+      "id": 89638,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89638&nation=eng"
+    },
+    {
+      "id": 89661,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89661&nation=eng"
+    },
+    {
+      "id": 89826,
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaWordNo=89826&nation=eng"
+    },
+    {
+      "id": 5876,
+      "url": "https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5876&mn_id=217&pageIndex=215",
+      "interpretation": "General spoken 냐고 is admitted across predicate classes and coda conditions. This supports the shortened quoted-question path, not unrestricted literal 으냐 attachment or register inference."
+    },
+    {
+      "id": 330060,
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=27&pageIndex=1&qna_seq=330060",
+      "interpretation": "Inferred candidate from the quoted 하는군 contraction and NIKL 330060 terminal ending + polite particle example 하는군요. This is not a direct quoted-question source example or positive grammatical-validity gold; the optional dictionary assessment remains Unknown."
+    }
+  ],
+  "distribution": {
+    "general": "Spoken 냐 reports preserve verbs, adjectives, copulas and coda alternatives. Narrow native annotations conflict with direct verbal examples; NIKL 5876 supports general spoken 냐고 without a lexical whitelist.",
+    "verbal": "느냐 reports preserve bare verbs/existentials and listed 시/었/겠 prefinals. Bare ordinary adjectives/copulas conflict; honorific-only ordinary adjective/copula extensions remain Unknown.",
+    "adjective": "으냐 reports preserve bare adjectival owners with Eu full/zero and irregular recovery; prefinals and known verbal/derived-verbal owners are excluded by the shared adjective-question boundary.",
+    "polite": "Three exact 더군요 bundles retain base + 요 alternatives. Inferred 냐는군/느냐는군/으냐는군 + 요 use NIKL 330060 terminal particle evidence, are not primary quoted examples and remain Unknown. Unlisted quoted 구나 followers are unjudged; COV-018aa stays open.",
+    "negation": "Negation inherits represented predecessor class. An unclassified lexical predecessor cannot borrow a dictionary homonym class to certify its later negative owner."
+  },
+  "representation": "Twelve distinct bundles with ending.quoted_question_exclamation provenance; no implicit reporting 하다, no auxiliary connector license; original POS 품사 없음 preserved.",
+  "corpus_discovery": {
+    "files": 6,
+    "matching_observations": 0,
+    "scope": "Pinned KAIST/GSD train/dev/test: longest literal suffix including inferred/unjudged polite followers and exact annotated ending scan. No annotated target test fabricated."
+  },
+  "independent_review": "Pending; agent-authored scoped evidence and inferred candidates do not establish full linguistic or contextual correctness.",
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary pinned September 2026 native LMF exports. RelatedForm/non-English equivalents omitted.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "source_notes": [
+    {
+      "entry_id": 88945,
+      "headword": "-냐는구나",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘이다’, 받침이 없거나 ‘ㄹ’ 받침인 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-냐고 하는구나'가 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람이 한 질문을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 88946,
+      "headword": "-느냐는구나",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "동사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-느냐고 하는구나'가 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람이 한 질문을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 88947,
+      "headword": "-으냐는구나",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘ㄹ’을 제외한 받침 있는 형용사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-으냐고 하는구나'가 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람이 한 질문을 감탄의 느낌을 실어 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89636,
+      "headword": "-냐는군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘이다’, 받침이 없거나 ‘ㄹ’ 받침인 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-냐고 하는군'이 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람의 질문을 상대방에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89637,
+      "headword": "-느냐는군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘있다’, ‘없다’, ‘계시다’, 동사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-느냐고 하는군'이 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람의 질문을 상대방에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89638,
+      "headword": "-으냐는군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘ㄹ’을 제외한 받침 있는 형용사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-으냐고 하는군'이 줄어든 말이다.",
+            "definition": "(아주낮춤으로) 다른 사람의 질문을 상대방에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89659,
+      "headword": "-느냐더군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘있다’, ‘없다’, ‘계시다’, 동사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-느냐고 하더군'이 줄어든 말이다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 의문의 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89660,
+      "headword": "-냐더군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "'이다', 받침이 없거나 'ㄹ' 받침인 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-냐고 하더군'이 줄어든 말이다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 의문의 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89661,
+      "headword": "-으냐더군",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘ㄹ’을 제외한 받침 있는 형용사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-으냐고 하더군'이 줄어든 말이다.",
+            "definition": "(두루낮춤으로) 들어서 새롭게 알게 된 의문의 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89824,
+      "headword": "-냐더군요",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "'이다', 받침이 없거나 'ㄹ' 받침인 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다. "
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-냐고 하더군요'가 줄어든 말이다.",
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 의문의 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89825,
+      "headword": "-느냐더군요",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "동사와 ‘있다’, ‘없다’나 ‘있다’, ‘없다’로 끝나는 형용사 또는 ‘-으시-’, ‘-었-’, ‘-겠-’ 뒤에 붙여 쓴다. "
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-느냐고 하더군요'가 줄어든 말이다.",
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 의문의 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    },
+    {
+      "entry_id": 89826,
+      "headword": "-으냐더군요",
+      "pos": "품사 없음",
+      "entry_features": {
+        "homonym_number": "0",
+        "lexicalUnit": "문법‧표현",
+        "partOfSpeech": "품사 없음",
+        "vocabularyLevel": "없음",
+        "annotation": "‘ㄹ’을 제외한 받침 있는 형용사 뒤에 붙여 쓴다."
+      },
+      "senses": [
+        {
+          "id": "1",
+          "features": {
+            "annotation": "'-으냐고 하더군요'가 줄어든 말이다.",
+            "definition": "(두루높임으로) 들어서 새롭게 알게 된 의문의 내용을 듣는 사람에게 전할 때 쓰는 표현."
+          }
+        }
+      ]
+    }
+  ]
+}

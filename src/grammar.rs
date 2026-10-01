@@ -584,6 +584,14 @@ pub(crate) fn endings() -> &'static [Ending] {
             "다더군요",
             "더라는구나",
             "더라는군",
+            "냐는구나",
+            "냐는군",
+            "냐더군",
+            "냐더군요",
+            "느냐는구나",
+            "느냐는군",
+            "느냐더군",
+            "느냐더군요",
             "구려",
             "구먼",
             "는구나",
@@ -785,6 +793,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("더구나", "더구나", 0),
             ("더라는구나", "더라는구나", 0),
             ("더라는군", "더라는군", 0),
+            ("냐는구나", "냐는구나", 0),
+            ("냐는군", "냐는군", 0),
+            ("냐더군", "냐더군", 0),
+            ("냐더군요", "냐더군요", 0),
             ("더구려", "더구려", 0),
             ("더구먼", "더구먼", 0),
             ("더구만", "더구먼", 0),
@@ -909,6 +921,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("으냐면서", "냐면서", "으냐면서"),
             ("으냐니", "냐니", "으냐니"),
             ("으냐느니", "냐느니", "으냐느니"),
+            ("으냐는구나", "냐는구나", "으냐는구나"),
+            ("으냐는군", "냐는군", "으냐는군"),
+            ("으냐더군", "냐더군", "으냐더군"),
+            ("으냐더군요", "냐더군요", "으냐더군요"),
             ("으냔", "냔", "으냔"),
             ("으나", "나", "으나"),
             ("으나마", "나마", "으나마"),
@@ -1396,6 +1412,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.quoted_exclamation" => {
             "Recover a source-listed contracted report with exclamation or recalled reporting as one ending bundle. The implicit reporting predicate is not inserted, and another speaker's experience remains distinct from the current speaker's own retrospective ending."
+        }
+        "ending.quoted_question_exclamation" => {
+            "Recover a source-listed contracted question report as one ending bundle. General spoken 냐, verbal/existential 느냐 and adjectival 으냐 retain distinct attachment paths; the implicit reporting predicate and contextual register are not inferred."
         }
         "ending.exclamation" => {
             "Recover distinct present, retrospective and copular exclamation bundles. 구려 also has a recommendation sense; morphology does not choose the contextual meaning."

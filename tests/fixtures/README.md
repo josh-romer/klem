@@ -1747,3 +1747,15 @@ resultative, question-class and contextual cases remain in the source review.
   bundled/split polite paths and homonym judgments separate. These endings
   have no occurrences in the six pinned KAIST/GSD files; no annotated corpus
   target is fabricated. The source/evaluation reports retain this evidence gap.
+
+- `krdict-question-exclamation.json` preserves 89 full attributed native entries
+  for COV-017bi, omitting only RelatedForm/non-English equivalents.
+  `question-exclamation-sources.json` records export hashes, twelve expression
+  identities, all 51 original groups and their unchanged direct tokens. The
+  251 raw and 55 optional dictionary cases use the `qqex-` prefix. General
+  spoken 냐 conflicts between notes and examples are explicit. Three 군 + 요
+  paths are marked inference and remain Unknown; two unlisted 구나 + 요
+  observations have no forbidden gold. No target is present in the six pinned
+  KAIST/GSD files, so no annotated target fixture is fabricated. Homonyms,
+  owner-local prefinals, negative inheritance, copula omission, derived 답다
+  and exact source POS 품사 없음 remain separate in the audit and tests.

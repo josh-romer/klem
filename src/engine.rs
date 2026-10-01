@@ -367,6 +367,24 @@ pub(crate) fn plain_quoted_exclamation(form: &str) -> bool {
     matches!(form, "다는구나" | "다는군" | "다더군" | "다더군요")
 }
 
+pub(crate) fn verbal_quoted_question_exclamation(form: &str) -> bool {
+    matches!(form, "느냐는구나" | "느냐는군" | "느냐더군" | "느냐더군요")
+}
+pub(crate) fn quoted_question_exclamation(form: &str) -> bool {
+    verbal_quoted_question_exclamation(form)
+        || matches!(
+            form,
+            "냐는구나"
+                | "냐는군"
+                | "냐더군"
+                | "냐더군요"
+                | "으냐는구나"
+                | "으냐는군"
+                | "으냐더군"
+                | "으냐더군요"
+        )
+}
+
 pub(crate) fn literary_na_ending(form: &str) -> bool {
     // Only these two source-reviewed finals share this attachment class.
     matches!(form, "나이다" | "나이까")
@@ -631,6 +649,10 @@ pub(crate) fn adjectival_question(form: &str) -> bool {
             | "으냐지만"
             | "으냐니까"
             | "으냐느니"
+            | "으냐는구나"
+            | "으냐는군"
+            | "으냐더군"
+            | "으냐더군요"
     )
 }
 
@@ -946,6 +968,14 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if quoted_exclamation(ending.form)
                     && !present_declarative(ending.form)
+                    && p.morphs.iter().any(|m| {
+                        !honorific_prefinal(&m.form)
+                            && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
+                    })
+                {
+                    continue;
+                }
+                if quoted_question_exclamation(ending.form)
                     && p.morphs.iter().any(|m| {
                         !honorific_prefinal(&m.form)
                             && !matches!(m.form.as_str(), "었" | "겠" | "어야겠")
@@ -1331,6 +1361,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 }
                 if quoted_exclamation(ending.form) {
                     p.rules.push("ending.quoted_exclamation".into());
+                }
+                if quoted_question_exclamation(ending.form) {
+                    p.rules.push("ending.quoted_question_exclamation".into());
                 }
                 if added_exclamation(ending.form)
                     || (matches!(ending.form, "구나" | "군" | "군요")
@@ -1934,6 +1967,21 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
             // class check to this owner, never to an earlier lexical head.
             // Prefinal combinations need a separate distribution review.
             if bare
+                && verbal_quoted_question_exclamation(&m.form)
+                && matches!(
+                    class,
+                    Some(PredicateClass::Adjective | PredicateClass::Copula)
+                )
+                && !lemma.text.ends_with("있다")
+                && !lemma.text.ends_with("없다")
+                && !matches!(
+                    lemma.text.as_str(),
+                    "계시다" | "않다" | "아니하다" | "못하다"
+                )
+            {
+                return false;
+            }
+            if bare
                 && m.form == "음세"
                 && matches!(
                     class,
@@ -2140,6 +2188,12 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
 // Bounded adjective attachment inventory. The known suffix is ㅂ-irregular;
 // arbitrary lexical predicates still retain the engine's regular hypotheses.
 fn dap_suffix_allowed(p: &Predicate) -> bool {
+    if p.morphs
+        .first()
+        .is_some_and(|m| verbal_quoted_question_exclamation(&m.form))
+    {
+        return false;
+    }
     if p.morphs.first().is_some_and(|m| {
         neuni_verbal_ending(&m.form)
             || present_exclamation(&m.form)
@@ -2207,6 +2261,7 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
     }
     let vowel = first.starts_with('어')
         || first.starts_with('은')
+        || adjectival_question(first)
         || matches!(
             first,
             "었" | "시"
@@ -2312,6 +2367,10 @@ fn dap_suffix_allowed(p: &Predicate) -> bool {
             | "냐며"
             | "냐면서"
             | "다는구나"
+            | "냐는구나"
+            | "냐는군"
+            | "냐더군"
+            | "냐더군요"
             | "다는군"
             | "다더군"
             | "다더군요"
@@ -2536,6 +2595,15 @@ fn add_copulas(p: &Predicate, out: &mut Vec<Analysis>) {
     }
     // Bare 이다 takes quoted -냐는; -느냐는 may follow its licensed
     // prefinals, but does not attach directly to the copula.
+    if p.morphs.first().is_some_and(|m| {
+        verbal_quoted_question_exclamation(&m.form)
+            || matches!(
+                m.form.as_str(),
+                "으냐는구나" | "으냐는군" | "으냐더군" | "으냐더군요"
+            )
+    }) {
+        return;
+    }
     if p.morphs.first().is_some_and(|m| {
         matches!(
             m.form.as_str(),
@@ -3612,6 +3680,14 @@ fn before_particle(ending: &str, particle: &str) -> bool {
                         | "더구먼"
                         | "다더군"
                         | "는다더군"
+                        | "냐더군"
+                        | "느냐더군"
+                        | "으냐더군"
+                        // Inferred from the quoted 하는군 contraction and
+                        // NIKL 330060's terminal ending + polite particle.
+                        | "냐는군"
+                        | "느냐는군"
+                        | "으냐는군"
                         | "로구먼"
                         | "로군"
                         | "은걸"

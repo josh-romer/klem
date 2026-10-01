@@ -3653,3 +3653,23 @@ neither a lexical 여행가다 nor corrected source spacing is certified.
 All fourteen native entries retain their actual 품사 없음 labels.
 See the [source audit](quoted-exclamation-source-audit.json) and
 [candidate comparison](quoted-exclamation-evaluation.json).
+
+## Quoted question exclamations (COV-017bi)
+
+Twelve bundles preserve general 냐, verbal/existential 느냐 and adjectival
+으냐 questions with 는구나/는군/더군/더군요 reports. General spoken 냐
+retains verb, adjective and copula alternatives despite narrower native notes;
+full examples and NIKL 5876 record the disagreement. Adjectival 으냐 shares
+Eu allomorphs and prefinal boundaries; verbal 느냐 preserves listed prefinals.
+Derived 답다 and ㄹ-drop paths compose with the immediate owner restrictions.
+
+`ending.quoted_question_exclamation` explains these bundles without inserting
+an implicit reporting 하다. Three explicit 더군요 expressions preserve both
+bundled endings and base + 요 paths. Three additional quoted 군 + 요
+hypotheses are inferred from contraction and terminal-particle evidence,
+remain Unknown under dictionary assessment, and are not native example gold.
+Unlisted 구나 followers remain unjudged under COV-018aa. Negative owners
+inherit represented predecessor class; unknown lexical heads cannot borrow a
+homonym’s class. Full source groups, exact identities and individual candidate
+changes appear in the [source audit](question-exclamation-source-audit.json)
+and [evaluation](question-exclamation-evaluation.json).

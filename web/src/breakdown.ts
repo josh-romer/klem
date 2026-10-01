@@ -113,7 +113,13 @@ export function parts(
       ((previousMorpheme?.kind === "particle" &&
         ["에", "에서", "서", "에게", "한테", "께", "로", "으로"].includes(previousMorpheme.form)) ||
        (previousLemma && ["여기", "거기", "저기", "어디", "이리", "그리", "저리"].includes(previousLemma.text)));
-    const label = enumerativeDa || emphaticDa
+    const nominalI = m.kind === "suffix" && m.form === "이" &&
+      a.rules.includes("suffix.nominal.i") && previous && "lemma" in previous && previous.lemma === 0;
+    const adverbI = m.kind === "suffix" && m.form === "이" && a.rules.includes("suffix.adverbial.i");
+    const label = nominalI || adverbI
+      ? { ...grammarLabels[key], label: nominalI ? "Noun-forming suffix" : "Adverb-forming suffix",
+          sources: grammarLabels[key].sources.filter((source) => source.id === (nominalI ? 88924 : 88927)) }
+      : enumerativeDa || emphaticDa
       ? { ...grammarLabels[key],
           label: enumerativeDa ? (emphaticDa ? "Enumeration / emphasis" : "Enumeration") : "Adverbial emphasis",
           sources: grammarLabels[key].sources.filter((s) =>

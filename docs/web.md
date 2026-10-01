@@ -330,3 +330,10 @@ different lemma and role in the API/export. Neither option inserts 하 into the
 surface. Dictionary-only filters remove unmatched bases; exported candidates
 and ordered component identities match the CLI. Other opaque roots and choosing
 a contextual sense remain outside this finite review.
+
+COV-022d distinguishes noun-forming 이 (KRDict 88924) from adverb-forming
+이 (88927), even when both render 높 + 이. The options retain their separate
+API indices and rule evidence; whole lexical words remain the compact initial
+readings. A noun suffix can precede ordinary noun particles, 들/쯤 or a copula,
+with component order and canonical lemmas preserved in exported JSON. Neither
+suffix source chooses the sentence's intended sense.

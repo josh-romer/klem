@@ -90,6 +90,18 @@ pub(crate) const ADVERB_NOMINAL_ROOTS: &[&str] = &[
 pub(crate) const OPAQUE_ADVERB_ROOTS: &[(&str, &str, Option<&str>)] =
     &[("천천", "히", Some("천천하다")), ("분연", "히", None)];
 
+// KRDict 88924, sense 1: a finite noun formation, separate from adverbial -이.
+pub(crate) const NOUN_I_FORMS: &[(&str, &str)] = &[
+    ("굽이", "굽다"),
+    ("깊이", "깊다"),
+    ("넓이", "넓다"),
+    ("길이", "길다"),
+    ("놀이", "놀다"),
+    ("높이", "높다"),
+    ("먹이", "먹다"),
+    ("벌이", "벌다"),
+];
+
 #[derive(Debug, Clone)]
 pub(crate) struct Recovery {
     pub stem: String,
@@ -1482,6 +1494,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Retain a reviewed shortened noun-modifying expression as one grammatical component."
         }
         "identity" => "Unchanged vocabulary hypothesis; no dictionary verification.",
+        "suffix.nominal.i" => {
+            "Separate a source-listed predicate stem and noun-forming 이. Preserve lexical nouns and adverbial homonyms; this finite rule does not strip 이 from arbitrary words or attach through prefinals."
+        }
         "suffix.adverbial.i" => {
             "Recover a scoped adjective base before adverb-forming -이; retain whole-word readings."
         }

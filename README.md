@@ -210,6 +210,11 @@ derivational base without claiming a standalone lexical POS or dictionary
 entry; whole lexical adverbs remain available. Consumers matching `LemmaKind`
 exhaustively should handle `Root`. See [the scoped rules](docs/rules.md#finite-opaque-adverb-roots-cov-022c).
 
+Noun/adverb `이` suffix alternatives can share lemma and morpheme fields while
+retaining distinct `rules`. Keep that provenance when displaying or deduplicating
+analyses. The finite noun-forming extension uses predicate lemmas such as
+`높다` before `Suffix("이")`, preserving whole lexical nouns and adverbs.
+
 ## Validation and performance
 
 ```sh

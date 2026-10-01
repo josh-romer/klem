@@ -95,6 +95,8 @@ pub struct SpellingRecovery {
 
 /// All components in one analysis coexist. Different analyses are alternatives.
 /// `rules` is the sorted union of supporting rule IDs, not an ordered derivation.
+/// Noun/adverb suffix homonyms can have identical lemma and morpheme fields;
+/// their distinct rule provenance is preserved in separate analyses.
 #[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
 pub struct Analysis {
     pub lemmas: Vec<Lemma>,

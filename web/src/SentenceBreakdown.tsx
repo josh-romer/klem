@@ -57,11 +57,17 @@ export default function SentenceBreakdown(props: {
     choice === undefined ? null : parts(props.result, index, choice);
   const title = (index: number, choice: number) => {
     const a = props.result.records[index].analysis!.analyses[choice];
-    return (
+    const text = (
       parts(props.result, index, choice)
         ?.map((p) => p.form)
         .join(" + ") ?? a.lemmas.map((l) => l.text).join(" + ")
     );
+    if (a.rules.includes("suffix.nominal.i")) return `${text} · noun-forming`;
+    if (a.rules.includes("suffix.adverbial.i") &&
+        props.result.records[index].analysis!.analyses.some((other) => other.rules.includes("suffix.nominal.i"))) {
+      return `${text} · adverb-forming`;
+    }
+    return text;
   };
   function component(part: Part, index: number) {
     return (

@@ -343,6 +343,11 @@ The source-listed -히, 하다-root and ㅂ-recovery extension is COV-022a below
 Other lexical/root classes and nominal -이 remain COV-013 audit work. No dictionary of corpus
 answers is loaded by the engine.
 
+The finite COV-022d noun-forming extension below adds independent nominal
+suffix paths for the source-listed nouns. Its noun rule does not change the
+adverbial particle boundary; `높이를` can retain both lexical 높이 + 를 and
+noun-forming 높다 + 이 + 를 without an adverbial object-case interpretation.
+
 Evidence: [path/boundary tests](../tests/adverbs.rs), eight `adverb-*`
 [candidate judgments](../tests/fixtures/validity.json), and three unmodified
 KAIST development sentences in [the annotated fixture](../tests/fixtures/kaist-adverbs.conllu).
@@ -3801,3 +3806,36 @@ POS assessment is Unknown for this role because standalone POS labels do not
 establish the root relationship. Missing headwords are still missing, and both
 dictionary filters require headword matches. Other roots, lexical classes,
 suffix/auxiliary interactions and independent Korean review remain open.
+
+### Predicate-base noun-forming -이 (COV-022d)
+
+The finite KRDict 88924 sense-1 table emits 굽이 → 굽다, 깊이 → 깊다,
+넓이 → 넓다, 길이 → 길다, 놀이 → 놀다, 높이 → 높다, 먹이 → 먹다 and
+벌이 → 벌다 before `Suffix("이")`, marked `suffix.nominal.i`. The derived
+noun uses the existing nominal particle/copula boundaries, with one plural
+들 and approximation 쯤 (including 들 + 쯤). The noun's final vowel determines
+particle allomorphs; an earlier predicate coda cannot license object 을.
+Source-listed forms remain finite: no productive 이 stripping, prefinal
+composition, related noun roots, compounds or auxiliary route is inferred.
+Other derivational suffixes require their own attachment review.
+
+Whole lexical nouns, causative predicates such as 높이다/먹이다, adverbs and
+subject-particle homonyms remain independent candidates. Bare 길이/깊이/높이
+can have noun and adverb paths with identical lemma and morpheme fields;
+deduplication preserves their distinct rule provenance. Consumers should retain
+that provenance when presenting alternatives. It is a set of supporting rules,
+not a contextual sense choice or a derivation sequence.
+
+The ordered noun breakdown consumes its suffix before outer particles/plural/
+approximation or a separate copula. Browser noun suffix parts select KRDict
+88924 and adverb suffix parts select 88927. The full source fixture preserves
+all three noun-suffix senses and 44 groups, while this extension licenses only
+the eight direct sense-1 forms. Annotated training nouns remain lexical gold;
+the new decomposition is separately source-authored evidence. Wider senses,
+repeated-base classification and independent Korean review remain open.
+
+Spacing suggestions recognize these predicate-lookup noun paths in a
+case-marked nominal segment. They do not count bare noun 먹이 as the predicate
+segment of the bounded template. This preserves 먹이를 먹는다 without inventing
+먹이를 먹이 from the noun suffix; each segment keeps its own provenance,
+dictionary assessment and ordered component identities.

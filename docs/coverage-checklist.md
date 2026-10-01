@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–c batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -2604,9 +2604,10 @@ review remains open under the completion review below.
   lexical classes and nominal -이 independently. **Partial: COV-022a adds
   source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb
   and repeated nominal bases plus shortened 익히/특히; COV-022c adds the finite
-  opaque 천천/분연 roots.** Remaining: other lexical
+  opaque 천천/분연 roots; COV-022d adds the eight source-listed
+  predicate-base noun formations.** Remaining: other lexical
   classes, other opaque roots beyond the finite COV-022c forms, subdivision of nonlexical
-  repeated bases, suffix/auxiliary interactions, and nominal -이. Keep lexical readings and causative/noun homonyms; historical
+  repeated bases, suffix/auxiliary interactions, and other nominal -이 senses/classes. Keep lexical readings and causative/noun homonyms; historical
   달리/빨리 do not license a general 르 inflection rule.
 - [x] **COV-022a — Source-listed predicate adverbs.** Six explicit ㅂ-stem
   recoveries include 가까이 → 가깝다 and 가벼이 → 가볍다. 헛되이 and 적잖이
@@ -2666,6 +2667,31 @@ review remains open under the completion review below.
   [evaluation](opaque-adverb-evaluation.json).
   Other opaque roots, class subdivision, suffix/auxiliary interactions, nominal
   -이 and independent Korean-language review remain in COV-022/completion review.
+
+- [x] **COV-022d — Native predicate-base noun-forming -이.** Implemented
+  and verified for all eight sense-1 examples of KRDict 88924: 굽이, 깊이,
+  넓이, 길이, 놀이, 높이, 먹이 and 벌이. The finite noun paths preserve
+  predicate lookup lemmas, whole lexical nouns, adverb homonyms, existing
+  nominal particles/copulas, plural 들 and approximation 쯤. Noun and adverb
+  suffix provenance remains separate despite identical bare lemma/morpheme
+  fields; browser sources use 88924/88927 respectively. `required_rules`
+  constraints keep ledger judgments specific to the noun derivation.
+  Source: [noun-forming -이](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88924).
+  [Source review](nominal-i-source-audit.json) retains all three senses and
+  44 native groups, including eight direct target examples, and complete
+  training sentences with four unchanged lexical noun targets. The native
+  fixture has 33 complete source entries. Five [tests](../tests/nominal_i.rs),
+  151 stable cases (127 required / 24 forbidden), and exact noun/copula/quote
+  controls pass targeted validation. Wider compound/root senses,
+  other suffix/auxiliary attachments and independent Korean-language review
+  remain COV-022 work. All 632 Rust tests, candidate comparisons, full frozen
+  corpus outcomes, lint/format/build, browser, Nix CLI/web/flake checks and
+  refreshed packaged preview gates pass. The novel retains 179,112 records,
+  adding 41 candidates at 39 occurrences in all five modes without removals;
+  their contextual senses remain unjudged. One spacing segment gains a noun
+  path while boundaries and search limits stay unchanged. Three interleaved
+  release samples per filter have after medians of 1.61/1.59 seconds on this host;
+  timings are descriptive. See [evaluation](nominal-i-evaluation.json).
 
 ### P3: dictionary and representation boundaries
 

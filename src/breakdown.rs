@@ -76,19 +76,42 @@ impl Analysis {
                     .strip_suffix('다')
                     .filter(|stem| !stem.is_empty())?;
             }
-            let adverbial = matches!(
-                lemma.kind,
-                LemmaKind::Predicate | LemmaKind::Adverbial | LemmaKind::Root
-            ) && self.morphemes.get(cursor).is_some_and(|m| {
-                m.kind == MorphemeKind::Suffix && matches!(m.form.as_str(), "이" | "히")
-            });
+            let noun_i = index == 0
+                && lemma.kind == LemmaKind::Predicate
+                && self.rules.iter().any(|r| r == "suffix.nominal.i");
+            if noun_i {
+                let first = self.morphemes.get(cursor)?;
+                if first.kind != MorphemeKind::Suffix || first.form != "이" {
+                    return None;
+                }
+                parts.push(Component::Morpheme(cursor));
+                cursor += 1;
+                for form in ["들", "쯤"] {
+                    if self
+                        .morphemes
+                        .get(cursor)
+                        .is_some_and(|m| m.kind == MorphemeKind::Suffix && m.form == form)
+                    {
+                        parts.push(Component::Morpheme(cursor));
+                        cursor += 1;
+                    }
+                }
+            }
+            let adverbial = !noun_i
+                && matches!(
+                    lemma.kind,
+                    LemmaKind::Predicate | LemmaKind::Adverbial | LemmaKind::Root
+                )
+                && self.morphemes.get(cursor).is_some_and(|m| {
+                    m.kind == MorphemeKind::Suffix && matches!(m.form.as_str(), "이" | "히")
+                });
             if lemma.kind == LemmaKind::Root && !adverbial {
                 return None;
             }
             if adverbial {
                 parts.push(Component::Morpheme(cursor));
                 cursor += 1;
-            } else if predicate || derived_predicate {
+            } else if !noun_i && (predicate || derived_predicate) {
                 while self
                     .morphemes
                     .get(cursor)

@@ -833,3 +833,29 @@ builds, flake checks and the refreshed packaged preview pass; both filters and
 all three browser export modes match the CLI. The release novel check retains
 179,112 records, with approximately 1.6-second median runs per filter on this
 host. These observations do not certify every generated analysis.
+
+## Native noun-forming -이 (2026-10-01)
+
+COV-022d separates all eight native sense-1 predicate-base noun formations
+from adverbial -이, retaining whole lexical nouns, causative predicates and
+homonyms. The full fixture preserves 33 source entries and all three noun
+suffix senses/44 original groups; four lexical gold targets remain unchanged
+in three complete training sentences. Five tests track source identity, rule
+constraints, exact dictionary/CLI exports, ordered components and spacing roles.
+
+The [source audit](nominal-i-source-audit.json) and
+[evaluation](nominal-i-evaluation.json) record 127 new required judgments and
+24 boundary exclusions. All 12,212 probe inputs retain every prior candidate
+under raw/headword/compatible modes; each adds 280 paths, 34 unjudged. Full
+frozen corpus outcomes are unchanged. These noun and suffix entries remain
+outside the 715-entry ending/particle/auxiliary queue; its counts remain 386
+scoped / 328 unreviewed / one gap. Wider noun suffix senses, nonlexical repeated
+base classification and independent Korean review remain open. All 632 Rust
+tests, Nix CLI/web builds and flake checks, and refreshed packaged-preview gates
+pass. Novel output retains all 179,112 records, adds 41 candidates at 39
+occurrences without removals, and retains existing dictionary readings. One
+spacing segment gains a noun path; boundaries and search limits remain unchanged.
+All new contextual novel paths remain unjudged. Packaged/debug output hashes
+match in all five modes. Three interleaved local release runs per filter give
+after medians of 1.61/1.59 seconds; these observations do not certify grammar
+coverage or universal throughput.

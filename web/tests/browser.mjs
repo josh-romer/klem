@@ -503,6 +503,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !opaqueIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...opaqueEntries);
 
+  const nominalIFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-nominal-i.json"), "utf8"));
+  const nominalIEntries = nominalIFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nominalIIds = new Set(nominalIEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nominalIIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nominalIEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -4766,6 +4772,45 @@ try {
     assert.ok(!candidates.some(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(forbidden)), word);
     assert.ok(candidates.some(a => a.unchanged), `${word}: preserve the original word`);
   }
+  // Noun/adverb 이 shares component spelling but keeps distinct provenance/source.
+  await page.getByLabel("Dictionary matches only").check();
+  await page.getByLabel("Exclude known grammar conflicts").check();
+  for (const [word, base, expected] of [
+    ["높이", "높다", ["높", "이"]], ["높이를", "높다", ["높", "이", "를"]],
+    ["놀이들이었다", "놀다", ["놀", "이", "들", "이", "었", "다"]],
+    ["먹이쯤에는", "먹다", ["먹", "이", "쯤", "에", "는"]],
+  ]) {
+    await submit(page, word); await waitHeading(page, word);
+    const result = await (await post("analyze", {text:word})).json();
+    const candidates = result.records[0].analysis.analyses;
+    const noun = candidates.findIndex(a => a.lemmas[0].text === base && a.rules.includes("suffix.nominal.i"));
+    assert.ok(noun >= 0, word);
+    const wordBlock = page.locator(".breakdown-word").first();
+    await wordBlock.getByRole("combobox").selectOption(String(noun));
+    assert.deepEqual(await wordBlock.locator(".part-form").allTextContents(), expected);
+    await wordBlock.getByRole("button", {name:"이 Noun-forming suffix",exact:true}).click();
+    await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));
+    if (word === "높이") {
+      const adverb = candidates.findIndex(a => a.lemmas[0].text === base && a.rules.includes("suffix.adverbial.i"));
+      assert.ok(adverb >= 0 && noun !== adverb);
+      assert.deepEqual(candidates[noun].lemmas, candidates[adverb].lemmas);
+      assert.deepEqual(candidates[noun].morphemes, candidates[adverb].morphemes);
+      assert.match(await wordBlock.locator(`option[value="${noun}"]`).innerText(), /noun-forming/);
+      assert.match(await wordBlock.locator(`option[value="${adverb}"]`).innerText(), /adverb-forming/);
+      await wordBlock.getByRole("combobox").selectOption(String(adverb));
+      await wordBlock.getByRole("button", {name:"이 Adverb-forming suffix",exact:true}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88927"));
+      await wordBlock.getByRole("combobox").selectOption(String(noun));
+      await page.screenshot({path:resolve(tmpdir(),"klem-nominal-i-desktop.png"),fullPage:true});
+      await page.setViewportSize({width:390,height:844}); assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+      await page.screenshot({path:resolve(tmpdir(),"klem-nominal-i-mobile.png"),fullPage:true}); await page.setViewportSize({width:1440,height:1100});
+    }
+    const waitDownload = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await(await waitDownload).path(),"utf8"));
+    assert.deepEqual(exported.records, execFileSync(cliBin,["text","-","--dictionary",database,"--dict-compatible"],{input:word,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.getByLabel("Dictionary matches only").uncheck();
+
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.
   await page.getByLabel("Dictionary matches only").check();

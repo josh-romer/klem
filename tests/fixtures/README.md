@@ -1839,3 +1839,14 @@ records export hashes, full source groups and 40 unchanged target occurrences.
 `kaist-opaque-adverbs.conllu` and `gsd-opaque-adverbs.conllu` preserve complete
 UD 2.15 training sentences and lexical adverb gold without relabeling it as a
 root analysis. See [the scoped review](../../docs/opaque-adverb-source-audit.json).
+
+COV-022d `krdict-nominal-i.json` preserves 33 full native entries, omitting only
+RelatedForm and non-English equivalents and normalizing Sense to an array.
+The source manifest records all eleven pinned export hashes, all three senses
+and 44 original groups of noun-forming -이 88924, with eight sense-1 targets.
+The same complete suffix entry extends `krdict-grammar-labels.json` to 748
+entries. Attribution: National Institute of Korean Language Korean Basic
+Dictionary, CC BY-SA 2.0 KR; the license link and adaptation policy above apply.
+`kaist-nominal-i.conllu`/`gsd-nominal-i.conllu` preserve three complete UD 2.15
+training sentences with four lexical noun targets. Corpus gold is unchanged;
+the new predicate-base noun derivation is separate source-authored evidence.

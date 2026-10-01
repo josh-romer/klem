@@ -635,3 +635,12 @@ The raw API retains all hypotheses. The [tests](../tests/opaque_adverbs.rs) cove
 missing heads, homonym identity, conservative role assessment and CLI/library
 word/text parity. [Source evidence](opaque-adverb-source-audit.json) distinguishes
 the root paths from the separately inferred 천천하다 lookup relationship.
+
+COV-022d noun-forming -이 keeps predicate base lookups separate from the
+whole lexical noun. POS compatibility checks the base's predicate membership;
+it does not select a homonym or prove a particular derived noun sense. Both
+filters preserve matched noun derivations, lexical nouns and adverb homonyms.
+A following copula owns its own ending and dictionary assessment. Native
+fixtures retain all headword homonyms and full senses. Identical component
+strings may have distinct noun/adverb provenance and must remain distinct in
+export. Browser sources select suffix 88924/88927 from that provenance.

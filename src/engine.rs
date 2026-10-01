@@ -27,8 +27,21 @@ fn morph(form: impl Into<String>, kind: MorphemeKind) -> Morpheme {
 
 // Bounded suffix paths at the nominal boundary, before particles or a copula.
 // Whole-word hypotheses remain: a matching tail need not be a real suffix.
+fn noun_i_derivation(word: &str) -> Option<Analysis> {
+    let &(_, head) = grammar::NOUN_I_FORMS
+        .iter()
+        .find(|&&(surface, _)| surface == word)?;
+    Some(Analysis {
+        lemmas: vec![lemma(head, LemmaKind::Predicate)],
+        morphemes: vec![morph("이", MorphemeKind::Suffix)],
+        rules: vec!["suffix.nominal.i".into()],
+        unchanged: false,
+        spelling_paths: Vec::new(),
+    })
+}
+
 fn simple_nominal_derivations(word: &str) -> Vec<Analysis> {
-    let mut out = vec![];
+    let mut out: Vec<_> = noun_i_derivation(word).into_iter().collect();
     // One honorific, relational, or plural suffix; also honorific + plural.
     // Each shorter base is a lexical hypothesis, never recursively re-split.
     for (form, rule) in [
@@ -44,6 +57,13 @@ fn simple_nominal_derivations(word: &str) -> Vec<Analysis> {
                 unchanged: false,
                 spelling_paths: Vec::new(),
             });
+            if form == "들"
+                && let Some(mut a) = noun_i_derivation(base)
+            {
+                a.morphemes.push(morph(form, MorphemeKind::Suffix));
+                a.rules.push(rule.into());
+                out.push(a);
+            }
             // Only honorific + plural is licensed in this batch.
             if form == "들"
                 && let Some(root) = base.strip_suffix('님').filter(|s| !s.is_empty())
@@ -1789,9 +1809,11 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
     {
         for mut a in nominal_bases(base) {
             // -적/-쯤 combinations need their own attachment audit.
-            if a.morphemes
-                .iter()
-                .any(|m| matches!(m.form.as_str(), "적" | "쯤"))
+            // Noun-forming -이 followed by -답다 needs a separate derivation audit.
+            if a.rules.iter().any(|r| r == "suffix.nominal.i")
+                || a.morphemes
+                    .iter()
+                    .any(|m| matches!(m.form.as_str(), "적" | "쯤"))
             {
                 continue;
             }
@@ -4187,15 +4209,17 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
             })
             || auxiliary_inflections_allowed(a)
     });
-    // Semantic duplicates share rule names, but spelling paths remain
+    // Noun/adverb -이 homonyms retain distinct functions despite identical
+    // lemma/morpheme fields. Other semantic duplicates share rule names, but spelling paths remain
     // alternatives. A derivation with no spelling obligation subsumes others.
-    type Key = (Vec<Lemma>, Vec<Morpheme>, bool);
+    type Key = (Vec<Lemma>, Vec<Morpheme>, bool, bool);
     type Evidence = (Vec<String>, Vec<Vec<SpellingRecovery>>);
     let mut unique: BTreeMap<Key, Evidence> = BTreeMap::new();
     for a in out {
         use std::collections::btree_map::Entry;
         let paths = a.spelling_paths;
-        match unique.entry((a.lemmas, a.morphemes, a.unchanged)) {
+        let noun_i = a.rules.iter().any(|r| r == "suffix.nominal.i");
+        match unique.entry((a.lemmas, a.morphemes, a.unchanged, noun_i)) {
             Entry::Vacant(v) => {
                 v.insert((a.rules, paths));
             }
@@ -4213,7 +4237,7 @@ pub(crate) fn analyze(word: &str) -> Result<WordAnalysis, Error> {
     let analyses = unique
         .into_iter()
         .map(
-            |((lemmas, morphemes, unchanged), (mut rules, mut spelling_paths))| {
+            |((lemmas, morphemes, unchanged, _), (mut rules, mut spelling_paths))| {
                 rules.sort();
                 rules.dedup();
                 for path in &mut spelling_paths {

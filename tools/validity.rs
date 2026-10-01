@@ -30,6 +30,8 @@ pub struct Judgment {
     /// None selects all morpheme paths for this ordered lemma group.
     pub morphemes: Option<Vec<String>>,
     pub morpheme_kinds: Option<Vec<MorphemeKind>>,
+    /// Optional provenance constraints, e.g. noun/adverb suffix homonyms.
+    pub required_rules: Option<Vec<String>>,
     pub verdict: Verdict,
     pub reason: String,
     pub source: String,
@@ -85,6 +87,10 @@ impl Judgment {
                 .morpheme_kinds
                 .as_ref()
                 .is_none_or(|kinds| a.morphemes.iter().map(|m| &m.kind).eq(kinds.iter()))
+            && self
+                .required_rules
+                .as_ref()
+                .is_none_or(|rules| rules.iter().all(|r| a.rules.contains(r)))
     }
 }
 
@@ -138,6 +144,11 @@ pub fn evaluate_with(
                     .zip(j.morpheme_kinds.as_ref())
                     .is_some_and(|(forms, kinds)| forms.len() != kinds.len())
                 || j.reason.trim().is_empty()
+                || j.required_rules.as_ref().is_some_and(|rules| {
+                    rules.is_empty()
+                        || rules.iter().any(|r| klem::rule_explanation(r).is_none())
+                        || rules.iter().collect::<BTreeSet<_>>().len() != rules.len()
+                })
                 || !suite
                     .sources
                     .get(&j.source)
@@ -162,7 +173,8 @@ pub fn evaluate_with(
                     && compatible(&count(j), &count(other));
                 let identical = j.lemma_kinds == other.lemma_kinds
                     && j.morphemes == other.morphemes
-                    && j.morpheme_kinds == other.morpheme_kinds;
+                    && j.morpheme_kinds == other.morpheme_kinds
+                    && j.required_rules == other.required_rules;
                 if overlap && (j.verdict != other.verdict || identical) {
                     return Err(format!(
                         "conflicting or duplicate scopes: {}/{} and {}",

@@ -1,0 +1,1193 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-022d",
+  "before_revision": "803972dc7e0fe15084431452a711f737a65ad2a1",
+  "native_fixture": "tests/fixtures/krdict-nominal-i.json",
+  "native_fixture_sha256": "e06abc501e00ca3d11bbac3a7c0624c691aa370304718c3d6665a74048e2a71c",
+  "native_entries": 33,
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "attribution": "National Institute of Korean Language Korean Basic Dictionary; pinned September 2026 export. Only RelatedForm and non-English equivalents omitted; Sense normalized to an array.",
+  "forms": [
+    {
+      "surface": "굽이",
+      "base": "굽다",
+      "kind": "predicate",
+      "suffix": "이",
+      "rule": "suffix.nominal.i"
+    },
+    {
+      "surface": "깊이",
+      "base": "깊다",
+      "kind": "predicate",
+      "suffix": "이",
+      "rule": "suffix.nominal.i"
+    },
+    {
+      "surface": "넓이",
+      "base": "넓다",
+      "kind": "predicate",
+      "suffix": "이",
+      "rule": "suffix.nominal.i"
+    },
+    {
+      "surface": "길이",
+      "base": "길다",
+      "kind": "predicate",
+      "suffix": "이",
+      "rule": "suffix.nominal.i"
+    },
+    {
+      "surface": "놀이",
+      "base": "놀다",
+      "kind": "predicate",
+      "suffix": "이",
+      "rule": "suffix.nominal.i"
+    },
+    {
+      "surface": "높이",
+      "base": "높다",
+      "kind": "predicate",
+      "suffix": "이",
+      "rule": "suffix.nominal.i"
+    },
+    {
+      "surface": "먹이",
+      "base": "먹다",
+      "kind": "predicate",
+      "suffix": "이",
+      "rule": "suffix.nominal.i"
+    },
+    {
+      "surface": "벌이",
+      "base": "벌다",
+      "kind": "predicate",
+      "suffix": "이",
+      "rule": "suffix.nominal.i"
+    }
+  ],
+  "source_groups": [
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "굽이"
+          }
+        ]
+      },
+      "examples": [
+        "굽이"
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "굽이",
+          "base": "굽다",
+          "case_id": "nominal-i-native-88924-s1-g1-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깊이"
+          }
+        ]
+      },
+      "examples": [
+        "깊이"
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "깊이",
+          "base": "깊다",
+          "case_id": "nominal-i-native-88924-s1-g2-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "넓이"
+          }
+        ]
+      },
+      "examples": [
+        "넓이"
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "넓이",
+          "base": "넓다",
+          "case_id": "nominal-i-native-88924-s1-g3-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "길이"
+          }
+        ]
+      },
+      "examples": [
+        "길이"
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "길이",
+          "base": "길다",
+          "case_id": "nominal-i-native-88924-s1-g4-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "놀이"
+          }
+        ]
+      },
+      "examples": [
+        "놀이"
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "놀이",
+          "base": "놀다",
+          "case_id": "nominal-i-native-88924-s1-g5-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "높이"
+          }
+        ]
+      },
+      "examples": [
+        "높이"
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "높이",
+          "base": "높다",
+          "case_id": "nominal-i-native-88924-s1-g6-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 7,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "먹이"
+          }
+        ]
+      },
+      "examples": [
+        "먹이"
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "먹이",
+          "base": "먹다",
+          "case_id": "nominal-i-native-88924-s1-g7-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "1",
+      "example_group": 8,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "벌이"
+          }
+        ]
+      },
+      "examples": [
+        "벌이"
+      ],
+      "targets": [
+        {
+          "turn": 0,
+          "token": 0,
+          "surface": "벌이",
+          "base": "벌다",
+          "case_id": "nominal-i-native-88924-s1-g8-t0-w0"
+        }
+      ]
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "길잡이"
+          }
+        ]
+      },
+      "examples": [
+        "길잡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "떠돌이"
+          }
+        ]
+      },
+      "examples": [
+        "떠돌이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "목걸이"
+          }
+        ]
+      },
+      "examples": [
+        "목걸이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "미닫이"
+          }
+        ]
+      },
+      "examples": [
+        "미닫이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "옷걸이"
+          }
+        ]
+      },
+      "examples": [
+        "옷걸이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "2",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "젖먹이"
+          }
+        ]
+      },
+      "examples": [
+        "젖먹이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 1,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "까막눈이"
+          }
+        ]
+      },
+      "examples": [
+        "까막눈이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 2,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "까불이"
+          }
+        ]
+      },
+      "examples": [
+        "까불이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 3,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깜빡이"
+          }
+        ]
+      },
+      "examples": [
+        "깜빡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 4,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깡깡이"
+          }
+        ]
+      },
+      "examples": [
+        "깡깡이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 5,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "깽깽이"
+          }
+        ]
+      },
+      "examples": [
+        "깽깽이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 6,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "꿀꿀이"
+          }
+        ]
+      },
+      "examples": [
+        "꿀꿀이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 7,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "끈끈이"
+          }
+        ]
+      },
+      "examples": [
+        "끈끈이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 8,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "노랑이"
+          }
+        ]
+      },
+      "examples": [
+        "노랑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 9,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "누렁이"
+          }
+        ]
+      },
+      "examples": [
+        "누렁이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 10,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "덜렁이"
+          }
+        ]
+      },
+      "examples": [
+        "덜렁이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 11,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "동강이"
+          }
+        ]
+      },
+      "examples": [
+        "동강이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 12,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "됨됨이"
+          }
+        ]
+      },
+      "examples": [
+        "됨됨이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 13,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "딸랑이"
+          }
+        ]
+      },
+      "examples": [
+        "딸랑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 14,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "뚱뚱이"
+          }
+        ]
+      },
+      "examples": [
+        "뚱뚱이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 15,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "못난이"
+          }
+        ]
+      },
+      "examples": [
+        "못난이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 16,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "멍청이"
+          }
+        ]
+      },
+      "examples": [
+        "멍청이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 17,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "미치광이"
+          }
+        ]
+      },
+      "examples": [
+        "미치광이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 18,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "바둑이"
+          }
+        ]
+      },
+      "examples": [
+        "바둑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 19,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "뺑뺑이"
+          }
+        ]
+      },
+      "examples": [
+        "뺑뺑이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 20,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "얼간이"
+          }
+        ]
+      },
+      "examples": [
+        "얼간이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 21,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "오뚝이"
+          }
+        ]
+      },
+      "examples": [
+        "오뚝이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 22,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "왕눈이"
+          }
+        ]
+      },
+      "examples": [
+        "왕눈이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 23,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "점박이"
+          }
+        ]
+      },
+      "examples": [
+        "점박이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 24,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "짝짝이"
+          }
+        ]
+      },
+      "examples": [
+        "짝짝이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 25,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "쭉정이"
+          }
+        ]
+      },
+      "examples": [
+        "쭉정이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 26,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "팔푼이"
+          }
+        ]
+      },
+      "examples": [
+        "팔푼이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 27,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "합죽이"
+          }
+        ]
+      },
+      "examples": [
+        "합죽이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 28,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "허풍선이"
+          }
+        ]
+      },
+      "examples": [
+        "허풍선이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 29,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "홀쭉이"
+          }
+        ]
+      },
+      "examples": [
+        "홀쭉이"
+      ],
+      "targets": []
+    },
+    {
+      "entry_id": "krdict:88924",
+      "sense_id": "3",
+      "example_group": 30,
+      "native_group": {
+        "feat": [
+          {
+            "att": "type",
+            "val": "구"
+          },
+          {
+            "att": "example",
+            "val": "흰둥이"
+          }
+        ]
+      },
+      "examples": [
+        "흰둥이"
+      ],
+      "targets": []
+    }
+  ],
+  "source_group_count": 44,
+  "native_target_occurrences": 8,
+  "corpus": [
+    {
+      "corpus": "kaist",
+      "source": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+      "source_sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "fixture": "tests/fixtures/kaist-nominal-i.conllu",
+      "sent_id": "MH2_0084-s13",
+      "token_id": "1",
+      "surface": "높이",
+      "lemma": "높이",
+      "xpos": "ncn",
+      "case_id": "nominal-i-kaist-MH2_0084-s13-t1"
+    },
+    {
+      "corpus": "kaist",
+      "source": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+      "source_sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "fixture": "tests/fixtures/kaist-nominal-i.conllu",
+      "sent_id": "MH2_0084-s13",
+      "token_id": "4",
+      "surface": "넓이",
+      "lemma": "넓이",
+      "xpos": "ncn",
+      "case_id": "nominal-i-kaist-MH2_0084-s13-t4"
+    },
+    {
+      "corpus": "kaist",
+      "source": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+      "source_sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+      "fixture": "tests/fixtures/kaist-nominal-i.conllu",
+      "sent_id": "MH2_0028-s35",
+      "token_id": "11",
+      "surface": "먹이를",
+      "lemma": "먹이+를",
+      "xpos": "ncn+jco",
+      "case_id": "nominal-i-kaist-MH2_0028-s35-t11"
+    },
+    {
+      "corpus": "gsd",
+      "source": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+      "source_sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+      "fixture": "tests/fixtures/gsd-nominal-i.conllu",
+      "sent_id": "train-s3086",
+      "token_id": "3",
+      "surface": "먹이를",
+      "lemma": "먹이+를",
+      "xpos": "NNG+JKO",
+      "case_id": "nominal-i-gsd-train-s3086-t3"
+    }
+  ],
+  "scope": "All eight native -이 88924 sense-1 noun examples, existing noun particles/copulas, one plural suffix, and approximation. Distinguish noun/adverb suffix provenance while retaining all lexical alternatives.",
+  "remaining": [
+    "Other nominal -이 senses and noun+verb compounds/root classes remain unimplemented in this finite extension.",
+    "Further derivational suffixes and auxiliary boundaries require separate source review; no arbitrary predicate stem stripping or prefinal-noun suffix composition.",
+    "Predicate headword/POS membership does not select the intended noun/base sense; independent Korean-language review remains pending."
+  ],
+  "primary_consultations": [
+    {
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=88924",
+      "retrieved": "2026-10-01",
+      "finding": "Sense 1 explicitly lists the eight noun formations after selected adjective/verb stems. Other senses license different base classes and remain separately recorded."
+    }
+  ],
+  "status": "Finite noun forms, source integrity, individual judgment tracking, candidate/corpus/novel comparisons, 632 Rust tests, browser, Nix CLI/web/flake checks and refreshed packaged preview verified. Wider source senses and independent Korean review remain open.",
+  "repeated_base_review": {
+    "source": "https://www.korean.go.kr/nkview/nknews/199911/16_11.htm",
+    "retrieved": "2026-10-01",
+    "finding": "NIKL classifies its repeated/near-repeated noun examples as nominal bases. Missing KRDict headwords alone do not settle lexical status, so the existing nominal hypotheses are retained; finer nonlexical classes still need sources."
+  },
+  "native_selection_identity": "Pinned numeric ID, lexical unit and written-form identity. Separate idiom/expression records sharing a parent numeric ID are not treated as duplicate parent entries.",
+  "regression_tracking": {
+    "cases": 151,
+    "required": 127,
+    "forbidden": 24,
+    "new_total_required": 6930,
+    "new_total_forbidden": 3074,
+    "additional_controls": [
+      "nominal-i-copular-control-먹이라-ending",
+      "nominal-i-copular-control-먹이라고-ending",
+      "nominal-i-copular-control-먹이라고-particle"
+    ],
+    "old_test_correction": "The old copular-stripping test rejected any 먹다 lemma. Its assertion now retains the exact source-listed noun formation plus factual copula or definition-particle paths, while continuing to reject unsupported predicate stripping. Direct 먹이다 alternatives remain."
+  },
+  "spacing_scope": "Noun-forming paths are eligible for the case-marked nominal segment, while this bounded spacing template excludes them from its predicate segment. 먹이를 먹이 is not generated from noun 먹이; 먹이를 먹는다 preserves the noun path and independent predicate.",
+  "evaluation": "docs/nominal-i-evaluation.json",
+  "source_integrity": {
+    "native_entries": 33,
+    "complete_noun_suffix_senses": 3,
+    "all_export_hashes_match": true,
+    "only_documented_omissions": true,
+    "source_groups": 44,
+    "native_target_occurrences": 8,
+    "corpus_sentences": 3,
+    "corpus_targets": 4,
+    "corpus_source_bytes_preserved": true,
+    "original_ledger_prefix_unchanged": true,
+    "frozen_baselines": [
+      {
+        "path": "data/baselines/kaist-dev.jsonl",
+        "sha256": "942e84f3d7f1905341fe2585e588563edb947feae96b5dfc1872ef915290b42c",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/kaist-test.jsonl",
+        "sha256": "fdd557c80a41a24274c43a82f8c1868b2992d00286dbf48dd877df57b8a81222",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-dev.jsonl",
+        "sha256": "c32e071e6823b4a1e69935933b568daa54e8c2dcfa5dea8b2da9eabe1a51d9b8",
+        "unchanged": true
+      },
+      {
+        "path": "data/baselines/gsd-test.jsonl",
+        "sha256": "76d656c99f08b14feb9d31a6d41ef83ff568570445c0402873e98d7cd2dfa422",
+        "unchanged": true
+      }
+    ]
+  }
+}

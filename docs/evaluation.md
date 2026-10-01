@@ -134,12 +134,20 @@ cargo run --release --locked --example evaluate_validity -- \
 
 The structured ledger supplies stable case/judgment IDs, ordered lemma groups,
 optional exact morpheme sequences, optional `lemma_kinds` and `morpheme_kinds`,
+optional `required_rules` provenance constraints,
 required/forbidden verdicts, rationales, and primary-source links. Missing fields
 leave that dimension unconstrained. Role lists must match their corresponding
 text-list lengths when both are present. This lets identical 이 strings retain
 distinct suffix and particle judgments. Older role-unspecified judgments preserve
 their broad scopes. Overlapping contradictory judgments, duplicate IDs, and
 missing evidence are rejected. Normal tests run the ledger offline.
+
+`required_rules`, when present, must be a nonempty list of distinct known rule
+IDs, all of which must occur in the analysis. This distinguishes noun-forming
+`suffix.nominal.i` from adverb-forming `suffix.adverbial.i` even when lemma and
+morpheme fields coincide. Different positive constraints may overlap;
+contradictory overlapping scopes remain rejected conservatively. Rule evidence
+does not certify contextual senses or unjudged derivations.
 
 The initial 16 cases have 11 required and 10 forbidden judgments. All pass; 11
 of 72 emitted nonidentity analyses match judgments, leaving 61 in the review
@@ -3367,3 +3375,47 @@ remain unjudged. Debug/release novel output hashes match under both filters.
 Three interleaved release samples for --dict-only have before/after median times 1.564/1.564s and observed peak RSS 29.0/29.7 MiB. These measurements include startup, dictionary access and JSONL serialization; they do not establish statistical equivalence.
 
 Three interleaved release samples for --dict-compatible have before/after median times 1.549/1.544s and observed peak RSS 29.4/29.2 MiB. These measurements include startup, dictionary access and JSONL serialization; they do not establish statistical equivalence.
+
+## Native noun-forming -이 (COV-022d)
+
+The [source audit](nominal-i-source-audit.json) preserves 33 complete native
+entries, all three noun-suffix senses/44 example groups, eight direct sense-1
+forms, and three unchanged training sentences with four lexical noun targets.
+The finite implementation adds independent noun suffix provenance without
+merging noun/adverb hypotheses that share lemma and morpheme fields. Five tests
+and 151 stable cases add 127 required paths and 24 exclusions, reaching 6,930
+required / 3,074 forbidden judgments. Optional `required_rules` constraints
+keep the suffix function explicit. Annotated lexical gold is retained; it does
+not certify derivational segmentation or contextual senses.
+
+The [individual candidate comparison](nominal-i-evaluation.json) covers 12,212
+NFC/NFD surfaces in raw, headword-only and compatible modes. Each adds 280
+paths at 254 inputs without removals: 246 match required structural judgments
+and 34 remain unjudged. Complete raw additions retain stable IDs and reviews;
+filter-specific IDs refer to verified identical raw evidence. The final spacing
+role correction leaves these audited outputs byte-identical. All four frozen
+corpus outcomes and recall are unchanged; baselines are not regenerated.
+
+The pinned Mujeong novel retains all 179,112 records and existing dictionary
+readings in five modes, including both filters with spacing suggestions. Each
+mode adds 41 main candidates at 39 occurrences without removals. The audit
+retains every occurrence, original byte span, UTF-8 context and new hypothesis;
+all contextual senses remain unjudged. One spacing segment gains a noun-case
+path while boundaries, alternative counts and search limits stay unchanged.
+Bare noun `먹이` cannot fill this template's predicate segment, while
+`먹이를 먹는다` retains the noun-case and independent predicate roles.
+
+Packaged release and final debug novel output hashes match in all five modes.
+Three interleaved local release runs per version/filter, including startup,
+dictionary access and JSONL serialization, give headword median before/after
+times of 1.62/1.61 seconds and compatible medians of 1.60/1.59 seconds. Observed
+peak child RSS is below 30 MiB. These samples are descriptive, not proof of
+statistical equivalence or a universal throughput guarantee.
+
+All 632 Rust tests, full pinned corpus, lint/format, frontend/browser, inventory
+tooling and three x86_64 Linux Nix checks pass. Packaged and refreshed preview
+HTTP/CLI results match across all 151 cases and both filters. Browser noun and
+adverb menus select distinct 88924/88927 source entries; plural/copula and
+approximation components remain ordered, all three JSON export modes match the
+CLI, and final desktop/mobile views are inspected. Other noun-suffix senses,
+compound/root classes and independent Korean-language review remain open.

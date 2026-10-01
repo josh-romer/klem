@@ -396,14 +396,33 @@ fn copular_i_is_not_stripped_from_arbitrary_predicates() {
         ("먹라서", "먹다"),
         ("가라서", "가다"),
     ] {
-        assert!(
-            !engine
-                .analyze_word(word)
-                .unwrap()
-                .lemma_strings()
-                .contains(&forbidden),
-            "{word} must not recover {forbidden}"
-        );
+        let result = engine.analyze_word(word).unwrap();
+        for a in result
+            .analyses
+            .iter()
+            .filter(|a| a.lemmas.iter().any(|l| l.text == forbidden))
+        {
+            // 먹이 is an independently listed noun formation. Its factual
+            // copula is distinct from stripping 이 out of a lexical predicate.
+            assert!(
+                matches!(word, "먹이라" | "먹이라고")
+                    && (a
+                        .lemmas
+                        .iter()
+                        .map(|l| l.text.as_str())
+                        .eq(["먹다", "이다"])
+                        || (word == "먹이라고"
+                            && a.lemmas.len() == 1
+                            && a.morphemes.get(1).is_some_and(
+                                |m| m.form == "라고" && m.kind == klem::MorphemeKind::Particle
+                            )))
+                    && a.rules.iter().any(|r| r == "suffix.nominal.i")
+                    && a.morphemes
+                        .first()
+                        .is_some_and(|m| m.form == "이" && m.kind == klem::MorphemeKind::Suffix),
+                "{word} must not recover an unsupported {forbidden} path: {a:?}"
+            );
+        }
     }
     for (word, expected) in [
         ("먹이라", "먹이다"),

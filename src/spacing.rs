@@ -82,7 +82,8 @@ fn nominal_case(a: &Analysis) -> bool {
     // Nominal roots/derivations or explicit nominalizations, never an arbitrary
     // connective followed by a particle. Each word is checked independently.
     (a.lemmas.len() == 1
-        && a.lemmas[0].kind == LemmaKind::Nominal
+        && (a.lemmas[0].kind == LemmaKind::Nominal
+            || a.rules.iter().any(|r| r == "suffix.nominal.i"))
         && a.morphemes[..a.morphemes.len() - tail.len()]
             .iter()
             .all(|m| m.kind == MorphemeKind::Suffix && m.form != "답다"))
@@ -141,10 +142,14 @@ impl<D: Dictionary + ?Sized> Search<'_, '_, D> {
                 .iter()
                 .filter(|a| match role {
                     Role::Case => nominal_case(a),
-                    Role::Predicate => a
-                        .lemmas
-                        .first()
-                        .is_some_and(|l| l.kind == LemmaKind::Predicate),
+                    // A predicate lookup lemma before a noun suffix is a
+                    // nominal word, not a sentence predicate for this template.
+                    Role::Predicate => {
+                        !a.rules.iter().any(|r| r == "suffix.nominal.i")
+                            && a.lemmas
+                                .first()
+                                .is_some_and(|l| l.kind == LemmaKind::Predicate)
+                    }
                 })
                 .cloned()
                 .collect(),

@@ -62,7 +62,12 @@ export default function SentenceBreakdown(props: {
         ?.map((p) => p.form)
         .join(" + ") ?? a.lemmas.map((l) => l.text).join(" + ")
     );
-    if (a.rules.includes("suffix.nominal.i")) return `${text} · noun-forming`;
+    if (a.rules.includes("suffix.nominal.i")) {
+      const base = a.rules.includes("derivation.nominal.related_root")
+        ? ` · related ${a.lemmas[0].text}`
+        : a.lemmas[0].kind === "root" ? " · root" : "";
+      return `${text} · noun-forming${base}`;
+    }
     if (a.rules.includes("suffix.adverbial.i") &&
         props.result.records[index].analysis!.analyses.some((other) => other.rules.includes("suffix.nominal.i"))) {
       return `${text} · adverb-forming`;

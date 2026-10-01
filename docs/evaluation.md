@@ -3513,3 +3513,38 @@ Linux checks pass. Packaged/refreshed-preview HTTP/CLI outputs agree on all 180
 cases and three browser exports; inspected desktop/mobile views preserve noun
 ownership and root-filter uncertainty. Seventeen native examples, finer base
 histories, related-predicate/root alternatives and independent review remain open.
+
+## Native roots and related noun-base predicates (COV-022i)
+
+The [source audit](noun-root-source-audit.json) preserves seven native suffix
+examples, seven Root hypotheses and six separate related predicate lookups.
+Five 하다 entries match the pinned dictionary; primary quiet-person
+합죽거리다 differs from its missing-teeth 합죽하다 counterpart and has no
+pinned head. 미치광 remains one historical root without unrelated 광 senses.
+Positive source boundaries, not missing heads, establish Root possibilities.
+Six tests and 265 stable cases add 226 required / 39 forbidden judgments,
+reaching 7,486 required / 3,170 forbidden. The 29-entry fixture retains complete
+suffix senses/44 groups. Five unchanged KAIST training sentences supply one
+whole-noun and four longer plant-compound gold rows, with no suffix gold.
+
+The [individual comparison](noun-root-evaluation.json) covers 13,268 NFC/NFD
+inputs under raw and both filters. Raw adds 468 paths at 238 surfaces, including
+442 required and 26 unjudged additions. Each filter adds 180 paths at 170
+surfaces, including 170 required and ten unjudged. All prior candidates and
+lookup readings remain. Seven roots and the quiet-person related head are
+unmatched and removed by both filters; dictionary membership also excludes
+the unmatched 미치광이풀 gold compound. Its original raw annotation remains.
+Every full raw addition/ID/disposition and verified filter reference is retained.
+
+All four full frozen corpus reports and all five 179,112-record novel outputs,
+including spacing sidecars, are byte-identical. Baselines remain frozen and
+packaged/debug novel hashes match. Three interleaved local release samples give
+headword medians 1.63/1.62 seconds and compatible medians 1.60/1.60 seconds;
+after peak child RSS is 30,436/30,100 KiB. These descriptive measurements include
+startup, lookup and serialization, without establishing statistical equivalence.
+All 653 Rust tests, pinned corpus, lint/format, full browser and Nix builds/three
+Linux checks pass. Packaged/refreshed-preview HTTP/CLI agree on all 265 cases
+and three browser exports; visually inspected desktop/mobile views retain root/
+related menu identities, noun ownership and missing-head filter uncertainty.
+Ten native forms, finer histories, contextual related senses and independent
+Korean review remain open alongside the broader morphology inventory.

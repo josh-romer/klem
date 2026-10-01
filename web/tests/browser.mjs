@@ -527,6 +527,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounSoundIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounSoundEntries);
 
+  const nounRootFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-noun-root.json"), "utf8"));
+  const nounRootEntries = nounRootFixture.LexicalResource.Lexicon.LexicalEntry;
+  const nounRootIds = new Set(nounRootEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !nounRootIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nounRootEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -4936,6 +4942,51 @@ try {
     assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,flag],{input:"뺑뺑이",encoding:"utf8"}).trim().split("\n").map(JSON.parse));
     assert.ok(exported.records[0].analysis.analyses.every(a => !a.rules.includes("suffix.nominal.i")));
     assert.ok(exported.records[0].analysis.analyses.some(a => a.unchanged));
+  }
+  await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Noun roots and related predicates render the same base while preserving
+  // distinct canonical lookups, source provenance and missing-head filters.
+  await page.getByLabel("Dictionary matches only").uncheck();
+  for (const [word, root, heads] of [
+    ["끈끈이", "끈끈", ["끈끈하다"]], ["누렁이", "누렁", []],
+    ["뚱뚱이", "뚱뚱", ["뚱뚱하다"]], ["멍청이", "멍청", ["멍청하다"]],
+    ["미치광이", "미치광", []], ["합죽이", "합죽", ["합죽하다", "합죽거리다"]],
+    ["홀쭉이", "홀쭉", ["홀쭉하다"]],
+  ]) {
+    await submit(page, word); await waitHeading(page, word);
+    const data = await (await post("analyze", {text:word})).json();
+    const block = page.locator(".breakdown-word").first();
+    for (const [head, kind] of [[root, "root"], ...heads.map(h => [h, "predicate"])]) {
+      const choice = data.records[0].analysis.analyses.findIndex(a => a.rules.includes("suffix.nominal.i") && a.lemmas[0].text === head && a.lemmas[0].kind === kind);
+      assert.ok(choice >= 0, head); await block.getByRole("combobox").selectOption(String(choice));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(), [root,"이"]);
+      const title = await block.locator(`option[value="${choice}"]`).innerText();
+      assert.match(title,/noun-forming/);assert.ok(title.includes(kind === "root" ? "root" : `related ${head}`));
+      await block.getByRole("button", {name:"이 Noun-forming suffix", exact:true}).click();
+      await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo="]')?.getAttribute('href')?.includes("ParaWordNo=88924"));
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await(await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database],{input:word,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await submit(page, "홀쭉이들이었다"); await waitHeading(page, "홀쭉이들이었다");
+  const rootCopula = await (await post("analyze",{text:"홀쭉이들이었다"})).json();
+  const relatedCopula = rootCopula.records[0].analysis.analyses.findIndex(a=>a.rules.includes("derivation.nominal.related_root")&&a.lemmas[0].text==="홀쭉하다");
+  assert.ok(relatedCopula>=0);await page.locator(".breakdown-word").first().getByRole("combobox").selectOption(String(relatedCopula));
+  assert.deepEqual(await page.locator(".breakdown-word").first().locator(".part-form").allTextContents(),["홀쭉","이","들","이","었","다"]);
+  await page.screenshot({path:resolve(tmpdir(),"klem-noun-root-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-noun-root-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});
+  for (const flag of ["--dict-only","--dict-compatible"]) {
+    await page.getByLabel("Dictionary matches only").check();
+    if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,"홀쭉이 합죽이 누렁이 미치광이");await waitHeading(page,"홀쭉이");
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,flag],{input:"홀쭉이 합죽이 누렁이 미치광이",encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+    const words=exported.records.filter(r=>r.analysis);assert.ok(words[0].analysis.analyses.some(a=>a.rules.includes("derivation.nominal.related_root")));
+    assert.ok(words.every(r=>r.analysis.analyses.every(a=>a.lemmas.every(l=>l.kind!=="root"&&l.text!=="합죽거리다"))));
   }
   await page.getByLabel("Dictionary matches only").uncheck();
 

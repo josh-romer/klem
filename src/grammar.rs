@@ -129,6 +129,21 @@ pub(crate) const NOUN_I_SOUND_FORMS: &[(&str, &str, LemmaKind)] = &[
     ("짝짝이", "짝짝", LemmaKind::Adverbial),
 ];
 
+// KRDict 88924 sense 3, Article 23 and NIKL 318501/333918/325909.
+// Roots express reviewed derivational boundaries, not standalone POS claims.
+// Related predicates are separate lookup hypotheses; no 하/거리 is inserted.
+// 합죽거리다 belongs to the primary quiet-person sense, not the pinned
+// missing-teeth sense. 미치광 stays one historical base (미치- + 狂).
+pub(crate) const NOUN_I_ROOTS: &[(&str, &str, &[&str])] = &[
+    ("끈끈이", "끈끈", &["끈끈하다"]),
+    ("누렁이", "누렁", &[]),
+    ("뚱뚱이", "뚱뚱", &["뚱뚱하다"]),
+    ("멍청이", "멍청", &["멍청하다"]),
+    ("미치광이", "미치광", &[]),
+    ("합죽이", "합죽", &["합죽하다", "합죽거리다"]),
+    ("홀쭉이", "홀쭉", &["홀쭉하다"]),
+];
+
 // Selected compound bases before noun-forming -이, not arbitrary segmentation.
 // The two lemmas form one base; neither takes an inflectional ending here.
 // NIKL 320611 confirms 밀다 + 닫다; Article 28 accounts for lost ㄹ.
@@ -1534,6 +1549,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "identity" => "Unchanged vocabulary hypothesis; no dictionary verification.",
         "suffix.nominal.i" => {
             "Separate a source-listed base and noun-forming 이. Preserve lexical nouns and adverbial homonyms; this finite rule does not strip 이 from arbitrary words or attach through prefinals."
+        }
+        "derivation.nominal.related_root" => {
+            "Link a finite noun-forming root to a reviewed related predicate as a separate lookup hypothesis. The related 하다/거리다 form does not insert a surface segment or license productive restoration, inflection or contextual sense selection."
         }
         "derivation.nominal.compound" => {
             "The first two lookup lemmas form one reviewed compound base before noun-forming 이. Neither component has an inflectional ending; following particles and copulas belong to the derived noun."

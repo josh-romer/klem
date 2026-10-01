@@ -270,3 +270,5 @@ Quoted declarative reports also preserve a separate polite 요 particle, as in
 with Unknown attachment. See [the source audit](docs/quote-followers-source-audit.json)
 for direct examples and unresolved quoted 구나/register coverage.
 Finite sound/manner noun formations include 꿀꿀 + 이 and 오뚝 + 이. Source-listed 뺑뺑 + 이 uses a derivational root without a standalone POS claim; dictionary-only filters remove that path when the root has no dictionary match.
+
+Noun-forming roots such as 홀쭉 + 이 retain a separate related-predicate lookup 홀쭉하다. Both choices display 홀쭉 + 이 while preserving their canonical identities in exports. Missing roots or related heads remain visible in raw mode and follow the dictionary filters.

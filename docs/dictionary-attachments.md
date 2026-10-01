@@ -662,3 +662,5 @@ Both filters retain source-supported matched paths; a dictionary entry does not
 certify the derivational relationship. See [the review](noun-base-source-audit.json).
 
 COV-022h sound/manner noun candidates keep adverb-role compatibility separate from contextual base senses. Base homonyms remain available, and compatible POS does not certify the formation meaning. The source-listed 뺑뺑 derivational root has no pinned headword: raw results retain the suffix path, while both dictionary filters remove it and retain the matched whole noun. No replacement predicate or synthetic head is inserted.
+
+COV-022i roots have no standalone POS assertion and all seven lack pinned base heads. Separate related-predicate candidates keep five attested 하다 lookups; the primary quiet-person 합죽거리다 lookup is absent. Both dictionary filters remove unmatched root/related paths while retaining matched whole nouns and the five known related predicates. Dictionary membership does not choose base sense or lexical history. 미치다/광 homonyms are preserved as source observations, not substituted for the complete 미치광 base.

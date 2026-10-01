@@ -973,3 +973,21 @@ Full corpus/novel outputs remain unchanged. COV-022i–l retains seventeen nativ
 examples, and wider derivation/independent review remain open. These noun/suffix
 forms are outside the 715-entry ending/particle/auxiliary queue's POS scope;
 that queue remains 386 scoped / 328 unreviewed / one gap.
+
+## Native roots and related predicate alternatives (2026-10-01)
+
+COV-022i implements seven reviewed roots and six related predicate lookup paths
+before noun-forming 이. Five 하다 heads match; quiet-person 합죽거리다 is
+primary but missing in the pinned dictionary and distinct from missing-teeth
+합죽하다. The [source audit](noun-root-source-audit.json) retains 29 complete
+entries, all suffix senses/44 groups and five unchanged complete training
+sentences. These preserve one whole-noun and four plant-compound gold rows;
+none is internal suffix gold. Six tests/265 stable cases cover 226 required and
+39 forbidden paths. All 653 Rust tests, Nix/browser/HTTP/preview and release
+gates pass. The [comparison](noun-root-evaluation.json) preserves every prior
+candidate across 13,268 inputs and retains 26 raw unjudged additions. Corpus
+and all five novel outputs remain unchanged. Missing-head filters also remove
+the unmatched plant compound without changing its raw gold. Ten native forms
+COV-022j–l and wider derivation/independent review remain open. Noun/suffix
+forms remain outside the 715-entry ending/particle/auxiliary queue's POS scope;
+that queue remains 386 scoped / 328 unreviewed / one gap.

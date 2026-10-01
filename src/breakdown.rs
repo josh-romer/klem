@@ -30,6 +30,19 @@ impl Analysis {
             .rules
             .iter()
             .any(|r| r == "derivation.nominal.compound");
+        if self
+            .rules
+            .iter()
+            .any(|r| r == "derivation.nominal.related_root")
+            && (compound
+                || !self.rules.iter().any(|r| r == "suffix.nominal.i")
+                || self.lemmas[0].kind != LemmaKind::Predicate
+                || !crate::grammar::NOUN_I_ROOTS
+                    .iter()
+                    .any(|&(_, _, heads)| heads.contains(&self.lemmas[0].text.as_str())))
+        {
+            return None;
+        }
         if compound
             && (!self.rules.iter().any(|r| r == "suffix.nominal.i")
                 || self.lemmas.len() < 2

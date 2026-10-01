@@ -77,12 +77,13 @@ export function parts(
           .some((a) => a.id === e.id && a.status === "unknown"));
       const stem = ["predicate", "auxiliary", "copula"].includes(lemma.kind);
       const next = order[position + 1];
-      const adverbRoot = lemma.kind === "predicate" &&
-        a.rules.includes("derivation.adverbial.hada") && next &&
+      const derivedRoot = lemma.kind === "predicate" &&
+        (a.rules.includes("derivation.adverbial.hada") ||
+          (component.lemma === 0 && a.rules.includes("derivation.nominal.related_root"))) && next &&
         "morpheme" in next && a.morphemes[next.morpheme].kind === "suffix" &&
         ["이", "히"].includes(a.morphemes[next.morpheme].form);
       return {
-        form: adverbRoot ? lemma.text.replace(/하다$/, "") : stem ? lemma.text.replace(/다$/, "") : lemma.text,
+        form: derivedRoot ? lemma.text.replace(/(?:하다|거리다)$/, "") : stem ? lemma.text.replace(/다$/, "") : lemma.text,
         label:
           (entry && result.glosses[entry.id]) ||
           (entry ? "No English gloss" : lemma.kind === "root" ? "Root" : "No dictionary gloss"),

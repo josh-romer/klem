@@ -27,30 +27,55 @@ fn morph(form: impl Into<String>, kind: MorphemeKind) -> Morpheme {
 
 // Bounded suffix paths at the nominal boundary, before particles or a copula.
 // Whole-word hypotheses remain: a matching tail need not be a real suffix.
-fn noun_i_derivation(word: &str) -> Option<Analysis> {
+fn noun_i_derivations(word: &str) -> Vec<Analysis> {
+    if let Some(&(_, root, related)) = grammar::NOUN_I_ROOTS
+        .iter()
+        .find(|&&(surface, _, _)| surface == word)
+    {
+        let mut out = vec![Analysis {
+            lemmas: vec![lemma(root, LemmaKind::Root)],
+            morphemes: vec![morph("이", MorphemeKind::Suffix)],
+            rules: vec!["suffix.nominal.i".into()],
+            unchanged: false,
+            spelling_paths: Vec::new(),
+        }];
+        for &head in related {
+            out.push(Analysis {
+                lemmas: vec![lemma(head, LemmaKind::Predicate)],
+                morphemes: vec![morph("이", MorphemeKind::Suffix)],
+                rules: vec![
+                    "suffix.nominal.i".into(),
+                    "derivation.nominal.related_root".into(),
+                ],
+                unchanged: false,
+                spelling_paths: Vec::new(),
+            });
+        }
+        return out;
+    }
     if let Some(&(_, base, kind)) = grammar::NOUN_I_SOUND_FORMS
         .iter()
         .find(|&&(surface, _, _)| surface == word)
     {
-        return Some(Analysis {
+        return vec![Analysis {
             lemmas: vec![lemma(base, kind)],
             morphemes: vec![morph("이", MorphemeKind::Suffix)],
             rules: vec!["suffix.nominal.i".into()],
             unchanged: false,
             spelling_paths: Vec::new(),
-        });
+        }];
     }
     if let Some(&(_, base)) = grammar::NOUN_I_NOMINAL_FORMS
         .iter()
         .find(|&&(surface, _)| surface == word)
     {
-        return Some(Analysis {
+        return vec![Analysis {
             lemmas: vec![lemma(base, LemmaKind::Nominal)],
             morphemes: vec![morph("이", MorphemeKind::Suffix)],
             rules: vec!["suffix.nominal.i".into()],
             unchanged: false,
             spelling_paths: Vec::new(),
-        });
+        }];
     }
     if let Some(&(_, left, kind, right)) = grammar::NOUN_I_COMPOUNDS
         .iter()
@@ -63,28 +88,31 @@ fn noun_i_derivation(word: &str) -> Option<Analysis> {
         if word == "미닫이" {
             rules.push("derivation.nominal.compound_l_loss".into());
         }
-        return Some(Analysis {
+        return vec![Analysis {
             lemmas: vec![lemma(left, kind), lemma(right, LemmaKind::Predicate)],
             morphemes: vec![morph("이", MorphemeKind::Suffix)],
             rules,
             unchanged: false,
             spelling_paths: Vec::new(),
-        });
+        }];
     }
-    let &(_, head) = grammar::NOUN_I_FORMS
+    let Some(&(_, head)) = grammar::NOUN_I_FORMS
         .iter()
-        .find(|&&(surface, _)| surface == word)?;
-    Some(Analysis {
+        .find(|&&(surface, _)| surface == word)
+    else {
+        return Vec::new();
+    };
+    vec![Analysis {
         lemmas: vec![lemma(head, LemmaKind::Predicate)],
         morphemes: vec![morph("이", MorphemeKind::Suffix)],
         rules: vec!["suffix.nominal.i".into()],
         unchanged: false,
         spelling_paths: Vec::new(),
-    })
+    }]
 }
 
 fn simple_nominal_derivations(word: &str) -> Vec<Analysis> {
-    let mut out: Vec<_> = noun_i_derivation(word).into_iter().collect();
+    let mut out = noun_i_derivations(word);
     // One honorific, relational, or plural suffix; also honorific + plural.
     // Each shorter base is a lexical hypothesis, never recursively re-split.
     for (form, rule) in [
@@ -100,12 +128,12 @@ fn simple_nominal_derivations(word: &str) -> Vec<Analysis> {
                 unchanged: false,
                 spelling_paths: Vec::new(),
             });
-            if form == "들"
-                && let Some(mut a) = noun_i_derivation(base)
-            {
-                a.morphemes.push(morph(form, MorphemeKind::Suffix));
-                a.rules.push(rule.into());
-                out.push(a);
+            if form == "들" {
+                for mut a in noun_i_derivations(base) {
+                    a.morphemes.push(morph(form, MorphemeKind::Suffix));
+                    a.rules.push(rule.into());
+                    out.push(a);
+                }
             }
             // Only honorific + plural is licensed in this batch.
             if form == "들"

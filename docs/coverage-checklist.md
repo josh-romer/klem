@@ -23,7 +23,7 @@ percentage is assigned: the inventory itself still needs an audit.
 - **Audit needed:** coverage has not been inventoried sufficiently to declare it complete.
 - **Deferred:** outside the current release scope; not silently counted as complete.
 
-P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d/022f–h batches are implemented.
+P1 and the bounded COV-010/011/012/014/015/016/017a–av/017ax–ay/017ba–bm/018a–k/018m–z/019a–g/019i–r/020a–o/021a–h/022a–d/022f–i batches are implemented.
 COV-013 has an initial inventory pass; its remaining work is split into
 COV-017..022 below. P3 needs further scope or representation decisions.
 Priorities reflect the concrete failures found,
@@ -2607,7 +2607,8 @@ review remains open under the completion review below.
   opaque 천천/분연 roots; COV-022d adds the eight source-listed
   predicate-base noun formations; COV-022f adds all six native sense-2 forms
   with ordered compound bases and finite normalization; COV-022g adds four
-  nominal-base formations and COV-022h adds nine sound/manner forms.**
+  nominal-base formations, COV-022h adds nine sound/manner forms, and
+  COV-022i adds seven roots with six related-predicate alternatives.**
   Remaining: other lexical
   classes, other opaque roots beyond the finite COV-022c forms, subdivision of nonlexical
   repeated bases, suffix/auxiliary interactions, and other nominal -이 senses/classes. Keep lexical readings and causative/noun homonyms; historical
@@ -2703,8 +2704,9 @@ review remains open under the completion review below.
   bare-word CLI probes (raw/headword/compatible) lack the noun-forming rule
   in that historical snapshot; existing lexical candidates remain in the report.
   COV-022f subsequently covers the six sense-2 forms; COV-022g covers four
-  sense-3 nominal forms and COV-022h covers nine sound/manner forms. Seventeen
-  native sense-3 forms remain open. The discovery artifact is preserved as
+  sense-3 nominal forms, COV-022h covers nine sound/manner forms, and COV-022i
+  covers seven roots with six related-predicate alternatives. Ten native sense-3
+  forms remain open. The discovery artifact is preserved as
   historical evidence. Fourteen
   prefix occurrences across six pinned corpus partitions retain complete
   sentence bodies and original rows. All are in KAIST training data: nine
@@ -2793,13 +2795,34 @@ review remains open under the completion review below.
   [evaluation](noun-sound-evaluation.json). Finer base senses, related-predicate/
   root alternatives and independent Korean review remain open.
 
-- [ ] **COV-022i — Native related-predicate and root noun bases.** Review and
-  implement 끈끈이, 누렁이, 뚱뚱이, 멍청이, 미치광이, 합죽이 and 홀쭉이.
+- [x] **COV-022i — Native related-predicate and root noun bases.** Implemented for
+  끈끈이, 누렁이, 뚱뚱이, 멍청이, 미치광이, 합죽이 and 홀쭉이.
   Distinguish an explicit derivational root from a related predicate lookup and
   from a missing dictionary head. Primary NIKL 333918 supports 미치광 + 이
-  through historical analysis; finer 미치다/狂 grouping needs an explicit
-  representation decision. No productive 누렇다 restoration or invented
+  through historical analysis; the complete 미치광 base is represented as one
+  root, with finer 미치다/狂 history documented separately. No productive 누렇다 restoration or invented
   누렁하다 is licensed by missing heads.
+  Seven roots and six separately preserved related-predicate lookup paths
+  retain one noun-suffix boundary. Five 하다 forms are pinned; primary
+  quiet-person 합죽거리다 is a distinct missing-head alternative. 미치광
+  stays one historical root. Six tests and 265 stable cases (226 required /
+  39 forbidden) retain 29 complete entries, seven native occurrences/thirteen
+  path judgments, all suffix senses/44 groups and five unchanged whole-noun/
+  plant-compound training sentences; no internal suffix gold is invented.
+  Root/related menus remain distinct with canonical export lemmas and the same
+  displayed base. All 653 Rust tests, pinned corpus, lint/format, full browser,
+  Nix CLI/web builds and three Linux checks pass. Across 13,268 inputs every
+  prior candidate remains: raw adds 468 paths (442 required / 26 unjudged),
+  each filter adds 180 (170 required / 10 unjudged); missing roots/quiet-head
+  paths disappear under filters. Actual dictionary membership also excludes
+  the unmatched 미치광이풀 whole corpus lemma, preserving original raw gold.
+  All four full corpus reports and five 179,112-record novel outputs are
+  byte-identical; no baseline changes. Packaged/refreshed-preview HTTP/CLI and
+  three browser exports agree; desktop/mobile views are inspected. Release/
+  debug novel hashes match; three local samples give after medians 1.62/1.60
+  seconds for the two filters. See [source audit](noun-root-source-audit.json)
+  and [evaluation](noun-root-evaluation.json). Finer histories, contextual
+  related-head senses and independent Korean review remain open.
 
 - [ ] **COV-022j — Native 까불이 predicate relationship.** Review and implement
   the source-listed 까불이 base while preserving both 까불다 homonyms and the
@@ -2824,11 +2847,11 @@ review remains open under the completion review below.
   provenance; neither date nor a missing head settles them automatically.
 
   COV-022g–l partition every original native sense-3 example exactly once;
-  the four open batches COV-022i–l retain the other seventeen forms. The
+  the three open batches COV-022j–l retain the other ten forms. The
   [read-only review tool](../tools/review_nominal_i_bases.py) verifies
   source/plan identity and retains ninety current CLI/filter snapshots plus
   full dictionary sense/role observations. The historical ninety-probe discovery snapshot assigns no required judgment
-  or runtime path; subsequent COV-022g/h implementations have separate evidence.
+  or runtime path; subsequent COV-022g/h/i implementations have separate evidence.
   All existing corpus annotations and
   frozen baselines remain unchanged; other compound leads and wider COV-022
   derivations remain open beyond these thirty forms.

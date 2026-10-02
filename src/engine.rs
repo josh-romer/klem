@@ -1010,6 +1010,11 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 true,
                 &mut memo,
             ) {
+                // -너라's lexical owner itself must end in 오. Do not borrow
+                // a polite prefinal 오 from another stem to satisfy that note.
+                if ending.form == "너라" && !p.stem.ends_with('오') {
+                    continue;
+                }
                 p.copula_only |= matches!(ending.boundary, Boundary::OmittedCopula(_));
                 if p.rules.iter().any(|r| r == "copula.omitted_polite")
                     && (ending.form != "으리까"
@@ -1642,6 +1647,9 @@ fn single_predicates(word: &str) -> Vec<Predicate> {
                 p.morphs.push(morph(ending.form, MorphemeKind::Ending));
                 p.rules.extend(r.rules.clone());
                 p.rules.push("ending".into());
+                if matches!(ending.form, "거라" | "너라") {
+                    p.rules.push("ending.direct_command".into());
+                }
                 if ending.form == "으리다" {
                     p.rules.push("ending.literary_ri".into());
                 }

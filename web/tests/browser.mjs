@@ -663,6 +663,11 @@ try {
   const writtenVowelCompatIds = new Set(writtenVowelCompatEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !writtenVowelCompatIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...writtenVowelCompatEntries);
+  const directCommandNative = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-gera-nera.json"),"utf8"));
+  const directCommandEntries = directCommandNative.LexicalResource.Lexicon.LexicalEntry;
+  const directCommandIds = new Set(directCommandEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !directCommandIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...directCommandEntries);
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -6104,6 +6109,53 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-written-vowel-compat-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-written-vowel-compat-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const directCommandSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/gera-nera-sources.json"),"utf8"));
+  const directCommandTokens = new Map();
+  for (const c of directCommandSource.cases) {
+    if (!directCommandTokens.has(c.surface)) directCommandTokens.set(c.surface,await (await post("analyze",{text:c.surface})).json());
+    const data = directCommandTokens.get(c.surface);
+    const token = data.records[0];
+    const indices = token.analysis.analyses.flatMap((a,i) => auxiliaryPath(a,c) ? [i] : []);
+    if (c.verdict === "required") {
+      assert.ok(indices.length,c.id);
+      for (const i of indices) {
+        assert.ok(token.analysis.analyses[i].rules.includes("ending.direct_command"),c.id);
+        assert.ok(data.breakdowns[0][i]?.length,c.id);
+      }
+    } else assert.equal(indices.length,0,c.id);
+  }
+  for (const e of directCommandSource.source_entries) assert.deepEqual((await (await post("entry",{id:e.id})).json()).entry,e,e.id);
+  const directCommandText = "들어오너라 데려가거라 먹어보거라 살거라 오거라 가시거라 행복하거라";
+  const directCommandParts = [["들어오","너라"],["데려가","거라"],["먹","어","보","거라"],["살","거라"],["오","거라"],["가","시","거라"],["행복하","거라"]];
+  const directCommandHeads = [["들어오다"],["데려가다"],["먹다","보다"],["살다"],["오다"],["가다"],["행복하다"]];
+  const directCommandForms = [["너라"],["거라"],["어","거라"],["거라"],["거라"],["시","거라"],["거라"]];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check();
+    else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check();
+    else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,directCommandText);await waitHeading(page,"들어오너라");
+    const response = await (await post("analyze",{text:directCommandText})).json();
+    for (const [n,t] of response.records.filter(r => r.analysis).entries()) {
+      const index = t.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(directCommandHeads[n])
+        && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(directCommandForms[n]));
+      assert.ok(index >= 0,t.surface);
+      const block = page.locator(".breakdown-word").nth(n);
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),1,t.surface);
+      await block.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(),directCommandParts[n],t.surface);
+      assert.equal(await block.locator(".part-gloss").last().innerText(),grammarLabels[n === 0 ? "-너라" : "-거라"].label);
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:directCommandText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-gera-nera-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-gera-nera-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

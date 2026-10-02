@@ -891,3 +891,17 @@ preserves 135 full source entries, 2,373 individually identified probes,
 all 1,993 before outputs and the norm-source scope. These are targeted spelling
 regressions, not a blind contextual precision sample. Independent Korean
 review and the broader checklist remain open.
+
+Modern direct commands retain separate `거라` and `너라` endings. The
+[current NIKL explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=305262)
+licenses broad verbal `거라`, including 오거라, and `너라` after 오다-final
+stems. Their lexical owner is checked before later composition; a polite
+prefinal 오 cannot supply a missing lexical 오. Bare known verb entries keep
+their ordinary compatible assessment. Unreviewed intervening prefinals and
+adjective/copula wishes remain unknown, including 행복하거라, and survive
+the compatible filter. This does not certify their mood or register.
+The [evaluation](gera-nera-evaluation.json) preserves all 46 original native
+written-form recoveries, every earlier hypothesis and separate source reviews.
+Exceptional past commands 섰거라/물렀거라 already recover, but their
+entry-level licenses and further source-example/corpus regressions remain
+open in COV-021l; no general past-command prohibition is inferred.

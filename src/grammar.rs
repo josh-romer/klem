@@ -412,6 +412,9 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
 #[derive(Debug, Clone, Copy)]
 pub(crate) enum Boundary {
     Literal,
+    // Modern -너라 attaches directly to 오다/오다-final verb stems. Its
+    // initial ㄴ is not a productive license to restore stem-final ㄹ.
+    ComeStem,
     Consonant,
     // Literary 사오/사옵 and 삽 attach to closed stems, including retained
     // ㄹ. Unlike the ordinary consonant/ㅅ boundaries, they neither require
@@ -547,6 +550,11 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                     rules: vec!["copula.zero".into(), rule.into()],
                     spelling: None,
                 });
+            }
+        }
+        Boundary::ComeStem => {
+            if base.ends_with('오') {
+                push(&mut out, base.into(), "boundary.regular");
             }
         }
         Boundary::Literal => {
@@ -694,6 +702,16 @@ pub(crate) fn endings() -> &'static [Ending] {
     RULES.get_or_init(|| {
         use Boundary::*;
         let mut out = Vec::new();
+        // NIKL 305262 and FAQ 6416: separate regular modern endings;
+        // -거라 is not restricted to 가다, and 오거라 coexists with 오너라.
+        for (suffix, boundary) in [("거라", Literal), ("너라", ComeStem)] {
+            out.push(Ending {
+                suffix,
+                form: suffix,
+                boundary,
+                connector: false,
+            });
+        }
         // 되/으되 are not a productive (으) vowel-boundary pair: ordinary
         // consonants keep 되; lexical/prefinal licenses are checked later.
         for suffix in ["되", "으되"] {
@@ -1911,6 +1929,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.reporting_confirmation" => {
             "Recognize confirming and reported -다지/-라지 families and contracted polite -죠 forms; preserve factual and command alternatives without inferring an implicit speaker or reporting verb."
+        }
+        "ending.direct_command" => {
+            "Separate modern command -거라 from a verb stem, or -너라 from an 오다-final stem. These are independent regular endings; lexical mood, register and intervening prefinals require separate review."
         }
         "ending.activity_reason" => {
             "Recognize full -느라고 and short -느라 reason/purpose endings after verbs or honorific 시; clause-level subject and meaning constraints require context."

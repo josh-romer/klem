@@ -1,0 +1,5642 @@
+{
+  "schema_version": 1,
+  "before_revision": "7ed1638",
+  "cli": "/tmp/klem-gera-nera-runtime/klem",
+  "cli_sha256": "e4d7ca9dfeb1d532d8c73707dc05e28a833fd7c8f79d6679f102877132a77501",
+  "comparisons": [
+    {
+      "mode": "candidate-raw",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "before_jsonl_sha256": "812b44e122e5564357ba50e1da3e0564d27972025ade4bbbf059229d97121535",
+      "after_jsonl_sha256": "b522f84e139c5a2be90a376505b0b50446cbd8219a67b8a70f369f03c74d644c",
+      "records": 77584,
+      "changed_records": 45,
+      "added_paths": 162,
+      "all_original_paths_metadata_assessments_and_relative_order_preserved": true
+    },
+    {
+      "mode": "candidate-headword",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "before_jsonl_sha256": "6e5385e0752ac1c40411a0b95bf53a7c73002e213eb6b543b8f38dda9149cba5",
+      "after_jsonl_sha256": "0b8d0cbe4e8e97d1e3dc0c2e27f23413db15700759b653cb074f0847f7765ac6",
+      "records": 77584,
+      "changed_records": 45,
+      "added_paths": 94,
+      "all_original_paths_metadata_assessments_and_relative_order_preserved": true
+    },
+    {
+      "mode": "candidate-compatible",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "before_jsonl_sha256": "b2053d2dd605bb779127e397284a90c312fe5716de9e77ad9a7ef246e76d3703",
+      "after_jsonl_sha256": "31e60fe53441b437ece373292ab5a57081f05cc9832142cbc28e0349cfdc92ed",
+      "records": 77584,
+      "changed_records": 45,
+      "added_paths": 91,
+      "all_original_paths_metadata_assessments_and_relative_order_preserved": true
+    },
+    {
+      "mode": "novel-raw",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "7656acef6ef6b7a845e7629bfafebfc9038febf810efe833a95264c3874d0aac",
+      "after_jsonl_sha256": "0bf54a96a1bb0d8a4cb264bcd6ad913c42d454b397f20ddf3139b9d964f5a96c",
+      "records": 179112,
+      "changed_records": 19,
+      "added_paths": 23,
+      "all_original_paths_metadata_assessments_and_relative_order_preserved": true
+    },
+    {
+      "mode": "novel-headword",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "2877071ff1b95714110ce720f0ad7148cf7c5a2dac7b02cb8925358149aa862e",
+      "after_jsonl_sha256": "2f34fdc1c3662c04b13d35575dbaf1ab30a8caadd7bc9a0aaee04527f0d108a2",
+      "records": 179112,
+      "changed_records": 19,
+      "added_paths": 21,
+      "all_original_paths_metadata_assessments_and_relative_order_preserved": true
+    },
+    {
+      "mode": "novel-compatible",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "53c5b552f0afe891d064cdb245291a9427c447a35445f07e1fe4f3be0038d6ca",
+      "after_jsonl_sha256": "8ba521861533f19bcfd51848428f6b87033bfdd4d4c1e1961070ff246b2f9cdb",
+      "records": 179112,
+      "changed_records": 19,
+      "added_paths": 21,
+      "all_original_paths_metadata_assessments_and_relative_order_preserved": true
+    },
+    {
+      "mode": "novel-headword-spacing",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "e8f5b12b7054c24c62ddd87b852b815ec9a039321ccbb221e6110ab62bb9db1b",
+      "after_jsonl_sha256": "a84d9b56c0569030dd659650483cea4c58583e127416606d5c25dce6b614ae5c",
+      "records": 179112,
+      "changed_records": 19,
+      "added_paths": 21,
+      "all_original_paths_metadata_assessments_and_relative_order_preserved": true
+    },
+    {
+      "mode": "novel-compatible-spacing",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "adc7750f6ede9b5d928b312f44c15c2dd6b18172b39578310dab3e98e1cf361c",
+      "after_jsonl_sha256": "b6f6f506e5194ade926b367879d63e9e46ebb81ef876a9855fd1b0f10bc977af",
+      "records": 179112,
+      "changed_records": 19,
+      "added_paths": 21,
+      "all_original_paths_metadata_assessments_and_relative_order_preserved": true
+    }
+  ],
+  "new_distinct_paths": [
+    {
+      "surface": "가져오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "가져오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "가져오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "가져다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "가져오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "가지다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "가져오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "가다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "거쳐가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "거치다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "거쳐가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "거쳐가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "거쳐가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "거쳐다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "거쳐오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "거치다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "거쳐오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "거쳐오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "거쳐오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "거쳐다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "건너가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "건너다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "건너가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "건너가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "건너가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "건느다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "건너오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "건너다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "건너오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "건너오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "건너오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "건느다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걸어가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걸어다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걷다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.digeut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "digeut_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걸다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걸으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걸으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걸어오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걸어다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걷다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.digeut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "digeut_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "걸어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "걸다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "기어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "기어가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "기어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "기어다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "기어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "깃다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.siot"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "siot_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "기어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "기으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "기어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "기다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "끌어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "끋다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.digeut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "digeut_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "끌어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "끌어오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "끌어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "끌다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "끌어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "끌으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "끌어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "끌어다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "나가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "나가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "나가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "나다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "낳다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.hieut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내리다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내려다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내려가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내려오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내리다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내려다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "낳다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.hieut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "hieut_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "내오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "내오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다가가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다그다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다가가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다가가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다가가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다가가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다가다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다가오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다가다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다가오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다그다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다가오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다가오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다가오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다녀가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다녀다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다녀가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다녀가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "다녀가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "다니다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "달려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "달리다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "달려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "달려가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "달려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "달려다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "달려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "달려오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "달려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "달리다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "달려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "달려다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "데려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "데려가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "데려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "데려다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "데려가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "데리다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "데려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "데려오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "데려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "데리다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "데려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "데려다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "도망가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "도망가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "돌아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "돌아다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "돌아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "돌다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "돌아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "돋다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.digeut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "digeut_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "돌아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "돌아오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "돌아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "돌으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뒤따라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뒤따라다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뒤따라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뒤따라가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뒤따라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뒤따르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_eu_deletion"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뒤따라오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뒤따라다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뒤따라오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뒤따르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_eu_deletion"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뒤따라오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뒤따라오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들어가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "듣다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.digeut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "digeut_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들어다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "듣다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.digeut"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "digeut_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들어오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들어다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "copula",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들이다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "를",
+            "kind": "particle"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "copula",
+          "ending",
+          "ending.direct_command",
+          "particle",
+          "particle.contraction.l"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들여가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들여다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드",
+            "kind": "adverbial"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "를",
+            "kind": "particle"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "copula",
+          "ending",
+          "ending.direct_command",
+          "particle",
+          "particle.contraction.l"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들이다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드",
+            "kind": "adverbial"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "를",
+            "kind": "particle"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "copula",
+          "ending",
+          "ending.direct_command",
+          "particle",
+          "particle.contraction.l"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "드",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "를",
+            "kind": "particle"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "copula",
+          "ending",
+          "ending.direct_command",
+          "particle",
+          "particle.contraction.l"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들여오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들여다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "들여오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "들",
+            "kind": "nominal"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "copula",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "따라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "따라가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "따라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "따라다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "따라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "따르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_eu_deletion"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "따라오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "따라다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "따라오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "따르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_eu_deletion"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "따라오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "따라오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "떠내려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "떠내려오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "떠내려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "떠내리다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "떠내려오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "떠내려다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.yeo_absorption",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뛰으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뛰다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뜃다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.siot"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "siot_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뛰어가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뛰어다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뛰어오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뛰어다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뛰으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뛰다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뛰어오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "뜃다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.siot"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "siot_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "불러오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "부르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.reu"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_doubling"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "불러오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "불러다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "불러오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "불르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_eu_deletion"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "불러오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "불러오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "시집오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "시집오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "앞서가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "앞서가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "앞서가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "앞서다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "올라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "오르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.reu"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_doubling"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "올라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "올라다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "올라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "올르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_eu_deletion"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "올라가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "올라가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "잡아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "잡다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "잡아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "잡아가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "잡아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "잡으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "잡아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "잡아다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "질러가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "질러다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "질러가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "질러가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "질러가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "질르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_eu_deletion"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "질러가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "지르다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command",
+          "irregular.reu"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "reu_doubling"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "쫓아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "쫓아가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "쫓아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "쫓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "쫓아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "쫓아다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "쫓아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "쫓으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "쫓아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "쫓아오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "쫓아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "쫓아다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "쫓아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "쫓으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "쫓아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "쫓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "찾아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "찾아다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "찾아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "찾아가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "찾아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "찾으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "찾아가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "찾다",
+            "kind": "predicate"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "찾아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "찾아다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "찾아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "찾으다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.eu",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "찾아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "찾아오다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "찾아오너라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "찾다",
+            "kind": "predicate"
+          },
+          {
+            "text": "오다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "너라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "자거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "자다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "가거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "가다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "있거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "있다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "타거라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "타다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "거라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "ending.direct_command"
+        ],
+        "unchanged": false
+      },
+      "contextual_judgment": "unjudged"
+    }
+  ],
+  "complete_changes": {
+    "path": "/tmp/klem-gera-nera-broad-changes.jsonl.gz",
+    "sha256": "de4d4faa36b66c422cfa80711f2cd3ca0cd2d0c83c686c7eaf30acc41861d84d"
+  },
+  "contextual_accuracy": "All added hypotheses retain an unjudged disposition. Full before/after records preserve every original novel occurrence; counts are not a precision claim."
+}

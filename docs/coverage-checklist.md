@@ -3257,6 +3257,64 @@ review remains open under the completion review below.
   Independent Korean review, the 79 remaining original written-form misses,
   other architectures and the full parent COV-021/checklist remain open.
 
+- [ ] **COV-021l — Modern direct command -거라/-너라.** **Implementation and
+  broad verification pass; source-example/corpus and past-entry review remains
+  pending.** Modern
+  NIKL guidance treats these as independent regular endings: -거라 attaches
+  broadly to verbs (including 오다), while -너라 requires an 오다-final stem.
+  Recovery now retains stem consonants before 거라 and never invents ㄹ loss
+  before 너라. All 46 native written forms missed by the original discovery
+  recover their own headwords, including compound verbs and the separately
+  identified auxiliary 오다 entry. The frozen source fixture preserves 101
+  complete English-projected native entries, 88 individual probes and all 95
+  before outputs; the preflight also preserves every original native source
+  and four complete selected training sentences. Two of those sentences use
+  nominal 거 + 이다 + 라, rather than a command, and remain separately visible.
+  The raw ledger adds 92 cases (84 required / 8 forbidden), including four
+  auxiliary-owner compositions; no previous case or source judgment changes.
+  Focused tests verify source identity, unchanged hypotheses/order, NFD,
+  local ownership, unknown prefinal/wish classes, bounded caches and all
+  CLI/library filter modes. An extraction audit retains all twelve mistaken
+  idiom records that reused parent IDs and their corrected native verb entries.
+  Dictionary compatibility leaves unreviewed prefinals and adjective/copula
+  wishes unknown rather than imposing a POS-wide prohibition. NIKL 327283
+  independently confirms the exceptional past commands 섰거라/물렀거라;
+  their entry/sense-level compatibility still requires separate regressions.
+  All 761 Rust tests, full pinned KAIST/GSD reports, original/current ledgers,
+  formatting, Clippy, frontend build and nine inventory unit tests pass.
+  All eight broad modes preserve every prior path, assessment, relative order
+  and spacing result across 1,128,312 records; 166 distinct new paths remain
+  contextually unjudged. Nineteen novel occurrences retain all five modes and
+  seventeen complete original paragraphs. The original 97-pair discovery
+  rescan leaves 33 misses and retains all 67 complex/non-Hangul exclusions.
+  Inventory review advances to 427 scoped / 288 unreviewed. The full browser
+  suite verifies all 88 probes, all 101 complete English-projected sources,
+  labels, raw candidate indices and all three filter display/export modes;
+  desktop/mobile results were inspected. Nix CLI/web builds pass all 761
+  release tests. All eight release/debug streams match exactly; paired novel
+  runs remain about 1.85 seconds for headword filtering and 1.83 seconds for
+  compatible filtering, with complete output hashes retained. Actual packaged
+  and refreshed port-8081 APIs match all 95 frozen surfaces and all 101 complete
+  native entries; packaged/local frontend bytes match. All three x86_64 Linux
+  flake checks pass. Before closing this bounded item, add every native ending-example
+  target (including 살아가거라/나오너라), both actual command training rows
+  (including 데리다 + 오다), and entry-specific past licenses for 서다 68756
+  and 무르다 55296 sense 3. Raw paths already exist; their source-example and
+  entry-level judgments must be tracked independently. Distinct softening
+  무르다 55295 and adjective 55297 stay unjudged. See the frozen
+  [followup sources](gera-nera-followup-preflight.json) and the
+  [individual unjudged queue](gera-nera-review-queue.json).
+  Additional quotation, polite
+  followers, mood/register and independent Korean review remain open.
+  Evidence: [source preflight](gera-nera-source-preflight.json),
+  [fixture correction audit](gera-nera-fixture-audit.json),
+  [evaluation](gera-nera-evaluation.json),
+  [original paradigm rescan](gera-nera-original-paradigm-rescan.json),
+  [tests](../tests/gera_nera.rs),
+  [NIKL modern explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=305262),
+  [modern attachment FAQ](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6416&mn_id=62&pageIndex=1),
+  [past-command exception review](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=327283).
+
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds
   source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb

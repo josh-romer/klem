@@ -1007,6 +1007,18 @@ impl Annotation {
                         }
                     }
                     if status == Compatibility::Compatible
+                        && ending.is_some_and(|i| {
+                            matches!(analysis.morphemes[i].form.as_str(), "거라" | "너라")
+                        })
+                        && (!bare
+                            || !matches!(matched.entry.pos.as_str(), "동사" | "보조 동사"))
+                    {
+                        // The modern sources establish direct verbal stems.
+                        // Honorific/tense/mood and adjectival or copular wishes
+                        // need separate review; do not invent a POS-wide ban.
+                        status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
                         && !bare
                         && ending.is_some_and(|i| analysis.morphemes[i].form == "음세")
                     {

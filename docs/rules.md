@@ -10,6 +10,7 @@ lookup table. `src/grammar.rs` holds endings and spelling transformations;
 | Family | Covered examples |
 | --- | --- |
 | Regular predicates | 먹고, 먹지만, 먹는데, 먹기, 가는, 간다 |
+| Modern direct commands | 먹거라, 살거라, 오거라, 들어오너라, 먹어보거라 |
 | Comparative endings | 보듯, 보듯이, 살듯, 보셨듯이 |
 | Present conditional | 한다면, 산다면, 먹는다면, 먹으신다면 |
 | Shortened adnominal expressions | 먹으려는, 살려는, 도우려는, 먹자는, 바꿔보자는 |

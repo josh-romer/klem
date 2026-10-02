@@ -34,6 +34,7 @@ pub enum AttachmentRule {
     NeuraVerb,
     AuxiliaryClass,
     NegativeLexicalClass,
+    AuxiliaryAdjectiveAdnominalClass,
     ConjecturalAdnominalClass,
     PretenceAdnominalClass,
     LiteraryAssertionClass,
@@ -686,6 +687,34 @@ impl Annotation {
                             rule: AttachmentRule::NegativeLexicalClass,
                             morpheme_index: connector,
                         });
+                    }
+                    // KRDict 62899 is the adjective homonym of auxiliary 하다;
+                    // 62888 remains a separate verb entry. Its own present verb
+                    // ending (85033/85037) or bare -는 (85853) cannot borrow the
+                    // earlier owner's class. Prefinal -는 and later owners stay
+                    // independent. Preserve any existing connector conflict.
+                    if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                        && lemma.text == "하다"
+                        && matched.entry.pos == "보조 형용사"
+                        && (lemma.kind == LemmaKind::Auxiliary
+                            || (*index == 0 && lemma.kind == LemmaKind::Predicate))
+                        && let Some(i) = ending
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let rule = if crate::engine::present_declarative(form) {
+                            Some(AttachmentRule::PresentDeclarativeVerb)
+                        } else if bare && form == "는" {
+                            Some(AttachmentRule::AuxiliaryAdjectiveAdnominalClass)
+                        } else {
+                            None
+                        };
+                        if let Some(rule) = rule {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict {
+                                rule,
+                                morpheme_index: Some(i),
+                            });
+                        }
                     }
                     if status == Compatibility::Compatible
                         && matched.entry.pos == "동사"

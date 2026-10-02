@@ -792,3 +792,27 @@ entry is compatible, but the absent 헛소리하다 head leaves the reading unkn
 both headword and compatible filters remove it. Fifty-nine of the sixty native
 joined paths have all required dictionary heads. This dictionary gap is explicit
 in the source record rather than hidden by a fake fixture entry.
+
+
+## Auxiliary 하다 adjective inflection (COV-019z)
+
+KRDict lists auxiliary verb 하다 (62888) and auxiliary adjective 하다 (62899)
+as separate entries, with native forms 하는 and 한 respectively. Their complete
+nine and two senses and 48 native example groups are retained in the attributed
+fixture. Present declarative -ㄴ다/-는다 (85033/85037) licenses verbal inflection;
+-는 (85853) distinguishes the bare present verb/existential owner from listed
+prefinal attachment. The adjective 하다 entry is not an existential exception.
+
+The immediate 하다 adjective entry receives `present_declarative_verb` for
+its own represented present verb ending, or `auxiliary_adjective_adnominal_class`
+for its own bare -는. Conflicts reference that ending's morpheme index. An
+already proven connector conflict remains intact. Neither an earlier head's POS
+nor a later auxiliary/copula's ending supplies this entry's inflection.
+
+All raw paths and verb homonyms remain. Standalone lexical 하다 remains
+compatible; its auxiliary verb entry retains unknown sentence context. Intervening
+prefinal -는 controls retain the existing policy without contextual certification.
+This review does not decide the lexical subsets and left-class licenses of all
+senses; the broad notes do not justify pruning every lexical verb before 어 하다.
+The complete source/entry manifest, per-case ledger, source-aligned corpus fixtures,
+and evaluation distinguish finite entry compatibility from contextual correctness.

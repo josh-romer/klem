@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 414 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–y/020d–h/020j–k/020n–o/021d; 301 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 415 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–z/020d–h/020j–k/020n–o/021d; 300 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2417,6 +2417,48 @@ review remains open under the completion review below.
   Broader left-class/lexical-subset, ending/prefinal/particle,
   semantic/register and independent Korean-language review remain required.
   COV-013 records a scoped source/connector disposition, not full entry certification.
+
+- [ ] **COV-019z — Complete auxiliary 하다 homonym audit.**
+  **Partial: complete native source and immediate right-inflection review implemented.**
+  The [preflight](hada-aux-source-preflight.json) preserves both complete
+  auxiliary entries: verb 62888 (nine senses/37 groups) and adjective 62899
+  (two senses/11 groups). The [offline fixture](../tests/fixtures/krdict-hada-aux.json)
+  has 67 complete native entries, including lexical 하다 73277, native owners
+  and source endings. Original notes, forms and examples are retained.
+  Shared 하다 spelling cannot transfer the verb entry's inflection to the
+  adjective entry. Entry 62899 now conflicts with its own present declarative
+  ending or bare -는; the existing `present_declarative_verb` rule and new
+  `auxiliary_adjective_adnominal_class` identify the precise morpheme.
+  예쁘기도한다/예쁘기도하는 preserve every raw candidate and the verb
+  homonym. This is an entry-level conflict, not a global grammatical judgment.
+  Standalone 한다/하는 preserve lexical verb compatibility and auxiliary verb
+  uncertainty. Prefinal -는, later 가다/않다/이다 owners, and prior
+  connector conflicts remain independent. No new left-class/sense filter is added.
+  Seventy-two raw required cases and 94 dictionary cases/437 per-entry judgments
+  track all native groups, bundled and split particles, reports, honorifics,
+  standalone forms, unknown providers and exact cache/library/CLI filter identity.
+  [Four family regressions](../tests/hada_aux.rs) and [corpus tracking](../tests/corpus.rs)
+  preserve 288 original training targets and complete unchanged blocks. All 271
+  previous matches remain; seventeen original recovery misses or annotation
+  disagreements remain visible without gold repair. The [evaluation](hada-aux-evaluation.json)
+  records finite verification and individually identified assessment changes.
+  All 720 Rust/release tests, pinned corpus, Clippy, formatting and full browser
+  checks pass. Across 14,007 distinct surfaces and all five 179,112-record novel
+  modes, raw/filtered candidates and ordering remain identical; only entry 62899
+  changes. All four held-out corpus reports remain byte-identical. All 3,860
+  assessment events (including 224 nested spacing events) are verified against
+  the actual packaged library breakdown; 179 complete distinct paths retain
+  stable hashes and every original event ID/span/pointer. Spacing text, offsets
+  and candidate choices stay equal. Original ledger case bytes and unjudged
+  entries/order remain; 682 additional unjudged IDs belong to the new cases.
+  All eight release/debug modes match exactly. Packaged and refreshed preview
+  checks cover 550 raw cases/1,031 entry judgments and all filters/exports;
+  desktop/mobile rendering and source selection pass. Three paired local novel
+  runs have medians near 1.6 seconds before/after; these are descriptive timings.
+  All three current-system flake checks and nine inventory unit tests pass.
+  Broader eleven-sense left-class/lexical-subset licenses, ending/prefinal/particle
+  combinations, contextual sense/register and independent Korean-language review
+  remain required. COV-013 records scoped dispositions, not full entry certification.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

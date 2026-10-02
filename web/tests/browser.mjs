@@ -611,6 +611,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !deulAuxIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...deulAuxEntries);
 
+  const hadaAuxFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-hada-aux.json"), "utf8"));
+  const hadaAuxEntries = hadaAuxFixture.LexicalResource.Lexicon.LexicalEntry;
+  const hadaAuxIds = new Set(hadaAuxEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !hadaAuxIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...hadaAuxEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5549,6 +5555,67 @@ try {
   await page.getByLabel("Dictionary matches only").check();
   await page.getByLabel("Exclude known grammar conflicts").uncheck();
   await page.getByLabel("Dictionary matches only").uncheck();
+  // The adjective 하다 entry owns its own ending. Preserve verb homonyms,
+  // native source paths, unknown prefinals, later owners and raw UI indices.
+  const hadaAuxEntryLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/hada-aux-entry-judgments.json"), "utf8"));
+  assert.equal(hadaAuxEntryLedger.cases.length, 94);
+  assert.equal(hadaAuxEntryLedger.cases.reduce((n, c) => n + c.judgments.length, 0), 437);
+  const hadaAuxCases = recipientLedger.cases.filter(c => c.id.startsWith("hada-aux-"));
+  assert.equal(hadaAuxCases.length, 72);
+  for (const c of hadaAuxCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => hieutMatches(a, j)), j.verdict === "required", c.id);
+  }
+  for (const c of hadaAuxEntryLedger.cases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a, c)); assert.ok(index >= 0, c.id);
+    for (const j of c.judgments) {
+      const entry = token.dictionary.readings[index].lemmas.find(s => s.lemma_index === j.lemma_index).entries.find(e => e.id === j.entry_id);
+      assert.ok(entry, c.id); assert.equal(entry.status, j.status, c.id); assert.deepEqual(entry.conflicts, j.conflicts, c.id);
+    }
+    for (const flag of ["--dict-only", "--dict-compatible"]) {
+      const filtered = JSON.parse(execFileSync(cliBin, ["text", "-", "--dictionary", database, flag], {input: c.surface, encoding: "utf8"}).trim());
+      assert.equal(filtered.analysis.analyses.some(a => auxiliaryPath(a, c)), flag === "--dict-only" ? !c.missing_owner_entries : c.filter_retained, c.id);
+    }
+  }
+  for (const flag of [null, "--dict-only", "--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check(); else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check(); else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text = "예쁘기도한다 예쁘기도하는 예쁘기도하시는 예쁘기도하다 예쁘기도해간다 예쁘기도하지않는다 학생이기도한다 한다 하는";
+    await submit(page, text); await waitHeading(page, "예쁘기도한다");
+    const raw = await (await post("analyze", {text})).json(); const words = raw.records.filter(r => r.analysis);
+    for (const [n, heads, forms, parts] of [
+      [0, ["예쁘다", "하다"], ["기", "도", "는다"], ["예쁘", "기", "도", "하", "는다"]],
+      [1, ["예쁘다", "하다"], ["기", "도", "는"], ["예쁘", "기", "도", "하", "는"]],
+      [2, ["예쁘다", "하다"], ["기", "도", "시", "는"], ["예쁘", "기", "도", "하", "시", "는"]],
+      [3, ["예쁘다", "하다"], ["기", "도", "다"], ["예쁘", "기", "도", "하", "다"]],
+      [4, ["예쁘다", "하다", "가다"], ["기", "도", "어", "는다"], ["예쁘", "기", "도", "하", "여", "가", "는다"]],
+      [5, ["예쁘다", "하다", "않다"], ["기", "도", "지", "는다"], ["예쁘", "기", "도", "하", "지", "않", "는다"]],
+      [6, ["학생", "이다", "하다"], ["기", "도", "는다"], ["학생", "이", "기", "도", "하", "는다"]],
+      [7, ["하다"], ["는다"], ["하", "는다"]],
+      [8, ["하다"], ["는"], ["하", "는"]],
+    ]) {
+      const index = words[n].analysis.analyses.findIndex(a => a.lemmas.map(l => l.text).join("/") === heads.join("/") && a.morphemes.map(m => m.form).join("/") === forms.join("/"));
+      assert.ok(index >= 0, heads.join("/")); const block = page.locator(".breakdown-word").nth(n);
+      assert.equal(await block.locator(`option[value="${index}"]`).count(), 1);
+      await block.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(), parts);
+      if (n === 0 || n === 1) assert.equal(await block.locator(".part-gloss").nth(3).innerText(), raw.glosses["krdict:62888"]);
+      if (n === 7 || n === 8) assert.equal(await block.locator(".part-gloss").first().innerText(), raw.glosses["krdict:73277"]);
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(), "utf8"));
+    assert.deepEqual(exported.records, execFileSync(cliBin, ["text", "-", "--dictionary", database, ...(flag ? [flag] : [])], {input: text, encoding: "utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(0).locator(".breakdown-part").nth(3).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=62888"]'));
+  assert.ok(await page.locator(".entry-choices button").filter({hasText: "하다"}).count() >= 3);
+  await page.screenshot({path: resolve(tmpdir(), "klem-hada-aux-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844}); assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-hada-aux-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
+
   const opaqueText = "천천히 분연히";
   await submit(page, opaqueText); await waitHeading(page, "천천히");
   const opaqueRaw = await (await post("analyze", {text: opaqueText})).json();

@@ -3104,3 +3104,51 @@ fn deul_targets_preserve_25_original_rows_and_the_remaining_source_spelling_miss
     }
     assert_eq!((total, before_matches, after_matches), (25, 9, 24));
 }
+
+#[test]
+fn hada_targets_preserve_288_original_rows_and_all_17_source_disagreements() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/hada-aux-sources.json")).unwrap();
+    let mut total = 0;
+    let mut matched = 0;
+    let mut misses = Vec::new();
+    for (kind, input) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-hada-aux.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-hada-aux.conllu").as_slice(),
+        ),
+    ] {
+        let original = std::str::from_utf8(input).unwrap();
+        let file = source["corpus_search"]["files"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == kind.name())
+            .unwrap();
+        let report = corpus::evaluate(input, kind, "hada-aux").unwrap();
+        for target in file["targets"].as_array().unwrap() {
+            let row = target["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(original.lines().any(|line| line == row));
+            let case = &report.cases[target["id"].as_str().unwrap()];
+            assert_eq!(serde_json::to_value(case).unwrap(), target["case_report"]);
+            total += 1;
+            matched += usize::from(case.matched);
+            if !case.matched {
+                misses.push(case.id.clone());
+            }
+        }
+    }
+    assert_eq!((total, matched, misses.len()), (288, 271, 17));
+    assert!(misses.iter().any(|id| id == "id:train-s252/8"));
+    assert!(misses.iter().any(|id| id == "id:MH2_0164-s29/6"));
+}

@@ -2007,3 +2007,27 @@ https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and
 https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0).
 The dictionary, corpus and consulted official-answer materials retain their
 separate attribution and license scopes.
+
+
+`krdict-hada-aux.json` preserves 67 complete native entries: both auxiliary 하다
+homonyms (62888/62899), lexical 하다 (73277), every native lexical owner and
+three inflection sources. Only RelatedForm/non-English equivalents are omitted;
+Sense arrays are normalized. Attribution: National Institute of Korean Language,
+Korean Basic Dictionary (CC BY-SA 2.0 KR).
+`hada-aux-sources.json` preserves all eleven auxiliary senses and 48 native groups,
+eleven export hashes, frozen before observations and source identity. Seventy-two
+required `hada-aux-*` cases preserve structural hypotheses; adjective-entry
+conflicts do not become blanket raw prohibitions. The separate dictionary ledger
+contains 94 cases/437 per-entry judgments, including explicit immediate-owner,
+standalone, prefinal and later-auxiliary/copula controls. Constructed contexts
+remain linguistically unjudged.
+
+`kaist-hada-aux.conllu` and `gsd-hada-aux.conllu` preserve 288 exact source-aligned
+training targets in complete unchanged original blocks. The cohort was selected
+before recovery inspection: first two aligned 하 px/VX rows per following-ending
+category. All 271 matches and seventeen original misses are tracked; implicit-하다,
+spelling and representation disagreements are not repaired. Attribution: UD
+Korean KAIST/GSD contributors and source corpora,
+https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and
+https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0).
+Dictionary and corpus license scopes apply separately.

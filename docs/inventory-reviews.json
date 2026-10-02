@@ -9,10 +9,11 @@
       "checklist": [
         "COV-019d",
         "COV-019m",
-        "COV-019o"
+        "COV-019o",
+        "COV-019z"
       ],
-      "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense. Lexical verbs before 어 하다, including 지 negatives, are explicitly unknown under dictionary assessment: NIKL licenses some verbs, so adjective-only sense 9 does not justify blanket pruning.",
-      "remaining": "This disposition covers only the expressive left-class boundary, not all nine senses of this entry. Unknown lexical adjective/verb identity, lexical-subset and contextual compatibility, and other connector/prefinal restrictions remain open. Resolve the semantic verb subset with evidence beyond this KRDict entry; 자다+어+를+하다 in 잘해서 remains unjudged.",
+      "scope": "Sense 9 expressive 어 하다 excludes a preceding known auxiliary verb or represented copula; known adjective, negative-class inheritance, internal particle and explicit 답다 paths remain. Other 하다 connectors are unchanged. COV-019m carries the existing represented auxiliary class into per-entry dictionary assessment and browser hint selection; it does not add a connector or choose a contextual sense. Lexical verbs before 어 하다, including 지 negatives, are explicitly unknown under dictionary assessment: NIKL licenses some verbs, so adjective-only sense 9 does not justify blanket pruning. COV-019z retains all nine complete native senses/37 groups and observes every POS homonym independently of the adjective entry's immediate right-inflection conflict. No new raw or left-class filter is added.",
+      "remaining": "The earlier expressive boundary and this complete native-source/right-entry retention audit do not certify all nine senses. Broader connector, left-class and lexical-subset, ending/prefinal/particle, contextual/register and independent Korean review remain open, including 자다+어+를+하다 in 잘해서.",
       "evidence": [
         {
           "path": "tests/auxiliary_left_class.rs",
@@ -48,6 +49,34 @@
         },
         {
           "path": "docs/core-case-evaluation.json"
+        },
+        {
+          "path": "tests/hada_aux.rs",
+          "test": "hada_sources_keep_both_complete_entries_and_all_48_native_groups"
+        },
+        {
+          "path": "tests/hada_aux.rs",
+          "test": "hada_entry_policy_preserves_both_pos_homonyms_and_immediate_owners"
+        },
+        {
+          "path": "tests/hada_aux.rs",
+          "test": "hada_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "hada_targets_preserve_288_original_rows_and_all_17_source_disagreements"
+        },
+        {
+          "path": "docs/hada-aux-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/hada-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/hada-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/hada-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -98,6 +127,154 @@
         {
           "case": "left-hada-internal-particle",
           "judgment": "group"
+        },
+        {
+          "case": "hada-aux-native-62888-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-7-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-7-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-7-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-7-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-3-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-3-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-3-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-3-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-3-5",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-2-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-4-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-4-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-4-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-6-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-6-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-6-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-6-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-8-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-8-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-8-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-8-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-5-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-5-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-5-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-5-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-9-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-9-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-9-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62888-9-4",
+          "judgment": "path"
         }
       ]
     },
@@ -33177,6 +33354,92 @@
         {
           "case": "deul-aux-wrong-connector-을",
           "judgment": "auxiliary"
+        }
+      ]
+    },
+    {
+      "id": "krdict:62899",
+      "source_sha256": "e1d5e36be65d5f280ddf19b5aadacb45969b3d479d7305fff68ce67cbe0e147b",
+      "status": "scoped",
+      "checklist": [
+        "COV-019z"
+      ],
+      "scope": "Retain the complete native adjective entry: two senses/eleven groups and native forms. Per-entry immediate present declarative or bare -는 conflicts reference the adjective owner's own ending. Preserve all raw paths, verb homonyms, previous connector conflicts, prefinal and later-owner observations, standalone auxiliary uncertainty and source-native retention.",
+      "remaining": "This disposition does not certify all left-class/lexical-subset, semantic/register or ending/prefinal/particle licenses of either sense. Constructed observations remain contextually unjudged; independent Korean-language review is pending.",
+      "evidence": [
+        {
+          "path": "tests/hada_aux.rs",
+          "test": "hada_sources_keep_both_complete_entries_and_all_48_native_groups"
+        },
+        {
+          "path": "tests/hada_aux.rs",
+          "test": "hada_entry_policy_preserves_both_pos_homonyms_and_immediate_owners"
+        },
+        {
+          "path": "tests/hada_aux.rs",
+          "test": "hada_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "hada_targets_preserve_288_original_rows_and_all_17_source_disagreements"
+        },
+        {
+          "path": "docs/hada-aux-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/hada-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/hada-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/hada-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "hada-aux-native-62899-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-2-4",
+          "judgment": "path"
+        },
+        {
+          "case": "hada-aux-native-62899-2-5",
+          "judgment": "path"
         }
       ]
     }

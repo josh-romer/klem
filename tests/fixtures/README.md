@@ -1937,3 +1937,25 @@ Attribution: UD Korean KAIST/GSD treebank contributors and source corpora,
 https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and
 https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0).
 Dictionary and corpus licenses apply to their respective material.
+
+`krdict-pretence-aux.json` preserves 104 complete native entries, including both
+양하다 auxiliary homonyms, 척하다, 체하다 and six related expression entries:
+ten family entries/senses and all 38 original example groups. The base -는
+and present declarative source entries are separately recorded. Only
+RelatedForm/non-English equivalents are omitted; Sense arrays normalized.
+Attribution: National Institute of Korean Language, Korean Basic Dictionary
+(CC BY-SA 2.0 KR). Eleven pinned export hashes, all native groups, original
+재미있었는 양하다 and dated primary NIKL consultations are in
+`pretence-aux-sources.json`. Forty-seven `pretence-aux-*` cases track 38
+required native paths and nine forbidden auxiliary connector paths. The
+separate entry ledger records 59 cases/116 per-entry owner/inflection judgments,
+including 양하다 verb/adjective and lexical 체하다 homonyms. Original
+historical judgments and frozen baselines remain.
+
+`kaist-pretence-aux.conllu` retains two complete unchanged UD r2.15 training
+blocks. Original rows, bodies and tags remain; 체할's nbn+xsm+etm is not
+rewritten as a verb auxiliary. Both targets recover, while exact aligned GSD
+training searches find no targets in the recorded categories. Attribution:
+UD Korean KAIST treebank contributors and KAIST corpus,
+https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15
+(CC BY-SA 4.0). Corpus and dictionary licenses apply separately.

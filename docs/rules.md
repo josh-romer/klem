@@ -4037,3 +4037,35 @@ The consultation, page identity and retrieval limits are recorded in the source
 manifest. Source-supported ending/prefinal/particle licenses, contextual senses,
 register and independent Korean-language review remain open under the original
 COV-019v and COV-019 requirements.
+
+## Pretence/appearance auxiliary owners (COV-019w)
+
+The [source record](../tests/fixtures/pretence-aux-sources.json) retains both
+양하다 auxiliary homonyms, 척하다, 체하다 and six related expressions: ten
+entries/senses and all 38 original example groups. Every joined native path
+already recovered. Nine alternate-connector exclusions target auxiliary roles
+only; whole-word and independent lexical alternatives remain. The complete
+native groups preserve source spacing, dialogues and 재미있었는 양하다.
+
+Dictionary assessment now applies bare -는 owner evidence before this family.
+Lexical adjective and represented copula entries conflict; lexical verbs,
+있다/없다 compounds, 계시다, mixed homonyms and unknown classes remain.
+An earlier adjective cannot classify a later 지다 auxiliary. Prefinal controls
+preserve existing policy without certifying every grammatical combination.
+The related -ㄴ 척하다/-ㄴ 체하다 entries explicitly admit copulas despite
+omission in their auxiliary notes; 학생인척하다 remains possible. The
+[NIKL answer of 2024-11-13](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=305861)
+also confirms joined copular adnominal-plus-auxiliary forms.
+
+양하다 retains both verb and adjective entries. Bare present -는 and present
+declarative endings now conflict with the adjective entry on the right owner's
+own slot. Its verb entry remains, and separately written auxiliaries keep their
+context uncertainty except for the proven inflection conflict. No raw candidate
+or shared engine class changes. Lexical 체하다 'have indigestion' remains
+separate from the pretence auxiliary; dictionary matches do not select meaning.
+
+Two complete unchanged KAIST targets preserve 체할's noun-plus-adjective and
+척할's noun-plus-verb derivation. Both recovered before this change; neither is
+relabeled as auxiliary gold. Aligned training searches found no GSD targets in
+these categories. Source-supported broader ending/prefinal/particle licenses,
+semantic/register and independent Korean-language review remain open.

@@ -35,6 +35,7 @@ pub enum AttachmentRule {
     AuxiliaryClass,
     NegativeLexicalClass,
     ConjecturalAdnominalClass,
+    PretenceAdnominalClass,
     LiteraryAssertionClass,
     BareLiteraryDeclarative,
     BareLiteraryQuestion,
@@ -515,6 +516,13 @@ impl Annotation {
                         if analysis.lemmas[*i].kind == LemmaKind::Auxiliary
                         && matches!(analysis.lemmas[*i].text.as_str(), "듯하다" | "듯싶다"))
                 });
+            let pretence_present = bare
+                && ending.is_some_and(|i| analysis.morphemes[i].form == "는")
+                && components.first().is_some_and(|c| {
+                    matches!(c, Component::Lemma(i)
+                        if analysis.lemmas[*i].kind == LemmaKind::Auxiliary
+                        && matches!(analysis.lemmas[*i].text.as_str(), "양하다" | "척하다" | "체하다"))
+                });
             let expressive_connector = if lemma.kind == LemmaKind::Predicate {
                 expressive_hada_connector(analysis, rest)
             } else {
@@ -581,7 +589,7 @@ impl Annotation {
                         });
                     }
                     if status == Compatibility::Compatible
-                        && conjectural_present
+                        && (conjectural_present || pretence_present)
                         && (lemma.kind == LemmaKind::Copula
                             || (lemma.kind == LemmaKind::Predicate
                                 && matched.entry.pos == "형용사"
@@ -591,9 +599,41 @@ impl Annotation {
                     {
                         status = Compatibility::Incompatible;
                         conflicts.push(AttachmentConflict {
-                            rule: AttachmentRule::ConjecturalAdnominalClass,
+                            rule: if conjectural_present {
+                                AttachmentRule::ConjecturalAdnominalClass
+                            } else {
+                                AttachmentRule::PretenceAdnominalClass
+                            },
                             morpheme_index: ending,
                         });
+                    }
+                    // 양하다 has both auxiliary POS classes. Assess the
+                    // right owner's inflection per entry rather than choosing
+                    // a shared class or borrowing one from the earlier head.
+                    // Standalone context uncertainty cannot license a known
+                    // adjective's present verb ending, but remains otherwise.
+                    if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
+                        && lemma.text == "양하다"
+                        && matched.entry.pos == "보조 형용사"
+                        && (lemma.kind == LemmaKind::Auxiliary
+                            || (*index == 0 && lemma.kind == LemmaKind::Predicate))
+                        && let Some(i) = ending
+                    {
+                        let form = analysis.morphemes[i].form.as_str();
+                        let rule = if crate::engine::present_declarative(form) {
+                            Some(AttachmentRule::PresentDeclarativeVerb)
+                        } else if bare && form == "는" {
+                            Some(AttachmentRule::PretenceAdnominalClass)
+                        } else {
+                            None
+                        };
+                        if let Some(rule) = rule {
+                            status = Compatibility::Incompatible;
+                            conflicts.push(AttachmentConflict {
+                                rule,
+                                morpheme_index: Some(i),
+                            });
+                        }
                     }
                     if *index == 1
                         && analysis.rules.iter().any(|r| r == "derivation.nominal.root_compound")

@@ -32255,6 +32255,238 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:67248",
+      "source_sha256": "154a82f796ee3266da4adb484980ccbffb4fb5d414ade8489ea1c4bde6a584c2",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019w"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained with six related expressions (10 family entries/senses, 38 groups). All source paths and original training targets have individual regression evidence. Finite dictionary checks distinguish bare adnominal owners and the 양하다 adjective homonym's present inflection, preserving verbs, existential exceptions, mixed/unknown classes, later owners and standalone context uncertainty.",
+      "remaining": "Original COV-019w remains incomplete: broader ending/prefinal/particle licenses and semantic/register consultation, contextual meaning and independent Korean-language review remain required. Original 재미있었는 양하다 and KAIST 체할 noun-plus-adjective annotation are preserved without general grammar certification or source relabeling.",
+      "evidence": [
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_sources_keep_10_complete_entries_and_all_38_native_groups"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_entry_policy_preserves_exceptions_homonyms_and_immediate_owners"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "pretence_targets_keep_two_original_noun_predicate_annotations"
+        },
+        {
+          "path": "tests/fixtures/pretence-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/pretence-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/pretence-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "pretence-aux-native-67248-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-67248-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-67248-1-3",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:67249",
+      "source_sha256": "6453a1a805b7d6072d4f931c6098fbdbcc1b23975a3f36ac913692cccb979ac1",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019w"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained with six related expressions (10 family entries/senses, 38 groups). All source paths and original training targets have individual regression evidence. Finite dictionary checks distinguish bare adnominal owners and the 양하다 adjective homonym's present inflection, preserving verbs, existential exceptions, mixed/unknown classes, later owners and standalone context uncertainty.",
+      "remaining": "Original COV-019w remains incomplete: broader ending/prefinal/particle licenses and semantic/register consultation, contextual meaning and independent Korean-language review remain required. Original 재미있었는 양하다 and KAIST 체할 noun-plus-adjective annotation are preserved without general grammar certification or source relabeling.",
+      "evidence": [
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_sources_keep_10_complete_entries_and_all_38_native_groups"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_entry_policy_preserves_exceptions_homonyms_and_immediate_owners"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "pretence_targets_keep_two_original_noun_predicate_annotations"
+        },
+        {
+          "path": "tests/fixtures/pretence-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/pretence-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/pretence-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "pretence-aux-native-67249-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-67249-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-67249-1-3",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:72226",
+      "source_sha256": "8ed1e2c6fd2a98fa5a37667b241f6193221e9c007476f9ceaba39454238c0b12",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019w"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained with six related expressions (10 family entries/senses, 38 groups). All source paths and original training targets have individual regression evidence. Finite dictionary checks distinguish bare adnominal owners and the 양하다 adjective homonym's present inflection, preserving verbs, existential exceptions, mixed/unknown classes, later owners and standalone context uncertainty.",
+      "remaining": "Original COV-019w remains incomplete: broader ending/prefinal/particle licenses and semantic/register consultation, contextual meaning and independent Korean-language review remain required. Original 재미있었는 양하다 and KAIST 체할 noun-plus-adjective annotation are preserved without general grammar certification or source relabeling.",
+      "evidence": [
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_sources_keep_10_complete_entries_and_all_38_native_groups"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_entry_policy_preserves_exceptions_homonyms_and_immediate_owners"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "pretence_targets_keep_two_original_noun_predicate_annotations"
+        },
+        {
+          "path": "tests/fixtures/pretence-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/pretence-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/pretence-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "pretence-aux-native-72226-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-72226-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-72226-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-72226-1-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:72227",
+      "source_sha256": "13487b7da12bc2a84fc24908208f399615f0e769f98448b4c9266332452ef7a6",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019w"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained with six related expressions (10 family entries/senses, 38 groups). All source paths and original training targets have individual regression evidence. Finite dictionary checks distinguish bare adnominal owners and the 양하다 adjective homonym's present inflection, preserving verbs, existential exceptions, mixed/unknown classes, later owners and standalone context uncertainty.",
+      "remaining": "Original COV-019w remains incomplete: broader ending/prefinal/particle licenses and semantic/register consultation, contextual meaning and independent Korean-language review remain required. Original 재미있었는 양하다 and KAIST 체할 noun-plus-adjective annotation are preserved without general grammar certification or source relabeling.",
+      "evidence": [
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_sources_keep_10_complete_entries_and_all_38_native_groups"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_entry_policy_preserves_exceptions_homonyms_and_immediate_owners"
+        },
+        {
+          "path": "tests/pretence_aux.rs",
+          "test": "pretence_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "pretence_targets_keep_two_original_noun_predicate_annotations"
+        },
+        {
+          "path": "tests/fixtures/pretence-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/pretence-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/pretence-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "pretence-aux-native-72227-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-72227-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-72227-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "pretence-aux-native-72227-1-4",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

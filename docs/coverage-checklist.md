@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 402 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–v/020d–h/020j–k/020n–o/021d; 313 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 406 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–w/020d–h/020j–k/020n–o/021d; 309 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2307,25 +2307,38 @@ review remains open under the completion review below.
   entry coverage.
 
 - [ ] **COV-019w — Complete pretence/appearance auxiliary audit.**
-  The [source preflight](pretence-aux-source-preflight.json) retains every
-  native sense, form, note and original example group for both 양하다
-  homonyms (67248/67249), 척하다 (72226) and 체하다 (72227): four
-  entries/senses and fourteen groups. All fourteen selected joined paths
-  already recover at `f82a968`; no new raw recall or contextual correctness
-  is claimed. Exact aligned training searches retain two complete original
-  KAIST targets/blocks and no GSD matches in the searched auxiliary and
-  bound-noun-plus-predicate derivation categories. Both targets match.
-  Original 재미있었는 양하다 and KAIST 체할's nbn+xsm annotation remain
-  explicit; neither observation certifies a general grammar rule. The
-  양하다 homonyms' different Korean definitions and POS remain separate
-  despite overlapping English labels. Omitted copulas in three native notes
-  do not supply invented forbidden paths. Pending: individual native and
-  annotation regressions, complete attributed fixtures, per-entry ownership,
-  homonym/allomorph/internal-particle boundaries, source-supported
-  ending/prefinal licenses, semantic/register consultation, candidate/ledger
-  audits, CLI/library/cache/browser/export parity and Nix/runtime gates.
-  These four entries remain unreviewed in COV-013 until scoped evidence is
-  completed; independent Korean-language review is still required.
+  **Partial: complete native sources, regression tracking and finite dictionary
+  owner/inflection evidence implemented.** The original
+  [preflight](pretence-aux-source-preflight.json) remains. The expanded
+  [source record](../tests/fixtures/pretence-aux-sources.json) retains both
+  양하다 homonyms, 척하다, 체하다 and six related expressions: ten
+  entries/senses and all 38 original groups. All native paths already recover;
+  no new raw recall or contextual correctness is claimed. Four
+  [tests](../tests/pretence_aux.rs), 47 raw cases (38 required / nine forbidden)
+  and 116 [entry judgments](../tests/fixtures/pretence-aux-entry-judgments.json)
+  cover NFD, unchanged hypotheses, homonyms, bare owner/inflection boundaries,
+  later-owner resets, existential exceptions and cache/library/CLI identity.
+  Bare -는 adjective/copula owners before this family now conflict under
+  dictionary assessment; 양하다's adjective right entry separately conflicts
+  with bare -는 and present declaratives while the verb homonym remains.
+  Related expression entries and NIKL confirm copula retention. Standalone
+  contexts, intervening prefinals and native 재미있었는 양하다 stay distinct.
+  Two complete unchanged KAIST targets preserve 체할's noun-plus-adjective
+  versus 척할's noun-plus-verb annotation; neither is relabeled. No GSD
+  training targets occur in the searched aligned categories.
+  The [evaluation](pretence-aux-evaluation.json) records 13,451 comparison
+  surfaces, all 78 independently source-audited entry changes and ten
+  compatible-filter removals. Raw generation, five full novel modes and all
+  four complete corpus report hashes stay unchanged; the original case bytes
+  and review-queue prefix remain, with 561 new stable unjudged IDs. Release
+  and debug output matches in all eight modes. Full browser/export checks,
+  705 Rust/release tests, three x86_64 Linux flake checks and the refreshed
+  preview pass, including 375 packaged/live cases and 304 entry judgments.
+  Primary-guide context observations are retained without
+  isolated negative or sense filters. Broader source-supported ending/prefinal/particle
+  licenses, semantic/register consultation and independent Korean-language review remain
+  required. These four COV-013 dispositions are scoped rather than complete
+  entry certification.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

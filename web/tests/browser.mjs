@@ -593,6 +593,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !conjecturalAuxIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...conjecturalAuxEntries);
 
+  const pretenceAuxFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-pretence-aux.json"), "utf8"));
+  const pretenceAuxEntries = pretenceAuxFixture.LexicalResource.Lexicon.LexicalEntry;
+  const pretenceAuxIds = new Set(pretenceAuxEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !pretenceAuxIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...pretenceAuxEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5338,6 +5344,70 @@ try {
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();
   await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Native pretence/appearance sources retain nominal, existential, negative
+  // and multi-auxiliary owners. 양하다's right inflection is assessed per POS.
+  const pretenceEntryLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/pretence-aux-entry-judgments.json"), "utf8"));
+  assert.equal(pretenceEntryLedger.cases.length, 59);
+  assert.equal(pretenceEntryLedger.cases.reduce((n, c) => n + c.judgments.length, 0), 116);
+  const pretenceCases = recipientLedger.cases.filter(c => c.id.startsWith("pretence-aux-"));
+  assert.equal(pretenceCases.length, 47);
+  for (const c of pretenceCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => hieutMatches(a, j)), j.verdict === "required", c.id);
+  }
+  for (const c of pretenceEntryLedger.cases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a, c)); assert.ok(index >= 0, c.id);
+    for (const j of c.judgments) {
+      const entry = token.dictionary.readings[index].lemmas.find(s => s.lemma_index === j.lemma_index).entries.find(e => e.id === j.entry_id);
+      assert.ok(entry, c.id); assert.equal(entry.status, j.status, c.id); assert.deepEqual(entry.conflicts, j.conflicts, c.id);
+    }
+    if ("filter_retained" in c) {
+      const filtered = JSON.parse(execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: c.surface, encoding: "utf8"}).trim());
+      assert.equal(filtered.analysis.analyses.some(a => auxiliaryPath(a, c)), c.filter_retained, c.id);
+    }
+  }
+  for (const flag of [null, "--dict-only", "--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check(); else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check(); else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text = "기쁜양했지만 선생님인양하며 먹는양한다 먹는양하는 모르는척해주었다 죽은척하곤한다 크는척하다 예쁘는체하다 체한다";
+    await submit(page, text); await waitHeading(page, "기쁜양했지만");
+    const raw = await (await post("analyze", {text})).json(); const words = raw.records.filter(r => r.analysis);
+    for (const [n, heads, morphemes, forms] of [
+      [0, ["기쁘다", "양하다"], ["은", "었", "지만"], ["기쁘", "은", "양하", "였", "지만"]],
+      [1, ["선생님", "이다", "양하다"], ["은", "으며"], ["선생님", "이", "은", "양하", "으며"]],
+      [2, ["먹다", "양하다"], ["는", "는다"], ["먹", "는", "양하", "는다"]],
+      [3, ["먹다", "양하다"], ["는", "는"], ["먹", "는", "양하", "는"]],
+      [4, ["모르다", "척하다", "주다"], ["는", "어", "었", "다"], ["모르", "는", "척하", "여", "주", "었", "다"]],
+      [5, ["죽다", "척하다", "하다"], ["은", "고", "는", "는다"], ["죽", "은", "척하", "고", "는", "하", "는다"]],
+      [6, ["크다", "척하다"], ["는", "다"], ["크", "는", "척하", "다"]],
+      [7, ["예쁘다", "체하다"], ["는", "다"], ["예쁘", "는", "체하", "다"]],
+      [8, ["체하다"], ["는다"], ["체하", "는다"]],
+    ]) {
+      const index = words[n].analysis.analyses.findIndex(a => a.lemmas.map(l => l.text).join("/") === heads.join("/") && a.morphemes.map(m => m.form).join("/") === morphemes.join("/"));
+      assert.ok(index >= 0, heads.join("/")); const block = page.locator(".breakdown-word").nth(n);
+      if (flag === "--dict-compatible" && n === 7) assert.equal(await block.locator(`option[value="${index}"]`).count(), 0);
+      else {
+        assert.equal(await block.locator(`option[value="${index}"]`).count(), 1);
+        await block.getByRole("combobox").selectOption(String(index));
+        assert.deepEqual(await block.locator(".part-form").allTextContents(), forms);
+        if (n === 2 || n === 3) assert.equal(await block.locator(".part-gloss").nth(2).innerText(), raw.glosses["krdict:67248"]);
+        if (n === 8) assert.equal(await block.locator(".part-gloss").first().innerText(), raw.glosses["krdict:79176"]);
+      }
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(), "utf8"));
+    assert.deepEqual(exported.records, execFileSync(cliBin, ["text", "-", "--dictionary", database, ...(flag ? [flag] : [])], {input: text, encoding: "utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(2).locator(".breakdown-part").nth(2).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=67248"]'));
+  assert.ok(await page.locator(".entry-choices button").filter({hasText: "양하다"}).count() >= 2);
+  await page.screenshot({path: resolve(tmpdir(), "klem-pretence-aux-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844}); assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-pretence-aux-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

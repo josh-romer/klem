@@ -2928,3 +2928,53 @@ fn conjectural_targets_preserve_34_original_auxiliary_and_derivation_annotations
         .collect()
     );
 }
+
+#[test]
+fn pretence_targets_keep_two_original_noun_predicate_annotations() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/pretence-aux-sources.json")).unwrap();
+    let input = include_bytes!("fixtures/kaist-pretence-aux.conllu").as_slice();
+    let report = corpus::evaluate(input, Corpus::Kaist, "pretence-aux").unwrap();
+    let files = source["corpus_search"]["files"].as_array().unwrap();
+    let kaist = files.iter().find(|f| f["corpus"] == "kaist").unwrap();
+    let targets = kaist["targets"].as_array().unwrap();
+    assert_eq!(targets.len(), 2);
+    let mut representations = std::collections::BTreeSet::new();
+    for target in targets {
+        let case = &report.cases[target["id"].as_str().unwrap()];
+        assert_eq!(case.surface, target["surface"].as_str().unwrap());
+        assert_eq!(
+            serde_json::to_value(&case.expected).unwrap(),
+            target["expected"]
+        );
+        assert!(case.matched, "{}", case.id);
+        let row = target["source_row"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .map(|v| v.as_str().unwrap())
+            .collect::<Vec<_>>()
+            .join("\t");
+        assert!(
+            std::str::from_utf8(input)
+                .unwrap()
+                .lines()
+                .any(|line| line == row)
+        );
+        representations.insert(target["category"][1].as_str().unwrap());
+        // The source has adjective derivation for 체할; recovery must not
+        // silently relabel it as a verb auxiliary to agree with KRDict.
+        if target["surface"] == "체할" {
+            assert_eq!(target["source_row"][4], "nbn+xsm+etm");
+        }
+    }
+    assert_eq!(
+        representations,
+        ["nominal-adjective-derivation", "nominal-verb-derivation"]
+            .into_iter()
+            .collect()
+    );
+    let gsd = files.iter().find(|f| f["corpus"] == "gsd").unwrap();
+    assert!(gsd["targets"].as_array().unwrap().is_empty());
+    assert!(gsd["search_counts"].as_array().unwrap().is_empty());
+}

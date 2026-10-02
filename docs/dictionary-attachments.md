@@ -753,3 +753,26 @@ compatible filtering excludes them while preserving supported homonyms.
 Prefinal controls establish policy retention, not full grammatical certification.
 The complete sources, literal 76466 example mismatch and contextual/register
 limits remain in the [source record](../tests/fixtures/conjectural-aux-sources.json).
+
+## Pretence adnominal and 양하다 inflection classes (COV-019w)
+
+`pretence_adnominal_class` assesses the immediate bare -는 owner before
+양하다/척하다/체하다. Lexical adjective or represented copula entries
+conflict; verb homonyms, existential exceptions and unknown providers remain.
+The conflict references that owner's morpheme, and a later auxiliary supplies
+its own independent class. This shares the finite owner evidence used for the
+conjectural family while preserving the existing conflict identifier there.
+
+The adjective 양하다 entry (67249) separately conflicts with its own bare
+-는 and present declarative endings. The latter uses the existing
+`present_declarative_verb` rule. The verb homonym (67248) remains. Standalone
+context is still unknown for supported auxiliary entries; it cannot license a
+known adjective's verb inflection. Intervening prefinal -는 controls preserve
+current policy without broader grammatical certification. No shared class is
+assigned to both homonyms and no contextual meaning is chosen.
+
+The [entry ledger](../tests/fixtures/pretence-aux-entry-judgments.json) records
+59 cases/116 judgments. Known bare owner conflicts disappear only under
+compatible filtering; headword-only filtering and raw generation retain them.
+The original 재미있었는 양하다 source and KAIST 체할 annotation remain
+explicit. Lexical 체하다 79176 keeps its independent entry and role.

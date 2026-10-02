@@ -1501,7 +1501,19 @@
     "finite-vowel-source-89962": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89962",
     "finite-vowel-source-71337": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71337",
     "finite-vowel-source-29765": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=29765",
-    "finite-vowel-kaist-r2.15": "https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15"
+    "finite-vowel-kaist-r2.15": "https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15",
+    "complex-bieup-source-84853": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=84853",
+    "complex-bieup-source-64511": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=64511",
+    "complex-bieup-source-41140": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=41140",
+    "complex-bieup-source-58034": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=58034",
+    "complex-bieup-source-50935": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=50935",
+    "complex-bieup-source-54086": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=54086",
+    "complex-bieup-source-64728": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=64728",
+    "complex-bieup-source-63307": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=63307",
+    "complex-bieup-source-89859": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89859",
+    "complex-bieup-source-14103": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=14103",
+    "complex-bieup-source-77700": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77700",
+    "complex-bieup-source-71363": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71363"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -69802,6 +69814,2010 @@
             "source": "finite-vowel-kaist-r2.15",
             "reason": "Unchanged original annotated 아무렇 + 어도 group, complete original sentence and token row preserved.",
             "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-84853-native-0",
+        "surface": "폭넓은",
+        "judgments": [
+          {
+            "id": "complex-bieup-84853-native-0-required",
+            "lemmas": [
+              "폭넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-84853"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-84853-native-1",
+        "surface": "폭넓어",
+        "judgments": [
+          {
+            "id": "complex-bieup-84853-native-1-required",
+            "lemmas": [
+              "폭넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-84853"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-84853-native-2",
+        "surface": "폭넓으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-84853-native-2-required",
+            "lemmas": [
+              "폭넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-84853"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-84853-native-3",
+        "surface": "폭넓습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-84853-native-3-required",
+            "lemmas": [
+              "폭넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-84853"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-84853-native-4",
+        "surface": "폭넓고",
+        "judgments": [
+          {
+            "id": "complex-bieup-84853-native-4-required",
+            "lemmas": [
+              "폭넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-84853"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-84853-native-5",
+        "surface": "폭넓지",
+        "judgments": [
+          {
+            "id": "complex-bieup-84853-native-5-required",
+            "lemmas": [
+              "폭넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-84853"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64511-native-0",
+        "surface": "넓은",
+        "judgments": [
+          {
+            "id": "complex-bieup-64511-native-0-required",
+            "lemmas": [
+              "넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64511"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64511-native-1",
+        "surface": "넓어",
+        "judgments": [
+          {
+            "id": "complex-bieup-64511-native-1-required",
+            "lemmas": [
+              "넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64511"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64511-native-2",
+        "surface": "넓으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-64511-native-2-required",
+            "lemmas": [
+              "넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64511"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64511-native-3",
+        "surface": "넓습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-64511-native-3-required",
+            "lemmas": [
+              "넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64511"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64511-native-4",
+        "surface": "넓고",
+        "judgments": [
+          {
+            "id": "complex-bieup-64511-native-4-required",
+            "lemmas": [
+              "넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64511"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64511-native-5",
+        "surface": "넓지",
+        "judgments": [
+          {
+            "id": "complex-bieup-64511-native-5-required",
+            "lemmas": [
+              "넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64511"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-41140-native-0",
+        "surface": "넓디넓은",
+        "judgments": [
+          {
+            "id": "complex-bieup-41140-native-0-required",
+            "lemmas": [
+              "넓디넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-41140"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-41140-native-1",
+        "surface": "넓디넓어",
+        "judgments": [
+          {
+            "id": "complex-bieup-41140-native-1-required",
+            "lemmas": [
+              "넓디넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-41140"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-41140-native-2",
+        "surface": "넓디넓으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-41140-native-2-required",
+            "lemmas": [
+              "넓디넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-41140"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-41140-native-3",
+        "surface": "넓디넓습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-41140-native-3-required",
+            "lemmas": [
+              "넓디넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-41140"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-41140-native-4",
+        "surface": "넓디넓고",
+        "judgments": [
+          {
+            "id": "complex-bieup-41140-native-4-required",
+            "lemmas": [
+              "넓디넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-41140"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-41140-native-5",
+        "surface": "넓디넓지",
+        "judgments": [
+          {
+            "id": "complex-bieup-41140-native-5-required",
+            "lemmas": [
+              "넓디넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-41140"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-58034-native-0",
+        "surface": "뒤밟아",
+        "judgments": [
+          {
+            "id": "complex-bieup-58034-native-0-required",
+            "lemmas": [
+              "뒤밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-58034"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-58034-native-1",
+        "surface": "뒤밟으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-58034-native-1-required",
+            "lemmas": [
+              "뒤밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-58034"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-58034-native-2",
+        "surface": "뒤밟고",
+        "judgments": [
+          {
+            "id": "complex-bieup-58034-native-2-required",
+            "lemmas": [
+              "뒤밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-58034"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-58034-native-3",
+        "surface": "뒤밟는",
+        "judgments": [
+          {
+            "id": "complex-bieup-58034-native-3-required",
+            "lemmas": [
+              "뒤밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "는"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-58034"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-58034-native-4",
+        "surface": "뒤밟지",
+        "judgments": [
+          {
+            "id": "complex-bieup-58034-native-4-required",
+            "lemmas": [
+              "뒤밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-58034"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-50935-native-0",
+        "surface": "드넓은",
+        "judgments": [
+          {
+            "id": "complex-bieup-50935-native-0-required",
+            "lemmas": [
+              "드넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-50935"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-50935-native-1",
+        "surface": "드넓어",
+        "judgments": [
+          {
+            "id": "complex-bieup-50935-native-1-required",
+            "lemmas": [
+              "드넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-50935"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-50935-native-2",
+        "surface": "드넓으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-50935-native-2-required",
+            "lemmas": [
+              "드넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-50935"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-50935-native-3",
+        "surface": "드넓습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-50935-native-3-required",
+            "lemmas": [
+              "드넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-50935"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-50935-native-4",
+        "surface": "드넓고",
+        "judgments": [
+          {
+            "id": "complex-bieup-50935-native-4-required",
+            "lemmas": [
+              "드넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-50935"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-50935-native-5",
+        "surface": "드넓지",
+        "judgments": [
+          {
+            "id": "complex-bieup-50935-native-5-required",
+            "lemmas": [
+              "드넓다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-50935"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-54086-native-0",
+        "surface": "떫은",
+        "judgments": [
+          {
+            "id": "complex-bieup-54086-native-0-required",
+            "lemmas": [
+              "떫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-54086"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-54086-native-1",
+        "surface": "떫어",
+        "judgments": [
+          {
+            "id": "complex-bieup-54086-native-1-required",
+            "lemmas": [
+              "떫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-54086"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-54086-native-2",
+        "surface": "떫으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-54086-native-2-required",
+            "lemmas": [
+              "떫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-54086"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-54086-native-3",
+        "surface": "떫습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-54086-native-3-required",
+            "lemmas": [
+              "떫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-54086"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-54086-native-4",
+        "surface": "떫고",
+        "judgments": [
+          {
+            "id": "complex-bieup-54086-native-4-required",
+            "lemmas": [
+              "떫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-54086"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-54086-native-5",
+        "surface": "떫지",
+        "judgments": [
+          {
+            "id": "complex-bieup-54086-native-5-required",
+            "lemmas": [
+              "떫다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-54086"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64728-native-0",
+        "surface": "밟는",
+        "judgments": [
+          {
+            "id": "complex-bieup-64728-native-0-required",
+            "lemmas": [
+              "밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "는"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64728"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64728-native-1",
+        "surface": "밟아",
+        "judgments": [
+          {
+            "id": "complex-bieup-64728-native-1-required",
+            "lemmas": [
+              "밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64728"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64728-native-2",
+        "surface": "밟으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-64728-native-2-required",
+            "lemmas": [
+              "밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64728"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64728-native-3",
+        "surface": "밟습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-64728-native-3-required",
+            "lemmas": [
+              "밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64728"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64728-native-4",
+        "surface": "밟고",
+        "judgments": [
+          {
+            "id": "complex-bieup-64728-native-4-required",
+            "lemmas": [
+              "밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64728"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-64728-native-5",
+        "surface": "밟지",
+        "judgments": [
+          {
+            "id": "complex-bieup-64728-native-5-required",
+            "lemmas": [
+              "밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-64728"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-native-0",
+        "surface": "설운",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-native-0-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-native-1",
+        "surface": "설워",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-native-1-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-native-2",
+        "surface": "설우니",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-native-2-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-native-3",
+        "surface": "섧습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-native-3-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-native-4",
+        "surface": "섧고",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-native-4-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-native-5",
+        "surface": "섧지",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-native-5-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-89859-native-0",
+        "surface": "얇은",
+        "judgments": [
+          {
+            "id": "complex-bieup-89859-native-0-required",
+            "lemmas": [
+              "얇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-89859"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-89859-native-1",
+        "surface": "얇아",
+        "judgments": [
+          {
+            "id": "complex-bieup-89859-native-1-required",
+            "lemmas": [
+              "얇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-89859"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-89859-native-2",
+        "surface": "얇으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-89859-native-2-required",
+            "lemmas": [
+              "얇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-89859"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-89859-native-3",
+        "surface": "얇습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-89859-native-3-required",
+            "lemmas": [
+              "얇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-89859"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-89859-native-4",
+        "surface": "얇고",
+        "judgments": [
+          {
+            "id": "complex-bieup-89859-native-4-required",
+            "lemmas": [
+              "얇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-89859"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-89859-native-5",
+        "surface": "얇지",
+        "judgments": [
+          {
+            "id": "complex-bieup-89859-native-5-required",
+            "lemmas": [
+              "얇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-89859"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-14103-native-0",
+        "surface": "엷은",
+        "judgments": [
+          {
+            "id": "complex-bieup-14103-native-0-required",
+            "lemmas": [
+              "엷다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-14103"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-14103-native-1",
+        "surface": "엷어",
+        "judgments": [
+          {
+            "id": "complex-bieup-14103-native-1-required",
+            "lemmas": [
+              "엷다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-14103"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-14103-native-2",
+        "surface": "엷으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-14103-native-2-required",
+            "lemmas": [
+              "엷다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-14103"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-14103-native-3",
+        "surface": "엷습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-14103-native-3-required",
+            "lemmas": [
+              "엷다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-14103"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-14103-native-4",
+        "surface": "엷고",
+        "judgments": [
+          {
+            "id": "complex-bieup-14103-native-4-required",
+            "lemmas": [
+              "엷다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-14103"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-14103-native-5",
+        "surface": "엷지",
+        "judgments": [
+          {
+            "id": "complex-bieup-14103-native-5-required",
+            "lemmas": [
+              "엷다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-14103"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-77700-native-0",
+        "surface": "짓밟아",
+        "judgments": [
+          {
+            "id": "complex-bieup-77700-native-0-required",
+            "lemmas": [
+              "짓밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-77700"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-77700-native-1",
+        "surface": "짓밟으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-77700-native-1-required",
+            "lemmas": [
+              "짓밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-77700"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-77700-native-2",
+        "surface": "짓밟고",
+        "judgments": [
+          {
+            "id": "complex-bieup-77700-native-2-required",
+            "lemmas": [
+              "짓밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-77700"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-77700-native-3",
+        "surface": "짓밟는",
+        "judgments": [
+          {
+            "id": "complex-bieup-77700-native-3-required",
+            "lemmas": [
+              "짓밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "는"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-77700"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-77700-native-4",
+        "surface": "짓밟지",
+        "judgments": [
+          {
+            "id": "complex-bieup-77700-native-4-required",
+            "lemmas": [
+              "짓밟다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-77700"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-71363-native-0",
+        "surface": "짧은",
+        "judgments": [
+          {
+            "id": "complex-bieup-71363-native-0-required",
+            "lemmas": [
+              "짧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "은"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-71363"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-71363-native-1",
+        "surface": "짧아",
+        "judgments": [
+          {
+            "id": "complex-bieup-71363-native-1-required",
+            "lemmas": [
+              "짧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-71363"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-71363-native-2",
+        "surface": "짧으니",
+        "judgments": [
+          {
+            "id": "complex-bieup-71363-native-2-required",
+            "lemmas": [
+              "짧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으니"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-71363"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-71363-native-3",
+        "surface": "짧습니다",
+        "judgments": [
+          {
+            "id": "complex-bieup-71363-native-3-required",
+            "lemmas": [
+              "짧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "습니다"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-71363"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-71363-native-4",
+        "surface": "짧고",
+        "judgments": [
+          {
+            "id": "complex-bieup-71363-native-4-required",
+            "lemmas": [
+              "짧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "고"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-71363"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-71363-native-5",
+        "surface": "짧지",
+        "judgments": [
+          {
+            "id": "complex-bieup-71363-native-5-required",
+            "lemmas": [
+              "짧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "지"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-71363"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-polite",
+        "surface": "설워요",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-polite-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-expanded",
+        "surface": "설우어",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-expanded-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-expanded-polite",
+        "surface": "설우어요",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-expanded-polite-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-concessive",
+        "surface": "설워도",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-concessive-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-reason",
+        "surface": "설워서",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-reason-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-conditional",
+        "surface": "설우면",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-conditional-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-honorific",
+        "surface": "설우시다",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-honorific-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "시",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-past",
+        "surface": "설웠다",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-past-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-past-polite",
+        "surface": "설웠어요",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-past-polite-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-past-modal",
+        "surface": "설웠겠지",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-past-modal-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-adnominal-future",
+        "surface": "설울",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-adnominal-future-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "을"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-nominal",
+        "surface": "설움",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-nominal-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "음"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
+          }
+        ]
+      },
+      {
+        "id": "complex-bieup-63307-nominal-particle",
+        "surface": "설움도",
+        "judgments": [
+          {
+            "id": "complex-bieup-63307-nominal-particle-required",
+            "lemmas": [
+              "섧다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "음",
+              "도"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "particle"
+            ],
+            "verdict": "required",
+            "reason": "Native written paradigm at the stated existing suffix boundary; contextual sense, mood and register are not judged.",
+            "source": "complex-bieup-source-63307"
           }
         ]
       }

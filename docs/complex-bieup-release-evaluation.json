@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "cli": "/nix/store/bmai4ihgab8s7qsz37f35rgjdir7n9rk-klem-0.1.0/bin/klem",
+  "cli_sha256": "47796160fc214965841eaa197701203e9ca49236935770381f2ebfa05a6cbcac",
+  "before_cli": "/nix/store/p6kjipbsww9r4pcimi7sh21px6w4lsmr-klem-0.1.0/bin/klem",
+  "before_cli_sha256": "6e2ecd09313320fc2d602ba33897535c64fff0f98b89ca79512a58aeffb2a700",
+  "streams": [
+    {
+      "mode": "candidate-raw",
+      "seconds": 13.503476141995634,
+      "sha256": "3d2b5aaa729ab4815e86589d78b476e3525f8163157b53540d69f4523ed9a0a2",
+      "bytes": 485856563
+    },
+    {
+      "mode": "candidate-headword",
+      "seconds": 12.07767762900039,
+      "sha256": "3410a16bc459a9fcebacd9e829dc0dfccd20d15005b1d707426c27e5dfc38e3a",
+      "bytes": 52322004
+    },
+    {
+      "mode": "candidate-compatible",
+      "seconds": 11.964345875996514,
+      "sha256": "263590e717ea0e2a241f280f011bf79dc4e2ac7bd5bdb1f7fed4b061a449f4e0",
+      "bytes": 47863727
+    },
+    {
+      "mode": "novel-raw",
+      "seconds": 7.080766376006068,
+      "sha256": "ffafbf197c1c51498184b96b3f625f6ed1128c4d58d1cdde62d45af4b2988a0b",
+      "bytes": 255113044
+    },
+    {
+      "mode": "novel-headword",
+      "seconds": 6.7598718340013875,
+      "sha256": "3653e176db9c9bfc932c2049e9965c788eb0bce3f7bd5d89ab93f6dd042f8535",
+      "bytes": 127225535
+    },
+    {
+      "mode": "novel-compatible",
+      "seconds": 6.878554406997864,
+      "sha256": "7b47b197b0736151728bd747b98ced3fb288b339ddc44f9cabfa531e71b59802",
+      "bytes": 115270359
+    },
+    {
+      "mode": "novel-headword-spacing",
+      "seconds": 8.526705113996286,
+      "sha256": "3ef44f8c180461a6b5de8b6a2cc6d28016a579f5a06cfab053ccabba21b6a350",
+      "bytes": 155731448
+    },
+    {
+      "mode": "novel-compatible-spacing",
+      "seconds": 8.56790558200737,
+      "sha256": "4890b553fc9ae9ce7d40f61e520ce361d3babe481bc08440d2951915b08283eb",
+      "bytes": 143776272
+    }
+  ],
+  "paired_novel_measurements": [
+    {
+      "flag": "--dict-only",
+      "runs": {
+        "before": [
+          {
+            "seconds": 6.920071803004248,
+            "sha256": "3bb7292eb709e54ed8e2e16f9193925c8132cef9a5c995e8b5c1234076d19035",
+            "bytes": 127216349
+          },
+          {
+            "seconds": 6.845722457001102,
+            "sha256": "3bb7292eb709e54ed8e2e16f9193925c8132cef9a5c995e8b5c1234076d19035",
+            "bytes": 127216349
+          },
+          {
+            "seconds": 6.8111475269979564,
+            "sha256": "3bb7292eb709e54ed8e2e16f9193925c8132cef9a5c995e8b5c1234076d19035",
+            "bytes": 127216349
+          }
+        ],
+        "after": [
+          {
+            "seconds": 6.851007452001795,
+            "sha256": "3653e176db9c9bfc932c2049e9965c788eb0bce3f7bd5d89ab93f6dd042f8535",
+            "bytes": 127225535
+          },
+          {
+            "seconds": 6.863310781001928,
+            "sha256": "3653e176db9c9bfc932c2049e9965c788eb0bce3f7bd5d89ab93f6dd042f8535",
+            "bytes": 127225535
+          },
+          {
+            "seconds": 6.9927097449981375,
+            "sha256": "3653e176db9c9bfc932c2049e9965c788eb0bce3f7bd5d89ab93f6dd042f8535",
+            "bytes": 127225535
+          }
+        ]
+      },
+      "median_before": 6.845722457001102,
+      "median_after": 6.863310781001928
+    },
+    {
+      "flag": "--dict-compatible",
+      "runs": {
+        "before": [
+          {
+            "seconds": 6.776372612002888,
+            "sha256": "d9e760be8e13b06f058b876dc362bd9a9c8442b24ebd3a1b4d77502d2b08f91a",
+            "bytes": 115261173
+          },
+          {
+            "seconds": 6.854386906008585,
+            "sha256": "d9e760be8e13b06f058b876dc362bd9a9c8442b24ebd3a1b4d77502d2b08f91a",
+            "bytes": 115261173
+          },
+          {
+            "seconds": 6.832551657993463,
+            "sha256": "d9e760be8e13b06f058b876dc362bd9a9c8442b24ebd3a1b4d77502d2b08f91a",
+            "bytes": 115261173
+          }
+        ],
+        "after": [
+          {
+            "seconds": 6.75352994199784,
+            "sha256": "7b47b197b0736151728bd747b98ced3fb288b339ddc44f9cabfa531e71b59802",
+            "bytes": 115270359
+          },
+          {
+            "seconds": 6.6717038880015025,
+            "sha256": "7b47b197b0736151728bd747b98ced3fb288b339ddc44f9cabfa531e71b59802",
+            "bytes": 115270359
+          },
+          {
+            "seconds": 6.768915526001365,
+            "sha256": "7b47b197b0736151728bd747b98ced3fb288b339ddc44f9cabfa531e71b59802",
+            "bytes": 115270359
+          }
+        ]
+      },
+      "median_before": 6.832551657993463,
+      "median_after": 6.75352994199784
+    }
+  ],
+  "method": "Three alternating old/new immutable release runs per dictionary mode; complete novel stdout is streamed through SHA-256, never discarded unverified. Descriptive wall-clock timings on this machine, not an isolated benchmark or cross-batch performance comparison."
+}

@@ -482,7 +482,7 @@ fn record_spelling(p: &mut Predicate, r: &Recovery, vowel_boundary: bool) {
             Some(27) => (HieutRegular, HieutIrregular, "irregular.hieut"),
             Some(7) => (DigeutRegular, DigeutIrregular, "irregular.digeut"),
             Some(19) => (SiotRegular, SiotIrregular, "irregular.siot"),
-            Some(17) => (BieupRegular, BieupIrregular, "irregular.bieup"),
+            Some(11 | 17) => (BieupRegular, BieupIrregular, "irregular.bieup"),
             _ => return,
         };
         if r.rules.iter().any(|r| r == rule) {

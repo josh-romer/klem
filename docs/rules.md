@@ -4126,6 +4126,41 @@ Complete sources, selection timing and individual cases are preserved in the
 [source preflight](deictic-vowel-source-preflight.json) and
 [evaluation](deictic-vowel-evaluation.json).
 
+## Complex ㄼ vowel paradigms (COV-021o)
+
+At an 아/어 or (으) boundary, retained ㄹ followed by 우 also permits
+restoration of ㄼ: `설워 → 섧다 + 어`, `설운 → 섧다 + 은`, and
+`설우니 → 섧다 + 으니`. Expanded 설우어, past 설웠다, and existing
+honorific/nominal/auxiliary templates use the same recovery. This adds a lexical
+hypothesis under `irregular.bieup`; it does not classify every ㄼ predicate as
+irregular. The restricted 오 rules for the previously reviewed simple ㅂ stems
+do not extend to ㄼ.
+
+The twelve complete native ㄼ entries distinguish eleven regular paradigms
+(including 넓다, 얇다, 밟다 and their listed compounds) from irregular 섧다.
+Written 활용 forms supply each entry's own regular/irregular evidence. The
+compatible dictionary filter rejects the opposite spelling only when that
+entry supplies contradictory evidence; raw and headword-only hypotheses stay
+available. Pronunciations, consonant-only forms and older annotations cannot
+resolve the spelling class. A vowel-initial prefinal may require the regular
+ㄼ paradigm without borrowing an 아/어 vowel requirement from that prefinal.
+
+Spelling requirements retain their local lexical owner through auxiliaries
+and nominalization/copula combinations. The additional ㄼ requirements coexist
+with earlier vowel requirements: 얇아 requires both its regular ㄼ paradigm
+and its written 아 class. The complete old 얇다 snapshots and every previous
+spelling obligation remain in the historical regression audit.
+
+Primary evidence: [NIKL's explicit 섧다/서럽다 inflections](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5704&mn_id=182),
+[Article 18 and explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=322819),
+and [complete native source entries and before outputs](../tests/fixtures/complex-bieup-sources.json).
+The broader reverse ㄹ + 우 operation is an inference from this named paradigm;
+서럽다 remains a distinct stem, with 서러워 rather than synonym substitution.
+This inflection work does not settle the separate pronunciation-based 하
+shortening scope. See [the evaluation](complex-bieup-evaluation.json) for
+completed source, corpus, browser, Nix and runtime gates and the unjudged
+contextual queue.
+
 ## Further finite vowel paradigms (COV-021n)
 
 Dictionary-written 고래/요래/조래 recover both 고러다/요러다/조러다 and

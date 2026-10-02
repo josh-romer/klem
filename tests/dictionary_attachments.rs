@@ -54,6 +54,7 @@ impl Fixture {
             "krdict-conditional-question.json",
             "krdict-quote-followers.json",
             "krdict-proposal-audit.json",
+            "krdict-complex-bieup.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -63,6 +64,15 @@ impl Fixture {
                 .as_array()
                 .unwrap()
             {
+                if file == "krdict-complex-bieup.json"
+                    && ![
+                        "84853", "64511", "41140", "58034", "50935", "54086", "64728", "63307",
+                        "89859", "14103", "77700", "71363",
+                    ]
+                    .contains(&entry["val"].as_str().unwrap())
+                {
+                    continue;
+                }
                 if matches!(
                     file,
                     "krdict-quote-followers.json" | "krdict-proposal-audit.json"
@@ -103,6 +113,7 @@ impl Fixture {
                         | "krdict-conditional-question.json"
                         | "krdict-quote-followers.json"
                         | "krdict-proposal-audit.json"
+                        | "krdict-complex-bieup.json"
                 ) {
                     // Full native entries supply written forms absent from older
                     // POS-only fixtures; do not borrow evidence by headword.
@@ -180,7 +191,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (1989, 1644)
+        (2072, 1681)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

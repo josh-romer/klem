@@ -2977,8 +2977,9 @@ review remains open under the completion review below.
   vowel paradigms; COV-021j adds open-ㅕ absorption and twelve finite written
   vowel exceptions; COV-021l adds modern direct-command recovery and finite
   source-reviewed past-entry licenses; COV-021n adds eight further finite
-  vowel paradigms.** Remaining: COV-021m attachment/register,
-  COV-021o complex ㄼ inflections, other lexical paradigms and unmapped
+  vowel paradigms; COV-021o adds complex ㄼ inflections and their per-entry
+  spelling compatibility.** Remaining: COV-021m attachment/register,
+  other lexical paradigms and unmapped
   shortened-stem senses, ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
@@ -3372,7 +3373,7 @@ review remains open under the completion review below.
   [novel contexts](finite-vowel-novel-contexts.json),
   [unjudged path queue](finite-vowel-review-queue.json).
 
-- [ ] **COV-021o — Complex ㄼ written inflections and 섧다.** The
+- [x] **COV-021o — Complex ㄼ written inflections and 섧다.** The
   [source preflight](complex-bieup-source-preflight.json) preserves all twelve
   native predicates with ㄼ codas, 81 current before outputs and the three
   original 섧다 misses: 설운, 설워 and 설우니. Review written vowel/으
@@ -3383,7 +3384,46 @@ review remains open under the completion review below.
   exceptions, authored contrasts and contextual judgments separate. The
   [full NIKL answer](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5704&mn_id=182)
   confirms the distinct 어 inflections for the two standard synonyms; full
-  broader coda-rule evidence and implementation remain pending.
+  [Article 18 and its explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=322819)
+  have also been read. **Implementation progress:** both vowel and (으)
+  recovery now restore ㄼ from retained ㄹ + 우, with per-entry, component-owned
+  regular/irregular spelling requirements. All twelve native paradigms retain
+  their written source forms; eleven are regular and 섧다 is irregular.
+  [Frozen sources](../tests/fixtures/complex-bieup-sources.json) contain 26
+  complete English entries, 151 before outputs, 83 required paths, 72 spelling
+  contrasts and eight unchanged complete training sentences. New
+  [regressions](../tests/complex_bieup.rs) check both dictionary filters, CLI
+  parity, Unicode, sparse/pronunciation-only sources, separate homonym evidence,
+  legacy annotations, and lexical/auxiliary/prefinal ownership. The
+  [historical vowel audit](complex-bieup-written-vowel-history.json) preserves
+  all 24 earlier 얇다 probes and their original vowel obligations. A
+  [full rescan](complex-bieup-original-paradigm-rescan.json) recovers the three
+  original 섧다 pairs and leaves 22 original misses. The
+  [corpus and ledger audit](complex-bieup-corpus-ledger.json) preserves all four
+  original development/test gold reports and all earlier ledger case/source
+  objects; 9,200 required paths pass and zero forbidden paths are emitted.
+  The complete browser suite and all eight candidate/novel modes now pass;
+  the [broad observations](complex-bieup-observations.json) preserve 1,128,312
+  records, previous linguistic paths/order, every earlier spelling obligation,
+  and all spacing frames. Added requirements are checked against actual API
+  breakdown owners. The [gate tracker](complex-bieup-evaluation.json) records
+  778 passing Rust tests and the completed bounded verification gates.
+  [Individual review cases](complex-bieup-review-queue.json) retain 66 distinct
+  new paths. [Novel contexts](complex-bieup-novel-contexts.json) preserve all
+  forty changed raw occurrences, 37 complete paragraphs, and actual before/after
+  records from all five novel modes, including unchanged filtered occurrences.
+  Contextual judgments remain unjudged.
+  **Bounded verification complete:** all 778 packaged Nix release tests and
+  three host flake checks pass. All eight release streams match debug exactly.
+  [Paired novel runs](complex-bieup-release-evaluation.json) show comparable
+  old/new timings on this machine; timings are descriptive and are not a
+  cross-batch benchmark. The packaged and refreshed local preview APIs match
+  the full tested debug responses except elapsed time for 301 surfaces, 144
+  complete native entries and all twelve frontend files. Full responses,
+  hashes, process identities and checks are retained in the gate tracker.
+  The retained-ㄹ reverse operation is a lexical hypothesis supported by the
+  named source paradigm, not a claim that every ㄼ stem is irregular.
+  ㄼ pronunciation before 하 and the separate ㄶ/ㅀ shortening scope stay open.
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

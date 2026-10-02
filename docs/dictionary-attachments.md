@@ -331,6 +331,33 @@ unknown candidate does not certify its spelling. Other irregular classes remain
 in COV-021. See [the case evaluation](digeut-siot-evaluation.json) for source
 hashes, individual judgments, novel removals and the remaining unjudged queue.
 
+## Written ㄼ inflection compatibility (COV-021o)
+
+The existing optional `bieup` evidence and `BieupRegular`/`BieupIrregular`
+requirements also cover ㄼ. A retained ㄹ + 우 boundary permits 섧다 at
+설운/설워/설우니. The native written forms distinguish its irregular
+paradigm from eleven regular entries, including 넓다, 얇다, 밟다 and their
+listed compounds. `--dict-compatible` checks each entry's own written
+활용 forms; `--dict-only` retains both lexical spelling hypotheses.
+
+This uses the same alternative spelling paths and local owners as simple ㅂ.
+For example, 설워놓으니 requires irregular ㄼ on 섧다 and regular ㅎ on
+놓다. 얇아 retains both the regular ㄼ and written 아 obligations. Literal
+consonant endings do not acquire a ㄼ spelling requirement. Honorific 시
+can require a regular/irregular ㄼ boundary without imposing the later past
+prefinal's 아/어 class on the lexical root.
+
+Missing forms, pronunciation-only evidence and old annotations stay unknown.
+Homonyms never share profiles. The cache accounts for the additional evidence;
+the dictionary schema and public JSON fields are unchanged. The retained-ㄹ
+reverse operation is an inference from the complete named 섧다 paradigm and
+[NIKL's explicit answer](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5704&mn_id=182),
+alongside [Article 18's lexical distinction](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=322819).
+It does not classify every ㄼ stem as irregular or substitute the synonym 서럽다.
+See [the source regressions](../tests/complex_bieup.rs) and
+[the evaluation](complex-bieup-evaluation.json) for completed package, browser,
+corpus and broad gates and the separate unjudged contextual cases.
+
 ## Written ㅂ inflection compatibility (COV-021f)
 
 The per-entry spelling checks include ㅂ. Written `활용` 니 forms establish

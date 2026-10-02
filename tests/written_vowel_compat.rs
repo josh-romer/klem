@@ -1,4 +1,5 @@
 //! COV-021k: all native ㅡ/ㅑ paradigms, source identity and local ownership.
+use history::complex_bieup as complex_history;
 #[path = "support/written_vowel_history.rs"]
 mod history;
 use klem::dictionary::{
@@ -107,17 +108,28 @@ fn every_native_vowel_entry_retains_all_sources_and_its_own_positive_forms() {
                 .unwrap();
             assert_eq!(e.status, Compatibility::Compatible);
             assert!(e.conflicts.is_empty());
-            assert_eq!(
-                a.spelling_paths,
-                vec![vec![SpellingRecovery {
-                    morpheme_index: 0,
-                    class: if evidence.a.is_empty() {
-                        SpellingClass::WrittenVowelEo
-                    } else {
-                        SpellingClass::WrittenVowelA
-                    }
-                }]]
-            );
+            let mut requirements = vec![SpellingRecovery {
+                morpheme_index: 0,
+                class: if evidence.a.is_empty() {
+                    SpellingClass::WrittenVowelEo
+                } else {
+                    SpellingClass::WrittenVowelA
+                },
+            }];
+            if stem
+                .chars()
+                .last()
+                .is_some_and(|c| ('가'..='힣').contains(&c) && (c as u32 - '가' as u32) % 28 == 11)
+            {
+                requirements.insert(
+                    0,
+                    SpellingRecovery {
+                        morpheme_index: 0,
+                        class: SpellingClass::BieupRegular,
+                    },
+                );
+            }
+            assert_eq!(a.spelling_paths, vec![requirements]);
         }
     }
     for id in f["excluded_hieut_ids"].as_array().unwrap() {
@@ -221,7 +233,9 @@ fn every_frozen_probe_keeps_raw_order_and_checks_the_actual_vowel_owner() {
             }
             if c["owner_morpheme_index"].is_null() {
                 assert!(
-                    a.spelling_paths.is_empty(),
+                    complex_history::project_analysis(a)
+                        .spelling_paths
+                        .is_empty(),
                     "{}: a later prefinal borrowed the lexical vowel",
                     c["id"]
                 );

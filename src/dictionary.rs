@@ -238,7 +238,7 @@ impl ConjugationEvidence {
             Some(27) => ("니", Boundary::EuZero, "irregular.hieut"),
             Some(7) => ("으니", Boundary::EuFull, "irregular.digeut"),
             Some(19) => ("으니", Boundary::EuFull, "irregular.siot"),
-            Some(17) => ("니", Boundary::EuZero, "irregular.bieup"),
+            Some(11 | 17) => ("니", Boundary::EuZero, "irregular.bieup"),
             _ => return None,
         };
         let mut evidence = Self::default();
@@ -252,7 +252,7 @@ impl ConjugationEvidence {
             } else if crate::grammar::recover(&written, suffix, boundary)
                 .iter()
                 .any(|r| r.stem == stem && r.rules.iter().any(|r| r == rule))
-                || (crate::hangul::coda(stem) == Some(17)
+                || (matches!(crate::hangul::coda(stem), Some(11 | 17))
                     && crate::grammar::recover(&written, "", Boundary::Attached(4))
                         .iter()
                         .any(|r| r.stem == stem && r.rules.iter().any(|r| r == rule)))
@@ -537,7 +537,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         .headword
                         .strip_suffix('다')
                         .and_then(crate::hangul::coda),
-                    Some(7 | 17 | 19 | 27)
+                    Some(7 | 11 | 17 | 19 | 27)
                 ))
                 && matches!(
                     summary.pos.as_str(),
@@ -673,11 +673,13 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         .as_ref()
                         .and_then(CachedSpelling::consonant)
                         .filter(|_| {
-                            entry
-                                .headword
-                                .strip_suffix('다')
-                                .and_then(crate::hangul::coda)
-                                == Some(17)
+                            matches!(
+                                entry
+                                    .headword
+                                    .strip_suffix('다')
+                                    .and_then(crate::hangul::coda),
+                                Some(11 | 17)
+                            )
                         })
                         .cloned(),
                 })

@@ -3,6 +3,63 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn complex_bieup_preserves_eight_original_training_gold_groups() {
+    use klem::dictionary::{DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict};
+    let path = std::env::temp_dir().join(format!(
+        "klem-complex-bieup-corpus-{}.db",
+        std::process::id()
+    ));
+    import_krdict(
+        &[std::path::PathBuf::from(
+            "tests/fixtures/krdict-complex-bieup.json",
+        )],
+        &path,
+        "complex-bieup",
+    )
+    .unwrap();
+    let db = SqliteDictionary::open(&path).unwrap();
+    let mut dictionary = DictionarySession::new(&db, 4096);
+    let sources: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/complex-bieup-sources.json")).unwrap();
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-complex-bieup.conllu").as_slice(),
+        Corpus::Kaist,
+        "complex-bieup",
+    )
+    .unwrap();
+    assert_eq!(sources["corpus_rows"].as_array().unwrap().len(), 8);
+    for row in sources["corpus_rows"].as_array().unwrap() {
+        let id = format!(
+            "id:{}/{}",
+            row["sentence_id"].as_str().unwrap(),
+            row["token_id"].as_str().unwrap()
+        );
+        let case = &report.cases[&id];
+        assert_eq!(case.surface, row["surface"]);
+        assert_eq!(case.expected, [row["headword"].as_str().unwrap()]);
+        assert!(case.matched, "{id}: {case:?}");
+        for filter in [DictionaryFilter::Headword, DictionaryFilter::Compatible] {
+            let mut word = klem::Lemmatizer::new().analyze_word(&case.surface).unwrap();
+            dictionary
+                .annotate(&word)
+                .unwrap()
+                .filter(&mut word, filter);
+            assert!(
+                word.analyses.iter().any(|a| a
+                    .lemmas
+                    .iter()
+                    .map(|l| &l.text)
+                    .eq(case.expected.iter())),
+                "{id} {filter:?}"
+            );
+        }
+    }
+    drop(dictionary);
+    drop(db);
+    std::fs::remove_file(path).unwrap();
+}
+
+#[test]
 fn finite_vowel_contractions_recover_every_original_amuraedo_training_group() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-finite-vowel.conllu").as_slice(),

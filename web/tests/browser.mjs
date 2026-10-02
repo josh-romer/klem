@@ -681,6 +681,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !finiteVowelIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...finiteVowelEntries);
 
+  const complexBieupFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-complex-bieup.json"),"utf8"));
+  const complexBieupEntries = complexBieupFixture.LexicalResource.Lexicon.LexicalEntry;
+  const complexBieupIds = new Set(complexBieupEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !complexBieupIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...complexBieupEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -6262,6 +6268,75 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-finite-vowel-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-finite-vowel-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const complexBieupSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/complex-bieup-sources.json"),"utf8"));
+  const complexBieupTokens = new Map();
+  function projectComplexBieup(analysis, components) {
+    const owners = new Map();let owner;
+    for (const component of components) {
+      if (component.lemma !== undefined) owner = component.lemma;
+      if (component.morpheme !== undefined) owners.set(component.morpheme,owner);
+    }
+    const projected = structuredClone(analysis);
+    if (projected.spelling_paths) {
+      projected.spelling_paths = projected.spelling_paths.map(path => path.filter(r => {
+        const lemma = projected.lemmas[owners.get(r.morpheme_index)];
+        const stem = lemma?.text.endsWith("다") ? lemma.text.slice(0,-1) : "";
+        const last = stem.codePointAt(stem.length-1);
+        return !(last >= 0xac00 && last <= 0xd7a3 && (last-0xac00)%28 === 11 && ["bieup_regular","bieup_irregular"].includes(r.class));
+      }));
+      if (projected.spelling_paths.some(path => path.length === 0)) delete projected.spelling_paths;
+    }
+    return projected;
+  }
+  for (const [surface,before] of Object.entries(complexBieupSource.before_words)) {
+    const data = await (await post("analyze",{text:surface})).json();complexBieupTokens.set(surface,data);
+    const token = data.records[0];
+    const projected = token.analysis.analyses.map((a,i) => projectComplexBieup(a,data.breakdowns[0][i]));
+    assert.deepEqual(projected.filter(a => before.analyses.some(b => isDeepStrictEqual(a,b))),before.analyses,surface);
+    assert.deepEqual(token,JSON.parse(execFileSync(cliBin,["text","-","--dictionary",database],{input:surface,encoding:"utf8"}).trim()),surface);
+  }
+  for (const c of complexBieupSource.cases) {
+    const token = complexBieupTokens.get(c.surface).records[0];
+    assert.ok(token.analysis.analyses.some(a => auxiliaryPath(a,c)),c.id);
+  }
+  for (const c of complexBieupSource.contrasts) {
+    const token = complexBieupTokens.get(c.surface).records[0];
+    const i = token.analysis.analyses.findIndex(a => a.lemmas.length === 1 && a.lemmas[0].text === c.headword && isDeepStrictEqual(a.morphemes.map(m => m.form),c.forms));
+    assert.ok(i >= 0,c.id);
+    const entry = token.dictionary.readings[i].lemmas[0].entries.find(e => e.id === c.entry);assert.ok(entry,c.id);
+    assert.equal(entry.status,c.compatible ? "compatible" : "incompatible",c.id);
+  }
+  for (const e of complexBieupSource.source_entries) assert.deepEqual((await (await post("entry",{id:e.id})).json()).entry,e,e.id);
+  const complexBieupText = "설운 설워 설우니 넓어 밟아 섧어 널워";
+  const complexBieupHeads = ["섧다","섧다","섧다","넓다","밟다","섧다","넓다"];
+  const complexBieupForms = ["은","어","으니","어","어","어","어"];
+  const complexBieupParts = [["섧","은"],["섧","어"],["섧","으니"],["넓","어"],["밟","어"],["섧","어"],["넓","어"]];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check();
+    else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,complexBieupText);await waitHeading(page,"설운");
+    const data = await (await post("analyze",{text:complexBieupText})).json();
+    for (const [n,t] of data.records.filter(r => r.analysis).entries()) {
+      const index = t.analysis.analyses.findIndex(a => a.lemmas.length === 1 && a.lemmas[0].text === complexBieupHeads[n] && isDeepStrictEqual(a.morphemes.map(m => m.form),[complexBieupForms[n]]));
+      assert.ok(index >= 0,t.surface);const word = page.locator(".breakdown-word").nth(n);
+      if (flag === "--dict-compatible" && n >= 5) assert.equal(await word.locator(`option[value="${index}"]`).count(),0,t.surface);
+      else {
+        assert.equal(await word.locator(`option[value="${index}"]`).count(),1,t.surface);
+        await word.getByRole("combobox").selectOption(String(index));
+        assert.deepEqual(await word.locator(".part-form").allTextContents(),complexBieupParts[n],t.surface);
+      }
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:complexBieupText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-complex-bieup-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-complex-bieup-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

@@ -399,16 +399,20 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
     for r in intermediates {
         for vowel in ['우', '오'] {
             if let Some(prefix) = r.stem.strip_suffix(vowel)
-                && let Some((_, v, 0)) = last(prefix)
+                && let Some((_, v, t @ (0 | 8))) = last(prefix)
             {
                 // Dictionary-written exceptions: 곱디곱 keeps 고와; humble
                 // 듣잡/받잡 use 오 both here and before (으) endings.
                 // Other stems retain the existing 돕/곱 versus 우 distinction.
                 if (vowel == '오') == matches!(prefix, "도" | "고" | "곱디고" | "듣자" | "받자")
+                    && (t == 0 || vowel == '우')
                 {
+                    // 섧 -> 설우 -> 설워 retains ㄹ. This is a lexical
+                    // hypothesis; per-entry written forms distinguish regular
+                    // ㄼ stems such as 넓다 and 밟다 from this paradigm.
                     push(
                         &mut out,
-                        replace_last(prefix, v, 17).unwrap(),
+                        replace_last(prefix, v, if t == 8 { 11 } else { 17 }).unwrap(),
                         "irregular.bieup",
                     );
                 }
@@ -700,10 +704,15 @@ fn drops_rieul(suffix: &str) -> bool {
 fn recover_eu_open(base: &str, out: &mut Vec<Recovery>, allow_h: bool) {
     for vowel in ['우', '오'] {
         if let Some(prefix) = base.strip_suffix(vowel)
-            && let Some((_, v, 0)) = last(prefix)
+            && let Some((_, v, t @ (0 | 8))) = last(prefix)
             && (vowel == '오') == matches!(prefix, "듣자" | "받자")
+            && (t == 0 || vowel == '우')
         {
-            push(out, replace_last(prefix, v, 17).unwrap(), "irregular.bieup");
+            push(
+                out,
+                replace_last(prefix, v, if t == 8 { 11 } else { 17 }).unwrap(),
+                "irregular.bieup",
+            );
         }
     }
     if allow_h && let Some((_, v, 0)) = last(base) {
@@ -1819,7 +1828,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "deletion.eu" => "Restore stem-final ㅡ before 아/어.",
         "deletion.rieul" => "Restore ㄹ lost before a consonant ending.",
         "irregular.digeut" => "Hypothesize ㄷ irregular class: ㄷ becomes ㄹ before a vowel.",
-        "irregular.bieup" => "Hypothesize ㅂ irregular class: ㅂ becomes 우 (or restricted 오).",
+        "irregular.bieup" => {
+            "Hypothesize ㅂ irregular class: ㅂ becomes 우 (or restricted 오); ㄼ retains ㄹ before 우, as in 섧다 → 설워. Written entry forms determine lexical compatibility."
+        }
         "irregular.siot" => "Hypothesize ㅅ irregular class: ㅅ disappears before a vowel.",
         "irregular.hieut" => "Hypothesize ㅎ irregular class: deletion or vowel contraction.",
         "irregular.reu" => "Restore 르 and undo doubled ㄹ before 아/어.",

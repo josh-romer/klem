@@ -1,9 +1,11 @@
-//! Only COV-021k's additive spelling obligations are projected away here.
+//! Only COV-021k's vowel and COV-021o's owned ㄼ obligations are projected.
 //! Frozen linguistic judgments, lexical candidates, order and older spelling
 //! obligations remain exact. The new obligations have independent owner tests.
 use klem::{Analysis, SpellingClass, WordAnalysis};
+#[path = "complex_bieup_history.rs"]
+pub mod complex_bieup;
 pub fn project_analysis(a: &Analysis) -> Analysis {
-    let mut a = a.clone();
+    let mut a = complex_bieup::project_analysis(a);
     for path in &mut a.spelling_paths {
         path.retain(|r| {
             !matches!(

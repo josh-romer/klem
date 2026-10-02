@@ -1,0 +1,5577 @@
+{
+  "schema_version": 1,
+  "before_revision": "504f4075ccf62997dddf071b2a1271c8371bdddf",
+  "before_cli": "/nix/store/p6kjipbsww9r4pcimi7sh21px6w4lsmr-klem-0.1.0/bin/klem",
+  "before_cli_sha256": "6e2ecd09313320fc2d602ba33897535c64fff0f98b89ca79512a58aeffb2a700",
+  "cli": "/tmp/klem-complex-bieup-runtime/klem",
+  "cli_sha256": "d3f8eadea95c76ba09cb08d4a639fd1cf94887e508687d69414539c20929ef98",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "comparisons": [
+    {
+      "mode": "candidate-raw",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "before_jsonl_sha256": "dbf0fffc7d6e92e391b2f820952e2cfbd518ae35d86f4ea2263ff21f7738e62f",
+      "after_jsonl_sha256": "3d2b5aaa729ab4815e86589d78b476e3525f8163157b53540d69f4523ed9a0a2",
+      "records": 77584,
+      "changed_records": 142,
+      "added_paths": 3,
+      "metadata_updates": 77,
+      "source_conflicting_compatible_paths_removed": 0,
+      "all_original_raw_and_headword_components_provenance_and_relative_order_preserved": true,
+      "all_original_spacing_hypotheses_and_frames_preserved": true
+    },
+    {
+      "mode": "candidate-headword",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "before_jsonl_sha256": "01b8270e030b1b8956846fb184d7c64e450bdfed5e326bd26d9703065e01226c",
+      "after_jsonl_sha256": "3410a16bc459a9fcebacd9e829dc0dfccd20d15005b1d707426c27e5dfc38e3a",
+      "records": 77584,
+      "changed_records": 142,
+      "added_paths": 3,
+      "metadata_updates": 77,
+      "source_conflicting_compatible_paths_removed": 0,
+      "all_original_raw_and_headword_components_provenance_and_relative_order_preserved": true,
+      "all_original_spacing_hypotheses_and_frames_preserved": true
+    },
+    {
+      "mode": "candidate-compatible",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "before_jsonl_sha256": "daa43b0007d0f349ed812adc9f805a94b1cbe9f10c9014445bdca8faba6ecadf",
+      "after_jsonl_sha256": "263590e717ea0e2a241f280f011bf79dc4e2ac7bd5bdb1f7fed4b061a449f4e0",
+      "records": 77584,
+      "changed_records": 131,
+      "added_paths": 3,
+      "metadata_updates": 76,
+      "source_conflicting_compatible_paths_removed": 0,
+      "all_original_raw_and_headword_components_provenance_and_relative_order_preserved": true,
+      "all_original_spacing_hypotheses_and_frames_preserved": true
+    },
+    {
+      "mode": "novel-raw",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "bf7916305b3a717dbeb498aba460ca64a51f48b521e092a327650c979aa6e8f4",
+      "after_jsonl_sha256": "ffafbf197c1c51498184b96b3f625f6ed1128c4d58d1cdde62d45af4b2988a0b",
+      "records": 179112,
+      "changed_records": 40,
+      "added_paths": 16,
+      "metadata_updates": 17,
+      "source_conflicting_compatible_paths_removed": 0,
+      "all_original_raw_and_headword_components_provenance_and_relative_order_preserved": true,
+      "all_original_spacing_hypotheses_and_frames_preserved": true
+    },
+    {
+      "mode": "novel-headword",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "3bb7292eb709e54ed8e2e16f9193925c8132cef9a5c995e8b5c1234076d19035",
+      "after_jsonl_sha256": "3653e176db9c9bfc932c2049e9965c788eb0bce3f7bd5d89ab93f6dd042f8535",
+      "records": 179112,
+      "changed_records": 34,
+      "added_paths": 10,
+      "metadata_updates": 17,
+      "source_conflicting_compatible_paths_removed": 0,
+      "all_original_raw_and_headword_components_provenance_and_relative_order_preserved": true,
+      "all_original_spacing_hypotheses_and_frames_preserved": true
+    },
+    {
+      "mode": "novel-compatible",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "d9e760be8e13b06f058b876dc362bd9a9c8442b24ebd3a1b4d77502d2b08f91a",
+      "after_jsonl_sha256": "7b47b197b0736151728bd747b98ced3fb288b339ddc44f9cabfa531e71b59802",
+      "records": 179112,
+      "changed_records": 34,
+      "added_paths": 10,
+      "metadata_updates": 17,
+      "source_conflicting_compatible_paths_removed": 0,
+      "all_original_raw_and_headword_components_provenance_and_relative_order_preserved": true,
+      "all_original_spacing_hypotheses_and_frames_preserved": true
+    },
+    {
+      "mode": "novel-headword-spacing",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "1db44cdb01a30900a9995ef7340e58a5dcfb72ccc29c16221354654a4745aa98",
+      "after_jsonl_sha256": "3ef44f8c180461a6b5de8b6a2cc6d28016a579f5a06cfab053ccabba21b6a350",
+      "records": 179112,
+      "changed_records": 34,
+      "added_paths": 10,
+      "metadata_updates": 17,
+      "source_conflicting_compatible_paths_removed": 0,
+      "all_original_raw_and_headword_components_provenance_and_relative_order_preserved": true,
+      "all_original_spacing_hypotheses_and_frames_preserved": true
+    },
+    {
+      "mode": "novel-compatible-spacing",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "before_jsonl_sha256": "e73126b5a777456274ae06e0208656fbb1c3299bd68e0534d77d899d51d9ba71",
+      "after_jsonl_sha256": "4890b553fc9ae9ce7d40f61e520ce361d3babe481bc08440d2951915b08283eb",
+      "records": 179112,
+      "changed_records": 34,
+      "added_paths": 10,
+      "metadata_updates": 17,
+      "source_conflicting_compatible_paths_removed": 0,
+      "all_original_raw_and_headword_components_provenance_and_relative_order_preserved": true,
+      "all_original_spacing_hypotheses_and_frames_preserved": true
+    }
+  ],
+  "new_distinct_paths": [
+    {
+      "surface": "설우니",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "설운",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "설워",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "팔월",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "팗다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "를",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup",
+          "particle",
+          "particle.contraction.l"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "설움과",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "음",
+            "kind": "ending"
+          },
+          {
+            "form": "과",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup",
+          "nominalization",
+          "particle"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "팔월도",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "팗다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "를",
+            "kind": "particle"
+          },
+          {
+            "form": "도",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup",
+          "particle",
+          "particle.contraction.l"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "설움이",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "음",
+            "kind": "ending"
+          },
+          {
+            "form": "이",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup",
+          "nominalization",
+          "particle"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "설움을",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "음",
+            "kind": "ending"
+          },
+          {
+            "form": "을",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup",
+          "nominalization",
+          "particle"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "설움이라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "음",
+            "kind": "ending"
+          },
+          {
+            "form": "이",
+            "kind": "particle"
+          },
+          {
+            "form": "라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "copula",
+          "copula.zero",
+          "ending",
+          "irregular.bieup",
+          "nominalization",
+          "particle"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "설움이라",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "음",
+            "kind": "ending"
+          },
+          {
+            "form": "라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.copular",
+          "copula",
+          "ending",
+          "irregular.bieup",
+          "nominalization"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "설운데",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "섧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은데",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "칠월부터는",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "칣다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "를",
+            "kind": "particle"
+          },
+          {
+            "form": "부터",
+            "kind": "particle"
+          },
+          {
+            "form": "는",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup",
+          "particle",
+          "particle.contraction.l"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "칠월",
+      "analysis": {
+        "lemmas": [
+          {
+            "text": "칣다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "를",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "irregular.bieup",
+          "particle",
+          "particle.contraction.l"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_irregular"
+            }
+          ]
+        ]
+      },
+      "contextual_judgment": "unjudged"
+    }
+  ],
+  "owned_metadata_updates": [
+    {
+      "surface": "넓디넓어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓디넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓디넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓디넓으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓디넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓디넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓디넓은",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓디넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓디넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어야겠군요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어야겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "군요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "prefinal.obligation"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어야겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "군요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "prefinal.obligation"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어야겠군요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어야겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "군",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "particle",
+          "particle.polite",
+          "prefinal.obligation"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어야겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "군",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "particle",
+          "particle.polite",
+          "prefinal.obligation"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어야겠군요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "야",
+            "kind": "particle"
+          },
+          {
+            "form": "겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "군요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "copula",
+          "copula.omitted_ending",
+          "copula.omitted_prefinal",
+          "ending",
+          "particle",
+          "prefinal.modal"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "야",
+            "kind": "particle"
+          },
+          {
+            "form": "겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "군요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "copula",
+          "copula.omitted_ending",
+          "copula.omitted_prefinal",
+          "ending",
+          "particle",
+          "prefinal.modal"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어야겠군요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "야",
+            "kind": "particle"
+          },
+          {
+            "form": "겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "군",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "copula",
+          "copula.omitted_ending",
+          "copula.omitted_prefinal",
+          "ending",
+          "particle",
+          "particle.polite",
+          "prefinal.modal"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "이다",
+            "kind": "copula"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "야",
+            "kind": "particle"
+          },
+          {
+            "form": "겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "군",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "copula",
+          "copula.omitted_ending",
+          "copula.omitted_prefinal",
+          "ending",
+          "particle",
+          "particle.polite",
+          "prefinal.modal"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어지는",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "는",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "는",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어지니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.eu",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.eu",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어지니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어지어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓어집니다",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "습니다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.attached",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "습니다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.attached",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐고",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐느니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐느니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_neuni"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐느니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_neuni"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐는",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐는",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.adnominal_expression"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐는",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.adnominal_expression"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐는구나",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐는구나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_question_exclamation"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐는구나",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_question_exclamation"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐는군",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐는군",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_question_exclamation"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐는군",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_question_exclamation"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐더군요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐더군",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_question_exclamation",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐더군",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_question_exclamation",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐더군요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐더군요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_question_exclamation"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐더군요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_question_exclamation"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐면",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐면",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_conditional_question"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐면",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_conditional_question"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으냐지만",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐지만",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.reporting_contrast"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐지만",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.reporting_contrast"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으려고",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으려고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으려고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓으려고한다",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "하다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으려고",
+            "kind": "ending"
+          },
+          {
+            "form": "는다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.attached",
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          },
+          {
+            "text": "하다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으려고",
+            "kind": "ending"
+          },
+          {
+            "form": "는다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.attached",
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓은",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓은걸요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은걸",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.geol",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은걸",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.geol",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뒤밟아",
+      "before": {
+        "lemmas": [
+          {
+            "text": "뒤밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "뒤밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "뒤밟으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "뒤밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "뒤밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "드넓어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "드넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "드넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "드넓으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "드넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "드넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "드넓은",
+      "before": {
+        "lemmas": [
+          {
+            "text": "드넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "드넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "떫어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "떫다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "떫다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "떫으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "떫다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "떫다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "떫은",
+      "before": {
+        "lemmas": [
+          {
+            "text": "떫다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "떫다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "밟아",
+      "before": {
+        "lemmas": [
+          {
+            "text": "밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "밟으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아도",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어도",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어도",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아도",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "도",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel",
+          "particle"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "도",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel",
+          "particle"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아라",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어라",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아버렸다",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          },
+          {
+            "text": "버리다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          },
+          {
+            "text": "버리다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아봤다",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          },
+          {
+            "text": "보다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          },
+          {
+            "text": "보다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아서",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어서",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어서",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아야",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "야",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel",
+          "particle"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "야",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel",
+          "particle"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아야",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어야",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어야",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇아요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "ending",
+          "inflection.written_vowel"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇았겠지",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "지",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.modal",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "겠",
+            "kind": "prefinal"
+          },
+          {
+            "form": "지",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.modal",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇았다",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇았다고",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇았어요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "어요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "어요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇았어요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "particle",
+          "particle.polite",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "inflection.written_vowel",
+          "particle",
+          "particle.polite",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇았으면",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "으면",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "으면",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "inflection.written_vowel",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇았으면",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "으며",
+            "kind": "ending"
+          },
+          {
+            "form": "는",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "inflection.written_vowel",
+          "particle",
+          "particle.contraction.n",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "으며",
+            "kind": "ending"
+          },
+          {
+            "form": "는",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "inflection.written_vowel",
+          "particle",
+          "particle.contraction.n",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_a"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            },
+            {
+              "morpheme_index": 0,
+              "class": "written_vowel_eo"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "얇은",
+      "before": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "얇다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "엷어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "엷다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "엷다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "엷어지고",
+      "before": {
+        "lemmas": [
+          {
+            "text": "엷다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "엷다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "고",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "엷으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "엷다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "엷다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "엷은",
+      "before": {
+        "lemmas": [
+          {
+            "text": "엷다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "엷다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짓밟아",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짓밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짓밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짓밟으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짓밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짓밟다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧아",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧아지니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.eu",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.eu",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧아지니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧아지어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          },
+          {
+            "text": "지다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧으나마",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으나마",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으나마",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧으냐면",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐면",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_conditional_question"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냐면",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.quoted_conditional_question"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧으냔다",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냔다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.reporting_familiar"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으냔다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.reporting_familiar"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧은",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "짧은걸요",
+      "before": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은걸",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.geol",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "짧다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은걸",
+            "kind": "ending"
+          },
+          {
+            "form": "요",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending",
+          "ending.geol",
+          "particle",
+          "particle.polite"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "폭넓어",
+      "before": {
+        "lemmas": [
+          {
+            "text": "폭넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "폭넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "폭넓으니",
+      "before": {
+        "lemmas": [
+          {
+            "text": "폭넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "폭넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "폭넓은",
+      "before": {
+        "lemmas": [
+          {
+            "text": "폭넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "폭넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "은",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.eu",
+          "ending"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    },
+    {
+      "surface": "넓었다",
+      "before": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      },
+      "after": {
+        "lemmas": [
+          {
+            "text": "넓다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "boundary.regular",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false,
+        "spelling_paths": [
+          [
+            {
+              "morpheme_index": 0,
+              "class": "bieup_regular"
+            }
+          ]
+        ]
+      },
+      "owned_boundaries": {
+        "0": 0
+      },
+      "contextual_judgment": "unjudged"
+    }
+  ],
+  "compatible_removals": [],
+  "complete_changes": {
+    "path": "docs/complex-bieup-changes.jsonl.gz",
+    "sha256": "bf1600c7acd3c49cddabf54d5e8f7a154e78f0b4d9bd67296076e9f0e618f1c5"
+  },
+  "interpretation": "Exhaustive before/after observations and scoped ownership/preservation audit. Contextual sense/register and added novel hypotheses remain unjudged; counts are not a precision claim."
+}

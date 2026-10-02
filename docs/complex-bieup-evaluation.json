@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-021o"
+  ],
+  "status": "Completed bounded COV-021o inflection recovery, spelling compatibility and source/corpus/browser/Nix/release/runtime verification. The full coverage-checklist goal remains active.",
+  "before_revision": "504f4075ccf62997dddf071b2a1271c8371bdddf",
+  "source_fixture": {
+    "path": "tests/fixtures/complex-bieup-sources.json",
+    "sha256": "776295f3b9ac713cfbb983d5f651a70c43092926b8cbb5a7b03dd1a4d6f0482a"
+  },
+  "sources": {
+    "complete_english_entries": 26,
+    "native_complex_coda_predicates": 12,
+    "regular": 11,
+    "irregular": 1,
+    "frozen_surfaces": 151,
+    "required_paths": 83,
+    "spelling_contrasts": 72,
+    "dictionary_forbidden_contrasts": 37,
+    "original_complete_training_sentences": 8
+  },
+  "gates": {
+    "full_rust": {
+      "status": "passed",
+      "tests": 778,
+      "log_sha256": "555fbcd5c1fd46c1f2f48e383a602a65be3c15080a1b8befdc4075a7959caebd"
+    },
+    "format": "passed",
+    "clippy": {
+      "status": "passed",
+      "log_sha256": "f0dbb543b7547d4583e50d2c8d221e5ca226e70fea7d6ce5aae7c3c3b4e62a10",
+      "initial_refinement_lint_sha256": "2617b1d97df7f284184c7ea40ad3e747ebf80cf3aba137bc671ab0a95645fa65",
+      "initial_issue": "The test helper was imported twice in one integration crate; it now reuses the single existing module."
+    },
+    "frontend": {
+      "status": "passed",
+      "log_sha256": "170746ce592cc74048b9de98fffa30cf1ae76f0ec0ca34da41cd4ed7b71a6893"
+    },
+    "browser": {
+      "status": "passed",
+      "log_sha256": "c0fc4043b51015cf6f916f88010cceba6d837ff821dda1a505f57f633642f141",
+      "cli_sha256": "d3f8eadea95c76ba09cb08d4a639fd1cf94887e508687d69414539c20929ef98",
+      "server_sha256": "83e94cc68f01f61657a5e7dbf96f69df87c953fe6bd058dcaf92a8739e999fce",
+      "desktop_screenshot_sha256": "703d11cee5060bf11f3c8feabe2a2c17ddf37d00e558671bad7796aa3fb0e596",
+      "mobile_screenshot_sha256": "47c8e6b08d4dcdf599199441dae7ab3560e85b814d19690dc9b2a1dff4a3ff00",
+      "desktop_and_mobile_visually_inspected": true,
+      "all_151_histories_and_26_complete_source_entries_checked": true,
+      "all_three_filters_exports_and_raw_candidate_indices_checked": true
+    },
+    "inventory": {
+      "status": "passed",
+      "unit_tests": 9,
+      "entries": 715,
+      "scoped": 427,
+      "unreviewed": 288
+    },
+    "broad_comparison": {
+      "status": "passed",
+      "initial_audit_failure": "Audit helper used segments instead of the existing records field in spacing hypotheses; corrected to verify records and retained breakdown indices. This was not a production failure.",
+      "initial_log_sha256": "841a89a23c669d033ebcf876e9e955367a0f6e210991860f48ed662684178d6b",
+      "preserved_initial_changes": {
+        "path": "docs/complex-bieup-initial-comparison-changes.jsonl.gz",
+        "sha256": "0983bff6e13e5fcdce7d565fc3a92088fe105956a3860ae7bce98f8d3bb5d964"
+      },
+      "records": 1128312,
+      "observations": "docs/complex-bieup-observations.json",
+      "observations_sha256": "9d48b78fc344426dde30b6b99668d5121c881f550f666390bb4c3f5cd9c0c6dd",
+      "log_sha256": "77c28e592c0e6325a2ed2f01f03cdecda2651348f5e339ab67cc519518130152",
+      "new_distinct_paths": 13,
+      "distinct_owned_metadata_updates": 78,
+      "compatible_removals": 0,
+      "all_original_raw_and_headword_components_rules_order_and_spacing_frames_retained": true,
+      "all_original_spelling_obligations_preserved": true,
+      "actual_owner_api": {
+        "path": "docs/complex-bieup-owner-api.json.gz",
+        "sha256": "f84afd455075491a55f49532f8351765284fd2fd15f218d871d9cc01a1fca0cc",
+        "surfaces": 79
+      }
+    },
+    "nix": {
+      "status": "passed",
+      "release_tests": 778,
+      "package": "/nix/store/bmai4ihgab8s7qsz37f35rgjdir7n9rk-klem-0.1.0",
+      "wrapper": "/nix/store/jy3lz9fhhqdzyg8as90jdycy4vd7q3w5-klem-web",
+      "assets": "/nix/store/786g6fqbwdhxv43fvqbx0qzcldb5d8db-klem-web-assets-0.1.0",
+      "log_sha256": "17d4b9197064d3d6fa346e716af4107bf1040ade1ffd37d6b3ee617a07c393f2",
+      "host_system": "x86_64-linux",
+      "flake_checks": 3,
+      "inventory_unit_tests": 9,
+      "initial_flake_log_sha256": "6319ac42670fe4635c60404cd5de9c5386444ab9e981a6fc704505bbfb4d3d08",
+      "final_flake_log_sha256": "da72f66867d7b528d84f03b17bcb8b2ac8bc80096bf3504ac3874767097e6ca7",
+      "final_flake_status": "passed: all three x86_64-linux checks, including regenerated current inventory; other architectures were not checked"
+    },
+    "release_debug_and_paired_performance": {
+      "status": "passed",
+      "report": "docs/complex-bieup-release-evaluation.json",
+      "sha256": "96023999513739595a55920ca9bc96fd0a22e83c10ae689c2620772bdf3257c1",
+      "all_eight_stream_hashes_exact": true,
+      "interpretation": "Three alternating old/new immutable release runs per dictionary mode; complete novel stdout is streamed through SHA-256, never discarded unverified. Descriptive wall-clock timings on this machine, not an isolated benchmark or cross-batch performance comparison."
+    },
+    "packaged_and_live_api_and_preview": {
+      "status": "passed",
+      "surfaces": 301,
+      "complete_native_entries": 144,
+      "frontend_files": 12,
+      "all_api_fields_match_debug_except_elapsed_ms": true,
+      "all_frontend_files_match": true,
+      "preview": "http://127.0.0.1:8081",
+      "report": "docs/complex-bieup-preview-api.json.gz",
+      "sha256": "fbe82cd4434bbf96b6a75e223a077f8f411d0fc363f4e27584f6df48363a774b",
+      "process_identity": {
+        "pid": 3418191,
+        "uid": "1000",
+        "exe": "/nix/store/bmai4ihgab8s7qsz37f35rgjdir7n9rk-klem-0.1.0/bin/klem-web",
+        "args": [
+          "/nix/store/bmai4ihgab8s7qsz37f35rgjdir7n9rk-klem-0.1.0/bin/klem-web",
+          "--assets",
+          "/nix/store/786g6fqbwdhxv43fvqbx0qzcldb5d8db-klem-web-assets-0.1.0/share/klem-web",
+          "--port",
+          "8081",
+          "--dictionary",
+          "data/dictionaries/krdict/krdict.db"
+        ],
+        "cwd": "/home/josh/projects/klem",
+        "start_ticks": "7032327",
+        "server_sha256": "2060569fef4533b4816a602d89169bddad2a33300164d7ee8742838453d3084f",
+        "exec_session": 61372
+      },
+      "old_preview_identity_verified_with_pidfd": true,
+      "temporary_owner_api_stopped_with_pidfd": true
+    },
+    "owner_assertion_refinement": {
+      "status": "passed",
+      "tests": 10,
+      "log_sha256": "a98cdff9c90f37f20e45cedb036babd4c1b174f127bb71bec82710db174ea898",
+      "scope": "Strengthened final assertions require the exact honorific ㄼ requirement and preserve all earlier classes in legacy vowel comparisons."
+    },
+    "packaged_api": {
+      "status": "passed",
+      "report": "docs/complex-bieup-packaged-api.json.gz",
+      "sha256": "186fd044aeb97f0c469822a43f4459f74255b37235f9ae569e08d52316303cee",
+      "frozen_debug": "docs/complex-bieup-debug-api.json.gz",
+      "frozen_debug_sha256": "07ed9b0039954ed87034ee92c06a82e2dd378856d67a89652e20086efb1fc775",
+      "surfaces": 301,
+      "complete_native_entries": 144,
+      "frontend_files": 12,
+      "full_api_identical_except_elapsed_ms": true
+    }
+  },
+  "corpus_and_ledger": {
+    "path": "docs/complex-bieup-corpus-ledger.json",
+    "sha256": "119428b8a46255f8a723ed56ced9d8a4293c479267f34b79540400a452f841ff"
+  },
+  "raw_probes": {
+    "path": "docs/complex-bieup-probe-observations.json",
+    "sha256": "f44c41548fb727611dea1449780ba62b8accf1a73673a34939e8271c96c4daf4"
+  },
+  "historical_vowel_audit": {
+    "path": "docs/complex-bieup-written-vowel-history.json",
+    "sha256": "f52a29e8601c319dd79a661b17aec101cacd3fd45561730e09d081ee8f8be2fd"
+  },
+  "original_rescan": {
+    "path": "docs/complex-bieup-original-paradigm-rescan.json",
+    "sha256": "51594df5a8c9f347efe2c518ebbe13d735048baba4d8bfa49b0ba6c4c70fa23d"
+  },
+  "remaining_original_native_pairs": 22,
+  "original_complex_non_hangul_exclusions_unchanged": true,
+  "contextual_judgments": "All new unreviewed hypotheses remain unjudged in context; membership, source-form recovery and candidate counts do not establish precision. No synonym substitution or universal ㄼ irregular classification is added.",
+  "novel_contexts": {
+    "path": "docs/complex-bieup-novel-contexts.json",
+    "sha256": "ce25c96e82654311bdf345ade5c4d69b98302922c238c4ddfa873a408a6fc238",
+    "occurrences": 40,
+    "complete_paragraphs": 37,
+    "all_five_complete_before_after_modes": true
+  },
+  "individual_review_queue": {
+    "path": "docs/complex-bieup-review-queue.json",
+    "sha256": "7620512b2ebbe65701de54c9cc08e4b2f64fb7411cba8b968c1701677f199ac7",
+    "new_distinct_paths": 66,
+    "contextual_judgments": "unjudged"
+  }
+}

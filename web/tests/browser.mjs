@@ -635,6 +635,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !transitionIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...transitionEntries);
 
+  const lexicalMaldaFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-lexical-malda.json"), "utf8"));
+  const lexicalMaldaEntries = lexicalMaldaFixture.LexicalResource.Lexicon.LexicalEntry;
+  const lexicalMaldaIds = new Set(lexicalMaldaEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !lexicalMaldaIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...lexicalMaldaEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5816,6 +5822,68 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-transition-aux-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-transition-aux-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const lexicalMaldaSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/lexical-malda-sources.json"),"utf8"));
+  const lexicalMaldaMatches = (a,j) => JSON.stringify(a.lemmas.map(l=>l.text)) === JSON.stringify(j.lemmas)
+    && JSON.stringify(a.lemmas.map(l=>l.kind)) === JSON.stringify(j.lemma_kinds)
+    && (j.morphemes == null || JSON.stringify(a.morphemes.map(m=>m.form)) === JSON.stringify(j.morphemes))
+    && (!j.morpheme_kinds || JSON.stringify(a.morphemes.map(m=>m.kind)) === JSON.stringify(j.morpheme_kinds))
+    && (!j.required_rules || j.required_rules.every(r=>a.rules.includes(r)));
+  const lexicalMaldaCases = recipientLedger.cases.filter(c => c.id.startsWith("lexical-malda-"));
+  assert.equal(lexicalMaldaCases.length,88);
+  for (const c of lexicalMaldaCases) {
+    const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => lexicalMaldaMatches(a,j)),j.verdict === "required",c.id);
+  }
+  for (const c of lexicalMaldaSource.cases) {
+    const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
+    const i = token.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(i >= 0,c.id);
+    const slot = token.dictionary.readings[i].lemmas.find(l => l.lemma_index === c.lexical_mal_slot);
+    for (const j of c.entry_judgments) {
+      const e = slot.entries.find(e => e.id === j.id);assert.ok(e,c.id);
+      assert.equal(e.status,j.status,c.id);assert.deepEqual(e.conflicts,j.conflicts,c.id);
+    }
+  }
+  for (const e of [...lexicalMaldaSource.source_entries,...lexicalMaldaSource.grammar_entries,...lexicalMaldaSource.object_entries]) {
+    const response = await (await post("entry",{id:e.id})).json();assert.deepEqual(response.entry,e,e.id);
+  }
+  const lexicalMaldaText = "마시다만 먹어보다말았다 먹다말아버렸다 먹다말지않았다 할지말지 먹으나마나 밥말고도 선생님들말고 걱정마 염려마라 상관마요 꼼짝마";
+  const lexicalMaldaParts = [
+    ["마시","다","말","은"], ["먹","어","보","다","말","었","다"],
+    ["먹","다","말","어","버리","었","다"], ["먹","다","말","지","않","었","다"],
+    ["하","을지","말","지"], ["먹","으나","말","나"], ["밥","말","고","도"],
+    ["선생","님","들","말","고"], ["걱정","말","어"], ["염려","말","어라"],
+    ["상관","말","어요"], ["꼼짝","말","어"],
+  ];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag === "--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,lexicalMaldaText);await waitHeading(page,"마시다만");
+    const response = await (await post("analyze",{text:lexicalMaldaText})).json();
+    const tokens = response.records.filter(r => r.analysis);
+    for (const [n,t] of tokens.entries()) {
+      const c = lexicalMaldaSource.cases.find(c => c.surface === t.surface && (t.surface !== "꼼짝마" || c.lemmas[0].kind === "adverbial"));
+      assert.ok(c,t.surface);
+      const index = t.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(index >= 0,t.surface);
+      const block = page.locator(".breakdown-word").nth(n);
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),1,t.surface);
+      await block.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(),lexicalMaldaParts[n],t.surface);
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:lexicalMaldaText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(0).locator(".breakdown-part").nth(2).click();
+  // The lexical role retains all three verb homonyms; choose source 69296
+  // explicitly rather than assuming the first dictionary result is its sense.
+  await page.locator(".entry-choices button").filter({hasText:/말다\s*3/}).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=69296"]'));
+  await page.screenshot({path:resolve(tmpdir(),"klem-lexical-malda-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-lexical-malda-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

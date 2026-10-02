@@ -3254,6 +3254,8 @@ fn potential_auxiliary_targets_preserve_all_14_original_training_matches() {
 fn transition_auxiliary_targets_keep_all_original_rows_and_track_question_case_recovery() {
     let source: serde_json::Value =
         serde_json::from_str(include_str!("fixtures/transition-aux-sources.json")).unwrap();
+    let lexical: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/lexical-malda-sources.json")).unwrap();
     let mut count = 0;
     let mut matched_before = 0;
     let mut matched_after = 0;
@@ -3292,7 +3294,18 @@ fn transition_auxiliary_targets_keep_all_original_rows_and_track_question_case_r
             );
             assert_eq!(
                 serde_json::to_value(case).unwrap(),
-                target["case_report_after"]
+                if case.id == "id:MH2_0037-s44/6" {
+                    lexical["corpus_search"]
+                        .as_array()
+                        .unwrap()
+                        .iter()
+                        .flat_map(|f| f["targets"].as_array().unwrap())
+                        .find(|t| t["id"] == case.id)
+                        .unwrap()["case_report_after"]
+                        .clone()
+                } else {
+                    target["case_report_after"].clone()
+                }
             );
             let before = target["matched_before"].as_bool().unwrap();
             if before {
@@ -3302,12 +3315,69 @@ fn transition_auxiliary_targets_keep_all_original_rows_and_track_question_case_r
             if case.matched {
                 matched_after += 1;
             }
-            if target["case_report"] != target["case_report_after"] {
+            if target["case_report"] != serde_json::to_value(case).unwrap() {
                 changed.push(case.id.clone());
             }
             count += 1;
         }
     }
-    assert_eq!((count, matched_before, matched_after), (166, 158, 159));
-    assert_eq!(changed, ["id:MH2_0032-s186/6"]);
+    assert_eq!((count, matched_before, matched_after), (166, 158, 160));
+    assert_eq!(changed, ["id:MH2_0032-s186/6", "id:MH2_0037-s44/6"]);
+}
+
+#[test]
+fn lexical_malda_targets_preserve_original_homonyms_tags_and_training_gold() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/lexical-malda-sources.json")).unwrap();
+    let mut total = 0;
+    let mut before = 0;
+    let mut after = 0;
+    for (kind, input) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-lexical-malda.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-lexical-malda.conllu").as_slice(),
+        ),
+    ] {
+        let file = source["corpus_search"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == kind.name())
+            .unwrap();
+        let original = std::str::from_utf8(input).unwrap();
+        for block in file["selected_blocks"].as_array().unwrap() {
+            assert!(original.contains(block.as_str().unwrap()));
+        }
+        let report = corpus::evaluate(input, kind, "lexical-malda").unwrap();
+        for target in file["targets"].as_array().unwrap() {
+            let row = target["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(original.lines().any(|line| line == row));
+            let case = &report.cases[target["id"].as_str().unwrap()];
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                target["expected"]
+            );
+            assert_eq!(
+                serde_json::to_value(case).unwrap(),
+                target["case_report_after"]
+            );
+            if target["matched_before"] == true {
+                before += 1;
+                assert!(case.matched, "{}", case.id);
+            }
+            after += usize::from(case.matched);
+            total += 1;
+        }
+    }
+    assert_eq!((total, before, after), (52, 49, 50));
 }

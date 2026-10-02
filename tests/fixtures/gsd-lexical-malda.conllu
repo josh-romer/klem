@@ -1,0 +1,192 @@
+# sent_id = train-s179
+# text = 옛날 생각하구 몇 년 만에 왔는데 마니 마니 실망임다
+# translit = .yes.nal .saeng.gag.ha.gu .myeoch .nyeon .man.e .wass.neun.de .ma.ni .ma.ni .sil.mang.im.da
+1	옛날	옛날	NOUN	NNG	_	2	obj	_	Translit=.yes.nal|LTranslit=.yes.nal
+2	생각하구	생각+하구	VERB	NNG+JKB	_	9	advcl	_	Translit=.saeng.gag.ha.gu|LTranslit=.saeng.gag+.ha.gu
+3	몇	몇	DET	MM	_	4	det	_	Translit=.myeoch|LTranslit=.myeoch
+4	년	년	NOUN	NNB	_	6	nmod	_	Translit=.nyeon|LTranslit=.nyeon
+5	만에	만+에	ADP	NNB+JKB	_	4	case	_	Translit=.man.e|LTranslit=.man+.e
+6	왔는데	오+았+는데	VERB	VV+EP+EC	_	2	conj	_	Translit=.wass.neun.de|LTranslit=.o+.ass+.neun.de
+7	마니	말+니	ADV	VX+EC	_	9	advmod	_	Translit=.ma.ni|LTranslit=.mal+.ni
+8	마니	말+니	ADV	VX+EC	_	9	advmod	_	Translit=.ma.ni|LTranslit=.mal+.ni
+9	실망임다	실망+이+ㅁ+다	VERB	NNG+VCP+ETN+JX	_	0	root	_	Translit=.sil.mang.im.da|LTranslit=.sil.mang+.i+ㅁ+.da
+
+# sent_id = train-s292
+# text = 이건 오면 오고 말면 말라는 식.
+# translit = .i.geon .o.myeon .o.go .mal.myeon .mal.ra.neun .sig.
+1	이건	이건	PRON	NNG	_	6	nsubj	_	Translit=.i.geon|LTranslit=.i.geon
+2	오면	오+면	VERB	VV+EC	_	3	advcl	_	Translit=.o.myeon|LTranslit=.o+.myeon
+3	오고	오+고	VERB	VX+EC	_	6	dep	_	Translit=.o.go|LTranslit=.o+.go
+4	말면	말+면	VERB	VX+EC	_	5	advcl	_	Translit=.mal.myeon|LTranslit=.mal+.myeon
+5	말라는	말+라는	VERB	VX+ETM	_	3	conj	_	Translit=.mal.ra.neun|LTranslit=.mal+.ra.neun
+6	식	식	NOUN	NNG	_	0	root	_	SpaceAfter=No|Translit=.sig|LTranslit=.sig
+7	.	.	PUNCT	SF	_	6	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s391
+# text = 이 따위로 병원 운영하지 마세요.
+# translit = .i .dda.wi.ro .byeong.weon .un.yeong.ha.ji .ma.se.yo.
+1	이	이	DET	MM	_	2	det	_	Translit=.i|LTranslit=.i
+2	따위로	따위+로	ADV	NNB+JKB	_	4	obl	_	Translit=.dda.wi.ro|LTranslit=.dda.wi+.ro
+3	병원	병원	NOUN	NNG	_	4	obj	_	Translit=.byeong.weon|LTranslit=.byeong.weon
+4	운영하지	운영+하+지	VERB	NNG+XSV+EC	_	0	root	_	Translit=.un.yeong.ha.ji|LTranslit=.un.yeong+.ha+.ji
+5	마세요	말+시+어요	VERB	VX+EP+EF	_	4	flat	_	SpaceAfter=No|Translit=.ma.se.yo|LTranslit=.mal+.si+.eo.yo
+6	.	.	PUNCT	SF	_	5	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s605
+# text = 그러나 여미의 부모인 타다노는 놀이공원을 폭파하려다 에이지에게 들통나 경찰에게 붙잡히고 말았다.
+# translit = .geu.reo.na .yeo.mi.yi .bu.mo.in .ta.da.no.neun .nol.i.gong.weon.eul .pog.pa.ha.ryeo.da .e.i.ji.e.ge .deul.tong.na .gyeong.chal.e.ge .but.jab.hi.go .mal.ass.da.
+1	그러나	그러나	ADV	MAJ	_	10	advmod	_	Translit=.geu.reo.na|LTranslit=.geu.reo.na
+2	여미의	여미+의	NOUN	NNG+JKG	_	3	nmod:poss	_	Translit=.yeo.mi.yi|LTranslit=.yeo.mi+.yi
+3	부모인	부모+이+ㄴ	VERB	NNG+VCP+ETM	_	4	acl:relcl	_	Translit=.bu.mo.in|LTranslit=.bu.mo+.i+ㄴ
+4	타다노는	타다노+는	NOUN	NNP+JX	_	6	nsubj	_	Translit=.ta.da.no.neun|LTranslit=.ta.da.no+.neun
+5	놀이공원을	놀이+공원+을	NOUN	NNG+NNG+JKO	_	6	obj	_	Translit=.nol.i.gong.weon.eul|LTranslit=.nol.i+.gong.weon+.eul
+6	폭파하려다	폭파+하+려다	VERB	NNG+XSV+EC	_	8	advcl	_	Translit=.pog.pa.ha.ryeo.da|LTranslit=.pog.pa+.ha+.ryeo.da
+7	에이지에게	에이지+에게	ADV	NNP+JKB	_	8	advmod	_	Translit=.e.i.ji.e.ge|LTranslit=.e.i.ji+.e.ge
+8	들통나	들통+나+아	VERB	NNG+VV+EC	_	10	advcl	_	Translit=.deul.tong.na|LTranslit=.deul.tong+.na+.a
+9	경찰에게	경찰+에게	ADV	NNG+JKB	_	10	advmod	_	Translit=.gyeong.chal.e.ge|LTranslit=.gyeong.chal+.e.ge
+10	붙잡히고	붙잡히+고	VERB	VV+EC	_	0	root	_	Translit=.but.jab.hi.go|LTranslit=.but.jab.hi+.go
+11	말았다	말+았+다	VERB	VX+EP+EF	_	10	flat	_	SpaceAfter=No|Translit=.mal.ass.da|LTranslit=.mal+.ass+.da
+12	.	.	PUNCT	SF	_	11	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s631
+# text = 바닷가재 말고 다른 것도 좋아요
+# translit = .ba.das.ga.jae .mal.go .da.reun .geos.do .joh.a.yo
+1	바닷가재	바닷가재	NOUN	NNG	_	2	nsubj	_	Translit=.ba.das.ga.jae|LTranslit=.ba.das.ga.jae
+2	말고	말+고	VERB	VV+EC	_	0	root	_	Translit=.mal.go|LTranslit=.mal+.go
+3	다른	다른	ADJ	MM	_	4	amod	_	Translit=.da.reun|LTranslit=.da.reun
+4	것도	것+도	NOUN	NNB+JX	_	5	nsubj	_	Translit=.geos.do|LTranslit=.geos+.do
+5	좋아요	좋+아요	ADJ	VA+EC	_	2	conj	_	Translit=.joh.a.yo|LTranslit=.joh+.a.yo
+
+# sent_id = train-s1192
+# text = 누가 돈내준데도 오지마세요
+# translit = .nu.ga .don.nae.jun.de.do .o.ji.ma.se.yo
+1	누가	누+가	PRON	NNG+JKS	_	2	nsubj	_	Translit=.nu.ga|LTranslit=.nu+.ga
+2	돈내준데도	돈+내주+ㄴ데도	VERB	NNG+VV+EC	_	3	advcl	_	Translit=.don.nae.jun.de.do|LTranslit=.don+.nae.ju+ㄴ.de.do
+3	오지마세요	오+지+말+시+어요	VERB	VX+EC+VX+EP+EC	_	0	root	_	Translit=.o.ji.ma.se.yo|LTranslit=.o+.ji+.mal+.si+.eo.yo
+
+# sent_id = train-s1334
+# text = 여기 이찬근 선생님이 진료는 잘하신다는데 입원은 하지 마세요
+# translit = .yeo.gi .i.chan.geun .seon.saeng.nim.i .jin.ryo.neun .jal.ha.sin.da.neun.de .ib.weon.eun .ha.ji .ma.se.yo
+1	여기	여기	ADV	NP	_	5	advmod	_	Translit=.yeo.gi|LTranslit=.yeo.gi
+2	이찬근	이찬근	NOUN	NNG	_	5	nsubj	_	Translit=.i.chan.geun|LTranslit=.i.chan.geun
+3	선생님이	선생+님+이	NOUN	NNG+XSN+JKS	_	2	flat	_	Translit=.seon.saeng.nim.i|LTranslit=.seon.saeng+.nim+.i
+4	진료는	진료+는	NOUN	NNG+JX	_	5	obj	_	Translit=.jin.ryo.neun|LTranslit=.jin.ryo+.neun
+5	잘하신다는데	잘+하+시+ㄴ다는데	VERB	MAG+XSV+EP+EC	_	7	advcl	_	Translit=.jal.ha.sin.da.neun.de|LTranslit=.jal+.ha+.si+ㄴ.da.neun.de
+6	입원은	입원+은	NOUN	NNG+JX	_	7	obj	_	Translit=.ib.weon.eun|LTranslit=.ib.weon+.eun
+7	하지	하+지	VERB	VV+EC	_	0	root	_	Translit=.ha.ji|LTranslit=.ha+.ji
+8	마세요	말+시+어요	VERB	VX+EP+EC	_	7	flat	_	Translit=.ma.se.yo|LTranslit=.mal+.si+.eo.yo
+
+# sent_id = train-s2341
+# text = 왠만하면 그 집에 가지 마세요
+# translit = .waen.man.ha.myeon .geu .jib.e .ga.ji .ma.se.yo
+1	왠만하면	왠만하면	VERB	MAG	_	4	advcl	_	Translit=.waen.man.ha.myeon|LTranslit=.waen.man.ha.myeon
+2	그	그	DET	MM	_	3	det	_	Translit=.geu|LTranslit=.geu
+3	집에	집+에	ADV	NNG+JKB	_	4	obl	_	Translit=.jib.e|LTranslit=.jib+.e
+4	가지	가+지	VERB	VV+EC	_	0	root	_	Translit=.ga.ji|LTranslit=.ga+.ji
+5	마세요	말+시+어요	VERB	VX+EP+EC	_	4	flat	_	Translit=.ma.se.yo|LTranslit=.mal+.si+.eo.yo
+
+# sent_id = train-s2577
+# text = 바로 지금 기업이 경쟁력을 갖느냐, 마느냐의 문제는 기업 내에 얼마나 경쟁력 있는 인적 자원이 준비돼 있느냐에 따라 달려있다고 해도 과언은 아니다.
+# translit = .ba.ro .ji.geum .gi.eob.i .gyeong.jaeng.ryeog.eul .gaj.neu.nya, .ma.neu.nya.yi .mun.je.neun .gi.eob .nae.e .eol.ma.na .gyeong.jaeng.ryeog .iss.neun .in.jeog .ja.weon.i .jun.bi.dwae .iss.neu.nya.e .dda.ra .dal.ryeo.iss.da.go .hae.do .gwa.eon.eun .a.ni.da.
+1	바로	바로	ADV	MAG	_	2	advmod	_	Translit=.ba.ro|LTranslit=.ba.ro
+2	지금	지금	ADV	MAG	_	5	advmod	_	Translit=.ji.geum|LTranslit=.ji.geum
+3	기업이	기업+이	NOUN	NNG+JKS	_	5	nsubj	_	Translit=.gi.eob.i|LTranslit=.gi.eob+.i
+4	경쟁력을	경쟁력+을	NOUN	NNG+JKO	_	5	obj	_	Translit=.gyeong.jaeng.ryeog.eul|LTranslit=.gyeong.jaeng.ryeog+.eul
+5	갖느냐	갖+느냐	VERB	VV+EC	_	8	ccomp	_	SpaceAfter=No|Translit=.gaj.neu.nya|LTranslit=.gaj+.neu.nya
+6	,	,	PUNCT	SP	_	7	punct	_	Translit=,|LTranslit=,
+7	마느냐의	말+느냐+의	VERB	VV+EC+JKG	_	5	conj	_	Translit=.ma.neu.nya.yi|LTranslit=.mal+.neu.nya+.yi
+8	문제는	문제+는	NOUN	NNG+JX	_	19	nsubj	_	Translit=.mun.je.neun|LTranslit=.mun.je+.neun
+9	기업	기업	NOUN	NNG	_	16	nmod	_	Translit=.gi.eob|LTranslit=.gi.eob
+10	내에	내+에	ADP	NNB+JKB	_	9	case	_	Translit=.nae.e|LTranslit=.nae+.e
+11	얼마나	얼마나	ADV	MAG	_	16	advmod	_	Translit=.eol.ma.na|LTranslit=.eol.ma.na
+12	경쟁력	경쟁력	NOUN	NNG	_	13	nsubj	_	Translit=.gyeong.jaeng.ryeog|LTranslit=.gyeong.jaeng.ryeog
+13	있는	있+는	VERB	VV+ETM	_	14	acl:relcl	_	Translit=.iss.neun|LTranslit=.iss+.neun
+14	인적	인+적	NOUN	NNG+XSN	_	16	nsubj:pass	_	Translit=.in.jeog|LTranslit=.in+.jeog
+15	자원이	자원+이	NOUN	NNG+JKS	_	14	flat	_	Translit=.ja.weon.i|LTranslit=.ja.weon+.i
+16	준비돼	준비+되+어	VERB	NNG+XSV+EC	_	18	advcl	_	Translit=.jun.bi.dwae|LTranslit=.jun.bi+.doe+.eo
+17	있느냐에	있+느냐+에	ADV	VX+EC+JKB	_	16	flat	_	Translit=.iss.neu.nya.e|LTranslit=.iss+.neu.nya+.e
+18	따라	따르+아	VERB	VV+EC	_	19	advcl	_	Translit=.dda.ra|LTranslit=.dda.reu+.a
+19	달려있다고	달리+어+있+다고	VERB	VV+EC+VX+EC	_	20	ccomp	_	Translit=.dal.ryeo.iss.da.go|LTranslit=.dal.ri+.eo+.iss+.da.go
+20	해도	하+아도	VERB	VX+EC	_	22	advcl	_	Translit=.hae.do|LTranslit=.ha+.a.do
+21	과언은	과언+은	NOUN	NNG+JX	_	22	nsubj	_	Translit=.gwa.eon.eun|LTranslit=.gwa.eon+.eun
+22	아니다	아니+다	ADJ	VCN+EF	_	0	root	_	SpaceAfter=No|Translit=.a.ni.da|LTranslit=.a.ni+.da
+23	.	.	PUNCT	SF	_	22	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s2631
+# text = 전 말고두 찌개류도 맛나구 다른 것들도 맛있더라구요
+# translit = .jeon .mal.go.du .jji.gae.ryu.do .mas.na.gu .da.reun .geos.deul.do .mas.iss.deo.ra.gu.yo
+1	전	전	NOUN	NNG	_	2	nsubj	_	Translit=.jeon|LTranslit=.jeon
+2	말고두	말+고+두	ADV	VV+EC+JX	_	4	advmod	_	Translit=.mal.go.du|LTranslit=.mal+.go+.du
+3	찌개류도	찌개+류+도	NOUN	NNG+XSN+JX	_	4	nsubj	_	Translit=.jji.gae.ryu.do|LTranslit=.jji.gae+.ryu+.do
+4	맛나구	맛나+구	VERB	VA+EC	_	0	root	_	Translit=.mas.na.gu|LTranslit=.mas.na+.gu
+5	다른	다른	ADJ	MM	_	6	amod	_	Translit=.da.reun|LTranslit=.da.reun
+6	것들도	것+들+도	NOUN	NNB+XSN+JX	_	7	nsubj	_	Translit=.geos.deul.do|LTranslit=.geos+.deul+.do
+7	맛있더라구요	맛있+더라구요	ADJ	VA+EC	_	4	conj	_	Translit=.mas.iss.deo.ra.gu.yo|LTranslit=.mas.iss+.deo.ra.gu.yo
+
+# sent_id = train-s2799
+# text = 이 글 보시는 분들 족발 시킬 땐 가격을 절대 묻지마세요.
+# translit = .i .geul .bo.si.neun .bun.deul .jog.bal .si.kil .ddaen .ga.gyeog.eul .jeol.dae .mud.ji.ma.se.yo.
+1	이	이	DET	MM	_	2	det	_	Translit=.i|LTranslit=.i
+2	글	글	NOUN	NNG	_	3	obj	_	Translit=.geul|LTranslit=.geul
+3	보시는	보+시+는	VERB	VV+EP+ETM	_	4	acl:relcl	_	Translit=.bo.si.neun|LTranslit=.bo+.si+.neun
+4	분들	분+들	NOUN	NNB+XSN	_	6	nsubj	_	Translit=.bun.deul|LTranslit=.bun+.deul
+5	족발	족발	NOUN	NNG	_	6	obj	_	Translit=.jog.bal|LTranslit=.jog.bal
+6	시킬	시키+ㄹ	VERB	VV+ETM	_	10	advcl	_	Translit=.si.kil|LTranslit=.si.ki+ㄹ
+7	땐	때+ㄴ	NOUN	NNG+JX	_	6	obl	_	OrigDeprel=mark|Translit=.ddaen|LTranslit=.ddae+ㄴ
+8	가격을	가격+을	NOUN	NNG+JKO	_	10	obj	_	Translit=.ga.gyeog.eul|LTranslit=.ga.gyeog+.eul
+9	절대	절대	ADV	MAG	_	10	advmod	_	Translit=.jeol.dae|LTranslit=.jeol.dae
+10	묻지마세요	묻+지+말+시+어요	VERB	VV+EC+VX+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.mud.ji.ma.se.yo|LTranslit=.mud+.ji+.mal+.si+.eo.yo
+11	.	.	PUNCT	SF	_	10	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s3061
+# text = 하지만 본디 충무김밥은 맨밥을 김에 말아 따로 싸놓고, 주꾸미 등의 해산물을 고춧가루, 액젓 등으로 짜고 맵게 양념한다.
+# translit = .ha.ji.man .bon.di .chung.mu.gim.bab.eun .maen.bab.eul .gim.e .mal.a .dda.ro .ssa.noh.go, .ju.ggu.mi .deung.yi .hae.san.mul.eul .go.chus.ga.ru, .aeg.jeos .deung.eu.ro .jja.go .maeb.ge .yang.nyeom.han.da.
+1	하지만	하지만	ADV	MAJ	_	19	advmod	_	Translit=.ha.ji.man|LTranslit=.ha.ji.man
+2	본디	본디	ADV	MAG	_	3	advmod	_	Translit=.bon.di|LTranslit=.bon.di
+3	충무김밥은	충무+김밥+은	NOUN	NNP+NNG+JX	_	19	nsubj	_	Translit=.chung.mu.gim.bab.eun|LTranslit=.chung.mu+.gim.bab+.eun
+4	맨밥을	맨+밥+을	NOUN	XPN+NNG+JKO	_	6	obj	_	Translit=.maen.bab.eul|LTranslit=.maen+.bab+.eul
+5	김에	김+에	ADV	NNG+JKB	_	6	obl	_	Translit=.gim.e|LTranslit=.gim+.e
+6	말아	말+아	VERB	VV+EC	_	8	advcl	_	Translit=.mal.a|LTranslit=.mal+.a
+7	따로	따로	ADV	MAG	_	8	advmod	_	Translit=.dda.ro|LTranslit=.dda.ro
+8	싸놓고	싸+아+놓+고	VERB	VV+EC+VX+EC	_	19	advcl	_	SpaceAfter=No|Translit=.ssa.noh.go|LTranslit=.ssa+.a+.noh+.go
+9	,	,	PUNCT	SP	_	8	punct	_	Translit=,|LTranslit=,
+10	주꾸미	주꾸미	NOUN	NNG	_	19	obj	_	Translit=.ju.ggu.mi|LTranslit=.ju.ggu.mi
+11	등의	등+의	NOUN	NNB+JKG	_	10	dep	_	Translit=.deung.yi|LTranslit=.deung+.yi
+12	해산물을	해산물+을	NOUN	NNG+JKO	_	10	appos	_	Translit=.hae.san.mul.eul|LTranslit=.hae.san.mul+.eul
+13	고춧가루	고춧가루	NOUN	NNG	_	19	obl	_	SpaceAfter=No|Translit=.go.chus.ga.ru|LTranslit=.go.chus.ga.ru
+14	,	,	PUNCT	SP	_	15	punct	_	Translit=,|LTranslit=,
+15	액젓	액젓	NOUN	NNG	_	13	conj	_	Translit=.aeg.jeos|LTranslit=.aeg.jeos
+16	등으로	등+으로	ADV	NNB+JKB	_	15	dep	_	Translit=.deung.eu.ro|LTranslit=.deung+.eu.ro
+17	짜고	짜+고	VERB	VV+EC	_	19	advcl	_	Translit=.jja.go|LTranslit=.jja+.go
+18	맵게	맵+게	ADV	VA+EC	_	17	conj	_	Translit=.maeb.ge|LTranslit=.maeb+.ge
+19	양념한다	양념+하+ㄴ다	VERB	NNG+XSV+EF	_	0	root	_	SpaceAfter=No|Translit=.yang.nyeom.han.da|LTranslit=.yang.nyeom+.ha+ㄴ.da
+20	.	.	PUNCT	SF	_	19	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s3535
+# text = 즉, 유시민 전 장관 입장에서 노 전 대통령은 정치를 하지 말라고 했던 것이지 당을 하지 말라는 조언은 아니었다는 해석을 가능케 하는 대목이다.
+# translit = .jeug, .yu.si.min .jeon .jang.gwan .ib.jang.e.seo .no .jeon .dae.tong.ryeong.eun .jeong.chi.reul .ha.ji .mal.ra.go .haess.deon .geos.i.ji .dang.eul .ha.ji .mal.ra.neun .jo.eon.eun .a.ni.eoss.da.neun .hae.seog.eul .ga.neung.ke .ha.neun .dae.mog.i.da.
+1	즉	즉	ADV	MAG	_	23	advmod	_	SpaceAfter=No|Translit=.jeug|LTranslit=.jeug
+2	,	,	PUNCT	SP	_	1	punct	_	Translit=,|LTranslit=,
+3	유시민	유시민	NOUN	NNP	_	13	obl	_	Translit=.yu.si.min|LTranslit=.yu.si.min
+4	전	전	NOUN	NNG	_	3	flat	_	Translit=.jeon|LTranslit=.jeon
+5	장관	장관	NOUN	NNG	_	3	flat	_	Translit=.jang.gwan|LTranslit=.jang.gwan
+6	입장에서	입장+에서	ADV	NNG+JKB	_	3	flat	_	Translit=.ib.jang.e.seo|LTranslit=.ib.jang+.e.seo
+7	노	노	NOUN	NNP	_	13	nsubj	_	Translit=.no|LTranslit=.no
+8	전	전	NOUN	NNG	_	7	flat	_	Translit=.jeon|LTranslit=.jeon
+9	대통령은	대통령+은	NOUN	NNG+JX	_	7	flat	_	Translit=.dae.tong.ryeong.eun|LTranslit=.dae.tong.ryeong+.eun
+10	정치를	정치+를	NOUN	NNG+JKO	_	11	obj	_	Translit=.jeong.chi.reul|LTranslit=.jeong.chi+.reul
+11	하지	하+지	VERB	VV+EC	_	13	ccomp	_	Translit=.ha.ji|LTranslit=.ha+.ji
+12	말라고	말+라고	VERB	VX+EC	_	11	flat	_	Translit=.mal.ra.go|LTranslit=.mal+.ra.go
+13	했던	하+았+던	VERB	VX+EP+ETM	_	14	dep	_	Translit=.haess.deon|LTranslit=.ha+.ass+.deon
+14	것이지	것+이+지	VERB	NNB+VCP+EC	_	16	advcl	_	Translit=.geos.i.ji|LTranslit=.geos+.i+.ji
+15	당을	당+을	NOUN	NNG+JKO	_	16	obj	_	Translit=.dang.eul|LTranslit=.dang+.eul
+16	하지	하+지	VERB	VV+EC	_	19	ccomp	_	Translit=.ha.ji|LTranslit=.ha+.ji
+17	말라는	말+라는	VERB	VX+ETM	_	16	flat	_	Translit=.mal.ra.neun|LTranslit=.mal+.ra.neun
+18	조언은	조언+은	NOUN	NNG+JX	_	19	nsubj	_	Translit=.jo.eon.eun|LTranslit=.jo.eon+.eun
+19	아니었다는	아니+었+다는	VERB	VCN+EP+ETM	_	21	ccomp	_	Translit=.a.ni.eoss.da.neun|LTranslit=.a.ni+.eoss+.da.neun
+20	해석을	해석+을	NOUN	NNG+JKO	_	21	obj	_	Translit=.hae.seog.eul|LTranslit=.hae.seog+.eul
+21	가능케	가능+하+게	VERB	XR+XSA+EC	_	23	acl:relcl	_	Translit=.ga.neung.ke|LTranslit=.ga.neung+.ha+.ge
+22	하는	하+는	VERB	VX+ETM	_	21	flat	_	Translit=.ha.neun|LTranslit=.ha+.neun
+23	대목이다	대목+이+다	VERB	NNG+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.dae.mog.i.da|LTranslit=.dae.mog+.i+.da
+24	.	.	PUNCT	SF	_	23	punct	_	Translit=.|LTranslit=.
+

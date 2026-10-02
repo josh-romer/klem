@@ -2616,9 +2616,11 @@ review remains open under the completion review below.
   entries cover these sources alongside COV-018ab's question/case boundaries.
   [Corpus tracking](../tests/corpus.rs) preserves 166 original training targets,
   complete sentence blocks, gold and every before report. All 158 prior matches
-  remain; 이루어지느냐에 now recovers, yielding 159 matches. Seven original
-  misses remain individually recorded in the fixture; they are not all presumed
-  annotation disagreements. Full Rust tests, pinned corpus, lint and format pass;
+  remain; 이루어지느냐에 recovers, yielding 159 at the question/case
+  milestone. COV-019ac subsequently recovers 마시다만, yielding 160 current
+  matches / six remaining misses. Original milestone snapshots remain unchanged;
+  the later recovery is separately tracked. The remaining misses are not all
+  presumed annotation disagreements. Full Rust tests, pinned corpus, lint and format pass;
   [evaluation](transition-aux-evaluation.json) retains all changed corpus and novel
   contexts, sources and candidate identities. Nix release and packaged runtime
   checks pass, alongside all 735 Rust tests, pinned corpus, lint/format, full browser
@@ -2631,20 +2633,55 @@ review remains open under the completion review below.
   dispositions, not complete auxiliary certification.
 
 - [ ] **COV-019ac — Lexical cessative and contrastive 말다 complements.**
-  **Gap:** KAIST 마시다만 has original 마시+다+말+ㄴ annotation and means
-  unfinished drinking in its retained sentence context. This is a genuine
-  missing predicate/complement path, not dismissed as a 다만 ending or an
-  annotation disagreement. [The source preflight](lexical-malda-source-preflight.json)
-  retains lexical 말다 (69296), all three senses / 27 native groups, grammar
-  sources and the complete original training block before implementation.
-  Six selected paths recover beforehand; 21 predicate or nominal-contrast
-  structures do not. Cessative 다/다가, intention-interruption 려다가,
-  alternative-ending complements and explicit nominal 말고 contrast need
-  source-appropriate lexical predicate roles. Do not relabel lexical 동사
-  as 보조 동사 to force an auxiliary match. Ordinary separately spaced
-  transitive objects remain tokenized. Implement and verify these structures
-  with own-ending ownership, dictionary homonyms, corpus gold, filters,
-  library/browser parity and broader source licenses.
+  **Partial:** original KAIST 마시다만 now recovers 마시다 + 말다,
+  preserving its original 마시+다+말+ㄴ annotation and complete sentence.
+  The [initial frozen source](lexical-malda-source-preflight.json) retains
+  all three senses / 27 native groups of lexical 동사 말다 (69296).
+  All 27 selected paths recover; the original six-before / 21-missing
+  observations remain unchanged. The packed iterative chain retains lexical
+  predicate roles alongside auxiliary roles, with separate ending owners.
+  Cessative 다/다가 and intention-interruption 으려다/으려다가 compose
+  with outer endings, existing auxiliaries and particles. Paired alternatives
+  retain 을까, 든지/든, 거나, 거니, 건, asymmetric 을지 + 지,
+  and 나/으나 + 나. The literal 슬퍼 말다 path is retained; it does
+  not establish an unrestricted -어 complement for every predicate.
+  Nominal 말고 contrast, explicit object case, source-listed bare objects,
+  and shortened lexical imperatives preserve ordinary spacing as a separate
+  concern. [Additional full noun/adverb sources](lexical-malda-object-sources.json)
+  attest 상관 말다, 염려 마 and 꼼짝 말다. The corrected NIKL 326347
+  answer retracts a definite omitted-하지 account: the fixed 꼼짝 expression
+  retains its dictionary adverb without inventing 하지 or asserting object syntax.
+  Its theoretical syntax remains unresolved.
+  [The follow-up preflight](lexical-malda-followup-preflight.json) freezes
+  50 controls and 52 original training targets before implementation. All 49
+  prior matches remain; 마시다만 adds one, yielding 50. The remaining two
+  misses and all original gold, tags, rows, complete blocks and before reports
+  remain recorded. The earlier transition cohort separately moves from
+  159 question/case-batch matches to 160; its original 158-before reports and
+  question/case milestone snapshots are preserved.
+  [Three family tests](../tests/lexical_malda.rs) and
+  [individual corpus tracking](../tests/corpus.rs) cover 72 required /
+  16 forbidden paths, 288 lexical-mal entry judgments and 90 complete native
+  entries, including dictionary homonyms and CLI/library filter/cache parity.
+  Native proper name 유민이 has no pinned headword: raw recovery remains,
+  while dictionary-only filters omit that path. Browser regressions cover
+  mixed predicate/auxiliary components, raw option indices, dictionary detail,
+  all three filters, JSON export and desktop/mobile layouts.
+  All 739 Rust tests, pinned full-corpus regressions, Clippy, format and
+  739 Nix release tests pass. [Evaluation](lexical-malda-evaluation.json)
+  preserves all eight candidate/novel modes, 308 changed paths, all 19 changed
+  novel contexts and every old candidate/dictionary assessment. All four full
+  held-out corpus reports are unchanged. Original ledger observations remain
+  visible; 72 new requirements and 16 forbiddances pass. Inventory verification
+  and nine unit tests pass. Full browser, packaged/live API audits, all eight
+  release/debug modes and desktop/mobile checks pass. The refreshed local
+  preview retains all 308 changed paths and the same served asset. Twenty-four
+  paired timings are recorded as descriptive observations: novel medians remain
+  around 1.6 seconds; dense source/control input emits more paths and takes
+  about twice the previous elapsed time. All three x86_64 Linux flake checks
+  pass; other architectures remain unevaluated.
+  Broader ending/prefinal/internal-particle, left lexical subsets, source sense,
+  context/register and independent Korean-language review remain required.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

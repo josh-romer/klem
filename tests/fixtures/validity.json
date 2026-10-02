@@ -1396,7 +1396,13 @@
     "question-case-source-66341": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66341",
     "question-case-source-85764": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85764",
     "question-case-source-70060": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=70060",
-    "question-case-negative-exception": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8390&mn_id=62&pageIndex=80"
+    "question-case-negative-exception": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8390&mn_id=62&pageIndex=80",
+    "lexical-malda-69296": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69296",
+    "lexical-malda-14111": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=14111",
+    "lexical-malda-nikl-5937": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5937&mn_id=217",
+    "lexical-malda-16756": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=16756",
+    "lexical-malda-14183": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=14183",
+    "lexical-malda-nikl-326347": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&pageIndex=1&qna_seq=326347"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -48916,6 +48922,2277 @@
     {"id":"question-case-forbidden-no-auxiliary","surface":"하느냐보다","judgments":[{"id":"path","lemmas":["하다","보다"],"morphemes":["느냐","다"],"verdict":"forbidden","source":"question-case-source-76231","reason":"The finite question/case license does not create this unreviewed case, wrong allomorph, nominalizer or auxiliary connector; alternative raw hypotheses stay independent."}]},
     {"id":"transition-aux-forbidden-connector-72580","surface":"먹어말다","judgments":[{"id":"path","lemmas":["먹다","말다"],"lemma_kinds":["predicate","auxiliary"],"morphemes":["어","다"],"verdict":"forbidden","source":"transition-aux-source-72580","reason":"The catalogued connector source does not support this alternative boundary; lexical whole-word and other hypotheses remain."}]},
     {"id":"transition-aux-forbidden-connector-67899","surface":"먹어생기다","judgments":[{"id":"path","lemmas":["먹다","생기다"],"lemma_kinds":["predicate","auxiliary"],"morphemes":["어","다"],"verdict":"forbidden","source":"transition-aux-source-67899","reason":"The catalogued connector source does not support this alternative boundary; lexical whole-word and other hypotheses remain."}]},
-    {"id":"transition-aux-forbidden-connector-77247","surface":"먹고지다","judgments":[{"id":"path","lemmas":["먹다","지다"],"lemma_kinds":["predicate","auxiliary"],"morphemes":["고","다"],"verdict":"forbidden","source":"transition-aux-source-77247","reason":"The catalogued connector source does not support this alternative boundary; lexical whole-word and other hypotheses remain."}]}
+    {"id":"transition-aux-forbidden-connector-77247","surface":"먹고지다","judgments":[{"id":"path","lemmas":["먹다","지다"],"lemma_kinds":["predicate","auxiliary"],"morphemes":["고","다"],"verdict":"forbidden","source":"transition-aux-source-77247","reason":"The catalogued connector source does not support this alternative boundary; lexical whole-word and other hypotheses remain."}]},
+    {
+      "id": "lexical-malda-native-1-1",
+      "surface": "말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 0; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-2",
+      "surface": "말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 1; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-3",
+      "surface": "말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 2; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-4",
+      "surface": "말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 3; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-5",
+      "surface": "꺼내다말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "꺼내다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 4; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-6",
+      "surface": "익다말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "익다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 5; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-7",
+      "surface": "슬퍼말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "슬프다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 6; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-8",
+      "surface": "말자",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 7; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-9",
+      "surface": "하다만",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다",
+            "은"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 8; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-10",
+      "surface": "말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 9; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-1-11",
+      "surface": "꺼내려다말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "꺼내다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으려다",
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 1 / native group 10; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-2-1",
+      "surface": "탈까말까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "타다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "을까"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 2 / native group 0; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-2-2",
+      "surface": "열까말까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "열다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "을까"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 2 / native group 1; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-2-3",
+      "surface": "듣든지말든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "듣다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "든지"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 2 / native group 2; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-2-4",
+      "surface": "쳐다보거나말거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "쳐다보다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "거나"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 2 / native group 3; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-2-5",
+      "surface": "설치건말건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "설치다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "건"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 2 / native group 4; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-2-6",
+      "surface": "갈지말지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "지"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 2 / native group 5; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-1",
+      "surface": "거기말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "거기",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 0; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-2",
+      "surface": "바지말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "바지",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 1; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-3",
+      "surface": "밥말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밥",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 2; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-4",
+      "surface": "사진말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "사진",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 3; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-5",
+      "surface": "산말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "산",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 4; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-6",
+      "surface": "물말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "물",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 5; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-7",
+      "surface": "초콜릿말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "초콜릿",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 6; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-8",
+      "surface": "신문말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "신문",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 7; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-9",
+      "surface": "영어말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "영어",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 8; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-native-3-10",
+      "surface": "유민이말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "유민이",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Complete lexical source sense 3 / native group 9; retain lexical verb role and both ending owners; no semantic sense selection.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-1",
+      "surface": "마시다만",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "마시다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다",
+            "은"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-2",
+      "surface": "마시다가만",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "마시다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다가",
+            "은"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-3",
+      "surface": "쓰다말았다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "쓰다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다",
+            "었",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-4",
+      "surface": "읽으려다말았다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "읽다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으려다",
+            "었",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-5",
+      "surface": "읽으려다가말았다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "읽다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으려다가",
+            "었",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-6",
+      "surface": "하다말았다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다",
+            "었",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-7",
+      "surface": "하다가말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다가",
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-8",
+      "surface": "슬퍼말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "슬프다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-9",
+      "surface": "슬퍼말아라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "슬프다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "어라"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-10",
+      "surface": "할까말까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "을까"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-11",
+      "surface": "먹든지말든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "든지"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-12",
+      "surface": "먹든말든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "든"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-13",
+      "surface": "먹거나말거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "거나"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-14",
+      "surface": "먹거니말거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "거니"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-15",
+      "surface": "먹건말건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "건"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-16",
+      "surface": "할지말지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "지"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-17",
+      "surface": "먹으나마나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "나"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-18",
+      "surface": "하나마나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "나",
+            "나"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-19",
+      "surface": "선생이나마나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "선생",
+            "이다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula",
+            "predicate"
+          ],
+          "morphemes": [
+            "나",
+            "나"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-20",
+      "surface": "걱정을말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "걱정",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "를",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "particle",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-21",
+      "surface": "염려를말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "염려",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "를",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-14111",
+          "morpheme_kinds": [
+            "particle",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-22",
+      "surface": "주저를말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "주저",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "를",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "particle",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-23",
+      "surface": "지체를말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "지체",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "를",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "particle",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-24",
+      "surface": "생각을말자",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "생각",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "를",
+            "자"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "particle",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-25",
+      "surface": "생각말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "생각",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-26",
+      "surface": "걱정마",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "걱정",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-nikl-5937",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-27",
+      "surface": "걱정말아",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "걱정",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-28",
+      "surface": "염려마라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "염려",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "어라"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-14111",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-29",
+      "surface": "상관마요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "상관",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "어요"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-16756",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-30",
+      "surface": "꼼짝마",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "꼼짝",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "adverbial",
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-14183",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-31",
+      "surface": "꼼짝말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "꼼짝",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "adverbial",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-14183",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-32",
+      "surface": "밥말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밥",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-33",
+      "surface": "학생들말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "들",
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "suffix",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-34",
+      "surface": "선생님들말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "선생",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "님",
+            "들",
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "suffix",
+            "suffix",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-35",
+      "surface": "밥말고도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밥",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고",
+            "도"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-36",
+      "surface": "밥말고는",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밥",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고",
+            "는"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-37",
+      "surface": "마시다말았다면서",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "마시다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다",
+            "었",
+            "다면서"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-38",
+      "surface": "먹어보다말았다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "보다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "다",
+            "었",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-39",
+      "surface": "먹다말아버렸다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "다",
+            "어",
+            "었",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-40",
+      "surface": "먹다말지않았다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "다",
+            "지",
+            "었",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-41",
+      "surface": "늠므다말았다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "늠므다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "다",
+            "었",
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-42",
+      "surface": "늠므말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "늠므",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "고"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-69296",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-43",
+      "surface": "상관말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "상관",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-16756",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-44",
+      "surface": "염려마",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "염려",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-14111",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-control-45",
+      "surface": "꼼짝말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "꼼짝",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "adverbial",
+            "predicate"
+          ],
+          "morphemes": [
+            "다"
+          ],
+          "verdict": "required",
+          "reason": "Explicit construction/paradigm inference from the complete source. Joined input recovery does not recommend joined spelling; preserve native POS and own ending groups. Short lexical imperatives and fixed adverb do not restore 하지.",
+          "source": "lexical-malda-14183",
+          "morpheme_kinds": [
+            "ending"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-1",
+      "surface": "먹어마",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "어"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-2",
+      "surface": "먹고마",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "고",
+            "어"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-3",
+      "surface": "먹게말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "게",
+            "다"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-4",
+      "surface": "먹어서말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "어서",
+            "다"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-5",
+      "surface": "먹지만말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "지만",
+            "다"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-6",
+      "surface": "밥마셨다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밥",
+            "마시다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": null,
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-7",
+      "surface": "밥말끔하다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밥",
+            "말끔하다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": null,
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-8",
+      "surface": "밥먹다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밥",
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": null,
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-9",
+      "surface": "먹을까말든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "든지"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-10",
+      "surface": "먹거나말건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "건"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-11",
+      "surface": "걱정를말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "걱정",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "를",
+            "다"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-12",
+      "surface": "염려을말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "염려",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "를",
+            "다"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-13",
+      "surface": "꼼짝마",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "꼼짝하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-nikl-326347"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-14",
+      "surface": "꼼짝말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "꼼짝하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "고"
+          ],
+          "verdict": "forbidden",
+          "reason": "The reviewed lexical complement/nominal rule does not license this connector, short imperative after a predicate, wrong object allomorph, arbitrary noun + other verb splitting, or corrected-away hidden 하지 interpretation.",
+          "source": "lexical-malda-nikl-326347"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-15",
+      "surface": "먹어말다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "다"
+          ],
+          "required_rules": [
+            "lexical.mal.complement"
+          ],
+          "verdict": "forbidden",
+          "reason": "The native 슬퍼 말다 example licenses its attested lexical head, not an arbitrary -어 complement rule. A general predicate -어 + lexical 말다 construction is not established by this source; broader lexical licensing remains under review.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "lexical-malda-boundary-16",
+      "surface": "먹어말아",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "어"
+          ],
+          "required_rules": [
+            "lexical.mal.complement"
+          ],
+          "verdict": "forbidden",
+          "reason": "The native 슬퍼 말다 example licenses its attested lexical head, not an arbitrary -어 complement rule. A general predicate -어 + lexical 말다 construction is not established by this source; broader lexical licensing remains under review.",
+          "source": "lexical-malda-69296"
+        }
+      ]
+    }
   ]
 }

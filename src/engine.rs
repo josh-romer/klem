@@ -438,7 +438,9 @@ fn adverb_derivation(word: &str) -> Option<Analysis> {
 #[derive(Clone)]
 struct Predicate {
     stem: String,
-    auxiliaries: Vec<String>,
+    // Following predicates retain their lexical or auxiliary role.
+    following: Vec<(String, LemmaKind)>,
+    leading_lemmas: Vec<Lemma>,
     morphs: Vec<Morpheme>,
     rules: Vec<String>,
     connector: bool,
@@ -664,7 +666,8 @@ fn prefinals(
     }
     let mut out = vec![Predicate {
         stem: stem.into(),
-        auxiliaries: vec![],
+        following: vec![],
+        leading_lemmas: vec![],
         morphs: vec![],
         rules: vec![],
         connector: false,
@@ -969,6 +972,12 @@ pub(crate) fn result_connective(form: &str) -> bool {
 }
 
 fn predicates(word: &str) -> Vec<Predicate> {
+    let mut out = single_predicates(word);
+    out.extend(nominal_mal_predicates(word));
+    out
+}
+
+fn single_predicates(word: &str) -> Vec<Predicate> {
     let mut out = vec![];
     let mut memo = HashMap::new();
     // Article 18: prohibitive 말다 has the optional short imperatives 마/마라/마요.
@@ -1947,7 +1956,7 @@ fn predicates(word: &str) -> Vec<Predicate> {
             // Do not reinterpret that inserted 하 as a nominal followed by
             // an omitted copula (간편찮다 != 간편하 + 이다 + 지 + 않다).
             head.ha_contracted |= p.stem.ends_with('찮');
-            head.auxiliaries.push("않".into());
+            head.following.push(("않".into(), LemmaKind::Auxiliary));
             head.spellings
                 .extend(shifted_spellings(&p.spellings, head.morphs.len()));
             head.morphs.extend(p.morphs.clone());
@@ -1962,9 +1971,79 @@ fn predicates(word: &str) -> Vec<Predicate> {
     out
 }
 
+// Joined input can retain lexical 말다's noun contrast and source-listed
+// transitive objects. This does not recommend omitting ordinary word spacing
+// and does not introduce a general noun + verb segmentation rule.
+fn nominal_mal_predicates(word: &str) -> Vec<Predicate> {
+    let mut out = vec![];
+    for (index, _) in word
+        .char_indices()
+        .filter(|&(i, c)| i > 0 && matches!(c, '말' | '마'))
+    {
+        let base = &word[..index];
+        let right = &word[index..];
+        let mut objects = vec![];
+        for (suffix, condition) in [("을", 1), ("를", 2)] {
+            if let Some(root) = base.strip_suffix(suffix)
+                && grammar::particle_matches(root, condition)
+            {
+                for mut a in nominal_bases(root) {
+                    a.morphemes.push(morph("를", MorphemeKind::Particle));
+                    a.rules.push("particle".into());
+                    objects.push(a);
+                }
+            }
+        }
+        let listed_object = matches!(base, "걱정" | "염려" | "주저" | "지체" | "생각" | "상관");
+        let fixed_adverb = base == "꼼짝";
+        // Only single predicates enter this boundary. Nested nominal splitting
+        // stays outside this helper, keeping long 말다 chains iterative.
+        for p in single_predicates(right)
+            .into_iter()
+            .filter(|p| p.stem == "말" && p.leading_lemmas.is_empty())
+        {
+            let contrast = p.morphs.len() == 1 && p.morphs[0].form == "고";
+            let short = p.rules.iter().any(|r| r == "irregular.mal");
+            let mut bases = if !short { objects.clone() } else { vec![] };
+            if contrast || listed_object {
+                bases.extend(nominal_bases(base));
+            }
+            // The corrected NIKL 326347 answer retains the fixed expression
+            // 꼼짝 말다 but retracts the proposed hidden 하지. Preserve its
+            // dictionary adverb directly; infer neither an object nor a verb.
+            if fixed_adverb {
+                bases.push(Analysis {
+                    lemmas: vec![lemma(base, LemmaKind::Adverbial)],
+                    morphemes: vec![],
+                    rules: vec!["lexical.mal.fixed_adverb".into()],
+                    unchanged: false,
+                    spelling_paths: vec![],
+                });
+            }
+            // No leading nominal is shared between alternatives.
+            for a in bases {
+                let mut joined = p.clone();
+                joined.leading_lemmas = a.lemmas;
+                joined.spellings = shifted_spellings(&p.spellings, a.morphemes.len()).collect();
+                joined.morphs = a.morphemes;
+                joined.morphs.extend(p.morphs.iter().cloned());
+                joined.rules.extend(a.rules);
+                joined.rules.push("lexical.mal.nominal".into());
+                out.push(joined);
+            }
+        }
+    }
+    out
+}
+
 fn predicate_analysis(p: &Predicate) -> Analysis {
     Analysis {
-        lemmas: vec![lemma(format!("{}다", p.stem), LemmaKind::Predicate)],
+        lemmas: p
+            .leading_lemmas
+            .iter()
+            .cloned()
+            .chain([lemma(format!("{}다", p.stem), LemmaKind::Predicate)])
+            .collect(),
         morphemes: p.morphs.clone(),
         rules: p.rules.clone(),
         unchanged: false,
@@ -2019,14 +2098,14 @@ fn expand_predicate(p: &Predicate) -> Vec<Analysis> {
     }
     // The restored 하 belongs to a predicate. It cannot then become a nominal
     // base before an omitted copula: 생각다 is not 생각하 + 이다 + 다.
-    if !p.ha_contracted {
+    if !p.ha_contracted && p.leading_lemmas.is_empty() {
         add_copulas(p, &mut out);
     }
     for a in &mut out {
         a.lemmas.extend(
-            p.auxiliaries
+            p.following
                 .iter()
-                .map(|s| lemma(format!("{s}다"), LemmaKind::Auxiliary)),
+                .map(|(s, kind)| lemma(format!("{s}다"), *kind)),
         );
     }
     out.retain_mut(auxiliary_inflections_allowed);
@@ -3691,6 +3770,50 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
     }
 }
 
+// Lexical 말다 (KRDict 69296), distinct from auxiliary 72580. Paired
+// alternatives keep their own two endings, including asymmetric 을지 + 지.
+fn lexical_mal_link(left: &Predicate, right: &Predicate) -> bool {
+    if right.stem != "말" || !right.leading_lemmas.is_empty() {
+        return false;
+    }
+    let Some(last) = left
+        .morphs
+        .last()
+        .filter(|m| m.kind == MorphemeKind::Ending)
+    else {
+        return false;
+    };
+    if right.rules.iter().any(|r| r == "irregular.mal") {
+        return false;
+    }
+    if matches!(last.form.as_str(), "다" | "다가" | "으려다" | "으려다가") {
+        return true;
+    }
+    // The complete entry directly attests 슬퍼 말다. It supplies no general
+    // -어 complement license for arbitrary predicates (e.g. 먹어 말다).
+    // Keep this attested lexical construction distinct from auxiliary 말다.
+    if last.form == "어" {
+        return left.stem == "슬프" && left.following.is_empty();
+    }
+    let partner = match last.form.as_str() {
+        "을까" | "든지" | "든" | "거나" | "거니" | "건" => last.form.as_str(),
+        "을지" => "지",
+        "나" | "으나" => "나",
+        _ => return false,
+    };
+    right.morphs.len() == 1 && right.morphs[0].form == partner
+}
+
+fn predicate_link(left: &Predicate, right: &Predicate) -> Option<LemmaKind> {
+    if lexical_mal_link(left, right) {
+        Some(LemmaKind::Predicate)
+    } else if right.leading_lemmas.is_empty() && auxiliary_link(left, right) {
+        Some(LemmaKind::Auxiliary)
+    } else {
+        None
+    }
+}
+
 // Source-specific restrictions which need more than the left ending's name.
 fn auxiliary_link(left: &Predicate, right: &Predicate) -> bool {
     let Some(index) = left
@@ -4243,9 +4366,11 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
                     connector_predicates(right)
                         .into_iter()
                         .filter(|p| {
-                            grammar::AUXILIARY_CONNECTORS
-                                .iter()
-                                .any(|c| aux_allowed(&p.stem, c))
+                            p.leading_lemmas.is_empty()
+                                && (p.stem == "말"
+                                    || grammar::AUXILIARY_CONNECTORS
+                                        .iter()
+                                        .any(|c| aux_allowed(&p.stem, c)))
                         })
                         .collect(),
                 )
@@ -4281,7 +4406,7 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
     while let Some(current) = frames.last_mut() {
         let node = nodes[current.node].as_ref().unwrap();
         let accepts = |p: &Predicate| match path.last() {
-            Some(right) => p.connector && auxiliary_link(p, right),
+            Some(right) => p.connector && predicate_link(p, right).is_some(),
             None => {
                 p.morphs
                     .last()
@@ -4296,7 +4421,9 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
                 // Provenance is a set, not a derivation trace. Deduplicate it
                 // before materializing output, rather than retaining every step.
                 let mut rules: BTreeSet<&str> = base.rules.iter().map(String::as_str).collect();
+                let mut previous = base;
                 for tail in path.iter().rev() {
+                    let role = predicate_link(previous, tail).unwrap();
                     if joined
                         .morphs
                         .last()
@@ -4304,15 +4431,20 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
                     {
                         rules.insert("auxiliary.internal_particle");
                     }
-                    joined.auxiliaries.push(tail.stem.clone());
-                    joined.auxiliaries.extend(tail.auxiliaries.iter().cloned());
+                    joined.following.push((tail.stem.clone(), role));
+                    joined.following.extend(tail.following.iter().cloned());
                     joined
                         .spellings
                         .extend(shifted_spellings(&tail.spellings, joined.morphs.len()));
                     joined.morphs.extend(tail.morphs.iter().cloned());
                     rules.extend(tail.rules.iter().map(String::as_str));
-                    rules.insert("auxiliary");
+                    rules.insert(if role == LemmaKind::Predicate {
+                        "lexical.mal.complement"
+                    } else {
+                        "auxiliary"
+                    });
                     joined.connector = tail.connector;
+                    previous = tail;
                 }
                 joined.rules = rules.into_iter().map(str::to_owned).collect();
                 emit(joined);

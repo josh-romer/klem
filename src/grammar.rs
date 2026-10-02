@@ -402,6 +402,14 @@ pub(crate) const AUXILIARY_CONNECTORS: &[&str] = &[
     "기는",
     "기만",
     "고자",
+    // Lexical 말다 alternative complements (not general auxiliary licenses).
+    "거나",
+    "거니",
+    "건",
+    "든지",
+    "든",
+    "을지",
+    "으나",
 ];
 
 pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Recovery> {
@@ -1507,6 +1515,15 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "pronunciation.assumed_vowel_or_rieul" => {
             "Conditional nominal reading: the non-Hangul base must be pronounced with a final vowel or ㄹ; its pronunciation is not inferred."
         }
+        "lexical.mal.complement" => {
+            "Retain lexical 말다 after a cessative or source-listed paired alternative complement; preserve both predicates and their own endings."
+        }
+        "lexical.mal.nominal" => {
+            "Retain lexical 말다 after nominal contrast, an explicit object, or a source-listed bare object in joined input; ordinary word spacing is not inferred."
+        }
+        "lexical.mal.fixed_adverb" => {
+            "Retain the source-attested fixed expression 꼼짝 말다 with its dictionary adverb; do not invent an omitted 하지 or assert object syntax."
+        }
         "auxiliary.internal_particle" => {
             "Retain a licensed particle between an ending and the following auxiliary predicate."
         }
@@ -1775,7 +1792,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Expand the colloquial 거/이거/그거/저거 nominal to 것/이것/그것/저것 before a copula; preserve the short lexical alternative."
         }
         "auxiliary" => "Separate a licensed connective plus attached auxiliary.",
-        "irregular.mal" => "Restore prohibitive 말다 in the short imperatives 마, 마라 and 마요.",
+        "irregular.mal" => {
+            "Restore 말다 in the short imperatives 마, 마라 and 마요, including lexical 걱정 마 and prohibitive 하지 마."
+        }
         "nominalization" => "Analyze a nominalized predicate before a particle or copula.",
         "contraction.negative" => "Expand contracted 잖/찮 into 지/하지 plus auxiliary 않다.",
         "suffix.adverbial.hi" => "Recover the adverb-forming suffix -히 for a source-listed root.",

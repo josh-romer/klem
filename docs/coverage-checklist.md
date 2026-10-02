@@ -2243,6 +2243,25 @@ review remains open under the completion review below.
   contextual semantic suitability/register and independent Korean review
   remain required under COV-019.
 
+- [ ] **COV-019u — Complete negative auxiliary sources and lexical class ownership.**
+  Audit the six native verb/adjective entries for 않다, 아니하다 and 못하다,
+  including all seven senses and 74 example groups. The
+  [native preflight](negative-aux-source-preflight.json) preserves the complete
+  entries, grouped dialogue, selected joined excerpts and current per-entry
+  assessments. All 74 excerpts recover at `8a7a4ff`; this is source recovery
+  evidence, not a precision estimate. The distinct 다/다가 + 못하다 sense
+  already selects the adjective auxiliary entry even after a verb head.
+  Remaining: assess lexical classes through 지-negatives without treating
+  source-selected context as an inferred sense. For example, adjective-only
+  개운하다 currently leaves both 않다 auxiliary POS entries compatible;
+  verb-only 가다 does the same. Both lexical 크다 homonyms must retain their
+  possibilities. Preserve represented suffix/copula ownership, later auxiliary
+  resets, unknown providers, standalone auxiliaries and every raw analysis.
+  Add stable positive/conflict judgments, original annotated targets and full
+  dictionary/CLI/browser/corpus/Nix checks before assigning scoped inventory
+  dispositions. Wider COV-019 conditions and independent Korean review remain
+  open; the six entries remain unreviewed in COV-013.
+
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and

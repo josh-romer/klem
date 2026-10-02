@@ -776,3 +776,19 @@ The [entry ledger](../tests/fixtures/pretence-aux-entry-judgments.json) records
 compatible filtering; headword-only filtering and raw generation retain them.
 The original 재미있었는 양하다 source and KAIST 체할 annotation remain
 explicit. Lexical 체하다 79176 keeps its independent entry and role.
+
+## Intensive auxiliary entry observations (COV-019x)
+
+The [entry ledger](../tests/fixtures/intensive-aux-entry-judgments.json) records
+77 cases/139 judgments for 먹다, 빠지다, 자빠지다, 죽다, 터지다,
+재끼다 and 젖히다 under existing finite attachment policy. It separates
+lexical homonyms, standalone context uncertainty, missing providers and later
+owners without adding a grammar filter. Native notes and conflicting examples
+remain complete; narrow notes and consulted abstracts do not license universal
+left-POS or semantic exclusions. Constructed contexts remain unjudged.
+
+Raw 헛소리하고자빠졌네 recovers 헛소리하다 + 자빠지다. Its auxiliary
+entry is compatible, but the absent 헛소리하다 head leaves the reading unknown;
+both headword and compatible filters remove it. Fifty-nine of the sixty native
+joined paths have all required dictionary heads. This dictionary gap is explicit
+in the source record rather than hidden by a fake fixture entry.

@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 406 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–w/020d–h/020j–k/020n–o/021d; 309 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 413 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–x/020d–h/020j–k/020n–o/021d; 302 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2341,28 +2341,42 @@ review remains open under the completion review below.
   entry certification.
 
 - [ ] **COV-019x — Intensive and emphatic auxiliary source audit.**
-  **Source preflight complete; implementation and individual regression review
-  remain open.** The [preflight](intensive-aux-source-preflight.json) preserves
-  seven complete auxiliary entries for 먹다, 빠지다, 자빠지다, 죽다,
-  터지다, 재끼다 and 젖히다, plus six related 빠지다/죽다 expressions:
-  thirteen entries/senses and all sixty original example groups. Every joined
-  native excerpt already recovers with the immutable COV-019w package; this
-  supplies structural observations rather than contextual correctness.
-  The original -아 빠지다 vowel note conflicts with its own examples; the
-  -어 빠지다 adjective note also coexists with lexical-verb examples 썩다
-  and 늙다. Preserve both conflicts without rewriting the source or inventing
-  universal adjective-only exclusions. Some-verb notes need lexical-subset
-  review; literal verbs, homonyms and later auxiliary owners remain distinct.
-  Primary author abstracts and official NIKL consultations are recorded with
-  their access limits; complete research articles and semantic/register review
-  remain required. Five exact aligned training targets retain full original
-  sentences and annotations: one KAIST match, three GSD matches and the
-  unchanged GSD 줄서먹는 → 줄다 + 먹다 miss with its literal -아서
-  connector. Add attributed offline fixtures, individual path/entry judgments,
-  owner/prefinal/particle/right-ending checks and candidate/runtime/browser/Nix
-  verification for any changes. These seven COV-013 entries remain unreviewed;
-  source collection alone does not supply inventory dispositions or independent
-  Korean-language review.
+  **Partial: complete native sources, individual regressions and finite
+  runtime validation implemented.** The [preflight](intensive-aux-source-preflight.json)
+  and [source record](../tests/fixtures/intensive-aux-sources.json) preserve seven
+  complete auxiliary entries for 먹다, 빠지다, 자빠지다, 죽다, 터지다,
+  재끼다 and 젖히다, plus six related expressions: thirteen entries/senses
+  and all sixty original groups. The attributed offline fixture contains 126
+  complete native entries. Four [tests](../tests/intensive_aux.rs), 81 raw cases
+  (60 required / 21 forbidden) and 139 separate
+  [entry judgments](../tests/fixtures/intensive-aux-entry-judgments.json) cover
+  native recovery, homonyms, standalone/missing heads, immediate and later
+  owners, NFD, unchanged hypotheses, components, cache/library/CLI and filters.
+  Every native joined path already recovered. No runtime rule or filter changes
+  and no improved raw recall or contextual correctness are claimed.
+  헛소리하고자빠졌네 recovers 헛소리하다 + 자빠지다, but the pinned
+  dictionary lacks 헛소리하다; both dictionary filters remove that path.
+  This lexical-coverage miss is recorded independently from raw recovery.
+  The original -아 빠지다 vowel note conflicts with its examples; the
+  -어 빠지다 adjective note coexists with lexical-verb examples 썩다/늙다.
+  Preserve both conflicts without universal adjective-only exclusions.
+  Primary abstracts and official NIKL consultations retain access limits;
+  complete articles, lexical-subset, semantic/register and independent
+  Korean-language review remain required. Five exact aligned training targets
+  retain complete unchanged sentences/annotations: one KAIST match, three GSD
+  matches and the original 줄서먹는 → 줄다 + 먹다 miss with literal -아서.
+  Broader ending/prefinal/particle and contextual licenses remain open.
+  Seven COV-013 dispositions cover source/regression scope only, not complete
+  entry certification. The [evaluation](intensive-aux-evaluation.json) records
+  13,623 surfaces with unchanged candidates/assessments in all three filters,
+  five full novel modes and four complete corpus reports. Original case bytes
+  and the review-queue prefix remain, with 619 new stable unjudged IDs.
+  All eight release/debug modes match. The 710 Rust/release tests, pinned
+  corpus check, Clippy, formatting, full browser suite and 456 packaged/live
+  cases with 443 entry judgments pass. Three x86_64 Linux flake checks and
+  nine inventory unit tests pass. The live preview remains on the
+  byte-identical verified production binaries/assets. No new performance or
+  contextual-correctness claim is made.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

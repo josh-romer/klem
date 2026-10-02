@@ -599,6 +599,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !pretenceAuxIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...pretenceAuxEntries);
 
+  const intensiveAuxFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-intensive-aux.json"), "utf8"));
+  const intensiveAuxEntries = intensiveAuxFixture.LexicalResource.Lexicon.LexicalEntry;
+  const intensiveAuxIds = new Set(intensiveAuxEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !intensiveAuxIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...intensiveAuxEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5406,6 +5412,69 @@ try {
   await page.screenshot({path: resolve(tmpdir(), "klem-pretence-aux-desktop.png"), fullPage: true});
   await page.setViewportSize({width: 390, height: 844}); assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-pretence-aux-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Complete intensive sources and ownership observations retain dictionary
+  // uncertainty and the native 헛소리하다 lookup miss without fabricated data.
+  const intensiveEntryLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/intensive-aux-entry-judgments.json"), "utf8"));
+  assert.equal(intensiveEntryLedger.cases.length, 77);
+  assert.equal(intensiveEntryLedger.cases.reduce((n, c) => n + c.judgments.length, 0), 139);
+  const intensiveCases = recipientLedger.cases.filter(c => c.id.startsWith("intensive-aux-"));
+  assert.equal(intensiveCases.length, 81);
+  for (const c of intensiveCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => hieutMatches(a, j)), j.verdict === "required", c.id);
+  }
+  for (const c of intensiveEntryLedger.cases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a, c)); assert.ok(index >= 0, c.id);
+    for (const j of c.judgments) {
+      const entry = token.dictionary.readings[index].lemmas.find(s => s.lemma_index === j.lemma_index).entries.find(e => e.id === j.entry_id);
+      assert.ok(entry, c.id); assert.equal(entry.status, j.status, c.id); assert.deepEqual(entry.conflicts, j.conflicts, c.id);
+    }
+    for (const flag of ["--dict-only", "--dict-compatible"]) {
+      const filtered = JSON.parse(execFileSync(cliBin, ["text", "-", "--dictionary", database, flag], {input: c.surface, encoding: "utf8"}).trim());
+      const expected = flag === "--dict-only" ? !c.missing_owner_entries : c.filter_retained;
+      assert.equal(filtered.analysis.analyses.some(a => auxiliaryPath(a, c)), expected, c.id);
+    }
+  }
+  for (const flag of [null, "--dict-only", "--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check(); else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check(); else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text = "잊어먹었다 순해빠진 놀고자빠졌다 예뻐죽겠다 느려터져가지고 웃어재꼈다 불러젖혔다 헛소리하고자빠졌네 먹고싶어죽겠다";
+    await submit(page, text); await waitHeading(page, "잊어먹었다");
+    const raw = await (await post("analyze", {text})).json(); const words = raw.records.filter(r => r.analysis);
+    for (const [n, heads, morphemes, forms] of [
+      [0, ["잊다", "먹다"], ["어", "었", "다"], ["잊", "어", "먹", "었", "다"]],
+      [1, ["순하다", "빠지다"], ["어", "은"], ["순하", "여", "빠지", "은"]],
+      [2, ["놀다", "자빠지다"], ["고", "었", "다"], ["놀", "고", "자빠지", "었", "다"]],
+      [3, ["예쁘다", "죽다"], ["어", "겠", "다"], ["예쁘", "어", "죽", "겠", "다"]],
+      [4, ["느리다", "터지다", "가지다"], ["어", "어", "고"], ["느리", "어", "터지", "어", "가지", "고"]],
+      [5, ["웃다", "재끼다"], ["어", "었", "다"], ["웃", "어", "재끼", "었", "다"]],
+      [6, ["부르다", "젖히다"], ["어", "었", "다"], ["부르", "어", "젖히", "었", "다"]],
+      [7, ["헛소리하다", "자빠지다"], ["고", "었", "네"], ["헛소리하", "고", "자빠지", "었", "네"]],
+      [8, ["먹다", "싶다", "죽다"], ["고", "어", "겠", "다"], ["먹", "고", "싶", "어", "죽", "겠", "다"]],
+    ]) {
+      const index = words[n].analysis.analyses.findIndex(a => a.lemmas.map(l => l.text).join("/") === heads.join("/") && a.morphemes.map(m => m.form).join("/") === morphemes.join("/"));
+      assert.ok(index >= 0, heads.join("/")); const block = page.locator(".breakdown-word").nth(n);
+      if (flag && n === 7) assert.equal(await block.locator(`option[value="${index}"]`).count(), 0);
+      else {
+        assert.equal(await block.locator(`option[value="${index}"]`).count(), 1);
+        await block.getByRole("combobox").selectOption(String(index));
+        assert.deepEqual(await block.locator(".part-form").allTextContents(), forms);
+        if (n === 5) assert.equal(await block.locator(".part-gloss").nth(2).innerText(), raw.glosses["krdict:89813"]);
+      }
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(), "utf8"));
+    assert.deepEqual(exported.records, execFileSync(cliBin, ["text", "-", "--dictionary", database, ...(flag ? [flag] : [])], {input: text, encoding: "utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(5).locator(".breakdown-part").nth(2).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=89813"]'));
+  await page.screenshot({path: resolve(tmpdir(), "klem-intensive-aux-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844}); assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-intensive-aux-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
 

@@ -2978,3 +2978,68 @@ fn pretence_targets_keep_two_original_noun_predicate_annotations() {
     assert!(gsd["targets"].as_array().unwrap().is_empty());
     assert!(gsd["search_counts"].as_array().unwrap().is_empty());
 }
+
+#[test]
+fn intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/intensive-aux-sources.json")).unwrap();
+    let mut targets = 0;
+    let mut matches = 0;
+    let mut misses = Vec::new();
+    for (name, kind, input) in [
+        (
+            "kaist",
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-intensive-aux.conllu").as_slice(),
+        ),
+        (
+            "gsd",
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-intensive-aux.conllu").as_slice(),
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "intensive-aux").unwrap();
+        let file = source["corpus_search"]["files"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == name)
+            .unwrap();
+        for target in file["targets"].as_array().unwrap() {
+            let case = &report.cases[target["id"].as_str().unwrap()];
+            assert_eq!(case.surface, target["surface"].as_str().unwrap());
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                target["expected"]
+            );
+            assert_eq!(case.matched, target["matched_before"].as_bool().unwrap());
+            let row = target["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(
+                std::str::from_utf8(input)
+                    .unwrap()
+                    .lines()
+                    .any(|l| l == row)
+            );
+            targets += 1;
+            matches += usize::from(case.matched);
+            if !case.matched {
+                misses.push(case.id.clone());
+                assert_eq!(target["source_row"][2], "줄+아서+먹+는");
+                assert_eq!(target["source_row"][4], "VV+EC+VX+ETM");
+                assert_eq!(case.surface, "줄서먹는");
+                assert_eq!(case.expected, ["줄다", "먹다"]);
+                assert!(std::str::from_utf8(input).unwrap().contains(
+                    "행사기간이라 인파가 많아서 줄서먹는 거지 맛있어서 기다리는 거 절대 아니니 줄에 현혹되지 마세요."
+                ));
+            }
+        }
+    }
+    assert_eq!((targets, matches), (5, 4));
+    assert_eq!(misses, ["id:train-s3450/4"]);
+}

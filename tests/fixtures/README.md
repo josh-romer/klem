@@ -1959,3 +1959,28 @@ training searches find no targets in the recorded categories. Attribution:
 UD Korean KAIST treebank contributors and KAIST corpus,
 https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15
 (CC BY-SA 4.0). Corpus and dictionary licenses apply separately.
+
+`krdict-intensive-aux.json` retains 126 complete native entries, including seven
+intensive auxiliary verbs and six related expressions: 13 family entries/senses
+and all 60 original groups. Only RelatedForm/non-English equivalents are omitted;
+Sense arrays are normalized. Attribution: National Institute of Korean Language,
+Korean Basic Dictionary (CC BY-SA 2.0 KR). `intensive-aux-sources.json` retains
+11 export hashes, original source contradictions, before observations and dated
+primary consultation summaries with full-article access limits. Research summaries
+are separately cited and are not licensed as dictionary material.
+
+Eighty-one `intensive-aux-*` raw cases record 60 required native paths and 21
+alternate-connector exclusions for auxiliary roles. The entry ledger records
+77 cases/139 judgments under existing policy, distinguishing homonyms, immediate
+and later owners, standalone uncertainty and missing headwords. Constructed
+contexts remain linguistically unjudged. Native 헛소리하고자빠졌네 recovers
+raw but lacks the dictionary headword 헛소리하다, so both dictionary filters
+remove that path. No fake entry or runtime rule is added to force retention.
+
+`kaist-intensive-aux.conllu` and `gsd-intensive-aux.conllu` retain five complete
+unchanged UD r2.15 training blocks. Four targets recover; original GSD 줄서먹는
+with 줄+아서+먹+는 remains a miss. Source annotations are not repaired.
+Attribution: UD Korean KAIST/GSD contributors and source corpora,
+https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and
+https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0).
+Dictionary and corpus licenses apply separately.

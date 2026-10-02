@@ -1,0 +1,49 @@
+# sent_id = train-s582
+# text = 우리는 닭다리만 시켜먹는데 맛 이써요
+# translit = .u.ri.neun .darg.da.ri.man .si.kyeo.meog.neun.de .mas .i.sseo.yo
+1	우리는	우리+는	PRON	NP+JX	_	3	nsubj	_	Translit=.u.ri.neun|LTranslit=.u.ri+.neun
+2	닭다리만	닭다리+만	NOUN	NNG+JX	_	3	obj	_	Translit=.darg.da.ri.man|LTranslit=.darg.da.ri+.man
+3	시켜먹는데	시키+어+먹+는데	VERB	VV+EC+VX+EC	_	5	advcl	_	Translit=.si.kyeo.meog.neun.de|LTranslit=.si.ki+.eo+.meog+.neun.de
+4	맛	맛	NOUN	NNG	_	5	nsubj	_	Translit=.mas|LTranslit=.mas
+5	이써요	이+쓰+어요	ADJ	NP+VV+EC	_	0	root	_	Translit=.i.sseo.yo|LTranslit=.i+.sseu+.eo.yo
+
+# sent_id = train-s793
+# text = 귀중한 물건들 다 부숴먹고 개판입니다.
+# translit = .gwi.jung.han .mul.geon.deul .da .bu.sweo.meog.go .gae.pan.ib.ni.da.
+1	귀중한	귀중+하+ㄴ	ADJ	XR+XSA+ETM	_	2	amod	_	Translit=.gwi.jung.han|LTranslit=.gwi.jung+.ha+ㄴ
+2	물건들	물건+들	NOUN	NNG+XSN	_	4	obj	_	Translit=.mul.geon.deul|LTranslit=.mul.geon+.deul
+3	다	다	ADV	MAG	_	4	advmod	_	Translit=.da|LTranslit=.da
+4	부숴먹고	부수+어+먹+고	VERB	VV+EC+VX+EC	_	0	root	_	Translit=.bu.sweo.meog.go|LTranslit=.bu.su+.eo+.meog+.go
+5	개판입니다	개판+이+ㅂ니다	VERB	NNG+VCP+EF	_	4	conj	_	SpaceAfter=No|Translit=.gae.pan.ib.ni.da|LTranslit=.gae.pan+.i+ㅂ.ni.da
+6	.	.	PUNCT	SF	_	5	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1508
+# text = 안에 정육점에서 시켜먹는 즉석 부위별 생고기는 싱싱하고 맛나요
+# translit = .an.e .jeong.yug.jeom.e.seo .si.kyeo.meog.neun .jeug.seog .bu.wi.byeol .saeng.go.gi.neun .sing.sing.ha.go .mas.na.yo
+1	안에	안+에	ADV	NNG+JKB	_	3	obl	_	Translit=.an.e|LTranslit=.an+.e
+2	정육점에서	정육점+에서	ADV	NNG+JKB	_	3	advmod	_	Translit=.jeong.yug.jeom.e.seo|LTranslit=.jeong.yug.jeom+.e.seo
+3	시켜먹는	시키+어+먹+는	VERB	VV+EC+VX+ETM	_	4	acl:relcl	_	Translit=.si.kyeo.meog.neun|LTranslit=.si.ki+.eo+.meog+.neun
+4	즉석	즉석	NOUN	NNG	_	8	nsubj	_	Translit=.jeug.seog|LTranslit=.jeug.seog
+5	부위별	부위+별	NOUN	NNG+XSN	_	4	flat	_	Translit=.bu.wi.byeol|LTranslit=.bu.wi+.byeol
+6	생고기는	생+고기+는	NOUN	XPN+NNG+JX	_	4	flat	_	Translit=.saeng.go.gi.neun|LTranslit=.saeng+.go.gi+.neun
+7	싱싱하고	싱싱+하+고	VERB	XR+XSA+EC	_	0	root	_	Translit=.sing.sing.ha.go|LTranslit=.sing.sing+.ha+.go
+8	맛나요	맛나+요	ADJ	VA+EC	_	7	conj	_	Translit=.mas.na.yo|LTranslit=.mas.na+.yo
+
+# sent_id = train-s3450
+# text = 행사기간이라 인파가 많아서 줄서먹는 거지 맛있어서 기다리는 거 절대 아니니 줄에 현혹되지 마세요.
+# translit = .haeng.sa.gi.gan.i.ra .in.pa.ga .manh.a.seo .jul.seo.meog.neun .geo.ji .mas.iss.eo.seo .gi.da.ri.neun .geo .jeol.dae .a.ni.ni .jul.e .hyeon.hog.doe.ji .ma.se.yo.
+1	행사기간이라	행사+기간+이+라	VERB	NNG+NNG+VCP+EC	_	3	advcl	_	Translit=.haeng.sa.gi.gan.i.ra|LTranslit=.haeng.sa+.gi.gan+.i+.ra
+2	인파가	인파+가	NOUN	NNG+JKS	_	3	nsubj	_	Translit=.in.pa.ga|LTranslit=.in.pa+.ga
+3	많아서	많+아서	VERB	VA+EC	_	4	advcl	_	Translit=.manh.a.seo|LTranslit=.manh+.a.seo
+4	줄서먹는	줄+아서+먹+는	VERB	VV+EC+VX+ETM	_	5	dep	_	Translit=.jul.seo.meog.neun|LTranslit=.jul+.a.seo+.meog+.neun
+5	거지	거+이+지	VERB	NNB+VCP+EC	_	10	advcl	_	Translit=.geo.ji|LTranslit=.geo+.i+.ji
+6	맛있어서	맛있+어서	VERB	VA+EC	_	7	advcl	_	Translit=.mas.iss.eo.seo|LTranslit=.mas.iss+.eo.seo
+7	기다리는	기다리+는	VERB	VV+ETM	_	8	dep	_	Translit=.gi.da.ri.neun|LTranslit=.gi.da.ri+.neun
+8	거	거	NOUN	NNB	_	10	nsubj	_	Translit=.geo|LTranslit=.geo
+9	절대	절대	ADV	NNG	_	10	advmod	_	Translit=.jeol.dae|LTranslit=.jeol.dae
+10	아니니	아니+니	VERB	VCN+EC	_	12	advcl	_	Translit=.a.ni.ni|LTranslit=.a.ni+.ni
+11	줄에	줄+에	ADV	NNG+JKB	_	12	obl	_	Translit=.jul.e|LTranslit=.jul+.e
+12	현혹되지	현혹+되+지	VERB	NNG+XSV+EC	_	0	root	_	Translit=.hyeon.hog.doe.ji|LTranslit=.hyeon.hog+.doe+.ji
+13	마세요	말+시+어요	VERB	VX+EP+EF	_	12	flat	_	SpaceAfter=No|Translit=.ma.se.yo|LTranslit=.mal+.si+.eo.yo
+14	.	.	PUNCT	SF	_	13	punct	_	Translit=.|LTranslit=.
+

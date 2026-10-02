@@ -4069,3 +4069,22 @@ Two complete unchanged KAIST targets preserve 체할's noun-plus-adjective and
 relabeled as auxiliary gold. Aligned training searches found no GSD targets in
 these categories. Source-supported broader ending/prefinal/particle licenses,
 semantic/register and independent Korean-language review remain open.
+
+## Intensive auxiliary observations (COV-019x)
+
+The [source record](../tests/fixtures/intensive-aux-sources.json) retains all
+60 groups from seven auxiliary entries and six related expressions. Existing
+raw connectors recover every joined native excerpt. Alternate-connector judgments
+target only the auxiliary role. No engine rule, dictionary filter or universal
+semantic restriction is added. Some-verb subsets need further lexical review;
+-아 빠지다 and -어 빠지다 notes conflict with native examples and must not
+be used to exclude those examples. 죽다 keeps its native auxiliary-verb POS.
+
+Separate entry regressions preserve literal-verb homonyms, standalone and
+unknown providers, and immediate/later auxiliary owners. Constructed controls
+record current finite policy rather than contextual grammaticality. Full research
+articles, semantic/register evidence and broader ending/prefinal/particle licenses
+remain open. Original GSD 줄서먹는/아서 remains a source-aligned miss.
+Native 헛소리하고자빠졌네 has the raw 헛소리하다 + 자빠지다 path, but
+헛소리하다 has no pinned dictionary entry, so dictionary filtering drops it.
+Raw recall and dictionary coverage are tracked separately.

@@ -32487,6 +32487,567 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:77243",
+      "source_sha256": "c85281bffc96b38a98d972a5432faf9bf701e2a1698bd0aee2b1cab82433ea1a",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019x"
+      ],
+      "scope": "Complete native entry, sense, notes, forms and every example group retained alongside six related expressions (13 family entries/senses, 60 groups). Native paths and alternate-connector auxiliary-role boundaries have individual raw regression judgments. Separate entry observations preserve homonyms, immediate/later owners, standalone and missing-head uncertainty under existing finite attachment policy; no runtime grammar or dictionary filter changes.",
+      "remaining": "COV-019x remains incomplete: source-supported broader ending/prefinal/particle licenses, lexical subsets, semantic/register consultation, full research articles and independent Korean-language review remain required. Conflicting -아 빠지다/-어 빠지다 notes are retained. Original GSD 줄서먹는/아서 annotation remains a miss. 헛소리하고자빠졌네 recovers raw but dictionary filtering misses its absent 헛소리하다 headword. Constructed controls certify existing policy only, not contextual grammaticality.",
+      "evidence": [
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_sources_keep_13_complete_entries_and_all_60_native_groups"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_entry_observations_preserve_homonyms_unknowns_and_immediate_owners"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/intensive-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/intensive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intensive-aux-native-77243-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77243-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77243-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77243-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-먹다-고",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-먹다-지",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-먹다-을",
+          "judgment": "auxiliary"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73404",
+      "source_sha256": "7dfddee021d1407ddd049b4fe8824c101dec52c3d6ccdcfc1ce68e1a6944770a",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019x"
+      ],
+      "scope": "Complete native entry, sense, notes, forms and every example group retained alongside six related expressions (13 family entries/senses, 60 groups). Native paths and alternate-connector auxiliary-role boundaries have individual raw regression judgments. Separate entry observations preserve homonyms, immediate/later owners, standalone and missing-head uncertainty under existing finite attachment policy; no runtime grammar or dictionary filter changes.",
+      "remaining": "COV-019x remains incomplete: source-supported broader ending/prefinal/particle licenses, lexical subsets, semantic/register consultation, full research articles and independent Korean-language review remain required. Conflicting -아 빠지다/-어 빠지다 notes are retained. Original GSD 줄서먹는/아서 annotation remains a miss. 헛소리하고자빠졌네 recovers raw but dictionary filtering misses its absent 헛소리하다 headword. Constructed controls certify existing policy only, not contextual grammaticality.",
+      "evidence": [
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_sources_keep_13_complete_entries_and_all_60_native_groups"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_entry_observations_preserve_homonyms_unknowns_and_immediate_owners"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/intensive-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/intensive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intensive-aux-native-73404-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-73404-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-73404-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-73404-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-빠지다-고",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-빠지다-지",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-빠지다-을",
+          "judgment": "auxiliary"
+        }
+      ]
+    },
+    {
+      "id": "krdict:74296",
+      "source_sha256": "e8fa43eba8c197be9341da61b3f6be57a3ca7965dad337db7fc59df8bf454a85",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019x"
+      ],
+      "scope": "Complete native entry, sense, notes, forms and every example group retained alongside six related expressions (13 family entries/senses, 60 groups). Native paths and alternate-connector auxiliary-role boundaries have individual raw regression judgments. Separate entry observations preserve homonyms, immediate/later owners, standalone and missing-head uncertainty under existing finite attachment policy; no runtime grammar or dictionary filter changes.",
+      "remaining": "COV-019x remains incomplete: source-supported broader ending/prefinal/particle licenses, lexical subsets, semantic/register consultation, full research articles and independent Korean-language review remain required. Conflicting -아 빠지다/-어 빠지다 notes are retained. Original GSD 줄서먹는/아서 annotation remains a miss. 헛소리하고자빠졌네 recovers raw but dictionary filtering misses its absent 헛소리하다 headword. Constructed controls certify existing policy only, not contextual grammaticality.",
+      "evidence": [
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_sources_keep_13_complete_entries_and_all_60_native_groups"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_entry_observations_preserve_homonyms_unknowns_and_immediate_owners"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/intensive-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/intensive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intensive-aux-native-74296-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-74296-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-74296-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-74296-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-자빠지다-어",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-자빠지다-지",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-자빠지다-을",
+          "judgment": "auxiliary"
+        }
+      ]
+    },
+    {
+      "id": "krdict:77246",
+      "source_sha256": "5c1c3c4b94de9a139594837bf9caadafa80aa22d3b2d255565acdfbb77605387",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019x"
+      ],
+      "scope": "Complete native entry, sense, notes, forms and every example group retained alongside six related expressions (13 family entries/senses, 60 groups). Native paths and alternate-connector auxiliary-role boundaries have individual raw regression judgments. Separate entry observations preserve homonyms, immediate/later owners, standalone and missing-head uncertainty under existing finite attachment policy; no runtime grammar or dictionary filter changes.",
+      "remaining": "COV-019x remains incomplete: source-supported broader ending/prefinal/particle licenses, lexical subsets, semantic/register consultation, full research articles and independent Korean-language review remain required. Conflicting -아 빠지다/-어 빠지다 notes are retained. Original GSD 줄서먹는/아서 annotation remains a miss. 헛소리하고자빠졌네 recovers raw but dictionary filtering misses its absent 헛소리하다 headword. Constructed controls certify existing policy only, not contextual grammaticality.",
+      "evidence": [
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_sources_keep_13_complete_entries_and_all_60_native_groups"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_entry_observations_preserve_homonyms_unknowns_and_immediate_owners"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/intensive-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/intensive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intensive-aux-native-77246-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77246-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77246-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77246-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77246-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77246-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77246-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77246-1-8",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-77246-1-9",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-죽다-고",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-죽다-지",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-죽다-을",
+          "judgment": "auxiliary"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73432",
+      "source_sha256": "c41dca9388a83c286ddf95062b367d10b88a2faad5124e28df21f3b6ca277f89",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019x"
+      ],
+      "scope": "Complete native entry, sense, notes, forms and every example group retained alongside six related expressions (13 family entries/senses, 60 groups). Native paths and alternate-connector auxiliary-role boundaries have individual raw regression judgments. Separate entry observations preserve homonyms, immediate/later owners, standalone and missing-head uncertainty under existing finite attachment policy; no runtime grammar or dictionary filter changes.",
+      "remaining": "COV-019x remains incomplete: source-supported broader ending/prefinal/particle licenses, lexical subsets, semantic/register consultation, full research articles and independent Korean-language review remain required. Conflicting -아 빠지다/-어 빠지다 notes are retained. Original GSD 줄서먹는/아서 annotation remains a miss. 헛소리하고자빠졌네 recovers raw but dictionary filtering misses its absent 헛소리하다 headword. Constructed controls certify existing policy only, not contextual grammaticality.",
+      "evidence": [
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_sources_keep_13_complete_entries_and_all_60_native_groups"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_entry_observations_preserve_homonyms_unknowns_and_immediate_owners"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/intensive-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/intensive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intensive-aux-native-73432-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-73432-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-73432-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-73432-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-터지다-고",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-터지다-지",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-터지다-을",
+          "judgment": "auxiliary"
+        }
+      ]
+    },
+    {
+      "id": "krdict:89813",
+      "source_sha256": "648b5ad19584cbbcb5356bcf4debba075f258af7bfdb691abc61c9c5b55ef9a3",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019x"
+      ],
+      "scope": "Complete native entry, sense, notes, forms and every example group retained alongside six related expressions (13 family entries/senses, 60 groups). Native paths and alternate-connector auxiliary-role boundaries have individual raw regression judgments. Separate entry observations preserve homonyms, immediate/later owners, standalone and missing-head uncertainty under existing finite attachment policy; no runtime grammar or dictionary filter changes.",
+      "remaining": "COV-019x remains incomplete: source-supported broader ending/prefinal/particle licenses, lexical subsets, semantic/register consultation, full research articles and independent Korean-language review remain required. Conflicting -아 빠지다/-어 빠지다 notes are retained. Original GSD 줄서먹는/아서 annotation remains a miss. 헛소리하고자빠졌네 recovers raw but dictionary filtering misses its absent 헛소리하다 headword. Constructed controls certify existing policy only, not contextual grammaticality.",
+      "evidence": [
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_sources_keep_13_complete_entries_and_all_60_native_groups"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_entry_observations_preserve_homonyms_unknowns_and_immediate_owners"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/intensive-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/intensive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intensive-aux-native-89813-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-89813-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-89813-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-89813-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-89813-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-89813-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-89813-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-89813-1-8",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-재끼다-고",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-재끼다-지",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-재끼다-을",
+          "judgment": "auxiliary"
+        }
+      ]
+    },
+    {
+      "id": "krdict:74298",
+      "source_sha256": "346fe823d8295786c2e16a48bf906b0f25448b9658ccc88018c038ddb3a0aba5",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019x"
+      ],
+      "scope": "Complete native entry, sense, notes, forms and every example group retained alongside six related expressions (13 family entries/senses, 60 groups). Native paths and alternate-connector auxiliary-role boundaries have individual raw regression judgments. Separate entry observations preserve homonyms, immediate/later owners, standalone and missing-head uncertainty under existing finite attachment policy; no runtime grammar or dictionary filter changes.",
+      "remaining": "COV-019x remains incomplete: source-supported broader ending/prefinal/particle licenses, lexical subsets, semantic/register consultation, full research articles and independent Korean-language review remain required. Conflicting -아 빠지다/-어 빠지다 notes are retained. Original GSD 줄서먹는/아서 annotation remains a miss. 헛소리하고자빠졌네 recovers raw but dictionary filtering misses its absent 헛소리하다 headword. Constructed controls certify existing policy only, not contextual grammaticality.",
+      "evidence": [
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_sources_keep_13_complete_entries_and_all_60_native_groups"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_entry_observations_preserve_homonyms_unknowns_and_immediate_owners"
+        },
+        {
+          "path": "tests/intensive_aux.rs",
+          "test": "intensive_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/intensive-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/intensive-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/intensive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "intensive-aux-native-74298-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-74298-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-74298-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-native-74298-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-젖히다-고",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-젖히다-지",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "intensive-aux-wrong-connector-젖히다-을",
+          "judgment": "auxiliary"
+        }
+      ]
     }
   ]
 }

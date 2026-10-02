@@ -1319,6 +1319,28 @@ impl Annotation {
                                 ReuUncontracted => {
                                     matched.reu.as_ref().map(|e| !e.uncontracted.is_empty())
                                 }
+                                WrittenVowelA | WrittenVowelEo | EuUncontracted => {
+                                    matched.written_vowel.as_ref().and_then(|e| {
+                                        let (own, opposite) = match recovery.class {
+                                            WrittenVowelA => (&e.a, &e.eo),
+                                            WrittenVowelEo => (&e.eo, &e.a),
+                                            _ => (&e.uncontracted, &e.a),
+                                        };
+                                        if !own.is_empty() {
+                                            Some(true)
+                                        } else if !opposite.is_empty()
+                                            || (recovery.class == EuUncontracted && !e.eo.is_empty())
+                                        {
+                                            // NIKL Articles 16/18 and the reviewed ㅡ
+                                            // paradigms establish the incompatible
+                                            // alternate series/deletion. An unrelated
+                                            // or empty written form proves nothing.
+                                            Some(false)
+                                        } else {
+                                            None
+                                        }
+                                    })
+                                }
                             };
                             if let Some(supported) = supported {
                                 if !supported {

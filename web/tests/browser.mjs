@@ -658,6 +658,12 @@ try {
   const writtenVowelIds = new Set(writtenVowelEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !writtenVowelIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...writtenVowelEntries);
+  const writtenVowelCompatNative = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-written-vowel-compat.json"),"utf8"));
+  const writtenVowelCompatEntries = writtenVowelCompatNative.LexicalResource.Lexicon.LexicalEntry;
+  const writtenVowelCompatIds = new Set(writtenVowelCompatEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !writtenVowelCompatIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...writtenVowelCompatEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -6054,6 +6060,50 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-written-vowel-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-written-vowel-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+
+  const writtenVowelCompatSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/written-vowel-compat-sources.json"),"utf8"));
+  const writtenVowelCompatTokens = new Map();
+  for (const c of writtenVowelCompatSource.cases) {
+    if (!writtenVowelCompatTokens.has(c.surface)) writtenVowelCompatTokens.set(c.surface,(await (await post("analyze",{text:c.surface})).json()).records[0]);
+    const token = writtenVowelCompatTokens.get(c.surface);
+    const indices = token.analysis.analyses.flatMap((a,i) => auxiliaryPath(a,c) ? [i] : []);
+    assert.deepEqual(indices,c.before_candidate_indices,c.id);
+    for (const i of indices) {
+      const entry = token.dictionary.readings[i].lemmas[0].entries.find(e => e.id === c.owner_id);assert.ok(entry,c.id);
+      assert.equal(entry.status,c.expected_entry_status,c.id);
+      assert.deepEqual(entry.conflicts,c.expected_entry_status === "incompatible" ? [{rule:"lexical_spelling",morpheme_index:0}] : [],c.id);
+    }
+  }
+  for (const e of writtenVowelCompatSource.source_entries) assert.deepEqual((await (await post("entry",{id:e.id})).json()).entry,e,e.id);
+  const writtenVowelCompatText = "받아싸 받아써 가냘퍼 가냘파 약어 약아 본따버렸다 본떠버렸다 받아쓰셨어요";
+  const writtenVowelCompatParts = [["받아쓰","어"],["받아쓰","어"],["가냘프","어"],["가냘프","어"],["약","어"],["약","어"],["본뜨","어","버리","었","다"],["본뜨","어","버리","었","다"],["받아쓰","시","었","어요"]];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag === "--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,writtenVowelCompatText);await waitHeading(page,"받아싸");
+    const response = await (await post("analyze",{text:writtenVowelCompatText})).json();
+    for (const [n,t] of response.records.filter(r => r.analysis).entries()) {
+      const c = writtenVowelCompatSource.cases.find(c => c.surface === t.surface && c.before_candidate_indices.length);assert.ok(c,t.surface);
+      const index = t.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(index >= 0,t.surface);
+      const block = page.locator(".breakdown-word").nth(n);
+      const keep = flag !== "--dict-compatible" || c.expected_entry_status !== "incompatible";
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),keep ? 1 : 0,t.surface);
+      if(keep) {
+        await block.getByRole("combobox").selectOption(String(index));
+        const forms = writtenVowelCompatParts[n];
+        assert.deepEqual(await block.locator(".part-form").allTextContents(),forms,t.surface);
+      }
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:writtenVowelCompatText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-written-vowel-compat-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-written-vowel-compat-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

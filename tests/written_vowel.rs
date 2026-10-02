@@ -1,4 +1,6 @@
 //! COV-021j: written vowel exceptions and open-ㅕ absorption.
+#[path = "support/written_vowel_history.rs"]
+mod history;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::dictionary::{
@@ -127,9 +129,14 @@ fn finite_vowel_recovery_preserves_ambiguity_unicode_prefinal_and_auxiliary_owne
         assert_eq!(
             word.analyses
                 .iter()
-                .filter(|a| before.analyses.contains(a))
+                .filter(|a| before.analyses.contains(&history::project_analysis(a)))
+                .map(history::project_analysis)
                 .collect::<Vec<_>>(),
-            before.analyses.iter().collect::<Vec<_>>(),
+            before
+                .analyses
+                .iter()
+                .map(history::project_analysis)
+                .collect::<Vec<_>>(),
             "{surface}"
         );
         assert!(word.analyses.iter().any(|a| a.unchanged));
@@ -228,14 +235,19 @@ fn written_vowel_probes_preserve_old_candidates_and_finite_map_boundaries() {
             after
                 .analyses
                 .iter()
-                .filter(|a| before.analyses.contains(a))
+                .filter(|a| before.analyses.contains(&history::project_analysis(a)))
+                .map(history::project_analysis)
                 .collect::<Vec<_>>(),
-            before.analyses.iter().collect::<Vec<_>>()
+            before
+                .analyses
+                .iter()
+                .map(history::project_analysis)
+                .collect::<Vec<_>>()
         );
         for a in after
             .analyses
             .iter()
-            .filter(|a| !before.analyses.contains(a))
+            .filter(|a| !before.analyses.contains(&history::project_analysis(a)))
         {
             assert!(
                 a.rules

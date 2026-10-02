@@ -342,35 +342,86 @@ impl ReuEvidence {
     }
 }
 
-enum CachedSpelling {
-    Consonant(ConjugationEvidence),
-    Reu(ReuEvidence),
+/// Positive, per-entry written forms for the reviewed ㅡ/ㅑ vowel paradigms.
+/// Both series may coexist; sparse or pronunciation-only data stays unknown.
+#[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq, Eq)]
+pub struct WrittenVowelEvidence {
+    pub a: Vec<String>,
+    pub eo: Vec<String>,
+    pub uncontracted: Vec<String>,
+}
+impl WrittenVowelEvidence {
+    fn from_entry(entry: &Entry) -> Option<Self> {
+        let stem = entry.summary.headword.strip_suffix('다')?;
+        let mut evidence = Self::default();
+        for form in &entry.forms {
+            if form.kind != "활용" {
+                continue;
+            }
+            let written: String = form.written.trim().nfc().collect();
+            use crate::SpellingClass::*;
+            let forms = match crate::grammar::written_vowel_recovery(stem, &written) {
+                Some(WrittenVowelA) => &mut evidence.a,
+                Some(WrittenVowelEo) => &mut evidence.eo,
+                Some(EuUncontracted) => &mut evidence.uncontracted,
+                _ => continue,
+            };
+            forms.push(form.written.clone());
+        }
+        for forms in [
+            &mut evidence.a,
+            &mut evidence.eo,
+            &mut evidence.uncontracted,
+        ] {
+            forms.sort();
+            forms.dedup();
+        }
+        (evidence != Self::default()).then_some(evidence)
+    }
+    fn retained_bytes(&self) -> usize {
+        [&self.a, &self.eo, &self.uncontracted]
+            .into_iter()
+            .map(|forms| {
+                forms.capacity() * std::mem::size_of::<String>()
+                    + forms.iter().map(String::capacity).sum::<usize>()
+            })
+            .sum()
+    }
+}
+
+struct CachedSpelling {
+    consonant: Option<ConjugationEvidence>,
+    reu: Option<ReuEvidence>,
+    written_vowel: Option<WrittenVowelEvidence>,
 }
 impl CachedSpelling {
     fn from_entry(entry: &Entry) -> Option<Self> {
-        if entry.summary.headword.ends_with("르다") {
-            ReuEvidence::from_entry(entry).map(Self::Reu)
-        } else {
-            ConjugationEvidence::from_entry(entry).map(Self::Consonant)
-        }
+        let evidence = Self {
+            consonant: ConjugationEvidence::from_entry(entry),
+            reu: ReuEvidence::from_entry(entry),
+            written_vowel: WrittenVowelEvidence::from_entry(entry),
+        };
+        (evidence.consonant.is_some() || evidence.reu.is_some() || evidence.written_vowel.is_some())
+            .then_some(evidence)
     }
     fn consonant(&self) -> Option<&ConjugationEvidence> {
-        match self {
-            Self::Consonant(e) => Some(e),
-            Self::Reu(_) => None,
-        }
+        self.consonant.as_ref()
     }
     fn reu(&self) -> Option<&ReuEvidence> {
-        match self {
-            Self::Reu(e) => Some(e),
-            Self::Consonant(_) => None,
-        }
+        self.reu.as_ref()
+    }
+    fn written_vowel(&self) -> Option<&WrittenVowelEvidence> {
+        self.written_vowel.as_ref()
     }
     fn retained_bytes(&self) -> usize {
-        match self {
-            Self::Consonant(e) => e.retained_bytes(),
-            Self::Reu(e) => e.retained_bytes(),
-        }
+        self.consonant
+            .as_ref()
+            .map_or(0, ConjugationEvidence::retained_bytes)
+            + self.reu.as_ref().map_or(0, ReuEvidence::retained_bytes)
+            + self
+                .written_vowel
+                .as_ref()
+                .map_or(0, WrittenVowelEvidence::retained_bytes)
     }
 }
 
@@ -396,6 +447,8 @@ pub struct EntryMatch {
     pub bieup: Option<ConjugationEvidence>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub reu: Option<ReuEvidence>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub written_vowel: Option<WrittenVowelEvidence>,
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct LemmaMatches {
@@ -474,6 +527,11 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
         };
         for summary in entries.iter() {
             let evidence = if (summary.headword.ends_with("르다")
+                || summary
+                    .headword
+                    .strip_suffix('다')
+                    .and_then(crate::hangul::last)
+                    .is_some_and(|(_, v, t)| (v == 18 && t == 0) || (v == 2 && t != 27))
                 || matches!(
                     summary
                         .headword
@@ -574,6 +632,10 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                         .cloned()
                         .flatten(),
                     reu: evidence.as_ref().and_then(CachedSpelling::reu).cloned(),
+                    written_vowel: evidence
+                        .as_ref()
+                        .and_then(CachedSpelling::written_vowel)
+                        .cloned(),
                     hieut: evidence
                         .as_ref()
                         .and_then(CachedSpelling::consonant)

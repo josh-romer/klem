@@ -75,7 +75,11 @@ for the API, source licensing, limitations and measured novel coverage.
 `--dict-compatible` also excludes known lexical-role/ending conflicts, preserving
 unknown classes and valid homonyms. The browser exposes this under its dictionary
 filter. See the [scoped policy](docs/dictionary-attachments.md), including per-entry
-written ㅎ inflection checks. Raw/headword-only candidates remain available.
+written ㅎ/ㄷ/ㅅ/ㅂ/르 inflection checks and entry-specific ㅡ/ㅑ vowel choices.
+For example, 받아싸 → 받아쓰다 remains a raw/headword hypothesis but conflicts
+with that entry's written 받아써 paradigm under `--dict-compatible`.
+Missing evidence stays unknown; homonyms and alternate listed forms keep their
+own evidence. Raw/headword-only candidates remain available.
 
 
 Quoted-question reports such as 먹느냐는구나 and 좋으냐는군 preserve distinct

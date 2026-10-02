@@ -3221,19 +3221,41 @@ review remains open under the completion review below.
   observations, actual API/breakdown evidence, browser/Nix checks and remaining
   lexical, contextual and independent-review requirements.
 
-- [ ] **COV-021k — Entry-specific written-vowel compatibility.** COV-021j
-  recovers listed forms while retaining the older harmony hypotheses. The
-  current compatible filter still retains 받아싸→받아쓰다,
-  가냘퍼→가냘프다 and 약어→약다. These observed alternatives need explicit
-  source-specific disposition; a dictionary headword match does not settle
-  the written paradigm. Review ㅡ compounds and ㅑ stems against complete
-  native forms and independent norm explanations, including alternate listed
-  forms, homonyms and missing/contradictory source data. Track vowel choice on
-  the actual lexical owner before later prefinals/auxiliaries/particles. Keep
-  raw/headword-only hypotheses; any supported compatibility conflict must be
-  per-entry with conservative unknown fallback, not an absence-based global
-  ban. The original before probes are retained in the
-  [COV-021j fixture](../tests/fixtures/written-vowel-sources.json).
+- [x] **COV-021k — Entry-specific written-vowel compatibility.**
+  **Implemented and verified for the complete current native ㅡ/ㅑ scope.** The compatible filter now identifies 받아싸→받아쓰다,
+  가냘퍼→가냘프다 and 약어→약다 as entry-specific written-spelling conflicts.
+  All 80 current native open-ㅡ/non-ㅎ-ㅑ predicate entries retain their complete
+  written forms, homonyms and examples; 르 and ㅎ keep their separate classes.
+  The frozen fixture retains 135 complete source entries, 2,373 individually
+  identified probes and all 1,993 before outputs. Its 1,761 present entry
+  judgments include 801 reviewed conflicts; the other 612 authored probes
+  explicitly remain absent raw hypotheses rather than claimed filter fixes.
+  Written vowel choice belongs to the local lexical owner before later
+  prefinals, auxiliaries and particles. Both listed vowel series coexist;
+  pronunciation-only, missing, sparse and legacy evidence remains unknown.
+  Raw and headword-only candidates, ordering and earlier spelling obligations
+  are unchanged. All 19 changed compatibility snapshots preserve their original
+  hashes and every earlier history check; no source/gold judgment is rewritten.
+  All 757 Rust and Nix release tests, Clippy, formatting, frontend build,
+  pinned full KAIST/GSD comparisons and the original raw correctness ledger
+  pass. Eight complete candidate/novel modes preserve raw/headword hypotheses;
+  13 candidate-scan compatible paths are independently verified removals.
+  The novel loses no dictionary-filtered reading in any of its five modes.
+  Every changed novel occurrence retains its full original paragraph and
+  remains unjudged for contextual sense/register/particle followers.
+  The refreshed immutable preview verifies all 1,993 frozen outputs, all
+  1,761 entry judgments and all 135 source entries; 15,910 changed paths
+  and their owners match its actual API. The 1,025 longer paths have explicit
+  existing viewer-limit exclusions and full unbounded CLI/stress evidence.
+  Complete comparisons, original observations, source integrity, actual API
+  breakdowns, novel contexts and norm scopes are preserved in the
+  [evaluation](written-vowel-compat-evaluation.json) and standard lossless
+  gzip artifacts. The original COV-021j before probes are unchanged in the
+  [prior fixture](../tests/fixtures/written-vowel-sources.json).
+  All three x86_64 Linux flake checks and nine inventory unit tests pass;
+  the inventory remains 425 scoped / 290 unreviewed.
+  Independent Korean review, the 79 remaining original written-form misses,
+  other architectures and the full parent COV-021/checklist remain open.
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

@@ -1,4 +1,6 @@
 //! COV-017az: omitted copular 이 before basic literary polite 오/옵.
+#[path = "support/written_vowel_history.rs"]
+mod history;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::dictionary::{DictionaryFilter, DictionarySession, SqliteDictionary, import_krdict};
@@ -147,6 +149,9 @@ fn other_polite_followers_and_lexical_contractions_keep_baseline_outputs() {
     assert_eq!(baseline.len(), 8);
     let engine = Lemmatizer::new();
     for expected in baseline {
-        assert_eq!(engine.analyze_word(&expected.normalized).unwrap(), expected);
+        assert_eq!(
+            history::project_word(&engine.analyze_word(&expected.normalized).unwrap()),
+            expected
+        );
     }
 }

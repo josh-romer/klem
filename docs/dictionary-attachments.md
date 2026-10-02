@@ -856,3 +856,38 @@ separately illustrates nominalization before 직하다. Narrow notes alone do no
 create a left-class ban or an arbitrary spacing recommendation. Dictionary checks
 leave raw hypotheses intact and do not settle every prefinal, internal particle,
 semantic subset, register or contextual interpretation.
+
+## Written ㅡ/ㅑ vowel compatibility (COV-021k)
+
+The engine records `written_vowel_a`, `written_vowel_eo` or `eu_uncontracted`
+at the local 아/어 boundary, before combining auxiliaries or later prefinals.
+The dictionary annotation's optional `written_vowel` profile contains only
+written 활용 forms belonging to that entry. Pronunciations and another
+homonym's forms never provide spelling evidence. Empty or unrelated forms,
+missing full entries and older annotations remain unknown. Multiple explicitly
+listed vowel series coexist; the filter does not choose a contextual sense.
+
+The current dictionary scan covers all 80 entries with an open ㅡ stem other
+than 르, or a non-ㅎ ㅑ stem. 르 and ㅎ retain their separate spelling policies.
+받아싸 → 받아쓰다, 가냘퍼 → 가냘프다 and 약어 → 약다 remain raw and headword-only
+hypotheses but conflict with their entries' written paradigms under
+`--dict-compatible`. Uncontracted 받아쓰어 also conflicts with the written
+ㅡ-deletion paradigm. 받아쓰셨어요 imposes no vowel-series requirement on
+받아쓰다: the observed 셔 belongs to the later honorific 시.
+
+[NIKL Article 16](https://www.korean.go.kr/kornorms/m/m_regltn.do) explains
+ㅑ's 아 series, and the [Article 18 explanation reproduced by NIKL](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=304100)
+explains obligatory ㅡ deletion in the deletion paradigm.
+The [May](https://www.korean.go.kr/nkview/nknews/200405/70_3.html) and
+[June 2004 explanations](https://www.korean.go.kr/nkview/nknews/200406/71_3.html)
+cover the preceding vowel, single-syllable stems and past/connective forms.
+The [본떠/본따 answer](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=6654&mn_id=&pageIndex=1)
+confirms that a compound retains its final constituent's paradigm.
+The implementation checks positive whole-entry forms rather than guessing
+compound boundaries from the prefix vowel.
+
+The [frozen source fixture](../tests/fixtures/written-vowel-compat-sources.json)
+preserves 135 full source entries, 2,373 individually identified probes,
+all 1,993 before outputs and the norm-source scope. These are targeted spelling
+regressions, not a blind contextual precision sample. Independent Korean
+review and the broader checklist remain open.

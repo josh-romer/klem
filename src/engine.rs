@@ -463,6 +463,12 @@ fn record_spelling(p: &mut Predicate, r: &Recovery, vowel_boundary: bool) {
         return;
     }
     use SpellingClass::*;
+    if let Some(class) = r.spelling {
+        p.spellings.push(SpellingRecovery {
+            morpheme_index: p.morphs.len(),
+            class,
+        });
+    }
     let class = if r.stem.ends_with('르') {
         r.rules.iter().find_map(|rule| match rule.as_str() {
             "deletion.eu" => Some(ReuEuDeletion),

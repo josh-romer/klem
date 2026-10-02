@@ -1,4 +1,6 @@
 //! COV-021i: finite deictic verb vowel paradigms and adjective ambiguity.
+#[path = "support/written_vowel_history.rs"]
+mod history;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::dictionary::{
@@ -124,9 +126,14 @@ fn finite_vowel_recovery_preserves_ambiguity_unicode_prefinal_and_auxiliary_owne
         assert_eq!(
             word.analyses
                 .iter()
-                .filter(|a| before.analyses.contains(a))
+                .filter(|a| before.analyses.contains(&history::project_analysis(a)))
+                .map(history::project_analysis)
                 .collect::<Vec<_>>(),
-            before.analyses.iter().collect::<Vec<_>>(),
+            before
+                .analyses
+                .iter()
+                .map(history::project_analysis)
+                .collect::<Vec<_>>(),
             "{surface}"
         );
         assert!(word.analyses.iter().any(|a| a.unchanged));
@@ -236,14 +243,19 @@ fn unlisted_prefixed_stems_and_original_corpus_conflict_do_not_gain_the_finite_r
             after
                 .analyses
                 .iter()
-                .filter(|a| before.analyses.contains(a))
+                .filter(|a| before.analyses.contains(&history::project_analysis(a)))
+                .map(history::project_analysis)
                 .collect::<Vec<_>>(),
-            before.analyses.iter().collect::<Vec<_>>()
+            before
+                .analyses
+                .iter()
+                .map(history::project_analysis)
+                .collect::<Vec<_>>()
         );
         for a in after
             .analyses
             .iter()
-            .filter(|a| !before.analyses.contains(a))
+            .filter(|a| !before.analyses.contains(&history::project_analysis(a)))
         {
             assert!(a.rules.iter().any(|r| r == "contraction.yeo_absorption"));
             assert!(!a.rules.iter().any(|r| r == "contraction.deictic_verb"));

@@ -1,5 +1,7 @@
 use klem::{LemmaKind, Lemmatizer, MorphemeKind};
 use sha2::{Digest, Sha256};
+#[path = "support/written_vowel_history.rs"]
+mod history;
 
 #[test]
 fn output_matches_reviewed_snapshots() {
@@ -16,13 +18,29 @@ fn output_matches_reviewed_snapshots() {
         before_bieup_sha256: Option<String>,
         before_polite_sha256: Option<String>,
         before_written_vowel_sha256: Option<String>,
+        before_written_vowel_compat_sha256: Option<String>,
     }
     let snapshots: Vec<Snapshot> =
         serde_json::from_str(include_str!("fixtures/optimization.json")).unwrap();
     let engine = Lemmatizer::new();
     for snapshot in snapshots {
         let result = engine.analyze_word(&snapshot.word).unwrap();
-        let mut previous_grammar = result.clone();
+        let mut previous_grammar = history::project_word(&result);
+        if let Some(expected) = snapshot.before_written_vowel_compat_sha256 {
+            // Every metadata change is individually preserved in the COV-021k
+            // snapshot audit. Check the exact pre-change output before all
+            // older grammar/spelling history checks below.
+            let mut json = serde_json::to_vec(&previous_grammar).unwrap();
+            json.push(b'\n');
+            assert_eq!(
+                format!("{:x}", Sha256::digest(json)),
+                expected,
+                "{}: pre-written-vowel-compatibility output changed",
+                snapshot.word
+            );
+        } else {
+            assert_eq!(previous_grammar, result);
+        }
         if let Some(expected) = snapshot.before_written_vowel_sha256 {
             // COV-021j's added open-ㅕ hypotheses were reviewed individually
             // in written-vowel-snapshot-audit.json. Preserve exact old output
@@ -131,11 +149,26 @@ fn output_matches_reviewed_snapshots() {
             snapshot.word
         );
     }
-    let mut json = serde_json::to_vec(&engine.analyze_word(&"가".repeat(64)).unwrap()).unwrap();
+    let repeated = engine.analyze_word(&"가".repeat(64)).unwrap();
+    let mut json = serde_json::to_vec(&history::project_word(&repeated)).unwrap();
     json.push(b'\n');
     assert_eq!(
         format!("{:x}", Sha256::digest(json)),
         "ddd77ed67c939112e4496ac1807be4bf932d54be32d0fea102302912f5318eea"
+    );
+    let audit: serde_json::Value = serde_json::from_str(include_str!(
+        "fixtures/written-vowel-compat-snapshot-audit.json"
+    ))
+    .unwrap();
+    assert_eq!(
+        serde_json::to_value(&repeated).unwrap(),
+        audit["repeated_64"]["after_word"]
+    );
+    let mut json = serde_json::to_vec(&repeated).unwrap();
+    json.push(b'\n');
+    assert_eq!(
+        format!("{:x}", Sha256::digest(json)),
+        audit["repeated_64"]["after_sha256"].as_str().unwrap()
     );
 }
 

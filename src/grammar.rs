@@ -1,6 +1,6 @@
 //! Explicit morphotactics and reverse spelling rules. No statistical weights.
-use crate::LemmaKind;
 use crate::hangul::*;
+use crate::{LemmaKind, SpellingClass};
 use std::{collections::HashMap, sync::OnceLock};
 
 // Source-listed adverb roots, not a general 이/히 spelling heuristic. The
@@ -195,13 +195,44 @@ pub(crate) const NOUN_I_COMPOUNDS: &[(&str, &str, LemmaKind, &str)] = &[
 pub(crate) struct Recovery {
     pub stem: String,
     pub rules: Vec<String>,
+    pub spelling: Option<SpellingClass>,
 }
 fn push(out: &mut Vec<Recovery>, stem: String, rule: &str) {
     if !stem.is_empty() && has_hangul(&stem) {
         out.push(Recovery {
             stem,
             rules: vec![rule.into()],
+            spelling: None,
         });
+    }
+}
+
+/// Classify a local written 아/어 boundary. This does not generate or discard
+/// candidates and never guesses compound segmentation. 르 and ㅎ keep their
+/// independently reviewed paradigms; other vowels are outside this policy.
+pub(crate) fn written_vowel_recovery(stem: &str, surface: &str) -> Option<SpellingClass> {
+    use SpellingClass::*;
+    let (_, v, t) = last(stem)?;
+    if v == 18 && t == 0 && !stem.ends_with('르') {
+        if surface.strip_suffix(['아', '어']) == Some(stem) {
+            Some(EuUncontracted)
+        } else if replace_last(stem, V_A, 0).as_deref() == Some(surface) {
+            Some(WrittenVowelA)
+        } else if replace_last(stem, V_EO, 0).as_deref() == Some(surface) {
+            Some(WrittenVowelEo)
+        } else {
+            None
+        }
+    } else if v == 2 && t != 27 {
+        if surface.strip_suffix('아') == Some(stem) {
+            Some(WrittenVowelA)
+        } else if surface.strip_suffix('어') == Some(stem) {
+            Some(WrittenVowelEo)
+        } else {
+            None
+        }
+    } else {
+        None
     }
 }
 
@@ -370,6 +401,9 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
             }
         }
     }
+    for recovery in &mut out {
+        recovery.spelling = written_vowel_recovery(&recovery.stem, surface);
+    }
     out.sort_by(|a, b| (&a.stem, &a.rules).cmp(&(&b.stem, &b.rules)));
     out.dedup_by(|a, b| a.stem == b.stem && a.rules == b.rules);
     out
@@ -494,6 +528,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                     out.push(Recovery {
                         stem: format!("{nominal}이"),
                         rules: vec!["copula.omitted_ending".into(), rule.into()],
+                        spelling: None,
                     });
                 }
             }
@@ -510,6 +545,7 @@ pub(crate) fn recover(surface: &str, suffix: &str, boundary: Boundary) -> Vec<Re
                 out.push(Recovery {
                     stem: format!("{base}이"),
                     rules: vec!["copula.zero".into(), rule.into()],
+                    spelling: None,
                 });
             }
         }

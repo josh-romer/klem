@@ -1,4 +1,6 @@
 //! COV-019ac: paired lexical 말다 keeps inflection and auxiliary owners.
+#[path = "support/written_vowel_history.rs"]
+mod history;
 #[path = "../tools/validity.rs"]
 mod validity;
 use klem::dictionary::{
@@ -105,11 +107,16 @@ fn malda_inflection_paths_keep_prefinals_and_auxiliaries_with_their_owners() {
         let retained: Vec<_> = word
             .analyses
             .iter()
-            .filter(|a| before.analyses.contains(a))
+            .filter(|a| before.analyses.contains(&history::project_analysis(a)))
+            .map(history::project_analysis)
             .collect();
         assert_eq!(
             retained,
-            before.analyses.iter().collect::<Vec<_>>(),
+            before
+                .analyses
+                .iter()
+                .map(history::project_analysis)
+                .collect::<Vec<_>>(),
             "{surface}"
         );
         let a = word.analyses.iter().find(|a| matches(a, c)).unwrap();
@@ -147,7 +154,7 @@ fn repeated_short_mal_boundaries_preserve_exact_output_without_a_cutoff() {
     for c in sources()["stress"].as_array().unwrap() {
         let before: WordAnalysis = serde_json::from_value(c["before_word"].clone()).unwrap();
         assert_eq!(
-            engine.analyze_word(c["surface"].as_str().unwrap()).unwrap(),
+            history::project_word(&engine.analyze_word(c["surface"].as_str().unwrap()).unwrap()),
             before
         );
     }

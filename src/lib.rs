@@ -87,6 +87,9 @@ pub enum SpellingClass {
     ReuDoubling,
     ReoAddition,
     ReuUncontracted,
+    WrittenVowelA,
+    WrittenVowelEo,
+    EuUncontracted,
 }
 
 /// Ownership follows the lemma preceding this morpheme in `Analysis::breakdown`.

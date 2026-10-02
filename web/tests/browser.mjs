@@ -605,6 +605,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !intensiveAuxIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...intensiveAuxEntries);
 
+  const deulAuxFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-deul-aux.json"), "utf8"));
+  const deulAuxEntries = deulAuxFixture.LexicalResource.Lexicon.LexicalEntry;
+  const deulAuxIds = new Set(deulAuxEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !deulAuxIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...deulAuxEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5475,6 +5481,66 @@ try {
   await page.screenshot({path: resolve(tmpdir(), "klem-intensive-aux-desktop.png"), fullPage: true});
   await page.setViewportSize({width: 390, height: 844}); assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-intensive-aux-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Reaching-state 들다 retains source conflicts, homonyms and compound
+  // alternatives while exposing the independently confirmed 어 connector.
+  const deulEntryLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/deul-aux-entry-judgments.json"), "utf8"));
+  assert.equal(deulEntryLedger.cases.length, 26);
+  assert.equal(deulEntryLedger.cases.reduce((n, c) => n + c.judgments.length, 0), 151);
+  const deulCases = recipientLedger.cases.filter(c => c.id.startsWith("deul-aux-"));
+  assert.equal(deulCases.length, 22);
+  for (const c of deulCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => hieutMatches(a, j)), j.verdict === "required", c.id);
+  }
+  for (const c of deulEntryLedger.cases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a, c)); assert.ok(index >= 0, c.id);
+    for (const j of c.judgments) {
+      const entry = token.dictionary.readings[index].lemmas.find(s => s.lemma_index === j.lemma_index).entries.find(e => e.id === j.entry_id);
+      assert.ok(entry, c.id); assert.equal(entry.status, j.status, c.id); assert.deepEqual(entry.conflicts, j.conflicts, c.id);
+    }
+    for (const flag of ["--dict-only", "--dict-compatible"]) {
+      const filtered = JSON.parse(execFileSync(cliBin, ["text", "-", "--dictionary", database, flag], {input: c.surface, encoding: "utf8"}).trim());
+      const expected = flag === "--dict-only" ? !c.missing_owner_entries : c.filter_retained;
+      assert.equal(filtered.analysis.analyses.some(a => auxiliaryPath(a, c)), expected, c.id);
+    }
+  }
+  for (const flag of [null, "--dict-only", "--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check(); else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check(); else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text = "멎어들다 기울어들더니 잠겨들었다 젖어들다 멎어드는 멎어들어간다 스며들었다";
+    await submit(page, text); await waitHeading(page, "멎어들다");
+    const raw = await (await post("analyze", {text})).json(); const words = raw.records.filter(r => r.analysis);
+    for (const [n, heads, morphemes, forms] of [
+      [0, ["멎다", "들다"], ["어", "다"], ["멎", "어", "들", "다"]],
+      [1, ["기울다", "들다"], ["어", "더니"], ["기울", "어", "들", "더니"]],
+      [2, ["잠기다", "들다"], ["어", "었", "다"], ["잠기", "어", "들", "었", "다"]],
+      [3, ["젖다", "들다"], ["어", "다"], ["젖", "어", "들", "다"]],
+      [4, ["멎다", "들다"], ["어", "는"], ["멎", "어", "들", "는"]],
+      [5, ["멎다", "들다", "가다"], ["어", "어", "는다"], ["멎", "어", "들", "어", "가", "는다"]],
+      [6, ["스미다", "들다"], ["어", "었", "다"], ["스미", "어", "들", "었", "다"]],
+    ]) {
+      const index = words[n].analysis.analyses.findIndex(a => a.lemmas.map(l => l.text).join("/") === heads.join("/") && a.morphemes.map(m => m.form).join("/") === morphemes.join("/"));
+      assert.ok(index >= 0, heads.join("/")); const block = page.locator(".breakdown-word").nth(n);
+      {
+        assert.equal(await block.locator(`option[value="${index}"]`).count(), 1);
+        await block.getByRole("combobox").selectOption(String(index));
+        assert.deepEqual(await block.locator(".part-form").allTextContents(), forms);
+        if (n === 0) assert.equal(await block.locator(".part-gloss").nth(2).innerText(), raw.glosses["krdict:49855"]);
+      }
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(), "utf8"));
+    assert.deepEqual(exported.records, execFileSync(cliBin, ["text", "-", "--dictionary", database, ...(flag ? [flag] : [])], {input: text, encoding: "utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(0).locator(".breakdown-part").nth(2).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=49855"]'));
+  await page.screenshot({path: resolve(tmpdir(), "klem-deul-aux-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844}); assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-deul-aux-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
 

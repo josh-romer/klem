@@ -3043,3 +3043,64 @@ fn intensive_targets_keep_five_original_rows_and_the_gsd_connector_mismatch() {
     assert_eq!((targets, matches), (5, 4));
     assert_eq!(misses, ["id:train-s3450/4"]);
 }
+
+#[test]
+fn deul_targets_preserve_25_original_rows_and_the_remaining_source_spelling_miss() {
+    let sources: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/deul-aux-sources.json")).unwrap();
+    let mut total = 0;
+    let mut before_matches = 0;
+    let mut after_matches = 0;
+    for (kind, input) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-deul-aux.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-deul-aux.conllu").as_slice(),
+        ),
+    ] {
+        let file = sources["corpus_search"]["files"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == kind.name())
+            .unwrap();
+        let original = std::str::from_utf8(input).unwrap();
+        let report = corpus::evaluate(input, kind, "deul-aux").unwrap();
+        for target in file["targets"].as_array().unwrap() {
+            total += 1;
+            let row = target["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(original.lines().any(|line| line == row));
+            let id = target["id"].as_str().unwrap();
+            let case = &report.cases[id];
+            assert_eq!(case.surface, target["surface"].as_str().unwrap());
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                target["expected"]
+            );
+            let before = target["matched_before"].as_bool().unwrap();
+            before_matches += usize::from(before);
+            after_matches += usize::from(case.matched);
+            if before {
+                assert!(case.matched, "{id}");
+            }
+            if id == "id:MH2_0045-s450/9" {
+                assert_eq!(case.surface, "뛰어들와서는");
+                assert_eq!(case.expected, ["뛰다", "들다", "오다"]);
+                assert_eq!(target["source_row"][2], "뛰+어+들+어+오+아서+는");
+                assert!(!case.matched);
+            } else {
+                assert!(case.matched, "{id}");
+            }
+        }
+    }
+    assert_eq!((total, before_matches, after_matches), (25, 9, 24));
+}

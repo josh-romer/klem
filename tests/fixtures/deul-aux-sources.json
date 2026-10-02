@@ -1,0 +1,7516 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-013",
+    "COV-019y"
+  ],
+  "before_revision": "54c96ce7923b0a5f2988f7ac673f4e661ee5c4c6",
+  "native_fixture": "tests/fixtures/krdict-deul-aux.json",
+  "native_fixture_sha256": "d1e174499a2d41b606b080a2a95150b1bd873ff936accec25ec7fb60bd8afe4a",
+  "native_entries": 58,
+  "source_preflight": "docs/deul-aux-source-preflight.json",
+  "source_preflight_sha256": "70bf10fc0d16f0a8becff36ae8d120369b8aaf76ea940256ce74aac5b6f212ca",
+  "source_entries": [
+    {
+      "id": "krdict:49855",
+      "headword": "들다",
+      "homonym": "4",
+      "pos": "보조 동사",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=49855",
+      "level": "중급",
+      "lexical_unit": "단어",
+      "origins": [],
+      "notes": [],
+      "forms": [
+        {
+          "kind": "발음",
+          "written": "",
+          "pronunciations": [
+            "들다"
+          ]
+        },
+        {
+          "kind": "활용",
+          "written": "드는",
+          "pronunciations": []
+        },
+        {
+          "kind": "활용",
+          "written": "들어",
+          "pronunciations": [
+            "드러"
+          ]
+        },
+        {
+          "kind": "활용",
+          "written": "드니",
+          "pronunciations": []
+        },
+        {
+          "kind": "활용",
+          "written": "듭니다",
+          "pronunciations": [
+            "듬니다"
+          ]
+        }
+      ],
+      "senses": [
+        {
+          "id": "1",
+          "definition": "앞말이 나타내는 행동을 적극적으로 하려고 함을 나타내는 말.",
+          "translations": [
+            {
+              "language": "영어",
+              "lemma": "deulda",
+              "definition": "An auxiliary verb used when actively doing an action in the preceding statement."
+            }
+          ],
+          "examples": [
+            [
+              "민준이는 자기 관심 밖의 것은 아예 하려고 들지를 않았다."
+            ],
+            [
+              "그는 나를 속이려고 들었지만 나는 이미 사실을 다 알고 있었다."
+            ],
+            [
+              "모든 것을 일시에 해결하려고 들면 오히려 실패할 가능성이 있다."
+            ],
+            [
+              "우리 집을 팔아서 차라리 은행에 돈을 맡겨놓을까요?",
+              "정작 팔자고 들면 매번 아쉬워하면서 왜 자꾸 똑같은 이야기를 해."
+            ]
+          ],
+          "notes": [
+            "동사 뒤에서 '-려(고) 들다', '-기로 들다', '-자고 들다'로 쓴다."
+          ],
+          "patterns": []
+        },
+        {
+          "id": "2",
+          "definition": "앞의 행동을 재촉하며 몰아붙이듯 함을 나타내는 말.",
+          "translations": [
+            {
+              "language": "영어",
+              "lemma": "deulda",
+              "definition": "An auxiliary verb used when doing the preceding action as if to rush someone into doing it."
+            }
+          ],
+          "examples": [
+            [
+              "나는 워낙 말주변이 없어서 아내에게 따지고 들어 봤자 싸움이 되질 않는다."
+            ],
+            [
+              "그는 직원이 무슨 일을 하려고 하면 사사건건 따지고 들면서 그대로 내버려 두질 않았다."
+            ],
+            [
+              "지수야, 너 술 많이 마셨으니까 이제 그만 마셔.",
+              "지수는 원래 누군가가 말리고 들면 더 마셔. 내버려 둬."
+            ]
+          ],
+          "notes": [
+            "동사 뒤에서 '-고 들다'로 쓴다."
+          ],
+          "patterns": []
+        },
+        {
+          "id": "3",
+          "definition": "앞말이 뜻하는 상황에 다다름을 나타내는 말.",
+          "translations": [
+            {
+              "language": "영어",
+              "lemma": "deulda",
+              "definition": "A word that indicates reaching the situation indicated by the preceding word."
+            }
+          ],
+          "examples": [
+            [
+              "비가 멎어 들다."
+            ],
+            [
+              "해가 기울어 들다."
+            ],
+            [
+              "비가 조금씩 멎어 들더니 이내 그치고 무지개가 떴다."
+            ],
+            [
+              "모두들 검은 옷을 입고 있는 모습에 어쩐지 엄숙한 기분에 잠겨 들었다."
+            ],
+            [
+              "언제 도착했어?",
+              "해가 거의 기울어 들 때 도착했어."
+            ]
+          ],
+          "notes": [
+            "동사 뒤에서 '-고 들다'로 쓴다."
+          ],
+          "patterns": []
+        }
+      ]
+    }
+  ],
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "attestations": [
+    {
+      "entry": "krdict:49855",
+      "sense": "1",
+      "example_group": 0,
+      "examples": [
+        "민준이는 자기 관심 밖의 것은 아예 하려고 들지를 않았다."
+      ],
+      "excerpt": "하려고 들지를 않았다",
+      "case": "deul-aux-native-49855-1-1",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": true,
+      "before_paths": [
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "않다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으려고",
+                "kind": "ending"
+              },
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "를",
+                "kind": "particle"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "auxiliary.internal_particle",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "particle",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:62888",
+                    "status": "unknown",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:62899",
+                    "status": "unknown",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:73277",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "lemma_index": 2,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:17186",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71581",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:71583",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "auxiliary_class",
+                        "morpheme_index": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        }
+      ]
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "1",
+      "example_group": 1,
+      "examples": [
+        "그는 나를 속이려고 들었지만 나는 이미 사실을 다 알고 있었다."
+      ],
+      "excerpt": "속이려고 들었지만",
+      "case": "deul-aux-native-49855-1-2",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": true,
+      "before_paths": [
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "속이다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으려고",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "만",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "particle",
+              "particle.concessive",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:15597",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        },
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "속이다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으려고",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "지만",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:15597",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        }
+      ]
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "1",
+      "example_group": 2,
+      "examples": [
+        "모든 것을 일시에 해결하려고 들면 오히려 실패할 가능성이 있다."
+      ],
+      "excerpt": "해결하려고 들면",
+      "case": "deul-aux-native-49855-1-3",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": true,
+      "before_paths": [
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "해결하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으려고",
+                "kind": "ending"
+              },
+              {
+                "form": "으며",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending",
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:72471",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        },
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "해결하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으려고",
+                "kind": "ending"
+              },
+              {
+                "form": "으면",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:72471",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        }
+      ]
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "1",
+      "example_group": 3,
+      "examples": [
+        "우리 집을 팔아서 차라리 은행에 돈을 맡겨놓을까요?",
+        "정작 팔자고 들면 매번 아쉬워하면서 왜 자꾸 똑같은 이야기를 해."
+      ],
+      "excerpt": "팔자고 들면",
+      "case": "deul-aux-native-49855-1-4",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": true,
+      "before_paths": [
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "팔다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "자고",
+                "kind": "ending"
+              },
+              {
+                "form": "으며",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:71482",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        },
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "팔다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "자고",
+                "kind": "ending"
+              },
+              {
+                "form": "으면",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:71482",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        }
+      ]
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "2",
+      "example_group": 0,
+      "examples": [
+        "나는 워낙 말주변이 없어서 아내에게 따지고 들어 봤자 싸움이 되질 않는다."
+      ],
+      "excerpt": "따지고 들어 봤자",
+      "case": "deul-aux-native-49855-2-1",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": true,
+      "before_paths": [
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "따지다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "보다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "자",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.vowel",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:50534",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "lemma_index": 2,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:26847",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:61190",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:62171",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:62249",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "auxiliary_class",
+                        "morpheme_index": 1
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:70060",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        }
+      ]
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "2",
+      "example_group": 1,
+      "examples": [
+        "그는 직원이 무슨 일을 하려고 하면 사사건건 따지고 들면서 그대로 내버려 두질 않았다."
+      ],
+      "excerpt": "따지고 들면서",
+      "case": "deul-aux-native-49855-2-2",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": true,
+      "before_paths": [
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "따지다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              },
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:50534",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        }
+      ]
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "2",
+      "example_group": 2,
+      "examples": [
+        "지수야, 너 술 많이 마셨으니까 이제 그만 마셔.",
+        "지수는 원래 누군가가 말리고 들면 더 마셔. 내버려 둬."
+      ],
+      "excerpt": "말리고 들면",
+      "case": "deul-aux-native-49855-2-3",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": true,
+      "before_paths": [
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "말리다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              },
+              {
+                "form": "으며",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending",
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:14628",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:14630",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:54000",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        },
+        {
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "말리다",
+                "kind": "predicate"
+              },
+              {
+                "text": "들다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              },
+              {
+                "form": "으면",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          "reading": {
+            "status": "compatible",
+            "lemmas": [
+              {
+                "lemma_index": 0,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:14628",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:14630",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:54000",
+                    "status": "compatible",
+                    "conflicts": []
+                  }
+                ]
+              },
+              {
+                "lemma_index": 1,
+                "status": "compatible",
+                "entries": [
+                  {
+                    "id": "krdict:49855",
+                    "status": "compatible",
+                    "conflicts": []
+                  },
+                  {
+                    "id": "krdict:49856",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:57293",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "krdict:71686",
+                    "status": "incompatible",
+                    "conflicts": [
+                      {
+                        "rule": "lexical_role",
+                        "morpheme_index": null
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "source_slot": 1,
+          "target_auxiliary_entry": {
+            "id": "krdict:49855",
+            "status": "compatible",
+            "conflicts": []
+          }
+        }
+      ]
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "3",
+      "example_group": 0,
+      "examples": [
+        "비가 멎어 들다."
+      ],
+      "excerpt": "멎어 들다",
+      "case": "deul-aux-native-49855-3-1",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": false,
+      "before_paths": []
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "3",
+      "example_group": 1,
+      "examples": [
+        "해가 기울어 들다."
+      ],
+      "excerpt": "기울어 들다",
+      "case": "deul-aux-native-49855-3-2",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": false,
+      "before_paths": []
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "3",
+      "example_group": 2,
+      "examples": [
+        "비가 조금씩 멎어 들더니 이내 그치고 무지개가 떴다."
+      ],
+      "excerpt": "멎어 들더니",
+      "case": "deul-aux-native-49855-3-3",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": false,
+      "before_paths": []
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "3",
+      "example_group": 3,
+      "examples": [
+        "모두들 검은 옷을 입고 있는 모습에 어쩐지 엄숙한 기분에 잠겨 들었다."
+      ],
+      "excerpt": "잠겨 들었다",
+      "case": "deul-aux-native-49855-3-4",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": false,
+      "before_paths": []
+    },
+    {
+      "entry": "krdict:49855",
+      "sense": "3",
+      "example_group": 4,
+      "examples": [
+        "언제 도착했어?",
+        "해가 거의 기울어 들 때 도착했어."
+      ],
+      "excerpt": "기울어 들",
+      "case": "deul-aux-native-49855-3-5",
+      "source_slot": 1,
+      "target_entry": "krdict:49855",
+      "raw_recovered_before": false,
+      "before_paths": []
+    }
+  ],
+  "control_observations": [
+    {
+      "case": "deul-entry-official-wet",
+      "before_word": {
+        "normalized": "젖어들다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "젖어들다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "젖어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "젖어들다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "젖어들다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "젖어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "젖어들다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "젖다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-inflection-present",
+      "before_word": {
+        "normalized": "멎어드는",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멎어드",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드는",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "멎어드",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드느",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드느",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드느다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드는",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드늘다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드늫다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "멎다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "는",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.rieul",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-inflection-declarative",
+      "before_word": {
+        "normalized": "멎어든다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멎어드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어든다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어든다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어든다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "멎어드다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어든다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어든다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어든다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "멎다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "는다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.rieul",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-inflection-formal",
+      "before_word": {
+        "normalized": "멎어듭니다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멎어드",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "습니다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "습니다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "습니다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어듭니",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.enumerative_da"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어듭니",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "copula.zero",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어듭니다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어듭니다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어듭니다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "멎어드",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어듭니",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어듭니다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어듭니다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어듭니다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "멎다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "습니다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.rieul",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-inflection-reason",
+      "before_word": {
+        "normalized": "멎어드니",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멎어드",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드니",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어듷다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으니",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "멎어드",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드니",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어듷다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "멎다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "으니",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.rieul",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-inflection-connective",
+      "before_word": {
+        "normalized": "멎어들어",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멎어듣다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.digeut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "digeut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들으다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "멎어듣다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들으다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "멎다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-inflection-honorific",
+      "before_word": {
+        "normalized": "멎어드세요",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멎어드",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으세요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으세요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드섷다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드섷다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드세",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드세",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "ending.enumerative_yo"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드세",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드세다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "요",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending",
+              "particle",
+              "particle.polite"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드세다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어드세요",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으세요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어듷다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으세요",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "멎어드",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드섷다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드세",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드세",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드세다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어드세요",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어듷다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "멎다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "으세요",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "deletion.rieul",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-later-continuation-owner",
+      "before_word": {
+        "normalized": "멎어들어간다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멎어듣다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "ending",
+              "irregular.digeut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "digeut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어가다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어간다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어간다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어간다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어간드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어갈다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들어다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎어들으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.attached",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              "entries": [
+                {
+                  "id": "krdict:27500",
+                  "headword": "가다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                },
+                {
+                  "id": "krdict:28764",
+                  "headword": "가다",
+                  "homonym": "2",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "멎어듣다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어가다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어간다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어간다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어간다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어간드다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어갈다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들어다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎어들으다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:27500",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:28764",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:27500",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:28764",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:27500",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:28764",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:27500",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:28764",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "멎다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          },
+          {
+            "text": "가다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "는다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.attached",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-later-progressive-owner",
+      "before_word": {
+        "normalized": "기울어들고있다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "기울어들고있다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "기울어들고있다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "기울어들고있다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "기울어들고있하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "기울어들다",
+                "kind": "predicate"
+              },
+              {
+                "text": "있다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "기울어들고있다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "기울어들고있다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "기울어들고있다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "기울어들고있하다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "기울어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "있다",
+                "kind": "auxiliary"
+              },
+              "entries": [
+                {
+                  "id": "krdict:62595",
+                  "headword": "있다",
+                  "homonym": "3",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:68796",
+                  "headword": "있다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                },
+                {
+                  "id": "krdict:68797",
+                  "headword": "있다",
+                  "homonym": "2",
+                  "pos": "형용사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62595",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:68796",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:68797",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "기울다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          },
+          {
+            "text": "있다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "고",
+            "kind": "ending"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-negative-owner",
+      "before_word": {
+        "normalized": "멎지않아들다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "멎지않아들다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎지않아들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "멎지않아들다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "멎지않아들다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎지않아들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "멎지않아들다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "멎다",
+            "kind": "predicate"
+          },
+          {
+            "text": "않다",
+            "kind": "auxiliary"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "지",
+            "kind": "ending"
+          },
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-unknown-provider",
+      "before_word": {
+        "normalized": "늠므어들다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "늠므어들다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "늠므어들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "늠므어들다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "늠므어들다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "늠므어들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "늠므어들다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "늠므다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-standalone-lexical",
+      "before_word": {
+        "normalized": "든다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "든다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "든다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "든다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "드다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "든다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "든다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "든다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "들다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:49855",
+                  "headword": "들다",
+                  "homonym": "4",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "incompatible"
+                },
+                {
+                  "id": "krdict:49856",
+                  "headword": "들다",
+                  "homonym": "2",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:57293",
+                  "headword": "들다",
+                  "homonym": "3",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:71686",
+                  "headword": "들다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:49855",
+                      "status": "unknown",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:49856",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:57293",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:71686",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "들다",
+            "kind": "predicate"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "는다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "deletion.rieul",
+          "ending"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-literal-context-unjudged",
+      "before_word": {
+        "normalized": "빼들었다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "빼듣다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "irregular.digeut",
+              "prefinal.past"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "digeut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빼들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빼들어다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빼들었다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빼들었다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빼들었다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빼들었하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "빼들으다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.eu",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "빼듣다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "빼들다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "빼들어다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "빼들었다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "빼들었다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "빼들었다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "빼들었하다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "빼들으다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "빼다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.identical",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      }
+    },
+    {
+      "case": "deul-entry-compound-whole-alternative",
+      "before_word": {
+        "normalized": "스며들었다",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "스며듣다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "irregular.digeut",
+              "prefinal.past"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "digeut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "스며들다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "스며들어다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "스며들었다",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "스며들었다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "스며들었다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "스며들었하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "스며들으다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "deletion.eu",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "스며듣다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "스며들다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:65361",
+                  "headword": "스며들다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "스며들어다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "스며들었다",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "스며들었다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "스며들었다다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "스며들었하다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "스며들으다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:65361",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after_analysis": {
+        "lemmas": [
+          {
+            "text": "스미다",
+            "kind": "predicate"
+          },
+          {
+            "text": "들다",
+            "kind": "auxiliary"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "어",
+            "kind": "ending"
+          },
+          {
+            "form": "었",
+            "kind": "prefinal"
+          },
+          {
+            "form": "다",
+            "kind": "ending"
+          }
+        ],
+        "rules": [
+          "auxiliary",
+          "boundary.regular",
+          "contraction.vowel",
+          "ending",
+          "prefinal.past"
+        ],
+        "unchanged": false
+      }
+    }
+  ],
+  "tracking": {
+    "cases": 22,
+    "required": 19,
+    "forbidden": 3,
+    "entry_cases": 26,
+    "entry_judgments": 151,
+    "native_before": 7,
+    "native_after": 12,
+    "training_before": 9,
+    "training_after": 24,
+    "original_training_targets": 25
+  },
+  "source_findings": [
+    {
+      "entry": "krdict:49855",
+      "sense": "3",
+      "finding": "All five native third-sense groups use 어, while the literal note says 고. Preserve the complete original note and examples. NIKL answer 2024-12-10 explicitly confirms 어 들다; answer 2024-12-16 identifies the auxiliary addition in October 2024. The older 2020 FAQ is not current evidence for universally forbidding the connector."
+    }
+  ],
+  "primary_consultation": [
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=307371",
+      "answer_date": "2024-12-10",
+      "access": "Complete official answer retrieved.",
+      "finding": "The official answer explicitly lists 어 들다 for reaching a situation, with native 멎다/잠기다 examples, but treats the supplied 칼을 빼 들었다 context as a literal verb sequence. This supports the missing connector while requiring contextual sense distinction; it does not authorize universal segmentation or spelling certification."
+    },
+    {
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=307717",
+      "answer_date": "2024-12-16",
+      "access": "Complete official answer retrieved.",
+      "finding": "The answer allows 젖어 들다 as an auxiliary construction, with joined spelling also permitted, and dates this auxiliary dictionary addition to October 2024. Questions and quoted past answers are not separately treated as official current rulings."
+    },
+    {
+      "url": "https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8095&mn_id=&pageIndex=1",
+      "date": "2020-01-16",
+      "access": "Complete official FAQ retrieved.",
+      "finding": "The older FAQ says no 어 들다 construction for its 휘말려 들다 question. Later official answers identify a 2024 addition, so this old general exclusion is retained as historical evidence and not applied as a current connector ban."
+    }
+  ],
+  "corpus_search": {
+    "split": "training only",
+    "files": [
+      {
+        "corpus": "kaist",
+        "source": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+        "source_sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+        "selection": "First two exact source-aligned px/VX rows per auxiliary head and following-ending category in training order, selected before recovery inspection. Preserve OrigLemma and full source rows; no substring or neighboring-token joins.",
+        "search_counts": [
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "ㄴ:etm"
+            ],
+            "rows": 3
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "ㄹ:etm"
+            ],
+            "rows": 3
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "게:ecx"
+            ],
+            "rows": 3
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "고:ecc"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "기:etn"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "는:etm"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "면서:ecc"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecs"
+            ],
+            "rows": 3
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecx/가:px/ㄴ다:ef"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecx/가:px/ㅆ:ep/다:ef"
+            ],
+            "rows": 2
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecx/오:px/아서:ecs/는:jxt"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "었:ep/고:ecc"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "었:ep/다:ef"
+            ],
+            "rows": 2
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "었:ep/던:etm"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "지:ecx"
+            ],
+            "rows": 2
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "지:ecx/를:jco"
+            ],
+            "rows": 1
+          }
+        ],
+        "targets": [
+          {
+            "id": "id:M2TA_087-s83/14",
+            "source_row": [
+              "14",
+              "젖어들었다",
+              "젖+어+들+었+다",
+              "VERB",
+              "pvg+ecx+px+ep+ef",
+              "_",
+              "4",
+              "conj",
+              "_",
+              "SpaceAfter=No|Translit=.jeoj.eo.deul.eoss.da|LTranslit=.jeoj+.eo+.deul+.eoss+.da"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "었:ep/다:ef"
+            ],
+            "surface": "젖어들었다",
+            "expected": [
+              "젖다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:M2TA_087-s83/14",
+              "surface": "젖어들었다",
+              "expected": [
+                "젖다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:MH2_0021-s149/18",
+            "source_row": [
+              "18",
+              "모여들었던",
+              "모이+어+들+었+던",
+              "VERB",
+              "pvg+ecx+px+ep+etm",
+              "_",
+              "19",
+              "acl",
+              "_",
+              "Translit=.mo.yeo.deul.eoss.deon|LTranslit=.mo.i+.eo+.deul+.eoss+.deon"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "었:ep/던:etm"
+            ],
+            "surface": "모여들었던",
+            "expected": [
+              "모이다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0021-s149/18",
+              "surface": "모여들었던",
+              "expected": [
+                "모이다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:MH2_0021-s321/7",
+            "source_row": [
+              "7",
+              "먹혀들지를",
+              "먹히+어+들+지+를",
+              "NOUN",
+              "pvg+ecx+px+ecx+jco",
+              "_",
+              "0",
+              "root",
+              "_",
+              "Translit=.meog.hyeo.deul.ji.reul|LTranslit=.meog.hi+.eo+.deul+.ji+.reul"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "지:ecx/를:jco"
+            ],
+            "surface": "먹혀들지를",
+            "expected": [
+              "먹히다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0021-s321/7",
+              "surface": "먹혀들지를",
+              "expected": [
+                "먹히다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:MH2_0021-s334/12",
+            "source_row": [
+              "12",
+              "들기",
+              "들+기",
+              "VERB",
+              "px+etn",
+              "_",
+              "11",
+              "compound",
+              "_",
+              "Translit=.deul.gi|LTranslit=.deul+.gi"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "기:etn"
+            ],
+            "surface": "들기",
+            "expected": [
+              "들다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:MH2_0021-s334/12",
+              "surface": "들기",
+              "expected": [
+                "들다"
+              ],
+              "matched": true,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  0
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0028-s62/10",
+            "source_row": [
+              "10",
+              "들어",
+              "들+어",
+              "SCONJ",
+              "px+ecs",
+              "_",
+              "9",
+              "mark",
+              "_",
+              "Translit=.deul.eo|LTranslit=.deul+.eo"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecs"
+            ],
+            "surface": "들어",
+            "expected": [
+              "들다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:MH2_0028-s62/10",
+              "surface": "들어",
+              "expected": [
+                "들다"
+              ],
+              "matched": true,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  0
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0043-s501/9",
+            "source_row": [
+              "9",
+              "몰려들었다",
+              "몰리+어+들+었+다",
+              "VERB",
+              "pvg+ecx+px+ep+ef",
+              "_",
+              "0",
+              "root",
+              "_",
+              "SpaceAfter=No|Translit=.mol.ryeo.deul.eoss.da|LTranslit=.mol.ri+.eo+.deul+.eoss+.da"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "었:ep/다:ef"
+            ],
+            "surface": "몰려들었다",
+            "expected": [
+              "몰리다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0043-s501/9",
+              "surface": "몰려들었다",
+              "expected": [
+                "몰리다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  1
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0043-s502/6",
+            "source_row": [
+              "6",
+              "몰려들어",
+              "몰리+어+들+어",
+              "SCONJ",
+              "pvg+ecx+px+ecs",
+              "_",
+              "9",
+              "ccomp",
+              "_",
+              "Translit=.mol.ryeo.deul.eo|LTranslit=.mol.ri+.eo+.deul+.eo"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecs"
+            ],
+            "surface": "몰려들어",
+            "expected": [
+              "몰리다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0043-s502/6",
+              "surface": "몰려들어",
+              "expected": [
+                "몰리다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  1
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0045-s50/7",
+            "source_row": [
+              "7",
+              "들었고",
+              "들+었+고",
+              "CCONJ",
+              "px+ep+ecc",
+              "_",
+              "6",
+              "cc",
+              "_",
+              "Translit=.deul.eoss.go|LTranslit=.deul+.eoss+.go"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "었:ep/고:ecc"
+            ],
+            "surface": "들었고",
+            "expected": [
+              "들다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:MH2_0045-s50/7",
+              "surface": "들었고",
+              "expected": [
+                "들다"
+              ],
+              "matched": true,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  0
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0045-s50/14",
+            "source_row": [
+              "14",
+              "들어갔다",
+              "들+어+가+ㅆ+다",
+              "VERB",
+              "px+ecx+px+ep+ef",
+              "_",
+              "13",
+              "compound",
+              "_",
+              "SpaceAfter=No|Translit=.deul.eo.gass.da|LTranslit=.deul+.eo+.ga+ㅆ+.da"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecx/가:px/ㅆ:ep/다:ef"
+            ],
+            "surface": "들어갔다",
+            "expected": [
+              "들다",
+              "가다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:MH2_0045-s50/14",
+              "surface": "들어갔다",
+              "expected": [
+                "들다",
+                "가다"
+              ],
+              "matched": true,
+              "recovered": 2,
+              "recovered_sets": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0045-s161/9",
+            "source_row": [
+              "9",
+              "들어갔다",
+              "들+어+가+ㅆ+다",
+              "VERB",
+              "px+ecx+px+ep+ef",
+              "_",
+              "8",
+              "compound",
+              "_",
+              "SpaceAfter=No|Translit=.deul.eo.gass.da|LTranslit=.deul+.eo+.ga+ㅆ+.da"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecx/가:px/ㅆ:ep/다:ef"
+            ],
+            "surface": "들어갔다",
+            "expected": [
+              "들다",
+              "가다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:MH2_0045-s161/9",
+              "surface": "들어갔다",
+              "expected": [
+                "들다",
+                "가다"
+              ],
+              "matched": true,
+              "recovered": 2,
+              "recovered_sets": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0045-s253/13",
+            "source_row": [
+              "13",
+              "빠져들면서",
+              "빠지+어+들+면서",
+              "CCONJ",
+              "pvg+ecx+px+ecc",
+              "_",
+              "15",
+              "acl",
+              "_",
+              "Translit=.bba.jyeo.deul.myeon.seo|LTranslit=.bba.ji+.eo+.deul+.myeon.seo"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "면서:ecc"
+            ],
+            "surface": "빠져들면서",
+            "expected": [
+              "빠지다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0045-s253/13",
+              "surface": "빠져들면서",
+              "expected": [
+                "빠지다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:MH2_0045-s310/10",
+            "source_row": [
+              "10",
+              "들게",
+              "들+게",
+              "VERB",
+              "px+ecx",
+              "_",
+              "9",
+              "compound",
+              "_",
+              "Translit=.deul.ge|LTranslit=.deul+.ge"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "게:ecx"
+            ],
+            "surface": "들게",
+            "expected": [
+              "들다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:MH2_0045-s310/10",
+              "surface": "들게",
+              "expected": [
+                "들다"
+              ],
+              "matched": true,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  0
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0045-s450/9",
+            "source_row": [
+              "9",
+              "뛰어들와서는",
+              "뛰+어+들+어+오+아서+는",
+              "NOUN",
+              "pvg+ecx+px+ecx+px+ecs+jxt",
+              "_",
+              "11",
+              "ccomp",
+              "_",
+              "Translit=.ddwi.eo.deul.wa.seo.neun|LTranslit=.ddwi+.eo+.deul+.eo+.o+.a.seo+.neun"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecx/오:px/아서:ecs/는:jxt"
+            ],
+            "surface": "뛰어들와서는",
+            "expected": [
+              "뛰다",
+              "들다",
+              "오다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0045-s450/9",
+              "surface": "뛰어들와서는",
+              "expected": [
+                "뛰다",
+                "들다",
+                "오다"
+              ],
+              "matched": false,
+              "recovered": 2,
+              "recovered_sets": [
+                [
+                  0,
+                  2
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0051-s83/6",
+            "source_row": [
+              "6",
+              "밀려드는",
+              "밀리+어+들+는",
+              "VERB",
+              "pvg+ecx+px+etm",
+              "_",
+              "7",
+              "acl",
+              "_",
+              "Translit=.mil.ryeo.deu.neun|LTranslit=.mil.ri+.eo+.deul+.neun"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "는:etm"
+            ],
+            "surface": "밀려드는",
+            "expected": [
+              "밀리다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0051-s83/6",
+              "surface": "밀려드는",
+              "expected": [
+                "밀리다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  1
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0072-s324/10",
+            "source_row": [
+              "10",
+              "죄어들",
+              "죄+어+들+ㄹ",
+              "VERB",
+              "pvg+ecx+px+etm",
+              "_",
+              "11",
+              "acl",
+              "_",
+              "Translit=.joe.eo.deul|LTranslit=.joe+.eo+.deul+ㄹ"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "ㄹ:etm"
+            ],
+            "surface": "죄어들",
+            "expected": [
+              "죄다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0072-s324/10",
+              "surface": "죄어들",
+              "expected": [
+                "죄다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  0
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0072-s591/11",
+            "source_row": [
+              "11",
+              "들어간다",
+              "들+어+가+ㄴ다",
+              "VERB",
+              "px+ecx+px+ef",
+              "_",
+              "10",
+              "compound",
+              "_",
+              "SpaceAfter=No|Translit=.deul.eo.gan.da|LTranslit=.deul+.eo+.ga+ㄴ.da"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "어:ecx/가:px/ㄴ다:ef"
+            ],
+            "surface": "들어간다",
+            "expected": [
+              "들다",
+              "가다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:MH2_0072-s591/11",
+              "surface": "들어간다",
+              "expected": [
+                "들다",
+                "가다"
+              ],
+              "matched": true,
+              "recovered": 2,
+              "recovered_sets": [
+                [
+                  0,
+                  1
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0081-s50/7",
+            "source_row": [
+              "7",
+              "먹혀들지",
+              "먹히+어+들+지",
+              "VERB",
+              "pvg+ecx+px+ecx",
+              "_",
+              "0",
+              "root",
+              "_",
+              "Translit=.meog.hyeo.deul.ji|LTranslit=.meog.hi+.eo+.deul+.ji"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "지:ecx"
+            ],
+            "surface": "먹혀들지",
+            "expected": [
+              "먹히다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0081-s50/7",
+              "surface": "먹혀들지",
+              "expected": [
+                "먹히다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:MH2_0081-s124/9",
+            "source_row": [
+              "9",
+              "모여든",
+              "모이+어+들+ㄴ",
+              "VERB",
+              "pvg+ecx+px+etm",
+              "_",
+              "12",
+              "acl",
+              "_",
+              "Translit=.mo.yeo.deun|LTranslit=.mo.i+.eo+.deul+ㄴ"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "ㄴ:etm"
+            ],
+            "surface": "모여든",
+            "expected": [
+              "모이다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0081-s124/9",
+              "surface": "모여든",
+              "expected": [
+                "모이다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:MH2_0094-s126/12",
+            "source_row": [
+              "12",
+              "뛰어든",
+              "뛰+어+들+ㄴ",
+              "VERB",
+              "pvg+ecx+px+etm",
+              "_",
+              "13",
+              "acl",
+              "_",
+              "Translit=.ddwi.eo.deun|LTranslit=.ddwi+.eo+.deul+ㄴ"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "ㄴ:etm"
+            ],
+            "surface": "뛰어든",
+            "expected": [
+              "뛰다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0094-s126/12",
+              "surface": "뛰어든",
+              "expected": [
+                "뛰다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:MH2_0094-s391/6",
+            "source_row": [
+              "6",
+              "줄어들",
+              "줄+어+들+ㄹ",
+              "VERB",
+              "pvg+ecx+px+etm",
+              "_",
+              "7",
+              "acl",
+              "_",
+              "Translit=.jul.eo.deul|LTranslit=.jul+.eo+.deul+ㄹ"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "ㄹ:etm"
+            ],
+            "surface": "줄어들",
+            "expected": [
+              "줄다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0094-s391/6",
+              "surface": "줄어들",
+              "expected": [
+                "줄다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  0
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0094-s1451/5",
+            "source_row": [
+              "5",
+              "들지",
+              "들+지",
+              "VERB",
+              "px+ecx",
+              "_",
+              "4",
+              "compound",
+              "_",
+              "Translit=.deul.ji|LTranslit=.deul+.ji"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "지:ecx"
+            ],
+            "surface": "들지",
+            "expected": [
+              "들다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:MH2_0094-s1451/5",
+              "surface": "들지",
+              "expected": [
+                "들다"
+              ],
+              "matched": true,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  0
+                ]
+              ]
+            }
+          },
+          {
+            "id": "id:MH2_0146-s118/20",
+            "source_row": [
+              "20",
+              "줄어들고",
+              "줄+어+들+고",
+              "CCONJ",
+              "pvg+ecx+px+ecc",
+              "_",
+              "26",
+              "ccomp",
+              "_",
+              "Translit=.jul.eo.deul.go|LTranslit=.jul+.eo+.deul+.go"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "고:ecc"
+            ],
+            "surface": "줄어들고",
+            "expected": [
+              "줄다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0146-s118/20",
+              "surface": "줄어들고",
+              "expected": [
+                "줄다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:MH2_0148-s235/6",
+            "source_row": [
+              "6",
+              "줄어들게",
+              "줄+어+들+게",
+              "VERB",
+              "pvg+ecx+px+ecx",
+              "_",
+              "0",
+              "root",
+              "_",
+              "Translit=.jul.eo.deul.ge|LTranslit=.jul+.eo+.deul+.ge"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "게:ecx"
+            ],
+            "surface": "줄어들게",
+            "expected": [
+              "줄다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:MH2_0148-s235/6",
+              "surface": "줄어들게",
+              "expected": [
+                "줄다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          }
+        ],
+        "complete_selected_blocks": 22,
+        "summary": {
+          "schema_version": 2,
+          "input_sha256": "9281e8e53d127c9b0bd666128609db9a2e3b48d8d799502123353478c921d47e",
+          "corpus": "kaist",
+          "input": "/tmp/klem-deul-aux-kaist.conllu",
+          "rows": 324,
+          "excluded_rows": 38,
+          "malformed_rows": 0,
+          "converted_rows": 285,
+          "unsupported": {
+            "no_lexical_component": 1
+          },
+          "grouped_matches": 268,
+          "gold_lemmas": 319,
+          "recovered_gold_lemmas": 293,
+          "transformed_rows": 218,
+          "transformed_matches": 201,
+          "adapter_coverage": 0.9965034965034965,
+          "grouped_lemma_recall": 0.9403508771929825,
+          "lemma_recall": 0.9184952978056427,
+          "transformed_grouped_recall": 0.9220183486238532,
+          "mean_candidates": 6.456140350877193,
+          "p95_candidates": 16,
+          "max_candidates": 41,
+          "common_misses": [
+            {
+              "surface": "뛰어든",
+              "expected": [
+                "뛰다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "뛰어들와서는",
+              "expected": [
+                "뛰다",
+                "들다",
+                "오다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "먹혀들지",
+              "expected": [
+                "먹히다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "먹혀들지를",
+              "expected": [
+                "먹히다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "모여든",
+              "expected": [
+                "모이다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "모여들었던",
+              "expected": [
+                "모이다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "몰려들어",
+              "expected": [
+                "몰리다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "몰려들었다",
+              "expected": [
+                "몰리다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "밀려드는",
+              "expected": [
+                "밀리다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "빠져들면서",
+              "expected": [
+                "빠지다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "빠쳐",
+              "expected": [
+                "빠지다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "않앗다",
+              "expected": [
+                "않다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "젖어들었다",
+              "expected": [
+                "젖다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "죄어들",
+              "expected": [
+                "죄다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "줄어들",
+              "expected": [
+                "줄다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "줄어들게",
+              "expected": [
+                "줄다",
+                "들다"
+              ],
+              "count": 1
+            },
+            {
+              "surface": "줄어들고",
+              "expected": [
+                "줄다",
+                "들다"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "report_sha256": "3d07e29dd87401c422ad2aedebacec6d3086f0b50404901e5ed82f25d587d3a0",
+        "fixture": "tests/fixtures/kaist-deul-aux.conllu",
+        "fixture_note": "Complete unchanged original blocks including 뛰어들와서는 miss.",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": "UD Korean KAIST treebank contributors and KAIST corpus",
+        "upstream": "https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15",
+        "fixture_sha256": "9281e8e53d127c9b0bd666128609db9a2e3b48d8d799502123353478c921d47e"
+      },
+      {
+        "corpus": "gsd",
+        "source": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+        "source_sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+        "selection": "First two exact source-aligned px/VX rows per auxiliary head and following-ending category in training order, selected before recovery inspection. Preserve OrigLemma and full source rows; no substring or neighboring-token joins.",
+        "search_counts": [
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "는:ETM"
+            ],
+            "rows": 1
+          },
+          {
+            "category": [
+              "들",
+              "auxiliary",
+              "었:EP/다:EF"
+            ],
+            "rows": 1
+          }
+        ],
+        "targets": [
+          {
+            "id": "id:train-s2494/13",
+            "source_row": [
+              "13",
+              "전해들었다",
+              "전하+아+들+었+다",
+              "VERB",
+              "VV+EC+VX+EP+EF",
+              "_",
+              "35",
+              "advcl",
+              "_",
+              "SpaceAfter=No|Translit=.jeon.hae.deul.eoss.da|LTranslit=.jeon.ha+.a+.deul+.eoss+.da"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "었:EP/다:EF"
+            ],
+            "surface": "전해들었다",
+            "expected": [
+              "전하다",
+              "들다"
+            ],
+            "matched_before": false,
+            "case_report": {
+              "id": "id:train-s2494/13",
+              "surface": "전해들었다",
+              "expected": [
+                "전하다",
+                "들다"
+              ],
+              "matched": false,
+              "recovered": 0,
+              "recovered_sets": []
+            }
+          },
+          {
+            "id": "id:train-s2579/17",
+            "source_row": [
+              "17",
+              "드는",
+              "들+는",
+              "VERB",
+              "VX+ETM",
+              "_",
+              "16",
+              "flat",
+              "_",
+              "Translit=.deu.neun|LTranslit=.deul+.neun"
+            ],
+            "category": [
+              "들",
+              "auxiliary",
+              "는:ETM"
+            ],
+            "surface": "드는",
+            "expected": [
+              "들다"
+            ],
+            "matched_before": true,
+            "case_report": {
+              "id": "id:train-s2579/17",
+              "surface": "드는",
+              "expected": [
+                "들다"
+              ],
+              "matched": true,
+              "recovered": 1,
+              "recovered_sets": [
+                [
+                  0
+                ]
+              ]
+            }
+          }
+        ],
+        "complete_selected_blocks": 2,
+        "summary": {
+          "schema_version": 2,
+          "input_sha256": "be2b31eec61e50be7eb337b9e2792fe96fd608b11289b9204df8efec0aa73374",
+          "corpus": "gsd",
+          "input": "/tmp/klem-deul-aux-gsd.conllu",
+          "rows": 56,
+          "excluded_rows": 7,
+          "malformed_rows": 0,
+          "converted_rows": 47,
+          "unsupported": {
+            "no_lexical_component": 2
+          },
+          "grouped_matches": 46,
+          "gold_lemmas": 51,
+          "recovered_gold_lemmas": 49,
+          "transformed_rows": 38,
+          "transformed_matches": 37,
+          "adapter_coverage": 0.9591836734693877,
+          "grouped_lemma_recall": 0.9787234042553191,
+          "lemma_recall": 0.9607843137254902,
+          "transformed_grouped_recall": 0.9736842105263158,
+          "mean_candidates": 6.957446808510638,
+          "p95_candidates": 15,
+          "max_candidates": 22,
+          "common_misses": [
+            {
+              "surface": "전해들었다",
+              "expected": [
+                "전하다",
+                "들다"
+              ],
+              "count": 1
+            }
+          ]
+        },
+        "report_sha256": "2134ff598004a53f4f803804ba3e048320a6cfd4e6693cd117d5153b3d7d99d7",
+        "fixture": "tests/fixtures/gsd-deul-aux.conllu",
+        "fixture_note": "Complete unchanged original blocks including 뛰어들와서는 miss.",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attribution": "UD Korean GSD treebank contributors and source corpora",
+        "upstream": "https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15",
+        "fixture_sha256": "be2b31eec61e50be7eb337b9e2792fe96fd608b11289b9204df8efec0aa73374"
+      }
+    ]
+  },
+  "runtime_policy": "Add the independently confirmed 어 connector for 들다 while preserving all existing connectors and source text. No arbitrary compound or literal-context sense decision, no universal semantic filter, no new left-POS restriction.",
+  "remaining": [
+    "Individual source/entry retention and negative boundary cases using complete attributed offline fixtures.",
+    "Immediate owner, lexical subset, homonym, negative dependency, prefinal/particle and right-ending review.",
+    "Primary semantic/register consultation, full research articles and independent Korean-language review.",
+    "Preserve source conflicts and corpus annotations, including misses, without relabeling gold.",
+    "Audit all candidate/ledger changes and CLI/library/cache/browser/export/release/Nix behavior for any implementation changes."
+  ],
+  "attribution": "National Institute of Korean Language, Korean Basic Dictionary.",
+  "license": "CC BY-SA 2.0 KR",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0/kr/",
+  "license_scope": "Native dictionary entries/observations are CC BY-SA 2.0 KR; corpus blocks/reports are CC BY-SA 4.0. Research and consultation summaries retain separate citations, not the dictionary license."
+}

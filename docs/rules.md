@@ -645,7 +645,7 @@ The runtime keeps a finite connector/stem table; it does not read the inventory.
 
 | Canonical connector | Auxiliary families added or expanded |
 | --- | --- |
-| 어 | 나다/나가다, 계시다, 가지다/갖다, 달다, 마지않다/마지아니하다, 먹다, 버릇하다, 빠지다, 쌓다, 재끼다, 젖히다, 죽다, 치우다, 터지다, 하다 |
+| 어 | 나다/나가다, 계시다, 가지다/갖다, 달다, 들다, 마지않다/마지아니하다, 먹다, 버릇하다, 빠지다, 쌓다, 재끼다, 젖히다, 죽다, 치우다, 터지다, 하다 |
 | 고 | 계시다, 나다, 들다, 보다, 자빠지다, 하다 |
 | 지 | 아니하다, alongside 않다/못하다/말다 |
 | 게 | 생기다, alongside 되다/하다 |
@@ -665,8 +665,9 @@ spelling recovery and ordered prefinal machinery. 가지다/갖다 require follo
 requires 으니/으면. These constraints reject 먹어가졌다 and 먹어달았다 for
 those auxiliary readings. They do not claim every tail or lexical restriction
 in the source is enforced. In particular, negative 말다 mood selection,
-verb/adjective classes, source-specific subsets such as 빠지다, and the legacy
-어 + 없다 path still need review under COV-019.
+further verb/adjective classes and source-specific subsets such as 빠지다
+still need review under COV-019. COV-019c removed unsupported 어 + 없다;
+COV-019y adds independently confirmed reaching-state 어 + 들다.
 
 One internal particle slot can occur before an auxiliary. 도/만/들 use the
 existing ending licenses and auxiliary connector check; 기 + 도/만 connects
@@ -4088,3 +4089,21 @@ remain open. Original GSD 줄서먹는/아서 remains a source-aligned miss.
 Native 헛소리하고자빠졌네 has the raw 헛소리하다 + 자빠지다 path, but
 헛소리하다 has no pinned dictionary entry, so dictionary filtering drops it.
 Raw recall and dictionary coverage are tracked separately.
+
+## Reaching-state 들다 connector (COV-019y)
+
+The complete [source record](../tests/fixtures/deul-aux-sources.json) retains
+three senses and all twelve native groups. The third sense's -고 note conflicts
+with its five -어 examples. [NIKL's 2024-12-10 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=307371)
+explicitly lists the reaching-state -어 들다 use; the
+[2024-12-16 answer](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=307717)
+confirms 젖어 들다 and dates the addition to October 2024. The earlier 2020
+FAQ exclusion stays historical evidence. No dictionary text is repaired.
+
+The engine now admits 어 before 들다, preserving existing 고, intention and
+quoted connectors. 멎어들다, 기울어들다, 멎어들더니, 잠겨들었다 and
+기울어들 recover their native paths. This remains tolerant structural recovery;
+literal 빼 들었다 and listed compounds are not assigned an intended sense.
+Existing whole-word and compound paths stay alongside new auxiliary hypotheses.
+Broader class/subset, prefinal/particle/right-ending and contextual review remain
+open. The original training spelling 뛰어들와서는 remains a recorded miss.

@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 413 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–x/020d–h/020j–k/020n–o/021d; 302 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 414 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–y/020d–h/020j–k/020n–o/021d; 301 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2377,6 +2377,46 @@ review remains open under the completion review below.
   nine inventory unit tests pass. The live preview remains on the
   byte-identical verified production binaries/assets. No new performance or
   contextual-correctness claim is made.
+
+- [ ] **COV-019y — Complete 들다 auxiliary audit.**
+  **Partial: reaching-state -어 들다 implemented; complete source/regression
+  tracking and runtime validation implemented.** The
+  [preflight](deul-aux-source-preflight.json) and
+  [source record](../tests/fixtures/deul-aux-sources.json) retain one complete
+  auxiliary entry, all three senses and all twelve native groups. Its third
+  sense's literal -고 note conflicts with all five -어 examples. Official NIKL
+  answers dated 2024-12-10/16 explicitly confirm -어 들다 and identify a
+  dictionary addition in October 2024; the 2020 FAQ exclusion remains historical
+  evidence rather than a current connector ban. No source note is rewritten.
+  The engine now admits this connector, recovering the five previously missing
+  native paths while preserving the seven existing paths and other connectors.
+  The offline fixture retains 58 complete native entries. Four
+  [tests](../tests/deul_aux.rs), 22 raw cases (19 required / three forbidden) and
+  151 [entry judgments](../tests/fixtures/deul-aux-entry-judgments.json) cover
+  native examples, the official 젖어들다 pattern, inflections, NFD,
+  homonyms, unknown/standalone and later owners, compound alternatives and
+  cache/library/CLI/filter identity. Literal 빼들었다 and 스며들었다's
+  compound-versus-auxiliary interpretation remain contextual and unjudged.
+  Twenty-five exact aligned training targets preserve their complete original
+  blocks and annotations. Recovery rises from nine to twenty-four; the original
+  뛰어들와서는 → 뛰다 + 들다 + 오다 remains a miss, without gold repair.
+  The [evaluation](deul-aux-evaluation.json) records 13,703 surfaces, 414 raw
+  candidate additions and all 1,119 audited added-path events across candidate,
+  novel, spacing and held-out comparisons. Existing candidates/assessments remain;
+  three additional dev/test corpus cases recover without lost matches or source
+  annotation changes. Five full novel modes retain prior readings; 57 compatible
+  novel paths are added. Spacing text/offset choices stay equal while four nested
+  analysis metadata events are audited. Original case bytes and review-queue
+  entries/relative order remain; 470 new stable unjudged IDs are separate.
+  All eight release/debug modes, 715 Rust/release tests, pinned corpus check,
+  Clippy, formatting and full browser checks pass. Packaged and refreshed live
+  preview checks cover 478 cases/594 entry judgments and all filters/exports.
+  Three paired local novel runs have medians near 1.6 seconds before/after;
+  descriptive dense native-example medians rise from 0.20 to 0.24 seconds while
+  recovering new paths. All three current-system flake checks and nine inventory unit tests pass.
+  Broader left-class/lexical-subset, ending/prefinal/particle,
+  semantic/register and independent Korean-language review remain required.
+  COV-013 records a scoped source/connector disposition, not full entry certification.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

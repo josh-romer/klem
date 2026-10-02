@@ -1984,3 +1984,26 @@ Attribution: UD Korean KAIST/GSD contributors and source corpora,
 https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and
 https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0).
 Dictionary and corpus licenses apply separately.
+
+`krdict-deul-aux.json` retains 58 complete native entries, including 들다's
+auxiliary and lexical homonyms, native lexical owners, grammar entries and the
+independent 스며들다 compound. Only RelatedForm/non-English equivalents are
+omitted; Sense arrays normalized. Attribution: National Institute of Korean
+Language, Korean Basic Dictionary (CC BY-SA 2.0 KR).
+`deul-aux-sources.json` retains all three auxiliary senses and twelve groups,
+eleven pinned export hashes, before observations and separately cited current
+NIKL consultation. The literal third-sense 고 note and historical 2020 FAQ
+remain; neither is silently rewritten. Five native joined paths were missing
+before the independently confirmed 어 connector was added.
+
+Twenty-two `deul-aux-*` cases track 19 required and three forbidden auxiliary
+role paths. The separate entry ledger has 26 cases/151 per-entry judgments;
+constructed/literal/compound contexts remain explicitly unjudged.
+`kaist-deul-aux.conllu` and `gsd-deul-aux.conllu` preserve 25 original aligned
+training targets in complete unchanged blocks. Twenty-four recover, up from
+nine; original 뛰어들와서는 remains a miss without annotation repair.
+Attribution: UD Korean KAIST/GSD contributors and source corpora,
+https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and
+https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0).
+The dictionary, corpus and consulted official-answer materials retain their
+separate attribution and license scopes.

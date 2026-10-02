@@ -33048,6 +33048,137 @@
           "judgment": "auxiliary"
         }
       ]
+    },
+    {
+      "id": "krdict:49855",
+      "source_sha256": "14b23a1ab7cf6158f15a828e0185a683245f0320e6942a49c3802ed61e7f818e",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019y"
+      ],
+      "scope": "All three complete native senses, forms, notes and twelve groups retained. Independent NIKL 2024 answers confirm the reaching-state 어 connector despite the literal KRDict 고 note and historical 2020 exclusion. The engine adds only this connector, recovering five native misses and fifteen original corpus targets. Individual raw and native entry judgments preserve homonyms, standalone/unknown/later ownership and listed compound alternatives.",
+      "remaining": "Broader left-class/lexical subsets, ending/prefinal/particle licenses, semantic/register and independent Korean review remain open. Source notes and original 뛰어들와서는 miss are preserved. Native structural recovery and corpus lemma alignment do not classify arbitrary compounds or literal contexts such as 칼을 빼 들었다.",
+      "evidence": [
+        {
+          "path": "tests/deul_aux.rs",
+          "test": "deul_sources_keep_one_complete_entry_and_all_12_native_groups"
+        },
+        {
+          "path": "tests/deul_aux.rs",
+          "test": "deul_raw_paths_keep_unicode_components_and_original_word_hypotheses"
+        },
+        {
+          "path": "tests/deul_aux.rs",
+          "test": "deul_entry_observations_preserve_homonyms_unknowns_and_immediate_owners"
+        },
+        {
+          "path": "tests/deul_aux.rs",
+          "test": "deul_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "deul_targets_preserve_25_original_rows_and_the_remaining_source_spelling_miss"
+        },
+        {
+          "path": "docs/deul-aux-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/deul-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/deul-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/deul-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "deul-aux-native-49855-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-3-1",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-3-2",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-3-3",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-3-4",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-native-49855-3-5",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-inflection-present",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-inflection-declarative",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-inflection-formal",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-inflection-reason",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-inflection-connective",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-inflection-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "deul-aux-wrong-connector-지",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "deul-aux-wrong-connector-게",
+          "judgment": "auxiliary"
+        },
+        {
+          "case": "deul-aux-wrong-connector-을",
+          "judgment": "auxiliary"
+        }
+      ]
     }
   ]
 }

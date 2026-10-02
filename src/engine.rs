@@ -3625,6 +3625,9 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
             stem,
             "보" | "주"
                 | "드리"
+                // NIKL 2024-12-10/16 confirms the reaching-state use. The
+                // KRDict third-sense 고 note conflicts with its 어 examples.
+                | "들"
                 | "버리"
                 | "놓"
                 | "두"

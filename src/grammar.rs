@@ -243,6 +243,32 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
         if matches!(v, 0 | 4 | 1 | 5) && !surface.ends_with('하') {
             push(&mut out, surface.into(), "contraction.identical");
         }
+        // Article 34 lists 켜어 -> 켜 and 펴어 -> 펴. An open ㅕ stem
+        // also absorbs 어; keep the independent ㅣ + 어 -> ㅕ alternative.
+        if v == 6 {
+            push(&mut out, surface.into(), "contraction.yeo_absorption");
+        }
+        // Complete native written paradigms supply these whole-stem exceptions
+        // to the generic harmony/deletion heuristic. Do not infer arbitrary
+        // compound boundaries or replace the existing lexical hypotheses.
+        for (form, stem) in [
+            ("가냘파", "가냘프"),
+            ("크나커", "크나크"),
+            ("동터", "동트"),
+            ("못써", "못쓰"),
+            ("받아써", "받아쓰"),
+            ("본떠", "본뜨"),
+            ("손써", "손쓰"),
+            ("싹터", "싹트"),
+            ("악써", "악쓰"),
+            ("약아", "약"),
+            ("얇아", "얇"),
+            ("얕아", "얕"),
+        ] {
+            if surface == form {
+                push(&mut out, stem.into(), "inflection.written_vowel");
+            }
+        }
         for (from, to) in [(9, 8), (14, 13), (10, 11), (6, 20)] {
             if v == from {
                 push(
@@ -1709,6 +1735,12 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "boundary.attached" => "Recover an ending consonant fused into the final syllable.",
         "contraction.identical" => "Recover an absorbed 아/어 vowel.",
+        "contraction.yeo_absorption" => {
+            "Recover 어 absorbed after an open ㅕ stem (켜, 펴); retain the separate ㅣ + 어 contraction reading."
+        }
+        "inflection.written_vowel" => {
+            "Recover a finite dictionary-listed whole-stem vowel form, including compound ㅡ deletion and 약아/얇아/얕아; do not infer arbitrary compound boundaries."
+        }
         "contraction.vowel" => "Undo vowel contraction (와, 워, 돼, or 여).",
         "contraction.deictic_verb" => {
             "Recover the dictionary-listed verb stems 그러/이러/저러 from 그래/이래/저래, including past inflection; preserve the homonymous adjective and whole-word readings."

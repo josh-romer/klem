@@ -653,6 +653,11 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !deicticVowelIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...deicticVowelEntries);
 
+  const writtenVowelFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-written-vowel.json"),"utf8"));
+  const writtenVowelEntries = writtenVowelFixture.LexicalResource.Lexicon.LexicalEntry;
+  const writtenVowelIds = new Set(writtenVowelEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !writtenVowelIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...writtenVowelEntries);
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -6000,6 +6005,55 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-deictic-vowel-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-deictic-vowel-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const writtenVowelSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/written-vowel-sources.json"),"utf8"));
+  const writtenVowelCases = recipientLedger.cases.filter(c => c.id.startsWith("written-vowel-"));
+  assert.equal(writtenVowelCases.length,274);
+  for (const c of writtenVowelCases) {
+    const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => lexicalMaldaMatches(a,j)),j.verdict === "required",c.id);
+  }
+  for (const c of writtenVowelSource.cases) {
+    const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
+    const i = token.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(i >= 0,c.id);
+    for (const j of c.entry_judgments) {
+      const entry = token.dictionary.readings[i].lemmas[0].entries.find(e => e.id === j.id);assert.ok(entry,c.id);
+      assert.equal(entry.status,j.status,c.id);assert.deepEqual(entry.conflicts,j.conflicts,c.id);
+    }
+  }
+  for (const e of writtenVowelSource.source_entries) {
+    const response = await (await post("entry",{id:e.id})).json();assert.deepEqual(response.entry,e,e.id);
+  }
+  const writtenVowelText = "켜 폈어요 받아써 손썼다 얕아서 가냘파 악썼다";
+  const writtenVowelParts = [
+    ["켜","어"],["펴","었","어요"],["받아쓰","어"],["손쓰","었","다"],
+    ["얕","어서"],["가냘프","어"],["악쓰","었","다"],
+  ];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag === "--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,writtenVowelText);await waitHeading(page,"켜");
+    const response = await (await post("analyze",{text:writtenVowelText})).json();
+    for (const [n,t] of response.records.filter(r => r.analysis).entries()) {
+      const c = writtenVowelSource.cases.find(c => c.surface === t.surface);
+      const index = t.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(index >= 0,t.surface);
+      assert.ok(t.analysis.analyses.some(a => a.unchanged),t.surface);
+      const block = page.locator(".breakdown-word").nth(n);
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),1,t.surface);
+      await block.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(),writtenVowelParts[n],t.surface);
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:writtenVowelText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(0).locator(".breakdown-part").nth(0).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=72168"]'));
+  await page.screenshot({path:resolve(tmpdir(),"klem-written-vowel-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-written-vowel-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

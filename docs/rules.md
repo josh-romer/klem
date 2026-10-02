@@ -4124,3 +4124,22 @@ report's adjective default for ambiguous 그래도 is not a candidate filter.
 Complete sources, selection timing and individual cases are preserved in the
 [source preflight](deictic-vowel-source-preflight.json) and
 [evaluation](deictic-vowel-evaluation.json).
+
+## Written vowel paradigms (COV-021j)
+
+An open ㅕ stem can absorb 어: 켜어→켜 and 펴어→펴, including past
+켰다/폈다 and auxiliary chains. The independent ㅣ + 어 contraction
+remains. Twelve complete native written paradigms provide finite whole-stem
+recoveries: 가냘파→가냘프, 크나커→크나크, 동터→동트, 못써→못쓰,
+받아써→받아쓰, 본떠→본뜨, 손써→손쓰, 싹터→싹트, 악써→악쓰,
+약아→약, 얇아→얇, and 얕아→얕. All compose with existing endings,
+prefinals and auxiliaries. The finite maps do not strip arbitrary prefixes
+or infer an internal compound boundary.
+
+The source is each complete dictionary-written paradigm and NIKL's
+[Article 34 explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=&pageIndex=1&qna_seq=319497).
+The original lexical/harmony alternatives remain. Unknown raw stems and
+particle followers require separate review; dictionary headword matching
+does not select a contextual meaning. See the
+[source preflight](written-vowel-source-preflight.json) and
+[individual evaluation](written-vowel-evaluation.json).

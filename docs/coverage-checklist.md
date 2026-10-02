@@ -2974,7 +2974,8 @@ review remains open under the completion review below.
   compatibility and three finite 오 spelling exceptions; COV-021g adds
   per-entry 르/러 written paradigms; COV-021h adds twelve entry-specific
   shortened-stem restrictions; COV-021i adds the three finite deictic verb
-  vowel paradigms.** Remaining: other lexical paradigms and unmapped
+  vowel paradigms; COV-021j adds open-ㅕ absorption and twelve finite written
+  vowel exceptions.** Remaining: other lexical paradigms and unmapped
   shortened-stem senses, ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
@@ -3178,6 +3179,61 @@ review remains open under the completion review below.
   headword aliasing and other lexical paradigms remain under COV-021.
   See [evaluation](deictic-vowel-evaluation.json) for individual paths,
   corpus provenance, browser/Nix checks and performance observations.
+
+- [x] **COV-021j — Open-ㅕ absorption and finite written vowel paradigms.**
+  **Candidate recovery and bounded source regressions are implemented.**
+  Article 34's 켜어→켜 and 펴어→펴 receive productive open-ㅕ + 어
+  absorption alongside the original ㅣ→ㅕ contraction hypotheses. Complete
+  native entries license nine whole-stem ㅡ-deletion exceptions, including
+  받아써/손써/동터/가냘파, and 약아/얇아/얕아. These mappings do not infer
+  arbitrary compound boundaries or replace the broad harmony heuristic.
+  The [frozen source preflight](written-vowel-source-preflight.json) includes
+  every selected written paradigm, all 131 regex observations from complete
+  native groups and all 60 aligned original training targets. [Tests](../tests/written_vowel.rs)
+  cover 252 required paths, 22 boundary controls, 303 entry judgments,
+  69 complete native sources, Unicode, ordered auxiliaries, caching and CLI
+  filter parity. Target recovery improves 41/60→59/60, and all original
+  rows, tags and before results remain. The unchanged 보살펴온 segmentation
+  disagreement stays visible rather than forcing a new compound decomposition.
+  All five changed dev/test cases recover their unchanged gold, separately
+  recorded after implementation rather than added to the training fixture.
+  The original 97-pair dictionary scan is unchanged: repeating all 22,400
+  observations recovers exactly these 18 pairs and leaves 79 unjudged misses.
+  Every original candidate, order and assessment survives eight comparison
+  modes. The 179,112-record novel changes at 5,733 raw occurrences, 23
+  dictionary-filtered occurrences, and 25 with spacing suggestions. Complete
+  original paragraphs, all hypotheses and their path identities remain
+  unjudged for contextual sense; raw unknown stems and outer particle followers
+  are not certified by dictionary headword presence. Two compatibility stress
+  snapshots gain three individually audited hypotheses while preserving exact
+  old output and all earlier spelling-history fingerprints. All 753 Rust and
+  Nix release tests, full corpus checks, Clippy and formatting pass. The full
+  immutable-package browser suite verifies selection, homonyms, filtering,
+  source details, exports and desktop/mobile layouts. The refreshed preview
+  verifies all new judgments and all 7,530 changed paths. Three alternating
+  paired release runs measure novel-filter medians of 1.836 s (headword)
+  and 1.730 s (compatible); these are observations during browser validation,
+  not a statistical performance guarantee.
+  All three x86_64 Linux flake checks and nine inventory unit tests pass;
+  the inventory remains 425 scoped / 290 unreviewed. Other architectures,
+  independent linguistic review and the full parent scope remain open.
+  See [evaluation](written-vowel-evaluation.json) for complete compressed
+  observations, actual API/breakdown evidence, browser/Nix checks and remaining
+  lexical, contextual and independent-review requirements.
+
+- [ ] **COV-021k — Entry-specific written-vowel compatibility.** COV-021j
+  recovers listed forms while retaining the older harmony hypotheses. The
+  current compatible filter still retains 받아싸→받아쓰다,
+  가냘퍼→가냘프다 and 약어→약다. These observed alternatives need explicit
+  source-specific disposition; a dictionary headword match does not settle
+  the written paradigm. Review ㅡ compounds and ㅑ stems against complete
+  native forms and independent norm explanations, including alternate listed
+  forms, homonyms and missing/contradictory source data. Track vowel choice on
+  the actual lexical owner before later prefinals/auxiliaries/particles. Keep
+  raw/headword-only hypotheses; any supported compatibility conflict must be
+  per-entry with conservative unknown fallback, not an absence-based global
+  ban. The original before probes are retained in the
+  [COV-021j fixture](../tests/fixtures/written-vowel-sources.json).
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

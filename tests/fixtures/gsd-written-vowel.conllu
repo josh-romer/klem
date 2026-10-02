@@ -1,0 +1,176 @@
+# sent_id = train-s26
+# text = 튀김도 얇고 기름을 깨끗한 걸로 튀기는 거 같아요
+# translit = .twi.gim.do .yarb.go .gi.reum.eul .ggae.ggeus.han .geol.ro .twi.gi.neun .geo .gat.a.yo
+1	튀김도	튀김+도	NOUN	NNG+JX	_	2	nsubj	_	Translit=.twi.gim.do|LTranslit=.twi.gim+.do
+2	얇고	얇+고	VERB	VA+EC	_	0	root	_	Translit=.yarb.go|LTranslit=.yarb+.go
+3	기름을	기름+을	NOUN	NNG+JKO	_	6	obj	_	Translit=.gi.reum.eul|LTranslit=.gi.reum+.eul
+4	깨끗한	깨끗+하+ㄴ	ADJ	XR+XSA+ETM	_	5	amod	_	Translit=.ggae.ggeus.han|LTranslit=.ggae.ggeus+.ha+ㄴ
+5	걸로	것+로	ADV	NNB+JKB	_	6	obl	_	Translit=.geol.ro|LTranslit=.geos+.ro
+6	튀기는	튀기+는	VERB	VV+ETM	_	7	dep	_	Translit=.twi.gi.neun|LTranslit=.twi.gi+.neun
+7	거	거	NOUN	NNB	_	8	nsubj	_	Translit=.geo|LTranslit=.geo
+8	같아요	같+아요	ADJ	VA+EC	_	2	conj	_	Translit=.gat.a.yo|LTranslit=.gat+.a.yo
+
+# sent_id = train-s48
+# text = 둥지는 흙이나 채소 안에 얇게 들어가 있기도 하며, 직접 둥지를 치기도 한다.
+# translit = .dung.ji.neun .heurg.i.na .chae.so .an.e .yarb.ge .deul.eo.ga .iss.gi.do .ha.myeo, .jig.jeob .dung.ji.reul .chi.gi.do .han.da.
+1	둥지는	둥지+는	NOUN	NNG+JX	_	6	nsubj	_	Translit=.dung.ji.neun|LTranslit=.dung.ji+.neun
+2	흙이나	흙+이나	NOUN	NNG+JC	_	6	nmod	_	Translit=.heurg.i.na|LTranslit=.heurg+.i.na
+3	채소	채소	NOUN	NNG	_	2	conj	_	Translit=.chae.so|LTranslit=.chae.so
+4	안에	안+에	ADP	NNG+JKB	_	2	case	_	Translit=.an.e|LTranslit=.an+.e
+5	얇게	얇+게	ADV	VA+EC	_	6	advmod	_	Translit=.yarb.ge|LTranslit=.yarb+.ge
+6	들어가	들어가+아	VERB	VV+EC	_	0	root	_	Translit=.deul.eo.ga|LTranslit=.deul.eo.ga+.a
+7	있기도	있+기+도	VERB	VX+ETN+JX	_	6	flat	_	Translit=.iss.gi.do|LTranslit=.iss+.gi+.do
+8	하며	하+며	VERB	VX+EC	_	6	flat	_	SpaceAfter=No|Translit=.ha.myeo|LTranslit=.ha+.myeo
+9	,	,	PUNCT	SP	_	12	punct	_	Translit=,|LTranslit=,
+10	직접	직접	ADV	MAG	_	12	advmod	_	Translit=.jig.jeob|LTranslit=.jig.jeob
+11	둥지를	둥지+를	NOUN	NNG+JKO	_	12	obj	_	Translit=.dung.ji.reul|LTranslit=.dung.ji+.reul
+12	치기도	치+기+도	VERB	VV+ETN+JX	_	6	conj	_	Translit=.chi.gi.do|LTranslit=.chi+.gi+.do
+13	한다	하+ㄴ다	VERB	VX+EF	_	12	flat	_	SpaceAfter=No|Translit=.han.da|LTranslit=.ha+ㄴ.da
+14	.	.	PUNCT	SF	_	13	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s925
+# text = 그러나, 암흑물질을 못쓰게 된 이후로는 Whale Oil을 우주선의 연료로 사용하고 있다.
+# translit = .geu.reo.na, .am.heug.mul.jil.eul .mos.sseu.ge .doen .i.hu.ro.neun Whale Oil.eul .u.ju.seon.yi .yeon.ryo.ro .sa.yong.ha.go .iss.da.
+1	그러나	그러+나	ADV	VV+EC	_	11	advmod	_	SpaceAfter=No|Translit=.geu.reo.na|LTranslit=.geu.reo+.na
+2	,	,	PUNCT	SP	_	1	punct	_	Translit=,|LTranslit=,
+3	암흑물질을	암흑+물질+을	NOUN	NNG+NNG+JKO	_	4	obj	_	Translit=.am.heug.mul.jil.eul|LTranslit=.am.heug+.mul.jil+.eul
+4	못쓰게	못쓰+게	VERB	VV+EC	_	11	advcl	_	Translit=.mos.sseu.ge|LTranslit=.mos.sseu+.ge
+5	된	되+ㄴ	VERB	VV+ETM	_	4	flat	_	Translit=.doen|LTranslit=.doe+ㄴ
+6	이후로는	이후+로+는	ADV	NNG+JKB+JX	_	4	mark	_	Translit=.i.hu.ro.neun|LTranslit=.i.hu+.ro+.neun
+7	Whale	Whale	NOUN	SL	_	11	obj	_	Translit=Whale|LTranslit=Whale
+8	Oil을	Oil+을	NOUN	SL+JKO	_	7	flat	_	Translit=Oil.eul|LTranslit=Oil+.eul
+9	우주선의	우주선+의	NOUN	NNG+JKG	_	10	nmod:poss	_	Translit=.u.ju.seon.yi|LTranslit=.u.ju.seon+.yi
+10	연료로	연료+로	ADV	NNG+JKB	_	11	obl	_	Translit=.yeon.ryo.ro|LTranslit=.yeon.ryo+.ro
+11	사용하고	사용+하+고	VERB	NNG+XSV+EC	_	0	root	_	Translit=.sa.yong.ha.go|LTranslit=.sa.yong+.ha+.go
+12	있다	있+다	VERB	VX+EF	_	11	flat	_	SpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da
+13	.	.	PUNCT	SF	_	12	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s981
+# text = 이 기관은 실린더가 하나였으며, 증기 기관과 비슷하지만 가로등을 켜는 가스를 연료로 사용했다.
+# translit = .i .gi.gwan.eun .sil.rin.deo.ga .ha.na.yeoss.eu.myeo, .jeung.gi .gi.gwan.gwa .bi.seus.ha.ji.man .ga.ro.deung.eul .kyeo.neun .ga.seu.reul .yeon.ryo.ro .sa.yong.haess.da.
+1	이	이	DET	MM	_	2	det	_	Translit=.i|LTranslit=.i
+2	기관은	기관+은	NOUN	NNG+JX	_	4	nsubj	_	Translit=.gi.gwan.eun|LTranslit=.gi.gwan+.eun
+3	실린더가	실린더+가	NOUN	NNG+JKS	_	4	nsubj	_	Translit=.sil.rin.deo.ga|LTranslit=.sil.rin.deo+.ga
+4	하나였으며	하나+이+었+으며	VERB	NR+VCP+EP+EC	_	0	root	_	SpaceAfter=No|Translit=.ha.na.yeoss.eu.myeo|LTranslit=.ha.na+.i+.eoss+.eu.myeo
+5	,	,	PUNCT	SP	_	13	punct	_	Translit=,|LTranslit=,
+6	증기	증기	NOUN	NNG	_	8	obl	_	Translit=.jeung.gi|LTranslit=.jeung.gi
+7	기관과	기관+과	ADV	NNG+JC	_	6	flat	_	Translit=.gi.gwan.gwa|LTranslit=.gi.gwan+.gwa
+8	비슷하지만	비슷+하+지만	VERB	XR+XSA+EC	_	13	advcl	_	Translit=.bi.seus.ha.ji.man|LTranslit=.bi.seus+.ha+.ji.man
+9	가로등을	가로등+을	NOUN	NNG+JKO	_	10	obj	_	Translit=.ga.ro.deung.eul|LTranslit=.ga.ro.deung+.eul
+10	켜는	켜+는	VERB	VV+ETM	_	11	acl:relcl	_	Translit=.kyeo.neun|LTranslit=.kyeo+.neun
+11	가스를	가스+를	NOUN	NNG+JKO	_	13	obj	_	Translit=.ga.seu.reul|LTranslit=.ga.seu+.reul
+12	연료로	연료+로	ADV	NNG+JKB	_	13	obl	_	Translit=.yeon.ryo.ro|LTranslit=.yeon.ryo+.ro
+13	사용했다	사용+하+았+다	VERB	NNG+XSV+EP+EF	_	4	conj	_	SpaceAfter=No|Translit=.sa.yong.haess.da|LTranslit=.sa.yong+.ha+.ass+.da
+14	.	.	PUNCT	SF	_	13	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1440
+# text = 얇은 수육이 느끼하지도 않고 아무래도 최고임!
+# translit = .yarb.eun .su.yug.i .neu.ggi.ha.ji.do .anh.go .a.mu.rae.do .choe.go.im!
+1	얇은	얇+은	ADJ	VA+ETM	_	2	amod	_	Translit=.yarb.eun|LTranslit=.yarb+.eun
+2	수육이	수육+이	NOUN	NNG+JKS	_	3	nsubj	_	Translit=.su.yug.i|LTranslit=.su.yug+.i
+3	느끼하지도	느끼+하+지+도	VERB	XR+XSA+EC+JX	_	0	root	_	Translit=.neu.ggi.ha.ji.do|LTranslit=.neu.ggi+.ha+.ji+.do
+4	않고	않+고	VERB	VX+EC	_	3	flat	_	Translit=.anh.go|LTranslit=.anh+.go
+5	아무래도	아무래도	ADV	MAG	_	6	advmod	_	Translit=.a.mu.rae.do|LTranslit=.a.mu.rae.do
+6	최고임	최고+이+ㅁ	NOUN	NNG+VCP+ETN	_	3	conj	_	SpaceAfter=No|Translit=.choe.go.im|LTranslit=.choe.go+.i+ㅁ
+7	!	!	PUNCT	SF	_	6	punct	_	Translit=!|LTranslit=!
+
+# sent_id = train-s1503
+# text = 밤의 여로를 지나 어김없이 동터오는 해를 기다리는 마음이 이런 것일까.
+# translit = .bam.yi .yeo.ro.reul .ji.na .eo.gim.eobs.i .dong.teo.o.neun .hae.reul .gi.da.ri.neun .ma.eum.i .i.reon .geos.il.gga.
+1	밤의	밤+의	NOUN	NNG+JKG	_	2	nmod:poss	_	Translit=.bam.yi|LTranslit=.bam+.yi
+2	여로를	여로+를	NOUN	NNG+JKO	_	3	obj	_	Translit=.yeo.ro.reul|LTranslit=.yeo.ro+.reul
+3	지나	지나+아	VERB	VV+EC	_	7	advcl	_	Translit=.ji.na|LTranslit=.ji.na+.a
+4	어김없이	어김없이	ADV	MAG	_	5	advmod	_	Translit=.eo.gim.eobs.i|LTranslit=.eo.gim.eobs.i
+5	동터오는	동트+어+오+는	VERB	VV+EC+VX+ETM	_	6	acl:relcl	_	Translit=.dong.teo.o.neun|LTranslit=.dong.teu+.eo+.o+.neun
+6	해를	해+를	NOUN	NNG+JKO	_	7	obj	_	Translit=.hae.reul|LTranslit=.hae+.reul
+7	기다리는	기다리+는	VERB	VV+ETM	_	8	acl:relcl	_	Translit=.gi.da.ri.neun|LTranslit=.gi.da.ri+.neun
+8	마음이	마음+이	NOUN	NNG+JKS	_	10	nsubj	_	Translit=.ma.eum.i|LTranslit=.ma.eum+.i
+9	이런	이런	ADJ	MM	_	10	amod	_	Translit=.i.reon|LTranslit=.i.reon
+10	것일까	것+이+ㄹ까	VERB	NNB+VCP+EF	_	0	root	_	SpaceAfter=No|Translit=.geos.il.gga|LTranslit=.geos+.i+ㄹ.gga
+11	.	.	PUNCT	SF	_	10	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s2171
+# text = 페르시아만 연안의 해안선은 복잡하게 얽혔으며, 바다는 멀리까지 수심이 얕고 먼 바다에는 많은 섬과 산호초가 떠 있다.
+# translit = .pe.reu.si.a.man .yeon.an.yi .hae.an.seon.eun .bog.jab.ha.ge .eorg.hyeoss.eu.myeo, .ba.da.neun .meol.ri.gga.ji .su.sim.i .yat.go .meon .ba.da.e.neun .manh.eun .seom.gwa .san.ho.cho.ga .ddeo .iss.da.
+1	페르시아만	페르시아만	NOUN	NNP	_	3	nmod:poss	_	Translit=.pe.reu.si.a.man|LTranslit=.pe.reu.si.a.man
+2	연안의	연안+의	NOUN	NNG+JKG	_	1	flat	_	Translit=.yeon.an.yi|LTranslit=.yeon.an+.yi
+3	해안선은	해안선+은	NOUN	NNG+JX	_	5	nsubj	_	Translit=.hae.an.seon.eun|LTranslit=.hae.an.seon+.eun
+4	복잡하게	복잡+하+게	ADV	XR+XSA+EC	_	5	advmod	_	Translit=.bog.jab.ha.ge|LTranslit=.bog.jab+.ha+.ge
+5	얽혔으며	얽히+었+으며	VERB	VV+EP+EC	_	0	root	_	SpaceAfter=No|Translit=.eorg.hyeoss.eu.myeo|LTranslit=.eorg.hi+.eoss+.eu.myeo
+6	,	,	PUNCT	SP	_	10	punct	_	Translit=,|LTranslit=,
+7	바다는	바다+는	NOUN	NNG+JX	_	10	nsubj	_	Translit=.ba.da.neun|LTranslit=.ba.da+.neun
+8	멀리까지	멀리+까지	ADV	MAG+JX	_	10	advmod	_	Translit=.meol.ri.gga.ji|LTranslit=.meol.ri+.gga.ji
+9	수심이	수심+이	NOUN	NNG+JKS	_	10	nsubj	_	Translit=.su.sim.i|LTranslit=.su.sim+.i
+10	얕고	얕+고	VERB	VA+EC	_	5	conj	_	Translit=.yat.go|LTranslit=.yat+.go
+11	먼	멀+ㄴ	ADJ	VA+ETM	_	12	amod	_	Translit=.meon|LTranslit=.meol+ㄴ
+12	바다에는	바다+에+는	ADV	NNG+JKB+JX	_	16	advmod	_	Translit=.ba.da.e.neun|LTranslit=.ba.da+.e+.neun
+13	많은	많+은	ADJ	VA+ETM	_	15	amod	_	Translit=.manh.eun|LTranslit=.manh+.eun
+14	섬과	섬+과	NOUN	NNG+JC	_	16	nsubj	_	Translit=.seom.gwa|LTranslit=.seom+.gwa
+15	산호초가	산호초+가	NOUN	NNG+JKS	_	14	conj	_	Translit=.san.ho.cho.ga|LTranslit=.san.ho.cho+.ga
+16	떠	뜨+어	VERB	VV+EC	_	5	conj	_	Translit=.ddeo|LTranslit=.ddeu+.eo
+17	있다	있+다	VERB	VX+EF	_	16	flat	_	SpaceAfter=No|Translit=.iss.da|LTranslit=.iss+.da
+18	.	.	PUNCT	SF	_	17	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s2474
+# text = 월급제를 처음 도입했을 당시에는 택시기사들이 열심히 운행을 하지 않거나 미터를 켜지 않고 불법 영업을 하는 일이 잦아 완전 월급제를 제대로 운영할 수 없는 측면이 있었다.
+# translit = .weol.geub.je.reul .cheo.eum .do.ib.haess.eul .dang.si.e.neun .taeg.si.gi.sa.deul.i .yeol.sim.hi .un.haeng.eul .ha.ji .anh.geo.na .mi.teo.reul .kyeo.ji .anh.go .bul.beob .yeong.eob.eul .ha.neun .il.i .jaj.a .wan.jeon .weol.geub.je.reul .je.dae.ro .un.yeong.hal .su .eobs.neun .cheug.myeon.i .iss.eoss.da.
+1	월급제를	월급+제+를	NOUN	NNG+XSN+JKO	_	3	obj	_	Translit=.weol.geub.je.reul|LTranslit=.weol.geub+.je+.reul
+2	처음	처음	ADV	MAG	_	3	advmod	_	Translit=.cheo.eum|LTranslit=.cheo.eum
+3	도입했을	도입+하+았+을	VERB	NNG+XSV+EP+ETM	_	17	advcl	_	Translit=.do.ib.haess.eul|LTranslit=.do.ib+.ha+.ass+.eul
+4	당시에는	당시+에+는	ADV	NNG+JKB+JX	_	3	mark	_	Translit=.dang.si.e.neun|LTranslit=.dang.si+.e+.neun
+5	택시기사들이	택시+기사+들+이	NOUN	NNG+NNG+XSN+JKS	_	15	nsubj	_	Translit=.taeg.si.gi.sa.deul.i|LTranslit=.taeg.si+.gi.sa+.deul+.i
+6	열심히	열심히	ADV	MAG	_	8	advmod	_	Translit=.yeol.sim.hi|LTranslit=.yeol.sim.hi
+7	운행을	운행+을	NOUN	NNG+JKO	_	8	obj	_	Translit=.un.haeng.eul|LTranslit=.un.haeng+.eul
+8	하지	하+지	VERB	VV+EC	_	16	dep	_	Translit=.ha.ji|LTranslit=.ha+.ji
+9	않거나	않+거나	VERB	VX+EC	_	8	flat	_	Translit=.anh.geo.na|LTranslit=.anh+.geo.na
+10	미터를	미터+를	NOUN	NNB+JKO	_	11	obj	_	Translit=.mi.teo.reul|LTranslit=.mi.teo+.reul
+11	켜지	켜+지	VERB	VV+EC	_	8	conj	_	Translit=.kyeo.ji|LTranslit=.kyeo+.ji
+12	않고	않+고	VERB	VX+EC	_	11	flat	_	Translit=.anh.go|LTranslit=.anh+.go
+13	불법	불법	NOUN	NNG	_	15	obj	_	Translit=.bul.beob|LTranslit=.bul.beob
+14	영업을	영업+을	NOUN	NNG+JKO	_	13	flat	_	Translit=.yeong.eob.eul|LTranslit=.yeong.eob+.eul
+15	하는	하+는	VERB	VV+ETM	_	8	conj	_	Translit=.ha.neun|LTranslit=.ha+.neun
+16	일이	일+이	NOUN	NNG+JKS	_	17	nsubj	_	Translit=.il.i|LTranslit=.il+.i
+17	잦아	잦+아	VERB	VA+EC	_	25	advcl	_	Translit=.jaj.a|LTranslit=.jaj+.a
+18	완전	완전	NOUN	NNG	_	21	obj	_	Translit=.wan.jeon|LTranslit=.wan.jeon
+19	월급제를	월급+제+를	NOUN	NNG+XSN+JKO	_	18	flat	_	Translit=.weol.geub.je.reul|LTranslit=.weol.geub+.je+.reul
+20	제대로	제대로	ADV	MAG	_	21	advmod	_	Translit=.je.dae.ro|LTranslit=.je.dae.ro
+21	운영할	운영+하+ㄹ	VERB	NNG+XSV+ETM	_	22	dep	_	Translit=.un.yeong.hal|LTranslit=.un.yeong+.ha+ㄹ
+22	수	수	NOUN	NNB	_	23	nsubj	_	Translit=.su|LTranslit=.su
+23	없는	없+는	VERB	VA+ETM	_	24	dep	_	Translit=.eobs.neun|LTranslit=.eobs+.neun
+24	측면이	측면+이	NOUN	NNG+JKS	_	25	nsubj	_	Translit=.cheug.myeon.i|LTranslit=.cheug.myeon+.i
+25	있었다	있+었+다	ADJ	VV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.iss.eoss.da|LTranslit=.iss+.eoss+.da
+26	.	.	PUNCT	SF	_	25	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s3703
+# text = 몸을 편 플레이는 팀메이트에게서는 물론, 타교의 에이스나 캡틴으로부터도 존경을 모은다.
+# translit = .mom.eul .pyeon .peul.re.i.neun .tim.me.i.teu.e.ge.seo.neun .mul.ron, .ta.gyo.yi .e.i.seu.na .kaeb.tin.eu.ro.bu.teo.do .jon.gyeong.eul .mo.eun.da.
+1	몸을	몸+을	NOUN	NNG+JKO	_	2	obj	_	Translit=.mom.eul|LTranslit=.mom+.eul
+2	편	펴+ㄴ	VERB	VV+ETM	_	3	acl:relcl	_	Translit=.pyeon|LTranslit=.pyeo+ㄴ
+3	플레이는	플레이+는	NOUN	NNG+JX	_	11	nsubj	_	Translit=.peul.re.i.neun|LTranslit=.peul.re.i+.neun
+4	팀메이트에게서는	팀+메이트+에게서+는	ADV	NNG+NNG+JKB+JX	_	11	advmod	_	Translit=.tim.me.i.teu.e.ge.seo.neun|LTranslit=.tim+.me.i.teu+.e.ge.seo+.neun
+5	물론	물론	CCONJ	MAG	_	8	cc	_	SpaceAfter=No|Translit=.mul.ron|LTranslit=.mul.ron
+6	,	,	PUNCT	SP	_	5	punct	_	Translit=,|LTranslit=,
+7	타교의	타교+의	NOUN	NNG+JKG	_	9	nmod:poss	_	Translit=.ta.gyo.yi|LTranslit=.ta.gyo+.yi
+8	에이스나	에이스+나	NOUN	NNG+JC	_	4	conj	_	Translit=.e.i.seu.na|LTranslit=.e.i.seu+.na
+9	캡틴으로부터도	캡틴+으로부터+도	ADV	NNG+JKB+JX	_	4	conj	_	Translit=.kaeb.tin.eu.ro.bu.teo.do|LTranslit=.kaeb.tin+.eu.ro.bu.teo+.do
+10	존경을	존경+을	NOUN	NNG+JKO	_	11	obj	_	Translit=.jon.gyeong.eul|LTranslit=.jon.gyeong+.eul
+11	모은다	모으+ㄴ다	VERB	VV+EF	_	0	root	_	SpaceAfter=No|Translit=.mo.eun.da|LTranslit=.mo.eu+ㄴ.da
+12	.	.	PUNCT	SF	_	11	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s4084
+# text = 적게는 1년, 많게는 3년까지 보살펴온 제자들을 수험장으로 보내는 교사들의 심정은 하나같았다.
+# translit = .jeog.ge.neun 1.nyeon, .manh.ge.neun 3.nyeon.gga.ji .bo.sal.pyeo.on .je.ja.deul.eul .su.heom.jang.eu.ro .bo.nae.neun .gyo.sa.deul.yi .sim.jeong.eun .ha.na.gat.ass.da.
+1	적게는	적+게+는	ADV	VA+EC+JX	_	2	advmod	_	Translit=.jeog.ge.neun|LTranslit=.jeog+.ge+.neun
+2	1년	1+년	NOUN	SN+NNB	_	6	obl	_	SpaceAfter=No|Translit=1.nyeon|LTranslit=1+.nyeon
+3	,	,	PUNCT	SP	_	5	punct	_	Translit=,|LTranslit=,
+4	많게는	많+게+는	ADV	VA+EC+JX	_	5	advmod	_	Translit=.manh.ge.neun|LTranslit=.manh+.ge+.neun
+5	3년까지	3+년+까지	ADV	SN+NNB+JX	_	2	conj	_	Translit=3.nyeon.gga.ji|LTranslit=3+.nyeon+.gga.ji
+6	보살펴온	보살+펴+아+오+ㄴ	VERB	NNG+VV+EC+VX+ETM	_	7	acl:relcl	_	Translit=.bo.sal.pyeo.on|LTranslit=.bo.sal+.pyeo+.a+.o+ㄴ
+7	제자들을	제자+들+을	NOUN	NNG+XSN+JKO	_	9	obj	_	Translit=.je.ja.deul.eul|LTranslit=.je.ja+.deul+.eul
+8	수험장으로	수험+장+으로	ADV	NNG+NNG+JKB	_	9	obl	_	Translit=.su.heom.jang.eu.ro|LTranslit=.su.heom+.jang+.eu.ro
+9	보내는	보내+는	VERB	VV+ETM	_	10	acl:relcl	_	Translit=.bo.nae.neun|LTranslit=.bo.nae+.neun
+10	교사들의	교사+들+의	NOUN	NNG+XSN+JKG	_	11	nmod:poss	_	Translit=.gyo.sa.deul.yi|LTranslit=.gyo.sa+.deul+.yi
+11	심정은	심정+은	NOUN	NNG+JX	_	12	nsubj	_	Translit=.sim.jeong.eun|LTranslit=.sim.jeong+.eun
+12	하나같았다	하나같+았+다	ADJ	VA+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.ha.na.gat.ass.da|LTranslit=.ha.na.gat+.ass+.da
+13	.	.	PUNCT	SF	_	12	punct	_	Translit=.|LTranslit=.
+

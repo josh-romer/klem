@@ -3439,3 +3439,61 @@ fn deictic_vowel_targets_keep_all_original_rows_and_recover_three_gsd_misses() {
     }
     assert_eq!((before, after, total), (16, 19, 19));
 }
+
+#[test]
+fn written_vowel_targets_recover_eighteen_misses_and_preserve_original_segmentation() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/written-vowel-sources.json")).unwrap();
+    let mut before = 0;
+    let mut after = 0;
+    let mut total = 0;
+    for (kind, input) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-written-vowel.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-written-vowel.conllu").as_slice(),
+        ),
+    ] {
+        let frozen = source["corpus_search"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|c| c["corpus"].as_str().unwrap() == kind.name())
+            .unwrap();
+        let report = corpus::evaluate(input, kind, "written-vowel").unwrap();
+        let text = std::str::from_utf8(input).unwrap();
+        for target in frozen["targets"].as_array().unwrap() {
+            let id = target["id"].as_str().unwrap();
+            let case = &report.cases[id];
+            assert_eq!(
+                serde_json::to_value(case).unwrap(),
+                target["case_report_after"],
+                "{id}"
+            );
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                target["expected"]
+            );
+            let row = target["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(text.lines().any(|line| line == row));
+            if target["matched_before"] == true {
+                before += 1;
+                assert!(case.matched);
+            }
+            if case.matched {
+                after += 1;
+            }
+            total += 1;
+        }
+    }
+    assert_eq!((before, after, total), (41, 59, 60));
+}

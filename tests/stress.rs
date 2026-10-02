@@ -15,6 +15,7 @@ fn output_matches_reviewed_snapshots() {
         before_digeut_siot_sha256: Option<String>,
         before_bieup_sha256: Option<String>,
         before_polite_sha256: Option<String>,
+        before_written_vowel_sha256: Option<String>,
     }
     let snapshots: Vec<Snapshot> =
         serde_json::from_str(include_str!("fixtures/optimization.json")).unwrap();
@@ -22,6 +23,24 @@ fn output_matches_reviewed_snapshots() {
     for snapshot in snapshots {
         let result = engine.analyze_word(&snapshot.word).unwrap();
         let mut previous_grammar = result.clone();
+        if let Some(expected) = snapshot.before_written_vowel_sha256 {
+            // COV-021j's added open-ㅕ hypotheses were reviewed individually
+            // in written-vowel-snapshot-audit.json. Preserve exact old output
+            // before checking its existing polite/spelling history below.
+            previous_grammar.analyses.retain(|a| {
+                !a.rules
+                    .iter()
+                    .any(|r| r == "contraction.yeo_absorption" || r == "inflection.written_vowel")
+            });
+            let mut json = serde_json::to_vec(&previous_grammar).unwrap();
+            json.push(b'\n');
+            assert_eq!(
+                format!("{:x}", Sha256::digest(json)),
+                expected,
+                "{}: pre-written-vowel output changed",
+                snapshot.word
+            );
+        }
         if let Some(expected) = snapshot.before_polite_sha256 {
             // The additive polite paths were individually reviewed; retain
             // the exact prior output as well as its older spelling audits.

@@ -206,11 +206,21 @@
   },
   {
     "word": "의사였음을",
-    "sha256": "349c4b9e040a905fd46f1a35c4fbc42cf5aee9dfe9af17311530e6558a142948",
+    "sha256": "6b0e9041a76708bd2b69dc3ab1310bbb8e2417507678f8b1c88274077574399c",
     "previous_sha256": "3382b1c57e349423ca71e9cb49ec97e867fa14dc263037fd6e466d2c58473e9e",
     "change": "P1 particle expansion: additive contracted ㄴ/ㄹ or polite 요 paths; prior analyses and provenance retained.",
     "before_spelling_sha256": "22d2e5a86adee0289c8f3d6e61590e386d39cba63ac7ff6468a95ef05168dbac",
-    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged."
+    "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged.",
+    "before_written_vowel_sha256": "349c4b9e040a905fd46f1a35c4fbc42cf5aee9dfe9af17311530e6558a142948",
+    "reviewed_changes": [
+      {
+        "checklist": "COV-021j",
+        "before_sha256": "349c4b9e040a905fd46f1a35c4fbc42cf5aee9dfe9af17311530e6558a142948",
+        "after_sha256": "6b0e9041a76708bd2b69dc3ab1310bbb8e2417507678f8b1c88274077574399c",
+        "scope": "Productive open-ㅕ vowel-absorption hypothesis; complete old output and its previous spelling history are retained. Added lexical stem is hypothetical/unjudged until dictionary/context review, not a reinterpretation or removal of the valid copula reading.",
+        "evidence": "tests/fixtures/written-vowel-snapshot-audit.json"
+      }
+    ]
   },
   {
     "word": "것임을",
@@ -300,7 +310,7 @@
   },
   {
     "word": "들으셨겠어요",
-    "sha256": "874b7e902ba23f3833f16701a76c4aeca97aac2ab501ddbf722d0263588126cc",
+    "sha256": "122ad85ed601652b8283caf57a81b3c1a655b33e6814501b6083ac96f878976b",
     "previous_sha256": "eb0b56f616cf405d13c2e98cd47d0c0aeed70f1919965a74c99cc65c39eeb42f",
     "change": "COV-020f: Two new unverified nominal 들으 + omitted copula + honorific/past/modal paths, with bundled 어요 or separated 어 + 요. Existing 듣다/들다 predicate readings remain. The nominal identity and contextual honorific interpretation are unjudged. Every previous candidate and provenance retained. Individual review: docs/honorific-copula-evaluation.json.",
     "previous_revisions": [
@@ -318,7 +328,17 @@
     "before_spelling_sha256": "05508b5764b605ea361c23a97953f78869626bf80f93585bfd51fe8e1a0a7aad",
     "spelling_change": "COV-021d adds owned spelling-path evidence only. Removing spelling_paths reproduces before_spelling_sha256; all lemma groups, morphemes, ordering, identity flags and rule IDs are unchanged.",
     "before_digeut_siot_sha256": "fa9e3a3e4985c19bc65ffd3fc92395d845e7c3357267b9d6aeab7f6d0d844a8b",
-    "digeut_siot_change": "Only owned ㄷ/ㅅ spelling requirements added; pre-existing candidates, rule IDs and ㅎ requirements preserved."
+    "digeut_siot_change": "Only owned ㄷ/ㅅ spelling requirements added; pre-existing candidates, rule IDs and ㅎ requirements preserved.",
+    "before_written_vowel_sha256": "874b7e902ba23f3833f16701a76c4aeca97aac2ab501ddbf722d0263588126cc",
+    "reviewed_changes": [
+      {
+        "checklist": "COV-021j",
+        "before_sha256": "874b7e902ba23f3833f16701a76c4aeca97aac2ab501ddbf722d0263588126cc",
+        "after_sha256": "122ad85ed601652b8283caf57a81b3c1a655b33e6814501b6083ac96f878976b",
+        "scope": "Productive open-ㅕ vowel-absorption hypothesis; complete old output and its previous spelling history are retained. Added lexical stem is hypothetical/unjudged until dictionary/context review, not a reinterpretation or removal of the valid copula reading.",
+        "evidence": "tests/fixtures/written-vowel-snapshot-audit.json"
+      }
+    ]
   },
   {
     "word": "먹었었겠더라",

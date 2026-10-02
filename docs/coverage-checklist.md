@@ -2306,6 +2306,27 @@ review remains open under the completion review below.
   remain required. COV-013 records three scoped dispositions, not complete
   entry coverage.
 
+- [ ] **COV-019w — Complete pretence/appearance auxiliary audit.**
+  The [source preflight](pretence-aux-source-preflight.json) retains every
+  native sense, form, note and original example group for both 양하다
+  homonyms (67248/67249), 척하다 (72226) and 체하다 (72227): four
+  entries/senses and fourteen groups. All fourteen selected joined paths
+  already recover at `f82a968`; no new raw recall or contextual correctness
+  is claimed. Exact aligned training searches retain two complete original
+  KAIST targets/blocks and no GSD matches in the searched auxiliary and
+  bound-noun-plus-predicate derivation categories. Both targets match.
+  Original 재미있었는 양하다 and KAIST 체할's nbn+xsm annotation remain
+  explicit; neither observation certifies a general grammar rule. The
+  양하다 homonyms' different Korean definitions and POS remain separate
+  despite overlapping English labels. Omitted copulas in three native notes
+  do not supply invented forbidden paths. Pending: individual native and
+  annotation regressions, complete attributed fixtures, per-entry ownership,
+  homonym/allomorph/internal-particle boundaries, source-supported
+  ending/prefinal licenses, semantic/register consultation, candidate/ledger
+  audits, CLI/library/cache/browser/export parity and Nix/runtime gates.
+  These four entries remain unreviewed in COV-013 until scoped evidence is
+  completed; independent Korean-language review is still required.
+
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and

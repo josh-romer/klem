@@ -2680,6 +2680,39 @@ review remains open under the completion review below.
   around 1.6 seconds; dense source/control input emits more paths and takes
   about twice the previous elapsed time. All three x86_64 Linux flake checks
   pass; other architectures remain unevaluated.
+  The subsequent [inflection preflight](lexical-malda-inflection-preflight.json)
+  freezes 97 constructed probes, complete ending/prefinal sources, four native
+  regex hits and both original training scans before implementation. All four
+  regex hits are false positives for this construction and both corpus scans
+  have zero targets; neither is positive recovery evidence. A targeted search
+  separately verifies **했건 말았건** in 교정 (February 2019), PDF page 5.
+  Right-side honorific/past/modal combinations retain their own morpheme owners.
+  A validated following auxiliary chain can close the paired alternative,
+  including 먹거나 말아 버리거나 and 먹거나 말지 않거나; immediate paired
+  links before further auxiliaries remain available. Bare/honorific right 말
+  takes 나, while past/modal consonantal prefinals permit 으나. The draft's
+  bare 으나 leakage was found in the novel comparison and corrected before
+  final validation. Sixteen retrospective/humble probes remain explicitly
+  unjudged; their draft expectations are not promoted to grammar requirements.
+  [Four further family tests](../tests/malda_inflection.rs) cover 82 required /
+  16 forbidden paths, 328 homonym judgments, 48 complete pinned native entries,
+  Unicode, dictionary filters/cache/CLI parity and mixed component ownership.
+  Repeated 마 inputs through 1,024 syllables retain exact previous output;
+  impossible nominal boundaries are skipped before recovery without a candidate
+  or chain-depth limit. [Inflection evaluation](malda-inflection-evaluation.json)
+  retains all 202 newly added paths and their actual API breakdowns/source entries.
+  Eight candidate/novel modes preserve every prior candidate and assessment;
+  all five novel modes and all four full held-out corpus reports are unchanged.
+  All 743 Rust and 743 Nix release tests, Clippy, format, the full packaged
+  browser suite, actual packaged/live APIs and all eight release/debug output
+  comparisons pass. All three x86_64 Linux flake checks and nine inventory
+  verifier unit tests pass; other architectures remain unevaluated. The local
+  preview is refreshed with the verified immutable package and served asset.
+  The inventory remains 425 scoped / 290 unreviewed, with 456 source citations.
+  Forty-eight alternating paired release timings preserve exact stress output;
+  the 1,024-syllable repeated-마 medians are about 0.96 seconds before and
+  0.010 seconds after on this machine. These are descriptive diagnostics, not
+  a throughput or complexity guarantee. Broader original coverage is still open.
   Broader ending/prefinal/internal-particle, left lexical subsets, source sense,
   context/register and independent Korean-language review remain required.
 

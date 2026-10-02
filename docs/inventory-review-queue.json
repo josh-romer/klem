@@ -30,7 +30,7 @@
     "docs/continuative-topic-evaluation.json": "2ee76399461d8c7b9829436b4d23a746421e76a942cb99f70764c6d1619ab109",
     "docs/copula-yo-evaluation.json": "0c0962a150b54fd8f4c8334d9037c42be9fc2b9b0943f485d4188fc594259190",
     "docs/core-case-evaluation.json": "364d17559755544a42ed4f680c93ade9c84bcb8932229e80b4926b8433b4dcf5",
-    "docs/coverage-checklist.md": "a8ebcd6595ecf9983b89196c8384067c28e777e401d39b8e648f7f3b3fbaedc8",
+    "docs/coverage-checklist.md": "7f7d41c91445c07430ee40b79af080f9e8f0677f8aae3a5fdb70eb88d4a29b26",
     "docs/daga-native-source-audit.json": "e0e4bd9d6d98ce7bb3ec30163566653ec60960fef4d8201161cbaa0d4bc9eb31",
     "docs/daji-evaluation.json": "c22e4970a635fc001680e901e6c132c27be5da058f154883a908283129a32a8a",
     "docs/danda-evaluation.json": "281b9e1f0b4e26b16d7952f90228fdb8e74a5e958c05a924a58b3b78905a1b02",
@@ -225,7 +225,7 @@
     "tests/fixtures/soseo-sources.json": "88997eab0620b4eea49ac86a580b56ea1856d1dc8a5a3bc97209e58a7208564b",
     "tests/fixtures/transition-aux-entry-judgments.json": "e07e4b5e9d8dce0a81267661a8a328e514683b0d89af9b99c18998769ae34bad",
     "tests/fixtures/transition-aux-sources.json": "77ea48db715d8ba38c27d6d3a31c62f5f5af5f6cec438c652277cbd464dad009",
-    "tests/fixtures/validity.json": "4fb09e28ad686c0ef2797eefc2bc9d4d845d781316724f8788cf91c4b18f521f",
+    "tests/fixtures/validity.json": "4b4f6eb16c11ba3815ce6c12225e8c0a788a53447d1ad740cf7656be3e7153f6",
     "tests/geol.rs": "4615b2b5bbce7a8d749964b17b307eab383a1ae5e9c6d65f6c4be2ceacfd9cc7",
     "tests/geon_contrast.rs": "4190afb4c3360e075d40d39a9931081968250ad23293df29c256558208e581fc",
     "tests/hada_aux.rs": "1965bfdb22a4e8e16e05c977ecaa6dfdaddc4f305b46279a5256d84b85eecb41",
@@ -290,7 +290,7 @@
     "tests/uncertainty.rs": "79a025b3dc0961af891d8b28bad541fb476d3560bc502c86f524c5ffd70fa38f",
     "tests/vocative.rs": "6d5c301c4545b00e5d3cc4e3ef58273e67613c55b53f56bfb009ea3a345ab8e6",
     "web/src/grammar-labels.json": "d4706ebe6a2d452a9b1959b8036374b1eae2eda0bb50948e2a7b12ae6378f176",
-    "web/tests/browser.mjs": "908479136582a4aeb4eef38e07f6d15e608feec29d2e8045463e7c59262dda54"
+    "web/tests/browser.mjs": "60d5463da634b610fa5ec4e6a5d130adde04bbeae68157876eb2f9725a0d64a9"
   },
   "counts": {
     "entries": 715,
@@ -305,7 +305,7 @@
       "unreviewed": 290
     },
     "with_catalog_links": 431,
-    "with_judgment_citations": 454
+    "with_judgment_citations": 456
   },
   "entries": [
     {
@@ -5424,6 +5424,16 @@
           "case": "continuation-aux-source-62601-1-4",
           "judgment": "path",
           "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-17",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-7",
+          "judgment": "path",
+          "verdict": "required"
         }
       ],
       "inventory_evidence": [
@@ -6516,6 +6526,21 @@
       "source_sha256": "f65d8172360252c7a58275b1b5810d0addb32231d815652c4e795515f3615e9a",
       "catalog": [],
       "cited_judgments": [
+        {
+          "case": "malda-inflection-composition-18",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-8",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-9",
+          "judgment": "path",
+          "verdict": "required"
+        },
         {
           "case": "negative-class-native-71581-1-1",
           "judgment": "path",
@@ -13311,6 +13336,11 @@
         },
         {
           "case": "desire-topic-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-16",
           "judgment": "path",
           "verdict": "required"
         }
@@ -23897,6 +23927,76 @@
       ],
       "cited_judgments": [
         {
+          "case": "malda-inflection-composition-10",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-11",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-14",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-15",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-2",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-composition-3",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거나-bare",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거나-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거나-honorific-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거나-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거나-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거나-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거나-past-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거나-remote-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "retrospective-license-ending-22-66346",
           "judgment": "path",
           "verdict": "forbidden"
@@ -24033,7 +24133,48 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "malda-inflection-거니-bare",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거니-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거니-honorific-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거니-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거니-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거니-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거니-past-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-거니-remote-past",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
         "status": "unreviewed"
@@ -24406,6 +24547,46 @@
         }
       ],
       "cited_judgments": [
+        {
+          "case": "malda-inflection-건-bare",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-건-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-건-honorific-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-건-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-건-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-건-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-건-past-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-건-remote-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
         {
           "case": "retrospective-license-ending-23-78515",
           "judgment": "path",
@@ -28875,6 +29056,11 @@
         }
       ],
       "cited_judgments": [
+        {
+          "case": "malda-inflection-composition-6",
+          "judgment": "path",
+          "verdict": "required"
+        },
         {
           "case": "retrospective-connective-ending-1-80176",
           "judgment": "path",
@@ -50258,7 +50444,48 @@
           "kind": "ending"
         }
       ],
-      "cited_judgments": [],
+      "cited_judgments": [
+        {
+          "case": "malda-inflection-든-bare",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든-honorific-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든-past-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든-remote-past",
+          "judgment": "path",
+          "verdict": "required"
+        }
+      ],
       "inventory_evidence": [],
       "review": {
         "status": "unreviewed"
@@ -50511,6 +50738,51 @@
         }
       ],
       "cited_judgments": [
+        {
+          "case": "malda-inflection-composition-4",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든지-bare",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든지-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든지-honorific-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든지-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든지-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든지-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든지-past-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-든지-remote-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
         {
           "case": "retrospective-adnominal-preserved-78",
           "judgment": "path",
@@ -64103,6 +64375,66 @@
       ],
       "cited_judgments": [
         {
+          "case": "malda-inflection-boundary-14",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "malda-inflection-boundary-15",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "malda-inflection-boundary-16",
+          "judgment": "path",
+          "verdict": "forbidden"
+        },
+        {
+          "case": "malda-inflection-composition-5",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-나-bare",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-나-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-나-honorific-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-나-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-나-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-나-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-나-past-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-나-remote-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "retrospective-connective-ending-2-80160",
           "judgment": "path",
           "verdict": "forbidden"
@@ -72634,6 +72966,46 @@
       ],
       "cited_judgments": [
         {
+          "case": "malda-inflection-을까-bare",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-을까-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-을까-honorific-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-을까-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-을까-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-을까-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-을까-past-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-을까-remote-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
           "case": "retrospective-adnominal-ending-10-86120",
           "judgment": "path",
           "verdict": "forbidden"
@@ -77300,6 +77672,46 @@
         }
       ],
       "cited_judgments": [
+        {
+          "case": "malda-inflection-지-bare",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-지-honorific",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-지-honorific-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-지-honorific-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-지-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-지-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-지-past-modal",
+          "judgment": "path",
+          "verdict": "required"
+        },
+        {
+          "case": "malda-inflection-지-remote-past",
+          "judgment": "path",
+          "verdict": "required"
+        },
         {
           "case": "retrospective-license-ending-8-86135",
           "judgment": "path",

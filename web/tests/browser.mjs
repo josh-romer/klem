@@ -641,6 +641,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !lexicalMaldaIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...lexicalMaldaEntries);
 
+  const maldaInflectionFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-malda-inflection.json"),"utf8"));
+  const maldaInflectionEntries = maldaInflectionFixture.LexicalResource.Lexicon.LexicalEntry;
+  const maldaInflectionIds = new Set(maldaInflectionEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !maldaInflectionIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...maldaInflectionEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5884,6 +5890,58 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-lexical-malda-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-lexical-malda-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const maldaInflectionSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/malda-inflection-sources.json"),"utf8"));
+  const maldaInflectionCases = recipientLedger.cases.filter(c => c.id.startsWith("malda-inflection-"));
+  assert.equal(maldaInflectionCases.length,98);
+  for (const c of maldaInflectionCases) {
+    const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => lexicalMaldaMatches(a,j)),j.verdict === "required",c.id);
+  }
+  for (const c of maldaInflectionSource.cases) {
+    const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
+    const i = token.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(i >= 0,c.id);
+    const slot = token.dictionary.readings[i].lemmas.find(l => l.lemma_index === c.lexical_mal_slot);
+    for (const j of c.entry_judgments) {
+      const e = slot.entries.find(e => e.id === j.id);assert.ok(e,c.id);
+      assert.equal(e.status,j.status,c.id);assert.deepEqual(e.conflicts,j.conflicts,c.id);
+    }
+  }
+  for (const e of maldaInflectionSource.complete_entries) {
+    const response = await (await post("entry",{id:e.id})).json();assert.deepEqual(response.entry,e,e.id);
+  }
+  const maldaInflectionText = "했건말았건 먹으시거나마시거나 먹거나말아버렸거나 먹거나말지않았거나 할까말까싶다 먹을까말았을까요 먹거나말았거나도";
+  const maldaInflectionParts = [
+    ["하","였","건","말","었","건"], ["먹","시","거나","말","시","거나"],
+    ["먹","거나","말","어","버리","었","거나"], ["먹","거나","말","지","않","었","거나"],
+    ["하","을까","말","을까","싶","다"], ["먹","을까","말","었","을까요"],
+    ["먹","거나","말","었","거나","도"],
+  ];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag === "--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,maldaInflectionText);await waitHeading(page,"했건말았건");
+    const response = await (await post("analyze",{text:maldaInflectionText})).json();
+    for (const [n,t] of response.records.filter(r => r.analysis).entries()) {
+      const c = maldaInflectionSource.cases.find(c => c.surface === t.surface);
+      const index = t.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(index >= 0,t.surface);
+      const block = page.locator(".breakdown-word").nth(n);
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),1,t.surface);
+      await block.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(),maldaInflectionParts[n],t.surface);
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:maldaInflectionText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(0).locator(".breakdown-part").nth(3).click();
+  await page.locator(".entry-choices button").filter({hasText:/말다\s*3/}).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=69296"]'));
+  await page.screenshot({path:resolve(tmpdir(),"klem-malda-inflection-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-malda-inflection-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

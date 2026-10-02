@@ -1996,6 +1996,12 @@ fn nominal_mal_predicates(word: &str) -> Vec<Predicate> {
         }
         let listed_object = matches!(base, "걱정" | "염려" | "주저" | "지체" | "생각" | "상관");
         let fixed_adverb = base == "꼼짝";
+        // The only generic bare-nominal contrast is literal 말고. Other
+        // nominal constructions require an object or a reviewed lexical base;
+        // skip their impossible boundaries before recovering the right stem.
+        if objects.is_empty() && !listed_object && !fixed_adverb && right != "말고" {
+            continue;
+        }
         // Only single predicates enter this boundary. Nested nominal splitting
         // stays outside this helper, keeping long 말다 chains iterative.
         for p in single_predicates(right)
@@ -3772,7 +3778,7 @@ fn aux_allowed(stem: &str, connector: &str) -> bool {
 
 // Lexical 말다 (KRDict 69296), distinct from auxiliary 72580. Paired
 // alternatives keep their own two endings, including asymmetric 을지 + 지.
-fn lexical_mal_link(left: &Predicate, right: &Predicate) -> bool {
+fn lexical_mal_link(left: &Predicate, right: &Predicate, branch_end: Option<&str>) -> bool {
     if right.stem != "말" || !right.leading_lemmas.is_empty() {
         return false;
     }
@@ -3795,17 +3801,51 @@ fn lexical_mal_link(left: &Predicate, right: &Predicate) -> bool {
     if last.form == "어" {
         return left.stem == "슬프" && left.following.is_empty();
     }
-    let partner = match last.form.as_str() {
-        "을까" | "든지" | "든" | "거나" | "거니" | "건" => last.form.as_str(),
-        "을지" => "지",
-        "나" | "으나" => "나",
-        _ => return false,
+    let paired = |form: &str| {
+        // Polite 요 may have a bundled ending representation. The split
+        // particle representation is recovered separately by nominals().
+        let form = form.strip_suffix('요').unwrap_or(form);
+        match last.form.as_str() {
+            "을까" | "든지" | "든" | "거나" | "거니" | "건" => form == last.form,
+            "을지" => form == "지",
+            // Both allomorph entries license paired alternatives. Own right
+            // inflection is checked separately below; a following chain may
+            // close with either allomorph on its own final predicate.
+            "나" | "으나" => matches!(form, "나" | "으나"),
+            _ => false,
+        }
     };
-    right.morphs.len() == 1 && right.morphs[0].form == partner
+    let own_ending = right
+        .morphs
+        .last()
+        .filter(|m| m.kind == MorphemeKind::Ending);
+    let own_pair = own_ending.is_some_and(|m| paired(&m.form))
+        && right.morphs[..right.morphs.len() - 1]
+            .iter()
+            .all(|m| m.kind == MorphemeKind::Prefinal)
+        // Bare 말 and honorific 시 take 나. The paired recovery must not
+        // promote a generic 으나 hypothesis for their open/ㄹ boundary.
+        // Past/modal consonantal prefinals take 으나 (KRDict 80160).
+        && (own_ending.is_none_or(|m| m.form.strip_suffix('요').unwrap_or(&m.form) != "으나")
+            || right.morphs.iter().rev().nth(1).is_some_and(|m| {
+                matches!(m.form.as_str(), "었" | "겠" | "어야겠")
+            }));
+    // Reuse the right predicate's existing inflection recovery. A validated
+    // following chain can close the alternative too (말아 버리거나). Keep
+    // immediate paired links available before further auxiliaries, preserving
+    // readings such as 할까 말까 싶다 without a whole-chain ending ban.
+    own_pair
+        || (right.connector
+            && !own_ending.is_some_and(|m| paired(&m.form))
+            && branch_end.is_some_and(paired))
 }
 
-fn predicate_link(left: &Predicate, right: &Predicate) -> Option<LemmaKind> {
-    if lexical_mal_link(left, right) {
+fn predicate_link(
+    left: &Predicate,
+    right: &Predicate,
+    branch_end: Option<&str>,
+) -> Option<LemmaKind> {
+    if lexical_mal_link(left, right, branch_end) {
         Some(LemmaKind::Predicate)
     } else if right.leading_lemmas.is_empty() && auxiliary_link(left, right) {
         Some(LemmaKind::Auxiliary)
@@ -4405,8 +4445,13 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
     let mut path: Vec<&Predicate> = vec![];
     while let Some(current) = frames.last_mut() {
         let node = nodes[current.node].as_ref().unwrap();
+        let branch_end = path
+            .first()
+            .and_then(|p| p.morphs.last())
+            .filter(|m| m.kind == MorphemeKind::Ending)
+            .map(|m| m.form.as_str());
         let accepts = |p: &Predicate| match path.last() {
-            Some(right) => p.connector && predicate_link(p, right).is_some(),
+            Some(right) => p.connector && predicate_link(p, right, branch_end).is_some(),
             None => {
                 p.morphs
                     .last()
@@ -4423,7 +4468,10 @@ fn with_auxiliaries(word: &str, ending: PredicateEnd, mut emit: impl FnMut(Predi
                 let mut rules: BTreeSet<&str> = base.rules.iter().map(String::as_str).collect();
                 let mut previous = base;
                 for tail in path.iter().rev() {
-                    let role = predicate_link(previous, tail).unwrap();
+                    let role = predicate_link(previous, tail, branch_end).unwrap();
+                    if role == LemmaKind::Predicate && !lexical_mal_link(previous, tail, None) {
+                        rules.insert("lexical.mal.paired_branch");
+                    }
                     if joined
                         .morphs
                         .last()

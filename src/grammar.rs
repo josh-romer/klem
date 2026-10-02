@@ -1515,6 +1515,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "pronunciation.assumed_vowel_or_rieul" => {
             "Conditional nominal reading: the non-Hangul base must be pronounced with a final vowel or ㄹ; its pronunciation is not inferred."
         }
+        "lexical.mal.paired_branch" => {
+            "Close a lexical 말다 alternative at the ending of its validated following predicate chain, preserving each predicate's own inflection and auxiliary role."
+        }
         "lexical.mal.complement" => {
             "Retain lexical 말다 after a cessative or source-listed paired alternative complement; preserve both predicates and their own endings."
         }

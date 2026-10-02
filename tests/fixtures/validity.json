@@ -1402,7 +1402,22 @@
     "lexical-malda-nikl-5937": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5937&mn_id=217",
     "lexical-malda-16756": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=16756",
     "lexical-malda-14183": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=14183",
-    "lexical-malda-nikl-326347": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&pageIndex=1&qna_seq=326347"
+    "lexical-malda-nikl-326347": "https://korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=98&pageIndex=1&qna_seq=326347",
+    "malda-inflection-66346": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66346",
+    "malda-inflection-66489": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66489",
+    "malda-inflection-78515": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=78515",
+    "malda-inflection-82337": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82337",
+    "malda-inflection-86262": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86262",
+    "malda-inflection-86120": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86120",
+    "malda-inflection-86135": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86135",
+    "malda-inflection-80160": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80160",
+    "malda-inflection-corrections-201902": "https://www.corrections.go.kr/HP/TCOR/cor_06/cor_0601/ebook/201902/cor_201902.pdf",
+    "malda-inflection-80176": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=80176",
+    "malda-inflection-62601": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62601",
+    "malda-inflection-71581": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581",
+    "malda-inflection-82348": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82348",
+    "malda-inflection-62657": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62657",
+    "malda-inflection-69296": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69296"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -51191,6 +51206,3034 @@
           "verdict": "forbidden",
           "reason": "The native 슬퍼 말다 example licenses its attested lexical head, not an arbitrary -어 complement rule. A general predicate -어 + lexical 말다 construction is not established by this source; broader lexical licensing remains under review.",
           "source": "lexical-malda-69296"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거나-bare",
+      "surface": "먹거나말거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거나-honorific",
+      "surface": "먹거나마시거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "시",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거나-past",
+      "surface": "먹거나말았거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거나-honorific-past",
+      "surface": "먹거나마셨거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "시",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거나-modal",
+      "surface": "먹거나말겠거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "겠",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거나-honorific-modal",
+      "surface": "먹거나마시겠거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "시",
+            "겠",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거나-past-modal",
+      "surface": "먹거나말았겠거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "겠",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거나-remote-past",
+      "surface": "먹거나말았었거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거니-bare",
+      "surface": "먹거니말거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "거니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-66489",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거니-honorific",
+      "surface": "먹거니마시거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "시",
+            "거니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66489",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거니-past",
+      "surface": "먹거니말았거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "었",
+            "거니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66489",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거니-honorific-past",
+      "surface": "먹거니마셨거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "시",
+            "었",
+            "거니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66489",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거니-modal",
+      "surface": "먹거니말겠거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "겠",
+            "거니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66489",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거니-honorific-modal",
+      "surface": "먹거니마시겠거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "시",
+            "겠",
+            "거니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66489",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거니-past-modal",
+      "surface": "먹거니말았겠거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "었",
+            "겠",
+            "거니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66489",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-거니-remote-past",
+      "surface": "먹거니말았었거니",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거니",
+            "었",
+            "었",
+            "거니"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66489",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-건-bare",
+      "surface": "먹건말건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-78515",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-건-honorific",
+      "surface": "먹건마시건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "시",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-78515",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-건-past",
+      "surface": "먹건말았건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "었",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-78515",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-건-honorific-past",
+      "surface": "먹건마셨건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "시",
+            "었",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-78515",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-건-modal",
+      "surface": "먹건말겠건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "겠",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-78515",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-건-honorific-modal",
+      "surface": "먹건마시겠건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "시",
+            "겠",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-78515",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-건-past-modal",
+      "surface": "먹건말았겠건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "었",
+            "겠",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-78515",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-건-remote-past",
+      "surface": "먹건말았었건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "었",
+            "었",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-78515",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든지-bare",
+      "surface": "먹든지말든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든지-honorific",
+      "surface": "먹든지마시든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "시",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든지-past",
+      "surface": "먹든지말았든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "었",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든지-honorific-past",
+      "surface": "먹든지마셨든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "시",
+            "었",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든지-modal",
+      "surface": "먹든지말겠든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "겠",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든지-honorific-modal",
+      "surface": "먹든지마시겠든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "시",
+            "겠",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든지-past-modal",
+      "surface": "먹든지말았겠든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "었",
+            "겠",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든지-remote-past",
+      "surface": "먹든지말았었든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "었",
+            "었",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든-bare",
+      "surface": "먹든말든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-86262",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든-honorific",
+      "surface": "먹든마시든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "시",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86262",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든-past",
+      "surface": "먹든말았든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "었",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86262",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든-honorific-past",
+      "surface": "먹든마셨든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "시",
+            "었",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86262",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든-modal",
+      "surface": "먹든말겠든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "겠",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86262",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든-honorific-modal",
+      "surface": "먹든마시겠든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "시",
+            "겠",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86262",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든-past-modal",
+      "surface": "먹든말았겠든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "었",
+            "겠",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86262",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-든-remote-past",
+      "surface": "먹든말았었든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든",
+            "었",
+            "었",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86262",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-을까-bare",
+      "surface": "먹을까말까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "을까"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-86120",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-을까-honorific",
+      "surface": "먹을까마실까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "시",
+            "을까"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86120",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-을까-past",
+      "surface": "먹을까말았을까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "었",
+            "을까"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86120",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-을까-honorific-past",
+      "surface": "먹을까마셨을까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "시",
+            "었",
+            "을까"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86120",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-을까-modal",
+      "surface": "먹을까말겠을까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "겠",
+            "을까"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86120",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-을까-honorific-modal",
+      "surface": "먹을까마시겠을까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "시",
+            "겠",
+            "을까"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86120",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-을까-past-modal",
+      "surface": "먹을까말았겠을까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "었",
+            "겠",
+            "을까"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86120",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-을까-remote-past",
+      "surface": "먹을까말았었을까",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "었",
+            "었",
+            "을까"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86120",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-지-bare",
+      "surface": "먹을지말지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-86135",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-지-honorific",
+      "surface": "먹을지마시지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "시",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86135",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-지-past",
+      "surface": "먹을지말았지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "었",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86135",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-지-honorific-past",
+      "surface": "먹을지마셨지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "시",
+            "었",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86135",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-지-modal",
+      "surface": "먹을지말겠지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "겠",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86135",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-지-honorific-modal",
+      "surface": "먹을지마시겠지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "시",
+            "겠",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86135",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-지-past-modal",
+      "surface": "먹을지말았겠지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "었",
+            "겠",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86135",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-지-remote-past",
+      "surface": "먹을지말았었지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을지",
+            "었",
+            "었",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-86135",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-나-bare",
+      "surface": "먹으나마나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-나-honorific",
+      "surface": "먹으나마시나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "시",
+            "나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-나-past",
+      "surface": "먹으나말았으나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "었",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-나-honorific-past",
+      "surface": "먹으나마셨으나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "시",
+            "었",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-나-modal",
+      "surface": "먹으나말겠으나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "겠",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-나-honorific-modal",
+      "surface": "먹으나마시겠으나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "시",
+            "겠",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-나-past-modal",
+      "surface": "먹으나말았겠으나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "었",
+            "겠",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-나-remote-past",
+      "surface": "먹으나말았었으나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "었",
+            "었",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite construction inference: lexical 말다 sense 2 supplies paired alternatives, the complete partner ending notes and prefinal entries supply each right-hand inflection. Each predicate retains its own endings. No contextual sense, register or universal attachment judgment.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-1",
+      "surface": "했건말았건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "건",
+            "었",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-corrections-201902",
+          "reason": "Published past-pair attestation, PDF page 5; target was chosen by a targeted source search, not blind precision sampling.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-2",
+      "surface": "먹었거나말았거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "거나",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-3",
+      "surface": "먹으시거나마시거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "거나",
+            "시",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-4",
+      "surface": "먹었든지말았든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "든지",
+            "었",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82337",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-5",
+      "surface": "먹으나말았으나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "었",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-6",
+      "surface": "하시나마시나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "나",
+            "시",
+            "나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80176",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-7",
+      "surface": "먹거나말아버리거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "거나",
+            "어",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-62601",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-8",
+      "surface": "먹거나말지않거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "거나",
+            "지",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-71581",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-9",
+      "surface": "할지말지않을지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "을지",
+            "지",
+            "을지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-71581",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-10",
+      "surface": "먹거나말았거나도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "거나",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-11",
+      "surface": "먹었거나말았거나는",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "거나",
+            "었",
+            "거나",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-12",
+      "surface": "먹을까말았을까요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "었",
+            "을까요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-82348",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-13",
+      "surface": "먹을까말았을까요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "었",
+            "을까",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "source": "malda-inflection-82348",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-14",
+      "surface": "먹거나마시었거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "시",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-15",
+      "surface": "늠므거나말았거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "늠므다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-66346",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-16",
+      "surface": "할까말까싶다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다",
+            "싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "을까",
+            "을까",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-62657",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-17",
+      "surface": "먹거나말아버렸거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "거나",
+            "어",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-62601",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-composition-18",
+      "surface": "먹거나말지않았거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "거나",
+            "지",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-71581",
+          "reason": "Finite authored construction inference from complete lexical/ending/auxiliary notes; validated right inflection and auxiliary link retain separate owners. Internal branch closing is distinct from immediate paired ending; ordinary word spacing is separate.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-1",
+      "surface": "먹거나말았건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-2",
+      "surface": "먹건말았거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "건",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-3",
+      "surface": "먹든지말았든",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "든지",
+            "었",
+            "든"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-4",
+      "surface": "먹을까말았든지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "을까",
+            "었",
+            "든지"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-5",
+      "surface": "먹거나말아버리건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "거나",
+            "어",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-6",
+      "surface": "먹거나말지않건",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "거나",
+            "지",
+            "건"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-7",
+      "surface": "먹거나말았거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "거나",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-8",
+      "surface": "먹었거나말거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-9",
+      "surface": "먹거나말았거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-10",
+      "surface": "먹으시거나마시거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "시",
+            "거나",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-11",
+      "surface": "먹거나말았거나도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "었",
+            "도",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "particle",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-12",
+      "surface": "밥말았거나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "밥",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "거나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-13",
+      "surface": "먹거나마",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "거나",
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-69296",
+          "reason": "Scoped paired construction boundary or owner-order control. The selected path mismatches its paired partner, moves prefinals/particles across owners, changes lexical role, invents a nominal boundary, or shortens an imperative after a paired predicate. Other dictionary homonyms and independent analyses remain unknown.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-14",
+      "surface": "먹으나마나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "The paired lexical right owner has bare ㄹ or honorific vowel 시: -나 is licensed. -으나 is the other allomorph for consonants excluding ㄹ and after past/modal prefinals; do not transfer its spelling to this exact right owner.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-15",
+      "surface": "먹으나마시나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "으나",
+            "시",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "The paired lexical right owner has bare ㄹ or honorific vowel 시: -나 is licensed. -으나 is the other allomorph for consonants excluding ㄹ and after past/modal prefinals; do not transfer its spelling to this exact right owner.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "malda-inflection-boundary-16",
+      "surface": "하시나마시나",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "나",
+            "시",
+            "으나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "malda-inflection-80160",
+          "reason": "The paired lexical right owner has bare ㄹ or honorific vowel 시: -나 is licensed. -으나 is the other allomorph for consonants excluding ㄹ and after past/modal prefinals; do not transfer its spelling to this exact right owner.",
+          "verdict": "forbidden"
         }
       ]
     }

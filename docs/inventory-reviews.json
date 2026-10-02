@@ -4142,9 +4142,10 @@
       "source_sha256": "69394596dd03824283b82209916b912af1ea716d7f1d0615abe095d8aa033486",
       "status": "scoped",
       "checklist": [
-        "COV-018i"
+        "COV-018i",
+        "COV-018ab"
       ],
-      "scope": "Comparative 보다 after an 어서 adverbial clause, including corpus-backed 통해서보다는.",
+      "scope": "Comparative 보다 after an 어서 adverbial clause, including corpus-backed 통해서보다는. COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
       "remaining": "Other attachment/prefinal families, lexical identity/class, contextual meaning and independent Korean-language review remain open. This is a bounded disposition, not full-entry certification.",
       "evidence": [
         {
@@ -4165,11 +4166,39 @@
         },
         {
           "path": "docs/seo-connective-evaluation.json"
+        },
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
         }
       ],
       "judgments": [
         {
           "case": "seo-connectives-comparison",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-느냐-보다",
           "judgment": "path"
         }
       ]
@@ -10562,9 +10591,10 @@
       "checklist": [
         "COV-018k",
         "COV-018t",
-        "COV-019n"
+        "COV-019n",
+        "COV-018ab"
       ],
-      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles. 가 adds 지-ending emphasis, internal 지+가 before negative auxiliaries, and finite 도대체 adverb emphasis.",
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles. 가 adds 지-ending emphasis, internal 지+가 before negative auxiliaries, and finite 도대체 adverb emphasis. COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
       "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open. Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
       "evidence": [
         {
@@ -10592,6 +10622,30 @@
         },
         {
           "path": "docs/core-case-evaluation.json"
+        },
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -10666,6 +10720,10 @@
         {
           "case": "core-case-bad-ga-link",
           "judgment": "path"
+        },
+        {
+          "case": "question-case-control-느냐-가",
+          "judgment": "path"
         }
       ]
     },
@@ -10676,9 +10734,10 @@
       "checklist": [
         "COV-018k",
         "COV-018t",
-        "COV-019n"
+        "COV-019n",
+        "COV-018ab"
       ],
-      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles. Full 를 dispatch now reaches reviewed 어/게/지/고 endings and finite 빨리/곧이 adverbs; licensed auxiliary connectors remain enforced.",
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles. Full 를 dispatch now reaches reviewed 어/게/지/고 endings and finite 빨리/곧이 adverbs; licensed auxiliary connectors remain enforced. COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
       "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open. Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
       "evidence": [
         {
@@ -10706,6 +10765,30 @@
         },
         {
           "path": "docs/core-case-evaluation.json"
+        },
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -10836,6 +10919,10 @@
         {
           "case": "core-case-spaced-lexical",
           "judgment": "path"
+        },
+        {
+          "case": "question-case-control-느냐-를",
+          "judgment": "path"
         }
       ]
     },
@@ -10844,9 +10931,10 @@
       "source_sha256": "2e9d2dc8d037415ef15634fb13214b52648ef86acab8c6fc87d090817df67765",
       "status": "scoped",
       "checklist": [
-        "COV-018k"
+        "COV-018k",
+        "COV-018ab"
       ],
-      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles.",
+      "scope": "Source-attested 까지 + 가/를/에/로 and 부터 + 가; immediate case allomorphs, nominalizations, suffixes and reviewed outer particles. COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
       "remaining": "This is a scoped pair review, not all-entry case/particle certification. Further case stacking, semantic scope and contextual role selection remain open.",
       "evidence": [
         {
@@ -10863,6 +10951,30 @@
         },
         {
           "path": "docs/range-case-evaluation.json"
+        },
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -10880,6 +10992,10 @@
         },
         {
           "case": "range-case-forbidden-10",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-느냐-에",
           "judgment": "path"
         }
       ]
@@ -13887,9 +14003,10 @@
       "checklist": [
         "COV-017ac",
         "COV-019h",
-        "COV-020m"
+        "COV-020m",
+        "COV-018ab"
       ],
-      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries.",
+      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries. COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
       "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
       "evidence": [
         {
@@ -13913,6 +14030,30 @@
         },
         {
           "path": "docs/adverb-copula-evaluation.json"
+        },
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -13963,6 +14104,38 @@
         {
           "case": "adverb-copula-boundary-제법냐",
           "judgment": "path"
+        },
+        {
+          "case": "question-case-control-냐-에",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-냐-의",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-냐-와",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-냐-가",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-냐-를",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-냐-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-copula-nya",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-adjective-general",
+          "judgment": "path"
         }
       ]
     },
@@ -13973,9 +14146,10 @@
       "checklist": [
         "COV-017ac",
         "COV-019h",
-        "COV-020m"
+        "COV-020m",
+        "COV-018ab"
       ],
-      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries.",
+      "scope": "Preserve the general 냐 or verbal 느냐 question alongside the distinct adjectival family. Cases cover existential/honorific auxiliary verbs, inherited negatives and past/modal/honorific prefinals on adjective auxiliaries. COV-020m reviews vowel-final copula omission and bare versus prefinal 느냐 boundaries. COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
       "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
       "evidence": [
         {
@@ -13999,6 +14173,30 @@
         },
         {
           "path": "docs/adverb-copula-evaluation.json"
+        },
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -14057,6 +14255,118 @@
         {
           "case": "adverb-copula-boundary-제법이느냐",
           "judgment": "path"
+        },
+        {
+          "case": "question-case-control-adjective-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-adjective-case",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-aux-adjective-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-aux-adjective-case",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-adjective-past",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-adjective-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-existential",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-existential-compound",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-negative-existential",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-honorific-existential",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-adjective-later-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-negative-adjective",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-negative-verb",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-unknown-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-standalone-negative",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-copula-honorific",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-case-chain",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-case-chain-topic",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-conjunction-training",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-auxiliary-training",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-forbidden-copula-neunya-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-forbidden-copula-neunya-case",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-forbidden-unreviewed-case",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-forbidden-person-case",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-forbidden-reversed-case",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-forbidden-wrong-allomorph",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-forbidden-no-nominalizer",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-forbidden-no-auxiliary",
+          "judgment": "path"
         }
       ]
     },
@@ -14066,9 +14376,10 @@
       "status": "scoped",
       "checklist": [
         "COV-017ac",
-        "COV-019h"
+        "COV-019h",
+        "COV-018ab"
       ],
-      "scope": "Bare adjectival 으냐 is distinct from general 냐 and verbal 느냐. Recovered prefinals and represented auxiliary Verb slots reject the adjectival family; general/verbal alternatives, adjective auxiliaries and inherited negative classes are checked. Unknown lexical heads are not blanket-rejected.",
+      "scope": "Bare adjectival 으냐 is distinct from general 냐 and verbal 느냐. Recovered prefinals and represented auxiliary Verb slots reject the adjectival family; general/verbal alternatives, adjective auxiliaries and inherited negative classes are checked. Unknown lexical heads are not blanket-rejected. COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
       "remaining": "Broader contextual/sense attachment, existential honorific and past-adnominal paradigms, other prefinal combinations and independent Korean review remain open. This is a bounded attachment review.",
       "evidence": [
         {
@@ -14081,6 +14392,30 @@
         },
         {
           "path": "docs/adjectival-question-evaluation.json"
+        },
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -14130,6 +14465,46 @@
         },
         {
           "case": "adjectival-question-0-honorific-adjectival",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-으냐-에",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-으냐-의",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-으냐-와",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-으냐-가",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-으냐-를",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-으냐-보다",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-copula-eunya-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-copula-eunya-case",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-verb-eunya",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-negative-adjectival-alternative",
           "judgment": "path"
         }
       ]
@@ -17855,9 +18230,10 @@
       "source_sha256": "176990c2bc3745240ead89c4f8d4154637b53b2ce2b5d7707b5b544ed2b697db",
       "status": "scoped",
       "checklist": [
-        "COV-018t"
+        "COV-018t",
+        "COV-018ab"
       ],
-      "scope": "의 retains nominal genitive paths and reviewed preceding-particle forms 에서의/으로의.",
+      "scope": "의 retains nominal genitive paths and reviewed preceding-particle forms 에서의/으로의. COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
       "remaining": "Source senses are not contextually selected; animate/honorific/semantic restrictions and additional lexical adverb bases require separate review. This scoped disposition is not full-entry certification.",
       "evidence": [
         {
@@ -17870,6 +18246,30 @@
         },
         {
           "path": "docs/core-case-evaluation.json"
+        },
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -17887,6 +18287,10 @@
         },
         {
           "case": "core-case-direction-genitive",
+          "judgment": "path"
+        },
+        {
+          "case": "question-case-control-느냐-의",
           "judgment": "path"
         }
       ]
@@ -33907,6 +34311,305 @@
         },
         {
           "case": "potential-aux-native-77251-1-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:72580",
+      "source_sha256": "11b44789dc7684f124e6a4365b26bd576afe9764ec1c6e6028bf0592b4ffec21",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019ab"
+      ],
+      "scope": "Complete native entry, every sense/note/written form and every example group retained; native paths remain available with exact dictionary homonyms and ending owners. No additional contextual left-POS, command-only, negative-circumstance or passive spelling ban is inferred.",
+      "remaining": "Broader left-subset, ending/prefinal/internal-particle, sense/register, independent Korean review and COV-019ac lexical 말다 remain required. Complete native-source retention does not certify every productive combination.",
+      "evidence": [
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "transition-aux-native-72580-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-2-4",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-3-1",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-3-2",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-3-3",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-72580-3-4",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-forbidden-connector-72580",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:67899",
+      "source_sha256": "d6011cba057f5692a70f99d040e1251693b3458351ecffa30a723f87c7b02dd0",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019ab"
+      ],
+      "scope": "Complete native entry, every sense/note/written form and every example group retained; native paths remain available with exact dictionary homonyms and ending owners. No additional contextual left-POS, command-only, negative-circumstance or passive spelling ban is inferred.",
+      "remaining": "Broader left-subset, ending/prefinal/internal-particle, sense/register, independent Korean review and COV-019ac lexical 말다 remain required. Complete native-source retention does not certify every productive combination.",
+      "evidence": [
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "transition-aux-native-67899-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-67899-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-67899-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-67899-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-67899-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-67899-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-67899-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-67899-1-8",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-67899-1-9",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-forbidden-connector-67899",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:77247",
+      "source_sha256": "30e7f57c0190294ba290ac1f161ebbb3997e406f12eb901a31f3b8603012cb05",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019ab"
+      ],
+      "scope": "Complete native entry, every sense/note/written form and every example group retained; native paths remain available with exact dictionary homonyms and ending owners. No additional contextual left-POS, command-only, negative-circumstance or passive spelling ban is inferred.",
+      "remaining": "Broader left-subset, ending/prefinal/internal-particle, sense/register, independent Korean review and COV-019ac lexical 말다 remain required. Complete native-source retention does not certify every productive combination.",
+      "evidence": [
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "transition-aux-native-77247-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-3-1",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-3-2",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-3-3",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-native-77247-3-4",
+          "judgment": "path"
+        },
+        {
+          "case": "transition-aux-forbidden-connector-77247",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:78628",
+      "source_sha256": "624bc4b732082cd93705a7d708e53987d68d7d132c2d00c0c8892651d4afbd28",
+      "status": "scoped",
+      "checklist": [
+        "COV-018ab"
+      ],
+      "scope": " COV-018ab retains the reviewed question/case boundary with primitive question ending ownership, native source examples, original corpus conjunction evidence and a separately stated three-question/six-particle structural inference. Known bare question POS conflicts and the explicit 없다-negative exception stay separate; this does not certify broader prefinals or contextual senses.",
+      "remaining": "Other case/outer-particle orders, contextual senses/register and independent Korean-language review remain required.",
+      "evidence": [
+        {
+          "path": "tests/transition_aux.rs"
+        },
+        {
+          "path": "tests/corpus.rs"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/transition-aux-entry-judgments.json"
+        },
+        {
+          "path": "web/tests/browser.mjs"
+        },
+        {
+          "path": "docs/transition-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/question-case-source-preflight.json"
+        },
+        {
+          "path": "docs/transition-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "question-case-control-느냐-와",
           "judgment": "path"
         }
       ]

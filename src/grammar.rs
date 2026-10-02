@@ -1733,6 +1733,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "A factual 라-family ending follows its licensed prefinal, distinct from the homonymous command ending."
         }
         "particle" => "Remove a particle with licensed order and boundary allomorph.",
+        "particle.quoted_question" => {
+            "Retain a -냐/-느냐/-으냐 question clause before reviewed 에/의/와/가/를/보다 particles; preserve the question owner's inflection and existing case chains."
+        }
         "particle.comparison_case" => {
             "Recover reviewed 에/에서/서 before comparison particle 처럼; keep case order and distinguish separately spaced adverb 같이."
         }

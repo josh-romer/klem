@@ -3141,7 +3141,10 @@ fn hada_targets_preserve_288_original_rows_and_all_17_source_disagreements() {
             assert!(original.lines().any(|line| line == row));
             let case = &report.cases[target["id"].as_str().unwrap()];
             let mut expected = target["case_report"].clone();
-            if case.id == "id:M2TA_087-s125/16" {
+            if matches!(
+                case.id.as_str(),
+                "id:M2TA_087-s125/16" | "id:MH2_0147-s15/5"
+            ) {
                 assert_eq!(target["case_report"]["matched"], false);
                 expected["matched"] = serde_json::json!(true);
                 expected["recovered"] = serde_json::json!(1);
@@ -3155,7 +3158,7 @@ fn hada_targets_preserve_288_original_rows_and_all_17_source_disagreements() {
             }
         }
     }
-    assert_eq!((total, matched, misses.len()), (288, 272, 16));
+    assert_eq!((total, matched, misses.len()), (288, 273, 15));
     assert!(misses.iter().any(|id| id == "id:train-s252/8"));
     assert!(misses.iter().any(|id| id == "id:MH2_0164-s29/6"));
 }
@@ -3245,4 +3248,66 @@ fn potential_auxiliary_targets_preserve_all_14_original_training_matches() {
         }
     }
     assert_eq!(count, 14);
+}
+
+#[test]
+fn transition_auxiliary_targets_keep_all_original_rows_and_track_question_case_recovery() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/transition-aux-sources.json")).unwrap();
+    let mut count = 0;
+    let mut matched_before = 0;
+    let mut matched_after = 0;
+    let mut changed = Vec::new();
+    for (kind, input) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-transition-aux.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-transition-aux.conllu").as_slice(),
+        ),
+    ] {
+        let original = std::str::from_utf8(input).unwrap();
+        let file = source["corpus_search"]["files"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == kind.name())
+            .unwrap();
+        let report = corpus::evaluate(input, kind, "transition-aux").unwrap();
+        for target in file["targets"].as_array().unwrap() {
+            let row = target["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(original.lines().any(|line| line == row));
+            let case = &report.cases[target["id"].as_str().unwrap()];
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                target["expected"]
+            );
+            assert_eq!(
+                serde_json::to_value(case).unwrap(),
+                target["case_report_after"]
+            );
+            let before = target["matched_before"].as_bool().unwrap();
+            if before {
+                assert!(case.matched, "{}", case.id);
+                matched_before += 1;
+            }
+            if case.matched {
+                matched_after += 1;
+            }
+            if target["case_report"] != target["case_report_after"] {
+                changed.push(case.id.clone());
+            }
+            count += 1;
+        }
+    }
+    assert_eq!((count, matched_before, matched_after), (166, 158, 159));
+    assert_eq!(changed, ["id:MH2_0032-s186/6"]);
 }

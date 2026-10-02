@@ -508,6 +508,20 @@ impl Annotation {
             let bare = morphs
                 .first()
                 .is_some_and(|c| matches!(c, Component::Morpheme(i) if Some(*i) == ending));
+            // NIKL consultation 8390 recognizes 없다-influenced 없지 않느냐.
+            // Keep that immediate owner, including an internal particle, apart
+            // from ordinary adjectival negatives. Missing left context cannot
+            // decide whether this explicitly acknowledged use is present.
+            let negative_question_exception = lemma.text == "않다"
+                && connector.is_some_and(|i| analysis.morphemes[i].form == "지")
+                && order[..order.len() - rest.len() - 1]
+                    .iter()
+                    .rev()
+                    .find_map(|c| match c {
+                        Component::Lemma(i) => Some(analysis.lemmas[*i].text.as_str()),
+                        _ => None,
+                    })
+                    == Some("없다");
             // KRDict 75275/75276 and 85853 distinguish bare present 는
             // from adjective/copula 은. Evidence belongs to the immediate
             // connector owner; prefinals and auxiliary owners stay separate.
@@ -710,6 +724,23 @@ impl Annotation {
                             && lemma.text != "계시다"
                         {
                             Some(AttachmentRule::AuxiliaryAdjectiveAdnominalClass)
+                        } else if bare && form == "느냐"
+                            && !lemma.text.ends_with("있다")
+                            && !lemma.text.ends_with("없다")
+                            && lemma.text != "계시다"
+                        {
+                            // KRDict 76231 lists verbs and existential exceptions.
+                            if negative_question_exception {
+                                None
+                            } else if matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+                                && class.is_none()
+                                && negative_lexical.is_none()
+                            {
+                                status = Compatibility::Unknown;
+                                None
+                            } else {
+                                Some(AttachmentRule::BareVerbalQuestion)
+                            }
                         } else {
                             None
                         };
@@ -780,6 +811,26 @@ impl Annotation {
                     }
                     // Dictionary classes belong to the lexical head, not its
                     // auxiliary, derived suffix or a later copula's ending.
+                    // The represented copula owns its question independently
+                    // of the nominal. Bare 느냐 (76231) requires a verb or
+                    // existential; bare 으냐 (76235) requires an adjective.
+                    // General 냐 and preceding prefinals remain separate.
+                    if lemma.kind == LemmaKind::Copula
+                        && status == Compatibility::Compatible
+                        && bare
+                        && let Some(i) = ending
+                        && matches!(analysis.morphemes[i].form.as_str(), "느냐" | "으냐")
+                    {
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: if analysis.morphemes[i].form == "느냐" {
+                                AttachmentRule::BareVerbalQuestion
+                            } else {
+                                AttachmentRule::BareAdjectivalQuestion
+                            },
+                            morpheme_index: Some(i),
+                        });
+                    }
                     if lemma.kind == LemmaKind::Predicate
                         && status == Compatibility::Compatible
                         && let Some(i) = ending
@@ -836,7 +887,7 @@ impl Annotation {
                                 AttachmentRule::BareLiteraryQuestion
                             })
                         } else if bare
-                            && (matches!(form, "느냐지만" | "느냐니까" | "느냬" | "느냐느니")
+                            && (matches!(form, "느냐" | "느냐지만" | "느냐니까" | "느냬" | "느냐느니")
                                 || crate::engine::verbal_quoted_question(form))
                             && adjective
                             && !lemma.text.ends_with("있다")

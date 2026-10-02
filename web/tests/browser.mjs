@@ -629,6 +629,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !potentialIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...potentialEntries);
 
+  const transitionFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-transition-aux.json"), "utf8"));
+  const transitionEntries = transitionFixture.LexicalResource.Lexicon.LexicalEntry;
+  const transitionIds = new Set(transitionEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !transitionIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...transitionEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5744,6 +5750,72 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-potential-aux-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-potential-aux-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const transitionLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/transition-aux-entry-judgments.json"), "utf8"));
+  assert.equal(transitionLedger.cases.length, 133);
+  assert.equal(transitionLedger.cases.reduce((n,c) => n + c.judgments.length, 0), 422);
+  const transitionCases = recipientLedger.cases.filter(c => c.id.startsWith("transition-aux-") || c.id.startsWith("question-case-"));
+  assert.equal(transitionCases.length, 144);
+  for (const c of transitionCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => hieutMatches(a,j)), j.verdict === "required", c.id);
+  }
+  for (const c of transitionLedger.cases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a,c)); assert.ok(index >= 0,c.id);
+    for (const j of c.judgments) {
+      const entry = token.dictionary.readings[index].lemmas.find(s => s.lemma_index === j.lemma_index).entries.find(e => e.id === j.entry_id);
+      assert.ok(entry,c.id);assert.equal(entry.status,j.status,c.id);assert.deepEqual(entry.conflicts,j.conflicts,c.id);
+    }
+    for (const flag of ["--dict-only", "--dict-compatible"]) {
+      const filtered = JSON.parse(execFileSync(cliBin,["text","-","--dictionary",database,flag],{input:c.surface,encoding:"utf8"}).trim());
+      assert.equal(filtered.analysis.analyses.some(a => auxiliaryPath(a,c)),flag === "--dict-only" ? !c.missing_owner_entries : c.filter_retained,c.id);
+    }
+  }
+  const transitionSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/transition-aux-sources.json"),"utf8"));
+  for (const source of [...transitionSource.source_entries,...transitionSource.grammar_entries]) {
+    const entry = (await (await post("entry", {id:source.id})).json()).entry;
+    assert.deepEqual(entry, source, source.id);
+  }
+  const transitionText = "이루어지느냐에 하느냐와 무엇이냐에 먹느냐가 높으냐에 없지않느냐에 예쁘느냐에 학생이냐 학생이냐 쏟고말았다 죽게생겼다 예뻐진";
+  const transitionPaths = [
+    [["이루다","지다"],["어","느냐","에"],["이루","어","지","느냐","에"]],
+    [["하다"],["느냐","와"],["하","느냐","와"]],
+    [["무엇","이다"],["냐","에"],["무엇","이","냐","에"]],
+    [["먹다"],["느냐","가"],["먹","느냐","가"]],
+    [["높다"],["으냐","에"],["높","으냐","에"]],
+    [["없다","않다"],["지","느냐","에"],["없","지","않","느냐","에"]],
+    [["예쁘다"],["느냐","에"],["예쁘","느냐","에"]],
+    [["학생","이다"],["냐"],["학생","이","냐"]],
+    [["학생","이다"],["으냐"],["학생","이","으냐"]],
+    [["쏟다","말다"],["고","었","다"],["쏟","고","말","었","다"]],
+    [["죽다","생기다"],["게","었","다"],["죽","게","생기","었","다"]],
+    [["예쁘다","지다"],["어","은"],["예쁘","어","지","은"]],
+  ];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag === "--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,transitionText);await waitHeading(page,"이루어지느냐에");
+    const raw = await (await post("analyze",{text:transitionText})).json();const words = raw.records.filter(r => r.analysis);
+    for (const [n,[heads,forms,parts]] of transitionPaths.entries()) {
+      const index = words[n].analysis.analyses.findIndex(a => a.lemmas.map(l => l.text).join("/") === heads.join("/") && a.morphemes.map(m => m.form).join("/") === forms.join("/"));assert.ok(index >= 0,heads.join("/"));
+      const block = page.locator(".breakdown-word").nth(n),expected = flag === "--dict-compatible" && [6,8].includes(n) ? 0 : 1;
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),expected,heads.join("/"));
+      if(expected){await block.getByRole("combobox").selectOption(String(index));assert.deepEqual(await block.locator(".part-form").allTextContents(),parts);}
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:transitionText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  for (const [n,id] of [[9,72580],[10,67899],[11,77247]]) {
+    await page.locator(".breakdown-word").nth(n).locator(".breakdown-part").nth(2).click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`),id);
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-transition-aux-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-transition-aux-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

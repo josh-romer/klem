@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 421 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/018e–l/018m–z/019d–g/019i–z/019aa/020d–h/020j–k/020n–o/021d; 294 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 425 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 290 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -1997,6 +1997,44 @@ review remains open under the completion review below.
   This item stays open for quoted 구나, contextual register and independent
   Korean review.
 
+- [ ] **COV-018ab — Question clauses followed by case particles.**
+  **Partial:** bare 냐/느냐/으냐 now retain a question-clause boundary before
+  reviewed 에/의/와/가/를/보다, including existing outer case chains.
+  No nominalizer is invented. [The source preflight](question-case-source-preflight.json)
+  preserves an exhaustive pinned-native-example scan: 221 hits from 146 complete
+  entries, including 54 actual question/case observations, 165 quoted-ending
+  bundles, one existing concessive question and the false positive 케냐에.
+  All 54 selected native boundaries lacked an exact path before this change.
+  Uniform application across the three question forms is a structural inference;
+  own POS, prefinal and particle-allomorph licenses remain separate.
+  The frozen KAIST 하느냐와 target now recovers without altering its gold;
+  the 288-target Hada cohort retains its original seventeen before misses,
+  with fifteen current misses after this and the earlier 하건만 recovery.
+  Dictionary checks distinguish ordinary adjective 느냐 and represented copula
+  으냐 conflicts from general 냐. The raw alternatives remain visible.
+  NIKL [8390](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8390&mn_id=62&pageIndex=80)
+  recognizes 없다-influenced 없지 않느냐; that immediate negative-owner
+  exception is preserved, including a separately identified internal-particle
+  inference. Missing left classification remains Unknown. This does not extend
+  the exception to every adjectival negative or every existential head.
+  [Regressions](../tests/transition_aux.rs) cover the native paths, an 18-cell
+  question/particle matrix, class/POS alternatives, unknown owners, NFD,
+  allomorph and unsupported-boundary controls, cache/library/CLI parity.
+  [Evaluation](transition-aux-evaluation.json) verifies 18,013 candidate surfaces,
+  all five 179,112-record novel modes and 1,453 actual API paths. Four held-out
+  KAIST rows newly match; one GSD row gains a component with unchanged gold.
+  All 735 Rust and Nix release tests, pinned corpus, lint/format and full
+  browser checks pass. Packaged runtime covers 904 raw cases and 1,920 entry
+  judgments, all audited paths, filters, source selection, exports and desktop/mobile
+  rendering; eight release/debug modes match byte-for-byte. The refreshed preview
+  passes the same runtime checks. Three paired local novel runs remain near
+  1.6 seconds; the 21,500-word dense sample takes about 0.25 seconds after new
+  question paths versus 0.13–0.14 before. These are descriptive timings.
+  All three x86_64 Linux flake checks and nine inventory unit tests pass;
+  other architectures are unevaluated.
+  Other following particles, quoted-endings, contextual senses/register,
+  broader prefinal licenses and independent Korean-language review remain open.
+
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -2561,6 +2599,52 @@ review remains open under the completion review below.
   live preview passes the same runtime checks. Other architectures are unevaluated.
   Broader ending/prefinal/internal-particle, left-subset, context/register and
   independent Korean-language review remain required; all four dispositions are scoped.
+
+- [ ] **COV-019ab — Complete 말다/생기다/지다 auxiliary sources.**
+  **Partial:** all seven senses and 32 native groups of auxiliary 말다 (72580),
+  생기다 (67899) and 지다 (77247) are retained in
+  [the frozen preflight](transition-aux-source-preflight.json). Every selected
+  native predicate/auxiliary path already recovered. The preceding 성공해 in
+  성공해 보이고야 말겠어 is retained as source context; 보이다 owns 고야
+  as a lexical predicate. No auxiliary 보이다 is invented.
+  Narrow command-only 말다 notes do not justify suppressing questions/wishes.
+  Negative circumstances for 생기다 and passive/involuntary/state-change 지다
+  require contextual interpretation; no blanket left-POS or double-passive ban is
+  inferred. Native 인식되어진다 remains available.
+  [Four family tests](../tests/transition_aux.rs), 144 raw cases (133 required /
+  eleven forbidden), 133 dictionary cases / 422 judgments and 141 complete native
+  entries cover these sources alongside COV-018ab's question/case boundaries.
+  [Corpus tracking](../tests/corpus.rs) preserves 166 original training targets,
+  complete sentence blocks, gold and every before report. All 158 prior matches
+  remain; 이루어지느냐에 now recovers, yielding 159 matches. Seven original
+  misses remain individually recorded in the fixture; they are not all presumed
+  annotation disagreements. Full Rust tests, pinned corpus, lint and format pass;
+  [evaluation](transition-aux-evaluation.json) retains all changed corpus and novel
+  contexts, sources and candidate identities. Nix release and packaged runtime
+  checks pass, alongside all 735 Rust tests, pinned corpus, lint/format, full browser
+  and eight release/debug modes. The refreshed preview passes the same checks;
+  twenty-four paired timings are recorded as descriptive observations. All three
+  x86_64 Linux flake checks and nine inventory unit tests pass; other architectures
+  are unevaluated.
+  Broader ending/prefinal/internal-particle, lexical subset, context/register and
+  independent Korean-language review remain required; these are scoped source
+  dispositions, not complete auxiliary certification.
+
+- [ ] **COV-019ac — Lexical cessative and contrastive 말다 complements.**
+  **Gap:** KAIST 마시다만 has original 마시+다+말+ㄴ annotation and means
+  unfinished drinking in its retained sentence context. This is a genuine
+  missing predicate/complement path, not dismissed as a 다만 ending or an
+  annotation disagreement. [The source preflight](lexical-malda-source-preflight.json)
+  retains lexical 말다 (69296), all three senses / 27 native groups, grammar
+  sources and the complete original training block before implementation.
+  Six selected paths recover beforehand; 21 predicate or nominal-contrast
+  structures do not. Cessative 다/다가, intention-interruption 려다가,
+  alternative-ending complements and explicit nominal 말고 contrast need
+  source-appropriate lexical predicate roles. Do not relabel lexical 동사
+  as 보조 동사 to force an auxiliary match. Ordinary separately spaced
+  transitive objects remain tokenized. Implement and verify these structures
+  with own-ending ownership, dictionary homonyms, corpus gold, filters,
+  library/browser parity and broader source licenses.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

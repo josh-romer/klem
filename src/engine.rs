@@ -3454,6 +3454,7 @@ fn nominals(
         // Nominalizations accept ordinary particles; connective/final endings
         // have separate, explicit licenses for the newly supported particles.
         let ending = if flexible
+            || question_case_particle(particle.form)
             || matches!(
                 particle.form,
                 "은" | "는"
@@ -3487,11 +3488,18 @@ fn nominals(
         if !emphatic_adverbial {
             with_auxiliaries(base, ending, |p| {
                 let nominalized = PredicateEnd::Nominalized.accepts(&p);
+                let quoted_question = p
+                    .morphs
+                    .last()
+                    .is_some_and(|m| quoted_question_case(&m.form, particle.form));
                 let concessive = matches!(particle.form, "만" | "마는")
                     && p.morphs.last().is_some_and(|m| concessive_ending(&m.form));
                 for mut a in expand_predicate(&p) {
                     a.morphemes.extend(morphs.clone());
                     a.rules.push("particle".into());
+                    if quoted_question {
+                        a.rules.push("particle.quoted_question".into());
+                    }
                     if nominalized {
                         a.rules.push("nominalization".into());
                     }
@@ -3892,6 +3900,18 @@ impl PredicateEnd {
     }
 }
 
+// KRDict's native examples attest case-bearing questions (하느냐에,
+// 먹느냐가, 취업이냐의, 더운밥이냐를, 이루느냐보다); KAIST also
+// attests 하느냐와. These clauses retain their question ending, rather
+// than acquiring an invented nominalizer or a quoted-report ending.
+fn question_case_particle(particle: &str) -> bool {
+    matches!(particle, "에" | "의" | "와" | "가" | "를" | "보다")
+}
+
+fn quoted_question_case(ending: &str, particle: &str) -> bool {
+    matches!(ending, "냐" | "느냐" | "으냐") && question_case_particle(particle)
+}
+
 fn concessive_ending(ending: &str) -> bool {
     matches!(
         ending,
@@ -3960,6 +3980,9 @@ fn reporting_go(ending: &str) -> bool {
 }
 
 fn before_particle(ending: &str, particle: &str) -> bool {
+    if quoted_question_case(ending, particle) {
+        return true;
+    }
     let connective = intention_connective(ending)
         || result_connective(ending)
         || matches!(

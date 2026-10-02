@@ -226,7 +226,7 @@ fn proposal_uncertainty_is_per_entry_and_immediate_owner() {
             vec!["지", "읍시다"],
             1,
             "krdict:71581",
-            Compatibility::Unknown,
+            Compatibility::Incompatible,
         ),
         (
             "먹지않읍시다",
@@ -273,6 +273,21 @@ fn proposal_uncertainty_is_per_entry_and_immediate_owner() {
         assert_eq!(e.status, expected, "{word}: {id}");
         if expected == Compatibility::Unknown {
             assert!(e.conflicts.is_empty());
+        }
+        if word == "좋지않읍시다" && owner == 1 {
+            // The adjective owner's mood/sense remains uncertain. COV-019u
+            // independently settles only the verb auxiliary POS conflict;
+            // the adjective auxiliary alternative remains Unknown and survives.
+            assert!(e.conflicts.iter().any(|c| c.rule
+                == klem::dictionary::AttachmentRule::NegativeLexicalClass
+                && c.morpheme_index == Some(0)));
+            let adjective = assessment.lemmas[1]
+                .entries
+                .iter()
+                .find(|e| e.id == "krdict:71583")
+                .unwrap();
+            assert_eq!(adjective.status, Compatibility::Unknown);
+            assert!(adjective.conflicts.is_empty());
         }
     }
     for filter in [DictionaryFilter::Headword, DictionaryFilter::Compatible] {

@@ -3979,3 +3979,28 @@ its heading, table, examples and p.514 restriction concern 대다. That source t
 supplies no new 놓다 rule. Register, semantic suitability and the other three
 auxiliaries' remaining lexical/left-class/prefinal/particle restrictions remain
 open; this finite audit does not certify contextual grammar or full coverage.
+
+## Negative auxiliary lexical ownership (COV-019u)
+
+All six native 않다/아니하다/못하다 auxiliary entries, seven senses and 74
+groups remain in the [source record](../tests/fixtures/negative-class-sources.json).
+The raw generator is unchanged. Optional dictionary assessments distinguish a
+known verb-only or adjective-only owner through 지-negatives without choosing
+between mixed POS homonyms or guessing unknown provider classes. A same-class
+auxiliary homonym does not negate the lexical class evidence, but its uncertain
+token-initial role is retained. Previously incompatible spelling/attachment
+homonyms cannot supply a class. A suffix, copula or other auxiliary resets the
+dependency; 다/다가 못하다 keeps its separately reviewed adjective use.
+
+Seventy-four source excerpts test structural recovery. The separate entry ledger
+records 104 class/retention judgments and one explicitly reviewed historical
+policy correction. The proposal-owner test separately refines the verb POS
+  conflict while retaining the adjective alternative as Unknown. Sixteen
+  unchanged training targets retain separately written
+auxiliaries and the original unrecovered 굶기겠잖어 contraction; no annotations
+or frozen baselines are rewritten. Broader ending/prefinal licenses, particles,
+contextual senses, register and independent Korean review remain required.
+
+The entry ledger separately retains four reviewed historical refinements:
+  one old auxiliary judgment, one proposal-owner test and two intention-owner
+  judgments. Both historical fixture files remain byte-identical.

@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 393 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–t/020d–h/020j–k/020n–o/021d; 322 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 399 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–u/020d–h/020j–k/020n–o/021d; 316 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -1847,7 +1847,7 @@ review remains open under the completion review below.
   their distinct nominal, adverbial and finite post-ending boundaries. NIKL's
   vowel-final 새인들/장사인들 exception is preserved. Bundled 은 forms coexist
   with split paths; 들 plurals, lexical 샌들 and conjunction 랑 remain available.
-  Evidence: [98 judgments and three integration tests](../tests/concessive_designation.rs),
+  Evidence: [104 judgments and three integration tests](../tests/concessive_designation.rs),
   a 149-surface split/bundled check, dictionary/CLI/browser regressions and the
   [source and individual-case review](concessive-designation-evaluation.json).
   No target particle annotations were found in the mined training/development
@@ -2243,24 +2243,36 @@ review remains open under the completion review below.
   contextual semantic suitability/register and independent Korean review
   remain required under COV-019.
 
-- [ ] **COV-019u — Complete negative auxiliary sources and lexical class ownership.**
-  Audit the six native verb/adjective entries for 않다, 아니하다 and 못하다,
-  including all seven senses and 74 example groups. The
-  [native preflight](negative-aux-source-preflight.json) preserves the complete
-  entries, grouped dialogue, selected joined excerpts and current per-entry
-  assessments. All 74 excerpts recover at `8a7a4ff`; this is source recovery
-  evidence, not a precision estimate. The distinct 다/다가 + 못하다 sense
-  already selects the adjective auxiliary entry even after a verb head.
-  Remaining: assess lexical classes through 지-negatives without treating
-  source-selected context as an inferred sense. For example, adjective-only
-  개운하다 currently leaves both 않다 auxiliary POS entries compatible;
-  verb-only 가다 does the same. Both lexical 크다 homonyms must retain their
-  possibilities. Preserve represented suffix/copula ownership, later auxiliary
-  resets, unknown providers, standalone auxiliaries and every raw analysis.
-  Add stable positive/conflict judgments, original annotated targets and full
-  dictionary/CLI/browser/corpus/Nix checks before assigning scoped inventory
-  dispositions. Wider COV-019 conditions and independent Korean review remain
-  open; the six entries remain unreviewed in COV-013.
+- [x] **COV-019u — Complete negative auxiliary sources and lexical class ownership.**
+  All six native entries for 않다, 아니하다 and 못하다, seven senses and
+  74 groups are retained in the [source record](../tests/fixtures/negative-class-sources.json).
+  Every joined excerpt already recovered at `8a7a4ff`; no new recall is claimed.
+  The optional dictionary policy now rejects an auxiliary POS homonym only
+  when every viable lexical owner has the opposite known class. Mixed and
+  unknown classes remain; same-class auxiliary homonyms contribute POS evidence
+  without upgrading their uncertain token-initial role. Previously rejected
+  spelling/attachment homonyms cannot lend a class. The dependency walks through
+  지-negatives and stops at suffix/copula/other auxiliary boundaries. Existing
+  known-class resets and distinct 다/다가 못하다 adjective uses remain.
+  Four [source/class/CLI tests](../tests/negative_classes.rs), 74 required raw
+  cases and 104 separate [entry judgments](../tests/fixtures/negative-class-entry-judgments.json)
+  track the behavior. One old dictionary expectation is explicitly revised;
+  its original fixture bytes remain unchanged. The proposal-owner test also
+  tracks the new verb-entry conflict without settling adjective mood/sense
+  uncertainty or removing the reading. Two intention-owner judgments similarly
+  track the adjective-entry conflict while keeping tense with its original
+  owner and preserving their historical fixture. Sixteen complete unchanged
+  training targets retain separate-token auxiliaries and the original
+  굶기겠잖어 miss. The [evaluation](negative-class-evaluation.json) records all
+  695 Rust/release tests, Nix checks, 271 packaged/live runtime cases, browser
+  layouts/exports, byte-identical raw candidates and four full corpus reports,
+  all 560 POS-assessed changes, two contextually unjudged novel hypotheses,
+  descriptive novel/dense-input performance and 460 new stable unjudged IDs.
+  Original ledgers, historical fixture bytes and frozen baselines remain.
+  Broader ending/prefinal
+  licenses, particles, contextual senses/register and independent Korean review
+  remain required under COV-019. COV-013 records six scoped dispositions while
+  its wider inventory audit remains open.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

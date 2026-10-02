@@ -33,9 +33,41 @@ fn cases() -> Vec<Case> {
     struct Ledger {
         cases: Vec<Case>,
     }
-    serde_json::from_str::<Ledger>(include_str!("fixtures/ryeogo-expansion-assessments.json"))
-        .unwrap()
-        .cases
+    let mut cases =
+        serde_json::from_str::<Ledger>(include_str!("fixtures/ryeogo-expansion-assessments.json"))
+            .unwrap()
+            .cases;
+    // COV-019u supplies a known negative POS conflict independently of the
+    // still-unknown intention tense license. Retain the historical fixture.
+    let reviews: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/negative-class-entry-judgments.json")).unwrap();
+    let revisions = reviews["expanded_intention_revisions"].as_array().unwrap();
+    assert_eq!(revisions.len(), 2);
+    for revision in revisions {
+        let case = cases
+            .iter_mut()
+            .find(|c| c.id == revision["case_id"])
+            .unwrap();
+        let judgment = case
+            .judgments
+            .iter_mut()
+            .find(|j| j.id == revision["judgment_id"])
+            .unwrap();
+        assert_eq!(judgment.entry_id, revision["entry_id"]);
+        assert_eq!(judgment.lemma_index, revision["lemma_index"]);
+        assert_eq!(
+            serde_json::to_value(judgment.status).unwrap(),
+            revision["before"]["status"]
+        );
+        assert_eq!(
+            serde_json::to_value(&judgment.conflicts).unwrap(),
+            revision["before"]["conflicts"]
+        );
+        judgment.status = serde_json::from_value(revision["after"]["status"].clone()).unwrap();
+        judgment.conflicts =
+            serde_json::from_value(revision["after"]["conflicts"].clone()).unwrap();
+    }
+    cases
 }
 
 struct Fixture(PathBuf);

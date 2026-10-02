@@ -579,6 +579,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!repetitiveAuxIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...repetitiveAuxEntries);
 
+  const negativeClassFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-negative-classes.json"),"utf8"));
+  const negativeClassEntries = negativeClassFixture.LexicalResource.Lexicon.LexicalEntry;
+  const negativeClassIds = new Set(negativeClassEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!negativeClassIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...negativeClassEntries);
+
 
 
   await writeFile(input, JSON.stringify(fixture));
@@ -930,6 +936,14 @@ try {
   // A connector's known auxiliary class selects its supported homonym hint.
   // The same headword can have different evidence in two slots of one reading.
   const auxiliaryLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/auxiliary-dictionary.json"), "utf8"));
+  const negativeEntryLedger = JSON.parse(await readFile(resolve(root,"tests/fixtures/negative-class-entry-judgments.json"),"utf8"));
+  assert.equal(negativeEntryLedger.historical_revisions.length,1);
+  for(const revision of negativeEntryLedger.historical_revisions) {
+    const c=auxiliaryLedger.cases.find(c=>c.id===revision.case_id);
+    const j=c.judgments.find(j=>j.entry_id===revision.entry_id&&j.lemma_index===revision.lemma_index);
+    assert.deepEqual({status:j.status,conflicts:j.conflicts},revision.before);
+    Object.assign(j,revision.after);
+  }
   const auxiliaryPath = (a, c) => JSON.stringify(a.lemmas.map(l => [l.text, l.kind])) === JSON.stringify(c.lemmas.map(l => [l.text, l.kind]))
     && JSON.stringify(a.morphemes.map(m => [m.form, m.kind])) === JSON.stringify(c.morphemes.map(m => [m.form, m.kind]));
   for (const c of auxiliaryLedger.cases) {
@@ -2046,6 +2060,11 @@ try {
     for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => danikkaPath(a,j)),j.verdict === "required",c.id);
   }
   const expandedAssessments = JSON.parse(await readFile(resolve(root,"tests/fixtures/ryeogo-expansion-assessments.json"),"utf8"));
+  for(const revision of negativeEntryLedger.expanded_intention_revisions) {
+    const c=expandedAssessments.cases.find(c=>c.id===revision.case_id);const j=c.judgments.find(j=>j.id===revision.judgment_id);
+    assert.equal(j.entry_id,revision.entry_id);assert.equal(j.lemma_index,revision.lemma_index);
+    assert.deepEqual({status:j.status,conflicts:j.conflicts},revision.before);Object.assign(j,revision.after);
+  }
   assert.equal(expandedAssessments.cases.length,57);
   for (const c of expandedAssessments.cases) {
     const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
@@ -5216,6 +5235,29 @@ try {
     const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
   }
   await page.screenshot({path:resolve(tmpdir(),"klem-repetitive-aux-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-repetitive-aux-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Complete negative entry groups and independently reviewed POS conflicts.
+  // The selected canonical 못하다 + 어 path uses the existing 하 + 여 display.
+  assert.equal(negativeEntryLedger.cases.length,89);
+  assert.equal(negativeEntryLedger.cases.reduce((n,c)=>n+c.judgments.length,0),104);
+  for(const c of negativeEntryLedger.cases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    const index=token.analysis.analyses.findIndex(a=>auxiliaryPath(a,c));assert.ok(index>=0,c.id);
+    for(const j of c.judgments) {
+      const entry=token.dictionary.readings[index].lemmas[j.lemma_index].entries.find(e=>e.id===j.entry_id);assert.ok(entry,c.id);
+      assert.equal(entry.status,j.status,c.id);assert.deepEqual(entry.conflicts,j.conflicts,c.id);
+    }
+  }
+  for(const flag of[null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="개운하지않다 가지않다 크지않다 붉다못해";await submit(page,text);await waitHeading(page,"개운하지않다");
+    const raw=await(await post("analyze",{text})).json();const words=raw.records.filter(r=>r.analysis);
+    for(const[n,heads,forms]of[[0,["개운하다","않다"],["개운하","지","않","다"]],[1,["가다","않다"],["가","지","않","다"]],[2,["크다","않다"],["크","지","않","다"]],[3,["붉다","못하다"],["붉","다","못하","여"]]]) {
+      const i=words[n].analysis.analyses.findIndex(a=>a.lemmas.map(l=>l.text).join("/")===heads.join("/") && (n!==3 || a.morphemes.map(m=>m.form).join("/")==="다/어"));assert.ok(i>=0);const block=page.locator(".breakdown-word").nth(n);await block.getByRole("combobox").selectOption(String(i));assert.deepEqual(await block.locator(".part-form").allTextContents(),forms);
+    }
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-negative-class-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-negative-class-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

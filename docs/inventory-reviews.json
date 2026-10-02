@@ -31519,6 +31519,566 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:26838",
+      "source_sha256": "3e7698f3d6395a448efa9901b475a8524e922ea594e0978293d6b95bdcd98c71",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019u"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense.",
+      "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_sources_preserve_all_six_entries_seven_senses_and_74_groups"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_raw_unicode_cached_dictionary_and_cli_keep_native_paths"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_entry_conflicts_keep_homonyms_chains_and_owner_resets"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_unknown_classes_and_standalone_owners_do_not_borrow_pos"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "negative_class_targets_preserve_standalone_tokens_and_original_contraction_miss"
+        },
+        {
+          "path": "tests/fixtures/negative-class-sources.json"
+        },
+        {
+          "path": "tests/fixtures/negative-class-entry-judgments.json"
+        },
+        {
+          "path": "docs/negative-class-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "negative-class-native-26838-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26838-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26838-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26838-1-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:26841",
+      "source_sha256": "e684b8c80e2adc0bbce5e59be4cfa8cacc4b7c34df303900580301ae185d9696",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019u"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense.",
+      "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_sources_preserve_all_six_entries_seven_senses_and_74_groups"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_raw_unicode_cached_dictionary_and_cli_keep_native_paths"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_entry_conflicts_keep_homonyms_chains_and_owner_resets"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_unknown_classes_and_standalone_owners_do_not_borrow_pos"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "negative_class_targets_preserve_standalone_tokens_and_original_contraction_miss"
+        },
+        {
+          "path": "tests/fixtures/negative-class-sources.json"
+        },
+        {
+          "path": "tests/fixtures/negative-class-entry-judgments.json"
+        },
+        {
+          "path": "docs/negative-class-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "negative-class-native-26841-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-2-4",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-2-5",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-26841-2-6",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:71286",
+      "source_sha256": "d925d2a9a0acc4e566c27156bcd46bf53cc6ecd3afd36580b55275d632d6d23a",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019u"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense.",
+      "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_sources_preserve_all_six_entries_seven_senses_and_74_groups"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_raw_unicode_cached_dictionary_and_cli_keep_native_paths"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_entry_conflicts_keep_homonyms_chains_and_owner_resets"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_unknown_classes_and_standalone_owners_do_not_borrow_pos"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "negative_class_targets_preserve_standalone_tokens_and_original_contraction_miss"
+        },
+        {
+          "path": "tests/fixtures/negative-class-sources.json"
+        },
+        {
+          "path": "tests/fixtures/negative-class-entry-judgments.json"
+        },
+        {
+          "path": "docs/negative-class-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "negative-class-native-71286-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71286-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71286-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71286-1-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:71287",
+      "source_sha256": "6461fea45c8f80541344b8b08bbdf59b738c361161796517e2bb1cf7823d5e88",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019u"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense.",
+      "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_sources_preserve_all_six_entries_seven_senses_and_74_groups"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_raw_unicode_cached_dictionary_and_cli_keep_native_paths"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_entry_conflicts_keep_homonyms_chains_and_owner_resets"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_unknown_classes_and_standalone_owners_do_not_borrow_pos"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "negative_class_targets_preserve_standalone_tokens_and_original_contraction_miss"
+        },
+        {
+          "path": "tests/fixtures/negative-class-sources.json"
+        },
+        {
+          "path": "tests/fixtures/negative-class-entry-judgments.json"
+        },
+        {
+          "path": "docs/negative-class-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "negative-class-native-71287-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71287-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71287-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71287-1-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:71581",
+      "source_sha256": "f65d8172360252c7a58275b1b5810d0addb32231d815652c4e795515f3615e9a",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019u"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense.",
+      "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_sources_preserve_all_six_entries_seven_senses_and_74_groups"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_raw_unicode_cached_dictionary_and_cli_keep_native_paths"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_entry_conflicts_keep_homonyms_chains_and_owner_resets"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_unknown_classes_and_standalone_owners_do_not_borrow_pos"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "negative_class_targets_preserve_standalone_tokens_and_original_contraction_miss"
+        },
+        {
+          "path": "tests/fixtures/negative-class-sources.json"
+        },
+        {
+          "path": "tests/fixtures/negative-class-entry-judgments.json"
+        },
+        {
+          "path": "docs/negative-class-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "negative-class-native-71581-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-8",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-9",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-10",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-11",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-12",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-13",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-14",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-15",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-16",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-17",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-18",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-19",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-20",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-21",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-22",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-23",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-24",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-25",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71581-1-26",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:71583",
+      "source_sha256": "ff47d27b8210a21925a7624266f3cec686ea6663d07bd3e88286c626fdbd168a",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019u"
+      ],
+      "scope": "Complete native senses, notes, forms and every example group retained. All 74 joined native excerpts already recovered before the change. COV-019u adds finite per-entry lexical verb/adjective evidence through 지-negatives, preserving mixed/unknown homonyms, suffix/copula ownership, later auxiliary resets and the distinct 다/다가 못하다 adjective sense.",
+      "remaining": "Contextual negative versus independent lexical sense selection, semantic suitability, broader ending/prefinal/particle licenses and register remain open. The original 굶기겠잖어 contraction miss and separate-token annotations are retained. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_sources_preserve_all_six_entries_seven_senses_and_74_groups"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_raw_unicode_cached_dictionary_and_cli_keep_native_paths"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_entry_conflicts_keep_homonyms_chains_and_owner_resets"
+        },
+        {
+          "path": "tests/negative_classes.rs",
+          "test": "negative_unknown_classes_and_standalone_owners_do_not_borrow_pos"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "negative_class_targets_preserve_standalone_tokens_and_original_contraction_miss"
+        },
+        {
+          "path": "tests/fixtures/negative-class-sources.json"
+        },
+        {
+          "path": "tests/fixtures/negative-class-entry-judgments.json"
+        },
+        {
+          "path": "docs/negative-class-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "negative-class-native-71583-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-8",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-9",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-10",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-11",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-12",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-13",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-14",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-15",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-16",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-17",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-18",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-19",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-20",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-21",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-22",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-23",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-24",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-25",
+          "judgment": "path"
+        },
+        {
+          "case": "negative-class-native-71583-1-26",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

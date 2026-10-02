@@ -33,6 +33,7 @@ pub enum AttachmentRule {
     RepetitiveVerb,
     NeuraVerb,
     AuxiliaryClass,
+    NegativeLexicalClass,
     LiteraryAssertionClass,
     BareLiteraryDeclarative,
     BareLiteraryQuestion,
@@ -99,6 +100,82 @@ fn alternatives(statuses: impl Iterator<Item = Compatibility>) -> Compatibility 
         Compatibility::Unknown
     } else {
         Compatibility::Incompatible
+    }
+}
+
+// Resolve only an unambiguous lexical class behind a represented 지-negative.
+// Do not choose between homonyms or reuse an entry rejected by this spelling
+// path. Unknown providers cannot prove a class. A token-initial auxiliary
+// has no preceding owner; a known POS does not upgrade its lexical role.
+// A suffix, copula or nonnegative auxiliary establishes another owner.
+fn negative_lexical_class(
+    annotation: &Annotation,
+    analysis: &Analysis,
+    mut preceding: &[Component],
+    assessed: &[LemmaAssessment],
+) -> Option<PredicateClass> {
+    loop {
+        let owner = preceding
+            .iter()
+            .rposition(|c| matches!(c, Component::Lemma(_)))?;
+        let morphs = &preceding[owner + 1..];
+        if morphs.iter().any(|c| {
+            matches!(c, Component::Morpheme(i)
+            if analysis.morphemes[*i].kind == MorphemeKind::Suffix)
+        }) {
+            return None;
+        }
+        let connector = morphs.iter().find_map(|c| match c {
+            Component::Morpheme(i) if analysis.morphemes[*i].kind == MorphemeKind::Ending => {
+                Some(analysis.morphemes[*i].form.as_str())
+            }
+            _ => None,
+        });
+        if connector != Some("지") {
+            return None;
+        }
+        let Component::Lemma(index) = preceding[owner] else {
+            return None;
+        };
+        let lemma = &analysis.lemmas[index];
+        if lemma.kind == LemmaKind::Auxiliary
+            && matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+        {
+            preceding = &preceding[..owner];
+            continue;
+        }
+        if lemma.kind != LemmaKind::Predicate {
+            return None;
+        }
+        let slot = assessed.iter().find(|slot| slot.lemma_index == index)?;
+        let matches = &annotation
+            .lemmas
+            .iter()
+            .find(|m| m.lemma == *lemma)?
+            .entries;
+        let mut verb = false;
+        let mut adjective = false;
+        for entry in &slot.entries {
+            if entry.status == Compatibility::Incompatible {
+                continue;
+            }
+            match matches
+                .iter()
+                .find(|m| m.entry.id == entry.id)?
+                .entry
+                .pos
+                .as_str()
+            {
+                "동사" | "보조 동사" => verb = true,
+                "형용사" | "보조 형용사" => adjective = true,
+                _ => return None,
+            }
+        }
+        return match (verb, adjective) {
+            (true, false) => Some(PredicateClass::Verb),
+            (false, true) => Some(PredicateClass::Adjective),
+            _ => None,
+        };
     }
 }
 
@@ -405,6 +482,19 @@ impl Annotation {
                 LemmaKind::Copula => Some(PredicateClass::Copula),
                 _ => None,
             };
+            let negative_lexical = if class.is_none()
+                && lemma.kind == LemmaKind::Auxiliary
+                && matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
+            {
+                negative_lexical_class(
+                    self,
+                    analysis,
+                    &order[..order.len() - rest.len() - 1],
+                    &lemmas,
+                )
+            } else {
+                None
+            };
             let ending = morphs.iter().find_map(|c| match c {
                 Component::Morpheme(i) if analysis.morphemes[*i].kind == MorphemeKind::Ending => {
                     Some(*i)
@@ -512,6 +602,22 @@ impl Annotation {
                         status = Compatibility::Incompatible;
                         conflicts.push(AttachmentConflict {
                             rule: AttachmentRule::AuxiliaryClass,
+                            morpheme_index: connector,
+                        });
+                    }
+                    if status == Compatibility::Compatible
+                        && matches!(
+                            (negative_lexical, matched.entry.pos.as_str()),
+                            (Some(PredicateClass::Verb), "보조 형용사")
+                                | (Some(PredicateClass::Adjective), "보조 동사")
+                        )
+                    {
+                        // The six native negative entries distinguish verb
+                        // and adjective owners for 지. 다/다가 못하다 is a
+                        // separate adjective use handled by auxiliary_class.
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::NegativeLexicalClass,
                             morpheme_index: connector,
                         });
                     }

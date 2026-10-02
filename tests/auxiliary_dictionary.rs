@@ -30,9 +30,41 @@ fn cases() -> Vec<Case> {
     struct Ledger {
         cases: Vec<Case>,
     }
-    serde_json::from_str::<Ledger>(include_str!("fixtures/auxiliary-dictionary.json"))
-        .unwrap()
-        .cases
+    let mut cases =
+        serde_json::from_str::<Ledger>(include_str!("fixtures/auxiliary-dictionary.json"))
+            .unwrap()
+            .cases;
+    // Preserve the historical ledger bytes. COV-019u explicitly reviews the
+    // one formerly unknown lexical class now settled by dictionary evidence.
+    let reviews: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/negative-class-entry-judgments.json")).unwrap();
+    let revisions = reviews["historical_revisions"].as_array().unwrap();
+    assert_eq!(revisions.len(), 1);
+    for revision in revisions {
+        let case = cases
+            .iter_mut()
+            .find(|c| c.id == revision["case_id"])
+            .unwrap();
+        let judgment = case
+            .judgments
+            .iter_mut()
+            .find(|j| {
+                j.entry_id == revision["entry_id"] && j.lemma_index == revision["lemma_index"]
+            })
+            .unwrap();
+        assert_eq!(
+            serde_json::to_value(judgment.status).unwrap(),
+            revision["before"]["status"]
+        );
+        assert_eq!(
+            serde_json::to_value(&judgment.conflicts).unwrap(),
+            revision["before"]["conflicts"]
+        );
+        judgment.status = serde_json::from_value(revision["after"]["status"].clone()).unwrap();
+        judgment.conflicts =
+            serde_json::from_value(revision["after"]["conflicts"].clone()).unwrap();
+    }
+    cases
 }
 
 struct Fixture(PathBuf);

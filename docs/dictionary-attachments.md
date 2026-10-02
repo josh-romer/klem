@@ -702,3 +702,31 @@ filtering preserves them; compatible filtering excludes known conflicts. The
 three directly marked lexical errors, a negative-class inference and valid
 homonym/owner retentions. The engine separately excludes already represented
 adjective/copula owners. Wider lexical suitability and register remain open.
+
+## Negative lexical classes (COV-019u)
+
+`negative_lexical_class` assesses the verb/adjective POS of an 않다, 아니하다
+or 못하다 entry after 지. The six complete native entries distinguish these
+owners. A conflict is recorded only when every viable headword homonym has the
+opposite known class. Same-class lexical and auxiliary POS entries contribute
+class evidence without upgrading a token-initial auxiliary's uncertain role.
+Mixed verb/adjective homonyms and unknown provider classes prevent exclusion.
+Entries already rejected for spelling or attachment cannot lend their class.
+
+The dependency walks through represented 지-negatives. Suffixes, copulas and
+other auxiliaries establish independent owners; the existing structural checks
+continue to handle them. 다/다가 못하다 retains its distinct adjective use,
+including after a verb. The conflict references the preceding 지, belonging to
+the previous owner. This adds no dictionary lookup or raw candidate restriction.
+Existing ending/prefinal policies and contextual sense uncertainty remain.
+
+The [entry ledger](../tests/fixtures/negative-class-entry-judgments.json) records
+104 judgments, including one reviewed correction to an older dictionary-policy
+expectation. The original historical fixture is preserved byte for byte; raw
+structural uncertainty and dictionary evidence remain separate. The proposal
+  test also records a formerly unknown verb-entry conflict after 좋다; its
+  adjective auxiliary alternative retains proposal-mood uncertainty.
+
+Two intention-owner entry revisions are also explicit in the ledger. Their
+original fixture is preserved, and tense uncertainty stays with its original
+owner; the correct verb negative and later 하다 alternatives remain.

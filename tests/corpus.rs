@@ -2809,3 +2809,56 @@ fn repetitive_auxiliaries_preserve_every_training_target_and_source_disagreement
     assert_eq!(t["source_row"][2], "먹+어야+대+요");
     assert_eq!(t["source_row"][4], "VV+EC+VX+EC");
 }
+
+#[test]
+fn negative_class_targets_preserve_standalone_tokens_and_original_contraction_miss() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/negative-class-sources.json")).unwrap();
+    let mut count = 0;
+    let mut matched = 0;
+    for (kind, name, input) in [
+        (
+            Corpus::Kaist,
+            "kaist",
+            include_bytes!("fixtures/kaist-negative-classes.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            "gsd",
+            include_bytes!("fixtures/gsd-negative-classes.conllu").as_slice(),
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "negative-classes").unwrap();
+        let file = source["corpus_search"]["files"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == name)
+            .unwrap();
+        for t in file["targets"].as_array().unwrap() {
+            let c = &report.cases[t["id"].as_str().unwrap()];
+            assert_eq!(c.surface, t["surface"].as_str().unwrap());
+            assert_eq!(serde_json::to_value(&c.expected).unwrap(), t["expected"]);
+            assert_eq!(
+                c.matched,
+                t["matched_before"].as_bool().unwrap(),
+                "{}",
+                c.id
+            );
+            count += 1;
+            matched += usize::from(c.matched);
+        }
+    }
+    assert_eq!((count, matched), (16, 15));
+    let targets = source["corpus_search"]["files"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .flat_map(|f| f["targets"].as_array().unwrap());
+    let miss = targets
+        .filter(|t| t["matched_before"] == false)
+        .collect::<Vec<_>>();
+    assert_eq!(miss.len(), 1);
+    assert_eq!(miss[0]["surface"], "굶기겠잖어");
+    assert_eq!(miss[0]["id"], "id:M2TA_087-s112/4");
+}

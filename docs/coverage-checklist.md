@@ -2973,7 +2973,8 @@ review remains open under the completion review below.
   written ㅎ compatibility; COV-021e adds ㄷ/ㅅ and COV-021f adds ㅂ
   compatibility and three finite 오 spelling exceptions; COV-021g adds
   per-entry 르/러 written paradigms; COV-021h adds twelve entry-specific
-  shortened-stem restrictions.** Remaining: other lexical paradigms and unmapped
+  shortened-stem restrictions; COV-021i adds the three finite deictic verb
+  vowel paradigms.** Remaining: other lexical paradigms and unmapped
   shortened-stem senses, ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
@@ -2981,6 +2982,14 @@ review remains open under the completion review below.
   complex-coda 하다 words among 7,571 entries: 한몫하다, 값하다 and 꼴값하다.
   COV-021c now recovers their licensed shortened forms. Dictionary absence does
   not establish that hypothetical words in other coda classes are impossible.
+  A subsequent [whole-dictionary written-paradigm scan](written-paradigm-discovery.json)
+  examines 22,400 Hangul-only forms across 6,563 native predicate entries:
+  97 entry/form pairs do not recover their listed headword, and 67 complex
+  forms are retained separately for review. Every miss includes its complete
+  native entry and current candidate output. These are discovery observations,
+  not required judgments: the set includes apparent source typos, short/long
+  lexical aliases, vowel absorption, 거라/너라 compounds, and additional
+  deictic paradigms. Review each class rather than generalizing from counts.
 - [x] **COV-021a — Article 39 negative contractions.** 잖 recovers 지 + 않다;
   찮 restores 하지 + 않다. The left predicate uses existing spelling and
   prefinal recovery; the negative auxiliary retains its own inflection.
@@ -3136,6 +3145,39 @@ review remains open under the completion review below.
   Korean review and unavailable source senses remain open.
   See [policy](dictionary-attachments.md#restricted-short-stem-endings-cov-021h)
   and [evaluation](short-stem-evaluation.json).
+
+- [x] **COV-021i — Finite 그러다/이러다/저러다 vowel contractions.**
+  **Native written paradigms and scoped candidate regressions are implemented.**
+  그래/이래/저래 recover 그러다/이러다/저러다 before existing vowel endings,
+  past prefinals, auxiliaries and licensed particle chains. Exact whole stems
+  prevent arbitrary prefix restoration; the existing 그렇다/이렇다/저렇다
+  alternatives and whole-word readings remain. Verb paths do not inherit
+  the homonymous adjective's ㅎ spelling class. Complete native entries and
+  the NIKL 2025 annotation report distinguish verbal 그러 + 어도 from
+  adjectival 그렇 + 어도; its annotation default does not rank or suppress
+  candidates in this exhaustive generator.
+  The [source preflight](deictic-vowel-source-preflight.json) preserves the
+  original selection, complete dictionary example groups and all 19 aligned
+  training targets. [Tests](../tests/deictic_vowel.rs) cover 56 required paths,
+  13 forbidden boundary controls, 56 entry judgments, 65 complete native
+  sources, Unicode normalization, ordered ownership, caching and three
+  dictionary policies. Target recovery improves from 16/19 to 19/19 with
+  unchanged gold. Full dev/test comparisons additionally recover three
+  held-out cases, recorded as observations rather than training fixtures.
+  All 748 Rust and 748 Nix release tests, the full corpus check, Clippy,
+  formatting, frontend build, full immutable-package browser suite and all
+  three x86_64 Linux flake checks pass. The refreshed preview verifies all
+  new judgments, sources and changed paths. Three paired release runs process
+  179,112 novel records in median 1.732 s with headword filtering and 1.695 s
+  with compatibility filtering; these are descriptive measurements taken
+  during browser validation, not a statistical speedup claim.
+  Every existing candidate and assessment survives the eight comparison
+  modes; the novel's 232 changed occurrences retain their original contexts
+  and remain unjudged for contextual sense. The original 그러지말고 gold
+  disagreement is recorded separately and remains unresolved. Full short/long
+  headword aliasing and other lexical paradigms remain under COV-021.
+  See [evaluation](deictic-vowel-evaluation.json) for individual paths,
+  corpus provenance, browser/Nix checks and performance observations.
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

@@ -303,6 +303,15 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
                 );
             }
         }
+        // Complete written paradigms: 그러다/이러다/저러다 have 그래/이래/저래.
+        // These are finite verb contractions, distinct from the homonymous
+        // adjective ㅎ recoveries below. Whole stems only; no suffix-wide rule
+        // for arbitrary 러 verbs or fabricated prefixes (KRDict 37062/24838/25001).
+        for (form, stem) in [("그래", "그러"), ("이래", "이러"), ("저래", "저러")] {
+            if surface == form {
+                push(&mut out, stem.into(), "contraction.deictic_verb");
+            }
+        }
         for (form, stem) in [
             ("그래", "그렇"),
             ("이래", "이렇"),
@@ -1701,6 +1710,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         "boundary.attached" => "Recover an ending consonant fused into the final syllable.",
         "contraction.identical" => "Recover an absorbed 아/어 vowel.",
         "contraction.vowel" => "Undo vowel contraction (와, 워, 돼, or 여).",
+        "contraction.deictic_verb" => {
+            "Recover the dictionary-listed verb stems 그러/이러/저러 from 그래/이래/저래, including past inflection; preserve the homonymous adjective and whole-word readings."
+        }
         "contraction.noh" => {
             "Restore 놓아 from 놔 at an 아/어 boundary, including 놓다 compounds and auxiliaries."
         }

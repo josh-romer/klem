@@ -1417,7 +1417,14 @@
     "malda-inflection-71581": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71581",
     "malda-inflection-82348": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82348",
     "malda-inflection-62657": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=62657",
-    "malda-inflection-69296": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69296"
+    "malda-inflection-69296": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=69296",
+    "deictic-vowel-37062": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=37062",
+    "deictic-vowel-24838": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=24838",
+    "deictic-vowel-25001": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=25001",
+    "deictic-vowel-61178": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61178",
+    "deictic-vowel-71157": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71157",
+    "deictic-vowel-71226": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71226",
+    "deictic-vowel-nikl-332169": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?qna_seq=332169"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -54234,6 +54241,1989 @@
           "source": "malda-inflection-80160",
           "reason": "The paired lexical right owner has bare ㄹ or honorific vowel 시: -나 is licensed. -으나 is the other allomorph for consonants excluding ㄹ and after past/modal prefinals; do not transfer its spelling to this exact right owner.",
           "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-bare",
+      "surface": "그래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-요",
+      "surface": "그래요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-서",
+      "surface": "그래서",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어서"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-도",
+      "surface": "그래도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어도"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-야",
+      "surface": "그래야",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어야"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-라",
+      "surface": "그래라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-버렸다",
+      "surface": "그래버렸다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-봤다",
+      "surface": "그래봤다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-past-다",
+      "surface": "그랬다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-past-어요",
+      "surface": "그랬어요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "어요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-past-으면",
+      "surface": "그랬으면",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "으면"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-past-겠지",
+      "surface": "그랬겠지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "겠",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-그러-past-다고",
+      "surface": "그랬다고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-bare",
+      "surface": "이래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-요",
+      "surface": "이래요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-서",
+      "surface": "이래서",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어서"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-도",
+      "surface": "이래도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어도"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-야",
+      "surface": "이래야",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어야"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-라",
+      "surface": "이래라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-버렸다",
+      "surface": "이래버렸다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-봤다",
+      "surface": "이래봤다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-past-다",
+      "surface": "이랬다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-past-어요",
+      "surface": "이랬어요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "어요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-past-으면",
+      "surface": "이랬으면",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "으면"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-past-겠지",
+      "surface": "이랬겠지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "겠",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-이러-past-다고",
+      "surface": "이랬다고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-bare",
+      "surface": "저래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-요",
+      "surface": "저래요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어요"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-서",
+      "surface": "저래서",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어서"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-도",
+      "surface": "저래도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어도"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-야",
+      "surface": "저래야",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어야"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-라",
+      "surface": "저래라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-버렸다",
+      "surface": "저래버렸다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-봤다",
+      "surface": "저래봤다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다",
+            "보다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-past-다",
+      "surface": "저랬다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-past-어요",
+      "surface": "저랬어요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "어요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-past-으면",
+      "surface": "저랬으면",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "으면"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-past-겠지",
+      "surface": "저랬겠지",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "겠",
+            "지"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-control-저러-past-다고",
+      "surface": "저랬다고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다고"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite authored conjugation/composition inference from complete dictionary-written vowel forms and full ending/prefinal/auxiliary notes. Retain the short verb as its own lemma and preserve all old homonymous adjective/whole-word hypotheses; no full-verb alias or contextual sense selected.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-native-37062-2-0-0",
+      "surface": "그랬는데",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "는데"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Complete original native verb example group, finite word paradigm and conjugation preserved. The example grouping and POS come from the pinned source, not from generated output.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-native-25001-1-2-1",
+      "surface": "저래도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어도"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Complete original native verb example group, finite word paradigm and conjugation preserved. The example grouping and POS come from the pinned source, not from generated output.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-1-1",
+      "surface": "그래요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-1-2",
+      "surface": "그랬어요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-1-3",
+      "surface": "그래도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-adjective-1-1",
+      "surface": "그래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그렇다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-61178",
+          "reason": "Native adjective written forms share this spelling. Verb recovery must retain its independent ㅎ-irregular adjective path and entry assessment.",
+          "verdict": "required",
+          "required_rules": [
+            "irregular.hieut"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-adjective-1-2",
+      "surface": "그랬다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그렇다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-61178",
+          "reason": "Native adjective written forms share this spelling. Verb recovery must retain its independent ㅎ-irregular adjective path and entry assessment.",
+          "verdict": "required",
+          "required_rules": [
+            "irregular.hieut"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-2-1",
+      "surface": "이래요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-2-2",
+      "surface": "이랬어요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-2-3",
+      "surface": "이래도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-adjective-2-1",
+      "surface": "이래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이렇다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-71157",
+          "reason": "Native adjective written forms share this spelling. Verb recovery must retain its independent ㅎ-irregular adjective path and entry assessment.",
+          "verdict": "required",
+          "required_rules": [
+            "irregular.hieut"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-adjective-2-2",
+      "surface": "이랬다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이렇다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-71157",
+          "reason": "Native adjective written forms share this spelling. Verb recovery must retain its independent ㅎ-irregular adjective path and entry assessment.",
+          "verdict": "required",
+          "required_rules": [
+            "irregular.hieut"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-3-1",
+      "surface": "저래요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-3-2",
+      "surface": "저랬어요",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "어",
+            "요"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-separated-3-3",
+      "surface": "저래도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Finite listed conjugation keeps existing separated ending/particle paths alongside the bundled form; no reconstructed surface character offsets.",
+          "verdict": "required",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-adjective-3-1",
+      "surface": "저래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저렇다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-71226",
+          "reason": "Native adjective written forms share this spelling. Verb recovery must retain its independent ㅎ-irregular adjective path and entry assessment.",
+          "verdict": "required",
+          "required_rules": [
+            "irregular.hieut"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-adjective-3-2",
+      "surface": "저랬다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저렇다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-71226",
+          "reason": "Native adjective written forms share this spelling. Verb recovery must retain its independent ㅎ-irregular adjective path and entry assessment.",
+          "verdict": "required",
+          "required_rules": [
+            "irregular.hieut"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-1",
+      "surface": "ABC그래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "ABC그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-2",
+      "surface": "늠므이래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "늠므이러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-3",
+      "surface": "먹어저래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹어저러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-4",
+      "surface": "갈래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "갈러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-5",
+      "surface": "어때",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "어떠다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-6",
+      "surface": "그래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-7",
+      "surface": "이래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "이러하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-24838",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-8",
+      "surface": "저래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "저러하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-25001",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-9",
+      "surface": "그래",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그리하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-10",
+      "surface": "그랬다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-11",
+      "surface": "그랬시다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "시",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "prefinal",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-12",
+      "surface": "그래버렸다",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러다",
+            "버리다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "었",
+            "어",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "ending"
+          ],
+          "source": "deictic-vowel-37062",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deictic-vowel-boundary-13",
+      "surface": "그러지말고",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "그러하다",
+            "말다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "고"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "deictic-vowel-nikl-332169",
+          "reason": "Scope is this finite contraction provenance: only the three listed whole verb stems are licensed. Do not generalize to arbitrary prefixes/러 verbs, restore an adjectival or full verb alias, move past/auxiliary ownership, or reverse prefinal order. Other unrelated existing analyses remain unjudged.",
+          "verdict": "forbidden",
+          "required_rules": [
+            "contraction.deictic_verb"
+          ]
         }
       ]
     }

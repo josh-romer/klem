@@ -647,6 +647,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !maldaInflectionIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...maldaInflectionEntries);
 
+  const deicticVowelFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-deictic-vowel.json"),"utf8"));
+  const deicticVowelEntries = deicticVowelFixture.LexicalResource.Lexicon.LexicalEntry;
+  const deicticVowelIds = new Set(deicticVowelEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !deicticVowelIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...deicticVowelEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5942,6 +5948,58 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-malda-inflection-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-malda-inflection-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const deicticVowelSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/deictic-vowel-sources.json"),"utf8"));
+  const deicticVowelCases = recipientLedger.cases.filter(c => c.id.startsWith("deictic-vowel-"));
+  assert.equal(deicticVowelCases.length,69);
+  for (const c of deicticVowelCases) {
+    const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => lexicalMaldaMatches(a,j)),j.verdict === "required",c.id);
+  }
+  for (const c of deicticVowelSource.cases) {
+    const token = (await (await post("analyze",{text:c.surface})).json()).records[0];
+    const i = token.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(i >= 0,c.id);
+    for (const j of c.entry_judgments) {
+      const entry = token.dictionary.readings[i].lemmas[0].entries.find(e => e.id === j.id);assert.ok(entry,c.id);
+      assert.equal(entry.status,j.status,c.id);assert.deepEqual(entry.conflicts,j.conflicts,c.id);
+    }
+  }
+  for (const e of deicticVowelSource.source_entries) {
+    const response = await (await post("entry",{id:e.id})).json();assert.deepEqual(response.entry,e,e.id);
+  }
+  const deicticVowelText = "그래 그랬어요 이래 저랬다 그래버렸다 그랬는데 그래도";
+  const deicticVowelParts = [
+    ["그러","어"],["그러","었","어요"],["이러","어"],["저러","었","다"],
+    ["그러","어","버리","었","다"],["그러","었","는데"],["그러","어도"],
+  ];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag === "--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,deicticVowelText);await waitHeading(page,"그래");
+    const response = await (await post("analyze",{text:deicticVowelText})).json();
+    for (const [n,t] of response.records.filter(r => r.analysis).entries()) {
+      const c = deicticVowelSource.cases.find(c => c.surface === t.surface && c.new_verb);
+      const index = t.analysis.analyses.findIndex(a => auxiliaryPath(a,c));assert.ok(index >= 0,t.surface);
+      assert.ok(t.analysis.analyses.some(a => a.unchanged),t.surface);
+      const block = page.locator(".breakdown-word").nth(n);
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),1,t.surface);
+      await block.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(),deicticVowelParts[n],t.surface);
+    }
+    const adjective = response.records[0].analysis.analyses.findIndex(a => a.lemmas.length === 1 && a.lemmas[0].text === "그렇다" && a.morphemes.length === 1 && a.morphemes[0].form === "어");assert.ok(adjective >= 0);
+    await page.locator(".breakdown-word").nth(0).getByRole("combobox").selectOption(String(adjective));
+    assert.deepEqual(await page.locator(".breakdown-word").nth(0).locator(".part-form").allTextContents(),["그렇","어"]);
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:deicticVowelText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(0).locator(".breakdown-part").nth(0).click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=61178"]'));
+  await page.screenshot({path:resolve(tmpdir(),"klem-deictic-vowel-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-deictic-vowel-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

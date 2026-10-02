@@ -4107,3 +4107,20 @@ literal 빼 들었다 and listed compounds are not assigned an intended sense.
 Existing whole-word and compound paths stay alongside new auxiliary hypotheses.
 Broader class/subset, prefinal/particle/right-ending and contextual review remain
 open. The original training spelling 뛰어들와서는 remains a recorded miss.
+
+## Deictic verb vowel contractions (COV-021i)
+
+The exact stems 그래, 이래 and 저래 also recover 그러다, 이러다 and 저러다
+with 어. Existing past recovery composes this with 었, and existing ending,
+auxiliary and particle rules compose normally. For example, 그랬어요 includes
+그러다 + 었 + 어요, and 그래버렸다 includes 그러다 + 어 + 버리다 + 었 + 다.
+The adjective readings 그렇다, 이렇다 and 저렇다 remain selectable; the verb
+paths do not carry an adjective ㅎ spelling class.
+
+This finite mapping does not restore arbitrary prefixed stems or add full
+headword aliases such as 그리하다/그러하다. Dictionary matching certifies a
+lexical possibility, not the meaning of its occurrence. The NIKL annotation
+report's adjective default for ambiguous 그래도 is not a candidate filter.
+Complete sources, selection timing and individual cases are preserved in the
+[source preflight](deictic-vowel-source-preflight.json) and
+[evaluation](deictic-vowel-evaluation.json).

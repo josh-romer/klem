@@ -568,6 +568,12 @@ try {
   const madaCaseIds = new Set(madaCaseEntries.map(e=>String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!madaCaseIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...madaCaseEntries);
+  const carryAuxFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-carry-aux.json"),"utf8"));
+  const carryAuxEntries = carryAuxFixture.LexicalResource.Lexicon.LexicalEntry;
+  const carryAuxIds = new Set(carryAuxEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!carryAuxIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...carryAuxEntries);
+
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -5163,6 +5169,23 @@ try {
     const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
   }
   await page.screenshot({path:resolve(tmpdir(),"klem-mada-case-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-mada-case-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Complete carry-auxiliary sources retain both senses and the lexical homonyms.
+  const carryAuxCases=recipientLedger.cases.filter(c=>c.id.startsWith("carry-aux-"));assert.equal(carryAuxCases.length,30);
+  for(const c of carryAuxCases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments)assert.equal(token.analysis.analyses.some(a=>hieutMatches(a,j)&&(!j.required_rules||j.required_rules.every(r=>a.rules.includes(r)))),j.verdict==="required",c.id);
+  }
+  for(const flag of[null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="예뻐갖고 싸가지고 가진";await submit(page,text);await waitHeading(page,"예뻐갖고");const raw=await(await post("analyze",{text})).json();const words=raw.records.filter(r=>r.analysis);
+    for(const[n,lemmas,forms]of[[0,["예쁘다","갖다"],["예쁘","어","갖","고"]],[1,["싸다","가지다"],["싸","어","가지","고"]],[2,["가지다"],["가지","은"]]]) {
+      const i=words[n].analysis.analyses.findIndex(a=>a.lemmas.map(l=>l.text).join("/")===lemmas.join("/"));assert.ok(i>=0);const b=page.locator(".breakdown-word").nth(n);await b.getByRole("combobox").selectOption(String(i));assert.deepEqual(await b.locator(".part-form").allTextContents(),forms);
+    }
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  for(const id of["krdict:61191","krdict:73401"]) { const r=await(await post("entry",{id})).json();assert.equal(r.entry.senses.length,2);assert.equal(r.entry.senses.reduce((n,s)=>n+s.examples.length,0),8); }
+  await page.screenshot({path:resolve(tmpdir(),"klem-carry-aux-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-carry-aux-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

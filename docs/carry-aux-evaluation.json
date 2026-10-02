@@ -1,0 +1,5327 @@
+{
+  "schema_version": 1,
+  "before_revision": "e7c22cbfc61e80a02d65f83703b6bd3fc45f570e",
+  "scope": "COV-013/019s: complete native sense/example audit for the existing 가지다/갖다 auxiliary paths, lexical homonym preservation and individual-case tracking. No runtime change; broader original COV-019 and COV-013 scope remains open.",
+  "source_fixture": "tests/fixtures/carry-aux-sources.json",
+  "source_fixture_sha256": "f33e4faf02399a48d5d8b2e8e6239371504d4ac27ced19712c06b3d4ebaf3e13",
+  "dictionary_fixture": "tests/fixtures/krdict-carry-aux.json",
+  "dictionary_fixture_sha256": "e5e189524597bcf173cb5ca6e36b370347d1d2167abd48dc2aa37e94353f6835",
+  "source_hashes": {
+    "data/dictionaries/krdict/json/10_5000_20260919.json": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c",
+    "data/dictionaries/krdict/json/11_3671_20260919.json": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84",
+    "data/dictionaries/krdict/json/1_5000_20260919.json": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c",
+    "data/dictionaries/krdict/json/2_5000_20260919.json": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0",
+    "data/dictionaries/krdict/json/3_5000_20260919.json": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644",
+    "data/dictionaries/krdict/json/4_5000_20260919.json": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61",
+    "data/dictionaries/krdict/json/5_5000_20260919.json": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0",
+    "data/dictionaries/krdict/json/6_5000_20260919.json": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18",
+    "data/dictionaries/krdict/json/7_5000_20260919.json": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3",
+    "data/dictionaries/krdict/json/8_5000_20260919.json": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e",
+    "data/dictionaries/krdict/json/9_5000_20260919.json": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+  },
+  "complete_fixture_entries": 30,
+  "complete_auxiliary_entries": 2,
+  "complete_auxiliary_senses": 4,
+  "complete_auxiliary_example_groups": 16,
+  "decisions": [
+    {
+      "entries": [
+        "krdict:61191",
+        "krdict:73401"
+      ],
+      "decision": "Both native senses use the same fixed -어 가지고 / -어 갖고 form and permit a preceding verb or adjective. All original example groups and dialogue lines are retained. Joined excerpts verify the existing structural paths without selecting result-maintenance versus cause/means/reason, recommending spelling or imposing undocumented register restrictions."
+    },
+    {
+      "entries": [
+        "krdict:61191",
+        "krdict:73401"
+      ],
+      "decision": "Eight forbidden judgments restrict only the auxiliary-role connector/right-inflection paths. The same-source independent lexical homonyms retain present/adnominal and connective forms; no global lemma ban or sense borrowing is introduced."
+    },
+    {
+      "entries": [
+        "krdict:65234",
+        "krdict:29738"
+      ],
+      "decision": "Complete independent lexical entries remain separate from the two auxiliary entries. Their forms and examples are preserved in the fixture and four positive lexical-role regressions. They are not inventory entries and this audit does not certify their contextual senses."
+    }
+  ],
+  "ledger": {
+    "prefix": "carry-aux-",
+    "cases": 30,
+    "required": 22,
+    "forbidden": 8,
+    "comparison": {
+      "cases": {
+        "before": 10982,
+        "after": 11012
+      },
+      "required_total": {
+        "before": 7771,
+        "after": 7793
+      },
+      "required_present": {
+        "before": 7771,
+        "after": 7793
+      },
+      "forbidden_total": {
+        "before": 3225,
+        "after": 3233
+      },
+      "forbidden_present": {
+        "before": 0,
+        "after": 0
+      },
+      "emitted_nonidentity": {
+        "before": 117015,
+        "after": 117187
+      },
+      "judged_nonidentity": {
+        "before": 7784,
+        "after": 7806
+      },
+      "original_unjudged_queue_prefix_unchanged": true,
+      "new_unjudged": [
+        {
+          "id": "carry-aux-unjudged-0001",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "꺼낳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0002",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "꺼낳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0003",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "꺼내가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0004",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "꺼내가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0005",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "꺼내가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0006",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "꺼내다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0007",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "꺼다",
+                "kind": "predicate"
+              },
+              {
+                "text": "내다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0008",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "꺼다",
+                "kind": "predicate"
+              },
+              {
+                "text": "내다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0009",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "끄다",
+                "kind": "predicate"
+              },
+              {
+                "text": "내다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0010",
+          "case_id": "carry-aux-native-61191-1-1",
+          "surface": "꺼내가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "끄다",
+                "kind": "predicate"
+              },
+              {
+                "text": "내다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0011",
+          "case_id": "carry-aux-native-61191-1-2",
+          "surface": "사가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "사가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0012",
+          "case_id": "carry-aux-native-61191-1-2",
+          "surface": "사가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "사가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0013",
+          "case_id": "carry-aux-native-61191-1-2",
+          "surface": "사가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "사가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0014",
+          "case_id": "carry-aux-native-61191-1-2",
+          "surface": "사가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "사그다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0015",
+          "case_id": "carry-aux-native-61191-1-2",
+          "surface": "사가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "사다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0016",
+          "case_id": "carry-aux-native-61191-1-3",
+          "surface": "따가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "따가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0017",
+          "case_id": "carry-aux-native-61191-1-3",
+          "surface": "따가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "따가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0018",
+          "case_id": "carry-aux-native-61191-1-3",
+          "surface": "따가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "따가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0019",
+          "case_id": "carry-aux-native-61191-1-3",
+          "surface": "따가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "따그다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0020",
+          "case_id": "carry-aux-native-61191-1-3",
+          "surface": "따가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "따다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0021",
+          "case_id": "carry-aux-native-61191-1-4",
+          "surface": "싸가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "싸가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0022",
+          "case_id": "carry-aux-native-61191-1-4",
+          "surface": "싸가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "싸가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0023",
+          "case_id": "carry-aux-native-61191-1-4",
+          "surface": "싸가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "싸가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0024",
+          "case_id": "carry-aux-native-61191-1-4",
+          "surface": "싸가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "싸그다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0025",
+          "case_id": "carry-aux-native-61191-1-4",
+          "surface": "싸가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "싸다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0026",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "노르다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "irregular.reu"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "reu_doubling"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0027",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "노르다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.reu"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "reu_doubling"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0028",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "놀라가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0029",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "놀라가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0030",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "놀라가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0031",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "놀라그다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0032",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "놀라다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0033",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "놀르다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "reu_eu_deletion"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0034",
+          "case_id": "carry-aux-native-61191-2-1",
+          "surface": "놀라가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "놀르다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "reu_eu_deletion"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0035",
+          "case_id": "carry-aux-native-61191-2-2",
+          "surface": "빌려가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "빌려가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0036",
+          "case_id": "carry-aux-native-61191-2-2",
+          "surface": "빌려가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "빌려가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0037",
+          "case_id": "carry-aux-native-61191-2-2",
+          "surface": "빌려가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "빌려가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0038",
+          "case_id": "carry-aux-native-61191-2-2",
+          "surface": "빌려가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "빌리다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "contraction.vowel",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0039",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "듣다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "irregular.digeut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "digeut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0040",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "듣다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.digeut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "digeut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0041",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "들다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0042",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "들어가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0043",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "들어가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0044",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "들어가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0045",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "들어다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0046",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "들어다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0047",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "들으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0048",
+          "case_id": "carry-aux-native-61191-2-3",
+          "surface": "들어가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "들으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0049",
+          "case_id": "carry-aux-native-61191-2-4",
+          "surface": "해가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "하다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "irregular.ha"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0050",
+          "case_id": "carry-aux-native-61191-2-4",
+          "surface": "해가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "핳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0051",
+          "case_id": "carry-aux-native-61191-2-4",
+          "surface": "해가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "핳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0052",
+          "case_id": "carry-aux-native-61191-2-4",
+          "surface": "해가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "해가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0053",
+          "case_id": "carry-aux-native-61191-2-4",
+          "surface": "해가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "해가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0054",
+          "case_id": "carry-aux-native-61191-2-4",
+          "surface": "해가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "해가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0055",
+          "case_id": "carry-aux-native-61191-2-4",
+          "surface": "해가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "해다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0056",
+          "case_id": "carry-aux-native-61191-2-4",
+          "surface": "해가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "해다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0057",
+          "case_id": "carry-aux-native-73401-1-1",
+          "surface": "모아갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "모다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0058",
+          "case_id": "carry-aux-native-73401-1-1",
+          "surface": "모아갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "모아갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0059",
+          "case_id": "carry-aux-native-73401-1-1",
+          "surface": "모아갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "모아다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0060",
+          "case_id": "carry-aux-native-73401-1-1",
+          "surface": "모아갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "못다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.siot"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "siot_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0061",
+          "case_id": "carry-aux-native-73401-1-2",
+          "surface": "싸갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "싸갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0062",
+          "case_id": "carry-aux-native-73401-1-3",
+          "surface": "정리해갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "정리핳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0063",
+          "case_id": "carry-aux-native-73401-1-3",
+          "surface": "정리해갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "정리해갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0064",
+          "case_id": "carry-aux-native-73401-1-3",
+          "surface": "정리해갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "정리해다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0065",
+          "case_id": "carry-aux-native-73401-1-4",
+          "surface": "사갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "사갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0066",
+          "case_id": "carry-aux-native-73401-2-1",
+          "surface": "공부해갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "공부핳다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0067",
+          "case_id": "carry-aux-native-73401-2-1",
+          "surface": "공부해갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "공부해갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0068",
+          "case_id": "carry-aux-native-73401-2-1",
+          "surface": "공부해갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "공부해다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0069",
+          "case_id": "carry-aux-native-73401-2-2",
+          "surface": "자갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "자갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0070",
+          "case_id": "carry-aux-native-73401-2-3",
+          "surface": "예뻐갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "예뻐갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0071",
+          "case_id": "carry-aux-native-73401-2-3",
+          "surface": "예뻐갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "예뻐다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0072",
+          "case_id": "carry-aux-native-73401-2-4",
+          "surface": "바빠갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "바빠갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0073",
+          "case_id": "carry-aux-native-73401-2-4",
+          "surface": "바빠갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "바빠다",
+                "kind": "predicate"
+              },
+              {
+                "text": "갖다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0074",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_regular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0075",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋아가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0076",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋아가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0077",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋아가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0078",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋아그다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0079",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋아다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0080",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋아다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0081",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0082",
+          "case_id": "carry-aux-adjective-good",
+          "surface": "좋아가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "좋으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0083",
+          "case_id": "carry-aux-adjective-pretty",
+          "surface": "예뻐가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "예뻐가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0084",
+          "case_id": "carry-aux-adjective-pretty",
+          "surface": "예뻐가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "예뻐가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0085",
+          "case_id": "carry-aux-adjective-pretty",
+          "surface": "예뻐가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "예뻐가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0086",
+          "case_id": "carry-aux-adjective-pretty",
+          "surface": "예뻐가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "예뻐다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0087",
+          "case_id": "carry-aux-adjective-pretty",
+          "surface": "예뻐가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "예뻐다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0088",
+          "case_id": "carry-aux-adjective-pretty",
+          "surface": "예뻐가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "예쁘다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0089",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0090",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "지",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "particle"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0091",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0092",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가지",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0093",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가지",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0094",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가지느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0095",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가지느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0096",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가지느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0097",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가지늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0098",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가지늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0099",
+          "case_id": "carry-aux-lexical-가지는",
+          "surface": "가지는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가질다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0100",
+          "case_id": "carry-aux-lexical-가지고",
+          "surface": "가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0101",
+          "case_id": "carry-aux-lexical-가지고",
+          "surface": "가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0102",
+          "case_id": "carry-aux-lexical-갖는",
+          "surface": "갖는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "갖느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0103",
+          "case_id": "carry-aux-lexical-갖는",
+          "surface": "갖는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "갖느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0104",
+          "case_id": "carry-aux-lexical-갖는",
+          "surface": "갖는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "갖느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0105",
+          "case_id": "carry-aux-lexical-갖는",
+          "surface": "갖는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "갖늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0106",
+          "case_id": "carry-aux-lexical-갖는",
+          "surface": "갖는",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "갖늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0107",
+          "case_id": "carry-aux-gaji-bare",
+          "surface": "먹어가지다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0108",
+          "case_id": "carry-aux-gaji-bare",
+          "surface": "먹어가지다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0109",
+          "case_id": "carry-aux-gaji-bare",
+          "surface": "먹어가지다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.enumerative_da"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0110",
+          "case_id": "carry-aux-gaji-bare",
+          "surface": "먹어가지다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "copula.zero",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0111",
+          "case_id": "carry-aux-gaji-bare",
+          "surface": "먹어가지다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0112",
+          "case_id": "carry-aux-gaji-bare",
+          "surface": "먹어가지다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0113",
+          "case_id": "carry-aux-gaji-bare",
+          "surface": "먹어가지다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0114",
+          "case_id": "carry-aux-gaji-bare",
+          "surface": "먹어가지다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0115",
+          "case_id": "carry-aux-gaji-past",
+          "surface": "먹어가졌다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "contraction.vowel",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0116",
+          "case_id": "carry-aux-gaji-past",
+          "surface": "먹어가졌다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "contraction.vowel",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0117",
+          "case_id": "carry-aux-gaji-past",
+          "surface": "먹어가졌다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가졌다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0118",
+          "case_id": "carry-aux-gaji-past",
+          "surface": "먹어가졌다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가졌다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0119",
+          "case_id": "carry-aux-gaji-past",
+          "surface": "먹어가졌다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가졌하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0120",
+          "case_id": "carry-aux-gaji-past",
+          "surface": "먹어가졌다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "contraction.vowel",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0121",
+          "case_id": "carry-aux-gaji-past",
+          "surface": "먹어가졌다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "contraction.vowel",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0122",
+          "case_id": "carry-aux-gaji-past",
+          "surface": "먹어가졌다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "contraction.vowel",
+              "deletion.eu",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0123",
+          "case_id": "carry-aux-gaji-go-link",
+          "surface": "먹고가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹고가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0124",
+          "case_id": "carry-aux-gaji-go-link",
+          "surface": "먹고가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹고가지",
+                "kind": "nominal"
+              },
+              {
+                "text": "이다",
+                "kind": "copula"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "copula",
+              "copula.omitted_ending",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0125",
+          "case_id": "carry-aux-gaji-go-link",
+          "surface": "먹고가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹고가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0126",
+          "case_id": "carry-aux-gaji-go-link",
+          "surface": "먹고가지고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹고그다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.regular",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0127",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "boundary.regular",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0128",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가다",
+                "kind": "predicate"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0129",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0130",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지면",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "서",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0131",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지면서다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0132",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가지면스다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0133",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어가짛다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0134",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0135",
+          "case_id": "carry-aux-gaji-connective",
+          "surface": "먹어가지면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹으다",
+                "kind": "predicate"
+              },
+              {
+                "text": "가다",
+                "kind": "auxiliary"
+              },
+              {
+                "text": "지다",
+                "kind": "auxiliary"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "어",
+                "kind": "ending"
+              },
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "auxiliary",
+              "boundary.eu",
+              "contraction.identical",
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0136",
+          "case_id": "carry-aux-gat-bare",
+          "surface": "먹어갖다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0137",
+          "case_id": "carry-aux-gat-bare",
+          "surface": "먹어갖다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0138",
+          "case_id": "carry-aux-gat-bare",
+          "surface": "먹어갖다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖드다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0139",
+          "case_id": "carry-aux-gat-bare",
+          "surface": "먹어갖다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0140",
+          "case_id": "carry-aux-gat-past",
+          "surface": "먹어갖었다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖어다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "었",
+                "kind": "prefinal"
+              },
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "contraction.identical",
+              "ending",
+              "prefinal.past"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0141",
+          "case_id": "carry-aux-gat-past",
+          "surface": "먹어갖었다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖었다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0142",
+          "case_id": "carry-aux-gat-past",
+          "surface": "먹어갖었다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖었다다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0143",
+          "case_id": "carry-aux-gat-past",
+          "surface": "먹어갖었다",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖었하다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "다",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.ha",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0144",
+          "case_id": "carry-aux-gat-go-link",
+          "surface": "먹고갖고",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹고갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "고",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0145",
+          "case_id": "carry-aux-gat-connective",
+          "surface": "먹어갖으면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0146",
+          "case_id": "carry-aux-gat-connective",
+          "surface": "먹어갖으면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖으다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0147",
+          "case_id": "carry-aux-gat-connective",
+          "surface": "먹어갖으면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖으면",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "서",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0148",
+          "case_id": "carry-aux-gat-connective",
+          "surface": "먹어갖으면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖으면서다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "contraction.identical",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0149",
+          "case_id": "carry-aux-gat-connective",
+          "surface": "먹어갖으면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖으면스다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "어",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.eu",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        },
+        {
+          "id": "carry-aux-unjudged-0150",
+          "case_id": "carry-aux-gat-connective",
+          "surface": "먹어갖으면서",
+          "analysis": {
+            "lemmas": [
+              {
+                "text": "먹어갖읗다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으면서",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "source_integrity": {
+    "complete_native_entries": 30,
+    "complete_auxiliary_senses": 4,
+    "complete_auxiliary_example_groups": 16,
+    "shortening_relations_preserved": true,
+    "original_case_count": 10982,
+    "original_case_prefix_byte_identical": true,
+    "all_original_sources_preserved": true,
+    "unchanged_training_blocks": 2,
+    "runtime_binary_identity": {
+      "cli_sha256": {
+        "before_sha256": "1bc3d196e3c7d11c61c456dced4bc9bba73383d65f6f3c2868af0c0fa04fb4c4",
+        "after_sha256": "1bc3d196e3c7d11c61c456dced4bc9bba73383d65f6f3c2868af0c0fa04fb4c4"
+      },
+      "server_sha256": {
+        "before_sha256": "1e88fb76404f0ed047e60b4fddc1150c9774de0691499779e325e46c9dcb9216",
+        "after_sha256": "1e88fb76404f0ed047e60b4fddc1150c9774de0691499779e325e46c9dcb9216"
+      }
+    },
+    "frozen_baselines_unmodified": true
+  },
+  "corpus": {
+    "search": {
+      "split": "training only",
+      "rule": "Aligned lemma 가지/갖 with KAIST px or GSD VX auxiliary tag. Complete matching sentence blocks are retained unchanged; lexical VV/pvg homonyms are not called auxiliary evidence.",
+      "files": [
+        {
+          "path": "data/corpora/kaist/ko_kaist-ud-train.conllu",
+          "sha256": "6f99de7e21b8119022831afda52643dd8ff60ea386f2679c938dd7f652725d94",
+          "matching_rows": 2
+        },
+        {
+          "path": "data/corpora/gsd/ko_gsd-ud-train.conllu",
+          "sha256": "0bd96ceae934d1089ece599b8904b43b0074df75e41a8e07e4b72264337b39f8",
+          "matching_rows": 0
+        }
+      ]
+    },
+    "fixture": "tests/fixtures/kaist-carry-aux.conllu",
+    "fixture_sha256": "3d309e697a997a19993e02431e589d2b787377b21543ef6370157fff0ecf64a5",
+    "targets": [
+      {
+        "id": "id:M2TA_087-s155/12",
+        "surface": "싸가지고",
+        "expected": [
+          "싸다",
+          "가지다"
+        ]
+      },
+      {
+        "id": "id:MH2_0083-s63/4",
+        "surface": "가지고",
+        "expected": [
+          "가지다"
+        ]
+      }
+    ],
+    "source_annotations_unchanged": true,
+    "all_targets_matched": true,
+    "limits": "The joined token is source gold; the separately written auxiliary is a separate token. No cross-token candidate is invented and no annotations are repaired."
+  },
+  "gates": [
+    {
+      "gate": "all-tests",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "--features",
+        "web"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/klem-carry-aux-all-tests.log",
+      "log_sha256": "63dcfcf89b5f2b346b6253656ea207bb7687833fbb4d3429906924637a76a031"
+    },
+    {
+      "gate": "pinned",
+      "command": [
+        "cargo",
+        "test",
+        "--locked",
+        "--offline",
+        "--features",
+        "web",
+        "--test",
+        "corpus",
+        "pinned_full_corpus_regressions",
+        "--",
+        "--ignored"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/klem-carry-aux-pinned.log",
+      "log_sha256": "0c0e2e73ceb4b51024dba0dadebb372458e999afe54aeed91dd6e0d5f045197b"
+    },
+    {
+      "gate": "clippy",
+      "command": [
+        "cargo",
+        "clippy",
+        "--locked",
+        "--offline",
+        "--features",
+        "web",
+        "--all-targets",
+        "--",
+        "-D",
+        "warnings"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/klem-carry-aux-clippy.log",
+      "log_sha256": "2a74c306e82c0ffa55299fcb0617164512783b4bc394faa20895b7820329fcb7"
+    },
+    {
+      "gate": "fmt",
+      "command": [
+        "cargo",
+        "fmt",
+        "--all",
+        "--",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/klem-carry-aux-fmt.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "gate": "build",
+      "command": [
+        "cargo",
+        "build",
+        "--locked",
+        "--offline",
+        "--features",
+        "web"
+      ],
+      "exit_code": 0,
+      "log": "/tmp/klem-carry-aux-build.log",
+      "log_sha256": "8c233a54790c4800d3dd585436af679aa838da259bfdb129412e2d51cdb75cdc"
+    }
+  ],
+  "rust_tests": 685,
+  "frontend": {
+    "build_exit_code": 0,
+    "build_log_sha256": "9615b4aed268a4bd1b8e02d4b44d61ae4ba3c1d06ee31d9edbfe284e266b36a6",
+    "full_browser_exit_code": 0,
+    "browser_log_sha256": "c0fc4043b51015cf6f916f88010cceba6d837ff821dda1a505f57f633642f141",
+    "new_api_cases": 30,
+    "filters": [
+      "raw",
+      "headword",
+      "compatible"
+    ],
+    "ordered_components_and_exports": true,
+    "complete_native_entry_http_senses": true,
+    "desktop_mobile_inspected": true,
+    "visual_limits": "Lexical 싸다 can show the dictionary hint cheap instead of a contextual wrapping sense; 가지다/갖다 auxiliary translations are the native romanized gajida/gatda labels. Structural role/source correctness is tested; this audit does not turn hints into contextual translations."
+  },
+  "nix": {
+    "build_exit_code": 0,
+    "release_tests": 685,
+    "outputs": [
+      {
+        "drvPath": "/nix/store/42qwyw66awv8fd49w0fnwdm6fijiyrgq-klem-0.1.0.drv",
+        "outputs": {
+          "out": "/nix/store/cch31apkia52wm2p79fsm5l80icrcr2f-klem-0.1.0"
+        },
+        "startTime": 1790904014,
+        "stopTime": 1790904293
+      },
+      {
+        "drvPath": "/nix/store/7kf67iigsc5csyznr0zry4883z0g6b4l-klem-web.drv",
+        "outputs": {
+          "out": "/nix/store/5j7lmig455lgf7ja2ckxfaycrmahnal6-klem-web"
+        },
+        "startTime": 1790904293,
+        "stopTime": 1790904293
+      }
+    ],
+    "build_log_sha256": "58eefefcfc4d8a8a98c4d0f55d27053a061faa4cfd907d46c9d049793f186326",
+    "initial_source_snapshot_failure": "First build omitted untracked fixtures. Verified terminal failure; staged new files and reran. The corrected Git-backed source build passed all 685 release tests.",
+    "checks": {
+      "command": "nix flake check",
+      "exit_code": 0,
+      "platform": "x86_64-linux",
+      "checks": 3,
+      "log_sha256": "7d47c088081d362c720784d0976c1c928b0fc5ef353381de3890595315a14963",
+      "note": "Checks passed before this final documentation/queue update; final source check is required before committing. No other platform execution is claimed."
+    }
+  },
+  "packaged_outputs": {
+    "cli": "/nix/store/cch31apkia52wm2p79fsm5l80icrcr2f-klem-0.1.0/bin/klem",
+    "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+    "server": "/nix/store/cch31apkia52wm2p79fsm5l80icrcr2f-klem-0.1.0/bin/klem-web",
+    "server_sha256": "ce0720afaa8f1e29078ab4c3c42c210edb82bb9c227eb37c35d2389109e9349d",
+    "web_wrapper": "/nix/store/5j7lmig455lgf7ja2ckxfaycrmahnal6-klem-web/bin/klem-web",
+    "assets": "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web",
+    "production_js": "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web/assets/index-DU43SJBP.js",
+    "production_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+    "production_asset_local_parity": true,
+    "packaged_runtime": {
+      "url": "http://127.0.0.1:33459",
+      "cli": "/nix/store/cch31apkia52wm2p79fsm5l80icrcr2f-klem-0.1.0/bin/klem",
+      "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+      "cases": 170,
+      "new_carry_cases": 30,
+      "new_mada_cases": 20,
+      "required": 137,
+      "forbidden": 33,
+      "http_word_text_cli_parity": true,
+      "both_filters_exact_parity": true,
+      "root_homonyms": 5,
+      "known_other_origins": 4,
+      "complete_originless_matchmaking_and_debut_senses": true,
+      "all_source_origins_preserved": true,
+      "ordinary_words_do_not_gain_root_evidence": true,
+      "complete_lexical_assessment_slots": true,
+      "compound_root_ordered_components": true,
+      "spacing_keeps_whole_noun_without_conflicting_roots": true,
+      "complete_suffix_senses": {
+        "88924": 3,
+        "88927": 2
+      },
+      "noun_suffix_native_groups": 44,
+      "served_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+      "local_asset_parity": true,
+      "mada_native_senses": 2,
+      "mada_native_groups": 20,
+      "observed_mada_case_order_and_sources": true
+    }
+  },
+  "preview": {
+    "url": "http://127.0.0.1:8081",
+    "runtime": {
+      "url": "http://127.0.0.1:8081",
+      "cli": "/nix/store/cch31apkia52wm2p79fsm5l80icrcr2f-klem-0.1.0/bin/klem",
+      "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+      "cases": 170,
+      "new_carry_cases": 30,
+      "new_mada_cases": 20,
+      "required": 137,
+      "forbidden": 33,
+      "http_word_text_cli_parity": true,
+      "both_filters_exact_parity": true,
+      "root_homonyms": 5,
+      "known_other_origins": 4,
+      "complete_originless_matchmaking_and_debut_senses": true,
+      "all_source_origins_preserved": true,
+      "ordinary_words_do_not_gain_root_evidence": true,
+      "complete_lexical_assessment_slots": true,
+      "compound_root_ordered_components": true,
+      "spacing_keeps_whole_noun_without_conflicting_roots": true,
+      "complete_suffix_senses": {
+        "88924": 3,
+        "88927": 2
+      },
+      "noun_suffix_native_groups": 44,
+      "served_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+      "local_asset_parity": true,
+      "mada_native_senses": 2,
+      "mada_native_groups": 20,
+      "observed_mada_case_order_and_sources": true
+    },
+    "identity": {
+      "pid": 2638613,
+      "uid": "1000",
+      "exe": "/nix/store/cch31apkia52wm2p79fsm5l80icrcr2f-klem-0.1.0/bin/klem-web",
+      "args": [
+        "/nix/store/cch31apkia52wm2p79fsm5l80icrcr2f-klem-0.1.0/bin/klem-web",
+        "--assets",
+        "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web",
+        "--port",
+        "8081",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ],
+      "cwd": "/home/josh/projects/klem",
+      "start_ticks": "41779843",
+      "server_sha256": "ce0720afaa8f1e29078ab4c3c42c210edb82bb9c227eb37c35d2389109e9349d"
+    },
+    "restoration": "Previous preview was not listening (connection refused). Started the verified wrapper on the free port and verified all 170 cases; no unrelated process was stopped."
+  },
+  "runtime_compatibility": {
+    "runtime_change": false,
+    "debug_cli_and_server_byte_identical": true,
+    "nix_cli_server_and_production_js_byte_identical": true,
+    "previous_packaged_metadata": {
+      "cli": "/nix/store/c01cm4g7wa9gm2zvz7g48ns2jpl2y3pb-klem-0.1.0/bin/klem",
+      "cli_sha256": "f207e69ff726fd90326e174e1bcba960d7b52bf46f24f9a4138646afdb489292",
+      "server": "/nix/store/c01cm4g7wa9gm2zvz7g48ns2jpl2y3pb-klem-0.1.0/bin/klem-web",
+      "server_sha256": "ce0720afaa8f1e29078ab4c3c42c210edb82bb9c227eb37c35d2389109e9349d",
+      "web_wrapper": "/nix/store/r88139qwci2dwpfmig3l8ryvv733qyjn-klem-web/bin/klem-web",
+      "production_js": "/nix/store/jnfhki8z0pnp5ccdpk54lsbwvck1b984-klem-web-assets-0.1.0/share/klem-web/assets/index-DU43SJBP.js",
+      "production_js_sha256": "43f72fa488afd5ece048bc2a3d640494b28e42eb7c13bbb0f2be1a23cfc41d6c",
+      "documented_source_build_tests": 681,
+      "final_cli_server_hashes_match_verified_package": true
+    },
+    "prior_evaluation": "docs/mada-case-evaluation.json",
+    "prior_evaluation_sha256": "79244c0a7507d44d5697f335756208ef40b78a2fed3f224a93e1a85c715535bf",
+    "evidence_limit": "Identical executables/assets and unchanged pinned dictionary/source data preserve runtime behavior. Earlier full candidate/corpus/novel and timing evidence is referenced without presenting new measurements. Current pinned full-corpus, browser, CLI/HTTP, source-integrity and Nix release tests were rerun; no new throughput or general precision claim is made."
+  },
+  "inventory": {
+    "entries": 715,
+    "scoped": 389,
+    "unreviewed": 326,
+    "gaps": 0,
+    "new_scoped": [
+      "krdict:61191",
+      "krdict:73401"
+    ],
+    "interpretation": "Scoped source/structural dispositions with explicit limitations; full-entry contextual correctness and independent Korean-language review are not certified."
+  },
+  "remaining_original_scope": [
+    "All original open checklist items remain required; COV-013 still has 326 unreviewed inventory entries.",
+    "Contextual auxiliary versus lexical sense selection, semantic suitability and register remain open under COV-019.",
+    "Additional internal/outer particle combinations and broader prefinal licenses need source review.",
+    "The original unjudged queue and 150 stable new unjudged analyses remain available for individual review, not counted as confirmed readings.",
+    "Independent Korean-language review, fresh representative passage review and final published scope/recall/ambiguity/dictionary/performance assessment remain required."
+  ]
+}

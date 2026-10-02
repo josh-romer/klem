@@ -3928,3 +3928,28 @@ original corpus recovery. Semantic/register distribution and independent
 Korean review remain open.
 [Source audit](mada-case-source-audit.json) retains the public PDF provenance,
 57 complete dictionary entries and all twenty original 마다 example groups.
+
+## Carry auxiliary source audit (COV-013 / COV-019s)
+
+KRDict auxiliary [가지다 61191](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=61191)
+and [갖다 73401](https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73401)
+each have two senses: maintaining a result/state and expressing a cause,
+means or reason. Both senses specify a preceding verb or adjective and the
+fixed forms `-어 가지고` / `-어 갖고`. The complete offline fixture preserves
+all sixteen example groups, their original spacing and dialogue lines, notes,
+forms and relations. It omits multimedia and non-English equivalents.
+
+The existing engine recovers joined-input alternatives such as
+`꺼내가지고 → 꺼내다 + 어 + 가지다 + 고` and
+`예뻐갖고 → 예쁘다 + 어 + 갖다 + 고`. It keeps independent lexical
+가지다 and 갖다 homonyms and restricts only the auxiliary's right inflection
+to 고. The audit adds individual-case regressions and source review, without
+changing runtime rules, choosing a contextual sense or recommending joined
+spelling. Two original KAIST training sentences remain unchanged, including
+one joined auxiliary token and one separately written 가지고 token.
+
+Register, semantic suitability, additional particle combinations, broader
+prefinal licenses and independent Korean-language review remain open. The
+[source record](../tests/fixtures/carry-aux-sources.json) and
+[tests](../tests/carry_aux.rs) distinguish direct native attestations,
+constructed attachment-note checks, and scoped forbidden auxiliary paths.

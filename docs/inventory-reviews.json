@@ -31083,6 +31083,186 @@
           "judgment": "source-path"
         }
       ]
+    },
+    {
+      "id": "krdict:61191",
+      "source_sha256": "2faccf1c6eb5be76f1aa0fe67b1fe83de1899c7e14d359847c77f05d0e2fb9cd",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019a",
+        "COV-019s"
+      ],
+      "scope": "Both complete native auxiliary senses and all eight example groups reviewed. Existing -어 가지고/-어 갖고 paths preserve result/state maintenance and cause/means/reason possibilities, verb/adjective left predicates, source contractions and the restricted right 고 form. Joined excerpts are tolerant token input; original spaced examples and corpus sentences are retained unchanged. Independent lexical 가지다/갖다 homonyms keep their own forms.",
+      "remaining": "Contextual choice between the two senses or lexical homonyms, register, semantic suitability, further internal/outer particle combinations and broader left prefinal licensing remain open; this is not independent Korean-language review or full-entry contextual correctness certification.",
+      "evidence": [
+        {
+          "path": "tests/carry_aux.rs",
+          "test": "carry_sources_keep_both_full_senses_every_group_and_lexical_homonyms"
+        },
+        {
+          "path": "tests/carry_aux.rs",
+          "test": "carry_paths_preserve_unicode_order_roles_and_restricted_auxiliary_forms"
+        },
+        {
+          "path": "tests/carry_aux.rs",
+          "test": "carry_filters_cached_dictionary_and_cli_preserve_every_required_role"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "carry_auxiliaries_preserve_both_original_training_annotations"
+        },
+        {
+          "path": "tests/fixtures/carry-aux-sources.json"
+        },
+        {
+          "path": "docs/carry-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "carry-aux-native-61191-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-61191-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-61191-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-61191-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-61191-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-61191-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-61191-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-61191-2-4",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-adjective-good",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-adjective-pretty",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-gaji-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-gaji-past",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-gaji-go-link",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-gaji-connective",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:73401",
+      "source_sha256": "67bafb5a724024b3e13df5b64ff52a1a4dafd90217dc664f27696e5702f63b46",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019a",
+        "COV-019s"
+      ],
+      "scope": "Both complete native auxiliary senses and all eight example groups reviewed. Existing -어 가지고/-어 갖고 paths preserve result/state maintenance and cause/means/reason possibilities, verb/adjective left predicates, source contractions and the restricted right 고 form. Joined excerpts are tolerant token input; original spaced examples and corpus sentences are retained unchanged. Independent lexical 가지다/갖다 homonyms keep their own forms.",
+      "remaining": "Contextual choice between the two senses or lexical homonyms, register, semantic suitability, further internal/outer particle combinations and broader left prefinal licensing remain open; this is not independent Korean-language review or full-entry contextual correctness certification.",
+      "evidence": [
+        {
+          "path": "tests/carry_aux.rs",
+          "test": "carry_sources_keep_both_full_senses_every_group_and_lexical_homonyms"
+        },
+        {
+          "path": "tests/carry_aux.rs",
+          "test": "carry_paths_preserve_unicode_order_roles_and_restricted_auxiliary_forms"
+        },
+        {
+          "path": "tests/carry_aux.rs",
+          "test": "carry_filters_cached_dictionary_and_cli_preserve_every_required_role"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "carry_auxiliaries_preserve_both_original_training_annotations"
+        },
+        {
+          "path": "tests/fixtures/carry-aux-sources.json"
+        },
+        {
+          "path": "docs/carry-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "carry-aux-native-73401-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-73401-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-73401-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-73401-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-73401-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-73401-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-73401-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-native-73401-2-4",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-gat-bare",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-gat-past",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-gat-go-link",
+          "judgment": "path"
+        },
+        {
+          "case": "carry-aux-gat-connective",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

@@ -2746,3 +2746,22 @@ fn polite_partial_match_preserves_original_proper_name_annotation_conflict() {
                 .eq(["으옵", "어"])
     }));
 }
+
+#[test]
+fn carry_auxiliaries_preserve_both_original_training_annotations() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-carry-aux.conllu").as_slice(),
+        Corpus::Kaist,
+        "carry-aux",
+    )
+    .unwrap();
+    for (id, surface, expected) in [
+        ("id:M2TA_087-s155/12", "싸가지고", vec!["싸다", "가지다"]),
+        ("id:MH2_0083-s63/4", "가지고", vec!["가지다"]),
+    ] {
+        let c = &report.cases[id];
+        assert_eq!(c.surface, surface);
+        assert_eq!(c.expected, expected);
+        assert!(c.matched, "{id}: {c:?}");
+    }
+}

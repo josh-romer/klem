@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 387 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–r/020d–h/020j–k/020n–o/021d; 328 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 389 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–s/020d–h/020j–k/020n–o/021d; 326 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2200,6 +2200,23 @@ review remains open under the completion review below.
   Ordinary indicative/past/honorific right forms remain rejected. Broader lexical
   selection is unreviewed. See [tests](../tests/short_reports.rs) and the
   [evaluation](short-reports-evaluation.json).
+
+- [x] **COV-019s — Complete 가지다/갖다 auxiliary source audit.**
+  Existing 어 + 가지다/갖다 + 고 paths cover both result-maintenance and
+  cause/means/reason senses. The new [source record](../tests/fixtures/carry-aux-sources.json)
+  preserves all four native senses and sixteen example groups, including
+  adjective examples 예뻐 갖고 and 바빠 갖고. Thirty stable `carry-aux-*`
+  cases track 22 required and eight forbidden paths; independent lexical
+  가지다/갖다 homonyms retain their forms. Two complete unchanged KAIST
+  training sentences preserve 싸가지고 → 싸다 + 가지다 and the separately
+  written 가지고 annotation. Evidence: [source/path/dictionary/CLI tests](../tests/carry_aux.rs),
+  [corpus regression](../tests/corpus.rs), and browser API/component/export
+  checks. All finite gates passed: 685 Rust/release tests, pinned full corpora,
+  clippy/fmt, frontend/full browser, packaged 170-case CLI/HTTP parity and
+  three flake checks. The [evaluation](carry-aux-evaluation.json) preserves
+  the 150 new unjudged analyses and original ledger/queue prefixes. Contextual sense selection, register,
+  semantic suitability, further particle combinations and broader prefinal
+  licenses remain open under COV-019; independent Korean review is pending.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 389 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–s/020d–h/020j–k/020n–o/021d; 326 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 393 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–t/020d–h/020j–k/020n–o/021d; 322 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2217,6 +2217,31 @@ review remains open under the completion review below.
   the 150 new unjudged analyses and original ledger/queue prefixes. Contextual sense selection, register,
   semantic suitability, further particle combinations and broader prefinal
   licenses remain open under COV-019; independent Korean review is pending.
+
+- [x] **COV-019t — Repetitive/emphatic auxiliary audit and 대다 left class.**
+  Review all four complete native entries for 대다, 버릇하다, 마지않다 and
+  마지아니하다, preserving fifteen source groups and 39 original KAIST/GSD
+  training targets. NIKL's grammar-expression guide §3.6.27 pp.512–514
+  explicitly rejects adjective attachment before 어 대다. The engine checks
+  the immediate represented adjective/copula owner, including negative/답다
+  inheritance; a later verb auxiliary resets the class. The optional dictionary
+  compatibility check assesses each lexical POS homonym independently through
+  지-negatives and retains unknown provider classes. Twenty-seven raw cases
+  track 17 required / 10 forbidden paths; eight separate compatible-filter
+  cases track four retentions / four exclusions. The [source record](../tests/fixtures/repetitive-aux-sources.json)
+  separates direct NIKL (x) examples from class-composition inferences and
+  retains p.513's 놓다 prose typo as a source conflict, without borrowing it
+  as a rule. Evidence: [source/class/dictionary/CLI tests](../tests/repetitive_aux.rs),
+  [unchanged-annotation tests](../tests/corpus.rs), browser exports and full
+  corpus/candidate/novel comparisons. All finite gates passed: 690 Rust/release
+  tests, pinned full corpora, clippy/fmt, frontend/full browser, packaged
+  197-case CLI/HTTP parity plus eight filter policies, and three flake checks.
+  The [evaluation](repetitive-aux-evaluation.json) preserves all 273 new
+  unjudged analyses, every candidate/class change, original ledger/queue
+  prefixes and the unchanged GSD disagreement. Broader
+  lexical subsets, prefinals/particles, other three auxiliary left classes,
+  contextual semantic suitability/register and independent Korean review
+  remain required under COV-019.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

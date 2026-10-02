@@ -1,0 +1,63 @@
+# sent_id = train-s154
+# text = 그런데 양이 너무 작아서 둘이서 메뉴 세 개 시켜 먹어야대요
+# translit = .geu.reon.de .yang.i .neo.mu .jag.a.seo .dul.i.seo .me.nyu .se .gae .si.kyeo .meog.eo.ya.dae.yo
+1	그런데	그런데	ADV	MAJ	_	4	advmod	_	Translit=.geu.reon.de|LTranslit=.geu.reon.de
+2	양이	양+이	NOUN	NNG+JKS	_	4	nsubj	_	Translit=.yang.i|LTranslit=.yang+.i
+3	너무	너무	ADV	MAG	_	4	advmod	_	Translit=.neo.mu|LTranslit=.neo.mu
+4	작아서	작+아서	VERB	VA+EC	_	10	advcl	_	Translit=.jag.a.seo|LTranslit=.jag+.a.seo
+5	둘이서	둘+이서	NUM	NR+JKS	NumType=Card	9	nsubj	_	Translit=.dul.i.seo|LTranslit=.dul+.i.seo
+6	메뉴	메뉴	NOUN	NNG	_	9	obj	_	Translit=.me.nyu|LTranslit=.me.nyu
+7	세	세	NUM	MM	NumType=Card	6	nummod	_	Translit=.se|LTranslit=.se
+8	개	개	NOUN	NNB	_	6	flat	_	Translit=.gae|LTranslit=.gae
+9	시켜	시키+어	VERB	VV+EC	_	10	advcl	_	Translit=.si.kyeo|LTranslit=.si.ki+.eo
+10	먹어야대요	먹+어야+대+요	VERB	VV+EC+VX+EC	_	0	root	_	Translit=.meog.eo.ya.dae.yo|LTranslit=.meog+.eo.ya+.dae+.yo
+
+# sent_id = train-s966
+# text = 또 특정 장난감들을 갖고 일정한 명령에 따를 수도 있는 것으로 나타나, 조련사가 지정하는 장난감에 발을 갖다 대거나 지정하는 프리스비를 갖고 오기도 했다.
+# translit = .ddo .teug.jeong .jang.nan.gam.deul.eul .gaj.go .il.jeong.han .myeong.ryeong.e .dda.reul .su.do .iss.neun .geos.eu.ro .na.ta.na, .jo.ryeon.sa.ga .ji.jeong.ha.neun .jang.nan.gam.e .bal.eul .gaj.da .dae.geo.na .ji.jeong.ha.neun .peu.ri.seu.bi.reul .gaj.go .o.gi.do .haess.da.
+1	또	또	ADV	MAG	_	23	advmod	_	Translit=.ddo|LTranslit=.ddo
+2	특정	특정	NOUN	NNG	_	4	obj	_	Translit=.teug.jeong|LTranslit=.teug.jeong
+3	장난감들을	장난감+들+을	NOUN	NNG+XSN+JKO	_	2	flat	_	Translit=.jang.nan.gam.deul.eul|LTranslit=.jang.nan.gam+.deul+.eul
+4	갖고	갖+고	VERB	VV+EC	_	8	dep	_	Translit=.gaj.go|LTranslit=.gaj+.go
+5	일정한	일정+하+ㄴ	ADJ	XR+XSA+ETM	_	6	amod	_	Translit=.il.jeong.han|LTranslit=.il.jeong+.ha+ㄴ
+6	명령에	명령+에	ADV	NNG+JKB	_	7	obl	_	Translit=.myeong.ryeong.e|LTranslit=.myeong.ryeong+.e
+7	따를	따르+ㄹ	VERB	VV+ETM	_	4	conj	_	Translit=.dda.reul|LTranslit=.dda.reu+ㄹ
+8	수도	수+도	NOUN	NNB+JX	_	9	nsubj	_	Translit=.su.do|LTranslit=.su+.do
+9	있는	있+는	VERB	VV+ETM	_	10	dep	_	Translit=.iss.neun|LTranslit=.iss+.neun
+10	것으로	것+으로	ADV	NNB+JKB	_	11	obl	_	Translit=.geos.eu.ro|LTranslit=.geos+.eu.ro
+11	나타나	나타나+아	VERB	VV+EC	_	23	advcl	_	SpaceAfter=No|Translit=.na.ta.na|LTranslit=.na.ta.na+.a
+12	,	,	PUNCT	SP	_	11	punct	_	Translit=,|LTranslit=,
+13	조련사가	조련사+가	NOUN	NNG+JKS	_	14	nsubj	_	Translit=.jo.ryeon.sa.ga|LTranslit=.jo.ryeon.sa+.ga
+14	지정하는	지정+하+는	VERB	NNG+XSV+ETM	_	15	acl:relcl	_	Translit=.ji.jeong.ha.neun|LTranslit=.ji.jeong+.ha+.neun
+15	장난감에	장난감+에	ADV	NNG+JKB	_	17	obl	_	Translit=.jang.nan.gam.e|LTranslit=.jang.nan.gam+.e
+16	발을	발+을	NOUN	NNG+JKO	_	17	obj	_	Translit=.bal.eul|LTranslit=.bal+.eul
+17	갖다	갖+다	VERB	VV+EC	_	22	advcl	_	Translit=.gaj.da|LTranslit=.gaj+.da
+18	대거나	대+거나	VERB	VX+EC	_	17	flat	_	Translit=.dae.geo.na|LTranslit=.dae+.geo.na
+19	지정하는	지정+하+는	VERB	NNG+XSV+ETM	_	20	acl:relcl	_	Translit=.ji.jeong.ha.neun|LTranslit=.ji.jeong+.ha+.neun
+20	프리스비를	프리스비+를	NOUN	NNG+JKO	_	21	obj	_	Translit=.peu.ri.seu.bi.reul|LTranslit=.peu.ri.seu.bi+.reul
+21	갖고	갖+고	VERB	VV+EC	_	23	obj	_	Translit=.gaj.go|LTranslit=.gaj+.go
+22	오기도	오+기+도	NOUN	VX+ETN+JX	_	21	conj	_	Translit=.o.gi.do|LTranslit=.o+.gi+.do
+23	했다	하+았+다	VERB	VX+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.haess.da|LTranslit=.ha+.ass+.da
+24	.	.	PUNCT	SF	_	23	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1204
+# text = 손녀뻘 아이가 반말로 대꾸하자 분을 참지 못한 듯 할머니는 소녀의 머리채를 잡아 채 이리저리 함부로 흔들어댄다.
+# translit = .son.nyeo.bbeol .a.i.ga .ban.mal.ro .dae.ggu.ha.ja .bun.eul .cham.ji .mos.han .deus .hal.meo.ni.neun .so.nyeo.yi .meo.ri.chae.reul .jab.a .chae .i.ri.jeo.ri .ham.bu.ro .heun.deul.eo.daen.da.
+1	손녀뻘	손녀+뻘	NOUN	NNG+XSN	_	4	nsubj	_	Translit=.son.nyeo.bbeol|LTranslit=.son.nyeo+.bbeol
+2	아이가	아이+가	NOUN	NNG+JKS	_	1	flat	_	Translit=.a.i.ga|LTranslit=.a.i+.ga
+3	반말로	반말+로	ADV	NNG+JKB	_	4	obl	_	Translit=.ban.mal.ro|LTranslit=.ban.mal+.ro
+4	대꾸하자	대꾸+하+자	VERB	NNG+XSV+EC	_	6	advcl	_	Translit=.dae.ggu.ha.ja|LTranslit=.dae.ggu+.ha+.ja
+5	분을	분+을	NOUN	NNG+JKO	_	6	obj	_	Translit=.bun.eul|LTranslit=.bun+.eul
+6	참지	참+지	VERB	VV+EC	_	16	advcl	_	Translit=.cham.ji|LTranslit=.cham+.ji
+7	못한	못하+ㄴ	VERB	VX+ETM	_	6	flat	_	Translit=.mos.han|LTranslit=.mos.ha+ㄴ
+8	듯	듯	NOUN	NNB	_	6	obl	_	OrigDeprel=mark|Translit=.deus|LTranslit=.deus
+9	할머니는	할머니+는	NOUN	NNG+JX	_	12	nsubj	_	Translit=.hal.meo.ni.neun|LTranslit=.hal.meo.ni+.neun
+10	소녀의	소녀+의	NOUN	NNG+JKG	_	11	nmod:poss	_	Translit=.so.nyeo.yi|LTranslit=.so.nyeo+.yi
+11	머리채를	머리채+를	NOUN	NNG+JKO	_	12	obj	_	Translit=.meo.ri.chae.reul|LTranslit=.meo.ri.chae+.reul
+12	잡아	잡+아	VERB	VV+EC	_	16	advcl	_	Translit=.jab.a|LTranslit=.jab+.a
+13	채	채	VERB	MAG	_	12	flat	_	Translit=.chae|LTranslit=.chae
+14	이리저리	이리저리	ADV	MAG	_	16	advmod	_	Translit=.i.ri.jeo.ri|LTranslit=.i.ri.jeo.ri
+15	함부로	함부로	ADV	MAG	_	16	advmod	_	Translit=.ham.bu.ro|LTranslit=.ham.bu.ro
+16	흔들어댄다	흔들+어+대+ㄴ다	VERB	VV+EC+VX+EF	_	0	root	_	SpaceAfter=No|Translit=.heun.deul.eo.daen.da|LTranslit=.heun.deul+.eo+.dae+ㄴ.da
+17	.	.	PUNCT	SF	_	16	punct	_	Translit=.|LTranslit=.
+

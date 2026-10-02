@@ -684,3 +684,21 @@ remain in raw annotation/headword filtering. Compatibility filtering excludes
 these known `derivational_root` conflicts; ordinary 선 uses and later copulas
 remain independent. No within-entry contextual sense is selected. See
 [source evidence](noun-fan-source-audit.json) and [evaluation](noun-fan-evaluation.json); all finite gates pass. Original finer formation/history requirements and independent review remain open.
+
+## Repetitive verb attachment (COV-019t)
+
+`repetitive_verb` checks a lexical adjective entry connected by 어 to auxiliary
+대다, including lexical class inheritance through 지 + 않다/아니하다/못하다.
+The [NIKL grammar-expression guide](https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=grammar.pdf)
+§3.6.27 pp.512–514 explicitly rejects adjective attachment. Each dictionary POS
+homonym is assessed independently. Verb homonyms remain compatible with this
+finite condition; unknown roles/classes stay unknown. Another verb auxiliary
+or a derivation establishes its own class boundary, so the requirement does not
+propagate to an earlier adjective through expressive 하다 or trial 보다.
+
+The raw generator retains unclassified lexical hypotheses. Headword-only
+filtering preserves them; compatible filtering excludes known conflicts. The
+[separate policy cases](../tests/fixtures/repetitive-aux-policy.json) distinguish
+three directly marked lexical errors, a negative-class inference and valid
+homonym/owner retentions. The engine separately excludes already represented
+adjective/copula owners. Wider lexical suitability and register remain open.

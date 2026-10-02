@@ -30,6 +30,7 @@ pub enum AttachmentRule {
     NegativeCopulaCommand,
     IntentionVerb,
     ResultTransferVerb,
+    RepetitiveVerb,
     NeuraVerb,
     AuxiliaryClass,
     LiteraryAssertionClass,
@@ -169,7 +170,18 @@ fn bare_copular_ending(form: &str) -> bool {
 // head's class. Only 지-negatives preserve that dependency; a different
 // auxiliary, a copula or a derivational suffix starts a new class boundary.
 // Compute the requirement once, then assess each headword entry independently.
-fn expressive_hada_connector(analysis: &Analysis, mut rest: &[Component]) -> Option<usize> {
+fn expressive_hada_connector(analysis: &Analysis, rest: &[Component]) -> Option<usize> {
+    eo_auxiliary_connector(analysis, rest, "하다")
+}
+
+// Both expressive 하다 and repetitive 대다 depend on the lexical head
+// through 지-negatives only. Other auxiliaries and derivations start their
+// own class boundary; source restrictions must not leak across that owner.
+fn eo_auxiliary_connector(
+    analysis: &Analysis,
+    mut rest: &[Component],
+    target: &str,
+) -> Option<usize> {
     loop {
         let next = rest.iter().position(|c| matches!(c, Component::Lemma(_)))?;
         let morphs = &rest[..next];
@@ -193,7 +205,7 @@ fn expressive_hada_connector(analysis: &Analysis, mut rest: &[Component]) -> Opt
             return None;
         }
         let form = analysis.morphemes[connector].form.as_str();
-        if lemma.text == "하다" && form == "어" {
+        if lemma.text == target && form == "어" {
             return Some(connector);
         }
         if form != "지" || !matches!(lemma.text.as_str(), "않다" | "아니하다" | "못하다")
@@ -407,6 +419,9 @@ impl Annotation {
             } else {
                 None
             };
+            let repetitive_connector = (lemma.kind == LemmaKind::Predicate)
+                .then(|| eo_auxiliary_connector(analysis, rest, "대다"))
+                .flatten();
             let habitual_ending = (lemma.kind == LemmaKind::Predicate)
                 .then(|| habitual_condition_ending(analysis, rest))
                 .flatten();
@@ -509,6 +524,20 @@ impl Annotation {
                         // 내키지 않아 하다). Broad verb POS cannot decide this
                         // lexical subset, including through negative auxiliaries.
                         status = Compatibility::Unknown;
+                    }
+                    if status == Compatibility::Compatible
+                        && matched.entry.pos == "형용사"
+                        && let Some(i) = repetitive_connector
+                    {
+                        // NIKL §3.6.27 p.514 explicitly rejects 비싸 대서,
+                        // 예뻐 대서 and 어려워 댄다. Assess each POS homonym
+                        // independently; verb homonyms and unknown providers
+                        // remain, with no contextual sense or register choice.
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::RepetitiveVerb,
+                            morpheme_index: Some(i),
+                        });
                     }
                     if status == Compatibility::Compatible
                         && matched.entry.pos == "형용사"

@@ -2149,6 +2149,21 @@ fn auxiliary_inflections_allowed(a: &mut Analysis) -> bool {
         {
             return false;
         }
+        // NIKL grammar-expression guide §3.6.27 selects verbs for -어 대다
+        // and explicitly marks adjective examples invalid. The immediate
+        // represented owner supplies its class, including negatives and
+        // 답다; a later verb auxiliary resets an earlier adjective class.
+        // Unknown lexical predicates retain their dictionary-free hypotheses.
+        if lemma.kind == LemmaKind::Auxiliary
+            && lemma.text == "대다"
+            && connector == Some("어")
+            && matches!(
+                previous,
+                Some(PredicateClass::Adjective | PredicateClass::Copula)
+            )
+        {
+            return false;
+        }
         // Expressive -어 하다 selects an adjective. Check the immediately
         // preceding known role, including inherited negative classes. A
         // lexical head remains unknown without dictionary/sense analysis.

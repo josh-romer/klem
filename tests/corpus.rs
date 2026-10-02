@@ -2765,3 +2765,47 @@ fn carry_auxiliaries_preserve_both_original_training_annotations() {
         assert!(c.matched, "{id}: {c:?}");
     }
 }
+
+#[test]
+fn repetitive_auxiliaries_preserve_every_training_target_and_source_disagreement() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/repetitive-aux-sources.json")).unwrap();
+    let targets = source["corpus_targets"].as_array().unwrap();
+    assert_eq!(targets.len(), 39);
+    let mut matches = 0;
+    for (kind, name, input) in [
+        (
+            Corpus::Kaist,
+            "kaist",
+            include_bytes!("fixtures/kaist-repetitive-aux.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            "gsd",
+            include_bytes!("fixtures/gsd-repetitive-aux.conllu").as_slice(),
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "repetitive-aux").unwrap();
+        for t in targets.iter().filter(|t| t["corpus"] == name) {
+            let c = &report.cases[t["id"].as_str().unwrap()];
+            assert_eq!(c.surface, t["surface"].as_str().unwrap());
+            assert_eq!(serde_json::to_value(&c.expected).unwrap(), t["expected"]);
+            assert_eq!(
+                c.matched,
+                t["matched_before"].as_bool().unwrap(),
+                "{}",
+                c.id
+            );
+            matches += usize::from(c.matched);
+        }
+    }
+    assert_eq!(matches, 38);
+    // Original typo/auxiliary annotation remains a disagreement, not repaired gold.
+    let t = targets
+        .iter()
+        .find(|t| t["id"] == "id:train-s154/10")
+        .unwrap();
+    assert_eq!(t["source_row"][1], "먹어야대요");
+    assert_eq!(t["source_row"][2], "먹+어야+대+요");
+    assert_eq!(t["source_row"][4], "VV+EC+VX+EC");
+}

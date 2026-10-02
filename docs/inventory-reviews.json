@@ -31263,6 +31263,262 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:73991",
+      "source_sha256": "2d0be81c6c6c1c63ead6f89f71e3205ebac10e2c8346dac4afd8e184f642413a",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019a",
+        "COV-019t"
+      ],
+      "scope": "Complete native senses, forms, notes and every example group reviewed. Existing 어 connector and source-listed right inflections are retained with original source spacing. COV-019t adds the independently sourced NIKL 대다 verb-only condition, restricted to its immediate represented owner or individually assessed lexical POS homonym; this condition is not generalized to the other three entries.",
+      "remaining": "Contextual sense, lexical semantic suitability and register remain open. Further particle/prefinal and lexical-subset restrictions, including left classes of the other three auxiliary entries, require more evidence. The original GSD annotation disagreement is preserved. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_sources_keep_all_four_entries_and_every_native_group"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_paths_preserve_unicode_order_roles_and_restricted_auxiliary_forms"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_filters_cached_dictionary_and_cli_preserve_every_required_role"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_lexical_classes_keep_homonyms_unknowns_negative_dependencies_and_owners"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "repetitive_auxiliaries_preserve_every_training_target_and_source_disagreement"
+        },
+        {
+          "path": "tests/fixtures/repetitive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/repetitive-aux-policy.json"
+        },
+        {
+          "path": "docs/repetitive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "repetitive-aux-native-73991-1",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-73991-2",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-73991-3",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-73991-4",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-wrong-connector-1",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:75280",
+      "source_sha256": "0103f71edda6eea00b00e785cdc8fb2137047f8e56ab40944a06a02e7cb0d2f8",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019a",
+        "COV-019t"
+      ],
+      "scope": "Complete native senses, forms, notes and every example group reviewed. Existing 어 connector and source-listed right inflections are retained with original source spacing. COV-019t adds the independently sourced NIKL 대다 verb-only condition, restricted to its immediate represented owner or individually assessed lexical POS homonym; this condition is not generalized to the other three entries.",
+      "remaining": "Contextual sense, lexical semantic suitability and register remain open. Further particle/prefinal and lexical-subset restrictions, including left classes of the other three auxiliary entries, require more evidence. The original GSD annotation disagreement is preserved. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_sources_keep_all_four_entries_and_every_native_group"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_paths_preserve_unicode_order_roles_and_restricted_auxiliary_forms"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_filters_cached_dictionary_and_cli_preserve_every_required_role"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_lexical_classes_keep_homonyms_unknowns_negative_dependencies_and_owners"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "repetitive_auxiliaries_preserve_every_training_target_and_source_disagreement"
+        },
+        {
+          "path": "tests/fixtures/repetitive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/repetitive-aux-policy.json"
+        },
+        {
+          "path": "docs/repetitive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "repetitive-aux-native-75280-1",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-75280-2",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-75280-3",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-75280-4",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-wrong-connector-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:56089",
+      "source_sha256": "21523f26c58756c6b9ea0b8f1de5aaf18f9d8cb806a451b9cfeb9e1465696716",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019a",
+        "COV-019t"
+      ],
+      "scope": "Complete native senses, forms, notes and every example group reviewed. Existing 어 connector and source-listed right inflections are retained with original source spacing. COV-019t adds the independently sourced NIKL 대다 verb-only condition, restricted to its immediate represented owner or individually assessed lexical POS homonym; this condition is not generalized to the other three entries.",
+      "remaining": "Contextual sense, lexical semantic suitability and register remain open. Further particle/prefinal and lexical-subset restrictions, including left classes of the other three auxiliary entries, require more evidence. The original GSD annotation disagreement is preserved. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_sources_keep_all_four_entries_and_every_native_group"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_paths_preserve_unicode_order_roles_and_restricted_auxiliary_forms"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_filters_cached_dictionary_and_cli_preserve_every_required_role"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_lexical_classes_keep_homonyms_unknowns_negative_dependencies_and_owners"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "repetitive_auxiliaries_preserve_every_training_target_and_source_disagreement"
+        },
+        {
+          "path": "tests/fixtures/repetitive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/repetitive-aux-policy.json"
+        },
+        {
+          "path": "docs/repetitive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "repetitive-aux-native-56089-1",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-56089-2",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-56089-3",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-wrong-connector-3",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:58344",
+      "source_sha256": "ab43b6f54545e3d47d693fe8e9ef0cd19094e6fbb23775246ac88e2c6964794a",
+      "status": "scoped",
+      "checklist": [
+        "COV-013",
+        "COV-019a",
+        "COV-019t"
+      ],
+      "scope": "Complete native senses, forms, notes and every example group reviewed. Existing 어 connector and source-listed right inflections are retained with original source spacing. COV-019t adds the independently sourced NIKL 대다 verb-only condition, restricted to its immediate represented owner or individually assessed lexical POS homonym; this condition is not generalized to the other three entries.",
+      "remaining": "Contextual sense, lexical semantic suitability and register remain open. Further particle/prefinal and lexical-subset restrictions, including left classes of the other three auxiliary entries, require more evidence. The original GSD annotation disagreement is preserved. Independent Korean-language review remains pending.",
+      "evidence": [
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_sources_keep_all_four_entries_and_every_native_group"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_paths_preserve_unicode_order_roles_and_restricted_auxiliary_forms"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_filters_cached_dictionary_and_cli_preserve_every_required_role"
+        },
+        {
+          "path": "tests/repetitive_aux.rs",
+          "test": "repetitive_lexical_classes_keep_homonyms_unknowns_negative_dependencies_and_owners"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "repetitive_auxiliaries_preserve_every_training_target_and_source_disagreement"
+        },
+        {
+          "path": "tests/fixtures/repetitive-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/repetitive-aux-policy.json"
+        },
+        {
+          "path": "docs/repetitive-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "repetitive-aux-native-58344-1",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-58344-2",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-58344-3",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-native-58344-4",
+          "judgment": "path"
+        },
+        {
+          "case": "repetitive-aux-wrong-connector-2",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

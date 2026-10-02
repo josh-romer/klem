@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "review_status": "Agent-authored finite dictionary-compatible judgments, separate from raw generation and contextual precision. Independent Korean review pending.",
+  "sources": {
+    "repetitive-aux-73991": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=73991",
+    "repetitive-aux-58344": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=58344",
+    "repetitive-aux-56089": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=56089",
+    "repetitive-aux-75280": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=75280",
+    "repetitive-aux-nikl-guide": "https://www.korean.go.kr/common/download.do?c_file_name=5a2db2bc-a7ad-49f4-84a4-34b20ad33ffc_0.pdf&file_path=reportData&o_file_name=grammar.pdf"
+  },
+  "cases": [
+    {
+      "id": "repetitive-aux-policy-direct-expensive",
+      "surface": "비싸대서",
+      "judgments": [
+        {
+          "id": "path",
+          "verdict": "forbidden",
+          "lemmas": [
+            "비싸다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "어서"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "repetitive-aux-nikl-guide",
+          "reason": "Direct NIKL p.514 adjective example marked (x). Only dictionary-compatible filtering excludes this lexical-class reading; raw/headword hypotheses remain for external lexical evidence."
+        }
+      ]
+    },
+    {
+      "id": "repetitive-aux-policy-direct-pretty",
+      "surface": "예뻐대서",
+      "judgments": [
+        {
+          "id": "path",
+          "verdict": "forbidden",
+          "lemmas": [
+            "예쁘다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "어서"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "repetitive-aux-nikl-guide",
+          "reason": "Direct NIKL p.514 adjective example marked (x). Only dictionary-compatible filtering excludes this lexical-class reading; raw/headword hypotheses remain for external lexical evidence."
+        }
+      ]
+    },
+    {
+      "id": "repetitive-aux-policy-direct-difficult",
+      "surface": "어려워댄다",
+      "judgments": [
+        {
+          "id": "path",
+          "verdict": "forbidden",
+          "lemmas": [
+            "어렵다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "repetitive-aux-nikl-guide",
+          "reason": "Direct NIKL p.514 adjective example marked (x). Only dictionary-compatible filtering excludes this lexical-class reading; raw/headword hypotheses remain for external lexical evidence."
+        }
+      ]
+    },
+    {
+      "id": "repetitive-aux-policy-negative",
+      "surface": "예쁘지않아대서",
+      "judgments": [
+        {
+          "id": "path",
+          "verdict": "forbidden",
+          "lemmas": [
+            "예쁘다",
+            "않다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "어서"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "repetitive-aux-nikl-guide",
+          "reason": "The lexical adjective class remains local through represented 지 + 않다; the inference excludes this compatible-filter path without assigning an unknown provider class."
+        }
+      ]
+    },
+    {
+      "id": "repetitive-aux-policy-homonym",
+      "surface": "커댄다",
+      "judgments": [
+        {
+          "id": "path",
+          "verdict": "required",
+          "lemmas": [
+            "크다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "repetitive-aux-nikl-guide",
+          "reason": "Retain a dictionary-backed verb path or homonym under the finite class filter. This is a retention judgment, not contextual grammaticality gold; earlier adjective owners cannot constrain a later verb auxiliary.",
+          "required_rules": [
+            "auxiliary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repetitive-aux-policy-native-verb",
+      "surface": "졸라대서",
+      "judgments": [
+        {
+          "id": "path",
+          "verdict": "required",
+          "lemmas": [
+            "조르다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "어서"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "repetitive-aux-nikl-guide",
+          "reason": "Retain a dictionary-backed verb path or homonym under the finite class filter. This is a retention judgment, not contextual grammaticality gold; earlier adjective owners cannot constrain a later verb auxiliary.",
+          "required_rules": [
+            "auxiliary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repetitive-aux-policy-verb-reset",
+      "surface": "먹고싶어해댄다",
+      "judgments": [
+        {
+          "id": "path",
+          "verdict": "required",
+          "lemmas": [
+            "먹다",
+            "싶다",
+            "하다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "고",
+            "어",
+            "어",
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "repetitive-aux-nikl-guide",
+          "reason": "Retain a dictionary-backed verb path or homonym under the finite class filter. This is a retention judgment, not contextual grammaticality gold; earlier adjective owners cannot constrain a later verb auxiliary.",
+          "required_rules": [
+            "auxiliary"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repetitive-aux-policy-trial",
+      "surface": "먹어보아댄다",
+      "judgments": [
+        {
+          "id": "path",
+          "verdict": "required",
+          "lemmas": [
+            "먹다",
+            "보다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "어",
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "source": "repetitive-aux-nikl-guide",
+          "reason": "Retain a dictionary-backed verb path or homonym under the finite class filter. This is a retention judgment, not contextual grammaticality gold; earlier adjective owners cannot constrain a later verb auxiliary.",
+          "required_rules": [
+            "auxiliary"
+          ]
+        }
+      ]
+    }
+  ]
+}

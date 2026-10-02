@@ -3953,3 +3953,29 @@ prefinal licenses and independent Korean-language review remain open. The
 [source record](../tests/fixtures/carry-aux-sources.json) and
 [tests](../tests/carry_aux.rs) distinguish direct native attestations,
 constructed attachment-note checks, and scoped forbidden auxiliary paths.
+
+## Repetitive/emphatic auxiliaries (COV-013 / COV-019t)
+
+The complete native 대다, 버릇하다, 마지않다 and 마지아니하다 entries
+retain all fifteen example groups and the existing 어 connectors and right
+inflections. Their original source spacing and dialogue groups remain in the
+[source record](../tests/fixtures/repetitive-aux-sources.json). Thirty-nine
+unchanged training targets preserve one original GSD 먹어야대요 disagreement.
+
+NIKL's grammar-expression guide §3.6.27, printed pp.512–514, explicitly
+restricts 어 대다 to verbs and marks adjective examples invalid. A represented
+adjective/copula immediately before this auxiliary is excluded, including
+negatives inheriting that class and explicit 답다 formations. A later verb
+auxiliary resets the owner. The dictionary-free generator leaves unclassified
+lexical heads available; `--dict-compatible` separately checks their individual
+POS entries. A verb homonym of 크다 survives its adjective homonym's conflict,
+and unknown provider classes stay unknown. The serialized `repetitive_verb`
+conflict references the connecting 어, including when it belongs to a negative
+auxiliary rather than the lexical head.
+
+The three guide-marked lexical negatives are distinct from the inferred class
+composition tests. The guide's p.513 prose names 놓다 twice in form descriptions;
+its heading, table, examples and p.514 restriction concern 대다. That source typo
+supplies no new 놓다 rule. Register, semantic suitability and the other three
+auxiliaries' remaining lexical/left-class/prefinal/particle restrictions remain
+open; this finite audit does not certify contextual grammar or full coverage.

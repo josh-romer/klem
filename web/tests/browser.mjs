@@ -573,6 +573,12 @@ try {
   const carryAuxIds = new Set(carryAuxEntries.map(e=>String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!carryAuxIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...carryAuxEntries);
+  const repetitiveAuxFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-repetitive-aux.json"),"utf8"));
+  const repetitiveAuxEntries = repetitiveAuxFixture.LexicalResource.Lexicon.LexicalEntry;
+  const repetitiveAuxIds = new Set(repetitiveAuxEntries.map(e=>String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e=>!repetitiveAuxIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...repetitiveAuxEntries);
+
 
 
   await writeFile(input, JSON.stringify(fixture));
@@ -5186,6 +5192,30 @@ try {
   }
   for(const id of["krdict:61191","krdict:73401"]) { const r=await(await post("entry",{id})).json();assert.equal(r.entry.senses.length,2);assert.equal(r.entry.senses.reduce((n,s)=>n+s.examples.length,0),8); }
   await page.screenshot({path:resolve(tmpdir(),"klem-carry-aux-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-carry-aux-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Source-marked adjective errors feed the scoped repetitive-verb filter.
+  const repetitiveAuxCases=recipientLedger.cases.filter(c=>c.id.startsWith("repetitive-aux-"));assert.equal(repetitiveAuxCases.length,27);
+  const repetitivePolicy=JSON.parse(await readFile(resolve(root,"tests/fixtures/repetitive-aux-policy.json"),"utf8"));assert.equal(repetitivePolicy.cases.length,8);
+  for(const c of repetitiveAuxCases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    for(const j of c.judgments)assert.equal(token.analysis.analyses.some(a=>hieutMatches(a,j)&&(!j.required_rules||j.required_rules.every(r=>a.rules.includes(r)))),j.verdict==="required",c.id);
+  }
+  for(const c of repetitivePolicy.cases) {
+    const token=(await(await post("analyze",{text:c.surface})).json()).records[0];
+    const j=c.judgments[0];const i=token.analysis.analyses.findIndex(a=>hieutMatches(a,j));assert.ok(i>=0,c.id);
+    assert.equal(token.dictionary.readings[i].status!=="incompatible",j.verdict==="required",c.id);
+    if(j.verdict==="forbidden")assert.ok(token.dictionary.readings[i].lemmas[0].entries.some(e=>e.conflicts.some(c=>c.rule==="repetitive_verb")),c.id);
+  }
+  for(const flag of[null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();if(flag==="--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text="졸라대서 커댄다 예뻐대서";await submit(page,text);await waitHeading(page,"졸라대서");const raw=await(await post("analyze",{text})).json();const words=raw.records.filter(r=>r.analysis);
+    for(const[n,lemmas,forms]of[[0,["조르다","대다"],["조르","어","대","어서"]],[1,["크다","대다"],["크","어","대","는다"]]]) {
+      const i=words[n].analysis.analyses.findIndex(a=>a.lemmas.map(l=>l.text).join("/")===lemmas.join("/"));assert.ok(i>=0);const b=page.locator(".breakdown-word").nth(n);await b.getByRole("combobox").selectOption(String(i));assert.deepEqual(await b.locator(".part-form").allTextContents(),forms);
+    }
+    if(flag==="--dict-compatible")assert.equal(await page.locator(".breakdown-word").nth(2).getByRole("combobox").inputValue(),"");
+    const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-repetitive-aux-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-repetitive-aux-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

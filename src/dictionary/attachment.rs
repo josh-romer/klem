@@ -35,6 +35,7 @@ pub enum AttachmentRule {
     AuxiliaryClass,
     NegativeLexicalClass,
     AuxiliaryAdjectiveAdnominalClass,
+    BarePresentAdnominalClass,
     ConjecturalAdnominalClass,
     PretenceAdnominalClass,
     LiteraryAssertionClass,
@@ -688,13 +689,13 @@ impl Annotation {
                             morpheme_index: connector,
                         });
                     }
-                    // KRDict 62899 is the adjective homonym of auxiliary 하다;
-                    // 62888 remains a separate verb entry. Its own present verb
-                    // ending (85033/85037) or bare -는 (85853) cannot borrow the
-                    // earlier owner's class. Prefinal -는 and later owners stay
-                    // independent. Preserve any existing connector conflict.
+                    // The source POS identifies this adjective entry even
+                    // when a standalone auxiliary lacks its left context.
+                    // KRDict 85033/85037 require verbal present inflection;
+                    // 85853 lists the existential exceptions for bare -는.
+                    // Own prefinals and later owners remain independent, and
+                    // earlier proved connector conflicts take precedence.
                     if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
-                        && lemma.text == "하다"
                         && matched.entry.pos == "보조 형용사"
                         && (lemma.kind == LemmaKind::Auxiliary
                             || (*index == 0 && lemma.kind == LemmaKind::Predicate))
@@ -703,7 +704,11 @@ impl Annotation {
                         let form = analysis.morphemes[i].form.as_str();
                         let rule = if crate::engine::present_declarative(form) {
                             Some(AttachmentRule::PresentDeclarativeVerb)
-                        } else if bare && form == "는" {
+                        } else if bare && form == "는"
+                            && !lemma.text.ends_with("있다")
+                            && !lemma.text.ends_with("없다")
+                            && lemma.text != "계시다"
+                        {
                             Some(AttachmentRule::AuxiliaryAdjectiveAdnominalClass)
                         } else {
                             None
@@ -750,6 +755,27 @@ impl Annotation {
                         conflicts.push(AttachmentConflict {
                             rule: AttachmentRule::HabitualConditionVerb,
                             morpheme_index: Some(i),
+                        });
+                    }
+                    // KRDict 85853 licenses bare present -는 after verbs and
+                    // the listed existential adjectives. Keep those exceptions,
+                    // POS homonyms, prefinals and particle alternatives distinct.
+                    // A represented copula is its own owner, not the nominal's
+                    // class. Preserve earlier family-specific conflicts.
+                    if status == Compatibility::Compatible
+                        && bare
+                        && ending.is_some_and(|i| analysis.morphemes[i].form == "는")
+                        && (lemma.kind == LemmaKind::Copula
+                            || (lemma.kind == LemmaKind::Predicate
+                                && matched.entry.pos == "형용사"
+                                && !lemma.text.ends_with("있다")
+                                && !lemma.text.ends_with("없다")
+                                && lemma.text != "계시다"))
+                    {
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::BarePresentAdnominalClass,
+                            morpheme_index: ending,
                         });
                     }
                     // Dictionary classes belong to the lexical head, not its

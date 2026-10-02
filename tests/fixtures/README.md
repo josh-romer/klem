@@ -2052,3 +2052,27 @@ All three previously missing groups now recover. The earlier 하다 cohort's
 original records remain frozen, with 하건만 now recovering separately.
 Attribution: UD Korean KAIST/GSD contributors and source corpora, r2.15;
 corpus-derived text/evaluations CC BY-SA 4.0, separate from the dictionary license.
+
+
+`krdict-potential-aux.json` preserves 110 complete native entries, including all
+four potential auxiliary adjective sources, the lexical 뻔하다 homonym,
+present-adnominal/declarative sources, every selected native owner and 26 ㄹ-final
+probe heads. Only RelatedForm/non-English equivalents are omitted; Sense arrays
+are normalized. `potential-aux-sources.json` retains all five auxiliary senses /
+29 native groups, all five -는 groups, pinned export hashes and the explicitly
+separate selection stages. The raw ledger adds 128 required and five forbidden
+paths; the separate dictionary ledger records 128 cases/286 per-entry judgments
+and their before entries. Constructed contexts remain linguistically unjudged.
+
+The original `hada-aux-entry-judgments.json` observation of adjective 않다 in
+`hada-entry-later-negative-owner` is retained in `previous_judgment`. Its own
+verbal present-ending conflict now replaces that compatibility expectation;
+no original source, raw path or verbal homonym is altered. Attribution: National
+Institute of Korean Language, Korean Basic Dictionary, CC BY-SA 2.0 KR.
+
+`kaist-potential-aux.conllu` and `gsd-potential-aux.conllu` retain 14 exact
+source-aligned training targets and full unchanged blocks. Selection was frozen
+before production edits: first two aligned target heads per POS/following-tag
+category. All previous 14 matches remain identical. Attribution: UD Korean
+KAIST/GSD contributors and source corpora, r2.15; corpus-derived text/evaluations
+CC BY-SA 4.0, separate from the dictionary license.

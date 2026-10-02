@@ -7082,10 +7082,29 @@
           "id": "entry-2-krdict:71583",
           "lemma_index": 2,
           "entry_id": "krdict:71583",
-          "status": "compatible",
-          "conflicts": [],
+          "status": "incompatible",
+          "conflicts": [
+            {
+              "rule": "present_declarative_verb",
+              "morpheme_index": 3
+            }
+          ],
           "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583",
-          "reason": "Preserve previous source/entry observation. Prefinal and later-owner controls do not certify contextual grammaticality."
+          "reason": "COV-019aa: the exact adjective 않다 entry cannot take its own verbal present ending. This does not use an earlier ambiguous 하다 class or reject the independent verb homonym. The prior compatible observation remains recorded.",
+          "previous_judgment": {
+            "id": "entry-2-krdict:71583",
+            "lemma_index": 2,
+            "entry_id": "krdict:71583",
+            "status": "compatible",
+            "conflicts": [],
+            "source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583",
+            "reason": "Preserve previous source/entry observation. Prefinal and later-owner controls do not certify contextual grammaticality."
+          },
+          "updated_sources": [
+            "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85037",
+            "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71583"
+          ],
+          "revision_before": "c4457d30838c751229ee87f911ff04b39ff1e0a0"
         }
       ],
       "missing_owner_entries": false,

@@ -8344,10 +8344,11 @@
       "source_sha256": "6136f38bdb6e2a6134b8cf055f9090b5f2d45994d68223c8a16b24164161a0c3",
       "status": "scoped",
       "checklist": [
-        "COV-017t"
+        "COV-017t",
+        "COV-017bo"
       ],
-      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit.",
-      "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope.",
+      "scope": "COV-017t reviews the cited present/prospective exclusions and preserves the cited retrospective bundle or canonical short-allomorph alternatives. Exact judgments distinguish excluded 더 boundaries from retained 더 + 은-family components; this is not a full-entry prefinal or lexical-class audit. COV-017bo retains the complete five native groups and explicitly listed existential exceptions, checking ordinary bare lexical adjective/coplas and known auxiliary adjective entries per immediate owner without raw suppression.",
+      "remaining": "Other markers, lexical classes, contextual senses, and unreviewed retrospective followers remain open. Dialect/historical forms are outside the current standard-language scope. Wider prefinal and outer particle licenses, contextual/register suitability and independent Korean review remain open.",
       "evidence": [
         {
           "path": "tests/retrospective_adnominals.rs",
@@ -8371,6 +8372,37 @@
         },
         {
           "path": "docs/retrospective-adnominal-evaluation.json"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_sources_keep_four_complete_entries_and_all_29_native_groups"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_entry_policy_checks_standalone_classes_exceptions_and_exact_owners"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "potential_auxiliary_targets_preserve_all_14_original_training_matches"
+        },
+        {
+          "path": "docs/potential-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/present-adnominal-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/potential-aux-evaluation.json"
         }
       ],
       "judgments": [
@@ -8384,6 +8416,26 @@
         },
         {
           "case": "retrospective-adnominal-preserved-73",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-present-adnominal-native-85853-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-present-adnominal-native-85853-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-present-adnominal-native-85853-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-present-adnominal-native-85853-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-present-adnominal-native-85853-1-5",
           "judgment": "path"
         }
       ]
@@ -33559,6 +33611,302 @@
         },
         {
           "case": "geon-contrast-native-66935-1-5",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:53017",
+      "source_sha256": "36546093b8cd08cdd9344796434d62a28b22cecd2783ed3530a8e07f8d04cbf5",
+      "status": "scoped",
+      "checklist": [
+        "COV-019aa"
+      ],
+      "scope": "Complete native entry, senses/groups and forms; structural/source retention and independent own adjective inflection even in standalone context. Preserve raw, lexical/POS, prefinal/later-owner alternatives and explicit supported copula/nominalization attachments.",
+      "remaining": "This disposition does not certify all ending/prefinal/internal-particle combinations, lexical/left subsets, contextual or register distribution; independent Korean-language review remains open.",
+      "evidence": [
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_sources_keep_four_complete_entries_and_all_29_native_groups"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_entry_policy_checks_standalone_classes_exceptions_and_exact_owners"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "potential_auxiliary_targets_preserve_all_14_original_training_matches"
+        },
+        {
+          "path": "docs/potential-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/present-adnominal-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/potential-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "potential-aux-native-53017-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-1-5",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-1-6",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-1-7",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-1-8",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-1-9",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-2-1",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-2-2",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-2-3",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-2-4",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-2-5",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-2-6",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-2-7",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-53017-2-8",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:58484",
+      "source_sha256": "8e029b606395117c8fdd904e58850eb2d416611689b6adc5a7ed4f1fb9abf999",
+      "status": "scoped",
+      "checklist": [
+        "COV-019aa"
+      ],
+      "scope": "Complete native entry, senses/groups and forms; structural/source retention and independent own adjective inflection even in standalone context. Preserve raw, lexical/POS, prefinal/later-owner alternatives and explicit supported copula/nominalization attachments.",
+      "remaining": "This disposition does not certify all ending/prefinal/internal-particle combinations, lexical/left subsets, contextual or register distribution; independent Korean-language review remains open.",
+      "evidence": [
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_sources_keep_four_complete_entries_and_all_29_native_groups"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_entry_policy_checks_standalone_classes_exceptions_and_exact_owners"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "potential_auxiliary_targets_preserve_all_14_original_training_matches"
+        },
+        {
+          "path": "docs/potential-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/present-adnominal-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/potential-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "potential-aux-native-58484-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-58484-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-58484-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-58484-1-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:66639",
+      "source_sha256": "ecce67a6a4ea435d22d4931b3f4b3d366ed81eda98dcd34bf7ecea3d2fcf4d84",
+      "status": "scoped",
+      "checklist": [
+        "COV-019aa"
+      ],
+      "scope": "Complete native entry, senses/groups and forms; structural/source retention and independent own adjective inflection even in standalone context. Preserve raw, lexical/POS, prefinal/later-owner alternatives and explicit supported copula/nominalization attachments.",
+      "remaining": "This disposition does not certify all ending/prefinal/internal-particle combinations, lexical/left subsets, contextual or register distribution; independent Korean-language review remains open.",
+      "evidence": [
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_sources_keep_four_complete_entries_and_all_29_native_groups"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_entry_policy_checks_standalone_classes_exceptions_and_exact_owners"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "potential_auxiliary_targets_preserve_all_14_original_training_matches"
+        },
+        {
+          "path": "docs/potential-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/present-adnominal-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/potential-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "potential-aux-native-66639-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-66639-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-66639-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-66639-1-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:77251",
+      "source_sha256": "f14f192768ef47f09a90b8ed6f4feefbaab28cbe960038e540571e7bcf8115d5",
+      "status": "scoped",
+      "checklist": [
+        "COV-019aa"
+      ],
+      "scope": "Complete native entry, senses/groups and forms; structural/source retention and independent own adjective inflection even in standalone context. Preserve raw, lexical/POS, prefinal/later-owner alternatives and explicit supported copula/nominalization attachments.",
+      "remaining": "This disposition does not certify all ending/prefinal/internal-particle combinations, lexical/left subsets, contextual or register distribution; independent Korean-language review remains open.",
+      "evidence": [
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_sources_keep_four_complete_entries_and_all_29_native_groups"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_entry_policy_checks_standalone_classes_exceptions_and_exact_owners"
+        },
+        {
+          "path": "tests/potential_aux.rs",
+          "test": "potential_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "potential_auxiliary_targets_preserve_all_14_original_training_matches"
+        },
+        {
+          "path": "docs/potential-aux-source-preflight.json"
+        },
+        {
+          "path": "docs/present-adnominal-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-sources.json"
+        },
+        {
+          "path": "tests/fixtures/potential-aux-entry-judgments.json"
+        },
+        {
+          "path": "docs/potential-aux-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "potential-aux-native-77251-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-77251-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-77251-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "potential-aux-native-77251-1-4",
           "judgment": "path"
         }
       ]

@@ -623,6 +623,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !geonIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...geonEntries);
 
+  const potentialFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-potential-aux.json"), "utf8"));
+  const potentialEntries = potentialFixture.LexicalResource.Lexicon.LexicalEntry;
+  const potentialIds = new Set(potentialEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !potentialIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...potentialEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5680,6 +5686,66 @@ try {
   await page.screenshot({path: resolve(tmpdir(), "klem-geon-contrast-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
+
+  const potentialLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/potential-aux-entry-judgments.json"), "utf8"));
+  assert.equal(potentialLedger.cases.length, 128);
+  assert.equal(potentialLedger.cases.reduce((n,c) => n + c.judgments.length, 0), 286);
+  const potentialCases = recipientLedger.cases.filter(c => c.id.startsWith("potential-aux-"));
+  assert.equal(potentialCases.length, 133);
+  for (const c of potentialCases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => hieutMatches(a,j)), j.verdict === "required", c.id);
+  }
+  for (const c of potentialLedger.cases) {
+    const token = (await (await post("analyze", {text:c.surface})).json()).records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a,c)); assert.ok(index >= 0,c.id);
+    for (const j of c.judgments) {
+      const entry = token.dictionary.readings[index].lemmas.find(s => s.lemma_index === j.lemma_index).entries.find(e => e.id === j.entry_id);
+      assert.ok(entry,c.id);assert.equal(entry.status,j.status,c.id);assert.deepEqual(entry.conflicts,j.conflicts,c.id);
+    }
+    for (const flag of ["--dict-only", "--dict-compatible"]) {
+      const filtered = JSON.parse(execFileSync(cliBin,["text","-","--dictionary",database,flag],{input:c.surface,encoding:"utf8"}).trim());
+      assert.equal(filtered.analysis.analyses.some(a => auxiliaryPath(a,c)),flag === "--dict-only" ? !c.missing_owner_entries : c.filter_retained,c.id);
+    }
+  }
+  const potentialText = "먹을만한 그럴법했다 이길뻔했는데 걸었음직한데 학생일만하다 학생일법하다 뻔하는 예쁘는 맛있는 학생이는 예쁘기도하지않는다";
+  const potentialPaths = [
+    [["먹다","만하다"],["을","은"],["먹","을","만하","은"]],
+    [["그렇다","법하다"],["을","었","다"],["그렇","을","법하","였","다"]],
+    [["이기다","뻔하다"],["을","었","는데"],["이기","을","뻔하","였","는데"]],
+    [["걷다","직하다"],["었","음","은데"],["걷","었","음","직하","은데"]],
+    [["학생","이다","만하다"],["을","다"],["학생","이","을","만하","다"]],
+    [["학생","이다","법하다"],["을","다"],["학생","이","을","법하","다"]],
+    [["뻔하다"],["는"],["뻔하","는"]],
+    [["예쁘다"],["는"],["예쁘","는"]],
+    [["맛있다"],["는"],["맛있","는"]],
+    [["학생","이다"],["는"],["학생","이","는"]],
+    [["예쁘다","하다","않다"],["기","도","지","는다"],["예쁘","기","도","하","지","않","는다"]],
+  ];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if(flag)await page.getByLabel("Dictionary matches only").check();else await page.getByLabel("Dictionary matches only").uncheck();
+    if(flag === "--dict-compatible")await page.getByLabel("Exclude known grammar conflicts").check();else if(flag)await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,potentialText);await waitHeading(page,"먹을만한");
+    const raw = await (await post("analyze",{text:potentialText})).json();const words = raw.records.filter(r => r.analysis);
+    for (const [n,[heads,forms,parts]] of potentialPaths.entries()) {
+      const index = words[n].analysis.analyses.findIndex(a => a.lemmas.map(l => l.text).join("/") === heads.join("/") && a.morphemes.map(m => m.form).join("/") === forms.join("/"));assert.ok(index >= 0,heads.join("/"));
+      const block = page.locator(".breakdown-word").nth(n),expected = flag === "--dict-compatible" && [6,7,9].includes(n) ? 0 : 1;
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),expected,heads.join("/"));
+      if(expected){await block.getByRole("combobox").selectOption(String(index));assert.deepEqual(await block.locator(".part-form").allTextContents(),parts);}
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:potentialText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  for (const [n,id] of [[0,53017],[1,58484],[2,66639],[3,77251]]) {
+    await page.locator(".breakdown-word").nth(n).locator(".breakdown-part").nth(n===3?3:2).click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`),id);
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-potential-aux-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-potential-aux-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 
   const opaqueText = "천천히 분연히";
   await submit(page, opaqueText); await waitHeading(page, "천천히");

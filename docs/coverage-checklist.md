@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 417 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bn/018e–l/018m–z/019d–g/019i–z/020d–h/020j–k/020n–o/021d; 298 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 421 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/018e–l/018m–z/019d–g/019i–z/019aa/020d–h/020j–k/020n–o/021d; 294 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -1562,6 +1562,29 @@ review remains open under the completion review below.
   historical/register distribution, contextual suitability and independent Korean
   review remain required. Both inventory dispositions are scoped.
 
+- [ ] **COV-017bo — Present-adnominal source and entry classes.** **Partial:**
+  KRDict -는 (85853) retains its complete source entry and all five native groups.
+  Its listed verbs, 있다/없다/계시다 and 있다/없다-final adjective exceptions
+  stay distinct from ordinary bare adjectives and represented copulas. A new
+  `bare_present_adnominal_class` conflict identifies the actual owner's ending;
+  earlier family-specific conflicts, POS homonyms, particles, intervening
+  prefinals and later owners remain separate. Raw hypotheses remain visible.
+  The [additional source selection](present-adnominal-source-preflight.json)
+  explicitly records its post-prototype timing. All 2,975 pinned adjective
+  entries have source-class probes, including 85 listed exceptions. Original
+  literal probes for 26 ㄹ-final heads lacked a path; separately selected ㄹ-drop
+  probes retain those first observations. Fourteen auxiliary present-declarative
+  probes bring the checked exact class paths to 2,989. This is entry/inflection
+  evidence, not contextual correctness or a full allomorph audit.
+  [Family tests](../tests/potential_aux.rs) include all 26 secondary paths,
+  lexical/copula negatives, existential/native positives, prefinals, negative
+  and later-owner boundaries, cache and CLI identity. Further prefinal and outer
+  particle licenses, semantic/register distribution and independent Korean review
+  remain required. [Evaluation](potential-aux-evaluation.json) verifies all 2,989
+  exact source-class API paths and 9,347 changed-entry occurrences. Raw paths/order
+  and all four original held-out corpus reports are unchanged. Full Rust/browser,
+  packaged runtime, release/debug and current-system Nix checks pass.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -2496,6 +2519,48 @@ review remains open under the completion review below.
   Broader eleven-sense left-class/lexical-subset licenses, ending/prefinal/particle
   combinations, contextual sense/register and independent Korean-language review
   remain required. COV-013 records scoped dispositions, not full entry certification.
+
+- [ ] **COV-019aa — Complete potential auxiliary sources and own inflection.**
+  **Partial:** complete 만하다 (53017), 법하다 (58484), 뻔하다 (66639) and
+  직하다 (77251) retain all five senses/29 native groups and written adjective
+  forms. Every selected native path already recovered; no new raw recall is claimed.
+  [The frozen preflight](potential-aux-source-preflight.json) preserves 14
+  original training targets, all previously matched; [corpus tracking](../tests/corpus.rs)
+  preserves their complete blocks/annotations and exact outcomes.
+  Known adjective auxiliary entries now check their own present declarative and
+  bare -는 boundaries even when standalone left context is absent. Verbal POS
+  homonyms and explicit existential exceptions remain. Earlier connector/class
+  conflicts keep their identity; an earlier ambiguous owner cannot license a
+  later known adjective entry's verbal present ending.
+  The old `hada-entry-later-negative-owner` compatible judgment for adjective
+  않다 (71583) is retained as `previous_judgment` alongside its corrected own
+  -는다 conflict; the verb entry and raw path remain independent. Source POS
+  and native written 않은 support the distinction, rather than inferred left context.
+  NIKL [319063](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=11&qna_seq=319063)
+  explicitly supports copulas before 만하다/법하다 despite narrower source notes.
+  NIKL article 47 separately illustrates nominalization before 직하다. Those
+  paths remain available without claiming every joined spelling is recommended.
+  [Four regressions](../tests/potential_aux.rs), 133 raw cases (128 required /
+  five forbidden), 128 dictionary cases/286 judgments and 110 complete attributed
+  entries distinguish native retention, source classes, standalone uncertainty,
+  lexical 뻔하다, prefixed/later owners, ㄹ-drop alternatives and filters.
+  [Evaluation](potential-aux-evaluation.json) records 17,323 comparison surfaces,
+  all five novel modes, 9,347 changed-entry occurrences and 3,451 distinct raw
+  paths checked through actual API breakdowns. Raw identities/order and all four
+  held-out reports stay unchanged. Compatible mode removes 102 conflicting novel
+  readings; spacing probing removes three suggestions based on conflicting entry
+  readings (멀 어지는, 잘 못되는, 결 심하는). Original passage contexts and
+  candidate records remain unjudged. The old ledger/queue prefix is unchanged,
+  with 1,075 new stable unjudged observations retained.
+  All 730 Rust/release tests, pinned corpus, lint/format and full browser checks
+  pass. Packaged runtime covers 760 raw cases (671 required / 89 forbidden),
+  611 dictionary cases / 1,498 judgments, all audited paths, assets, filters,
+  source selection, exports and desktop/mobile rendering. Eight release/debug
+  modes match byte-for-byte. Twenty-four paired timings are descriptive only.
+  Three x86_64 Linux flake checks and nine inventory unit tests pass; the refreshed
+  live preview passes the same runtime checks. Other architectures are unevaluated.
+  Broader ending/prefinal/internal-particle, left-subset, context/register and
+  independent Korean-language review remain required; all four dispositions are scoped.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

@@ -3205,3 +3205,44 @@ fn geon_contrast_recovers_three_original_training_rows_without_gold_repairs() {
     }
     assert_eq!(count, 3);
 }
+
+#[test]
+fn potential_auxiliary_targets_preserve_all_14_original_training_matches() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/potential-aux-sources.json")).unwrap();
+    let mut count = 0;
+    for (kind, input) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-potential-aux.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-potential-aux.conllu").as_slice(),
+        ),
+    ] {
+        let original = std::str::from_utf8(input).unwrap();
+        let file = source["corpus_search"]["files"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == kind.name())
+            .unwrap();
+        let report = corpus::evaluate(input, kind, "potential-aux").unwrap();
+        for target in file["targets"].as_array().unwrap() {
+            let row = target["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(original.lines().any(|line| line == row));
+            let case = &report.cases[target["id"].as_str().unwrap()];
+            assert_eq!(serde_json::to_value(case).unwrap(), target["case_report"]);
+            assert!(case.matched && target["matched_before"].as_bool().unwrap());
+            count += 1;
+        }
+    }
+    assert_eq!(count, 14);
+}

@@ -171,6 +171,26 @@ fn hada_entry_policy_preserves_both_pos_homonyms_and_immediate_owners() {
             .sum::<usize>(),
         437
     );
+    let revised = all
+        .iter()
+        .find(|c| c["id"] == "hada-entry-later-negative-owner")
+        .unwrap();
+    let revised = revised["judgments"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|j| j["entry_id"] == "krdict:71583")
+        .unwrap();
+    assert_eq!(revised["previous_judgment"]["status"], "compatible");
+    assert_eq!(
+        revised["previous_judgment"]["conflicts"],
+        serde_json::json!([])
+    );
+    assert_eq!(revised["status"], "incompatible");
+    assert_eq!(
+        revised["conflicts"],
+        serde_json::json!([{"rule":"present_declarative_verb", "morpheme_index":3}])
+    );
     for c in all {
         let word = engine.analyze_word(c["surface"].as_str().unwrap()).unwrap();
         let a = word.analyses.iter().find(|a| path(a, c)).unwrap();

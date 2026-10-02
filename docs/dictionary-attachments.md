@@ -832,3 +832,27 @@ raw/dictionary alternatives. A later auxiliary's prefinal does not downgrade an
 earlier lexical head. Neither raw recovery nor dictionary retention establishes
 contextual suitability. Outer particles, additional prefinal licenses and
 historical/register evidence remain open.
+
+
+## Present-adnominal entry classes and potential auxiliaries (COV-017bo/019aa)
+
+The complete -는 entry (85853) explicitly licenses verbs, 있다/없다/계시다,
+있다/없다-final adjectives and specified preceding markers. Ordinary bare lexical
+adjective and represented copula entries receive `bare_present_adnominal_class`,
+pointing to their own ending. Existential/POS alternatives, preceding markers,
+later owners and earlier proven family-specific conflicts remain separate.
+
+All known auxiliary adjective entries retain their own class for present verbal
+inflection even when the preceding context is absent. Bare -는 uses the existing
+`auxiliary_adjective_adnominal_class` with the source existential exceptions;
+present declaratives use `present_declarative_verb`. The lexical 뻔하다 entry is
+separate from auxiliary 뻔하다. A later adjective 않다 cannot borrow verbal
+present inflection from an ambiguous earlier 하다; its previously recorded
+compatible observation is retained as `previous_judgment` with source references.
+
+Four potential auxiliaries preserve all complete native senses/groups and source
+forms. NIKL QNA 319063 allows copulas before 만하다/법하다, and article 47
+separately illustrates nominalization before 직하다. Narrow notes alone do not
+create a left-class ban or an arbitrary spacing recommendation. Dictionary checks
+leave raw hypotheses intact and do not settle every prefinal, internal particle,
+semantic subset, register or contextual interpretation.

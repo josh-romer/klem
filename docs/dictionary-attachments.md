@@ -902,6 +902,15 @@ adjective/copula wishes remain unknown, including 행복하거라, and survive
 the compatible filter. This does not certify their mood or register.
 The [evaluation](gera-nera-evaluation.json) preserves all 46 original native
 written-form recoveries, every earlier hypothesis and separate source reviews.
-Exceptional past commands 섰거라/물렀거라 already recover, but their
-entry-level licenses and further source-example/corpus regressions remain
-open in COV-021l; no general past-command prohibition is inferred.
+The [past-command source review](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=327283)
+licenses own single `었 + 거라` for 서다 entry 68756 and the retreat sense
+in 무르다 entry 55296. Only those already POS-compatible entries escape
+the generic unknown-prefinal downgrade. Softening 무르다 55295 and adjective
+55297 remain unknown; neither another namespace nor an earlier lexical owner
+can lend this license to an auxiliary. Extra honorific, modal, retrospective
+or repeated-past components remain unknown. Existing spelling conflicts are
+preserved. Entry compatibility establishes a reviewed possible sense without
+selecting it from sentence context. The [individual review](direct-command-review-evaluation.json)
+and [tests](../tests/direct_command_review.rs) preserve all nine complete native
+ending-example groups, four unchanged training rows and 34 entry judgments;
+no general past-command prohibition is inferred.

@@ -3,6 +3,34 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn direct_commands_keep_original_command_and_nominal_training_segmentations() {
+    for (kind, input, targets) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-direct-command-review.conllu").as_slice(),
+            vec![
+                ("id:MH2_0127-s393/13", "거라", vec!["거", "이다"]),
+                ("id:MH2_0174-s179/4", "오너라", vec!["오다"]),
+                ("id:MH2_0174-s191/7", "데려오너라", vec!["데리다", "오다"]),
+            ],
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-direct-command-review.conllu").as_slice(),
+            vec![("id:train-s2418/16", "거라", vec!["거", "이다"])],
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "direct-command-review").unwrap();
+        for (id, surface, heads) in targets {
+            let c = &report.cases[id];
+            assert_eq!(c.surface, surface);
+            assert_eq!(c.expected, heads);
+            assert!(c.matched, "{id}: {c:?}");
+        }
+    }
+}
+
+#[test]
 fn exclamation_recovers_original_annotated_bundles_without_relabeling_examples() {
     let report = corpus::evaluate(
         include_bytes!("fixtures/kaist-exclamation.conllu").as_slice(),

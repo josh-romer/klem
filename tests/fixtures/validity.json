@@ -1487,7 +1487,12 @@
     "gera-nera-83117": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83117",
     "gera-nera-89867": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89867",
     "gera-nera-90934": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=90934",
-    "gera-nera-68835": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68835"
+    "gera-nera-68835": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68835",
+    "direct-command-review-66953": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=66953",
+    "direct-command-review-68835": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68835",
+    "direct-command-review-gsd": "https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15",
+    "direct-command-review-kaist": "https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15",
+    "direct-command-review-nikl-past": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=327283"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -66657,6 +66662,497 @@
           "required_rules": [
             "ending.direct_command"
           ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-66953-1-1",
+      "surface": "가거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-66953",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-66953-1-2",
+      "surface": "가거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-66953",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-66953-1-3",
+      "surface": "살아가거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "살아가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-66953",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-66953-1-4",
+      "surface": "데려가거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "데려가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-66953",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-66953-1-5",
+      "surface": "가거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-66953",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-68835-1-1",
+      "surface": "들어오너라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "들어오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "너라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-68835",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-68835-1-2",
+      "surface": "가져오너라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "가져오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "너라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-68835",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-68835-1-3",
+      "surface": "나오너라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "나오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "너라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-68835",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-native-68835-1-4",
+      "surface": "오너라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "너라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-68835",
+          "reason": "Exact token from the complete native ending example; direct whole-head lookup, with context and register not selected.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-gsd-train-s2418-16",
+      "surface": "거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "거",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-gsd",
+          "reason": "Unchanged source row and complete sentence retained. Distinguish nominal 거 + 이다 + 라 from commands; preserve the original 데리다 + auxiliary 오다 segmentation.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-kaist-MH2_0127-s393-13",
+      "surface": "거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "거",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-kaist",
+          "reason": "Unchanged source row and complete sentence retained. Distinguish nominal 거 + 이다 + 라 from commands; preserve the original 데리다 + auxiliary 오다 segmentation.",
+          "verdict": "required"
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-kaist-MH2_0174-s179-4",
+      "surface": "오너라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "너라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "source": "direct-command-review-kaist",
+          "reason": "Unchanged source row and complete sentence retained. Distinguish nominal 거 + 이다 + 라 from commands; preserve the original 데리다 + auxiliary 오다 segmentation.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-kaist-MH2_0174-s191-7",
+      "surface": "데려오너라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "데리다",
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "너라"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "direct-command-review-kaist",
+          "reason": "Unchanged source row and complete sentence retained. Distinguish nominal 거 + 이다 + 라 from commands; preserve the original 데리다 + auxiliary 오다 segmentation.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-kaist-order-MH2_0174-s191-7",
+      "surface": "데려오너라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "데리다",
+            "오다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "너라",
+            "어"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "direct-command-review-kaist",
+          "reason": "Specific reversed connector/final hypothesis conflicts with the original annotated component order.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-past-stand",
+      "surface": "섰거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "direct-command-review-nikl-past",
+          "reason": "NIKL explicitly analyzes this limited command as lexical stem + past prefinal 었 + final 거라; it does not license arbitrary tense/mood combinations.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-past-kind-stand",
+      "surface": "섰거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "direct-command-review-nikl-past",
+          "reason": "The named 었 component is a prefinal, not a second terminal ending. This forbids only this exact kind assignment.",
+          "verdict": "forbidden"
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-past-withdraw",
+      "surface": "물렀거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "무르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "source": "direct-command-review-nikl-past",
+          "reason": "NIKL explicitly analyzes this limited command as lexical stem + past prefinal 었 + final 거라; it does not license arbitrary tense/mood combinations.",
+          "verdict": "required",
+          "required_rules": [
+            "ending.direct_command"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "direct-command-review-past-kind-withdraw",
+      "surface": "물렀거라",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "무르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "source": "direct-command-review-nikl-past",
+          "reason": "The named 었 component is a prefinal, not a second terminal ending. This forbids only this exact kind assignment.",
+          "verdict": "forbidden"
         }
       ]
     }

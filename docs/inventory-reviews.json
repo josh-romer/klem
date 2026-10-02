@@ -34619,10 +34619,11 @@
       "source_sha256": "d39ed1bd79311951aed01fdffa80b42b2aec5b139506cc93b59a6dbd31d9b358",
       "status": "scoped",
       "checklist": [
-        "COV-021l"
+        "COV-021l",
+        "COV-021m"
       ],
-      "scope": "Modern independent direct command ending; source-required verbal stems and 오다-final boundary for 너라. Every native written form retains its own headword; ordered auxiliary ownership, consonant boundaries and exhaustive original hypotheses are verified. Source notes, definitions, complete examples and all senses preserved.",
-      "remaining": "Every native ending-example target and both actual command training rows still need individual fixture regressions; exceptional 섰거라/물렀거라 need entry-level licenses. Further prefinal/mood/register licensing, adjective/copula wishes, existential contextual senses, polite followers, quotation and independent Korean review remain open. Full browser, packaged API and CLI/web Nix builds now pass; all three host-system flake checks and nine inventory unit tests pass.",
+      "scope": "Modern independent direct command ending; source-required verbal stems and 오다-final boundary for 너라. Every native written form retains its own headword; ordered auxiliary ownership, consonant boundaries and exhaustive original hypotheses are verified. Source notes, definitions, complete examples and all senses preserved. Followup preserves all nine native ending-example groups and four unchanged selected training rows, with 34 separate entry judgments. Own single-past licenses are limited to 서다 68756 and retreat 무르다 55296; other homonyms, extra prefinals and auxiliary owners retain prior assessments.",
+      "remaining": "Further prefinal/mood/register licensing, adjective/copula wishes, existential contextual senses, polite followers, quotation and independent Korean review remain open under COV-021m. Original contextual added-path and unjudged-probe observations remain unchanged.",
       "evidence": [
         {
           "path": "tests/gera_nera.rs"
@@ -34653,12 +34654,91 @@
         },
         {
           "path": "docs/dictionary-attachments.md"
+        },
+        {
+          "path": "tests/direct_command_review.rs"
+        },
+        {
+          "path": "tests/fixtures/direct-command-review-sources.json"
+        },
+        {
+          "path": "docs/direct-command-review-evaluation.json"
         }
       ],
       "judgments": [
         {
           "case": "gera-nera-0002",
           "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-66953-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-66953-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-66953-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-66953-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-66953-1-5",
+          "judgment": "path"
+        }
+      ],
+      "prior_dispositions": [
+        {
+          "id": "krdict:66953",
+          "source_sha256": "d39ed1bd79311951aed01fdffa80b42b2aec5b139506cc93b59a6dbd31d9b358",
+          "status": "scoped",
+          "checklist": [
+            "COV-021l"
+          ],
+          "scope": "Modern independent direct command ending; source-required verbal stems and 오다-final boundary for 너라. Every native written form retains its own headword; ordered auxiliary ownership, consonant boundaries and exhaustive original hypotheses are verified. Source notes, definitions, complete examples and all senses preserved.",
+          "remaining": "Every native ending-example target and both actual command training rows still need individual fixture regressions; exceptional 섰거라/물렀거라 need entry-level licenses. Further prefinal/mood/register licensing, adjective/copula wishes, existential contextual senses, polite followers, quotation and independent Korean review remain open. Full browser, packaged API and CLI/web Nix builds now pass; all three host-system flake checks and nine inventory unit tests pass.",
+          "evidence": [
+            {
+              "path": "tests/gera_nera.rs"
+            },
+            {
+              "path": "tests/fixtures/gera-nera-sources.json"
+            },
+            {
+              "path": "docs/gera-nera-source-preflight.json"
+            },
+            {
+              "path": "docs/gera-nera-fixture-audit.json"
+            },
+            {
+              "path": "web/tests/browser.mjs"
+            },
+            {
+              "path": "docs/gera-nera-evaluation.json"
+            },
+            {
+              "path": "docs/gera-nera-review-queue.json"
+            },
+            {
+              "path": "docs/gera-nera-followup-preflight.json"
+            },
+            {
+              "path": "docs/rules.md"
+            },
+            {
+              "path": "docs/dictionary-attachments.md"
+            }
+          ],
+          "judgments": [
+            {
+              "case": "gera-nera-0002",
+              "judgment": "path"
+            }
+          ]
         }
       ]
     },
@@ -34667,10 +34747,11 @@
       "source_sha256": "f46b6cd75af9d46b6ab22fb161aa4e1ff05be796d2006e35f283b3a88050851b",
       "status": "scoped",
       "checklist": [
-        "COV-021l"
+        "COV-021l",
+        "COV-021m"
       ],
-      "scope": "Modern independent direct command ending; source-required verbal stems and 오다-final boundary for 너라. Every native written form retains its own headword; ordered auxiliary ownership, consonant boundaries and exhaustive original hypotheses are verified. Source notes, definitions, complete examples and all senses preserved.",
-      "remaining": "Every native ending-example target and both actual command training rows still need individual fixture regressions; exceptional 섰거라/물렀거라 need entry-level licenses. Further prefinal/mood/register licensing, adjective/copula wishes, existential contextual senses, polite followers, quotation and independent Korean review remain open. Full browser, packaged API and CLI/web Nix builds now pass; all three host-system flake checks and nine inventory unit tests pass.",
+      "scope": "Modern independent direct command ending; source-required verbal stems and 오다-final boundary for 너라. Every native written form retains its own headword; ordered auxiliary ownership, consonant boundaries and exhaustive original hypotheses are verified. Source notes, definitions, complete examples and all senses preserved. Followup preserves all nine native ending-example groups and four unchanged selected training rows, with 34 separate entry judgments. Own single-past licenses are limited to 서다 68756 and retreat 무르다 55296; other homonyms, extra prefinals and auxiliary owners retain prior assessments.",
+      "remaining": "Further prefinal/mood/register licensing, adjective/copula wishes, existential contextual senses, polite followers, quotation and independent Korean review remain open under COV-021m. Original contextual added-path and unjudged-probe observations remain unchanged.",
       "evidence": [
         {
           "path": "tests/gera_nera.rs"
@@ -34701,12 +34782,87 @@
         },
         {
           "path": "docs/dictionary-attachments.md"
+        },
+        {
+          "path": "tests/direct_command_review.rs"
+        },
+        {
+          "path": "tests/fixtures/direct-command-review-sources.json"
+        },
+        {
+          "path": "docs/direct-command-review-evaluation.json"
         }
       ],
       "judgments": [
         {
           "case": "gera-nera-0080",
           "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-68835-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-68835-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-68835-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "direct-command-review-native-68835-1-4",
+          "judgment": "path"
+        }
+      ],
+      "prior_dispositions": [
+        {
+          "id": "krdict:68835",
+          "source_sha256": "f46b6cd75af9d46b6ab22fb161aa4e1ff05be796d2006e35f283b3a88050851b",
+          "status": "scoped",
+          "checklist": [
+            "COV-021l"
+          ],
+          "scope": "Modern independent direct command ending; source-required verbal stems and 오다-final boundary for 너라. Every native written form retains its own headword; ordered auxiliary ownership, consonant boundaries and exhaustive original hypotheses are verified. Source notes, definitions, complete examples and all senses preserved.",
+          "remaining": "Every native ending-example target and both actual command training rows still need individual fixture regressions; exceptional 섰거라/물렀거라 need entry-level licenses. Further prefinal/mood/register licensing, adjective/copula wishes, existential contextual senses, polite followers, quotation and independent Korean review remain open. Full browser, packaged API and CLI/web Nix builds now pass; all three host-system flake checks and nine inventory unit tests pass.",
+          "evidence": [
+            {
+              "path": "tests/gera_nera.rs"
+            },
+            {
+              "path": "tests/fixtures/gera-nera-sources.json"
+            },
+            {
+              "path": "docs/gera-nera-source-preflight.json"
+            },
+            {
+              "path": "docs/gera-nera-fixture-audit.json"
+            },
+            {
+              "path": "web/tests/browser.mjs"
+            },
+            {
+              "path": "docs/gera-nera-evaluation.json"
+            },
+            {
+              "path": "docs/gera-nera-review-queue.json"
+            },
+            {
+              "path": "docs/gera-nera-followup-preflight.json"
+            },
+            {
+              "path": "docs/rules.md"
+            },
+            {
+              "path": "docs/dictionary-attachments.md"
+            }
+          ],
+          "judgments": [
+            {
+              "case": "gera-nera-0080",
+              "judgment": "path"
+            }
+          ]
         }
       ]
     }

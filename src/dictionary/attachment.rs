@@ -372,6 +372,40 @@ fn habitual_condition_ending(analysis: &Analysis, mut rest: &[Component]) -> Opt
     }
 }
 
+// NIKL 327283 identifies the limited commands 섰거라 and 물렀거라;
+// the latter names the retreat sense, not the softening/adjective homonyms.
+// This establishes one attested sense in an entry, without selecting a sense
+// from sentence context or extending the license to another lexical owner.
+fn reviewed_past_direct_command(
+    entry: &super::EntrySummary,
+    lemma: &crate::Lemma,
+    analysis: &Analysis,
+    morphs: &[Component],
+) -> bool {
+    if lemma.kind != LemmaKind::Predicate
+        || lemma.text != entry.headword
+        || !matches!(
+            (
+                entry.id.as_str(),
+                entry.headword.as_str(),
+                entry.pos.as_str()
+            ),
+            ("krdict:68756", "서다", "동사") | ("krdict:55296", "무르다", "동사")
+        )
+    {
+        return false;
+    }
+    let [Component::Morpheme(past), Component::Morpheme(final_)] = morphs else {
+        return false;
+    };
+    let past = &analysis.morphemes[*past];
+    let final_ = &analysis.morphemes[*final_];
+    past.kind == MorphemeKind::Prefinal
+        && past.form == "었"
+        && final_.kind == MorphemeKind::Ending
+        && final_.form == "거라"
+}
+
 // NIKL's restricted short stems, bound to reviewed KRDict entry identities.
 // A headword alone cannot distinguish 까불다 (winnow) from 까불다 (act up),
 // or the unrelated 굴다/일다/붓다 homonyms. See short-stem-inventory.json.
@@ -1012,6 +1046,7 @@ impl Annotation {
                         })
                         && (!bare
                             || !matches!(matched.entry.pos.as_str(), "동사" | "보조 동사"))
+                        && !reviewed_past_direct_command(&matched.entry, lemma, analysis, morphs)
                     {
                         // The modern sources establish direct verbal stems.
                         // Honorific/tense/mood and adjectival or copular wishes

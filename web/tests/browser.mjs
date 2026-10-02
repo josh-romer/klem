@@ -668,6 +668,11 @@ try {
   const directCommandIds = new Set(directCommandEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !directCommandIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...directCommandEntries);
+  const commandReviewNative = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-direct-command-review.json"),"utf8"));
+  const commandReviewEntries = commandReviewNative.LexicalResource.Lexicon.LexicalEntry;
+  const commandReviewIds = new Set(commandReviewEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !commandReviewIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...commandReviewEntries);
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -6156,6 +6161,56 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-gera-nera-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-gera-nera-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const commandReviewSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/direct-command-review-sources.json"),"utf8"));
+  const commandReviewTokens = new Map();
+  for (const c of [...commandReviewSource.cases,...commandReviewSource.entry_cases]) {
+    if (!commandReviewTokens.has(c.surface)) commandReviewTokens.set(c.surface,await (await post("analyze",{text:c.surface})).json());
+    const data = commandReviewTokens.get(c.surface);const token = data.records[0];
+    const indices = token.analysis.analyses.flatMap((a,i) => auxiliaryPath(a,c) ? [i] : []);
+    assert.deepEqual(indices,c.before_candidate_indices,c.id);
+    if (c.verdict === "required") assert.ok(indices.length,c.id);
+    if (c.verdict === "forbidden") assert.equal(indices.length,0,c.id);
+    for (const i of indices) {
+      assert.ok(data.breakdowns[0][i]?.length,c.id);
+      if (!c.expected_status) continue;
+      const owner = token.dictionary.readings[i].lemmas.find(l => l.lemma_index === c.lemma_index);
+      assert.ok(owner,c.id);
+      const checked = c.entry_id ? owner.entries.find(e => e.id === c.entry_id) : owner;
+      assert.ok(checked,c.id);assert.equal(checked.status,c.expected_status,c.id);
+      if (c.surface === "무렀거라") assert.deepEqual(checked.conflicts,[{rule:"lexical_spelling",morpheme_index:0}],c.id);
+    }
+  }
+  for (const e of commandReviewSource.source_entries) assert.deepEqual((await (await post("entry",{id:e.id})).json()).entry,e,e.id);
+  const commandReviewText = "살아가거라 나오너라 데려오너라 섰거라 물렀거라 무르셨거라 서버렸거라 거라";
+  const commandReviewHeads = [["살아가다"],["나오다"],["데리다","오다"],["서다"],["무르다"],["무르다"],["서다","버리다"],["거","이다"]];
+  const commandReviewForms = [["거라"],["너라"],["어","너라"],["었","거라"],["었","거라"],["시","었","거라"],["어","었","거라"],["라"]];
+  const commandReviewParts = [["살아가","거라"],["나오","너라"],["데리","어","오","너라"],["서","었","거라"],["무르","었","거라"],["무르","시","었","거라"],["서","어","버리","었","거라"],["거","이","라"]];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check();
+    else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check();
+    else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,commandReviewText);await waitHeading(page,"살아가거라");
+    const data = await (await post("analyze",{text:commandReviewText})).json();
+    for (const [n,t] of data.records.filter(r => r.analysis).entries()) {
+      const index = t.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(commandReviewHeads[n]) && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(commandReviewForms[n]));
+      assert.ok(index >= 0,t.surface);const block = page.locator(".breakdown-word").nth(n);
+      assert.equal(await block.locator(`option[value="${index}"]`).count(),1,t.surface);
+      await block.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(),commandReviewParts[n],t.surface);
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:commandReviewText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.locator(".breakdown-word").nth(4).locator(".breakdown-part").first().click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=55296"]'));
+  await page.screenshot({path:resolve(tmpdir(),"klem-direct-command-review-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-direct-command-review-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

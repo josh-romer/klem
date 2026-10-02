@@ -2274,6 +2274,23 @@ review remains open under the completion review below.
   remain required under COV-019. COV-013 records six scoped dispositions while
   its wider inventory audit remains open.
 
+- [ ] **COV-019v — Complete conjectural auxiliary audit.**
+  The [source preflight](conjectural-aux-source-preflight.json) retains every
+  native sense, form, note and example group for 듯하다 (49988), 듯싶다
+  (49985) and 성싶다 (64397): three entries/senses and 11 groups. Every
+  selected joined excerpt already recovers at `e5ad081`, including 바쁘신
+  듯싶어서 and 아들인 듯해. Deterministic training search preserves 34
+  targets in complete original blocks, including distinct auxiliary and
+  noun-plus-adjective annotations; all 34 currently match. No new recall
+  or contextual correctness is claimed. Pending: individual native and
+  annotation regression IDs, dictionary entry/owner and filtered retention
+  checks, adnominal/allomorph/copula boundaries, ordered browser/export evidence,
+  source-supported ending/prefinal/particle licenses and semantic/register
+  review. The native notes admit verb/adjective/copula owners for 듯하다
+  and 듯싶다; 성싶다 lists verb/adjective + -을. An omitted example or
+  source category does not supply an invented forbidden path. These entries
+  remain unreviewed in COV-013 until scoped evidence is completed.
+
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and

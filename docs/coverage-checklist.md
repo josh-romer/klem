@@ -2340,6 +2340,30 @@ review remains open under the completion review below.
   required. These four COV-013 dispositions are scoped rather than complete
   entry certification.
 
+- [ ] **COV-019x — Intensive and emphatic auxiliary source audit.**
+  **Source preflight complete; implementation and individual regression review
+  remain open.** The [preflight](intensive-aux-source-preflight.json) preserves
+  seven complete auxiliary entries for 먹다, 빠지다, 자빠지다, 죽다,
+  터지다, 재끼다 and 젖히다, plus six related 빠지다/죽다 expressions:
+  thirteen entries/senses and all sixty original example groups. Every joined
+  native excerpt already recovers with the immutable COV-019w package; this
+  supplies structural observations rather than contextual correctness.
+  The original -아 빠지다 vowel note conflicts with its own examples; the
+  -어 빠지다 adjective note also coexists with lexical-verb examples 썩다
+  and 늙다. Preserve both conflicts without rewriting the source or inventing
+  universal adjective-only exclusions. Some-verb notes need lexical-subset
+  review; literal verbs, homonyms and later auxiliary owners remain distinct.
+  Primary author abstracts and official NIKL consultations are recorded with
+  their access limits; complete research articles and semantic/register review
+  remain required. Five exact aligned training targets retain full original
+  sentences and annotations: one KAIST match, three GSD matches and the
+  unchanged GSD 줄서먹는 → 줄다 + 먹다 miss with its literal -아서
+  connector. Add attributed offline fixtures, individual path/entry judgments,
+  owner/prefinal/particle/right-ending checks and candidate/runtime/browser/Nix
+  verification for any changes. These seven COV-013 entries remain unreviewed;
+  source collection alone does not supply inventory dispositions or independent
+  Korean-language review.
+
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds
   quoted copula fragments; COV-020c adds reviewed omitted-copula endings and

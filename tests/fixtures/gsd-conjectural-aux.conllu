@@ -1,0 +1,179 @@
+# sent_id = train-s19
+# text = 짜증나는 듯한 무표정한 얼굴로 친절하지도 않고 다시 가고 싶은 생각 없음
+# translit = .jja.jeung.na.neun .deus.han .mu.pyo.jeong.han .eol.gul.ro .chin.jeol.ha.ji.do .anh.go .da.si .ga.go .sip.eun .saeng.gag .eobs.eum
+1	짜증나는	짜증+나+는	VERB	NNG+VV+ETM	_	2	dep	_	Translit=.jja.jeung.na.neun|LTranslit=.jja.jeung+.na+.neun
+2	듯한	듯+하+ㄴ	VERB	NNB+XSA+ETM	_	4	acl:relcl	_	Translit=.deus.han|LTranslit=.deus+.ha+ㄴ
+3	무표정한	무+표정+하+ㄴ	ADJ	XPN+NNG+XSA+ETM	_	4	amod	_	Translit=.mu.pyo.jeong.han|LTranslit=.mu+.pyo.jeong+.ha+ㄴ
+4	얼굴로	얼굴+로	ADV	NNG+JKB	_	5	obl	_	Translit=.eol.gul.ro|LTranslit=.eol.gul+.ro
+5	친절하지도	친절+하+지+도	VERB	NNG+XSV+EC+JX	_	0	root	_	Translit=.chin.jeol.ha.ji.do|LTranslit=.chin.jeol+.ha+.ji+.do
+6	않고	않+고	VERB	VX+EC	_	5	flat	_	Translit=.anh.go|LTranslit=.anh+.go
+7	다시	다시	ADV	MAG	_	8	advmod	_	Translit=.da.si|LTranslit=.da.si
+8	가고	가+고	VERB	VV+EC	_	10	dep	_	Translit=.ga.go|LTranslit=.ga+.go
+9	싶은	싶+은	VERB	VX+ETM	_	8	flat	_	Translit=.sip.eun|LTranslit=.sip+.eun
+10	생각	생각	NOUN	NNG	_	11	nsubj	_	Translit=.saeng.gag|LTranslit=.saeng.gag
+11	없음	없+음	NOUN	VA+ETN	_	5	conj	_	Translit=.eobs.eum|LTranslit=.eobs+.eum
+
+# sent_id = train-s255
+# text = 휘닉스파크랑 차로 5분 거리에 있어서 겨울에 스키 타러 가도 좋을 듯해요...
+# translit = .hwi.nig.seu.pa.keu.rang .cha.ro 5.bun .geo.ri.e .iss.eo.seo .gyeo.ul.e .seu.ki .ta.reo .ga.do .joh.eul .deus.hae.yo...
+1	휘닉스파크랑	휘닉스파크랑	ADV	NNP	_	3	advmod	_	Translit=.hwi.nig.seu.pa.keu.rang|LTranslit=.hwi.nig.seu.pa.keu.rang
+2	차로	차+로	ADV	NNG+JKB	_	3	obl	_	Translit=.cha.ro|LTranslit=.cha+.ro
+3	5분	5+분	NOUN	SN+NNB	_	5	nmod	_	Translit=5.bun|LTranslit=5+.bun
+4	거리에	거리+에	ADP	NNG+JKB	_	3	case	_	Translit=.geo.ri.e|LTranslit=.geo.ri+.e
+5	있어서	있+어서	VERB	VV+EC	_	10	advcl	_	Translit=.iss.eo.seo|LTranslit=.iss+.eo.seo
+6	겨울에	겨울+에	ADV	NNG+JKB	_	8	obl	_	Translit=.gyeo.ul.e|LTranslit=.gyeo.ul+.e
+7	스키	스키	NOUN	NNG	_	8	obj	_	Translit=.seu.ki|LTranslit=.seu.ki
+8	타러	타+러	VERB	VV+EC	_	10	advcl	_	Translit=.ta.reo|LTranslit=.ta+.reo
+9	가도	가+아도	VERB	VX+EC	_	8	flat	_	Translit=.ga.do|LTranslit=.ga+.a.do
+10	좋을	좋+을	VERB	VA+ETM	_	11	dep	_	Translit=.joh.eul|LTranslit=.joh+.eul
+11	듯해요	듯+하+아요	ADJ	NNB+XSA+EC	_	0	root	_	SpaceAfter=No|Translit=.deus.hae.yo|LTranslit=.deus+.ha+.a.yo
+12	...	...	PUNCT	SE	_	11	punct	_	Translit=...|LTranslit=...
+
+# sent_id = train-s411
+# text = 증명사진을 30컷 이상 찍어서 괜찮은 걸로 보정해서 뽑아주시는 듯해서 나름 감동이였습니다.
+# translit = .jeung.myeong.sa.jin.eul 30.keos .i.sang .jjig.eo.seo .gwaen.chanh.eun .geol.ro .bo.jeong.hae.seo .bbob.a.ju.si.neun .deus.hae.seo .na.reum .gam.dong.i.yeoss.seub.ni.da.
+1	증명사진을	증명사진+을	NOUN	NNG+JKO	_	4	obj	_	Translit=.jeung.myeong.sa.jin.eul|LTranslit=.jeung.myeong.sa.jin+.eul
+2	30컷	30+컷	NOUN	SN+NNG	_	4	nmod	_	Translit=30.keos|LTranslit=30+.keos
+3	이상	이상	ADP	NNG	_	2	case	_	Translit=.i.sang|LTranslit=.i.sang
+4	찍어서	찍+어서	VERB	VV+EC	_	7	advcl	_	Translit=.jjig.eo.seo|LTranslit=.jjig+.eo.seo
+5	괜찮은	괜찮+은	ADJ	VA+ETM	_	6	amod	_	Translit=.gwaen.chanh.eun|LTranslit=.gwaen.chanh+.eun
+6	걸로	것+로	ADV	NNB+JKB	_	7	obl	_	Translit=.geol.ro|LTranslit=.geos+.ro
+7	보정해서	보정+하+아서	VERB	NNG+XSV+EC	_	8	advcl	_	Translit=.bo.jeong.hae.seo|LTranslit=.bo.jeong+.ha+.a.seo
+8	뽑아주시는	뽑+아+주+시+는	VERB	VV+EC+VX+EP+ETM	_	9	dep	_	Translit=.bbob.a.ju.si.neun|LTranslit=.bbob+.a+.ju+.si+.neun
+9	듯해서	듯+하+아서	VERB	NNB+XSA+EC	_	11	advcl	_	Translit=.deus.hae.seo|LTranslit=.deus+.ha+.a.seo
+10	나름	나름	ADV	NNB	_	11	advmod	_	Translit=.na.reum|LTranslit=.na.reum
+11	감동이였습니다	감동+이+았+습니다	VERB	NNG+VCP+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.gam.dong.i.yeoss.seub.ni.da|LTranslit=.gam.dong+.i+.ass+.seub.ni.da
+12	.	.	PUNCT	SF	_	11	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s436
+# text = 2008년 3월 이란 축구 국가대표팀의 감독으로 선임되는 듯하였으나, 그는 감독직을 거절하였다.
+# translit = 2008.nyeon 3.weol .i.ran .chug.gu .gug.ga.dae.pyo.tim.yi .gam.dog.eu.ro .seon.im.doe.neun .deus.ha.yeoss.eu.na, .geu.neun .gam.dog.jig.eul .geo.jeol.ha.yeoss.da.
+1	2008년	2008+년	NOUN	SN+NNB	_	7	nmod	_	Translit=2008.nyeon|LTranslit=2008+.nyeon
+2	3월	3+월	NOUN	SN+NNB	_	1	flat	_	Translit=3.weol|LTranslit=3+.weol
+3	이란	이란	NOUN	NNP	_	6	nmod:poss	_	Translit=.i.ran|LTranslit=.i.ran
+4	축구	축구	NOUN	NNG	_	3	flat	_	Translit=.chug.gu|LTranslit=.chug.gu
+5	국가대표팀의	국가+대표+팀+의	NOUN	NNG+NNG+NNG+JKG	_	3	flat	_	Translit=.gug.ga.dae.pyo.tim.yi|LTranslit=.gug.ga+.dae.pyo+.tim+.yi
+6	감독으로	감독+으로	ADV	NNG+JKB	_	7	obl	_	Translit=.gam.dog.eu.ro|LTranslit=.gam.dog+.eu.ro
+7	선임되는	선임+되+는	VERB	NNG+XSV+ETM	_	8	dep	_	Translit=.seon.im.doe.neun|LTranslit=.seon.im+.doe+.neun
+8	듯하였으나	듯+하+았+으나	VERB	NNB+XSA+EP+EC	_	12	advcl	_	SpaceAfter=No|Translit=.deus.ha.yeoss.eu.na|LTranslit=.deus+.ha+.ass+.eu.na
+9	,	,	PUNCT	SP	_	8	punct	_	Translit=,|LTranslit=,
+10	그는	그+는	PRON	NP+JX	_	12	nsubj	_	Translit=.geu.neun|LTranslit=.geu+.neun
+11	감독직을	감독직+을	NOUN	NNG+JKO	_	12	obj	_	Translit=.gam.dog.jig.eul|LTranslit=.gam.dog.jig+.eul
+12	거절하였다	거절+하+았+다	VERB	NNG+XSV+EP+EF	_	0	root	_	SpaceAfter=No|Translit=.geo.jeol.ha.yeoss.da|LTranslit=.geo.jeol+.ha+.ass+.da
+13	.	.	PUNCT	SF	_	12	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1670
+# text = 다이애너의 자매인 윌마 블록은 "친지들과 전혀 알지도 못하는 사람들"이 찾아와서 돈을 달라고 했다고 전했으며, 복권위원회에서 온 듯한 사람들이 지난 14일 필랜더와 그의 가족을 어디론가 데려간 것으로 알려졌다.
+# translit = .da.i.ae.neo.yi .ja.mae.in .wil.ma .beul.rog.eun ".chin.ji.deul.gwa .jeon.hyeo .al.ji.do .mos.ha.neun .sa.ram.deul".i .chaj.a.wa.seo .don.eul .dal.ra.go .haess.da.go .jeon.haess.eu.myeo, .bog.gweon.wi.weon.hoe.e.seo .on .deus.han .sa.ram.deul.i .ji.nan 14.il .pil.raen.deo.wa .geu.yi .ga.jog.eul .eo.di.ron.ga .de.ryeo.gan .geos.eu.ro .al.ryeo.jyeoss.da.
+1	다이애너의	다이애너+의	NOUN	NNP+JKG	_	2	nmod:poss	_	Translit=.da.i.ae.neo.yi|LTranslit=.da.i.ae.neo+.yi
+2	자매인	자매+이+ㄴ	VERB	NNG+VCP+ETM	_	3	acl:relcl	_	Translit=.ja.mae.in|LTranslit=.ja.mae+.i+ㄴ
+3	윌마	윌마	NOUN	NNP	_	17	nsubj	_	Translit=.wil.ma|LTranslit=.wil.ma
+4	블록은	블록+은	NOUN	NNG+JX	_	3	flat	_	Translit=.beul.rog.eun|LTranslit=.beul.rog+.eun
+5	"	"	PUNCT	SS	_	10	punct	_	SpaceAfter=No|Translit="|LTranslit="
+6	친지들과	친지+들+과	ADV	NNG+XSN+JKB	_	8	advmod	_	Translit=.chin.ji.deul.gwa|LTranslit=.chin.ji+.deul+.gwa
+7	전혀	전혀	ADV	MAG	_	8	advmod	_	Translit=.jeon.hyeo|LTranslit=.jeon.hyeo
+8	알지도	알+지+도	VERB	VV+EC+JX	_	10	acl:relcl	_	Translit=.al.ji.do|LTranslit=.al+.ji+.do
+9	못하는	못하+는	VERB	VX+ETM	_	8	flat	_	Translit=.mos.ha.neun|LTranslit=.mos.ha+.neun
+10	사람들	사람+들	NOUN	NNG+XSN	_	13	dep	_	SpaceAfter=No|Translit=.sa.ram.deul|LTranslit=.sa.ram+.deul
+11	"	"	PUNCT	SS	_	10	punct	_	SpaceAfter=No|Translit="|LTranslit="
+12	이	이	ADP	JKS	_	10	nsubj	_	Translit=.i|LTranslit=.i
+13	찾아와서	찾아오+아서	VERB	VV+EC	_	16	advcl	_	Translit=.chaj.a.wa.seo|LTranslit=.chaj.a.o+.a.seo
+14	돈을	돈+을	NOUN	NNG+JKO	_	15	obj	_	Translit=.don.eul|LTranslit=.don+.eul
+15	달라고	달+라고	VERB	VV+EC	_	16	ccomp	_	Translit=.dal.ra.go|LTranslit=.dal+.ra.go
+16	했다고	하+았+다고	VERB	VX+EP+EC	_	17	ccomp	_	Translit=.haess.da.go|LTranslit=.ha+.ass+.da.go
+17	전했으며	전하+았+으며	VERB	VV+EP+EC	_	0	root	_	SpaceAfter=No|Translit=.jeon.haess.eu.myeo|LTranslit=.jeon.ha+.ass+.eu.myeo
+18	,	,	PUNCT	SP	_	31	punct	_	Translit=,|LTranslit=,
+19	복권위원회에서	복권+위원회+에서	ADV	NNG+NNG+JKB	_	20	advmod	_	Translit=.bog.gweon.wi.weon.hoe.e.seo|LTranslit=.bog.gweon+.wi.weon.hoe+.e.seo
+20	온	오+ㄴ	VERB	VV+ETM	_	22	acl:relcl	_	Translit=.on|LTranslit=.o+ㄴ
+21	듯한	듯+하+ㄴ	NOUN	NNB+XSA+ETM	_	20	dep	_	Translit=.deus.han|LTranslit=.deus+.ha+ㄴ
+22	사람들이	사람+들+이	NOUN	NNG+XSN+JKS	_	29	nsubj	_	Translit=.sa.ram.deul.i|LTranslit=.sa.ram+.deul+.i
+23	지난	지나+ㄴ	VERB	VV+ETM	_	24	acl:relcl	_	Translit=.ji.nan|LTranslit=.ji.na+ㄴ
+24	14일	14+일	NOUN	SN+NNB	_	29	nmod	_	Translit=14.il|LTranslit=14+.il
+25	필랜더와	필랜더+와	NOUN	NNP+JC	_	29	obj	_	Translit=.pil.raen.deo.wa|LTranslit=.pil.raen.deo+.wa
+26	그의	그+의	PRON	NP+JKG	_	27	det:poss	_	Translit=.geu.yi|LTranslit=.geu+.yi
+27	가족을	가족+을	NOUN	NNG+JKO	_	25	conj	_	Translit=.ga.jog.eul|LTranslit=.ga.jog+.eul
+28	어디론가	어디+로+이+ㄴ가	ADV	NP+JKB+VCP+EC	_	29	advmod	_	Translit=.eo.di.ron.ga|LTranslit=.eo.di+.ro+.i+ㄴ.ga
+29	데려간	데려가+ㄴ	VERB	VV+ETM	_	30	dep	_	Translit=.de.ryeo.gan|LTranslit=.de.ryeo.ga+ㄴ
+30	것으로	것+으로	ADV	NNB+JKB	_	31	obl	_	Translit=.geos.eu.ro|LTranslit=.geos+.eu.ro
+31	알려졌다	알리+어+지+었+다	VERB	VV+EC+VX+EP+EF	_	17	conj	_	SpaceAfter=No|Translit=.al.ryeo.jyeoss.da|LTranslit=.al.ri+.eo+.ji+.eoss+.da
+32	.	.	PUNCT	SF	_	31	punct	_	Translit=.|LTranslit=.
+
+# sent_id = train-s1986
+# text = 아마 다른 집에 갈 거 주문 취소되서 갖고 온 듯하네요
+# translit = .a.ma .da.reun .jib.e .gal .geo .ju.mun .chwi.so.doe.seo .gaj.go .on .deus.ha.ne.yo
+1	아마	아마	ADV	MAG	_	10	advmod	_	Translit=.a.ma|LTranslit=.a.ma
+2	다른	다른	ADJ	MM	_	3	amod	_	Translit=.da.reun|LTranslit=.da.reun
+3	집에	집+에	ADV	NNG+JKB	_	4	obl	_	Translit=.jib.e|LTranslit=.jib+.e
+4	갈	가+ㄹ	VERB	VV+ETM	_	5	dep	_	Translit=.gal|LTranslit=.ga+ㄹ
+5	거	거	NOUN	NNB	_	7	nsubj:pass	_	Translit=.geo|LTranslit=.geo
+6	주문	주문	NOUN	NNG	_	7	nsubj:pass	_	Translit=.ju.mun|LTranslit=.ju.mun
+7	취소되서	취소+되+아서	VERB	NNG+XSV+EC	_	9	advcl	_	Translit=.chwi.so.doe.seo|LTranslit=.chwi.so+.doe+.a.seo
+8	갖고	갖+고	VERB	VV+EC	_	9	advcl	_	Translit=.gaj.go|LTranslit=.gaj+.go
+9	온	오+ㄴ	VERB	VX+ETM	_	10	dep	_	Translit=.on|LTranslit=.o+ㄴ
+10	듯하네요	듯+하+네요	ADJ	NNB+XSA+EC	_	0	root	_	Translit=.deus.ha.ne.yo|LTranslit=.deus+.ha+.ne.yo
+
+# sent_id = train-s2207
+# text = 되도록이면 점심 첫타는 피하는 게 좋을 듯함
+# translit = .doe.do.rog.i.myeon .jeom.sim .cheos.ta.neun .pi.ha.neun .ge .joh.eul .deus.ham
+1	되도록이면	되+도록+이+면	ADV	VV+EC+VCP+EC	_	7	advmod	_	Translit=.doe.do.rog.i.myeon|LTranslit=.doe+.do.rog+.i+.myeon
+2	점심	점심	NOUN	NNG	_	4	obj	_	Translit=.jeom.sim|LTranslit=.jeom.sim
+3	첫타는	첫+타+는	NOUN	MM+NNG+JX	_	2	flat	_	Translit=.cheos.ta.neun|LTranslit=.cheos+.ta+.neun
+4	피하는	피하+는	VERB	VV+ETM	_	5	dep	_	Translit=.pi.ha.neun|LTranslit=.pi.ha+.neun
+5	게	것+이	NOUN	NNB+JKS	_	6	nsubj	_	Translit=.ge|LTranslit=.geos+.i
+6	좋을	좋+을	VERB	VA+ETM	_	7	dep	_	Translit=.joh.eul|LTranslit=.joh+.eul
+7	듯함	듯+하+ㅁ	NOUN	NNB+XSA+ETN	_	0	root	_	Translit=.deus.ham|LTranslit=.deus+.ha+ㅁ
+
+# sent_id = train-s2343
+# text = 이런 데가 원래 비싼 건 알지만 음식이 넘 맛없어서 더더욱 비싸게 느껴지고 주문하면 음식 나오기까지 시간도 많이 걸리고 친절과도 거리가 좀 먼 듯해요
+# translit = .i.reon .de.ga .weon.rae .bi.ssan .geon .al.ji.man .eum.sig.i .neom .mas.eobs.eo.seo .deo.deo.ug .bi.ssa.ge .neu.ggyeo.ji.go .ju.mun.ha.myeon .eum.sig .na.o.gi.gga.ji .si.gan.do .manh.i .geol.ri.go .chin.jeol.gwa.do .geo.ri.ga .jom .meon .deus.hae.yo
+1	이런	이런	ADJ	MM	_	2	amod	_	Translit=.i.reon|LTranslit=.i.reon
+2	데가	데+가	NOUN	NNB+JKS	_	4	nsubj	_	Translit=.de.ga|LTranslit=.de+.ga
+3	원래	원래	ADV	MAG	_	4	advmod	_	Translit=.weon.rae|LTranslit=.weon.rae
+4	비싼	비싸+ㄴ	VERB	VA+ETM	_	5	dep	_	Translit=.bi.ssan|LTranslit=.bi.ssa+ㄴ
+5	건	것+ㄴ	NOUN	NNB+JX	_	6	obj	_	Translit=.geon|LTranslit=.geos+ㄴ
+6	알지만	알+지만	VERB	VV+EC	_	23	advcl	_	Translit=.al.ji.man|LTranslit=.al+.ji.man
+7	음식이	음식+이	NOUN	NNG+JKS	_	9	nsubj	_	Translit=.eum.sig.i|LTranslit=.eum.sig+.i
+8	넘	넘	ADV	NNG	_	9	advmod	_	Translit=.neom|LTranslit=.neom
+9	맛없어서	맛없+어서	VERB	VA+EC	_	12	advcl	_	Translit=.mas.eobs.eo.seo|LTranslit=.mas.eobs+.eo.seo
+10	더더욱	더더욱	ADV	MAG	_	11	advmod	_	Translit=.deo.deo.ug|LTranslit=.deo.deo.ug
+11	비싸게	비싸+게	ADV	VA+EC	_	12	advmod	_	Translit=.bi.ssa.ge|LTranslit=.bi.ssa+.ge
+12	느껴지고	느끼+어+지+고	VERB	VV+EC+VX+EC	_	23	advcl	_	Translit=.neu.ggyeo.ji.go|LTranslit=.neu.ggi+.eo+.ji+.go
+13	주문하면	주문+하+면	VERB	NNG+XSV+EC	_	18	advcl	_	Translit=.ju.mun.ha.myeon|LTranslit=.ju.mun+.ha+.myeon
+14	음식	음식	NOUN	NNG	_	15	nsubj	_	Translit=.eum.sig|LTranslit=.eum.sig
+15	나오기까지	나오+기+까지	ADV	VV+ETN+JX	_	18	advmod	_	Translit=.na.o.gi.gga.ji|LTranslit=.na.o+.gi+.gga.ji
+16	시간도	시간+도	NOUN	NNG+JX	_	18	nsubj	_	Translit=.si.gan.do|LTranslit=.si.gan+.do
+17	많이	많이	ADV	MAG	_	18	advmod	_	Translit=.manh.i|LTranslit=.manh.i
+18	걸리고	걸리+고	VERB	VV+EC	_	0	root	_	Translit=.geol.ri.go|LTranslit=.geol.ri+.go
+19	친절과도	친절+과+도	ADV	NNG+JKB+JX	_	22	advmod	_	Translit=.chin.jeol.gwa.do|LTranslit=.chin.jeol+.gwa+.do
+20	거리가	거리+가	NOUN	NNG+JKS	_	22	nsubj	_	Translit=.geo.ri.ga|LTranslit=.geo.ri+.ga
+21	좀	좀	ADV	MAG	_	22	advmod	_	Translit=.jom|LTranslit=.jom
+22	먼	멀+ㄴ	VERB	VA+ETM	_	23	dep	_	Translit=.meon|LTranslit=.meol+ㄴ
+23	듯해요	듯+하+아요	ADJ	NNB+XSA+EC	_	18	conj	_	Translit=.deus.hae.yo|LTranslit=.deus+.ha+.a.yo
+
+# sent_id = train-s3404
+# text = 음식이 깔끔하고 정갈하기는 하나 깊은 맛과 입맛을 끌어당기는 음식이 조금 부족한 듯합니다
+# translit = .eum.sig.i .ggal.ggeum.ha.go .jeong.gal.ha.gi.neun .ha.na .gip.eun .mas.gwa .ib.mas.eul .ggeul.eo.dang.gi.neun .eum.sig.i .jo.geum .bu.jog.han .deus.hab.ni.da
+1	음식이	음식+이	NOUN	NNG+JKS	_	2	nsubj	_	Translit=.eum.sig.i|LTranslit=.eum.sig+.i
+2	깔끔하고	깔끔+하+고	VERB	XR+XSA+EC	_	11	advcl	_	Translit=.ggal.ggeum.ha.go|LTranslit=.ggal.ggeum+.ha+.go
+3	정갈하기는	정갈+하+기+는	NOUN	XR+XSA+ETN+JX	_	4	nsubj	_	Translit=.jeong.gal.ha.gi.neun|LTranslit=.jeong.gal+.ha+.gi+.neun
+4	하나	하+나	VERB	VX+EC	_	2	conj	_	Translit=.ha.na|LTranslit=.ha+.na
+5	깊은	깊+은	ADJ	VA+ETM	_	6	amod	_	Translit=.gip.eun|LTranslit=.gip+.eun
+6	맛과	맛+과	NOUN	NNG+JC	_	11	nsubj	_	Translit=.mas.gwa|LTranslit=.mas+.gwa
+7	입맛을	입맛+을	NOUN	NNG+JKO	_	8	obj	_	Translit=.ib.mas.eul|LTranslit=.ib.mas+.eul
+8	끌어당기는	끌어당기+는	VERB	VV+ETM	_	9	acl:relcl	_	Translit=.ggeul.eo.dang.gi.neun|LTranslit=.ggeul.eo.dang.gi+.neun
+9	음식이	음식+이	NOUN	NNG+JKS	_	6	conj	_	Translit=.eum.sig.i|LTranslit=.eum.sig+.i
+10	조금	조금	ADV	MAG	_	11	advmod	_	Translit=.jo.geum|LTranslit=.jo.geum
+11	부족한	부족+하+ㄴ	VERB	NNG+XSA+ETM	_	12	dep	_	Translit=.bu.jog.han|LTranslit=.bu.jog+.ha+ㄴ
+12	듯합니다	듯+하+ㅂ니다	ADJ	NNB+XSA+EC	_	0	root	_	Translit=.deus.hab.ni.da|LTranslit=.deus+.ha+ㅂ.ni.da
+
+# sent_id = train-s4312
+# text = 생고기와 냉동고기를 해동시켜서 반 반 주는 듯하네요
+# translit = .saeng.go.gi.wa .naeng.dong.go.gi.reul .hae.dong.si.kyeo.seo .ban .ban .ju.neun .deus.ha.ne.yo
+1	생고기와	생+고기+와	NOUN	XPN+NNG+JC	_	3	obj	_	Translit=.saeng.go.gi.wa|LTranslit=.saeng+.go.gi+.wa
+2	냉동고기를	냉동+고기+를	NOUN	NNG+NNG+JKO	_	1	conj	_	Translit=.naeng.dong.go.gi.reul|LTranslit=.naeng.dong+.go.gi+.reul
+3	해동시켜서	해동+시키+어서	VERB	NNG+XSV+EC	_	6	advcl	_	Translit=.hae.dong.si.kyeo.seo|LTranslit=.hae.dong+.si.ki+.eo.seo
+4	반	반	NOUN	NNG	_	6	obj	_	Translit=.ban|LTranslit=.ban
+5	반	반	NOUN	NNG	_	4	flat	_	Translit=.ban|LTranslit=.ban
+6	주는	주+는	VERB	VV+ETM	_	7	dep	_	Translit=.ju.neun|LTranslit=.ju+.neun
+7	듯하네요	듯+하+네요	ADJ	NNB+XSA+EC	_	0	root	_	Translit=.deus.ha.ne.yo|LTranslit=.deus+.ha+.ne.yo
+

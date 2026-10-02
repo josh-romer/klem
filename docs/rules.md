@@ -4004,3 +4004,36 @@ contextual senses, register and independent Korean review remain required.
 The entry ledger separately retains four reviewed historical refinements:
   one old auxiliary judgment, one proposal-owner test and two intention-owner
   judgments. Both historical fixture files remain byte-identical.
+
+## Conjectural auxiliary sources and bare adnominal owners (COV-019v)
+
+The [complete source record](../tests/fixtures/conjectural-aux-sources.json)
+retains 듯하다/듯싶다/성싶다 and all ten related expression entries: thirteen
+entries/senses and 57 original example groups. Joined excerpts test tolerant
+word input; their original source spacing and dialogue groups remain. All
+these paths already recovered before this change. The base -는 entry (85853)
+is recorded separately and does not inflate the thirteen-entry count.
+
+Optional dictionary assessment now distinguishes the immediate bare -는 owner
+before 듯하다/듯싶다. Known lexical adjective and represented copula entries
+conflict; lexical verbs, 있다/없다 compounds and 계시다 remain. Each 크다
+homonym receives its own assessment, so the verb reading survives. Unknown
+provider classes remain unknown, and an earlier adjective cannot classify a
+later 지다 auxiliary. Intervening 시/겠 prefinal controls preserve the existing
+policy without certifying their broader grammar. Raw generation is unchanged.
+
+The -은 듯싶다 entry (76466) includes 맞는 듯싶은데. Its literal -는 path and
+full original group remain; neither spelling nor the annotation is silently
+rewritten. 성싶다's note omits copulas; omission alone supplies no forbidden
+copula judgment. Fifty-seven raw regression IDs and 84 separate entry
+judgments distinguish native retention from constructed class controls.
+Thirty-four training targets retain original auxiliary and noun-plus-adjective
+annotations in complete unchanged KAIST/GSD blocks.
+
+The primary NIKL grammar guide, printed p.402, describes subjective or uncertain
+conjecture, opinion/request/refusal softening and a preference for written
+usage. These contextual observations do not justify categorical token filters.
+The consultation, page identity and retrieval limits are recorded in the source
+manifest. Source-supported ending/prefinal/particle licenses, contextual senses,
+register and independent Korean-language review remain open under the original
+COV-019v and COV-019 requirements.

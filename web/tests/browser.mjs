@@ -587,6 +587,12 @@ try {
 
 
 
+  const conjecturalAuxFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-conjectural-aux.json"), "utf8"));
+  const conjecturalAuxEntries = conjecturalAuxFixture.LexicalResource.Lexicon.LexicalEntry;
+  const conjecturalAuxIds = new Set(conjecturalAuxEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !conjecturalAuxIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...conjecturalAuxEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5258,6 +5264,80 @@ try {
     const wait=page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();const exported=JSON.parse(await readFile(await(await wait).path(),"utf8"));assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:text,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
   }
   await page.screenshot({path:resolve(tmpdir(),"klem-negative-class-desktop.png"),fullPage:true});await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);await page.screenshot({path:resolve(tmpdir(),"klem-negative-class-mobile.png"),fullPage:true});await page.setViewportSize({width:1440,height:1100});await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  // Complete conjectural entries preserve native paths and owner-specific
+  // conflicts. UI options retain raw indices while filtered exports reindex.
+  const conjecturalEntryLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/conjectural-aux-entry-judgments.json"), "utf8"));
+  assert.equal(conjecturalEntryLedger.cases.length, 69);
+  assert.equal(conjecturalEntryLedger.cases.reduce((n, c) => n + c.judgments.length, 0), 84);
+  const conjecturalCases = recipientLedger.cases.filter(c => c.id.startsWith("conjectural-aux-"));
+  assert.equal(conjecturalCases.length, 57);
+  for (const c of conjecturalCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => hieutMatches(a, j)), j.verdict === "required", c.id);
+  }
+  for (const c of conjecturalEntryLedger.cases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a, c));
+    assert.ok(index >= 0, c.id);
+    for (const j of c.judgments) {
+      const entry = token.dictionary.readings[index].lemmas[j.lemma_index].entries.find(e => e.id === j.entry_id);
+      assert.ok(entry, c.id);
+      assert.equal(entry.status, j.status, c.id);
+      assert.deepEqual(entry.conflicts, j.conflicts, c.id);
+    }
+    if ("filter_retained" in c) {
+      const filtered = JSON.parse(execFileSync(cliBin, ["text", "-", "--dictionary", database, "--dict-compatible"], {input: c.surface, encoding: "utf8"}).trim());
+      assert.equal(filtered.analysis.analyses.some(a => auxiliaryPath(a, c)), c.filter_retained, c.id);
+    }
+  }
+  for (const flag of [null, "--dict-only", "--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check();
+    else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check();
+    else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    const text = "모르겠는듯싶다 아들인듯해 나을성싶어 크는듯하다 예쁘는듯하다 학생이는듯하다";
+    await submit(page, text); await waitHeading(page, "모르겠는듯싶다");
+    const raw = await (await post("analyze", {text})).json();
+    const words = raw.records.filter(r => r.analysis);
+    for (const [n, heads, morphemes, forms] of [
+      [0, ["모르다", "듯싶다"], ["겠", "는", "다"], ["모르", "겠", "는", "듯싶", "다"]],
+      [1, ["아들", "이다", "듯하다"], ["은", "어"], ["아들", "이", "은", "듯하", "여"]],
+      [2, ["낫다", "성싶다"], ["을", "어"], ["낫", "을", "성싶", "어"]],
+      [3, ["크다", "듯하다"], ["는", "다"], ["크", "는", "듯하", "다"]],
+      [4, ["예쁘다", "듯하다"], ["는", "다"], ["예쁘", "는", "듯하", "다"]],
+      [5, ["학생", "이다", "듯하다"], ["는", "다"], ["학생", "이", "는", "듯하", "다"]],
+    ]) {
+      const index = words[n].analysis.analyses.findIndex(a => a.lemmas.map(l => l.text).join("/") === heads.join("/") && a.morphemes.map(m => m.form).join("/") === morphemes.join("/"));
+      assert.ok(index >= 0, text);
+      const block = page.locator(".breakdown-word").nth(n);
+      const option = block.locator(`option[value="${index}"]`);
+      if (flag === "--dict-compatible" && n >= 4) {
+        assert.equal(await option.count(), 0, heads.join("/"));
+      } else {
+        assert.equal(await option.count(), 1, heads.join("/"));
+        await block.getByRole("combobox").selectOption(String(index));
+        assert.deepEqual(await block.locator(".part-form").allTextContents(), forms);
+      }
+    }
+    const wait = page.waitForEvent("download");
+    await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(), "utf8"));
+    const expected = execFileSync(cliBin, ["text", "-", "--dictionary", database, ...(flag ? [flag] : [])], {input: text, encoding: "utf8"}).trim().split("\n").map(JSON.parse);
+    assert.deepEqual(exported.records, expected);
+  }
+  // The retained 크다 verb homonym supplies the hint; the adjective conflict
+  // remains visible in the reading details without removing the verb path.
+  const conjecturalBlock = page.locator(".breakdown-word").nth(3);
+  await conjecturalBlock.locator(".breakdown-part").first().click();
+  await page.waitForFunction(() => document.querySelector('a[href*="ParaWordNo=66584"]'));
+  await page.screenshot({path: resolve(tmpdir(), "klem-conjectural-aux-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844});
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-conjectural-aux-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();
+  await page.getByLabel("Dictionary matches only").uncheck();
 
   // Root and related-predicate readings can render the same text while
   // retaining distinct roles, lookup evidence and exported identities.

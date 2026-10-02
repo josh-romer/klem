@@ -2862,3 +2862,69 @@ fn negative_class_targets_preserve_standalone_tokens_and_original_contraction_mi
     assert_eq!(miss[0]["surface"], "굶기겠잖어");
     assert_eq!(miss[0]["id"], "id:M2TA_087-s112/4");
 }
+
+#[test]
+fn conjectural_targets_preserve_34_original_auxiliary_and_derivation_annotations() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/conjectural-aux-sources.json")).unwrap();
+    let mut targets = 0;
+    let mut matched = 0;
+    let mut representations = std::collections::BTreeSet::new();
+    for (kind, name, input) in [
+        (
+            Corpus::Kaist,
+            "kaist",
+            include_bytes!("fixtures/kaist-conjectural-aux.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            "gsd",
+            include_bytes!("fixtures/gsd-conjectural-aux.conllu").as_slice(),
+        ),
+    ] {
+        let report = corpus::evaluate(input, kind, "conjectural-aux").unwrap();
+        let file = source["corpus_search"]["files"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == name)
+            .unwrap();
+        for t in file["targets"].as_array().unwrap() {
+            let case = &report.cases[t["id"].as_str().unwrap()];
+            assert_eq!(case.surface, t["surface"].as_str().unwrap());
+            assert_eq!(serde_json::to_value(&case.expected).unwrap(), t["expected"]);
+            assert_eq!(
+                case.matched,
+                t["matched_before"].as_bool().unwrap(),
+                "{}",
+                case.id
+            );
+            let row = t["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(
+                std::str::from_utf8(input)
+                    .unwrap()
+                    .lines()
+                    .any(|line| line == row)
+            );
+            representations.insert(t["category"][1].as_str().unwrap().to_owned());
+            targets += 1;
+            matched += usize::from(case.matched);
+        }
+    }
+    assert_eq!((targets, matched), (34, 34));
+    assert_eq!(
+        representations,
+        [
+            "auxiliary".to_owned(),
+            "nominal-adjective-derivation".to_owned()
+        ]
+        .into_iter()
+        .collect()
+    );
+}

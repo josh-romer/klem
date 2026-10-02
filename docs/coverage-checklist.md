@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 399 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–u/020d–h/020j–k/020n–o/021d; 316 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 402 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–v/020d–h/020j–k/020n–o/021d; 313 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2275,21 +2275,36 @@ review remains open under the completion review below.
   its wider inventory audit remains open.
 
 - [ ] **COV-019v — Complete conjectural auxiliary audit.**
-  The [source preflight](conjectural-aux-source-preflight.json) retains every
-  native sense, form, note and example group for 듯하다 (49988), 듯싶다
-  (49985) and 성싶다 (64397): three entries/senses and 11 groups. Every
-  selected joined excerpt already recovers at `e5ad081`, including 바쁘신
-  듯싶어서 and 아들인 듯해. Deterministic training search preserves 34
-  targets in complete original blocks, including distinct auxiliary and
-  noun-plus-adjective annotations; all 34 currently match. No new recall
-  or contextual correctness is claimed. Pending: individual native and
-  annotation regression IDs, dictionary entry/owner and filtered retention
-  checks, adnominal/allomorph/copula boundaries, ordered browser/export evidence,
-  source-supported ending/prefinal/particle licenses and semantic/register
-  review. The native notes admit verb/adjective/copula owners for 듯하다
-  and 듯싶다; 성싶다 lists verb/adjective + -을. An omitted example or
-  source category does not supply an invented forbidden path. These entries
-  remain unreviewed in COV-013 until scoped evidence is completed.
+  **Partial: complete native source retention, individual regression tracking and
+  a finite bare adnominal dictionary class check implemented.** The original
+  [source preflight](conjectural-aux-source-preflight.json) is preserved. The
+  expanded [source record](../tests/fixtures/conjectural-aux-sources.json) retains
+  듯하다 (49988), 듯싶다 (49985), 성싶다 (64397) and ten related expression
+  entries: thirteen entries/senses and 57 original example groups. All joined
+  paths already recovered; no new raw recall is claimed. Four
+  [tests](../tests/conjectural_aux.rs), 57 required raw regression IDs and 84
+  separate [entry judgments](../tests/fixtures/conjectural-aux-entry-judgments.json)
+  cover all groups, NFD, unchanged hypotheses, cache/CLI identity, copulas,
+  irregulars, immediate owners and mixed homonyms. Thirty-four training targets
+  retain complete original blocks and their distinct auxiliary versus
+  noun-plus-adjective annotations; all 34 match.
+  Bare -는 before 듯하다/듯싶다 now conflicts with known lexical adjective or
+  copula entries; verb homonyms, existential exceptions and unknown providers
+  remain. Intervening prefinal controls preserve policy without certifying
+  broader grammar. The -은 듯싶다 entry's literal 맞는 듯싶은데 example remains
+  explicit. 성싶다's omitted copula category supplies no invented forbidden path.
+  Primary guide context/register observations are retained without categorical
+  sense pruning. The [evaluation](conjectural-aux-evaluation.json) records full
+  browser/export and Nix package checks, 13,328 comparison surfaces, all 28
+  independently source-audited changed entry events and six compatible-filter
+  removals. Raw generation, five full novel modes and all four complete corpus
+  report hashes remain unchanged. The expanded ledger preserves the original
+  case bytes and review-queue prefix, with 530 new stable unjudged IDs. Release
+  and debug output matches in every comparison mode; 328 packaged/live cases
+  and 188 entry judgments pass. Source-supported broader ending/prefinal/particle
+  licenses, semantic/register review and independent Korean-language review
+  remain required. COV-013 records three scoped dispositions, not complete
+  entry coverage.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

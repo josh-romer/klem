@@ -730,3 +730,26 @@ structural uncertainty and dictionary evidence remain separate. The proposal
 Two intention-owner entry revisions are also explicit in the ledger. Their
 original fixture is preserved, and tense uncertainty stays with its original
 owner; the correct verb negative and later 하다 alternatives remain.
+
+## Conjectural adnominal classes (COV-019v)
+
+`conjectural_adnominal_class` attaches to the immediate bare -는 owner before
+듯하다/듯싶다. Known lexical adjective and represented copula entries receive
+a conflict referring to that owner's -는 morpheme. Lexical verbs and existential
+exceptions (있다/없다 compounds and 계시다) remain compatible. Mixed POS
+homonyms are assessed individually: 크다's adjective conflicts while its verb
+entry retains the path. Unknown provider classes remain unknown.
+
+An intervening prefinal or a different auxiliary owner prevents borrowing this
+bare-owner evidence. Thus 개운해지는듯하다 does not transfer 개운하다's
+adjective class to 지다. Existing spelling/role/ending/prefinal conflicts retain
+their original ownership. This check changes no raw candidate, dictionary
+lookup metadata, cache identity or source annotation.
+
+The [entry ledger](../tests/fixtures/conjectural-aux-entry-judgments.json)
+records 69 cases and 84 entry judgments, including native modal, copula and
+irregular paths. Headword-only filtering retains known class conflicts;
+compatible filtering excludes them while preserving supported homonyms.
+Prefinal controls establish policy retention, not full grammatical certification.
+The complete sources, literal 76466 example mismatch and contextual/register
+limits remain in the [source record](../tests/fixtures/conjectural-aux-sources.json).

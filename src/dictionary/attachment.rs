@@ -34,6 +34,7 @@ pub enum AttachmentRule {
     NeuraVerb,
     AuxiliaryClass,
     NegativeLexicalClass,
+    ConjecturalAdnominalClass,
     LiteraryAssertionClass,
     BareLiteraryDeclarative,
     BareLiteraryQuestion,
@@ -504,6 +505,16 @@ impl Annotation {
             let bare = morphs
                 .first()
                 .is_some_and(|c| matches!(c, Component::Morpheme(i) if Some(*i) == ending));
+            // KRDict 75275/75276 and 85853 distinguish bare present 는
+            // from adjective/copula 은. Evidence belongs to the immediate
+            // connector owner; prefinals and auxiliary owners stay separate.
+            let conjectural_present = bare
+                && ending.is_some_and(|i| analysis.morphemes[i].form == "는")
+                && components.first().is_some_and(|c| {
+                    matches!(c, Component::Lemma(i)
+                        if analysis.lemmas[*i].kind == LemmaKind::Auxiliary
+                        && matches!(analysis.lemmas[*i].text.as_str(), "듯하다" | "듯싶다"))
+                });
             let expressive_connector = if lemma.kind == LemmaKind::Predicate {
                 expressive_hada_connector(analysis, rest)
             } else {
@@ -567,6 +578,21 @@ impl Annotation {
                         conflicts.push(AttachmentConflict {
                             rule: AttachmentRule::LexicalRole,
                             morpheme_index: None,
+                        });
+                    }
+                    if status == Compatibility::Compatible
+                        && conjectural_present
+                        && (lemma.kind == LemmaKind::Copula
+                            || (lemma.kind == LemmaKind::Predicate
+                                && matched.entry.pos == "형용사"
+                                && !lemma.text.ends_with("있다")
+                                && !lemma.text.ends_with("없다")
+                                && lemma.text != "계시다"))
+                    {
+                        status = Compatibility::Incompatible;
+                        conflicts.push(AttachmentConflict {
+                            rule: AttachmentRule::ConjecturalAdnominalClass,
+                            morpheme_index: ending,
                         });
                     }
                     if *index == 1

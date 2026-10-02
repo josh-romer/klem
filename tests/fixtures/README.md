@@ -1913,3 +1913,27 @@ contributors and KAIST corpus, https://github.com/UniversalDependencies/UD_Korea
 `krdict-negative-classes.json` retains 102 complete native word entries, including all six 않다/아니하다/못하다 auxiliary entries, seven senses, 74 groups and every selected POS homonym. Only RelatedForm/non-English equivalents are omitted; Sense arrays normalized. Attribution: National Institute of Korean Language / Korean Basic Dictionary (CC BY-SA 2.0 KR). Eleven export hashes, complete imported sources and full-group attestations are in `negative-class-sources.json`. Seventy-four `negative-class-*` raw judgments preserve native structural recovery. `negative-class-entry-judgments.json` separately records 104 per-entry class/retention judgments and one reviewed historical correction; `auxiliary-dictionary.json` remains byte-identical. The ledger also records the reviewed proposal-owner test refinement with the adjective alternative still Unknown. Two reviewed intention-owner entry revisions preserve their original fixture and local tense uncertainty. These are finite source-backed judgments, not contextual precision gold.
 
 `kaist-negative-classes.conllu` and `gsd-negative-classes.conllu` retain eleven and five complete unchanged UD r2.15 training blocks/targets. Original token boundaries, OrigLemma metadata, segmentation and tags are preserved. Standalone negatives stay separate tokens, and 굶기겠잖어 remains an unrecovered original annotation target. Attribution: UD Korean KAIST/GSD treebank contributors and source corpora, https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0). Selection uses the first two aligned rows per head/lexical-tag/connector category before observing baseline recovery.
+
+`krdict-conjectural-aux.json` retains 102 complete native entries, including all
+three conjectural auxiliaries and ten related expression entries: thirteen
+family entries/senses and 57 original example groups. The base -는 entry 85853
+is separately recorded. Only RelatedForm/non-English equivalents are omitted;
+Sense arrays are normalized. Attribution: National Institute of Korean Language,
+Korean Basic Dictionary (CC BY-SA 2.0 KR). Eleven pinned export hashes, complete
+native groups, the literal 맞는 듯싶은데 mismatch in -은 듯싶다 (76466), primary
+NIKL consultations and retrieval limits are in `conjectural-aux-sources.json`.
+Fifty-seven `conjectural-aux-*` cases preserve native raw paths;
+`conjectural-aux-entry-judgments.json` separately records 69 cases/84 entry
+judgments for bare owner classes, exceptions, mixed homonyms and local ownership.
+No historical case, annotation or frozen corpus baseline is rewritten.
+
+`kaist-conjectural-aux.conllu` and `gsd-conjectural-aux.conllu` preserve complete
+unchanged UD r2.15 training sentence blocks for 24 KAIST and ten GSD targets.
+Original token rows, OrigLemma metadata, tags and bodies remain. Auxiliary and
+noun-plus-adjective derivation annotations are kept distinct; all 34 targets
+already recovered before this change. Selection takes the first two aligned
+rows per head/representation/following-ending category before observing recovery.
+Attribution: UD Korean KAIST/GSD treebank contributors and source corpora,
+https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and
+https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0).
+Dictionary and corpus licenses apply to their respective material.

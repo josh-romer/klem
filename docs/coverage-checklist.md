@@ -2976,8 +2976,9 @@ review remains open under the completion review below.
   shortened-stem restrictions; COV-021i adds the three finite deictic verb
   vowel paradigms; COV-021j adds open-ㅕ absorption and twelve finite written
   vowel exceptions; COV-021l adds modern direct-command recovery and finite
-  source-reviewed past-entry licenses.** Remaining: COV-021m attachment/register,
-  COV-021n finite vowel paradigms, other lexical paradigms and unmapped
+  source-reviewed past-entry licenses; COV-021n adds eight further finite
+  vowel paradigms.** Remaining: COV-021m attachment/register,
+  COV-021o complex ㄼ inflections, other lexical paradigms and unmapped
   shortened-stem senses, ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
   families. Do not extend stop/sonorant rules without pronunciation evidence.
@@ -3325,18 +3326,64 @@ review remains open under the completion review below.
   review and fresh passage evaluation still required. Dictionary entry
   compatibility does not choose a contextual sense or certify register.
 
-- [ ] **COV-021n — Additional finite written vowel paradigms.** The
-  [remaining-paradigm preflight](written-paradigm-remaining-preflight.json)
-  preserves all 33 original remaining entry/form pairs, 34 complete native
-  sources and 40 separately unjudged authored probe surfaces. Next review:
-  고래/요래/조래 for the distinct 고러다/고렇다, 요러다/요렇다 and
-  조러다/조렇다 entries; 아무래 for 아무렇다; 어째 for 어쩌다. Review
-  exact whole stems, past forms, auxiliary ownership, ending/particle
-  composition and prefix controls while retaining the existing whole-word
-  and predicate alternatives. Do not infer arbitrary 러/ㅎ contractions,
-  short/long lexical aliasing or spelling correction from this finite set.
-  Other lexical misses and all 67 original complex/non-Hangul observations
-  still require separate review under the full parent COV-021.
+- [x] **COV-021n — Additional finite written vowel paradigms.** **Eight
+  source-listed entry/form pairs and their existing suffix compositions are
+  implemented and verified.** 고래/요래/조래 retain separate 고러다/고렇다,
+  요러다/요렇다 and 조러다/조렇다 readings; 아무래 recovers 아무렇다 and
+  어째 recovers 어쩌다. Exact whole-stem maps compose with past, existing
+  endings/particles and ordered auxiliary owners, including 고랬다/어쨌다
+  and 고래봤다. Verb alternatives never inherit an adjective ㅎ obligation;
+  adjective paths retain their own source-profile checks. Existing lexical
+  readings, every older candidate, metadata, assessment and relative order
+  remain. Arbitrary prefixes, general 러/ㅎ contractions, headword aliases
+  and spelling correction are not inferred from the finite mapping.
+  The original preflight retains all 33 prior misses and forty authored probe
+  surfaces. The new fixture freezes 106 complete English-projected native
+  entries and 106 before outputs; 104 individual cases add 96 required and
+  eight forbidden hypotheses. Four complete original training sentences retain
+  their original 아무렇 + 어도 annotation, now recovered without gold edits.
+  All 771 Rust and Nix release tests, formatting, Clippy, frontend build and
+  the corrected full immutable browser suite pass. The browser correction
+  compares JSON structures independently of key order, without dropping fields;
+  all older browser checks remain. Desktop/mobile results were inspected and
+  all three filter display/export modes retain their actual raw candidate indices.
+  Eight full broad modes preserve every older candidate/assessment/order and
+  spacing result across 1,128,312 records. All four pinned dev/test corpora
+  preserve every original case identity, gold and match; candidate summaries
+  retain their before/after values. All 433 original fixture/baseline/corpus
+  files remain unchanged. The ledger passes all 12,489 cases (9,117 required /
+  3,386 forbidden), with every older judgment and unjudged observation preserved.
+  All eight release/debug streams match exactly. Actual packaged and refreshed
+  port-8081 APIs match all 133 frozen surfaces and 122 complete native entries;
+  packaged/local frontend bytes match. Paired release novel medians are about
+  1.88 s for headword filtering and 1.82 s for compatible filtering, with all
+  hashes retained; these are descriptive timings. All three x86_64 Linux flake
+  checks and nine inventory tests pass; 427 entries are scoped / 288 unreviewed.
+  The 156 individually tracked added hypotheses and all 32 changed novel
+  occurrences retain their contextual unjudged disposition, all five modes and
+  29 complete original paragraphs. The original 97-pair discovery rescan leaves
+  25 misses and preserves all 67 complex/non-Hangul exclusions. Other lexical
+  paradigms, alias/sense/register/particle review, fresh passages and independent
+  Korean review remain required under the full parent/checklist.
+  Evidence: [original remaining preflight](written-paradigm-remaining-preflight.json),
+  [individual evaluation](finite-vowel-evaluation.json),
+  [source and ownership tests](../tests/finite_vowel.rs),
+  [original paradigm rescan](finite-vowel-original-paradigm-rescan.json),
+  [novel contexts](finite-vowel-novel-contexts.json),
+  [unjudged path queue](finite-vowel-review-queue.json).
+
+- [ ] **COV-021o — Complex ㄼ written inflections and 섧다.** The
+  [source preflight](complex-bieup-source-preflight.json) preserves all twelve
+  native predicates with ㄼ codas, 81 current before outputs and the three
+  original 섧다 misses: 설운, 설워 and 설우니. Review written vowel/으
+  recovery and component-owned regular/irregular spelling requirements;
+  preserve 밟다/얇다/넓다/떫다/짧다 and their compound alternatives.
+  Require primary spelling evidence before broadening a coda rule. Keep
+  synonyms/alternate headwords (including 서럽다), pronunciation-only
+  exceptions, authored contrasts and contextual judgments separate. The
+  [full NIKL answer](https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=5704&mn_id=182)
+  confirms the distinct 어 inflections for the two standard synonyms; full
+  broader coda-rule evidence and implementation remain pending.
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

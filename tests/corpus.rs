@@ -3,6 +3,27 @@ mod corpus;
 use corpus::{Conversion, Corpus};
 
 #[test]
+fn finite_vowel_contractions_recover_every_original_amuraedo_training_group() {
+    let report = corpus::evaluate(
+        include_bytes!("fixtures/kaist-finite-vowel.conllu").as_slice(),
+        Corpus::Kaist,
+        "finite-vowel",
+    )
+    .unwrap();
+    for id in [
+        "id:MH2_0037-s97/5",
+        "id:MH2_0037-s265/5",
+        "id:MH2_0042-s214/1",
+        "id:MH2_0045-s331/3",
+    ] {
+        let case = &report.cases[id];
+        assert_eq!(case.surface, "아무래도");
+        assert_eq!(case.expected, ["아무렇다"]);
+        assert!(case.matched, "{id}: {case:?}");
+    }
+}
+
+#[test]
 fn direct_commands_keep_original_command_and_nominal_training_segmentations() {
     for (kind, input, targets) in [
         (

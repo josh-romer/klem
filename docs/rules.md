@@ -4126,6 +4126,25 @@ Complete sources, selection timing and individual cases are preserved in the
 [source preflight](deictic-vowel-source-preflight.json) and
 [evaluation](deictic-vowel-evaluation.json).
 
+## Further finite vowel paradigms (COV-021n)
+
+Dictionary-written 고래/요래/조래 recover both 고러다/요러다/조러다 and
+고렇다/요렇다/조렇다. 아무래 recovers 아무렇다; 어째 recovers 어쩌다.
+These exact whole-stem maps compose with existing endings and past recovery,
+including 고랬다, 아무랬다 and 어쨌다. Existing auxiliary/particle templates
+retain their ordered lexical owners. Only the adjective paths carry an
+irregular-ㅎ spelling requirement; the verb counterparts stay separate.
+Whole lexical readings such as 고래, 아무래도 and 어쨌든 remain available.
+
+The [source fixture](../tests/fixtures/finite-vowel-sources.json) preserves all
+eight native written paradigms and their complete senses/usage notes. In
+particular, 어쩌다's restricted second sense and 아무렇다's typical-use notes
+are not extended to every contextual use. The four original 아무래도 corpus
+rows remain unchanged. Prefix restoration, arbitrary 러/ㅎ contractions,
+long/short headword aliasing and spelling correction are outside this finite
+rule. [Individual evaluation](finite-vowel-evaluation.json) separates raw
+structural regressions from unjudged contextual/mood/auxiliary observations.
+
 ## Written vowel paradigms (COV-021j)
 
 An open ㅕ stem can absorb 어: 켜어→켜 and 펴어→펴, including past

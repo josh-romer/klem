@@ -1492,7 +1492,16 @@
     "direct-command-review-68835": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68835",
     "direct-command-review-gsd": "https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15",
     "direct-command-review-kaist": "https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15",
-    "direct-command-review-nikl-past": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=327283"
+    "direct-command-review-nikl-past": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=327283",
+    "finite-vowel-source-91459": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=91459",
+    "finite-vowel-source-23658": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=23658",
+    "finite-vowel-source-89713": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89713",
+    "finite-vowel-source-68804": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=68804",
+    "finite-vowel-source-89955": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89955",
+    "finite-vowel-source-89962": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89962",
+    "finite-vowel-source-71337": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71337",
+    "finite-vowel-source-29765": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=29765",
+    "finite-vowel-kaist-r2.15": "https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -67155,6 +67164,2646 @@
           "verdict": "forbidden"
         }
       ]
-    }
+    },
+      {
+        "id": "finite-vowel-91459-bare",
+        "surface": "고래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-polite",
+        "surface": "고래요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-concessive",
+        "surface": "고래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-reason",
+        "surface": "고래서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-condition",
+        "surface": "고래야",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어야"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-past",
+        "surface": "고랬다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-past-polite",
+        "surface": "고랬어요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-past-if",
+        "surface": "고랬으면",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-past-modal",
+        "surface": "고랬겠지",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-past-quote",
+        "surface": "고랬다고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-command",
+        "surface": "고래라",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어라"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-aux-버렸다",
+        "surface": "고래버렸다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다",
+              "버리다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "어",
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-aux-봤다",
+        "surface": "고래봤다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고러다",
+              "보다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "어",
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-91459-prefix",
+        "surface": "마고래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "마고러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-91459",
+            "reason": "The exact source-listed stem does not license a fabricated lexical prefix; this forbids only the stated hypothesis.",
+            "verdict": "forbidden"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-bare",
+        "surface": "고래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-polite",
+        "surface": "고래요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-concessive",
+        "surface": "고래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-reason",
+        "surface": "고래서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-condition",
+        "surface": "고래야",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어야"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-past",
+        "surface": "고랬다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-past-polite",
+        "surface": "고랬어요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-past-if",
+        "surface": "고랬으면",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-past-modal",
+        "surface": "고랬겠지",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-past-quote",
+        "surface": "고랬다고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-23658-prefix",
+        "surface": "마고래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "마고렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-23658",
+            "reason": "The exact source-listed stem does not license a fabricated lexical prefix; this forbids only the stated hypothesis.",
+            "verdict": "forbidden"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-bare",
+        "surface": "요래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-polite",
+        "surface": "요래요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-concessive",
+        "surface": "요래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-reason",
+        "surface": "요래서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-condition",
+        "surface": "요래야",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어야"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-past",
+        "surface": "요랬다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-past-polite",
+        "surface": "요랬어요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-past-if",
+        "surface": "요랬으면",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-past-modal",
+        "surface": "요랬겠지",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-past-quote",
+        "surface": "요랬다고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-command",
+        "surface": "요래라",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어라"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-aux-버렸다",
+        "surface": "요래버렸다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다",
+              "버리다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "어",
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-aux-봤다",
+        "surface": "요래봤다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요러다",
+              "보다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "어",
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89713-prefix",
+        "surface": "마요래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "마요러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89713",
+            "reason": "The exact source-listed stem does not license a fabricated lexical prefix; this forbids only the stated hypothesis.",
+            "verdict": "forbidden"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-bare",
+        "surface": "요래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-polite",
+        "surface": "요래요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-concessive",
+        "surface": "요래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-reason",
+        "surface": "요래서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-condition",
+        "surface": "요래야",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어야"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-past",
+        "surface": "요랬다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-past-polite",
+        "surface": "요랬어요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-past-if",
+        "surface": "요랬으면",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-past-modal",
+        "surface": "요랬겠지",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-past-quote",
+        "surface": "요랬다고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-68804-prefix",
+        "surface": "마요래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "마요렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-68804",
+            "reason": "The exact source-listed stem does not license a fabricated lexical prefix; this forbids only the stated hypothesis.",
+            "verdict": "forbidden"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-bare",
+        "surface": "조래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-polite",
+        "surface": "조래요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-concessive",
+        "surface": "조래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-reason",
+        "surface": "조래서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-condition",
+        "surface": "조래야",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어야"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-past",
+        "surface": "조랬다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-past-polite",
+        "surface": "조랬어요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-past-if",
+        "surface": "조랬으면",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-past-modal",
+        "surface": "조랬겠지",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-past-quote",
+        "surface": "조랬다고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-command",
+        "surface": "조래라",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어라"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-aux-버렸다",
+        "surface": "조래버렸다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다",
+              "버리다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "어",
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-aux-봤다",
+        "surface": "조래봤다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조러다",
+              "보다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "어",
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89955-prefix",
+        "surface": "마조래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "마조러다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89955",
+            "reason": "The exact source-listed stem does not license a fabricated lexical prefix; this forbids only the stated hypothesis.",
+            "verdict": "forbidden"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-bare",
+        "surface": "조래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-polite",
+        "surface": "조래요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-concessive",
+        "surface": "조래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-reason",
+        "surface": "조래서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-condition",
+        "surface": "조래야",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어야"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-past",
+        "surface": "조랬다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-past-polite",
+        "surface": "조랬어요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-past-if",
+        "surface": "조랬으면",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-past-modal",
+        "surface": "조랬겠지",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-past-quote",
+        "surface": "조랬다고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-89962-prefix",
+        "surface": "마조래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "마조렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-89962",
+            "reason": "The exact source-listed stem does not license a fabricated lexical prefix; this forbids only the stated hypothesis.",
+            "verdict": "forbidden"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-bare",
+        "surface": "아무래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-polite",
+        "surface": "아무래요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-concessive",
+        "surface": "아무래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-reason",
+        "surface": "아무래서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-condition",
+        "surface": "아무래야",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어야"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-past",
+        "surface": "아무랬다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-past-polite",
+        "surface": "아무랬어요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-past-if",
+        "surface": "아무랬으면",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-past-modal",
+        "surface": "아무랬겠지",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-past-quote",
+        "surface": "아무랬다고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-71337-prefix",
+        "surface": "마아무래",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "마아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-71337",
+            "reason": "The exact source-listed stem does not license a fabricated lexical prefix; this forbids only the stated hypothesis.",
+            "verdict": "forbidden"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-bare",
+        "surface": "어째",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-polite",
+        "surface": "어째요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-concessive",
+        "surface": "어째도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-reason",
+        "surface": "어째서",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어서"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-condition",
+        "surface": "어째야",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어야"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-past",
+        "surface": "어쨌다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-past-polite",
+        "surface": "어쨌어요",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "어요"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-past-if",
+        "surface": "어쨌으면",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "으면"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-past-modal",
+        "surface": "어쨌겠지",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "겠",
+              "지"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-past-quote",
+        "surface": "어쨌다고",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "었",
+              "다고"
+            ],
+            "morpheme_kinds": [
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-command",
+        "surface": "어째라",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어라"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-aux-버렸다",
+        "surface": "어째버렸다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다",
+              "버리다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "어",
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-aux-봤다",
+        "surface": "어째봤다",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "어쩌다",
+              "보다"
+            ],
+            "lemma_kinds": [
+              "predicate",
+              "auxiliary"
+            ],
+            "morphemes": [
+              "어",
+              "었",
+              "다"
+            ],
+            "morpheme_kinds": [
+              "ending",
+              "prefinal",
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "Source-listed whole-stem vowel boundary under an existing productive suffix template. Sense/register/contextual grammaticality remain unjudged; no arbitrary prefix or suffix-wide contraction is licensed.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-29765-prefix",
+        "surface": "마어째",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "마어쩌다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-source-29765",
+            "reason": "The exact source-listed stem does not license a fabricated lexical prefix; this forbids only the stated hypothesis.",
+            "verdict": "forbidden"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-kaist-MH2_0037-s97-5",
+        "surface": "아무래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-kaist-r2.15",
+            "reason": "Unchanged original annotated 아무렇 + 어도 group, complete original sentence and token row preserved.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-kaist-MH2_0037-s265-5",
+        "surface": "아무래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-kaist-r2.15",
+            "reason": "Unchanged original annotated 아무렇 + 어도 group, complete original sentence and token row preserved.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-kaist-MH2_0042-s214-1",
+        "surface": "아무래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-kaist-r2.15",
+            "reason": "Unchanged original annotated 아무렇 + 어도 group, complete original sentence and token row preserved.",
+            "verdict": "required"
+          }
+        ]
+      },
+      {
+        "id": "finite-vowel-kaist-MH2_0045-s331-3",
+        "surface": "아무래도",
+        "judgments": [
+          {
+            "id": "path",
+            "lemmas": [
+              "아무렇다"
+            ],
+            "lemma_kinds": [
+              "predicate"
+            ],
+            "morphemes": [
+              "어도"
+            ],
+            "morpheme_kinds": [
+              "ending"
+            ],
+            "source": "finite-vowel-kaist-r2.15",
+            "reason": "Unchanged original annotated 아무렇 + 어도 group, complete original sentence and token row preserved.",
+            "verdict": "required"
+          }
+        ]
+      }
   ]
 }

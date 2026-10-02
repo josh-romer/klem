@@ -1,3 +1,4 @@
+import { isDeepStrictEqual } from "node:util";
 import { chromium } from "playwright";
 import assert from "node:assert/strict";
 import { spawn, execFileSync } from "node:child_process";
@@ -673,6 +674,12 @@ try {
   const commandReviewIds = new Set(commandReviewEntries.map(e => String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !commandReviewIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...commandReviewEntries);
+
+  const finiteVowelFixture = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-finite-vowel.json"),"utf8"));
+  const finiteVowelEntries = finiteVowelFixture.LexicalResource.Lexicon.LexicalEntry;
+  const finiteVowelIds = new Set(finiteVowelEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !finiteVowelIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...finiteVowelEntries);
 
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
@@ -6211,6 +6218,50 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-direct-command-review-desktop.png"),fullPage:true});
   await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
   await page.screenshot({path:resolve(tmpdir(),"klem-direct-command-review-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const finiteVowelSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/finite-vowel-sources.json"),"utf8"));
+  const finiteVowelTokens = new Map();
+  for (const [surface,before] of Object.entries(finiteVowelSource.before_words)) {
+    const response = await (await post("analyze",{text:surface})).json();finiteVowelTokens.set(surface,response);
+    const after = response.records[0].analysis.analyses;
+    assert.deepEqual(after.filter(a => before.analyses.some(b => isDeepStrictEqual(a,b))),before.analyses,surface);
+    assert.equal(response.breakdowns[0].length,after.length,surface);
+  }
+  for (const c of finiteVowelSource.cases) {
+    const data = finiteVowelTokens.get(c.surface);const token = data.records[0];
+    const indices = token.analysis.analyses.flatMap((a,i) => auxiliaryPath(a,c) ? [i] : []);
+    if (c.verdict === "required") assert.ok(indices.length,c.id);
+    else assert.equal(indices.length,0,c.id);
+    for (const i of indices) assert.ok(data.breakdowns[0][i]?.length,c.id);
+  }
+  for (const e of finiteVowelSource.source_entries) assert.deepEqual((await (await post("entry",{id:e.id})).json()).entry,e,e.id);
+  const finiteVowelText = "고래 요래 조래 아무래도 어쨌다 고래봤다 고랬어요";
+  const finiteVowelHeads = [["고러다"],["요러다"],["조러다"],["아무렇다"],["어쩌다"],["고러다","보다"],["고러다"]];
+  const finiteVowelForms = [["어"],["어"],["어"],["어도"],["었","다"],["어","었","다"],["었","어요"]];
+  const finiteVowelParts = [["고러","어"],["요러","어"],["조러","어"],["아무렇","어도"],["어쩌","었","다"],["고러","어","보","었","다"],["고러","었","어요"]];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check();
+    else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check();
+    else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,finiteVowelText);await waitHeading(page,"고래");
+    const data = await (await post("analyze",{text:finiteVowelText})).json();
+    for (const [n,t] of data.records.filter(r => r.analysis).entries()) {
+      const index = t.analysis.analyses.findIndex(a => JSON.stringify(a.lemmas.map(l => l.text)) === JSON.stringify(finiteVowelHeads[n]) && JSON.stringify(a.morphemes.map(m => m.form)) === JSON.stringify(finiteVowelForms[n]));
+      assert.ok(index >= 0,t.surface);const word = page.locator(".breakdown-word").nth(n);
+      assert.equal(await word.locator(`option[value="${index}"]`).count(),1,t.surface);
+      await word.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await word.locator(".part-form").allTextContents(),finiteVowelParts[n],t.surface);
+    }
+    const wait = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:finiteVowelText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  await page.screenshot({path:resolve(tmpdir(),"klem-finite-vowel-desktop.png"),fullPage:true});
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-finite-vowel-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
 

@@ -295,6 +295,7 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
             ("약아", "약"),
             ("얇아", "얇"),
             ("얕아", "얕"),
+            ("어째", "어쩌"),
         ] {
             if surface == form {
                 push(&mut out, stem.into(), "inflection.written_vowel");
@@ -360,11 +361,20 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
                 );
             }
         }
-        // Complete written paradigms: 그러다/이러다/저러다 have 그래/이래/저래.
+        // Complete written paradigms: 그러다/이러다/저러다 and their
+        // 고러다/요러다/조러다 counterparts have these contracted vowel forms.
         // These are finite verb contractions, distinct from the homonymous
         // adjective ㅎ recoveries below. Whole stems only; no suffix-wide rule
-        // for arbitrary 러 verbs or fabricated prefixes (KRDict 37062/24838/25001).
-        for (form, stem) in [("그래", "그러"), ("이래", "이러"), ("저래", "저러")] {
+        // for arbitrary 러 verbs or fabricated prefixes (KRDict
+        // 37062/24838/25001 and 91459/89713/89955).
+        for (form, stem) in [
+            ("그래", "그러"),
+            ("이래", "이러"),
+            ("저래", "저러"),
+            ("고래", "고러"),
+            ("요래", "요러"),
+            ("조래", "조러"),
+        ] {
             if surface == form {
                 push(&mut out, stem.into(), "contraction.deictic_verb");
             }
@@ -374,6 +384,10 @@ pub(crate) fn aeo(surface: &str) -> Vec<Recovery> {
             ("이래", "이렇"),
             ("저래", "저렇"),
             ("어때", "어떻"),
+            ("고래", "고렇"),
+            ("요래", "요렇"),
+            ("조래", "조렇"),
+            ("아무래", "아무렇"),
         ] {
             if surface == form {
                 push(&mut out, stem.into(), "irregular.hieut");
@@ -1793,11 +1807,11 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
             "Recover 어 absorbed after an open ㅕ stem (켜, 펴); retain the separate ㅣ + 어 contraction reading."
         }
         "inflection.written_vowel" => {
-            "Recover a finite dictionary-listed whole-stem vowel form, including compound ㅡ deletion and 약아/얇아/얕아; do not infer arbitrary compound boundaries."
+            "Recover a finite dictionary-listed whole-stem vowel form, including compound ㅡ deletion, 약아/얇아/얕아 and 어째; do not infer arbitrary compound boundaries."
         }
         "contraction.vowel" => "Undo vowel contraction (와, 워, 돼, or 여).",
         "contraction.deictic_verb" => {
-            "Recover the dictionary-listed verb stems 그러/이러/저러 from 그래/이래/저래, including past inflection; preserve the homonymous adjective and whole-word readings."
+            "Recover dictionary-listed 그러/이러/저러 and 고러/요러/조러 vowel contractions, including past inflection; preserve the homonymous adjective and whole-word readings."
         }
         "contraction.noh" => {
             "Restore 놓아 from 놔 at an 아/어 boundary, including 놓다 compounds and auxiliaries."

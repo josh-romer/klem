@@ -617,6 +617,12 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !hadaAuxIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...hadaAuxEntries);
 
+  const geonFixture = JSON.parse(await readFile(resolve(root, "tests/fixtures/krdict-geon-contrast.json"), "utf8"));
+  const geonEntries = geonFixture.LexicalResource.Lexicon.LexicalEntry;
+  const geonIds = new Set(geonEntries.map(e => String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !geonIds.has(String(e.val)));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...geonEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -5613,6 +5619,65 @@ try {
   await page.screenshot({path: resolve(tmpdir(), "klem-hada-aux-desktop.png"), fullPage: true});
   await page.setViewportSize({width: 390, height: 844}); assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
   await page.screenshot({path: resolve(tmpdir(), "klem-hada-aux-mobile.png"), fullPage: true});
+  await page.setViewportSize({width: 1440, height: 1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
+
+  const geonLedger = JSON.parse(await readFile(resolve(root, "tests/fixtures/geon-contrast-entry-judgments.json"), "utf8"));
+  assert.equal(geonLedger.cases.length, 69);
+  assert.equal(geonLedger.cases.reduce((n, c) => n + c.judgments.length, 0), 181);
+  const geonCases = recipientLedger.cases.filter(c => c.id.startsWith("geon-contrast-"));
+  assert.equal(geonCases.length, 77);
+  for (const c of geonCases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    for (const j of c.judgments) assert.equal(token.analysis.analyses.some(a => hieutMatches(a, j)), j.verdict === "required", c.id);
+  }
+  for (const c of geonLedger.cases) {
+    const token = (await (await post("analyze", {text: c.surface})).json()).records[0];
+    const index = token.analysis.analyses.findIndex(a => auxiliaryPath(a, c)); assert.ok(index >= 0, c.id);
+    for (const j of c.judgments) {
+      const entry = token.dictionary.readings[index].lemmas.find(s => s.lemma_index === j.lemma_index).entries.find(e => e.id === j.entry_id);
+      assert.ok(entry, c.id); assert.equal(entry.status, j.status, c.id); assert.deepEqual(entry.conflicts, j.conflicts, c.id);
+    }
+    for (const flag of ["--dict-only", "--dict-compatible"]) {
+      const filtered = JSON.parse(execFileSync(cliBin, ["text", "-", "--dictionary", database, flag], {input: c.surface, encoding: "utf8"}).trim());
+      assert.equal(filtered.analysis.analyses.some(a => auxiliaryPath(a, c)), flag === "--dict-only" ? !c.missing_owner_entries : c.filter_retained, c.id);
+    }
+  }
+  const geonText = "하건만 하건마는 나라건만 나라이건마는 반대하셨건마는 말렸건만 먹더건만 읽어보건만";
+  const geonSelections = [
+    [["하다"], ["건만"], ["하", "건만"]],
+    [["하다"], ["건마는"], ["하", "건마는"]],
+    [["나라", "이다"], ["건만"], ["나라", "이", "건만"]],
+    [["나라", "이다"], ["건마는"], ["나라", "이", "건마는"]],
+    [["반대하다"], ["시", "었", "건마는"], ["반대하", "시", "었", "건마는"]],
+    [["말리다"], ["었", "건만"], ["말리", "었", "건만"]],
+    [["먹다"], ["더", "건만"], ["먹", "더", "건만"]],
+    [["읽다", "보다"], ["어", "건만"], ["읽", "어", "보", "건만"]],
+  ];
+  for (const flag of [null, "--dict-only", "--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check(); else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check(); else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page, geonText); await waitHeading(page, "하건만");
+    const raw = await (await post("analyze", {text: geonText})).json(); const words = raw.records.filter(r => r.analysis);
+    for (const [n, [heads, forms, parts]] of geonSelections.entries()) {
+      const index = words[n].analysis.analyses.findIndex(a => a.lemmas.map(l => l.text).join("/") === heads.join("/") && a.morphemes.map(m => m.form).join("/") === forms.join("/"));
+      assert.ok(index >= 0, heads.join("/")); const block = page.locator(".breakdown-word").nth(n);
+      assert.equal(await block.locator(`option[value="${index}"]`).count(), 1);
+      await block.getByRole("combobox").selectOption(String(index));
+      assert.deepEqual(await block.locator(".part-form").allTextContents(), parts);
+      assert.equal(await block.locator(".part-gloss").last().innerText(), "Expectation / contrast");
+    }
+    const wait = page.waitForEvent("download"); await page.getByRole("button", {name: "Export JSON", exact: true}).click();
+    const exported = JSON.parse(await readFile(await (await wait).path(), "utf8"));
+    assert.deepEqual(exported.records, execFileSync(cliBin, ["text", "-", "--dictionary", database, ...(flag ? [flag] : [])], {input: geonText, encoding: "utf8"}).trim().split("\n").map(JSON.parse));
+  }
+  for (const [n, id] of [[0, 66934], [1, 66935]]) {
+    await page.locator(".breakdown-word").nth(n).locator(".breakdown-part").last().click();
+    await page.waitForFunction(id => document.querySelector(`a[href*="ParaWordNo=${id}"]`), id);
+  }
+  await page.screenshot({path: resolve(tmpdir(), "klem-geon-contrast-desktop.png"), fullPage: true});
+  await page.setViewportSize({width: 390, height: 844}); assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), true);
+  await page.screenshot({path: resolve(tmpdir(), "klem-geon-contrast-mobile.png"), fullPage: true});
   await page.setViewportSize({width: 1440, height: 1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck(); await page.getByLabel("Dictionary matches only").uncheck();
 

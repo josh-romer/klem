@@ -33442,6 +33442,126 @@
           "judgment": "path"
         }
       ]
+    },
+    {
+      "id": "krdict:66934",
+      "source_sha256": "b459dcacf8ed2e12eddf53c38bf1afae225daad395c1aa0013dd640b0f6b38b6",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bn"
+      ],
+      "scope": "Complete native entry and all source groups, distinct literal ending and explicit/vowel-final omitted copula paths. Listed 시/었/겠 boundaries and per-owner Unknown for unreviewed prefinals; preserve raw alternatives and dictionary retention.",
+      "remaining": "Constructed structural inference does not certify contextual/register or all prefinal/particle combinations. Further conjectural/historical evidence and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/geon_contrast.rs",
+          "test": "geon_sources_keep_both_complete_entries_and_all_nine_native_groups"
+        },
+        {
+          "path": "tests/geon_contrast.rs",
+          "test": "geon_entry_policy_keeps_native_classes_and_unreviewed_owner_uncertainty"
+        },
+        {
+          "path": "tests/geon_contrast.rs",
+          "test": "geon_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "geon_contrast_recovers_three_original_training_rows_without_gold_repairs"
+        },
+        {
+          "path": "docs/geon-contrast-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/geon-contrast-sources.json"
+        },
+        {
+          "path": "tests/fixtures/geon-contrast-entry-judgments.json"
+        },
+        {
+          "path": "docs/geon-contrast-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "geon-contrast-native-66934-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "geon-contrast-native-66934-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "geon-contrast-native-66934-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geon-contrast-native-66934-1-4",
+          "judgment": "path"
+        }
+      ]
+    },
+    {
+      "id": "krdict:66935",
+      "source_sha256": "c3477905b6d52af1f58dee83b11460f0af270a5b634cd34f8a4da218ccdcb0ee",
+      "status": "scoped",
+      "checklist": [
+        "COV-017bn"
+      ],
+      "scope": "Complete native entry and all source groups, distinct literal ending and explicit/vowel-final omitted copula paths. Listed 시/었/겠 boundaries and per-owner Unknown for unreviewed prefinals; preserve raw alternatives and dictionary retention.",
+      "remaining": "Constructed structural inference does not certify contextual/register or all prefinal/particle combinations. Further conjectural/historical evidence and independent Korean-language review remain open.",
+      "evidence": [
+        {
+          "path": "tests/geon_contrast.rs",
+          "test": "geon_sources_keep_both_complete_entries_and_all_nine_native_groups"
+        },
+        {
+          "path": "tests/geon_contrast.rs",
+          "test": "geon_entry_policy_keeps_native_classes_and_unreviewed_owner_uncertainty"
+        },
+        {
+          "path": "tests/geon_contrast.rs",
+          "test": "geon_dictionary_cache_library_and_cli_keep_each_filter_identity"
+        },
+        {
+          "path": "tests/corpus.rs",
+          "test": "geon_contrast_recovers_three_original_training_rows_without_gold_repairs"
+        },
+        {
+          "path": "docs/geon-contrast-source-preflight.json"
+        },
+        {
+          "path": "tests/fixtures/geon-contrast-sources.json"
+        },
+        {
+          "path": "tests/fixtures/geon-contrast-entry-judgments.json"
+        },
+        {
+          "path": "docs/geon-contrast-evaluation.json"
+        }
+      ],
+      "judgments": [
+        {
+          "case": "geon-contrast-native-66935-1-1",
+          "judgment": "path"
+        },
+        {
+          "case": "geon-contrast-native-66935-1-2",
+          "judgment": "path"
+        },
+        {
+          "case": "geon-contrast-native-66935-1-3",
+          "judgment": "path"
+        },
+        {
+          "case": "geon-contrast-native-66935-1-4",
+          "judgment": "path"
+        },
+        {
+          "case": "geon-contrast-native-66935-1-5",
+          "judgment": "path"
+        }
+      ]
     }
   ]
 }

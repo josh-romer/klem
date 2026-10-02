@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-01.
+Last reviewed: 2026-10-02.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 415 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm/018e–l/018m–z/019d–g/019i–z/020d–h/020j–k/020n–o/021d; 300 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 417 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bn/018e–l/018m–z/019d–g/019i–z/020d–h/020j–k/020n–o/021d; 298 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -1527,6 +1527,41 @@ review remains open under the completion review below.
   Both inventory entries have scoped dispositions. Contextual wish subsets,
   social register, further paradigms and independent Korean review remain open.
 
+- [ ] **COV-017bn — Expectation contrast -건만/-건마는.** **Partial:**
+  distinct literal endings now recover all nine native example groups from the
+  two complete KRDict entries (66934/66935). Explicit copulas and vowel-final
+  omitted copulas preserve 나라건만 / 나라이건만; the full -건마는 counterpart
+  uses the same boundary as a structural inference. [NIKL FAQ 8917](https://korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8917&mn_id=62&pageIndex=12)
+  directly supports the short form's omission. The ending never becomes 건 + 만.
+  Listed 시/었/겠, auxiliary and literal irregular boundaries have regressions.
+  Unlisted 더/으옵 hypotheses remain raw and dictionary-retained with Unknown
+  on their immediate owner; omission from source notes is not a global ban.
+  [Four family tests](../tests/geon_contrast.rs) track 77 raw cases (69 required,
+  eight forbidden) and 69 dictionary cases/181 individual judgments, including
+  Unicode, cache, library and CLI filter identity. [Corpus tracking](../tests/corpus.rs)
+  recovers three unchanged KAIST training rows, including 하건만. The previous
+  하다 cohort retains its frozen 17 original misses and now recovers that one
+  case, leaving 16 current misses; no source gold is changed.
+  The [frozen source preflight](geon-contrast-source-preflight.json) and
+  [complete source manifest](../tests/fixtures/geon-contrast-sources.json)
+  distinguish native evidence from constructed structural controls. The
+  [evaluation](geon-contrast-evaluation.json) audits 616 distinct added paths /
+  1,338 occurrence checks over 14,152 surfaces and the full novel. All previous
+  candidates and entry assessments remain; all four full held-out corpus reports
+  are byte-identical. One new spacing hypothesis, 사랑 하건마는, includes a
+  pre-existing 사 + 랑 reading and remains contextually unjudged. The main ledger
+  preserves its previous cases/queue and adds 891 stable unjudged observations.
+  All 725 Rust tests, pinned corpus, lint/format, browser and Nix release checks
+  pass. Packaged runtime covers 627 raw cases, 483 dictionary cases / 1,212
+  judgments, actual assets and all filters/exports. Eight release/debug modes
+  match byte-for-byte; 24 paired timings are descriptive observations. Three
+  x86_64 Linux flake checks and nine inventory tests pass; the refreshed live
+  preview passes the same packaged-runtime checks. Other architectures are
+  unevaluated by these runtime gates.
+  Outer particles, further prefinal combinations (including conjectural 으리),
+  historical/register distribution, contextual suitability and independent Korean
+  review remain required. Both inventory dispositions are scoped.
+
 - [ ] **COV-018 — Further particle attachments and pronoun contractions.**
   **Partial: COV-018a–k and COV-018m–z cover post-ending, outer choice, emphatic,
   concessive, definition, enumerative, destination and recipient particles,
@@ -2456,6 +2491,8 @@ review remains open under the completion review below.
   desktop/mobile rendering and source selection pass. Three paired local novel
   runs have medians near 1.6 seconds before/after; these are descriptive timings.
   All three current-system flake checks and nine inventory unit tests pass.
+  Subsequent COV-017bn recovers the frozen 하건만 miss; 16 are current misses.
+  The original 17 before records remain unchanged in the source manifest.
   Broader eleven-sense left-class/lexical-subset licenses, ending/prefinal/particle
   combinations, contextual sense/register and independent Korean-language review
   remain required. COV-013 records scoped dispositions, not full entry certification.

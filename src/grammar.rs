@@ -746,6 +746,8 @@ pub(crate) fn endings() -> &'static [Ending] {
             "고요",
             "지만",
             "지마는",
+            "건만",
+            "건마는",
             "지만요",
             "지",
             "지요",
@@ -860,6 +862,10 @@ pub(crate) fn endings() -> &'static [Ending] {
             ("고", "고", 0),
             ("지만", "지만", 0),
             ("지마는", "지마는", 0),
+            // NIKL FAQ 8917 accepts 나라건만 alongside 나라이건만.
+            // The full form keeps the same vowel-final copula boundary.
+            ("건만", "건만", 0),
+            ("건마는", "건마는", 0),
             ("지만요", "지만요", 0),
             ("거든", "거든", 0),
             ("거든요", "거든요", 0),
@@ -1848,6 +1854,9 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "ending.concessive" => {
             "Recover concessive -(으)ㄴ들/-(으)ㄹ망정/지언정 or counterfactual -던들 with its reviewed stem and prefinal boundary; retain separate particle readings."
+        }
+        "ending.expectation_contrast" => {
+            "Recover -건만 and -건마는 as distinct expectation-versus-result endings; preserve explicit copulas and vowel-final omitted copulas without choosing a contextual interpretation."
         }
         "ending.expectation_question" => {
             "Recover -(으)려나 as a question or shortened intention expression, preserving dictionary homonyms without inserting implicit 하다 or choosing a contextual sense."

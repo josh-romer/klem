@@ -816,3 +816,19 @@ This review does not decide the lexical subsets and left-class licenses of all
 senses; the broad notes do not justify pruning every lexical verb before 어 하다.
 The complete source/entry manifest, per-case ledger, source-aligned corpus fixtures,
 and evaluation distinguish finite entry compatibility from contextual correctness.
+
+
+## Expectation contrast endings (COV-017bn)
+
+KRDict 66934/66935 list -건만/-건마는 after predicates, copulas and 시/었/겠.
+These remain distinct ending components and use a consonant-initial literal
+boundary. Vowel-conditioned irregular restoration does not apply. NIKL FAQ
+8917 directly accepts 나라건만 and 나라이건만; the full form's vowel-final
+omission is a structural inference from the corresponding ending, not an
+independent native quotation. Consonant-final 학생건만 cannot recover 학생 + 이다.
+
+The immediate owner's unlisted prefinal (e.g. 더 or 으옵) retains Unknown and
+raw/dictionary alternatives. A later auxiliary's prefinal does not downgrade an
+earlier lexical head. Neither raw recovery nor dictionary retention establishes
+contextual suitability. Outer particles, additional prefinal licenses and
+historical/register evidence remain open.

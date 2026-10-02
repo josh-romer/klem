@@ -2031,3 +2031,24 @@ Korean KAIST/GSD contributors and source corpora,
 https://github.com/UniversalDependencies/UD_Korean-Kaist/tree/r2.15 and
 https://github.com/UniversalDependencies/UD_Korean-GSD/tree/r2.15 (CC BY-SA 4.0).
 Dictionary and corpus license scopes apply separately.
+
+
+`krdict-geon-contrast.json` retains 44 complete native entries, including both
+contrast endings (66934/66935), all native lexical owners and control homonyms.
+Only RelatedForm/non-English equivalents are omitted; Sense arrays are normalized.
+`geon-contrast-sources.json` retains both complete source entries, all nine native
+example groups and pinned export hashes. The raw ledger adds 69 required and eight
+forbidden structural paths; the separate entry ledger tracks 69 cases/181 judgments.
+Constructed contexts and unlisted prefinals remain linguistically unjudged.
+Attribution: National Institute of Korean Language, Korean Basic Dictionary,
+CC BY-SA 2.0 KR. NIKL FAQ 8917 supports vowel-final omitted copula 나라건만;
+the full form's counterpart is explicitly marked a structural inference.
+
+`kaist-geon-contrast.conllu` preserves three exact aligned training targets in
+complete unchanged source blocks. GSD has no matching target in this preflight;
+its empty fixture records that result. Selection was frozen before recovery
+inspection: first two aligned target endings per preceding/following tag category.
+All three previously missing groups now recover. The earlier 하다 cohort's
+original records remain frozen, with 하건만 now recovering separately.
+Attribution: UD Korean KAIST/GSD contributors and source corpora, r2.15;
+corpus-derived text/evaluations CC BY-SA 4.0, separate from the dictionary license.

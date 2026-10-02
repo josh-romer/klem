@@ -3140,7 +3140,14 @@ fn hada_targets_preserve_288_original_rows_and_all_17_source_disagreements() {
                 .join("\t");
             assert!(original.lines().any(|line| line == row));
             let case = &report.cases[target["id"].as_str().unwrap()];
-            assert_eq!(serde_json::to_value(case).unwrap(), target["case_report"]);
+            let mut expected = target["case_report"].clone();
+            if case.id == "id:M2TA_087-s125/16" {
+                assert_eq!(target["case_report"]["matched"], false);
+                expected["matched"] = serde_json::json!(true);
+                expected["recovered"] = serde_json::json!(1);
+                expected["recovered_sets"] = serde_json::json!([[0]]);
+            }
+            assert_eq!(serde_json::to_value(case).unwrap(), expected);
             total += 1;
             matched += usize::from(case.matched);
             if !case.matched {
@@ -3148,7 +3155,53 @@ fn hada_targets_preserve_288_original_rows_and_all_17_source_disagreements() {
             }
         }
     }
-    assert_eq!((total, matched, misses.len()), (288, 271, 17));
+    assert_eq!((total, matched, misses.len()), (288, 272, 16));
     assert!(misses.iter().any(|id| id == "id:train-s252/8"));
     assert!(misses.iter().any(|id| id == "id:MH2_0164-s29/6"));
+}
+
+#[test]
+fn geon_contrast_recovers_three_original_training_rows_without_gold_repairs() {
+    let source: serde_json::Value =
+        serde_json::from_str(include_str!("fixtures/geon-contrast-sources.json")).unwrap();
+    let mut count = 0;
+    for (kind, input) in [
+        (
+            Corpus::Kaist,
+            include_bytes!("fixtures/kaist-geon-contrast.conllu").as_slice(),
+        ),
+        (
+            Corpus::Gsd,
+            include_bytes!("fixtures/gsd-geon-contrast.conllu").as_slice(),
+        ),
+    ] {
+        let original = std::str::from_utf8(input).unwrap();
+        let file = source["corpus_search"]["files"]
+            .as_array()
+            .unwrap()
+            .iter()
+            .find(|f| f["corpus"] == kind.name())
+            .unwrap();
+        let report = corpus::evaluate(input, kind, "geon-contrast").unwrap();
+        for target in file["targets"].as_array().unwrap() {
+            let row = target["source_row"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|v| v.as_str().unwrap())
+                .collect::<Vec<_>>()
+                .join("\t");
+            assert!(original.lines().any(|line| line == row));
+            let case = &report.cases[target["id"].as_str().unwrap()];
+            assert_eq!(
+                serde_json::to_value(&case.expected).unwrap(),
+                target["expected"]
+            );
+            assert!(!target["matched_before"].as_bool().unwrap());
+            assert!(case.matched, "{}", case.id);
+            assert_eq!(case.recovered, case.expected.len());
+            count += 1;
+        }
+    }
+    assert_eq!(count, 3);
 }

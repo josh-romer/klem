@@ -1802,6 +1802,9 @@ fn predicates(word: &str) -> Vec<Predicate> {
                 if matches!(ending.form, "은들" | "을망정" | "을지언정" | "던들") {
                     p.rules.push("ending.concessive".into());
                 }
+                if matches!(ending.form, "건만" | "건마는") {
+                    p.rules.push("ending.expectation_contrast".into());
+                }
                 if factual_ra {
                     p.rules.push("ending.factual_ra".into());
                 }

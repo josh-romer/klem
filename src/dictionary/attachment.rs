@@ -1179,7 +1179,8 @@ impl Annotation {
                             || crate::engine::copular_exclamation(form) {
                             Some(&["시"])
                         } else if matches!(form, "구나" | "군" | "군요" | "구려" | "구먼"
-                            | "더구나" | "더구려" | "더구먼" | "더군" | "더군요") {
+                            | "더구나" | "더구려" | "더구먼" | "더군" | "더군요"
+                            | "건만" | "건마는") {
                             Some(&["시", "었", "겠"])
                         } else { None };
                         if listed.is_some_and(|ls| morphs.iter().any(|c|

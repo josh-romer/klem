@@ -31,6 +31,7 @@
                 ./tests
                 ./docs/adverb-root-inventory.json
                 ./docs/question-case-source-preflight.json
+                ./docs/question-clause-additive-preflight.json
                 ./examples
                 ./tools/corpus.rs
                 ./tools/validity.rs
@@ -115,9 +116,12 @@
                 ./tools/excluded_paradigm_queue.py
                 ./tools/question_topic_audit.py
                 ./tools/question_topic_queue.py
+                ./tools/question_additive_audit.py
+                ./tools/question_additive_queue.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
                 ./web/tests/question-topic.mjs
+                ./web/tests/question-additive.mjs
               ];
             };
           } ''
@@ -128,6 +132,8 @@
             python tools/excluded_paradigm_queue.py --verify
             python tools/question_topic_audit.py --verify
             python tools/question_topic_queue.py --verify
+            python tools/question_additive_audit.py --verify
+            python tools/question_additive_queue.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

@@ -1596,7 +1596,10 @@
     "question-topic-16110": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=16110",
     "question-topic-38833": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=38833",
     "question-topic-inference": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&qna_seq=336008",
-    "question-topic-particle": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851"
+    "question-topic-particle": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851",
+    "question-additive-attestation": "https://www.nars.go.kr/fileDownload2.do?doc_id=1LHGA0YTKca&fileName=%EA%B5%AD%ED%9A%8C%EC%9E%85%EB%B2%95%EC%A1%B0%EC%82%AC%EC%B2%98%EC%84%B8%EB%AF%B8%EB%82%98%2820160429%29%EA%B5%AD%ED%9A%8C%EC%99%80+%EC%A0%95%EB%8B%B9%EC%A0%95%EC%B9%98_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf",
+    "question-additive-inference": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&qna_seq=336008",
+    "question-additive-absence-exception": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8390&mn_id=62&pageIndex=80"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -73793,6 +73796,427 @@
           "verdict": "forbidden",
           "source": "question-topic-particle",
           "reason": "The topic particle uses 는 after a vowel; the question clause ends in 냐. This forbids only the named path, never the surface or hypothetical heads."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-내느냐도",
+      "surface": "내느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-attestation",
+          "reason": "Agent morphological decomposition of the modern attested question/do word; the original printed layout remains unchanged."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-내냐도",
+      "surface": "내냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-먹느냐도",
+      "surface": "먹느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-먹냐도",
+      "surface": "먹냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-크냐도",
+      "surface": "크냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "크다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-좋냐도",
+      "surface": "좋냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-좋으냐도",
+      "surface": "좋으냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-학생이냐도",
+      "surface": "학생이냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-냈느냐도",
+      "surface": "냈느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "느냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-내겠느냐도",
+      "surface": "내겠느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "느냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-내시느냐도",
+      "surface": "내시느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "느냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-먹어내느냐도",
+      "surface": "먹어내느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "먹다",
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "느냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-inference",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-없지않느냐도",
+      "surface": "없지않느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "없다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "느냐",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-additive-absence-exception",
+          "reason": "Agent extension of the attested question/do boundary and functional noun-clause explanation to the existing question/prefinal/auxiliary licenses. Own lexical classes, the exact 없다-negative exception and contextual register remain separate. This is not direct attestation of every matrix cell."
+        }
+      ]
+    },
+    {
+      "id": "question-additive-no-invented-nominalizer",
+      "surface": "내느냐도",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "내다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐",
+            "기",
+            "도"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "source": "question-additive-inference",
+          "reason": "Agent representation constraint: the attested closed question functions as a noun clause without a written 기. Do not invent that overt morpheme in this named analysis; no alternative head or contextual nominal reading is banned."
         }
       ]
     }

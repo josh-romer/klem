@@ -994,3 +994,20 @@ paradigm forms and all novel records unchanged. The refreshed preview matches
 the packaged outputs and assets. Original raw gold/source objects and all 3,753
 earlier dictionary-policy cases remain unchanged; independent Korean-language
 review and broader checklist items stay open.
+
+COV-018ad adds a separate question-clause additive 도 reading, such as
+내다 + 느냐 + 도. The [source record](question-clause-additive-preflight.json)
+retains a modern external attestation with its printed line break and original
+before output. The [fixture](../tests/fixtures/question-additive-sources.json)
+preserves all nineteen complete native entries and a zero-hit scan of native
+question/도 examples. The uniform question-form and prefinal matrix is an agent
+inference, rather than direct attestation of every cell. Existing POS, lexical
+role and immediate question-owner checks still apply: 크다's verb homonym can
+retain 느냐 while its ordinary adjective homonym conflicts, and 학생 + 이다
+cannot borrow the noun's class for the copula's question ending. The narrow
+없다-influenced 않다 exception remains separate from general adjectival negatives.
+No 기 is inserted, and Unknown remains visible. The continuation auxiliary's
+immediate-left class audit remains COV-019ad; 좋아내느냐도 is retained as an unjudged diagnostic,
+not a required grammatical reading. [Individual alternatives](question-additive-review-queue.json)
+retain actual raw indices, ordered components, entry assessments and both filter
+memberships. Every contextual interpretation and register remains unjudged.

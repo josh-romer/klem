@@ -13884,9 +13884,10 @@
       "source_sha256": "ef01fcbdb93ddc2337341fc8a8c18cd4dafc370e5a490c87e127d2733b94520c",
       "status": "scoped",
       "checklist": [
-        "COV-018n"
+        "COV-018n",
+        "COV-018ad"
       ],
-      "scope": " COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만.",
+      "scope": " COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만. COV-018ad adds question-clause additive 도 from a modern external NARS attestation, corroborated by a functional noun-clause explanation. The native note and all six senses are preserved; its examples have no direct question/do occurrence. Uniform question forms and prefinal combinations are explicitly agent inferences, with separate lexical-owner restrictions.",
       "remaining": "Additional semantic/particle-chain restrictions and independent Korean review remain open; this is not full-entry coverage.",
       "evidence": [
         {
@@ -13903,6 +13904,26 @@
         },
         {
           "path": "docs/adverb-focus-evaluation.json"
+        },
+        {
+          "path": "tests/question_additive.rs",
+          "test": "attestation_layout_native_entries_and_append_only_judgments"
+        },
+        {
+          "path": "tests/question_additive.rs",
+          "test": "additive_keeps_question_owner_pos_copula_and_exact_negative_exception"
+        },
+        {
+          "path": "tests/fixtures/question-additive-sources.json"
+        },
+        {
+          "path": "docs/question-clause-additive-preflight.json"
+        },
+        {
+          "path": "docs/question-additive-review-queue.json"
+        },
+        {
+          "path": "docs/question-additive-evaluation.json"
         }
       ],
       "judgments": [
@@ -23800,10 +23821,11 @@
       "source_sha256": "ba511369dd7db0ead64a89d52043c8abba64c371204409f7791ef1101d8467a5",
       "status": "scoped",
       "checklist": [
-        "COV-019p"
+        "COV-019p",
+        "COV-019ad"
       ],
       "scope": "Reviewed all source senses/example groups for the existing 어 connector (also 고 for 나다), right inflection, ordered auxiliary ownership and preserved lexical alternatives. Every source example is tested as a separately documented tolerant joined input. Alternate connector judgments target auxiliary roles only.",
-      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples.",
+      "remaining": "Other left lexical/adjective and semantic restrictions, internal particles, contextual sense choice and independent Korean-language review remain open under COV-019. Source verb notes do not justify blanket adjective rejection, notably for 가다 with explicit adjective examples. COV-019ad freezes immediate-left class diagnostics, including the still-compatible adjective-headed 좋아내다/question-do paths. No new policy judgment or raw exclusion is made in that preflight.",
       "evidence": [
         {
           "path": "tests/continuation_aux.rs",
@@ -23827,6 +23849,9 @@
         },
         {
           "path": "docs/continuation-aux-evaluation.json"
+        },
+        {
+          "path": "docs/continuation-left-source-preflight.json"
         }
       ],
       "judgments": [

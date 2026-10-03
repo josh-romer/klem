@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-018ad",
+  "parent": "COV-018ab",
+  "reviewed": "2026-10-03",
+  "before_revision": "5419e9cc0609d015a4deaaa3aa7f8f64e727219c",
+  "scope": "Separate bare question endings and additive 도, preserving every prior hypothesis. Uniform forms and existing prefinal combinations are structural inferences. Context, senses, register, quoted-endings, further particles and independent Korean review remain open.",
+  "primary_attestation": {
+    "source_url": "https://www.nars.go.kr/fileDownload2.do?doc_id=1LHGA0YTKca&fileName=%EA%B5%AD%ED%9A%8C%EC%9E%85%EB%B2%95%EC%A1%B0%EC%82%AC%EC%B2%98%EC%84%B8%EB%AF%B8%EB%82%98%2820160429%29%EA%B5%AD%ED%9A%8C%EC%99%80+%EC%A0%95%EB%8B%B9%EC%A0%95%EC%B9%98_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf",
+    "source_sha256": "d57b9ca0ac2ad77c9333b04304c5f450a9396e6669f868672c0e79c76f66d787",
+    "event_date": "2016-04-29",
+    "author": "정진민",
+    "physical_page": 33,
+    "printed_page": 25,
+    "preflight_sha256": "305cbc60ac02d32d2611c9f158a4a18d4a10fb6837166505bb34be2a6dceced5",
+    "page_render": "/tmp/klem-question-additive-primary/page-33.png",
+    "page_render_sha256": "7c84b53fee9921f731adae90d66e5fb8fa4b0756737e6b91efbb614475e59854",
+    "original_layout_preserved": true,
+    "joined_input_is_explicit_author_diagnostic": true,
+    "linguistic_ruling": false
+  },
+  "corroborating_sources": {
+    "question-additive-attestation": "https://www.nars.go.kr/fileDownload2.do?doc_id=1LHGA0YTKca&fileName=%EA%B5%AD%ED%9A%8C%EC%9E%85%EB%B2%95%EC%A1%B0%EC%82%AC%EC%B2%98%EC%84%B8%EB%AF%B8%EB%82%98%2820160429%29%EA%B5%AD%ED%9A%8C%EC%99%80+%EC%A0%95%EB%8B%B9%EC%A0%95%EC%B9%98_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf",
+    "question-additive-inference": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&qna_seq=336008",
+    "question-additive-absence-exception": "https://www.korean.go.kr/front/mcfaq/mcfaqView.do?mcfaq_seq=8390&mn_id=62&pageIndex=80"
+  },
+  "inference": "Uniform question/do composition and existing prefinal/auxiliary combinations are agent structural inferences from the modern attestation and functional noun-clause explanation. Context, sense and register remain unjudged; no further particle license follows automatically.",
+  "native_scan": {
+    "regex": "[가-힣]+(?:느냐|으냐|냐)도[가-힣]*",
+    "entries_scanned": 56555,
+    "all_native_entries_scanned": true,
+    "hits": [],
+    "limitation": "No direct attestation in this snapshot is not evidence of impossibility."
+  },
+  "counts": {
+    "diagnostic_surfaces": 26,
+    "cli_word_responses": 78,
+    "word_api_responses": 26,
+    "source_context_responses": 4,
+    "full_native_entries": 19,
+    "new_raw_paths": 166,
+    "judged_new_paths": 13,
+    "unjudged_new_paths": 153
+  },
+  "composition_counts": {
+    "literal_question_additive": 150,
+    "particle.polite": 8,
+    "ending.enumerative_yo": 8
+  },
+  "ledger": {
+    "previous_cases": 12695,
+    "previous_sources": 1595,
+    "current_cases": 12709,
+    "current_sources": 1598,
+    "judgments": {
+      "required": 9311,
+      "forbidden": 3412
+    },
+    "all_prior_objects_preserved": true,
+    "previous_file_sha256": "59499e5d8400d826ff78ffba9d82b816e1ec7404df0bcc2971d57c83f6de3742",
+    "current_file_sha256": "8f43f8a8f1d25fc27cd2063968d1ce4fec6e2a9f6047147fb0a84e2414ef9863"
+  },
+  "preservation": {
+    "all_prior_12695_case_objects_and_1595_sources_unchanged": true,
+    "all_diagnostic_prior_paths_relative_order_native_entries_and_assessments_preserved": true,
+    "full_native_entries": 19,
+    "all_four_original_source_layout_or_diagnostic_contexts_lossless": true,
+    "all_eight_broad_streams_byte_identical": true,
+    "all_four_heldout_corpus_gold_rows_and_summaries_identical": true
+  },
+  "gates": {
+    "focused": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-targeted-final.log",
+      "sha256": "1bebe2cf3af9e673e147b78a3f8b37e38028fb3647ac5d67e61d4ed0b00a8553"
+    },
+    "full_cargo": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-cargo-verified.log",
+      "sha256": "d87edaa6d9db6f6d76896a7831de6cab0f349c1fe91fe5ee77b73bff0490f12e"
+    },
+    "pinned_full_corpus": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-pinned-corpus.log",
+      "sha256": "ae7cae507f9b46bdbfe9809c66cbd311c284fa39e252352f9baf3750c69ca2ae"
+    },
+    "clippy": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-clippy-final.log",
+      "sha256": "4d339aa72a18fc5225b5df4c1926a2514b8ff61b7b426dc1fca5d1f4b4f15c69"
+    },
+    "format": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-fmt-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "inventory_units": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-inventory-unit.log",
+      "sha256": "251af6b517f346b48c274bf8396a2ed110c83d4d74af978ffd35ccf2c7146368"
+    },
+    "full_browser": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-browser-full.log",
+      "sha256": "cf94a284c40b052c02baf4603323ca26850e1dba200e79cb92581ea619ba0dd5"
+    },
+    "packaged_browser": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-browser-packaged.log",
+      "sha256": "2e5dad81498ba9dc6aa51e025047a3787dc6b9ba0e7beed174311286226511d7"
+    },
+    "runtime": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-runtime.log",
+      "sha256": "94f09b957e7f88d1a7aa305ca8f0ff22e6450761476a3b2697020af2d56b45a3"
+    },
+    "packaged_runtime": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-packaged-runtime.log",
+      "sha256": "94f09b957e7f88d1a7aa305ca8f0ff22e6450761476a3b2697020af2d56b45a3"
+    },
+    "preview_runtime": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-preview-runtime.log",
+      "sha256": "94f09b957e7f88d1a7aa305ca8f0ff22e6450761476a3b2697020af2d56b45a3"
+    },
+    "broad_streams": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-broad.log",
+      "sha256": "4895f56224811814e545c012581ed9f7269db6bf5a99befcd013c60816406902"
+    },
+    "packaged_broad_streams": {
+      "status": "passed",
+      "path": "/tmp/klem-question-additive-broad-packaged.log",
+      "sha256": "4895f56224811814e545c012581ed9f7269db6bf5a99befcd013c60816406902"
+    }
+  },
+  "nix": {
+    "status": "passed",
+    "path": "/tmp/klem-question-additive-flake-final.log",
+    "sha256": "386f0880b98374a338b010f4a944e6acdcc01729727fd0a2094e902cc075842d",
+    "host": "x86_64-linux",
+    "checks": 3,
+    "release_tests": 804,
+    "other_platforms": "unevaluated"
+  },
+  "full_cargo_note": "The complete 804-test Cargo pass precedes only a test-comment correction from the intensive tracker to continuation-left COV-019ad. Test bodies, engine and fixtures are unchanged; the final Nix snapshot passes all 804 release tests.",
+  "verification_corrections": [
+    "The initial sandboxed Cargo run ended with status 143 and was not counted as a pass. A stable full rerun identified the stale aggregate validity totals; only the expected totals were corrected to 9311 required / 3412 forbidden.",
+    "An authored quoted-bundle expectation was absent in the actual frozen output; quoted-ending probes are tested against their full original outputs instead.",
+    "Browser component checks follow API owner ordering around auxiliaries, and the dictionary heading includes the native homonym number."
+  ],
+  "broad": {
+    "artifact": "docs/question-additive-observations.json",
+    "records": 1128312,
+    "new_paths": 0,
+    "changed_records": 0,
+    "debug_and_optimized_comparisons_identical": true,
+    "packaged_comparison_identical": true,
+    "limitation": "These original streams contain no newly affected boundary; the separate 26-surface cohort exercises the new rule. No recall or contextual precision improvement follows from unchanged broad outputs."
+  },
+  "runtime": {
+    "local": {
+      "artifact": "docs/question-additive-runtime.json.gz",
+      "sha256": "d5f899c6f6e469c6852f5df765bc3184278dee7b494df0537ccbf520f4474949",
+      "cli": "/tmp/klem-question-additive-runtime/klem",
+      "cli_sha256": "25fdb6edbf464b0dc9ed3b3582e9f43870957106b2f7b2930b39fc5a81a263fd",
+      "server": "/tmp/klem-question-additive-runtime/klem-web",
+      "server_sha256": "08eff612b4203eb7755e2ac08773fbf69e3dad4f2616446c560d1349ea6798c3",
+      "assets": "/nix/store/njkmbfdj1brjb4mlllwv1vqqynn694bp-klem-web-assets-0.1.0/share/klem-web",
+      "counts": {
+        "diagnostic_surfaces": 26,
+        "cli_word_responses": 78,
+        "word_api_responses": 26,
+        "source_context_responses": 4,
+        "full_native_entries": 19,
+        "new_raw_paths": 166,
+        "judged_new_paths": 13,
+        "unjudged_new_paths": 153
+      }
+    },
+    "packaged": {
+      "artifact": "docs/question-additive-packaged.json.gz",
+      "sha256": "a6c3635f9feced24033e7a23f8436c82e5d49994680ca841272a2b85bf01c43d",
+      "cli": "/nix/store/8v0b9qxh88m1r3j1alcbkpp7wxsrvqxs-klem-0.1.0/bin/klem",
+      "cli_sha256": "7c2872dd075ba29d8e567a84cf4db79ee89ae1654d2b2c33165915df8c387bdd",
+      "server": "/nix/store/8v0b9qxh88m1r3j1alcbkpp7wxsrvqxs-klem-0.1.0/bin/klem-web",
+      "server_sha256": "1d765c46731a2248df8af4d9b7f4aeff5042a070f5416804a0a0e9605af8de3e",
+      "assets": "/nix/store/njkmbfdj1brjb4mlllwv1vqqynn694bp-klem-web-assets-0.1.0/share/klem-web",
+      "counts": {
+        "diagnostic_surfaces": 26,
+        "cli_word_responses": 78,
+        "word_api_responses": 26,
+        "source_context_responses": 4,
+        "full_native_entries": 19,
+        "new_raw_paths": 166,
+        "judged_new_paths": 13,
+        "unjudged_new_paths": 153
+      }
+    },
+    "preview": {
+      "artifact": "docs/question-additive-preview.json.gz",
+      "sha256": "a6c3635f9feced24033e7a23f8436c82e5d49994680ca841272a2b85bf01c43d",
+      "cli": "/nix/store/8v0b9qxh88m1r3j1alcbkpp7wxsrvqxs-klem-0.1.0/bin/klem",
+      "cli_sha256": "7c2872dd075ba29d8e567a84cf4db79ee89ae1654d2b2c33165915df8c387bdd",
+      "server": "/nix/store/8v0b9qxh88m1r3j1alcbkpp7wxsrvqxs-klem-0.1.0/bin/klem-web",
+      "server_sha256": "1d765c46731a2248df8af4d9b7f4aeff5042a070f5416804a0a0e9605af8de3e",
+      "assets": "/nix/store/njkmbfdj1brjb4mlllwv1vqqynn694bp-klem-web-assets-0.1.0/share/klem-web",
+      "counts": {
+        "diagnostic_surfaces": 26,
+        "cli_word_responses": 78,
+        "word_api_responses": 26,
+        "source_context_responses": 4,
+        "full_native_entries": 19,
+        "new_raw_paths": 166,
+        "judged_new_paths": 13,
+        "unjudged_new_paths": 153
+      }
+    }
+  },
+  "verified_package": {
+    "klem": "/nix/store/8v0b9qxh88m1r3j1alcbkpp7wxsrvqxs-klem-0.1.0",
+    "web": "/nix/store/pb1lw06z06l8b8k8gbf3fm1simzzjs6c-klem-web",
+    "cli_sha256": "7c2872dd075ba29d8e567a84cf4db79ee89ae1654d2b2c33165915df8c387bdd",
+    "server_sha256": "1d765c46731a2248df8af4d9b7f4aeff5042a070f5416804a0a0e9605af8de3e"
+  },
+  "nix_app_entrypoints": {
+    "cli_app": "nix run .# -- word 내느냐도 --dictionary data/dictionaries/krdict/krdict.db",
+    "cli_word_sha256": "4f9b2c375fe9b608c1f2ba38bbe6504044bfabc9b10810a679bfa39451c9c302",
+    "cli_matches_frozen_runtime": true,
+    "web_app": "nix run .#web -- --port 8082 --dictionary data/dictionaries/krdict/krdict.db",
+    "status": {
+      "dictionary": {
+        "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+        "metadata": {
+          "attribution": "National Institute of Korean Language (국립국어원), Korean Basic Dictionary (한국어기초사전). Extracted text fields and NFC lookup keys; multimedia omitted.",
+          "entries": 56555,
+          "files": [
+            {
+              "entries": 5185,
+              "name": "10_5000_20260919.json",
+              "sha256": "31bcf084b4230f25cff943a68b901f4be168a5eaaee51dfa560d6878727fef0c"
+            },
+            {
+              "entries": 3815,
+              "name": "11_3671_20260919.json",
+              "sha256": "561308f8efe3dbac672db7fddb00e7d930b32b7b3c5bb34d9b378df2cea05e84"
+            },
+            {
+              "entries": 5288,
+              "name": "1_5000_20260919.json",
+              "sha256": "0c03a895b00f9182d413381b3da727e5cc855a0c484716d7e9f827f2e9188d7c"
+            },
+            {
+              "entries": 5308,
+              "name": "2_5000_20260919.json",
+              "sha256": "743f14af698810bbbf356ddf155ca058b5c482acb8d29aa8fafafa3eb28002a0"
+            },
+            {
+              "entries": 5388,
+              "name": "3_5000_20260919.json",
+              "sha256": "01f9a55a0f4d722ece953d84a779312eef98bc5e1b04738a23346e39013a4644"
+            },
+            {
+              "entries": 5480,
+              "name": "4_5000_20260919.json",
+              "sha256": "5989538bde34f2aa87891884dcd662e4381c1ad1bc34150b7a5bb72de741bf61"
+            },
+            {
+              "entries": 5229,
+              "name": "5_5000_20260919.json",
+              "sha256": "cbc23d1ae2ad0804db3c520b829405d07c16d8afe9a936a49881c082ad9cb6b0"
+            },
+            {
+              "entries": 5262,
+              "name": "6_5000_20260919.json",
+              "sha256": "8b0d472a79d7cbe10ec9c59c22ff0b7b3acc254d0e1d873569db85f60beded18"
+            },
+            {
+              "entries": 5247,
+              "name": "7_5000_20260919.json",
+              "sha256": "8b74d083bba6001fa4895ca298bd83860810da4d37661badef78a4cdea946fb3"
+            },
+            {
+              "entries": 5192,
+              "name": "8_5000_20260919.json",
+              "sha256": "5762197b87963119f7f02790c73fabb18cfd3c36d73baf403f017d85e5c4d80e"
+            },
+            {
+              "entries": 5161,
+              "name": "9_5000_20260919.json",
+              "sha256": "173830b051685455fa03585385cdfdbc67cd19ba52928a680967f4103a82d1a8"
+            }
+          ],
+          "license": "CC-BY-SA-2.0-KR",
+          "license_url": "https://krdict.korean.go.kr/kor/kboardPolicy/copyRightTermsInfo",
+          "schema": 1,
+          "snapshot": "2026-09",
+          "source": "krdict",
+          "source_url": "https://krdict.korean.go.kr/download/downloadPopup"
+        }
+      },
+      "limits": {
+        "text_bytes": 8000,
+        "word_chars": 64
+      },
+      "version": "0.1.0"
+    },
+    "packaged_asset_index_sha256": "2d42428df9be57a9beb7291029976f521a1c3985aa74e40045a014bde85d4796",
+    "packaged_assets_match": true
+  },
+  "timings": {
+    "schema_version": 1,
+    "before_cli": "/nix/store/fbbnwk3ndh2pi4nxj4mibmrzqw3m791a-klem-0.1.0/bin/klem",
+    "after_cli": "/tmp/klem-question-additive-runtime/klem",
+    "results": [
+      {
+        "sample": "complete_novel",
+        "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+        "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+        "trials_seconds": [
+          {
+            "before": 4.183331973996246,
+            "after": 4.184273454011418
+          },
+          {
+            "after": 4.114124815998366,
+            "before": 4.118410745999427
+          },
+          {
+            "before": 4.1669999940058915,
+            "after": 4.1792397539975354
+          }
+        ]
+      },
+      {
+        "sample": "26000_word_question_diagnostics",
+        "source": "/tmp/klem-question-additive-dense.txt",
+        "source_sha256": "d320b9c85686a8671c3feddecbffc26dc4371554b42f9e7de171f1a9a23c3813",
+        "trials_seconds": [
+          {
+            "before": 0.1350064850121271,
+            "after": 0.4165905349946115
+          },
+          {
+            "after": 0.4219992519938387,
+            "before": 0.1329610520042479
+          },
+          {
+            "before": 0.12864821900438983,
+            "after": 0.4488967689976562
+          }
+        ]
+      }
+    ],
+    "limitation": "Three alternating local pairs while other verification processes may compete for resources. Descriptive wall times; no performance guarantee, memory claim or correctness score."
+  },
+  "source_artifacts": {
+    "src/engine.rs": "626724408f151e227019b8d9c92bb25fc72d687360784aeb27b78c22bf88e552",
+    "src/grammar.rs": "3e9df7e2cc75dfa9da9cfd081aa34080587f1869607deec147a8fa215a7d5299",
+    "tests/question_additive.rs": "0a0f4a18058e934b1f7b07e10654ba534a0db760c82fe8ec4934c2b47f1c8b6c",
+    "tests/question_topic.rs": "c83020373073eb652e62ae1b2b67712451999f6d093246652fa968a28076087e",
+    "tests/validity.rs": "cd6572c8c933d09f16b72709e13a2d8ceddea62317e22bf518ca4d5c368f4505",
+    "tests/fixtures/validity.json": "8f43f8a8f1d25fc27cd2063968d1ce4fec6e2a9f6047147fb0a84e2414ef9863",
+    "tests/fixtures/question-additive-sources.json": "713e2535645c1b2f948477bfb1071bb48481606dc4b1d387054ea398c8dd2f6c",
+    "tests/fixtures/krdict-question-additive.json": "3286dc9cba992cf60ecaf15b3b6046acb3812f3f9343f153cb6c5a55f19e69ae",
+    "tools/question_additive_audit.py": "4fccd017d38a801362056fc2634cba7eaf1ea1a3717689d0738aa6b26cf32e19",
+    "tools/question_additive_queue.py": "834f537579910e39a8e417a52e42438b58cb94257a3cb2299d3c7a6e0d6a23c4",
+    "tools/question_additive_runtime.py": "681d5b854535ed95a9f6aaa63bca8d4840256637bb8d437900a764faf62c23c5",
+    "tools/question_additive_compare.py": "7409e452b7fe9be039e526e613f29e8e55ca9b1cf0444119251e331bc1e9c94f",
+    "web/tests/question-additive.mjs": "9f159c72bd964ed82b69d6dd25c5b127d613fe0c1be0cc107f100449c36f9750",
+    "docs/question-clause-additive-preflight.json": "305cbc60ac02d32d2611c9f158a4a18d4a10fb6837166505bb34be2a6dceced5",
+    "docs/question-additive-corpora.json": "4a0bb5943a04214e32b2b3be01980b03dfa75ac51b653e4c47463a49e2b5b858",
+    "docs/question-additive-review-queue.json": "fe0c61ae3ca5a889e7f8810d7225eec3a176556e816d72b9ddba03294c9e6aec",
+    "docs/continuation-left-source-preflight.json": "68952e488f5f2fe750185dc7596bd5b0b52797706608a95c05a3b886163c4721"
+  },
+  "remaining": [
+    "Parent COV-018ab: other particles, quoted-endings, broader prefinal licenses, contextual senses/register and independent Korean-language review.",
+    "Every contextual diagnostic reading remains unjudged; thirteen named structures are required and 153 other new structures remain unjudged.",
+    "COV-019ad: immediate-left class policy for continuation/completive 내다; 좋아내느냐도 remains an unjudged diagnostic, with all original raw hypotheses and before assessments retained in its separate preflight."
+  ]
+}

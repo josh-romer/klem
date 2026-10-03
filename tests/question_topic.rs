@@ -149,7 +149,10 @@ fn topic_paths_keep_every_prior_bundle_unicode_and_component_ownership() {
             let components = a.breakdown().unwrap();
             assert_eq!(components.len(), a.lemmas.len() + a.morphemes.len());
             assert!(a.rules.iter().all(|r| klem::rule_explanation(r).is_some()));
-            if !frozen.analyses.contains(a) {
+            // This frozen topic cohort also contains future-particle probes.
+            // Keep the topic-specific assertion scoped to topic surfaces;
+            // later independently reviewed particles may add their own paths.
+            if surface.ends_with("는") && !frozen.analyses.contains(a) {
                 assert!(
                     a.rules.contains(&"particle.quoted_question".to_owned()),
                     "{surface}: {a:?}"

@@ -1,6 +1,6 @@
 # Coverage and completion tracker
 
-Last reviewed: 2026-10-02.
+Last reviewed: 2026-10-03.
 
 This tracks the modern written Korean rule coverage needed by the CLI, library,
 and sentence explorer. Completion means that the explicitly listed scope has
@@ -2078,6 +2078,51 @@ review remains open under the completion review below.
   particles, broader prefinals, contextual senses/register and independent
   Korean-language review.
 
+- [x] **COV-018ad — Plain question-clause additive 도 alternatives.**
+  The modern NARS attestation
+  내느냐도 supports a separate 내다 + 느냐 + 도 path. The frozen
+  [source preflight](question-clause-additive-preflight.json) retains the
+  original PDF layout, source hash and before output; printed page 25 splits
+  the word as 내 / 느냐도. Only an explicitly authored diagnostic joins that
+  layout break. Production input retains its whitespace and token boundaries.
+  [The source fixture](../tests/fixtures/question-additive-sources.json)
+  retains all nineteen selected complete native entries and an exhaustive
+  56,555-entry native-example scan with zero direct question/도 hits. This
+  absence does not imply impossibility. NIKL's modern noun-clause explanation
+  and the existing question-owner/prefinal licenses supply structural
+  inferences for the remaining matrix cells; the NARS occurrence is an
+  attestation, not a linguistic ruling. No overt nominalizer is invented.
+  [Regressions](../tests/question_additive.rs) distinguish thirteen required
+  structures and one representation exclusion, own predicate/POS/copula
+  checks, the exact 없다-negative exception, unknown owners, unchanged
+  future-particle/quoted-ending probes, NFD, components, cache and CLI filters.
+  [The individual queue](question-additive-review-queue.json) records 166 new
+  diagnostic paths: thirteen required structures and 153 structurally
+  unjudged alternatives. Every contextual interpretation remains unjudged.
+  [Evaluation](question-additive-evaluation.json) records all 804 final
+  Nix release tests, the three host checks, 804 Cargo tests, pinned corpus,
+  lint/format and inventory gates, and the complete existing browser suite.
+  The packaged browser cohort covers all 26 diagnostics, both Unicode forms,
+  three filters, actual raw indices, ordered auxiliary components, exports,
+  dictionary source selection and desktop/mobile. Packaged and refreshed
+  preview CLI/API records, every new path, all nineteen full entries and all
+  four original-layout/diagnostic context responses agree with the local
+  audit. Both Nix app entry points run. [The full comparison](question-additive-observations.json)
+  verifies 1,128,312 records across eight modes, all byte-identical before
+  and after; optimized, debug and Nix outputs agree. These original streams
+  contain no newly affected boundary, so the separate source/diagnostic
+  cohort exercises this rule. [Four held-out corpus reports](question-additive-corpora.json)
+  retain every gold-row result and summary. All 12,695 prior case objects
+  and 1,595 source mappings remain unchanged. Fourteen appended cases bring
+  the ledger to 12,709 cases, 9,311 required and 3,412 forbidden judgments.
+  Three paired local novel runs remain near 4.1–4.2 seconds; the dense
+  26,000-word diagnostic input takes 0.42–0.45 seconds versus 0.13 before,
+  with additional candidate output. These are descriptive timings.
+  Further quoted-ending followers, other particles, broader prefinals,
+  contextual senses/register and independent Korean-language review remain
+  under the open COV-018ab parent. The continuation auxiliary's left-class audit
+  remains COV-019ad; diagnostic 좋아내느냐도 is not a new required judgment.
+
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal
   particles; COV-019b adds negative contrast particles and short prohibitives.**
@@ -2758,6 +2803,24 @@ review remains open under the completion review below.
   a throughput or complexity guarantee. Broader original coverage is still open.
   Broader ending/prefinal/internal-particle, left lexical subsets, source sense,
   context/register and independent Korean-language review remain required.
+
+- [ ] **COV-019ad — Continuation auxiliary immediate-left classes.**
+  The [frozen preflight](continuation-left-source-preflight.json) preserves
+  the complete native 내다 auxiliary entry 60625 and eleven diagnostic
+  surfaces in all three CLI modes. Its attachment note says 동사 뒤에서;
+  the current 좋아내다 and 좋아내느냐도 predicate/auxiliary paths nevertheless
+  remain compatible. The COV-019p connector audit explicitly left these
+  lexical-class restrictions open. Review complete source examples and
+  independent grammar evidence before adding finite per-entry judgments.
+  Distinguish the immediate owner, verb/adjective homonyms, represented
+  negatives, later auxiliary/copula owners and missing or conflicting source
+  classes. Preserve every raw path; a future filter restriction must name
+  the affected entry and connector, keep Unknown visible and retain all
+  unrelated assessments. Do not extend one entry's note to every auxiliary;
+  other continuation entries have conflicting adjective examples. Add source
+  and individual policy regressions, corpus/broad-stream comparisons,
+  CLI/library/cache parity, browser exports and Nix/runtime verification.
+  These observations are an unresolved policy audit, not new validity gold.
 
 - [ ] **COV-020 — Derived nominal/copula composition and attachment classes.**
   **Partial: COV-020a adds direct nominalization + copula; COV-020b adds

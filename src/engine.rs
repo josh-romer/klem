@@ -3553,7 +3553,7 @@ fn nominals(
         // Nominalizations accept ordinary particles; connective/final endings
         // have separate, explicit licenses for the newly supported particles.
         let ending = if flexible
-            || question_case_particle(particle.form)
+            || question_clause_particle(particle.form)
             || matches!(
                 particle.form,
                 "은" | "는"
@@ -3590,7 +3590,7 @@ fn nominals(
                 let quoted_question = p
                     .morphs
                     .last()
-                    .is_some_and(|m| quoted_question_case(&m.form, particle.form));
+                    .is_some_and(|m| question_clause_particle_boundary(&m.form, particle.form));
                 let concessive = matches!(particle.form, "만" | "마는")
                     && p.morphs.last().is_some_and(|m| concessive_ending(&m.form));
                 for mut a in expand_predicate(&p) {
@@ -4081,14 +4081,18 @@ impl PredicateEnd {
 // 먹느냐가, 취업이냐의, 더운밥이냐를, 이루느냐보다); KAIST also
 // attests 하느냐와. Native 넣느냐는/붙느냐는 also attest a topic-bearing
 // question clause; retain the separate quoted-ending bundle alternatives.
+// The modern 2016 NARS attestation 내느냐도 additionally licenses additive 도.
 // These clauses retain their question ending, rather
 // than acquiring an invented nominalizer or a quoted-report ending.
-fn question_case_particle(particle: &str) -> bool {
-    matches!(particle, "에" | "의" | "와" | "가" | "를" | "보다" | "는")
+fn question_clause_particle(particle: &str) -> bool {
+    matches!(
+        particle,
+        "에" | "의" | "와" | "가" | "를" | "보다" | "는" | "도"
+    )
 }
 
-fn quoted_question_case(ending: &str, particle: &str) -> bool {
-    matches!(ending, "냐" | "느냐" | "으냐") && question_case_particle(particle)
+fn question_clause_particle_boundary(ending: &str, particle: &str) -> bool {
+    matches!(ending, "냐" | "느냐" | "으냐") && question_clause_particle(particle)
 }
 
 fn concessive_ending(ending: &str) -> bool {
@@ -4159,7 +4163,7 @@ fn reporting_go(ending: &str) -> bool {
 }
 
 fn before_particle(ending: &str, particle: &str) -> bool {
-    if quoted_question_case(ending, particle) {
+    if question_clause_particle_boundary(ending, particle) {
         return true;
     }
     let connective = intention_connective(ending)

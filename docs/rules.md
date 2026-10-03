@@ -4211,6 +4211,36 @@ long/short headword aliasing and spelling correction are outside this finite
 rule. [Individual evaluation](finite-vowel-evaluation.json) separates raw
 structural regressions from unjudged contextual/mood/auxiliary observations.
 
+## Question-clause topics (COV-018ac)
+
+The complete native 면 and 나름 entries contain 넣느냐는 and 붙느냐는
+in topic-bearing contexts. Recover a separate question ending and particle 는,
+and retain the existing 느냐는 quoted-ending candidate. The source scan's
+original bundle classifications remain frozen; a surface ending in 는 alone
+cannot choose between these interpretations. The two selected contexts support
+the topic boundary, while the other 163 observations remain contextually
+unjudged in this follow-up.
+
+The uniform 냐/느냐/으냐 composition is an agent inference from those native
+examples and NIKL's [functional noun-clause explanation](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&qna_seq=336008).
+That answer addresses subject 가; it is not a ruling on every topic/prefinal
+combination. Preserve the existing question owner's own POS and prefinal
+licenses. A verb/adjective homonym retains separate assessments; represented
+copula 으냐 conflicts remain attached to the copula, and missing lexical
+classes stay Unknown. The topic particle follows its vowel allomorph, and no
+nominalizer is invented. Further particles, prefinals, register and contextual
+meanings remain separate requirements.
+
+See the [full native sources](../tests/fixtures/question-topic-sources.json),
+[individual regressions](../tests/question_topic.rs),
+[new-path queue](question-topic-review-queue.json), and
+[eight-stream comparison](question-topic-observations.json). The historical
+1995 article's description of 1948/1957 grammar does not license a blanket
+modern 느냐도/느냐부터 extension. The broad comparison also retains 458
+individually unjudged paths composing the existing ㄴ topic contraction and
+seven composing existing outer 요 with a question clause. Their contextual
+register is not certified by the two plain native examples.
+
 ## Written vowel paradigms (COV-021j)
 
 An open ㅕ stem can absorb 어: 켜어→켜 and 펴어→펴, including past

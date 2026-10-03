@@ -4079,10 +4079,12 @@ impl PredicateEnd {
 
 // KRDict's native examples attest case-bearing questions (하느냐에,
 // 먹느냐가, 취업이냐의, 더운밥이냐를, 이루느냐보다); KAIST also
-// attests 하느냐와. These clauses retain their question ending, rather
+// attests 하느냐와. Native 넣느냐는/붙느냐는 also attest a topic-bearing
+// question clause; retain the separate quoted-ending bundle alternatives.
+// These clauses retain their question ending, rather
 // than acquiring an invented nominalizer or a quoted-report ending.
 fn question_case_particle(particle: &str) -> bool {
-    matches!(particle, "에" | "의" | "와" | "가" | "를" | "보다")
+    matches!(particle, "에" | "의" | "와" | "가" | "를" | "보다" | "는")
 }
 
 fn quoted_question_case(ending: &str, particle: &str) -> bool {

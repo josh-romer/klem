@@ -1877,7 +1877,7 @@ pub(crate) fn explanation(id: &str) -> Option<&'static str> {
         }
         "particle" => "Remove a particle with licensed order and boundary allomorph.",
         "particle.quoted_question" => {
-            "Retain a -냐/-느냐/-으냐 question clause before reviewed 에/의/와/가/를/보다 particles; preserve the question owner's inflection and existing case chains."
+            "Retain a -냐/-느냐/-으냐 question clause before reviewed 에/의/와/가/를/보다 case particles or topic 는; preserve the question owner's inflection, existing case chains and separate quoted-ending alternatives."
         }
         "particle.comparison_case" => {
             "Recover reviewed 에/에서/서 before comparison particle 처럼; keep case order and distinguish separately spaced adverb 같이."

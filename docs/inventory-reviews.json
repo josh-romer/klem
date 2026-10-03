@@ -2612,9 +2612,10 @@
       "checklist": [
         "COV-019e",
         "COV-018n",
-        "COV-019i"
+        "COV-019i",
+        "COV-018ac"
       ],
-      "scope": "One contrastive 는 between connector 고 and 싶다, preserving particle order and vowel allomorph. Other attachments remain independently scoped. COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks.",
+      "scope": "One contrastive 는 between connector 고 and 싶다, preserving particle order and vowel allomorph. Other attachments remain independently scoped. COV-018n covers lexical adverbial focus attachment, compatible outer chains, distinct nominal homonyms and noun-case boundaries; restrictive 만 remains separate from concessive 만. COV-019i licenses one contrastive 는 after 고/어 before 있다/계시다, including existing 곤 contraction, without bypassing immediate-left or inflection checks. COV-018ac adds question-clause topic 는 from two complete native contexts, while retaining quoted-ending bundles and separate lexical-owner/prefinal licenses. Its uniform question-form composition is an agent inference, corroborated by the modern noun-clause explanation.",
       "remaining": "Other senses, further internal-particle combinations, lexical/subset restrictions, context and independent Korean-language review remain open.",
       "evidence": [
         {
@@ -2657,6 +2658,26 @@
         },
         {
           "path": "docs/continuative-topic-evaluation.json"
+        },
+        {
+          "path": "tests/question_topic.rs",
+          "test": "two_native_contexts_preserve_full_sources_and_individual_judgments"
+        },
+        {
+          "path": "tests/question_topic.rs",
+          "test": "topic_attachment_keeps_question_owner_pos_and_unknown_alternatives"
+        },
+        {
+          "path": "tests/fixtures/question-topic-sources.json"
+        },
+        {
+          "path": "docs/question-topic-review-queue.json"
+        },
+        {
+          "path": "docs/question-topic-observations.json"
+        },
+        {
+          "path": "docs/question-topic-evaluation.json"
         }
       ],
       "judgments": [
@@ -2691,6 +2712,14 @@
         {
           "case": "adverb-focus-nominal-3",
           "judgment": "path"
+        },
+        {
+          "case": "question-topic-넣느냐은",
+          "judgment": "wrong-allomorph"
+        },
+        {
+          "case": "question-topic-좋으냐은",
+          "judgment": "wrong-allomorph"
         }
       ]
     },

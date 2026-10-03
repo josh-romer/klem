@@ -1592,7 +1592,11 @@
   "excluded-paradigm-77098-1-source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77098",
   "excluded-paradigm-77098-5-source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77098",
   "excluded-paradigm-37053-2-source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=37053",
-  "excluded-paradigm-83941-2-source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83941"
+  "excluded-paradigm-83941-2-source": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=83941",
+    "question-topic-16110": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=16110",
+    "question-topic-38833": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=38833",
+    "question-topic-inference": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&qna_seq=336008",
+    "question-topic-particle": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=85851"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -73410,6 +73414,385 @@
           "verdict": "required",
           "source": "excluded-paradigm-83941-2-source",
           "reason": "The complete native entry explicitly lists this inflection. Surrounding whitespace is excluded only from the diagnostic token; the ending decomposition is an agent morphological inference."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-넣느냐는",
+      "surface": "넣느냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "넣다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-16110",
+          "reason": "Agent decomposition of the complete native question/topic example."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-붙느냐는",
+      "surface": "붙느냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "붙다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-38833",
+          "reason": "Agent decomposition of the complete native question/topic example."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-먹느냐는",
+      "surface": "먹느냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-먹냐는",
+      "surface": "먹냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "먹다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-크냐는",
+      "surface": "크냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "크다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-좋냐는",
+      "surface": "좋냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-좋으냐는",
+      "surface": "좋으냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-학생이냐는",
+      "surface": "학생이냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "학생",
+            "이다"
+          ],
+          "lemma_kinds": [
+            "nominal",
+            "copula"
+          ],
+          "morphemes": [
+            "냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-넣었느냐는",
+      "surface": "넣었느냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "넣다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "느냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-넣겠느냐는",
+      "surface": "넣겠느냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "넣다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "겠",
+            "느냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-넣으시느냐는",
+      "surface": "넣으시느냐는",
+      "judgments": [
+        {
+          "id": "topic",
+          "lemmas": [
+            "넣다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "느냐",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending",
+            "particle"
+          ],
+          "required_rules": [
+            "particle.quoted_question"
+          ],
+          "verdict": "required",
+          "source": "question-topic-inference",
+          "reason": "Agent structural extension of the two native question/topic contexts and NIKL's functional noun-clause explanation. Existing question/prefinal and lexical-owner licenses remain separate; no contextual sense or register is selected."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-넣느냐은",
+      "surface": "넣느냐은",
+      "judgments": [
+        {
+          "id": "wrong-allomorph",
+          "lemmas": [
+            "넣다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐",
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "source": "question-topic-particle",
+          "reason": "The topic particle uses 는 after a vowel; the question clause ends in 냐. This forbids only the named path, never the surface or hypothetical heads."
+        }
+      ]
+    },
+    {
+      "id": "question-topic-좋으냐은",
+      "surface": "좋으냐은",
+      "judgments": [
+        {
+          "id": "wrong-allomorph",
+          "lemmas": [
+            "좋다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐",
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "source": "question-topic-particle",
+          "reason": "The topic particle uses 는 after a vowel; the question clause ends in 냐. This forbids only the named path, never the surface or hypothetical heads."
         }
       ]
     }

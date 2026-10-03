@@ -1,0 +1,656 @@
+{
+  "schema_version": 1,
+  "scope": "Next COV-018ab source review; no additive-particle rule implemented yet.",
+  "source_url": "https://www.nars.go.kr/fileDownload2.do?doc_id=1LHGA0YTKca&fileName=%EA%B5%AD%ED%9A%8C%EC%9E%85%EB%B2%95%EC%A1%B0%EC%82%AC%EC%B2%98%EC%84%B8%EB%AF%B8%EB%82%98%2820160429%29%EA%B5%AD%ED%9A%8C%EC%99%80+%EC%A0%95%EB%8B%B9%EC%A0%95%EC%B9%98_%EC%9E%90%EB%A3%8C%EC%A7%91.pdf",
+  "source_sha256": "d57b9ca0ac2ad77c9333b04304c5f450a9396e6669f868672c0e79c76f66d787",
+  "event_date": "2016-04-29",
+  "author": "정진민",
+  "paper": "Paper on voter parties and the development of Korean party politics (English paraphrase of the title).",
+  "physical_page": 33,
+  "printed_page": 25,
+  "diagnostic": "내느냐도",
+  "before_word": {
+    "normalized": "내느냐도",
+    "analyses": [
+      {
+        "lemmas": [
+          {
+            "text": "내느냐",
+            "kind": "nominal"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "도",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "particle"
+        ],
+        "unchanged": false
+      },
+      {
+        "lemmas": [
+          {
+            "text": "내느냐",
+            "kind": "adverbial"
+          }
+        ],
+        "morphemes": [
+          {
+            "form": "도",
+            "kind": "particle"
+          }
+        ],
+        "rules": [
+          "particle",
+          "particle.adverbial_focus"
+        ],
+        "unchanged": false
+      },
+      {
+        "lemmas": [
+          {
+            "text": "내느냐도",
+            "kind": "unclassified"
+          }
+        ],
+        "morphemes": [],
+        "rules": [
+          "identity"
+        ],
+        "unchanged": true
+      }
+    ],
+    "dictionary": {
+      "source": "krdict",
+      "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+      "lemmas": [
+        {
+          "lemma": {
+            "text": "내느냐",
+            "kind": "nominal"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "내느냐",
+            "kind": "adverbial"
+          },
+          "entries": []
+        },
+        {
+          "lemma": {
+            "text": "내느냐도",
+            "kind": "unclassified"
+          },
+          "entries": []
+        }
+      ],
+      "readings": [
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        },
+        {
+          "status": "unknown",
+          "lemmas": [
+            {
+              "lemma_index": 0,
+              "status": "unknown",
+              "entries": []
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "particle_entries": [
+    {
+      "id": "krdict:86258",
+      "headword": "도",
+      "homonym": "7",
+      "pos": "조사",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=86258",
+      "level": "없음",
+      "lexical_unit": "단어",
+      "origins": [],
+      "notes": [
+        "체언이나 부사어 또는 연결 어미 ‘-아, -게, -지, -고’ 등의 뒤에 붙여 쓴다."
+      ],
+      "forms": [
+        {
+          "kind": "발음",
+          "written": "",
+          "pronunciations": []
+        }
+      ],
+      "senses": [
+        {
+          "id": "1",
+          "definition": "이미 있는 어떤 것에 다른 것을 더하거나 포함함을 나타내는 조사.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ч",
+              "definition": "нэгэнт байгаа зүйл дээр өөр зүйлийг нэмэх буюу хамруулсныг илэрхийлж буй нөхцөл."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "كلمة ملحقة تبين التضمين أو الإضافة للشيء القائم حالياً"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "助词。表示添加或包括。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "cũng",
+              "definition": "Trợ từ thể hiện sự thêm vào hoặc bao gồm cái khác vào cái nào đó đã có sẵn."
+            },
+            {
+              "language": "타이어",
+              "lemma": "...ด้วย",
+              "definition": "คำชี้ที่แสดงการรวมหรือเพิ่มสิ่งอื่นลงในสิ่งใด ๆ ที่มีอยู่แล้ว"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "juga",
+              "definition": "partikel yang menyatakan menambahkan atau mengikutsertakan sesuatu yang lain pada sesuatu yang sudah ada"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "Частица, указывающая на прибавление или включение чего-либо во что-либо уже имеющееся."
+            },
+            {
+              "language": "영어",
+              "lemma": "do",
+              "definition": "A postpositional particle used to indicate an addition or inclusion of another thing to something that already exists."
+            },
+            {
+              "language": "일본어",
+              "lemma": "も\t",
+              "definition": "既存の物事に他の物事を加えたり含ませたりするという意を表す助詞。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Particule indiquant qu'une chose est ajoutée ou comprise dans une autre qui existe déjà."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "(No hay expresión equivalente)",
+              "definition": "Posposición que añade o incluye algo a cierta cosa ya existente."
+            }
+          ],
+          "examples": [
+            [
+              "냉장고에 사과 말고 딸기도 있다."
+            ],
+            [
+              "그거랑 같이 여기 있는 이것도 먹어 봐."
+            ],
+            [
+              "나는 이 책뿐만 아니라 저 책도 좋아한다."
+            ],
+            [
+              "이 가방 참 예쁘다.",
+              "그 가방이 예쁘긴 한데 나는 이 가방도 예쁘다고 생각해."
+            ]
+          ],
+          "notes": [],
+          "patterns": []
+        },
+        {
+          "id": "2",
+          "definition": "둘 이상의 것을 나열함을 나타내는 조사.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ч",
+              "definition": "хоёроос дээш зүйлийг цувруулан хэлэхийг илэрхийлж буй нөхцөл."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "كلمة ملحقة تستخدم لتعديد الأشياء أو سردها"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "助词。表示同时举出两个以上的事物。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "cũng",
+              "definition": "Trợ từ thể hiện sự liệt kê hai thứ trở lên."
+            },
+            {
+              "language": "타이어",
+              "lemma": "...ด้วย...ด้วย, ทั้ง...ทั้ง...",
+              "definition": "คำชี้ที่แสดงการเรียบเรียงสิ่งที่มีมากกว่าสองสิ่งขึ้นไป"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "juga, serta",
+              "definition": "partikel yang menyatakan mengurutkan dua atau lebih sesuatu"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "Частица, указывающая на перечисление чего-либо в количестве более двух."
+            },
+            {
+              "language": "영어",
+              "lemma": "do",
+              "definition": "A postpositional particle used to list two or more things."
+            },
+            {
+              "language": "일본어",
+              "lemma": "も\t",
+              "definition": "二つ以上の物事を羅列するのに用いる助詞。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Particule servant à énumérer deux ou plusieurs choses."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "(No hay expresión equivalente)",
+              "definition": "Posposición que enumera más de dos cosas."
+            }
+          ],
+          "examples": [
+            [
+              "그곳에는 학생도 있고 회사원도 있었어요."
+            ],
+            [
+              "교정에는 진달래도 피고 개나리도 폈다."
+            ],
+            [
+              "이것도 맛있고 저것도 맛있다."
+            ],
+            [
+              "할아버지께서는 농장에서 돼지도 키우고 소도 키우셨다."
+            ],
+            [
+              "오늘은 학교에서 어땠니?",
+              "오늘만큼은 친구랑 싸우지도 않고 다투지도 않았어요."
+            ]
+          ],
+          "notes": [
+            "주로 '~도 ~도'로 쓴다."
+          ],
+          "patterns": []
+        },
+        {
+          "id": "3",
+          "definition": "어떤 기준이나 기대에 모자라지만 받아들일 수 있음을 나타내는 조사.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ч байсан",
+              "definition": "ямар нэг зүйлийг адил түвшинд байх гэсэн утгыг илэрхийлэх хэллэг"
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "كلمة ملحقة تبين وقوع الفعل أو الخبر على الرغم من الشعور بالمعاناة او النقص أو ان الشيء دون المستوى"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "助词。表示让步。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "cũng",
+              "definition": "Trợ từ thể hiện sự thiếu hụt so với tiêu chuẩn hoặc sự kỳ vọng nào đó nhưng có thể chấp nhận được."
+            },
+            {
+              "language": "타이어",
+              "lemma": "ถึงจะ...ก็ได้, เป็น...ก็ได้, ...ด้วยอีก, แม้จะเป็น...ก็",
+              "definition": "คำชี้ที่แสดงการยอมรับได้แม้ว่าขาดไปจากที่มาตรฐานหรือความคาดหวังใด ๆ"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "pun, juga",
+              "definition": "partikel yang menyatakan dapat diterima walau tidak mencukupi suatu patokan atau harapan"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "Частица, указывающая на возможность принятия чего-либо, несмотря на недостаточное соответствие какому-либо уровню или ожиданиям."
+            },
+            {
+              "language": "영어",
+              "lemma": "do",
+              "definition": "A postpositional particle used to indicate the ability to accept something although it does not reach a standard or expectation."
+            },
+            {
+              "language": "일본어",
+              "lemma": "も。でも\t",
+              "definition": "ある基準や期待を満たしてはいないが、受け入れることはできるという意を表す助詞。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Particule indiquant le fait que l'on puisse accepter une chose même si celle-ci ne satistait pas certains critères ou attentes."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "(No hay expresión equivalente)",
+              "definition": "Posposición que acepta algo a pesar de no alcanzar cierto criterio o expectativa."
+            }
+          ],
+          "examples": [
+            [
+              "아이스크림이 없으면 얼음물도 괜찮아요."
+            ],
+            [
+              "오늘 접수를 못 하신 분들께 내일까지도 기회를 드릴게요."
+            ],
+            [
+              "이것도 괜찮으시다면 좀 드세요."
+            ],
+            [
+              "지수야, 미안한데 이번 주말에 가기로 한 전시회를 못 갈 것 같아. 다음 주말은 어때?",
+              "이번 주말에 시간이 안 나면 다음 주말도 괜찮아."
+            ]
+          ],
+          "notes": [],
+          "patterns": []
+        },
+        {
+          "id": "4",
+          "definition": "극단적인 경우를 들어 다른 경우는 말할 것도 없음을 나타내는 조사.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ч",
+              "definition": "туйлын тохиолдлыг авч үзэн өөр тохиолдолд ярихын ч хэрэггүй болохыг илэрхийлж буй нөхцөл."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "كلمة ملحقة تستخدم لتوضيح الحالة القصوى للشيء دون غيرها"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "助词。举出极端事例。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "(ngay cả, thậm chí) cũng",
+              "definition": "Trợ từ thể hiện việc nêu lên trường hợp mang tính cực đoan, không cần phải nói tới trường hợp khác."
+            },
+            {
+              "language": "타이어",
+              "lemma": "แม้แต่..., แม้แต่จะ...",
+              "definition": "คำชี้ที่แสดงว่าไม่ต้องพูดถึงกรณีอื่นโดยยกกรณีที่สุดขีด"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "saja",
+              "definition": "partikel yang menyatakan tidak dapat mengatakan perihal yang lain dengan mengangkat situasi yang ekstrem"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "Частица, указывающая на крайний случай и на его примере - на бессмысленность говорить о других."
+            },
+            {
+              "language": "영어",
+              "lemma": "do",
+              "definition": "A postpositional particle used when giving an extreme case in order to show that it is obvious in another case."
+            },
+            {
+              "language": "일본어",
+              "lemma": "も。すら。さえ。まで",
+              "definition": "極端な場合を例にあげて、他の場合は言うまでもないという意を表す助詞。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Particule indiquant qu'il ne sert à rien de considérer tout autre cas en évoquant une situation extrême."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "(No hay expresión equivalente)",
+              "definition": "Posposición que indica que es algo innecesario de ser comentado alegando un caso extremo."
+            }
+          ],
+          "examples": [
+            [
+              "이런 기본적인 계산도 못 한단 말인가?"
+            ],
+            [
+              "그 사람이 범인이라는 것은 상상도 할 수 없었다."
+            ],
+            [
+              "지수는 작은 먼지 하나도 안 보일 만큼 깨끗하게 청소를 해 놓았다."
+            ],
+            [
+              "민준 씨가 월급을 안 받을테니 자기를 꼭 좀 써달라고 말했대.",
+              "돈을 못 받아도 이 일을 하겠다고 말했단 말야?"
+            ]
+          ],
+          "notes": [],
+          "patterns": []
+        },
+        {
+          "id": "5",
+          "definition": "일반적이지 않은 경우나 의외의 경우를 강조함을 나타내는 조사.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ч гэсэн",
+              "definition": "ердийн бус, санаснаас өөр тохиолдлыг онцолж буйг илэрхийлдэг нөхцөл."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "كلمة ملحقة تستخدم للتأكيد على خصوصية الحالة أو الموقف وأنها ليست معتادة"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "助词。表示强调不一般或出乎意料。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "cũng, cả",
+              "definition": "Trợ từ thể hiện sự nhấn mạnh trường hợp không bình thường hoặc trường hợp ngoại lệ."
+            },
+            {
+              "language": "타이어",
+              "lemma": "แม้แต่..., แม้แต่...ด้วย ก็..., ...ด้วย ก็...",
+              "definition": "คำชี้ที่แสดงการเน้นย้ำเหตุการณ์ที่ไม่ปกติทั่วไปหรือคาดไม่ถึง"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "bahkan, pun",
+              "definition": "partikel yang menyatakan penekanan kondisi yang tidak umum atau di luar dugaan"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "Частица, акцентирующая внимание на необычном или неожиданном случае."
+            },
+            {
+              "language": "영어",
+              "lemma": "do",
+              "definition": "A postpositional particle used to emphasize an unusual case or unexpected case."
+            },
+            {
+              "language": "일본어",
+              "lemma": "も。すら。さえ。まで",
+              "definition": "一般的でない場合や意外な場合を強調する意を表す助詞。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Particule indiquant le fait d'insister sur un cas inhabituel ou exceptionnel."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "(No hay expresión equivalente)",
+              "definition": "Posposición que enfatiza un caso inusual o inesperado."
+            }
+          ],
+          "examples": [
+            [
+              "영문학이 전공이라면서 이런 유명한 글도 안 읽었어?"
+            ],
+            [
+              "너라면 이 문제를 풀 수 있을 줄 알았는데 너도 못 푸는구나."
+            ],
+            [
+              "네가 네 이미지랑 다르게 이렇게 귀여운 물건도 좋아할 줄은 몰랐어."
+            ],
+            [
+              "모든 일을 꼼꼼하게 챙기는 유민 씨가 이런 중요한 사항을 메모도 안 했단 말이야?"
+            ],
+            [
+              "이 가게에 매일 오면서 이 과자도 안 먹어 봤어?",
+              "응, 난 땅콩 들어간 건 못 먹거든."
+            ]
+          ],
+          "notes": [],
+          "patterns": []
+        },
+        {
+          "id": "6",
+          "definition": "놀라움, 감탄, 실망 등의 감정을 강조함을 나타내는 조사.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "ч",
+              "definition": "гайхах, гайхашрах, урам хугарах зэрэг сэтгэлийн хөдөлгөөнийг онцолж буйг илэрхийлдэг нөхцөл."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "كلمة ملحقة تستخدم للتأكيد على مشاعر الدهشة، التعجب، خيبة الأمل"
+            },
+            {
+              "language": "중국어",
+              "lemma": "(无对应词汇)",
+              "definition": "助词。表示强调惊讶、感叹、失望。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "cũng",
+              "definition": "Trợ từ thể hiện sự nhấn mạnh những cảm xúc như ngạc nhiên, cảm thán, thất vọng..."
+            },
+            {
+              "language": "타이어",
+              "lemma": "ก็...ด้วยแหละ, ก็...ด้วย",
+              "definition": "คำชี้ที่แสดงการเน้นย้ำความรู้สึกของการตกใจ การอุทาน ความผิดหวัง เป็นต้น"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "(Tiada Penjelasan Arti)",
+              "definition": "partikel yang menyatakan penekanan perasaan seperti keterkejutan, seruan, kekecewaan, dsb"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "(нет эквивалента)",
+              "definition": "Частица, подчёркивающая такие эмоции, как изумление, восхищение, разочарование и т.п."
+            },
+            {
+              "language": "영어",
+              "lemma": "do",
+              "definition": "A postpositional particle used to emphasize emotions such as a surprise, exclamation, disappointment, etc."
+            },
+            {
+              "language": "일본어",
+              "lemma": "も",
+              "definition": "驚き・感嘆・失望などの感情を強調するという意を表す助詞。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "(Pas d'expression équivalente)",
+              "definition": "Particule indiquant le fait d'insister sur un sentiment d'étonnement, d'admiration ou de déception."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "(No hay expresión equivalente)",
+              "definition": "Posposición que enfatiza sentimientos como asombro, admiración, desilusión, etc."
+            }
+          ],
+          "examples": [
+            [
+              "그 많은 일을 이렇게 빨리도 끝내다니!"
+            ],
+            [
+              "너는 정말 영리하기도 하구나."
+            ],
+            [
+              "한복의 색이 참 곱기도 하다."
+            ],
+            [
+              "떠난 사람을 다시는 만날 수 없다니 슬프기도 하지."
+            ],
+            [
+              "이것 보세요. 일식이 일어나고 있어요.",
+              "정말이네요? 신기하기도 해라!"
+            ]
+          ],
+          "notes": [],
+          "patterns": []
+        }
+      ]
+    }
+  ],
+  "cli": "/tmp/klem-question-topic-runtime/klem",
+  "cli_sha256": "7c71bb1148de45ff0e6e80f4e672ef737bafbac46deae56456ed13df39e72937",
+  "finding": "Modern first-party usage has 내느냐도 across a PDF line boundary (내 / 느냐도). This is an attestation, not an explicit linguistic ruling or blanket particle license. The original line break is retained; reconstruction into a diagnostic is an agent inference.",
+  "page_text_sha256": "aae48272adf06042e7fd7d44b78cf60793ba31cf5a3e761cfb6401a0f9bd0f64",
+  "target_path": {
+    "lemmas": [
+      {
+        "text": "내다",
+        "kind": "predicate"
+      }
+    ],
+    "morphemes": [
+      {
+        "form": "느냐",
+        "kind": "ending"
+      },
+      {
+        "form": "도",
+        "kind": "particle"
+      }
+    ]
+  },
+  "target_path_present_before": false,
+  "review_status": "Attestation preflight for further COV-018ab work. No additive-particle grammar judgment or new rule is implemented in the topic batch.",
+  "complete_attested_sentence": "선거를 통한 집권도 중요하지만 집권 이후 국정운영을\n얼마나 효율적으로 수행함으로써 국민들이 체감할 수 있는 가시적인 성과를 내\n느냐도 매우 중요하다.",
+  "preceding_context_summary": "The preceding sentence describes a party that contributes to effective governing after an election.",
+  "nix_protocol_parity_confirmed": true
+}

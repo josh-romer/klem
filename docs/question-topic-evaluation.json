@@ -1,0 +1,1459 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-018ac",
+  "parent": "COV-018ab",
+  "reviewed": "2026-10-03",
+  "before_revision": "b37eb3777e9f2d11d56451f8f7fca2ec4ea00a44",
+  "scope": "Add a separate topic-particle interpretation after reviewed question clauses. No contextual interpretation, prefinal generalization, native repair or broad particle license.",
+  "source_attestations": [
+    {
+      "id": "question-source-5adc9c97ee566aac8416",
+      "entry_id": "krdict:16110",
+      "sense": "6",
+      "example_group": 5,
+      "line_index": 0,
+      "character_span": [
+        15,
+        19
+      ],
+      "surface": "넣느냐는",
+      "complete_example_group": [
+        "잡지에서 사진을 어느 면에 넣느냐는 매우 어렵고도 중요한 문제이다."
+      ],
+      "before_word": {
+        "normalized": "넣느냐는",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐는",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냐다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느냘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.adnominal_expression",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "넣다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "느냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "넣느냐",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냐",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냐느",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냐느",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냐느다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냐는",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냐늘다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냐늫다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냐다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느냘다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣느다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣늘다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣늫다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "넣다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:64509",
+                  "headword": "넣다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "hieut": {
+                    "regular": [
+                      "넣으니"
+                    ],
+                    "irregular": []
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:64509",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "discovery_classification": "bundled-quoted-question-expression"
+    },
+    {
+      "id": "question-source-d63fb44298f14166d7b3",
+      "entry_id": "krdict:38833",
+      "sense": "1",
+      "example_group": 3,
+      "line_index": 0,
+      "character_span": [
+        13,
+        17
+      ],
+      "surface": "붙느냐는",
+      "complete_example_group": [
+        "그가 시험에 붙느냐 못 붙느냐는 오직 자신이 노력할 나름이다."
+      ],
+      "before_word": {
+        "normalized": "붙느냐는",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.adverbial_focus"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐느",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐느",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐는",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냐다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느냘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙느다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.eu",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙늘다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙늫다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "으냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "ending.adnominal_expression",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          },
+          {
+            "lemmas": [
+              {
+                "text": "붙다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "느냐는",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.regular",
+              "ending",
+              "ending.adnominal_expression"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "붙느냐",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냐",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냐느",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냐느",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냐느다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냐는",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냐늘다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냐늫다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냐다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느냘다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙느다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙늘다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙늫다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "붙다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:74181",
+                  "headword": "붙다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:74181",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "discovery_classification": "bundled-quoted-question-expression"
+    }
+  ],
+  "primary_review": {
+    "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&qna_seq=336008",
+    "answer_date": "2026-09-21",
+    "html_sha256": "5a7a1bec951ccc5ee17bd9d38c7ff2705ae8cc091df72fb0508cb7a4fc1d8867",
+    "finding": "The actual answer treats the entire question clause as functioning as a noun clause followed by subject 가. Earlier conflicting answers are quoted in the question; the final answer is separate. This supports the structural inference, not a topic-specific direct ruling."
+  },
+  "historical_review": {
+    "url": "https://www.korean.go.kr/nkview/nklife/1995_3/5_2.html",
+    "finding": "The article reviews 1948/1957 grammar and lists 느냐는/느냐도/느냐부터. Its historical classification is not imported and does not license additional modern particle rules in this patch."
+  },
+  "inference": "Uniform question/topic composition is an agent inference from the two modern native contexts and the functional noun-clause explanation, not a direct NIKL ruling about every particle or prefinal.",
+  "counts": {
+    "diagnostic_surfaces": 140,
+    "cli_word_responses": 420,
+    "word_api_responses": 140,
+    "source_context_responses": 4,
+    "full_native_entries": 15,
+    "new_raw_paths": 421,
+    "judged_new_paths": 11,
+    "unjudged_new_paths": 410
+  },
+  "ledger": {
+    "previous": {
+      "cases": 12682,
+      "sources": 1591,
+      "case_objects_sha256": "6a11d8f383dccbfce9fb54c724f1452ba9f07c7bbd6aad211246d91ffa6ed985",
+      "file_sha256": "aca7d175812672fb1378d25af91eeb56da677146df3b76c5ee42631b295d8c13"
+    },
+    "current_cases": 12695,
+    "required": 9298,
+    "forbidden": 3411,
+    "all_previous_objects_preserved": true
+  },
+  "gates": {
+    "targeted": {
+      "status": "passed",
+      "path": "/tmp/klem-question-topic-targeted-final.log",
+      "sha256": "12aed5b0f0b2528f3204e098d7029f218ed8e0afcf2f73ba8136c2fda232cf58"
+    },
+    "full_cargo_before_final_policy_assertions": {
+      "status": "passed",
+      "path": "/tmp/klem-question-topic-cargo.log",
+      "sha256": "a23a8fb36bf338b155ad666c60bacf5c1b5cbc51a217356610cf7302320f2eff"
+    },
+    "format": {
+      "status": "passed",
+      "path": "/tmp/klem-question-topic-fmt-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "clippy": {
+      "status": "passed",
+      "path": "/tmp/klem-question-topic-clippy-final.log",
+      "sha256": "bd8694efad5b16c642254f13090615d9776fece4a5a3b4800202efcfbce7cf8a"
+    },
+    "inventory_unit": {
+      "status": "passed",
+      "path": "/tmp/klem-question-topic-inventory-unit.log",
+      "sha256": "b88294b8d138fbc271cecda9651730cdfd8d54c22df35cd450afce2dcd4cb8e6"
+    },
+    "browser_cohort": {
+      "status": "passed",
+      "path": "/tmp/klem-question-topic-browser.log",
+      "sha256": "afafd4e4a710dbcf89217e74693f184d435080d53326a42fac4ce74eae14560a"
+    },
+    "nix": {
+      "status": "passed",
+      "host": "x86_64-linux",
+      "checks": 3,
+      "release_tests": 800,
+      "log": "/tmp/klem-question-topic-flake.log",
+      "sha256": "c28d69924dce05b5c94d4a29a01f3b39685ad0bdadcc580ec50c89fbfeaebf5a",
+      "other_platforms": "unevaluated"
+    },
+    "packaged_browser_cohort": {
+      "status": "passed",
+      "submissions": 6,
+      "words": 17,
+      "filters": 3,
+      "unicode_forms": 2,
+      "log": "/tmp/klem-question-topic-browser-packaged.log",
+      "sha256": "1e06492f8bbbe9bb969945abe6304bbb9ea2a1bb84e2e4cb87d56e4b9d2408a6"
+    }
+  },
+  "broad": {
+    "path": "docs/question-topic-observations.json",
+    "sha256": "1596f1a025ce61a7b6ea87a9a34f9e770ed64a95dbb72111843063ec39ec4e10",
+    "streams": 8,
+    "records": 1128312,
+    "new_paths": 1100,
+    "distinct_surfaces": 151,
+    "all_five_novel_modes_byte_identical": true,
+    "topic_shape_counts": {
+      "plain": 635,
+      "existing_contraction_composition": 458,
+      "existing_polite_particle_composition": 7
+    },
+    "manual_and_nix_release_streams_byte_identical": true,
+    "cli": "/nix/store/fbbnwk3ndh2pi4nxj4mibmrzqw3m791a-klem-0.1.0/bin/klem",
+    "cli_sha256": "73cba58abdd81349432886fdf00b34509918dfe9d778a6f459707573e25b18a7",
+    "log": "/tmp/klem-question-topic-broad-packaged.log",
+    "log_sha256": "81f61a1e48bc80bafa0cd855b851b49ae4e8cf9ce1350074c00e9fa9ea0d8049"
+  },
+  "runtime": {
+    "path": "docs/question-topic-runtime.json.gz",
+    "sha256": "f379d2e4d3b22cb81d94bc8d715a214b73b4835a1eb618716a0461d2ebc22176",
+    "cli_sha256": "7c71bb1148de45ff0e6e80f4e672ef737bafbac46deae56456ed13df39e72937",
+    "server_sha256": "f6ec3f24c16a173a23054f1752bbb6f6daab7e809410db8fe9214df478102304",
+    "assets": "/nix/store/njkmbfdj1brjb4mlllwv1vqqynn694bp-klem-web-assets-0.1.0/share/klem-web"
+  },
+  "packaged": {
+    "status": "passed",
+    "path": "docs/question-topic-packaged.json.gz",
+    "sha256": "7dde5afb9fe5aadf9e3f837d827095762da781fe8af3498b27300f8fc6cf55f8",
+    "all_recorded_words_paths_components_sources_and_contexts_equal": true,
+    "counts": {
+      "diagnostic_surfaces": 140,
+      "cli_word_responses": 420,
+      "word_api_responses": 140,
+      "source_context_responses": 4,
+      "full_native_entries": 15,
+      "new_raw_paths": 421,
+      "judged_new_paths": 11,
+      "unjudged_new_paths": 410
+    }
+  },
+  "preview": {
+    "status": "passed",
+    "url": "http://127.0.0.1:8081",
+    "exec_session": 8882,
+    "identity": {
+      "pid": 252618,
+      "port": "8081",
+      "exe": "/nix/store/fbbnwk3ndh2pi4nxj4mibmrzqw3m791a-klem-0.1.0/bin/klem-web",
+      "cwd": "/home/josh/projects/klem",
+      "start_ticks": 9367329,
+      "args": [
+        "/nix/store/fbbnwk3ndh2pi4nxj4mibmrzqw3m791a-klem-0.1.0/bin/klem-web",
+        "--assets",
+        "/nix/store/njkmbfdj1brjb4mlllwv1vqqynn694bp-klem-web-assets-0.1.0/share/klem-web",
+        "--port",
+        "8081",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ]
+    },
+    "path": "docs/question-topic-preview.json.gz",
+    "sha256": "7dde5afb9fe5aadf9e3f837d827095762da781fe8af3498b27300f8fc6cf55f8",
+    "all_recorded_protocol_fields_equal": true
+  },
+  "full_browser": {
+    "status": "passed",
+    "log": "/tmp/klem-question-topic-browser-full.log",
+    "sha256": "cf94a284c40b052c02baf4603323ca26850e1dba200e79cb92581ea619ba0dd5",
+    "script": "web/tests/browser.mjs",
+    "cli": "/tmp/klem-question-topic-runtime/klem",
+    "server": "target/debug/klem-web",
+    "server_sha256": "332ae84d2b86a2c3457c6407b246847f826156802327dec11c054ae5d6079745",
+    "assets": "web/dist",
+    "asset_bytes_match_immutable_package": true,
+    "scope": "Full existing browser suite with current debug server and immutable release CLI. The finite new topic cohort separately uses the immutable release server/asset package."
+  },
+  "remaining": [
+    "Further question-clause particles",
+    "Broader prefinal licenses",
+    "Contextual senses/register",
+    "Independent Korean-language review"
+  ],
+  "source_artifacts": {
+    "tests/question_topic.rs": "63b9d6932bf4015d440db15f3d719472692ab512238bf3413dcdf8143e0f29a7",
+    "tests/fixtures/question-topic-sources.json": "7e09d51e5156fa7e0a65bd6964dde0b7dab660c8d35548324278b63db9bcc189",
+    "tests/fixtures/krdict-question-topic.json": "8c01ba7b5dc32f73d6d97355a907f7eadfb43483be0ced444a3988f13111100b",
+    "tools/question_topic_audit.py": "4eb6af9915c6488c26c1637e21bb18ca95df3e9209166f402e22e0b46cde0902",
+    "tools/question_topic_queue.py": "7531a338f5c4b65bebaa4db8333debdb7b51d186b32a125e8b2fec86d16104f2",
+    "tools/question_topic_compare.py": "9d09a567a10acdda20e2656d6b6662d55a42c4b498f747a1f420fa74b1e5eaac",
+    "tools/question_topic_runtime.py": "5a1dafad73bf319249f96ffba9de1620ea5edc706daa7b9bef5e91324b38610f",
+    "web/tests/question-topic.mjs": "c11e1dab099265ae7bc50feb572f0d46f23aa4a4a7f63164b8d5438072a585d3",
+    "docs/question-topic-corpora.json": "ff8487cb0e454d518fcf5f0e5ec7902a499db87253cde6d95c16a6be5bc89165",
+    "docs/question-topic-review-queue.json": "10799df784ca791aace509bf8164e6321f28596ec36ece316f0819bdddd0df08"
+  },
+  "nix_app_entrypoint": {
+    "status": "passed",
+    "app": "/nix/store/rq6ysj4mbbkf5gcm8v8rqry60k0arxh9-klem-web/bin/klem-web",
+    "cli": "/nix/store/fbbnwk3ndh2pi4nxj4mibmrzqw3m791a-klem-0.1.0/bin/klem",
+    "index_matches_packaged_assets": true,
+    "topic_path_present": true,
+    "cli_api_parity": true,
+    "record": "/tmp/klem-question-topic-app-smoke.json",
+    "sha256": "c51490c36500eefb4deb889f8125bb051820b5fd11326b6bf4cc615fa0a41d85"
+  },
+  "verified_package": {
+    "klem": "/nix/store/fbbnwk3ndh2pi4nxj4mibmrzqw3m791a-klem-0.1.0",
+    "web": "/nix/store/rq6ysj4mbbkf5gcm8v8rqry60k0arxh9-klem-web",
+    "cli_sha256": "73cba58abdd81349432886fdf00b34509918dfe9d778a6f459707573e25b18a7",
+    "server_sha256": "b6390c17464e07ebf0d0e523275efc67ae40e0fce54fb4846778896a30d7118c"
+  },
+  "preservation": {
+    "original_cases": 12682,
+    "all_original_case_and_source_objects_unchanged": true,
+    "all_old_fixtures_gold_and_baselines_unchanged": true
+  },
+  "corrected_verification_setup": {
+    "shape_classification": "Initially grouped all 465 non-plain broad paths as contractions. Inspecting the actual surfaces and rule/component records distinguishes 458 terminal 냔 contractions from seven terminal 는요 paths; the generator now reproduces that distinction. No production or candidate record changed."
+  }
+}

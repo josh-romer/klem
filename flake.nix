@@ -30,6 +30,7 @@
                 ./src
                 ./tests
                 ./docs/adverb-root-inventory.json
+                ./docs/question-case-source-preflight.json
                 ./examples
                 ./tools/corpus.rs
                 ./tools/validity.rs
@@ -112,8 +113,11 @@
                 ./tools/review_inventory.py ./tools/test_review_inventory.py
                 ./tools/excluded_paradigm_audit.py
                 ./tools/excluded_paradigm_queue.py
+                ./tools/question_topic_audit.py
+                ./tools/question_topic_queue.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
+                ./web/tests/question-topic.mjs
               ];
             };
           } ''
@@ -122,6 +126,8 @@
             python -m unittest discover -s tools -p 'test_review_inventory.py'
             python tools/excluded_paradigm_audit.py --verify
             python tools/excluded_paradigm_queue.py --verify
+            python tools/question_topic_audit.py --verify
+            python tools/question_topic_queue.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

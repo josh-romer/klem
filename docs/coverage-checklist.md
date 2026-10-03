@@ -2002,8 +2002,10 @@ review remains open under the completion review below.
   reviewed 에/의/와/가/를/보다, including existing outer case chains.
   No nominalizer is invented. [The source preflight](question-case-source-preflight.json)
   preserves an exhaustive pinned-native-example scan: 221 hits from 146 complete
-  entries, including 54 actual question/case observations, 165 quoted-ending
-  bundles, one existing concessive question and the false positive 케냐에.
+  entries, including 54 actual question/case observations, 165 observations
+  originally classified as quoted-ending bundles, one existing concessive
+  question and the false positive 케냐에. The subsequent COV-018ac review
+  distinguishes two topic-bearing contexts without rewriting that frozen scan.
   All 54 selected native boundaries lacked an exact path before this change.
   Uniform application across the three question forms is a structural inference;
   own POS, prefinal and particle-allomorph licenses remain separate.
@@ -2034,6 +2036,47 @@ review remains open under the completion review below.
   other architectures are unevaluated.
   Other following particles, quoted-endings, contextual senses/register,
   broader prefinal licenses and independent Korean-language review remain open.
+
+- [x] **COV-018ac — Plain question-clause topic alternatives.**
+  Complete native examples
+  for 넣느냐는 (면, 16110) and 붙느냐는 (나름, 38833) require a separate
+  question ending plus topic 는. The bundled 느냐는 interpretation remains.
+  [The source audit](../tests/fixtures/question-topic-sources.json) preserves
+  all 165 original bundle observations and all 15 selected complete native
+  entries, with English projections used only for offline importer tests.
+  NIKL [336008](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=73&qna_seq=336008)
+  explains a question clause's noun-clause function before subject 가;
+  extending that structure to topic 는 and the existing question/prefinal
+  classes is an agent inference corroborated by the two native contexts.
+  The 1995 review of 1948/1957 grammar lists further combinations but does
+  not license new modern 도/부터 rules here. No nominalizer is inserted.
+  [Regressions](../tests/question_topic.rs) cover eleven required named paths,
+  two wrong-allomorph exclusions, own POS/copula/prefinal checks, unknown
+  owners, retained quoted bundles, NFD, components, caches and both filters.
+  [The individual queue](question-topic-review-queue.json) records 421 new
+  diagnostic paths: eleven required structures and 410 structurally unjudged
+  alternatives. Every contextual interpretation remains unjudged.
+  [The full comparison](question-topic-observations.json) covers 1,128,312
+  records in eight modes: 151/125/123 changed candidate records, 1,100
+  distinct new paths (635 plain, 458 using the existing ㄴ particle
+  contraction, seven with existing outer 요). Contracted and polite-topic
+  combinations remain unjudged hypotheses; register and independent review
+  are open. There are no removed, modified or reordered prior candidates or
+  assessments, and all five novel streams unchanged byte-for-byte.
+  [Four held-out corpus reports](question-topic-corpora.json) preserve every
+  original gold-row result. The 12,682 prior validity cases are unchanged;
+  thirteen append-only cases bring the ledger to 12,695 cases with 9,298
+  required and 3,411 forbidden judgments. All 800 current Nix release tests,
+  the three host flake checks, inventory audits, Clippy, format and full
+  existing browser suite pass. The new browser cohort checks both Unicode
+  forms, all filters, raw indices, separate topic/bundle choices, sources,
+  exports and desktop/mobile on the Nix preview. Packaged and refreshed
+  preview CLI/API records, components, all fifteen full entries and the
+  two source contexts agree. The Nix web app entry point serves the packaged
+  assets and new topic path. [Evaluation](question-topic-evaluation.json)
+  records the scope and immutable packages. The parent COV-018ab remains open for other
+  particles, broader prefinals, contextual senses/register and independent
+  Korean-language review.
 
 - [ ] **COV-019 — Auxiliary inventory and internal particles.** **Partial:
   COV-019a implements the structural connector catalog and bounded internal

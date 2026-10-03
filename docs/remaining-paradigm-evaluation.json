@@ -1,0 +1,1655 @@
+{
+  "schema_version": 1,
+  "checklist": [
+    "COV-021p"
+  ],
+  "status": "Source preflight, three scoped regressions, CLI modes, format/lint and all three host Nix checks passed. COV-021p and the full coverage-checklist goal remain open.",
+  "before_revision": "4983c72aa41a07c42fb35c908a8d616782f08c16",
+  "source_preflight": {
+    "path": "docs/remaining-paradigm-source-preflight.json",
+    "sha256": "17a6aab02cf1fa89825b6c26954b82bc9f4b38f959e0aa7d3a27aecdf6aa9340"
+  },
+  "observations": 22,
+  "complete_native_entries": 18,
+  "surfaces": 96,
+  "reviewed_source_head_discrepancies": 1,
+  "unreviewed_observations": 21,
+  "original_unrecovered_count_unchanged": 22,
+  "judgments": [
+    {
+      "case": "remaining-paradigm-seotureun-long-required",
+      "mode": "raw",
+      "indices": [
+        2
+      ],
+      "verdict": "required"
+    },
+    {
+      "case": "remaining-paradigm-seotureun-long-required",
+      "mode": "headword",
+      "indices": [
+        0
+      ],
+      "verdict": "required"
+    },
+    {
+      "case": "remaining-paradigm-seotureun-long-required",
+      "mode": "compatible",
+      "indices": [
+        0
+      ],
+      "verdict": "required"
+    },
+    {
+      "case": "remaining-paradigm-seotun-short-required",
+      "mode": "raw",
+      "indices": [
+        4
+      ],
+      "verdict": "required"
+    },
+    {
+      "case": "remaining-paradigm-seotun-long-forbidden",
+      "mode": "raw",
+      "indices": [],
+      "verdict": "forbidden"
+    },
+    {
+      "case": "remaining-paradigm-seotun-short-required",
+      "mode": "headword",
+      "indices": [
+        0
+      ],
+      "verdict": "required"
+    },
+    {
+      "case": "remaining-paradigm-seotun-long-forbidden",
+      "mode": "headword",
+      "indices": [],
+      "verdict": "forbidden"
+    },
+    {
+      "case": "remaining-paradigm-seotun-short-required",
+      "mode": "compatible",
+      "indices": [
+        0
+      ],
+      "verdict": "required"
+    },
+    {
+      "case": "remaining-paradigm-seotun-long-forbidden",
+      "mode": "compatible",
+      "indices": [],
+      "verdict": "forbidden"
+    }
+  ],
+  "complete_cli_outputs": {
+    "서투른": {
+      "raw": {
+        "normalized": "서투른",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "서투르",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서투르",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서투르다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서투른",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서투를다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서투릏다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "서투르",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "서투르",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "서투르다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:29043",
+                  "headword": "서투르다",
+                  "homonym": "0",
+                  "pos": "형용사",
+                  "pos_compatibility": "compatible",
+                  "reu": {
+                    "eu_deletion": [],
+                    "rieul_doubling": [
+                      "서툴러"
+                    ],
+                    "reo": [],
+                    "uncontracted": []
+                  }
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "서투른",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "서투를다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "서투릏다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:29043",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "headword": {
+        "normalized": "서투른",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "서투르다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "서투르다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:29043",
+                  "headword": "서투르다",
+                  "homonym": "0",
+                  "pos": "형용사",
+                  "pos_compatibility": "compatible",
+                  "reu": {
+                    "eu_deletion": [],
+                    "rieul_doubling": [
+                      "서툴러"
+                    ],
+                    "reo": [],
+                    "uncontracted": []
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:29043",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "compatible": {
+        "normalized": "서투른",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "서투르다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "서투르다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:29043",
+                  "headword": "서투르다",
+                  "homonym": "0",
+                  "pos": "형용사",
+                  "pos_compatibility": "compatible",
+                  "reu": {
+                    "eu_deletion": [],
+                    "rieul_doubling": [
+                      "서툴러"
+                    ],
+                    "reo": [],
+                    "uncontracted": []
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:29043",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "서툰": {
+      "raw": {
+        "normalized": "서툰",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "서투",
+                "kind": "nominal"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서투",
+                "kind": "adverbial"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "는",
+                "kind": "particle"
+              }
+            ],
+            "rules": [
+              "particle",
+              "particle.contraction.n"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서투다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "boundary.attached",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서툰",
+                "kind": "unclassified"
+              }
+            ],
+            "morphemes": [],
+            "rules": [
+              "identity"
+            ],
+            "unchanged": true
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서툴다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          },
+          {
+            "lemmas": [
+              {
+                "text": "서퉇다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "ending",
+              "irregular.hieut"
+            ],
+            "unchanged": false,
+            "spelling_paths": [
+              [
+                {
+                  "morpheme_index": 0,
+                  "class": "hieut_irregular"
+                }
+              ]
+            ]
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "서투",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "서투",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "서투다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "서툰",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "서툴다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:29045",
+                  "headword": "서툴다",
+                  "homonym": "0",
+                  "pos": "형용사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "서퉇다",
+                "kind": "predicate"
+              },
+              "entries": []
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:29045",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "headword": {
+        "normalized": "서툰",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "서툴다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "서툴다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:29045",
+                  "headword": "서툴다",
+                  "homonym": "0",
+                  "pos": "형용사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:29045",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "compatible": {
+        "normalized": "서툰",
+        "analyses": [
+          {
+            "lemmas": [
+              {
+                "text": "서툴다",
+                "kind": "predicate"
+              }
+            ],
+            "morphemes": [
+              {
+                "form": "은",
+                "kind": "ending"
+              }
+            ],
+            "rules": [
+              "deletion.rieul",
+              "ending"
+            ],
+            "unchanged": false
+          }
+        ],
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "서툴다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:29045",
+                  "headword": "서툴다",
+                  "homonym": "0",
+                  "pos": "형용사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:29045",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "production_source_unchanged": {
+    "src/bin/klem-web/grammar_labels.rs": "4f6c7676220a6d4e1d80414c73bb1f7a7c4b1253dadfc72870ffc5bba852d35f",
+    "src/bin/klem-web.rs": "7a83c9629c78251ce4c29493ef550ff73a3c08463a89f606c1e5772bf5d90804",
+    "src/breakdown.rs": "7fa02aed414bcfc6d6bac02e2c897ec68597d259038f34b7b5a1b3d3a596fa4c",
+    "src/dictionary/attachment.rs": "4aaad71699baf912d2c9fb19feb6ab28e9ce1a41eb655a427f9a947c11c9f0c9",
+    "src/dictionary/import.rs": "f877ad28736093de1a53365a3335678fd53daaad57888f67a2a67dd05345b05b",
+    "src/dictionary.rs": "a4cfbb0f5ddd6dd8750595c91b96344ff8c2ac2a4926b818ed3703024d264c83",
+    "src/dictionary_cli.rs": "2a9351e21d7fe06125a68240f6bcd8e0aba18107d17f18458c8ee928eb135c68",
+    "src/engine.rs": "2a2f1684255782076ee1f2fdbc40ddfac9745ea98b7f130d583aba3b83664dc3",
+    "src/grammar.rs": "490d02fef611992976d034a31afe34906e9ecd5fcb510b2cd592708898aa752e",
+    "src/hangul.rs": "615c24455744054bc6b2bf42dc28f8c0f7bcde0e252e0b3821423fe962e1f84d",
+    "src/lib.rs": "237fd3edad0222f85a04f202c75a3ccad47138b047b09cf58a20dadd513616da",
+    "src/main.rs": "bb849ac17d169c80a0f2298f6c04edc5f983cd6c95473fa123d6801020829bb7",
+    "src/pronunciation.rs": "c3133e56881c4e9d02f741e36ef5966166d04e8f1d624238a00c085b36c7ce0b",
+    "src/spacing.rs": "366ba96d730523e5d993a7b0545228ca9188f220fee3ab5dedbbdb7bf6b2a4a2",
+    "src/text.rs": "5ef733732a66f033e791826595c9ec50e46b67435e5c002b4594adff1e34d073"
+  },
+  "gates": {
+    "source_integrity": {
+      "status": "passed",
+      "log_sha256": "6c4707c8876292683c80ab1c4d5d65f673a6f8ee0011fffddb0ce49cd7e5e338"
+    },
+    "validity": {
+      "status": "passed",
+      "tests": 4,
+      "required": 9202,
+      "forbidden": 3387,
+      "required_missing": 0,
+      "forbidden_emitted": 0,
+      "log_sha256": "0e20fd9a8b4ace4c8de2b0ee5813cb9a9502d0508078ec53ea62925504445118"
+    },
+    "format": "passed",
+    "clippy": {
+      "status": "passed",
+      "log_sha256": "8629377a836c0869473961c346bfcb06aa665892d2dff188743e2b3f764d3de0"
+    },
+    "cli_dictionary_modes": {
+      "status": "passed",
+      "checks": 9
+    },
+    "nix": {
+      "status": "passed",
+      "host_system": "x86_64-linux",
+      "flake_checks": 3,
+      "rust_tests": 778,
+      "inventory_unit_tests": 9,
+      "log_sha256": "ef54000f4234110c60ef5ba864872150dffc0ed04ab94c0460a01a9f4d470502",
+      "other_architectures": "Not checked"
+    },
+    "packaged_runtime": {
+      "status": "passed",
+      "package": "/nix/store/xk4gq13wl5z178f053jj0piwq64girbk-klem-0.1.0",
+      "wrapper": "/nix/store/xi8ylw0l1v176k3fkaiyysa846s7rar5-klem-web",
+      "cli_sha256": "47796160fc214965841eaa197701203e9ca49236935770381f2ebfa05a6cbcac",
+      "server_sha256": "2060569fef4533b4816a602d89169bddad2a33300164d7ee8742838453d3084f",
+      "cli_and_server_byte_identical_to_bounded_feature_tested_runtime": true,
+      "preview": "http://127.0.0.1:8081",
+      "preview_binary_unchanged": true
+    },
+    "live_preview": {
+      "status": "passed",
+      "url": "http://127.0.0.1:8081",
+      "process_identity": {
+        "pid": 3418191,
+        "uid": "1000",
+        "exe": "/nix/store/bmai4ihgab8s7qsz37f35rgjdir7n9rk-klem-0.1.0/bin/klem-web",
+        "args": [
+          "/nix/store/bmai4ihgab8s7qsz37f35rgjdir7n9rk-klem-0.1.0/bin/klem-web",
+          "--assets",
+          "/nix/store/786g6fqbwdhxv43fvqbx0qzcldb5d8db-klem-web-assets-0.1.0/share/klem-web",
+          "--port",
+          "8081",
+          "--dictionary",
+          "data/dictionaries/krdict/krdict.db"
+        ],
+        "cwd": "/home/josh/projects/klem",
+        "start_ticks": "7032327",
+        "server_sha256": "2060569fef4533b4816a602d89169bddad2a33300164d7ee8742838453d3084f",
+        "exec_session": 61372
+      },
+      "actual_api": {
+        "서툰": {
+          "breakdowns": [
+            [
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ]
+            ]
+          ],
+          "elapsed_ms": 0.601352,
+          "glosses": {
+            "krdict:29045": "clumsy; unskilled"
+          },
+          "grammar": {
+            "-은": [
+              {
+                "headword": "-은",
+                "homonym": "1",
+                "id": "krdict:80344",
+                "pos": "어미"
+              },
+              {
+                "headword": "-ㄴ",
+                "homonym": "3",
+                "id": "krdict:78634",
+                "pos": "어미"
+              }
+            ],
+            "는": [
+              {
+                "headword": "는",
+                "homonym": "0",
+                "id": "krdict:85851",
+                "pos": "조사"
+              }
+            ]
+          },
+          "records": [
+            {
+              "analysis": {
+                "analyses": [
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "nominal",
+                        "text": "서투"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "는",
+                        "kind": "particle"
+                      }
+                    ],
+                    "rules": [
+                      "particle",
+                      "particle.contraction.n"
+                    ],
+                    "unchanged": false
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "adverbial",
+                        "text": "서투"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "는",
+                        "kind": "particle"
+                      }
+                    ],
+                    "rules": [
+                      "particle",
+                      "particle.contraction.n"
+                    ],
+                    "unchanged": false
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "predicate",
+                        "text": "서투다"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "은",
+                        "kind": "ending"
+                      }
+                    ],
+                    "rules": [
+                      "boundary.attached",
+                      "ending"
+                    ],
+                    "unchanged": false
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "unclassified",
+                        "text": "서툰"
+                      }
+                    ],
+                    "morphemes": [],
+                    "rules": [
+                      "identity"
+                    ],
+                    "unchanged": true
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "predicate",
+                        "text": "서툴다"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "은",
+                        "kind": "ending"
+                      }
+                    ],
+                    "rules": [
+                      "deletion.rieul",
+                      "ending"
+                    ],
+                    "unchanged": false
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "predicate",
+                        "text": "서퉇다"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "은",
+                        "kind": "ending"
+                      }
+                    ],
+                    "rules": [
+                      "ending",
+                      "irregular.hieut"
+                    ],
+                    "spelling_paths": [
+                      [
+                        {
+                          "class": "hieut_irregular",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    ],
+                    "unchanged": false
+                  }
+                ],
+                "normalized": "서툰"
+              },
+              "dictionary": {
+                "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+                "lemmas": [
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "nominal",
+                      "text": "서투"
+                    }
+                  },
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "adverbial",
+                      "text": "서투"
+                    }
+                  },
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "predicate",
+                      "text": "서투다"
+                    }
+                  },
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "unclassified",
+                      "text": "서툰"
+                    }
+                  },
+                  {
+                    "entries": [
+                      {
+                        "headword": "서툴다",
+                        "homonym": "0",
+                        "id": "krdict:29045",
+                        "pos": "형용사",
+                        "pos_compatibility": "compatible"
+                      }
+                    ],
+                    "lemma": {
+                      "kind": "predicate",
+                      "text": "서툴다"
+                    }
+                  },
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "predicate",
+                      "text": "서퉇다"
+                    }
+                  }
+                ],
+                "readings": [
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [
+                          {
+                            "conflicts": [],
+                            "id": "krdict:29045",
+                            "status": "compatible"
+                          }
+                        ],
+                        "lemma_index": 0,
+                        "status": "compatible"
+                      }
+                    ],
+                    "status": "compatible"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  }
+                ],
+                "source": "krdict"
+              },
+              "kind": "word",
+              "span": {
+                "end": 6,
+                "start": 0
+              },
+              "surface": "서툰"
+            }
+          ],
+          "rules": {
+            "boundary.attached": "Recover an ending consonant fused into the final syllable.",
+            "deletion.rieul": "Restore ㄹ lost before a consonant ending.",
+            "ending": "Match a licensed terminal ending.",
+            "identity": "Unchanged vocabulary hypothesis; no dictionary verification.",
+            "irregular.hieut": "Hypothesize ㅎ irregular class: deletion or vowel contraction.",
+            "particle": "Remove a particle with licensed order and boundary allomorph.",
+            "particle.contraction.n": "Expand attached ㄴ to topic/emphatic 는 after an open syllable."
+          }
+        },
+        "서투른": {
+          "breakdowns": [
+            [
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ],
+              [
+                {
+                  "lemma": 0
+                },
+                {
+                  "morpheme": 0
+                }
+              ]
+            ]
+          ],
+          "elapsed_ms": 0.33579200000000003,
+          "glosses": {
+            "krdict:29043": "clumsy; unskilled"
+          },
+          "grammar": {
+            "-은": [
+              {
+                "headword": "-은",
+                "homonym": "1",
+                "id": "krdict:80344",
+                "pos": "어미"
+              },
+              {
+                "headword": "-ㄴ",
+                "homonym": "3",
+                "id": "krdict:78634",
+                "pos": "어미"
+              }
+            ],
+            "는": [
+              {
+                "headword": "는",
+                "homonym": "0",
+                "id": "krdict:85851",
+                "pos": "조사"
+              }
+            ]
+          },
+          "records": [
+            {
+              "analysis": {
+                "analyses": [
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "nominal",
+                        "text": "서투르"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "는",
+                        "kind": "particle"
+                      }
+                    ],
+                    "rules": [
+                      "particle",
+                      "particle.contraction.n"
+                    ],
+                    "unchanged": false
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "adverbial",
+                        "text": "서투르"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "는",
+                        "kind": "particle"
+                      }
+                    ],
+                    "rules": [
+                      "particle",
+                      "particle.contraction.n"
+                    ],
+                    "unchanged": false
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "predicate",
+                        "text": "서투르다"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "은",
+                        "kind": "ending"
+                      }
+                    ],
+                    "rules": [
+                      "boundary.attached",
+                      "ending"
+                    ],
+                    "unchanged": false
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "unclassified",
+                        "text": "서투른"
+                      }
+                    ],
+                    "morphemes": [],
+                    "rules": [
+                      "identity"
+                    ],
+                    "unchanged": true
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "predicate",
+                        "text": "서투를다"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "은",
+                        "kind": "ending"
+                      }
+                    ],
+                    "rules": [
+                      "deletion.rieul",
+                      "ending"
+                    ],
+                    "unchanged": false
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "kind": "predicate",
+                        "text": "서투릏다"
+                      }
+                    ],
+                    "morphemes": [
+                      {
+                        "form": "은",
+                        "kind": "ending"
+                      }
+                    ],
+                    "rules": [
+                      "ending",
+                      "irregular.hieut"
+                    ],
+                    "spelling_paths": [
+                      [
+                        {
+                          "class": "hieut_irregular",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    ],
+                    "unchanged": false
+                  }
+                ],
+                "normalized": "서투른"
+              },
+              "dictionary": {
+                "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+                "lemmas": [
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "nominal",
+                      "text": "서투르"
+                    }
+                  },
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "adverbial",
+                      "text": "서투르"
+                    }
+                  },
+                  {
+                    "entries": [
+                      {
+                        "headword": "서투르다",
+                        "homonym": "0",
+                        "id": "krdict:29043",
+                        "pos": "형용사",
+                        "pos_compatibility": "compatible",
+                        "reu": {
+                          "eu_deletion": [],
+                          "reo": [],
+                          "rieul_doubling": [
+                            "서툴러"
+                          ],
+                          "uncontracted": []
+                        }
+                      }
+                    ],
+                    "lemma": {
+                      "kind": "predicate",
+                      "text": "서투르다"
+                    }
+                  },
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "unclassified",
+                      "text": "서투른"
+                    }
+                  },
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "predicate",
+                      "text": "서투를다"
+                    }
+                  },
+                  {
+                    "entries": [],
+                    "lemma": {
+                      "kind": "predicate",
+                      "text": "서투릏다"
+                    }
+                  }
+                ],
+                "readings": [
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [
+                          {
+                            "conflicts": [],
+                            "id": "krdict:29043",
+                            "status": "compatible"
+                          }
+                        ],
+                        "lemma_index": 0,
+                        "status": "compatible"
+                      }
+                    ],
+                    "status": "compatible"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  },
+                  {
+                    "lemmas": [
+                      {
+                        "entries": [],
+                        "lemma_index": 0,
+                        "status": "unknown"
+                      }
+                    ],
+                    "status": "unknown"
+                  }
+                ],
+                "source": "krdict"
+              },
+              "kind": "word",
+              "span": {
+                "end": 9,
+                "start": 0
+              },
+              "surface": "서투른"
+            }
+          ],
+          "rules": {
+            "boundary.attached": "Recover an ending consonant fused into the final syllable.",
+            "deletion.rieul": "Restore ㄹ lost before a consonant ending.",
+            "ending": "Match a licensed terminal ending.",
+            "identity": "Unchanged vocabulary hypothesis; no dictionary verification.",
+            "irregular.hieut": "Hypothesize ㅎ irregular class: deletion or vowel contraction.",
+            "particle": "Remove a particle with licensed order and boundary allomorph.",
+            "particle.contraction.n": "Expand attached ㄴ to topic/emphatic 는 after an open syllable."
+          }
+        }
+      },
+      "complete_native_entries_checked": [
+        "krdict:29043",
+        "krdict:29045"
+      ],
+      "all_record_fields_match_packaged_cli_text": true,
+      "all_word_and_dictionary_fields_match_frozen_cli_word": true,
+      "all_breakdown_indices_retained": true,
+      "initial_probe_failure": "The audit compared a text record analysis with a word-command envelope; text records carry dictionary annotations alongside analysis. The helper now compares complete CLI text records and separately reconstructs the word envelope. No production mismatch was observed."
+    }
+  },
+  "preservation": "All earlier validity source/case objects, the whole dictionary snapshot and every original discovery observation are unchanged. The three append-only judgments separate literal inflection from lexical synonym/short-head relations. Companion spellings remain diagnostics, not spelling-correction rules or accuracy measurements.",
+  "remaining": "Review the other 21 source observations with primary written evidence. Add source-backed rules only where warranted, preserve actual alternatives, finish unrelated open checklist families, and complete independent language review and fresh-passage evaluation.",
+  "ledger": {
+    "path": "tests/fixtures/validity.json",
+    "sha256": "2ad31931b79bc6e7d830ee66e27efed66b1487d51322d403fafeeea04ad917f2",
+    "before_cases": 12572,
+    "current_cases": 12575,
+    "added_required": 2,
+    "added_forbidden": 1,
+    "all_prior_source_and_case_objects_preserved": true
+  }
+}

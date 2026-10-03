@@ -3425,6 +3425,38 @@ review remains open under the completion review below.
   named source paradigm, not a claim that every ㄼ stem is irregular.
   ㄼ pronunciation before 하 and the separate ㄶ/ㅀ shortening scope stay open.
 
+- [ ] **COV-021p — Remaining written-source observations and head discrepancies.**
+  Review the remaining 22 original entry/form observations before treating any
+  as required gold or adding spelling recovery. The
+  [frozen source audit](remaining-paradigm-source-preflight.json) assigns stable
+  individual IDs and preserves all 17 original complete native entries, the
+  separate 서툴다 entry, and complete current dictionary output for 96 surfaces.
+  It checks every observation against its unchanged discovery entry and exact
+  form index. Twenty-two authored companion spellings recover the listed head
+  using existing rules; these are diagnostics, not dictionary corrections or
+  proof that the source forms are typos. Original discovery counts stay intact.
+  **One source-head discrepancy reviewed:** the full
+  [NIKL answer of 2025-12-01](https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=324385)
+  explicitly assigns 서툰 to 서툴다 rather than 서투르다. The complete earlier
+  [paradigm explanation, pp. 125–126](https://www.korean.go.kr/nkview/nklife/2007_3/2007_0311.pdf)
+  agrees. Preserve both heads and the existing short-stem path; a lexical alias
+  would contradict this inflection evidence. The other 21 observations remain
+  unreviewed, including source-written 뒤얽히여, phonetic-looking 앙뭅니다,
+  apparent truncations, changed base spelling and the 삐뚤빼뚤/삐뚤삐뚤 group.
+  Current full dictionary views still show 서툰 under the long head and
+  뒤얽히여 as a written application. Persistence is not orthographic approval;
+  pronunciation fields and spelling fields require separate review. Add scoped
+  source-backed candidate judgments and regression gates for adjudicated cases,
+  without rewriting old observations or inferring universal bans from missing
+  dictionary heads. Three new individually identified ledger regressions retain
+  서툰 → 서툴다 and 서투른 → 서투르다, and forbid the contradicted
+  서툰 → 서투르다 inflection. Earlier case/source objects are unchanged.
+  The [reproducible extraction tool](../tools/remaining_paradigm_preflight.py)
+  refuses overwrites and records trimmed surrounding source whitespace separately.
+  The [verification record](remaining-paradigm-evaluation.json) keeps the scoped
+  judgments, all three CLI dictionary modes and their complete outputs separate
+  from the unchanged original discovery count and remaining source reviews.
+
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds
   source-listed predicate adverbs, including 가까이; COV-022b adds finite adverb

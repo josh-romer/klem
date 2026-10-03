@@ -1513,7 +1513,9 @@
     "complex-bieup-source-89859": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=89859",
     "complex-bieup-source-14103": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=14103",
     "complex-bieup-source-77700": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=77700",
-    "complex-bieup-source-71363": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71363"
+    "complex-bieup-source-71363": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=71363",
+    "remaining-paradigm-nikl-324385": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&pageIndex=1&qna_seq=324385",
+    "remaining-paradigm-short-stems-2007": "https://www.korean.go.kr/nkview/nklife/2007_3/2007_0311.pdf"
   },
   "cases": [
     {"id": "copula-polite-누구-ri", "surface": "누구오리까", "judgments": [{"id": "path", "lemmas": ["누구", "이다"], "lemma_kinds": ["nominal", "copula"], "morphemes": ["으옵", "으리까"], "morpheme_kinds": ["prefinal", "ending"], "verdict": "required", "source": "polite-copula-publisher", "reason": "Direct publisher token 누구오리까; the copula + polite + literary question analysis is agent structural inference, not an annotated gold parse."}]},
@@ -71820,6 +71822,78 @@
             "source": "complex-bieup-source-63307"
           }
         ]
-      }
+      },
+    {
+      "id": "remaining-paradigm-seotun-short-required",
+      "surface": "서툰",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서툴다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "remaining-paradigm-nikl-324385",
+          "reason": "The full NIKL 2025-12-01 answer explicitly assigns 서툰 to 서툴다 and explains ㄹ deletion before ㄴ. Preserve the distinct short head."
+        }
+      ]
+    },
+    {
+      "id": "remaining-paradigm-seotun-long-forbidden",
+      "surface": "서툰",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서투르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "remaining-paradigm-nikl-324385",
+          "reason": "The same primary answer explicitly excludes 서투르다 as the inflection head of 서툰. The original KRDict listing remains unchanged as a tracked source-head discrepancy, not required gold."
+        }
+      ]
+    },
+    {
+      "id": "remaining-paradigm-seotureun-long-required",
+      "surface": "서투른",
+      "judgments": [
+        {
+          "id": "path",
+          "lemmas": [
+            "서투르다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "은"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "source": "remaining-paradigm-short-stems-2007",
+          "reason": "The full NIKL paradigm table on pp.125–126 assigns 서투른 to the long head 서투르다, separate from 서툰 under 서툴다."
+        }
+      ]
+    }
   ]
 }

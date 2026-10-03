@@ -687,6 +687,14 @@ try {
   fixture.LexicalResource.Lexicon.LexicalEntry = fixture.LexicalResource.Lexicon.LexicalEntry.filter(e => !complexBieupIds.has(String(e.val)));
   fixture.LexicalResource.Lexicon.LexicalEntry.push(...complexBieupEntries);
 
+  // Only the reviewed native POS-conflict entry is added; all earlier source
+  // fixtures and homonyms remain intact.
+  const nativePosLmf = JSON.parse(await readFile(resolve(root,"tests/fixtures/krdict-source-head.json"),"utf8"));
+  const nativePosEntries = nativePosLmf.LexicalResource.Lexicon.LexicalEntry.filter(e => String(e.val) === "600930");
+  assert.equal(nativePosEntries.length,1);
+  assert.ok(!fixture.LexicalResource.Lexicon.LexicalEntry.some(e => String(e.val) === "600930"));
+  fixture.LexicalResource.Lexicon.LexicalEntry.push(...nativePosEntries);
+
   await writeFile(input, JSON.stringify(fixture));
   execFileSync(cliBin, [
     "dict",
@@ -6339,6 +6347,60 @@ try {
   await page.screenshot({path:resolve(tmpdir(),"klem-complex-bieup-mobile.png"),fullPage:true});
   await page.setViewportSize({width:1440,height:1100});
   await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+
+  const nativePosSource = JSON.parse(await readFile(resolve(root,"tests/fixtures/native-pos-sources.json"),"utf8"));
+  const nativePosPolicy = JSON.parse(await readFile(resolve(root,"tests/fixtures/native-pos-policy.json"),"utf8"));
+  const nativePosAdditional = JSON.parse(await readFile(resolve(root,"tests/fixtures/native-pos-boundaries.json"),"utf8"));
+  for (const [surface,word] of Object.entries(nativePosAdditional.before_words)) {
+    if (nativePosSource.before_words[surface]) assert.deepEqual(nativePosSource.before_words[surface],word);
+    nativePosSource.before_words[surface]=word;
+  }
+  const nativePosNative = structuredClone(nativePosSource.source_entries[0]);
+  for (const sense of nativePosNative.senses) sense.translations = sense.translations.filter(t => t.language === "영어");
+  assert.deepEqual((await (await post("entry",{id:"krdict:600930"})).json()).entry,nativePosNative);
+  for (const c of nativePosPolicy.cases) {
+    const response = await (await post("analyze",{text:c.surface})).json();
+    const token = response.records[0],j = c.judgments[0];
+    const index = token.analysis.analyses.findIndex(a => isDeepStrictEqual(a.lemmas.map(l => l.text),j.lemmas) && isDeepStrictEqual(a.lemmas.map(l => l.kind),j.lemma_kinds) && isDeepStrictEqual(a.morphemes.map(m => m.form),j.morphemes));
+    assert.ok(index >= 0,c.id);
+    assert.deepEqual(token.analysis,nativePosSource.before_words[c.surface]);
+    const annotation = token.dictionary;
+    const matched = annotation.lemmas.find(m => m.lemma.text === "발그스레하다" && m.lemma.kind === j.lemma_kinds[0]).entries[0];
+    assert.equal(matched.pos,"동사");assert.equal(matched.independent_pos.reviewed_pos,"형용사");
+    assert.equal(matched.independent_pos.source_url,nativePosSource.primary.url);
+    assert.equal(annotation.readings[index].status === "incompatible",j.verdict === "forbidden",c.id);
+    assert.ok(annotation.lemmas.filter(m => m.lemma.text !== "발그스레하다").every(m => m.entries.every(e => !e.independent_pos)),c.id);
+  }
+  const nativePosText = "발그스레하냐 발그스레하구나 발그스레하는 발그스레하느냐 발그스레하지않으냐 발그스레해하는";
+  const nativePosHeads = [["발그스레하다"],["발그스레하다"],["발그스레하다"],["발그스레하다"],["발그스레하다","않다"],["발그스레하다","하다"]];
+  const nativePosForms = [["으냐"],["구나"],["는"],["느냐"],["지","으냐"],["어","는"]];
+  for (const flag of [null,"--dict-only","--dict-compatible"]) {
+    if (flag) await page.getByLabel("Dictionary matches only").check(); else await page.getByLabel("Dictionary matches only").uncheck();
+    if (flag === "--dict-compatible") await page.getByLabel("Exclude known grammar conflicts").check();
+    else if (flag) await page.getByLabel("Exclude known grammar conflicts").uncheck();
+    await submit(page,nativePosText); await waitHeading(page,"발그스레하냐");
+    const response = await (await post("analyze",{text:nativePosText})).json();
+    for (const [n,t] of response.records.filter(t => t.analysis).entries()) {
+      const index = t.analysis.analyses.findIndex(a => isDeepStrictEqual(a.lemmas.map(l => l.text),nativePosHeads[n]) && isDeepStrictEqual(a.morphemes.map(m => m.form),nativePosForms[n]));
+      assert.ok(index >= 0,t.surface);
+      const word = page.locator(".breakdown-word").nth(n);
+      assert.equal(await word.locator(`option[value="${index}"]`).count(),flag === "--dict-compatible" && [2,3].includes(n) ? 0 : 1,t.surface);
+    }
+    const download = page.waitForEvent("download");await page.getByRole("button",{name:"Export JSON",exact:true}).click();
+    const exported = JSON.parse(await readFile(await (await download).path(),"utf8"));
+    assert.deepEqual(exported.records,execFileSync(cliBin,["text","-","--dictionary",database,...(flag?[flag]:[])],{input:nativePosText,encoding:"utf8"}).trim().split("\n").map(JSON.parse));
+    await page.locator(".entry-choices button").filter({hasText:"발그스레하다"}).click();
+    await page.getByRole("link",{name:"Independent POS source",exact:true}).waitFor();
+    assert.equal(await page.locator(".entry-meta").first().innerText().then(t => t.includes("동사")),true);
+    assert.equal(await page.getByRole("link",{name:"Independent POS source",exact:true}).getAttribute("href"),nativePosSource.primary.url);
+  }
+  await page.setViewportSize({width:390,height:844});assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
+  await page.screenshot({path:resolve(tmpdir(),"klem-native-pos-mobile.png"),fullPage:true});
+  await page.setViewportSize({width:1440,height:1100});
+  await page.getByLabel("Exclude known grammar conflicts").uncheck();await page.getByLabel("Dictionary matches only").uncheck();
+  await submit(page,"먹었어요");await waitHeading(page,"먹었어요");
+  assert.equal(await page.getByRole("link",{name:"Independent POS source",exact:true}).count(),0);
+  console.log("Independent POS checks passed: preserved native entry, component ownership, filters, exports, source attribution and mobile.");
 
   const opaqueText = "천천히 분연히";
   await submit(page, opaqueText); await waitHeading(page, "천천히");

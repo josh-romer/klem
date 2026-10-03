@@ -2978,7 +2978,9 @@ review remains open under the completion review below.
   vowel exceptions; COV-021l adds modern direct-command recovery and finite
   source-reviewed past-entry licenses; COV-021n adds eight further finite
   vowel paradigms; COV-021o adds complex ㄼ inflections and their per-entry
-  spelling compatibility.** Remaining: COV-021m attachment/register,
+  spelling compatibility; COV-021p completes the bounded written-source review;
+  COV-021q adds the independently evidenced class for one native POS conflict.**
+  Remaining: COV-021m attachment/register,
   other lexical paradigms and unmapped
   shortened-stem senses, ㄼ lexical
   pronunciation exceptions, ㄶ/ㅀ before 하, and further ending/particle
@@ -3513,7 +3515,7 @@ review remains open under the completion review below.
   as recovered pairs. Independent Korean-language review, the separate POS
   issue below, and the full parent checklist remain open.
 
-- [ ] **COV-021q — Independently evidenced native POS conflicts.** The pinned
+- [x] **COV-021q — Independently evidenced native POS conflicts.** The pinned
   complete krdict:600930 entry labels 발그스레하다 as 동사, while the complete
   [expert-reviewed source](https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm)
   labels it 형용사. Preserve both source identities and the original native
@@ -3535,6 +3537,30 @@ review remains open under the completion review below.
   or a selected annotation policy. A global unknown-POS fallback also relaxes
   coarse lexical roles; any policy must retain known predicate/nominal roles,
   independent entry evidence and actual component ownership.
+  **Bounded implementation verified:** a separately attributed adjective
+  sidecar now requires the exact native identity and complete Korean profile,
+  preserving the original POS and all imported fields. Existing class checks
+  and represented negative inheritance use the same component-owned evidence;
+  known predicate/nominal roles and unknown mood/register remain distinct.
+  [148 frozen diagnostics](../tests/fixtures/native-pos-sources.json),
+  [39 policy cases](../tests/fixtures/native-pos-policy.json) and
+  [seven integration tests](../tests/native_pos.rs) cover entry guards, legacy
+  annotations, cache/Unicode, existing boundaries and all three CLI modes.
+  Additional result-transfer, conjectural, pretence, repetitive and later
+  copular probes bring the union to 165 surfaces. The first Nix run passed
+  791 release tests, and all 1,128,312 earlier broad-stream records were
+  checked against their original hashes: only the three native paradigm
+  forms gain independent class metadata; novel streams are unchanged.
+  [Final verification](native-pos-evaluation.json) retains 990 complete CLI
+  responses, all 165 full API responses, 80 individually located assessment
+  changes and all 39 policy checks. All 792 Nix release tests, three host
+  checks, Clippy/formatting and nine inventory tests pass. The full browser
+  suite checks component ownership, native source identity, filters, exports,
+  source attribution and mobile; desktop/mobile source panels were inspected.
+  The refreshed packaged preview matches all tested responses and assets.
+  Original raw/gold/source objects and all 3,753 earlier attachment cases remain
+  unchanged. This completes the finite independently evidenced conflict policy;
+  independent Korean-language review and the full parent checklist stay open.
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

@@ -2,6 +2,7 @@
   "schema_version": 1,
   "review_status": "Source-reviewed scoped dictionary conflict policy; independent Korean review pending. Required/forbidden applies only after DictionaryFilter::Compatible, not to raw rule hypotheses.",
   "sources": {
+    "independent-pos-600930": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
     "qfollow-source-82280": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82280",
     "qfollow-source-82841": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=82841",
     "qfollow-source-84871": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=84871",
@@ -19897,6 +19898,1000 @@
             "source": "complex-bieup-source-71363"
           }
         ]
-      }
+      },
+    {
+      "id": "independent-pos-adjective-question",
+      "surface": "발그스레하냐",
+      "judgments": [
+        {
+          "id": "independent-pos-adjective-question-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으냐"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-adjective-exclamation",
+      "surface": "발그스레하구나",
+      "judgments": [
+        {
+          "id": "independent-pos-adjective-exclamation-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-present-adnominal",
+      "surface": "발그스레하는",
+      "judgments": [
+        {
+          "id": "independent-pos-present-adnominal-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-verbal-question",
+      "surface": "발그스레하느냐",
+      "judgments": [
+        {
+          "id": "independent-pos-verbal-question-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-present-declarative",
+      "surface": "발그스레한다",
+      "judgments": [
+        {
+          "id": "independent-pos-present-declarative-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-adjective-report",
+      "surface": "발그스레하단다",
+      "judgments": [
+        {
+          "id": "independent-pos-adjective-report-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "단다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-literary-assertion",
+      "surface": "발그스레하느니라",
+      "judgments": [
+        {
+          "id": "independent-pos-literary-assertion-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느니라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-literary-declarative",
+      "surface": "발그스레하나이다",
+      "judgments": [
+        {
+          "id": "independent-pos-literary-declarative-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "나이다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-literary-question",
+      "surface": "발그스레하나이까",
+      "judgments": [
+        {
+          "id": "independent-pos-literary-question-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "나이까"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-quoted-question",
+      "surface": "발그스레하느냐면",
+      "judgments": [
+        {
+          "id": "independent-pos-quoted-question-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느냐면"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-present-exclamation",
+      "surface": "발그스레하는구나",
+      "judgments": [
+        {
+          "id": "independent-pos-present-exclamation-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-present-geol",
+      "surface": "발그스레하는걸",
+      "judgments": [
+        {
+          "id": "independent-pos-present-geol-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "는걸"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-present-neuni",
+      "surface": "발그스레하느니",
+      "judgments": [
+        {
+          "id": "independent-pos-present-neuni-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느니"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-adjective-niman",
+      "surface": "발그스레하니만",
+      "judgments": [
+        {
+          "id": "independent-pos-adjective-niman-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "니만"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-intention",
+      "surface": "발그스레하려다가",
+      "judgments": [
+        {
+          "id": "independent-pos-intention-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으려다가"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-activity-reason",
+      "surface": "발그스레하느라",
+      "judgments": [
+        {
+          "id": "independent-pos-activity-reason-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "느라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-habitual-condition",
+      "surface": "발그스레할라치면",
+      "judgments": [
+        {
+          "id": "independent-pos-habitual-condition-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "을라치면"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-unreviewed-command",
+      "surface": "발그스레하거라",
+      "judgments": [
+        {
+          "id": "independent-pos-unreviewed-command-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "거라"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Required retention under dictionary-compatible filtering: mood, register or prefinal extension remains unknown. This does not certify grammaticality.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-unreviewed-proposal",
+      "surface": "발그스레합시다",
+      "judgments": [
+        {
+          "id": "independent-pos-unreviewed-proposal-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "읍시다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Required retention under dictionary-compatible filtering: mood, register or prefinal extension remains unknown. This does not certify grammaticality.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-unreviewed-quoted-proposal",
+      "surface": "발그스레하자는구나",
+      "judgments": [
+        {
+          "id": "independent-pos-unreviewed-quoted-proposal-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "자는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Required retention under dictionary-compatible filtering: mood, register or prefinal extension remains unknown. This does not certify grammaticality.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-unreviewed-quoted-command",
+      "surface": "발그스레하라는구나",
+      "judgments": [
+        {
+          "id": "independent-pos-unreviewed-quoted-command-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "으라는구나"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Required retention under dictionary-compatible filtering: mood, register or prefinal extension remains unknown. This does not certify grammaticality.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-unreviewed-honorific-question",
+      "surface": "발그스레하시느냐면",
+      "judgments": [
+        {
+          "id": "independent-pos-unreviewed-honorific-question-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "시",
+            "느냐면"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Required retention under dictionary-compatible filtering: mood, register or prefinal extension remains unknown. This does not certify grammaticality.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-past-question",
+      "surface": "발그스레하였느냐",
+      "judgments": [
+        {
+          "id": "independent-pos-past-question-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "느냐"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-past-exclamation",
+      "surface": "발그스레하였구나",
+      "judgments": [
+        {
+          "id": "independent-pos-past-exclamation-required",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "었",
+            "구나"
+          ],
+          "morpheme_kinds": [
+            "prefinal",
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-negative-present",
+      "surface": "발그스레하지않는",
+      "judgments": [
+        {
+          "id": "independent-pos-negative-present-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-negative-verbal-question",
+      "surface": "발그스레하지않느냐",
+      "judgments": [
+        {
+          "id": "independent-pos-negative-verbal-question-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "느냐"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-negative-adjective-question",
+      "surface": "발그스레하지않으냐",
+      "judgments": [
+        {
+          "id": "independent-pos-negative-adjective-question-required",
+          "lemmas": [
+            "발그스레하다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "으냐"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-unreviewed-negative-report",
+      "surface": "발그스레하지않느냐면",
+      "judgments": [
+        {
+          "id": "independent-pos-unreviewed-negative-report-required",
+          "lemmas": [
+            "발그스레하다",
+            "않다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "느냐면"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Required retention under dictionary-compatible filtering: mood, register or prefinal extension remains unknown. This does not certify grammaticality.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-later-verbal-owner",
+      "surface": "발그스레해하는",
+      "judgments": [
+        {
+          "id": "independent-pos-later-verbal-owner-required",
+          "lemmas": [
+            "발그스레하다",
+            "하다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "required",
+          "reason": "Scoped dictionary-filter judgment using the independently reviewed adjective class for the exact pinned entry. Raw hypotheses and native source fields remain unchanged.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-nominal-role",
+      "surface": "발그스레하다를",
+      "judgments": [
+        {
+          "id": "independent-pos-nominal-role-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "nominal"
+          ],
+          "morphemes": [
+            "를"
+          ],
+          "morpheme_kinds": [
+            "particle"
+          ],
+          "verdict": "forbidden",
+          "reason": "Known predicate evidence continues to reject the nominal lexical role; independent POS evidence must not become a global unknown-role fallback.",
+          "source": "independent-pos-600930"
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-result-transfer",
+      "surface": "발그스레해다",
+      "judgments": [
+        {
+          "id": "independent-pos-result-transfer-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어다"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-result-transfer-followed",
+      "surface": "발그스레해다가",
+      "judgments": [
+        {
+          "id": "independent-pos-result-transfer-followed-forbidden",
+          "lemmas": [
+            "발그스레하다"
+          ],
+          "lemma_kinds": [
+            "predicate"
+          ],
+          "morphemes": [
+            "어다가"
+          ],
+          "morpheme_kinds": [
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-conjectural-hada",
+      "surface": "발그스레하는듯하다",
+      "judgments": [
+        {
+          "id": "independent-pos-conjectural-hada-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "듯하다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-conjectural-sipda",
+      "surface": "발그스레하는듯싶다",
+      "judgments": [
+        {
+          "id": "independent-pos-conjectural-sipda-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "듯싶다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-pretence-cheok",
+      "surface": "발그스레하는척하다",
+      "judgments": [
+        {
+          "id": "independent-pos-pretence-cheok-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "척하다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-pretence-yang",
+      "surface": "발그스레하는양하다",
+      "judgments": [
+        {
+          "id": "independent-pos-pretence-yang-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "양하다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-pretence-che",
+      "surface": "발그스레하는체하다",
+      "judgments": [
+        {
+          "id": "independent-pos-pretence-che-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "체하다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "는",
+            "다"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-repetition",
+      "surface": "발그스레해대는",
+      "judgments": [
+        {
+          "id": "independent-pos-repetition-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "어",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    },
+    {
+      "id": "independent-pos-negative-repetition",
+      "surface": "발그스레하지않아대는",
+      "judgments": [
+        {
+          "id": "independent-pos-negative-repetition-forbidden",
+          "lemmas": [
+            "발그스레하다",
+            "않다",
+            "대다"
+          ],
+          "lemma_kinds": [
+            "predicate",
+            "auxiliary",
+            "auxiliary"
+          ],
+          "morphemes": [
+            "지",
+            "어",
+            "는"
+          ],
+          "morpheme_kinds": [
+            "ending",
+            "ending",
+            "ending"
+          ],
+          "verdict": "forbidden",
+          "source": "independent-pos-600930",
+          "reason": "The exact reviewed adjective class contradicts the existing finite attachment requirement at this owned connector. Later components and raw hypotheses remain intact; this is dictionary-filter policy, not contextual ranking."
+        }
+      ]
+    }
   ]
 }

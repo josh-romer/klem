@@ -166,9 +166,7 @@ fn negative_lexical_class(
             match matches
                 .iter()
                 .find(|m| m.entry.id == entry.id)?
-                .entry
-                .pos
-                .as_str()
+                .effective_pos()
             {
                 "동사" | "보조 동사" => verb = true,
                 "형용사" | "보조 형용사" => adjective = true,
@@ -607,6 +605,7 @@ impl Annotation {
                 .flat_map(|m| &m.entries)
                 .map(|matched| {
                     let mut status = matched.pos_compatibility;
+                    let pos = matched.effective_pos();
                     // This independently sourced analysis explicitly names a
                     // bound noun, unlike the broad nominal role used by whole
                     // words. Preserve every lookup entry but record the known
@@ -618,7 +617,7 @@ impl Annotation {
                             .iter()
                             .any(|r| r == "derivation.nominal.bound_i")
                         && status == Compatibility::Compatible
-                        && matched.entry.pos != "의존 명사"
+                        && pos != "의존 명사"
                     {
                         status = Compatibility::Incompatible;
                     }
@@ -627,7 +626,7 @@ impl Annotation {
                     // outside this analysis; do not call that a POS conflict.
                     if *index == 0
                         && lemma.kind == LemmaKind::Predicate
-                        && matches!(matched.entry.pos.as_str(), "보조 동사" | "보조 형용사")
+                        && matches!(pos, "보조 동사" | "보조 형용사")
                     {
                         status = Compatibility::Unknown;
                     }
@@ -642,7 +641,7 @@ impl Annotation {
                         && (conjectural_present || pretence_present)
                         && (lemma.kind == LemmaKind::Copula
                             || (lemma.kind == LemmaKind::Predicate
-                                && matched.entry.pos == "형용사"
+                                && pos == "형용사"
                                 && !lemma.text.ends_with("있다")
                                 && !lemma.text.ends_with("없다")
                                 && lemma.text != "계시다"))
@@ -664,7 +663,7 @@ impl Annotation {
                     // adjective's present verb ending, but remains otherwise.
                     if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
                         && lemma.text == "양하다"
-                        && matched.entry.pos == "보조 형용사"
+                        && pos == "보조 형용사"
                         && (lemma.kind == LemmaKind::Auxiliary
                             || (*index == 0 && lemma.kind == LemmaKind::Predicate))
                         && let Some(i) = ending
@@ -699,7 +698,7 @@ impl Annotation {
                             // No conclusion is drawn from origin absence alone.
                             || (matched.entry.id == "krdict:63243"
                                 && matched.entry.headword == "선"
-                                && matched.entry.pos == "명사"))
+                                && pos == "명사"))
                     {
                         status = Compatibility::Incompatible;
                         conflicts.push(AttachmentConflict {
@@ -710,7 +709,7 @@ impl Annotation {
                     if lemma.kind == LemmaKind::Auxiliary
                         && status == Compatibility::Compatible
                         && matches!(
-                            (class, matched.entry.pos.as_str()),
+                            (class, pos),
                             (Some(PredicateClass::Verb), "보조 형용사")
                                 | (Some(PredicateClass::Adjective), "보조 동사")
                         )
@@ -723,7 +722,7 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible
                         && matches!(
-                            (negative_lexical, matched.entry.pos.as_str()),
+                            (negative_lexical, pos),
                             (Some(PredicateClass::Verb), "보조 형용사")
                                 | (Some(PredicateClass::Adjective), "보조 동사")
                         )
@@ -744,7 +743,7 @@ impl Annotation {
                     // Own prefinals and later owners remain independent, and
                     // earlier proved connector conflicts take precedence.
                     if matches!(status, Compatibility::Compatible | Compatibility::Unknown)
-                        && matched.entry.pos == "보조 형용사"
+                        && pos == "보조 형용사"
                         && (lemma.kind == LemmaKind::Auxiliary
                             || (*index == 0 && lemma.kind == LemmaKind::Predicate))
                         && let Some(i) = ending
@@ -787,7 +786,7 @@ impl Annotation {
                         }
                     }
                     if status == Compatibility::Compatible
-                        && matched.entry.pos == "동사"
+                        && pos == "동사"
                         && expressive_connector.is_some()
                     {
                         // KRDict 62888 sense 9 describes adjective attachment,
@@ -797,7 +796,7 @@ impl Annotation {
                         status = Compatibility::Unknown;
                     }
                     if status == Compatibility::Compatible
-                        && matched.entry.pos == "형용사"
+                        && pos == "형용사"
                         && let Some(i) = repetitive_connector
                     {
                         // NIKL §3.6.27 p.514 explicitly rejects 비싸 대서,
@@ -811,7 +810,7 @@ impl Annotation {
                         });
                     }
                     if status == Compatibility::Compatible
-                        && matched.entry.pos == "형용사"
+                        && pos == "형용사"
                         && lemma.text != "있다"
                         && let Some(i) = habitual_ending
                     {
@@ -832,7 +831,7 @@ impl Annotation {
                         && ending.is_some_and(|i| analysis.morphemes[i].form == "는")
                         && (lemma.kind == LemmaKind::Copula
                             || (lemma.kind == LemmaKind::Predicate
-                                && matched.entry.pos == "형용사"
+                                && pos == "형용사"
                                 && !lemma.text.ends_with("있다")
                                 && !lemma.text.ends_with("없다")
                                 && lemma.text != "계시다"))
@@ -870,8 +869,8 @@ impl Annotation {
                         && let Some(i) = ending
                     {
                         let form = analysis.morphemes[i].form.as_str();
-                        let adjective = matched.entry.pos == "형용사";
-                        let verb = matched.entry.pos == "동사";
+                        let adjective = pos == "형용사";
+                        let verb = pos == "동사";
                         let rule = if bare
                             && bare_copular_ending(form)
                             && (verb || (adjective && lemma.text != "아니다"))
@@ -1045,7 +1044,7 @@ impl Annotation {
                             matches!(analysis.morphemes[i].form.as_str(), "거라" | "너라")
                         })
                         && (!bare
-                            || !matches!(matched.entry.pos.as_str(), "동사" | "보조 동사"))
+                            || !matches!(pos, "동사" | "보조 동사"))
                         && !reviewed_past_direct_command(&matched.entry, lemma, analysis, morphs)
                     {
                         // The modern sources establish direct verbal stems.
@@ -1077,7 +1076,6 @@ impl Annotation {
                         && let Some(i) = ending
                     {
                         let form = analysis.morphemes[i].form.as_str();
-                        let pos = matched.entry.pos.as_str();
                         let rule = if crate::engine::present_exclamation(form)
                             && (pos == "보조 형용사" || (pos == "보조 동사" && lemma.text == "있다"))
                         {
@@ -1099,7 +1097,6 @@ impl Annotation {
                         && crate::engine::quoted_exclamation(&analysis.morphemes[i].form)
                     {
                         let form = analysis.morphemes[i].form.as_str();
-                        let pos = matched.entry.pos.as_str();
                         let rule = if crate::engine::present_declarative(form) && pos == "보조 형용사" {
                             Some(AttachmentRule::PresentDeclarativeVerb)
                         } else if bare && crate::engine::plain_quoted_exclamation(form)
@@ -1124,7 +1121,7 @@ impl Annotation {
                         // Preserve the hypothesis without certifying that class
                         // extension. Past/modal reports have separate evidence.
                         let honorific_verb_report = crate::engine::plain_quoted_exclamation(form)
-                            && matches!(matched.entry.pos.as_str(), "동사" | "보조 동사")
+                            && matches!(pos, "동사" | "보조 동사")
                             && morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
                                 if analysis.morphemes[*j].kind == MorphemeKind::Prefinal))
                             && morphs.iter().all(|c| !matches!(c, Component::Morpheme(j)
@@ -1152,7 +1149,6 @@ impl Annotation {
                         && crate::engine::quoted_question_report(&analysis.morphemes[i].form)
                     {
                         let form = analysis.morphemes[i].form.as_str();
-                        let pos = matched.entry.pos.as_str();
                         let existential_or_negative = lemma.text.ends_with("있다")
                             || lemma.text.ends_with("없다")
                             || matches!(lemma.text.as_str(), "계시다" | "않다" | "아니하다" | "못하다");
@@ -1193,7 +1189,7 @@ impl Annotation {
                     if status == Compatibility::Compatible
                         && let Some(i) = ending
                         && crate::engine::verbal_quoted_question(&analysis.morphemes[i].form)
-                        && ((matched.entry.pos == "형용사"
+                        && ((pos == "형용사"
                             && !lemma.text.ends_with("있다") && !lemma.text.ends_with("없다"))
                             || lemma.kind == LemmaKind::Copula
                             || (crate::engine::quoted_conditional_question(&analysis.morphemes[i].form)
@@ -1227,7 +1223,7 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible
                         && ending.is_some_and(|i| analysis.morphemes[i].form == "읍시다")
-                        && (matches!(matched.entry.pos.as_str(), "형용사" | "보조 형용사")
+                        && (matches!(pos, "형용사" | "보조 형용사")
                             || derived_adjective
                             || matches!(class, Some(PredicateClass::Adjective))
                             || (lemma.kind == LemmaKind::Auxiliary
@@ -1243,7 +1239,7 @@ impl Annotation {
                     }
                     if status == Compatibility::Compatible && let Some(i) = ending
                         && crate::engine::quoted_proposal_exclamation(&analysis.morphemes[i].form)
-                        && (matches!(matched.entry.pos.as_str(), "형용사" | "보조 형용사")
+                        && (matches!(pos, "형용사" | "보조 형용사")
                             || derived_adjective
                             || matches!(class, Some(PredicateClass::Adjective))
                             || (lemma.kind == LemmaKind::Auxiliary
@@ -1269,10 +1265,10 @@ impl Annotation {
                         if morphs.iter().any(|c| matches!(c, Component::Morpheme(j)
                             if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
                                 && !listed.contains(&analysis.morphemes[*j].form.as_str())))
-                            || (is_command && (matches!(matched.entry.pos.as_str(), "형용사" | "보조 형용사")
+                            || (is_command && (matches!(pos, "형용사" | "보조 형용사")
                                 || derived_adjective || matches!(class, Some(PredicateClass::Adjective))))
                             || (!is_command && !bare && lemma.kind != LemmaKind::Copula
-                                && (matches!(matched.entry.pos.as_str(), "동사" | "형용사" | "보조 동사" | "보조 형용사")
+                                && (matches!(pos, "동사" | "형용사" | "보조 동사" | "보조 형용사")
                                     || derived_adjective || matches!(class, Some(PredicateClass::Verb | PredicateClass::Adjective)))
                                 && lemma.text != "아니다")
                             || (matches!(form, "라는군" | "으라는군")
@@ -1310,7 +1306,7 @@ impl Annotation {
                         if listed.is_some_and(|ls| morphs.iter().any(|c|
                             matches!(c, Component::Morpheme(j) if analysis.morphemes[*j].kind == MorphemeKind::Prefinal
                                 && !ls.contains(&analysis.morphemes[*j].form.as_str()))))
-                            || (bare && form == "더구나" && matched.entry.pos == "동사")
+                            || (bare && form == "더구나" && pos == "동사")
                         {
                             // The full 더구나 entry directly illustrates
                             // 잘되더구나 despite omitting verbs in its note.
@@ -1408,14 +1404,14 @@ impl Annotation {
                             || lemma.kind == LemmaKind::Copula
                             || (intention_prefinal
                                 && matches!(
-                                    matched.entry.pos.as_str(),
+                                    pos,
                                     "동사" | "형용사" | "보조 동사" | "보조 형용사"
                                 ))
                             || (lemma.kind == LemmaKind::Predicate
-                                && matched.entry.pos == "형용사")
+                                && pos == "형용사")
                             || (lemma.kind == LemmaKind::Auxiliary
                                 && matches!(class, Some(PredicateClass::Adjective))
-                                && matched.entry.pos == "보조 형용사"))
+                                && pos == "보조 형용사"))
                     {
                         // The connective/auxiliary entries specify verbs, but
                         // NIKL Q&A 335000 leaves adjective state-making uses

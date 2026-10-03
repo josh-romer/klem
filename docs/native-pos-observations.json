@@ -1,0 +1,4527 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-021q",
+  "before_revision": "be1b115",
+  "before_cli": "/nix/store/l7cmcla80w6j8szdmx55sq7b2dr9w26g-klem-0.1.0/bin/klem",
+  "before_cli_sha256": "47796160fc214965841eaa197701203e9ca49236935770381f2ebfa05a6cbcac",
+  "cli": "/tmp/klem-native-pos-runtime/klem",
+  "cli_sha256": "b47dcd64b72afdeea546831fe1e85ef6c01048e84e962dd53ba37ab6dec57c0d",
+  "dictionary_sha256": "23d993696c55d0e54660e4a2b23dac7d68525fecb1fdc44341e1f2b3f75dead5",
+  "comparisons": [
+    {
+      "mode": "candidate-raw",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "records": 77584,
+      "before_jsonl_sha256": "3d2b5aaa729ab4815e86589d78b476e3525f8163157b53540d69f4523ed9a0a2",
+      "after_jsonl_sha256": "21799f8b70c421f20e3a53012a28c0b88d1d29fb2dc8e4d722ac8471e35908d4",
+      "changed_records": 3
+    },
+    {
+      "mode": "candidate-headword",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "records": 77584,
+      "before_jsonl_sha256": "3410a16bc459a9fcebacd9e829dc0dfccd20d15005b1d707426c27e5dfc38e3a",
+      "after_jsonl_sha256": "dd465aba8ce19a2476ba0bfebe15c394985c5e76c91054a16997373d41f54963",
+      "changed_records": 3
+    },
+    {
+      "mode": "candidate-compatible",
+      "source": "/tmp/klem-written-vowel-candidate-input.txt",
+      "source_sha256": "2988f74194c342253b18f3feadfa6c1b7008931766aa4ecde7f64a9e06dd3783",
+      "records": 77584,
+      "before_jsonl_sha256": "263590e717ea0e2a241f280f011bf79dc4e2ac7bd5bdb1f7fed4b061a449f4e0",
+      "after_jsonl_sha256": "d1e1a684efbacc0a2492619df95e42ce01cc21ddb1ff03de45f17197def361a9",
+      "changed_records": 3
+    },
+    {
+      "mode": "novel-raw",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "ffafbf197c1c51498184b96b3f625f6ed1128c4d58d1cdde62d45af4b2988a0b",
+      "after_jsonl_sha256": "ffafbf197c1c51498184b96b3f625f6ed1128c4d58d1cdde62d45af4b2988a0b",
+      "changed_records": 0
+    },
+    {
+      "mode": "novel-headword",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "3653e176db9c9bfc932c2049e9965c788eb0bce3f7bd5d89ab93f6dd042f8535",
+      "after_jsonl_sha256": "3653e176db9c9bfc932c2049e9965c788eb0bce3f7bd5d89ab93f6dd042f8535",
+      "changed_records": 0
+    },
+    {
+      "mode": "novel-compatible",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "7b47b197b0736151728bd747b98ced3fb288b339ddc44f9cabfa531e71b59802",
+      "after_jsonl_sha256": "7b47b197b0736151728bd747b98ced3fb288b339ddc44f9cabfa531e71b59802",
+      "changed_records": 0
+    },
+    {
+      "mode": "novel-headword-spacing",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "3ef44f8c180461a6b5de8b6a2cc6d28016a579f5a06cfab053ccabba21b6a350",
+      "after_jsonl_sha256": "3ef44f8c180461a6b5de8b6a2cc6d28016a579f5a06cfab053ccabba21b6a350",
+      "changed_records": 0
+    },
+    {
+      "mode": "novel-compatible-spacing",
+      "source": "/home/josh/projects/klem/data/books/mujeong.txt",
+      "source_sha256": "50a02d2f5f11f148497f2f00c782733ee3f8c2e331e1c0e5f74e3b7c8b0ca4dc",
+      "records": 179112,
+      "before_jsonl_sha256": "4890b553fc9ae9ce7d40f61e520ce361d3babe481bc08440d2951915b08283eb",
+      "after_jsonl_sha256": "4890b553fc9ae9ce7d40f61e520ce361d3babe481bc08440d2951915b08283eb",
+      "changed_records": 0
+    }
+  ],
+  "complete_changed_records": [
+    {
+      "mode": "candidate-raw",
+      "record_index": 39598,
+      "before": {
+        "surface": "발그스레하니",
+        "span": {
+          "start": 309627,
+          "end": 309645
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하니",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스렇다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스렇다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하니",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레핳다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하니",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "발그스레할다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레핳다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              "entries": [
+                {
+                  "id": "krdict:62888",
+                  "headword": "하다",
+                  "homonym": "2",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:62899",
+                  "headword": "하다",
+                  "homonym": "3",
+                  "pos": "보조 형용사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:73277",
+                  "headword": "하다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레하니",
+        "span": {
+          "start": 309627,
+          "end": 309645
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하니",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스렇다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스렇다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.regular",
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.eu",
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "copula",
+                "copula.omitted_ending",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하니",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레핳다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하니",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "발그스레할다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레핳다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              "entries": [
+                {
+                  "id": "krdict:62888",
+                  "headword": "하다",
+                  "homonym": "2",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:62899",
+                  "headword": "하다",
+                  "homonym": "3",
+                  "pos": "보조 형용사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:73277",
+                  "headword": "하다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "candidate-raw",
+      "record_index": 39600,
+      "before": {
+        "surface": "발그스레하여",
+        "span": {
+          "start": 309646,
+          "end": 309664
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하여",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스렇다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "ending",
+                "irregular.ha",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "contraction.identical",
+                "ending",
+                "irregular.ha"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "여",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.vowel",
+                "copula",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.ha"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하여",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하여다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.yeo_absorption",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.vowel",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "발그스레하여",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하여다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하이다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              "entries": [
+                {
+                  "id": "krdict:62888",
+                  "headword": "하다",
+                  "homonym": "2",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:62899",
+                  "headword": "하다",
+                  "homonym": "3",
+                  "pos": "보조 형용사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:73277",
+                  "headword": "하다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레하여",
+        "span": {
+          "start": 309646,
+          "end": 309664
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하여",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스렇다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "ending",
+                "irregular.ha",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "contraction.identical",
+                "ending",
+                "irregular.ha"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "여",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                },
+                {
+                  "text": "이다",
+                  "kind": "copula"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.vowel",
+                "copula",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.ha"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하여",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하여다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.yeo_absorption",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하이다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "contraction.vowel",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "발그스레하여",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하여다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하이다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "이다",
+                "kind": "copula"
+              },
+              "entries": [
+                {
+                  "id": "krdict:86118",
+                  "headword": "이다",
+                  "homonym": "3",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:86232",
+                  "headword": "이다",
+                  "homonym": "2",
+                  "pos": "조사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:92457",
+                  "headword": "이다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              "entries": [
+                {
+                  "id": "krdict:62888",
+                  "headword": "하다",
+                  "homonym": "2",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:62899",
+                  "headword": "하다",
+                  "homonym": "3",
+                  "pos": "보조 형용사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:73277",
+                  "headword": "하다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:86118",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:86232",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:92457",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "candidate-raw",
+      "record_index": 39602,
+      "before": {
+        "surface": "발그스레한",
+        "span": {
+          "start": 309665,
+          "end": 309680
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레한",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스렇다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.attached",
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.attached",
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "adverbial"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레한",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레핳다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "발그스레한",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레할다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레핳다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              "entries": [
+                {
+                  "id": "krdict:62888",
+                  "headword": "하다",
+                  "homonym": "2",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:62899",
+                  "headword": "하다",
+                  "homonym": "3",
+                  "pos": "보조 형용사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:73277",
+                  "headword": "하다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레한",
+        "span": {
+          "start": 309665,
+          "end": 309680
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레한",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스렇다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.attached",
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레다",
+                  "kind": "predicate"
+                },
+                {
+                  "text": "하다",
+                  "kind": "auxiliary"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                },
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "auxiliary",
+                "boundary.attached",
+                "contraction.identical",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "nominal"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하",
+                  "kind": "adverbial"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "는",
+                  "kind": "particle"
+                }
+              ],
+              "rules": [
+                "particle",
+                "particle.contraction.n"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레한",
+                  "kind": "unclassified"
+                }
+              ],
+              "morphemes": [],
+              "rules": [
+                "identity"
+              ],
+              "unchanged": true
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레할다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "deletion.rieul",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레핳다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.hieut"
+              ],
+              "unchanged": false,
+              "spelling_paths": [
+                [
+                  {
+                    "morpheme_index": 0,
+                    "class": "hieut_irregular"
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스렇다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하",
+                "kind": "nominal"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하",
+                "kind": "adverbial"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            },
+            {
+              "lemma": {
+                "text": "발그스레한",
+                "kind": "unclassified"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레할다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "발그스레핳다",
+                "kind": "predicate"
+              },
+              "entries": []
+            },
+            {
+              "lemma": {
+                "text": "하다",
+                "kind": "auxiliary"
+              },
+              "entries": [
+                {
+                  "id": "krdict:62888",
+                  "headword": "하다",
+                  "homonym": "2",
+                  "pos": "보조 동사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:62899",
+                  "headword": "하다",
+                  "homonym": "3",
+                  "pos": "보조 형용사",
+                  "pos_compatibility": "compatible"
+                },
+                {
+                  "id": "krdict:73277",
+                  "headword": "하다",
+                  "homonym": "1",
+                  "pos": "동사",
+                  "pos_compatibility": "incompatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                },
+                {
+                  "lemma_index": 1,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:62888",
+                      "status": "compatible",
+                      "conflicts": []
+                    },
+                    {
+                      "id": "krdict:62899",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "auxiliary_class",
+                          "morpheme_index": 0
+                        }
+                      ]
+                    },
+                    {
+                      "id": "krdict:73277",
+                      "status": "incompatible",
+                      "conflicts": [
+                        {
+                          "rule": "lexical_role",
+                          "morpheme_index": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            },
+            {
+              "status": "unknown",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "unknown",
+                  "entries": []
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "candidate-headword",
+      "record_index": 39598,
+      "before": {
+        "surface": "발그스레하니",
+        "span": {
+          "start": 309627,
+          "end": 309645
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하니",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레하니",
+        "span": {
+          "start": 309627,
+          "end": 309645
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하니",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "candidate-headword",
+      "record_index": 39600,
+      "before": {
+        "surface": "발그스레하여",
+        "span": {
+          "start": 309646,
+          "end": 309664
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하여",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.ha"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레하여",
+        "span": {
+          "start": 309646,
+          "end": 309664
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하여",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.ha"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "candidate-headword",
+      "record_index": 39602,
+      "before": {
+        "surface": "발그스레한",
+        "span": {
+          "start": 309665,
+          "end": 309680
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레한",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레한",
+        "span": {
+          "start": 309665,
+          "end": 309680
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레한",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "candidate-compatible",
+      "record_index": 39598,
+      "before": {
+        "surface": "발그스레하니",
+        "span": {
+          "start": 309627,
+          "end": 309645
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하니",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레하니",
+        "span": {
+          "start": 309627,
+          "end": 309645
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하니",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.regular",
+                "ending"
+              ],
+              "unchanged": false
+            },
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "으니",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.eu",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "candidate-compatible",
+      "record_index": 39600,
+      "before": {
+        "surface": "발그스레하여",
+        "span": {
+          "start": 309646,
+          "end": 309664
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하여",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.ha"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레하여",
+        "span": {
+          "start": 309646,
+          "end": 309664
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레하여",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "어",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "ending",
+                "irregular.ha"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "mode": "candidate-compatible",
+      "record_index": 39602,
+      "before": {
+        "surface": "발그스레한",
+        "span": {
+          "start": 309665,
+          "end": 309680
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레한",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible"
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "after": {
+        "surface": "발그스레한",
+        "span": {
+          "start": 309665,
+          "end": 309680
+        },
+        "kind": "word",
+        "analysis": {
+          "normalized": "발그스레한",
+          "analyses": [
+            {
+              "lemmas": [
+                {
+                  "text": "발그스레하다",
+                  "kind": "predicate"
+                }
+              ],
+              "morphemes": [
+                {
+                  "form": "은",
+                  "kind": "ending"
+                }
+              ],
+              "rules": [
+                "boundary.attached",
+                "ending"
+              ],
+              "unchanged": false
+            }
+          ]
+        },
+        "dictionary": {
+          "source": "krdict",
+          "fingerprint": "837de0c1deea1a090c9d9687a9a1fee1425f3dedaaf1c93cc0fcc93870bb7234",
+          "lemmas": [
+            {
+              "lemma": {
+                "text": "발그스레하다",
+                "kind": "predicate"
+              },
+              "entries": [
+                {
+                  "id": "krdict:600930",
+                  "headword": "발그스레하다",
+                  "homonym": "0",
+                  "pos": "동사",
+                  "pos_compatibility": "compatible",
+                  "independent_pos": {
+                    "reviewed_pos": "형용사",
+                    "source_id": "opendict:569243",
+                    "source_url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+                    "source_response_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+                    "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe"
+                  }
+                }
+              ]
+            }
+          ],
+          "readings": [
+            {
+              "status": "compatible",
+              "lemmas": [
+                {
+                  "lemma_index": 0,
+                  "status": "compatible",
+                  "entries": [
+                    {
+                      "id": "krdict:600930",
+                      "status": "compatible",
+                      "conflicts": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "all_raw_and_headword_candidates_unchanged": true,
+  "native_fields_unchanged": true,
+  "all_original_baseline_hashes_verified": true,
+  "all_changes_match_the_authored_adjective_control": true,
+  "control_scope": "POS-only authored counterfactual adapter, not a native source repair or contextual gold.",
+  "interpretation": "Exhaustive stream observations; no precision or contextual grammaticality claim."
+}

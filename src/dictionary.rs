@@ -5,10 +5,12 @@
 mod import;
 pub use import::import_krdict;
 mod attachment;
+mod pos;
 pub use attachment::{
     AttachmentConflict, AttachmentRule, DictionaryFilter, EntryAssessment, LemmaAssessment,
     ReadingAssessment,
 };
+pub use pos::IndependentPosEvidence;
 
 use crate::{Lemma, LemmaKind, WordAnalysis};
 use rusqlite::{Connection, OpenFlags, OptionalExtension};
@@ -430,6 +432,9 @@ pub struct EntryMatch {
     #[serde(flatten)]
     pub entry: EntrySummary,
     pub pos_compatibility: Compatibility,
+    /// Independently reviewed class evidence, bound to this native entry.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub independent_pos: Option<IndependentPosEvidence>,
     /// Native origins for individually reviewed compound roots. Omitted when
     /// not consulted or absent in older annotations; empty is inconclusive.
     /// This is per-entry evidence, not a contextually selected sense.
@@ -449,6 +454,15 @@ pub struct EntryMatch {
     pub reu: Option<ReuEvidence>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub written_vowel: Option<WrittenVowelEvidence>,
+}
+impl EntryMatch {
+    /// Class for attachment checks; `entry.pos` always remains native.
+    pub fn effective_pos(&self) -> &str {
+        self.independent_pos
+            .as_ref()
+            .filter(|e| e.applies_to(&self.entry))
+            .map_or(self.entry.pos.as_str(), |e| e.reviewed_pos.as_str())
+    }
 }
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct LemmaMatches {
@@ -483,6 +497,7 @@ struct CachedLookup {
     entries: Arc<Vec<EntrySummary>>,
     spelling: Vec<Option<CachedSpelling>>,
     origins: Vec<Option<Vec<String>>>,
+    independent_pos: Vec<Option<IndependentPosEvidence>>,
 }
 
 /// FIFO cache of headword summaries and scoped spelling evidence, including negative lookups. The byte budget
@@ -525,7 +540,23 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
         } else {
             Vec::new()
         };
+        let mut independent_pos = if entries.iter().any(pos::consult) {
+            Vec::with_capacity(entries.len())
+        } else {
+            Vec::new()
+        };
         for summary in entries.iter() {
+            if independent_pos.capacity() > 0 {
+                let evidence = if pos::consult(summary) {
+                    self.dictionary
+                        .entry(&summary.id)?
+                        .filter(|e| e.summary == *summary)
+                        .and_then(|e| IndependentPosEvidence::from_entry(&e))
+                } else {
+                    None
+                };
+                independent_pos.push(evidence);
+            }
             let evidence = if (summary.headword.ends_with("르다")
                 || summary
                     .headword
@@ -564,6 +595,12 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
             + std::mem::size_of::<(Arc<CachedLookup>, usize)>()
             + std::mem::size_of::<CachedLookup>()
             + spelling.capacity() * std::mem::size_of::<Option<CachedSpelling>>()
+            + independent_pos.capacity() * std::mem::size_of::<Option<IndependentPosEvidence>>()
+            + independent_pos
+                .iter()
+                .flatten()
+                .map(IndependentPosEvidence::retained_bytes)
+                .sum::<usize>()
             + origins.capacity() * std::mem::size_of::<Option<Vec<String>>>()
             + origins
                 .iter()
@@ -593,6 +630,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
             entries,
             spelling,
             origins,
+            independent_pos,
         });
         if size <= self.budget {
             while self.bytes > self.budget - size {
@@ -625,6 +663,7 @@ impl<'a, D: Dictionary + ?Sized> DictionarySession<'a, D> {
                 .map(|(index, (entry, evidence))| EntryMatch {
                     pos_compatibility: pos_compatibility(lemma, entry),
                     entry: entry.clone(),
+                    independent_pos: matched.independent_pos.get(index).cloned().flatten(),
                     origins: matched
                         .origins
                         .get(index)

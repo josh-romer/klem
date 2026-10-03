@@ -941,3 +941,56 @@ selecting it from sentence context. The [individual review](direct-command-revie
 and [tests](../tests/direct_command_review.rs) preserve all nine complete native
 ending-example groups, four unchanged training rows and 34 entry judgments;
 no general past-command prohibition is inferred.
+
+## Independently reviewed POS conflicts (COV-021q)
+
+The pinned KRDict entry `krdict:600930` lists 발그스레하다 as 동사. The
+[expert-reviewed 우리말샘 entry](https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm)
+lists it as 형용사. For this individually reviewed identity and native profile,
+attachment checks use the independently sourced adjective class. `Entry`,
+`EntrySummary`, imported SQLite fields and the annotation's original `pos` stay
+unchanged. The optional `independent_pos` annotation records the reviewed class,
+separate source ID/URL, primary-response SHA-256 and native-profile SHA-256.
+The browser shows the original label and links the class used for attachment.
+
+Qualification requires the exact native ID, headword, homonym, original POS and
+complete Korean entry profile: URL, level, lexical unit, origins, notes, every
+written form/pronunciation and every sense ID/definition/example/note/pattern.
+Translations are excluded from the profile hash so a language projection of the
+same source can qualify. Missing or changed Korean evidence, another provider's
+ID, another homonym or a changed native class receives no independent sidecar.
+This finite review does not guess a class from a definition or translation.
+
+All existing class-sensitive checks use this entry's effective class, including
+class inheritance through represented 지-negatives. An unrelated later auxiliary,
+copula or derivational suffix keeps its own ownership. Coarse predicate/nominal
+role checks retain the original known predicate classification. Unknown wishes,
+command registers and unreviewed prefinal extensions still survive filtering;
+a retained reading is not certified grammaticality. Old serialized annotations
+without this optional field retain their original native-label behavior. Invalid
+or moved source metadata cannot lend a class to another entry. Cache accounting
+includes the optional evidence and its retained strings.
+
+[The source fixture](../tests/fixtures/native-pos-sources.json) preserves 148
+pre-change raw candidate lists, the complete original entry and all 46 earlier
+authored adjective controls. An [additional boundary fixture](../tests/fixtures/native-pos-boundaries.json)
+preserves 23 probes, for 165 distinct surfaces across both sets. [Thirty-nine policy cases](../tests/fixtures/native-pos-policy.json)
+are appended to the separate dictionary ledger, with 14 required retentions and
+25 scoped conflicts. The original raw ledger, contradictory source fields and
+all earlier cases remain intact. [Tests](../tests/native_pos.rs) cover source
+qualification, homonyms, sparse/updated entries, legacy JSON, NFC/NFD, bounded
+caching, component ownership, existing class gates and CLI agreement in three
+modes. The counterfactual controls remain authored diagnostics; the independent
+source supplies the class premise, and existing reviewed attachment rules supply
+the ending restrictions. Independent Korean-language review remains pending.
+
+[Final verification](native-pos-evaluation.json) retains all 990 full CLI responses
+and 165 complete API responses, with 80 located class-assessment changes and all
+39 policy checks. All 792 Nix release tests, three host checks, nine inventory
+tests, formatting, Clippy and the complete browser suite pass. Eight broad
+streams preserve every original baseline hash and candidate: all 1,128,312
+records are checked, with only independent metadata added for three native
+paradigm forms and all novel records unchanged. The refreshed preview matches
+the packaged outputs and assets. Original raw gold/source objects and all 3,753
+earlier dictionary-policy cases remain unchanged; independent Korean-language
+review and broader checklist items stay open.

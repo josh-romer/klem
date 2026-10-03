@@ -89,6 +89,9 @@ export default function App() {
   let request: AbortController | undefined;
   let generation = 0;
   const token = createMemo(() => result()?.records[selected()]);
+  const entryPosEvidence = createMemo(() => token()?.dictionary?.lemmas
+    .flatMap((m) => m.entries)
+    .find((e) => e.id === entryId())?.independent_pos);
   const candidates = createMemo(() =>
     token() ? analyses(token()!, only(), compatible()) : [],
   );
@@ -634,6 +637,16 @@ export default function App() {
                         </For>
                       </div>
                     </div>
+                    <Show when={entryPosEvidence()}>
+                      {(evidence) => (
+                        <p class="panel-caption">
+                          Attachment class: <span lang="ko">{evidence().reviewed_pos}</span>
+                          {" · "}<a href={evidence().source_url} target="_blank" rel="noreferrer"
+                            aria-label="Independent POS source">우리말샘</a>.
+                          {" "}The dictionary’s original label is shown above.
+                        </p>
+                      )}
+                    </Show>
                     <ol class="senses">
                       <For each={loaded().senses}>
                         {(sense) => (

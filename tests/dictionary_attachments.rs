@@ -55,6 +55,8 @@ impl Fixture {
             "krdict-quote-followers.json",
             "krdict-proposal-audit.json",
             "krdict-complex-bieup.json",
+            "krdict-source-head.json",
+            "krdict-auxiliary-inventory.json",
         ] {
             let data: serde_json::Value = serde_json::from_slice(
                 &fs::read(PathBuf::from("tests/fixtures").join(file)).unwrap(),
@@ -64,6 +66,17 @@ impl Fixture {
                 .as_array()
                 .unwrap()
             {
+                if file == "krdict-auxiliary-inventory.json"
+                    && ![
+                        "49988", "49985", "72226", "67248", "67249", "72227", "73991",
+                    ]
+                    .contains(&entry["val"].as_str().unwrap())
+                {
+                    continue;
+                }
+                if file == "krdict-source-head.json" && entry["val"] != "600930" {
+                    continue;
+                }
                 if file == "krdict-complex-bieup.json"
                     && ![
                         "84853", "64511", "41140", "58034", "50935", "54086", "64728", "63307",
@@ -191,7 +204,7 @@ fn source_backed_attachment_judgments_preserve_raw_rules_and_headword_policy() {
     assert!(report.passed(), "{:?}", report.violations);
     assert_eq!(
         (report.required_total, report.forbidden_total),
-        (2072, 1681)
+        (2086, 1706)
     );
     assert_eq!(
         report.required_total + report.forbidden_total,

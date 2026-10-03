@@ -21,6 +21,13 @@ export interface EntrySummary {
 }
 export interface EntryMatch extends EntrySummary {
   pos_compatibility: string;
+  independent_pos?: {
+    reviewed_pos: string;
+    source_id: string;
+    source_url: string;
+    source_response_sha256: string;
+    native_profile_sha256: string;
+  };
   origins?: string[];
   written_vowel?: { a: string[]; eo: string[]; uncontracted: string[] };
   reu?: { eu_deletion: string[]; rieul_doubling: string[]; reo: string[]; uncontracted: string[] };

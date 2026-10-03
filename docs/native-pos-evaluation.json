@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-021q",
+  "reviewed": "2026-10-03",
+  "before_revision": "be1b115",
+  "scope": "Finite independently evidenced adjective class for one exact native identity/profile. No source rewrite, contextual sense selection or POS-wide unknown fallback.",
+  "primary": {
+    "headword": "발그스레하다",
+    "sense_no": "569243",
+    "url": "https://opendict.korean.go.kr/dictionary/view?sense_no=569243&viewType=confirm",
+    "html_sha256": "2061cc240475b872cf76d10ee73f8e84d3a7b0e7f64380ed08106e5466e8cb33",
+    "pos": "형용사",
+    "scope": "Full expert-reviewed entry read. Its adjective label conflicts with the pinned KRDict verb label. Native fields remain unchanged; dictionary annotation policy is a separate open issue."
+  },
+  "native_profile_sha256": "93f7b45bd7ac9eaa460402b6cbab5e84c7519764714351133754e9eb5d66ffbe",
+  "gates": {
+    "nix": {
+      "status": "passed",
+      "log_path": "/tmp/klem-native-pos-flake-expanded.log",
+      "log_sha256": "fc68112e84dadc806e68a0083a161983399530437eef86c40a95c2f6e29504fc",
+      "host": "x86_64-linux",
+      "checks": 3,
+      "release_tests": 792
+    },
+    "targeted": {
+      "status": "passed",
+      "log_path": "/tmp/klem-native-pos-final-targeted.log",
+      "log_sha256": "1f8ce0cb01791b91bec69f8c872564f827f936227c05fda4384b1afbb13dc496"
+    },
+    "clippy": {
+      "status": "passed",
+      "log_path": "/tmp/klem-native-pos-clippy-final.log",
+      "log_sha256": "e579b2147672fda631d68d152bf590cd21705f29d378bb3b3d8be198480f8d99"
+    },
+    "format": {
+      "status": "passed",
+      "log_path": "/tmp/klem-native-pos-fmt-final.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "browser": {
+      "status": "passed",
+      "log_path": "/tmp/klem-native-pos-browser-corrected.log",
+      "log_sha256": "cf94a284c40b052c02baf4603323ca26850e1dba200e79cb92581ea619ba0dd5",
+      "cli": "/tmp/klem-native-pos-runtime/klem",
+      "cli_sha256": "b47dcd64b72afdeea546831fe1e85ef6c01048e84e962dd53ba37ab6dec57c0d",
+      "server_sha256": "462ad0585fe4b7e4c6d817b89d87e53dea70bb957d1f632838cf3832d840cfe8",
+      "packaged_assets": "/nix/store/njkmbfdj1brjb4mlllwv1vqqynn694bp-klem-web-assets-0.1.0/share/klem-web",
+      "full_suite": true,
+      "explicit_native_entry_selection": true,
+      "desktop_and_mobile_visually_inspected": true,
+      "desktop_panel_sha256": "f55d6c19b1d0ae73800cb505660430971441e361d03feb836883cb847b87817f",
+      "mobile_panel_sha256": "000ac29f00e35a151fea7a675f8e02916cb87853dc9bc9040e01d300e3695940"
+    },
+    "inventory_tests": {
+      "status": "passed",
+      "log_path": "/tmp/klem-native-pos-inventory-unit-corrected.log",
+      "log_sha256": "542478c5e228cffe15731b293460e1c4bc97eab58d811a31f3775a96f09a3ee3",
+      "tests": 9
+    },
+    "final_cached_flake": {
+      "status": "passed",
+      "log_path": "/tmp/klem-native-pos-flake-final.log",
+      "log_sha256": "c3686e4f993a1708b0011643c13f810b32ab2d9c127f8e8b274bcc2d5d111eab",
+      "checks": 3,
+      "inventory": {
+        "entries": 715,
+        "scoped": 427,
+        "unreviewed": 288
+      }
+    }
+  },
+  "fixture_surfaces": {
+    "initial": 148,
+    "additional": 23,
+    "distinct": 165,
+    "prior_isolated_controls": 46
+  },
+  "policy_cases": {
+    "total": 39,
+    "required": 14,
+    "forbidden": 25
+  },
+  "raw_assessment_changes": 80,
+  "runtime": {
+    "path": "docs/native-pos-runtime.json.gz",
+    "sha256": "8c3b1d484098b0ca0a65a35f5ec019764c612552789e5397da90c6f599051e05",
+    "full_cli_outputs": 990,
+    "full_api_surfaces": 165,
+    "complete_native_entry_retained": true,
+    "all_packaged_cli_api_and_debug_outputs_equal": true
+  },
+  "preview": {
+    "path": "docs/native-pos-preview.json.gz",
+    "sha256": "0b930962a6e1320a68d59a9ae9f2cce7d31be77d93bcbe6892145801301b1290",
+    "url": "http://127.0.0.1:8081",
+    "full_api_surfaces": 165,
+    "all_responses_and_assets_match_packaged": true,
+    "process_identity": {
+      "pid": 4015074,
+      "uid": 1000,
+      "start_ticks": 8749658,
+      "exe": "/nix/store/0d0yv9jy4mic8fcy2x3mcixw95l22x2g-klem-0.1.0/bin/klem-web",
+      "cwd": "/home/josh/projects/klem",
+      "argv": [
+        "/nix/store/0d0yv9jy4mic8fcy2x3mcixw95l22x2g-klem-0.1.0/bin/klem-web",
+        "--assets",
+        "/nix/store/njkmbfdj1brjb4mlllwv1vqqynn694bp-klem-web-assets-0.1.0/share/klem-web",
+        "--port",
+        "8081",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ]
+    },
+    "previous_process_identity": {
+      "pid": 3418191,
+      "start_ticks": 7032327,
+      "uid": 1000,
+      "exe": "/nix/store/bmai4ihgab8s7qsz37f35rgjdir7n9rk-klem-0.1.0/bin/klem-web",
+      "cwd": "/home/josh/projects/klem",
+      "argv": [
+        "/nix/store/bmai4ihgab8s7qsz37f35rgjdir7n9rk-klem-0.1.0/bin/klem-web",
+        "--assets",
+        "/nix/store/786g6fqbwdhxv43fvqbx0qzcldb5d8db-klem-web-assets-0.1.0/share/klem-web",
+        "--port",
+        "8081",
+        "--dictionary",
+        "data/dictionaries/krdict/krdict.db"
+      ]
+    }
+  },
+  "broad": {
+    "path": "docs/native-pos-observations.json",
+    "sha256": "e009d9de7f5d62874b86ab38b64264da9ecbf8f70c69ba3b64c09ea770516f7e",
+    "streams": 8,
+    "records": 1128312,
+    "changed_records": 9,
+    "changed_distinct_surfaces": [
+      "발그스레하니",
+      "발그스레하여",
+      "발그스레한"
+    ],
+    "all_novel_records_unchanged": true,
+    "all_original_baseline_hashes_verified": true
+  },
+  "preservation": {
+    "unchanged_files": {
+      "tests/fixtures/validity.json": "40f2aba2668126f41f604be37a127e10b7579f10e1e0af1b7251952cf1b366d5",
+      "tests/fixtures/source-head-sources.json": "46ad07956769f7175936d201a297707e7b9529526727a73c6684f04a991fe8af",
+      "tests/fixtures/source-head-primary-reviews.json": "7a693a02b2bb182bc79ed08b31343a1437e8280807fbf05e3f1882f875226305",
+      "docs/native-pos-source-preflight.json": "66f54a91841f73b891d5132d47994196f76898b91d9adfa62648c6ac6325c576",
+      "docs/native-pos-diagnostic-controls.json": "224ae483eeb66575cf86a29af8d7555c69f11c5a4c761b88ac31c27074e96356"
+    },
+    "original_attachment_cases": 3753,
+    "original_attachment_sources": 1181,
+    "all_original_case_source_objects_preserved": true,
+    "new_attachment_cases": 3792,
+    "native_entry": {
+      "id": "krdict:600930",
+      "headword": "발그스레하다",
+      "homonym": "0",
+      "pos": "동사",
+      "url": "https://krdict.korean.go.kr/kor/dicSearch/SearchView?ParaWordNo=600930",
+      "level": "고급",
+      "lexical_unit": "단어",
+      "origins": [],
+      "notes": [],
+      "forms": [
+        {
+          "kind": "발음",
+          "written": "",
+          "pronunciations": [
+            "발그스레하다"
+          ]
+        },
+        {
+          "kind": "활용",
+          "written": "발그스레한",
+          "pronunciations": []
+        },
+        {
+          "kind": "활용",
+          "written": "발그스레하여",
+          "pronunciations": []
+        },
+        {
+          "kind": "활용",
+          "written": "발그스레하니",
+          "pronunciations": []
+        },
+        {
+          "kind": "활용",
+          "written": "발그르세합니다",
+          "pronunciations": [
+            "발그스레함니다"
+          ]
+        }
+      ],
+      "senses": [
+        {
+          "id": "1",
+          "definition": "조금 발갛다.",
+          "translations": [
+            {
+              "language": "몽골어",
+              "lemma": "улайх, улаарах",
+              "definition": "бага зэрэг улаан."
+            },
+            {
+              "language": "아랍어",
+              "lemma": "(لا يوجد كلمة مرادفة)",
+              "definition": "أحمر قليلاً"
+            },
+            {
+              "language": "중국어",
+              "lemma": "微红",
+              "definition": "有点红。"
+            },
+            {
+              "language": "베트남어",
+              "lemma": "hơi đỏ",
+              "definition": "Hơi đỏ một chút."
+            },
+            {
+              "language": "타이어",
+              "lemma": "แดงนิดหน่อย, แดงระเรื่อ",
+              "definition": "แดงนิดหน่อย"
+            },
+            {
+              "language": "인도네시아어",
+              "lemma": "sedikit kemerahan",
+              "definition": "sedikit kemerahan"
+            },
+            {
+              "language": "러시아어",
+              "lemma": "розоватый; слегка красноватый",
+              "definition": "Немного красный. Светло-красный оттенок, менее интенсивный, чем ярко-красный или багряный."
+            },
+            {
+              "language": "영어",
+              "lemma": "(no equivalent expression)",
+              "definition": "It's a little red."
+            },
+            {
+              "language": "일본어",
+              "lemma": "あかみがかっている【赤みがかっている】",
+              "definition": "少し明るくてうっすらと赤い。"
+            },
+            {
+              "language": "프랑스어",
+              "lemma": "être rougeâtre",
+              "definition": "Être rougeâtre un peu."
+            },
+            {
+              "language": "스페인어",
+              "lemma": "rojizo, za",
+              "definition": "Ponerse ligeramente rojo."
+            }
+          ],
+          "examples": [
+            [
+              "볼이 발그스레하다."
+            ],
+            [
+              "뺨이 발그스레하다."
+            ],
+            [
+              "얼굴이 발그스레하다."
+            ],
+            [
+              "겨울바람을 맞고 들어온 민준이의 얼굴이 발그스레해졌다."
+            ],
+            [
+              "좋아하는 친구를 만난 지수의 뺨이 발그스레하게 상기되었다."
+            ],
+            [
+              "요즘 외출하면 얼굴에 홍조가 나타나네.",
+              "그러네. 얼굴이 좀 발그스레한 것 같아."
+            ]
+          ],
+          "notes": [],
+          "patterns": [
+            "1이 발그스레하다"
+          ]
+        }
+      ]
+    }
+  },
+  "source_files": {
+    "src/dictionary.rs": "1042aef56706c7af1d7672739dfcc0e229955e9761a6cdb04dfd2616d67435ee",
+    "src/dictionary/attachment.rs": "8b5883a3a8b371d1f114095c5f647c8cf87297de1d4901c88d44f87013de0528",
+    "src/dictionary/pos.rs": "4d7f7073df0197d590a117647379286a5c862a25d55f51d2f82d27595cbcc868",
+    "tests/native_pos.rs": "7194a4d8cf61ebf38a06c66e6efc40415d503d51766de353f45b331fbb934a6e",
+    "tests/fixtures/native-pos-sources.json": "d00f171a7f8a674322325c93390c52f0e8c6d964721f89b2633e34360825b784",
+    "tests/fixtures/native-pos-boundaries.json": "ab993b8e1b76c84d110ca59414e21b51ff5bbb0975ed1aff262be1c0c553c262",
+    "tests/fixtures/native-pos-policy.json": "1f4b8a43f0a77262df126c78f15146acec3220183598045abe05c79e7956ebcc",
+    "tools/native_pos_preflight.py": "ca00eaec2c92b07b07fb0a0a5304104f081736be37597da8d534e6a0b8b5c0f2",
+    "tools/native_pos_boundaries_preflight.py": "e5a996fc75cdc952d3b34cca4a91c3e3693bc80e612f97b5861b9fec328fec44",
+    "tools/native_pos_compare.py": "54014f22537eed19f79e2bb9305270531509e92caa2c042119ae0f2d090223f4",
+    "tools/native_pos_runtime.py": "0bacd66067b09f83642a33942480eb5cec5e23f91d9fb71699ea5c99a942b72f",
+    "web/src/App.tsx": "a50c501508ecb3786cc3e38cf5fae04e98f229b7f962c2f1a6be6d4fdd804770",
+    "web/src/model.ts": "9c1023b4222f40f308a40b1e810374341723a4394d4f5dc8a48cd9f1a054b592",
+    "web/tests/browser.mjs": "e8adc80990e2e1ec28273aa910293d467e34f73ecda177541fb2f7c65fcc3b3b"
+  },
+  "corrected_verification_setup": [
+    {
+      "issue": "Initial negative fixture did not contain the native 않다 entries.",
+      "log_sha256": "9cf379a3355fdbf7b746669eec5e66c21095e075c21f5d44a10dcbcf65f92ad8"
+    },
+    {
+      "issue": "Additional copular fixture overlapped existing IDs; selected only its separate 이다 entries.",
+      "log_sha256": "5eac0a1129708390db5648981d45efe77d780394cfef0e3b28f34368c729ba73"
+    },
+    {
+      "issue": "Clippy required eliding a needless test-helper lifetime.",
+      "log_sha256": "961b81ea26e1fd16bf6e9a56b4280a1f69f45f6a069bd123ff5b5baa67b1d12d"
+    },
+    {
+      "issue": "Initial browser test assumed the first selected entry was the reviewed head; it was an auxiliary. Corrected tests explicitly select the reviewed head.",
+      "log_sha256": "16f955693a7f97d2e9510f6316fc178de81feaf0136b830149cac5d25c351ca9"
+    },
+    {
+      "issue": "Inventory unittest module invocation omitted the tools import path; discovery passed all nine tests.",
+      "log_sha256": "22c2ff4ff44b799f890ffdfb19c51fae076ea7b61c3cfa8c1a8d4ea8bfe4fec1"
+    }
+  ],
+  "remaining": "Independent Korean-language review and the other parent checklist requirements remain open. Updated/sparse/other native profiles require their own evidence; the new sidecar is not an inventory-wide repair.",
+  "verified_package": {
+    "cli": "/nix/store/0d0yv9jy4mic8fcy2x3mcixw95l22x2g-klem-0.1.0/bin/klem",
+    "cli_sha256": "6b486f8c25f260939e81ea884606e1ea03357e122486a1fd24ecfb8692d48e30",
+    "server": "/nix/store/0d0yv9jy4mic8fcy2x3mcixw95l22x2g-klem-0.1.0/bin/klem-web",
+    "server_sha256": "43e8199089fa493fc0d2fc8e9d2fe9d7e38a41e2324aaf7fde86ed9c9bed3753",
+    "web_app": "/nix/store/0znj9vyl3hhw14xg4l44qnmxd37ysr13-klem-web",
+    "byte_identical_to_runtime_package": true
+  }
+}

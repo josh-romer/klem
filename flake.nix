@@ -110,6 +110,8 @@
               root = ./.;
               fileset = pkgs.lib.fileset.unions [
                 ./tools/review_inventory.py ./tools/test_review_inventory.py
+                ./tools/excluded_paradigm_audit.py
+                ./tools/excluded_paradigm_queue.py
                 ./docs ./tests ./web/src/grammar-labels.json
                 ./web/tests/browser.mjs
               ];
@@ -118,6 +120,8 @@
             cd "$src"
             export PYTHONDONTWRITEBYTECODE=1
             python -m unittest discover -s tools -p 'test_review_inventory.py'
+            python tools/excluded_paradigm_audit.py --verify
+            python tools/excluded_paradigm_queue.py --verify
             python tools/review_inventory.py --verify
             touch "$out"
           '';

@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "checklist": "COV-021r",
+  "reviewed": "2026-10-03",
+  "before_revision": "6676eae1ee5df04e76093569e92adda4512b549a",
+  "scope": "Every original excluded native written-form field; no source repair, spelling correction, new grammar candidates, contextual sense selection or corpus gold changes.",
+  "original_discovery": {
+    "path": "docs/written-paradigm-discovery.json",
+    "sha256": "ef3bbc3aef025f65970c1767685d4098ab399b5d7c92116a9d18791d2036b266",
+    "original_misses": 97,
+    "original_exclusions": 67,
+    "unchanged": true
+  },
+  "counts": {
+    "original_exclusions": 67,
+    "empty_fields": 10,
+    "whitespace_fields": 57,
+    "supported_listed_pairs": 56,
+    "written_conflicts": 1,
+    "required": 57,
+    "forbidden": 1
+  },
+  "source_entries": 63,
+  "diagnostic_surfaces": 141,
+  "full_before_cli_responses": 423,
+  "full_original_text_responses": 67,
+  "ledger": {
+    "previous_cases": 12624,
+    "previous_sources": 1534,
+    "all_previous_objects_unchanged": true,
+    "current_cases": 12682,
+    "current_required": 9287,
+    "current_forbidden": 3409
+  },
+  "primary_review": {
+    "reviewed": "2026-10-03",
+    "reviewer": "agent source and written-form review; independent Korean review remains open",
+    "spelling": {
+      "url": "https://www.korean.go.kr/common/download.do?c_file_name=0528a905-2eb3-4c5a-978c-f424dd6a6c47_0.pdf&file_path=reportData&o_file_name=%ED%95%9C%EA%B8%80%EB%A7%9E%EC%B6%A4%EB%B2%95+%ED%91%9C%EC%A4%80%EC%96%B4%EA%B7%9C%EC%A0%95+%ED%95%B4%EC%84%A4.pdf",
+      "response_sha256": "dcca9b73804a46c08ecbe19af2c151adcd1bde143e13198548bb693575df0243",
+      "provisions": [
+        "Spelling Article 15",
+        "Spelling Article 16",
+        "Spelling Article 18"
+      ],
+      "scope": "The complete listed head retains its written stem before the selected ending. Exceptions are entry-specific; surrounding source whitespace is outside the diagnostic word only.",
+      "retrieved_full_document": true
+    },
+    "conflict": {
+      "id": "krdict:90327",
+      "headword": "졸아들다",
+      "url": "https://krdict.korean.go.kr/eng/dicSearch/SearchView?ParaNationCode=6&ParaWordNo=90327&nation=eng&nationCode=6&viewTypes=on",
+      "response_sha256": "2936214affc3410cc75ea13db1ffdeab05dd7c35efb63f651aaedc661e3f08f0",
+      "full_response_read": true,
+      "native_written": "조라들어 ",
+      "standard_written_companion": "졸아들어",
+      "basis": "Agent application of Article 15 to the unchanged native head, supported by its own written examples. This is not an explicit NIKL FAQ token ruling. Pronunciation [조라드러] and the native conflicting written field remain distinct.",
+      "source_examples": [
+        "강물이 졸아들어 강바닥이 다 보일 정도로 가뭄이 심했다.",
+        "몇 달 동안 비가 오지 않아 논바닥에 물이 다 졸아들었다."
+      ]
+    }
+  },
+  "source_artifacts": {
+    "tests/fixtures/excluded-paradigm-sources.json": "0cde6ac61fd799bf76860b889ddef2417d14839bf25e3df06999d5b2e2c2874f",
+    "tests/fixtures/krdict-excluded-paradigm.json": "2946c22dc110b232755d19052e7b3d5ab2a0d3d0796c09424d8c4216bc4bda0a",
+    "tools/excluded_paradigm_audit.py": "3d345548b42d6c26316ae7bd2c25639f634c9c01a435587bcce59f86610fdfeb",
+    "tests/excluded_paradigms.rs": "a295c9b437c1a962e451b1676c3ce025f34787ba82d883e0fbb837797cf0a584",
+    "docs/hada-remaining-coda-source-review.json": "7e93736591fe0033a2d1eee87706901d98b46c3399feaff074c6e70a9e57e77b",
+    "tools/excluded_paradigm_runtime.py": "ea58780247ff9e233316e847f5f59072709fb1e60b41431395212c548d8531e8",
+    "web/tests/excluded-paradigms.mjs": "a5c2a21b1352ae39183191f9c7315bfd660063129ed701326824d8c8e5f8e586",
+    "tests/validity.rs": "c4a27d13f56fe0f1ce477af4ff4987f8a603e166b115921da44454ff0628cb8f",
+    "tools/excluded_paradigm_queue.py": "d7380c789027605ed805ed94f1f585b0a2f8063ec1447e69efd95d3563a4692f",
+    "docs/excluded-paradigm-review-queue.json": "80134182488c1742b90472a0b56c9a203b41eae3bc0317836ff82ec8eac2c333"
+  },
+  "shortening_source_review": {
+    "path": "docs/hada-remaining-coda-source-review.json",
+    "frozen_hypothetical_surfaces": 198,
+    "matching_pending_native_heads": 0,
+    "new_coda_rules": 0,
+    "disposition": "Exact base + 하 pronunciation remains unresolved; neither dictionary absence nor 히 suffix pronunciation licenses a blanket coda class."
+  },
+  "gates": {
+    "targeted": {
+      "status": "passed",
+      "tests": 4,
+      "log": "/tmp/klem-excluded-targeted.log",
+      "sha256": "e77fb5ca0e21cf11434f78d435372f11943f72f0164142fe1fbcdcb959c71aa9"
+    },
+    "format": {
+      "status": "passed",
+      "log": "/tmp/klem-excluded-fmt-final.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "inventory_unit": {
+      "status": "passed",
+      "tests": 9,
+      "log": "/tmp/klem-excluded-inventory-unit.log",
+      "sha256": "75fba743710fa8701bf5b43b3a05777218c0adb981f5677e7360b6f3b6247ae8"
+    },
+    "cargo": {
+      "status": "initial_run_failed_stale_ledger_totals_corrected",
+      "log": "/tmp/klem-excluded-cargo.log",
+      "sha256": "4c2acc829583f95f6234a41ad4c02ed4c78b93165c1482a26450200cc6b3e50a",
+      "scope": "The initial run passed the candidate, corpus, dictionary and stress suites before reaching a stale ledger-count assertion. Full current release coverage is required from Nix."
+    },
+    "nix": {
+      "status": "passed",
+      "host": "x86_64-linux",
+      "checks": 3,
+      "release_tests": 796,
+      "log": "/tmp/klem-excluded-flake.log",
+      "sha256": "c93a8340ef006c2d826d39e8827b91fb494a3f2673ea403a5e17b7ca05c09b45",
+      "scope": "Full release checks after the ledger-count correction. Final preservation-test and queue-verifier checks are recorded separately."
+    },
+    "clippy": {
+      "status": "passed",
+      "log": "/tmp/klem-excluded-clippy.log",
+      "sha256": "dfd4b991ed4b6611f540b5e793ca9101e0d81f67fef75f10d5623017465566cc"
+    },
+    "runtime": {
+      "status": "passed",
+      "log": "/tmp/klem-excluded-packaged-runtime.log",
+      "sha256": "f84b1f07b35ab33d056bb72130188de7e3031e79fb69a7fb64e2d3cba88e214b",
+      "full_cli_responses": 423,
+      "word_api_responses": 141,
+      "padded_text_api_responses": 57,
+      "empty_api_responses": 10,
+      "complete_entry_responses": 63,
+      "ledger_cases": 58,
+      "all_full_responses_and_assets_match_preview": true
+    },
+    "targeted_final": {
+      "status": "passed",
+      "tests": 8,
+      "log": "/tmp/klem-excluded-targeted-final.log",
+      "sha256": "308e32e62a190b57eef5fe1e08700d6d0547a72546c2a62d063ad5f1b24acecb"
+    },
+    "browser_cohort": {
+      "status": "passed",
+      "log": "/tmp/klem-excluded-browser-final.log",
+      "sha256": "b90fb5f9faeaa92071e8cd7c0a2655c56f94d8a6ece9e4625e4a4f5b60831e72",
+      "submissions": 6,
+      "words": 58,
+      "filters": 3,
+      "unicode_forms": 2,
+      "all_raw_indices_and_exports_match_cli": true,
+      "native_conjugated_forms_and_examples_retained": true,
+      "desktop_and_mobile_visually_inspected": true,
+      "screenshots": {
+        "desktop": {
+          "path": "/tmp/klem-excluded-browser-3By53W/desktop.png",
+          "sha256": "849ab1365e4e75719b65268d4ffe80636951263c2e1a601eee2048d135553181"
+        },
+        "mobile": {
+          "path": "/tmp/klem-excluded-browser-3By53W/mobile.png",
+          "sha256": "643ebb1dcfd9125c98978d493bd660e7417936921a4fdf77ab32a95e30fa563a"
+        }
+      },
+      "scope": "Complete excluded-field cohort; unchanged production assets. This is an additional standalone browser regression, not a new run of the entire older browser suite."
+    },
+    "targeted_preservation": {
+      "status": "passed",
+      "tests": 8,
+      "log": "/tmp/klem-excluded-targeted-preservation.log",
+      "sha256": "90f7107db76df9fa5ce998bd28518c52f2e4154769623838377baecbec9e649e",
+      "scope": "Prior candidates and order stay intact while future independently licensed additions can extend the engine. Written required/forbidden judgments and lossless text/CLI checks remain exact."
+    },
+    "clippy_final": {
+      "status": "passed",
+      "log": "/tmp/klem-excluded-clippy-final.log",
+      "sha256": "ca7dd6ed09d4c6056fdf4cbb086ef46cbcd641b9bb579b5d02288cb5d553e687"
+    },
+    "final_flake": {
+      "status": "passed",
+      "host": "x86_64-linux",
+      "checks": 3,
+      "release_tests": 796,
+      "log": "/tmp/klem-excluded-flake-final.log",
+      "sha256": "eb4a188aed316fb196d1c97d4679b2fa288d06eb09f3e94ab5a3280bba5d0ded",
+      "includes_preservation_tests_and_individual_queue_verifier": true,
+      "other_architectures": "not evaluated"
+    },
+    "format_final": {
+      "status": "passed",
+      "log": "/tmp/klem-excluded-fmt-preservation.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "failure_audit": [
+    {
+      "stage": "primary_pdf_text_extraction",
+      "initial_failure": "pdftotext was not on PATH.",
+      "resolution": "Used the installed immutable poppler-utils executable and read the full relevant provisions."
+    },
+    {
+      "stage": "raw_native_extraction",
+      "initial_failure": "Native ID 55996 also appears on a proverb subentry; ID-only extraction encountered a duplicate.",
+      "resolution": "Require the unchanged native headword and POS before selecting the complete raw entry. The dictionary is not repaired."
+    },
+    {
+      "stage": "initial_full_cargo",
+      "initial_failure": "The aggregate ledger-count assertion retained the previous totals (9230 required / 3408 forbidden). Every judgment itself passed.",
+      "resolution": "Update only the expected counts to 9287 required / 3409 forbidden; all 12624 old case objects and 1534 old source objects remain unchanged. The corrected targeted ledger suite passes."
+    },
+    {
+      "stage": "browser_cohort",
+      "initial_failure": "The source-example assertion queried visible text while the Examples details element was collapsed.",
+      "resolution": "Open the existing Examples and Conjugated forms sections before inspecting their native content; retain all preceding 58-word/three-filter/two-Unicode checks."
+    }
+  ],
+  "remaining_requirements": [
+    "Independent Korean-language and contextual judgments, fresh passage evaluation and every open parent/checklist item.",
+    "Further lexical paradigms and shortening pronunciation evidence at the exact ㄼ/ㄶ/ㅀ + 하 boundary."
+  ],
+  "production_source_change": [],
+  "preview": {
+    "path": "docs/excluded-paradigm-preview.json.gz",
+    "sha256": "895e5ab7f3e10b870f93e6aa4cc53606e9399067a95276c2925c4ee7a1b830ab",
+    "url": "http://127.0.0.1:8081",
+    "full_cli_responses": 423,
+    "word_api_responses": 141,
+    "padded_text_api_responses": 57,
+    "empty_api_responses": 10,
+    "complete_entry_responses": 63,
+    "ledger_cases": 58,
+    "original_candidate_indices_and_full_native_fields_retained": true
+  },
+  "packaged_runtime": {
+    "path": "docs/excluded-paradigm-packaged.json.gz",
+    "sha256": "159b2eab17ac6d116487f0507cf978bd5335eade4304ad29c61c3fd3290119b2",
+    "cli": "/nix/store/9xv9zga9lpn7kkf0rg8m92rhcxpsd46r-klem-0.1.0/bin/klem",
+    "cli_sha256": "6b486f8c25f260939e81ea884606e1ea03357e122486a1fd24ecfb8692d48e30",
+    "server_sha256": "43e8199089fa493fc0d2fc8e9d2fe9d7e38a41e2324aaf7fde86ed9c9bed3753",
+    "production_binaries_byte_identical_to_previous_package": true,
+    "limitation": "Existing corpus/stress tests pass in the full Nix release suite. No fresh contextual passage judgment or performance estimate is inferred from unchanged binaries."
+  },
+  "individual_queue": {
+    "path": "docs/excluded-paradigm-review-queue.json",
+    "sha256": "80134182488c1742b90472a0b56c9a203b41eae3bc0317836ff82ec8eac2c333",
+    "existing_unjudged_alternatives": 329,
+    "stable_ids_raw_indices_full_assessments_filters": true,
+    "new_raw_paths": 0,
+    "offline_nix_verifier": "tools/excluded_paradigm_queue.py --verify"
+  },
+  "final_package": {
+    "path": "/nix/store/9ri21zskrkmlk1ss63wzihi4xhfi3rpv-klem-0.1.0",
+    "cli_sha256": "6b486f8c25f260939e81ea884606e1ea03357e122486a1fd24ecfb8692d48e30",
+    "server_sha256": "43e8199089fa493fc0d2fc8e9d2fe9d7e38a41e2324aaf7fde86ed9c9bed3753",
+    "byte_identical_to_verified_runtime_and_live_preview_binaries": true,
+    "preview": "http://127.0.0.1:8081",
+    "preview_restarted": false,
+    "reason": "The existing preview serves the exact same server bytes and unchanged assets; the changes are source-review artifacts, tests and offline verification tools."
+  }
+}

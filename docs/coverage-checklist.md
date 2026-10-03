@@ -174,8 +174,8 @@ review remains open under the completion review below.
   **Partial: initial inventory, development-miss clustering, and persistent
   entry review queue implemented.** The [715-entry queue](inventory-review-queue.json)
   preserves homonyms, source attachment notes, and links to existing evidence.
-  The [manual review ledger](inventory-reviews.json) records 425 scoped
-  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 290 entries have no disposition in this
+  The [manual review ledger](inventory-reviews.json) records 427 scoped
+  dispositions from COV-016/017c/017h–i/017m–n/017p–z/017aa–ap/017ar–az/017ba–bg/017bm–bo/018e–l/018m–z/018ab/019d–g/019i–z/019aa–ab/020d–h/020j–k/020n–o/021d; 288 entries have no disposition in this
   ledger yet, including entries with implemented behavior elsewhere. The previous 마다 gap now has a sourced modern structural
   implementation and scoped disposition, verified with full finite gates.
   Original COV-018l semantic/register review remains
@@ -2979,7 +2979,8 @@ review remains open under the completion review below.
   source-reviewed past-entry licenses; COV-021n adds eight further finite
   vowel paradigms; COV-021o adds complex ㄼ inflections and their per-entry
   spelling compatibility; COV-021p completes the bounded written-source review;
-  COV-021q adds the independently evidenced class for one native POS conflict.**
+  COV-021q adds the independently evidenced class for one native POS conflict;
+  COV-021r reviews all 67 originally excluded written-form fields.**
   Remaining: COV-021m attachment/register,
   other lexical paradigms and unmapped
   shortened-stem senses, ㄼ lexical
@@ -3561,6 +3562,35 @@ review remains open under the completion review below.
   Original raw/gold/source objects and all 3,753 earlier attachment cases remain
   unchanged. This completes the finite independently evidenced conflict policy;
   independent Korean-language review and the full parent checklist stay open.
+
+- [x] **COV-021r — Originally excluded native written-form fields.** Review
+  all 67 original exclusions without rewriting the discovery scan, source fields
+  or miss count. Ten empty spellings remain source gaps; 57 padded fields retain
+  their exact whitespace. The trimmed diagnostic is a separate evaluator input,
+  with lossless text/byte spans and unchanged word-input validation. Fifty-six
+  listed head/ending pairs already recover in all three dictionary modes.
+  The remaining 조라들어 field under 졸아들다 conflicts with the entry's own
+  written examples and spelling Article 15. A scoped regression requires
+  졸아들다 + 어 on 졸아들어 and forbids that named path on 조라들어,
+  preserving the native written/pronunciation fields and hypothetical alternate
+  roots. The [frozen preflight](../tests/fixtures/excluded-paradigm-sources.json)
+  retains 63 complete entries, 141 diagnostic surfaces in three dictionary modes,
+  all 67 original text responses and 58 individual ledger cases (57 required /
+  one forbidden). [Four integration tests](../tests/excluded_paradigms.rs) verify
+  exact native import, missing fields, raw candidate preservation, NFD, byte spans,
+  lossless CLI text and filtered CLI/library/component-assessment parity.
+  [Evaluation](excluded-paradigm-evaluation.json) records verification gates.
+  The reproducible extractor refuses overwrites, and its offline verifier runs
+  in the Nix flake. The [individual queue](excluded-paradigm-review-queue.json)
+  retains 329 existing unjudged alternatives with stable IDs, raw indices,
+  complete assessments and both filter memberships; no new raw paths are emitted.
+  All 796 Nix release tests, three host checks, Clippy/formatting, nine inventory
+  tests and the 58-word browser cohort pass. The browser covers both NFC/NFD,
+  all filters, raw indices, exports and the unchanged native fields/examples;
+  desktop/mobile rendering was inspected. Packaged CLI/API/asset responses match
+  the live preview, and both production binaries remain byte-identical to the
+  preceding package. No production rule, source correction or corpus gold changes.
+  Independent Korean-language review and the full parent/checklist remain open.
 
 - [ ] **COV-022 — Remaining adverbial and nominal derivations.** Review -이/-히
   lexical classes and nominal -이 independently. **Partial: COV-022a adds

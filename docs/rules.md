@@ -2903,6 +2903,37 @@ The [Article 39/40 answer](https://korean.go.kr/front/onlineQna/onlineQnaView.do
 supports the predicate restoration, not an inserted noun or copula.
 
 ㄼ has word-dependent pronunciations; ㄶ/ㅀ need a separate audit before 하.
+The [remaining-coda source review](hada-remaining-coda-source-review.json)
+retains full-source hashes and all 198 hypothetical full/short diagnostics.
+Pronunciation Article 12 distinguishes predicate-stem suffixes such as 히
+from other boundaries before ㅎ. Its ㄶ/ㅀ provisions concerning following
+plain stops do not establish their sound before restored 하. None of the
+three pending classes has a 하다 head in the pinned dictionary; that absence
+does not establish grammatical impossibility. Recovery remains open pending
+evidence for the exact lexical and morphological boundary.
+
+## Excluded native written-form fields (COV-021r)
+
+The original whole-dictionary scan excluded 67 fields: ten empty spellings and
+57 with surrounding whitespace. [Individual source records](../tests/fixtures/excluded-paradigm-sources.json)
+retain all original fields and complete entries. The evaluator selects a trimmed
+diagnostic token without changing the dictionary or input. Text analysis preserves
+the surrounding whitespace and byte spans; word analysis continues to reject it.
+Missing spellings are source gaps, not guessed inflections or failed observations.
+
+Fifty-six listed head/ending pairs already recover in all dictionary modes.
+The remaining field, 조라들어 under 졸아들다, conflicts with the entry's own
+written examples and Article 15. The scoped judgment requires 졸아들다 + 어
+for 졸아들어 and rejects that named path for 조라들어. The original field and
+its separate pronunciation remain visible; identity and hypothetical 조라들다
+alternatives remain. This finite review does not add spelling correction or
+choose contextual senses. [Evaluation](excluded-paradigm-evaluation.json) and
+[regressions](../tests/excluded_paradigms.rs) track source preservation,
+lossless text, Unicode, dictionary filtering and CLI/library parity. The
+[individual queue](excluded-paradigm-review-queue.json) retains 329 existing
+alternatives as unjudged, with stable identity, raw position, full dictionary
+assessment and filter membership. The finite written-form judgments do not
+certify those other readings or their contextual use.
 These three classes remain outside this extension, without a claim that all
 such hypothetical words are ungrammatical. Other ending families, independent
 linguistic review and all other open coverage items remain pending.
